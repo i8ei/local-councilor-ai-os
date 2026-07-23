@@ -54,6 +54,11 @@ ssp.kaigiroku.net/tenant/...        -> kaigiroku_net
 PDF URLを連番で組み立てる、といった探索はしません。検出だけ対応する
 `voices`/`discuss`を取込可能と表示しないことも運用上の要件です。
 
+取込アダプターがないベンダーは、利用者のAIエージェントが本モジュールの契約に
+沿って自作する想定です。手順は
+[未対応ベンダーに出会ったら](../../modules/minutes-db/adapter_guidance.md)を
+参照してください。
+
 ## 取得時の礼節
 
 - 各ホストの`robots.txt`を先に確認し、禁止経路は取得しない。
