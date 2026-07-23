@@ -15,16 +15,16 @@
 まず各自治体で `bootstrap` を実行して `municipality.db` を作ります。
 
 ```bash
-python3 -m bootstrap.cli '太良町' --out-dir bootstrap/output/太良町 --cross-check
-python3 -m bootstrap.cli '川棚町' --prefecture '長崎県' --out-dir bootstrap/output/川棚町 --cross-check
+python3 -m bootstrap.cli 'A町' --out-dir bootstrap/output/A町 --cross-check
+python3 -m bootstrap.cli 'B町' --prefecture '〇〇県' --out-dir bootstrap/output/B町 --cross-check
 ```
 
 次に比較DBを作ります。
 
 ```bash
 python3 modules/benchmark/build_from_bootstrap.py \
-  bootstrap/output/太良町/municipality.db \
-  bootstrap/output/川棚町/municipality.db \
+  bootstrap/output/A町/municipality.db \
+  bootstrap/output/B町/municipality.db \
   --db benchmark.db
 ```
 
