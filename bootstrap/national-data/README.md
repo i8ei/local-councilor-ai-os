@@ -185,3 +185,38 @@ indicator:
 - 決算カードまたは注記で定義と単位を確認できる
 - `PRAGMA integrity_check` が `ok` になる
 - オフライン再構築で同じ原本から同じ行を生成できる
+
+## 実装
+
+Tier 1a は `bootstrap/cli/census.py`、Tier 1b は `bootstrap/cli/fiscal.py`、Open XMLの最小読取器は `bootstrap/cli/xlsx.py` に実装した。
+
+```bash
+export ESTAT_APPID='e-Statから発行されたAppId'
+python3 -m bootstrap.cli '自治体名'
+python3 -m bootstrap.cli '自治体名' --cross-check
+python3 -m bootstrap.cli '自治体名' --offline --cross-check
+```
+
+国勢調査は、3種類の意味検索を行い、表IDの重複、集計区分、表題、除外語を検査する。必要な3指標が共通して持つ `SURVEY_DATE` の最大値を選び、各表の `getMetaInfo` から分類コードを解決して、対象5桁コードの値が意味条件ごとに一件になることを確認する。
+
+動的探索または選択表のメタデータ照合に失敗した場合だけ、検証済み2020年表 `0003445078`、`0003445098`、`0003445163` を一組で使う。この場合、実行レポートと `authority_map.yaml` に `latest-ness lost` の警告と理由を残す。公開URLは `https://www.e-stat.go.jp/dbview?sid=<statsDataId>` とし、AppId入りAPI URLを保存しない。
+
+財政の主経路は、一覧ページから最新年度ページ、年度ページから自治体種別に合う「概況」XLSXを発見する。`main_content` IDはコードに固定しない。XLSXはZIP/XMLとして読み、共有文字列・インライン文字列・ワークブック関係を解決する。列番号は固定せず、団体コード、団体名、6指標の見出しラベルから列を決める。既知の別名へフォールバックした場合は、採用ラベル、ヘッダーセル、`header_fallback_used` を来歴に残す。
+
+対象行は6桁団体コードで一意に選び、団体名も照合する。欠測記号は `value = NULL`、`raw_value = <原記号>` として保持する。`--cross-check` を指定した場合だけ、決算カード索引から同年度ページと対象都道府県XLSXを発見し、自治体シートの6指標を比較する。決算カード取得・抽出の失敗は主経路の値へ置き換えず、任意検算の失敗として警告する。
+
+### 検証状況
+
+2026-07-23、太良町で次をライブ確認した。
+
+- `api.e-stat.go.jp/robots.txt` と `www.soumu.go.jp/robots.txt` を各取得前に確認し、必要経路が許可されていた
+- e-Stat API 3.0 の `getStatsList`、`getMetaInfo`、`getStatsData` が成功
+- 動的探索が、3指標の揃う最新共通 `SURVEY_DATE` として2020年10月を選択。2020年固定表へのフォールバックは不使用
+- 総務省一覧から令和6年度ページを発見し、町村概況XLSXを発見
+- 6桁団体コードと団体名で対象行を一意に照合し、6指標を見出しラベルから抽出
+- 同年度の決算カードXLSXを索引から発見し、6指標すべてが主経路と一致
+- SQLite 9指標行と `PRAGMA integrity_check = ok`
+- オフライン再実行はHTTPリクエスト0件で、オンライン実行と同じ9指標行を再構築
+- AppId実値の保存がないことをキャッシュと出力全体で検査
+
+ライブ取得は実装・修正中を含めて累計21リクエストだった。全自治体種別、他都道府県、過年度、次年度のレイアウト、動的探索失敗時の実APIフォールバック、新設・再編自治体、決算カードの全欠測注記は未検証である。
