@@ -31,7 +31,9 @@ https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData
 https://www.e-stat.go.jp/api/api-info/e-stat-manual3-0
 ```
 
-Tier 0 の地域メタ情報 API と異なり、e-Stat API 3.0 の利用には AppId が必要である。AppId は環境変数などの秘密情報として扱い、ログ、保存 URL、`authority_map.yaml` に書かない。
+Tier 0 の地域メタ情報 API と異なり、e-Stat API 3.0 の利用には AppId が必要である。e-Statへユーザー登録した後、マイページの「ユーザ情報変更」→「登録内容変更」→「利用する機能」で「API機能」にチェックを入れ、画面下部の「変更」で確定する。その後、「API機能（アプリケーションID発行）」からAppIdを発行する。ユーザー登録だけではAPI機能が有効になっていない場合がある。
+
+AppId は環境変数などの秘密情報として扱い、ログ、保存 URL、`authority_map.yaml` に書かない。`STATUS 100`またはHTTP 403の認証エラーでは、AppIdの誤入力だけでなく、「API機能」の有効化と変更確定も確認する。
 
 ### 統計表を意味から選ぶ
 

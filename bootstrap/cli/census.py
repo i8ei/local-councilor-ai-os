@@ -64,6 +64,14 @@ class CensusError(RuntimeError):
     """Raised when census tables cannot be selected or parsed safely."""
 
 
+ESTAT_AUTH_HELP = (
+    "e-Statの認証に失敗しました。ESTAT_APPIDの値に加えて、e-Statへログインし、"
+    "「ユーザ情報変更」→「登録内容変更」→「利用する機能」で「API機能」に"
+    "チェックを入れ、画面下部の「変更」で確定した後にアプリケーションIDを"
+    "発行したか確認してください"
+)
+
+
 @dataclass(frozen=True)
 class TableSelection:
     """The three common-vintage tables and selection provenance."""
@@ -108,6 +116,8 @@ def _api_get(
             sensitive_query_keys={"appId"},
         )
     except FetchError as error:
+        if "HTTP 403" in str(error):
+            raise CensusError(ESTAT_AUTH_HELP) from error
         raise CensusError(f"e-Stat {endpoint} の取得に失敗しました: {error}") from error
     return result.json(), result.fetched_at
 
@@ -118,6 +128,8 @@ def _check_result(root: dict[str, Any], operation: str) -> None:
         status = int(result.get("STATUS", 999))
     except (TypeError, ValueError):
         status = 999
+    if status == 100:
+        raise CensusError(ESTAT_AUTH_HELP)
     if status > 2:
         raise CensusError(f"{operation} APIエラー: {result}")
 
