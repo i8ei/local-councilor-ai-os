@@ -29,7 +29,7 @@ run_suite "bootstrap" python3 -m unittest discover -v
 
 # Per-module suites. Each module runs from its own directory so that
 # sibling-relative imports (adapters, search, ingest, ...) resolve.
-for module in minutes-db regulations benchmark settlement-review; do
+for module in minutes-db regulations benchmark budget-review settlement-review; do
   if compgen -G "modules/${module}/tests/test_*.py" > /dev/null; then
     run_suite "modules/${module}" bash -c \
       "cd 'modules/${module}' && python3 -m unittest discover -s tests -v"
