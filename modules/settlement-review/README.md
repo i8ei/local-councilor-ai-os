@@ -2,31 +2,73 @@
 
 ## 目的
 
-このモジュールは、9月の決算審査に向けて、決算書の総括表と明細を検算可能な形へ整え、確認すべき増減や執行差の候補を作る。PDF から取り出した数値をそのまま分析へ渡さず、原典位置、単位、定義、取得日時を保持し、階層ごとの合計が差額ゼロになったデータだけを利用する。
+このモジュールは、決算書の総括表と明細を検算可能な形へ整え、9月の決算審査で人が確認する増減や執行差の候補を作る。PDFから数字を取り出す処理そのものは自治体、年度、会計、資料公開範囲、PDF品質によって異なるため、汎用抽出器として作り込まない。
+
+本モジュールが提供するのは、抽出後の正規化CSV契約、SQLiteスキーマ、差額ゼロ検算、分析候補生成、公開・非公開境界、ありがちな失敗パターンである。
 
 ## 構成
 
 | ファイル | 役割 |
 |---|---|
 | `schema.sql` | 総括表、歳入の款項明細、歳出の款項目節明細を格納する |
+| `csv_contract.md` | `summary`、`revenue`、`expenditure` CSVの列契約 |
+| `ingest_csv.py` | 人または個別AIが確認した正規化CSVをSQLiteへ投入する |
 | `verify_totals.py` | 歳入の項から款、歳出の節から目、目から款を差額ゼロで突合する |
-| `insight_spec.md` | v0.2 で生成する分析候補と証拠台帳への受け渡しを定義する |
+| `insights.py` | 検算を通ったDBから、人が確認する分析候補をJSONで出す |
+| `insight_spec.md` | 分析候補と証拠台帳への受け渡しを定義する |
+| `csv_templates.py` | CSVヘッダー雛形を出力する |
+| `extraction_guidance.md` | PDF抽出を個別AIや人に任せる際の依頼方針 |
+| `failure_patterns.md` | 単位、ページ、欠測、重複加算などの典型的な失敗 |
+| `public_private_boundary.md` | 公開資料、内部資料、要配慮資料の境界 |
 | `tests/create_fixtures.py` | 合格用と不合格用の小さな SQLite を再生成する |
 
 `schema.sql` は、原表の複数金額列を名前付きの `value` として保持し、原行全体を `raw_value` に残す。すべての行は原単位を持つ。歳出明細は節粒度であり、同じ目合計が複数の節行に反復される前提なので、款集計の前に款、項、目で重複を除く。
 
-PDF の判定、取得、転記、見開き結合は [Tier 3 手順書](../../bootstrap/local-documents/)を参照する。データ層と判断層の境界は[データと判断](../../way-of-working/03-data-vs-judgment.md)、検証状態は[根拠データ契約](../../data-contracts/evidence_schema.md)に従う。
+## PDF抽出の位置づけ
 
-## 利用計画
+PDFの版面、列位置、テキスト層、見開き、単位、会計区分、公開範囲は自治体ごとに異なる。したがって、このモジュールは「任意PDFを正しく読む」責任を持たない。利用者はローカルで、AI、人手、OCR、`pdftotext`、表抽出ツールなどを組み合わせてCSVを作る。
+
+ただし、どの方法で抽出しても、最後は次を満たす必要がある。
+
+1. `csv_contract.md` の列を満たす。
+2. `source_locator` から原典位置へ戻れる。
+3. `verify_totals.py` が終了コード0である。
+4. 公開資料か非公開資料かを区別している。
+5. 原因や政策評価を数値だけから自動確定しない。
+
+## CSV雛形
 
 ```sh
-sqlite3 settlement.db < modules/settlement-review/schema.sql
+python3 modules/settlement-review/csv_templates.py summary > summary.csv
+python3 modules/settlement-review/csv_templates.py revenue > revenue.csv
+python3 modules/settlement-review/csv_templates.py expenditure > expenditure.csv
+```
+
+## 正規化CSVの取込
+
+```sh
+python3 modules/settlement-review/ingest_csv.py summary summary.csv --db settlement.db
+python3 modules/settlement-review/ingest_csv.py revenue revenue.csv --db settlement.db
+python3 modules/settlement-review/ingest_csv.py expenditure expenditure.csv --db settlement.db
 python3 modules/settlement-review/verify_totals.py settlement.db
 ```
 
-検算は読み取り専用で実行する。単位不一致、総括表の欠落、明細の欠落、反復された目合計の不一致、差額がゼロでない項目のいずれかがあれば終了コード `1` を返す。全件が一致した場合は `0` を返す。検算結果と人の原典確認を証拠台帳へ記録した後に、対象行を `reconciled` として扱う。
+`ingest_csv.py` は整数列のカンマ、`△`、Unicode minusを正規化し、既存行は一意キーで更新する。ここで検証済みに昇格するわけではない。差額ゼロ検算と人の原典確認を通した後に `reconciled` として扱う。
 
-合成フィクスチャは次の手順で再生成して実行できる。
+## 分析候補
+
+検算を通ったDBから、人が確認する候補を生成する。
+
+```sh
+python3 modules/settlement-review/insights.py settlement.db \
+  --min-unused-ratio 0.1 \
+  --min-carryover-ratio 0.1 \
+  --min-outstanding-ratio 0.1
+```
+
+`insights.py` は実行時に `verify_totals.py` を通し、検算に失敗したDBでは候補を生成しない。出力は「大きな不用額」「大きな繰越」「大きな収入未済」などの確認候補であり、原因や妥当性を断定しない。
+
+## 検算フィクスチャ
 
 ```sh
 python3 modules/settlement-review/tests/create_fixtures.py
@@ -36,22 +78,8 @@ python3 modules/settlement-review/verify_totals.py \
   modules/settlement-review/tests/failing.db
 ```
 
+`passing.db` は終了コード0、`failing.db` は終了コード1を期待する。
 
-## 正規化CSVの取込
+## 外部利用条件
 
-PDFや表抽出から得た数値は、人が原典位置、単位、列意味を確認したうえで、標準CSVとして `ingest_csv.py` から投入できる。CSVは `summary`、`revenue`、`expenditure` の3種類に分ける。
-
-```sh
-python3 modules/settlement-review/ingest_csv.py summary summary.csv --db settlement.db
-python3 modules/settlement-review/ingest_csv.py revenue revenue.csv --db settlement.db
-python3 modules/settlement-review/ingest_csv.py expenditure expenditure.csv --db settlement.db
-python3 modules/settlement-review/verify_totals.py settlement.db
-```
-
-必須列はスキーマの列名に合わせる。共通必須列は `fiscal_year`、`account_name`、`raw_value`、`unit`、`as_of`、`definition`、`source_name`、`source_url`、`source_locator`、`fetched_at`、`verification_state`、`print_page`、`pdf_page`。`source_locator` はJSON文字列を推奨し、通常文字列の場合は `{"locator": ...}` に正規化する。
-
-`ingest_csv.py` は整数列のカンマ、`△`、Unicode minusを正規化し、既存行は一意キーで更新する。ここで検証済みに昇格するわけではない。差額ゼロ検算と人の原典確認を通した後に `reconciled` として扱う。
-
-## 状態
-
-v0.1 では、格納スキーマ、来歴要件、差額ゼロの検証仕様、分析出力仕様を公開する。取込処理の参照実装は、実際の9月決算審査で版面差と人の確認点を記録した後、v0.2 で追加する。現時点では人間併走による転記と正規化を前提とし、自治体横断の完全自動 OCR を約束しない。
+対外利用できるのは、原則として公式公開資料に基づき、差額ゼロ検算と人の原典確認を通った値だけである。非公開資料や内部資料から得た数値は、公開資料で検証可能な問いへ変換する。公開成果物には内部ファイルパス、内部リンク、非公開資料由来の数値を混ぜない。

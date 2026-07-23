@@ -162,6 +162,45 @@ python3 modules/regulations/context_pack.py '個人情報の取扱い' \
 
 この段階で新規作成したDB、キャッシュ、静的設定だけを作成記録から特定し、退避する。取得済み原典を残すかも人が決める。他段階の検索層とVaultノートは変更しない。
 
+## 段階5 決算レビュー
+
+この段階は任意である。予算書・決算書など自治体固有PDFの数値を検算可能なDBへ入れたい場合だけ実行する。PDFから数字を読む処理そのものは、自治体、年度、会計、公開範囲、PDF品質によって異なるため、本リポジトリは汎用抽出器を提供しない。ここで固定するのは、抽出後のCSV契約、SQLite格納、差額ゼロ検算、公開・非公開境界である。
+
+### 確認
+
+対象資料が公式公開資料か、内部資料か、要配慮資料かを先に分類する。対象年度、会計名、ページ範囲、原表単位、PDFページと印刷ページの対応、外部AIへ送ってよい資料かを確認する。非公開資料は公開用DBへ混ぜず、公開成果物では公式公開資料で再検証できる問いへ変換する。
+
+### 実行
+
+まず [CSV契約](modules/settlement-review/csv_contract.md)、[抽出ガイダンス](modules/settlement-review/extraction_guidance.md)、[失敗パターン](modules/settlement-review/failure_patterns.md)、[公開・非公開境界](modules/settlement-review/public_private_boundary.md)を読む。CSV雛形を生成し、個別AIまたは人がPDFから転記した値を、原典位置つきで埋める。
+
+```sh
+python3 modules/settlement-review/csv_templates.py summary > summary.csv
+python3 modules/settlement-review/csv_templates.py revenue > revenue.csv
+python3 modules/settlement-review/csv_templates.py expenditure > expenditure.csv
+
+python3 modules/settlement-review/ingest_csv.py summary summary.csv --db settlement.db
+python3 modules/settlement-review/ingest_csv.py revenue revenue.csv --db settlement.db
+python3 modules/settlement-review/ingest_csv.py expenditure expenditure.csv --db settlement.db
+python3 modules/settlement-review/verify_totals.py settlement.db
+```
+
+検算に通ったDBだけ、確認候補生成へ進める。
+
+```sh
+python3 modules/settlement-review/insights.py settlement.db
+```
+
+`insights.py` の出力は質問候補ではなく、人が確認する入口である。原因、妥当性、政策評価は自動確定しない。
+
+### 検証
+
+`verify_totals.py` が終了コード0であること、`source_locator` から原表の該当箇所へ戻れること、単位、会計、年度、ページが一致していることを確認する。`insights.py` の候補は、原典と担当課説明や監査資料など別根拠へ戻してから採用する。
+
+### 中止・巻き戻し
+
+この段階で作ったCSV、DB、抽出ログ、内部資料由来の作業物だけを作成記録から特定して退避する。公開情報基盤、議事録DB、Vaultノートは変更しない。非公開資料を誤って公開用DBへ入れた場合は、そのDBを外部利用不可として破棄し、公開資料だけで再構築する。
+
 ## 完了報告
 
-各段階後に、作成物、作成先、スキップ、統合差分、検証結果、未確認事項を報告し、解除方法を示す。段階1は棚とテンプレート、段階2は常設規則とトリガー、段階3は自治体DBと裁定表、段階4は議事録DBとキャッシュが対象である。作成記録と照合し、基盤側を削除対象にしない。次へ進むかは利用者が決める。
+各段階後に、作成物、作成先、スキップ、統合差分、検証結果、未確認事項を報告し、解除方法を示す。段階1は棚とテンプレート、段階2は常設規則とトリガー、段階3は自治体DBと裁定表、段階4は議事録DB・例規DBとキャッシュ、段階5は決算CSV・DB・検算結果が対象である。作成記録と照合し、基盤側を削除対象にしない。次へ進むかは利用者が決める。
