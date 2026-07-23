@@ -164,7 +164,7 @@ python3 modules/regulations/context_pack.py '個人情報の取扱い' \
 
 ## 段階5 決算レビュー
 
-この段階は任意である。予算書・決算書など自治体固有PDFの数値を検算可能なDBへ入れたい場合だけ実行する。PDFから数字を読む処理そのものは、自治体、年度、会計、公開範囲、PDF品質によって異なるため、本リポジトリは汎用抽出器を提供しない。ここで固定するのは、抽出後のCSV契約、SQLite格納、差額ゼロ検算、公開・非公開境界である。
+この段階は任意である。予算書・決算書など自治体固有PDFの数値を検算可能なDBへ入れたい場合だけ実行する。PDFから数字を読む処理そのものは、自治体、年度、会計、公開範囲、PDF品質によって異なるため、本リポジトリは汎用抽出器を提供しない。ここで固定するのは、抽出後のSQLite入力契約、SQLite格納、差額ゼロ検算、公開・非公開境界である。CSVは正本ではなく、SQLiteへ投入するための中間入力形式として扱う。
 
 ### 確認
 
@@ -172,7 +172,7 @@ python3 modules/regulations/context_pack.py '個人情報の取扱い' \
 
 ### 実行
 
-まず [CSV契約](modules/settlement-review/csv_contract.md)、[抽出ガイダンス](modules/settlement-review/extraction_guidance.md)、[失敗パターン](modules/settlement-review/failure_patterns.md)、[公開・非公開境界](modules/settlement-review/public_private_boundary.md)を読む。CSV雛形を生成し、個別AIまたは人がPDFから転記した値を、原典位置つきで埋める。
+まず [SQLite入力契約](modules/settlement-review/sqlite_input_contract.md)、[抽出ガイダンス](modules/settlement-review/extraction_guidance.md)、[失敗パターン](modules/settlement-review/failure_patterns.md)、[公開・非公開境界](modules/settlement-review/public_private_boundary.md)を読む。取込用CSVの雛形を生成し、個別AIまたは人がPDFから転記した値を、原典位置つきで埋める。作業の中心は投入後のSQLiteであり、CSVは受け渡し用である。
 
 ```sh
 python3 modules/settlement-review/csv_templates.py summary > summary.csv
@@ -203,4 +203,4 @@ python3 modules/settlement-review/insights.py settlement.db
 
 ## 完了報告
 
-各段階後に、作成物、作成先、スキップ、統合差分、検証結果、未確認事項を報告し、解除方法を示す。段階1は棚とテンプレート、段階2は常設規則とトリガー、段階3は自治体DBと裁定表、段階4は議事録DB・例規DBとキャッシュ、段階5は決算CSV・DB・検算結果が対象である。作成記録と照合し、基盤側を削除対象にしない。次へ進むかは利用者が決める。
+各段階後に、作成物、作成先、スキップ、統合差分、検証結果、未確認事項を報告し、解除方法を示す。段階1は棚とテンプレート、段階2は常設規則とトリガー、段階3は自治体DBと裁定表、段階4は議事録DB・例規DBとキャッシュ、段階5は決算の取込用CSV・SQLite DB・検算結果が対象である。作成記録と照合し、基盤側を削除対象にしない。次へ進むかは利用者が決める。
