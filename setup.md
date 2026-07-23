@@ -77,6 +77,33 @@ AIエージェントは、日常業務のどの合図で[ワークフロー](wor
 
 [自治体ブートストラップ](bootstrap/README.md)のCLIを新規出力先へ実行する。自治体名の候補が複数なら都道府県ヒントを求めて停止する。成功すると自治体DBと`authority_map.yaml`ができる。後者は値の複製ではなく、指標と利用目的から公式原典とDB位置を選ぶ裁定表である。
 
+```sh
+python3 -m bootstrap.cli '自治体名' \
+  --prefecture '都道府県名' \
+  --out-dir bootstrap/output/自治体名 \
+  --cross-check
+```
+
+初回オンライン実行の後、同じ入力でオフライン再構築を行い、キャッシュだけで再現できることを確認する。
+
+```sh
+python3 -m bootstrap.cli '自治体名' \
+  --prefecture '都道府県名' \
+  --out-dir bootstrap/output/自治体名-offline \
+  --offline \
+  --cross-check
+```
+
+複数自治体の比較が必要な場合は、各自治体の`municipality.db`を作成した後、比較DBを別名で生成する。比較DBは新たな公式取得を行わず、検証済みのブートストラップ出力だけを束ねる。
+
+```sh
+python3 modules/benchmark/build_from_bootstrap.py bootstrap/output \
+  --db benchmark.db
+python3 modules/benchmark/compare.py zaiseiryoku_shisuu \
+  --db benchmark.db \
+  --limit 20
+```
+
 取得は公式URLに限り、`robots.txt`を守り、低い頻度で行い、取得物をキャッシュする。禁止経路を推測URLで迂回しない。公開条件と相手側の負荷を尊重するためである。
 
 ### 検証
@@ -98,6 +125,34 @@ AIエージェントは、日常業務のどの合図で[ワークフロー](wor
 ### 実行
 
 [議事録データベース](modules/minutes-db/README.md)の順に、まず`detect`で公開方式の証拠を得る。次に検出結果と公式ページを人が照合し、対応アダプターまたは静的設定を選ぶ。最後に`ingest`で原典、来歴、SQLiteと全文索引を作る。`unknown`を推測で既知ベンダーへ割り当てず、取込不能なら未対応として止める。
+
+```sh
+python3 modules/minutes-db/detect.py '公式議会ページURL'
+python3 modules/minutes-db/ingest.py \
+  --adapter static \
+  --config minutes-static.json \
+  --db minutes.db \
+  --limit 10
+python3 modules/minutes-db/search.py '防災' --db minutes.db --k 10
+python3 modules/minutes-db/context_pack.py '防災計画の見直し' \
+  --db minutes.db \
+  --k 5 \
+  --char-budget 6000
+```
+
+例規を反復検索する場合は、公式例規索引を人が確認したうえで、静的例規設定を作る。例規DBも検索層であり、外部引用前には公式画面で施行時点、条番号、前後条文を確認する。
+
+```sh
+python3 modules/regulations/ingest.py \
+  --config regulations-static.json \
+  --db regulations.db \
+  --limit 20
+python3 modules/regulations/search.py '個人情報' --db regulations.db --k 10
+python3 modules/regulations/context_pack.py '個人情報の取扱い' \
+  --db regulations.db \
+  --k 5 \
+  --char-budget 6000
+```
 
 ### 検証
 

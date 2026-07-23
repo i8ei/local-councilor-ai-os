@@ -36,6 +36,22 @@ python3 modules/settlement-review/verify_totals.py \
   modules/settlement-review/tests/failing.db
 ```
 
+
+## 正規化CSVの取込
+
+PDFや表抽出から得た数値は、人が原典位置、単位、列意味を確認したうえで、標準CSVとして `ingest_csv.py` から投入できる。CSVは `summary`、`revenue`、`expenditure` の3種類に分ける。
+
+```sh
+python3 modules/settlement-review/ingest_csv.py summary summary.csv --db settlement.db
+python3 modules/settlement-review/ingest_csv.py revenue revenue.csv --db settlement.db
+python3 modules/settlement-review/ingest_csv.py expenditure expenditure.csv --db settlement.db
+python3 modules/settlement-review/verify_totals.py settlement.db
+```
+
+必須列はスキーマの列名に合わせる。共通必須列は `fiscal_year`、`account_name`、`raw_value`、`unit`、`as_of`、`definition`、`source_name`、`source_url`、`source_locator`、`fetched_at`、`verification_state`、`print_page`、`pdf_page`。`source_locator` はJSON文字列を推奨し、通常文字列の場合は `{"locator": ...}` に正規化する。
+
+`ingest_csv.py` は整数列のカンマ、`△`、Unicode minusを正規化し、既存行は一意キーで更新する。ここで検証済みに昇格するわけではない。差額ゼロ検算と人の原典確認を通した後に `reconciled` として扱う。
+
 ## 状態
 
 v0.1 では、格納スキーマ、来歴要件、差額ゼロの検証仕様、分析出力仕様を公開する。取込処理の参照実装は、実際の9月決算審査で版面差と人の確認点を記録した後、v0.2 で追加する。現時点では人間併走による転記と正規化を前提とし、自治体横断の完全自動 OCR を約束しない。
