@@ -33,6 +33,7 @@ def build_context_pack(
     query: str,
     k: int = 5,
     char_budget: int = 8000,
+    question: str | None = None,
 ) -> dict[str, Any]:
     """Select top hits without exceeding the cumulative quote budget."""
     hits = search_database(connection, query, k)
@@ -71,7 +72,7 @@ def build_context_pack(
         "schema_version": "minutes-context-pack/1",
         "pack_id": "mcp_" + hashlib.sha256(pack_key.encode()).hexdigest()[:24],
         "purpose": "議事録検索結果から、問いに必要な原典抜粋だけを渡す",
-        "question": query,
+        "question": question or query,
         "created_at": created_at,
         "information_classification": "public",
         "search": {"query": query, "requested_k": k, "selected_hits": len(items)},
@@ -93,6 +94,11 @@ def build_context_pack(
         "regeneration": {
             "command": f"python3 context_pack.py {json.dumps(query, ensure_ascii=False)} "
             f"--db <minutes.db> --k {k} --char-budget {char_budget}"
+            + (
+                f" --question {json.dumps(question, ensure_ascii=False)}"
+                if question
+                else ""
+            )
         },
     }
 
@@ -101,6 +107,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("query", help="Question or minutes search expression")
     parser.add_argument("--db", required=True, help="Minutes SQLite database")
+    parser.add_argument(
+        "--question",
+        help="Human question to record separately from the search expression",
+    )
     parser.add_argument("--k", type=int, default=5, help="Maximum source hits")
     parser.add_argument(
         "--char-budget",
@@ -119,7 +129,11 @@ def main() -> int:
     try:
         with sqlite3.connect(Path(args.db)) as connection:
             pack = build_context_pack(
-                connection, args.query, args.k, args.char_budget
+                connection,
+                args.query,
+                args.k,
+                args.char_budget,
+                question=args.question,
             )
     except sqlite3.Error as exc:
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)

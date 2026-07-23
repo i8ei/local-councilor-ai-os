@@ -192,6 +192,25 @@ def _make_adapter(args: argparse.Namespace) -> Any:
 
 def ingest(args: argparse.Namespace) -> dict[str, Any]:
     adapter = _make_adapter(args)
+    if args.dry_run:
+        if args.adapter != "static":
+            raise ValueError("--dry-run is currently supported only for static")
+        meeting_refs = adapter.list_meetings(limit=args.limit)
+        return {
+            "adapter": args.adapter,
+            "status": "dry_run",
+            "database": None,
+            "database_created": False,
+            "meeting_bodies_fetched": 0,
+            "documents_downloaded": 0,
+            "selected_meetings": meeting_refs,
+            "candidates": adapter.discovery_candidates,
+            "note": (
+                "索引とfollow対象HTMLだけを確認。会議本文・PDF・DBは未取得"
+            ),
+        }
+    if not args.db:
+        raise ValueError("--db is required unless --dry-run is used")
     database_path = Path(args.db)
     database_path.parent.mkdir(parents=True, exist_ok=True)
     with sqlite3.connect(database_path) as connection:
@@ -232,9 +251,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--url", help="Tenant or minutes URL")
     parser.add_argument("--config", help="Static adapter JSON config")
-    parser.add_argument("--db", required=True, help="Output SQLite database")
+    parser.add_argument("--db", help="Output SQLite database")
     parser.add_argument("--limit", type=int, default=None, help="Meeting limit")
     parser.add_argument("--cache-dir", help="Override the local cache directory")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="List static candidates without fetching meeting bodies or creating a DB",
+    )
     return parser
 
 

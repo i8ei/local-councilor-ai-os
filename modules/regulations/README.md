@@ -32,10 +32,14 @@
 ```bash
 python3 ingest.py --config municipality.json --db regulations.db --limit 10
 python3 search.py "個人情報" --db regulations.db --k 10
-python3 context_pack.py "個人情報の取扱い" --db regulations.db --k 5 --char-budget 6000
+python3 context_pack.py "個人情報" \
+  --question "個人情報の取扱いは何条にあるか" \
+  --db regulations.db --k 5 --char-budget 6000
 ```
 
 `ingest.py` は `robots.txt`、低頻度取得、SHA-256つきキャッシュを、議事録DBと同じ取得器で扱います。HTMLは標準ライブラリの `HTMLParser` で可視テキスト化し、`第1条` / `第一条` 形式の見出しで条単位に分割します。条見出しを検出できない場合は文書単位のfallbackチャンクを保存します。
+
+`context_pack.py`の位置引数は検索式です。人が答えたい問いを検索式と分けて記録する場合は`--question`を使います。
 
 ## g-reikiベンダーアダプター
 

@@ -115,9 +115,12 @@ class StaticHtmlAdapterTest(unittest.TestCase):
             ):
                 references = adapter.list_meetings()
                 self.assertEqual(1, len(references))
+                decisions = adapter.discovery_candidates
                 document = adapter.fetch_meeting(references[0]["meeting_id"])
 
         self.assertEqual("架空町議会", document["meeting"]["council_name"])
+        self.assertIn("selected", {item["reason"] for item in decisions})
+        self.assertIn("excluded_by_regex", {item["reason"] for item in decisions})
         self.assertEqual("2026-07-23", document["meeting"]["date"])
         self.assertEqual("extracted", document["provenance"]["status"])
         self.assertEqual("佐藤一郎", document["speeches"][1]["speaker"])
@@ -222,6 +225,35 @@ class StaticHtmlAdapterTest(unittest.TestCase):
             self.assertEqual([], adapter.list_meetings(limit=0))
         fetch.assert_not_called()
 
+    def test_matches_decoded_pdf_filename_when_label_is_only_file_size(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            encoded_url = (
+                "https://example.invalid/files/"
+                "%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F.pdf"
+            )
+            index = make_result(
+                INDEX_URL,
+                f'<a href="{encoded_url}">（PDF455KB）</a>'.encode(),
+                content_type="text/html",
+                cache_path=root / "index.cache",
+            )
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": INDEX_URL,
+                    "link_include_regex": "一般質問",
+                    "pdf": True,
+                }
+            )
+            with patch(
+                "adapters.static_html.polite_fetch",
+                return_value=index,
+            ):
+                references = adapter.list_meetings()
+        self.assertEqual(1, len(references))
+        self.assertEqual("一般質問.pdf", references[0]["meeting_name"])
+        self.assertEqual("selected", adapter.discovery_candidates[0]["reason"])
+
     def test_follows_one_level_with_excludes_and_global_limit(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -264,6 +296,7 @@ class StaticHtmlAdapterTest(unittest.TestCase):
             )
             with patch("adapters.static_html.polite_fetch", side_effect=fetch):
                 references = adapter.list_meetings(limit=2)
+                decisions = adapter.discovery_candidates
 
         self.assertEqual(
             [
@@ -283,6 +316,7 @@ class StaticHtmlAdapterTest(unittest.TestCase):
         source_urls = " ".join(ref["source_url"] for ref in references)
         self.assertNotIn("agenda.pdf", source_urls)
         self.assertNotIn("schedule.pdf", source_urls)
+        self.assertIn("excluded_by_regex", {item["reason"] for item in decisions})
 
     def test_from_config_rejects_non_json(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

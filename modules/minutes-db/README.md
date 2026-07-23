@@ -88,16 +88,25 @@ python3 ingest.py \
 python3 ingest.py \
   --adapter static \
   --config municipality.json \
+  --limit 20 \
+  --dry-run
+
+python3 ingest.py \
+  --adapter static \
+  --config municipality.json \
   --db minutes.db \
   --limit 2
 
 python3 search.py "防災" --db minutes.db --k 10
 
-python3 context_pack.py "防災計画の見直し" \
+python3 context_pack.py "防災" \
+  --question "地域防災計画はいつ見直されたか" \
   --db minutes.db \
   --k 5 \
   --char-budget 6000
 ```
+
+静的アダプターの`--dry-run`は、索引と設定したfollow対象HTMLまでを読み、各リンクを`selected`、`excluded_by_regex`、`format_mismatch`、`duplicate`に分けます。会議本文やPDFを取得せず、DBも作りません。候補を確認してから少数件の本取込へ進んでください。
 
 同じ`source_url`と会議内`seq`の再取込は更新となり、重複行を作りません。
 検索結果は話者、日付、会議名、抜粋、原典URL、原典位置、取得時刻を返します。
@@ -106,7 +115,7 @@ FTS5が使えない場合、FTS構文が不正な場合、trigramで扱いにく
 
 コンテキストパックは引用本文を改変せず、話者、会議、日付、原典URL、
 原典位置、取得時刻とともにJSON化します。`--char-budget`は引用文字数の合計
-上限です。これは検索結果であり、採用する解釈や判断は別の判断ノートへ
+上限です。検索式と人が答えたい問いが異なる場合は`--question`で分けます。これは検索結果であり、採用する解釈や判断は別の判断ノートへ
 検索条件・対象範囲・欠落情報とともに戻してください。
 
 ## 取得時の礼節とキャッシュ

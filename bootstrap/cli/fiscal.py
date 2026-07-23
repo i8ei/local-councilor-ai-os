@@ -297,6 +297,17 @@ def _parse_number(raw: str) -> int | float | None:
     return int(number) if number.is_integer() else number
 
 
+def _display_raw_value(raw: str) -> str:
+    """Shorten obvious binary-float tails while leaving source text unchanged."""
+
+    stripped = raw.strip()
+    match = re.fullmatch(r"([+-]?\d+)\.(\d{12,})", stripped)
+    if not match or not re.search(r"(?:0{6,}|9{6,})\d?$", match.group(2)):
+        return raw
+    concise = format(float(stripped), ".12g")
+    return concise if len(concise) < len(stripped) else raw
+
+
 def _header_spec() -> dict[str, tuple[str, ...]]:
     result = {
         "local_government_code_6": (
@@ -388,31 +399,38 @@ def parse_overview_xlsx(
             raise FiscalError(
                 f"{spec['label']}の値セルが空です: {sheet.name} row {row_number}"
             )
+        source_locator = {
+            "kind": "xlsx",
+            "index_url": FISCAL_INDEX,
+            "year_page_url": source_page_url,
+            "resolved_xlsx_url": discovery["xlsx_url"],
+            "sheet": sheet.name,
+            "row_key": code,
+            "row": row_number,
+            "column": header.column,
+            "header_cell": header.cell.ref,
+            "header_label": header.matched_label,
+            "header_fallback_used": header.fallback_used,
+            "value_cell": value_cell.ref,
+            "sha256": discovery["xlsx_sha256"],
+        }
+        display_raw_value = _display_raw_value(value_cell.value)
+        if display_raw_value != value_cell.value:
+            source_locator["original_xml_value"] = value_cell.value
+            source_locator["raw_value_display_normalization"] = (
+                "shortened_obvious_binary_float_tail"
+            )
         records.append(
             {
                 "indicator": indicator,
                 "value": _parse_number(value_cell.value),
-                "raw_value": value_cell.value,
+                "raw_value": display_raw_value,
                 "unit": spec["unit"],
                 "as_of": f"{fiscal_year}年度",
                 "definition": spec["definition"],
                 "source_name": "総務省 市町村別決算状況調",
                 "source_url": source_page_url,
-                "source_locator": {
-                    "kind": "xlsx",
-                    "index_url": FISCAL_INDEX,
-                    "year_page_url": source_page_url,
-                    "resolved_xlsx_url": discovery["xlsx_url"],
-                    "sheet": sheet.name,
-                    "row_key": code,
-                    "row": row_number,
-                    "column": header.column,
-                    "header_cell": header.cell.ref,
-                    "header_label": header.matched_label,
-                    "header_fallback_used": header.fallback_used,
-                    "value_cell": value_cell.ref,
-                    "sha256": discovery["xlsx_sha256"],
-                },
+                "source_locator": source_locator,
                 "fetched_at": discovery["xlsx_fetched_at"],
             }
         )
@@ -555,21 +573,28 @@ def _parse_card_xlsx(
             str(spec["label"]),
             indicator != "keijou_shuushi_hiritsu",
         )
+        source_locator = {
+            "kind": "xlsx_cross_check",
+            "index_url": CARD_INDEX,
+            "year_page_url": discovery["year_page_url"],
+            "resolved_xlsx_url": discovery["xlsx_url"],
+            "sheet": sheet.name,
+            "label_cell": label_cell.ref,
+            "value_cell": value_cell.ref,
+            "sha256": discovery["xlsx_sha256"],
+        }
+        display_raw_value = _display_raw_value(value_cell.value)
+        if display_raw_value != value_cell.value:
+            source_locator["original_xml_value"] = value_cell.value
+            source_locator["raw_value_display_normalization"] = (
+                "shortened_obvious_binary_float_tail"
+            )
         extracted[indicator] = {
             "value": _parse_number(value_cell.value),
-            "raw_value": value_cell.value,
+            "raw_value": display_raw_value,
             "source_name": "総務省 市町村決算カード",
             "source_url": discovery["year_page_url"],
-            "source_locator": {
-                "kind": "xlsx_cross_check",
-                "index_url": CARD_INDEX,
-                "year_page_url": discovery["year_page_url"],
-                "resolved_xlsx_url": discovery["xlsx_url"],
-                "sheet": sheet.name,
-                "label_cell": label_cell.ref,
-                "value_cell": value_cell.ref,
-                "sha256": discovery["xlsx_sha256"],
-            },
+            "source_locator": source_locator,
             "fetched_at": discovery["xlsx_fetched_at"],
             "as_of": f"{fiscal_year}年度",
         }

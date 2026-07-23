@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.1",
+  "updated_at": "2026-07-24",
+  "sources": {
+    "estat-api-v3": {
+      "title": "政府統計の総合窓口（e-Stat）API 3.0",
+      "publisher": "独立行政法人統計センター",
+      "authority_level": "primary",
+      "source_type": "api",
+      "public_access": true,
+      "documentation_url": "https://www.e-stat.go.jp/api/api-info/e-stat-manual3-0",
+      "attribution": {
+        "source_name": "政府統計の総合窓口（e-Stat）",
+        "source_url_required": true
+      },
+      "access": {
+        "mode": "live_api",
+        "authentication": "app_id",
+        "activation_note": "e-Statの登録内容変更で「API機能」を有効化し、アプリケーションIDを発行する",
+        "credential_environment_variable": "ESTAT_APPID",
+        "endpoints": [
+          "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsList",
+          "https://api.e-stat.go.jp/rest/3.0/app/json/getMetaInfo",
+          "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"
+        ]
+      },
+      "use_boundary": {
+        "suitable_for": [
+          "統計表の発見",
+          "自治体コードと全国統計の取得",
+          "取得条件を絞った最新参照"
+        ],
+        "not_sufficient_for": [
+          "自治体固有の予算書・決算書",
+          "出典・取得時点を伴わない対外利用"
+        ]
+      },
+      "persistence": {
+        "default": "live_with_cache",
+        "raw_response": "cache_for_rebuild",
+        "sqlite": "normalize_when_repeated_search_or_cross_source_join_is_needed",
+        "snapshot": "pin_verified_outputs_used_for_publication"
+      }
+    },
+    "jgrants-public-api": {
+      "title": "Jグランツ 公開API",
+      "publisher": "デジタル庁",
+      "authority_level": "primary",
+      "source_type": "api",
+      "public_access": true,
+      "documentation_url": "https://developers.digital.go.jp/documents/jgrants/api/",
+      "attribution": {
+        "source_name": "Jグランツ",
+        "source_url_required": true
+      },
+      "access": {
+        "mode": "live_api",
+        "authentication": "none_for_public_endpoints",
+        "endpoints": [
+          "https://api.jgrants-portal.go.jp/exp/v1/public/subsidies",
+          "https://api.jgrants-portal.go.jp/exp/v1/public/subsidies/id/{id}",
+          "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/{id}"
+        ],
+        "version_note": "一覧はv1。詳細v2はworkflow配列などv1と応答構造が異なる"
+      },
+      "use_boundary": {
+        "suitable_for": [
+          "公募中・公開済み補助金の候補発見",
+          "補助金IDを指定した詳細参照"
+        ],
+        "not_sufficient_for": [
+          "自治体が実際に採択・活用した事実の確認",
+          "公募要領や交付要綱の本文確認を省略した政策判断"
+        ]
+      },
+      "persistence": {
+        "default": "live_with_cache",
+        "raw_response": "cache_with_fetched_at_and_content_hash",
+        "sqlite": "not_required_for_occasional_lookup",
+        "snapshot": "pin_selected_records_used_for_comparison_or_publication"
+      }
+    },
+    "municipal-budget-settlement-index": {
+      "title": "自治体公式サイトの予算・決算資料索引",
+      "publisher": "対象自治体",
+      "authority_level": "primary",
+      "source_type": "html_and_documents",
+      "public_access": true,
+      "documentation_url": null,
+      "attribution": {
+        "source_name": "自治体公式サイト",
+        "source_url_required": true
+      },
+      "access": {
+        "mode": "official_index_discovery",
+        "authentication": "none_or_human_handoff",
+        "endpoints": []
+      },
+      "use_boundary": {
+        "suitable_for": [
+          "予算書・決算書・説明資料の公式公表経路確認",
+          "文書候補と年度の棚卸し"
+        ],
+        "not_sufficient_for": [
+          "PDFを取得する前の利用者方針確認を省略すること",
+          "抽出値の差額ゼロ検算を省略すること"
+        ]
+      },
+      "persistence": {
+        "default": "diagnose_index_then_confirm",
+        "raw_response": "preserve_selected_official_documents",
+        "sqlite": "build_after_extraction_when_repeated_validation_or_comparison_is_needed",
+        "snapshot": "preserve_every_document_used_as_evidence"
+      }
+    }
+  }
+}

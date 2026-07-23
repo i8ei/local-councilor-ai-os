@@ -76,12 +76,23 @@ class RegulationsPipelineTests(unittest.TestCase):
             self.assertEqual(3, report["articles"])
             with sqlite3.connect(db) as connection:
                 hits = search.search_database(connection, "個人情報", 5)
-                pack = context_pack.build_context_pack(connection, "個人情報", 5, 20)
+                pack = context_pack.build_context_pack(
+                    connection,
+                    "個人情報",
+                    5,
+                    20,
+                    question="個人情報の取扱いは何条にあるか",
+                )
             self.assertGreaterEqual(len(hits), 1)
             self.assertEqual("架空町個人情報保護条例", hits[0]["title"])
             self.assertEqual(1, len(pack["items"]))
             self.assertTrue(pack["items"][0]["quote_is_verbatim"])
             self.assertLessEqual(pack["limits"]["quote_characters_used"], 20)
+            self.assertEqual("個人情報", pack["search"]["query"])
+            self.assertEqual(
+                "個人情報の取扱いは何条にあるか",
+                pack["question"],
+            )
 
 
 if __name__ == "__main__":

@@ -6,12 +6,21 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from bootstrap.cli.fiscal import parse_overview_xlsx
+from bootstrap.cli.fiscal import _display_raw_value, parse_overview_xlsx
 from bootstrap.cli.tests.fixtures import build_minimal_xlsx
 from bootstrap.cli.xlsx import read_workbook
 
 
 class XlsxFiscalTests(unittest.TestCase):
+    def test_raw_value_shortens_only_obvious_float_noise(self) -> None:
+        self.assertEqual("0.3", _display_raw_value("0.30000000000000004"))
+        self.assertEqual("15.4", _display_raw_value("15.399999999999999"))
+        self.assertEqual(
+            "1.2345678901234567",
+            _display_raw_value("1.2345678901234567"),
+        )
+        self.assertEqual("1,234.50", _display_raw_value("1,234.50"))
+
     def test_shared_strings_and_header_alias_fallback(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "fixture.xlsx"

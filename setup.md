@@ -6,6 +6,84 @@
 
 セットアップはAIエージェントとの対話で一段階ずつ進める。各段階は「確認、実行、検証、停止」で閉じ、次へ自動で進まない。開始前に作成先、既存物、外部通信、生成物、巻き戻し対象と理由を示し、明示承認を得る。実行時は作成記録を残す。同名ファイルは自動上書きせず、差分を示して承認された項目だけを統合する。不合格なら未完了として停止する。
 
+## 段階0 Obsidian・AI環境・権限
+
+### 確認
+
+最初に、利用者と一緒にObsidianを起動し、対象Vaultの名前と絶対パスを確認する。新規Vaultの作成、Obsidian CLIの有効化、Claude Code／Codexの基本設定、グローバルなSkillや権限設定は基盤側の`claude-obsidian-setup`が担当する。本リポジトリはそれらを自動で変更しない。
+
+既存環境へ統合する場合は、次を読み取り専用で診断する。
+
+```sh
+python3 -m onboarding diagnose \
+  --vault '/absolute/path/to/vault' \
+  --agent codex
+```
+
+Codexでは`AGENTS.override.md`があればそれを、なければ`AGENTS.md`を有効な指示として扱う。Claude Codeでは`CLAUDE.md`を確認する。Obsidian CLIは、Vault一覧、対象Vaultの絶対パス、対象Vaultを明示した検索疎通の三つが一致して初めて利用可能と判定する。
+
+権限は一括して「問題なし」と推測せず、少なくとも次を分けて確認する。
+
+| 権限・操作 | 導入前の扱い |
+|---|---|
+| 対象Vaultの読み書き | ホストOS上の可否と、AIクライアントのworkspace範囲を分ける |
+| リポジトリ内コマンドの実行 | 使用するAIクライアントの承認方式を確認する |
+| Obsidianアプリの起動・CLI操作 | OSやクライアントが都度確認する可能性を伝える |
+| 公式サイト・APIへの外部通信 | 選択した機能ごとに通信先を計画へ出す |
+| グローバル設定・Skill・パッケージ変更 | 本リポジトリでは自動実行しない |
+| 既存ファイルの上書き・統合・削除 | scaffoldの対象外。別の明示確認を要する |
+
+承認ダイアログの回数はAIクライアントと利用者設定に依存するため、CLIは正確な回数を断定しない。代わりに、通常の新規作成、別確認が必要な操作、予定される外部通信先を計画に分けて表示する。
+
+利用形態は次から選ぶ。
+
+| モード | 用途 |
+|---|---|
+| `integrate` | ObsidianとClaude Code／Codexが既に動く。不足するOS構成だけ追加する |
+| `full` | 基盤未整備。`claude-obsidian-setup`へ戻り、完了後に`integrate`で再診断する |
+| `components` | データCLIだけを選んで使う。OS全体の導入完了とは表示しない |
+| `diagnose` | 何も作らず、現状と不足だけ確認する |
+
+### 実行
+
+`integrate`の場合は、作成予定と権限プレビューを先に出す。
+
+```sh
+python3 -m onboarding plan \
+  --vault '/absolute/path/to/vault' \
+  --agent codex \
+  --mode integrate \
+  --features core,templates,workflows
+```
+
+表示された対象、競合、外部通信、`plan_sha256`を利用者が確認した後、同じ引数とSHA-256でscaffoldを作る。
+
+```sh
+python3 -m onboarding scaffold \
+  --vault '/absolute/path/to/vault' \
+  --agent codex \
+  --mode integrate \
+  --features core,templates,workflows \
+  --accept-plan-sha256 '<plan_sha256>'
+```
+
+実行直前に診断と計画を再作成し、SHA-256が一致しなければ停止する。異なる内容の既存ファイル、symlink、Vault外の対象は上書きや追従をせず停止する。作成結果はVault内の`.local-councilor-ai-os/runs/`へ記録する。
+
+### 検証
+
+返されたmanifestを指定して検証する。
+
+```sh
+python3 -m onboarding verify \
+  --manifest '/absolute/path/to/vault/.local-councilor-ai-os/runs/<run-id>.json'
+```
+
+8つの棚、各MOCの`description`、OS専用MOCからの接続、テンプレート、artifactのSHA-256、Obsidian CLI疎通を確認する。scaffoldが正しくても、本人情報と自治体固有の議会運用が未確認なら`profile_status: incomplete`のまま段階1へ渡す。
+
+### 中止・巻き戻し
+
+基盤不足なら何も作らず`claude-obsidian-setup`へハンドオフする。scaffold後に戻す必要がある場合はmanifestの`action: create`だけを人が確認して退避候補にする。`action: reuse`、既存の入口MOC、AI指示ファイル、基盤側の設定は巻き戻し対象にしない。
+
 ## 段階1 議員業務プロファイル
 
 ### 確認
@@ -82,6 +160,15 @@ AIエージェントは、日常業務のどの合図で[ワークフロー](wor
 
 アプリケーションIDは環境変数として実行時だけ渡し、ノート、実行報告、キャッシュ、データベースへ書かない。ユーザーID、メールアドレス、アプリケーションIDの画面をセットアップ記録へ貼らない。
 
+参照可能なAPIと保存方針はsource registryで確認できる。
+
+```sh
+python3 -m bootstrap.cli.sources list
+python3 -m bootstrap.cli.sources show jgrants-public-api
+```
+
+e-StatとJグランツは都度参照＋取得時刻・hashつきcacheを既定とする。一度だけの確認にSQLiteは必須ではない。反復検索、複数原典の結合、年度比較、差額検算が必要になった時だけ正規化SQLiteを作り、対外利用したレコードはsnapshotを固定する。Jグランツは補助金候補の発見に使えるが、自治体が実際に採択・活用した事実や、公募要領・交付要綱の本文確認を代替しない。
+
 ### 実行
 
 [自治体ブートストラップ](bootstrap/README.md)のCLIを新規出力先へ実行する。自治体名の候補が複数なら都道府県ヒントを求めて停止する。成功すると自治体DBと`authority_map.yaml`ができる。後者は値の複製ではなく、指標と利用目的から公式原典とDB位置を選ぶ裁定表である。
@@ -142,10 +229,16 @@ python3 modules/minutes-db/detect.py '公式議会ページURL'
 python3 modules/minutes-db/ingest.py \
   --adapter static \
   --config minutes-static.json \
+  --limit 20 \
+  --dry-run
+python3 modules/minutes-db/ingest.py \
+  --adapter static \
+  --config minutes-static.json \
   --db minutes.db \
   --limit 10
 python3 modules/minutes-db/search.py '防災' --db minutes.db --k 10
-python3 modules/minutes-db/context_pack.py '防災計画の見直し' \
+python3 modules/minutes-db/context_pack.py '防災' \
+  --question '地域防災計画はいつ見直されたか' \
   --db minutes.db \
   --k 5 \
   --char-budget 6000
@@ -159,7 +252,8 @@ python3 modules/regulations/ingest.py \
   --db regulations.db \
   --limit 20
 python3 modules/regulations/search.py '個人情報' --db regulations.db --k 10
-python3 modules/regulations/context_pack.py '個人情報の取扱い' \
+python3 modules/regulations/context_pack.py '個人情報' \
+  --question '個人情報の取扱いは何条にあるか' \
   --db regulations.db \
   --k 5 \
   --char-budget 6000
@@ -179,7 +273,14 @@ python3 modules/regulations/context_pack.py '個人情報の取扱い' \
 
 ### 確認
 
-対象資料が当初予算、補正予算、現計予算のどれかを確認する。対象年度、会計名、議案番号、ページ範囲、原表単位、PDFページと印刷ページの対応、外部AIへ送ってよい資料かを確認する。
+最初に自治体公式サイトの索引だけを診断し、予算・決算の候補を列挙する。この時点では文書を取得しない。
+
+```sh
+python3 -m bootstrap.cli.local_documents diagnose \
+  --index-url '自治体公式の予算・決算索引URL'
+```
+
+候補を見て、今は見送る、1〜3件だけPDF品質と抽出経路を試す、年度・会計・種類を限定する、必要範囲を全件取り込む、のいずれかを利用者が選ぶ。その後、対象資料が当初予算、補正予算、現計予算のどれかを確認する。対象年度、会計名、議案番号、ページ範囲、原表単位、PDFページと印刷ページの対応、外部AIへ送ってよい資料かを確認する。
 
 ### 実行
 
@@ -211,7 +312,7 @@ python3 modules/budget-review/insights.py budget.db
 
 ### 確認
 
-対象資料が公式公開資料か、内部資料か、要配慮資料かを先に分類する。対象年度、会計名、ページ範囲、原表単位、PDFページと印刷ページの対応、外部AIへ送ってよい資料かを確認する。非公開資料は公開用DBへ混ぜず、公開成果物では公式公開資料で再検証できる問いへ変換する。
+段階5で索引診断をしていない場合は、同じ`bootstrap.cli.local_documents diagnose`で決算候補まで確認し、文書取得の範囲を利用者が選ぶ。対象資料が公式公開資料か、内部資料か、要配慮資料かを先に分類する。対象年度、会計名、ページ範囲、原表単位、PDFページと印刷ページの対応、外部AIへ送ってよい資料かを確認する。非公開資料は公開用DBへ混ぜず、公開成果物では公式公開資料で再検証できる問いへ変換する。
 
 ### 実行
 

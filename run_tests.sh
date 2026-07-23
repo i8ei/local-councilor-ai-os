@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Run every test suite in the repository from one entry point.
-# Root `python3 -m unittest discover` only finds bootstrap tests because
+# Root `python3 -m unittest discover` finds package tests, while
 # `modules/` is not a package and its subdirectories use hyphenated names,
 # so per-module suites must be invoked explicitly to avoid silent skips.
 set -euo pipefail
@@ -24,8 +24,8 @@ run_suite() {
   echo
 }
 
-# Tier 0-1 bootstrap CLI (a real package, discoverable from the repo root).
-run_suite "bootstrap" python3 -m unittest discover -v
+# Package suites: onboarding and Tier 0-1 bootstrap CLI.
+run_suite "package tests" python3 -m unittest discover -v
 
 # Per-module suites. Each module runs from its own directory so that
 # sibling-relative imports (adapters, search, ingest, ...) resolve.

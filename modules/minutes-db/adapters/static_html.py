@@ -11,7 +11,7 @@ import tempfile
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
-from urllib.parse import urljoin, urlparse
+from urllib.parse import unquote, urljoin, urlparse
 
 from .base import Adapter, FetchResult, polite_fetch
 
@@ -330,6 +330,13 @@ class StaticHtmlAdapter(Adapter):
         self.config = self._validate_config(config)
         self.cache_dir = Path(cache_dir) if cache_dir is not None else None
         self._meetings: dict[str, dict[str, Any]] = {}
+        self._discovery_candidates: list[dict[str, Any]] = []
+
+    @property
+    def discovery_candidates(self) -> list[dict[str, Any]]:
+        """Return the most recent discovery decisions without mutable internals."""
+
+        return [dict(item) for item in self._discovery_candidates]
 
     @classmethod
     def from_config(
@@ -414,6 +421,7 @@ class StaticHtmlAdapter(Adapter):
         results: list[dict[str, Any]] = []
         seen: set[str] = set()
         followed: set[str] = set()
+        self._discovery_candidates = []
 
         def parse_links(fetched: FetchResult) -> list[tuple[str, str]]:
             parser = _DocumentParser()
@@ -430,10 +438,17 @@ class StaticHtmlAdapter(Adapter):
             source_url = parsed._replace(fragment="").geturl()
             return source_url, urlparse(source_url)
 
+        def matches(pattern: re.Pattern[str], source_url: str, label: str) -> bool:
+            return bool(
+                pattern.search(source_url)
+                or pattern.search(unquote(source_url))
+                or pattern.search(label)
+            )
+
         def is_excluded(source_url: str, label: str) -> bool:
             return bool(
                 exclude
-                and (exclude.search(source_url) or exclude.search(label))
+                and matches(exclude, source_url, label)
             )
 
         def discover_from(
@@ -444,28 +459,80 @@ class StaticHtmlAdapter(Adapter):
                 if normalized is None:
                     continue
                 source_url, parsed = normalized
-                if include and not (
-                    include.search(source_url) or include.search(label)
-                ):
+                is_pdf = parsed.path.lower().endswith(".pdf")
+                if include and not matches(include, source_url, label):
+                    if is_pdf == self.config["pdf"]:
+                        self._discovery_candidates.append(
+                            {
+                                "source_url": source_url,
+                                "label": label,
+                                "discovered_from": fetched.final_url,
+                                "reason": "excluded_by_regex",
+                                "rule": "link_include_regex",
+                            }
+                        )
                     continue
                 if is_excluded(source_url, label):
+                    self._discovery_candidates.append(
+                        {
+                            "source_url": source_url,
+                            "label": label,
+                            "discovered_from": fetched.final_url,
+                            "reason": "excluded_by_regex",
+                            "rule": "link_exclude_regex",
+                        }
+                    )
                     continue
-                is_pdf = parsed.path.lower().endswith(".pdf")
                 if is_pdf != self.config["pdf"]:
+                    self._discovery_candidates.append(
+                        {
+                            "source_url": source_url,
+                            "label": label,
+                            "discovered_from": fetched.final_url,
+                            "reason": "format_mismatch",
+                            "expected_format": (
+                                "pdf" if self.config["pdf"] else "html"
+                            ),
+                        }
+                    )
                     continue
                 if source_url in seen:
+                    self._discovery_candidates.append(
+                        {
+                            "source_url": source_url,
+                            "label": label,
+                            "discovered_from": fetched.final_url,
+                            "reason": "duplicate",
+                        }
+                    )
                     continue
                 seen.add(source_url)
                 meeting_id = _stable_id("meeting", source_url)
+                decoded_filename = Path(unquote(parsed.path)).name
+                generic_pdf_label = bool(
+                    re.fullmatch(r"\s*[（(]?\s*PDF[^）)]*[）)]?\s*", label, re.I)
+                )
                 ref = {
                     "meeting_id": meeting_id,
                     "source_url": source_url,
-                    "meeting_name": label or Path(parsed.path).name or source_url,
+                    "meeting_name": (
+                        decoded_filename
+                        if not label or generic_pdf_label
+                        else label
+                    )
+                    or source_url,
                     "discovered_from": fetched.final_url,
                     "is_pdf": is_pdf,
                 }
                 self._meetings[meeting_id] = ref
                 results.append(ref)
+                self._discovery_candidates.append(
+                    {
+                        **ref,
+                        "label": label,
+                        "reason": "selected",
+                    }
+                )
                 if limit is not None and len(results) >= limit:
                     return True
             return False
@@ -482,7 +549,7 @@ class StaticHtmlAdapter(Adapter):
                 if normalized is None:
                     continue
                 follow_url, _ = normalized
-                if not (follow.search(follow_url) or follow.search(label)):
+                if not matches(follow, follow_url, label):
                     continue
                 if is_excluded(follow_url, label) or follow_url in followed:
                     continue
