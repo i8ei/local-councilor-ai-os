@@ -1,0 +1,33 @@
+# OS files
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# SQLite runtime artifacts and generated databases
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Local caches and fetched originals
+.cache/
+cache/
+tmp/
+
+# Sensitive local working data
+internal/
+private/
+originals/
+
+# Local environment files
+.env
+.env.*
+!.env.example

@@ -1,0 +1,44 @@
+# Placeholder-only profile for councilor-specific operating preferences.
+# Replace placeholders locally; do not commit personal or sensitive values.
+
+schema_version: "<schema-version>"
+
+council:
+  role: "<council-role>"
+  term:
+    starts_on: "<YYYY-MM-DD>"
+    ends_on: "<YYYY-MM-DD>"
+  committees:
+    standing: []
+    special: []
+    other: []
+
+policy:
+  priority_areas: []
+  watch_topics: []
+  excluded_topics: []
+
+working_style:
+  decision_owner: "<decision-owner>"
+  review_cadence: "<review-cadence>"
+  preferred_note_granularity: "<note-granularity>"
+  ai_assistance_scope: []
+
+notice_format:
+  preferred_structure: []
+  max_length: null
+  citation_style: "<citation-style>"
+  number_format: "<number-format>"
+  date_format: "<date-format>"
+  tone: "<tone>"
+
+external_output:
+  channels: []
+  required_reviewers: []
+  require_manual_send_approval: null
+  require_four_item_number_set: null
+
+privacy:
+  internal_information_policy: "<internal-information-policy-reference>"
+  pii_policy: "<pii-policy-reference>"
+  default_context_classification: "<classification>"

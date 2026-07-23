@@ -1,0 +1,50 @@
+# Placeholder schema for routing an indicator and use case to authoritative sources.
+# Keep source definitions in source_registry.example.yaml and reference them by ID.
+# Discover downloadable files from official index pages; never derive opaque file URLs.
+
+schema_version: "<schema-version>"
+generated_at: "<ISO-8601-datetime>"
+
+indicators:
+  "<indicator-id>":
+    label: "<indicator-label>"
+    description: "<indicator-description>"
+    canonical_unit: "<unit>"
+    definition_reference: "<source-id>#<locator-id>"
+    use_cases:
+      "<use-case-id>":
+        primary:
+          source_id: "<source-id>"
+          locator_id: "<locator-id>"
+          dataset_id: "<dataset-id-or-null>"
+          table_id: "<table-id-or-null>"
+          field: "<field-or-column-name>"
+          geography_code:
+            system: "<code-system>"
+            width: null
+            normalization: "<normalization-rule>"
+          time_basis: "<fiscal-year-or-calendar-year-rule>"
+          unit: "<source-unit>"
+        cross_checks:
+          - source_id: "<source-id>"
+            locator_id: "<locator-id>"
+            field: "<field-or-column-name>"
+            comparison_rule: "<comparison-rule>"
+            tolerance: "<tolerance-or-null>"
+        transformations:
+          - operation: "<operation>"
+            expression: "<deterministic-expression>"
+            output_unit: "<unit>"
+        verification:
+          required_state: "<verified-or-reconciled>"
+          required_checks: []
+        caveats: []
+
+defaults:
+  missing_value_policy: "<policy>"
+  stale_after: "<duration>"
+  external_use_requires:
+    - "value"
+    - "as_of"
+    - "definition"
+    - "source"

@@ -1,0 +1,60 @@
+# Placeholder schema for official source discovery and provenance.
+# Store stable index-page routes, not guessed or hardcoded opaque download URLs.
+# Download URLs belong to fetch records because they may change between releases.
+
+schema_version: "<schema-version>"
+updated_at: "<ISO-8601-datetime>"
+
+sources:
+  "<source-id>":
+    title: "<official-source-title>"
+    publisher: "<official-publisher>"
+    legal_basis: []
+    source_type: "<api-or-html-or-xlsx-or-csv-or-pdf>"
+    authority_level: "<primary-or-cross-check>"
+    public_access: null
+    terms_url: "<official-terms-page-url>"
+    coverage:
+      geography: "<coverage>"
+      time: "<coverage>"
+      subject: "<coverage>"
+    locators:
+      "<locator-id>":
+        purpose: "<discovery-purpose>"
+        index_url: "<official-index-page-url>"
+        discovery:
+          method: "<api-or-link-selection>"
+          selector_or_rule: "<machine-readable-selection-rule>"
+          expected_media_type: "<media-type>"
+          filename_pattern: "<pattern-or-null>"
+          release_label_pattern: "<pattern-or-null>"
+        request:
+          method: "<GET-or-POST>"
+          authentication: "<none-or-supported-method>"
+          parameters: {}
+        response:
+          code_system: "<municipality-code-system-or-null>"
+          code_width: null
+          encoding: "<encoding-or-null>"
+          sheet_selection: "<sheet-rule-or-null>"
+          header_detection: "<header-rule-or-null>"
+        validation:
+          required_columns: []
+          minimum_expected_rows: null
+          checksum_policy: "<policy>"
+          structural_checks: []
+        update:
+          cadence: "<cadence>"
+          discovery_required_each_run: null
+          freshness_rule: "<rule>"
+        caveats: []
+
+fetch_record_contract:
+  fetched_at: "<ISO-8601-datetime>"
+  locator_id: "<locator-id>"
+  discovered_from: "<official-index-page-url>"
+  resolved_url: "<download-or-api-url-at-fetch-time>"
+  release_label: "<release-label>"
+  media_type: "<media-type>"
+  content_hash: "<algorithm>:<digest>"
+  status: "<discovered-or-verified-or-rejected>"
