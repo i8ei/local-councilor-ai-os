@@ -1,0 +1,21 @@
+{
+  "_comment": {
+    "layout": "1年度の索引ページから各定例会・臨時会のページへ進み、その先に日別・議題別の会議録PDFが並ぶ二段構成向けです。追跡はこの1段だけで、再帰しません。",
+    "replace": [
+      "index_urlを、各会期ページへのリンクが並ぶ年度索引ページのURLに置き換えてください。",
+      "council_nameを、対象の議会名に置き換えてください。"
+    ],
+    "common_exclude_patterns": "概要・要約・次第・議案・資料・日程・予定、およびsummary・agenda・scheduleを、会期ページとPDFの両方で除外します。",
+    "after_limit_2": [
+      "取込結果のmeetingsが1〜2件で、source_urlが会期ページではなくPDFを指していること。",
+      "意図した定例会・臨時会を経由し、概要・日程・予定のPDFが混入していないこと。",
+      "原文に実際にある語を2つ検索し、少なくとも1件を画面上の元PDFと照合すること。"
+    ]
+  },
+  "index_url": "https://www.example.jp/gikai/minutes/reiwa8/",
+  "follow_link_regex": "(令和|平成|昭和).*(定例会|臨時会)|(?i:(session|meeting)[-_]?\\d+)",
+  "link_include_regex": "\\.pdf$",
+  "link_exclude_regex": "(?i)(summary|agenda|schedule|概要|要約|次第|議案|資料|日程|予定)",
+  "pdf": true,
+  "council_name": "例示町議会"
+}

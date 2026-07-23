@@ -360,7 +360,11 @@ class StaticHtmlAdapter(Adapter):
         ):
             raise ValueError("config.index_url must be a URL or a non-empty URL list")
         validated["index_url"] = index_urls
-        for key in ("link_include_regex", "link_exclude_regex"):
+        for key in (
+            "link_include_regex",
+            "link_exclude_regex",
+            "follow_link_regex",
+        ):
             value = validated.get(key)
             if value is not None and not isinstance(value, str):
                 raise ValueError(f"config.{key} must be a string")
@@ -377,7 +381,11 @@ class StaticHtmlAdapter(Adapter):
     def detect_capabilities(self) -> dict[str, Any]:
         return {
             "adapter": self.adapter_name,
-            "meeting_discovery": "configured_index",
+            "meeting_discovery": (
+                "configured_index_one_level"
+                if self.config.get("follow_link_regex")
+                else "configured_index"
+            ),
             "formats": ["pdf"] if self.config["pdf"] else ["html"],
             "speaker_segmentation": "heuristic_with_fallback",
             "pdf_text_extractor": shutil.which("pdftotext"),
@@ -398,29 +406,53 @@ class StaticHtmlAdapter(Adapter):
             if self.config.get("link_exclude_regex")
             else None
         )
+        follow = (
+            re.compile(self.config["follow_link_regex"])
+            if self.config.get("follow_link_regex")
+            else None
+        )
         results: list[dict[str, Any]] = []
         seen: set[str] = set()
-        for index_url in self.config["index_url"]:
-            fetched = polite_fetch(index_url, cache_dir=self.cache_dir)
+        followed: set[str] = set()
+
+        def parse_links(fetched: FetchResult) -> list[tuple[str, str]]:
             parser = _DocumentParser()
             parser.feed(fetched.text())
-            for href, label in parser.links:
-                source_url = urljoin(fetched.final_url, href)
-                parsed = urlparse(source_url)
-                if parsed.scheme not in {"http", "https"}:
+            return parser.links
+
+        def normalized_link(
+            fetched: FetchResult, href: str
+        ) -> tuple[str, Any] | None:
+            source_url = urljoin(fetched.final_url, href)
+            parsed = urlparse(source_url)
+            if parsed.scheme not in {"http", "https"}:
+                return None
+            source_url = parsed._replace(fragment="").geturl()
+            return source_url, urlparse(source_url)
+
+        def is_excluded(source_url: str, label: str) -> bool:
+            return bool(
+                exclude
+                and (exclude.search(source_url) or exclude.search(label))
+            )
+
+        def discover_from(
+            fetched: FetchResult, links: list[tuple[str, str]]
+        ) -> bool:
+            for href, label in links:
+                normalized = normalized_link(fetched, href)
+                if normalized is None:
                     continue
+                source_url, parsed = normalized
                 if include and not (
                     include.search(source_url) or include.search(label)
                 ):
                     continue
-                if exclude and (
-                    exclude.search(source_url) or exclude.search(label)
-                ):
+                if is_excluded(source_url, label):
                     continue
                 is_pdf = parsed.path.lower().endswith(".pdf")
                 if is_pdf != self.config["pdf"]:
                     continue
-                source_url = parsed._replace(fragment="").geturl()
                 if source_url in seen:
                     continue
                 seen.add(source_url)
@@ -435,6 +467,30 @@ class StaticHtmlAdapter(Adapter):
                 self._meetings[meeting_id] = ref
                 results.append(ref)
                 if limit is not None and len(results) >= limit:
+                    return True
+            return False
+
+        for index_url in self.config["index_url"]:
+            fetched = polite_fetch(index_url, cache_dir=self.cache_dir)
+            links = parse_links(fetched)
+            if discover_from(fetched, links):
+                return results
+            if follow is None:
+                continue
+            for href, label in links:
+                normalized = normalized_link(fetched, href)
+                if normalized is None:
+                    continue
+                follow_url, _ = normalized
+                if not (follow.search(follow_url) or follow.search(label)):
+                    continue
+                if is_excluded(follow_url, label) or follow_url in followed:
+                    continue
+                followed.add(follow_url)
+                follow_result = polite_fetch(
+                    follow_url, cache_dir=self.cache_dir
+                )
+                if discover_from(follow_result, parse_links(follow_result)):
                     return results
         return results
 

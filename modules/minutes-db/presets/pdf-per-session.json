@@ -1,0 +1,20 @@
+{
+  "_comment": {
+    "layout": "「令和N年第M回定例会」のような会期ページを開くと、日別・議題別の会議録PDFが直接並ぶ構成向けです。",
+    "replace": [
+      "index_urlを、その会期ページのURLに置き換えてください。",
+      "council_nameを、対象の議会名に置き換えてください。"
+    ],
+    "common_exclude_patterns": "概要・要約・次第・議案・資料・日程・予定、およびsummary・agenda・scheduleを除外します。",
+    "after_limit_2": [
+      "取込結果のmeetingsが1〜2件で、statusesが失敗状態になっていないこと。",
+      "PDFではspeechesが0件ならpdftotextの有無と、画像PDFでないかを確認すること。",
+      "原文に実際にある語を2つ検索し、少なくとも1件を画面上の元PDFと照合すること。"
+    ]
+  },
+  "index_url": "https://www.example.jp/gikai/meetings/reiwa8-session1/",
+  "link_include_regex": "\\.pdf$",
+  "link_exclude_regex": "(?i)(summary|agenda|schedule|概要|要約|次第|議案|資料|日程|予定)",
+  "pdf": true,
+  "council_name": "例示町議会"
+}

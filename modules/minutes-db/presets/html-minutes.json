@@ -1,0 +1,20 @@
+{
+  "_comment": {
+    "layout": "会議録一覧ページから、○議長・○○君などの話者表示を含むHTML本文ページへ直接リンクする構成向けです。",
+    "replace": [
+      "index_urlを、HTML会議録へのリンクが並ぶ一覧ページのURLに置き換えてください。",
+      "council_nameを、対象の議会名に置き換えてください。"
+    ],
+    "common_exclude_patterns": "概要・要約・次第・議案・資料・日程・予定、およびsummary・agenda・scheduleを除外します。",
+    "after_limit_2": [
+      "取込結果のmeetingsが1〜2件で、speechesが0件ではないこと。",
+      "検索結果のspeakerと本文の区切りが、元ページの話者表示に対応していること。",
+      "原文に実際にある語を2つ検索し、少なくとも1件を画面上の元HTMLと照合すること。"
+    ]
+  },
+  "index_url": "https://www.example.jp/gikai/minutes/",
+  "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|minutes|kaigiroku|gijiroku)",
+  "link_exclude_regex": "(?i)(summary|agenda|schedule|概要|要約|次第|議案|資料|日程|予定)",
+  "pdf": false,
+  "council_name": "例示町議会"
+}
