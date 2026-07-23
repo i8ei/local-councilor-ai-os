@@ -6,7 +6,14 @@ import os
 import unittest
 from unittest.mock import patch
 
-from bootstrap.cli.census import FALLBACK_TABLES, discover_tables, fetch_census
+from bootstrap.cli.census import (
+    FALLBACK_TABLES,
+    CensusError,
+    _api_get,
+    _check_result,
+    discover_tables,
+    fetch_census,
+)
 from bootstrap.cli.http import FetchError
 from bootstrap.cli.tests.fixtures import FakeEStatClient
 
@@ -19,7 +26,31 @@ class FailingEStatClient:
         raise FetchError("synthetic discovery failure")
 
 
+class ForbiddenEStatClient:
+    offline = False
+
+    def fetch(self, *_args: object, **_kwargs: object) -> object:
+        raise FetchError("取得に失敗しました: HTTP 403")
+
+
 class CensusTests(unittest.TestCase):
+    def test_status_100_explains_api_feature_activation(self) -> None:
+        with self.assertRaisesRegex(CensusError, "API機能.*チェック"):
+            _check_result(
+                {"RESULT": {"STATUS": 100, "ERROR_MSG": "認証に失敗しました"}},
+                "getStatsList",
+            )
+
+    @patch.dict(os.environ, {"ESTAT_APPID": "test-secret"}, clear=False)
+    def test_http_403_explains_api_feature_activation(self) -> None:
+        with self.assertRaisesRegex(CensusError, "API機能.*チェック"):
+            _api_get(
+                ForbiddenEStatClient(),
+                "getStatsList",
+                {"statsCode": "00200521"},
+                cache_label="auth-check",
+            )
+
     @patch.dict(os.environ, {"ESTAT_APPID": "test-secret"}, clear=False)
     def test_dynamic_tables_share_one_survey_date(self) -> None:
         result = fetch_census(
