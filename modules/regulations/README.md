@@ -52,8 +52,12 @@ python3 vendor_greiki.py \
   --base-url "https://www1.g-reiki.net/<tenant>/" \
   --db regulations.db \
   --source-name "○○自治体例規集" \
-  --limit 3
+  --limit 3 \
+  --manifest-dir '/path/to/vault/.local-councilor-ai-os/runs/regulations'
 ```
+
+`ingest.py`と`vendor_greiki.py`はいずれも`--manifest-dir`を受け付け、成功・失敗を
+共通run manifestへ記録します。
 
 アダプターは次の順に処理します。
 

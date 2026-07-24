@@ -16,7 +16,7 @@ Run manifestは、データ取得・変換・scaffoldの各実行について、
 | `product` | `local-councilor-ai-os` |
 | `source_revision` | 実行したリポジトリのcommit。既存互換のためトップレベルに保持 |
 | `run_id` | 上書きしない実行ID |
-| `run_type` | `onboarding`、`bootstrap`、`minutes`等。旧manifestでは省略可能 |
+| `run_type` | `onboarding`、`bootstrap`、`minutes`、`regulations`、`benchmark`、`budget`、`settlement`等。旧manifestでは省略可能 |
 | `status` | run自体の状態。旧onboarding語彙もreaderが解釈する |
 | `started_at` / `finished_at` | UTC ISO 8601 |
 | `target` / `scope` | Vault、自治体、対象期間、会計等 |
@@ -25,10 +25,28 @@ Run manifestは、データ取得・変換・scaffoldの各実行について、
 | `checks` | integrity、検算、対象Vault確認等 |
 | `warnings` / `failures` | 未解決事項と失敗 |
 
+取得を伴うrunは、可能な場合に`retrieval`へcache directory、offline／refresh、
+live request数、cache hit／miss、取得元別内訳、最新性をこのrunで再確認したかを記録する。
+秘密値を含むquery parameterはredactする。
+
+## モジュール固有のready条件
+
+`lcaios status`は成功manifestの出力hashとSQLite integrityに加え、次のcheckを要求する。
+
+| `run_type` | 必須check |
+|---|---|
+| `minutes` | `meeting_rows` |
+| `regulations` | `document_rows` |
+| `benchmark` | `municipality_rows` |
+| `budget` | `budget_reconciliation` |
+| `settlement` | `settlement_reconciliation` |
+
+予算・決算は取込だけではreadyにならず、`verify_totals.py`が成功したrun manifestが必要である。
+
 ## 状態の扱い
 
 - `running`は完了とみなさない。
-- `failed`は過去の最新成功runを無効化しない。
+- `failed`は過去の最新成功runを無効化しない。最新runの失敗は警告し、成功runが一度もなければ`blocked`とする。
 - onboardingの`status: incomplete`は、`scaffold_status: complete`と`profile_status: incomplete`を分けて解釈する。
 - artifactごとに最新の完了runを候補とし、現在のhashと一致しない場合は`modified_after_run`相当としてreadyにしない。
 
@@ -37,4 +55,3 @@ Run manifestは、データ取得・変換・scaffoldの各実行について、
 - 環境変数は値を保存せず、`present`または`missing`だけを記録する。
 - URLの認証queryは既存HTTP層と同じredaction規則を使う。
 - cache、DB、manifestへ`ESTAT_APPID`等の生値を保存しない。
-

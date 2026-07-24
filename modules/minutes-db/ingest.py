@@ -11,8 +11,19 @@ import sys
 from pathlib import Path
 from typing import Any
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 from adapters.kaigiroku_net import KaigirokuNetAdapter
 from adapters.static_html import StaticHtmlAdapter
+from lcaios.module_manifest import (
+    begin_module_run,
+    fail_module_run,
+    finish_database_run,
+    finish_dry_run,
+    input_file_record,
+)
 
 MODULE_DIR = Path(__file__).resolve().parent
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
@@ -259,17 +270,76 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="List static candidates without fetching meeting bodies or creating a DB",
     )
+    parser.add_argument("--manifest-dir", type=Path)
+    parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
+    manifest_path: Path | None = None
+    manifest: dict[str, Any] | None = None
     try:
+        manifest_path, manifest = begin_module_run(
+            args.manifest_dir,
+            run_type="minutes",
+            repo_root=REPO_ROOT,
+            run_id=args.run_id,
+            requested={
+                "adapter": args.adapter,
+                "url": args.url,
+                "config": args.config,
+                "database": args.db,
+                "limit": args.limit,
+                "cache_directory": args.cache_dir,
+                "dry_run": args.dry_run,
+            },
+        )
         result = ingest(args)
     except (OSError, ValueError, RuntimeError, sqlite3.Error) as exc:
+        fail_module_run(manifest_path, manifest, exc)
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
+    if args.dry_run:
+        finish_dry_run(
+            manifest_path,
+            manifest,
+            scope={"adapter": args.adapter, "action": "dry_run"},
+            coverage={
+                "selected_meetings": len(result["selected_meetings"]),
+                "candidates": len(result["candidates"]),
+            },
+        )
+    else:
+        inputs = (
+            [input_file_record(args.config, kind="minutes_adapter_config")]
+            if args.config
+            else []
+        )
+        finish_database_run(
+            manifest_path,
+            manifest,
+            database=result["database"],
+            artifact_kind="minutes_database",
+            scope={"adapter": args.adapter, "action": "ingest"},
+            coverage={
+                "meetings": result["meetings"],
+                "speeches": result["speeches"],
+                "statuses": result["statuses"],
+                "fts_tokenizer": result["fts_tokenizer"],
+            },
+            inputs=inputs,
+            checks=[
+                {
+                    "name": "meeting_rows",
+                    "status": "passed" if result["meetings"] > 0 else "failed",
+                    "detail": result["meetings"],
+                }
+            ],
+        )
+    if manifest_path is not None:
+        result["manifest"] = str(manifest_path)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
 

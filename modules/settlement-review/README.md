@@ -47,13 +47,19 @@ python3 modules/settlement-review/csv_templates.py expenditure > expenditure.csv
 ## SQLiteへの取込
 
 ```sh
-python3 modules/settlement-review/ingest_csv.py summary summary.csv --db settlement.db
-python3 modules/settlement-review/ingest_csv.py revenue revenue.csv --db settlement.db
-python3 modules/settlement-review/ingest_csv.py expenditure expenditure.csv --db settlement.db
-python3 modules/settlement-review/verify_totals.py settlement.db
+python3 modules/settlement-review/ingest_csv.py summary summary.csv --db settlement.db \
+  --manifest-dir '/path/to/vault/.local-councilor-ai-os/runs/settlement'
+python3 modules/settlement-review/ingest_csv.py revenue revenue.csv --db settlement.db \
+  --manifest-dir '/path/to/vault/.local-councilor-ai-os/runs/settlement'
+python3 modules/settlement-review/ingest_csv.py expenditure expenditure.csv --db settlement.db \
+  --manifest-dir '/path/to/vault/.local-councilor-ai-os/runs/settlement'
+python3 modules/settlement-review/verify_totals.py settlement.db \
+  --manifest-dir '/path/to/vault/.local-councilor-ai-os/runs/settlement'
 ```
 
 CSVを読み込むのは `ingest_csv.py` だが、検索、検算、分析候補生成の作業対象はSQLiteである。`ingest_csv.py` は整数列のカンマ、`△`、Unicode minusを正規化し、既存行は一意キーで更新する。ここで検証済みに昇格するわけではない。差額ゼロ検算と人の原典確認を通した後に `reconciled` として扱う。
+`lcaios status`で`module_ready:settlement`にするには、取込manifestだけでなく、
+`settlement_reconciliation`が成功した検算manifestが必要である。
 
 ## 分析候補
 

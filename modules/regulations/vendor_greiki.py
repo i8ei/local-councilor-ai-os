@@ -16,6 +16,9 @@ from pathlib import Path
 from typing import Any, Callable
 
 MODULE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = MODULE_DIR.parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 MINUTES_MODULE = MODULE_DIR.parent / "minutes-db"
 if str(MINUTES_MODULE) not in sys.path:
     sys.path.insert(0, str(MINUTES_MODULE))
@@ -36,6 +39,11 @@ from ingest import (  # noqa: E402
     segment_articles,
     stable_id,
     store_document,
+)
+from lcaios.module_manifest import (  # noqa: E402
+    begin_module_run,
+    fail_module_run,
+    finish_database_run,
 )
 
 
@@ -543,6 +551,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--source-name", help="Official source label stored in the DB")
     parser.add_argument("--limit", type=int, help="Document limit for verification runs")
     parser.add_argument("--cache-dir", help="Override local cache directory")
+    parser.add_argument("--manifest-dir", type=Path)
+    parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
 
 
@@ -557,7 +567,23 @@ def main(argv: list[str] | None = None) -> int:
             file=sys.stderr,
         )
         return 2
+    manifest_path: Path | None = None
+    manifest: dict[str, Any] | None = None
     try:
+        manifest_path, manifest = begin_module_run(
+            args.manifest_dir,
+            run_type="regulations",
+            repo_root=REPO_ROOT,
+            run_id=args.run_id,
+            requested={
+                "adapter": "g-reiki",
+                "base_url": args.base_url,
+                "database": args.db,
+                "source_name": args.source_name,
+                "limit": args.limit,
+                "cache_directory": args.cache_dir,
+            },
+        )
         result = ingest_greiki(
             args.base_url,
             args.db,
@@ -566,14 +592,40 @@ def main(argv: list[str] | None = None) -> int:
             limit=args.limit,
         )
     except StructureMismatchError as exc:
+        fail_module_run(manifest_path, manifest, exc)
         error = {"status": exc.status, "error": str(exc)}
     except RobotsDeniedError as exc:
+        fail_module_run(manifest_path, manifest, exc)
         error = {"status": "robots_denied", "error": str(exc)}
     except RobotsUnavailableError as exc:
+        fail_module_run(manifest_path, manifest, exc)
         error = {"status": "robots_unavailable", "error": str(exc)}
     except (FetchError, OSError, ValueError, RuntimeError, sqlite3.Error) as exc:
+        fail_module_run(manifest_path, manifest, exc)
         error = {"status": "error", "error": str(exc)}
     else:
+        finish_database_run(
+            manifest_path,
+            manifest,
+            database=result["database"],
+            artifact_kind="regulations_database",
+            scope={"adapter": "g-reiki", "action": "ingest"},
+            coverage={
+                "documents": result["documents"],
+                "articles": result["articles"],
+                "statuses": result["statuses"],
+                "fts_tokenizer": result["fts_tokenizer"],
+            },
+            checks=[
+                {
+                    "name": "document_rows",
+                    "status": "passed" if result["documents"] > 0 else "failed",
+                    "detail": result["documents"],
+                }
+            ],
+        )
+        if manifest_path is not None:
+            result["manifest"] = str(manifest_path)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     print(json.dumps(error, ensure_ascii=False), file=sys.stderr)

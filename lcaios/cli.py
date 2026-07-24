@@ -17,6 +17,7 @@ from .lifecycle import (
     restore_database,
 )
 from .output_check import check_output_file
+from .smoke_test import SmokeTestError, run_bootstrap_smoke_test
 from .status import REQUIREMENTS, build_status, requirements_met
 
 
@@ -59,6 +60,8 @@ def render_markdown(report: dict[str, Any]) -> str:
         "profile_ready": report["profile"].get("detail", ""),
         "tier1_data_ready": report["bootstrap"].get("detail", ""),
     }
+    for name, module in report.get("modules", {}).items():
+        gate_details[f"module_ready:{name}"] = module.get("detail", "")
     for name in sorted(report["requirements"]):
         state = report["requirements"][name]
         lines.append(
@@ -106,6 +109,23 @@ def render_markdown(report: dict[str, Any]) -> str:
                 f"`{source.get('check_due_at') or ''}` |"
             )
 
+    lines.extend(
+        [
+            "",
+            "## Modules",
+            "",
+            "| Module | 状態 | Database | Coverage |",
+            "|---|---|---|---|",
+        ]
+    )
+    for name in sorted(report.get("modules", {})):
+        module = report["modules"][name]
+        lines.append(
+            f"| `{name}` | `{module['state']}` | "
+            f"`{module.get('database') or ''}` | "
+            f"{_escape(json.dumps(module.get('coverage', {}), ensure_ascii=False, sort_keys=True))} |"
+        )
+
     lines.extend(["", "## 警告", ""])
     if report["warnings"]:
         for item in report["warnings"]:
@@ -144,7 +164,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     status = subparsers.add_parser(
         "status",
-        help="Vault、onboarding manifest、Tier 1 DBの状態を再計算",
+        help="Vault、Tier 1、各module manifestの状態を再計算",
     )
     status.add_argument("--vault", required=True, type=Path)
     status.add_argument(
@@ -159,7 +179,7 @@ def build_parser() -> argparse.ArgumentParser:
         default=[],
         help=(
             "foundation_ready,scaffold_ready,profile_ready,"
-            "tier1_data_readyを指定。未達なら終了コード2"
+            "tier1_data_ready,module_ready:<name>を指定。未達なら終了コード2"
         ),
     )
     status.add_argument(
@@ -254,6 +274,42 @@ def build_parser() -> argparse.ArgumentParser:
     )
     generated.add_argument("--vault", required=True, type=Path)
     generated.add_argument(
+        "--format",
+        choices=("json", "markdown"),
+        default="markdown",
+    )
+    smoke_test = subparsers.add_parser(
+        "smoke-test",
+        help="オンライン／オフライン再構築と意味差分を一括検証",
+    )
+    smoke_subparsers = smoke_test.add_subparsers(
+        dest="smoke_command",
+        required=True,
+    )
+    smoke_bootstrap = smoke_subparsers.add_parser(
+        "bootstrap",
+        help="自治体Tier 0〜1のライブ・再現性・秘密値境界を検証",
+    )
+    smoke_bootstrap.add_argument("municipality_name")
+    smoke_bootstrap.add_argument("--prefecture")
+    smoke_bootstrap.add_argument("--work-dir", type=Path)
+    smoke_bootstrap.add_argument(
+        "--refresh",
+        action="store_true",
+        help="cold-cache相当として公式参照先を再取得",
+    )
+    smoke_bootstrap.add_argument(
+        "--no-cross-check",
+        action="store_true",
+        help="決算カードによる財政クロスチェックを省略",
+    )
+    smoke_bootstrap.add_argument(
+        "--max-live-requests",
+        type=int,
+        default=40,
+        help="オンライン実行のHTTPリクエスト上限",
+    )
+    smoke_bootstrap.add_argument(
         "--format",
         choices=("json", "markdown"),
         default="markdown",
@@ -420,6 +476,17 @@ def _render_doctor(report: dict[str, Any]) -> str:
             f"- Tier 1: `{report['bootstrap']['state']}` / "
             f"鮮度 `{report['bootstrap']['freshness']}`",
             "",
+            "## Modules",
+            "",
+            "| Module | 状態 |",
+            "|---|---|",
+        ]
+    )
+    for name in sorted(report.get("modules", {})):
+        lines.append(f"| `{name}` | `{report['modules'][name]['state']}` |")
+    lines.extend(
+        [
+            "",
             "## 次の一手",
             "",
             f"- コマンド: `{recommendation['next_command']}`",
@@ -428,6 +495,31 @@ def _render_doctor(report: dict[str, Any]) -> str:
     )
     if report["diagnosis"].get("error"):
         lines.append(f"- 診断メモ: {_escape(report['diagnosis']['error'])}")
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def _render_smoke_test(report: dict[str, Any]) -> str:
+    lines = [
+        "# Bootstrap smoke test",
+        "",
+        f"- 状態: `{report['status']}`",
+        f"- 自治体: `{report['municipality']['prefecture']}"
+        f"{report['municipality']['name']}`",
+        f"- Work directory: `{report['work_directory']}`",
+        f"- Online requests: "
+        f"`{report['online']['retrieval'].get('live_request_count', 0)}`",
+        f"- Online cache hits: "
+        f"`{report['online']['retrieval'].get('cache_hit_count', 0)}`",
+        f"- Offline requests: `{report['offline']['live_request_count']}`",
+        "",
+        "| Check | 状態 | 詳細 |",
+        "|---|---|---|",
+    ]
+    for item in report["checks"]:
+        lines.append(
+            f"| `{item['name']}` | `{item['status']}` | "
+            f"{_escape(item.get('detail', ''))} |"
+        )
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -491,6 +583,20 @@ def main(argv: Sequence[str] | None = None) -> int:
             else:
                 print(_render_generated_files(report), end="")
             return 0
+        if args.command == "smoke-test" and args.smoke_command == "bootstrap":
+            report = run_bootstrap_smoke_test(
+                args.municipality_name,
+                prefecture=args.prefecture,
+                work_dir=args.work_dir,
+                refresh=args.refresh,
+                cross_check=not args.no_cross_check,
+                max_live_requests=args.max_live_requests,
+            )
+            if args.format == "json":
+                print(json.dumps(report, ensure_ascii=False, indent=2))
+            else:
+                print(_render_smoke_test(report), end="")
+            return 0 if report["status"] == "passed" else 2
 
         report = build_status(
             args.vault,
@@ -526,7 +632,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             )
         )
         return 0 if requirements_met(report, required) else 2
-    except ValueError as error:
+    except (SmokeTestError, ValueError) as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 2
     except (OSError, sqlite3.Error) as error:

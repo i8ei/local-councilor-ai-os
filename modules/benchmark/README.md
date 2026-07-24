@@ -26,8 +26,12 @@ python3 -m bootstrap.cli 'B町' --prefecture '〇〇県' --out-dir bootstrap/out
 python3 modules/benchmark/build_from_bootstrap.py \
   bootstrap/output/A町/municipality.db \
   bootstrap/output/B町/municipality.db \
-  --db benchmark.db
+  --db benchmark.db \
+  --manifest-dir '/path/to/vault/.local-councilor-ai-os/runs/benchmark'
 ```
+
+`--manifest-dir`を指定すると、入力DBのSHA-256、自治体件数、出力DBのSHA-256と
+SQLite integrityを共通run manifestへ記録します。
 
 またはディレクトリを渡すと、配下の `municipality.db` を探索します。
 

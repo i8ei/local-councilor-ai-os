@@ -11,6 +11,17 @@ from pathlib import Path
 from typing import Any, Iterable
 
 MODULE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = MODULE_DIR.parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from lcaios.module_manifest import (  # noqa: E402
+    begin_module_run,
+    fail_module_run,
+    finish_database_run,
+    input_file_record,
+)
+
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
 
 
@@ -133,16 +144,57 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("inputs", nargs="+", type=Path, help="municipality.db files or directories")
     parser.add_argument("--db", required=True, type=Path, help="Output benchmark SQLite database")
+    parser.add_argument("--manifest-dir", type=Path)
+    parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
 
 
-def main() -> int:
-    args = build_parser().parse_args()
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    manifest_path: Path | None = None
+    manifest: dict[str, Any] | None = None
     try:
+        manifest_path, manifest = begin_module_run(
+            args.manifest_dir,
+            run_type="benchmark",
+            repo_root=REPO_ROOT,
+            run_id=args.run_id,
+            requested={
+                "inputs": [str(path) for path in args.inputs],
+                "database": str(args.db),
+            },
+        )
         result = build(args.inputs, args.db)
     except (OSError, ValueError, sqlite3.Error) as exc:
+        fail_module_run(manifest_path, manifest, exc)
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
+    finish_database_run(
+        manifest_path,
+        manifest,
+        database=result["database"],
+        artifact_kind="benchmark_database",
+        scope={"action": "build"},
+        coverage={
+            "municipalities": result["municipalities"],
+            "indicators": result["indicators"],
+        },
+        inputs=[
+            input_file_record(path, kind="municipality_database")
+            for path in result["input_databases"]
+        ],
+        checks=[
+            {
+                "name": "municipality_rows",
+                "status": (
+                    "passed" if result["municipalities"] > 0 else "failed"
+                ),
+                "detail": result["municipalities"],
+            }
+        ],
+    )
+    if manifest_path is not None:
+        result["manifest"] = str(manifest_path)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
 

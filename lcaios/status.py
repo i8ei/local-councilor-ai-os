@@ -17,12 +17,34 @@ SCHEMA_VERSION = 1
 PRODUCT = "local-councilor-ai-os"
 CONTROL_DIRECTORY = ".local-councilor-ai-os"
 INSTANCE_FILE = "instance.json"
+MODULE_TYPES = (
+    "minutes",
+    "regulations",
+    "benchmark",
+    "budget",
+    "settlement",
+)
+MODULE_ARTIFACT_KINDS = {
+    "minutes": "minutes_database",
+    "regulations": "regulations_database",
+    "benchmark": "benchmark_database",
+    "budget": "budget_database",
+    "settlement": "settlement_database",
+}
+MODULE_REQUIRED_CHECKS = {
+    "minutes": "meeting_rows",
+    "regulations": "document_rows",
+    "benchmark": "municipality_rows",
+    "budget": "budget_reconciliation",
+    "settlement": "settlement_reconciliation",
+}
 REQUIREMENTS = frozenset(
     {
         "foundation_ready",
         "scaffold_ready",
         "profile_ready",
         "tier1_data_ready",
+        *(f"module_ready:{name}" for name in MODULE_TYPES),
     }
 )
 READY_STATES = frozenset({"ready"})
@@ -308,6 +330,229 @@ def _manifest_sort_key(value: dict[str, Any]) -> tuple[str, str]:
         str(value.get("finished_at") or ""),
         str(value.get("run_id") or ""),
     )
+
+
+def _module_status(
+    vault: Path,
+    run_type: str,
+) -> tuple[dict[str, Any], list[dict[str, str]]]:
+    """Derive one optional module state from its append-only manifests."""
+
+    manifest_directory = (
+        vault / CONTROL_DIRECTORY / "runs" / run_type
+    )
+    warnings: list[dict[str, str]] = []
+    manifests: list[tuple[Path, dict[str, Any]]] = []
+    if not manifest_directory.is_dir():
+        return {
+            "state": "not_configured",
+            "detail": "run manifestがありません",
+            "database": None,
+            "manifest": None,
+            "coverage": {},
+            "checks": [],
+        }, warnings
+    for path in sorted(manifest_directory.glob("*.json")):
+        try:
+            value = _read_json(path)
+        except (OSError, json.JSONDecodeError) as error:
+            warnings.append(
+                _warning(
+                    "error",
+                    "module_manifest_invalid_json",
+                    run_type,
+                    f"run manifestを読み取れません: {error}",
+                    path,
+                )
+            )
+            continue
+        if not isinstance(value, dict):
+            warnings.append(
+                _warning(
+                    "error",
+                    "module_manifest_invalid_type",
+                    run_type,
+                    "run manifestのトップレベルがobjectではありません",
+                    path,
+                )
+            )
+            continue
+        if value.get("product") != PRODUCT or value.get("run_type") != run_type:
+            continue
+        manifests.append((path, value))
+    if not manifests:
+        return {
+            "state": "not_configured",
+            "detail": "有効なrun manifestがありません",
+            "database": None,
+            "manifest": None,
+            "coverage": {},
+            "checks": [],
+        }, warnings
+
+    latest_path, latest = max(
+        manifests,
+        key=lambda item: _manifest_sort_key(item[1]),
+    )
+    latest_status = str(latest.get("status") or "")
+    expected_kind = MODULE_ARTIFACT_KINDS[run_type]
+    database_runs: list[tuple[Path, dict[str, Any], dict[str, Any]]] = []
+    for path, manifest in manifests:
+        if manifest.get("status") != "succeeded":
+            continue
+        outputs = manifest.get("outputs")
+        if not isinstance(outputs, list):
+            continue
+        artifact = next(
+            (
+                item
+                for item in outputs
+                if isinstance(item, dict) and item.get("kind") == expected_kind
+            ),
+            None,
+        )
+        if artifact is not None:
+            database_runs.append((path, manifest, artifact))
+    base = {
+        "database": None,
+        "manifest": {
+            "path": str(latest_path),
+            "run_id": latest.get("run_id"),
+            "source_revision": latest.get("source_revision"),
+            "status": latest_status,
+        },
+        "coverage": latest.get("coverage")
+        if isinstance(latest.get("coverage"), dict)
+        else {},
+        "checks": latest.get("checks")
+        if isinstance(latest.get("checks"), list)
+        else [],
+    }
+    if latest_status == "failed":
+        warnings.append(
+            _warning(
+                "error" if not database_runs else "warning",
+                "module_latest_run_failed",
+                run_type,
+                "最新のmodule runが失敗しています",
+                latest_path,
+            )
+        )
+        if not database_runs:
+            return {
+                **base,
+                "state": "blocked",
+                "detail": "最新runが失敗。failureとcheckを確認してください",
+            }, warnings
+    if latest_status == "running":
+        warnings.append(
+            _warning(
+                "warning",
+                "module_latest_run_incomplete",
+                run_type,
+                "最新のmodule runが完了していません",
+                latest_path,
+            )
+        )
+        if not database_runs:
+            return {
+                **base,
+                "state": "incomplete",
+                "detail": "最新runがrunningのままです",
+            }, warnings
+    if not database_runs:
+        return {
+            **base,
+            "state": "partial",
+            "detail": "dry-runまたは診断のみ。module databaseは未生成",
+        }, warnings
+
+    manifest_path, manifest, artifact = max(
+        database_runs,
+        key=lambda item: _manifest_sort_key(item[1]),
+    )
+    database = _resolve_path(
+        str(artifact.get("path") or ""),
+        base=manifest_path.parent,
+    )
+    checks = (
+        manifest.get("checks")
+        if isinstance(manifest.get("checks"), list)
+        else []
+    )
+    coverage = (
+        manifest.get("coverage")
+        if isinstance(manifest.get("coverage"), dict)
+        else {}
+    )
+    manifest_info = {
+        "path": str(manifest_path),
+        "run_id": manifest.get("run_id"),
+        "source_revision": manifest.get("source_revision"),
+        "status": manifest.get("status"),
+    }
+    result = {
+        "state": "ready",
+        "detail": "artifact hash、SQLite integrity、必須checkを確認",
+        "database": str(database),
+        "manifest": manifest_info,
+        "coverage": coverage,
+        "checks": checks,
+    }
+    if database.is_symlink():
+        result["state"] = "invalid"
+        result["detail"] = "module databaseがsymlinkです"
+    elif not database.is_file():
+        result["state"] = "unavailable"
+        result["detail"] = "module databaseが存在しません"
+    else:
+        expected_hash = str(artifact.get("sha256") or "")
+        actual_hash = hashlib.sha256(database.read_bytes()).hexdigest()
+        if not expected_hash or actual_hash != expected_hash:
+            result["state"] = "invalid"
+            result["detail"] = "module databaseのhashがmanifestと一致しません"
+        else:
+            try:
+                with sqlite3.connect(
+                    sqlite_read_only_uri(database),
+                    uri=True,
+                ) as connection:
+                    integrity = str(
+                        connection.execute("PRAGMA integrity_check").fetchone()[0]
+                    )
+            except sqlite3.Error as error:
+                integrity = f"error: {error}"
+            if integrity != "ok":
+                result["state"] = "invalid"
+                result["detail"] = f"SQLite integrity不合格: {integrity}"
+    failed_checks = [
+        item
+        for item in checks
+        if isinstance(item, dict) and item.get("status") != "passed"
+    ]
+    required_check = MODULE_REQUIRED_CHECKS[run_type]
+    check_names = {
+        str(item.get("name"))
+        for item in checks
+        if isinstance(item, dict) and item.get("status") == "passed"
+    }
+    if result["state"] == "ready" and failed_checks:
+        result["state"] = "blocked"
+        result["detail"] = "module checkに不合格があります"
+    elif result["state"] == "ready" and required_check not in check_names:
+        result["state"] = "incomplete"
+        result["detail"] = f"必須check `{required_check}` が未実施です"
+    if result["state"] not in {"ready", "not_configured", "partial"}:
+        warnings.append(
+            _warning(
+                "error" if result["state"] in {"invalid", "blocked"} else "warning",
+                "module_not_ready",
+                run_type,
+                result["detail"],
+                database,
+            )
+        )
+    return result, warnings
 
 
 def _artifact_path(artifact: dict[str, Any], vault: Path) -> Path:
@@ -946,6 +1191,12 @@ def build_status(
         "profile_ready": profile["state"],
         "tier1_data_ready": tier1_state,
     }
+    modules: dict[str, dict[str, Any]] = {}
+    for run_type in MODULE_TYPES:
+        module, module_warnings = _module_status(vault, run_type)
+        modules[run_type] = module
+        warnings.extend(module_warnings)
+        requirements[f"module_ready:{run_type}"] = module["state"]
     instance_state = (
         "invalid"
         if any(
@@ -955,7 +1206,12 @@ def build_status(
         )
         else ("ready" if instance is not None else "not_configured")
     )
-    overall_inputs = list(requirements.values())
+    overall_inputs = [
+        requirements["foundation_ready"],
+        requirements["scaffold_ready"],
+        requirements["profile_ready"],
+        requirements["tier1_data_ready"],
+    ]
     if instance_state == "invalid":
         overall_inputs.append("invalid")
     return {
@@ -976,6 +1232,7 @@ def build_status(
         "scaffold": scaffold,
         "profile": profile,
         "bootstrap": bootstrap,
+        "modules": modules,
         "requirements": requirements,
         "warnings": _ordered_warnings(warnings),
     }

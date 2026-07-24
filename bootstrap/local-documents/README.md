@@ -15,6 +15,24 @@ python3 -m bootstrap.cli.local_documents diagnose \
 
 このコマンドは索引HTMLだけを読み、候補文書を列挙して`needs_confirmation`で止まる。PDF、XLSX、CSV、ZIPは取得せず、SQLiteも作らない。利用者は`later`（後日）、`sample`（1〜3件テスト）、`targeted`（年度・会計・種類を限定）、`full`（必要範囲を全件）のいずれかを選ぶ。
 
+## 候補を少数取得して品質を確認する
+
+診断結果の1始まりの候補番号を指定し、最大3件だけ取得する。
+
+```sh
+python3 -m bootstrap.cli.local_documents sample \
+  --index-url 'https://www.example.jp/official/budget-and-settlement/' \
+  --candidate 1 \
+  --candidate 3 \
+  --output-dir /tmp/municipality-document-sample
+```
+
+`sample`は診断と同じ公式索引から観測したURLだけを取得し、原本path、SHA-256、
+媒体型、PDF署名、取得日時、cache状態をJSONで返す。`pdftotext`がPATH上にあれば、
+先頭3ページだけでテキスト層を確認し、文字数を記録する。数値抽出、SQLite作成、
+検証状態の昇格は行わない。`--candidate`を省略した場合は`--limit 1`（最大3）で
+先頭候補を選ぶ。
+
 ## 0. PDF の型を先に判定する
 
 取得前後に、各 PDF について次を記録する。

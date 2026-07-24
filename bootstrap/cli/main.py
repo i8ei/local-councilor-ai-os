@@ -56,7 +56,9 @@ def run(
     prefecture: str | None,
     *,
     out_dir: Path | None,
+    cache_dir: Path | None,
     offline: bool,
+    refresh: bool,
     cross_check: bool,
 ) -> dict[str, Any]:
     """Run the complete bootstrap and return a secret-free report."""
@@ -66,7 +68,11 @@ def run(
         if out_dir is not None
         else BOOTSTRAP_DIR / "output" / _safe_directory_name(name)
     )
-    client = HttpClient(DEFAULT_CACHE_DIR, offline=offline)
+    client = HttpClient(
+        cache_dir or DEFAULT_CACHE_DIR,
+        offline=offline,
+        refresh=refresh,
+    )
     municipality = resolve_municipality(name, prefecture, client)
     census = fetch_census(municipality, client)
     fiscal = fetch_fiscal(municipality, client, cross_check=cross_check)
@@ -97,6 +103,7 @@ def run(
         ]
         if item
     ]
+    retrieval = client.retrieval_report()
     return {
         "status": "ok",
         "mode": "offline" if offline else "online",
@@ -122,6 +129,7 @@ def run(
         "database": database,
         "authority_map": authority,
         "live_request_count": client.request_count,
+        "retrieval": retrieval,
         "warnings": warnings,
     }
 
@@ -143,6 +151,16 @@ def _parser() -> argparse.ArgumentParser:
         "--offline",
         action="store_true",
         help="ネットワークを使わず検証済みローカルキャッシュだけを使う",
+    )
+    parser.add_argument(
+        "--cache-dir",
+        type=Path,
+        help="bootstrap共有cacheの代わりに使うcacheディレクトリ",
+    )
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="検証済みcacheがあっても公式参照先を再取得する",
     )
     parser.add_argument(
         "--cross-check",
@@ -171,7 +189,13 @@ def main(argv: Sequence[str] | None = None) -> int:
                     "municipality_name": args.municipality_name,
                     "prefecture": args.prefecture,
                     "offline": args.offline,
+                    "refresh": args.refresh,
                     "cross_check": args.cross_check,
+                    "cache_directory": (
+                        str(args.cache_dir.expanduser().resolve(strict=False))
+                        if args.cache_dir is not None
+                        else str(DEFAULT_CACHE_DIR.resolve(strict=False))
+                    ),
                     "output_directory": (
                         str(args.out_dir.expanduser().resolve(strict=False))
                         if args.out_dir is not None
@@ -193,7 +217,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             args.municipality_name,
             args.prefecture,
             out_dir=args.out_dir,
+            cache_dir=args.cache_dir,
             offline=args.offline,
+            refresh=args.refresh,
             cross_check=args.cross_check,
         )
     except AmbiguousMunicipality as error:
@@ -290,6 +316,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                     {"code": "bootstrap_warning", "message": str(item)}
                     for item in report["warnings"]
                 ],
+                "retrieval": report.get("retrieval", {}),
             }
             finish_run(
                 manifest_path,
