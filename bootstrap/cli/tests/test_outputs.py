@@ -51,6 +51,20 @@ class OutputTests(unittest.TestCase):
             }
             for index, key in enumerate(keys)
         ]
+        prepared_source = {
+            "state": "source_prepared",
+            "comparison": "manual",
+            "secondary_source_name": "総務省 市町村決算カード",
+            "secondary_source_url": "https://example.invalid/card-2024.html",
+            "secondary_resolved_xlsx_url": (
+                "https://example.invalid/card-2024.xlsx"
+            ),
+            "secondary_sha256": "card-sha256",
+            "secondary_cache_path": "/cache/card-2024.xlsx",
+            "secondary_fetched_at": "2026-01-02T03:04:05Z",
+        }
+        for record in records[3:]:
+            record["source_locator"]["cross_check"] = dict(prepared_source)
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             database_path = root / "municipality.db"
@@ -72,12 +86,36 @@ class OutputTests(unittest.TestCase):
                 count = connection.execute(
                     "SELECT count(*) FROM indicator"
                 ).fetchone()[0]
+                verification_states = {
+                    row[0]
+                    for row in connection.execute(
+                        "SELECT verification_state FROM indicator"
+                    ).fetchall()
+                }
+                fiscal_locator = connection.execute(
+                    """
+                    SELECT source_locator FROM indicator
+                    WHERE indicator_key = 'zaiseiryoku_shisuu'
+                    """
+                ).fetchone()[0]
         self.assertEqual("ok", result["integrity_check"])
         self.assertEqual("ok", integrity)
         self.assertEqual(9, count)
         self.assertNotIn("raw_value:", content)
         self.assertNotIn("secret-value-", content)
         self.assertIn("sqlite_locator:", content)
+        self.assertEqual({"verified_source_extraction"}, verification_states)
+        self.assertIn('"state": "source_prepared"', fiscal_locator)
+        self.assertIn('source_name: "総務省 市町村決算カード"', content)
+        self.assertIn(
+            'source_url: "https://example.invalid/card-2024.html"',
+            content,
+        )
+        self.assertIn('sha256: "card-sha256"', content)
+        self.assertIn('comparison: "manual"', content)
+        self.assertIn('required_state: "verified"', content)
+        self.assertNotIn("comparison_rule:", content)
+        self.assertNotIn('required_state: "reconciled"', content)
 
 
 if __name__ == "__main__":

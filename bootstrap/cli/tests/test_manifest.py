@@ -39,7 +39,7 @@ def _successful_report(root: Path) -> dict[str, object]:
             "indicator_count": 6,
             "fiscal_year": "2024",
             "primary_status": "verified",
-            "cross_check_status": "reconciled",
+            "cross_check_status": "source_prepared",
         },
         "database": {
             "path": str(database),
@@ -155,4 +155,3 @@ class BootstrapManifestTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

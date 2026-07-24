@@ -111,7 +111,15 @@ verification:
     definition_and_scope: null
     unit: null
     totals_reconciled: null
-    cross_check: null
+    cross_check:
+      state: "source_prepared"
+      comparison: "manual"
+      secondary_source_name: "<secondary-source-name>"
+      secondary_source_url: "<official-index-or-year-page-url>"
+      secondary_resolved_xlsx_url: "<resolved-xlsx-url>"
+      secondary_sha256: "<sha256>"
+      secondary_cache_path: "<local-cache-path>"
+      secondary_fetched_at: "<ISO-8601-datetime>"
   issues: []
   rejection_reason: "<reason-or-null>"
 ```
@@ -125,6 +133,8 @@ verification:
 - `rejected`：旧版、対象外、誤抽出などにより利用しない
 
 状態を進めるときは、対応する `checks` と `checked_at` を更新する。状態だけを手入力で変更しない。
+
+`cross_check.state: source_prepared` は、第二資料を手動比較できる状態まで準備したことだけを表す。値の一致を意味せず、`verification.state` を `reconciled` へ進めない。決算カードを第二資料とする場合、`cross_check` は上記のポインタだけを保持し、第二資料の値や自動比較規則を保存しない。
 
 ## 完全なレコード形
 
