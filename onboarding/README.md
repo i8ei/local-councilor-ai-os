@@ -98,6 +98,11 @@ python3 -m onboarding scaffold \
 
 scaffold作成後も、本人情報と自治体固有の議会運用を確認するまではOS全体を`complete`にせず、`profile_status: incomplete`として残す。
 
+profileを確認済みにする操作はonboarding manifestを書き換えず、
+`python3 -m lcaios profile confirm ... --confirm-human-reviewed`で別のappend-only
+profile manifestへ記録する。`layout: preserve`ではprofileの保存棚を固定せず、
+Vault内の確認済み2ファイルを明示指定する。
+
 ## 4. scaffoldの検証
 
 ```sh

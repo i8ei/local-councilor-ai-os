@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
@@ -645,6 +646,7 @@ def _read_onboarding(
             "artifact_checks": [],
             "profile_state": "not_configured",
             "obsidian_cli_confirmed": False,
+            "agent": None,
         }, warnings
 
     completed: list[tuple[Path, dict[str, Any]]] = []
@@ -753,6 +755,7 @@ def _read_onboarding(
             "artifact_checks": [],
             "profile_state": "incomplete",
             "obsidian_cli_confirmed": False,
+            "agent": None,
         }, warnings
 
     path, manifest = max(completed, key=lambda item: _manifest_sort_key(item[1]))
@@ -780,6 +783,198 @@ def _read_onboarding(
         "artifact_checks": artifact_checks,
         "profile_state": str(manifest.get("profile_status") or "incomplete"),
         "obsidian_cli_confirmed": obsidian_confirmed,
+        "agent": (
+            str(manifest.get("target", {}).get("agent"))
+            if manifest.get("target", {}).get("agent") in {"claude", "codex"}
+            else None
+        ),
+    }, warnings
+
+
+def _read_profile_confirmation(
+    vault: Path,
+) -> tuple[dict[str, Any], list[dict[str, str]]]:
+    manifest_directory = vault / CONTROL_DIRECTORY / "runs" / "profile"
+    warnings: list[dict[str, str]] = []
+    if not manifest_directory.is_dir():
+        return {
+            "state": "not_configured",
+            "detail": "確認済みprofile manifestがありません",
+            "manifest": None,
+            "artifact_checks": [],
+        }, warnings
+
+    manifests: list[tuple[Path, dict[str, Any]]] = []
+    for path in sorted(manifest_directory.glob("*.json")):
+        try:
+            value = _read_json(path)
+        except (OSError, json.JSONDecodeError) as error:
+            warnings.append(
+                _warning(
+                    "warning",
+                    "profile_manifest_invalid_json",
+                    "profile",
+                    f"profile manifestを読み取れません: {error}",
+                    path,
+                )
+            )
+            continue
+        if not isinstance(value, dict):
+            warnings.append(
+                _warning(
+                    "warning",
+                    "profile_manifest_invalid_type",
+                    "profile",
+                    "profile manifestのトップレベルはobjectである必要があります",
+                    path,
+                )
+            )
+            continue
+        if value.get("product") != PRODUCT or value.get("run_type") != "profile":
+            continue
+        target = value.get("target")
+        target_vault = target.get("vault_path") if isinstance(target, dict) else None
+        if not isinstance(target_vault, str) or (
+            _resolve_path(target_vault, base=vault) != vault
+        ):
+            warnings.append(
+                _warning(
+                    "warning",
+                    "profile_manifest_target_mismatch",
+                    "profile",
+                    "profile manifestの対象Vaultが一致しません",
+                    path,
+                )
+            )
+            continue
+        manifests.append((path, value))
+
+    if not manifests:
+        return {
+            "state": "incomplete",
+            "detail": "有効なprofile manifestがありません",
+            "manifest": None,
+            "artifact_checks": [],
+        }, warnings
+
+    latest_path, latest = max(
+        manifests,
+        key=lambda item: _manifest_sort_key(item[1]),
+    )
+    successful = [
+        item for item in manifests if item[1].get("status") == "succeeded"
+    ]
+    if latest.get("status") != "succeeded":
+        warnings.append(
+            _warning(
+                "warning",
+                "profile_latest_run_not_succeeded",
+                "profile",
+                "最新のprofile確認runが成功していません",
+                latest_path,
+            )
+        )
+    if not successful:
+        return {
+            "state": "incomplete",
+            "detail": "成功したprofile確認runがありません",
+            "manifest": str(latest_path),
+            "artifact_checks": [],
+        }, warnings
+
+    path, manifest = max(
+        successful,
+        key=lambda item: _manifest_sort_key(item[1]),
+    )
+    inputs = manifest.get("inputs")
+    input_items = inputs if isinstance(inputs, list) else []
+    checks: list[dict[str, str]] = []
+    failures: list[str] = []
+    for kind in ("councilor_profile", "council_adapter"):
+        artifact = next(
+            (
+                item
+                for item in input_items
+                if isinstance(item, dict) and item.get("kind") == kind
+            ),
+            None,
+        )
+        if artifact is None:
+            checks.append(
+                {
+                    "kind": kind,
+                    "status": "failed",
+                    "detail": "artifact宣言がありません",
+                }
+            )
+            failures.append(kind)
+            continue
+        artifact_value = Path(str(artifact.get("path") or "")).expanduser()
+        if not artifact_value.is_absolute():
+            artifact_value = path.parent / artifact_value
+        lexical_path = Path(os.path.abspath(artifact_value))
+        artifact_path = lexical_path.resolve(strict=False)
+        status = "passed"
+        detail = ""
+        if lexical_path.is_symlink():
+            status = "failed"
+            detail = "symlinkは使用できません"
+        elif not _inside(artifact_path, vault):
+            status = "failed"
+            detail = "Vault外artifactです"
+        elif not artifact_path.is_file():
+            status = "failed"
+            detail = "artifactが存在しません"
+        else:
+            expected_hash = str(artifact.get("sha256") or "")
+            actual_hash = hashlib.sha256(artifact_path.read_bytes()).hexdigest()
+            if not expected_hash or actual_hash != expected_hash:
+                status = "failed"
+                detail = "確認後に内容が変更されています"
+        checks.append(
+            {
+                "kind": kind,
+                "status": status,
+                "detail": detail,
+                "path": str(artifact_path),
+            }
+        )
+        if status == "failed":
+            failures.append(kind)
+
+    manifest_checks = (
+        manifest.get("checks")
+        if isinstance(manifest.get("checks"), list)
+        else []
+    )
+    human_confirmed = any(
+        isinstance(item, dict)
+        and item.get("name") == "human_profile_confirmation"
+        and item.get("status") == "passed"
+        for item in manifest_checks
+    )
+    if not human_confirmed:
+        failures.append("human_profile_confirmation")
+    state = "invalid" if failures else "ready"
+    if failures:
+        warnings.append(
+            _warning(
+                "error",
+                "profile_confirmation_invalid",
+                "profile",
+                "profile確認のartifactまたは人の確認記録に問題があります",
+                path,
+            )
+        )
+    return {
+        "state": state,
+        "detail": (
+            "議員・議会profileを本人確認済み"
+            if state == "ready"
+            else "profile確認の完全性に問題があります"
+        ),
+        "manifest": str(path),
+        "artifact_checks": checks,
     }, warnings
 
 
@@ -1156,25 +1351,31 @@ def build_status(
         "detail": onboarding["detail"],
         "manifest": onboarding.get("manifest"),
         "artifact_checks": onboarding.get("artifact_checks", []),
+        "agent": onboarding.get("agent"),
     }
-    profile_manifest_state = onboarding.get("profile_state")
-    profile_state = (
-        "ready"
-        if profile_manifest_state in {"ready", "complete", "verified"}
-        else (
-            "not_configured"
-            if profile_manifest_state == "not_configured"
-            else "incomplete"
+    profile, profile_warnings = _read_profile_confirmation(vault)
+    warnings.extend(profile_warnings)
+    if profile["state"] == "not_configured":
+        profile_manifest_state = onboarding.get("profile_state")
+        profile_state = (
+            "ready"
+            if profile_manifest_state in {"ready", "complete", "verified"}
+            else (
+                "not_configured"
+                if profile_manifest_state == "not_configured"
+                else "incomplete"
+            )
         )
-    )
-    profile = {
-        "state": profile_state,
-        "detail": (
-            "議員・議会profileを人が確認済み"
-            if profile_state == "ready"
-            else "議員・議会profileは人の確認が必要"
-        ),
-    }
+        profile = {
+            "state": profile_state,
+            "detail": (
+                "議員・議会profileを人が確認済み"
+                if profile_state == "ready"
+                else "議員・議会profileは人の確認が必要"
+            ),
+            "manifest": onboarding.get("manifest"),
+            "artifact_checks": [],
+        }
     if bootstrap["state"] == "ready":
         freshness_state = bootstrap["freshness"]["state"]
         tier1_state = {

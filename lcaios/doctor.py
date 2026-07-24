@@ -24,15 +24,20 @@ def recommend_next(
     to the foundation setup repository.
     """
 
+    requirements = status.get("requirements", {})
+    foundation_ready = requirements.get("foundation_ready") == "ready"
     handoff_keys = (
         "ai_client_selection",
         "vault_registered",
         "instruction_file",
         "obsidian_cli",
     )
-    if diagnosis.get("recommended_mode") == "full" or any(
-        _capability(diagnosis, key) == "handoff_required"
-        for key in handoff_keys
+    if not foundation_ready and (
+        diagnosis.get("recommended_mode") == "full"
+        or any(
+            _capability(diagnosis, key) == "handoff_required"
+            for key in handoff_keys
+        )
     ):
         return {
             "next_command": "python3 -m onboarding diagnose --vault <vault>",
@@ -51,7 +56,6 @@ def recommend_next(
             "exit_code": 2,
         }
 
-    requirements = status.get("requirements", {})
     tier1 = requirements.get("tier1_data_ready")
 
     if requirements.get("foundation_ready") != "ready":
@@ -104,7 +108,10 @@ def recommend_next(
     if requirements.get("profile_ready") != "ready":
         return {
             "next_command": (
-                "profiles/councilor-profile.yaml と council-adapter.md を本人確認で完成"
+                "python3 -m lcaios profile confirm --vault <vault> "
+                "--profile <確認済みcouncilor-profile.yaml> "
+                "--council-adapter <確認済みcouncil-adapter.md> "
+                "--confirm-human-reviewed"
             ),
             "reason": "議員本人・議会固有運用のprofileが未完了",
             "exit_code": 2,
@@ -166,10 +173,15 @@ def run_doctor(
     from onboarding.core import OnboardingError, diagnose_environment
 
     vault_path = Path(vault).expanduser()
+    status = build_status(vault_path, bootstrap_database=bootstrap_database)
+    effective_agent = agent
+    stored_agent = status.get("scaffold", {}).get("agent")
+    if agent == "auto" and stored_agent in {"claude", "codex"}:
+        effective_agent = str(stored_agent)
     try:
         diagnosis = diagnose_environment(
             vault_path,
-            agent=agent,
+            agent=effective_agent,
             probe_obsidian=probe_obsidian,
         )
         diagnosis_error = None
@@ -177,19 +189,24 @@ def run_doctor(
         diagnosis = {
             "recommended_mode": "full",
             "capabilities": {},
-            "agent": agent,
+            "agent": effective_agent,
         }
         diagnosis_error = str(error)
 
-    status = build_status(vault_path, bootstrap_database=bootstrap_database)
     recommendation = recommend_next(diagnosis, status)
+    recommended_mode = diagnosis.get("recommended_mode")
+    if (
+        status.get("requirements", {}).get("foundation_ready") == "ready"
+        and recommended_mode == "full"
+    ):
+        recommended_mode = "integrate"
     return {
         "schema_version": 1,
         "product": "local-councilor-ai-os",
         "generated_at": status["generated_at"],
         "vault": status["vault"]["path"],
         "diagnosis": {
-            "recommended_mode": diagnosis.get("recommended_mode"),
+            "recommended_mode": recommended_mode,
             "recommended_layout": diagnosis.get("recommended_layout"),
             "agent": diagnosis.get("agent"),
             "error": diagnosis_error,
