@@ -9,6 +9,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
+from onboarding.cli import build_parser
 from onboarding.core import (
     ROOT_MOC,
     OnboardingError,
@@ -35,7 +36,100 @@ def _create_base(vault: Path, instruction: str = "AGENTS.md") -> None:
     (vault / instruction).write_text("# Rules\n", encoding="utf-8")
 
 
+def _which_with(*available: str):
+    available_set = set(available)
+    return lambda name: f"/mock/{name}" if name in available_set else None
+
+
 class OnboardingTests(unittest.TestCase):
+    def test_cli_defaults_to_auto_client_selection(self) -> None:
+        args = build_parser().parse_args(
+            ["diagnose", "--vault", "/tmp/example-vault"]
+        )
+        self.assertEqual("auto", args.agent)
+
+    def test_auto_requires_one_choice_when_claude_and_codex_exist(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            _create_base(vault)
+            (vault / "CLAUDE.md").write_text("# Claude Rules\n", encoding="utf-8")
+            with (
+                patch(
+                    "onboarding.core.shutil.which",
+                    side_effect=_which_with("obsidian", "claude", "codex"),
+                ),
+                patch("onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY),
+            ):
+                result = diagnose_environment(vault, agent="auto")
+            selection = result["capabilities"]["ai_client_selection"]
+            self.assertEqual("needs-confirmation", selection["status"])
+            self.assertEqual("auto", result["agent"])
+            self.assertEqual("diagnose", result["recommended_mode"])
+            rendered_steps = "\n".join(result["next_steps"])
+            self.assertIn("--agent codex", rendered_steps)
+            self.assertIn("--agent claude", rendered_steps)
+            plan = build_plan(result, mode="diagnose", repo_root=REPO_ROOT)
+            self.assertEqual("blocked", plan["status"])
+
+    def test_auto_selects_only_available_claude_client(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            _create_base(vault, instruction="CLAUDE.md")
+            with (
+                patch(
+                    "onboarding.core.shutil.which",
+                    side_effect=_which_with("obsidian", "claude"),
+                ),
+                patch("onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY),
+            ):
+                result = diagnose_environment(vault, agent="auto")
+            self.assertEqual("claude", result["agent"])
+            self.assertEqual("integrate", result["recommended_mode"])
+            self.assertEqual(
+                "CLAUDE.md",
+                result["capabilities"]["instruction_file"]["active"],
+            )
+            self.assertIn(
+                "Claude Code",
+                result["permission_preflight"]["ai_workspace_scope"]["detail"],
+            )
+
+    def test_missing_codex_guide_has_actionable_handoff(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            (vault / ".obsidian").mkdir()
+            with (
+                patch(
+                    "onboarding.core.shutil.which",
+                    side_effect=_which_with("obsidian", "codex"),
+                ),
+                patch("onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY),
+            ):
+                result = diagnose_environment(vault, agent="codex")
+            steps = "\n".join(result["next_steps"])
+            self.assertIn("AGENTS.md", steps)
+            self.assertIn("writable roots", steps)
+            self.assertIn("--agent codex", steps)
+            self.assertFalse((vault / "AGENTS.md").exists())
+
+    def test_missing_claude_guide_has_actionable_handoff(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            (vault / ".obsidian").mkdir()
+            with (
+                patch(
+                    "onboarding.core.shutil.which",
+                    side_effect=_which_with("obsidian", "claude"),
+                ),
+                patch("onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY),
+            ):
+                result = diagnose_environment(vault, agent="claude")
+            steps = "\n".join(result["next_steps"])
+            self.assertIn("CLAUDE.md", steps)
+            self.assertIn("読み書き許可", steps)
+            self.assertIn("--agent claude", steps)
+            self.assertFalse((vault / "CLAUDE.md").exists())
+
     def test_obsidian_probe_requires_exact_vault_and_targeted_search(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             vault = Path(temporary).resolve()

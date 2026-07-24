@@ -8,6 +8,7 @@ import sys
 from typing import Any, Sequence
 
 from .core import (
+    AUTO_AGENT,
     AGENTS,
     FEATURES,
     MODES,
@@ -38,18 +39,27 @@ def _render_status_table(title: str, values: dict[str, dict[str, Any]]) -> list[
 
 
 def _render_diagnosis(value: dict[str, Any]) -> str:
+    requested_agent = value.get("requested_agent", value["agent"])
+    selected_agent = value["agent"]
     lines = [
         "# 導入診断",
         "",
         f"- Vault: `{value['vault_path']}`",
+        f"- AIクライアント指定: `{requested_agent}`",
+        f"- 選択結果: `{selected_agent}`",
         f"- 推奨モード: `{value['recommended_mode']}`",
         "- この診断は読み取り専用です。",
         "",
     ]
     lines.extend(_render_status_table("能力", value["capabilities"]))
+    lines.extend(_render_status_table("AIクライアント", value["ai_clients"]))
     lines.extend(_render_status_table("コマンド", value["commands"]))
     lines.extend(_render_status_table("認証情報", value["credentials"]))
     lines.extend(_render_status_table("権限プリフライト", value["permission_preflight"]))
+    if value["next_steps"]:
+        lines.extend(["## 次の操作", ""])
+        lines.extend(f"{index}. {step}" for index, step in enumerate(value["next_steps"], 1))
+        lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -117,7 +127,15 @@ def _print(value: dict[str, Any], output_format: str, kind: str) -> None:
 
 
 def _diagnosis_exit_code(value: dict[str, Any]) -> int:
-    handoff_keys = ("vault_registered", "instruction_file", "obsidian_cli")
+    selection_status = value["capabilities"]["ai_client_selection"]["status"]
+    if selection_status == "needs-confirmation":
+        return 2
+    handoff_keys = (
+        "ai_client_selection",
+        "vault_registered",
+        "instruction_file",
+        "obsidian_cli",
+    )
     if any(
         value["capabilities"][key]["status"] == "handoff_required"
         for key in handoff_keys
@@ -145,7 +163,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     diagnose = subparsers.add_parser("diagnose", help="環境を読み取り専用で診断")
     diagnose.add_argument("--vault", required=True, help="対象Vaultの絶対パス")
-    diagnose.add_argument("--agent", choices=sorted(AGENTS), default="codex")
+    agent_choices = sorted((*AGENTS, AUTO_AGENT))
+    diagnose.add_argument("--agent", choices=agent_choices, default=AUTO_AGENT)
     diagnose.add_argument(
         "--skip-obsidian-probe",
         action="store_true",
@@ -155,7 +174,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     plan = subparsers.add_parser("plan", help="決定的な変更計画を読み取り専用で作成")
     plan.add_argument("--vault", required=True, help="対象Vaultの絶対パス")
-    plan.add_argument("--agent", choices=sorted(AGENTS), default="codex")
+    plan.add_argument("--agent", choices=agent_choices, default=AUTO_AGENT)
     plan.add_argument("--mode", choices=sorted(MODES), default=None)
     plan.add_argument(
         "--features",
@@ -170,7 +189,7 @@ def build_parser() -> argparse.ArgumentParser:
         help="確認済み計画と一致する場合だけ不足ファイルを新規作成",
     )
     scaffold.add_argument("--vault", required=True, help="対象Vaultの絶対パス")
-    scaffold.add_argument("--agent", choices=sorted(AGENTS), default="codex")
+    scaffold.add_argument("--agent", choices=agent_choices, default=AUTO_AGENT)
     scaffold.add_argument("--mode", choices=("integrate",), default="integrate")
     scaffold.add_argument(
         "--features",

@@ -8,8 +8,7 @@
 
 ```sh
 python3 -m onboarding diagnose \
-  --vault '/absolute/path/to/vault' \
-  --agent codex
+  --vault '/absolute/path/to/vault'
 ```
 
 既定で、次の3段階をすべて確認する。
@@ -18,7 +17,9 @@ python3 -m onboarding diagnose \
 - 対象Vault名を明示した`vault info=path`が同じ絶対パスを返す
 - 対象Vault名を明示した検索コマンドが終了コード0になる
 
-Obsidian CLIがない、Vaultとして開かれていない、またはAI指示ファイルがない場合は`handoff_required`になる。自動インストールやグローバル設定変更は行わず、`claude-obsidian-setup`へ戻す。
+AIクライアントを指定しない場合は`auto`診断になる。Claude CodeまたはCodexの片方だけが利用可能なら自動選択し、両方なら`--agent claude`または`--agent codex`を選ぶため終了コード2で停止する。Codexは`AGENTS.override.md`、次に`AGENTS.md`、Claude Codeは`CLAUDE.md`を有効なVaultガイドとして確認する。
+
+Obsidian CLIがない、Vaultとして開かれていない、選択したAIクライアントのCLIやVaultガイドがない場合は`handoff_required`になる。必要なガイド、クライアント固有の権限確認、`claude-obsidian-setup`の参照先、引数を含む再診断コマンドを表示する。自動インストール、ガイドの自動作成、グローバル設定変更は行わない。
 
 診断は、Vault登録、指示ファイル、主要CLI、既存scaffold、`ESTAT_APPID`の有無、権限上の確認事項を返す。認証情報の値は表示しない。OS上の書き込み可否と、AIクライアントのwritable rootsは別物なので、後者は`needs-confirmation`として残す。
 
@@ -71,4 +72,4 @@ python3 -m onboarding verify \
 
 manifestに記録した全artifactのSHA-256、Markdownの`description` frontmatter、8つの業務棚MOC、OS専用MOCのリンク、Obsidian CLI疎通を読み取り専用で検証する。
 
-終了コードは、成功またはscaffold検証済み・profile未完了が`0`、停止条件または検証失敗が`2`、基盤セットアップへのハンドオフが`3`。
+終了コードは、成功またはscaffold検証済み・profile未完了が`0`、AIクライアント選択・停止条件・検証失敗が`2`、基盤セットアップへのハンドオフが`3`。

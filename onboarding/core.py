@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import shlex
 import shutil
 import subprocess
 import unicodedata
@@ -15,7 +16,13 @@ from typing import Any, Iterable
 
 
 SCHEMA_VERSION = 1
+AUTO_AGENT = "auto"
+AGENT_ORDER = ("codex", "claude")
 AGENTS = {"codex", "claude"}
+AGENT_LABELS = {
+    "codex": "Codex",
+    "claude": "Claude Code",
+}
 MODES = {"integrate", "full", "components", "diagnose"}
 FEATURES = {
     "core",
@@ -99,6 +106,141 @@ def _active_instruction(vault: Path, agent: str) -> tuple[str | None, list[str]]
         if (vault / name).is_file() and (vault / name).stat().st_size > 0
     ]
     return (found[0] if found else None), found
+
+
+def _select_agent(
+    requested_agent: str,
+    commands: dict[str, str | None],
+) -> tuple[str | None, dict[str, Any]]:
+    if requested_agent != AUTO_AGENT:
+        if requested_agent not in AGENTS:
+            raise OnboardingError(f"未対応のAIエージェントです: {requested_agent}")
+        if commands[requested_agent]:
+            return requested_agent, _status(
+                "reuse",
+                f"{AGENT_LABELS[requested_agent]}を明示指定",
+                requested=requested_agent,
+                selected=requested_agent,
+            )
+        return requested_agent, _status(
+            "handoff_required",
+            f"{AGENT_LABELS[requested_agent]}のCLIがPATHにない",
+            requested=requested_agent,
+            selected=requested_agent,
+        )
+
+    available = [agent for agent in AGENT_ORDER if commands[agent]]
+    if len(available) == 1:
+        selected = available[0]
+        return selected, _status(
+            "reuse",
+            f"利用可能なAIクライアントを自動選択: {AGENT_LABELS[selected]}",
+            requested=AUTO_AGENT,
+            selected=selected,
+            available=available,
+        )
+    if len(available) > 1:
+        labels = "、".join(AGENT_LABELS[agent] for agent in available)
+        return None, _status(
+            "needs-confirmation",
+            f"複数のAIクライアントを検出: {labels}。今回使うものを一度選択",
+            requested=AUTO_AGENT,
+            selected=None,
+            available=available,
+        )
+    return None, _status(
+        "handoff_required",
+        "Claude CodeとCodexのCLIを確認できない",
+        requested=AUTO_AGENT,
+        selected=None,
+        available=[],
+    )
+
+
+def _client_inventory(
+    vault: Path,
+    commands: dict[str, str | None],
+) -> dict[str, dict[str, Any]]:
+    clients: dict[str, dict[str, Any]] = {}
+    for agent in AGENT_ORDER:
+        active, found = _active_instruction(vault, agent)
+        command = commands[agent]
+        detail_parts = [f"CLI: {command}" if command else "CLI: 未検出"]
+        detail_parts.append(
+            f"有効ガイド: {active}" if active else "有効ガイド: 未設定"
+        )
+        clients[agent] = _status(
+            "reuse" if command else "unavailable",
+            "、".join(detail_parts),
+            command=command,
+            active_instruction=active,
+            found_instruction_files=found,
+        )
+    return clients
+
+
+def _handoff_steps(
+    *,
+    vault: Path,
+    requested_agent: str,
+    selected_agent: str | None,
+    selection_status: str,
+    active_instruction: str | None,
+    registered: bool,
+    obsidian_status: str,
+) -> list[str]:
+    quoted_vault = shlex.quote(str(vault))
+    setup_url = "https://github.com/i8ei/claude-obsidian-setup"
+    steps: list[str] = []
+
+    if not registered:
+        steps.append(
+            "Obsidianを起動し、対象フォルダを「フォルダを保管庫として開く」で"
+            "Vault登録する"
+        )
+    if obsidian_status != "reuse":
+        steps.append(
+            "Obsidianの対象Vaultを開いた状態で、CLIのVault一覧・絶対パス・検索疎通を確認する"
+        )
+    if selection_status == "needs-confirmation":
+        steps.append("今回の導入をClaude CodeとCodexのどちらで進めるか選ぶ")
+        for agent in AGENT_ORDER:
+            steps.append(
+                "選択後に再診断: "
+                f"`python3 -m onboarding diagnose --vault {quoted_vault} "
+                f"--agent {agent}`"
+            )
+        return steps
+    if selection_status == "handoff_required":
+        label = AGENT_LABELS.get(selected_agent or requested_agent, "AIクライアント")
+        steps.append(f"{label}のCLIを基盤セットアップで利用可能にする: {setup_url}")
+    if selected_agent and not active_instruction:
+        if selected_agent == "codex":
+            steps.append(
+                "Vault直下に非空の`AGENTS.md`を用意する。"
+                "`AGENTS.override.md`がある場合はそちらが優先される"
+            )
+            steps.append(
+                "Codexで対象Vaultがwritable roots内か、変更時の承認方式と合わせて確認する"
+            )
+        else:
+            steps.append("Vault直下に非空の`CLAUDE.md`を用意する")
+            steps.append(
+                "Claude Codeで対象Vaultの読み書き許可と変更時の承認方式を確認する"
+            )
+        steps.append(f"基盤手順: {setup_url}")
+    if selected_agent and (
+        selection_status != "reuse"
+        or not active_instruction
+        or not registered
+        or obsidian_status != "reuse"
+    ):
+        steps.append(
+            "完了後に再診断: "
+            f"`python3 -m onboarding diagnose --vault {quoted_vault} "
+            f"--agent {selected_agent}`"
+        )
+    return steps
 
 
 def _probe_obsidian(command: str, vault: Path) -> dict[str, Any]:
@@ -215,10 +357,14 @@ def diagnose_environment(
     vault = Path(vault_path).expanduser().resolve()
     exists = vault.is_dir()
     registered = exists and (vault / ".obsidian").is_dir()
-    active_instruction, instruction_files = (
-        _active_instruction(vault, agent) if exists else (None, [])
-    )
     commands = {name: shutil.which(name) for name in COMMANDS}
+    selected_agent, client_selection = _select_agent(agent, commands)
+    clients = _client_inventory(vault, commands) if exists else {}
+    active_instruction, instruction_files = (
+        _active_instruction(vault, selected_agent)
+        if exists and selected_agent
+        else (None, [])
+    )
 
     if commands["obsidian"] and probe_obsidian and exists:
         obsidian_cli = _probe_obsidian(str(commands["obsidian"]), vault)
@@ -234,8 +380,15 @@ def diagnose_environment(
             "obsidianコマンドがPATHにない。基盤セットアップへ戻る",
         )
 
-    if registered and active_instruction and obsidian_cli["status"] == "reuse":
+    if (
+        registered
+        and client_selection["status"] == "reuse"
+        and active_instruction
+        and obsidian_cli["status"] == "reuse"
+    ):
         recommended_mode = "integrate"
+    elif client_selection["status"] == "needs-confirmation":
+        recommended_mode = "diagnose"
     elif exists:
         recommended_mode = "full"
     else:
@@ -259,10 +412,12 @@ def diagnose_environment(
         "schema_version": SCHEMA_VERSION,
         "generated_at": _utc_now(),
         "read_only": True,
-        "agent": agent,
+        "requested_agent": agent,
+        "agent": selected_agent or AUTO_AGENT,
         "vault_path": str(vault),
         "recommended_mode": recommended_mode,
         "capabilities": {
+            "ai_client_selection": client_selection,
             "vault_directory": _status(
                 "reuse" if exists else "unavailable",
                 "Vault候補のディレクトリが存在"
@@ -292,10 +447,20 @@ def diagnose_environment(
                 agent_scope="needs-confirmation",
             ),
             "instruction_file": _status(
-                "reuse" if active_instruction else "handoff_required",
-                f"{agent}で有効なVaultガイド: {active_instruction}"
+                (
+                    "reuse"
+                    if active_instruction
+                    else client_selection["status"]
+                    if selected_agent is None
+                    else "handoff_required"
+                ),
+                f"{AGENT_LABELS[selected_agent]}で有効なVaultガイド: {active_instruction}"
                 if active_instruction
-                else f"{agent}用の有効なVaultガイドがない。基盤セットアップへ戻る",
+                else (
+                    "AIクライアント選択後に有効なVaultガイドを確認"
+                    if selected_agent is None
+                    else f"{AGENT_LABELS[selected_agent]}用の有効なVaultガイドがない"
+                ),
                 active=active_instruction,
                 found=instruction_files,
             ),
@@ -308,6 +473,7 @@ def diagnose_environment(
                 template_count=template_count,
             ),
         },
+        "ai_clients": clients,
         "commands": {
             name: _status(
                 "reuse" if path else "unavailable",
@@ -326,7 +492,13 @@ def diagnose_environment(
         "permission_preflight": {
             "ai_workspace_scope": _status(
                 "needs-confirmation",
-                "AIクライアントのwritable roots、追加ディレクトリ、承認方式を確認",
+                (
+                    "Codexのwritable roots、追加ディレクトリ、承認方式を確認"
+                    if selected_agent == "codex"
+                    else "Claude Codeの対象ディレクトリ権限と承認方式を確認"
+                    if selected_agent == "claude"
+                    else "使用するAIクライアントを選び、対象Vaultの権限と承認方式を確認"
+                ),
             ),
             "global_changes": _status(
                 "skip",
@@ -337,6 +509,15 @@ def diagnose_environment(
                 "scaffoldは既存ファイルを上書き・削除しない",
             ),
         },
+        "next_steps": _handoff_steps(
+            vault=vault,
+            requested_agent=agent,
+            selected_agent=selected_agent,
+            selection_status=client_selection["status"],
+            active_instruction=active_instruction,
+            registered=registered,
+            obsidian_status=obsidian_cli["status"],
+        ),
     }
 
 
@@ -616,6 +797,8 @@ def build_plan(
 
     blockers: list[str] = []
     capabilities = diagnosis["capabilities"]
+    if capabilities["ai_client_selection"]["status"] != "reuse":
+        blockers.append("今回使用するClaude CodeまたはCodexを選択・確認できていない")
     if selected_mode == "full":
         blockers.append(
             "先にclaude-obsidian-setupでObsidianとAI協働基盤を完了し、integrateで再開"

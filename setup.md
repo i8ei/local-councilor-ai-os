@@ -16,11 +16,10 @@
 
 ```sh
 python3 -m onboarding diagnose \
-  --vault '/absolute/path/to/vault' \
-  --agent codex
+  --vault '/absolute/path/to/vault'
 ```
 
-Codexでは`AGENTS.override.md`があればそれを、なければ`AGENTS.md`を有効な指示として扱う。Claude Codeでは`CLAUDE.md`を確認する。Obsidian CLIは、Vault一覧、対象Vaultの絶対パス、対象Vaultを明示した検索疎通の三つが一致して初めて利用可能と判定する。
+AIクライアントを指定しない場合は、Claude CodeとCodexのCLIを読み取り専用で検出する。片方だけなら自動選択し、両方なら今回使うものを一度だけ選ぶよう停止する。選択後は`--agent claude`または`--agent codex`で再診断する。Codexでは`AGENTS.override.md`があればそれを、なければ`AGENTS.md`を有効な指示として扱う。Claude Codeでは`CLAUDE.md`を確認する。不足時は必要ファイル、クライアント固有の権限確認、基盤手順、再診断コマンドを表示し、自動作成しない。Obsidian CLIは、Vault一覧、対象Vaultの絶対パス、対象Vaultを明示した検索疎通の三つが一致して初めて利用可能と判定する。
 
 権限は一括して「問題なし」と推測せず、少なくとも次を分けて確認する。
 
