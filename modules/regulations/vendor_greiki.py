@@ -11,42 +11,33 @@ import sys
 import threading
 import urllib.parse
 from collections import deque
+from contextlib import closing
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Callable
 
-MODULE_DIR = Path(__file__).resolve().parent
-REPO_ROOT = MODULE_DIR.parents[1]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
-MINUTES_MODULE = MODULE_DIR.parent / "minutes-db"
-if str(MINUTES_MODULE) not in sys.path:
-    sys.path.insert(0, str(MINUTES_MODULE))
-if str(MODULE_DIR) in sys.path:
-    sys.path.remove(str(MODULE_DIR))
-sys.path.insert(0, str(MODULE_DIR))
-
-from adapters import base as fetch_base  # type: ignore  # noqa: E402
-from adapters.base import (  # type: ignore  # noqa: E402
+from lcaios.module_manifest import (
+    begin_module_run,
+    fail_module_run,
+    finish_database_run,
+)
+from modules.minutes_db.adapters import base as fetch_base
+from modules.minutes_db.adapters.base import (
     FetchError,
     FetchResult,
     RobotsDeniedError,
     RobotsUnavailableError,
 )
-from ingest import (  # noqa: E402
+from modules.regulations.ingest import (
     _infer_date,
     ensure_schema,
     segment_articles,
     stable_id,
     store_document,
 )
-from lcaios.module_manifest import (  # noqa: E402
-    begin_module_run,
-    fail_module_run,
-    finish_database_run,
-)
 
-
+MODULE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = MODULE_DIR.parents[1]
 USER_AGENT = "local-councilor-ai-os regulations ingester (research; low rate)"
 MIN_REQUEST_INTERVAL_SECONDS = 1.5
 DEFAULT_CACHE_DIR = MODULE_DIR / ".cache" / "greiki"
@@ -166,8 +157,9 @@ class _LinkParser(HTMLParser):
         if tag == "a" and attributes.get("href"):
             self._href = attributes["href"]
             self._link_text = []
-        if tag in {"frame", "iframe"} and attributes.get("src"):
-            self.links.append((attributes["src"], "", tag))
+        src = attributes.get("src")
+        if tag in {"frame", "iframe"} and src:
+            self.links.append((src, "", tag))
 
     def handle_endtag(self, tag: str) -> None:
         if tag.lower() == "a" and self._href is not None:
@@ -510,7 +502,7 @@ def ingest_greiki(
     )
     database = Path(db_path)
     database.parent.mkdir(parents=True, exist_ok=True)
-    with sqlite3.connect(database) as connection:
+    with closing(sqlite3.connect(database)) as connection, connection:
         connection.execute("PRAGMA foreign_keys = ON")
         tokenizer = ensure_schema(connection)
         document_count = 0

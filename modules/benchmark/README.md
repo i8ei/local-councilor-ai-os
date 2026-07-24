@@ -23,7 +23,7 @@ python3 -m bootstrap.cli 'B町' --prefecture '〇〇県' --out-dir bootstrap/out
 次に比較DBを作ります。
 
 ```bash
-python3 modules/benchmark/build_from_bootstrap.py \
+python3 -m modules.benchmark.build_from_bootstrap \
   bootstrap/output/A町/municipality.db \
   bootstrap/output/B町/municipality.db \
   --db benchmark.db \
@@ -36,13 +36,13 @@ SQLite integrityを共通run manifestへ記録します。
 またはディレクトリを渡すと、配下の `municipality.db` を探索します。
 
 ```bash
-python3 modules/benchmark/build_from_bootstrap.py bootstrap/output --db benchmark.db
+python3 -m modules.benchmark.build_from_bootstrap bootstrap/output --db benchmark.db
 ```
 
 比較します。
 
 ```bash
-python3 modules/benchmark/compare.py zaiseiryoku_shisuu --db benchmark.db --limit 20
+python3 -m modules.benchmark.compare zaiseiryoku_shisuu --db benchmark.db --limit 20
 ```
 
 出力には `value / as_of / definition / source_name / source_url` が含まれます。対外利用時は値だけを抜き出さず、必ず4点セットで表示してください。
@@ -60,7 +60,7 @@ python3 modules/benchmark/compare.py zaiseiryoku_shisuu --db benchmark.db --limi
 | `jinkou_kouzou` | 総人口、総世帯数、65歳以上人口構成比 | 同一国勢調査基準日 |
 
 ```bash
-python3 modules/benchmark/compare.py \
+python3 -m modules.benchmark.compare \
   --preset zaisei_kenzensei \
   --db benchmark.db
 ```

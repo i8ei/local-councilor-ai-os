@@ -14,9 +14,9 @@ import urllib.request
 import urllib.robotparser
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from http.client import HTTPMessage
 from pathlib import Path
 from typing import Any, Mapping
-
 
 USER_AGENT = (
     "local-councilor-ai-os bootstrap/0.1 "
@@ -53,7 +53,7 @@ class _NoRedirectHandler(urllib.request.HTTPRedirectHandler):
         fp: Any,
         code: int,
         msg: str,
-        headers: Mapping[str, str],
+        headers: HTTPMessage,
         newurl: str,
     ) -> None:
         return None

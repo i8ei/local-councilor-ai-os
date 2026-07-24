@@ -10,26 +10,21 @@ import re
 import sqlite3
 import sys
 import urllib.parse
+from contextlib import closing
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
-MODULE_DIR = Path(__file__).resolve().parent
-REPO_ROOT = MODULE_DIR.parents[1]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
-MINUTES_MODULE = MODULE_DIR.parent / "minutes-db"
-if str(MINUTES_MODULE) not in sys.path:
-    sys.path.insert(0, str(MINUTES_MODULE))
-
-from adapters.base import FetchError, polite_fetch  # type: ignore  # noqa: E402
-from lcaios.module_manifest import (  # noqa: E402
+from lcaios.module_manifest import (
     begin_module_run,
     fail_module_run,
     finish_database_run,
     input_file_record,
 )
+from modules.minutes_db.adapters.base import FetchError, polite_fetch
 
+MODULE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = MODULE_DIR.parents[1]
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
 _BLOCK_TAGS = {
     "article", "br", "dd", "div", "dl", "dt", "h1", "h2", "h3", "h4",
@@ -395,7 +390,7 @@ def ingest(config_path: str | Path, db_path: str | Path, *, cache_dir: str | Pat
     refs = discover_documents(config, cache_dir=cache_dir, limit=limit)
     database = Path(db_path)
     database.parent.mkdir(parents=True, exist_ok=True)
-    with sqlite3.connect(database) as connection:
+    with closing(sqlite3.connect(database)) as connection, connection:
         connection.execute("PRAGMA foreign_keys = ON")
         tokenizer = ensure_schema(connection)
         documents = 0

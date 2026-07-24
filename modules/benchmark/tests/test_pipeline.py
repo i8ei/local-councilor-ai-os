@@ -2,25 +2,14 @@
 
 from __future__ import annotations
 
-import json
 import sqlite3
-import sys
 import tempfile
 import unittest
+from contextlib import closing
 from pathlib import Path
 
-MODULE_DIR = Path(__file__).resolve().parents[1]
-if str(MODULE_DIR) not in sys.path:
-    sys.path.insert(0, str(MODULE_DIR))
-ROOT = MODULE_DIR.parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
-
-import build_from_bootstrap  # noqa: E402
-import compare  # noqa: E402
-import presets  # noqa: E402
-from bootstrap.cli.db import build_database  # noqa: E402
-
+from bootstrap.cli.db import build_database
+from modules.benchmark import build_from_bootstrap, compare, presets
 
 UNITS = {
     "zaiseiryoku_shisuu": "指数",
@@ -121,7 +110,7 @@ class BenchmarkPipelineTests(unittest.TestCase):
             report = build_from_bootstrap.build([root], out)
             self.assertEqual("ok", report["integrity_check"])
             self.assertEqual(2, report["municipalities"])
-            with sqlite3.connect(out) as connection:
+            with closing(sqlite3.connect(out)) as connection, connection:
                 result = compare.compare(connection, "zaiseiryoku_shisuu", limit=10)
             self.assertEqual("2024年度", result["as_of"])
             self.assertEqual(["B町", "A町"], [item["name"] for item in result["items"]])
@@ -140,7 +129,7 @@ class BenchmarkPipelineTests(unittest.TestCase):
             make_bootstrap_db(db3, "33333", "C町", None)
             out = root / "benchmark.db"
             build_from_bootstrap.build([root], out)
-            with sqlite3.connect(out) as connection:
+            with closing(sqlite3.connect(out)) as connection, connection:
                 result = compare.compare(connection, "zaiseiryoku_shisuu", limit=10)
             names = [item["name"] for item in result["items"]]
             self.assertEqual(["B町", "A町", "C町"], names)
@@ -185,7 +174,7 @@ class BenchmarkPresetTests(unittest.TestCase):
             )
             out = root / "benchmark.db"
             build_from_bootstrap.build([root], out)
-            with sqlite3.connect(out) as connection:
+            with closing(sqlite3.connect(out)) as connection, connection:
                 result = compare.compare_preset(
                     connection,
                     "zaisei_kenzensei",
@@ -222,7 +211,7 @@ class BenchmarkPresetTests(unittest.TestCase):
             )
             out = root / "benchmark.db"
             build_from_bootstrap.build([root], out)
-            with sqlite3.connect(out) as connection:
+            with closing(sqlite3.connect(out)) as connection, connection:
                 result = compare.compare_preset(
                     connection,
                     "zaisei_kenzensei",
@@ -263,7 +252,7 @@ class BenchmarkPresetTests(unittest.TestCase):
             )
             out = root / "benchmark.db"
             build_from_bootstrap.build([root], out)
-            with sqlite3.connect(out) as connection:
+            with closing(sqlite3.connect(out)) as connection, connection:
                 result = compare.compare_preset(
                     connection,
                     "zaisei_kenzensei",
@@ -301,7 +290,7 @@ class BenchmarkPresetTests(unittest.TestCase):
             )
             out = root / "benchmark.db"
             build_from_bootstrap.build([root], out)
-            with sqlite3.connect(out) as connection:
+            with closing(sqlite3.connect(out)) as connection, connection:
                 result = compare.compare_preset(
                     connection,
                     "zaisei_kenzensei",
@@ -347,7 +336,7 @@ class BenchmarkPresetTests(unittest.TestCase):
             )
             out = root / "benchmark.db"
             build_from_bootstrap.build([root], out)
-            with sqlite3.connect(out) as connection:
+            with closing(sqlite3.connect(out)) as connection, connection:
                 result = compare.compare_preset(
                     connection,
                     "kessan_gaiyou",

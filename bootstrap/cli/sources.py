@@ -8,7 +8,6 @@ import sys
 from pathlib import Path
 from typing import Any, Sequence
 
-
 DEFAULT_REGISTRY = (
     Path(__file__).resolve().parents[2]
     / "data-contracts"

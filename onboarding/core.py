@@ -14,7 +14,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-
 SCHEMA_VERSION = 1
 AUTO_AGENT = "auto"
 AGENT_ORDER = ("codex", "claude")
@@ -673,6 +672,11 @@ def diagnose_environment(
         f"既存役割 {detected_role_count}件、"
         f"推奨layout `{recommended_layout}`"
     )
+    selected_agent_label = (
+        AGENT_LABELS[selected_agent]
+        if selected_agent is not None
+        else "AIクライアント"
+    )
 
     return {
         "schema_version": SCHEMA_VERSION,
@@ -722,12 +726,12 @@ def diagnose_environment(
                     if selected_agent is None
                     else "handoff_required"
                 ),
-                f"{AGENT_LABELS[selected_agent]}で有効なVaultガイド: {active_instruction}"
+                f"{selected_agent_label}で有効なVaultガイド: {active_instruction}"
                 if active_instruction
                 else (
                     "AIクライアント選択後に有効なVaultガイドを確認"
                     if selected_agent is None
-                    else f"{AGENT_LABELS[selected_agent]}用の有効なVaultガイドがない"
+                    else f"{selected_agent_label}用の有効なVaultガイドがない"
                 ),
                 active=active_instruction,
                 found=instruction_files,

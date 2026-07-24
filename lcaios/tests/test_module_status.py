@@ -7,7 +7,7 @@ import json
 import sqlite3
 import tempfile
 import unittest
-from contextlib import redirect_stdout
+from contextlib import closing, redirect_stdout
 from io import StringIO
 from pathlib import Path
 
@@ -17,7 +17,7 @@ from lcaios.status import build_status
 
 def _database(path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with sqlite3.connect(path) as connection:
+    with closing(sqlite3.connect(path)) as connection, connection:
         connection.execute("CREATE TABLE fixture (value TEXT)")
         connection.execute("INSERT INTO fixture VALUES ('ok')")
 

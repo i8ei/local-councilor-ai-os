@@ -1,0 +1,1 @@
+"""Minutes database source adapters."""

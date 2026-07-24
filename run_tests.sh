@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Run every test suite in the repository from one entry point.
-# Root `python3 -m unittest discover` finds package tests, while
-# `modules/` is not a package and its subdirectories use hyphenated names,
-# so per-module suites must be invoked explicitly to avoid silent skips.
+# Every component, including `modules/`, is an importable package, so one
+# root discovery run covers the complete test suite.
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT_DIR"
+export PYTHONWARNINGS="${PYTHONWARNINGS:-error::ResourceWarning}"
 
 failures=0
 
@@ -24,25 +24,16 @@ run_suite() {
   echo
 }
 
-# Package suites: unified status, onboarding, and Tier 0-1 bootstrap CLI.
-run_suite "package tests" python3 -m unittest discover -v
-
-# Per-module suites. Each module runs from its own directory so that
-# sibling-relative imports (adapters, search, ingest, ...) resolve.
-for module in minutes-db regulations benchmark budget-review settlement-review; do
-  if compgen -G "modules/${module}/tests/test_*.py" > /dev/null; then
-    run_suite "modules/${module}" bash -c \
-      "cd 'modules/${module}' && python3 -m unittest discover -s tests -v"
-  fi
-done
+run_suite "all tests" python3 -m unittest discover -v
 
 # Settlement reconciliation: rebuild fixtures, expect pass=0 and fail=1.
-run_suite "settlement-review verify_totals" bash -c '
+run_suite "settlement_review verify_totals" bash -c '
   set -euo pipefail
-  cd modules/settlement-review
-  python3 tests/create_fixtures.py > /dev/null
-  python3 verify_totals.py tests/passing.db > /dev/null
-  if python3 verify_totals.py tests/failing.db > /dev/null; then
+  python3 -m modules.settlement_review.tests.create_fixtures > /dev/null
+  python3 -m modules.settlement_review.verify_totals \
+    modules/settlement_review/tests/passing.db > /dev/null
+  if python3 -m modules.settlement_review.verify_totals \
+    modules/settlement_review/tests/failing.db > /dev/null; then
     echo "expected failing.db to return non-zero"
     exit 1
   fi

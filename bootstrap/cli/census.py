@@ -12,7 +12,6 @@ from typing import Any
 
 from .http import FetchError, HttpClient
 
-
 API_BASE = "https://api.e-stat.go.jp/rest/3.0/app/json"
 STATS_CODE = "00200521"
 

@@ -7,7 +7,6 @@ from datetime import datetime, timezone
 
 from lcaios.freshness import evaluate_bootstrap_freshness
 
-
 ROWS = [
     {
         "indicator_key": "population_total",

@@ -7,7 +7,7 @@ import json
 import sqlite3
 import tempfile
 import unittest
-from contextlib import redirect_stderr, redirect_stdout
+from contextlib import closing, redirect_stderr, redirect_stdout
 from io import StringIO
 from pathlib import Path
 
@@ -26,7 +26,7 @@ from lcaios.lifecycle import (
 
 def _database(path: Path, *, schema_version: str = "1", value: str = "old") -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with sqlite3.connect(path) as connection:
+    with closing(sqlite3.connect(path)) as connection, connection:
         connection.executescript(
             """
             CREATE TABLE municipality (name TEXT);
@@ -49,7 +49,7 @@ def _database(path: Path, *, schema_version: str = "1", value: str = "old") -> N
 
 
 def _indicator_value(path: Path) -> str:
-    with sqlite3.connect(path) as connection:
+    with closing(sqlite3.connect(path)) as connection, connection:
         return str(
             connection.execute("SELECT value FROM indicator").fetchone()[0]
         )

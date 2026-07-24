@@ -20,7 +20,6 @@ from .xlsx import (
     read_workbook,
 )
 
-
 FISCAL_INDEX = "https://www.soumu.go.jp/iken/kessan_jokyo_2.html"
 CARD_INDEX = "https://www.soumu.go.jp/iken/zaisei/card.html"
 
@@ -309,7 +308,7 @@ def _display_raw_value(raw: str) -> str:
 
 
 def _header_spec() -> dict[str, tuple[str, ...]]:
-    result = {
+    result: dict[str, tuple[str, ...]] = {
         "local_government_code_6": (
             "団体コード",
             "地方公共団体コード",

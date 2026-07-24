@@ -7,6 +7,7 @@ import argparse
 import json
 import sqlite3
 import sys
+from contextlib import closing
 from pathlib import Path
 from typing import Any
 
@@ -112,7 +113,7 @@ def main() -> int:
         print("--k must be at least 1", file=sys.stderr)
         return 2
     try:
-        with sqlite3.connect(Path(args.db)) as connection:
+        with closing(sqlite3.connect(Path(args.db))) as connection:
             results = search_database(connection, args.query, args.k)
     except sqlite3.Error as exc:
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)

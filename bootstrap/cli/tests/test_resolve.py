@@ -13,12 +13,12 @@ from bootstrap.cli.resolve import (
     local_government_code,
     resolve_municipality,
 )
+from bootstrap.cli.tests.fixtures import FakeRegionClient
 from bootstrap.municipalities import (
     load_metadata,
     load_registry,
     validate_registry,
 )
-from bootstrap.cli.tests.fixtures import FakeRegionClient
 
 
 class NoNetworkClient:

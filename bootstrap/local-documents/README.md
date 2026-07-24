@@ -2,7 +2,7 @@
 
 Tier 3 は、自治体ごとに版面が異なる予算書と決算書を、人が原本を見ながら検証可能な SQLite へ変換する手順である。全自治体へ通用する完全自動 OCR は対象外とする。この層は、人間併走を前提に、抽出の速さより原典位置と検算可能性を優先する。
 
-格納形式と合計検算は[決算レビュー](../../modules/settlement-review/)を使う。SQLite は原典から再構築できる派生物であり、PDF の代替正本ではない。
+格納形式と合計検算は[決算レビュー](../../modules/settlement_review/)を使う。SQLite は原典から再構築できる派生物であり、PDF の代替正本ではない。
 
 ## 取得前に候補だけ診断する
 
@@ -61,7 +61,7 @@ python3 -m bootstrap.cli.local_documents sample \
 
 ## 3. 正規化して格納する
 
-`modules/settlement-review/schema.sql` を適用し、総括表、歳入明細、歳出明細へ格納する。数値は原表記を `raw_value` に残し、正規化値とは分ける。`unit`、`as_of`、定義、出典名、URL、原典位置、取得日時、検証状態を各行へ持たせる。原典位置には `print_page` と `pdf_page` の両方を入れる。
+`modules/settlement_review/schema.sql` を適用し、総括表、歳入明細、歳出明細へ格納する。数値は原表記を `raw_value` に残し、正規化値とは分ける。`unit`、`as_of`、定義、出典名、URL、原典位置、取得日時、検証状態を各行へ持たせる。原典位置には `print_page` と `pdf_page` の両方を入れる。
 
 歳入は款と項、歳出は款、項、目、節を識別する。解釈や質問候補は DB に書かず、検算後の分析成果から証拠台帳と判断ノートへ渡す。
 

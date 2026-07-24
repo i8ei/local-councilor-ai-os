@@ -1,0 +1,46 @@
+# Project metadata and tool configuration.
+#
+# This repository is a reference implementation that is run in place with
+# ``python3 -m ...`` (see README.md), not installed from PyPI. It has no
+# third-party runtime dependencies; everything uses the Python standard
+# library. This file declares metadata plus the shared lint/type-check
+# configuration so CI and local runs behave identically.
+
+[project]
+name = "local-councilor-ai-os"
+version = "0.1.0"
+description = "地方議員のためのAI運用OS — 調査・質問設計・根拠管理・答弁追跡の参照実装"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = []
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+extend-exclude = ["*.db", ".cache", "cache", "tmp"]
+
+[tool.ruff.lint]
+# Conservative, high-signal rule set that the codebase already satisfies:
+# pycodestyle errors/warnings, pyflakes, import sorting, and a few
+# bugbear checks. Kept intentionally focused to avoid style churn.
+select = ["E", "F", "I", "W", "B"]
+# Line length is reported by the formatter, not the linter.
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["lcaios", "bootstrap", "onboarding", "modules"]
+
+[tool.mypy]
+python_version = "3.11"
+# Type-check every importable package, including the runnable modules.
+files = ["lcaios", "bootstrap", "onboarding", "modules"]
+ignore_missing_imports = true
+warn_unused_ignores = false
+warn_redundant_casts = true
+no_implicit_optional = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["*.tests.*", "tests.*"]
+ignore_errors = true

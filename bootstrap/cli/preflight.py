@@ -26,7 +26,6 @@ from bootstrap.cli.http import (
 )
 from bootstrap.municipalities import load_metadata, load_registry
 
-
 SOURCE_KINDS = ("minutes", "regulations", "budget", "settlement")
 DOCUMENT_EXTENSIONS = {".pdf", ".txt", ".xlsx", ".xls", ".csv", ".zip"}
 NAVIGATION_EXTENSIONS = {"", ".html", ".htm", ".php", ".asp", ".aspx"}

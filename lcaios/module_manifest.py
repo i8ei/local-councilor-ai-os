@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 import sqlite3
+from contextlib import closing
 from pathlib import Path
 from typing import Any
 
@@ -71,7 +72,9 @@ def sqlite_integrity(path: str | Path) -> str:
     """Run SQLite integrity_check without permitting writes."""
 
     database = Path(path).expanduser().resolve(strict=False)
-    with sqlite3.connect(sqlite_read_only_uri(database), uri=True) as connection:
+    with closing(
+        sqlite3.connect(sqlite_read_only_uri(database), uri=True)
+    ) as connection:
         return str(connection.execute("PRAGMA integrity_check").fetchone()[0])
 
 

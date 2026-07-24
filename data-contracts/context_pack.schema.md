@@ -2,7 +2,7 @@
 
 ## 目的と参照実装
 
-コンテキストパックは、SQLite や FTS5 の検索結果から、特定の問いに必要な原典抜粋だけを選んだ一時的な JSON である。参照実装は `modules/minutes-db/context_pack.py` の `minutes-context-pack/1` とする。DB 全体を AI へ渡さず、引用量、情報区分、原典への経路を機械的に制限する。
+コンテキストパックは、SQLite や FTS5 の検索結果から、特定の問いに必要な原典抜粋だけを選んだ一時的な JSON である。参照実装は `modules/minutes_db/context_pack.py` の `minutes-context-pack/1` とする。DB 全体を AI へ渡さず、引用量、情報区分、原典への経路を機械的に制限する。
 
 一般契約では抜粋配列を `items` と呼ぶ。参照実装の JSON 上の名前は後方互換のため `evidence` であり、`items` と同じ責務を持つ。別モジュールは `items` を採用してよいが、`schema_version` ごとに配列名を固定し、同じ版の途中で変更しない。
 

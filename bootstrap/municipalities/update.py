@@ -10,7 +10,6 @@ import io
 import json
 import os
 import re
-import sys
 import tempfile
 import urllib.parse
 from dataclasses import dataclass, field
@@ -27,7 +26,6 @@ from bootstrap.municipalities.registry import (
     RegistryError,
     validate_registry,
 )
-
 
 J_LIS_CODE_ROOT = "https://www.j-lis.go.jp/spd/code-address/jititai-code.html"
 J_LIS_MAP_ROOT = "https://www.j-lis.go.jp/spd/map-search/cms_1069.html"
