@@ -11,7 +11,10 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from bootstrap.cli.local_documents import diagnose_index, main as local_documents_main
+from bootstrap.cli.local_documents import (
+    diagnose_index,
+    main as local_documents_main,
+)
 from bootstrap.cli.sources import DEFAULT_REGISTRY, load_registry
 
 
@@ -157,6 +160,72 @@ class LocalDocumentDiagnosisTests(unittest.TestCase):
             "https://example.go.jp/finance/budget.pdf",
             result["candidates"][0]["url"],
         )
+
+    def test_sample_downloads_selected_candidate_without_creating_database(
+        self,
+    ) -> None:
+        index = SimpleNamespace(
+            final_url="https://example.go.jp/finance/",
+            content_type="text/html",
+            fetched_at="2026-07-24T00:00:00Z",
+            sha256="index",
+            text=lambda: (
+                '<a href="budget.pdf">予算書</a>'
+                '<a href="settlement.xlsx">決算書</a>'
+            ),
+        )
+        document = SimpleNamespace(
+            final_url="https://example.go.jp/finance/budget.pdf",
+            content_type="application/pdf",
+            fetched_at="2026-07-24T00:01:00Z",
+            body=b"%PDF-1.7 fixture",
+            from_cache=False,
+        )
+
+        class FakeClient:
+            def fetch(self, url: str, **kwargs: object) -> object:
+                return index if url.endswith("/finance/") else document
+
+            def retrieval_report(self) -> dict[str, int]:
+                return {"live_request_count": 2}
+
+        with tempfile.TemporaryDirectory() as temporary:
+            output = io.StringIO()
+            with (
+                patch(
+                    "bootstrap.cli.local_documents.HttpClient",
+                    return_value=FakeClient(),
+                ),
+                patch(
+                    "bootstrap.cli.local_documents._pdf_text_quality",
+                    return_value={
+                        "status": "unavailable",
+                        "tool": "pdftotext",
+                    },
+                ),
+                redirect_stdout(output),
+            ):
+                status = local_documents_main(
+                    [
+                        "sample",
+                        "--index-url",
+                        "https://example.go.jp/finance/",
+                        "--output-dir",
+                        temporary,
+                        "--candidate",
+                        "1",
+                    ]
+                )
+            result = json.loads(output.getvalue())
+            self.assertEqual(0, status)
+            self.assertEqual("sampled", result["status"])
+            self.assertEqual(1, result["documents_downloaded"])
+            self.assertFalse(result["database_created"])
+            self.assertEqual(
+                "passed",
+                result["samples"][0]["format_check"]["status"],
+            )
+            self.assertTrue(Path(result["samples"][0]["path"]).is_file())
 
 
 if __name__ == "__main__":

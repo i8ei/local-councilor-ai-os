@@ -1,0 +1,55 @@
+name: Live bootstrap contract
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: live-contract
+  cancel-in-progress: false
+
+jobs:
+  imari-bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      ESTAT_APPID: ${{ secrets.ESTAT_APPID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Check live-test credential
+        run: |
+          if [ -z "$ESTAT_APPID" ]; then
+            echo "::error::Repository secret ESTAT_APPID is required"
+            exit 1
+          fi
+      - name: Run isolated live bootstrap contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          report="$RUNNER_TEMP/lcaios-imari-report.json"
+          python3 -m lcaios smoke-test bootstrap "伊万里市" \
+            --prefecture "佐賀県" \
+            --work-dir "$RUNNER_TEMP/lcaios-imari" \
+            --refresh \
+            --max-live-requests 40 \
+            --format json > "$report"
+          jq '{
+            status,
+            municipality,
+            checks,
+            retrieval: {
+              live_request_count: .online.retrieval.live_request_count,
+              cache_hit_count: .online.retrieval.cache_hit_count,
+              cache_miss_count: .online.retrieval.cache_miss_count,
+              refresh_count: .online.retrieval.refresh_count,
+              latestness_rechecked_this_run:
+                .online.retrieval.latestness_rechecked_this_run
+            }
+          }' "$report"

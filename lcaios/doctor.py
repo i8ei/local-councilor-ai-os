@@ -101,6 +101,41 @@ def recommend_next(
             "reason": "議員本人・議会固有運用のprofileが未完了",
             "exit_code": 2,
         }
+    module_commands = {
+        "minutes": (
+            "cd modules/minutes-db && python3 ingest.py ... "
+            "--manifest-dir <vault>/.local-councilor-ai-os/runs/minutes"
+        ),
+        "regulations": (
+            "cd modules/regulations && python3 ingest.py ... "
+            "--manifest-dir <vault>/.local-councilor-ai-os/runs/regulations"
+        ),
+        "benchmark": (
+            "cd modules/benchmark && python3 build_from_bootstrap.py ... "
+            "--manifest-dir <vault>/.local-councilor-ai-os/runs/benchmark"
+        ),
+        "budget": (
+            "cd modules/budget-review && python3 verify_totals.py <budget.db> "
+            "--manifest-dir <vault>/.local-councilor-ai-os/runs/budget"
+        ),
+        "settlement": (
+            "cd modules/settlement-review && "
+            "python3 verify_totals.py <settlement.db> "
+            "--manifest-dir <vault>/.local-councilor-ai-os/runs/settlement"
+        ),
+    }
+    for name in sorted(status.get("modules", {})):
+        module = status["modules"][name]
+        if module.get("state") in {"not_configured", "ready"}:
+            continue
+        return {
+            "next_command": module_commands[name],
+            "reason": (
+                f"設定済みmodule `{name}` が `{module.get('state')}`。"
+                f"{module.get('detail', '')}"
+            ),
+            "exit_code": 2,
+        }
     return {
         "next_command": (
             "python3 -m lcaios verify output --file <公開予定稿> "
@@ -155,7 +190,7 @@ def run_doctor(
             "state": status["bootstrap"]["state"],
             "freshness": status["bootstrap"]["freshness"]["state"],
         },
+        "modules": status.get("modules", {}),
         "recommendation": recommendation,
         "warnings": status.get("warnings", []),
     }
-

@@ -3,10 +3,13 @@
 from __future__ import annotations
 
 import csv
+import io
+import json
 import sqlite3
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 
 MODULE_DIR = Path(__file__).resolve().parents[1]
@@ -62,10 +65,54 @@ class SettlementCsvIngestTests(unittest.TestCase):
                 {**COMMON, "kan_code": "1", "kan_name": "歳出款", "ko_code": "1", "ko_name": "歳出項", "moku_code": "1", "moku_name": "歳出目1", "setsu_code": "2", "setsu_name": "歳出節2", "item_budget_current_amount": "60", "item_spent_amount": "40", "item_carryover_amount": "5", "item_unused_amount": "15", "section_budget_current_amount": "30", "section_spent_amount": "15", "section_carryover_amount": "0", "section_unused_amount": "15"},
                 {**COMMON, "kan_code": "1", "kan_name": "歳出款", "ko_code": "1", "ko_name": "歳出項", "moku_code": "2", "moku_name": "歳出目2", "setsu_code": "1", "setsu_name": "歳出節1", "item_budget_current_amount": "40", "item_spent_amount": "30", "item_carryover_amount": "5", "item_unused_amount": "5", "section_budget_current_amount": "40", "section_spent_amount": "30", "section_carryover_amount": "5", "section_unused_amount": "5"},
             ])
-            self.assertEqual(2, ingest_csv.ingest_csv("summary", summary, db)["rows_loaded"])
-            self.assertEqual(2, ingest_csv.ingest_csv("revenue", revenue, db)["rows_loaded"])
-            self.assertEqual(3, ingest_csv.ingest_csv("expenditure", expenditure, db)["rows_loaded"])
-            self.assertEqual(0, verify_totals.verify(db))
+            manifest_dir = root / "runs"
+            with redirect_stdout(io.StringIO()):
+                for index, (kind, source) in enumerate(
+                    (
+                        ("summary", summary),
+                        ("revenue", revenue),
+                        ("expenditure", expenditure),
+                    ),
+                    start=1,
+                ):
+                    self.assertEqual(
+                        0,
+                        ingest_csv.main(
+                            [
+                                kind,
+                                str(source),
+                                "--db",
+                                str(db),
+                                "--manifest-dir",
+                                str(manifest_dir),
+                                "--run-id",
+                                f"settlement-ingest-{index}",
+                            ]
+                        ),
+                    )
+                self.assertEqual(
+                    0,
+                    verify_totals.main(
+                        [
+                            str(db),
+                            "--manifest-dir",
+                            str(manifest_dir),
+                            "--run-id",
+                            "settlement-verify",
+                        ]
+                    ),
+                )
+            verify_manifest = json.loads(
+                (manifest_dir / "settlement-verify.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertEqual("succeeded", verify_manifest["status"])
+            self.assertEqual(7, verify_manifest["coverage"]["rows"])
+            self.assertEqual(
+                "settlement_reconciliation",
+                verify_manifest["checks"][1]["name"],
+            )
             with sqlite3.connect(db) as connection:
                 self.assertEqual("ok", connection.execute("PRAGMA integrity_check").fetchone()[0])
 

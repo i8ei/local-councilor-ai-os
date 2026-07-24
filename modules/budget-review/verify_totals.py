@@ -9,6 +9,17 @@ import sys
 from pathlib import Path
 from typing import Any
 
+MODULE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = MODULE_DIR.parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from lcaios.module_manifest import (  # noqa: E402
+    begin_module_run,
+    fail_module_run,
+    finish_verification_run,
+)
+
 AMOUNT_FIELDS = (
     "current_year_amount",
     "previous_year_amount",
@@ -246,15 +257,68 @@ def verify(path: Path) -> int:
     return 0
 
 
+def _manifest_coverage(path: Path) -> dict[str, Any]:
+    with _open(path) as connection:
+        row = connection.execute(
+            """
+            SELECT
+                COUNT(*) AS rows,
+                MIN(fiscal_year) AS first_year,
+                MAX(fiscal_year) AS last_year,
+                COUNT(DISTINCT account_name) AS accounts
+            FROM budget_line
+            """
+        ).fetchone()
+    return {
+        "rows": int(row["rows"]),
+        "first_fiscal_year": row["first_year"],
+        "last_fiscal_year": row["last_year"],
+        "accounts": int(row["accounts"]),
+    }
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("database", type=Path)
+    parser.add_argument("--manifest-dir", type=Path)
+    parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
 
 
-def main() -> int:
-    args = build_parser().parse_args()
-    return verify(args.database)
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    manifest_path: Path | None = None
+    manifest: dict[str, Any] | None = None
+    try:
+        manifest_path, manifest = begin_module_run(
+            args.manifest_dir,
+            run_type="budget",
+            repo_root=REPO_ROOT,
+            run_id=args.run_id,
+            requested={"action": "verify", "database": str(args.database)},
+        )
+        exit_code = verify(args.database)
+        if not args.database.is_file():
+            fail_module_run(
+                manifest_path,
+                manifest,
+                f"database not found: {args.database}",
+            )
+            return exit_code
+        finish_verification_run(
+            manifest_path,
+            manifest,
+            database=args.database,
+            artifact_kind="budget_database",
+            verification_name="budget_reconciliation",
+            exit_code=exit_code,
+            coverage=_manifest_coverage(args.database),
+        )
+        return exit_code
+    except (OSError, ValueError, sqlite3.Error) as exc:
+        fail_module_run(manifest_path, manifest, exc)
+        print(f"manifestを記録できません: {exc}", file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":

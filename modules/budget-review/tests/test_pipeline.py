@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import csv
 import io
+import json
 import sqlite3
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 
 MODULE_DIR = Path(__file__).resolve().parents[1]
@@ -80,9 +82,45 @@ class BudgetPipelineTests(unittest.TestCase):
                 ko("expenditure", "2", "1", "総務管理費", "100", "80"),
             ]
             write_csv(csv_path, rows)
-            report = ingest_csv.ingest_csv(csv_path, db)
-            self.assertEqual(6, report["rows_loaded"])
-            self.assertEqual(0, verify_totals.verify(db))
+            manifest_dir = root / "runs"
+            with redirect_stdout(io.StringIO()):
+                self.assertEqual(
+                    0,
+                    ingest_csv.main(
+                        [
+                            str(csv_path),
+                            "--db",
+                            str(db),
+                            "--manifest-dir",
+                            str(manifest_dir),
+                            "--run-id",
+                            "budget-ingest",
+                        ]
+                    ),
+                )
+                self.assertEqual(
+                    0,
+                    verify_totals.main(
+                        [
+                            str(db),
+                            "--manifest-dir",
+                            str(manifest_dir),
+                            "--run-id",
+                            "budget-verify",
+                        ]
+                    ),
+                )
+            verify_manifest = json.loads(
+                (manifest_dir / "budget-verify.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertEqual("succeeded", verify_manifest["status"])
+            self.assertEqual(6, verify_manifest["coverage"]["rows"])
+            self.assertEqual(
+                "budget_reconciliation",
+                verify_manifest["checks"][1]["name"],
+            )
             with sqlite3.connect(db) as connection:
                 result = insights.generate_insights(connection, min_change_ratio=0.1)
             self.assertTrue(result["candidates"])

@@ -12,6 +12,17 @@ from pathlib import Path
 from typing import Any
 
 MODULE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = MODULE_DIR.parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from lcaios.module_manifest import (  # noqa: E402
+    begin_module_run,
+    fail_module_run,
+    finish_database_run,
+    input_file_record,
+)
+
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
 
 REQUIRED = {
@@ -180,16 +191,46 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("csv", type=Path)
     parser.add_argument("--db", required=True, type=Path)
+    parser.add_argument("--manifest-dir", type=Path)
+    parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
 
 
-def main() -> int:
-    args = build_parser().parse_args()
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    manifest_path: Path | None = None
+    manifest: dict[str, Any] | None = None
     try:
+        manifest_path, manifest = begin_module_run(
+            args.manifest_dir,
+            run_type="budget",
+            repo_root=REPO_ROOT,
+            run_id=args.run_id,
+            requested={"csv": str(args.csv), "database": str(args.db)},
+        )
         result = ingest_csv(args.csv, args.db)
     except (OSError, ValueError, sqlite3.Error) as exc:
+        fail_module_run(manifest_path, manifest, exc)
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
+    finish_database_run(
+        manifest_path,
+        manifest,
+        database=result["database"],
+        artifact_kind="budget_database",
+        scope={"action": "ingest"},
+        coverage={"rows_loaded": result["rows_loaded"]},
+        inputs=[input_file_record(args.csv, kind="budget_normalized_csv")],
+        checks=[
+            {
+                "name": "budget_rows",
+                "status": "passed" if result["rows_loaded"] > 0 else "failed",
+                "detail": result["rows_loaded"],
+            }
+        ],
+    )
+    if manifest_path is not None:
+        result["manifest"] = str(manifest_path)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
 

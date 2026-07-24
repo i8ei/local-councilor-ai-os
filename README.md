@@ -52,6 +52,10 @@ python3 -m bootstrap.cli '<自治体名>' \
 
 # 4. 導入・profile・データ・鮮度の再確認
 python3 -m lcaios status --vault '/absolute/path/to/vault'
+
+# 5. オンライン取得とキャッシュ再現を一度に検証
+python3 -m lcaios smoke-test bootstrap '<自治体名>' \
+  --prefecture '<都道府県名>'
 ```
 
 `doctor`は診断とreadinessを束ね、次に実行すべき1コマンドだけを示す。基盤が未整備なら`claude-obsidian-setup`へのハンドオフを終了コード3で返す。部品だけを使う利用者には、OS全体の導入完了とは表示しない。
@@ -151,7 +155,7 @@ python3 -m onboarding diagnose \
 - 議事録の本文・PDF・DB未取得dry-runと、検索式から独立した問いを持つcontext pack
 - 複数AI協働の設計と、段階式セットアップ手順
 - OS制御層 `lcaios/`（`main`追加分）。導入・profile・データ・鮮度を横断する読み取り専用の状態確認、参照先別の鮮度判定、公開前output安全検査、SQLiteのschema互換検証・非上書きbackup・SHA-256確認付き復旧、生成物一覧、次の一手を示す`doctor`
-- 共通run manifest（bootstrapの`--manifest-dir`）とデータ契約（run manifest、instance、鮮度、情報区分、schema互換）、外部コンテンツをデータとして扱うprompt injection境界
+- bootstrap、議事録、例規、比較、予算、決算の共通run manifestとデータ契約（run manifest、instance、鮮度、情報区分、schema互換）、外部コンテンツをデータとして扱うprompt injection境界
 
 ## 統一状態確認
 
@@ -173,6 +177,18 @@ python3 -m lcaios status --vault '/absolute/path/to/vault'
 ```
 
 run manifestを使わない場合は、Vault内の`.local-councilor-ai-os/instance.json`へDB位置を記録できます。通常の状態表示は未完了項目があっても終了コード0で報告し、CIや公開前ゲートでは`--require tier1_data_ready`等を指定すると、未達時に終了コード2を返します。状態確認は読み取り専用で、manifestやDBを作成・修正しません。
+
+各モジュールの取込・検算CLIにも`--manifest-dir`を指定できます。保存先は
+`<vault>/.local-councilor-ai-os/runs/<module>`とし、`<module>`は
+`minutes`、`regulations`、`benchmark`、`budget`、`settlement`のいずれかです。
+`status`と`doctor`はartifactのSHA-256、SQLite integrity、モジュール固有の必須checkを
+確認します。CIで個別モジュールを必須にする場合は、次のように指定します。
+
+```bash
+python3 -m lcaios status \
+  --vault '/absolute/path/to/vault' \
+  --require 'module_ready:regulations'
+```
 
 参照先別の鮮度だけを確認する場合:
 
@@ -261,6 +277,20 @@ python3 -m lcaios generated-files --vault '/absolute/path/to/vault'
 ```
 
 ルートの `python3 -m unittest discover` は `lcaios/`、`bootstrap/`、`onboarding/` のテストを検出します。`modules/` はパッケージではなく、サブディレクトリ名にハイフンを含むため、各モジュールのテストは個別に起動する必要があります。`run_tests.sh` はこれらと各モジュールのテスト、予算・決算の検算ゲートまでをまとめて実行し、いずれかが失敗すると終了コード1を返します。
+
+通常のpush／PRでは、外部通信しない合成fixtureテストをPython 3.11と3.14で実行します。
+実APIの契約確認は、週次または手動の`Live bootstrap contract` workflowへ分離しています。
+ローカルで同じ検証を行うには`ESTAT_APPID`を環境変数へ設定し、次を実行します。
+
+```bash
+python3 -m lcaios smoke-test bootstrap '伊万里市' \
+  --prefecture '佐賀県' \
+  --work-dir /tmp/lcaios-imari-smoke \
+  --max-live-requests 40
+```
+
+このsmoke testは、隔離した共有キャッシュでオンライン構築とオフライン再構築を続けて行い、
+指標、authority map、SQLite integrity、通信0件、AppId非残存、HTTP要求上限を検証します。
 
 ## ライセンス
 

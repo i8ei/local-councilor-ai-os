@@ -95,7 +95,8 @@ python3 ingest.py \
   --adapter kaigiroku_net \
   --url https://ssp.kaigiroku.net/tenant/sakuho/ \
   --db minutes.db \
-  --limit 2
+  --limit 2 \
+  --manifest-dir '/path/to/vault/.local-councilor-ai-os/runs/minutes'
 
 python3 ingest.py \
   --adapter static \
@@ -121,6 +122,7 @@ python3 context_pack.py "防災" \
 静的アダプターの`--dry-run`は、索引と設定したfollow対象HTMLまでを読み、各リンクを`selected`、`excluded_by_regex`、`format_mismatch`、`duplicate`に分けます。会議本文やPDFを取得せず、DBも作りません。候補を確認してから少数件の本取込へ進んでください。
 
 同じ`source_url`と会議内`seq`の再取込は更新となり、重複行を作りません。
+`--manifest-dir`を指定すると、成功・失敗・dry-runを上書きしないrun manifestへ記録します。
 検索結果は話者、日付、会議名、抜粋、原典URL、原典位置、取得時刻を返します。
 FTS5が使えない場合、FTS構文が不正な場合、trigramで扱いにくい短語の場合は
 リテラルな`LIKE`検索で補完します。

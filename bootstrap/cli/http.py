@@ -197,13 +197,93 @@ class HttpClient:
         cache_dir: str | os.PathLike[str],
         *,
         offline: bool = False,
+        refresh: bool = False,
         timeout: float = 90,
     ) -> None:
+        if offline and refresh:
+            raise ValueError("offlineとrefreshは同時に指定できません")
         self.cache_dir = Path(cache_dir)
         self.offline = offline
+        self.refresh = refresh
         self.timeout = timeout
         self.request_count = 0
+        self.cache_hit_count = 0
+        self.cache_miss_count = 0
+        self.refresh_count = 0
+        self.fetch_log: list[dict[str, Any]] = []
         self._robots: dict[str, urllib.robotparser.RobotFileParser] = {}
+
+    @staticmethod
+    def _source_id(cache_key: str) -> str:
+        return cache_key.split(":", 1)[0] or "url"
+
+    def _record_fetch(
+        self,
+        *,
+        cache_key: str,
+        url: str,
+        status: str,
+        result: FetchResult | None = None,
+    ) -> None:
+        item: dict[str, Any] = {
+            "source_id": self._source_id(cache_key),
+            "status": status,
+            "url": result.url if result is not None else url,
+        }
+        if result is not None:
+            item.update(
+                {
+                    "final_url": result.final_url,
+                    "fetched_at": result.fetched_at,
+                    "sha256": result.sha256,
+                }
+            )
+        self.fetch_log.append(item)
+
+    def retrieval_report(self) -> dict[str, Any]:
+        """Return secret-free cache and network provenance for this process."""
+
+        by_source: dict[str, dict[str, Any]] = {}
+        for item in self.fetch_log:
+            source = by_source.setdefault(
+                item["source_id"],
+                {
+                    "source_id": item["source_id"],
+                    "cache_hits": 0,
+                    "network_fetches": 0,
+                    "refreshes": 0,
+                    "cache_misses": 0,
+                    "latestness_rechecked_this_run": True,
+                },
+            )
+            status = item["status"]
+            if status == "cache_hit":
+                source["cache_hits"] += 1
+                source["latestness_rechecked_this_run"] = False
+            elif status == "refreshed":
+                source["refreshes"] += 1
+                source["network_fetches"] += 1
+            elif status == "fetched":
+                source["network_fetches"] += 1
+            elif status == "cache_miss":
+                source["cache_misses"] += 1
+                source["latestness_rechecked_this_run"] = False
+        return {
+            "cache_directory": str(self.cache_dir.resolve(strict=False)),
+            "offline": self.offline,
+            "refresh": self.refresh,
+            "live_request_count": self.request_count,
+            "cache_hit_count": self.cache_hit_count,
+            "cache_miss_count": self.cache_miss_count,
+            "refresh_count": self.refresh_count,
+            "latestness_rechecked_this_run": bool(self.fetch_log)
+            and all(
+                item["status"] in {"fetched", "refreshed"}
+                for item in self.fetch_log
+            ),
+            "sources": sorted(by_source.values(), key=lambda item: item["source_id"]),
+            "accesses": self.fetch_log,
+        }
 
     def _read_cached(
         self,
@@ -346,7 +426,11 @@ class HttpClient:
         robots_url = origin + "/robots.txt"
         robots_key = "robots:" + robots_url
         accepted = set(range(200, 300)) | {401, 403, 404, 410}
-        cached = self._read_cached(robots_key, accepted_statuses=accepted)
+        cached = (
+            None
+            if self.refresh
+            else self._read_cached(robots_key, accepted_statuses=accepted)
+        )
         if cached:
             result, status = cached
         else:
@@ -423,15 +507,45 @@ class HttpClient:
         secret_keys = sensitive_query_keys or set()
         safe_url = _redact_url(requested_url, secret_keys)
         key = cache_key or "url:" + safe_url
-        cached = self._read_cached(key, accepted_statuses=range(200, 300))
+        body_path, metadata_path = _cache_files(self.cache_dir, key)
+        cache_available = body_path.is_file() and metadata_path.is_file()
+        cached = (
+            None
+            if self.refresh
+            else self._read_cached(key, accepted_statuses=range(200, 300))
+        )
         if cached:
+            self.cache_hit_count += 1
+            self._record_fetch(
+                cache_key=key,
+                url=safe_url,
+                status="cache_hit",
+                result=cached[0],
+            )
             return cached[0]
         if self.offline:
+            self.cache_miss_count += 1
+            self._record_fetch(
+                cache_key=key,
+                url=safe_url,
+                status="cache_miss",
+            )
             raise OfflineCacheMiss(f"キャッシュがありません: {safe_url}")
 
         with _REQUEST_LOCK:
-            cached = self._read_cached(key, accepted_statuses=range(200, 300))
+            cached = (
+                None
+                if self.refresh
+                else self._read_cached(key, accepted_statuses=range(200, 300))
+            )
             if cached:
+                self.cache_hit_count += 1
+                self._record_fetch(
+                    cache_key=key,
+                    url=safe_url,
+                    status="cache_hit",
+                    result=cached[0],
+                )
                 return cached[0]
             current_url = requested_url
             request_log: list[dict[str, Any]] = []
@@ -454,11 +568,23 @@ class HttpClient:
                     raise FetchError(
                         f"取得に失敗しました: HTTP {response.status}: {safe_url}"
                     )
-                return self._write_cache(
+                result = self._write_cache(
                     key,
                     requested_url,
                     response,
                     request_log,
                     sensitive_query_keys=secret_keys,
                 )
+                status = "refreshed" if self.refresh and cache_available else "fetched"
+                if status == "refreshed":
+                    self.refresh_count += 1
+                elif not cache_available:
+                    self.cache_miss_count += 1
+                self._record_fetch(
+                    cache_key=key,
+                    url=safe_url,
+                    status=status,
+                    result=result,
+                )
+                return result
             raise FetchError("リダイレクト回数が上限を超えました")

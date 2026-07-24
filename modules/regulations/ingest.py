@@ -15,11 +15,20 @@ from pathlib import Path
 from typing import Any
 
 MODULE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = MODULE_DIR.parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 MINUTES_MODULE = MODULE_DIR.parent / "minutes-db"
 if str(MINUTES_MODULE) not in sys.path:
     sys.path.insert(0, str(MINUTES_MODULE))
 
 from adapters.base import FetchError, polite_fetch  # type: ignore  # noqa: E402
+from lcaios.module_manifest import (  # noqa: E402
+    begin_module_run,
+    fail_module_run,
+    finish_database_run,
+    input_file_record,
+)
 
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
 _BLOCK_TAGS = {
@@ -414,16 +423,57 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--db", required=True, help="Output SQLite database")
     parser.add_argument("--limit", type=int, default=None, help="Document limit")
     parser.add_argument("--cache-dir", help="Override cache directory")
+    parser.add_argument("--manifest-dir", type=Path)
+    parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
 
 
-def main() -> int:
-    args = build_parser().parse_args()
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    manifest_path: Path | None = None
+    manifest: dict[str, Any] | None = None
     try:
+        manifest_path, manifest = begin_module_run(
+            args.manifest_dir,
+            run_type="regulations",
+            repo_root=REPO_ROOT,
+            run_id=args.run_id,
+            requested={
+                "adapter": "static",
+                "config": args.config,
+                "database": args.db,
+                "limit": args.limit,
+                "cache_directory": args.cache_dir,
+            },
+        )
         result = ingest(args.config, args.db, cache_dir=args.cache_dir, limit=args.limit)
     except (OSError, ValueError, RuntimeError, sqlite3.Error, FetchError, json.JSONDecodeError) as exc:
+        fail_module_run(manifest_path, manifest, exc)
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
+    finish_database_run(
+        manifest_path,
+        manifest,
+        database=result["database"],
+        artifact_kind="regulations_database",
+        scope={"adapter": "static", "action": "ingest"},
+        coverage={
+            "documents": result["documents"],
+            "articles": result["articles"],
+            "statuses": result["statuses"],
+            "fts_tokenizer": result["fts_tokenizer"],
+        },
+        inputs=[input_file_record(args.config, kind="regulations_adapter_config")],
+        checks=[
+            {
+                "name": "document_rows",
+                "status": "passed" if result["documents"] > 0 else "failed",
+                "detail": result["documents"],
+            }
+        ],
+    )
+    if manifest_path is not None:
+        result["manifest"] = str(manifest_path)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
 

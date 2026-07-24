@@ -3,8 +3,11 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
+import shutil
+import subprocess
 import sys
 import urllib.parse
 from html.parser import HTMLParser
@@ -197,6 +200,139 @@ def diagnose_index(
     }
 
 
+def _sample_filename(candidate: dict[str, Any], position: int) -> str:
+    path = urllib.parse.unquote(
+        urllib.parse.urlsplit(str(candidate["url"])).path
+    )
+    filename = Path(path).name
+    filename = re.sub(r"[^0-9A-Za-z._-]+", "_", filename).strip("._")
+    extension = f".{candidate['format']}" if candidate.get("format") else ""
+    return filename or f"document-{position}{extension}"
+
+
+def _pdf_text_quality(path: Path) -> dict[str, Any]:
+    executable = shutil.which("pdftotext")
+    if executable is None:
+        return {
+            "status": "unavailable",
+            "tool": "pdftotext",
+            "detail": "PATH上にpdftotextがないためテキスト層は未確認",
+        }
+    result = subprocess.run(
+        [executable, "-f", "1", "-l", "3", str(path), "-"],
+        capture_output=True,
+        text=True,
+        check=False,
+        timeout=60,
+    )
+    if result.returncode != 0:
+        return {
+            "status": "failed",
+            "tool": "pdftotext",
+            "detail": result.stderr.strip()[:500],
+        }
+    characters = len(result.stdout.strip())
+    return {
+        "status": "extracted" if characters else "empty",
+        "tool": "pdftotext",
+        "pages_checked": "1-3",
+        "character_count": characters,
+    }
+
+
+def _available_destination(directory: Path, filename: str) -> Path:
+    """Choose a new path without overwriting an earlier sample."""
+
+    candidate = directory / filename
+    if not candidate.exists():
+        return candidate
+    stem = Path(filename).stem
+    suffix = Path(filename).suffix
+    counter = 2
+    while True:
+        candidate = directory / f"{stem}-{counter}{suffix}"
+        if not candidate.exists():
+            return candidate
+        counter += 1
+
+
+def sample_documents(
+    *,
+    diagnosis: dict[str, Any],
+    client: HttpClient,
+    output_directory: Path,
+    candidate_numbers: list[int],
+) -> dict[str, Any]:
+    """Download selected official candidates and report extraction quality."""
+
+    candidates = diagnosis["candidates"]
+    if not candidates:
+        raise ValueError("取得候補がありません")
+    if not candidate_numbers:
+        raise ValueError("候補を1件以上指定してください")
+    if len(candidate_numbers) > 3:
+        raise ValueError("sampleで取得できる候補は最大3件です")
+    if len(set(candidate_numbers)) != len(candidate_numbers):
+        raise ValueError("同じ候補番号を重複して指定できません")
+    if any(number < 1 or number > len(candidates) for number in candidate_numbers):
+        raise ValueError(
+            f"候補番号は1から{len(candidates)}の範囲で指定してください"
+        )
+
+    output_directory.mkdir(parents=True, exist_ok=True)
+    documents: list[dict[str, Any]] = []
+    for number in candidate_numbers:
+        candidate = candidates[number - 1]
+        fetched = client.fetch(
+            str(candidate["url"]),
+            cache_key=f"local-document:{candidate['url']}",
+        )
+        filename = _sample_filename(candidate, number)
+        destination = _available_destination(output_directory, filename)
+        destination.write_bytes(fetched.body)
+        expected_format = str(candidate.get("format") or "")
+        is_pdf = expected_format == "pdf"
+        pdf_signature = fetched.body.startswith(b"%PDF-") if is_pdf else None
+        document = {
+            "candidate_number": number,
+            "title": candidate["title"],
+            "kinds": candidate["kinds"],
+            "source_url": fetched.final_url,
+            "path": str(destination.resolve(strict=False)),
+            "format": expected_format,
+            "content_type": fetched.content_type,
+            "size_bytes": len(fetched.body),
+            "sha256": hashlib.sha256(fetched.body).hexdigest(),
+            "fetched_at": fetched.fetched_at,
+            "from_cache": fetched.from_cache,
+            "format_check": {
+                "status": (
+                    "passed"
+                    if not is_pdf or pdf_signature
+                    else "failed"
+                ),
+                "pdf_signature": pdf_signature,
+            },
+        }
+        if is_pdf:
+            document["text_layer_check"] = _pdf_text_quality(destination)
+        documents.append(document)
+
+    quality_passed = all(
+        document["format_check"]["status"] == "passed"
+        for document in documents
+    )
+    return {
+        **diagnosis,
+        "status": "sampled" if quality_passed else "quality_failed",
+        "documents_downloaded": len(documents),
+        "sample_directory": str(output_directory.resolve(strict=False)),
+        "samples": documents,
+        "database_created": False,
+        "retrieval": client.retrieval_report(),
+    }
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="python3 -m bootstrap.cli.local_documents",
@@ -210,6 +346,27 @@ def build_parser() -> argparse.ArgumentParser:
     diagnose.add_argument("--index-url", required=True)
     diagnose.add_argument("--cache-dir", default="bootstrap/.cache/local-documents")
     diagnose.add_argument("--offline", action="store_true")
+    sample = subparsers.add_parser(
+        "sample",
+        help="公式索引の候補を最大3件取得し、原本hashとPDF品質を確認する",
+    )
+    sample.add_argument("--index-url", required=True)
+    sample.add_argument("--output-dir", required=True, type=Path)
+    sample.add_argument(
+        "--candidate",
+        action="append",
+        type=int,
+        help="1始まりの候補番号。最大3回指定可",
+    )
+    sample.add_argument(
+        "--limit",
+        type=int,
+        choices=(1, 2, 3),
+        default=1,
+        help="--candidate省略時に先頭から取得する件数",
+    )
+    sample.add_argument("--cache-dir", default="bootstrap/.cache/local-documents")
+    sample.add_argument("--offline", action="store_true")
     return parser
 
 
@@ -229,9 +386,19 @@ def main(argv: Sequence[str] | None = None) -> int:
             fetched_at=fetched.fetched_at,
             content_hash=f"sha256:{fetched.sha256}",
         )
+        if args.command == "sample":
+            numbers = args.candidate or list(
+                range(1, min(args.limit, result["candidate_count"]) + 1)
+            )
+            result = sample_documents(
+                diagnosis=result,
+                client=client,
+                output_directory=args.output_dir,
+                candidate_numbers=numbers,
+            )
         print(json.dumps(result, ensure_ascii=False, indent=2))
-        return 0
-    except FetchError as error:
+        return 2 if result["status"] == "quality_failed" else 0
+    except (FetchError, OSError, ValueError, subprocess.TimeoutExpired) as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 2
 
