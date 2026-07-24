@@ -8,7 +8,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from bootstrap.cli.http import HttpClient, OfflineCacheMiss, _cache_files
+from bootstrap.cli.http import (
+    HttpClient,
+    OfflineCacheMiss,
+    _RawResponse,
+    _cache_files,
+)
 
 
 class HttpRetrievalReportingTests(unittest.TestCase):
@@ -60,6 +65,24 @@ class HttpRetrievalReportingTests(unittest.TestCase):
     def test_offline_and_refresh_are_mutually_exclusive(self) -> None:
         with self.assertRaisesRegex(ValueError, "同時"):
             HttpClient("/tmp/unused-lcaios-cache", offline=True, refresh=True)
+
+    def test_robots_http_400_is_unavailable_under_rfc_9309(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            client = HttpClient(temporary)
+            client._request_once = lambda _: _RawResponse(  # type: ignore[method-assign]
+                url="https://example.test/robots.txt",
+                status=400,
+                body=b"",
+                headers={"Content-Type": "text/plain"},
+                fetched_at="2026-07-24T00:00:00Z",
+            )
+            parser = client._robots_parser("https://example.test/data")
+            self.assertTrue(
+                parser.can_fetch(
+                    "local-councilor-ai-os",
+                    "https://example.test/data",
+                )
+            )
 
 
 if __name__ == "__main__":

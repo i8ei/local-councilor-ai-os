@@ -1,0 +1,799 @@
+{
+  "excluded_current_region_count": 8,
+  "excluded_current_regions": [
+    {
+      "area_code_5": "01695",
+      "prefecture_name": "北海道",
+      "reason": "not present in both J-LIS local-government code and official website indexes",
+      "region_level": "13",
+      "region_name": "色丹村"
+    },
+    {
+      "area_code_5": "01696",
+      "prefecture_name": "北海道",
+      "reason": "not present in both J-LIS local-government code and official website indexes",
+      "region_level": "13",
+      "region_name": "泊村"
+    },
+    {
+      "area_code_5": "01697",
+      "prefecture_name": "北海道",
+      "reason": "not present in both J-LIS local-government code and official website indexes",
+      "region_level": "13",
+      "region_name": "留夜別村"
+    },
+    {
+      "area_code_5": "01698",
+      "prefecture_name": "北海道",
+      "reason": "not present in both J-LIS local-government code and official website indexes",
+      "region_level": "13",
+      "region_name": "留別村"
+    },
+    {
+      "area_code_5": "01699",
+      "prefecture_name": "北海道",
+      "reason": "not present in both J-LIS local-government code and official website indexes",
+      "region_level": "13",
+      "region_name": "紗那村"
+    },
+    {
+      "area_code_5": "01700",
+      "prefecture_name": "北海道",
+      "reason": "not present in both J-LIS local-government code and official website indexes",
+      "region_level": "13",
+      "region_name": "蘂取村"
+    },
+    {
+      "area_code_5": "07999",
+      "prefecture_name": "福島県",
+      "reason": "not present in both J-LIS local-government code and official website indexes",
+      "region_level": "9",
+      "region_name": "浜通り地域"
+    },
+    {
+      "area_code_5": "13199",
+      "prefecture_name": "東京都",
+      "reason": "not present in both J-LIS local-government code and official website indexes",
+      "region_level": "10",
+      "region_name": "境界未定地域"
+    }
+  ],
+  "generated_at": "2026-07-24T07:28:05Z",
+  "name_alias_count": 2,
+  "prefecture_count": 47,
+  "record_count": 1741,
+  "registry_file": "municipalities.csv",
+  "registry_sha256": "983ea24a4867c2fa32627da960937c78a786f50916d6f5f145caf8733c6b3f99",
+  "retrieval": {
+    "cache_hit_count": 0,
+    "cache_miss_count": 0,
+    "latestness_rechecked_this_run": true,
+    "live_request_count": 104,
+    "offline": false,
+    "refresh": true,
+    "refresh_count": 102
+  },
+  "schema_version": 1,
+  "scope": "Current basic municipalities present in all three sources: e-Stat region metadata, J-LIS local-government codes, and J-LIS official website map.",
+  "source_roots": {
+    "estat_region_api": "https://dashboard.e-stat.go.jp/api/1.0/Json/getRegionInfo",
+    "jlis_code": "https://www.j-lis.go.jp/spd/code-address/jititai-code.html",
+    "jlis_home": "https://www.j-lis.go.jp/spd/map-search/cms_1069.html"
+  },
+  "sources": [
+    {
+      "fetched_at": "2026-07-24T07:25:32Z",
+      "final_url": "https://dashboard.e-stat.go.jp/api/1.0/Json/getRegionInfo?Lang=JP&RegionLevel=3",
+      "from_cache": false,
+      "sha256": "1550074583520e28375ff6ea36b1dba504bfdc5950fa77ff9c1f52f7d771f05c",
+      "url": "https://dashboard.e-stat.go.jp/api/1.0/Json/getRegionInfo?Lang=JP&RegionLevel=3"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:34Z",
+      "final_url": "https://dashboard.e-stat.go.jp/api/1.0/Json/getRegionInfo?Lang=JP&RegionLevel=8%2C9%2C10%2C12%2C13",
+      "from_cache": false,
+      "sha256": "2cb14d8aa48c1602720a7c0aa9d3a3e17e57227182f5a53ca012fb7aafd6e2d5",
+      "url": "https://dashboard.e-stat.go.jp/api/1.0/Json/getRegionInfo?Lang=JP&RegionLevel=8%2C9%2C10%2C12%2C13"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:16Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15214184.html",
+      "from_cache": false,
+      "sha256": "616e91319fdd62055643fbcaea44d95218682400a210ba01321db663528b3dfc",
+      "url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15214184.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:19Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15314184.html",
+      "from_cache": false,
+      "sha256": "56a67066edc8a4ffc9f66bb7c424c1a48b78c25f15ef2904d2037d1476f9a457",
+      "url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15314184.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:22Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15414184.html",
+      "from_cache": false,
+      "sha256": "599f2c75e62e367991bcf6bb9baa047ab19497e5644c5caddcabf068536553c6",
+      "url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15414184.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:25Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15514184.html",
+      "from_cache": false,
+      "sha256": "9b1e39142c14439eeb35acf4999bd5bf82c87a3187b178f1f2965385d60783e5",
+      "url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15514184.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:28Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15614184.html",
+      "from_cache": false,
+      "sha256": "d977650698d7ccd470f3b2978e1a9433f9753620978882ae9838796de9df3952",
+      "url": "https://www.j-lis.go.jp/spd/code-address/chuugoku/cms_15614184.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:40Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/hokkaido/cms_12214179.html",
+      "from_cache": false,
+      "sha256": "4b485069ce2526d3770a7470c324ba0cbddffb1bca7e346ac8886849c3f62d1b",
+      "url": "https://www.j-lis.go.jp/spd/code-address/hokkaido/cms_12214179.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:36Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/jititai-code.html",
+      "from_cache": false,
+      "sha256": "1efedbe3988d270ebf1432e3d5b0be163dd0720d1a365d0201744ffe3004a5b0",
+      "url": "https://www.j-lis.go.jp/spd/code-address/jititai-code.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:07Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_12914181.html",
+      "from_cache": false,
+      "sha256": "e01be539b10ca25d07c6518a327e99245dbdb040aa4b6805ed03a864ba0bad7e",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_12914181.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:10Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13014181.html",
+      "from_cache": false,
+      "sha256": "3387230c539199b8491b67ba92303e27759a759ab42e7729d58bcdfe79502f6c",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13014181.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:13Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13114181.html",
+      "from_cache": false,
+      "sha256": "6f87fbe96f6a8a855d6de7dca930d8aa5ab2bfe51647d0cb61b4f4336d14b6ac",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13114181.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:16Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13214181.html",
+      "from_cache": false,
+      "sha256": "71d987472f1e441d2836c978c7e3f1ad3c140f05a6cd6ffe386a44a3d064c11f",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13214181.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:19Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13314181.html",
+      "from_cache": false,
+      "sha256": "96362d63d0bf6bfd70e30f357ef2bbac7a1941d369f3d275ed3f7f82b78c644d",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13314181.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:22Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13414181.html",
+      "from_cache": false,
+      "sha256": "7a74ea093f2ae8b418db9d24efee06793df396184f92f2add59fa214142a4f85",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13414181.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:25Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13514181.html",
+      "from_cache": false,
+      "sha256": "3a995ef04be29c639e3bc7e6b86b26cd1d7f0e3690ce99ff350babedc647282d",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kantou/cms_13514181.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:55Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14514183.html",
+      "from_cache": false,
+      "sha256": "a8962d33b14e25d5ea160b2670152b82b9ec8a6ae7c5a2802dc2740020eb2679",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14514183.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:58Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14614183.html",
+      "from_cache": false,
+      "sha256": "1bf005012b2069fe2ab81c2f8d8a3d116968a659a329664244de2d87a2c20db1",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14614183.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:01Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14714183.html",
+      "from_cache": false,
+      "sha256": "5d52094388c77f01c3043036d9cd008ef29f8ad10781b4c217d73f593cf3c123",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14714183.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:04Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14814183.html",
+      "from_cache": false,
+      "sha256": "9d5087c94997bfc825deef3daa66493161db08042b265a9aa874f8d3c589bd25",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14814183.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:07Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14914183.html",
+      "from_cache": false,
+      "sha256": "fb8cf9f9efd42c5c154a068bcc23d903fedb5b7c0172dada434d185473ad3a0f",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_14914183.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:10Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_15014183.html",
+      "from_cache": false,
+      "sha256": "881625bce285371739a08867397feb1968862e23f694c597fa963ab96dcf6b8c",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_15014183.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:13Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_15114183.html",
+      "from_cache": false,
+      "sha256": "be3de368dfd0425328b487cac5e606328613904f51755c237ebfab292c579343",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kinki/cms_15114183.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:43Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16114187.html",
+      "from_cache": false,
+      "sha256": "c3333f8b8a0be741bb6d2d2d748027a6adb8b8ee81ca882d6a8af017c5c09bd8",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16114187.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:46Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16214187.html",
+      "from_cache": false,
+      "sha256": "5172dd16187dc982427d5c702c399e6d8c88d8289372350383dc5dbde9f0943b",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16214187.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:49Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16314187.html",
+      "from_cache": false,
+      "sha256": "da70b39777efc71e92449407bfe0d48ef77599255d9a5a3f1d780c21bed09ae6",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16314187.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:52Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16414187.html",
+      "from_cache": false,
+      "sha256": "e2fbc95185f5f4eafd2b4f39ea5fb28e470c7bb2a14c154719261c7afdffe52f",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16414187.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:55Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16514187.html",
+      "from_cache": false,
+      "sha256": "6e5b251acbc87d28b6edba461569d60f5821679f7f05a1e320f46b2a75e573af",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16514187.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:58Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16614187.html",
+      "from_cache": false,
+      "sha256": "ca75ccc61e4eb4abe2dcba246384795c26bceb0cad7d78f8af2ba5491385fd0d",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16614187.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:28:01Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16714187.html",
+      "from_cache": false,
+      "sha256": "ba9f0d2084dadcb67ba609e0fd929c8aa6c6abddef0901763d944e68a4ea411d",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16714187.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:28:04Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16814187.html",
+      "from_cache": false,
+      "sha256": "5d0e496850fd029b0db275d5973e4aeff15323afe962e5be0c78d305e90db1b4",
+      "url": "https://www.j-lis.go.jp/spd/code-address/kyuusyuu/cms_16814187.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:31Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/shikoku/cms_15714186.html",
+      "from_cache": false,
+      "sha256": "e264aea06f8fad8638165d8cb7be26cb67d6c126c3870289fc478373871796c2",
+      "url": "https://www.j-lis.go.jp/spd/code-address/shikoku/cms_15714186.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:34Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/shikoku/cms_15814186.html",
+      "from_cache": false,
+      "sha256": "9d9766251df9105fe50f1f10152a942d34b713cf5c4c18d917e56355e56437cc",
+      "url": "https://www.j-lis.go.jp/spd/code-address/shikoku/cms_15814186.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:37Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/shikoku/cms_15914186.html",
+      "from_cache": false,
+      "sha256": "51a2cf7c08ed61ab5157e3306ec3d3dbf1f71ac98c1783008c09cd0f6d1a5d8d",
+      "url": "https://www.j-lis.go.jp/spd/code-address/shikoku/cms_15914186.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:40Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/shikoku/cms_16014186.html",
+      "from_cache": false,
+      "sha256": "d4193abe280bc4130a1c1e3ecdf3711cf9526983f62b4c47122a2a1efa4711e6",
+      "url": "https://www.j-lis.go.jp/spd/code-address/shikoku/cms_16014186.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:48Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12314180.html",
+      "from_cache": false,
+      "sha256": "0366d44788b543a37dbeff88894e0c7c78c8bfbad6597f17d8828186742b2e17",
+      "url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12314180.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:51Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12414180.html",
+      "from_cache": false,
+      "sha256": "d4801ad52841aac19af6d862281800929dcbb4f79feff03bf6acbd53681c53b4",
+      "url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12414180.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:55Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12514180.html",
+      "from_cache": false,
+      "sha256": "6a9ea5eb54ebf6f9d338d1986b79586f47f1bc1a2d96995e3bfe06f8a11a7a8b",
+      "url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12514180.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:57Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12614180.html",
+      "from_cache": false,
+      "sha256": "892cf57f9fb1e5d0c6e9712c1e13ea32a0c0fb52b9885281460d7840df6018dc",
+      "url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12614180.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:01Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12714180.html",
+      "from_cache": false,
+      "sha256": "f00a3a92ef4f78cc2d44a61da65776d463d9a82e1a82b2278ab2859db17cec3f",
+      "url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12714180.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:04Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12814180.html",
+      "from_cache": false,
+      "sha256": "84a9995fd8f869dadb14ff254211bd997e7b6122d1bd550998fc3240944a4741",
+      "url": "https://www.j-lis.go.jp/spd/code-address/touhoku/cms_12814180.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:28Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_13614182.html",
+      "from_cache": false,
+      "sha256": "780b29e62080899cbb7b29f48ef1c0aa032e27d42a5bf3df81a1b4faecdb6b8d",
+      "url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_13614182.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:31Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_13714182.html",
+      "from_cache": false,
+      "sha256": "2c5964dac3de727aa43f52b920161e53f419e7617217b0177d1e81b3bca3ac25",
+      "url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_13714182.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:34Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_13814182.html",
+      "from_cache": false,
+      "sha256": "a26d371daaf6cbbfa03db0dbad53c98d70b27a387b84aabd8cd6cb6f15e6a5d3",
+      "url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_13814182.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:37Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_13914182.html",
+      "from_cache": false,
+      "sha256": "0c0590e389ebc5f8ff17f4eb45c9560b759a49648a9a06bddf161beeab7ad70b",
+      "url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_13914182.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:40Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14014182.html",
+      "from_cache": false,
+      "sha256": "27fbd1688c739f93d2f9166ff4a89d3839a375e92cada6667088f9e229bfe266",
+      "url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14014182.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:43Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14114182.html",
+      "from_cache": false,
+      "sha256": "ae0ec17858c10fcec680a94a5c7391ef816ea1db37c8dd6fd3caf56de0f6e866",
+      "url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14114182.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:46Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14214182.html",
+      "from_cache": false,
+      "sha256": "233c55af17e6f35f593c45b80db32cb3e103be650d7076e35c030d5d3f286527",
+      "url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14214182.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:49Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14314182.html",
+      "from_cache": false,
+      "sha256": "008ea6df3aeec39467ff7515c8698f523f272ad66fbdc645deb9107a42f86d0e",
+      "url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14314182.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:52Z",
+      "final_url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14414182.html",
+      "from_cache": false,
+      "sha256": "58606dcf7889206a995bdc674a04672269cbbe2275af17edae7500cd73df8a1d",
+      "url": "https://www.j-lis.go.jp/spd/code-address/tyuubu/cms_14414182.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:17Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_165569147.html",
+      "from_cache": false,
+      "sha256": "8f5a0597da4b05d62439f37904ba019bcc0dfad9f6583f8098d6cc2be56b4bb3",
+      "url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_165569147.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:20Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_165669147.html",
+      "from_cache": false,
+      "sha256": "678412acbe6ed7b5e2e5bdc358b472e6dbb6f93949c1e925e7b2ff544343e84f",
+      "url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_165669147.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:23Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_165769147.html",
+      "from_cache": false,
+      "sha256": "9bc0eb0dab6e022700f7fa12a19e9bc42f5b438d9dbafd2f324d2edc34ec5309",
+      "url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_165769147.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:26Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_165869147.html",
+      "from_cache": false,
+      "sha256": "6092a7d6dd86127a35bfe925d9c7e08ad31535f0763a7886deb11ae4df2be709",
+      "url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_165869147.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:29Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_16596914.html",
+      "from_cache": false,
+      "sha256": "150fd4ee61323abe3511e021789abe52be811e884c473a299eab425c57cb7e63",
+      "url": "https://www.j-lis.go.jp/spd/map-search/chuugoku/cms_16596914.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:38Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/cms_1069.html",
+      "from_cache": false,
+      "sha256": "f2ff7cc3214e8d2c1cec31e70bc6f09420ebb2d9bebbb38000a2e1af0801df13",
+      "url": "https://www.j-lis.go.jp/spd/map-search/cms_1069.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:41Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_1069143.html",
+      "from_cache": false,
+      "sha256": "ed73b18367f9f10c4bd2072bdbff8d35f805fa6a14d3ca56938efbabe4baea26",
+      "url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_1069143.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:43Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_11685269143.html",
+      "from_cache": false,
+      "sha256": "93aadfa6f776684b4044213d370c307e73d77778b3a178d418d291e4007e89f1",
+      "url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_11685269143.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:44Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_11685369143.html",
+      "from_cache": false,
+      "sha256": "2c6f8a4df80df4a8ed243a6974beec0eb9c20affbcc8b6a83951b7c3e97419e8",
+      "url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_11685369143.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:46Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_11685469143.html",
+      "from_cache": false,
+      "sha256": "0604711127f7e40a15aa2ac990a1a41f6d76487dfc199d87225c8835e94254a8",
+      "url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_11685469143.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:47Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_11685569143.html",
+      "from_cache": false,
+      "sha256": "171f3aadfa11421e467c81311c429532d996e83e615d7cdccdf99eb24f0dcb30",
+      "url": "https://www.j-lis.go.jp/spd/map-search/hokkaido/cms_11685569143.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:08Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_162969150.html",
+      "from_cache": false,
+      "sha256": "e8c4041226b6cdc2553ed40e234f1620e04848d0ed6ec6afe7d88b1290dd5eb8",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_162969150.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:11Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163069150.html",
+      "from_cache": false,
+      "sha256": "684b5d8f0d706b221f9ada865d717e56bca8886d508ad0fe8e7ea91859f7c9fd",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163069150.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:14Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163169150.html",
+      "from_cache": false,
+      "sha256": "14590de515446bb18d5566c5b736a8b945e46ec3ce0f5f0621cba34028a79080",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163169150.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:17Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163269150.html",
+      "from_cache": false,
+      "sha256": "39079f5f5785b6679449f7f8e323b1c750e3de56cde5c54904f2cc3b4e43fed4",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163269150.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:20Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163369150.html",
+      "from_cache": false,
+      "sha256": "b7571271ebbd4a41ab1e5647d149648ce951266959cb44b66acb7a02c5d61b57",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163369150.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:23Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163469150.html",
+      "from_cache": false,
+      "sha256": "ee3cd0272f52686b8e1fd569a24fe892806a08dff6d2e8f4c637f3495ca1fcf7",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163469150.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:26Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163569150.html",
+      "from_cache": false,
+      "sha256": "aca7bf0ab7684d9ea2e20602da78b543a4c535aa32794cd46e2642c21ad1a178",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kantou/cms_163569150.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:56Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_164769146.html",
+      "from_cache": false,
+      "sha256": "92c67bcd7131f88f58c8828db6996c4e60983af9d3328899f1ffa9a7ceeddf5f",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_164769146.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:59Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_164869146.html",
+      "from_cache": false,
+      "sha256": "a44ca8c8990534b971cc705bfa993c6b02bd4583d1fe112a49fb379c0ec6cf28",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_164869146.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:02Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_164969146.html",
+      "from_cache": false,
+      "sha256": "0690b0aa466716b74fe020f763b0222ec81a00e2a6109ab26419af0abe0a5610",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_164969146.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:05Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_165069146.html",
+      "from_cache": false,
+      "sha256": "eea9ea622eb0bbd83dc71b86a470031bc5bd2442006b351ec8913888e838e9b3",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_165069146.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:08Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_165169146.html",
+      "from_cache": false,
+      "sha256": "01e5795cbdbf81cc0dfc0a296c9acf8925eb8f893f82132f45e8779f8f99fbbc",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_165169146.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:11Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_165269146.html",
+      "from_cache": false,
+      "sha256": "96cd4d422f4ecf13e922836577293c18774f978f8ef000bf9a1d2586f97fc9a5",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_165269146.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:15Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_165369146.html",
+      "from_cache": false,
+      "sha256": "2ffaac49f5502b5c0b1dfda94d89a4eaa1f4e8f375332daadb1b2404bee1f6bb",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kinki/cms_165369146.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:44Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_166669149.html",
+      "from_cache": false,
+      "sha256": "04ad721f5930a89a2f74628d36757f895d4fdef6bd4a8ad9ae24963beda03fae",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_166669149.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:47Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_166769149.html",
+      "from_cache": false,
+      "sha256": "260a4ae828a8de0c073b219a7d5698ec84e6b50a119627e157e161359ff6c7cf",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_166769149.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:50Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_166869149.html",
+      "from_cache": false,
+      "sha256": "854f973874f90a7a43095c34b79a92d9ce5ecc4e7cdf418adfb9f5a934b5fe7d",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_166869149.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:53Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_166969149.html",
+      "from_cache": false,
+      "sha256": "457260ea353f97616eafa9deea1a3879c390dae4cc955bdcd1ab17adb0e1fd8c",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_166969149.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:56Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_167069149.html",
+      "from_cache": false,
+      "sha256": "869f0578c1a3d45a629addd4fea62fef0d39a59d49ded3e22e30de9312e0f51d",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_167069149.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:28:00Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_167169149.html",
+      "from_cache": false,
+      "sha256": "40ae6ead79873f8f8b9d1b60a672c744fd1fc5b8becfab0ee73629743eb13486",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_167169149.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:28:02Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_167269149.html",
+      "from_cache": false,
+      "sha256": "c00b6d8d976d7f88cced264b908c50affb9c77ccd8ca7c4260b21dd75568fb91",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_167269149.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:28:05Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_167369149.html",
+      "from_cache": false,
+      "sha256": "8799cc0170076504c4ee4885dd0b3ee7540ab3b86c1f1275a5191b9dc9d2c481",
+      "url": "https://www.j-lis.go.jp/spd/map-search/kyuusyuu/cms_167369149.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:32Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/shikoku/cms_166169148.html",
+      "from_cache": false,
+      "sha256": "841dabf58e0420628ea355d3266bca8a9e02ed573f622a74ccab1f689b8ebae4",
+      "url": "https://www.j-lis.go.jp/spd/map-search/shikoku/cms_166169148.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:35Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/shikoku/cms_166269148.html",
+      "from_cache": false,
+      "sha256": "bca2c1d53c1ddac9367d8321dd26bce8d7206ecea990c0fcedd46459ccd62d42",
+      "url": "https://www.j-lis.go.jp/spd/map-search/shikoku/cms_166269148.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:38Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/shikoku/cms_166369148.html",
+      "from_cache": false,
+      "sha256": "39e9a661d4157827e0e83657676e6abfd700655583a357f108fdd805cedfce79",
+      "url": "https://www.j-lis.go.jp/spd/map-search/shikoku/cms_166369148.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:27:41Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/shikoku/cms_166469148.html",
+      "from_cache": false,
+      "sha256": "f900c396671bd5cc2a776ad0256448cebbaf21b68256fb61cada7521aab5f62c",
+      "url": "https://www.j-lis.go.jp/spd/map-search/shikoku/cms_166469148.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:50Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162269144.html",
+      "from_cache": false,
+      "sha256": "a40b154e5841155de5a8f44ba1a2881ccaa22df6b7cf59a32efda4043394793a",
+      "url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162269144.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:53Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162369144.html",
+      "from_cache": false,
+      "sha256": "5a52a1c8ef7f58f0b53e39b57b6383f17f4803499cd8d393f084c08c8524fc98",
+      "url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162369144.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:56Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162469144.html",
+      "from_cache": false,
+      "sha256": "3c512416638ea289157620f34e9cca23a2b0929f1721ddd30679e6991af36efb",
+      "url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162469144.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:25:59Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162569144.html",
+      "from_cache": false,
+      "sha256": "57289b9423ec604fd140f69458c5fbea812961cc742e09029cd6042ca235d383",
+      "url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162569144.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:02Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162669144.html",
+      "from_cache": false,
+      "sha256": "5e125d7416c93026f9274fce944d0db647e627650a91a3e701322c7afa2b5a42",
+      "url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162669144.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:05Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162769144.html",
+      "from_cache": false,
+      "sha256": "0de674c6117620c646e4e3980a053922acb8c9ff9f6b1661e9116adf1ca1c4bf",
+      "url": "https://www.j-lis.go.jp/spd/map-search/touhoku/cms_162769144.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:29Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_163769145.html",
+      "from_cache": false,
+      "sha256": "84a064b35ee9222f89bc56cc7023aac0c3e88dd17e03135a4304f784e0fe9554",
+      "url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_163769145.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:32Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_163869145.html",
+      "from_cache": false,
+      "sha256": "8cfa236a147424a6ed31c39e1cfe869b00811eae3a0b58a7f3e6b3da4eefa510",
+      "url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_163869145.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:35Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_163969145.html",
+      "from_cache": false,
+      "sha256": "52e5911c1d3468f641a0b890d5ce9739cc20665153413b578c9c2c81617002ab",
+      "url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_163969145.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:38Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164069145.html",
+      "from_cache": false,
+      "sha256": "3a8396c9c2fe771f6eca95d012323ecb7190cdc1808767b6185554211803fccd",
+      "url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164069145.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:41Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164169145.html",
+      "from_cache": false,
+      "sha256": "c2d702ac2a8d07dfac65b859820f0fa62928b9bc5101e9effb4def637f907d8d",
+      "url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164169145.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:44Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164269145.html",
+      "from_cache": false,
+      "sha256": "af3c601d436ff7c0921348881fe1e98c7074edfcd3fa0ea62af37bdf0766c558",
+      "url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164269145.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:47Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164369145.html",
+      "from_cache": false,
+      "sha256": "28667d9262783dff18574b471cb41bb4b9143a823a6c0e9c1488fd247b3e33a6",
+      "url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164369145.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:50Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164469145.html",
+      "from_cache": false,
+      "sha256": "65adc902da59f4c97673537c85506043bb62d0deedd6bf4de6cc8cfb90a4f66a",
+      "url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164469145.html"
+    },
+    {
+      "fetched_at": "2026-07-24T07:26:53Z",
+      "final_url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164569145.html",
+      "from_cache": false,
+      "sha256": "0732734e4d1589677806649797f18c0fd8fdf4fe9e75a44b035286e6b3979c49",
+      "url": "https://www.j-lis.go.jp/spd/map-search/tyuubu/cms_164569145.html"
+    }
+  ]
+}
