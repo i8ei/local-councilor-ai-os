@@ -17,9 +17,48 @@ OFFICE_REL_NS = (
 )
 PACKAGE_REL_NS = "http://schemas.openxmlformats.org/package/2006/relationships"
 
+# Check declared sizes before decompression to prevent unbounded memory use.
+MAX_MEMBER_BYTES = 64 * 1024 * 1024
+MAX_TOTAL_DECOMPRESSED_BYTES = 256 * 1024 * 1024
+
 
 class XlsxError(RuntimeError):
     """Raised when a workbook cannot be interpreted safely."""
+
+
+class _DecompressionBudget:
+    """Track declared uncompressed sizes so a zip bomb fails before it is read."""
+
+    def __init__(self, archive: zipfile.ZipFile) -> None:
+        self._archive = archive
+        self._declared_total = 0
+
+    def read(self, name: str) -> bytes:
+        """Read one member after checking its declared uncompressed size."""
+
+        info = self._archive.getinfo(name)
+        if info.file_size > MAX_MEMBER_BYTES:
+            raise XlsxError(
+                f"XLSX部品「{name}」の展開後サイズが"
+                f"1部品の上限{MAX_MEMBER_BYTES}バイトを超えています"
+            )
+        next_total = self._declared_total + info.file_size
+        if next_total > MAX_TOTAL_DECOMPRESSED_BYTES:
+            raise XlsxError(
+                f"XLSX部品「{name}」を展開すると累計サイズが"
+                f"ブック全体の上限{MAX_TOTAL_DECOMPRESSED_BYTES}バイトを超えます"
+            )
+        data = self._archive.read(name)
+        # Defence in depth. CPython already stops at the declared size and then
+        # fails the CRC, so an under-declared member is rejected before this
+        # runs; keep the check in case that ever stops holding.
+        if len(data) > info.file_size:
+            raise XlsxError(
+                f"XLSX部品「{name}」の実際の展開後サイズが"
+                f"宣言上限{info.file_size}バイトを超えています"
+            )
+        self._declared_total = next_total
+        return data
 
 
 @dataclass(frozen=True)
@@ -80,9 +119,9 @@ def column_number(cell_ref: str) -> int:
     return result
 
 
-def _shared_strings(archive: zipfile.ZipFile) -> list[str]:
+def _shared_strings(budget: _DecompressionBudget) -> list[str]:
     try:
-        root = ET.fromstring(archive.read("xl/sharedStrings.xml"))
+        root = ET.fromstring(budget.read("xl/sharedStrings.xml"))
     except KeyError:
         return []
     return [
@@ -91,10 +130,10 @@ def _shared_strings(archive: zipfile.ZipFile) -> list[str]:
     ]
 
 
-def _sheet_paths(archive: zipfile.ZipFile) -> list[tuple[str, str]]:
+def _sheet_paths(budget: _DecompressionBudget) -> list[tuple[str, str]]:
     try:
-        workbook = ET.fromstring(archive.read("xl/workbook.xml"))
-        relations = ET.fromstring(archive.read("xl/_rels/workbook.xml.rels"))
+        workbook = ET.fromstring(budget.read("xl/workbook.xml"))
+        relations = ET.fromstring(budget.read("xl/_rels/workbook.xml.rels"))
     except KeyError as error:
         raise XlsxError(f"XLSXの必須部品がありません: {error}") from error
     targets = {
@@ -118,10 +157,10 @@ def _sheet_paths(archive: zipfile.ZipFile) -> list[tuple[str, str]]:
 
 
 def _read_cells(
-    archive: zipfile.ZipFile, path: str, strings: list[str]
+    budget: _DecompressionBudget, path: str, strings: list[str]
 ) -> tuple[Cell, ...]:
     try:
-        root = ET.fromstring(archive.read(path))
+        root = ET.fromstring(budget.read(path))
     except KeyError as error:
         raise XlsxError(f"ワークシート部品がありません: {path}") from error
     cells: list[Cell] = []
@@ -162,10 +201,11 @@ def read_workbook(path: str | Path) -> list[Worksheet]:
 
     try:
         with zipfile.ZipFile(path) as archive:
-            strings = _shared_strings(archive)
+            budget = _DecompressionBudget(archive)
+            strings = _shared_strings(budget)
             return [
-                Worksheet(name, sheet_path, _read_cells(archive, sheet_path, strings))
-                for name, sheet_path in _sheet_paths(archive)
+                Worksheet(name, sheet_path, _read_cells(budget, sheet_path, strings))
+                for name, sheet_path in _sheet_paths(budget)
             ]
     except zipfile.BadZipFile as error:
         raise XlsxError(f"有効なXLSXではありません: {path}") from error
