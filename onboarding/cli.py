@@ -11,11 +11,13 @@ from .core import (
     AUTO_AGENT,
     AGENTS,
     FEATURES,
+    LAYOUTS,
     MODES,
     OnboardingError,
     apply_scaffold,
     build_plan,
     diagnose_environment,
+    load_vault_map,
     public_plan,
     verify_scaffold,
 )
@@ -48,6 +50,7 @@ def _render_diagnosis(value: dict[str, Any]) -> str:
         f"- AIクライアント指定: `{requested_agent}`",
         f"- 選択結果: `{selected_agent}`",
         f"- 推奨モード: `{value['recommended_mode']}`",
+        f"- 推奨layout: `{value['recommended_layout']}`",
         "- この診断は読み取り専用です。",
         "",
     ]
@@ -71,12 +74,27 @@ def _render_plan(value: dict[str, Any]) -> str:
         f"- 状態: `{value['status']}`",
         f"- Vault: `{value['vault_path']}`",
         f"- モード: `{value['mode']}`",
+        f"- layout: `{value['layout']}`",
         f"- 選択機能: `{', '.join(value['features']) or 'なし'}`",
         "",
     ]
     if value["blockers"]:
         lines.extend(["## 停止条件", ""])
         lines.extend(f"- {item}" for item in value["blockers"])
+        lines.append("")
+    if value.get("role_mappings"):
+        lines.extend(
+            [
+                "## 既存Vault役割対応",
+                "",
+                "| 役割 | 既存path |",
+                "|---|---|",
+            ]
+        )
+        lines.extend(
+            f"| `{role}` | `{path}` |"
+            for role, path in value["role_mappings"].items()
+        )
         lines.append("")
     lines.extend(["## ファイル操作", "", "| 状態 | 対象 |", "|---|---|"])
     lines.extend(f"| `{item['status']}` | `{item['target']}` |" for item in value["actions"])
@@ -176,6 +194,11 @@ def build_parser() -> argparse.ArgumentParser:
     plan.add_argument("--vault", required=True, help="対象Vaultの絶対パス")
     plan.add_argument("--agent", choices=agent_choices, default=AUTO_AGENT)
     plan.add_argument("--mode", choices=sorted(MODES), default=None)
+    plan.add_argument("--layout", choices=sorted(LAYOUTS), default=None)
+    plan.add_argument(
+        "--vault-map",
+        help="preserve layoutで使う確認済みvault-map.yaml",
+    )
     plan.add_argument(
         "--features",
         type=_feature_list,
@@ -191,6 +214,11 @@ def build_parser() -> argparse.ArgumentParser:
     scaffold.add_argument("--vault", required=True, help="対象Vaultの絶対パス")
     scaffold.add_argument("--agent", choices=agent_choices, default=AUTO_AGENT)
     scaffold.add_argument("--mode", choices=("integrate",), default="integrate")
+    scaffold.add_argument("--layout", choices=sorted(LAYOUTS), default=None)
+    scaffold.add_argument(
+        "--vault-map",
+        help="planと同じ確認済みvault-map.yaml",
+    )
     scaffold.add_argument(
         "--features",
         type=_feature_list,
@@ -235,10 +263,17 @@ def main(argv: Sequence[str] | None = None) -> int:
             _print(diagnosis, args.format, "diagnosis")
             return _diagnosis_exit_code(diagnosis)
 
+        role_mappings = (
+            load_vault_map(args.vault_map, vault=args.vault)
+            if getattr(args, "vault_map", None)
+            else None
+        )
         plan = build_plan(
             diagnosis,
             mode=args.mode,
+            layout=args.layout,
             features=args.features,
+            role_mappings=role_mappings,
         )
         if args.command == "plan":
             _print(public_plan(plan), args.format, "plan")

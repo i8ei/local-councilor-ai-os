@@ -61,7 +61,7 @@ python3 -m onboarding plan \
   --vault '/absolute/path/to/vault' \
   --agent codex \
   --mode integrate \
-  --features core,templates,workflows
+  --layout '<diagnoseが示したscaffoldまたはpreserve>'
 ```
 
 表示された対象、競合、外部通信、`plan_sha256`を利用者が確認した後、同じ引数とSHA-256でscaffoldを作る。
@@ -71,11 +71,13 @@ python3 -m onboarding scaffold \
   --vault '/absolute/path/to/vault' \
   --agent codex \
   --mode integrate \
-  --features core,templates,workflows \
+  --layout '<diagnoseが示したscaffoldまたはpreserve>' \
   --accept-plan-sha256 '<plan_sha256>'
 ```
 
 実行直前に診断と計画を再作成し、SHA-256が一致しなければ停止する。異なる内容の既存ファイル、symlink、Vault外の対象は上書きや追従をせず停止する。作成結果はVault内の`.local-councilor-ai-os/runs/`へ記録する。
+
+既存Vaultで`recommended_layout: preserve`になった場合は、固定棚を追加しない。一意に検出した既存pathと役割の対応をplanで確認し、`.local-councilor-ai-os/vault-map.yaml`へ保存する。候補が誤っている場合は制約付き`vault-map.yaml`を別に作って`--vault-map`でplanとscaffoldへ渡す。既存ノート、MOC、AI指示、`instance.json`は自動編集しない。
 
 ### 検証
 
@@ -86,7 +88,7 @@ python3 -m onboarding verify \
   --manifest '/absolute/path/to/vault/.local-councilor-ai-os/runs/<run-id>.json'
 ```
 
-8つの棚、各MOCの`description`、OS専用MOCからの接続、テンプレート、artifactのSHA-256、Obsidian CLI疎通を確認する。scaffoldが正しくても、本人情報と自治体固有の議会運用が未確認なら`profile_status: incomplete`のまま段階1へ渡す。
+`scaffold` layoutでは8つの棚、各MOCの`description`、OS専用MOCからの接続、テンプレートを確認する。`preserve` layoutでは役割pathの存在、Vault内解決、symlink不使用を確認する。共通してartifactのSHA-256とObsidian CLI疎通を確認する。基盤が正しくても、本人情報と自治体固有の議会運用が未確認なら`profile_status: incomplete`のまま段階1へ渡す。
 
 ### 中止・巻き戻し
 
@@ -108,7 +110,7 @@ AIエージェントは、次を一項目ずつ質問する。
 
 ### 実行
 
-既存のVault構造を確認し、次の棚を不足分だけ作る。
+`scaffold` layoutでは、既存のVault構造を確認し、次の棚を不足分だけ作る。`preserve` layoutでは棚を作らず、確認済み`vault-map.yaml`の既存pathを利用する。
 
 | 棚 | `description` に書く役割 |
 |---|---|
