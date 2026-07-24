@@ -7,6 +7,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from bootstrap.cli.http import (
     HttpClient,
@@ -83,6 +84,46 @@ class HttpRetrievalReportingTests(unittest.TestCase):
                     "https://example.test/data",
                 )
             )
+
+    def test_robots_redirect_can_cross_authority_under_rfc_9309(self) -> None:
+        responses = iter(
+            [
+                _RawResponse(
+                    url="https://old.example.test/robots.txt",
+                    status=301,
+                    body=b"",
+                    headers={
+                        "Location": "https://new.example.test/robots.txt"
+                    },
+                    fetched_at="2026-07-24T00:00:00Z",
+                ),
+                _RawResponse(
+                    url="https://new.example.test/robots.txt",
+                    status=200,
+                    body=b"User-agent: *\nDisallow: /private\n",
+                    headers={"Content-Type": "text/plain"},
+                    fetched_at="2026-07-24T00:00:01Z",
+                ),
+            ]
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            client = HttpClient(temporary)
+            with patch.object(client, "_request_once", side_effect=lambda _: next(responses)):
+                parser = client._robots_parser(
+                    "https://old.example.test/public"
+                )
+        self.assertTrue(
+            parser.can_fetch(
+                "local-councilor-ai-os",
+                "https://old.example.test/public",
+            )
+        )
+        self.assertFalse(
+            parser.can_fetch(
+                "local-councilor-ai-os",
+                "https://old.example.test/private",
+            )
+        )
 
 
 if __name__ == "__main__":

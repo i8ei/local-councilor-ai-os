@@ -152,6 +152,7 @@ python3 -m onboarding diagnose \
 - 議事録の静的設定プリセット集。よくある公開レイアウト4種の設定例と確認手順を同梱
 - Obsidian・AI環境の読み取り専用診断、計画ハッシュ確認、安全なVault scaffold、manifest検証
 - 予算・決算索引の文書未取得診断と、e-Stat・Jグランツを含む参照先レジストリ
+- 同梱自治体registryの公式ホームURLから議事録・例規・予算・決算の入口を少量HTMLだけで分類する都道府県一括preflight
 - 議事録の本文・PDF・DB未取得dry-runと、検索式から独立した問いを持つcontext pack
 - 複数AI協働の設計と、段階式セットアップ手順
 - OS制御層 `lcaios/`（`main`追加分）。導入・profile・データ・鮮度を横断する読み取り専用の状態確認、参照先別の鮮度判定、公開前output安全検査、SQLiteのschema互換検証・非上書きbackup・SHA-256確認付き復旧、生成物一覧、次の一手を示す`doctor`

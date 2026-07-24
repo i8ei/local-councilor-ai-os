@@ -454,12 +454,9 @@ class HttpClient:
                 )
                 target = self._redirect_target(response)
                 if target:
-                    if urllib.parse.urlsplit(target).hostname != urllib.parse.urlsplit(
-                        robots_url
-                    ).hostname:
-                        raise RobotsUnavailableError(
-                            "robots.txt の別ホスト転送は追跡しません"
-                        )
+                    # RFC 9309 section 2.3.1.2 allows redirects across
+                    # authorities. The resulting rules still apply to the
+                    # authority of the originally requested robots.txt.
                     current_url = target
                     continue
                 if response.status not in accepted:
