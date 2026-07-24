@@ -55,18 +55,26 @@ def recommend_next(
     tier1 = requirements.get("tier1_data_ready")
 
     if requirements.get("foundation_ready") != "ready":
+        layout = str(diagnosis.get("recommended_layout") or "scaffold")
         return {
-            "next_command": "python3 -m onboarding plan --vault <vault>",
+            "next_command": (
+                f"python3 -m onboarding plan --vault <vault> --layout {layout}"
+            ),
             "reason": "Vault・AIガイド・Obsidian CLIの導入前提を確認する",
             "exit_code": 2,
         }
     if requirements.get("scaffold_ready") != "ready":
+        layout = str(diagnosis.get("recommended_layout") or "scaffold")
         return {
             "next_command": (
-                "python3 -m onboarding plan --vault <vault> "
+                f"python3 -m onboarding plan --vault <vault> --layout {layout} "
                 "then scaffold --accept-plan-sha256 <hash>"
             ),
-            "reason": "棚・MOC・workflow・templateのscaffoldが未検証",
+            "reason": (
+                "既存Vaultの役割対応とcontrol fileが未検証"
+                if layout == "preserve"
+                else "棚・MOC・workflow・templateのscaffoldが未検証"
+            ),
             "exit_code": 2,
         }
     if tier1 in ("not_configured", "unavailable"):
@@ -182,6 +190,7 @@ def run_doctor(
         "vault": status["vault"]["path"],
         "diagnosis": {
             "recommended_mode": diagnosis.get("recommended_mode"),
+            "recommended_layout": diagnosis.get("recommended_layout"),
             "agent": diagnosis.get("agent"),
             "error": diagnosis_error,
         },

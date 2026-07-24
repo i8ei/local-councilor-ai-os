@@ -135,6 +135,8 @@ python3 -m onboarding diagnose \
 
 診断はClaude Code／Codexの利用可否も確認する。片方だけなら自動選択し、両方なら今回使うものを一度だけ選び、`--agent claude`または`--agent codex`で再診断する。以後は計画、計画ハッシュを確認したscaffold、検証の順で進む。詳細は[`onboarding/README.md`](onboarding/README.md)と[`setup.md`](setup.md)の段階0を参照してください。
 
+すでにObsidianを運用しているVaultでは、診断が既存の一般質問、予算、決算、広報、住民の声、証拠台帳、template等を候補として検出し、`layout: preserve`を提案する。既存ノートやフォルダを移動・改名せず、確認した役割対応を`.local-councilor-ai-os/vault-map.yaml`へ保存する。新規Vaultで標準8棚を作る`layout: scaffold`とは分離されている。
+
 ## 現在の状態
 
 現在は **v0.1系** です。最新リリースは v0.1.8 で、`main` には次のOS制御層（次期リリース候補）を追加済みです。公開済み・実装済みの範囲は次のとおりです。

@@ -28,3 +28,4 @@
 
 `lcaios status`はinstanceがない場合も停止せず、対象モジュールを`not_configured`として報告する。不正JSON、未対応schema、product不一致は警告し、手入力でreadyへ昇格させない。
 
+既存Vaultを`layout: preserve`で統合する場合、役割対応は同じcontrol directoryの[`vault-map.yaml`](vault-map.schema.md)へ分離する。preserve scaffoldはinstanceがなければ上記最小形を作るが、既存instanceはschemaとproductの検査だけを行い、自動編集・統合しない。

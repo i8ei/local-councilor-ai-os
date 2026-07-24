@@ -57,6 +57,16 @@ class DoctorRecommendationTests(unittest.TestCase):
         self.assertEqual(2, result["exit_code"])
         self.assertIn("bootstrap.cli", result["next_command"])
 
+    def test_preserve_layout_is_included_in_onboarding_plan(self) -> None:
+        diagnosis = _diagnosis()
+        diagnosis["recommended_layout"] = "preserve"
+        result = recommend_next(
+            diagnosis,
+            _status(scaffold_ready="not_configured"),
+        )
+        self.assertIn("--layout preserve", result["next_command"])
+        self.assertIn("既存Vault", result["reason"])
+
     def test_due_tier1_recommends_refresh(self) -> None:
         result = recommend_next(
             _diagnosis(),
@@ -104,4 +114,3 @@ class DoctorRecommendationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

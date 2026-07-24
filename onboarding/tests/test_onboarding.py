@@ -11,12 +11,16 @@ from unittest.mock import patch
 
 from onboarding.cli import build_parser
 from onboarding.core import (
+    CONTROL_DIRECTORY,
+    INSTANCE_FILE,
     ROOT_MOC,
+    VAULT_MAP_FILE,
     OnboardingError,
     _probe_obsidian,
     apply_scaffold,
     build_plan,
     diagnose_environment,
+    load_vault_map,
     public_plan,
     verify_scaffold,
 )
@@ -190,6 +194,187 @@ class OnboardingTests(unittest.TestCase):
                 result = diagnose_environment(vault, agent="codex")
             instruction = result["capabilities"]["instruction_file"]
             self.assertEqual("AGENTS.override.md", instruction["active"])
+
+    def test_diagnosis_recommends_preserve_for_mature_vault(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            _create_base(vault)
+            (vault / "HOME.md").write_text("# Home\n", encoding="utf-8")
+            (vault / "議会" / "一般質問").mkdir(parents=True)
+            (vault / "議会" / "予算").mkdir()
+            (vault / "Templates").mkdir()
+            with (
+                patch("onboarding.core.shutil.which", return_value="/mock/command"),
+                patch("onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY),
+            ):
+                result = diagnose_environment(vault, agent="codex")
+            self.assertEqual("preserve", result["recommended_layout"])
+            self.assertEqual(
+                ["議会/一般質問"],
+                result["role_candidates"]["general_questions"],
+            )
+            self.assertEqual(["議会/予算"], result["role_candidates"]["budget"])
+            self.assertEqual(["Templates"], result["role_candidates"]["templates"])
+            self.assertEqual(
+                "preserve",
+                result["capabilities"]["existing_scaffold"]["status"],
+            )
+            self.assertFalse((vault / CONTROL_DIRECTORY).exists())
+
+    def test_preserve_plan_only_adds_control_files_by_default(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            _create_base(vault)
+            existing = vault / "議会" / "一般質問"
+            existing.mkdir(parents=True)
+            original = existing / "既存.md"
+            original.write_text("keep\n", encoding="utf-8")
+            with (
+                patch("onboarding.core.shutil.which", return_value="/mock/command"),
+                patch("onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY),
+            ):
+                diagnosis = diagnose_environment(vault, agent="codex")
+                plan = build_plan(
+                    diagnosis,
+                    mode="integrate",
+                    layout="preserve",
+                    role_mappings={"general_questions": "議会/一般質問"},
+                    repo_root=REPO_ROOT,
+                )
+            self.assertEqual("ready", plan["status"])
+            self.assertEqual("preserve", plan["layout"])
+            self.assertEqual(("core",), plan["features"])
+            targets = {Path(item["target"]).name for item in plan["actions"]}
+            self.assertEqual({VAULT_MAP_FILE, INSTANCE_FILE}, targets)
+            self.assertFalse((vault / "一般質問").exists())
+            self.assertEqual("keep\n", original.read_text(encoding="utf-8"))
+
+    def test_preserve_apply_and_verify_do_not_modify_existing_notes(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            _create_base(vault)
+            questions = vault / "議会" / "一般質問"
+            questions.mkdir(parents=True)
+            original = questions / "既存.md"
+            original.write_text("keep\n", encoding="utf-8")
+            with (
+                patch("onboarding.core.shutil.which", return_value="/mock/command"),
+                patch("onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY),
+            ):
+                diagnosis = diagnose_environment(vault, agent="codex")
+                plan = build_plan(
+                    diagnosis,
+                    mode="integrate",
+                    layout="preserve",
+                    role_mappings={"general_questions": "議会/一般質問"},
+                    repo_root=REPO_ROOT,
+                )
+                result = apply_scaffold(
+                    plan,
+                    accepted_plan_sha256=plan["plan_sha256"],
+                )
+                verification = verify_scaffold(result["manifest"])
+            self.assertEqual("keep\n", original.read_text(encoding="utf-8"))
+            self.assertFalse((vault / "一般質問").exists())
+            vault_map = vault / CONTROL_DIRECTORY / VAULT_MAP_FILE
+            self.assertTrue(vault_map.is_file())
+            self.assertIn(
+                'general_questions: "議会/一般質問"',
+                vault_map.read_text(encoding="utf-8"),
+            )
+            self.assertTrue((vault / CONTROL_DIRECTORY / INSTANCE_FILE).is_file())
+            self.assertEqual("verified", verification["scaffold_status"])
+            self.assertEqual([], verification["failures"])
+
+    def test_preserve_reuses_existing_valid_instance_without_editing(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            _create_base(vault)
+            (vault / "議会" / "予算").mkdir(parents=True)
+            control = vault / CONTROL_DIRECTORY
+            control.mkdir()
+            instance = control / INSTANCE_FILE
+            content = (
+                '{"schema_version":1,"product":"local-councilor-ai-os",'
+                '"paths":{"bootstrap_database":"/data/existing.db"}}\n'
+            )
+            instance.write_text(content, encoding="utf-8")
+            with (
+                patch("onboarding.core.shutil.which", return_value="/mock/command"),
+                patch("onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY),
+            ):
+                diagnosis = diagnose_environment(vault, agent="codex")
+                plan = build_plan(
+                    diagnosis,
+                    mode="integrate",
+                    layout="preserve",
+                    role_mappings={"budget": "議会/予算"},
+                    repo_root=REPO_ROOT,
+                )
+                result = apply_scaffold(
+                    plan,
+                    accepted_plan_sha256=plan["plan_sha256"],
+                )
+            self.assertEqual(content, instance.read_text(encoding="utf-8"))
+            self.assertNotIn(str(instance), result["created"])
+
+    def test_preserve_rejects_missing_and_symlink_role_paths(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            _create_base(vault)
+            outside = vault.parent / f"{vault.name}-outside"
+            outside.mkdir()
+            link = vault / "linked"
+            link.symlink_to(outside, target_is_directory=True)
+            with (
+                patch("onboarding.core.shutil.which", return_value="/mock/command"),
+                patch("onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY),
+            ):
+                diagnosis = diagnose_environment(vault, agent="codex")
+                with self.assertRaisesRegex(OnboardingError, "既存pathがありません"):
+                    build_plan(
+                        diagnosis,
+                        mode="integrate",
+                        layout="preserve",
+                        role_mappings={"budget": "missing"},
+                        repo_root=REPO_ROOT,
+                    )
+                with self.assertRaisesRegex(OnboardingError, "symlink"):
+                    build_plan(
+                        diagnosis,
+                        mode="integrate",
+                        layout="preserve",
+                        role_mappings={"budget": "linked"},
+                        repo_root=REPO_ROOT,
+                    )
+
+    def test_load_vault_map_accepts_only_constrained_existing_roles(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            vault = root / "vault"
+            vault.mkdir()
+            (vault / "議会" / "決算").mkdir(parents=True)
+            map_path = root / "vault-map.yaml"
+            map_path.write_text(
+                "schema_version: 1\n"
+                "product: local-councilor-ai-os\n"
+                "layout: preserve\n"
+                'managed_namespace: "地方議員AI運用OS"\n'
+                "roles:\n"
+                '  settlement: "議会/決算"\n',
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                {"settlement": "議会/決算"},
+                load_vault_map(map_path, vault=vault),
+            )
+            map_path.write_text(
+                map_path.read_text(encoding="utf-8")
+                + '  unknown_role: "議会/決算"\n',
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(OnboardingError, "rolesが不正"):
+                load_vault_map(map_path, vault=vault)
 
     def test_plan_blocks_conflicting_existing_file_without_writing(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

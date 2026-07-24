@@ -24,6 +24,7 @@ AGENT_LABELS = {
     "claude": "Claude Code",
 }
 MODES = {"integrate", "full", "components", "diagnose"}
+LAYOUTS = {"scaffold", "preserve"}
 FEATURES = {
     "core",
     "templates",
@@ -72,6 +73,23 @@ NETWORK_BY_FEATURE = {
 }
 ROOT_MOC = "地方議員AI運用OS MOC.md"
 SETUP_NOTE = "inbox/地方議員AI運用OSセットアップ記録.md"
+CONTROL_DIRECTORY = ".local-councilor-ai-os"
+VAULT_MAP_FILE = "vault-map.yaml"
+INSTANCE_FILE = "instance.json"
+PRESERVE_ROLE_BASENAMES = {
+    "sessions": ("会期",),
+    "general_questions": ("一般質問",),
+    "question_archive": ("一般質問集",),
+    "budget": ("予算", "予算決算"),
+    "settlement": ("決算",),
+    "regulations": ("例規", "条例制度"),
+    "inspections": ("行政視察",),
+    "public_relations": ("広報",),
+    "resident_voices": ("住民の声",),
+    "evidence_ledger": ("証拠台帳",),
+    "templates": ("Templates", "テンプレート"),
+}
+PRESERVE_ROLES = frozenset({"vault_home", *PRESERVE_ROLE_BASENAMES})
 
 
 class OnboardingError(RuntimeError):
@@ -346,6 +364,238 @@ def _probe_obsidian(command: str, vault: Path) -> dict[str, Any]:
     )
 
 
+def _relative_vault_path(vault: Path, path: Path) -> str | None:
+    try:
+        relative = path.resolve(strict=False).relative_to(vault.resolve())
+    except (OSError, ValueError):
+        return None
+    return relative.as_posix()
+
+
+def _preserve_role_candidates(vault: Path) -> dict[str, list[str]]:
+    """Find unambiguous role candidates without reading note content."""
+
+    if not vault.is_dir():
+        return {}
+    candidates: dict[str, list[str]] = {}
+    home = vault / "HOME.md"
+    if home.is_file() and not home.is_symlink():
+        candidates["vault_home"] = ["HOME.md"]
+
+    names_to_roles = {
+        name: role
+        for role, names in PRESERVE_ROLE_BASENAMES.items()
+        for name in names
+    }
+    ignored = {".git", ".obsidian", CONTROL_DIRECTORY}
+    for root_text, directories, _ in os.walk(vault, followlinks=False):
+        root = Path(root_text)
+        relative_root = _relative_vault_path(vault, root)
+        depth = 0 if relative_root in {None, "."} else len(Path(relative_root).parts)
+        directories[:] = [
+            name
+            for name in directories
+            if name not in ignored and not name.startswith(".")
+        ]
+        if depth >= 3:
+            directories[:] = []
+            continue
+        for name in directories:
+            role = names_to_roles.get(name)
+            if not role:
+                continue
+            path = root / name
+            if path.is_symlink():
+                continue
+            relative = _relative_vault_path(vault, path)
+            if relative is not None:
+                candidates.setdefault(role, []).append(relative)
+    return {
+        role: sorted(dict.fromkeys(paths))
+        for role, paths in sorted(candidates.items())
+    }
+
+
+def _recommended_layout(
+    *,
+    shelf_count: int,
+    candidates: dict[str, list[str]],
+) -> str:
+    if shelf_count == len(SHELVES):
+        return "scaffold"
+    unambiguous = sum(1 for paths in candidates.values() if len(paths) == 1)
+    return "preserve" if unambiguous >= 2 else "scaffold"
+
+
+def _default_role_mappings(
+    candidates: dict[str, list[str]],
+) -> dict[str, str]:
+    return {
+        role: paths[0]
+        for role, paths in sorted(candidates.items())
+        if len(paths) == 1
+    }
+
+
+def _validate_preserve_mapping(
+    vault: Path,
+    mappings: dict[str, str],
+) -> dict[str, str]:
+    if not isinstance(mappings, dict) or not mappings:
+        raise OnboardingError(
+            "preserve layoutには1件以上の既存Vault役割対応が必要です"
+        )
+    normalized: dict[str, str] = {}
+    for role, raw_path in sorted(mappings.items()):
+        if role not in PRESERVE_ROLES:
+            raise OnboardingError(f"未対応のVault役割です: {role}")
+        if not isinstance(raw_path, str) or not raw_path.strip():
+            raise OnboardingError(f"Vault役割 `{role}` のpathが空です")
+        candidate = Path(raw_path).expanduser()
+        if candidate.is_absolute():
+            raise OnboardingError(
+                f"Vault役割 `{role}` はVault相対pathで指定してください"
+            )
+        target = vault / candidate
+        current = target
+        while current != vault and current != current.parent:
+            if current.exists() and current.is_symlink():
+                raise OnboardingError(
+                    f"Vault役割 `{role}` のpathにsymlinkを含められません"
+                )
+            current = current.parent
+        relative = _relative_vault_path(vault, target)
+        if relative is None or relative in {"", "."}:
+            raise OnboardingError(f"Vault役割 `{role}` がVault外を指しています")
+        if not target.exists():
+            raise OnboardingError(
+                f"Vault役割 `{role}` の既存pathがありません: {relative}"
+            )
+        if role == "vault_home":
+            if not target.is_file():
+                raise OnboardingError("vault_homeは既存ファイルを指定してください")
+        elif not target.is_dir():
+            raise OnboardingError(
+                f"Vault役割 `{role}` は既存ディレクトリを指定してください"
+            )
+        normalized[role] = relative
+    return normalized
+
+
+def _yaml_string(value: str) -> str:
+    return json.dumps(value, ensure_ascii=False)
+
+
+def _vault_map_content(
+    mappings: dict[str, str],
+    *,
+    managed_namespace: str = "地方議員AI運用OS",
+) -> str:
+    lines = [
+        "schema_version: 1",
+        "product: local-councilor-ai-os",
+        "layout: preserve",
+        f"managed_namespace: {_yaml_string(managed_namespace)}",
+        "roles:",
+    ]
+    lines.extend(
+        f"  {role}: {_yaml_string(path)}"
+        for role, path in sorted(mappings.items())
+    )
+    return "\n".join(lines) + "\n"
+
+
+def _parse_vault_map(content: str) -> dict[str, Any]:
+    value: dict[str, Any] = {}
+    roles: dict[str, str] = {}
+    in_roles = False
+    for line_number, raw_line in enumerate(content.splitlines(), 1):
+        if not raw_line.strip() or raw_line.lstrip().startswith("#"):
+            continue
+        if raw_line == "roles:":
+            in_roles = True
+            value["roles"] = roles
+            continue
+        if in_roles and raw_line.startswith("  "):
+            key, separator, raw_value = raw_line.strip().partition(":")
+            if not separator or key not in PRESERVE_ROLES:
+                raise OnboardingError(
+                    f"vault-map.yamlのrolesが不正です（{line_number}行目）"
+                )
+            try:
+                parsed = json.loads(raw_value.strip())
+            except json.JSONDecodeError as error:
+                raise OnboardingError(
+                    f"vault-map.yamlのpathは引用文字列で指定してください"
+                    f"（{line_number}行目）"
+                ) from error
+            if not isinstance(parsed, str):
+                raise OnboardingError(
+                    f"vault-map.yamlのpathが文字列ではありません"
+                    f"（{line_number}行目）"
+                )
+            roles[key] = parsed
+            continue
+        in_roles = False
+        key, separator, raw_value = raw_line.partition(":")
+        if not separator:
+            raise OnboardingError(
+                f"vault-map.yamlの形式が不正です（{line_number}行目）"
+            )
+        raw_value = raw_value.strip()
+        if key == "schema_version":
+            value[key] = int(raw_value) if raw_value.isdigit() else raw_value
+        elif key in {"product", "layout"}:
+            value[key] = raw_value
+        elif key == "managed_namespace":
+            try:
+                value[key] = json.loads(raw_value)
+            except json.JSONDecodeError as error:
+                raise OnboardingError(
+                    "vault-map.yamlのmanaged_namespaceは引用文字列で指定してください"
+                ) from error
+        else:
+            raise OnboardingError(f"vault-map.yamlの未対応フィールドです: {key}")
+    if value.get("schema_version") != 1:
+        raise OnboardingError("vault-map.yamlのschema_versionが未対応です")
+    if value.get("product") != "local-councilor-ai-os":
+        raise OnboardingError("vault-map.yamlのproductが一致しません")
+    if value.get("layout") != "preserve":
+        raise OnboardingError("vault-map.yamlのlayoutがpreserveではありません")
+    if not roles:
+        raise OnboardingError("vault-map.yamlにrolesがありません")
+    return value
+
+
+def load_vault_map(
+    path: str | os.PathLike[str],
+    *,
+    vault: str | os.PathLike[str],
+) -> dict[str, str]:
+    """Load the constrained, dependency-free preserve mapping format."""
+
+    source = Path(path).expanduser().resolve()
+    try:
+        content = source.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as error:
+        raise OnboardingError(f"vault-mapを読み取れません: {error}") from error
+    value = _parse_vault_map(content)
+    return _validate_preserve_mapping(
+        Path(vault).expanduser().resolve(),
+        dict(value["roles"]),
+    )
+
+
+def _instance_content() -> str:
+    return (
+        "{\n"
+        '  "schema_version": 1,\n'
+        '  "product": "local-councilor-ai-os",\n'
+        '  "paths": {}\n'
+        "}\n"
+    )
+
+
 def diagnose_environment(
     vault_path: str | os.PathLike[str],
     *,
@@ -407,6 +657,22 @@ def diagnose_environment(
         if (vault / "テンプレート").is_dir()
         else 0
     )
+    role_candidates = _preserve_role_candidates(vault)
+    recommended_layout = _recommended_layout(
+        shelf_count=shelf_count,
+        candidates=role_candidates,
+    )
+    detected_role_count = sum(
+        1 for paths in role_candidates.values() if len(paths) == 1
+    )
+    ambiguous_roles = sorted(
+        role for role, paths in role_candidates.items() if len(paths) > 1
+    )
+    scaffold_detail = (
+        f"固定MOC {shelf_count}/{len(SHELVES)}、"
+        f"既存役割 {detected_role_count}件、"
+        f"推奨layout `{recommended_layout}`"
+    )
 
     return {
         "schema_version": SCHEMA_VERSION,
@@ -416,6 +682,8 @@ def diagnose_environment(
         "agent": selected_agent or AUTO_AGENT,
         "vault_path": str(vault),
         "recommended_mode": recommended_mode,
+        "recommended_layout": recommended_layout,
+        "role_candidates": role_candidates,
         "capabilities": {
             "ai_client_selection": client_selection,
             "vault_directory": _status(
@@ -466,11 +734,18 @@ def diagnose_environment(
             ),
             "obsidian_cli": obsidian_cli,
             "existing_scaffold": _status(
-                "reuse" if shelf_count == len(SHELVES) else "add",
-                f"MOC {shelf_count}/{len(SHELVES)}、テンプレート {template_count}件",
+                "reuse"
+                if shelf_count == len(SHELVES)
+                else "preserve"
+                if recommended_layout == "preserve"
+                else "add",
+                scaffold_detail,
                 shelf_count=shelf_count,
                 expected_shelf_count=len(SHELVES),
                 template_count=template_count,
+                detected_role_count=detected_role_count,
+                ambiguous_roles=ambiguous_roles,
+                recommended_layout=recommended_layout,
             ),
         },
         "ai_clients": clients,
@@ -717,6 +992,64 @@ def _planned_files(
     return files
 
 
+def _planned_preserve_files(
+    vault: Path,
+    repo_root: Path,
+    selected: tuple[str, ...],
+    mappings: dict[str, str],
+) -> list[dict[str, str]]:
+    files: list[dict[str, str]] = []
+    control = vault / CONTROL_DIRECTORY
+    if "core" in selected:
+        files.append(
+            {
+                "kind": "generated",
+                "target": str(control / VAULT_MAP_FILE),
+                "content": _vault_map_content(mappings),
+            }
+        )
+        instance = control / INSTANCE_FILE
+        if not instance.exists():
+            files.append(
+                {
+                    "kind": "generated",
+                    "target": str(instance),
+                    "content": _instance_content(),
+                }
+            )
+    if "workflows" in selected:
+        namespace = vault / "地方議員AI運用OS"
+        files.append(
+            {
+                "kind": "generated",
+                "target": str(namespace / "運用MOC.md"),
+                "content": _operations_moc_content(repo_root),
+            }
+        )
+        for directory in ("principles", "workflows"):
+            for source in sorted((repo_root / directory).glob("*.md")):
+                files.append(
+                    {
+                        "kind": "copy",
+                        "source": str(source),
+                        "target": str(namespace / directory / source.name),
+                    }
+                )
+    if "templates" in selected:
+        templates_path = mappings.get("templates")
+        if templates_path:
+            template_root = vault / templates_path / "local-councilor-ai-os"
+            for source in sorted((repo_root / "templates").glob("*.md")):
+                files.append(
+                    {
+                        "kind": "copy",
+                        "source": str(source),
+                        "target": str(template_root / source.name),
+                    }
+                )
+    return files
+
+
 def _content_for_item(item: dict[str, str]) -> str:
     if item["kind"] == "copy":
         source = Path(item["source"])
@@ -770,24 +1103,53 @@ def build_plan(
     diagnosis: dict[str, Any],
     *,
     mode: str | None = None,
+    layout: str | None = None,
     features: Iterable[str] | None = None,
+    role_mappings: dict[str, str] | None = None,
     repo_root: str | os.PathLike[str] | None = None,
 ) -> dict[str, Any]:
     """Build a deterministic, non-writing scaffold and permission preview."""
 
     selected_mode = mode or str(diagnosis["recommended_mode"])
-    selected = _selected_features(selected_mode, features)
+    selected_layout = layout or str(
+        diagnosis.get("recommended_layout") or "scaffold"
+    )
+    if selected_layout not in LAYOUTS:
+        raise OnboardingError(f"未対応のVault layoutです: {selected_layout}")
+    selected_features = (
+        ("core",)
+        if selected_mode == "integrate"
+        and selected_layout == "preserve"
+        and features is None
+        else features
+    )
+    selected = _selected_features(selected_mode, selected_features)
     vault = Path(str(diagnosis["vault_path"]))
     root = (
         Path(repo_root).expanduser().resolve()
         if repo_root
         else Path(__file__).resolve().parents[1]
     )
-    planned_files = (
-        _planned_files(vault, root, selected)
-        if selected_mode == "integrate"
-        else []
-    )
+    normalized_mappings: dict[str, str] = {}
+    if selected_mode == "integrate" and selected_layout == "preserve":
+        detected = diagnosis.get("role_candidates")
+        proposed_mappings = role_mappings or _default_role_mappings(
+            detected if isinstance(detected, dict) else {}
+        )
+        normalized_mappings = _validate_preserve_mapping(
+            vault,
+            proposed_mappings,
+        )
+        planned_files = _planned_preserve_files(
+            vault,
+            root,
+            selected,
+            normalized_mappings,
+        )
+    elif selected_mode == "integrate":
+        planned_files = _planned_files(vault, root, selected)
+    else:
+        planned_files = []
     actions = []
     for item in planned_files:
         action = dict(item)
@@ -817,6 +1179,30 @@ def build_plan(
             for item in actions
             if item["status"] in {"conflict", "blocked"}
         )
+        if (
+            selected_layout == "preserve"
+            and "templates" in selected
+            and "templates" not in normalized_mappings
+        ):
+            blockers.append(
+                "preserve layoutでtemplatesを選ぶ場合はtemplates役割の既存pathが必要"
+            )
+        instance = vault / CONTROL_DIRECTORY / INSTANCE_FILE
+        if selected_layout == "preserve" and instance.exists():
+            try:
+                instance_value = json.loads(instance.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as error:
+                blockers.append(f"既存instance.jsonを検証できない: {error}")
+            else:
+                if not isinstance(instance_value, dict):
+                    blockers.append("既存instance.jsonのトップレベルがobjectではない")
+                elif instance_value.get("product") not in {
+                    None,
+                    "local-councilor-ai-os",
+                }:
+                    blockers.append("既存instance.jsonのproductが一致しない")
+                elif str(instance_value.get("schema_version", "1")) != "1":
+                    blockers.append("既存instance.jsonのschemaが未対応")
 
     network = sorted(
         {
@@ -828,6 +1214,8 @@ def build_plan(
     diagnosis_seed = {
         "vault_path": diagnosis["vault_path"],
         "agent": diagnosis["agent"],
+        "recommended_layout": diagnosis.get("recommended_layout"),
+        "role_candidates": diagnosis.get("role_candidates", {}),
         "capability_statuses": {
             key: value["status"]
             for key, value in diagnosis["capabilities"].items()
@@ -847,7 +1235,9 @@ def build_plan(
         "vault_path": str(vault),
         "agent": diagnosis["agent"],
         "mode": selected_mode,
+        "layout": selected_layout,
         "features": selected,
+        "role_mappings": normalized_mappings,
         "actions": actions,
         "network": network,
         "blockers": blockers,
@@ -870,7 +1260,11 @@ def build_plan(
         "read_only_preview": True,
         "approval_preview": {
             "normal_scoped_actions": [
-                "不足する棚・MOC・profile・テンプレートの新規作成",
+                (
+                    "既存Vault役割対応とcontrol fileの新規作成"
+                    if selected_layout == "preserve"
+                    else "不足する棚・MOC・profile・テンプレートの新規作成"
+                ),
                 "Vault内への実行記録の新規作成",
             ],
             "separate_confirmation": [
@@ -887,6 +1281,7 @@ def build_plan(
         },
         "_planned_files": planned_files,
         "_repo_root": str(root),
+        "_role_mappings": normalized_mappings,
     }
 
 
@@ -958,7 +1353,9 @@ def apply_scaffold(
     current_plan = build_plan(
         diagnosis,
         mode=str(plan["mode"]),
+        layout=str(plan["layout"]),
         features=tuple(plan["features"]),
+        role_mappings=dict(plan.get("_role_mappings") or {}),
         repo_root=str(plan["_repo_root"]),
     )
     if current_plan["status"] != "ready":
@@ -998,12 +1395,14 @@ def apply_scaffold(
         "started_at": started_at,
         "finished_at": None,
         "requested_mode": plan["mode"],
+        "requested_layout": plan["layout"],
         "selected_features": plan["features"],
         "plan_sha256": accepted_plan_sha256,
         "plan_sha256_confirmed": True,
         "target": {
             "vault_path": str(vault),
             "agent": plan["agent"],
+            "layout": plan["layout"],
             "obsidian_vault_name": diagnosis["capabilities"]["obsidian_cli"].get(
                 "vault_name"
             ),
@@ -1161,24 +1560,42 @@ def verify_scaffold(
             if len(frontmatter) < 3 or "description:" not in frontmatter[1]:
                 failures.append(f"description frontmatterがない: {artifact_path}")
 
-    shelf_paths = [vault / directory / filename for directory, filename, _, _ in SHELVES]
-    if sum(item.is_file() for item in shelf_paths) != len(SHELVES):
-        failures.append("8つの業務棚MOCが揃っていない")
-    root_moc = vault / ROOT_MOC
-    if root_moc.is_file():
-        root_content = root_moc.read_text(encoding="utf-8")
-        for directory, filename, _, _ in SHELVES:
-            expected_link = f"[[{directory}/{filename.removesuffix('.md')}]]"
-            if expected_link not in root_content:
-                failures.append(f"OS MOCにリンクがない: {expected_link}")
+    layout = str(
+        manifest.get("requested_layout")
+        or manifest.get("target", {}).get("layout")
+        or "scaffold"
+    )
+    if layout == "preserve":
+        vault_map = vault / CONTROL_DIRECTORY / VAULT_MAP_FILE
+        try:
+            map_value = _parse_vault_map(vault_map.read_text(encoding="utf-8"))
+            _validate_preserve_mapping(vault, dict(map_value["roles"]))
+        except (OSError, UnicodeError, OnboardingError) as error:
+            failures.append(f"既存Vault役割対応を検証できない: {error}")
+    elif layout == "scaffold":
+        shelf_paths = [
+            vault / directory / filename for directory, filename, _, _ in SHELVES
+        ]
+        if sum(item.is_file() for item in shelf_paths) != len(SHELVES):
+            failures.append("8つの業務棚MOCが揃っていない")
+        root_moc = vault / ROOT_MOC
+        if root_moc.is_file():
+            root_content = root_moc.read_text(encoding="utf-8")
+            for directory, filename, _, _ in SHELVES:
+                expected_link = f"[[{directory}/{filename.removesuffix('.md')}]]"
+                if expected_link not in root_content:
+                    failures.append(f"OS MOCにリンクがない: {expected_link}")
+        else:
+            failures.append(f"OS MOCが存在しない: {root_moc}")
     else:
-        failures.append(f"OS MOCが存在しない: {root_moc}")
+        failures.append(f"manifestのVault layoutが未対応: {layout}")
 
     checks.append(
         {
             "name": "artifact_integrity",
             "status": "passed" if not failures else "failed",
             "artifact_count": len(artifacts),
+            "layout": layout,
         }
     )
     return {
