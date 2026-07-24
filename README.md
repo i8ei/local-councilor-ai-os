@@ -33,6 +33,19 @@ AIは、調査、整理、照合、検算を手伝います。しかし、政策
 
 中心に使うのはObsidianです。検索や検算にはSQLiteなどの小さなデータベースとコマンドラインツールを使います。最初から全部を導入する必要はなく、現在地を確認しながら一段ずつ整えられます。
 
+## 自分の自治体で試して、教えてください
+
+このOSは、各自治体で実際に試した結果から育てたいプロジェクトです。コードを書けなくても、
+自治体名、どこまで進んだか、どこで止まったかをIssueで知らせるだけで大きな貢献に
+なります。公式資料の入口情報だけでも歓迎します。
+
+- [自治体で試した結果を報告する](https://github.com/i8ei/local-councilor-ai-os/issues/new?template=municipality-test.yml)
+- [不具合を報告する](https://github.com/i8ei/local-councilor-ai-os/issues/new?template=bug-report.yml)
+- [IssueやPull Requestの出し方](CONTRIBUTING.md)
+
+Claude CodeやCodexと一緒に作ったPull Requestも歓迎します。AIが作った変更は、提出者が
+差分を確認し、実在する個人情報、秘密値、内部資料を含めないでください。
+
 ## Obsidian は必須です
 
 `local-councilor-ai-os` は、Obsidian Vault を判断ノートの正本として使う前提です。Obsidian は単なる保存先ではなく、MOC、wikilink、backlink、frontmatter、lifecycle、検算記録、公開前レビュー、答弁後追跡を接続する判断層です。

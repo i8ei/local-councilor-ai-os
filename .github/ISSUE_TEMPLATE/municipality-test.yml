@@ -1,0 +1,93 @@
+name: 自治体で試した結果
+description: お住まい・活動地域の自治体で試した結果や、止まった場所を共有する
+title: "[自治体テスト] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        コードを書けなくても歓迎です。分からない項目は「不明」と記入してください。
+        APIキー、個人情報、内部資料は貼らないでください。
+
+  - type: input
+    id: municipality
+    attributes:
+      label: 自治体名
+      placeholder: 例：太良町
+    validations:
+      required: true
+
+  - type: input
+    id: prefecture
+    attributes:
+      label: 都道府県
+      placeholder: 例：佐賀県
+    validations:
+      required: true
+
+  - type: dropdown
+    id: result
+    attributes:
+      label: 結果
+      options:
+        - PASS
+        - PARTIAL
+        - FAIL
+        - 未判定
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 実行環境
+      description: 分かる範囲で、OS、Python、使用クライアント、モデル、commitを記載してください。
+      placeholder: |
+        OS:
+        Python:
+        クライアント:
+        モデル:
+        commit:
+
+  - type: textarea
+    id: attempted
+    attributes:
+      label: 試したこと
+      description: 実行したコマンドや、READMEのどこまで進んだかを書いてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: 起きたこと・止まった場所
+      description: 成功したことと、完了できなかったことを分けてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: official_sources
+    attributes:
+      label: 確認できた公式入口
+      description: 公式ホームページ、議事録、例規、予算・決算資料の入口。推測したURLは記載しないでください。
+      placeholder: |
+        公式ホームページ:
+        議事録:
+        例規:
+        予算・決算:
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: エラーやログ
+      description: 秘密値、個人情報、内部資料、不要な絶対パスを除いた最小限のログを貼ってください。
+      render: shell
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 安全確認
+      options:
+        - label: APIキー、秘密値、個人情報、内部資料を含めていません
+          required: true
+        - label: URLや自治体固有情報を、もっともらしく推測していません
+          required: true

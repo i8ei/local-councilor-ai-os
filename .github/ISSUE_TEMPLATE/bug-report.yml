@@ -1,0 +1,65 @@
+name: 不具合報告
+description: 再現可能なエラー、誤判定、説明と実際の挙動の違いを報告する
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        再現に必要な最小情報を記入してください。秘密値や個人情報は貼らないでください。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 不具合の概要
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した結果
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の結果
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 実行環境
+      placeholder: |
+        OS:
+        Python:
+        commit:
+        実行コマンド:
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: エラーやログ
+      description: 秘密値、個人情報、内部資料、不要な絶対パスを除いてください。
+      render: shell
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 安全確認
+      options:
+        - label: APIキー、秘密値、個人情報、内部資料を含めていません
+          required: true
