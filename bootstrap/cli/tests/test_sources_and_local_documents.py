@@ -60,6 +60,64 @@ class LocalDocumentDiagnosisTests(unittest.TestCase):
             [item["id"] for item in result["next_options"]],
         )
 
+    def test_index_heading_classifies_year_only_document_links(self) -> None:
+        result = diagnose_index(
+            index_url="https://example.go.jp/finance/settlement/",
+            final_url="https://example.go.jp/finance/settlement/index.html",
+            html="""
+                <title>決算 | Example City</title>
+                <h1>決算</h1>
+                <a href="files/r6.pdf">令和6年度</a>
+                <a href="/about.html">財政課について</a>
+            """,
+            fetched_at="2026-07-24T00:00:00Z",
+            content_hash="sha256:test",
+        )
+        self.assertEqual(1, result["candidate_count"])
+        self.assertEqual(["settlement"], result["candidates"][0]["kinds"])
+        self.assertEqual(
+            "official_index_context_and_document_extension",
+            result["candidates"][0]["reason"],
+        )
+
+    def test_navigation_keywords_do_not_classify_unrelated_page(self) -> None:
+        result = diagnose_index(
+            index_url="https://example.go.jp/finance/contact/",
+            final_url="https://example.go.jp/finance/contact/index.html",
+            html="""
+                <title>財政課へのお問い合わせ | Example City</title>
+                <h1>財政課へのお問い合わせ</h1>
+                <a href="/finance/budget/">予算</a>
+                <a href="/finance/settlement/">決算</a>
+                <a href="files/contact-guide.pdf">問い合わせ案内</a>
+            """,
+            fetched_at="2026-07-24T00:00:00Z",
+            content_hash="sha256:test",
+        )
+        self.assertEqual(0, result["candidate_count"])
+
+    def test_duplicate_icon_link_uses_later_human_readable_title(self) -> None:
+        result = diagnose_index(
+            index_url="https://example.go.jp/finance/settlement/",
+            final_url="https://example.go.jp/finance/settlement/index.html",
+            html="""
+                <title>決算 | Example City</title>
+                <a href="files/r6.pdf"><img src="pdf.png"></a>
+                <a href="files/r6.pdf">令和6年度決算カード</a>
+            """,
+            fetched_at="2026-07-24T00:00:00Z",
+            content_hash="sha256:test",
+        )
+        self.assertEqual(1, result["candidate_count"])
+        self.assertEqual(
+            "令和6年度決算カード",
+            result["candidates"][0]["title"],
+        )
+        self.assertEqual(
+            "official_index_keyword_and_document_extension",
+            result["candidates"][0]["reason"],
+        )
+
     def test_cli_fetches_only_the_index_url(self) -> None:
         fetched = SimpleNamespace(
             final_url="https://example.go.jp/finance/",

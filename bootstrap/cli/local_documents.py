@@ -16,7 +16,19 @@ from .http import FetchError, HttpClient
 
 KEYWORDS = {
     "budget": ("予算書", "当初予算", "補正予算", "予算概要", "予算説明"),
-    "settlement": ("決算書", "決算概要", "決算状況", "決算説明", "主要な施策"),
+    "settlement": (
+        "決算書",
+        "決算概要",
+        "決算状況",
+        "決算説明",
+        "決算カード",
+        "主要な施策",
+        "主要施策",
+    ),
+}
+PAGE_KEYWORDS = {
+    "budget": ("予算",),
+    "settlement": ("決算",),
 }
 DOCUMENT_EXTENSIONS = (".pdf", ".xlsx", ".xls", ".csv", ".zip")
 OPTIONS = {
@@ -33,13 +45,22 @@ class _LinkParser(HTMLParser):
         self.links: list[dict[str, str]] = []
         self._href: str | None = None
         self._text: list[str] = []
+        self._in_title = False
+        self._in_h1 = False
+        self._title_text: list[str] = []
+        self._h1_text: list[str] = []
 
     def handle_starttag(
         self,
         tag: str,
         attrs: list[tuple[str, str | None]],
     ) -> None:
-        if tag.lower() != "a" or self._href is not None:
+        tag_name = tag.lower()
+        if tag_name == "title":
+            self._in_title = True
+        elif tag_name == "h1":
+            self._in_h1 = True
+        if tag_name != "a" or self._href is not None:
             return
         href = dict(attrs).get("href")
         if href:
@@ -47,11 +68,16 @@ class _LinkParser(HTMLParser):
             self._text = []
 
     def handle_data(self, data: str) -> None:
+        if self._in_title:
+            self._title_text.append(data)
+        if self._in_h1:
+            self._h1_text.append(data)
         if self._href is not None:
             self._text.append(data)
 
     def handle_endtag(self, tag: str) -> None:
-        if tag.lower() == "a" and self._href is not None:
+        tag_name = tag.lower()
+        if tag_name == "a" and self._href is not None:
             self.links.append(
                 {
                     "href": self._href,
@@ -60,6 +86,19 @@ class _LinkParser(HTMLParser):
             )
             self._href = None
             self._text = []
+        if tag_name == "title":
+            self._in_title = False
+        elif tag_name == "h1":
+            self._in_h1 = False
+
+    def page_context(self) -> str:
+        """Return normalized title and primary heading text."""
+
+        return re.sub(
+            r"\s+",
+            " ",
+            " ".join((*self._title_text, *self._h1_text)),
+        ).strip()
 
 
 def diagnose_index(
@@ -74,18 +113,29 @@ def diagnose_index(
 
     parser = _LinkParser()
     parser.feed(html)
+    page_evidence = parser.page_context()
+    page_kinds = {
+        kind
+        for kind, keywords in PAGE_KEYWORDS.items()
+        if any(keyword in page_evidence for keyword in keywords)
+    }
     candidates: list[dict[str, Any]] = []
-    seen: set[str] = set()
+    candidate_by_url: dict[str, dict[str, Any]] = {}
     for link in parser.links:
         resolved_url = urllib.parse.urljoin(final_url, link["href"])
         parts = urllib.parse.urlsplit(resolved_url)
         if parts.scheme not in {"http", "https"} or not parts.netloc:
             continue
         evidence = f"{link['text']} {urllib.parse.unquote(parts.path)}"
-        kinds = [
+        direct_kinds = {
             kind
             for kind, keywords in KEYWORDS.items()
             if any(keyword in evidence for keyword in keywords)
+        }
+        kinds = [
+            kind
+            for kind in KEYWORDS
+            if kind in direct_kinds or kind in page_kinds
         ]
         extension = Path(parts.path).suffix.lower()
         if not kinds or extension not in DOCUMENT_EXTENSIONS:
@@ -93,18 +143,34 @@ def diagnose_index(
         canonical = urllib.parse.urlunsplit(
             (parts.scheme.lower(), parts.netloc, parts.path, parts.query, "")
         )
-        if canonical in seen:
+        existing = candidate_by_url.get(canonical)
+        if existing:
+            fallback_title = Path(parts.path).name
+            if link["text"] and existing["title"] == fallback_title:
+                existing["title"] = link["text"]
+            existing["kinds"] = [
+                kind
+                for kind in KEYWORDS
+                if kind in set(existing["kinds"]) | set(kinds)
+            ]
+            if direct_kinds:
+                existing["reason"] = (
+                    "official_index_keyword_and_document_extension"
+                )
             continue
-        seen.add(canonical)
-        candidates.append(
-            {
-                "title": link["text"] or Path(parts.path).name,
-                "url": canonical,
-                "kinds": kinds,
-                "format": extension.removeprefix("."),
-                "reason": "official_index_keyword_and_document_extension",
-            }
-        )
+        candidate = {
+            "title": link["text"] or Path(parts.path).name,
+            "url": canonical,
+            "kinds": kinds,
+            "format": extension.removeprefix("."),
+            "reason": (
+                "official_index_keyword_and_document_extension"
+                if direct_kinds
+                else "official_index_context_and_document_extension"
+            ),
+        }
+        candidate_by_url[canonical] = candidate
+        candidates.append(candidate)
 
     return {
         "schema_version": 1,
