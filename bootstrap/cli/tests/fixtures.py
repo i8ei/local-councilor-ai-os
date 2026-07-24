@@ -224,6 +224,70 @@ def _column_name(number: int) -> str:
     return result
 
 
+def build_inline_xlsx(
+    path: Path,
+    sheets: list[tuple[str, dict[str, str]]],
+) -> None:
+    """Build a sparse multi-sheet XLSX using inline strings."""
+
+    workbook_sheets = "".join(
+        f'<sheet name="{html.escape(name)}" sheetId="{index}" r:id="rId{index}"/>'
+        for index, (name, _) in enumerate(sheets, start=1)
+    )
+    relationships = "".join(
+        f'<Relationship Id="rId{index}" '
+        'Type="http://schemas.openxmlformats.org/officeDocument/2006/'
+        f'relationships/worksheet" Target="worksheets/sheet{index}.xml"/>'
+        for index in range(1, len(sheets) + 1)
+    )
+    with zipfile.ZipFile(path, "w") as archive:
+        archive.writestr(
+            "[Content_Types].xml",
+            '<?xml version="1.0"?>'
+            '<Types xmlns="http://schemas.openxmlformats.org/package/2006/'
+            'content-types"><Default Extension="rels" '
+            'ContentType="application/vnd.openxmlformats-package.'
+            'relationships+xml"/><Default Extension="xml" '
+            'ContentType="application/xml"/></Types>',
+        )
+        archive.writestr(
+            "xl/workbook.xml",
+            '<?xml version="1.0"?>'
+            '<workbook xmlns="http://schemas.openxmlformats.org/'
+            'spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/'
+            'officeDocument/2006/relationships"><sheets>'
+            f"{workbook_sheets}</sheets></workbook>",
+        )
+        archive.writestr(
+            "xl/_rels/workbook.xml.rels",
+            '<?xml version="1.0"?>'
+            '<Relationships xmlns="http://schemas.openxmlformats.org/package/'
+            f'2006/relationships">{relationships}</Relationships>',
+        )
+        for index, (_, cells) in enumerate(sheets, start=1):
+            rows: dict[int, list[tuple[str, str]]] = {}
+            for ref, value in cells.items():
+                row = int("".join(char for char in ref if char.isdigit()))
+                rows.setdefault(row, []).append((ref, value))
+            xml_rows = "".join(
+                f'<row r="{row}">'
+                + "".join(
+                    f'<c r="{ref}" t="inlineStr"><is><t>'
+                    f"{html.escape(value)}</t></is></c>"
+                    for ref, value in row_cells
+                )
+                + "</row>"
+                for row, row_cells in sorted(rows.items())
+            )
+            archive.writestr(
+                f"xl/worksheets/sheet{index}.xml",
+                '<?xml version="1.0" encoding="UTF-8"?>'
+                '<worksheet xmlns="http://schemas.openxmlformats.org/'
+                f'spreadsheetml/2006/main"><sheetData>{xml_rows}'
+                "</sheetData></worksheet>",
+            )
+
+
 def build_minimal_xlsx(path: Path) -> None:
     """Build a one-sheet XLSX using shared strings and numeric cells."""
 

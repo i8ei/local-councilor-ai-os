@@ -331,7 +331,7 @@ def build_parser() -> argparse.ArgumentParser:
     smoke_bootstrap.add_argument(
         "--no-cross-check",
         action="store_true",
-        help="決算カードによる財政クロスチェックを省略",
+        help="決算カード照合用XLSXの準備を省略",
     )
     smoke_bootstrap.add_argument(
         "--max-live-requests",

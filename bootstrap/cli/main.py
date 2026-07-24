@@ -166,7 +166,10 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--cross-check",
         action="store_true",
-        help="決算カードXLSXで財政6指標を任意検算する",
+        help=(
+            "決算カードXLSXを検算用に取得し出典と原本を記録する"
+            "（値の突合は利用者が行う）"
+        ),
     )
     parser.add_argument(
         "--manifest-dir",
