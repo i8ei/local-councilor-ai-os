@@ -4,6 +4,8 @@ OS制御層のコードと自動テストは`main`へ反映済み。正式なv0.
 
 ## Added
 
+- Added the reusable "ツボ探し" workflow for turning a local problem into a fact-based 見立て, identifying the most effective municipal, prefectural, or national lever, and drafting a 手当て with side effects, objections, follow-up indicators, and exit conditions.
+- Added `policy-issue` and `policy-pr` templates and data contracts so installed users can run the workflow in their own municipalities without publishing local case data.
 - Added the read-only `lcaios` OS control plane:
   - `doctor` combines environment diagnosis, readiness, and one recommended next command.
   - `status` derives foundation, scaffold, profile, and Tier 1 readiness from existing manifests and SQLite artifacts.

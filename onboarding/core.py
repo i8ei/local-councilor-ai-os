@@ -854,7 +854,7 @@ def _operations_moc_content(repo_root: Path) -> str:
     )
     return (
         "---\n"
-        "description: 地方議員AI運用OSの原則と七つの実務ワークフローを確認する入口\n"
+        "description: 地方議員AI運用OSの原則と実務ワークフローを確認する入口\n"
         "---\n\n"
         "# 運用MOC\n\n"
         "## 常設規則\n\n"
