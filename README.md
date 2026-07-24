@@ -31,6 +31,10 @@ Obsidianを中心に、公開資料、議事録、統計、予算決算、住民
 
 ## Obsidian は必須です
 
+`local-councilor-ai-os` は、Obsidian Vault を判断ノートの正本として使う前提です。Obsidian は単なる保存先ではなく、MOC、wikilink、backlink、frontmatter、lifecycle、検算記録、公開前レビュー、答弁後追跡を接続する判断層です。
+
+Obsidian がなければ、このOSは機能しません。各CLIを単体のデータツールとして実行することはできますが、それは `local-councilor-ai-os` の一部部品を使っているだけであり、本リポジトリが想定する運用体験ではありません。Obsidian以外のノートアプリへの互換レイヤーは提供しません。
+
 ## 標準の導入導線
 
 初見の利用者は、次の順に読み取り専用で進めると迷いにくい。
@@ -51,10 +55,6 @@ python3 -m lcaios status --vault '/absolute/path/to/vault'
 ```
 
 `doctor`は診断とreadinessを束ね、次に実行すべき1コマンドだけを示す。基盤が未整備なら`claude-obsidian-setup`へのハンドオフを終了コード3で返す。部品だけを使う利用者には、OS全体の導入完了とは表示しない。
-
-`local-councilor-ai-os` は、Obsidian Vault を判断ノートの正本として使う前提です。Obsidian は単なる保存先ではなく、MOC、wikilink、backlink、frontmatter、lifecycle、検算記録、公開前レビュー、答弁後追跡を接続する判断層です。
-
-Obsidian がなければ、このOSは機能しません。各CLIを単体のデータツールとして実行することはできますが、それは `local-councilor-ai-os` の一部部品を使っているだけであり、本リポジトリが想定する運用体験ではありません。Obsidian以外のノートアプリへの互換レイヤーは提供しません。
 
 ## 共通化するもの、委ねるもの
 
@@ -133,7 +133,7 @@ python3 -m onboarding diagnose \
 
 ## 現在の状態
 
-現在は **v0.1** です。次を公開済みです。
+現在は **v0.1系** です。最新リリースは v0.1.8 で、`main` には次のOS制御層（次期リリース候補）を追加済みです。公開済み・実装済みの範囲は次のとおりです。
 
 - 運用設計の中核 `way-of-working/` 10章と、実務手順 `workflows/` 7本
 - 安全原則、データ契約（証拠、来歴、コンテキストパック、権威マップ）、実務テンプレート
@@ -150,6 +150,8 @@ python3 -m onboarding diagnose \
 - 予算・決算索引の文書未取得診断と、e-Stat・Jグランツを含む参照先レジストリ
 - 議事録の本文・PDF・DB未取得dry-runと、検索式から独立した問いを持つcontext pack
 - 複数AI協働の設計と、段階式セットアップ手順
+- OS制御層 `lcaios/`（`main`追加分）。導入・profile・データ・鮮度を横断する読み取り専用の状態確認、参照先別の鮮度判定、公開前output安全検査、SQLiteのschema互換検証・非上書きbackup・SHA-256確認付き復旧、生成物一覧、次の一手を示す`doctor`
+- 共通run manifest（bootstrapの`--manifest-dir`）とデータ契約（run manifest、instance、鮮度、情報区分、schema互換）、外部コンテンツをデータとして扱うprompt injection境界
 
 ## 統一状態確認
 
@@ -212,9 +214,10 @@ backup前と復旧前後にSQLite integrityとschemaを検証します。既存t
 python3 -m lcaios generated-files --vault '/absolute/path/to/vault'
 ```
 
-次はv0.2の予定です。
+次の正式リリースはv0.2の予定です。OS制御層のコードと自動テストは`main`へ追加済みで、残る完了条件は次です。
 
 - 予算・決算PDF抽出そのものではなく、SQLite入力契約、公開・非公開境界、失敗パターン、分析候補生成の実戦検証と閾値設計を深める
+- 9月決算審査と次回予算審議で、検算閾値、導入負荷、現場へ戻せた時間を評価する
 
 議事録のベンダーアダプターが未対応の場合でも、行き止まりにはなりません。利用者のAIエージェントが、本リポジトリの契約（正規化スキーマ、礼節基盤、参照実装2本）に沿って自分の議会向けの取込を書けます。手順は [`modules/minutes-db/adapter_guidance.md`](modules/minutes-db/adapter_guidance.md) にあります。汎用化できた実装は、実戦検証を経て本体へ取り込みます。
 
@@ -257,7 +260,7 @@ python3 -m lcaios generated-files --vault '/absolute/path/to/vault'
 ./run_tests.sh
 ```
 
-ルートの `python3 -m unittest discover` は `bootstrap/` と `onboarding/` のテストを検出します。`modules/` はパッケージではなく、サブディレクトリ名にハイフンを含むため、各モジュールのテストは個別に起動する必要があります。`run_tests.sh` はこれらと各モジュールのテスト、予算・決算の検算ゲートまでをまとめて実行し、いずれかが失敗すると終了コード1を返します。
+ルートの `python3 -m unittest discover` は `lcaios/`、`bootstrap/`、`onboarding/` のテストを検出します。`modules/` はパッケージではなく、サブディレクトリ名にハイフンを含むため、各モジュールのテストは個別に起動する必要があります。`run_tests.sh` はこれらと各モジュールのテスト、予算・決算の検算ゲートまでをまとめて実行し、いずれかが失敗すると終了コード1を返します。
 
 ## ライセンス
 

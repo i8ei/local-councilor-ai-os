@@ -73,3 +73,17 @@ python3 -m onboarding verify \
 manifestに記録した全artifactのSHA-256、Markdownの`description` frontmatter、8つの業務棚MOC、OS専用MOCのリンク、Obsidian CLI疎通を読み取り専用で検証する。
 
 終了コードは、成功またはscaffold検証済み・profile未完了が`0`、AIクライアント選択・停止条件・検証失敗が`2`、基盤セットアップへのハンドオフが`3`。
+
+## 5. OS全体の状態確認
+
+onboardingは環境診断とscaffoldの正本である。scaffold後に、profile、Tier 1 DB、artifact完全性、鮮度を含むOS全体の状態と次の一手を確認する場合は、読み取り専用の統一入口を使う。
+
+```sh
+python3 -m lcaios doctor \
+  --vault '/absolute/path/to/vault'
+
+python3 -m lcaios status \
+  --vault '/absolute/path/to/vault'
+```
+
+`doctor`はonboarding診断とreadinessを束ねるが、自動scaffold、設定変更、データ取得は行わない。基盤不足なら本READMEの段階1へ戻し、scaffold未完了なら`plan`、`scaffold`、`verify`の順を示す。
