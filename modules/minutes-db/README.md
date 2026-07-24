@@ -22,6 +22,18 @@ SQLite/FTS5へ格納するTier 2アダプターです。SQLiteは原典の代替
 
 ## 対応アダプター
 
+### 対応範囲の区分
+
+| アダプター | detect | ingest | ライブ検証 | 既知の限界 |
+|---|---|---|---|---|
+| kaigiroku.net | 対応 | 対応 | 合成fixture（robots制約でAPIライブ未検証） | tenant URL必須。tenant名は推測しない |
+| 静的HTML/PDF | 対応 | 対応 | 実在1サイトでライブ検証済み | OCR・画像PDF・複雑な表は未対応 |
+| voices系 | 検出のみ | 未対応 | — | 利用者AIが契約に沿って自作 |
+| discuss系 | 検出のみ | 未対応 | — | 利用者AIが契約に沿って自作 |
+| unknown | 検出のみ | 未対応 | — | 公式経路を人が確認して設定 |
+
+「検出できる」ことと「安全に取込できる」ことは別である。detectだけのベンダーは、対応adapterがある状態と混同しない。
+
 ### kaigiroku.net
 
 `https://ssp.kaigiroku.net/tenant/<name>/` 形式のtenant URLだけを受け付けます。

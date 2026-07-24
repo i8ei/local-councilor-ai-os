@@ -1,6 +1,13 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated_at": "2026-07-24",
+  "defaults": {
+    "freshness": {
+      "recommended_check_interval_days": 365,
+      "period_semantics": "source-specificな意味が記録されるまで不明",
+      "failure_policy": "freshと仮定せずunknownを優先する"
+    }
+  },
   "sources": {
     "estat-api-v3": {
       "title": "政府統計の総合窓口（e-Stat）API 3.0",
@@ -35,10 +42,55 @@
           "出典・取得時点を伴わない対外利用"
         ]
       },
+      "freshness": {
+        "check_method": "最新の国勢調査SURVEY_DATEを保存済みas_ofと比較する",
+        "recommended_check_interval_days": 365,
+        "period_semantics": "5年ごとの国勢調査基準日。センサス間に新しい集計が公表され得る",
+        "failure_policy": "最新SURVEY_DATEを確認できない場合はunknownとする"
+      },
       "persistence": {
         "default": "live_with_cache",
         "raw_response": "cache_for_rebuild",
         "sqlite": "normalize_when_repeated_search_or_cross_source_join_is_needed",
+        "snapshot": "pin_verified_outputs_used_for_publication"
+      }
+    },
+    "soumu-municipal-fiscal-overview": {
+      "title": "総務省 市町村別決算状況調・決算カード",
+      "publisher": "総務省",
+      "authority_level": "primary",
+      "source_type": "html_and_documents",
+      "public_access": true,
+      "documentation_url": "https://www.soumu.go.jp/iken/kessan_jokyo_2.html",
+      "attribution": {
+        "source_name": "総務省 地方財政状況調査関係資料",
+        "source_url_required": true
+      },
+      "access": {
+        "mode": "official_index_discovery",
+        "authentication": "none",
+        "endpoints": []
+      },
+      "use_boundary": {
+        "suitable_for": [
+          "市町村の財政指標の取得",
+          "決算カードとの相互照合"
+        ],
+        "not_sufficient_for": [
+          "対象年度・定義を確認しない対外利用",
+          "当初予算そのものの把握"
+        ]
+      },
+      "freshness": {
+        "check_method": "最新年度の索引を保存済みas_ofと比較する",
+        "recommended_check_interval_days": 365,
+        "period_semantics": "会計年度単位の年次公表",
+        "failure_policy": "対象年度を確認できない場合はunknown、期限超過はdueとする"
+      },
+      "persistence": {
+        "default": "cache_for_rebuild",
+        "raw_response": "cache_for_rebuild",
+        "sqlite": "normalize_for_repeated_comparison_and_reconciliation",
         "snapshot": "pin_verified_outputs_used_for_publication"
       }
     },
@@ -73,6 +125,12 @@
           "公募要領や交付要綱の本文確認を省略した政策判断"
         ]
       },
+      "freshness": {
+        "check_method": "利用時に公開APIへ再照会し、募集期間と詳細workflowを確認する",
+        "recommended_check_interval_days": 1,
+        "period_semantics": "募集情報は随時更新。保存snapshotは取得時点の根拠",
+        "failure_policy": "API再確認できない保存情報はdueまたはunknownとして扱う"
+      },
       "persistence": {
         "default": "live_with_cache",
         "raw_response": "cache_with_fetched_at_and_content_hash",
@@ -105,6 +163,12 @@
           "PDFを取得する前の利用者方針確認を省略すること",
           "抽出値の差額ゼロ検算を省略すること"
         ]
+      },
+      "freshness": {
+        "check_method": "自治体公式索引を再取得し、公開年度・資料種別・URLを比較する",
+        "recommended_check_interval_days": 90,
+        "period_semantics": "予算・決算の公表時期に応じて年度内に複数回変化し得る",
+        "failure_policy": "索引を確認できない場合はunknown。保存文書を現在の最新とはみなさない"
       },
       "persistence": {
         "default": "diagnose_index_then_confirm",

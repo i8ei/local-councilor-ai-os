@@ -24,7 +24,7 @@ run_suite() {
   echo
 }
 
-# Package suites: onboarding and Tier 0-1 bootstrap CLI.
+# Package suites: unified status, onboarding, and Tier 0-1 bootstrap CLI.
 run_suite "package tests" python3 -m unittest discover -v
 
 # Per-module suites. Each module runs from its own directory so that

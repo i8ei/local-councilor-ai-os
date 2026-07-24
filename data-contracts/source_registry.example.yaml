@@ -2,8 +2,14 @@
 # Store stable index-page routes, not guessed or hardcoded opaque download URLs.
 # Download URLs belong to fetch records because they may change between releases.
 
-schema_version: "1.1"
+schema_version: "1.2"
 updated_at: "<ISO-8601-datetime>"
+
+defaults:
+  freshness:
+    recommended_check_interval_days: 365
+    period_semantics: "<default-period-semantics>"
+    failure_policy: "<default-failure-policy>"
 
 sources:
   "<source-id>":
@@ -25,6 +31,11 @@ sources:
     use_boundary:
       suitable_for: []
       not_sufficient_for: []
+    freshness:
+      check_method: "<how-to-confirm-the-latest-official-period>"
+      recommended_check_interval_days: 365
+      period_semantics: "<point-or-fiscal-year-or-continuous>"
+      failure_policy: "<unknown-or-due-or-stale-policy>"
     persistence:
       default: "<live-with-cache-or-diagnose-then-confirm>"
       raw_response: "<policy>"

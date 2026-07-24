@@ -40,9 +40,21 @@ def load_registry(path: str | Path = DEFAULT_REGISTRY) -> dict[str, Any]:
             "access",
             "use_boundary",
             "persistence",
+            "freshness",
         ):
             if required not in source:
                 raise RegistryError(f"{source_id}に{required}がありません")
+        freshness = source["freshness"]
+        if not isinstance(freshness, dict):
+            raise RegistryError(f"{source_id}のfreshnessがobjectではありません")
+        for required in (
+            "check_method",
+            "recommended_check_interval_days",
+            "period_semantics",
+            "failure_policy",
+        ):
+            if required not in freshness:
+                raise RegistryError(f"{source_id}.freshnessに{required}がありません")
     return value
 
 
@@ -54,6 +66,9 @@ def _summary(source_id: str, source: dict[str, Any]) -> dict[str, Any]:
         "source_type": source["source_type"],
         "access_mode": source["access"]["mode"],
         "default_persistence": source["persistence"]["default"],
+        "freshness_check_interval_days": source["freshness"][
+            "recommended_check_interval_days"
+        ],
     }
 
 

@@ -29,6 +29,13 @@ class SourceRegistryTests(unittest.TestCase):
             "not_sufficient_for",
             sources["jgrants-public-api"]["use_boundary"],
         )
+        self.assertIn("soumu-municipal-fiscal-overview", sources)
+        for source in sources.values():
+            self.assertGreater(
+                source["freshness"]["recommended_check_interval_days"],
+                0,
+            )
+            self.assertTrue(source["freshness"]["check_method"])
 
     def test_invalid_registry_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

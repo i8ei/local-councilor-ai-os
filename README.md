@@ -31,6 +31,27 @@ Obsidianを中心に、公開資料、議事録、統計、予算決算、住民
 
 ## Obsidian は必須です
 
+## 標準の導入導線
+
+初見の利用者は、次の順に読み取り専用で進めると迷いにくい。
+
+```bash
+# 1. 現在地と次の一手を1コマンドで確認
+python3 -m lcaios doctor --vault '/absolute/path/to/vault'
+
+# 2. 環境診断と安全なscaffold
+python3 -m onboarding diagnose --vault '/absolute/path/to/vault'
+
+# 3. 自治体データ基盤の構築
+python3 -m bootstrap.cli '<自治体名>' \
+  --manifest-dir '/absolute/path/to/vault/.local-councilor-ai-os/runs/bootstrap'
+
+# 4. 導入・profile・データ・鮮度の再確認
+python3 -m lcaios status --vault '/absolute/path/to/vault'
+```
+
+`doctor`は診断とreadinessを束ね、次に実行すべき1コマンドだけを示す。基盤が未整備なら`claude-obsidian-setup`へのハンドオフを終了コード3で返す。部品だけを使う利用者には、OS全体の導入完了とは表示しない。
+
 `local-councilor-ai-os` は、Obsidian Vault を判断ノートの正本として使う前提です。Obsidian は単なる保存先ではなく、MOC、wikilink、backlink、frontmatter、lifecycle、検算記録、公開前レビュー、答弁後追跡を接続する判断層です。
 
 Obsidian がなければ、このOSは機能しません。各CLIを単体のデータツールとして実行することはできますが、それは `local-councilor-ai-os` の一部部品を使っているだけであり、本リポジトリが想定する運用体験ではありません。Obsidian以外のノートアプリへの互換レイヤーは提供しません。
@@ -130,6 +151,67 @@ python3 -m onboarding diagnose \
 - 議事録の本文・PDF・DB未取得dry-runと、検索式から独立した問いを持つcontext pack
 - 複数AI協働の設計と、段階式セットアップ手順
 
+## 統一状態確認
+
+既存Vaultのonboarding manifestとTier 1の`municipality.db`を変更せずに読み、導入、profile、artifact完全性、SQLite integrity、指標の検証状態を一つのJSONまたはMarkdownへまとめられます。
+
+```bash
+python3 -m lcaios status \
+  --vault '/absolute/path/to/vault' \
+  --bootstrap-db '/absolute/path/to/municipality.db'
+```
+
+bootstrap実行時にrun manifestをVaultへ保存すると、以後は`--bootstrap-db`を省略できます。
+
+```bash
+python3 -m bootstrap.cli '自治体名' \
+  --manifest-dir '/absolute/path/to/vault/.local-councilor-ai-os/runs/bootstrap'
+
+python3 -m lcaios status --vault '/absolute/path/to/vault'
+```
+
+run manifestを使わない場合は、Vault内の`.local-councilor-ai-os/instance.json`へDB位置を記録できます。通常の状態表示は未完了項目があっても終了コード0で報告し、CIや公開前ゲートでは`--require tier1_data_ready`等を指定すると、未達時に終了コード2を返します。状態確認は読み取り専用で、manifestやDBを作成・修正しません。
+
+参照先別の鮮度だけを確認する場合:
+
+```bash
+python3 -m lcaios freshness --vault '/absolute/path/to/vault'
+```
+
+鮮度は`fresh / due / stale / unknown`で表示します。DBを今日再構築しただけでは`fresh`にせず、各行に保存された原典取得日時、対象期、source registryの再確認間隔を使います。offline rebuildは最新公表期を再確認したものとして扱いません。
+
+公開予定稿の機械的な漏えい走査:
+
+```bash
+python3 -m lcaios verify output --file '/absolute/path/to/draft.md'
+```
+
+内部wikilink、内部・絶対path、未検証印、秘密値候補、隠しコメント、不可視制御文字、内部区分標識を検出し、errorがあれば終了コード2を返します。自動削除・修正・公開は行いません。検出0件でも、個人の再識別可能性、数値・引用の正しさ、公開可否は保証しないため、人による公開前レビューが必要です。
+
+Tier 1 SQLiteのschema互換・backup・復旧:
+
+```bash
+# 読み取り専用検証
+python3 -m lcaios verify database --file '/path/to/municipality.db'
+
+# 既存ファイルを上書きしないSQLite snapshot
+python3 -m lcaios backup database \
+  --file '/path/to/municipality.db' \
+  --out-dir '/path/to/backups'
+
+# 出力されたbackup SHA-256を画面で確認して復旧
+python3 -m lcaios restore database \
+  --backup '/path/to/backup.db' \
+  --target '/path/to/municipality.db' \
+  --accept-sha256 '<backup_sha256>'
+```
+
+backup前と復旧前後にSQLite integrityとschemaを検証します。既存targetは削除せず`.previous-*`へ退避し、確認済みSHA-256が一致しなければ復旧しません。manifestが宣言した生成物は、削除せず一覧できます。
+
+```bash
+python3 -m lcaios generated-files --vault '/absolute/path/to/vault'
+```
+
 次はv0.2の予定です。
 
 - 予算・決算PDF抽出そのものではなく、SQLite入力契約、公開・非公開境界、失敗パターン、分析候補生成の実戦検証と閾値設計を深める
@@ -141,6 +223,7 @@ python3 -m onboarding diagnose \
 | パス | 内容 |
 |---|---|
 | `principles/` | 判断責任、安全境界、証拠と検証の憲章 |
+| `lcaios/` | 導入状態、artifact完全性、Tier 1 DBを横断する読み取り専用status CLI |
 | `onboarding/` | Obsidian・AI環境の診断、権限プレビュー、安全なVault scaffold |
 | `way-of-working/` | 正本、MOC、権威ルーター、問い化などの運用設計 |
 | `bootstrap/` | 自治体名から全国共通データ基盤を立ち上げる設計 |
