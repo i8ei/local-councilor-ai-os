@@ -18,12 +18,20 @@ OS制御層のコードと自動テストは`main`へ反映済み。正式なv0.
 - Added source registry 1.2 with source-specific freshness policies and the Soumu municipal fiscal source.
 - Added an explicit prompt-injection boundary: external documents are data, not instructions. Context packs can carry `source_content_policy`.
 - Added a detect/ingest/live-verification compatibility table for minutes adapters.
+- Added shared Ruff and mypy configuration in `pyproject.toml`, with CI gates covering all importable packages.
 
 ## Changed
 
 - Onboarding manifests now include `run_type: onboarding` for the shared manifest reader.
 - The public-output review template and workflow now invoke the deterministic output safety scanner before human review.
 - Setup and README documentation now use the standard path `doctor → onboarding → bootstrap → status`.
+- Converted `modules/` into importable Python packages and standardized module commands on `python3 -m modules.<package>.<command>`.
+- Rewrote the README introduction around the purpose, practical changes, and human decision boundary before technical details.
+
+## Fixed
+
+- Closed SQLite connections deterministically and made `ResourceWarning` fail the test suite.
+- Centralized read-only SQLite URI construction and added allowlists for dynamic SQL identifiers.
 
 ## Safety
 
@@ -34,7 +42,8 @@ OS制御層のコードと自動テストは`main`へ反映済み。正式なv0.
 
 ## Verified
 
-- Verified all 134 tests and the settlement reconciliation gates.
+- Verified all 181 tests and the settlement reconciliation gates.
+- Verified Ruff and mypy across 105 source files.
 - Verified offline `bootstrap → manifest → status` with nine normalized indicators and `tier1_data_ready: ready`.
 - Verified per-source freshness against saved e-Stat and Soumu provenance.
 - Verified public-output clean/blocked examples.
