@@ -17,6 +17,7 @@ from .lifecycle import (
     restore_database,
 )
 from .output_check import check_output_file
+from .profile import confirm_profile
 from .smoke_test import SmokeTestError, run_bootstrap_smoke_test
 from .status import REQUIREMENTS, build_status, requirements_met
 
@@ -194,6 +195,35 @@ def build_parser() -> argparse.ArgumentParser:
     freshness.add_argument("--vault", required=True, type=Path)
     freshness.add_argument("--bootstrap-db", type=Path)
     freshness.add_argument(
+        "--format",
+        choices=("json", "markdown"),
+        default="markdown",
+    )
+    profile = subparsers.add_parser(
+        "profile",
+        help="本人確認済みの議員・議会profileを登録",
+    )
+    profile_subparsers = profile.add_subparsers(
+        dest="profile_command",
+        required=True,
+    )
+    profile_confirm = profile_subparsers.add_parser(
+        "confirm",
+        help="profile内容を検査しhash-only manifestへ確認記録を追加",
+    )
+    profile_confirm.add_argument("--vault", required=True, type=Path)
+    profile_confirm.add_argument("--profile", required=True, type=Path)
+    profile_confirm.add_argument(
+        "--council-adapter",
+        required=True,
+        type=Path,
+    )
+    profile_confirm.add_argument(
+        "--confirm-human-reviewed",
+        action="store_true",
+        help="本人が内容と公開・内部情報の分離を確認済みであることを明示",
+    )
+    profile_confirm.add_argument(
         "--format",
         choices=("json", "markdown"),
         default="markdown",
@@ -406,6 +436,28 @@ def _render_database_verification(report: dict[str, Any]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def _render_profile_confirmation(report: dict[str, Any]) -> str:
+    lines = [
+        "# Profile確認",
+        "",
+        f"- 状態: `{report['status']}`",
+        f"- Vault: `{report['vault']}`",
+        f"- Councilor profile: `{report['profile']}`",
+        f"- Council adapter: `{report['council_adapter']}`",
+        f"- Manifest: `{report['manifest']}`",
+        "- Profile本文はmanifestへ保存せず、pathとSHA-256だけを記録しました。",
+        "",
+        "| Check | 状態 | 詳細 |",
+        "|---|---|---|",
+    ]
+    for item in report["checks"]:
+        lines.append(
+            f"| `{item['name']}` | `{item['status']}` | "
+            f"{_escape(item.get('detail', ''))} |"
+        )
+    return "\n".join(lines).rstrip() + "\n"
+
+
 def _render_backup(report: dict[str, Any]) -> str:
     return (
         "# Database backup\n\n"
@@ -558,6 +610,18 @@ def main(argv: Sequence[str] | None = None) -> int:
             else:
                 print(_render_database_verification(report), end="")
             return 0 if report["ok"] else 2
+        if args.command == "profile" and args.profile_command == "confirm":
+            report = confirm_profile(
+                args.vault,
+                profile=args.profile,
+                council_adapter=args.council_adapter,
+                human_reviewed=args.confirm_human_reviewed,
+            )
+            if args.format == "json":
+                print(json.dumps(report, ensure_ascii=False, indent=2))
+            else:
+                print(_render_profile_confirmation(report), end="")
+            return 0
         if args.command == "backup" and args.backup_command == "database":
             report = backup_database(args.file, args.out_dir)
             if args.format == "json":

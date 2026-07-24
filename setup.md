@@ -127,6 +127,19 @@ AIエージェントは、次を一項目ずつ質問する。
 
 `templates/`のひな型はVaultのノートテンプレート領域へ複製する。同名があれば置換せず、差分を示す。聞き取り結果から`profiles/councilor-profile.yaml`と`profiles/council-adapter.md`を記入する。前者には役割と作業条件、後者には公開資料で確認できる議会日程、通告様式、会議録経路を置く。個人の判断と公開された議会運用を混ぜない。
 
+本人確認後、両ファイルをVault内の任意の棚へ保存し、次を実行する。
+
+```bash
+python3 -m lcaios profile confirm \
+  --vault '/absolute/path/to/vault' \
+  --profile '/absolute/path/to/vault/任意の棚/councilor-profile.yaml' \
+  --council-adapter '/absolute/path/to/vault/任意の棚/council-adapter.md' \
+  --confirm-human-reviewed
+```
+
+本文はmanifestへ複製されず、pathとhashだけが記録される。AIによる推定、未記入
+placeholder、Vault外path、symlinkでは`profile_ready`にしない。
+
 ### 検証
 
 八つの棚、各MOCの`description`、基盤MOCからの接続、テンプレートの件数、二つのプロファイルの未記入欄を確認する。既存物を置換していないこと、公開側から`住民の声`へリンクがないことも確認する。

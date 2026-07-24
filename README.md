@@ -181,6 +181,22 @@ python3 -m lcaios status --vault '/absolute/path/to/vault'
 
 run manifestを使わない場合は、Vault内の`.local-councilor-ai-os/instance.json`へDB位置を記録できます。通常の状態表示は未完了項目があっても終了コード0で報告し、CIや公開前ゲートでは`--require tier1_data_ready`等を指定すると、未達時に終了コード2を返します。状態確認は読み取り専用で、manifestやDBを作成・修正しません。
 
+本人確認済みprofileを状態表示へ接続する場合は、profile本文をVault内の任意の棚へ
+保存してから確認コマンドを実行する。
+
+```bash
+python3 -m lcaios profile confirm \
+  --vault '/absolute/path/to/vault' \
+  --profile '/absolute/path/to/vault/任意の棚/councilor-profile.yaml' \
+  --council-adapter '/absolute/path/to/vault/任意の棚/council-adapter.md' \
+  --confirm-human-reviewed
+```
+
+このコマンドは本文を変更・複製せず、pathとSHA-256だけをappend-only manifestへ
+記録する。確認後に内容が変われば`profile_ready`を`invalid`へ戻す。`doctor`は
+onboardingで選んだClaude CodeまたはCodexをmanifestから再利用するため、両方が
+インストール済みでも選択画面へ戻り続けない。
+
 各モジュールの取込・検算CLIにも`--manifest-dir`を指定できます。保存先は
 `<vault>/.local-councilor-ai-os/runs/<module>`とし、`<module>`は
 `minutes`、`regulations`、`benchmark`、`budget`、`settlement`のいずれかです。
