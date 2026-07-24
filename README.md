@@ -182,7 +182,7 @@ python3 -m onboarding diagnose \
 
 現在は **v0.1系** です。最新リリースは v0.1.8 で、`main` には次のOS制御層（次期リリース候補）を追加済みです。公開済み・実装済みの範囲は次のとおりです。
 
-- 運用設計の中核 `way-of-working/` 10章と、実務手順 `workflows/` 8本
+- 運用設計の中核 [`way-of-working/`](way-of-working/README.md) 11章と、実務手順 `workflows/` 8本
 - 安全原則、データ契約（証拠、来歴、コンテキストパック、権威マップ）、実務テンプレート
 - ツボ探しのワークフローと、見立て・手当てのテンプレートおよびデータ契約（地域課題を、働きかける先と副作用込みの制度提案へ変換する型。コード追加なしで利用可）
 - 自治体名からのブートストラップCLI（Tier 0〜1、実装・ライブ検証済み）
@@ -305,7 +305,7 @@ python3 -m lcaios generated-files --vault '/absolute/path/to/vault'
 | `principles/` | 判断責任、安全境界、証拠と検証の憲章 |
 | `lcaios/` | 導入状態、artifact完全性、Tier 1 DBを横断する読み取り専用status CLI |
 | `onboarding/` | Obsidian・AI環境の診断、権限プレビュー、安全なVault scaffold |
-| `way-of-working/` | 正本、MOC、権威ルーター、問い化などの運用設計 |
+| [`way-of-working/`](way-of-working/README.md) | 正本、MOC、権威ルーター、問い化、ツボ探しなどの運用設計 |
 | `bootstrap/` | 自治体名から全国共通データ基盤を立ち上げる設計 |
 | `workflows/` | 案件開始から答弁後の実装追跡までの手順 |
 | `profiles/` | 議員の役割や議会固有差分を表す設定 |
