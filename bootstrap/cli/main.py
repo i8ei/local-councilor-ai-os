@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sqlite3
 import sys
@@ -32,6 +33,12 @@ from bootstrap.cli.resolve import (
     resolve_municipality,
 )
 from bootstrap.cli.xlsx import XlsxError
+from lcaios.run_manifest import (
+    artifact_record,
+    finish_run,
+    redact_text,
+    start_run,
+)
 
 
 BOOTSTRAP_DIR = Path(__file__).resolve().parents[1]
@@ -142,11 +149,45 @@ def _parser() -> argparse.ArgumentParser:
         action="store_true",
         help="決算カードXLSXで財政6指標を任意検算する",
     )
+    parser.add_argument(
+        "--manifest-dir",
+        type=Path,
+        help="共通run manifestの保存先。指定しなければmanifestは作らない",
+    )
     return parser
 
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = _parser().parse_args(argv)
+    manifest_path: Path | None = None
+    manifest: dict[str, Any] | None = None
+    if args.manifest_dir is not None:
+        try:
+            manifest_path, manifest = start_run(
+                args.manifest_dir,
+                run_type="bootstrap",
+                repo_root=Path(__file__).resolve().parents[2],
+                requested={
+                    "municipality_name": args.municipality_name,
+                    "prefecture": args.prefecture,
+                    "offline": args.offline,
+                    "cross_check": args.cross_check,
+                    "output_directory": (
+                        str(args.out_dir.expanduser().resolve(strict=False))
+                        if args.out_dir is not None
+                        else None
+                    ),
+                },
+            )
+        except OSError as error:
+            print(
+                json.dumps(
+                    {"status": "failed", "error": str(error)},
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
+            return 1
     try:
         report = run(
             args.municipality_name,
@@ -156,17 +197,25 @@ def main(argv: Sequence[str] | None = None) -> int:
             cross_check=args.cross_check,
         )
     except AmbiguousMunicipality as error:
-        print(
-            json.dumps(
+        result = {
+            "status": "ambiguous",
+            "error": str(error),
+            "candidates": error.candidates,
+        }
+        if manifest_path is not None and manifest is not None:
+            manifest["failures"].append(
                 {
-                    "status": "ambiguous",
-                    "error": str(error),
-                    "candidates": error.candidates,
-                },
-                ensure_ascii=False,
-                indent=2,
+                    "code": "ambiguous_municipality",
+                    "message": redact_text(
+                        str(error),
+                        secret_values=(os.environ.get("ESTAT_APPID", ""),),
+                    ),
+                }
             )
-        )
+            manifest["scope"] = {"candidates": error.candidates}
+            finish_run(manifest_path, manifest, status="failed")
+            result["manifest"] = str(manifest_path)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
         return 2
     except (
         CensusError,
@@ -180,14 +229,99 @@ def main(argv: Sequence[str] | None = None) -> int:
         ValueError,
         sqlite3.Error,
     ) as error:
-        print(
-            json.dumps(
-                {"status": "failed", "error": str(error)},
-                ensure_ascii=False,
-                indent=2,
-            )
+        safe_error = redact_text(
+            str(error),
+            secret_values=(os.environ.get("ESTAT_APPID", ""),),
         )
+        result = {"status": "failed", "error": safe_error}
+        if manifest_path is not None and manifest is not None:
+            manifest["failures"].append(
+                {
+                    "code": type(error).__name__,
+                    "message": safe_error,
+                }
+            )
+            finish_run(manifest_path, manifest, status="failed")
+            result["manifest"] = str(manifest_path)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
         return 1
+    if manifest_path is not None and manifest is not None:
+        try:
+            database_path = Path(str(report["database"]["path"]))
+            authority_path = Path(str(report["authority_map"]["path"]))
+            manifest_updates = {
+                "target": {
+                    "output_directory": str(database_path.parent.resolve()),
+                },
+                "scope": {
+                    **report["municipality"],
+                    "mode": report["mode"],
+                    "fiscal_year": report["fiscal"]["fiscal_year"],
+                },
+                "outputs": [
+                    artifact_record(
+                        database_path,
+                        kind="municipality_database",
+                        schema_version=1,
+                    ),
+                    artifact_record(
+                        authority_path,
+                        kind="authority_map",
+                        schema_version=1,
+                    ),
+                ],
+                "checks": [
+                    {
+                        "name": "sqlite_integrity",
+                        "status": (
+                            "passed"
+                            if report["database"]["integrity_check"] == "ok"
+                            else "failed"
+                        ),
+                        "detail": report["database"]["integrity_check"],
+                    },
+                    {
+                        "name": "indicator_rows",
+                        "status": "passed",
+                        "detail": report["database"]["indicator_rows"],
+                    },
+                ],
+                "warnings": [
+                    {"code": "bootstrap_warning", "message": str(item)}
+                    for item in report["warnings"]
+                ],
+            }
+            finish_run(
+                manifest_path,
+                manifest,
+                status="succeeded",
+                updates=manifest_updates,
+            )
+            report["manifest"] = str(manifest_path)
+        except (KeyError, OSError, ValueError) as error:
+            safe_error = redact_text(
+                str(error),
+                secret_values=(os.environ.get("ESTAT_APPID", ""),),
+            )
+            manifest["failures"].append(
+                {
+                    "code": "manifest_finalize_failed",
+                    "message": safe_error,
+                }
+            )
+            finish_run(manifest_path, manifest, status="failed")
+            print(
+                json.dumps(
+                    {
+                        "status": "failed",
+                        "error": safe_error,
+                        "manifest": str(manifest_path),
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
+            return 1
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0
 

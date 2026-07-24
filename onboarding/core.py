@@ -993,6 +993,7 @@ def apply_scaffold(
         "product": "local-councilor-ai-os",
         "source_revision": _source_revision(Path(str(plan["_repo_root"]))),
         "run_id": run_id,
+        "run_type": "onboarding",
         "status": "running",
         "started_at": started_at,
         "finished_at": None,
