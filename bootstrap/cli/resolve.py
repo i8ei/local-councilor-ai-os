@@ -100,9 +100,7 @@ def local_government_code(area_code_5: str) -> str:
         int(digit) * weight
         for digit, weight in zip(area_code_5, (6, 5, 4, 3, 2), strict=True)
     )
-    check_digit = 11 - (weighted_sum % 11)
-    if check_digit >= 10:
-        check_digit = 0
+    check_digit = (11 - (weighted_sum % 11)) % 10
     return area_code_5 + str(check_digit)
 
 

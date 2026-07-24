@@ -17,6 +17,16 @@ from bootstrap.cli.tests.fixtures import FakeRegionClient
 
 
 class ResolveTests(unittest.TestCase):
+    def test_local_government_code_modulus_edge_cases(self) -> None:
+        cases = {
+            "41209": "412091",
+            "41204": "412040",
+            "41203": "412031",
+        }
+        for area_code, expected in cases.items():
+            with self.subTest(area_code=area_code):
+                self.assertEqual(expected, local_government_code(area_code))
+
     def test_ambiguous_name_requires_prefecture(self) -> None:
         with self.assertRaises(AmbiguousMunicipality) as raised:
             resolve_municipality("同名市", None, FakeRegionClient())
