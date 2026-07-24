@@ -95,7 +95,11 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual("paragraph:1", hits[0]["locator"])
 
         pack = build_context_pack(
-            self.connection, "防災", k=3, char_budget=10
+            self.connection,
+            "防災",
+            k=3,
+            char_budget=10,
+            question="地域防災計画はいつ見直されたか",
         )
         self.assertEqual(1, len(pack["evidence"]))
         evidence = pack["evidence"][0]
@@ -103,6 +107,11 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue(evidence["quote_is_verbatim"])
         self.assertEqual("2026-07-23T00:00:00Z", evidence["fetched_at"])
         self.assertLessEqual(pack["limits"]["quote_characters_used"], 10)
+        self.assertEqual("防災", pack["search"]["query"])
+        self.assertEqual(
+            "地域防災計画はいつ見直されたか",
+            pack["question"],
+        )
 
     def test_short_query_uses_literal_fallback(self) -> None:
         store_meeting(self.connection, synthetic_document("町の水対策です。"))

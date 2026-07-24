@@ -2,7 +2,7 @@
 # Store stable index-page routes, not guessed or hardcoded opaque download URLs.
 # Download URLs belong to fetch records because they may change between releases.
 
-schema_version: "<schema-version>"
+schema_version: "1.1"
 updated_at: "<ISO-8601-datetime>"
 
 sources:
@@ -13,7 +13,23 @@ sources:
     source_type: "<api-or-html-or-xlsx-or-csv-or-pdf>"
     authority_level: "<primary-or-cross-check>"
     public_access: null
+    documentation_url: "<official-documentation-url-or-null>"
     terms_url: "<official-terms-page-url>"
+    attribution:
+      source_name: "<required-source-name>"
+      source_url_required: null
+    access:
+      mode: "<live-api-or-official-index-discovery>"
+      authentication: "<none-or-supported-method>"
+      endpoints: []
+    use_boundary:
+      suitable_for: []
+      not_sufficient_for: []
+    persistence:
+      default: "<live-with-cache-or-diagnose-then-confirm>"
+      raw_response: "<policy>"
+      sqlite: "<when-needed>"
+      snapshot: "<when-required>"
     coverage:
       geography: "<coverage>"
       time: "<coverage>"
@@ -50,6 +66,7 @@ sources:
         caveats: []
 
 fetch_record_contract:
+  source_id: "<source-id>"
   fetched_at: "<ISO-8601-datetime>"
   locator_id: "<locator-id>"
   discovered_from: "<official-index-page-url>"

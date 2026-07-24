@@ -27,7 +27,13 @@ def _excerpt(text: str, query: str, limit: int) -> tuple[str, int, int]:
     return text[start:end], start, end
 
 
-def build_context_pack(connection: sqlite3.Connection, query: str, k: int = 5, char_budget: int = 8000) -> dict[str, Any]:
+def build_context_pack(
+    connection: sqlite3.Connection,
+    query: str,
+    k: int = 5,
+    char_budget: int = 8000,
+    question: str | None = None,
+) -> dict[str, Any]:
     hits = search_database(connection, query, k)
     items: list[dict[str, Any]] = []
     used = 0
@@ -60,7 +66,7 @@ def build_context_pack(connection: sqlite3.Connection, query: str, k: int = 5, c
         "schema_version": "regulations-context-pack/1",
         "pack_id": "rcp_" + hashlib.sha256(key.encode()).hexdigest()[:24],
         "purpose": "例規検索結果から、問いに必要な条文抜粋だけを渡す",
-        "question": query,
+        "question": question or query,
         "created_at": created_at,
         "information_classification": "public",
         "search": {"query": query, "requested_k": k, "selected_hits": len(items)},
@@ -73,6 +79,11 @@ def build_context_pack(connection: sqlite3.Connection, query: str, k: int = 5, c
         },
         "regeneration": {
             "command": f"python3 context_pack.py {json.dumps(query, ensure_ascii=False)} --db <regulations.db> --k {k} --char-budget {char_budget}"
+            + (
+                f" --question {json.dumps(question, ensure_ascii=False)}"
+                if question
+                else ""
+            )
         },
     }
 
@@ -81,6 +92,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("query")
     parser.add_argument("--db", required=True)
+    parser.add_argument(
+        "--question",
+        help="Human question to record separately from the search expression",
+    )
     parser.add_argument("--k", type=int, default=5)
     parser.add_argument("--char-budget", type=int, default=8000)
     return parser
@@ -93,7 +108,13 @@ def main() -> int:
         return 2
     try:
         with sqlite3.connect(Path(args.db)) as connection:
-            pack = build_context_pack(connection, args.query, args.k, args.char_budget)
+            pack = build_context_pack(
+                connection,
+                args.query,
+                args.k,
+                args.char_budget,
+                question=args.question,
+            )
     except sqlite3.Error as exc:
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1

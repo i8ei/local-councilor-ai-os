@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Minimal Obsidian CLI double for clean-room integration tests.
+set -euo pipefail
+
+vault_path="${TEST_OBSIDIAN_VAULT_PATH:?TEST_OBSIDIAN_VAULT_PATH is required}"
+vault_name="${TEST_OBSIDIAN_VAULT_NAME:-Kashima Cleanroom}"
+
+if [[ "$*" == "vaults verbose" ]]; then
+  printf '%s\t%s\n' "$vault_name" "$vault_path"
+  exit 0
+fi
+
+if [[ "$1" == "vault=${vault_name}" && "$2" == "vault" && "$3" == "info=path" ]]; then
+  printf '%s\n' "$vault_path"
+  exit 0
+fi
+
+if [[ "$1" == "vault=${vault_name}" && "$2" == "search" ]]; then
+  printf '0\n'
+  exit 0
+fi
+
+exit 2
