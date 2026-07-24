@@ -25,7 +25,6 @@ from onboarding.core import (
     verify_scaffold,
 )
 
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
 OBSIDIAN_READY = {
     "status": "reuse",

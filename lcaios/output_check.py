@@ -13,7 +13,6 @@ import unicodedata
 from pathlib import Path
 from typing import Any, Iterable
 
-
 SEVERITY_ORDER = {"error": 0, "warning": 1, "info": 2}
 
 # Absolute paths, vault-internal control directories, and known local roots.

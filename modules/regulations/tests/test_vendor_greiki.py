@@ -6,26 +6,14 @@ import hashlib
 import io
 import json
 import sqlite3
-import sys
 import tempfile
 import unittest
-from contextlib import redirect_stderr
+from contextlib import closing, redirect_stderr
 from pathlib import Path
 from unittest.mock import patch
 
-MODULE_DIR = Path(__file__).resolve().parents[1]
-MINUTES_DIR = MODULE_DIR.parent / "minutes-db"
-for path in (str(MINUTES_DIR), str(MODULE_DIR)):
-    while path in sys.path:
-        sys.path.remove(path)
-sys.path.insert(0, str(MINUTES_DIR))
-sys.path.insert(0, str(MODULE_DIR))
-
-import vendor_greiki  # noqa: E402
-import context_pack  # noqa: E402
-import search  # noqa: E402
-from adapters.base import FetchResult, RobotsDeniedError  # type: ignore  # noqa: E402
-
+from modules.minutes_db.adapters.base import FetchResult, RobotsDeniedError
+from modules.regulations import context_pack, search, vendor_greiki
 
 BASE_URL = "https://example.invalid/fake-town/"
 ENTRY_URL = BASE_URL + "reiki_menu.html"
@@ -96,7 +84,7 @@ class GreikiAdapterTests(unittest.TestCase):
                 limit=1,
                 fetcher=fetcher,
             )
-            with sqlite3.connect(database) as connection:
+            with closing(sqlite3.connect(database)) as connection, connection:
                 hits = search.search_database(connection, "あき地", 5)
                 pack = context_pack.build_context_pack(
                     connection, "あき地", 5, 1000
@@ -208,7 +196,7 @@ class GreikiAdapterTests(unittest.TestCase):
 
         stderr = io.StringIO()
         with patch(
-            "vendor_greiki.ingest_greiki",
+            "modules.regulations.vendor_greiki.ingest_greiki",
             side_effect=RobotsDeniedError("robots.txt により取得できません"),
         ), redirect_stderr(stderr):
             status = vendor_greiki.main(

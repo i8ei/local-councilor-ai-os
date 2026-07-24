@@ -5,7 +5,7 @@ from __future__ import annotations
 import sqlite3
 import tempfile
 import unittest
-from contextlib import redirect_stdout
+from contextlib import closing, redirect_stdout
 from io import StringIO
 from pathlib import Path
 from unittest.mock import patch
@@ -20,7 +20,7 @@ from lcaios.smoke_test import (
 
 
 def _database(path: Path, value: str = "10") -> None:
-    with sqlite3.connect(path) as connection:
+    with closing(sqlite3.connect(path)) as connection, connection:
         connection.execute(
             """
             CREATE TABLE indicator (

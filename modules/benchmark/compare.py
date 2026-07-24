@@ -7,10 +7,11 @@ import argparse
 import json
 import sqlite3
 import sys
+from contextlib import closing
 from pathlib import Path
 from typing import Any
 
-from presets import PRESETS, Preset, get_preset
+from .presets import PRESETS, Preset, get_preset
 
 
 def compare(
@@ -330,7 +331,7 @@ def main() -> int:
     if bool(args.indicator_key) == bool(args.preset):
         parser.error("specify exactly one indicator_key or --preset")
     try:
-        with sqlite3.connect(Path(args.db)) as connection:
+        with closing(sqlite3.connect(Path(args.db))) as connection:
             if args.preset:
                 result = compare_preset(
                     connection,

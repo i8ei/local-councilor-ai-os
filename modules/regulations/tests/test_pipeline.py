@@ -5,26 +5,14 @@ from __future__ import annotations
 import hashlib
 import json
 import sqlite3
-import sys
 import tempfile
 import unittest
+from contextlib import closing
 from pathlib import Path
 from unittest.mock import patch
 
-MODULE_DIR = Path(__file__).resolve().parents[1]
-MINUTES_DIR = MODULE_DIR.parent / "minutes-db"
-for module_name in ("context_pack", "ingest", "search"):
-    sys.modules.pop(module_name, None)
-for path in (str(MINUTES_DIR), str(MODULE_DIR)):
-    while path in sys.path:
-        sys.path.remove(path)
-sys.path.insert(0, str(MINUTES_DIR))
-sys.path.insert(0, str(MODULE_DIR))
-
-import context_pack  # noqa: E402
-import ingest  # noqa: E402
-import search  # noqa: E402
-from adapters.base import FetchResult  # type: ignore  # noqa: E402
+from modules.minutes_db.adapters.base import FetchResult
+from modules.regulations import context_pack, ingest, search
 
 INDEX_URL = "https://example.invalid/reiki/index.html"
 DOC_URL = "https://example.invalid/reiki/privacy.html"
@@ -70,11 +58,11 @@ class RegulationsPipelineTests(unittest.TestCase):
                 DOC_URL: result(DOC_URL, document_html, root / "doc.cache"),
             }
             db = root / "regulations.db"
-            with patch("ingest.polite_fetch", side_effect=lambda url, **_: responses[url]):
+            with patch("modules.regulations.ingest.polite_fetch", side_effect=lambda url, **_: responses[url]):
                 report = ingest.ingest(config, db, limit=1)
             self.assertEqual(1, report["documents"])
             self.assertEqual(3, report["articles"])
-            with sqlite3.connect(db) as connection:
+            with closing(sqlite3.connect(db)) as connection, connection:
                 hits = search.search_database(connection, "個人情報", 5)
                 pack = context_pack.build_context_pack(
                     connection,

@@ -7,7 +7,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-
 INDICATOR_INFO = {
     "population_total": (
         "総人口",

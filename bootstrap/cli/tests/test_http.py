@@ -12,8 +12,8 @@ from unittest.mock import patch
 from bootstrap.cli.http import (
     HttpClient,
     OfflineCacheMiss,
-    _RawResponse,
     _cache_files,
+    _RawResponse,
 )
 
 

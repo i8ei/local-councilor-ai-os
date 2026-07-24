@@ -254,7 +254,7 @@ python3 -m lcaios generated-files --vault '/absolute/path/to/vault'
 - 予算・決算PDF抽出そのものではなく、SQLite入力契約、公開・非公開境界、失敗パターン、分析候補生成の実戦検証と閾値設計を深める
 - 9月決算審査と次回予算審議で、検算閾値、導入負荷、現場へ戻せた時間を評価する
 
-議事録のベンダーアダプターが未対応の場合でも、行き止まりにはなりません。利用者のAIエージェントが、本リポジトリの契約（正規化スキーマ、礼節基盤、参照実装2本）に沿って自分の議会向けの取込を書けます。手順は [`modules/minutes-db/adapter_guidance.md`](modules/minutes-db/adapter_guidance.md) にあります。汎用化できた実装は、実戦検証を経て本体へ取り込みます。
+議事録のベンダーアダプターが未対応の場合でも、行き止まりにはなりません。利用者のAIエージェントが、本リポジトリの契約（正規化スキーマ、礼節基盤、参照実装2本）に沿って自分の議会向けの取込を書けます。手順は [`modules/minutes_db/adapter_guidance.md`](modules/minutes_db/adapter_guidance.md) にあります。汎用化できた実装は、実戦検証を経て本体へ取り込みます。
 
 ## リポジトリ案内
 
@@ -295,7 +295,14 @@ python3 -m lcaios generated-files --vault '/absolute/path/to/vault'
 ./run_tests.sh
 ```
 
-ルートの `python3 -m unittest discover` は `lcaios/`、`bootstrap/`、`onboarding/` のテストを検出します。`modules/` はパッケージではなく、サブディレクトリ名にハイフンを含むため、各モジュールのテストは個別に起動する必要があります。`run_tests.sh` はこれらと各モジュールのテスト、予算・決算の検算ゲートまでをまとめて実行し、いずれかが失敗すると終了コード1を返します。
+`lcaios/`、`bootstrap/`、`onboarding/`、`modules/` はすべてインポート可能なパッケージなので、ルートの `python3 -m unittest discover` 一回で全テストを検出します。`run_tests.sh` はこの全体検出に加えて予算・決算の検算ゲートまでをまとめて実行し、いずれかが失敗すると終了コード1を返します。テスト実行時は `PYTHONWARNINGS=error::ResourceWarning` を設定し、DB接続リークを失敗として検出します。
+
+lint と型チェックは次で実行します。
+
+```bash
+ruff check .
+mypy
+```
 
 通常のpush／PRでは、外部通信しない合成fixtureテストをPython 3.11と3.14で実行します。
 実APIの契約確認は、週次または手動の`Live bootstrap contract` workflowへ分離しています。

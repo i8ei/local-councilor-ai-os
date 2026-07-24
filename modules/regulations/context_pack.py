@@ -8,11 +8,12 @@ import hashlib
 import json
 import sqlite3
 import sys
+from contextlib import closing
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from search import search_database
+from .search import search_database
 
 
 def _excerpt(text: str, query: str, limit: int) -> tuple[str, int, int]:
@@ -107,7 +108,7 @@ def main() -> int:
         print("--k and --char-budget must be at least 1", file=sys.stderr)
         return 2
     try:
-        with sqlite3.connect(Path(args.db)) as connection:
+        with closing(sqlite3.connect(Path(args.db))) as connection:
             pack = build_context_pack(
                 connection,
                 args.query,

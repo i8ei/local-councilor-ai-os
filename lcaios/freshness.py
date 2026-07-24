@@ -7,7 +7,6 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-
 DEFAULT_REGISTRY = (
     Path(__file__).resolve().parents[1]
     / "data-contracts"
@@ -80,7 +79,10 @@ def _policy(
 def _source_rows(
     rows: Iterable[dict[str, Any]],
 ) -> dict[str, list[dict[str, Any]]]:
-    grouped = {"estat": [], "fiscal": []}
+    grouped: dict[str, list[dict[str, Any]]] = {
+        "estat": [],
+        "fiscal": [],
+    }
     for row in rows:
         key = str(row.get("indicator_key") or "")
         source_name = str(row.get("source_name") or "").lower()
@@ -113,7 +115,7 @@ def _evaluate_source(
     checked_at = max(retrieved_values) if retrieved_values else None
     interval_value = policy.get("recommended_check_interval_days")
     try:
-        interval_days = int(interval_value)
+        interval_days = int(interval_value) if interval_value is not None else 0
     except (TypeError, ValueError):
         interval_days = 0
     due_at = (

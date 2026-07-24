@@ -8,12 +8,12 @@ import sqlite3
 import subprocess
 import sys
 import tempfile
+from contextlib import closing
 from pathlib import Path
 from typing import Any, Sequence
 
 from .database import verify_bootstrap_database
 from .run_manifest import redact_text, utc_now
-
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -52,7 +52,7 @@ def _run_json_command(command: Sequence[str]) -> dict[str, Any]:
 
 
 def _indicator_rows(path: Path) -> tuple[tuple[Any, ...], ...]:
-    with sqlite3.connect(path) as connection:
+    with closing(sqlite3.connect(path)) as connection:
         columns = [
             str(row[1])
             for row in connection.execute("PRAGMA table_info(indicator)")
@@ -178,7 +178,7 @@ def run_bootstrap_smoke_test(
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         manifest_ok = manifest.get("status") == "succeeded"
 
-    checks = [
+    checks: list[dict[str, Any]] = [
         {
             "name": "online_bootstrap",
             "status": "passed" if online.get("status") == "ok" else "failed",

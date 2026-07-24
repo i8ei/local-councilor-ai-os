@@ -15,7 +15,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-
 SCHEMA_VERSION = 1
 PRODUCT = "local-councilor-ai-os"
 SENSITIVE_QUERY_PATTERN = re.compile(

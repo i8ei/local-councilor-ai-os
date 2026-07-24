@@ -7,7 +7,6 @@ import urllib.parse
 from pathlib import Path
 from typing import Any
 
-
 SUPPORTED_MAJOR = 1
 KNOWN_BOOTSTRAP_MINOR = 0
 REQUIRED_BOOTSTRAP_TABLES = ("municipality", "indicator", "build_metadata")

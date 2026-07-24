@@ -13,7 +13,6 @@ from lcaios.cli import main
 from lcaios.profile import confirm_profile
 from lcaios.status import build_status
 
-
 PROFILE_TEXT = """\
 schema_version: 1
 status: confirmed

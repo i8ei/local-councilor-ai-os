@@ -8,8 +8,8 @@ import sys
 from typing import Any, Sequence
 
 from .core import (
-    AUTO_AGENT,
     AGENTS,
+    AUTO_AGENT,
     FEATURES,
     LAYOUTS,
     MODES,

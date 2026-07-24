@@ -7,21 +7,19 @@ import argparse
 import json
 import sqlite3
 import sys
+from contextlib import closing
 from pathlib import Path
 from typing import Any, Iterable
 
-MODULE_DIR = Path(__file__).resolve().parent
-REPO_ROOT = MODULE_DIR.parents[1]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
-
-from lcaios.module_manifest import (  # noqa: E402
+from lcaios.module_manifest import (
     begin_module_run,
     fail_module_run,
     finish_database_run,
     input_file_record,
 )
 
+MODULE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = MODULE_DIR.parents[1]
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
 
 
@@ -43,7 +41,7 @@ def _iter_inputs(paths: Iterable[Path]) -> list[Path]:
 
 
 def _read_source(path: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
-    with sqlite3.connect(path) as connection:
+    with closing(sqlite3.connect(path)) as connection:
         connection.row_factory = sqlite3.Row
         municipality_row = connection.execute("SELECT * FROM municipality").fetchone()
         if municipality_row is None:
@@ -61,7 +59,7 @@ def build(input_paths: Iterable[Path], output: Path) -> dict[str, Any]:
     if not sources:
         raise ValueError("No municipality.db inputs found")
     output.parent.mkdir(parents=True, exist_ok=True)
-    with sqlite3.connect(output) as target:
+    with closing(sqlite3.connect(output)) as target, target:
         target.execute("PRAGMA foreign_keys = ON")
         ensure_schema(target)
         municipality_count = 0

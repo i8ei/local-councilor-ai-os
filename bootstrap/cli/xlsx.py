@@ -11,7 +11,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-
 XLSX_NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 OFFICE_REL_NS = (
     "http://schemas.openxmlformats.org/officeDocument/2006/relationships"

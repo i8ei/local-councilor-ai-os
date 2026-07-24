@@ -16,7 +16,6 @@ from typing import Any, Sequence
 
 from .http import FetchError, HttpClient
 
-
 KEYWORDS = {
     "budget": ("予算書", "当初予算", "補正予算", "予算概要", "予算説明"),
     "settlement": (

@@ -9,7 +9,6 @@ from typing import Any
 
 from .run_manifest import artifact_record, finish_run, start_run
 
-
 PROFILE_PLACEHOLDER = re.compile(r"<[^>\n]+>")
 PROFILE_REQUIRED = (
     re.compile(r"^schema_version:\s*1\s*$", re.MULTILINE),

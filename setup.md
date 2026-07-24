@@ -218,9 +218,9 @@ python3 -m bootstrap.cli '自治体名' \
 複数自治体の比較が必要な場合は、各自治体の`municipality.db`を作成した後、比較DBを別名で生成する。比較DBは新たな公式取得を行わず、検証済みのブートストラップ出力だけを束ねる。
 
 ```sh
-python3 modules/benchmark/build_from_bootstrap.py bootstrap/output \
+python3 -m modules.benchmark.build_from_bootstrap bootstrap/output \
   --db benchmark.db
-python3 modules/benchmark/compare.py zaiseiryoku_shisuu \
+python3 -m modules.benchmark.compare zaiseiryoku_shisuu \
   --db benchmark.db \
   --limit 20
 ```
@@ -269,22 +269,22 @@ python3 -m lcaios backup database \
 
 ### 実行
 
-[議事録データベース](modules/minutes-db/README.md)の順に、まず`detect`で公開方式の証拠を得る。次に検出結果と公式ページを人が照合し、対応アダプターまたは静的設定を選ぶ。最後に`ingest`で原典、来歴、SQLiteと全文索引を作る。`unknown`を推測で既知ベンダーへ割り当てず、取込不能なら未対応として止める。
+[議事録データベース](modules/minutes_db/README.md)の順に、まず`detect`で公開方式の証拠を得る。次に検出結果と公式ページを人が照合し、対応アダプターまたは静的設定を選ぶ。最後に`ingest`で原典、来歴、SQLiteと全文索引を作る。`unknown`を推測で既知ベンダーへ割り当てず、取込不能なら未対応として止める。
 
 ```sh
-python3 modules/minutes-db/detect.py '公式議会ページURL'
-python3 modules/minutes-db/ingest.py \
+python3 -m modules.minutes_db.detect '公式議会ページURL'
+python3 -m modules.minutes_db.ingest \
   --adapter static \
   --config minutes-static.json \
   --limit 20 \
   --dry-run
-python3 modules/minutes-db/ingest.py \
+python3 -m modules.minutes_db.ingest \
   --adapter static \
   --config minutes-static.json \
   --db minutes.db \
   --limit 10
-python3 modules/minutes-db/search.py '防災' --db minutes.db --k 10
-python3 modules/minutes-db/context_pack.py '防災' \
+python3 -m modules.minutes_db.search '防災' --db minutes.db --k 10
+python3 -m modules.minutes_db.context_pack '防災' \
   --question '地域防災計画はいつ見直されたか' \
   --db minutes.db \
   --k 5 \
@@ -294,12 +294,12 @@ python3 modules/minutes-db/context_pack.py '防災' \
 例規を反復検索する場合は、公式例規索引を人が確認したうえで、静的例規設定を作る。例規DBも検索層であり、外部引用前には公式画面で施行時点、条番号、前後条文を確認する。
 
 ```sh
-python3 modules/regulations/ingest.py \
+python3 -m modules.regulations.ingest \
   --config regulations-static.json \
   --db regulations.db \
   --limit 20
-python3 modules/regulations/search.py '個人情報' --db regulations.db --k 10
-python3 modules/regulations/context_pack.py '個人情報' \
+python3 -m modules.regulations.search '個人情報' --db regulations.db --k 10
+python3 -m modules.regulations.context_pack '個人情報' \
   --question '個人情報の取扱いは何条にあるか' \
   --db regulations.db \
   --k 5 \
@@ -331,18 +331,18 @@ python3 -m bootstrap.cli.local_documents diagnose \
 
 ### 実行
 
-[予算レビュー](modules/budget-review/README.md)と[SQLite入力契約](modules/budget-review/sqlite_input_contract.md)、[失敗パターン](modules/budget-review/failure_patterns.md)を読む。取込用CSVの雛形を生成し、個別AIまたは人がPDFから転記した値を、原典位置つきで埋める。CSVは受け渡し用であり、作業の中心は投入後のSQLiteである。
+[予算レビュー](modules/budget_review/README.md)と[SQLite入力契約](modules/budget_review/sqlite_input_contract.md)、[失敗パターン](modules/budget_review/failure_patterns.md)を読む。取込用CSVの雛形を生成し、個別AIまたは人がPDFから転記した値を、原典位置つきで埋める。CSVは受け渡し用であり、作業の中心は投入後のSQLiteである。
 
 ```sh
-python3 modules/budget-review/csv_templates.py > budget.csv
-python3 modules/budget-review/ingest_csv.py budget.csv --db budget.db
-python3 modules/budget-review/verify_totals.py budget.db
+python3 -m modules.budget_review.csv_templates > budget.csv
+python3 -m modules.budget_review.ingest_csv budget.csv --db budget.db
+python3 -m modules.budget_review.verify_totals budget.db
 ```
 
 検算に通ったDBだけ、確認候補生成へ進める。
 
 ```sh
-python3 modules/budget-review/insights.py budget.db
+python3 -m modules.budget_review.insights budget.db
 ```
 
 ### 検証
@@ -363,23 +363,23 @@ python3 modules/budget-review/insights.py budget.db
 
 ### 実行
 
-まず [SQLite入力契約](modules/settlement-review/sqlite_input_contract.md)、[抽出ガイダンス](modules/settlement-review/extraction_guidance.md)、[失敗パターン](modules/settlement-review/failure_patterns.md)、[公開・非公開境界](modules/settlement-review/public_private_boundary.md)を読む。取込用CSVの雛形を生成し、個別AIまたは人がPDFから転記した値を、原典位置つきで埋める。作業の中心は投入後のSQLiteであり、CSVは受け渡し用である。
+まず [SQLite入力契約](modules/settlement_review/sqlite_input_contract.md)、[抽出ガイダンス](modules/settlement_review/extraction_guidance.md)、[失敗パターン](modules/settlement_review/failure_patterns.md)、[公開・非公開境界](modules/settlement_review/public_private_boundary.md)を読む。取込用CSVの雛形を生成し、個別AIまたは人がPDFから転記した値を、原典位置つきで埋める。作業の中心は投入後のSQLiteであり、CSVは受け渡し用である。
 
 ```sh
-python3 modules/settlement-review/csv_templates.py summary > summary.csv
-python3 modules/settlement-review/csv_templates.py revenue > revenue.csv
-python3 modules/settlement-review/csv_templates.py expenditure > expenditure.csv
+python3 -m modules.settlement_review.csv_templates summary > summary.csv
+python3 -m modules.settlement_review.csv_templates revenue > revenue.csv
+python3 -m modules.settlement_review.csv_templates expenditure > expenditure.csv
 
-python3 modules/settlement-review/ingest_csv.py summary summary.csv --db settlement.db
-python3 modules/settlement-review/ingest_csv.py revenue revenue.csv --db settlement.db
-python3 modules/settlement-review/ingest_csv.py expenditure expenditure.csv --db settlement.db
-python3 modules/settlement-review/verify_totals.py settlement.db
+python3 -m modules.settlement_review.ingest_csv summary summary.csv --db settlement.db
+python3 -m modules.settlement_review.ingest_csv revenue revenue.csv --db settlement.db
+python3 -m modules.settlement_review.ingest_csv expenditure expenditure.csv --db settlement.db
+python3 -m modules.settlement_review.verify_totals settlement.db
 ```
 
 検算に通ったDBだけ、確認候補生成へ進める。
 
 ```sh
-python3 modules/settlement-review/insights.py settlement.db
+python3 -m modules.settlement_review.insights settlement.db
 ```
 
 `insights.py` の出力は質問候補ではなく、人が確認する入口である。原因、妥当性、政策評価は自動確定しない。

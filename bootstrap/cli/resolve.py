@@ -7,13 +7,15 @@ import urllib.parse
 from dataclasses import dataclass
 from typing import Any
 
-from .http import HttpClient
 from bootstrap.municipalities import (
     RegistryError,
     load_metadata,
+)
+from bootstrap.municipalities import (
     lookup as registry_lookup,
 )
 
+from .http import HttpClient
 
 REGION_API = "https://dashboard.e-stat.go.jp/api/1.0/Json/getRegionInfo"
 MUNICIPALITY_LEVELS = "8,9,10,12,13"
@@ -127,7 +129,7 @@ def resolve_municipality(
         registry_metadata = {}
 
     if registry_matches:
-        candidates = [
+        registry_candidates = [
             {
                 "name": item["municipality_name"],
                 "area_code_5": item["area_code_5"],
@@ -142,10 +144,13 @@ def resolve_municipality(
             }
             for item in registry_matches
         ]
-        if len(candidates) > 1:
-            raise AmbiguousMunicipality(registry_search_name, candidates)
-        result: dict[str, Any] = dict(candidates[0])
-        result.update(
+        if len(registry_candidates) > 1:
+            raise AmbiguousMunicipality(
+                registry_search_name,
+                registry_candidates,
+            )
+        registry_result: dict[str, Any] = dict(registry_candidates[0])
+        registry_result.update(
             {
                 "input_name": name,
                 "input_prefecture": prefecture_hint,
@@ -162,7 +167,7 @@ def resolve_municipality(
                 ),
             }
         )
-        return result
+        return registry_result
 
     requested_name = normalize_name(name)
     prefecture_response = _fetch_region_info(

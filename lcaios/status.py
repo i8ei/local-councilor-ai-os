@@ -6,13 +6,13 @@ import hashlib
 import json
 import os
 import sqlite3
+from contextlib import closing
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
 from .database import evaluate_schema_compatibility, sqlite_read_only_uri
 from .freshness import evaluate_bootstrap_freshness
-
 
 SCHEMA_VERSION = 1
 PRODUCT = "local-councilor-ai-os"
@@ -414,7 +414,7 @@ def _module_status(
         )
         if artifact is not None:
             database_runs.append((path, manifest, artifact))
-    base = {
+    base: dict[str, Any] = {
         "database": None,
         "manifest": {
             "path": str(latest_path),
@@ -476,11 +476,8 @@ def _module_status(
         str(artifact.get("path") or ""),
         base=manifest_path.parent,
     )
-    checks = (
-        manifest.get("checks")
-        if isinstance(manifest.get("checks"), list)
-        else []
-    )
+    checks_value = manifest.get("checks")
+    checks: list[Any] = checks_value if isinstance(checks_value, list) else []
     coverage = (
         manifest.get("coverage")
         if isinstance(manifest.get("coverage"), dict)
@@ -492,7 +489,7 @@ def _module_status(
         "source_revision": manifest.get("source_revision"),
         "status": manifest.get("status"),
     }
-    result = {
+    result: dict[str, Any] = {
         "state": "ready",
         "detail": "artifact hash、SQLite integrity、必須checkを確認",
         "database": str(database),
@@ -514,9 +511,11 @@ def _module_status(
             result["detail"] = "module databaseのhashがmanifestと一致しません"
         else:
             try:
-                with sqlite3.connect(
-                    sqlite_read_only_uri(database),
-                    uri=True,
+                with closing(
+                    sqlite3.connect(
+                        sqlite_read_only_uri(database),
+                        uri=True,
+                    )
                 ) as connection:
                     integrity = str(
                         connection.execute("PRAGMA integrity_check").fetchone()[0]
@@ -549,7 +548,7 @@ def _module_status(
                 "error" if result["state"] in {"invalid", "blocked"} else "warning",
                 "module_not_ready",
                 run_type,
-                result["detail"],
+                str(result["detail"]),
                 database,
             )
         )
@@ -762,7 +761,8 @@ def _read_onboarding(
     artifact_checks, artifact_warnings = _verify_artifacts(manifest, vault)
     warnings.extend(artifact_warnings)
     failed_artifacts = any(item["status"] == "failed" for item in artifact_checks)
-    checks = manifest.get("checks") if isinstance(manifest.get("checks"), list) else []
+    checks_value = manifest.get("checks")
+    checks: list[Any] = checks_value if isinstance(checks_value, list) else []
     obsidian_confirmed = any(
         isinstance(item, dict)
         and item.get("name") == "obsidian_cli_target"
@@ -942,9 +942,10 @@ def _read_profile_confirmation(
         if status == "failed":
             failures.append(kind)
 
-    manifest_checks = (
-        manifest.get("checks")
-        if isinstance(manifest.get("checks"), list)
+    manifest_checks_value = manifest.get("checks")
+    manifest_checks: list[Any] = (
+        manifest_checks_value
+        if isinstance(manifest_checks_value, list)
         else []
     )
     human_confirmed = any(
@@ -994,7 +995,7 @@ def _read_bootstrap(
     now: datetime | None = None,
 ) -> tuple[dict[str, Any], list[dict[str, str]]]:
     warnings: list[dict[str, str]] = []
-    empty = {
+    empty: dict[str, Any] = {
         "state": "not_configured",
         "detail": "Tier 1 databaseが設定されていません",
         "database": str(path) if path else None,
@@ -1311,6 +1312,7 @@ def build_status(
     bootstrap_manifest_path: Path | None = None
     bootstrap_manifest: dict[str, Any] | None = None
 
+    bootstrap_path: Path | None
     if bootstrap_database is not None:
         bootstrap_path = _resolve_path(bootstrap_database, base=Path.cwd())
     else:

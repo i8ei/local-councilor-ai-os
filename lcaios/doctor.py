@@ -118,24 +118,23 @@ def recommend_next(
         }
     module_commands = {
         "minutes": (
-            "cd modules/minutes-db && python3 ingest.py ... "
+            "python3 -m modules.minutes_db.ingest ... "
             "--manifest-dir <vault>/.local-councilor-ai-os/runs/minutes"
         ),
         "regulations": (
-            "cd modules/regulations && python3 ingest.py ... "
+            "python3 -m modules.regulations.ingest ... "
             "--manifest-dir <vault>/.local-councilor-ai-os/runs/regulations"
         ),
         "benchmark": (
-            "cd modules/benchmark && python3 build_from_bootstrap.py ... "
+            "python3 -m modules.benchmark.build_from_bootstrap ... "
             "--manifest-dir <vault>/.local-councilor-ai-os/runs/benchmark"
         ),
         "budget": (
-            "cd modules/budget-review && python3 verify_totals.py <budget.db> "
+            "python3 -m modules.budget_review.verify_totals <budget.db> "
             "--manifest-dir <vault>/.local-councilor-ai-os/runs/budget"
         ),
         "settlement": (
-            "cd modules/settlement-review && "
-            "python3 verify_totals.py <settlement.db> "
+            "python3 -m modules.settlement_review.verify_totals <settlement.db> "
             "--manifest-dir <vault>/.local-councilor-ai-os/runs/settlement"
         ),
     }

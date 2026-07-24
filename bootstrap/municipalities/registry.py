@@ -11,7 +11,6 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
-
 REGISTRY_DIR = Path(__file__).resolve().parent
 DEFAULT_REGISTRY_PATH = REGISTRY_DIR / "municipalities.csv"
 DEFAULT_METADATA_PATH = REGISTRY_DIR / "metadata.json"

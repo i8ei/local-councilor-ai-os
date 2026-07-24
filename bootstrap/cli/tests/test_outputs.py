@@ -5,6 +5,7 @@ from __future__ import annotations
 import sqlite3
 import tempfile
 import unittest
+from contextlib import closing
 from pathlib import Path
 
 from bootstrap.cli.authority_map import generate_authority_map
@@ -64,7 +65,7 @@ class OutputTests(unittest.TestCase):
                 database_name=database_path.name,
             )
             content = map_path.read_text(encoding="utf-8")
-            with sqlite3.connect(database_path) as connection:
+            with closing(sqlite3.connect(database_path)) as connection, connection:
                 integrity = connection.execute(
                     "PRAGMA integrity_check"
                 ).fetchone()[0]

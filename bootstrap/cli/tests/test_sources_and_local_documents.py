@@ -13,6 +13,8 @@ from unittest.mock import patch
 
 from bootstrap.cli.local_documents import (
     diagnose_index,
+)
+from bootstrap.cli.local_documents import (
     main as local_documents_main,
 )
 from bootstrap.cli.sources import DEFAULT_REGISTRY, load_registry
