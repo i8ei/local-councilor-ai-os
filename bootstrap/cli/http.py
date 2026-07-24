@@ -425,7 +425,9 @@ class HttpClient:
             return self._robots[origin]
         robots_url = origin + "/robots.txt"
         robots_key = "robots:" + robots_url
-        accepted = set(range(200, 300)) | {401, 403, 404, 410}
+        # RFC 9309 section 2.3.1.3 treats HTTP 4xx as an unavailable
+        # robots.txt. Keep 401/403 conservative, but allow other 4xx statuses.
+        accepted = set(range(200, 300)) | set(range(400, 500))
         cached = (
             None
             if self.refresh
@@ -481,7 +483,7 @@ class HttpClient:
         parser.set_url(robots_url)
         if status in {401, 403}:
             lines = ["User-agent: *", "Disallow: /"]
-        elif status in {404, 410}:
+        elif status in range(400, 500):
             lines = ["User-agent: *", "Disallow:"]
         else:
             lines = result.text().splitlines()

@@ -114,6 +114,8 @@ def run(
             "local_government_code_6": municipality[
                 "local_government_code_6"
             ],
+            "official_home_url": municipality.get("official_home_url"),
+            "resolved_from": municipality["resolved_from"],
         },
         "census": {
             "indicator_count": len(census["records"]),

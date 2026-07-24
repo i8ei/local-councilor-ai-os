@@ -1,4 +1,4 @@
-"""Tier 0 municipality resolution through the e-Stat dashboard API."""
+"""Tier 0 municipality resolution through a snapshot and the e-Stat API."""
 
 from __future__ import annotations
 
@@ -8,6 +8,11 @@ from dataclasses import dataclass
 from typing import Any
 
 from .http import HttpClient
+from bootstrap.municipalities import (
+    RegistryError,
+    load_metadata,
+    lookup as registry_lookup,
+)
 
 
 REGION_API = "https://dashboard.e-stat.go.jp/api/1.0/Json/getRegionInfo"
@@ -110,6 +115,54 @@ def resolve_municipality(
     client: HttpClient,
 ) -> dict[str, Any]:
     """Resolve one current municipality by NFC-normalized exact name."""
+
+    try:
+        registry_search_name, registry_matches = registry_lookup(
+            name, prefecture_hint
+        )
+        registry_metadata = load_metadata()
+    except RegistryError:
+        registry_search_name = normalize_name(name)
+        registry_matches = []
+        registry_metadata = {}
+
+    if registry_matches:
+        candidates = [
+            {
+                "name": item["municipality_name"],
+                "area_code_5": item["area_code_5"],
+                "local_government_code_6": item[
+                    "local_government_code_6"
+                ],
+                "prefecture": item["prefecture_name"],
+                "prefecture_code_2": item["prefecture_code_2"],
+                "region_level": item["region_level"],
+                "official_home_url": item["official_home_url"],
+                "home_source_url": item["home_source_url"],
+            }
+            for item in registry_matches
+        ]
+        if len(candidates) > 1:
+            raise AmbiguousMunicipality(registry_search_name, candidates)
+        result: dict[str, Any] = dict(candidates[0])
+        result.update(
+            {
+                "input_name": name,
+                "input_prefecture": prefecture_hint,
+                "normalized_name": registry_search_name,
+                "candidate_count": 1,
+                "resolved_from": "bundled municipality registry",
+                "source_url": registry_matches[0]["code_source_url"],
+                "resolved_at": registry_metadata.get("generated_at", ""),
+                "registry_schema_version": registry_metadata.get(
+                    "schema_version"
+                ),
+                "registry_generated_at": registry_metadata.get(
+                    "generated_at"
+                ),
+            }
+        )
+        return result
 
     requested_name = normalize_name(name)
     prefecture_response = _fetch_region_info(
