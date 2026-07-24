@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import sqlite3
-import urllib.parse
 from pathlib import Path
 from typing import Any
 
@@ -12,11 +11,17 @@ KNOWN_BOOTSTRAP_MINOR = 0
 REQUIRED_BOOTSTRAP_TABLES = ("municipality", "indicator", "build_metadata")
 
 
-def sqlite_read_only_uri(path: Path) -> str:
-    """Return a read-only file URI that never creates the database."""
+def sqlite_read_only_uri(path: str | Path) -> str:
+    """Return a read-only file URI that never creates the database.
 
-    quoted = urllib.parse.quote(path.as_posix(), safe="/:")
-    return f"file:{quoted}?mode=ro"
+    The path is resolved to an absolute ``file://`` URI so that
+    drive-lettered Windows paths become the canonical ``file:///C:/...``
+    form. A bare ``file:C:/...`` would be treated as a relative path by
+    SQLite and could resolve against the current drive's working directory.
+    """
+
+    absolute = Path(path).expanduser().resolve(strict=False)
+    return f"{absolute.as_uri()}?mode=ro"
 
 
 def parse_schema_version(value: Any) -> tuple[int, int] | None:

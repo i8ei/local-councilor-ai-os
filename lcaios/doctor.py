@@ -116,6 +116,8 @@ def recommend_next(
             "reason": "議員本人・議会固有運用のprofileが未完了",
             "exit_code": 2,
         }
+    # Keys must stay in sync with status.MODULE_TYPES. Missing entries fall
+    # back to a generic status re-check rather than raising KeyError.
     module_commands = {
         "minutes": (
             "python3 -m modules.minutes_db.ingest ... "
@@ -142,8 +144,12 @@ def recommend_next(
         module = status["modules"][name]
         if module.get("state") in {"not_configured", "ready"}:
             continue
+        next_command = module_commands.get(
+            name,
+            f"python3 -m lcaios status --vault <vault>  # module `{name}` の対応コマンド未登録",
+        )
         return {
-            "next_command": module_commands[name],
+            "next_command": next_command,
             "reason": (
                 f"設定済みmodule `{name}` が `{module.get('state')}`。"
                 f"{module.get('detail', '')}"
