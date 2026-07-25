@@ -39,6 +39,9 @@ class DryRunTests(unittest.TestCase):
                 db=str(database),
                 limit=10,
                 cache_dir=None,
+                offline=False,
+                refresh=False,
+                timeout=90,
                 dry_run=True,
             )
             with patch("modules.minutes_db.ingest._make_adapter", return_value=adapter):

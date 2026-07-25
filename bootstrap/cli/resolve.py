@@ -15,7 +15,7 @@ from bootstrap.municipalities import (
     lookup as registry_lookup,
 )
 
-from .http import HttpClient
+from .http import CacheTier, HttpClient
 
 REGION_API = "https://dashboard.e-stat.go.jp/api/1.0/Json/getRegionInfo"
 MUNICIPALITY_LEVELS = "8,9,10,12,13"
@@ -85,7 +85,11 @@ def _fetch_region_info(
 ) -> RegionResponse:
     query = urllib.parse.urlencode(params)
     url = REGION_API + "?" + query
-    result = client.fetch(url, cache_key="regions:" + cache_label + ":" + query)
+    result = client.fetch(
+        url,
+        tier=CacheTier.INDEX,
+        cache_key="regions:" + cache_label + ":" + query,
+    )
     return RegionResponse(result.json(), url, result.fetched_at)
 
 

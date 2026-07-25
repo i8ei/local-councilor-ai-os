@@ -8,25 +8,26 @@ import json
 import re
 import sqlite3
 import sys
-import threading
 import urllib.parse
 from collections import deque
 from contextlib import closing
 from html.parser import HTMLParser
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
+from lcaios.http import (
+    REGULATIONS_USER_AGENT,
+    CacheTier,
+    FetchError,
+    FetchResult,
+    HttpClient,
+    RobotsDeniedError,
+    RobotsUnavailableError,
+)
 from lcaios.module_manifest import (
     begin_module_run,
     fail_module_run,
     finish_database_run,
-)
-from modules.minutes_db.adapters import base as fetch_base
-from modules.minutes_db.adapters.base import (
-    FetchError,
-    FetchResult,
-    RobotsDeniedError,
-    RobotsUnavailableError,
 )
 from modules.regulations.ingest import (
     _infer_date,
@@ -38,8 +39,6 @@ from modules.regulations.ingest import (
 
 MODULE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = MODULE_DIR.parents[1]
-USER_AGENT = "local-councilor-ai-os regulations ingester (research; low rate)"
-MIN_REQUEST_INTERVAL_SECONDS = 1.5
 DEFAULT_CACHE_DIR = MODULE_DIR / ".cache" / "greiki"
 ENTRY_FILENAME = "reiki_menu.html"
 MAX_NAVIGATION_PAGES = 64
@@ -56,7 +55,6 @@ _META_CHARSET_RE = re.compile(
 )
 _KANA_INDEX_RE = re.compile(r"(?:kana_default|r_50_[a-z]+)\.html$", re.I)
 _REGULATION_RE = re.compile(r"reiki_honbun/[^/]+\.html$", re.I)
-_FETCH_SETTINGS_LOCK = threading.RLock()
 
 
 class StructureMismatchError(RuntimeError):
@@ -115,28 +113,6 @@ def decode_html(body: bytes, declared_encoding: str | None = None) -> tuple[str,
         except (LookupError, UnicodeDecodeError):
             continue
     return body.decode("utf-8", errors="replace"), "utf-8"
-
-
-def fetch_url(
-    url: str,
-    *,
-    cache_dir: str | Path | None = None,
-    timeout: float = 30,
-) -> FetchResult:
-    """Use the shared polite fetcher with this adapter's honest user agent."""
-    cache_root = Path(cache_dir) if cache_dir is not None else DEFAULT_CACHE_DIR
-    with _FETCH_SETTINGS_LOCK:
-        previous_user_agent = fetch_base.USER_AGENT
-        previous_interval = fetch_base.MIN_REQUEST_INTERVAL_SECONDS
-        fetch_base.USER_AGENT = USER_AGENT
-        fetch_base.MIN_REQUEST_INTERVAL_SECONDS = max(
-            MIN_REQUEST_INTERVAL_SECONDS, previous_interval
-        )
-        try:
-            return fetch_base.polite_fetch(url, cache_dir=cache_root, timeout=timeout)
-        finally:
-            fetch_base.USER_AGENT = previous_user_agent
-            fetch_base.MIN_REQUEST_INTERVAL_SECONDS = previous_interval
 
 
 class _LinkParser(HTMLParser):
@@ -344,9 +320,8 @@ def _page_links(
 def discover_documents(
     base_url: str,
     *,
-    cache_dir: str | Path | None = None,
+    client: HttpClient,
     limit: int | None = None,
-    fetcher: Callable[..., FetchResult] = fetch_url,
 ) -> list[dict[str, Any]]:
     """Discover regulation pages by following only links present in g-reiki indexes."""
     base_url = normalize_base_url(base_url)
@@ -362,7 +337,7 @@ def discover_documents(
 
     while queue and len(visited) < MAX_NAVIGATION_PAGES:
         page_url = queue.popleft()
-        fetched = fetcher(page_url, cache_dir=cache_dir)
+        fetched = client.fetch(page_url, tier=CacheTier.INDEX)
         if not _same_tenant(fetched.final_url, base_url):
             raise StructureMismatchError(
                 "g-reiki entry/index redirected outside the supplied tenant base URL"
@@ -421,13 +396,12 @@ def fetch_document(
     ref: dict[str, Any],
     *,
     base_url: str,
+    client: HttpClient,
     source_name: str | None = None,
-    cache_dir: str | Path | None = None,
-    fetcher: Callable[..., FetchResult] = fetch_url,
 ) -> dict[str, Any]:
     """Fetch and normalize one g-reiki regulation into the existing schema."""
     base_url = normalize_base_url(base_url)
-    fetched = fetcher(ref["source_url"], cache_dir=cache_dir)
+    fetched = client.fetch(ref["source_url"], tier=CacheTier.DOCUMENT)
     if not _same_tenant(fetched.final_url, base_url):
         raise StructureMismatchError(
             "regulation page redirected outside the supplied tenant base URL"
@@ -493,13 +467,21 @@ def ingest_greiki(
     source_name: str | None = None,
     cache_dir: str | Path | None = None,
     limit: int | None = None,
-    fetcher: Callable[..., FetchResult] = fetch_url,
+    offline: bool = False,
+    refresh: bool = False,
+    timeout: float = 90,
 ) -> dict[str, Any]:
     """Discover, fetch, and store g-reiki regulations."""
     base_url = normalize_base_url(base_url)
-    refs = discover_documents(
-        base_url, cache_dir=cache_dir, limit=limit, fetcher=fetcher
+    client = HttpClient(
+        cache_dir or DEFAULT_CACHE_DIR,
+        user_agent=REGULATIONS_USER_AGENT,
+        offline=offline,
+        refresh=refresh,
+        timeout=timeout,
+        min_interval_seconds=1.5,
     )
+    refs = discover_documents(base_url, client=client, limit=limit)
     database = Path(db_path)
     database.parent.mkdir(parents=True, exist_ok=True)
     with closing(sqlite3.connect(database)) as connection, connection:
@@ -512,9 +494,8 @@ def ingest_greiki(
             payload = fetch_document(
                 ref,
                 base_url=base_url,
+                client=client,
                 source_name=source_name,
-                cache_dir=cache_dir,
-                fetcher=fetcher,
             )
             article_count += store_document(connection, payload)
             status = str(payload["provenance"]["status"])
@@ -529,6 +510,7 @@ def ingest_greiki(
         "articles": article_count,
         "statuses": statuses,
         "fts_tokenizer": tokenizer,
+        "retrieval": client.retrieval_report(),
     }
 
 
@@ -543,6 +525,22 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--source-name", help="Official source label stored in the DB")
     parser.add_argument("--limit", type=int, help="Document limit for verification runs")
     parser.add_argument("--cache-dir", help="Override local cache directory")
+    parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="ネットワークを使わず検証済みローカルキャッシュだけを使う",
+    )
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="検証済みcacheがあっても公式参照先を再取得する",
+    )
+    parser.add_argument(
+        "--timeout",
+        type=float,
+        default=90,
+        help="取得タイムアウト秒",
+    )
     parser.add_argument("--manifest-dir", type=Path)
     parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
@@ -573,7 +571,10 @@ def main(argv: list[str] | None = None) -> int:
                 "database": args.db,
                 "source_name": args.source_name,
                 "limit": args.limit,
-                "cache_directory": args.cache_dir,
+                "cache_directory": args.cache_dir or str(DEFAULT_CACHE_DIR),
+                "offline": args.offline,
+                "refresh": args.refresh,
+                "timeout": args.timeout,
             },
         )
         result = ingest_greiki(
@@ -582,6 +583,9 @@ def main(argv: list[str] | None = None) -> int:
             source_name=args.source_name,
             cache_dir=args.cache_dir,
             limit=args.limit,
+            offline=args.offline,
+            refresh=args.refresh,
+            timeout=args.timeout,
         )
     except StructureMismatchError as exc:
         fail_module_run(manifest_path, manifest, exc)
@@ -596,6 +600,8 @@ def main(argv: list[str] | None = None) -> int:
         fail_module_run(manifest_path, manifest, exc)
         error = {"status": "error", "error": str(exc)}
     else:
+        if manifest is not None:
+            manifest["retrieval"] = result["retrieval"]
         finish_database_run(
             manifest_path,
             manifest,

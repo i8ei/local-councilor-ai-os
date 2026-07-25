@@ -2,7 +2,7 @@
 
 The public UI uses a shared JSONP API.  The service currently disallows the
 API and shared JavaScript paths in robots.txt, so this module deliberately
-routes every request through ``polite_fetch``.  That means a live crawl stops
+routes every request through the injected HTTP client. That means a live crawl stops
 before an API request unless the site's robots policy changes.
 """
 
@@ -16,7 +16,7 @@ from datetime import date
 from typing import Any, Iterable
 from urllib.parse import parse_qs, urlencode, urljoin, urlparse
 
-from .base import Adapter, FetchResult, polite_fetch
+from .base import Adapter, CacheTier, FetchResult, HttpClient
 
 API_ROOT = "https://ssp.kaigiroku.net/dnp/search/"
 API_ENDPOINTS = {
@@ -276,9 +276,9 @@ class KaigirokuNetAdapter(Adapter):
 
     adapter_name = "kaigiroku_net"
 
-    def __init__(self, url: str, cache_dir: str | None = None):
+    def __init__(self, url: str, *, client: HttpClient):
         self.url = url
-        self.cache_dir = cache_dir
+        self.client = client
         self.tenant_slug, self.tenant_id = resolve_tenant(url)
         self.tenant_url = (
             f"https://ssp.kaigiroku.net/tenant/{self.tenant_slug}/"
@@ -302,7 +302,11 @@ class KaigirokuNetAdapter(Adapter):
         }
 
     def _api(
-        self, endpoint: str, params: dict[str, Any] | None = None
+        self,
+        endpoint: str,
+        params: dict[str, Any] | None = None,
+        *,
+        tier: CacheTier = CacheTier.INDEX,
     ) -> tuple[Any, FetchResult]:
         request_params = {
             "tenant_id": self.tenant_id,
@@ -311,9 +315,9 @@ class KaigirokuNetAdapter(Adapter):
         }
         api_url = urljoin(API_ROOT, endpoint)
         separator = "&" if "?" in api_url else "?"
-        result = polite_fetch(
+        result = self.client.fetch(
             f"{api_url}{separator}{urlencode(request_params, doseq=True)}",
-            cache_dir=self.cache_dir,
+            tier=tier,
         )
         self._last_fetch = result
         text = _decode_bytes(result.body, result.encoding)
@@ -501,7 +505,9 @@ class KaigirokuNetAdapter(Adapter):
             for key_name in ("council_id", "schedule_id", "minute_id")
             if ref.get(key_name) not in (None, "")
         }
-        payload, result = self._api(API_ENDPOINTS["minutes"], params)
+        payload, result = self._api(
+            API_ENDPOINTS["minutes"], params, tier=CacheTier.DOCUMENT
+        )
         speeches = _extract_speeches(payload)
         raw = ref.get("_raw", {})
         council_id = str(ref.get("council_id", ""))

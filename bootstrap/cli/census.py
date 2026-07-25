@@ -10,7 +10,7 @@ import urllib.parse
 from dataclasses import dataclass
 from typing import Any
 
-from .http import FetchError, HttpClient
+from .http import CacheTier, FetchError, HttpClient
 
 API_BASE = "https://api.e-stat.go.jp/rest/3.0/app/json"
 STATS_CODE = "00200521"
@@ -99,6 +99,7 @@ def _api_get(
     params: dict[str, Any],
     *,
     cache_label: str,
+    tier: CacheTier,
 ) -> tuple[dict[str, Any], str]:
     app_id = os.environ.get("ESTAT_APPID")
     if not app_id and not client.offline:
@@ -111,6 +112,7 @@ def _api_get(
     try:
         result = client.fetch(
             url,
+            tier=tier,
             cache_key=f"estat:{endpoint}:{cache_label}:{digest}",
             sensitive_query_keys={"appId"},
         )
@@ -153,6 +155,7 @@ def discover_tables(client: HttpClient) -> TableSelection:
                 "getStatsList",
                 {"statsCode": STATS_CODE, "searchWord": query, "limit": 500},
                 cache_label=indicator,
+                tier=CacheTier.INDEX,
             )
             root = payload.get("GET_STATS_LIST", {})
             _check_result(root, "getStatsList")
@@ -270,6 +273,7 @@ def _fetch_indicator(
         "getMetaInfo",
         {"statsDataId": table_id},
         cache_label=table_id,
+        tier=CacheTier.DOCUMENT,
     )
     _, label_maps = _metadata_maps(meta_payload)
     data_payload, fetched_at = _api_get(
@@ -284,6 +288,7 @@ def _fetch_indicator(
             "annotationGetFlg": "Y",
         },
         cache_label=f"{table_id}:{area_code}",
+        tier=CacheTier.DOCUMENT,
     )
     root = data_payload.get("GET_STATS_DATA", {})
     _check_result(root, "getStatsData")

@@ -10,6 +10,8 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
+from lcaios.http import CacheTier
+from lcaios.tests.http_fakes import FakeHttpClient
 from modules.minutes_db.adapters.base import FetchResult
 from modules.minutes_db.adapters.static_html import StaticHtmlAdapter, segment_speeches
 
@@ -65,7 +67,9 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                 self.assertIn("日程", comment["common_exclude_patterns"])
                 self.assertTrue(comment["after_limit_2"])
 
-                adapter = StaticHtmlAdapter.from_config(path)
+                adapter = StaticHtmlAdapter.from_config(
+                    path, client=FakeHttpClient({})
+                )
                 self.assertEqual(
                     [raw["index_url"]], adapter.config["index_url"]
                 )
@@ -93,6 +97,7 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                     cache_path=root / "meeting.cache",
                 ),
             }
+            client = FakeHttpClient(responses)
             adapter = StaticHtmlAdapter(
                 {
                     "index_url": INDEX_URL,
@@ -101,18 +106,21 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                     "pdf": False,
                     "council_name": "架空町議会",
                 },
-                cache_dir=root / "cache",
+                client=client,
             )
-            with patch(
-                "modules.minutes_db.adapters.static_html.polite_fetch",
-                side_effect=lambda url, **_: responses[url],
-            ):
-                references = adapter.list_meetings()
-                self.assertEqual(1, len(references))
-                decisions = adapter.discovery_candidates
-                document = adapter.fetch_meeting(references[0]["meeting_id"])
+            references = adapter.list_meetings()
+            self.assertEqual(1, len(references))
+            decisions = adapter.discovery_candidates
+            document = adapter.fetch_meeting(references[0]["meeting_id"])
 
         self.assertEqual("架空町議会", document["meeting"]["council_name"])
+        self.assertEqual(
+            [
+                (INDEX_URL, CacheTier.INDEX),
+                (MEETING_URL, CacheTier.DOCUMENT),
+            ],
+            client.calls,
+        )
         self.assertIn("selected", {item["reason"] for item in decisions})
         self.assertIn("excluded_by_regex", {item["reason"] for item in decisions})
         self.assertEqual("2026-07-23", document["meeting"]["date"])
@@ -147,23 +155,28 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                     cache_path=root / "meeting.pdf",
                 ),
             }
+            client = FakeHttpClient(responses)
             adapter = StaticHtmlAdapter(
                 {
                     "index_url": INDEX_URL,
                     "link_include_regex": r"\.pdf$",
                     "pdf": True,
-                }
+                },
+                client=client,
             )
             with (
-                patch(
-                    "modules.minutes_db.adapters.static_html.polite_fetch",
-                    side_effect=lambda url, **_: responses[url],
-                ),
                 patch("modules.minutes_db.adapters.static_html.shutil.which", return_value=None),
             ):
                 reference = adapter.list_meetings()[0]
                 document = adapter.fetch_meeting(reference["meeting_id"])
 
+        self.assertEqual(
+            [
+                (INDEX_URL, CacheTier.INDEX),
+                (PDF_URL, CacheTier.DOCUMENT),
+            ],
+            client.calls,
+        )
         self.assertEqual([], document["speeches"])
         self.assertEqual(
             "pdf_cached_pdftotext_unavailable",
@@ -182,7 +195,10 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                 content_type="application/pdf",
                 cache_path=root / "meeting.pdf",
             )
-            adapter = StaticHtmlAdapter({"index_url": INDEX_URL, "pdf": True})
+            adapter = StaticHtmlAdapter(
+                {"index_url": INDEX_URL, "pdf": True},
+                client=FakeHttpClient({}),
+            )
             completed = SimpleNamespace(
                 returncode=0,
                 stdout="○議長　開会します。\f二ページ目です。".encode(),
@@ -214,10 +230,13 @@ class StaticHtmlAdapterTest(unittest.TestCase):
         self.assertEqual(["page:1", "page:2"], [item["locator"] for item in pages])
 
     def test_zero_limit_performs_no_fetch(self) -> None:
-        adapter = StaticHtmlAdapter({"index_url": INDEX_URL, "pdf": False})
-        with patch("modules.minutes_db.adapters.static_html.polite_fetch") as fetch:
-            self.assertEqual([], adapter.list_meetings(limit=0))
-        fetch.assert_not_called()
+        client = FakeHttpClient({})
+        adapter = StaticHtmlAdapter(
+            {"index_url": INDEX_URL, "pdf": False},
+            client=client,
+        )
+        self.assertEqual([], adapter.list_meetings(limit=0))
+        self.assertEqual([], client.calls)
 
     def test_matches_decoded_pdf_filename_when_label_is_only_file_size(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -232,18 +251,17 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                 content_type="text/html",
                 cache_path=root / "index.cache",
             )
+            client = FakeHttpClient({INDEX_URL: index})
             adapter = StaticHtmlAdapter(
                 {
                     "index_url": INDEX_URL,
                     "link_include_regex": "一般質問",
                     "pdf": True,
-                }
+                },
+                client=client,
             )
-            with patch(
-                "modules.minutes_db.adapters.static_html.polite_fetch",
-                return_value=index,
-            ):
-                references = adapter.list_meetings()
+            references = adapter.list_meetings()
+        self.assertEqual([(INDEX_URL, CacheTier.INDEX)], client.calls)
         self.assertEqual(1, len(references))
         self.assertEqual("一般質問.pdf", references[0]["meeting_name"])
         self.assertEqual("selected", adapter.discovery_candidates[0]["reason"])
@@ -271,12 +289,7 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                     cache_path=root / "session-2.cache",
                 ),
             }
-            fetched_urls: list[str] = []
-
-            def fetch(url: str, **_: object) -> FetchResult:
-                fetched_urls.append(url)
-                return responses[url]
-
+            client = FakeHttpClient(responses)
             adapter = StaticHtmlAdapter(
                 {
                     "index_url": YEAR_INDEX_URL,
@@ -286,11 +299,11 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                         r"(?i)(summary|agenda|schedule|概要|日程|予定)"
                     ),
                     "pdf": True,
-                }
+                },
+                client=client,
             )
-            with patch("modules.minutes_db.adapters.static_html.polite_fetch", side_effect=fetch):
-                references = adapter.list_meetings(limit=2)
-                decisions = adapter.discovery_candidates
+            references = adapter.list_meetings(limit=2)
+            decisions = adapter.discovery_candidates
 
         self.assertEqual(
             [
@@ -305,7 +318,10 @@ class StaticHtmlAdapterTest(unittest.TestCase):
         )
         self.assertEqual(
             [YEAR_INDEX_URL, SESSION_ONE_URL, SESSION_TWO_URL],
-            fetched_urls,
+            [url for url, _ in client.calls],
+        )
+        self.assertTrue(
+            all(tier is CacheTier.INDEX for _, tier in client.calls)
         )
         source_urls = " ".join(ref["source_url"] for ref in references)
         self.assertNotIn("agenda.pdf", source_urls)
@@ -317,7 +333,9 @@ class StaticHtmlAdapterTest(unittest.TestCase):
             path = Path(temporary) / "config.json"
             path.write_text("index_url: invalid", encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "not valid JSON"):
-                StaticHtmlAdapter.from_config(path)
+                StaticHtmlAdapter.from_config(
+                    path, client=FakeHttpClient({})
+                )
 
 
 if __name__ == "__main__":

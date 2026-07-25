@@ -5,8 +5,10 @@ from __future__ import annotations
 import hashlib
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 from typing import Any
+from unittest.mock import patch
 
 from bootstrap.cli.fiscal import (
     CARD_INDEX,
@@ -181,6 +183,77 @@ class XlsxFiscalTests(unittest.TestCase):
         )
         self.assertIsNone(future_burden["value"])
         self.assertEqual("-", future_burden["raw_value"])
+
+    def test_workbook_rejects_member_over_decompression_limit(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "oversized-member.xlsx"
+            build_inline_xlsx(
+                path,
+                [("概況", {"A1": "架空町" * 500})],
+            )
+            with zipfile.ZipFile(path) as archive:
+                member_size = archive.getinfo(
+                    "xl/worksheets/sheet1.xml"
+                ).file_size
+            limit = member_size - 1
+            with patch("bootstrap.cli.xlsx.MAX_MEMBER_BYTES", limit):
+                with self.assertRaises(XlsxError) as caught:
+                    read_workbook(path)
+        self.assertIn("xl/worksheets/sheet1.xml", str(caught.exception))
+        self.assertIn(str(limit), str(caught.exception))
+
+    def test_workbook_rejects_cumulative_decompression_limit(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "oversized-workbook.xlsx"
+            build_inline_xlsx(
+                path,
+                [
+                    ("概況A", {"A1": "架空町"}),
+                    ("概況B", {"A1": "架空村"}),
+                ],
+            )
+            with zipfile.ZipFile(path) as archive:
+                limit = sum(
+                    archive.getinfo(name).file_size
+                    for name in (
+                        "xl/workbook.xml",
+                        "xl/_rels/workbook.xml.rels",
+                        "xl/worksheets/sheet1.xml",
+                    )
+                )
+            with patch(
+                "bootstrap.cli.xlsx.MAX_TOTAL_DECOMPRESSED_BYTES",
+                limit,
+            ):
+                with self.assertRaises(XlsxError) as caught:
+                    read_workbook(path)
+        self.assertIn("xl/worksheets/sheet2.xml", str(caught.exception))
+        self.assertIn(str(limit), str(caught.exception))
+
+    def test_workbook_rejects_member_under_declared_in_the_directory(self) -> None:
+        # Threat model: a hostile central directory under-declares a member's
+        # uncompressed size so the pre-read budget check waves it through.
+        # CPython stops reading at the declared size and then fails the CRC, so
+        # the workbook is rejected without decompressing the real payload.
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "underdeclared-member.xlsx"
+            build_inline_xlsx(path, [("概況", {"A1": "架空町"})])
+            real_getinfo = zipfile.ZipFile.getinfo
+
+            def under_declaring_getinfo(
+                archive: zipfile.ZipFile, name: str
+            ) -> zipfile.ZipInfo:
+                info = real_getinfo(archive, name)
+                if name == "xl/worksheets/sheet1.xml":
+                    info.file_size = 8
+                return info
+
+            with patch.object(
+                zipfile.ZipFile, "getinfo", under_declaring_getinfo
+            ):
+                with self.assertRaises(XlsxError) as caught:
+                    read_workbook(path)
+        self.assertIn("有効なXLSXではありません", str(caught.exception))
 
     def test_latest_fiscal_link_context_starts_after_previous_anchor(self) -> None:
         client = _FiscalIndexClient(

@@ -17,7 +17,12 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Sequence
 
-from bootstrap.cli.http import FetchResult, HttpClient
+from bootstrap.cli.http import (
+    BOOTSTRAP_USER_AGENT,
+    CacheTier,
+    FetchResult,
+    HttpClient,
+)
 from bootstrap.cli.resolve import MUNICIPALITY_LEVELS, REGION_API, _classes
 from bootstrap.municipalities.registry import (
     DEFAULT_METADATA_PATH,
@@ -149,7 +154,7 @@ def _fetch(
     cache_key: str,
     source_records: dict[str, dict[str, Any]],
 ) -> FetchResult:
-    result = client.fetch(url, cache_key=cache_key)
+    result = client.fetch(url, tier=CacheTier.INDEX, cache_key=cache_key)
     source_records[result.url] = {
         "url": result.url,
         "final_url": result.final_url,
@@ -372,7 +377,11 @@ def update(
 ) -> dict[str, Any]:
     """Acquire, verify, and optionally write one national snapshot."""
 
-    client = HttpClient(cache_dir, refresh=refresh)
+    client = HttpClient(
+        cache_dir,
+        user_agent=BOOTSTRAP_USER_AGENT,
+        refresh=refresh,
+    )
     sources: dict[str, dict[str, Any]] = {}
     prefectures, current_regions = _current_regions(client, sources)
     code_root = _fetch(

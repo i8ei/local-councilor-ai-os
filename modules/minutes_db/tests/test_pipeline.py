@@ -2,11 +2,18 @@
 
 from __future__ import annotations
 
+import io
+import json
 import sqlite3
 import tempfile
 import unittest
+from contextlib import redirect_stdout
+from datetime import datetime, timezone
 from pathlib import Path
+from unittest.mock import patch
 
+from lcaios.http import HttpClient, _RawResponse
+from modules.minutes_db import ingest
 from modules.minutes_db.context_pack import build_context_pack
 from modules.minutes_db.ingest import ensure_schema, store_meeting
 from modules.minutes_db.search import search_database
@@ -120,6 +127,152 @@ class PipelineTests(unittest.TestCase):
         hits = search_database(self.connection, "水", k=3)
         self.assertEqual(1, len(hits))
         self.assertIn("水", hits[0]["text"])
+
+    def test_manifest_distinguishes_cached_and_refreshed_retrieval(self) -> None:
+        index_url = "https://example.invalid/council/index.html"
+        meeting_url = "https://example.invalid/council/meeting.html"
+        responses = {
+            index_url: (
+                '<a href="meeting.html">'
+                "令和8年第1回定例会 2026年7月1日"
+                "</a>"
+            ).encode(),
+            meeting_url: (
+                "<html><title>令和8年第1回定例会</title>"
+                "<p>2026年7月1日</p><p>○議長　開会します。</p></html>"
+            ).encode(),
+        }
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            config = root / "config.json"
+            config.write_text(
+                json.dumps(
+                    {
+                        "index_url": index_url,
+                        "link_include_regex": "meeting\\.html$",
+                        "pdf": False,
+                        "council_name": "架空町議会",
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            cache = root / "cache"
+            manifests = root / "manifests"
+
+            def request_once(client: HttpClient, url: str) -> _RawResponse:
+                client.request_count += 1
+                return _RawResponse(
+                    url=url,
+                    status=200,
+                    body=responses[url],
+                    headers={"Content-Type": "text/html; charset=utf-8"},
+                    fetched_at=datetime.now(timezone.utc)
+                    .isoformat(timespec="seconds")
+                    .replace("+00:00", "Z"),
+                )
+
+            def run(run_id: str, *, refresh: bool = False) -> dict[str, object]:
+                argv = [
+                    "--adapter",
+                    "static",
+                    "--config",
+                    str(config),
+                    "--db",
+                    str(root / f"{run_id}.db"),
+                    "--cache-dir",
+                    str(cache),
+                    "--manifest-dir",
+                    str(manifests),
+                    "--run-id",
+                    run_id,
+                    "--limit",
+                    "1",
+                ]
+                if refresh:
+                    argv.append("--refresh")
+                with redirect_stdout(io.StringIO()):
+                    self.assertEqual(0, ingest.main(argv))
+                return json.loads(
+                    (manifests / f"{run_id}.json").read_text(encoding="utf-8")
+                )
+
+            with (
+                patch.object(HttpClient, "_assert_robots_allowed"),
+                patch.object(
+                    HttpClient,
+                    "_request_once",
+                    autospec=True,
+                    side_effect=request_once,
+                ),
+            ):
+                run("network")
+                cached = run("cached")
+                refreshed = run("refreshed", refresh=True)
+
+        cached_retrieval = cached["retrieval"]
+        refreshed_retrieval = refreshed["retrieval"]
+        self.assertEqual(2, cached_retrieval["cache_hit_count"])
+        self.assertEqual(0, cached_retrieval["live_request_count"])
+        self.assertFalse(cached_retrieval["latestness_rechecked_this_run"])
+        self.assertEqual(
+            "cache_hit",
+            next(
+                item["status"]
+                for item in cached_retrieval["accesses"]
+                if item["url"] == index_url
+            ),
+        )
+        self.assertEqual(
+            {
+                "cache_hits": 2,
+                "network_fetches": 0,
+                "refreshes": 0,
+                "cache_misses": 0,
+                "latestness_rechecked_this_run": False,
+            },
+            {
+                key: cached_retrieval["sources"][0][key]
+                for key in (
+                    "cache_hits",
+                    "network_fetches",
+                    "refreshes",
+                    "cache_misses",
+                    "latestness_rechecked_this_run",
+                )
+            },
+        )
+        self.assertEqual(2, refreshed_retrieval["refresh_count"])
+        self.assertEqual(2, refreshed_retrieval["live_request_count"])
+        self.assertTrue(refreshed_retrieval["latestness_rechecked_this_run"])
+        self.assertEqual(
+            "refreshed",
+            next(
+                item["status"]
+                for item in refreshed_retrieval["accesses"]
+                if item["url"] == index_url
+            ),
+        )
+        self.assertEqual(
+            {
+                "cache_hits": 0,
+                "network_fetches": 2,
+                "refreshes": 2,
+                "cache_misses": 0,
+                "latestness_rechecked_this_run": True,
+            },
+            {
+                key: refreshed_retrieval["sources"][0][key]
+                for key in (
+                    "cache_hits",
+                    "network_fetches",
+                    "refreshes",
+                    "cache_misses",
+                    "latestness_rechecked_this_run",
+                )
+            },
+        )
 
 
 if __name__ == "__main__":

@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urljoin, urlparse
 
-from .base import Adapter, FetchResult, polite_fetch
+from .base import Adapter, CacheTier, FetchResult, HttpClient
 
 _BLOCK_TAGS = {
     "article",
@@ -324,10 +324,10 @@ class StaticHtmlAdapter(Adapter):
         self,
         config: dict[str, Any],
         *,
-        cache_dir: str | Path | None = None,
+        client: HttpClient,
     ) -> None:
         self.config = self._validate_config(config)
-        self.cache_dir = Path(cache_dir) if cache_dir is not None else None
+        self.client = client
         self._meetings: dict[str, dict[str, Any]] = {}
         self._discovery_candidates: list[dict[str, Any]] = []
 
@@ -342,7 +342,7 @@ class StaticHtmlAdapter(Adapter):
         cls,
         config_path: str | Path,
         *,
-        cache_dir: str | Path | None = None,
+        client: HttpClient,
     ) -> "StaticHtmlAdapter":
         path = Path(config_path)
         try:
@@ -351,7 +351,7 @@ class StaticHtmlAdapter(Adapter):
             raise ValueError(f"Static adapter config is not valid JSON: {path}") from exc
         if not isinstance(config, dict):
             raise ValueError("Static adapter config must be a JSON object")
-        return cls(config, cache_dir=cache_dir)
+        return cls(config, client=client)
 
     @staticmethod
     def _validate_config(config: dict[str, Any]) -> dict[str, Any]:
@@ -537,7 +537,7 @@ class StaticHtmlAdapter(Adapter):
             return False
 
         for index_url in self.config["index_url"]:
-            fetched = polite_fetch(index_url, cache_dir=self.cache_dir)
+            fetched = self.client.fetch(index_url, tier=CacheTier.INDEX)
             links = parse_links(fetched)
             if discover_from(fetched, links):
                 return results
@@ -553,8 +553,8 @@ class StaticHtmlAdapter(Adapter):
                 if is_excluded(follow_url, label) or follow_url in followed:
                     continue
                 followed.add(follow_url)
-                follow_result = polite_fetch(
-                    follow_url, cache_dir=self.cache_dir
+                follow_result = self.client.fetch(
+                    follow_url, tier=CacheTier.INDEX
                 )
                 if discover_from(follow_result, parse_links(follow_result)):
                     return results
@@ -562,7 +562,9 @@ class StaticHtmlAdapter(Adapter):
 
     def fetch_meeting(self, meeting_id: str | dict[str, Any]) -> dict[str, Any]:
         ref = self._resolve_ref(meeting_id)
-        fetched = polite_fetch(ref["source_url"], cache_dir=self.cache_dir)
+        fetched = self.client.fetch(
+            ref["source_url"], tier=CacheTier.DOCUMENT
+        )
         is_pdf = bool(ref.get("is_pdf", self.config["pdf"]))
         if is_pdf:
             text, status, issues = self._extract_pdf(fetched)

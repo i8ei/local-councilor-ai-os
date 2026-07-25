@@ -12,8 +12,15 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
-from .adapters.base import FetchError, polite_fetch
+from .adapters.base import (
+    MINUTES_USER_AGENT,
+    CacheTier,
+    FetchError,
+    HttpClient,
+)
 
+MODULE_DIR = Path(__file__).resolve().parent
+DEFAULT_CACHE_DIR = MODULE_DIR / ".cache"
 _STATIC_STRONG_RE = re.compile(r"(?:会議録|議事録|minutes?)", re.I)
 _MEETING_RE = re.compile(r"(?:定例会|臨時会|本会議|委員会)")
 _DOCUMENT_RE = re.compile(r"\.(?:pdf|html?|txt)(?:$|[?#])", re.I)
@@ -90,9 +97,8 @@ def _evidence(matched_url: str, reason: str, evidence_type: str) -> dict[str, st
 def detect_url(
     url: str,
     *,
+    client: HttpClient,
     fetch_page: bool = True,
-    cache_dir: str | Path | None = None,
-    timeout: float = 30,
 ) -> dict[str, Any]:
     """Return a conservative JSON-serializable detection verdict."""
 
@@ -112,7 +118,7 @@ def detect_url(
     fetch_error: str | None = None
     if fetch_page and not urllib.parse.urlsplit(url).path.lower().endswith(".pdf"):
         try:
-            result = polite_fetch(url, cache_dir=cache_dir, timeout=timeout)
+            result = client.fetch(url, tier=CacheTier.INDEX)
             fetched_at = result.fetched_at
             final_url = result.final_url
             parser = _PageLinks()
@@ -202,8 +208,23 @@ def _build_parser() -> argparse.ArgumentParser:
         description="議事録公開方式を、観測できた URL とリンクから判定します。"
     )
     parser.add_argument("url", help="自治体公式サイトまたは議事録ページの URL")
-    parser.add_argument("--cache-dir", help="取得キャッシュの保存先")
-    parser.add_argument("--timeout", type=float, default=30, help="取得タイムアウト秒")
+    parser.add_argument("--cache-dir", type=Path, help="取得キャッシュの保存先")
+    parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="ネットワークを使わず検証済みローカルキャッシュだけを使う",
+    )
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="検証済みcacheがあっても公式参照先を再取得する",
+    )
+    parser.add_argument(
+        "--timeout",
+        type=float,
+        default=90,
+        help="取得タイムアウト秒",
+    )
     parser.add_argument(
         "--no-fetch",
         action="store_true",
@@ -213,12 +234,22 @@ def _build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
-    args = _build_parser().parse_args(argv)
+    parser = _build_parser()
+    args = parser.parse_args(argv)
+    try:
+        client = HttpClient(
+            args.cache_dir or DEFAULT_CACHE_DIR,
+            user_agent=MINUTES_USER_AGENT,
+            offline=args.offline,
+            refresh=args.refresh,
+            timeout=args.timeout,
+        )
+    except ValueError as error:
+        parser.error(str(error))
     verdict = detect_url(
         args.url,
+        client=client,
         fetch_page=not args.no_fetch,
-        cache_dir=args.cache_dir,
-        timeout=args.timeout,
     )
     json.dump(verdict, sys.stdout, ensure_ascii=False, indent=2)
     sys.stdout.write("\n")

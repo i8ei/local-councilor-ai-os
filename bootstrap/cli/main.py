@@ -25,7 +25,7 @@ from bootstrap.cli.authority_map import generate_authority_map
 from bootstrap.cli.census import CensusError, fetch_census
 from bootstrap.cli.db import DatabaseError, build_database
 from bootstrap.cli.fiscal import FiscalError, fetch_fiscal
-from bootstrap.cli.http import FetchError, HttpClient
+from bootstrap.cli.http import BOOTSTRAP_USER_AGENT, FetchError, HttpClient
 from bootstrap.cli.resolve import (
     AmbiguousMunicipality,
     ResolveError,
@@ -69,6 +69,7 @@ def run(
     )
     client = HttpClient(
         cache_dir or DEFAULT_CACHE_DIR,
+        user_agent=BOOTSTRAP_USER_AGENT,
         offline=offline,
         refresh=refresh,
     )
