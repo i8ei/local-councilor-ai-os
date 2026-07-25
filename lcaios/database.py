@@ -2,13 +2,83 @@
 
 from __future__ import annotations
 
+import re
 import sqlite3
 from pathlib import Path
-from typing import Any
+from typing import Any, TypedDict
 
 SUPPORTED_MAJOR = 1
 KNOWN_BOOTSTRAP_MINOR = 0
 REQUIRED_BOOTSTRAP_TABLES = ("municipality", "indicator", "build_metadata")
+_FTS_TOKENIZER_RE = re.compile(
+    r"\btokenize\s*=\s*(?:'([^']+)'|\"([^\"]+)\"|([^\s,)]+))",
+    re.IGNORECASE,
+)
+
+
+class FtsSchemaStatus(TypedDict):
+    """Outcome of ensuring an optional FTS schema."""
+
+    tokenizer: str
+    rebuilt: bool
+    previous_tokenizer: str | None
+
+
+def _supports_fts5_tokenizer(
+    connection: sqlite3.Connection,
+    tokenizer: str,
+) -> bool:
+    table_name = f"__lcaios_fts_probe_{tokenizer}_{id(connection):x}"
+    created = False
+    try:
+        connection.execute(
+            f'CREATE VIRTUAL TABLE temp."{table_name}" '
+            f"USING fts5(value, tokenize='{tokenizer}')"
+        )
+        created = True
+        return True
+    except sqlite3.OperationalError:
+        return False
+    finally:
+        if created:
+            connection.execute(f'DROP TABLE temp."{table_name}"')
+
+
+def supports_fts5(connection: sqlite3.Connection) -> bool:
+    """Return whether the connected SQLite build provides FTS5."""
+
+    return _supports_fts5_tokenizer(connection, "unicode61")
+
+
+def supports_fts5_trigram(connection: sqlite3.Connection) -> bool:
+    """Return whether the connected SQLite build supports the FTS5 trigram tokenizer."""
+
+    return _supports_fts5_tokenizer(connection, "trigram")
+
+
+def fts5_table_tokenizer(
+    connection: sqlite3.Connection,
+    table_name: str,
+) -> str | None:
+    """Return the tokenizer named in an existing FTS table's CREATE statement."""
+
+    row = connection.execute(
+        """
+        SELECT sql
+        FROM sqlite_master
+        WHERE type = 'table' AND name = ?
+        """,
+        (table_name,),
+    ).fetchone()
+    if row is None or not isinstance(row[0], str):
+        return None
+    match = _FTS_TOKENIZER_RE.search(row[0])
+    if match is None:
+        return None
+    specification = next(
+        value for value in match.groups() if value is not None
+    )
+    return specification.split()[0].casefold()
 
 
 def sqlite_read_only_uri(path: str | Path) -> str:
@@ -169,4 +239,3 @@ def verify_bootstrap_database(path: str | Path) -> dict[str, Any]:
         "checks": checks,
         "schema": schema,
     }
-

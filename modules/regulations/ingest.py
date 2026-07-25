@@ -15,6 +15,12 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
+from lcaios.database import (
+    FtsSchemaStatus,
+    fts5_table_tokenizer,
+    supports_fts5,
+    supports_fts5_trigram,
+)
 from lcaios.http import (
     REGULATIONS_USER_AGENT,
     CacheTier,
@@ -177,18 +183,98 @@ def segment_articles(text: str) -> list[dict[str, Any]]:
     ] if collapsed else []
 
 
-def ensure_schema(connection: sqlite3.Connection) -> str:
-    """Create tables; keep relational layer usable when FTS5 is unavailable."""
+def _rebuild_fts(
+    connection: sqlite3.Connection,
+    tokenizer: str,
+) -> None:
+    connection.execute("SAVEPOINT rebuild_regulation_articles_fts")
+    try:
+        connection.execute("DROP TABLE regulation_articles_fts")
+        connection.execute(
+            f"""
+            CREATE VIRTUAL TABLE regulation_articles_fts USING fts5(
+                text,
+                heading,
+                article_no,
+                title,
+                document_id UNINDEXED,
+                article_id UNINDEXED,
+                tokenize='{tokenizer}'
+            )
+            """
+        )
+        connection.execute(
+            """
+            INSERT INTO regulation_articles_fts (
+                text, heading, article_no, title, document_id, article_id
+            )
+            SELECT
+                a.text, a.heading, a.article_no, d.title,
+                a.document_id, a.article_id
+            FROM regulation_articles AS a
+            JOIN regulation_documents AS d
+              ON d.document_id = a.document_id
+            """
+        )
+    except sqlite3.Error:
+        connection.execute("ROLLBACK TO rebuild_regulation_articles_fts")
+        connection.execute("RELEASE rebuild_regulation_articles_fts")
+        raise
+    connection.execute("RELEASE rebuild_regulation_articles_fts")
+
+
+def ensure_schema(connection: sqlite3.Connection) -> FtsSchemaStatus:
+    """Create tables and upgrade the FTS tokenizer supported by this build."""
     schema = SCHEMA_PATH.read_text(encoding="utf-8")
+    relational = schema.split(
+        "CREATE VIRTUAL TABLE IF NOT EXISTS regulation_articles_fts",
+        1,
+    )[0]
+    previous = fts5_table_tokenizer(
+        connection,
+        "regulation_articles_fts",
+    )
+    if supports_fts5_trigram(connection):
+        tokenizer = "trigram"
+    elif supports_fts5(connection):
+        tokenizer = "unicode61"
+    else:
+        connection.executescript(relational)
+        return {
+            "tokenizer": "unavailable",
+            "rebuilt": False,
+            "previous_tokenizer": previous,
+        }
+    if tokenizer == "trigram":
+        schema = schema.replace(
+            "tokenize='unicode61'",
+            "tokenize='trigram'",
+            1,
+        )
     try:
         connection.executescript(schema)
-        return "unicode61"
     except sqlite3.OperationalError as exc:
         if "fts5" not in str(exc).lower():
             raise
-        relational = schema.split("CREATE VIRTUAL TABLE IF NOT EXISTS regulation_articles_fts", 1)[0]
         connection.executescript(relational)
-        return "unavailable"
+        return {
+            "tokenizer": "unavailable",
+            "rebuilt": False,
+            "previous_tokenizer": previous,
+        }
+
+    current = fts5_table_tokenizer(
+        connection,
+        "regulation_articles_fts",
+    )
+    rebuilt = current != tokenizer
+    if rebuilt:
+        _rebuild_fts(connection, tokenizer)
+    return {
+        "tokenizer": tokenizer,
+        "rebuilt": rebuilt,
+        "previous_tokenizer": previous,
+    }
 
 
 def _load_config(path: str | Path) -> dict[str, Any]:
@@ -486,7 +572,7 @@ def ingest(
     database.parent.mkdir(parents=True, exist_ok=True)
     with closing(sqlite3.connect(database)) as connection, connection:
         connection.execute("PRAGMA foreign_keys = ON")
-        tokenizer = ensure_schema(connection)
+        fts_schema = ensure_schema(connection)
         documents = 0
         articles = 0
         statuses: dict[str, int] = {}
@@ -503,7 +589,8 @@ def ingest(
         "articles": articles,
         "skipped_urls": refs.skipped_urls,
         "statuses": statuses,
-        "fts_tokenizer": tokenizer,
+        "fts_tokenizer": fts_schema["tokenizer"],
+        "fts_schema": fts_schema,
         "retrieval": client.retrieval_report(),
     }
 
@@ -586,6 +673,7 @@ def main(argv: list[str] | None = None) -> int:
             "skipped_urls": result["skipped_urls"],
             "statuses": result["statuses"],
             "fts_tokenizer": result["fts_tokenizer"],
+            "fts_schema": result["fts_schema"],
         },
         inputs=[input_file_record(args.config, kind="regulations_adapter_config")],
         checks=[

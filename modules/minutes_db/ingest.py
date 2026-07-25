@@ -12,6 +12,12 @@ from contextlib import closing
 from pathlib import Path
 from typing import Any
 
+from lcaios.database import (
+    FtsSchemaStatus,
+    fts5_table_tokenizer,
+    supports_fts5,
+    supports_fts5_trigram,
+)
 from lcaios.http import MINUTES_USER_AGENT, HttpClient
 from lcaios.module_manifest import (
     begin_module_run,
@@ -36,22 +42,61 @@ def stable_id(prefix: str, value: str) -> str:
     return f"{prefix}_{digest}"
 
 
-def _supports_trigram(connection: sqlite3.Connection) -> bool:
+def _rebuild_fts(
+    connection: sqlite3.Connection,
+    tokenizer: str,
+) -> None:
+    connection.execute("SAVEPOINT rebuild_speeches_fts")
     try:
+        connection.execute("DROP TABLE speeches_fts")
         connection.execute(
-            "CREATE VIRTUAL TABLE temp.__trigram_probe "
-            "USING fts5(value, tokenize='trigram')"
+            f"""
+            CREATE VIRTUAL TABLE speeches_fts USING fts5(
+                text,
+                speaker,
+                meeting_id UNINDEXED,
+                speech_id UNINDEXED,
+                content='speeches',
+                content_rowid='rowid',
+                tokenize='{tokenizer}'
+            )
+            """
         )
-        connection.execute("DROP TABLE temp.__trigram_probe")
-        return True
-    except sqlite3.OperationalError:
-        return False
+        connection.execute(
+            """
+            INSERT INTO speeches_fts (
+                rowid, text, speaker, meeting_id, speech_id
+            )
+            SELECT rowid, text, speaker, meeting_id, speech_id
+            FROM speeches
+            """
+        )
+    except sqlite3.Error:
+        connection.execute("ROLLBACK TO rebuild_speeches_fts")
+        connection.execute("RELEASE rebuild_speeches_fts")
+        raise
+    connection.execute("RELEASE rebuild_speeches_fts")
 
 
-def ensure_schema(connection: sqlite3.Connection) -> str:
+def ensure_schema(connection: sqlite3.Connection) -> FtsSchemaStatus:
     """Create the schema, preferring trigram when this SQLite supports it."""
     schema = SCHEMA_PATH.read_text(encoding="utf-8")
-    tokenizer = "trigram" if _supports_trigram(connection) else "unicode61"
+    relational_schema = schema.split(
+        "CREATE VIRTUAL TABLE IF NOT EXISTS speeches_fts",
+        1,
+    )[0]
+    previous = fts5_table_tokenizer(connection, "speeches_fts")
+    if supports_fts5_trigram(connection):
+        tokenizer = "trigram"
+    elif supports_fts5(connection):
+        tokenizer = "unicode61"
+    else:
+        connection.executescript(relational_schema)
+        return {
+            "tokenizer": "unavailable",
+            "rebuilt": False,
+            "previous_tokenizer": previous,
+        }
     if tokenizer == "trigram":
         schema = schema.replace("tokenize='unicode61'", "tokenize='trigram'", 1)
     try:
@@ -60,12 +105,22 @@ def ensure_schema(connection: sqlite3.Connection) -> str:
         if "fts5" not in str(exc).lower():
             raise
         # Keep the relational search layer usable on SQLite builds without FTS5.
-        relational_schema = schema.split(
-            "CREATE VIRTUAL TABLE IF NOT EXISTS speeches_fts", 1
-        )[0]
         connection.executescript(relational_schema)
-        tokenizer = "unavailable"
-    return tokenizer
+        return {
+            "tokenizer": "unavailable",
+            "rebuilt": False,
+            "previous_tokenizer": previous,
+        }
+
+    current = fts5_table_tokenizer(connection, "speeches_fts")
+    rebuilt = current != tokenizer
+    if rebuilt:
+        _rebuild_fts(connection, tokenizer)
+    return {
+        "tokenizer": tokenizer,
+        "rebuilt": rebuilt,
+        "previous_tokenizer": previous,
+    }
 
 
 def _as_json(value: Any, default: Any) -> str:
@@ -234,7 +289,7 @@ def ingest(args: argparse.Namespace) -> dict[str, Any]:
     database_path.parent.mkdir(parents=True, exist_ok=True)
     with closing(sqlite3.connect(database_path)) as connection, connection:
         connection.execute("PRAGMA foreign_keys = ON")
-        tokenizer = ensure_schema(connection)
+        fts_schema = ensure_schema(connection)
         meeting_refs = adapter.list_meetings(limit=args.limit)
         meeting_count = 0
         speech_count = 0
@@ -246,7 +301,7 @@ def ingest(args: argparse.Namespace) -> dict[str, Any]:
             status = str((document.get("provenance") or {}).get("status", "discovered"))
             statuses[status] = statuses.get(status, 0) + 1
             meeting_count += 1
-        if tokenizer != "unavailable":
+        if fts_schema["tokenizer"] != "unavailable":
             connection.execute(
                 "INSERT INTO speeches_fts(speeches_fts) VALUES ('rebuild')"
             )
@@ -257,7 +312,8 @@ def ingest(args: argparse.Namespace) -> dict[str, Any]:
         "meetings": meeting_count,
         "speeches": speech_count,
         "statuses": statuses,
-        "fts_tokenizer": tokenizer,
+        "fts_tokenizer": fts_schema["tokenizer"],
+        "fts_schema": fts_schema,
         "retrieval": client.retrieval_report(),
     }
 
@@ -360,6 +416,7 @@ def main(argv: list[str] | None = None) -> int:
                 "speeches": result["speeches"],
                 "statuses": result["statuses"],
                 "fts_tokenizer": result["fts_tokenizer"],
+                "fts_schema": result["fts_schema"],
             },
             inputs=inputs,
             checks=[
