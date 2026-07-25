@@ -7,10 +7,9 @@
 これは現在の公式入口を保証するregistryではない。AIや人が毎回サイト全体をゼロから
 読む代わりに、最初に再確認すべき少数ページを選ぶための過去観測である。
 
-## 利用者に必要なもの
+## 利用方法
 
-通常利用にCloudflareアカウントや`lcaios-explorer`は不要である。snapshotは
-リポジトリに同梱され、preflightが既定で自動読込する。
+snapshotはリポジトリに同梱され、preflightが既定で自動読込する。
 
 ```bash
 python3 -m bootstrap.cli.preflight \
@@ -51,13 +50,9 @@ Tier 0〜1の通常bootstrap reportにも、対象自治体1件の観測が`sour
 | `depth1_partial` | 15 | 深度1候補の一部だけ取得 |
 | `source_run_stopped` | 91 | 公式ホーム取得前後で安全停止 |
 
-来歴:
-
-- source run: `0d13d710-9df7-4ead-8699-e448d1c2a48e`
-- depth1 representative: `0db3fe43-9149-4f18-ac41-ed7f6c058f15`
-- depth1 rollout: `c0c9af7e-ab61-4b98-952b-6dba29666527`
-- explorer revision: `0b5f748`
-- scope version: 8
+詳細な生成来歴は`manifest.json`に記録する。利用時に必要なのは、snapshotの
+`generated_at`、explorer revision、scope version、snapshot SHA-256、municipality
+registry SHA-256である。
 
 ## 1自治体のデータ契約
 
@@ -133,7 +128,12 @@ snapshotを使わず比較する場合は`--no-observatory-hints`を指定する
 | `municipalities.jsonl` | Git同梱の現行snapshot |
 | `manifest.json` | 来歴、件数、SHA-256、信頼境界 |
 | `catalog.py` | runtime loaderと全件validation |
-| `update.py` | D1 exportを正規化してsnapshotを置換するgenerator |
-| [`MAINTENANCE.md`](MAINTENANCE.md) | D1 export、更新、検証、レビュー手順 |
+| `update.py` | explorer exportを正規化してsnapshotを置換するgenerator |
 
 snapshotは日付別に蓄積しない。現行ファイルを置き換え、履歴はGitに持たせる。
+
+## 古い候補を見つけた場合
+
+`municipalities.jsonl`を直接修正せず、[自治体テストIssue](https://github.com/i8ei/local-councilor-ai-os/issues/new?template=municipality-test.yml)
+で、自治体名、preflightの`status`と`reason`、現在の公式ページで確認できた入口を
+報告する。snapshotの生成基盤と更新運用は、この公開runtime契約には含めない。
