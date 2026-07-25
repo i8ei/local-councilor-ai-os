@@ -206,6 +206,27 @@ python3 -m bootstrap.cli '自治体名' \
   --manifest-dir '/absolute/path/to/vault/.local-councilor-ai-os/runs/bootstrap'
 ```
 
+通常の実行レポートには、その自治体について全国観測で既知だったsource種別、候補URL、
+候補ページ、停止理由と、次のpreflight引数が`source_discovery`として含まれる。これは
+現在の入口を保証する値ではなく、次の探索順を決めるヒントである。
+
+議事録、例規、予算、決算の現在の入口を確認する場合は、同じ自治体をpreflightする。
+e-Stat AppIdは不要で、文書本文、PDF、vendor先、DBは取得しない。
+
+```sh
+python3 -m bootstrap.cli.preflight \
+  --prefecture '都道府県名' \
+  --municipality '自治体名' \
+  --output /tmp/municipality-preflight.json \
+  --cache-dir /tmp/municipality-preflight-cache
+```
+
+preflightは同梱した全国1,741自治体の観測snapshotから、同一公式hostの既知候補を
+優先する。ただし過去観測だけでは`ready`にせず、現在の公式ホームからリンクを
+再確認する。`source_not_found`は「資料が存在しない」という意味ではなく、ページ上限内で
+入口を観測しなかったという意味である。全statusの読み方と停止条件は
+[自治体ブートストラップ](bootstrap/README.md#preflight結果の読み方)を参照する。
+
 初回オンライン実行の後、同じ入力でオフライン再構築を行い、キャッシュだけで再現できることを確認する。
 
 ```sh
@@ -236,6 +257,11 @@ python3 -m modules.benchmark.compare zaiseiryoku_shisuu \
 最初にe-Stat APIの認証が成功することを確認する。`ESTAT_APPID`が設定済みでも認証エラーになる場合は、「API機能」の有効化と変更確定、発行したアプリケーションIDの値を再確認する。
 
 その後、自治体コードの一意性、DBの整合性、指標の値、時点、定義、出典、`authority_map.yaml`に値が複製されていないことを確認する。同じキャッシュからオフライン再構築し、行数と主要値が一致することも確認する。不一致は隔離し、最新値として使わない。
+
+preflight reportでは、各sourceの`status`だけでなく、`reason`、`evidence`、
+`warnings`を確認する。`observatory.trust`が
+`prior_observation_requires_live_confirmation`である候補を、人の確認なしに現在の
+公式入口としてprofileやadapter設定へ転記しない。
 
 統一状態確認と参照先別鮮度を確認する。
 

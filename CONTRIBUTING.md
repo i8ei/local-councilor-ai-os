@@ -9,6 +9,7 @@
 - 自治体で試した結果と、止まった段階の報告
 - 自治体コードや公式ホームページ入口の訂正
 - 議事録、例規、予算・決算資料の公式入口に関する情報
+- 全国観測snapshotの候補と、現在の公式ページが一致しなかった再現例
 - 未対応ベンダーや新しい公開方式の再現例
 - READMEやセットアップ文書で迷った箇所の改善
 - アダプター、検証処理、回帰テストの追加
@@ -23,6 +24,17 @@
 
 URLや資料の場所が不明な場合は、推測せず「不明」と書いてください。実行ログを貼る
 場合は、APIキー、個人情報、内部資料、端末内の不要な絶対パスを除いてください。
+
+固有資料の入口に関する報告では、可能なら1自治体に限定したpreflight reportの
+`status`、`reason`、`warnings`を添えてください。report全体を貼る必要はありません。
+
+```bash
+python3 -m bootstrap.cli.preflight \
+  --prefecture '都道府県名' \
+  --municipality '自治体名' \
+  --output /tmp/municipality-preflight.json \
+  --cache-dir /tmp/municipality-preflight-cache
+```
 
 ## Pull Requestを出す
 
@@ -58,3 +70,14 @@ python3 -m modules.settlement_review.verify_totals --help
 
 自治体固有の修正が他地域でも再利用できそうな場合は、設定例、fixture、最小テストを
 添えてください。実データそのものではなく、再現に必要な最小構造を共有します。
+
+## 全国観測snapshotを更新するとき
+
+`bootstrap/observatory/municipalities.jsonl`を手編集しないでください。正本は
+`lcaios-explorer`のCloudflare D1であり、読取exportを
+`python3 -m bootstrap.observatory.update`へ渡して全1,741自治体を再生成します。
+
+更新PRには、run ID、scope version、explorer revision、件数と容量の差分、代表自治体の
+live確認、hash検証と全テスト結果を含めてください。手順は
+[`bootstrap/observatory/MAINTENANCE.md`](bootstrap/observatory/MAINTENANCE.md)を
+参照してください。日付別snapshot、raw HTML、PDF、文書本文、作業DBは追加しません。

@@ -14,6 +14,32 @@
 
 `authority_map.yaml` には指標値を複製しない。値は SQLite から取得し、裁定表は「何をどこから読むべきか」だけを管理する。
 
+## 最短の使い方
+
+人口・財政のTier 0〜1を構築するにはe-Stat AppIdを設定して実行する。
+
+```bash
+export ESTAT_APPID='<e-Stat AppId>'
+python3 -m bootstrap.cli '自治体名' \
+  --prefecture '都道府県名' \
+  --manifest-dir '/absolute/path/to/vault/.local-councilor-ai-os/runs/bootstrap'
+```
+
+議事録・例規・予算・決算の入口だけを調べるpreflightにはAppIdは不要である。1自治体に
+限定すれば、公式ホームと優先候補を既定最大8ページだけ確認する。
+
+```bash
+python3 -m bootstrap.cli.preflight \
+  --prefecture '都道府県名' \
+  --municipality '自治体名' \
+  --output /tmp/municipality-preflight.json \
+  --cache-dir /tmp/municipality-preflight-cache
+```
+
+この二つは役割が異なる。`bootstrap.cli`は全国共通データからSQLiteを作り、
+`bootstrap.cli.preflight`は自治体固有資料の入口を診断するだけで、PDF、vendor先、
+文書本文を取得せずDBも作らない。
+
 ## Tier モデル
 
 | Tier | 対象 | 自動化の目安 | 現時点の設計 |
@@ -123,6 +149,21 @@ source_not_found / human_confirmation_required`へ分類する。文書本文、
 観測済みなら、HTTPS側の`robots.txt`を改めて確認してから取得する。既存reportは
 上書きしない。比較試験では`--no-observatory-hints`で優先付けを無効化できる。
 
+### preflight結果の読み方
+
+| status | 意味 | 次の行動 |
+|---|---|---|
+| `ready` | 現在の公式ページから、対応adapterまたは公式文書入口を確認した | 対応moduleのdry-runや索引診断へ進む |
+| `unsupported_vendor` | vendorは確認したが、検証済みadapterがない | [議事録adapter guidance](../modules/minutes_db/adapter_guidance.md)または[例規module](../modules/regulations/README.md)を参照し、対象自治体で実装を検証する |
+| `unknown_structure` | 関連ページは取得したが、静的HTMLだけでは構造を確定できない | 人または利用者のAIがページを確認する |
+| `robots_blocked` | `robots.txt`の禁止または確認不能で安全停止した | 迂回せず、公開元の取得条件または入口を確認する |
+| `source_not_found` | ページ上限内で該当入口を観測しなかった | 「存在しない」と断定せず、必要時だけ追加調査する |
+| `human_confirmation_required` | 候補はあるが、現在の公式入口として確定できない | 公式ページでリンク関係と対象資料を確認する |
+
+batch全体の`status`は、4種類すべてが`ready`の自治体だけを`ready`とする。それ以外は
+`needs_attention`であり、失敗と同義ではない。個別の`reason`、`evidence`、`warnings`
+を確認する。
+
 ## 実装
 
 Tier 0〜1 の標準ライブラリ版 CLI は `bootstrap/cli/` に実装した。次のどちらでも実行できる。
@@ -180,7 +221,11 @@ python3 -m lcaios backup database \
 
 HTTP取得は公式URLだけを対象に、ホストごとの `robots.txt` 判定、プロセス全体で1.5秒以上の間隔、正直なUser-Agent、SHA-256付きローカルキャッシュ、`fetched_at` の保存を行う。キャッシュヒット時と `--offline` 時は通信しない。リダイレクト先も取得前に `robots.txt` を判定する。実行レポートとrun manifestの`retrieval`には、cache directory、live request数、hit／miss／refresh数、取得元別内訳、このrunで最新性を再確認したかを記録する。
 
-単体テストは全国基礎自治体registryの小さなCSVを除いて実データを同梱せず、合成した地域API・e-Stat応答と、テスト内でZIP/XMLから生成する最小XLSXを使う。registryの生成元、更新方法、対象範囲は[`municipalities/README.md`](municipalities/README.md)を参照する。
+単体テストは合成した地域API・e-Stat応答と、テスト内でZIP/XMLから生成する最小XLSXを
+使う。取得原本、統計値、利用者DBは同梱しない。全国基礎自治体registryと公開URLの
+観測snapshotだけを軽量な探索metadataとして同梱する。生成元、更新方法、対象範囲は
+[`municipalities/README.md`](municipalities/README.md)と
+[`observatory/README.md`](observatory/README.md)を参照する。
 
 ```bash
 python3 -m unittest discover -v
@@ -214,3 +259,12 @@ SQLite integrity、オフライン通信0件、AppId非残存、ライブ要求�
 - 合成フィクスチャによる単体テスト7件が成功。曖昧な自治体名が候補を返して終了コード2になる経路と、動的探索失敗時の警告付きフォールバック選択を含む
 
 未検証なのは、全自治体種別・全都道府県・過年度XLSXの網羅、将来のHTML/XLSX見出し変更、動的探索を意図的に失敗させた実API上の2020年表フォールバック、新設・再編自治体、決算カードの年度・都道府県ごとの配置差である。決算カードの値は自動抽出しないため、主経路の6指標との一致は確認済みとして扱わない。見出しの既知別名を使った場合は `header_fallback_used` と採用ラベル・セルを `source_locator` に記録するが、意味を確定できない変更では停止する。
+
+2026-07-25、全国自治体観測snapshotの接続後に次を確認した。
+
+- snapshotは同梱registryと同じ1,741自治体を重複・欠落なく収録
+- snapshot SHA-256とregistry SHA-256をロード時に照合
+- 1,084自治体に具体的なsource URL、1,541自治体に優先候補ページ
+- 過去の外部vendor URLだけでは`ready`にならない合成テスト
+- 太良町は同一公式hostで既観測のHTTPSへ切り替え、HTTPS側robotsを再確認して4ページを取得。例規はlive確認で`ready`、議事録・予算・決算は非ready状態を維持
+- 全246テスト、Ruff、mypy、GitHub ActionsのPython 3.11／3.14とlintが成功
