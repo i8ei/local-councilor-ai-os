@@ -27,6 +27,7 @@ from bootstrap.cli.http import (
     RobotsUnavailableError,
 )
 from bootstrap.municipalities import load_metadata, load_registry
+from bootstrap.observatory import ObservatoryError, load_catalog, lookup
 
 SOURCE_KINDS = ("minutes", "regulations", "budget", "settlement")
 DOCUMENT_EXTENSIONS = {".pdf", ".txt", ".xlsx", ".xls", ".csv", ".zip"}
@@ -241,6 +242,8 @@ def _classify_kind(
     root_blocked: bool,
     root_unavailable: bool,
     dynamic_navigation: bool,
+    observatory_source_kinds: set[str],
+    observatory_navigation_mode: str | None,
 ) -> dict[str, Any]:
     if root_blocked:
         return _result(
@@ -253,7 +256,12 @@ def _classify_kind(
             reason="official_home_not_available_in_offline_cache",
         )
 
-    matching = [item for item in evidence if kind in item["kinds"]]
+    matching = [
+        item
+        for item in evidence
+        if kind in item["kinds"]
+        and item["evidence_type"] != "observatory_hint"
+    ]
     vendors = [item for item in matching if item.get("vendor")]
     if kind == "minutes":
         supported = next(
@@ -416,14 +424,152 @@ def _classify_kind(
             evidence=[matching[0]],
             reason="related_link_found_but_not_confirmed_as_an_index",
         )
+    prior = next(
+        (
+            item
+            for item in evidence
+            if kind in item["kinds"]
+            and item["evidence_type"] == "observatory_hint"
+        ),
+        None,
+    )
+    if prior:
+        return _result(
+            status="human_confirmation_required",
+            adapter=prior.get("vendor"),
+            index_url=prior["url"],
+            evidence=[prior],
+            reason="observatory_candidate_requires_live_confirmation",
+        )
+    if kind in observatory_source_kinds:
+        return _result(
+            status="human_confirmation_required",
+            reason="observatory_source_kind_requires_live_discovery",
+        )
     if dynamic_navigation:
         return _result(
             status="unknown_structure",
             reason="javascript_navigation_not_visible_in_static_html",
         )
+    if observatory_navigation_mode == "javascript_candidate":
+        return _result(
+            status="unknown_structure",
+            reason="observatory_javascript_navigation_requires_live_discovery",
+        )
     return _result(
         status="source_not_found",
         reason="no_matching_link_observed_within_page_bound",
+    )
+
+
+def _observatory_summary(
+    hint: dict[str, Any] | None,
+) -> dict[str, Any]:
+    if hint is None:
+        return {
+            "available": False,
+            "trust": "no_prior_observation",
+        }
+    return {
+        "available": True,
+        "lane": hint.get("lane"),
+        "navigation_mode": hint.get("navigation_mode"),
+        "source_kinds": hint.get("source_kinds", []),
+        "vendor_signals": hint.get("vendor_signals", []),
+        "observed_at": hint.get("observed_at", {}),
+        "candidate_page_count": len(hint.get("candidate_pages", [])),
+        "trust": "prior_observation_requires_live_confirmation",
+    }
+
+
+def _observatory_evidence(
+    hint: dict[str, Any] | None,
+    official_domains: set[str],
+) -> list[dict[str, Any]]:
+    if hint is None:
+        return []
+    source_urls = hint.get("source_urls")
+    if not isinstance(source_urls, dict):
+        return []
+    evidence: list[dict[str, Any]] = []
+    for kind in SOURCE_KINDS:
+        urls = source_urls.get(kind, [])
+        if not isinstance(urls, list):
+            continue
+        for url in urls:
+            if not isinstance(url, str):
+                continue
+            vendor = _vendor(url)
+            evidence.append(
+                {
+                    "evidence_type": "observatory_hint",
+                    "url": url,
+                    "observed_on": "bundled_observatory",
+                    "label": "",
+                    "kinds": [kind],
+                    "official_host": _official_host(url, official_domains),
+                    "vendor": vendor[1] if vendor else None,
+                }
+            )
+    return evidence
+
+
+def _observatory_seed_urls(
+    hint: dict[str, Any] | None,
+    official_domains: set[str],
+) -> list[str]:
+    if hint is None:
+        return []
+    candidate_pages = hint.get("candidate_pages")
+    values: list[object] = (
+        list(candidate_pages) if isinstance(candidate_pages, list) else []
+    )
+    source_urls = hint.get("source_urls")
+    if isinstance(source_urls, dict):
+        for kind in SOURCE_KINDS:
+            urls = source_urls.get(kind, [])
+            if isinstance(urls, list):
+                values.extend(urls)
+    seed_urls: set[str] = set()
+    for value in values:
+        canonical = _canonical_url(value) if isinstance(value, str) else None
+        if (
+            canonical is not None
+            and _official_host(canonical, official_domains)
+            and _document_extension(canonical) in NAVIGATION_EXTENSIONS
+        ):
+            seed_urls.add(canonical)
+    return sorted(seed_urls)
+
+
+def _root_fetch_url(
+    root_url: str,
+    hint: dict[str, Any] | None,
+) -> str:
+    parts = urllib.parse.urlsplit(root_url)
+    if parts.scheme.lower() != "http" or hint is None:
+        return root_url
+    official_domains = {_domain_key(root_url)}
+    values: list[object] = []
+    candidate_pages = hint.get("candidate_pages")
+    if isinstance(candidate_pages, list):
+        values.extend(candidate_pages)
+    source_urls = hint.get("source_urls")
+    if isinstance(source_urls, dict):
+        for kind in SOURCE_KINDS:
+            urls = source_urls.get(kind)
+            if isinstance(urls, list):
+                values.extend(urls)
+    has_observed_https = any(
+        isinstance(value, str)
+        and urllib.parse.urlsplit(value).scheme.lower() == "https"
+        and _official_host(value, official_domains)
+        for value in values
+    )
+    if not has_observed_https:
+        return root_url
+    return urllib.parse.urlunsplit(
+        ("https", parts.netloc, parts.path or "/", parts.query, "")
     )
 
 
@@ -432,20 +578,22 @@ def preflight_municipality(
     client: HttpClient,
     *,
     max_pages: int,
+    observatory_hint: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Fetch only bounded official HTML pages and classify four source types."""
 
     if max_pages < 1:
         raise ValueError("max_pages must be at least 1")
     root_url = municipality["official_home_url"]
+    root_fetch_url = _root_fetch_url(root_url, observatory_hint)
     official_domains = {_domain_key(root_url)}
     queue: list[tuple[int, int, int, str, str, str]] = []
     sequence = itertools.count()
     heapq.heappush(
         queue,
-        (0, 0, next(sequence), root_url, "", "official_home"),
+        (0, 0, next(sequence), root_fetch_url, "", "official_home"),
     )
-    queued = {root_url}
+    queued = {root_fetch_url}
     visited: set[str] = set()
     pages: list[dict[str, Any]] = []
     evidence: list[dict[str, Any]] = []
@@ -455,6 +603,21 @@ def preflight_municipality(
     root_blocked = False
     root_unavailable = False
     dynamic_navigation = False
+    observatory_seeded = False
+    observatory_source_kinds = (
+        {
+            kind
+            for kind in observatory_hint.get("source_kinds", [])
+            if kind in SOURCE_KINDS
+        }
+        if observatory_hint
+        else set()
+    )
+    observatory_navigation_mode = (
+        str(observatory_hint.get("navigation_mode"))
+        if observatory_hint
+        else None
+    )
 
     while queue and len(pages) < max_pages:
         _negative_score, depth, _order, url, discovered_from, label = heapq.heappop(
@@ -472,8 +635,11 @@ def preflight_municipality(
             for item in evidence
             for item_kind in item["kinds"]
             if (
-                item.get("vendor")
-                or item["evidence_type"] in {"document_link", "page_context"}
+                item["evidence_type"] != "observatory_hint"
+                and (
+                    item.get("vendor")
+                    or item["evidence_type"] in {"document_link", "page_context"}
+                )
             )
         }
         if candidate_kinds and all(
@@ -667,6 +833,30 @@ def preflight_municipality(
                 )
                 queued.add(resolved)
 
+        if depth == 0 and not observatory_seeded:
+            observatory_seeded = True
+            for seed_url in _observatory_seed_urls(
+                observatory_hint,
+                official_domains,
+            ):
+                if seed_url in visited or seed_url in queued:
+                    continue
+                heapq.heappush(
+                    queue,
+                    (
+                        -1000,
+                        1,
+                        next(sequence),
+                        seed_url,
+                        "bundled_observatory",
+                        "observatory_hint",
+                    ),
+                )
+                queued.add(seed_url)
+
+    evidence.extend(
+        _observatory_evidence(observatory_hint, official_domains)
+    )
     sources = {
         kind: _classify_kind(
             kind,
@@ -675,6 +865,8 @@ def preflight_municipality(
             root_blocked=root_blocked,
             root_unavailable=root_unavailable,
             dynamic_navigation=dynamic_navigation,
+            observatory_source_kinds=observatory_source_kinds,
+            observatory_navigation_mode=observatory_navigation_mode,
         )
         for kind in SOURCE_KINDS
     }
@@ -686,6 +878,7 @@ def preflight_municipality(
             "local_government_code_6"
         ],
         "official_home_url": root_url,
+        "official_home_fetch_url": root_fetch_url,
         "status": (
             "ready"
             if all(source["status"] == "ready" for source in sources.values())
@@ -697,6 +890,7 @@ def preflight_municipality(
         "pages": pages,
         "warnings": warnings,
         "dynamic_navigation_detected": dynamic_navigation,
+        "observatory": _observatory_summary(observatory_hint),
         "documents_downloaded": 0,
         "database_created": False,
     }
@@ -708,6 +902,7 @@ def run_preflight(
     municipality_names: list[str],
     client: HttpClient,
     max_pages: int,
+    observatory_catalog: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Run a bounded batch from the bundled municipality registry."""
 
@@ -733,6 +928,14 @@ def run_preflight(
             municipality,
             client,
             max_pages=max_pages,
+            observatory_hint=(
+                lookup(
+                    municipality["area_code_5"],
+                    catalog=observatory_catalog,
+                )
+                if observatory_catalog is not None
+                else None
+            ),
         )
         results.append(result)
         print(
@@ -769,6 +972,17 @@ def run_preflight(
             "generated_at": registry_metadata.get("generated_at"),
             "sha256": registry_metadata.get("registry_sha256"),
         },
+        "observatory": (
+            {
+                "enabled": True,
+                "generated_at": observatory_catalog["manifest"].get(
+                    "generated_at"
+                ),
+                "trust": "prior_observation_requires_live_confirmation",
+            }
+            if observatory_catalog is not None
+            else {"enabled": False}
+        ),
         "status_counts": dict(sorted(status_counts.items())),
         "source_status_counts": source_status_counts,
         "documents_downloaded": 0,
@@ -806,6 +1020,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--cache-dir", required=True, type=Path)
     parser.add_argument("--offline", action="store_true")
     parser.add_argument(
+        "--no-observatory-hints",
+        action="store_true",
+        help="同梱した全国観測snapshotを候補ページの優先付けに使わない",
+    )
+    parser.add_argument(
         "--max-pages-per-municipality",
         type=int,
         default=8,
@@ -825,14 +1044,20 @@ def main(argv: Sequence[str] | None = None) -> int:
             user_agent=BOOTSTRAP_USER_AGENT,
             offline=args.offline,
         )
+        observatory_catalog = (
+            None
+            if args.no_observatory_hints
+            else load_catalog()
+        )
         report = run_preflight(
             prefecture=args.prefecture,
             municipality_names=args.municipality,
             client=client,
             max_pages=args.max_pages_per_municipality,
+            observatory_catalog=observatory_catalog,
         )
         _write_new(args.output, report)
-    except (OSError, PreflightError, ValueError) as error:
+    except (OSError, ObservatoryError, PreflightError, ValueError) as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 2
     print(json.dumps(report, ensure_ascii=False, indent=2))
