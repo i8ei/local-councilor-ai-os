@@ -73,11 +73,8 @@ python3 -m modules.settlement_review.verify_totals --help
 
 ## 全国観測snapshotを更新するとき
 
-`bootstrap/observatory/municipalities.jsonl`を手編集しないでください。正本は
-`lcaios-explorer`のCloudflare D1であり、読取exportを
-`python3 -m bootstrap.observatory.update`へ渡して全1,741自治体を再生成します。
+`bootstrap/observatory/municipalities.jsonl`を手編集しないでください。候補が古い場合は、
+自治体テストIssueへ現在の公式入口とpreflightの`status`、`reason`を報告してください。
+snapshot更新はmaintainerが全1,741自治体を同じ契約で再生成して行います。
 
-更新PRには、run ID、scope version、explorer revision、件数と容量の差分、代表自治体の
-live確認、hash検証と全テスト結果を含めてください。手順は
-[`bootstrap/observatory/MAINTENANCE.md`](bootstrap/observatory/MAINTENANCE.md)を
-参照してください。日付別snapshot、raw HTML、PDF、文書本文、作業DBは追加しません。
+日付別snapshot、raw HTML、PDF、文書本文、作業DBは追加しません。

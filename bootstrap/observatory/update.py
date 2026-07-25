@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Normalize a lcaios-explorer D1 export into the bundled hint snapshot."""
+"""Normalize a lcaios-explorer export into the bundled hint snapshot."""
 
 from __future__ import annotations
 
@@ -242,7 +242,7 @@ def _extract_rows(payload: object) -> list[object]:
         item = payload[0]
         if isinstance(item, dict) and isinstance(item.get("results"), list):
             return list(item["results"])
-    raise ExportError("input must be a Wrangler D1 JSON result")
+    raise ExportError("input must be a JSON result containing a results array")
 
 
 def write_snapshot(
@@ -317,7 +317,7 @@ def write_snapshot(
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="lcaios-explorer D1 exportをbootstrap用snapshotへ正規化"
+        description="lcaios-explorer exportをbootstrap用snapshotへ正規化"
     )
     parser.add_argument("--input", required=True, type=Path)
     parser.add_argument("--output-dir", type=Path, default=OBSERVATORY_DIR)
