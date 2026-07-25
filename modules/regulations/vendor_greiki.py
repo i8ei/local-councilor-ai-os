@@ -486,7 +486,7 @@ def ingest_greiki(
     database.parent.mkdir(parents=True, exist_ok=True)
     with closing(sqlite3.connect(database)) as connection, connection:
         connection.execute("PRAGMA foreign_keys = ON")
-        tokenizer = ensure_schema(connection)
+        fts_schema = ensure_schema(connection)
         document_count = 0
         article_count = 0
         statuses: dict[str, int] = {}
@@ -509,7 +509,8 @@ def ingest_greiki(
         "documents": document_count,
         "articles": article_count,
         "statuses": statuses,
-        "fts_tokenizer": tokenizer,
+        "fts_tokenizer": fts_schema["tokenizer"],
+        "fts_schema": fts_schema,
         "retrieval": client.retrieval_report(),
     }
 
@@ -613,6 +614,7 @@ def main(argv: list[str] | None = None) -> int:
                 "articles": result["articles"],
                 "statuses": result["statuses"],
                 "fts_tokenizer": result["fts_tokenizer"],
+                "fts_schema": result["fts_schema"],
             },
             checks=[
                 {

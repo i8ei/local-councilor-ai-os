@@ -9,7 +9,20 @@ import sqlite3
 import sys
 from contextlib import closing
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal, TypedDict
+
+from lcaios.database import fts5_table_tokenizer
+
+SearchPath = Literal["fts", "like"]
+
+
+class SearchReport(TypedDict):
+    query: str
+    total_matches: int
+    truncated: bool
+    search_path: SearchPath
+    fts_error: str | None
+    fallback_reason: str | None
 
 
 def _plain_snippet(text: str, query: str, width: int = 140) -> str:
@@ -27,7 +40,11 @@ def _plain_snippet(text: str, query: str, width: int = 140) -> str:
     return excerpt
 
 
-def _row_to_result(row: sqlite3.Row, snippet: str) -> dict[str, Any]:
+def _row_to_result(
+    row: sqlite3.Row,
+    snippet: str,
+    search_path: SearchPath,
+) -> dict[str, Any]:
     return {
         "speech_id": row["speech_id"],
         "speaker": row["speaker"],
@@ -40,66 +57,167 @@ def _row_to_result(row: sqlite3.Row, snippet: str) -> dict[str, Any]:
         "source_url": row["source_url"],
         "locator": row["locator"],
         "fetched_at": row["fetched_at"],
+        "search_path": search_path,
     }
 
 
-def search_database(
-    connection: sqlite3.Connection, query: str, k: int = 10
-) -> list[dict[str, Any]]:
-    """Return ranked FTS hits, supplementing with literal LIKE matches."""
-    connection.row_factory = sqlite3.Row
-    results: list[dict[str, Any]] = []
-    seen: set[str] = set()
-    try:
-        rows = connection.execute(
-            """
-            SELECT
-                s.speech_id, s.speaker, s.speaker_role, s.text, s.locator,
-                m.date, m.meeting_name, m.council_name, m.source_url,
-                m.fetched_at,
-                snippet(speeches_fts, 0, '【', '】', '…', 24) AS fts_snippet
-            FROM speeches_fts
-            JOIN speeches AS s ON s.rowid = speeches_fts.rowid
-            JOIN meetings AS m ON m.meeting_id = s.meeting_id
-            WHERE speeches_fts MATCH ?
-            ORDER BY bm25(speeches_fts)
-            LIMIT ?
-            """,
-            (query, k),
-        ).fetchall()
-        for row in rows:
-            results.append(_row_to_result(row, row["fts_snippet"]))
-            seen.add(str(row["speech_id"]))
-    except sqlite3.OperationalError:
-        # A missing FTS5 module, short trigram query, or FTS syntax error is
-        # handled by the literal search below.
-        pass
+def _literal_pattern(query: str) -> str:
+    escaped = (
+        query.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
+    )
+    return f"%{escaped}%"
 
-    if len(results) < k:
-        escaped = query.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
-        rows = connection.execute(
+
+def _like_search(
+    connection: sqlite3.Connection,
+    query: str,
+    k: int,
+) -> tuple[list[dict[str, Any]], int]:
+    pattern = _literal_pattern(query)
+    parameters = (pattern, pattern)
+    total = int(
+        connection.execute(
             """
-            SELECT
-                s.speech_id, s.speaker, s.speaker_role, s.text, s.locator,
-                m.date, m.meeting_name, m.council_name, m.source_url,
-                m.fetched_at
+            SELECT COUNT(*)
             FROM speeches AS s
             JOIN meetings AS m ON m.meeting_id = s.meeting_id
             WHERE s.text LIKE ? ESCAPE '\\'
                OR COALESCE(s.speaker, '') LIKE ? ESCAPE '\\'
-            ORDER BY COALESCE(m.date, '') DESC, s.seq
-            LIMIT ?
             """,
-            (f"%{escaped}%", f"%{escaped}%", k * 3),
-        ).fetchall()
-        for row in rows:
-            speech_id = str(row["speech_id"])
-            if speech_id in seen:
-                continue
-            results.append(_row_to_result(row, _plain_snippet(row["text"], query)))
-            seen.add(speech_id)
-            if len(results) >= k:
-                break
+            parameters,
+        ).fetchone()[0]
+    )
+    rows = connection.execute(
+        """
+        SELECT
+            s.speech_id, s.speaker, s.speaker_role, s.text, s.locator,
+            m.date, m.meeting_name, m.council_name, m.source_url,
+            m.fetched_at
+        FROM speeches AS s
+        JOIN meetings AS m ON m.meeting_id = s.meeting_id
+        WHERE s.text LIKE ? ESCAPE '\\'
+           OR COALESCE(s.speaker, '') LIKE ? ESCAPE '\\'
+        ORDER BY
+            CASE
+                WHEN COALESCE(s.speaker, '') = ? THEN 0
+                WHEN s.text = ? THEN 1
+                WHEN instr(COALESCE(s.speaker, ''), ?) > 0 THEN 2
+                ELSE 3
+            END,
+            CASE
+                WHEN instr(s.text, ?) > 0 THEN instr(s.text, ?)
+                ELSE 2147483647
+            END,
+            COALESCE(m.date, '') DESC,
+            s.seq
+        LIMIT ?
+        """,
+        (*parameters, *(query for _ in range(5)), k),
+    ).fetchall()
+    return [
+        _row_to_result(
+            row,
+            _plain_snippet(row["text"], query),
+            "like",
+        )
+        for row in rows
+    ], total
+
+
+def _short_trigram_query(
+    connection: sqlite3.Connection,
+    query: str,
+) -> bool:
+    if fts5_table_tokenizer(connection, "speeches_fts") != "trigram":
+        return False
+    literal = query.strip()
+    if len(literal) >= 2 and literal.startswith('"') and literal.endswith('"'):
+        literal = literal[1:-1]
+    return len(literal) < 3
+
+
+def search_with_report(
+    connection: sqlite3.Connection, query: str, k: int = 10
+) -> tuple[list[dict[str, Any]], SearchReport]:
+    """Return one search path's results and its execution report."""
+    connection.row_factory = sqlite3.Row
+    fts_error: str | None = None
+    fallback_reason: str | None = None
+    if _short_trigram_query(connection, query):
+        fallback_reason = "query_too_short_for_trigram"
+    else:
+        try:
+            total = int(
+                connection.execute(
+                    """
+                    SELECT COUNT(*)
+                    FROM speeches_fts
+                    JOIN speeches AS s ON s.rowid = speeches_fts.rowid
+                    JOIN meetings AS m ON m.meeting_id = s.meeting_id
+                    WHERE speeches_fts MATCH ?
+                    """,
+                    (query,),
+                ).fetchone()[0]
+            )
+            if total:
+                rows = connection.execute(
+                    """
+                    SELECT
+                        s.speech_id, s.speaker, s.speaker_role, s.text,
+                        s.locator, m.date, m.meeting_name, m.council_name,
+                        m.source_url, m.fetched_at,
+                        snippet(
+                            speeches_fts,
+                            0,
+                            '【',
+                            '】',
+                            '…',
+                            24
+                        ) AS fts_snippet
+                    FROM speeches_fts
+                    JOIN speeches AS s ON s.rowid = speeches_fts.rowid
+                    JOIN meetings AS m ON m.meeting_id = s.meeting_id
+                    WHERE speeches_fts MATCH ?
+                    ORDER BY bm25(speeches_fts)
+                    LIMIT ?
+                    """,
+                    (query, k),
+                ).fetchall()
+                results = [
+                    _row_to_result(row, row["fts_snippet"], "fts")
+                    for row in rows
+                ]
+                if results:
+                    return results, {
+                        "query": query,
+                        "total_matches": total,
+                        "truncated": total > len(results),
+                        "search_path": "fts",
+                        "fts_error": None,
+                        "fallback_reason": None,
+                    }
+            fallback_reason = "no_fts_matches"
+        except sqlite3.OperationalError as exc:
+            fts_error = str(exc)
+            fallback_reason = "fts_error"
+
+    results, total = _like_search(connection, query, k)
+    return results, {
+        "query": query,
+        "total_matches": total,
+        "truncated": total > len(results),
+        "search_path": "like",
+        "fts_error": fts_error,
+        "fallback_reason": fallback_reason,
+    }
+
+
+def search_database(
+    connection: sqlite3.Connection,
+    query: str,
+    k: int = 10,
+) -> list[dict[str, Any]]:
+    results, _report = search_with_report(connection, query, k)
     return results
 
 
@@ -118,11 +236,21 @@ def main() -> int:
         return 2
     try:
         with closing(sqlite3.connect(Path(args.db))) as connection:
-            results = search_database(connection, args.query, args.k)
+            results, report = search_with_report(
+                connection,
+                args.query,
+                args.k,
+            )
     except sqlite3.Error as exc:
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
-    print(json.dumps(results, ensure_ascii=False, indent=2))
+    print(
+        json.dumps(
+            {"report": report, "results": results},
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
     return 0
 
 

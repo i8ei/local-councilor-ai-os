@@ -103,6 +103,11 @@ class GreikiAdapterTests(unittest.TestCase):
 
         self.assertEqual(1, report["documents"])
         self.assertGreaterEqual(report["articles"], 2)
+        self.assertEqual(
+            report["fts_tokenizer"],
+            report["fts_schema"]["tokenizer"],
+        )
+        self.assertFalse(report["fts_schema"]["rebuilt"])
         self.assertGreaterEqual(len(hits), 1)
         self.assertEqual(DOC_1_URL, hits[0]["source_url"])
         self.assertGreaterEqual(len(pack["items"]), 1)

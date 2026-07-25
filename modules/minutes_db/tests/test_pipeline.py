@@ -5,6 +5,7 @@ from __future__ import annotations
 import io
 import json
 import sqlite3
+import sys
 import tempfile
 import unittest
 from contextlib import redirect_stdout
@@ -14,9 +15,10 @@ from unittest.mock import patch
 
 from lcaios.http import HttpClient, _RawResponse
 from modules.minutes_db import ingest
+from modules.minutes_db import search as minutes_search
 from modules.minutes_db.context_pack import build_context_pack
 from modules.minutes_db.ingest import ensure_schema, store_meeting
-from modules.minutes_db.search import search_database
+from modules.minutes_db.search import search_database, search_with_report
 
 
 def synthetic_document(text: str) -> dict[str, object]:
@@ -51,6 +53,21 @@ def synthetic_document(text: str) -> dict[str, object]:
             "issues": [],
         },
     }
+
+
+def synthetic_documents(texts: list[str]) -> dict[str, object]:
+    document = synthetic_document(texts[0])
+    document["speeches"] = [
+        {
+            "seq": index,
+            "speaker": f"架空議員{index}",
+            "speaker_role": "議員",
+            "text": text,
+            "locator": f"paragraph:{index}",
+        }
+        for index, text in enumerate(texts, start=1)
+    ]
+    return document
 
 
 class PipelineTests(unittest.TestCase):
@@ -127,6 +144,188 @@ class PipelineTests(unittest.TestCase):
         hits = search_database(self.connection, "水", k=3)
         self.assertEqual(1, len(hits))
         self.assertIn("水", hits[0]["text"])
+
+    def test_trigram_finds_substring_in_long_cjk_run(self) -> None:
+        status = ensure_schema(self.connection)
+        if status["tokenizer"] != "trigram":
+            self.skipTest("SQLite trigram tokenizer is unavailable")
+        store_meeting(
+            self.connection,
+            synthetic_document(
+                "架空町介護保険事業の運営について質問します。"
+            ),
+        )
+
+        rows, report = search_with_report(
+            self.connection,
+            "介護保険",
+            k=10,
+        )
+
+        self.assertEqual(1, len(rows))
+        self.assertEqual("fts", rows[0]["search_path"])
+        self.assertEqual("fts", report["search_path"])
+        self.assertEqual(1, report["total_matches"])
+
+    def test_successful_fts_result_is_not_padded_with_like_rows(self) -> None:
+        status = ensure_schema(self.connection)
+        if status["tokenizer"] != "trigram":
+            self.skipTest("SQLite trigram tokenizer is unavailable")
+        store_meeting(
+            self.connection,
+            synthetic_documents(
+                [
+                    "介護保険の対象です。",
+                    "介護保険の手続です。",
+                    "介護保険の給付です。",
+                ]
+            ),
+        )
+        keep_rowid = self.connection.execute(
+            "SELECT rowid FROM speeches ORDER BY seq LIMIT 1"
+        ).fetchone()[0]
+        self.connection.execute(
+            "DELETE FROM speeches_fts WHERE rowid != ?",
+            (keep_rowid,),
+        )
+
+        rows, report = search_with_report(
+            self.connection,
+            "介護保険",
+            k=10,
+        )
+
+        self.assertEqual(1, len(rows))
+        self.assertEqual("fts", report["search_path"])
+        self.assertTrue(all(row["search_path"] == "fts" for row in rows))
+
+    def test_fts_error_is_visible_in_fallback_report(self) -> None:
+        store_meeting(
+            self.connection,
+            synthetic_document("介護保険の対象です。"),
+        )
+        self.connection.execute("DROP TABLE speeches_fts")
+
+        rows, report = search_with_report(
+            self.connection,
+            "介護保険",
+            k=10,
+        )
+
+        self.assertEqual(1, len(rows))
+        self.assertEqual("like", rows[0]["search_path"])
+        self.assertEqual("like", report["search_path"])
+        self.assertEqual("fts_error", report["fallback_reason"])
+        self.assertIn("speeches_fts", report["fts_error"] or "")
+
+    def test_like_report_counts_matches_beyond_limit(self) -> None:
+        store_meeting(
+            self.connection,
+            synthetic_documents(
+                ["予算を審議します。", "予算を補正します。", "予算を公表します。"]
+            ),
+        )
+
+        rows, report = search_with_report(self.connection, "予算", k=1)
+
+        self.assertEqual(1, len(rows))
+        self.assertEqual("like", report["search_path"])
+        self.assertEqual(3, report["total_matches"])
+        self.assertTrue(report["truncated"])
+        self.assertEqual(
+            "query_too_short_for_trigram",
+            report["fallback_reason"],
+        )
+        self.assertIsNone(report["fts_error"])
+
+    def test_search_main_prints_report_and_named_results(self) -> None:
+        store_meeting(
+            self.connection,
+            synthetic_document("予算を審議します。"),
+        )
+        self.connection.commit()
+        stdout = io.StringIO()
+        with (
+            patch.object(
+                sys,
+                "argv",
+                [
+                    "search.py",
+                    "予算",
+                    "--db",
+                    str(self.database),
+                    "--k",
+                    "1",
+                ],
+            ),
+            redirect_stdout(stdout),
+        ):
+            self.assertEqual(0, minutes_search.main())
+
+        payload = json.loads(stdout.getvalue())
+        self.assertEqual(
+            {
+                "query",
+                "total_matches",
+                "truncated",
+                "search_path",
+                "fts_error",
+                "fallback_reason",
+            },
+            set(payload["report"]),
+        )
+        self.assertIsInstance(payload["results"], list)
+
+    def test_ensure_schema_rebuilds_old_unicode61_database(self) -> None:
+        connection = sqlite3.connect(":memory:")
+        try:
+            connection.executescript(
+                ingest.SCHEMA_PATH.read_text(encoding="utf-8")
+            )
+            store_meeting(
+                connection,
+                synthetic_document(
+                    "架空町介護保険事業の運営について質問します。"
+                ),
+            )
+            old_matches = connection.execute(
+                """
+                SELECT COUNT(*)
+                FROM speeches_fts
+                WHERE speeches_fts MATCH ?
+                """,
+                ("介護保険",),
+            ).fetchone()[0]
+            relational_count = connection.execute(
+                "SELECT COUNT(*) FROM speeches"
+            ).fetchone()[0]
+            if not ingest.supports_fts5_trigram(connection):
+                self.skipTest("SQLite trigram tokenizer is unavailable")
+
+            status = ensure_schema(connection)
+            rows, report = search_with_report(
+                connection,
+                "介護保険",
+                k=10,
+            )
+
+            self.assertEqual(0, old_matches)
+            self.assertEqual("trigram", status["tokenizer"])
+            self.assertTrue(status["rebuilt"])
+            self.assertEqual(
+                "unicode61",
+                status["previous_tokenizer"],
+            )
+            self.assertEqual(
+                relational_count,
+                connection.execute(
+                    "SELECT COUNT(*) FROM speeches"
+                ).fetchone()[0],
+            )
+            self.assertEqual(1, len(rows))
+            self.assertEqual("fts", report["search_path"])
+        finally:
+            connection.close()
 
     def test_manifest_distinguishes_cached_and_refreshed_retrieval(self) -> None:
         index_url = "https://example.invalid/council/index.html"
