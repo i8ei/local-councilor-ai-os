@@ -199,7 +199,24 @@ def find_header_columns(
             raise XlsxError(
                 f"見出し「{aliases[0]}」を先頭{max_row}行から発見できません"
             )
-        alias_index, _, cell, alias = min(found, key=lambda item: (item[0], item[1]))
+        alias_index = min(item[0] for item in found)
+        winning = [item for item in found if item[0] == alias_index]
+        columns = {item[2].column for item in winning}
+        if len(columns) > 1:
+            first_by_column: dict[int, Cell] = {}
+            for _, _, candidate, _ in winning:
+                current = first_by_column.get(candidate.column)
+                if current is None or candidate.row < current.row:
+                    first_by_column[candidate.column] = candidate
+            details = ", ".join(
+                f"{cell.ref}「{cell.value}」"
+                for _, cell in sorted(first_by_column.items())
+            )
+            raise XlsxError(
+                f"見出しキー「{key}」が複数列に一致しました: "
+                f"{details}"
+            )
+        _, _, cell, alias = min(winning, key=lambda item: item[1])
         matches[key] = HeaderMatch(
             key=key,
             column=cell.column,

@@ -70,7 +70,7 @@ def _check_comparison(connection: sqlite3.Connection) -> int:
         print(
             f"{_label(row)} {row['side']} {row['grain']} "
             f"本年度={row['current_year_amount']} 前年度={row['previous_year_amount']} "
-            f"比較={row['comparison_amount']} 差額={difference}"
+            f"比較={row['comparison_amount']} 差額={difference} 単位={row['unit']}"
         )
         if difference != 0:
             failures += 1
@@ -100,7 +100,8 @@ def _check_supplement(connection: sqlite3.Connection) -> int:
         print(
             f"{_label(row)} {row['side']} {row['grain']} "
             f"補正前={row['pre_supplement_amount']} 補正={row['supplement_amount']} "
-            f"補正後={row['post_supplement_amount']} 差額={difference}"
+            f"補正後={row['post_supplement_amount']} 差額={difference} "
+            f"単位={row['unit']}"
         )
         if difference != 0:
             failures += 1
@@ -130,7 +131,12 @@ def _parent_rows(connection: sqlite3.Connection, grain: str) -> list[sqlite3.Row
     ))
 
 
-def _child_sum(connection: sqlite3.Connection, parent: sqlite3.Row, child_grain: str, field: str) -> int | None:
+def _child_values(
+    connection: sqlite3.Connection,
+    parent: sqlite3.Row,
+    child_grain: str,
+    field: str,
+) -> list[sqlite3.Row]:
     if field not in AMOUNT_FIELDS:
         raise ValueError(f"Unsupported amount field: {field}")
     filters = [
@@ -153,10 +159,20 @@ def _child_sum(connection: sqlite3.Connection, parent: sqlite3.Row, child_grain:
         if parent[key] is not None:
             filters.append(f"{key} = :{key}")
             params[key] = parent[key]
-    rows = connection.execute(
-        f"SELECT {field} AS value FROM budget_line WHERE " + " AND ".join(filters),
+    return list(connection.execute(
+        f"SELECT {field} AS value, unit FROM budget_line WHERE "
+        + " AND ".join(filters),
         params,
-    ).fetchall()
+    ))
+
+
+def _child_sum(
+    connection: sqlite3.Connection,
+    parent: sqlite3.Row,
+    child_grain: str,
+    field: str,
+) -> int | None:
+    rows = _child_values(connection, parent, child_grain, field)
     values = [row["value"] for row in rows if row["value"] is not None]
     if not values:
         return None
@@ -173,14 +189,40 @@ def _check_hierarchy(connection: sqlite3.Connection) -> int:
             parent_amount = _amount(parent, "current_year_amount")
             if parent_amount is None:
                 continue
-            child_amount = _child_sum(connection, parent, child_grain, "current_year_amount")
-            if child_amount is None:
+            child_rows = _child_values(
+                connection,
+                parent,
+                child_grain,
+                "current_year_amount",
+            )
+            child_values = [
+                row["value"] for row in child_rows if row["value"] is not None
+            ]
+            if not child_values:
                 continue
+            child_amount = int(sum(child_values))
             found = True
+            child_units = sorted(
+                {
+                    str(row["unit"])
+                    for row in child_rows
+                    if row["value"] is not None
+                }
+            )
+            if len(child_units) != 1 or child_units[0] != parent["unit"]:
+                print(
+                    f"{_label(parent)} {parent['side']} "
+                    f"{parent_grain}->{child_grain} "
+                    f"単位不一致=親:{parent['unit']} "
+                    f"子:{','.join(child_units)}"
+                )
+                failures += 1
+                continue
             difference = child_amount - parent_amount
             print(
                 f"{_label(parent)} {parent['side']} {parent_grain}->{child_grain} "
-                f"親={parent_amount} 子合計={child_amount} 差額={difference}"
+                f"親={parent_amount} 子合計={child_amount} 差額={difference} "
+                f"単位={parent['unit']}"
             )
             if difference != 0:
                 failures += 1
@@ -190,9 +232,19 @@ def _check_hierarchy(connection: sqlite3.Connection) -> int:
 
 
 def _total_amounts(connection: sqlite3.Connection, key: tuple[Any, ...]) -> dict[str, int]:
+    return {
+        side: amount
+        for side, (amount, _unit) in _total_entries(connection, key).items()
+    }
+
+
+def _total_entries(
+    connection: sqlite3.Connection,
+    key: tuple[Any, ...],
+) -> dict[str, tuple[int, str]]:
     rows = connection.execute(
         """
-        SELECT side, current_year_amount, post_supplement_amount
+        SELECT side, current_year_amount, post_supplement_amount, unit
         FROM budget_line
         WHERE fiscal_year = ? AND account_name = ? AND budget_stage = ?
           AND COALESCE(proposal_no, '') = COALESCE(?, '')
@@ -200,13 +252,13 @@ def _total_amounts(connection: sqlite3.Connection, key: tuple[Any, ...]) -> dict
         """,
         key,
     ).fetchall()
-    result: dict[str, int] = {}
+    result: dict[str, tuple[int, str]] = {}
     for row in rows:
         amount = row["current_year_amount"]
         if amount is None:
             amount = row["post_supplement_amount"]
         if amount is not None:
-            result[row["side"]] = int(amount)
+            result[row["side"]] = (int(amount), str(row["unit"]))
     return result
 
 
@@ -227,16 +279,28 @@ def _check_balance(connection: sqlite3.Connection) -> int:
         print("  欠落=予算行")
         return 1
     for key in keys:
-        amounts = _total_amounts(connection, key)
+        entries = _total_entries(connection, key)
         label = f"年度={key[0]} 会計={key[1]} 段階={key[2]}"
         if key[3]:
             label += f" 議案={key[3]}"
-        if "revenue" not in amounts or "expenditure" not in amounts:
+        if "revenue" not in entries or "expenditure" not in entries:
             print(f"{label} 欠落=歳入または歳出のtotal行")
             failures += 1
             continue
-        difference = amounts["revenue"] - amounts["expenditure"]
-        print(f"{label} 歳入={amounts['revenue']} 歳出={amounts['expenditure']} 差額={difference}")
+        revenue, revenue_unit = entries["revenue"]
+        expenditure, expenditure_unit = entries["expenditure"]
+        if revenue_unit != expenditure_unit:
+            print(
+                f"{label} 単位不一致=歳入:{revenue_unit} "
+                f"歳出:{expenditure_unit}"
+            )
+            failures += 1
+            continue
+        difference = revenue - expenditure
+        print(
+            f"{label} 歳入={revenue} 歳出={expenditure} "
+            f"差額={difference} 単位={revenue_unit}"
+        )
         if difference != 0:
             failures += 1
     return failures

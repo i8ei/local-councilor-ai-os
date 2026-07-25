@@ -191,14 +191,21 @@ def generate_authority_map(
                         f"            locator_id: {_quote(indicator)}",
                         f"            field: {_quote(indicator)}",
                         (
+                            "            source_name: "
+                            + _quote(cross_check["secondary_source_name"])
+                        ),
+                        (
                             "            source_url: "
                             + _quote(cross_check["secondary_source_url"])
                         ),
                         (
-                            "            comparison_rule: "
-                            + _quote(cross_check["comparison_rule"])
+                            "            sha256: "
+                            + _quote(cross_check["secondary_sha256"])
                         ),
-                        '            tolerance: "0.0001"',
+                        (
+                            "            comparison: "
+                            + _quote(cross_check["comparison"])
+                        ),
                     ]
                 )
             else:
@@ -209,7 +216,7 @@ def generate_authority_map(
                     "        verification:",
                     (
                         "          required_state: "
-                        + _quote("reconciled" if cross_check else "verified")
+                        + _quote("verified")
                     ),
                     "          required_checks:",
                     '            - "nonempty definition and unit"',

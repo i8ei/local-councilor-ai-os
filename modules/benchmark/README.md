@@ -16,9 +16,11 @@
 まず各自治体で `bootstrap` を実行して `municipality.db` を作ります。
 
 ```bash
-python3 -m bootstrap.cli 'A町' --out-dir bootstrap/output/A町 --cross-check
-python3 -m bootstrap.cli 'B町' --prefecture '〇〇県' --out-dir bootstrap/output/B町 --cross-check
+python3 -m bootstrap.cli 'A町' --out-dir bootstrap/output/A町
+python3 -m bootstrap.cli 'B町' --prefecture '〇〇県' --out-dir bootstrap/output/B町
 ```
+
+決算カードをローカルで確認する場合は、各実行に`--cross-check`を追加して照合用XLSXを準備できます。このオプションは決算カードから値を抽出せず、比較や一致判定も行いません。
 
 次に比較DBを作ります。
 

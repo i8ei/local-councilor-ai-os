@@ -26,17 +26,19 @@ indicators:
           time_basis: "<fiscal-year-or-calendar-year-rule>"
           unit: "<source-unit>"
         cross_checks:
-          - source_id: "<source-id>"
-            locator_id: "<locator-id>"
-            field: "<field-or-column-name>"
-            comparison_rule: "<comparison-rule>"
-            tolerance: "<tolerance-or-null>"
+          - source_id: "<secondary-source-id>"
+            locator_id: "<secondary-locator-id>"
+            field: "<field-or-indicator-name>"
+            source_name: "<secondary-source-name>"
+            source_url: "<official-year-page-url>"
+            sha256: "<sha256>"
+            comparison: "manual"
         transformations:
           - operation: "<operation>"
             expression: "<deterministic-expression>"
             output_unit: "<unit>"
         verification:
-          required_state: "<verified-or-reconciled>"
+          required_state: "verified"
           required_checks: []
         caveats: []
 

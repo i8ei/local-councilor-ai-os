@@ -132,6 +132,41 @@ class BudgetPipelineTests(unittest.TestCase):
             ingest_csv.ingest_csv(csv_path, db)
             self.assertNotEqual(0, verify_totals.verify(db))
 
+    def test_verification_fails_on_mixed_child_units(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            csv_path = root / "budget.csv"
+            db = root / "budget.db"
+            child_in_yen = ko(
+                "revenue",
+                "1",
+                "1",
+                "架空税A",
+                "50",
+                "50",
+            )
+            child_in_yen["unit"] = "円"
+            rows = [
+                total("revenue", "100"),
+                total("expenditure", "100"),
+                kan("revenue", "1", "架空税", "100", "100"),
+                child_in_yen,
+                ko("revenue", "1", "2", "架空税B", "50", "50"),
+            ]
+            write_csv(csv_path, rows)
+            ingest_csv.ingest_csv(csv_path, db)
+            output = io.StringIO()
+
+            with redirect_stdout(output):
+                status = verify_totals.verify(db)
+
+        self.assertEqual(1, status)
+        self.assertIn(
+            "単位不一致=親:千円 子:円,千円",
+            output.getvalue(),
+        )
+        self.assertIn("検算結果=不合格 不一致件数=1", output.getvalue())
+
     def test_template_contains_source_locator(self) -> None:
         output = io.StringIO()
         csv_templates.write_template(output)

@@ -196,20 +196,61 @@ def _load_config(path: str | Path) -> dict[str, Any]:
     if not isinstance(index_urls, list) or not index_urls:
         raise ValueError("config.index_url must be a URL or URL list")
     data["index_url"] = index_urls
+    allow_hosts = data.get("allow_hosts", [])
+    if (
+        not isinstance(allow_hosts, list)
+        or not all(isinstance(host, str) and host.strip() for host in allow_hosts)
+    ):
+        raise ValueError("config.allow_hosts must be a list of hostnames")
     for key in ("link_include_regex", "link_exclude_regex"):
         if data.get(key):
             re.compile(str(data[key]))
     return data
 
 
-def discover_documents(config: dict[str, Any], *, cache_dir: str | Path | None = None, limit: int | None = None) -> list[dict[str, Any]]:
+class DiscoveryResults(list[dict[str, Any]]):
+    """List-compatible discovery result with visible rejected candidates."""
+
+    def __init__(
+        self,
+        documents: list[dict[str, Any]] | None = None,
+        *,
+        skipped_urls: list[str] | None = None,
+    ) -> None:
+        super().__init__(documents or [])
+        self.skipped_urls = skipped_urls or []
+
+
+def _allowed_hosts(config: dict[str, Any]) -> set[str]:
+    values = config.get("allow_hosts", [])
+    if (
+        not isinstance(values, list)
+        or not all(isinstance(host, str) and host.strip() for host in values)
+    ):
+        raise ValueError("config.allow_hosts must be a list of hostnames")
+    return {host.strip().casefold() for host in values}
+
+
+def discover_documents(
+    config: dict[str, Any],
+    *,
+    cache_dir: str | Path | None = None,
+    limit: int | None = None,
+) -> DiscoveryResults:
     """Discover candidate regulation documents from configured official index pages."""
     include = re.compile(str(config["link_include_regex"])) if config.get("link_include_regex") else None
     exclude = re.compile(str(config["link_exclude_regex"])) if config.get("link_exclude_regex") else None
-    results: list[dict[str, Any]] = []
+    results = DiscoveryResults()
     seen: set[str] = set()
+    skipped: set[str] = set()
+    allow_hosts = _allowed_hosts(config)
     for index_url in config["index_url"]:
         fetched = polite_fetch(index_url, cache_dir=cache_dir)
+        # Compare hostnames, not netlocs: an explicit :443/:80 on an otherwise
+        # same-site link must not be mistaken for a different host.
+        index_hostname = (
+            urllib.parse.urlsplit(fetched.final_url).hostname or ""
+        ).casefold()
         parser = _HtmlTextParser()
         parser.feed(fetched.text())
         for href, label in parser.links:
@@ -224,6 +265,12 @@ def discover_documents(config: dict[str, Any], *, cache_dir: str | Path | None =
             if exclude and exclude.search(combined):
                 continue
             if not include and not re.search(r"(条例|規則|要綱|例規|reiki|regulation|rule)", combined, re.I):
+                continue
+            hostname = parsed.hostname.casefold() if parsed.hostname else ""
+            if hostname != index_hostname and hostname not in allow_hosts:
+                if source_url not in skipped:
+                    results.skipped_urls.append(source_url)
+                    skipped.add(source_url)
                 continue
             if source_url in seen:
                 continue
@@ -253,7 +300,27 @@ def fetch_document(ref: dict[str, Any], config: dict[str, Any], *, cache_dir: st
         title = ref.get("title") or Path(urllib.parse.urlsplit(fetched.final_url).path).name
         extractor = "plain-text"
     articles = segment_articles(text)
-    source_name = str(config.get("source_name") or config.get("municipality") or urllib.parse.urlsplit(fetched.final_url).hostname or "official source")
+    source_host = urllib.parse.urlsplit(fetched.final_url).hostname
+    index_urls = config.get("index_url") or []
+    if isinstance(index_urls, str):
+        index_urls = [index_urls]
+    configured_hosts = {
+        host.casefold()
+        for url in [
+            ref.get("discovered_from"),
+            *index_urls,
+        ]
+        if url and (host := urllib.parse.urlsplit(str(url)).hostname)
+    }
+    same_host = bool(
+        source_host and source_host.casefold() in configured_hosts
+    )
+    source_name = str(
+        config.get("source_name")
+        or (config.get("municipality") if same_host else source_host)
+        or source_host
+        or "official source"
+    )
     document = {
         "document": {
             "document_id": ref.get("document_id") or stable_id("regdoc", ref["source_url"]),
@@ -407,6 +474,7 @@ def ingest(config_path: str | Path, db_path: str | Path, *, cache_dir: str | Pat
         "database": str(database),
         "documents": documents,
         "articles": articles,
+        "skipped_urls": refs.skipped_urls,
         "statuses": statuses,
         "fts_tokenizer": tokenizer,
     }
@@ -455,6 +523,7 @@ def main(argv: list[str] | None = None) -> int:
         coverage={
             "documents": result["documents"],
             "articles": result["articles"],
+            "skipped_urls": result["skipped_urls"],
             "statuses": result["statuses"],
             "fts_tokenizer": result["fts_tokenizer"],
         },

@@ -65,11 +65,12 @@ def _utc_now() -> str:
 
 def _verification_state(record: dict[str, Any]) -> str:
     check = record.get("source_locator", {}).get("cross_check", {})
-    if check.get("state") in {"matched", "matched_missing"}:
-        return "reconciled"
-    if check.get("state") == "mismatch":
-        return "needs_review"
-    return "verified_source_extraction"
+    if not check or (
+        check.get("state") == "source_prepared"
+        and check.get("comparison") == "manual"
+    ):
+        return "verified_source_extraction"
+    return "needs_review"
 
 
 def build_database(

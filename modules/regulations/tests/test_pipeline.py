@@ -35,6 +35,61 @@ def result(url: str, body: str, path: Path) -> FetchResult:
 
 
 class RegulationsPipelineTests(unittest.TestCase):
+    def test_discovery_confines_hosts_and_reports_skips(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            allowed_url = "https://files.example.invalid/shared/rule.html"
+            skipped_url = "https://outside.invalid/foreign-regulation.html"
+            index_html = (
+                '<a href="privacy.html">架空町個人情報保護条例</a>'
+                f'<a href="{allowed_url}">架空町共同規則</a>'
+                f'<a href="{skipped_url}">別の架空町条例</a>'
+            )
+            fetched = result(INDEX_URL, index_html, root / "index.cache")
+            config = {
+                "index_url": [INDEX_URL],
+                "allow_hosts": ["FILES.EXAMPLE.INVALID"],
+            }
+
+            with patch(
+                "modules.regulations.ingest.polite_fetch",
+                return_value=fetched,
+            ):
+                refs = ingest.discover_documents(config)
+
+        self.assertIsInstance(refs, list)
+        self.assertEqual([DOC_URL, allowed_url], [ref["source_url"] for ref in refs])
+        self.assertEqual([skipped_url], refs.skipped_urls)
+
+    def test_fetch_document_uses_redirected_host_as_source_name(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            redirected_url = "https://records.example.invalid/rule.html"
+            fetched = result(
+                redirected_url,
+                "<p>第1条 架空の規則を定める。</p>",
+                root / "document.cache",
+            )
+            ref = {
+                "source_url": DOC_URL,
+                "discovered_from": INDEX_URL,
+                "title": "架空町規則",
+            }
+
+            with patch(
+                "modules.regulations.ingest.polite_fetch",
+                return_value=fetched,
+            ):
+                payload = ingest.fetch_document(
+                    ref,
+                    {"municipality": "架空町"},
+                )
+
+        self.assertEqual(
+            "records.example.invalid",
+            payload["document"]["source_name"],
+        )
+
     def test_ingest_search_and_context_pack(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

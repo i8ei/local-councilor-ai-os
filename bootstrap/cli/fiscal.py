@@ -1,8 +1,9 @@
-"""Tier 1b fiscal discovery, overview-XLSX extraction, and card cross-check."""
+"""Tier 1b fiscal discovery and overview-XLSX extraction."""
 
 from __future__ import annotations
 
 import html.parser
+import math
 import re
 import unicodedata
 import urllib.parse
@@ -11,7 +12,6 @@ from typing import Any
 
 from .http import FetchError, FetchResult, HttpClient
 from .xlsx import (
-    Cell,
     HeaderMatch,
     Worksheet,
     XlsxError,
@@ -112,15 +112,21 @@ class _LinkParser(html.parser.HTMLParser):
             self._anchor_text.append(text)
 
     def handle_endtag(self, tag: str) -> None:
-        if tag.lower() != "a" or self._href is None:
+        if tag.lower() != "a":
             return
-        text = " ".join(self._anchor_text).strip()
-        context = " ".join(self._visible[-20:])
-        self.links.append(
-            Link(urllib.parse.urljoin(self.page_url, self._href), text, context)
-        )
+        if self._href is not None:
+            text = " ".join(self._anchor_text).strip()
+            context = " ".join(self._visible[-20:])
+            self.links.append(
+                Link(
+                    urllib.parse.urljoin(self.page_url, self._href),
+                    text,
+                    context,
+                )
+            )
         self._href = None
         self._anchor_text = []
+        self._visible = []
 
 
 def _normalize(value: str) -> str:
@@ -200,7 +206,15 @@ def discover_latest_fiscal_page(
             candidates.append((year, link.url, link.text))
     if not candidates:
         raise FiscalError("市町村別決算状況調の索引から年度ページを発見できません")
-    year, url, label = max(candidates, key=lambda item: (item[0], item[1]))
+    maximum_year = max(item[0] for item in candidates)
+    latest = [item for item in candidates if item[0] == maximum_year]
+    latest_urls = sorted({item[1] for item in latest})
+    if len(latest_urls) > 1:
+        raise FiscalError(
+            f"最新年度 {maximum_year} の市町村別決算状況調ページが"
+            f"複数あります: {', '.join(latest_urls)}"
+        )
+    year, url, label = latest[0]
     return year, url, label, result.fetched_at
 
 
@@ -281,18 +295,21 @@ def _normalize_code(value: str) -> str | None:
 
 
 def _parse_number(raw: str) -> int | float | None:
-    cleaned = (
-        raw.strip()
-        .replace(",", "")
-        .replace("％", "")
-        .replace("%", "")
-    )
-    if cleaned in {"", "-", "―", "－", "***", "*", "…"}:
+    stripped = raw.strip()
+    if stripped in {"", "-", "―", "－", "***", "*", "…"}:
         return None
+    if not re.fullmatch(
+        r"[+-]?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?[％%]?",
+        stripped,
+    ):
+        raise FiscalError(f"財政値を数値として解釈できません: {raw!r}")
+    cleaned = stripped.removesuffix("％").removesuffix("%").replace(",", "")
     try:
         number = float(cleaned)
     except ValueError as error:
         raise FiscalError(f"財政値を数値として解釈できません: {raw!r}") from error
+    if not math.isfinite(number):
+        raise FiscalError(f"財政値が有限の数値ではありません: {raw!r}")
     return int(number) if number.is_integer() else number
 
 
@@ -323,6 +340,37 @@ def _header_spec() -> dict[str, tuple[str, ...]]:
         }
     )
     return result
+
+
+def _header_unit(header: HeaderMatch) -> str | None:
+    units = {
+        "％" if unit == "%" else unit
+        for unit in re.findall(
+            r"百万円|千円|円|％|%",
+            normalize_label(header.cell.value),
+        )
+    }
+    if len(units) > 1:
+        raise FiscalError(
+            f"見出しの単位注記を一意に解釈できません: "
+            f"{header.cell.ref}「{header.cell.value}」"
+        )
+    return next(iter(units)) if units else None
+
+
+def _validate_header_unit(
+    indicator_label: str,
+    expected_unit: str,
+    header: HeaderMatch,
+) -> None:
+    annotated_unit = _header_unit(header)
+    normalized_expected = "％" if expected_unit == "%" else expected_unit
+    if annotated_unit is not None and annotated_unit != normalized_expected:
+        raise FiscalError(
+            f"{indicator_label}の見出し単位が定義と一致しません: "
+            f"{header.cell.ref}「{header.cell.value}」 "
+            f"({annotated_unit} != {normalized_expected})"
+        )
 
 
 def _find_primary_row(
@@ -361,25 +409,28 @@ def parse_overview_xlsx(
     except XlsxError as error:
         raise FiscalError(str(error)) from error
     code = str(municipality["local_government_code_6"])
-    selected: tuple[Worksheet, dict[str, HeaderMatch], int] | None = None
+    candidates: list[tuple[Worksheet, dict[str, HeaderMatch], int]] = []
     errors: list[str] = []
     for sheet in sheets:
         try:
             headers = find_header_columns(sheet.cells, _header_spec(), max_row=200)
-            row_number = _find_primary_row(sheet, headers, code)
-            if row_number is not None:
-                if selected is not None:
-                    raise FiscalError(
-                        f"団体コード {code} を複数シートで発見しました"
-                    )
-                selected = (sheet, headers, row_number)
-        except (XlsxError, FiscalError) as error:
+        except XlsxError as error:
             errors.append(f"{sheet.name}: {error}")
-    if selected is None:
+            continue
+        row_number = _find_primary_row(sheet, headers, code)
+        if row_number is not None:
+            candidates.append((sheet, headers, row_number))
+    if len(candidates) > 1:
+        sheet_names = ", ".join(candidate[0].name for candidate in candidates)
+        raise FiscalError(
+            f"団体コード {code} を複数シートで発見しました: "
+            f"{sheet_names}"
+        )
+    if not candidates:
         detail = "; ".join(errors[:3])
         raise FiscalError(f"概況XLSXに団体コード {code} の行がありません。{detail}")
 
-    sheet, headers, row_number = selected
+    sheet, headers, row_number = candidates[0]
     row = sheet.rows().get(row_number, {})
     name_cell = row.get(headers["municipality_name"].column)
     if name_cell is None:
@@ -393,6 +444,11 @@ def parse_overview_xlsx(
     records: list[dict[str, Any]] = []
     for indicator, spec in INDICATORS.items():
         header = headers[indicator]
+        _validate_header_unit(
+            str(spec["label"]),
+            str(spec["unit"]),
+            header,
+        )
         value_cell = row.get(header.column)
         if value_cell is None:
             raise FiscalError(
@@ -515,136 +571,13 @@ def _discover_card_xlsx(
     }
 
 
-def _locate_card_value(
-    cells: tuple[Cell, ...], label: str, same_row: bool
-) -> tuple[Cell, Cell]:
-    label_cells = [
-        cell for cell in cells if normalize_label(cell.value).startswith(label)
-    ]
-    candidates: list[tuple[int, Cell, Cell]] = []
-    for label_cell in label_cells:
-        for value_cell in cells:
-            row_delta = value_cell.row - label_cell.row
-            column_delta = value_cell.column - label_cell.column
-            if column_delta <= 0 or column_delta > 30:
-                continue
-            if same_row and row_delta != 0:
-                continue
-            if not same_row and not (-1 <= row_delta <= 2):
-                continue
-            try:
-                _parse_number(value_cell.value)
-            except FiscalError:
-                continue
-            score = abs(row_delta) * 2 + column_delta
-            candidates.append((score, label_cell, value_cell))
-    if not candidates:
-        raise FiscalError(f"決算カードの「{label}」に対応する値がありません")
-    _, label_cell, value_cell = min(candidates, key=lambda item: item[0])
-    return label_cell, value_cell
-
-
-def _parse_card_xlsx(
-    xlsx_path: Any,
-    municipality_name: str,
-    fiscal_year: int,
-    discovery: dict[str, Any],
-) -> dict[str, dict[str, Any]]:
-    try:
-        sheets = read_workbook(xlsx_path)
-    except XlsxError as error:
-        raise FiscalError(str(error)) from error
-    matches = [
-        sheet
-        for sheet in sheets
-        if re.sub(r"^\d+", "", _normalize(sheet.name)) == _normalize(municipality_name)
-    ]
-    if len(matches) != 1:
-        raise FiscalError(
-            f"決算カードの自治体シートが1件になりません: "
-            f"{municipality_name} ({len(matches)}件)"
-        )
-    sheet = matches[0]
-    extracted: dict[str, dict[str, Any]] = {}
-    for indicator, spec in INDICATORS.items():
-        label_cell, value_cell = _locate_card_value(
-            sheet.cells,
-            str(spec["label"]),
-            indicator != "keijou_shuushi_hiritsu",
-        )
-        source_locator = {
-            "kind": "xlsx_cross_check",
-            "index_url": CARD_INDEX,
-            "year_page_url": discovery["year_page_url"],
-            "resolved_xlsx_url": discovery["xlsx_url"],
-            "sheet": sheet.name,
-            "label_cell": label_cell.ref,
-            "value_cell": value_cell.ref,
-            "sha256": discovery["xlsx_sha256"],
-        }
-        display_raw_value = _display_raw_value(value_cell.value)
-        if display_raw_value != value_cell.value:
-            source_locator["original_xml_value"] = value_cell.value
-            source_locator["raw_value_display_normalization"] = (
-                "shortened_obvious_binary_float_tail"
-            )
-        extracted[indicator] = {
-            "value": _parse_number(value_cell.value),
-            "raw_value": display_raw_value,
-            "source_name": "総務省 市町村決算カード",
-            "source_url": discovery["year_page_url"],
-            "source_locator": source_locator,
-            "fetched_at": discovery["xlsx_fetched_at"],
-            "as_of": f"{fiscal_year}年度",
-        }
-    return extracted
-
-
-def _apply_cross_check(
-    primary_records: list[dict[str, Any]],
-    secondary: dict[str, dict[str, Any]],
-) -> dict[str, Any]:
-    checks: dict[str, Any] = {}
-    for record in primary_records:
-        indicator = str(record["indicator"])
-        card = secondary[indicator]
-        primary_value = record.get("value")
-        secondary_value = card.get("value")
-        if primary_value is None and secondary_value is None:
-            state = "matched_missing"
-        elif primary_value is None or secondary_value is None:
-            state = "mismatch"
-        else:
-            difference = abs(float(primary_value) - float(secondary_value))
-            state = "matched" if difference <= 0.0001 else "mismatch"
-        check = {
-            "state": state,
-            "comparison_rule": "numeric equality within 0.0001; missing matches missing",
-            "secondary_raw_value": card["raw_value"],
-            "secondary_source_name": card["source_name"],
-            "secondary_source_url": card["source_url"],
-            "secondary_source_locator": card["source_locator"],
-            "secondary_fetched_at": card["fetched_at"],
-        }
-        record["source_locator"]["cross_check"] = check
-        checks[indicator] = check
-    mismatch_count = sum(
-        1 for check in checks.values() if check["state"] == "mismatch"
-    )
-    return {
-        "status": "reconciled" if mismatch_count == 0 else "mismatch",
-        "mismatch_count": mismatch_count,
-        "checks": checks,
-    }
-
-
 def fetch_fiscal(
     municipality: dict[str, Any],
     client: HttpClient,
     *,
     cross_check: bool = False,
 ) -> dict[str, Any]:
-    """Fetch the primary overview workbook and optionally check the fiscal card."""
+    """Fetch the primary workbook and optionally prepare the fiscal card."""
 
     fiscal_year, page_url, page_label, index_fetched_at = (
         discover_latest_fiscal_page(client)
@@ -676,19 +609,35 @@ def fetch_fiscal(
                 str(municipality["prefecture"]),
             )
             card_discovery["year_page_label"] = card_page_label
-            secondary = _parse_card_xlsx(
-                card_workbook.cache_path,
-                str(municipality["name"]),
-                fiscal_year,
-                card_discovery,
+            cross_check_locator = {
+                "state": "source_prepared",
+                "comparison": "manual",
+                "secondary_source_name": "総務省 市町村決算カード",
+                "secondary_source_url": card_discovery["year_page_url"],
+                "secondary_resolved_xlsx_url": card_discovery["xlsx_url"],
+                "secondary_sha256": card_discovery["xlsx_sha256"],
+                "secondary_cache_path": str(card_workbook.cache_path),
+                "secondary_fetched_at": card_discovery["xlsx_fetched_at"],
+            }
+            for record in records:
+                record["source_locator"]["cross_check"] = dict(
+                    cross_check_locator
+                )
+            cross_check_result = {
+                "status": "source_prepared",
+                "comparison": "manual",
+                "discovery": card_discovery,
+                "cache_path": str(card_workbook.cache_path),
+            }
+            warnings.append(
+                "決算カードXLSXを手動検証用に準備しました。"
+                "値は自動で突合していません。"
             )
-            cross_check_result = _apply_cross_check(records, secondary)
-            cross_check_result["discovery"] = card_discovery
-            if cross_check_result["status"] == "mismatch":
-                warnings.append("決算状況調と決算カードの一部指標が一致しません")
         except (FiscalError, KeyError, OSError) as error:
             cross_check_result = {"status": "failed", "error": str(error)}
-            warnings.append(f"任意の決算カード検算に失敗しました: {error}")
+            warnings.append(
+                f"任意の決算カード資料の準備に失敗しました: {error}"
+            )
     return {
         "fiscal_year": fiscal_year,
         "status": "parsed_primary_overview_xlsx",
