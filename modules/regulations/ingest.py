@@ -15,17 +15,23 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
+from lcaios.http import (
+    REGULATIONS_USER_AGENT,
+    CacheTier,
+    FetchError,
+    HttpClient,
+)
 from lcaios.module_manifest import (
     begin_module_run,
     fail_module_run,
     finish_database_run,
     input_file_record,
 )
-from modules.minutes_db.adapters.base import FetchError, polite_fetch
 
 MODULE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = MODULE_DIR.parents[1]
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
+REGULATIONS_STATIC_DEFAULT_CACHE_DIR = MODULE_DIR / ".cache" / "static"
 _BLOCK_TAGS = {
     "article", "br", "dd", "div", "dl", "dt", "h1", "h2", "h3", "h4",
     "h5", "h6", "li", "main", "p", "pre", "section", "table", "td", "th",
@@ -234,7 +240,7 @@ def _allowed_hosts(config: dict[str, Any]) -> set[str]:
 def discover_documents(
     config: dict[str, Any],
     *,
-    cache_dir: str | Path | None = None,
+    client: HttpClient,
     limit: int | None = None,
 ) -> DiscoveryResults:
     """Discover candidate regulation documents from configured official index pages."""
@@ -245,7 +251,7 @@ def discover_documents(
     skipped: set[str] = set()
     allow_hosts = _allowed_hosts(config)
     for index_url in config["index_url"]:
-        fetched = polite_fetch(index_url, cache_dir=cache_dir)
+        fetched = client.fetch(index_url, tier=CacheTier.INDEX)
         # Compare hostnames, not netlocs: an explicit :443/:80 on an otherwise
         # same-site link must not be mistaken for a different host.
         index_hostname = (
@@ -286,9 +292,14 @@ def discover_documents(
     return results
 
 
-def fetch_document(ref: dict[str, Any], config: dict[str, Any], *, cache_dir: str | Path | None = None) -> dict[str, Any]:
+def fetch_document(
+    ref: dict[str, Any],
+    config: dict[str, Any],
+    *,
+    client: HttpClient,
+) -> dict[str, Any]:
     """Fetch one regulation document and normalize it into articles."""
-    fetched = polite_fetch(ref["source_url"], cache_dir=cache_dir)
+    fetched = client.fetch(ref["source_url"], tier=CacheTier.DOCUMENT)
     parser = _HtmlTextParser()
     if fetched.content_type in {"text/html", "application/xhtml+xml"} or fetched.text().lstrip().startswith("<"):
         parser.feed(fetched.text())
@@ -452,9 +463,25 @@ def store_document(connection: sqlite3.Connection, payload: dict[str, Any]) -> i
     return stored
 
 
-def ingest(config_path: str | Path, db_path: str | Path, *, cache_dir: str | Path | None = None, limit: int | None = None) -> dict[str, Any]:
+def ingest(
+    config_path: str | Path,
+    db_path: str | Path,
+    *,
+    cache_dir: str | Path | None = None,
+    limit: int | None = None,
+    offline: bool = False,
+    refresh: bool = False,
+    timeout: float = 90,
+) -> dict[str, Any]:
+    client = HttpClient(
+        cache_dir or REGULATIONS_STATIC_DEFAULT_CACHE_DIR,
+        user_agent=REGULATIONS_USER_AGENT,
+        offline=offline,
+        refresh=refresh,
+        timeout=timeout,
+    )
     config = _load_config(config_path)
-    refs = discover_documents(config, cache_dir=cache_dir, limit=limit)
+    refs = discover_documents(config, client=client, limit=limit)
     database = Path(db_path)
     database.parent.mkdir(parents=True, exist_ok=True)
     with closing(sqlite3.connect(database)) as connection, connection:
@@ -464,7 +491,7 @@ def ingest(config_path: str | Path, db_path: str | Path, *, cache_dir: str | Pat
         articles = 0
         statuses: dict[str, int] = {}
         for ref in refs:
-            payload = fetch_document(ref, config, cache_dir=cache_dir)
+            payload = fetch_document(ref, config, client=client)
             articles += store_document(connection, payload)
             status = str((payload.get("provenance") or {}).get("status", "discovered"))
             statuses[status] = statuses.get(status, 0) + 1
@@ -486,6 +513,22 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--db", required=True, help="Output SQLite database")
     parser.add_argument("--limit", type=int, default=None, help="Document limit")
     parser.add_argument("--cache-dir", help="Override cache directory")
+    parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="ネットワークを使わず検証済みローカルキャッシュだけを使う",
+    )
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="検証済みcacheがあっても公式参照先を再取得する",
+    )
+    parser.add_argument(
+        "--timeout",
+        type=float,
+        default=90,
+        help="取得タイムアウト秒",
+    )
     parser.add_argument("--manifest-dir", type=Path)
     parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
@@ -506,10 +549,24 @@ def main(argv: list[str] | None = None) -> int:
                 "config": args.config,
                 "database": args.db,
                 "limit": args.limit,
-                "cache_directory": args.cache_dir,
+                "cache_directory": (
+                    args.cache_dir
+                    or str(REGULATIONS_STATIC_DEFAULT_CACHE_DIR)
+                ),
+                "offline": args.offline,
+                "refresh": args.refresh,
+                "timeout": args.timeout,
             },
         )
-        result = ingest(args.config, args.db, cache_dir=args.cache_dir, limit=args.limit)
+        result = ingest(
+            args.config,
+            args.db,
+            cache_dir=args.cache_dir,
+            limit=args.limit,
+            offline=args.offline,
+            refresh=args.refresh,
+            timeout=args.timeout,
+        )
     except (OSError, ValueError, RuntimeError, sqlite3.Error, FetchError, json.JSONDecodeError) as exc:
         fail_module_run(manifest_path, manifest, exc)
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)

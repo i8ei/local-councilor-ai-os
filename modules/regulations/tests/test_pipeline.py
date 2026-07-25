@@ -11,7 +11,8 @@ from contextlib import closing
 from pathlib import Path
 from unittest.mock import patch
 
-from modules.minutes_db.adapters.base import FetchResult
+from lcaios.http import REGULATIONS_USER_AGENT, CacheTier, FetchResult
+from lcaios.tests.http_fakes import FakeHttpClient
 from modules.regulations import context_pack, ingest, search
 
 INDEX_URL = "https://example.invalid/reiki/index.html"
@@ -51,15 +52,13 @@ class RegulationsPipelineTests(unittest.TestCase):
                 "allow_hosts": ["FILES.EXAMPLE.INVALID"],
             }
 
-            with patch(
-                "modules.regulations.ingest.polite_fetch",
-                return_value=fetched,
-            ):
-                refs = ingest.discover_documents(config)
+            client = FakeHttpClient({INDEX_URL: fetched})
+            refs = ingest.discover_documents(config, client=client)
 
         self.assertIsInstance(refs, list)
         self.assertEqual([DOC_URL, allowed_url], [ref["source_url"] for ref in refs])
         self.assertEqual([skipped_url], refs.skipped_urls)
+        self.assertEqual([(INDEX_URL, CacheTier.INDEX)], client.calls)
 
     def test_fetch_document_uses_redirected_host_as_source_name(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -76,19 +75,18 @@ class RegulationsPipelineTests(unittest.TestCase):
                 "title": "架空町規則",
             }
 
-            with patch(
-                "modules.regulations.ingest.polite_fetch",
-                return_value=fetched,
-            ):
-                payload = ingest.fetch_document(
-                    ref,
-                    {"municipality": "架空町"},
-                )
+            client = FakeHttpClient({DOC_URL: fetched})
+            payload = ingest.fetch_document(
+                ref,
+                {"municipality": "架空町"},
+                client=client,
+            )
 
         self.assertEqual(
             "records.example.invalid",
             payload["document"]["source_name"],
         )
+        self.assertEqual([(DOC_URL, CacheTier.DOCUMENT)], client.calls)
 
     def test_ingest_search_and_context_pack(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -113,10 +111,29 @@ class RegulationsPipelineTests(unittest.TestCase):
                 DOC_URL: result(DOC_URL, document_html, root / "doc.cache"),
             }
             db = root / "regulations.db"
-            with patch("modules.regulations.ingest.polite_fetch", side_effect=lambda url, **_: responses[url]):
+            client = FakeHttpClient(responses)
+            with patch.object(
+                ingest,
+                "HttpClient",
+                return_value=client,
+            ) as http_client:
                 report = ingest.ingest(config, db, limit=1)
+            http_client.assert_called_once_with(
+                ingest.REGULATIONS_STATIC_DEFAULT_CACHE_DIR,
+                user_agent=REGULATIONS_USER_AGENT,
+                offline=False,
+                refresh=False,
+                timeout=90,
+            )
             self.assertEqual(1, report["documents"])
             self.assertEqual(3, report["articles"])
+            self.assertEqual(
+                [
+                    (INDEX_URL, CacheTier.INDEX),
+                    (DOC_URL, CacheTier.DOCUMENT),
+                ],
+                client.calls,
+            )
             with closing(sqlite3.connect(db)) as connection, connection:
                 hits = search.search_database(connection, "個人情報", 5)
                 pack = context_pack.build_context_pack(
