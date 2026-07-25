@@ -226,6 +226,7 @@ def ingest(args: argparse.Namespace) -> dict[str, Any]:
             "note": (
                 "索引とfollow対象HTMLだけを確認。会議本文・PDF・DBは未取得"
             ),
+            "retrieval": client.retrieval_report(),
         }
     if not args.db:
         raise ValueError("--db is required unless --dry-run is used")
@@ -257,6 +258,7 @@ def ingest(args: argparse.Namespace) -> dict[str, Any]:
         "speeches": speech_count,
         "statuses": statuses,
         "fts_tokenizer": tokenizer,
+        "retrieval": client.retrieval_report(),
     }
 
 
@@ -329,6 +331,8 @@ def main(argv: list[str] | None = None) -> int:
         fail_module_run(manifest_path, manifest, exc)
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
+    if manifest is not None:
+        manifest["retrieval"] = result["retrieval"]
     if args.dry_run:
         finish_dry_run(
             manifest_path,

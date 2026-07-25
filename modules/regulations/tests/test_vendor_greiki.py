@@ -8,7 +8,8 @@ import json
 import sqlite3
 import tempfile
 import unittest
-from contextlib import closing, redirect_stderr
+from contextlib import closing, redirect_stderr, redirect_stdout
+from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
@@ -16,7 +17,9 @@ from lcaios.http import (
     REGULATIONS_USER_AGENT,
     CacheTier,
     FetchResult,
+    HttpClient,
     RobotsDeniedError,
+    _RawResponse,
 )
 from lcaios.tests.http_fakes import FakeHttpClient
 from modules.regulations import context_pack, search, vendor_greiki
@@ -287,6 +290,113 @@ class GreikiAdapterTests(unittest.TestCase):
                 (DOC_1_URL, CacheTier.DOCUMENT),
             ],
             client.calls,
+        )
+
+    def test_manifest_distinguishes_cached_and_refreshed_retrieval(self) -> None:
+        responses = {
+            ENTRY_URL: fixture("reiki_menu.html").encode(),
+            KANA_DEFAULT_URL: fixture("kana_default.html").encode(),
+            KANA_A_URL: fixture("r_50_a.html").encode(),
+            DOC_1_URL: fixture("regulation.html").encode("cp932"),
+        }
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            cache = root / "cache"
+            manifests = root / "manifests"
+
+            def request_once(client: HttpClient, url: str) -> _RawResponse:
+                client.request_count += 1
+                content_type = (
+                    "text/html; charset=Shift_JIS"
+                    if url == DOC_1_URL
+                    else "text/html; charset=utf-8"
+                )
+                return _RawResponse(
+                    url=url,
+                    status=200,
+                    body=responses[url],
+                    headers={"Content-Type": content_type},
+                    fetched_at=datetime.now(timezone.utc)
+                    .isoformat(timespec="seconds")
+                    .replace("+00:00", "Z"),
+                )
+
+            def run(run_id: str, *, refresh: bool = False) -> dict[str, object]:
+                argv = [
+                    "--base-url",
+                    BASE_URL,
+                    "--db",
+                    str(root / f"{run_id}.db"),
+                    "--cache-dir",
+                    str(cache),
+                    "--manifest-dir",
+                    str(manifests),
+                    "--run-id",
+                    run_id,
+                    "--limit",
+                    "1",
+                ]
+                if refresh:
+                    argv.append("--refresh")
+                with redirect_stdout(io.StringIO()):
+                    self.assertEqual(0, vendor_greiki.main(argv))
+                return json.loads(
+                    (manifests / f"{run_id}.json").read_text(encoding="utf-8")
+                )
+
+            with (
+                patch.object(HttpClient, "_assert_robots_allowed"),
+                patch.object(
+                    HttpClient,
+                    "_request_once",
+                    autospec=True,
+                    side_effect=request_once,
+                ),
+            ):
+                run("network")
+                cached = run("cached")
+                refreshed = run("refreshed", refresh=True)
+
+        cached_retrieval = cached["retrieval"]
+        refreshed_retrieval = refreshed["retrieval"]
+        self.assertEqual(4, cached_retrieval["cache_hit_count"])
+        self.assertEqual(0, cached_retrieval["live_request_count"])
+        self.assertFalse(cached_retrieval["latestness_rechecked_this_run"])
+        self.assertEqual(
+            "cache_hit",
+            next(
+                item["status"]
+                for item in cached_retrieval["accesses"]
+                if item["url"] == ENTRY_URL
+            ),
+        )
+        self.assertEqual(4, cached_retrieval["sources"][0]["cache_hits"])
+        self.assertEqual(0, cached_retrieval["sources"][0]["network_fetches"])
+        self.assertEqual(0, cached_retrieval["sources"][0]["refreshes"])
+        self.assertEqual(0, cached_retrieval["sources"][0]["cache_misses"])
+        self.assertFalse(
+            cached_retrieval["sources"][0]["latestness_rechecked_this_run"]
+        )
+        self.assertEqual(4, refreshed_retrieval["refresh_count"])
+        self.assertEqual(4, refreshed_retrieval["live_request_count"])
+        self.assertTrue(refreshed_retrieval["latestness_rechecked_this_run"])
+        self.assertEqual(
+            "refreshed",
+            next(
+                item["status"]
+                for item in refreshed_retrieval["accesses"]
+                if item["url"] == ENTRY_URL
+            ),
+        )
+        self.assertEqual(0, refreshed_retrieval["sources"][0]["cache_hits"])
+        self.assertEqual(4, refreshed_retrieval["sources"][0]["network_fetches"])
+        self.assertEqual(4, refreshed_retrieval["sources"][0]["refreshes"])
+        self.assertEqual(0, refreshed_retrieval["sources"][0]["cache_misses"])
+        self.assertTrue(
+            refreshed_retrieval["sources"][0][
+                "latestness_rechecked_this_run"
+            ]
         )
 
 

@@ -510,6 +510,7 @@ def ingest_greiki(
         "articles": article_count,
         "statuses": statuses,
         "fts_tokenizer": tokenizer,
+        "retrieval": client.retrieval_report(),
     }
 
 
@@ -599,6 +600,8 @@ def main(argv: list[str] | None = None) -> int:
         fail_module_run(manifest_path, manifest, exc)
         error = {"status": "error", "error": str(exc)}
     else:
+        if manifest is not None:
+            manifest["retrieval"] = result["retrieval"]
         finish_database_run(
             manifest_path,
             manifest,

@@ -504,6 +504,7 @@ def ingest(
         "skipped_urls": refs.skipped_urls,
         "statuses": statuses,
         "fts_tokenizer": tokenizer,
+        "retrieval": client.retrieval_report(),
     }
 
 
@@ -571,6 +572,8 @@ def main(argv: list[str] | None = None) -> int:
         fail_module_run(manifest_path, manifest, exc)
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
+    if manifest is not None:
+        manifest["retrieval"] = result["retrieval"]
     finish_database_run(
         manifest_path,
         manifest,
