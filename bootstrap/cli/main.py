@@ -33,6 +33,7 @@ from bootstrap.cli.resolve import (
     resolve_municipality,
 )
 from bootstrap.cli.xlsx import XlsxError
+from bootstrap.observatory import ObservatoryError, load_catalog, lookup
 from lcaios.run_manifest import (
     artifact_record,
     finish_run,
@@ -74,6 +75,16 @@ def run(
         refresh=refresh,
     )
     municipality = resolve_municipality(name, prefecture, client)
+    observatory_hint: dict[str, Any] | None = None
+    observatory_warning: str | None = None
+    try:
+        observatory_catalog = load_catalog()
+        observatory_hint = lookup(
+            municipality["area_code_5"],
+            catalog=observatory_catalog,
+        )
+    except ObservatoryError as error:
+        observatory_warning = f"observatory hint unavailable: {error}"
     census = fetch_census(municipality, client)
     fiscal = fetch_fiscal(municipality, client, cross_check=cross_check)
     records = list(census["records"]) + list(fiscal["records"])
@@ -100,6 +111,7 @@ def run(
         for item in [
             census["selection"].get("warning"),
             *fiscal.get("warnings", []),
+            observatory_warning,
         ]
         if item
     ]
@@ -127,6 +139,27 @@ def run(
             "fiscal_year": fiscal["fiscal_year"],
             "primary_status": fiscal["status"],
             "cross_check_status": fiscal["cross_check"]["status"],
+        },
+        "source_discovery": {
+            "prior_observation": observatory_hint,
+            "trust": (
+                "prior_observation_requires_live_confirmation"
+                if observatory_hint is not None
+                else "no_prior_observation"
+            ),
+            "preflight_argv": [
+                "python3",
+                "-m",
+                "bootstrap.cli.preflight",
+                "--prefecture",
+                municipality["prefecture"],
+                "--municipality",
+                municipality["name"],
+                "--output",
+                "<report.json>",
+                "--cache-dir",
+                "<cache-dir>",
+            ],
         },
         "database": database,
         "authority_map": authority,

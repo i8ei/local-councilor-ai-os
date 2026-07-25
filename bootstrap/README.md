@@ -31,10 +31,11 @@ Tier 0 と Tier 1 は全国共通の入口を使えるが、公開側の表題�
 2. 同梱した全国基礎自治体registryで候補を検索し、正規化後の完全一致で絞る。未収録時だけ地域メタ情報APIへfallbackする。
 3. 同名自治体が複数ある場合は、都道府県ヒントを求めて停止する。
 4. 現行自治体の5桁標準地域コードを確定する。
-5. e-Stat から、必要な指標が同一基準日で揃う最新の統計表を探索する。
-6. 総務省の索引ページから最新の財政ファイルを発見し、6桁団体コードで行を照合する。
-7. 各値を `value / as_of / definition / source` の4点セットで保存する。
-8. 検算に通ったデータだけを SQLite と `authority_map.yaml` から利用可能にする。
+5. 同梱した全国自治体観測snapshotから、固有資料の既知入口と再確認候補を読み出す。
+6. e-Stat から、必要な指標が同一基準日で揃う最新の統計表を探索する。
+7. 総務省の索引ページから最新の財政ファイルを発見し、6桁団体コードで行を照合する。
+8. 各値を `value / as_of / definition / source` の4点セットで保存する。
+9. 検算に通ったデータだけを SQLite と `authority_map.yaml` から利用可能にする。
 
 ## 原典 URL は「推測」せず「発見」する
 
@@ -111,11 +112,16 @@ python3 -m bootstrap.cli.preflight \
 ```
 
 都道府県内の各自治体について、公式ホームと関連候補を既定最大8ページまで取得する。
-実際に掲載されたリンクだけを最大2階層辿り、議事録、例規、予算、決算を
+同梱した[全国自治体観測snapshot](observatory/README.md)に既観測の候補があれば、
+公式ホームを取得した後に同一公式hostの候補を優先する。過去観測だけでは`ready`に
+せず、現在の公式ページから再確認できたリンクだけを最大2階層辿り、議事録、例規、
+予算、決算を
 `ready / unsupported_vendor / unknown_structure / robots_blocked /
 source_not_found / human_confirmation_required`へ分類する。文書本文、PDF、vendor先は
 取得せず、DBも作らない。JavaScriptでしかナビゲーションが見えない場合は
-`unknown_structure`で停止する。既存reportは上書きしない。
+`unknown_structure`で停止する。台帳がHTTPでも同一公式hostのHTTPSをsnapshotで
+観測済みなら、HTTPS側の`robots.txt`を改めて確認してから取得する。既存reportは
+上書きしない。比較試験では`--no-observatory-hints`で優先付けを無効化できる。
 
 ## 実装
 
@@ -134,6 +140,10 @@ python3 bootstrap/cli/main.py '自治体名' [--prefecture '都道府県名'] \
 オンライン実行には `ESTAT_APPID` が必要である。e-Statのユーザー登録後、マイページの「ユーザ情報変更」→「登録内容変更」→「利用する機能」で「API機能」にチェックを入れ、「変更」で確定する。その後、「API機能（アプリケーションID発行）」からAppIdを発行する。ユーザー登録だけではAPI機能が有効になっていない場合がある。
 
 AppId は e-Stat API リクエスト時だけ使用し、JSON 実行レポート、キャッシュメタデータ、SQLite、`authority_map.yaml` には保存しない。認証エラーでは、AppIdの値に加えて「API機能」の有効化と変更確定を確認する。既定の出力先は `bootstrap/output/<自治体名>/`、共有キャッシュは `bootstrap/.cache/` で、どちらも Git 管理対象外である。`--cache-dir`で実行単位のキャッシュを分離できる。`--refresh`は通常キャッシュとrobots cacheを使わず公式サイトを再確認するため、`--offline`とは同時に指定できない。
+
+通常のTier 0〜1実行レポートには、対象自治体1件ぶんの観測snapshotとpreflight用の
+引数列も`source_discovery`として含める。これは次の探索先を示すヒントであり、
+現在の掲載状態や取得成功を保証しない。
 
 生成物は次の二つである。
 

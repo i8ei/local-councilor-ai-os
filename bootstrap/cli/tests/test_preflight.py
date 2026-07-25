@@ -192,6 +192,150 @@ class MunicipalityPreflightTests(unittest.TestCase):
         for source in report["sources"].values():
             self.assertEqual("unknown_structure", source["status"])
 
+    def test_observatory_candidate_is_fetched_after_official_home(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": """
+                <title>架空町</title>
+                <a href="/tourism/">観光</a>
+            """,
+            "https://www.town.example.jp/finance/": """
+                <title>予算書・決算書</title>
+                <h1>予算書・決算書</h1>
+            """,
+        }
+        hint = {
+            "lane": "covered",
+            "navigation_mode": "static",
+            "source_kinds": ["budget", "settlement"],
+            "vendor_signals": [],
+            "observed_at": {"home": "2026-07-24T00:00:00Z"},
+            "candidate_pages": ["https://www.town.example.jp/finance/"],
+            "source_urls": {},
+        }
+        client = FakeClient(pages)
+
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY,
+            client,
+            max_pages=2,
+            observatory_hint=hint,
+        )
+
+        self.assertEqual(
+            [
+                "https://www.town.example.jp/",
+                "https://www.town.example.jp/finance/",
+            ],
+            client.urls,
+        )
+        self.assertEqual("ready", report["sources"]["budget"]["status"])
+        self.assertEqual("ready", report["sources"]["settlement"]["status"])
+        self.assertEqual(
+            "bundled_observatory",
+            report["pages"][1]["discovered_from"],
+        )
+
+    def test_observatory_vendor_never_becomes_ready_without_live_link(self) -> None:
+        hint = {
+            "lane": "covered",
+            "navigation_mode": "static",
+            "source_kinds": ["minutes"],
+            "vendor_signals": ["voices"],
+            "observed_at": {"home": "2026-07-24T00:00:00Z"},
+            "candidate_pages": [],
+            "source_urls": {
+                "minutes": ["https://example.gijiroku.com/voices/"],
+            },
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY,
+            FakeClient(
+                {
+                    "https://www.town.example.jp/": (
+                        "<title>架空町</title><a href='/tourism/'>観光</a>"
+                    )
+                }
+            ),
+            max_pages=1,
+            observatory_hint=hint,
+        )
+
+        minutes = report["sources"]["minutes"]
+        self.assertEqual("human_confirmation_required", minutes["status"])
+        self.assertEqual("voices", minutes["adapter"])
+        self.assertEqual(
+            "observatory_candidate_requires_live_confirmation",
+            minutes["reason"],
+        )
+
+    def test_observatory_kind_without_url_requests_live_discovery(self) -> None:
+        hint = {
+            "lane": "covered",
+            "navigation_mode": "static",
+            "source_kinds": ["regulations"],
+            "vendor_signals": [],
+            "observed_at": {"home": "2026-07-24T00:00:00Z"},
+            "candidate_pages": [],
+            "source_urls": {},
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY,
+            FakeClient(
+                {
+                    "https://www.town.example.jp/": (
+                        "<title>架空町</title><a href='/tourism/'>観光</a>"
+                    )
+                }
+            ),
+            max_pages=1,
+            observatory_hint=hint,
+        )
+
+        regulations = report["sources"]["regulations"]
+        self.assertEqual(
+            "human_confirmation_required",
+            regulations["status"],
+        )
+        self.assertEqual(
+            "observatory_source_kind_requires_live_discovery",
+            regulations["reason"],
+        )
+
+    def test_observed_https_on_same_official_host_upgrades_http_root(self) -> None:
+        municipality = {
+            **MUNICIPALITY,
+            "official_home_url": "http://www.town.example.jp/",
+        }
+        hint = {
+            "lane": "covered",
+            "navigation_mode": "static",
+            "source_kinds": [],
+            "vendor_signals": [],
+            "observed_at": {"home": "2026-07-24T00:00:00Z"},
+            "candidate_pages": ["https://www.town.example.jp/finance/"],
+            "source_urls": {},
+        }
+        client = FakeClient(
+            {
+                "https://www.town.example.jp/": (
+                    "<title>架空町</title><a href='/tourism/'>観光</a>"
+                )
+            }
+        )
+
+        report = preflight_municipality(  # type: ignore[arg-type]
+            municipality,
+            client,
+            max_pages=1,
+            observatory_hint=hint,
+        )
+
+        self.assertEqual(["https://www.town.example.jp/"], client.urls)
+        self.assertEqual(
+            "https://www.town.example.jp/",
+            report["official_home_fetch_url"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
