@@ -18,6 +18,8 @@ from pathlib import Path
 from typing import Any, Sequence
 
 from bootstrap.cli.http import (
+    BOOTSTRAP_USER_AGENT,
+    CacheTier,
     FetchError,
     HttpClient,
     OfflineCacheMiss,
@@ -482,6 +484,7 @@ def preflight_municipality(
         try:
             fetched = client.fetch(
                 url,
+                tier=CacheTier.INDEX,
                 cache_key=f"preflight:{municipality['area_code_5']}:{url}",
             )
         except OfflineCacheMiss as error:
@@ -817,7 +820,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(f"ERROR: 既存reportを上書きしません: {args.output}", file=sys.stderr)
         return 2
     try:
-        client = HttpClient(args.cache_dir, offline=args.offline)
+        client = HttpClient(
+            args.cache_dir,
+            user_agent=BOOTSTRAP_USER_AGENT,
+            offline=args.offline,
+        )
         report = run_preflight(
             prefecture=args.prefecture,
             municipality_names=args.municipality,

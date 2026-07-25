@@ -138,7 +138,7 @@ class LocalDocumentDiagnosisTests(unittest.TestCase):
             sha256="abc",
             text=lambda: '<a href="budget.pdf">予算書</a>',
         )
-        client = SimpleNamespace(fetch=lambda url: fetched)
+        client = SimpleNamespace(fetch=lambda url, **_: fetched)
         output = io.StringIO()
         with (
             patch(

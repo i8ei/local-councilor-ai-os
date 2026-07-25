@@ -10,7 +10,7 @@ import urllib.parse
 from dataclasses import dataclass
 from typing import Any
 
-from .http import FetchError, FetchResult, HttpClient
+from .http import CacheTier, FetchError, FetchResult, HttpClient
 from .xlsx import (
     HeaderMatch,
     Worksheet,
@@ -155,7 +155,11 @@ def _fiscal_year(value: str) -> int | None:
 
 def _fetch_html(client: HttpClient, url: str, cache_label: str) -> FetchResult:
     try:
-        result = client.fetch(url, cache_key=f"soumu:html:{cache_label}:{url}")
+        result = client.fetch(
+            url,
+            tier=CacheTier.INDEX,
+            cache_key=f"soumu:html:{cache_label}:{url}",
+        )
     except FetchError as error:
         raise FiscalError(f"総務省ページを取得できません: {url}: {error}") from error
     if "html" not in result.content_type and b"<html" not in result.body[:4096].lower():
@@ -265,6 +269,7 @@ def discover_overview_xlsx(
     try:
         workbook = client.fetch(
             chosen.url,
+            tier=CacheTier.DOCUMENT,
             cache_key=f"soumu:xlsx:fiscal:{fiscal_year}:{kind}:{chosen.url}",
         )
     except FetchError as error:
@@ -554,6 +559,7 @@ def _discover_card_xlsx(
     try:
         workbook = client.fetch(
             chosen.url,
+            tier=CacheTier.DOCUMENT,
             cache_key=(
                 f"soumu:xlsx:card:{fiscal_year}:{prefecture}:{chosen.url}"
             ),

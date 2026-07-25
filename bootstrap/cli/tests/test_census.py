@@ -14,7 +14,7 @@ from bootstrap.cli.census import (
     discover_tables,
     fetch_census,
 )
-from bootstrap.cli.http import FetchError
+from bootstrap.cli.http import CacheTier, FetchError
 from bootstrap.cli.tests.fixtures import FakeEStatClient
 
 
@@ -49,6 +49,7 @@ class CensusTests(unittest.TestCase):
                 "getStatsList",
                 {"statsCode": "00200521"},
                 cache_label="auth-check",
+                tier=CacheTier.INDEX,
             )
 
     @patch.dict(os.environ, {"ESTAT_APPID": "test-secret"}, clear=False)

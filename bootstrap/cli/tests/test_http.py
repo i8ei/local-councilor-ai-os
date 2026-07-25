@@ -10,8 +10,11 @@ from pathlib import Path
 from unittest.mock import patch
 
 from bootstrap.cli.http import (
+    BOOTSTRAP_USER_AGENT,
+    CacheTier,
     HttpClient,
     OfflineCacheMiss,
+    RobotsUnavailableError,
     _cache_files,
     _RawResponse,
 )
@@ -39,9 +42,14 @@ class HttpRetrievalReportingTests(unittest.TestCase):
                 ),
                 encoding="utf-8",
             )
-            client = HttpClient(cache, offline=True)
+            client = HttpClient(
+                cache,
+                user_agent=BOOTSTRAP_USER_AGENT,
+                offline=True,
+            )
             result = client.fetch(
                 "https://example.test/data",
+                tier=CacheTier.DOCUMENT,
                 cache_key=key,
             )
             report = client.retrieval_report()
@@ -53,10 +61,15 @@ class HttpRetrievalReportingTests(unittest.TestCase):
 
     def test_offline_miss_is_reported(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
-            client = HttpClient(temporary, offline=True)
+            client = HttpClient(
+                temporary,
+                user_agent=BOOTSTRAP_USER_AGENT,
+                offline=True,
+            )
             with self.assertRaises(OfflineCacheMiss):
                 client.fetch(
                     "https://example.test/missing",
+                    tier=CacheTier.DOCUMENT,
                     cache_key="fixture:missing",
                 )
             report = client.retrieval_report()
@@ -65,11 +78,21 @@ class HttpRetrievalReportingTests(unittest.TestCase):
 
     def test_offline_and_refresh_are_mutually_exclusive(self) -> None:
         with self.assertRaisesRegex(ValueError, "同時"):
-            HttpClient("/tmp/unused-lcaios-cache", offline=True, refresh=True)
+            HttpClient(
+                "/tmp/unused-lcaios-cache",
+                user_agent=BOOTSTRAP_USER_AGENT,
+                offline=True,
+                refresh=True,
+            )
 
-    def test_robots_http_400_is_unavailable_under_rfc_9309(self) -> None:
+    def test_robots_http_400_blocks_fetching(self) -> None:
+        # Deliberately stricter than RFC 9309's permissive reading of 4xx:
+        # only 401/403/404/410 are interpreted, anything else is unusable.
         with tempfile.TemporaryDirectory() as temporary:
-            client = HttpClient(temporary)
+            client = HttpClient(
+                temporary,
+                user_agent=BOOTSTRAP_USER_AGENT,
+            )
             client._request_once = lambda _: _RawResponse(  # type: ignore[method-assign]
                 url="https://example.test/robots.txt",
                 status=400,
@@ -77,13 +100,8 @@ class HttpRetrievalReportingTests(unittest.TestCase):
                 headers={"Content-Type": "text/plain"},
                 fetched_at="2026-07-24T00:00:00Z",
             )
-            parser = client._robots_parser("https://example.test/data")
-            self.assertTrue(
-                parser.can_fetch(
-                    "local-councilor-ai-os",
-                    "https://example.test/data",
-                )
-            )
+            with self.assertRaises(RobotsUnavailableError):
+                client._robots_parser("https://example.test/data")
 
     def test_robots_redirect_can_cross_authority_under_rfc_9309(self) -> None:
         responses = iter(
@@ -107,7 +125,10 @@ class HttpRetrievalReportingTests(unittest.TestCase):
             ]
         )
         with tempfile.TemporaryDirectory() as temporary:
-            client = HttpClient(temporary)
+            client = HttpClient(
+                temporary,
+                user_agent=BOOTSTRAP_USER_AGENT,
+            )
             with patch.object(client, "_request_once", side_effect=lambda _: next(responses)):
                 parser = client._robots_parser(
                     "https://old.example.test/public"

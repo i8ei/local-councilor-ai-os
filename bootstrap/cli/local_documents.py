@@ -14,7 +14,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Sequence
 
-from .http import FetchError, HttpClient
+from .http import BOOTSTRAP_USER_AGENT, CacheTier, FetchError, HttpClient
 
 KEYWORDS = {
     "budget": ("予算書", "当初予算", "補正予算", "予算概要", "予算説明"),
@@ -284,6 +284,7 @@ def sample_documents(
         candidate = candidates[number - 1]
         fetched = client.fetch(
             str(candidate["url"]),
+            tier=CacheTier.DOCUMENT,
             cache_key=f"local-document:{candidate['url']}",
         )
         filename = _sample_filename(candidate, number)
@@ -372,8 +373,12 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
-        client = HttpClient(args.cache_dir, offline=args.offline)
-        fetched = client.fetch(args.index_url)
+        client = HttpClient(
+            args.cache_dir,
+            user_agent=BOOTSTRAP_USER_AGENT,
+            offline=args.offline,
+        )
+        fetched = client.fetch(args.index_url, tier=CacheTier.INDEX)
         if "html" not in fetched.content_type:
             raise FetchError(
                 f"索引がHTMLではありません: {fetched.content_type}"
