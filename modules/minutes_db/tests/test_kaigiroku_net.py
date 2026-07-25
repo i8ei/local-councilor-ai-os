@@ -4,11 +4,14 @@ from __future__ import annotations
 
 import unittest
 from pathlib import Path
-from types import SimpleNamespace
-from typing import Any
+from urllib.parse import urlencode, urljoin
 
+from lcaios.http import CacheTier
+from lcaios.tests.http_fakes import FakeHttpClient, make_fetch_result
 from modules.minutes_db.adapters.kaigiroku_net import (
     API_ENDPOINTS,
+    API_ROOT,
+    CALLBACK_NAME,
     KaigirokuNetAdapter,
     KaigirokuNetError,
     resolve_tenant,
@@ -18,37 +21,51 @@ from modules.minutes_db.adapters.kaigiroku_net import (
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
 
-def fixture(name: str) -> Any:
-    return unwrap_jsonp((FIXTURES / name).read_bytes())
-
-
-class FixtureAdapter(KaigirokuNetAdapter):
-    def __init__(self) -> None:
-        super().__init__("https://ssp.kaigiroku.net/tenant/example/")
-        self.calls: list[tuple[str, dict[str, Any]]] = []
-        self.responses = {
-            API_ENDPOINTS["councils"]: fixture("kaigiroku_councils.jsonp"),
-            API_ENDPOINTS["view_years"]: fixture("kaigiroku_years.jsonp"),
-            API_ENDPOINTS["minute_index"]: fixture("kaigiroku_index.jsonp"),
-            API_ENDPOINTS["minute_index_list"]: fixture(
-                "kaigiroku_index_list.jsonp"
-            ),
-            API_ENDPOINTS["minutes"]: fixture("kaigiroku_minute.jsonp"),
+def api_url(endpoint: str, **params: str) -> str:
+    query = urlencode(
+        {
+            "tenant_id": "example",
+            **params,
+            "callback": CALLBACK_NAME,
         }
+    )
+    return f"{urljoin(API_ROOT, endpoint)}?{query}"
 
-    def _api(
-        self, endpoint: str, params: dict[str, Any] | None = None
-    ) -> tuple[Any, Any]:
-        self.calls.append((endpoint, params or {}))
-        response = SimpleNamespace(
-            fetched_at="2026-07-23T00:00:00+00:00",
-            final_url=f"https://example.invalid/api/{endpoint}",
-            content_type="application/javascript",
-            sha256="0" * 64,
-            cache_path=Path("/tmp/synthetic-cache"),
-            from_cache=True,
-        )
-        return self.responses[endpoint], response
+
+def fixture_client() -> FakeHttpClient:
+    urls_and_fixtures = {
+        api_url(API_ENDPOINTS["councils"]): "kaigiroku_councils.jsonp",
+        api_url(
+            API_ENDPOINTS["view_years"], council_id="c-1"
+        ): "kaigiroku_years.jsonp",
+        api_url(
+            API_ENDPOINTS["minute_index"],
+            council_id="c-1",
+            year="2026",
+        ): "kaigiroku_index.jsonp",
+        api_url(
+            API_ENDPOINTS["minute_index_list"],
+            council_id="c-1",
+            year="2026",
+            schedule_id="s-1",
+        ): "kaigiroku_index_list.jsonp",
+        api_url(
+            API_ENDPOINTS["minutes"],
+            council_id="c-1",
+            schedule_id="s-1",
+            minute_id="m-1",
+        ): "kaigiroku_minute.jsonp",
+    }
+    return FakeHttpClient(
+        {
+            url: make_fetch_result(
+                url,
+                (FIXTURES / fixture_name).read_text(encoding="utf-8"),
+                content_type="application/javascript",
+            )
+            for url, fixture_name in urls_and_fixtures.items()
+        }
+    )
 
 
 class JsonpTests(unittest.TestCase):
@@ -87,36 +104,54 @@ class TenantTests(unittest.TestCase):
 
 class AdapterPipelineTests(unittest.TestCase):
     def test_lists_and_fetches_one_normalized_meeting(self) -> None:
-        adapter = FixtureAdapter()
+        client = fixture_client()
+        adapter = KaigirokuNetAdapter(
+            "https://ssp.kaigiroku.net/tenant/example/",
+            client=client,
+        )
         meetings = adapter.list_meetings(limit=1)
 
         self.assertEqual(len(meetings), 1)
         self.assertEqual(meetings[0]["council_name"], "架空町議会")
         self.assertEqual(meetings[0]["date"], "2026-06-03")
         self.assertEqual(
-            [call[0] for call in adapter.calls],
+            [url for url, _ in client.calls],
             [
-                API_ENDPOINTS["councils"],
-                API_ENDPOINTS["view_years"],
-                API_ENDPOINTS["minute_index"],
-                API_ENDPOINTS["minute_index_list"],
+                api_url(API_ENDPOINTS["councils"]),
+                api_url(API_ENDPOINTS["view_years"], council_id="c-1"),
+                api_url(
+                    API_ENDPOINTS["minute_index"],
+                    council_id="c-1",
+                    year="2026",
+                ),
+                api_url(
+                    API_ENDPOINTS["minute_index_list"],
+                    council_id="c-1",
+                    year="2026",
+                    schedule_id="s-1",
+                ),
             ],
+        )
+        self.assertTrue(
+            all(tier is CacheTier.INDEX for _, tier in client.calls)
         )
 
         normalized = adapter.fetch_meeting(meetings[0])
         self.assertEqual(normalized["adapter"], "kaigiroku_net")
-        self.assertEqual(normalized["fetched_at"], "2026-07-23T00:00:00+00:00")
+        self.assertEqual(normalized["fetched_at"], "2000-01-01T00:00:00Z")
         self.assertEqual(len(normalized["speeches"]), 2)
         self.assertEqual(normalized["speeches"][1]["speaker"], "○架空花子君")
         self.assertEqual(normalized["speeches"][1]["locator"], "2")
-        self.assertEqual(
-            normalized["provenance"]["content_hash"], f"sha256:{'0' * 64}"
-        )
+        self.assertEqual(client.calls[-1][1], CacheTier.DOCUMENT)
 
     def test_zero_limit_makes_no_requests(self) -> None:
-        adapter = FixtureAdapter()
+        client = FakeHttpClient({})
+        adapter = KaigirokuNetAdapter(
+            "https://ssp.kaigiroku.net/tenant/example/",
+            client=client,
+        )
         self.assertEqual(adapter.list_meetings(limit=0), [])
-        self.assertEqual(adapter.calls, [])
+        self.assertEqual(client.calls, [])
 
 
 if __name__ == "__main__":

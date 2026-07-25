@@ -12,6 +12,7 @@ from contextlib import closing
 from pathlib import Path
 from typing import Any
 
+from lcaios.http import MINUTES_USER_AGENT, HttpClient
 from lcaios.module_manifest import (
     begin_module_run,
     fail_module_run,
@@ -26,6 +27,7 @@ from .adapters.static_html import StaticHtmlAdapter
 MODULE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = MODULE_DIR.parents[1]
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
+DEFAULT_CACHE_DIR = MODULE_DIR / ".cache"
 
 
 def stable_id(prefix: str, value: str) -> str:
@@ -189,22 +191,25 @@ def store_meeting(connection: sqlite3.Connection, document: dict[str, Any]) -> i
     return stored
 
 
-def _make_adapter(args: argparse.Namespace) -> Any:
-    cache_dir = Path(args.cache_dir) if args.cache_dir else None
+def _make_adapter(args: argparse.Namespace, client: HttpClient) -> Any:
     if args.adapter == "kaigiroku_net":
         if not args.url:
             raise ValueError("--url is required for kaigiroku_net")
-        return KaigirokuNetAdapter(
-            args.url,
-            cache_dir=str(cache_dir) if cache_dir is not None else None,
-        )
+        return KaigirokuNetAdapter(args.url, client=client)
     if not args.config:
         raise ValueError("--config is required for static")
-    return StaticHtmlAdapter.from_config(args.config, cache_dir=cache_dir)
+    return StaticHtmlAdapter.from_config(args.config, client=client)
 
 
 def ingest(args: argparse.Namespace) -> dict[str, Any]:
-    adapter = _make_adapter(args)
+    client = HttpClient(
+        Path(args.cache_dir) if args.cache_dir else DEFAULT_CACHE_DIR,
+        user_agent=MINUTES_USER_AGENT,
+        offline=args.offline,
+        refresh=args.refresh,
+        timeout=args.timeout,
+    )
+    adapter = _make_adapter(args, client)
     if args.dry_run:
         if args.adapter != "static":
             raise ValueError("--dry-run is currently supported only for static")
@@ -268,6 +273,22 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--limit", type=int, default=None, help="Meeting limit")
     parser.add_argument("--cache-dir", help="Override the local cache directory")
     parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="ネットワークを使わず検証済みローカルキャッシュだけを使う",
+    )
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="検証済みcacheがあっても公式参照先を再取得する",
+    )
+    parser.add_argument(
+        "--timeout",
+        type=float,
+        default=90,
+        help="取得タイムアウト秒",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="List static candidates without fetching meeting bodies or creating a DB",
@@ -294,8 +315,13 @@ def main(argv: list[str] | None = None) -> int:
                 "config": args.config,
                 "database": args.db,
                 "limit": args.limit,
-                "cache_directory": args.cache_dir,
+                "cache_directory": (
+                    args.cache_dir or str(DEFAULT_CACHE_DIR)
+                ),
                 "dry_run": args.dry_run,
+                "offline": args.offline,
+                "refresh": args.refresh,
+                "timeout": args.timeout,
             },
         )
         result = ingest(args)
