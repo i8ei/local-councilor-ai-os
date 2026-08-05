@@ -30,6 +30,9 @@ python3 ingest.py \
 
 ## 推奨する確認ループ
 
+最初の3段階は、取得・抽出・検索が動くことを確かめるスモークテストです。
+通過しても、会期ごとに複数あるPDFの一部しか取得していない可能性は残ります。
+
 1. `ingest --limit 2`の結果で、`meetings`が2件以下、`statuses`が想定どおり、
    `speeches`が0件ではないことを確認します。対象ページに会議録が1件しか
    なければ、`meetings: 1`で正常です。PDFで`pdftotext`が使えない場合や
@@ -43,6 +46,19 @@ python3 ingest.py \
 
 3. 検索結果を少なくとも1件選び、表示された`source_url`を画面で開きます。
    話者、本文、日付、会議名を元のHTML/PDFと見比べ、同じ内容か確認します。
+4. 1〜3を通過したら`--limit`を外して全件を取り込みます。索引に表示された
+   会期・日別・議題別の文書数と、取込結果の範囲を画面上で照合します。
+5. 全件取込したDBに完全性診断を実行します。
+
+   ```bash
+   python3 coverage.py --db minutes.db --config municipality.json
+   ```
+
+   `presiding_officer_presence`、`document_counts_by_year`、
+   `session_document_coverage`（アダプターが候補数を実測した場合のみ）、
+   `zero_segment_documents`を確認します。`attention_required: true`は取込失敗では
+   なく、原典索引との照合が必要という注意です。少数件の検索が成功し、1件を
+   原典と照合できても、コーパス全体が揃っている証明にはなりません。
 
 期待する文書が0件、関係のない資料が混入、または必要なページがさらに深い場合は、
 正規表現を推測で広げ続けないでください。どのプリセットにも合わない構成は

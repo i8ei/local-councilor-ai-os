@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urljoin, urlparse
 
+from ..coverage import validate_coverage_config
 from .base import Adapter, CacheTier, FetchResult, HttpClient
 
 _BLOCK_TAGS = {
@@ -330,12 +331,24 @@ class StaticHtmlAdapter(Adapter):
         self.client = client
         self._meetings: dict[str, dict[str, Any]] = {}
         self._discovery_candidates: list[dict[str, Any]] = []
+        self._coverage_candidate_sessions: dict[str, dict[str, Any]] = {}
 
     @property
     def discovery_candidates(self) -> list[dict[str, Any]]:
         """Return the most recent discovery decisions without mutable internals."""
 
         return [dict(item) for item in self._discovery_candidates]
+
+    @property
+    def coverage_candidate_sessions(self) -> list[dict[str, Any]] | None:
+        """Return measured PDF-link counts grouped by their source index page."""
+
+        if not self.config["pdf"]:
+            return None
+        candidates = [
+            dict(item) for item in self._coverage_candidate_sessions.values()
+        ]
+        return candidates or None
 
     @classmethod
     def from_config(
@@ -382,6 +395,9 @@ class StaticHtmlAdapter(Adapter):
         if "pdf" in validated and not isinstance(validated["pdf"], bool):
             raise ValueError("config.pdf must be true or false")
         validated.setdefault("pdf", False)
+        validated["coverage"] = validate_coverage_config(
+            validated.get("coverage")
+        )
         return validated
 
     def detect_capabilities(self) -> dict[str, Any]:
@@ -421,6 +437,7 @@ class StaticHtmlAdapter(Adapter):
         seen: set[str] = set()
         followed: set[str] = set()
         self._discovery_candidates = []
+        self._coverage_candidate_sessions = {}
 
         def parse_links(fetched: FetchResult) -> list[tuple[str, str]]:
             parser = _DocumentParser()
@@ -453,6 +470,18 @@ class StaticHtmlAdapter(Adapter):
         def discover_from(
             fetched: FetchResult, links: list[tuple[str, str]]
         ) -> bool:
+            if self.config["pdf"]:
+                candidate_urls = {
+                    normalized[0]
+                    for href, _label in links
+                    if (normalized := normalized_link(fetched, href)) is not None
+                    and normalized[1].path.lower().endswith(".pdf")
+                }
+                if candidate_urls:
+                    self._coverage_candidate_sessions[fetched.final_url] = {
+                        "session_key": fetched.final_url,
+                        "candidate_document_links": len(candidate_urls),
+                    }
             for href, label in links:
                 normalized = normalized_link(fetched, href)
                 if normalized is None:
