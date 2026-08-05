@@ -31,6 +31,16 @@ class MinutesAdapter(ABC):
     def fetch_meeting(self, meeting_id: str) -> dict[str, Any]:
         """Return one normalized meeting, its speeches, and provenance."""
 
+    @property
+    def coverage_candidate_sessions(self) -> list[dict[str, Any]] | None:
+        """Return optional per-session candidate counts for coverage diagnosis.
+
+        Adapters must return ``None`` when they cannot measure candidate document
+        links. Coverage diagnostics never infer or guess these counts.
+        """
+
+        return None
+
 
 # Keep the shorter name convenient for third-party adapters.
 Adapter = MinutesAdapter

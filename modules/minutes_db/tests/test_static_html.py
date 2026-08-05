@@ -77,6 +77,7 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                     raw["index_url"].startswith("https://www.example.jp/")
                 )
                 self.assertEqual("例示町議会", adapter.config["council_name"])
+                self.assertIn("町長", adapter.config["coverage"]["presiding_officer_titles"])
 
     def test_discovers_filtered_html_and_normalizes_speakers(self) -> None:
         index_body = (FIXTURES / "static_index.html").read_bytes()
@@ -304,6 +305,7 @@ class StaticHtmlAdapterTest(unittest.TestCase):
             )
             references = adapter.list_meetings(limit=2)
             decisions = adapter.discovery_candidates
+            coverage_candidates = adapter.coverage_candidate_sessions
 
         self.assertEqual(
             [
@@ -327,6 +329,19 @@ class StaticHtmlAdapterTest(unittest.TestCase):
         self.assertNotIn("agenda.pdf", source_urls)
         self.assertNotIn("schedule.pdf", source_urls)
         self.assertIn("excluded_by_regex", {item["reason"] for item in decisions})
+        self.assertEqual(
+            [
+                {
+                    "session_key": SESSION_ONE_URL,
+                    "candidate_document_links": 2,
+                },
+                {
+                    "session_key": SESSION_TWO_URL,
+                    "candidate_document_links": 2,
+                },
+            ],
+            coverage_candidates,
+        )
 
     def test_from_config_rejects_non_json(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

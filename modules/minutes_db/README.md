@@ -12,6 +12,7 @@ SQLite/FTS5へ格納するTier 2アダプターです。SQLiteは原典の代替
        └─ 会議・発言の共通形式 + provenance
             └─ SQLite + FTS5（trigram、非対応時はunicode61）
                  ├─ search.py（LIKE補完）
+                 ├─ coverage.py（取込範囲の診断）
                  └─ context_pack.py（出典付き最小抜粋）
 ```
 
@@ -58,7 +59,10 @@ UTF-8/CP932を処理する実装です。
   "link_include_regex": "(gijiroku|kaigiroku|minutes)",
   "link_exclude_regex": "(summary|agenda)",
   "pdf": true,
-  "council_name": "例示町議会"
+  "council_name": "例示町議会",
+  "coverage": {
+    "presiding_officer_titles": ["知事", "市長", "区長", "町長", "村長"]
+  }
 }
 ```
 
@@ -112,6 +116,8 @@ python3 ingest.py \
 
 python3 search.py "防災" --db minutes.db --k 10
 
+python3 coverage.py --db minutes.db --config municipality.json
+
 python3 context_pack.py "防災" \
   --question "地域防災計画はいつ見直されたか" \
   --db minutes.db \
@@ -120,6 +126,48 @@ python3 context_pack.py "防災" \
 ```
 
 静的アダプターの`--dry-run`は、索引と設定したfollow対象HTMLまでを読み、各リンクを`selected`、`excluded_by_regex`、`format_mismatch`、`duplicate`に分けます。会議本文やPDFを取得せず、DBも作りません。候補を確認してから少数件の本取込へ進んでください。
+
+## 取込範囲の診断
+
+少数件の取込、発言件数の確認、全文検索、原典との照合は、取得・抽出・検索が
+動くことを確かめるスモークテストです。これらが通っても、1会期を構成する複数の
+PDFのうち1本だけを取り込んだような欠落は検出できません。全件取込後に
+`coverage.py`を実行し、次の4点を確認します。
+
+- 首長側役職の発言が一度もない文書の割合。既定の役職名は`知事`、`市長`、
+  `区長`、`町長`、`村長`です。議長だけを含む進行資料を見分ける目的のため、
+  `議長`は既定値に含めません。
+- 年ごとの文書数と、文書がある年の中央値から大きく少ない年。最古年から
+  最新年までの途中に文書がない年も0件として表示します。
+- 会期索引ページで検出したPDF候補リンク数と、そのページから取り込んだ文書数。
+  この情報をアダプターが実測できた場合だけ表示し、推測で補いません。
+- DBに登録済みだが、発言が0件の文書。
+
+出力の`status`は常に`advisory`で、注意対象があれば`attention_required`が
+`true`になります。各項目の`flagged`も取込を失敗扱いにはしません。小規模議会、
+年度途中、付属資料を含む索引では正当な注意表示があり得るため、原典の索引と
+照合して判断します。run manifestでは`coverage.diagnostics`に同じ情報を記録し、
+通常の取込成功状態は維持します。
+
+閾値と首長側役職名は静的アダプター設定の`coverage`で変更できます。
+
+```json
+{
+  "coverage": {
+    "presiding_officer_titles": ["町長", "副町長"],
+    "presiding_officer_absence_share_threshold": 0.5,
+    "low_year_count_ratio": 0.6,
+    "minimum_session_document_coverage_ratio": 0.8,
+    "zero_segment_document_threshold": 0
+  }
+}
+```
+
+同じ項目は`coverage.py`の各CLIオプションでも上書きできます。過去に作成したDBにも
+単独で実行できます。その場合も首長側発言、年別件数、発言0件文書を診断します。
+候補リンク数はDBから復元・推測せず、通常取込時にアダプターから得られた場合だけ
+そのrunの出力とmanifestへ加えます。`--limit`付き取込では意図的な未取込も
+候補数との差に現れるため、完全性の判断は全件取込後の結果を使います。
 
 同じ`source_url`と会議内`seq`の再取込は更新となり、重複行を作りません。
 `--manifest-dir`を指定すると、成功・失敗・dry-runを上書きしないrun manifestへ記録します。

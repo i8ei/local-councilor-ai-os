@@ -29,6 +29,7 @@ from lcaios.module_manifest import (
 
 from .adapters.kaigiroku_net import KaigirokuNetAdapter
 from .adapters.static_html import StaticHtmlAdapter
+from .coverage import diagnose_coverage, validate_coverage_config
 
 MODULE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = MODULE_DIR.parents[1]
@@ -306,6 +307,18 @@ def ingest(args: argparse.Namespace) -> dict[str, Any]:
                 "INSERT INTO speeches_fts(speeches_fts) VALUES ('rebuild')"
             )
         connection.commit()
+        coverage_options = validate_coverage_config(
+            getattr(adapter, "config", {}).get("coverage")
+        )
+        coverage_diagnostics = diagnose_coverage(
+            connection,
+            options=coverage_options,
+            candidate_sessions=getattr(
+                adapter,
+                "coverage_candidate_sessions",
+                None,
+            ),
+        )
     return {
         "adapter": args.adapter,
         "database": str(database_path),
@@ -314,6 +327,7 @@ def ingest(args: argparse.Namespace) -> dict[str, Any]:
         "statuses": statuses,
         "fts_tokenizer": fts_schema["tokenizer"],
         "fts_schema": fts_schema,
+        "coverage_diagnostics": coverage_diagnostics,
         "retrieval": client.retrieval_report(),
     }
 
@@ -417,6 +431,7 @@ def main(argv: list[str] | None = None) -> int:
                 "statuses": result["statuses"],
                 "fts_tokenizer": result["fts_tokenizer"],
                 "fts_schema": result["fts_schema"],
+                "diagnostics": result["coverage_diagnostics"],
             },
             inputs=inputs,
             checks=[
