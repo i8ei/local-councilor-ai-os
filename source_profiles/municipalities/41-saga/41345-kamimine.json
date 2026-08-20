@@ -6,10 +6,10 @@
   "official_home_url": "http://www.town.kamimine.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "ready",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "http://www.town.kamimine.saga.dbsr.jp/index.php/",
-      "verified_at": "2026-08-20T22:25:14Z",
+      "verified_at": "2026-08-20T22:48:34Z",
       "verified_by": "verify --live",
       "evidence": [
         {
@@ -21,9 +21,15 @@
           "observed_on": "http://www.town.kamimine.saga.dbsr.jp/index.php/",
           "sha256": "e3c5e6fa6fb87eb2b8b5a894450ae8aca900d9ce052d688b033c52a96eccee2f",
           "fetched_at": "2026-08-20T22:20:33Z"
+        },
+        {
+          "url": "http://www.town.kamimine.saga.dbsr.jp/index.php/",
+          "observed_on": "http://www.town.kamimine.saga.dbsr.jp/index.php/",
+          "sha256": "3fd9d079400fd351e6d052704519f4665d2cb6a0787d9b83f500476fa10c57c2",
+          "fetched_at": "2026-08-20T22:42:19Z"
         }
       ],
-      "notes": "dbsr query-list index live-verified; ready for observed-index ingestion"
+      "notes": "dbsr index live-verified; minutes bodies are robots-restricted (robots.txt allows only the bare /index.php index and disallows meeting detail/document paths), so automated body ingestion is blocked and requires the councilor/user to obtain municipality permission"
     },
     "regulations": {
       "status": "ready",
