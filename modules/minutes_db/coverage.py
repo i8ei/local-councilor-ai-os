@@ -241,7 +241,7 @@ def _session_document_coverage(
                 "flagged": coverage_ratio < minimum_coverage_ratio,
             }
         )
-    sessions.sort(key=lambda item: item["session_key"])
+    sessions.sort(key=lambda item: str(item["session_key"]))
     return {
         "minimum_coverage_ratio": minimum_coverage_ratio,
         "sessions": sessions,
