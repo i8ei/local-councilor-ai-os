@@ -26,6 +26,50 @@ _MEETING_RE = re.compile(r"(?:定例会|臨時会|本会議|委員会)")
 _DOCUMENT_RE = re.compile(r"\.(?:pdf|html?|txt)(?:$|[?#])", re.I)
 _DISCUSS_HOST_SUFFIXES = ("discussvision.net",)
 
+# Council scope for static minutes (consistent with bootstrap/cli/preflight.py)
+_COUNCIL_TEXT_TOKENS = (
+    "市議会",
+    "町議会",
+    "村議会",
+    "区議会",
+    "議会事務局",
+    "本会議",
+    "定例会",
+    "臨時会",
+)
+_COUNCIL_URL_TOKENS = (
+    "/gikai",
+    "/shigikai",
+    "/council",
+    "/assembly",
+    "kaigiroku",
+    "gijiroku",
+)
+_NON_COUNCIL_TOKENS = (
+    "審議会",
+    "懇話会",
+    "審査会",
+    "教育委員会",
+    "農業委員会",
+    "選挙管理委員会",
+    "総合教育会議",
+    "監査委員",
+)
+
+
+def _has_council_scope(text: str) -> bool:
+    """Check if text indicates council scope and not non-council committee."""
+    if any(tok in text for tok in _NON_COUNCIL_TOKENS):
+        return False
+    lower = text.lower()
+    if any(tok.lower() in lower for tok in _COUNCIL_TEXT_TOKENS):
+        return True
+    if "議会" in text:
+        return True
+    if any(tok in lower for tok in _COUNCIL_URL_TOKENS):
+        return True
+    return False
+
 
 class _PageLinks(HTMLParser):
     def __init__(self) -> None:
@@ -65,12 +109,16 @@ def _known_family(url: str) -> tuple[str, str] | None:
     parts = urllib.parse.urlsplit(url)
     host = (parts.hostname or "").lower().rstrip(".")
     path = urllib.parse.unquote(parts.path)
+    lower_path = path.lower()
     if host == "ssp.kaigiroku.net":
         if re.match(r"^/tenant/[^/]+(?:/|$)", path, re.I):
             return "kaigiroku_net", "ssp.kaigiroku.net の /tenant/<name>/ URL"
         return "kaigiroku_net", "kaigiroku.net配信ホスト ssp.kaigiroku.net"
-    if _host_matches(host, "gijiroku.com") and re.search(r"/voices(?:/|$)", path, re.I):
-        return "voices", "*.gijiroku.com の /voices/ URL"
+    if _host_matches(host, "gijiroku.com"):
+        return "voices", "*.gijiroku.com の voices 系 URL"
+    if host == "dbsr.jp" or host.endswith(".dbsr.jp"):
+        if "/index.php" in lower_path:
+            return "dbsr", "dbsr.jp の /index.php URL"
     if any(_host_matches(host, suffix) for suffix in _DISCUSS_HOST_SUFFIXES):
         return "discuss", "DiscussVision の既知ホスト"
     return None
@@ -79,6 +127,8 @@ def _known_family(url: str) -> tuple[str, str] | None:
 def _is_static_candidate(url: str, label: str = "") -> bool:
     decoded_url = urllib.parse.unquote(url)
     combined = f"{decoded_url} {label}"
+    if not _has_council_scope(combined):
+        return False
     if decoded_url.lower().split("?", 1)[0].endswith(".pdf"):
         return True
     if _STATIC_STRONG_RE.search(combined):
@@ -162,6 +212,19 @@ def detect_url(
 
     for candidate_url, label in resolved_links:
         if _is_static_candidate(candidate_url, label):
+            if any(tok in page_text for tok in _NON_COUNCIL_TOKENS):
+                lower_cand = candidate_url.lower()
+                lower_label = label.lower()
+                if not any(
+                    tok in lower_cand or tok in lower_label
+                    for tok in ("/gikai", "/shigikai", "/council", "/assembly")
+                ):
+                    continue
+                if any(
+                    t in f"{label} {page_text}"
+                    for t in ("教育委員会", "農業委員会", "審議会")
+                ):
+                    continue
             response = {
                 "input_url": url,
                 "verdict": "static_candidate",
@@ -178,7 +241,9 @@ def detect_url(
             return response
 
     if _is_static_candidate(final_url) or (
-        page_text and _STATIC_STRONG_RE.search(page_text)
+        page_text
+        and _STATIC_STRONG_RE.search(page_text)
+        and _has_council_scope(page_text)
     ):
         response = {
             "input_url": url,

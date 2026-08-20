@@ -336,6 +336,135 @@ class MunicipalityPreflightTests(unittest.TestCase):
             report["official_home_fetch_url"],
         )
 
+    def test_non_council_committee_pdf_is_not_ready(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="/kiji0036603/index.html">議事録</a>',
+            "https://www.town.example.jp/kiji0036603/index.html": """
+                <title>令和8年度第1回架空町まちづくり推進審議会議事録</title>
+                <a href="doc.pdf">令和8年度第2回まちづくり推進審議会 議事録（PDF）</a>
+            """,
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY,
+            FakeClient(pages),
+            max_pages=2,
+        )
+        minutes = report["sources"]["minutes"]
+        self.assertNotEqual("ready", minutes["status"])
+        self.assertIsNone(minutes["adapter"])
+
+    def test_education_board_pdf_is_not_ready(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="/kiji0033035/index.html">教育委員会</a>',
+            "https://www.town.example.jp/kiji0033035/index.html": """
+                <title>令和8年6月定例教育委員会（会議録）</title>
+                <a href="doc.pdf">令和8年6月定例教育委員会会議録（PDF）</a>
+            """,
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=2
+        )
+        self.assertNotEqual("ready", report["sources"]["minutes"]["status"])
+
+    def test_agriculture_committee_pdf_with_context_is_not_ready(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="/main/13235.html">農業委員会議事録</a>',
+            "https://www.town.example.jp/main/13235.html": """
+                <title>架空町：農業委員会議事録</title>
+                <a href="file.pdf">令和7年4月定例会議事録</a>
+            """,
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=2
+        )
+        self.assertNotEqual("ready", report["sources"]["minutes"]["status"])
+
+    def test_council_gikai_pdf_remains_ready(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="/gikai/minutes.html">町議会</a>',
+            "https://www.town.example.jp/gikai/minutes.html": """
+                <title>町議会 会議録</title>
+                <a href="/files/r7.pdf">令和7年第1回定例会会議録</a>
+            """,
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=2
+        )
+        self.assertEqual("ready", report["sources"]["minutes"]["status"])
+        self.assertEqual("static_html_pdf", report["sources"]["minutes"]["adapter"])
+
+    def test_council_url_council_keeps_sitemap_case_ready(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="/council/minutes.html">会議録</a>',
+            "https://www.town.example.jp/council/minutes.html": """
+                <title>会議録</title>
+                <a href="/files/minutes.pdf">令和8年第1回会議録</a>
+            """,
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=2
+        )
+        self.assertEqual("ready", report["sources"]["minutes"]["status"])
+
+    def test_gijiroku_without_voices_path_still_voices(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="https://example.gijiroku.com/other/">会議録</a>',
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=1
+        )
+        self.assertEqual("unsupported_vendor", report["sources"]["minutes"]["status"])
+        self.assertEqual("voices", report["sources"]["minutes"]["adapter"])
+
+    def test_dbsr_vendor_is_unsupported(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="https://sample.dbsr.jp/index.php">会議録</a>',
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=1
+        )
+        self.assertEqual("unsupported_vendor", report["sources"]["minutes"]["status"])
+        self.assertEqual("dbsr", report["sources"]["minutes"]["adapter"])
+
+    def test_d1_law_regulations_is_unsupported(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="https://www.d1-law.com/example/">例規集</a>',
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=1
+        )
+        self.assertEqual(
+            "unsupported_vendor", report["sources"]["regulations"]["status"]
+        )
+        self.assertEqual("d1_law", report["sources"]["regulations"]["adapter"])
+
+    def test_joureikun_path_is_unsupported(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="/joureikun/aggregate/whatsnew/index.html">例規集</a>',
+            "https://www.town.example.jp/joureikun/aggregate/whatsnew/index.html": "<title>例規集</title>",
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=2
+        )
+        self.assertEqual(
+            "unsupported_vendor", report["sources"]["regulations"]["status"]
+        )
+        self.assertEqual("joureikun", report["sources"]["regulations"]["adapter"])
+
+    def test_zenin_kyogikai_under_gikai_is_council(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": '<a href="/gikai/kyogikai.html">全員協議会</a>',
+            "https://www.town.example.jp/gikai/kyogikai.html": """
+                <title>全員協議会 会議録</title>
+                <a href="/files/kyogikai.pdf">令和7年全員協議会議事録</a>
+            """,
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=2
+        )
+        self.assertEqual("ready", report["sources"]["minutes"]["status"])
+        self.assertEqual("static_html_pdf", report["sources"]["minutes"]["adapter"])
+
 
 if __name__ == "__main__":
     unittest.main()
