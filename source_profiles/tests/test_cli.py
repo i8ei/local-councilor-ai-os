@@ -180,6 +180,56 @@ def _synthetic_joureikun_profile() -> dict:
     }
 
 
+def _synthetic_dbsr_minutes_profile(status: str = "needs_review") -> dict:
+    return {
+        "schema_version": 1,
+        "area_code_5": "41210",
+        "prefecture": "佐賀県",
+        "municipality": "神埼市",
+        "official_home_url": "http://www.city.kanzaki.saga.jp/",
+        "sources": {
+            "minutes": {
+                "status": status,
+                "adapter": "dbsr",
+                "index_url": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [
+                    {
+                        "url": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
+                        "observed_on": "http://www.city.kanzaki.saga.jp/",
+                    }
+                ],
+                "notes": None,
+            },
+            "regulations": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "budget": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "settlement": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+        },
+    }
+
+
 class CliTests(unittest.TestCase):
     def test_validate_all_saga_passes(self) -> None:
         buf = io.StringIO()
@@ -431,6 +481,198 @@ class CliTests(unittest.TestCase):
             self.assertEqual("error", report["status"])
         finally:
             Path(tmp_path).unlink(missing_ok=True)
+
+    def test_verify_persists_blocked_and_returns_0(self) -> None:
+        import copy
+        from unittest import mock
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            cache_dir = tmp_path / "cache"
+            cache_dir.mkdir()
+            profile = _synthetic_dbsr_minutes_profile("needs_review")
+            profile_path = tmp_path / "41210-kanzaki.json"
+            profile_path.write_text(
+                json.dumps(profile, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            updated = copy.deepcopy(profile)
+            updated["sources"]["minutes"]["status"] = "blocked"
+            updated["sources"]["minutes"]["verified_at"] = "2020-01-01T00:00:00Z"
+            updated["sources"]["minutes"]["verified_by"] = "verify --live"
+            updated["sources"]["minutes"]["evidence"] = [
+                {
+                    "url": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
+                    "observed_on": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
+                    "sha256": "b" * 64,
+                    "fetched_at": "2020-01-01T00:00:00Z",
+                }
+            ]
+            updated["sources"]["minutes"]["notes"] = (
+                "minutes bodies are robots-restricted (robots.txt disallows meeting detail/document paths); observed Saga dbsr tenants block bodies, so ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+            )
+            report = {
+                "municipality": "神埼市",
+                "kind": "minutes",
+                "adapter": "dbsr",
+                "result": "blocked",
+                "reason": "RobotsDeniedError: robots.txt disallows (minutes bodies are robots-restricted)",
+                "status_before": "needs_review",
+                "status_after": "blocked",
+            }
+            with mock.patch.object(
+                _cli, "HttpClient", lambda *a, **kw: mock.MagicMock()
+            ):  # type: ignore[arg-type]
+                with mock.patch.object(
+                    _cli, "verify_profile", return_value=(updated, report)
+                ):  # type: ignore[arg-type]
+                    buf = io.StringIO()
+                    with redirect_stdout(buf):
+                        code = main(
+                            [
+                                "verify",
+                                "--municipality",
+                                "神埼市",
+                                "--prefecture",
+                                "佐賀県",
+                                "--kind",
+                                "minutes",
+                                "--cache-dir",
+                                str(cache_dir),
+                                "--profiles-dir",
+                                str(tmp_path),
+                            ]
+                        )
+                    self.assertEqual(0, code)
+                    out_report = json.loads(buf.getvalue())
+                    self.assertEqual("blocked", out_report["result"])
+                    on_disk = json.loads(profile_path.read_text(encoding="utf-8"))
+                    self.assertEqual("blocked", on_disk["sources"]["minutes"]["status"])
+                    self.assertEqual(
+                        "2020-01-01T00:00:00Z",
+                        on_disk["sources"]["minutes"]["verified_at"],
+                    )
+
+    def test_verify_persists_verified_and_returns_0(self) -> None:
+        import copy
+        from unittest import mock
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            cache_dir = tmp_path / "cache"
+            cache_dir.mkdir()
+            profile = _synthetic_greiki_profile("needs_review")
+            profile_path = tmp_path / "41441-tara.json"
+            profile_path.write_text(
+                json.dumps(profile, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            updated = copy.deepcopy(profile)
+            updated["sources"]["regulations"]["status"] = "ready"
+            updated["sources"]["regulations"]["verified_at"] = "2020-01-01T00:00:00Z"
+            updated["sources"]["regulations"]["verified_by"] = "verify --live"
+            updated["sources"]["regulations"]["evidence"] = [
+                {
+                    "url": "https://www1.g-reiki.net/town.tara/reiki_menu.html",
+                    "observed_on": "https://www1.g-reiki.net/town.tara/",
+                    "sha256": "c" * 64,
+                    "fetched_at": "2020-01-01T00:00:00Z",
+                }
+            ]
+            report = {
+                "municipality": "太良町",
+                "kind": "regulations",
+                "adapter": "g_reiki",
+                "result": "verified",
+                "reason": "ok",
+                "status_before": "needs_review",
+                "status_after": "ready",
+            }
+            with mock.patch.object(
+                _cli, "HttpClient", lambda *a, **kw: mock.MagicMock()
+            ):  # type: ignore[arg-type]
+                with mock.patch.object(
+                    _cli, "verify_profile", return_value=(updated, report)
+                ):  # type: ignore[arg-type]
+                    buf = io.StringIO()
+                    with redirect_stdout(buf):
+                        code = main(
+                            [
+                                "verify",
+                                "--municipality",
+                                "太良町",
+                                "--prefecture",
+                                "佐賀県",
+                                "--kind",
+                                "regulations",
+                                "--cache-dir",
+                                str(cache_dir),
+                                "--profiles-dir",
+                                str(tmp_path),
+                            ]
+                        )
+                    self.assertEqual(0, code)
+                    out_report = json.loads(buf.getvalue())
+                    self.assertEqual("verified", out_report["result"])
+                    on_disk = json.loads(profile_path.read_text(encoding="utf-8"))
+                    self.assertEqual(
+                        "ready", on_disk["sources"]["regulations"]["status"]
+                    )
+
+    def test_verify_failed_does_not_persist(self) -> None:
+        import copy
+        from unittest import mock
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            cache_dir = tmp_path / "cache"
+            cache_dir.mkdir()
+            profile = _synthetic_dbsr_minutes_profile("needs_review")
+            profile_path = tmp_path / "41210-kanzaki.json"
+            profile_path.write_text(
+                json.dumps(profile, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            updated = copy.deepcopy(profile)
+            report = {
+                "municipality": "神埼市",
+                "kind": "minutes",
+                "adapter": "dbsr",
+                "result": "failed",
+                "reason": "FetchError: HTTP 500",
+                "status_before": "needs_review",
+                "status_after": "needs_review",
+            }
+            with mock.patch.object(
+                _cli, "HttpClient", lambda *a, **kw: mock.MagicMock()
+            ):  # type: ignore[arg-type]
+                with mock.patch.object(
+                    _cli, "verify_profile", return_value=(updated, report)
+                ):  # type: ignore[arg-type]
+                    buf = io.StringIO()
+                    with redirect_stdout(buf):
+                        code = main(
+                            [
+                                "verify",
+                                "--municipality",
+                                "神埼市",
+                                "--prefecture",
+                                "佐賀県",
+                                "--kind",
+                                "minutes",
+                                "--cache-dir",
+                                str(cache_dir),
+                                "--profiles-dir",
+                                str(tmp_path),
+                            ]
+                        )
+                    self.assertEqual(2, code)
+                    out_report = json.loads(buf.getvalue())
+                    self.assertEqual("failed", out_report["result"])
+                    on_disk = json.loads(profile_path.read_text(encoding="utf-8"))
+                    self.assertEqual(
+                        "needs_review", on_disk["sources"]["minutes"]["status"]
+                    )
 
 
 if __name__ == "__main__":

@@ -7,11 +7,21 @@
   "sources": {
     "minutes": {
       "status": "needs_review",
-      "adapter": null,
+      "adapter": "static",
+      "index_url": "https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/",
       "verified_at": null,
       "verified_by": null,
-      "evidence": [],
-      "notes": "議会会議録の索引を要人手確認"
+      "evidence": [
+        {
+          "url": "https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/",
+          "observed_on": "https://www.city.takeo.lg.jp/home.html"
+        },
+        {
+          "url": "https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/",
+          "observed_on": "https://www.city.takeo.lg.jp/shisei/shigikai/"
+        }
+      ],
+      "notes": "会議録PDFは公式ホスト www.city.takeo.lg.jp 上の静的PDFだが、索引 https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/ から R7gikai/R8gikai 等の年度ページ、さらに YYYYMM 月別ページを経て到達する2階層深さのため現行verifierのdepth-1 followでは到達不可（例: /shisei/shigikai/ichiran/ -> /shisei/shigikai/R8gikai/ -> /shisei/shigikai/R8gikai/202609/ -> 202609teirei.pdf 等）。robotsは /shisei/shigikai/ を許可。durablesな索引として /shisei/shigikai/ichiran/ を採用し、follow_link_regexはdepth-1では効果が無いため未設定（年度ページ自体に会議録PDFが無く月別ページにPDFが配置）。"
     },
     "regulations": {
       "status": "ready",

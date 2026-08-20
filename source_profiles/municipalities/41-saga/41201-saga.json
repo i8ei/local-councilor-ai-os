@@ -6,12 +6,18 @@
   "official_home_url": "https://www.city.saga.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": null,
+      "status": "unsupported",
+      "adapter": "voices",
+      "index_url": "https://sagashi-gikai.gijiroku.com/",
       "verified_at": null,
       "verified_by": null,
-      "evidence": [],
-      "notes": "議会会議録の索引を要人手確認"
+      "evidence": [
+        {
+          "url": "https://sagashi-gikai.gijiroku.com/",
+          "observed_on": "https://www.city.saga.lg.jp/shisei/shigikai/index.html"
+        }
+      ],
+      "notes": "voices (gijiroku.com) 方式のため現行 ingest adapter 未対応。議会会議録は https://sagashi-gikai.gijiroku.com/ で外部ベンダー運用"
     },
     "regulations": {
       "status": "ready",

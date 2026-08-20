@@ -27,6 +27,7 @@ from lcaios.module_manifest import (
     input_file_record,
 )
 
+from .adapters.dbsr import DbsrAdapter
 from .adapters.kaigiroku_net import KaigirokuNetAdapter
 from .adapters.static_html import StaticHtmlAdapter
 from .coverage import diagnose_coverage, validate_coverage_config
@@ -252,6 +253,10 @@ def _make_adapter(args: argparse.Namespace, client: HttpClient) -> Any:
         if not args.url:
             raise ValueError("--url is required for kaigiroku_net")
         return KaigirokuNetAdapter(args.url, client=client)
+    if args.adapter == "dbsr":
+        if not args.url:
+            raise ValueError("--url is required for dbsr")
+        return DbsrAdapter(args.url, client=client)
     if not args.config:
         raise ValueError("--config is required for static")
     return StaticHtmlAdapter.from_config(args.config, client=client)
@@ -337,7 +342,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--adapter",
         required=True,
-        choices=("kaigiroku_net", "static"),
+        choices=("kaigiroku_net", "static", "dbsr"),
     )
     parser.add_argument("--url", help="Tenant or minutes URL")
     parser.add_argument("--config", help="Static adapter JSON config")

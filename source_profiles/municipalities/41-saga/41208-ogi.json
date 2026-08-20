@@ -6,12 +6,17 @@
   "official_home_url": "http://www.city.ogi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "unsupported",
       "adapter": null,
       "verified_at": null,
       "verified_by": null,
-      "evidence": [],
-      "notes": "議会会議録の索引を要人手確認"
+      "evidence": [
+        {
+          "url": "http://www.db-search.com/ogi-c/index.php/",
+          "observed_on": "https://www.city.ogi.lg.jp/main/1357.html"
+        }
+      ],
+      "notes": "議会の会議録は db-search.com（http://www.db-search.com/ogi-c/index.php/）で外部ベンダー運用のため現行 ingest adapter 未対応（robots Disallow:/）。preflight で検出した https://www.city.ogi.lg.jp/main/13235.html（農業委員会議事録）は議会会議録ではないため false positive"
     },
     "regulations": {
       "status": "ready",

@@ -6,18 +6,30 @@
   "official_home_url": "http://www.town.miyaki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "unsupported",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T22:48:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
           "observed_on": "http://www.town.miyaki.lg.jp/"
+        },
+        {
+          "url": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
+          "observed_on": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
+          "sha256": "b1eaaa527e533b3f2835318aa0fd5adc81b3f11d0bcce13063802641930902b9",
+          "fetched_at": "2026-08-20T22:20:54Z"
+        },
+        {
+          "url": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
+          "observed_on": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
+          "sha256": "e0daa32e12c7b985d44989fc9c6b76f1846f5bfdc0eb5af9bf901aed44a5c595",
+          "fetched_at": "2026-08-20T22:42:48Z"
         }
       ],
-      "notes": "dbsr型: 本増分では未対応、専用adapter要"
+      "notes": "dbsr index live-verified; minutes bodies are robots-restricted (robots.txt allows only the bare /index.php index and disallows meeting detail/document paths), so automated body ingestion is blocked and requires the councilor/user to obtain municipality permission"
     },
     "regulations": {
       "status": "unsupported",

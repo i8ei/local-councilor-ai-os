@@ -324,8 +324,8 @@ def _cmd_verify(args: argparse.Namespace) -> int:
 
     updated, v_report = verify_profile(data, client=client, now=now, kind=kind)
 
-    # If verified, persist to disk
-    if v_report.get("result") == "verified":
+    # If verified or blocked, persist to disk
+    if v_report.get("result") in ("verified", "blocked"):
         try:
             # Write atomically via temp file
             tmp_path = path.with_suffix(".tmp")
@@ -348,7 +348,7 @@ def _cmd_verify(args: argparse.Namespace) -> int:
             return 2
 
     print(json.dumps(v_report, ensure_ascii=False, indent=2))
-    return 0 if v_report.get("result") == "verified" else 2
+    return 0 if v_report.get("result") in ("verified", "blocked") else 2
 
 
 def build_parser() -> argparse.ArgumentParser:
