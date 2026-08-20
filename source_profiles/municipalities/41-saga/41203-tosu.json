@@ -6,15 +6,21 @@
   "official_home_url": "http://www.city.tosu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/tosu/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T14:06:45Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/tosu/SpTop.html",
           "observed_on": "http://www.city.tosu.lg.jp/"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/tosu/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/tosu/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-20T14:05:37Z"
         }
       ],
       "notes": null

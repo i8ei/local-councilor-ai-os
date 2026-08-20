@@ -422,6 +422,7 @@ class MinutesStaticVerifyTests(unittest.TestCase):
         self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
 
     def test_minutes_kaigiroku_unsupported(self) -> None:
+        # After implementation, kaigiroku with non-kaigiroku HTML should fail with structure_mismatch, not "未対応"
         profile = _base_minutes_static_needs_review()
         profile["sources"]["minutes"]["adapter"] = "kaigiroku_net"  # type: ignore[index]
         profile["sources"]["minutes"].pop("index_url", None)  # type: ignore[attr-defined]
@@ -439,7 +440,7 @@ class MinutesStaticVerifyTests(unittest.TestCase):
             profile, client=client, now=NOW, kind="minutes"
         )
         self.assertEqual("failed", report["result"])
-        self.assertIn("未対応", report["reason"])
+        self.assertIn("structure_mismatch", report["reason"])
         self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
 
     def test_minutes_idempotent(self) -> None:
@@ -460,6 +461,229 @@ class MinutesStaticVerifyTests(unittest.TestCase):
         cnt2 = sum(1 for e in ev2 if e.get("sha256") == fetch.sha256)
         self.assertEqual(cnt1, cnt2)
         self.assertEqual(len(ev1), len(ev2))
+
+
+# -------------------------------------------------------------------
+# kaigiroku_net synthetic tests (no network)
+# -------------------------------------------------------------------
+
+KAI_TENANT_URL = "https://ssp.kaigiroku.net/tenant/karatsu/SpTop.html"
+KAI_TENANT_SLUG = "karatsu"
+
+
+def _kaigiroku_entrance_html(tenant: str = KAI_TENANT_SLUG) -> str:
+    return f"""
+<html><head><title>{tenant} 会議録</title></head>
+<body>
+<h1>{tenant}市議会 会議録</h1>
+<p>kaigiroku</p>
+<a href="/tenant/{tenant}/SpTop.html">SpTop</a>
+<div>ssp.kaigiroku.net tenant {tenant}</div>
+</body></html>
+"""
+
+
+def _base_kaigiroku_needs_review(tenant_url: str = KAI_TENANT_URL) -> dict:
+    return {
+        "schema_version": 1,
+        "area_code_5": VALID_AREA,
+        "prefecture": VALID_PREF,
+        "municipality": VALID_MUNI,
+        "official_home_url": VALID_HOME,
+        "sources": {
+            "minutes": {
+                "status": "needs_review",
+                "adapter": "kaigiroku_net",
+                "tenant_url": tenant_url,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [{"url": tenant_url, "observed_on": VALID_HOME}],
+                "notes": None,
+            },
+            "regulations": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "budget": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "settlement": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+        },
+    }
+
+
+class KaigirokuNetVerifyTests(unittest.TestCase):
+    def test_kaigiroku_promotes_to_ready(self) -> None:
+        profile = _base_kaigiroku_needs_review()
+        fetch = make_fetch_result(KAI_TENANT_URL, _kaigiroku_entrance_html())
+        client = FakeHttpClient({KAI_TENANT_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("needs_review", report["status_before"])
+        self.assertEqual("ready", report["status_after"])
+        self.assertEqual("ready", updated["sources"]["minutes"]["status"])
+        self.assertEqual(NOW, updated["sources"]["minutes"]["verified_at"])
+        self.assertEqual("verify --live", updated["sources"]["minutes"]["verified_by"])
+        ev = updated["sources"]["minutes"]["evidence"]
+        self.assertTrue(any(e.get("sha256") == fetch.sha256 for e in ev))
+        self.assertTrue(
+            any(
+                e.get("url") == KAI_TENANT_URL
+                and e.get("observed_on") == KAI_TENANT_URL
+                for e in ev
+            )
+        )
+        self.assertEqual([], validate_profile(updated))
+        # robots forbidden areas must not be fetched
+        fetched = [u for u, _ in client.calls]
+        self.assertEqual([KAI_TENANT_URL], fetched)
+        self.assertFalse(any("/tenant/js/" in u for u in fetched))
+        self.assertFalse(any("/dnp/search/" in u for u in fetched))
+
+    def test_invalid_tenant_url_host_not_kaigiroku(self) -> None:
+        orig = _base_kaigiroku_needs_review(
+            tenant_url="https://example.com/tenant/karatsu/SpTop.html"
+        )
+        profile = copy.deepcopy(orig)
+        # Even if fetch would succeed, verifier must reject before fetching
+        fetch = make_fetch_result(
+            "https://example.com/tenant/karatsu/SpTop.html", _kaigiroku_entrance_html()
+        )
+        client = FakeHttpClient(
+            {"https://example.com/tenant/karatsu/SpTop.html": fetch}
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("invalid_tenant_url", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+        self.assertEqual(orig, profile)  # original not mutated
+        # gai host profile must remain unchanged (deepcopy returned for invalid)
+        self.assertEqual(
+            updated["sources"]["minutes"]["tenant_url"],
+            orig["sources"]["minutes"]["tenant_url"],
+        )
+        self.assertEqual(0, len(client.calls))
+
+    def test_invalid_tenant_url_path_not_tenant(self) -> None:
+        bad_url = "https://ssp.kaigiroku.net/notenant/karatsu/SpTop.html"
+        profile = _base_kaigiroku_needs_review(tenant_url=bad_url)
+        fetch = make_fetch_result(bad_url, _kaigiroku_entrance_html())
+        client = FakeHttpClient({bad_url: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("invalid_tenant_url", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+        self.assertEqual(0, len(client.calls))
+
+    def test_robots_denied_does_not_promote(self) -> None:
+        profile = _base_kaigiroku_needs_review()
+
+        class DenyClient:
+            def fetch(self, url: str, *, tier: object, **_: object):  # type: ignore[no-untyped-def]
+                raise RobotsDeniedError("robots")
+
+        client = DenyClient()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )  # type: ignore[arg-type]
+        self.assertEqual("failed", report["result"])
+        self.assertIn("RobotsDenied", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_404_does_not_promote(self) -> None:
+        profile = _base_kaigiroku_needs_review()
+
+        class NotFoundClient:
+            def fetch(self, url: str, *, tier: object, **_: object):  # type: ignore[no-untyped-def]
+                raise FetchError("HTTP 404")
+
+        client = NotFoundClient()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )  # type: ignore[arg-type]
+        self.assertEqual("failed", report["result"])
+        self.assertIn("FetchError", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_host_drift_does_not_promote(self) -> None:
+        profile = _base_kaigiroku_needs_review()
+        fetch = make_fetch_result(KAI_TENANT_URL, _kaigiroku_entrance_html())
+        fetch = replace(
+            fetch, final_url="https://evil.example.com/tenant/karatsu/SpTop.html"
+        )
+        client = FakeHttpClient({KAI_TENANT_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("host drift", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_structure_mismatch_does_not_promote(self) -> None:
+        profile = _base_kaigiroku_needs_review()
+        html = "<html><head><title>hello</title></head><body><p>hello world no markers</p></body></html>"
+        fetch = make_fetch_result(KAI_TENANT_URL, html)
+        client = FakeHttpClient({KAI_TENANT_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("structure_mismatch", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_idempotent(self) -> None:
+        profile = _base_kaigiroku_needs_review()
+        fetch = make_fetch_result(KAI_TENANT_URL, _kaigiroku_entrance_html())
+        client = FakeHttpClient({KAI_TENANT_URL: fetch})
+        updated1, report1 = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report1["result"])
+        updated2, report2 = verify_profile(
+            updated1, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report2["result"])
+        ev1 = updated1["sources"]["minutes"]["evidence"]
+        ev2 = updated2["sources"]["minutes"]["evidence"]
+        cnt1 = sum(1 for e in ev1 if e.get("sha256") == fetch.sha256)
+        cnt2 = sum(1 for e in ev2 if e.get("sha256") == fetch.sha256)
+        self.assertEqual(cnt1, cnt2)
+        self.assertEqual(len(ev1), len(ev2))
+
+    def test_does_not_fetch_robots_forbidden_urls(self) -> None:
+        profile = _base_kaigiroku_needs_review()
+        fetch = make_fetch_result(KAI_TENANT_URL, _kaigiroku_entrance_html())
+        client = FakeHttpClient({KAI_TENANT_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertNotIn("https://ssp.kaigiroku.net/tenant/js/app.js", fetched)
+        self.assertNotIn("https://ssp.kaigiroku.net/dnp/search/councils/index", fetched)
+        self.assertEqual(1, len(fetched))
 
 
 # -------------------------------------------------------------------

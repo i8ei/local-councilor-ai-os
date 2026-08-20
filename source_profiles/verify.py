@@ -70,6 +70,49 @@ def _has_greiki_structure(html_text: str) -> bool:
     return False
 
 
+def _is_kaigiroku_host(host: str | None) -> bool:
+    if host is None:
+        return False
+    h = host.lower()
+    return h == "ssp.kaigiroku.net" or h.endswith(".kaigiroku.net")
+
+
+def _parse_kaigiroku_tenant(url: str) -> tuple[str | None, str | None]:
+    """Return (host, tenant_slug) if url matches kaigiroku tenant pattern."""
+    try:
+        parts = urllib.parse.urlsplit(url)
+    except Exception:
+        return None, None
+    host = parts.netloc.lower() if parts.netloc else None
+    if not _is_kaigiroku_host(host):
+        return host, None
+    m = re.match(r"^/tenant/([^/]+)(?:/|$)", parts.path)
+    if not m:
+        return host, None
+    return host, m.group(1)
+
+
+def _has_kaigiroku_entrance(html_text: str, tenant_slug: str) -> bool:
+    low = html_text.lower()
+    # Real SpTop.html contains kaigiroku-specific UI traces, not just generic 会議録.
+    # Generic static minutes pages also contain 会議録 but lack kaigiroku traces;
+    # they must not be mistaken for a kaigiroku entrance.
+    if "kaigiroku" in low or "ssp.kaigiroku" in low or "sptop" in low:
+        return True
+    if "会議録検索" in html_text:
+        return True
+    if "council_list" in low or "committee_list" in low or "tenant.js" in low:
+        return True
+    # Require both 会議名/会議録 and tenant hint to avoid generic false positive
+    if (
+        tenant_slug
+        and tenant_slug.lower() in low
+        and ("会議録" in html_text or "議事録" in html_text or "会議名" in html_text)
+    ):
+        return True
+    return False
+
+
 def _is_council_scope(
     *,
     label: str,
@@ -594,6 +637,161 @@ def _verify_minutes_static(
     return updated, report
 
 
+def _verify_minutes_kaigiroku_net(
+    profile: dict[str, Any],
+    updated: dict[str, Any],
+    entry: dict[str, Any],
+    *,
+    client: Any,
+    now: str,
+    municipality: str,
+    status_before: Any,
+    adapter: Any,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    tenant_url = entry.get("tenant_url")
+    if not isinstance(tenant_url, str) or not tenant_url.strip():
+        report: dict[str, Any] = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "invalid_tenant_url: missing tenant_url (cannot derive entry URL without guessing)",
+            "status_before": status_before,
+            "status_after": status_before,
+        }
+        return copy.deepcopy(profile), report
+    tenant_url = tenant_url.strip()
+    host, tenant_slug = _parse_kaigiroku_tenant(tenant_url)
+    if tenant_slug is None:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"invalid_tenant_url: tenant_url {tenant_url!r} must be https://ssp.kaigiroku.net/tenant/<name>/... with host ssp.kaigiroku.net",
+            "status_before": status_before,
+            "status_after": status_before,
+            "tenant_url": tenant_url,
+        }
+        return copy.deepcopy(profile), report
+    # Fetch only the tenant_url page via HttpClient (robots respected)
+    try:
+        result = client.fetch(tenant_url, tier=CacheTier.INDEX)
+    except Exception as exc:
+        err_name = type(exc).__name__
+        reason = f"{err_name}: {exc}"
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": reason,
+            "status_before": status_before,
+            "status_after": status_before,
+            "tenant_url": tenant_url,
+        }
+        return updated, report
+    final_url_val = result.final_url if hasattr(result, "final_url") else tenant_url  # type: ignore[attr-defined]
+    final_host = _host(str(final_url_val))
+    if not _is_kaigiroku_host(final_host):
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"host drift: tenant {host!r} -> final {final_host!r}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "tenant_url": tenant_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+    try:
+        html_text = _decode_html(result)
+    except Exception as exc:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"decode_error: {exc}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "tenant_url": tenant_url,
+        }
+        return updated, report
+    # Structure check: kaigiroku entrance markers
+    if not _has_kaigiroku_entrance(html_text, tenant_slug):
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "structure_mismatch: kaigiroku entrance does not contain expected markers (会議録/kaigiroku/SpTop/tenant)",
+            "status_before": status_before,
+            "status_after": status_before,
+            "tenant_url": tenant_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+    # All checks passed -> promote
+    sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
+    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    evidence = entry.get("evidence")
+    if not isinstance(evidence, list):
+        evidence = []
+        entry["evidence"] = evidence
+    duplicate = False
+    for ev in evidence:
+        if not isinstance(ev, dict):
+            continue
+        if ev.get("url") == tenant_url and ev.get("sha256") == sha256:
+            duplicate = True
+            break
+    if not duplicate:
+        new_ev: dict[str, Any] = {
+            "url": tenant_url,
+            "observed_on": tenant_url,
+            "sha256": sha256,
+            "fetched_at": fetched_at,
+        }
+        evidence.append(new_ev)
+    entry["verified_at"] = now
+    entry["verified_by"] = "verify --live"
+    if status_before == "needs_review":
+        entry["status"] = "ready"
+    elif status_before != "ready":
+        entry["status"] = "ready"
+    status_after = entry.get("status")
+    errs = validate_profile(updated)
+    if errs:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"post-verify validation failed: {errs}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "tenant_url": tenant_url,
+        }
+        return copy.deepcopy(profile), report
+    report = {
+        "municipality": municipality,
+        "kind": "minutes",
+        "adapter": adapter,
+        "result": "verified",
+        "reason": "ok",
+        "status_before": status_before,
+        "status_after": status_after,
+        "tenant_url": tenant_url,
+        "final_url": final_url_val,
+        "sha256": sha256,
+        "fetched_at": fetched_at,
+    }
+    return updated, report
+
+
 def verify_profile(
     profile: dict[str, Any],
     *,
@@ -640,16 +838,16 @@ def verify_profile(
                 adapter=adapter,
             )
         if adapter == "kaigiroku_net":
-            report = {
-                "municipality": municipality,
-                "kind": kind,
-                "adapter": adapter,
-                "result": "failed",
-                "reason": f"verify unsupported for adapter {adapter!r} kind {kind!r}: この増分では未対応 (kaigiroku_net verify not implemented)",
-                "status_before": status_before,
-                "status_after": status_before,
-            }
-            return updated, report
+            return _verify_minutes_kaigiroku_net(
+                profile,
+                updated,
+                entry,
+                client=client,
+                now=now,
+                municipality=municipality,
+                status_before=status_before,
+                adapter=adapter,
+            )
         # dbsr / voices / null / other
         report = {
             "municipality": municipality,
