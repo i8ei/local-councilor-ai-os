@@ -968,6 +968,19 @@ def _dbsr_index_html() -> str:
     )
 
 
+def _dbsr_query_index_html() -> str:
+    return (
+        "<html><head>"
+        '<meta name="author" content="上峰町議会事務局">'
+        '<meta name="keywords" content="議会,会議録,議事録,検索">'
+        "<title>上峰町議会 会議録検索</title></head><body>"
+        '<a href="?QueryType=New&Template=List&ListOrder=ASC'
+        '&Cabinet=1&TermStart=2026-06-05&TermEnd=2026-06-12">'
+        "第２回定例会（６月）</a>"
+        "</body></html>"
+    )
+
+
 def _base_dbsr_needs_review(index_url: str = DBSR_INDEX_URL) -> dict:
     return {
         "schema_version": 1,
@@ -1038,6 +1051,18 @@ class DbsrVerifyTests(unittest.TestCase):
         )
         self.assertEqual([], validate_profile(updated))
         self.assertEqual([DBSR_INDEX_URL], [u for u, _ in client.calls])
+
+    def test_dbsr_query_list_variant_promotes_to_ready(self) -> None:
+        index_url = "http://www.town.kamimine.saga.dbsr.jp/index.php/"
+        profile = _base_dbsr_needs_review(index_url=index_url)
+        fetch = make_fetch_result(index_url, _dbsr_query_index_html())
+        client = FakeHttpClient({index_url: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", updated["sources"]["minutes"]["status"])
+        self.assertEqual([index_url], [u for u, _ in client.calls])
 
     def test_dbsr_evidence_idempotent(self) -> None:
         profile = _base_dbsr_needs_review()

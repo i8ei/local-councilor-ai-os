@@ -6,18 +6,24 @@
   "official_home_url": "http://www.town.miyaki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "dbsr",
       "index_url": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T22:20:52Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
           "observed_on": "http://www.town.miyaki.lg.jp/"
+        },
+        {
+          "url": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
+          "observed_on": "https://www.town.miyaki.saga.dbsr.jp/index.php/",
+          "sha256": "b1eaaa527e533b3f2835318aa0fd5adc81b3f11d0bcce13063802641930902b9",
+          "fetched_at": "2026-08-20T22:20:54Z"
         }
       ],
-      "notes": "dbsr adapter implemented; live verify pending before ready promotion"
+      "notes": "dbsr index live-verified; ready for observed-index ingestion"
     },
     "regulations": {
       "status": "unsupported",

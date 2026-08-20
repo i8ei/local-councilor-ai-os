@@ -6,18 +6,24 @@
   "official_home_url": "http://www.town.kamimine.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "dbsr",
       "index_url": "http://www.town.kamimine.saga.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T22:25:14Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kamimine.saga.dbsr.jp/index.php/",
           "observed_on": "http://www.town.kamimine.lg.jp/"
+        },
+        {
+          "url": "http://www.town.kamimine.saga.dbsr.jp/index.php/",
+          "observed_on": "http://www.town.kamimine.saga.dbsr.jp/index.php/",
+          "sha256": "e3c5e6fa6fb87eb2b8b5a894450ae8aca900d9ce052d688b033c52a96eccee2f",
+          "fetched_at": "2026-08-20T22:20:33Z"
         }
       ],
-      "notes": "dbsr adapter implemented; live verify pending before ready promotion"
+      "notes": "dbsr query-list index live-verified; ready for observed-index ingestion"
     },
     "regulations": {
       "status": "ready",

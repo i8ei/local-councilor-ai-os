@@ -94,7 +94,7 @@ For `minutes/static` the index is checked for a council-scoped minutes document 
 
 For `minutes/kaigiroku_net` the stored `tenant_url` is fetched and promoted only if the host stays on `ssp.kaigiroku.net` and the page carries kaigiroku entrance markers.
 
-For `minutes/dbsr` the stored `index_url` (must be a `*.dbsr.jp` URL containing `/index.php`) is fetched once and promoted only if the host stays on `*.dbsr.jp` and the page carries a minutes hint (会議録/議事録/定例会/臨時会/本会議) together with at least one same-host `/index.php/<id>` detail link. A bare or maintenance page on the vendor host does not promote.
+For `minutes/dbsr` the stored `index_url` (must be a `*.dbsr.jp` URL containing `/index.php`) is fetched once and promoted only if the host stays on `*.dbsr.jp` and the page carries a minutes hint (会議録/議事録/定例会/臨時会/本会議) together with either a same-host `/index.php/<id>` detail link or the observed query-list form (`/index.php/?QueryType=New&Template=List...` with a meeting label). A bare or maintenance page on the vendor host does not promote.
 
 Trust boundary:
 

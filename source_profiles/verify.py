@@ -808,8 +808,9 @@ def _has_dbsr_minutes_entrance(
     """Confirm a dbsr page is an active council minutes index.
 
     Requires both a minutes hint term and at least one same-host link into an
-    ``/index.php/<id>`` detail page (or an explicit minutes document link). A
-    bare, empty, or error page on the vendor host must not promote.
+    ``/index.php/<id>`` detail page, or an observed dbsr list query
+    (``QueryType=New&Template=List``) whose label names a meeting. A bare,
+    empty, or error page on the vendor host must not promote.
     """
     if not _DBSR_MINUTES_HINT_RE.search(html_text):
         return False
@@ -820,9 +821,20 @@ def _has_dbsr_minutes_entrance(
             continue
         if _host(resolved) != observed_host:
             continue
-        path = urllib.parse.urlsplit(resolved).path
+        resolved_parts = urllib.parse.urlsplit(resolved)
+        path = resolved_parts.path
         # A detail page under /index.php/<id>, i.e. more than the bare index.
         if re.search(r"/index\.php/.+", path):
+            return True
+        # Some dbsr tenants (observed: Kamimine) list meetings as query links
+        # on the bare index instead of path-based detail pages.
+        query = urllib.parse.parse_qs(resolved_parts.query)
+        if (
+            path.rstrip("/") == "/index.php"
+            and query.get("QueryType") == ["New"]
+            and query.get("Template") == ["List"]
+            and _DBSR_MINUTES_HINT_RE.search(label)
+        ):
             return True
         if _is_minutes_document_link(label=label, url=resolved):
             return True
@@ -924,7 +936,7 @@ def _verify_minutes_dbsr(
             "kind": "minutes",
             "adapter": adapter,
             "result": "failed",
-            "reason": "structure_mismatch: dbsr index has no minutes hint with an /index.php detail link",
+            "reason": "structure_mismatch: dbsr index has no minutes hint with a supported detail/list link",
             "status_before": status_before,
             "status_after": status_before,
             "index_url": index_url,
