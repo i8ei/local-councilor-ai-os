@@ -147,7 +147,7 @@ def _collapse(value: str) -> str:
 
 
 class _MinutesPageParser(HTMLParser):
-    """Extract title/H1 context and links for minutes verify."""
+    """Extract title/H1..H6 context and links for minutes verify."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -159,7 +159,7 @@ class _MinutesPageParser(HTMLParser):
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         tag_name = tag.lower()
-        if tag_name in {"title", "h1"}:
+        if tag_name in {"title", "h1", "h2", "h3", "h4", "h5", "h6"}:
             self._capture_context = True
         if tag_name == "a" and self._href is None:
             href = dict(attrs).get("href")
@@ -175,7 +175,7 @@ class _MinutesPageParser(HTMLParser):
 
     def handle_endtag(self, tag: str) -> None:
         tag_name = tag.lower()
-        if tag_name in {"title", "h1"}:
+        if tag_name in {"title", "h1", "h2", "h3", "h4", "h5", "h6"}:
             self._capture_context = False
         if tag_name == "a" and self._href is not None:
             self.links.append((self._href, _collapse("".join(self._link_text))))
@@ -285,23 +285,104 @@ def _verify_minutes_static(
         parser.feed(html_text)
     except Exception:
         pass
+
     # New rule: ready iff official host and page has at least one council-scoped minutes document link.
     # Removed old "title/H1 must have council scope" gate; title council scope is bonus only.
     # A council minutes document link = (.pdf OR label/URL contains 会議録/議事録/minutes) AND label/URL has council token AND not non-council (rescued only under /gikai etc).
-    has_council_doc = False
-    for href, label in parser.links:
-        resolved = _canonical_url(urllib.parse.urljoin(str(final_url_val), href))
-        if resolved is None:
-            continue
-        if not _is_minutes_document_link(label=label, url=resolved):
-            continue
-        if not _is_council_document_scope(
-            label=label, url=resolved, observed_on=str(final_url_val)
-        ):
-            continue
-        has_council_doc = True
-        break
-    if not has_council_doc:
+    def _has_council_doc_on_page(
+        links: list[tuple[str, str]], observed_url: str, page_context: str
+    ) -> bool:
+        for href, label in links:
+            resolved = _canonical_url(urllib.parse.urljoin(str(observed_url), href))
+            if resolved is None:
+                continue
+            if not _is_minutes_document_link(label=label, url=resolved):
+                continue
+            if _is_council_document_scope(
+                label=label, url=resolved, observed_on=str(observed_url)
+            ):
+                return True
+            # Fallback: page context contains council token (e.g., headings 定例会)
+            # Allows generic "1日目" PDFs under a council heading to count.
+            if page_context and _is_council_scope(
+                label=label,
+                url=resolved,
+                observed_on=str(observed_url),
+                page_context=page_context,
+            ):
+                return True
+        return False
+
+    page_context = parser.context()
+    has_council_doc = _has_council_doc_on_page(
+        parser.links, str(final_url_val), page_context
+    )
+    if has_council_doc:
+        # Direct success on index (no follow needed)
+        sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
+        fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+        evidence = entry.get("evidence")
+        if not isinstance(evidence, list):
+            evidence = []
+            entry["evidence"] = evidence
+        duplicate = False
+        for ev in evidence:
+            if not isinstance(ev, dict):
+                continue
+            if ev.get("url") == index_url and ev.get("sha256") == sha256:
+                duplicate = True
+                break
+        if not duplicate:
+            new_ev: dict[str, Any] = {
+                "url": index_url,
+                "observed_on": index_url,
+                "sha256": sha256,
+                "fetched_at": fetched_at,
+            }
+            evidence.append(new_ev)
+        entry["verified_at"] = now
+        entry["verified_by"] = "verify --live"
+        if status_before == "needs_review":
+            entry["status"] = "ready"
+        elif status_before != "ready":
+            entry["status"] = "ready"
+        status_after = entry.get("status")
+        errs = validate_profile(updated)
+        if errs:
+            report = {
+                "municipality": municipality,
+                "kind": "minutes",
+                "adapter": adapter,
+                "result": "failed",
+                "reason": f"post-verify validation failed: {errs}",
+                "status_before": status_before,
+                "status_after": status_before,
+                "index_url": index_url,
+            }
+            return copy.deepcopy(profile), report
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "verified",
+            "reason": "ok",
+            "status_before": status_before,
+            "status_after": status_after,
+            "index_url": index_url,
+            "final_url": final_url_val,
+            "sha256": sha256,
+            "fetched_at": fetched_at,
+        }
+        return updated, report
+
+    # No document on index -> try 1-level follow if configured
+    config = entry.get("config")
+    follow_regex_raw: str | None = None
+    if isinstance(config, dict):
+        raw = config.get("follow_link_regex")
+        if isinstance(raw, str) and raw.strip():
+            follow_regex_raw = raw
+    if follow_regex_raw is None:
         report = {
             "municipality": municipality,
             "kind": "minutes",
@@ -314,28 +395,169 @@ def _verify_minutes_static(
             "final_url": final_url_val,
         }
         return updated, report
-    # All checks passed -> promote
-    sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
-    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    # Validate regex
+    try:
+        follow_pat = re.compile(follow_regex_raw)
+    except re.error as exc:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"invalid follow_link_regex: {exc}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return updated, report
+    # Collect candidates: same host, HTML only, regex matches label or URL (decoded)
+    candidates: list[str] = []
+    seen_follow: set[str] = set()
+    for href, label in parser.links:
+        resolved = _canonical_url(urllib.parse.urljoin(str(final_url_val), href))
+        if resolved is None:
+            continue
+        # Host must match official host (no drift)
+        cand_host = _host(resolved)
+        if entry_host is not None and cand_host is not None and cand_host != entry_host:
+            continue
+        # Only HTML links (exclude PDFs)
+        path_lower = Path(urllib.parse.urlsplit(resolved).path).suffix.lower()
+        if path_lower == ".pdf":
+            continue
+        decoded = urllib.parse.unquote(resolved)
+        if not (
+            follow_pat.search(label)
+            or follow_pat.search(resolved)
+            or follow_pat.search(decoded)
+        ):
+            continue
+        if resolved in seen_follow:
+            continue
+        seen_follow.add(resolved)
+        candidates.append(resolved)
+        if len(candidates) >= 3:
+            break
+    if not candidates:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "no_follow_candidate: no link matches follow_link_regex on same host (HTML only)",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+    # Try each candidate depth 1 only, no recursion
+    last_error: str | None = None
+    fetched_any = False
+    success_follow_result: Any | None = None
+    success_follow_final: str | None = None
+    for cand_url in candidates:
+        try:
+            f_result = client.fetch(cand_url, tier=CacheTier.INDEX)
+        except Exception as exc:  # noqa: BLE001
+            last_error = f"{type(exc).__name__}: {exc}"
+            continue
+        fetched_any = True
+        f_final = f_result.final_url if hasattr(f_result, "final_url") else cand_url  # type: ignore[attr-defined]
+        f_host = _host(str(f_final))
+        if entry_host is not None and f_host is not None and f_host != entry_host:
+            last_error = f"host drift on follow: {entry_host!r} -> {f_host!r}"
+            continue
+        try:
+            f_html = _decode_html(f_result)
+        except Exception as exc:  # noqa: BLE001
+            last_error = f"decode_error: {exc}"
+            continue
+        f_parser = _MinutesPageParser()
+        try:
+            f_parser.feed(f_html)
+        except Exception:
+            pass
+        f_context = f_parser.context()
+        if _has_council_doc_on_page(f_parser.links, str(f_final), f_context):
+            success_follow_result = f_result
+            success_follow_final = str(f_final)
+            break
+    if success_follow_result is None:
+        if not fetched_any:
+            report = {
+                "municipality": municipality,
+                "kind": "minutes",
+                "adapter": adapter,
+                "result": "failed",
+                "reason": last_error
+                or "no_council_document_link: follow pages contain no council-scoped minutes document link",
+                "status_before": status_before,
+                "status_after": status_before,
+                "index_url": index_url,
+                "final_url": final_url_val,
+            }
+            return updated, report
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "no_council_document_link: follow pages contain no council-scoped minutes document link (.pdf or label/URL contains 会議録/議事録/minutes with council token)",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+    # Success via follow: add evidence for both root and follow (idempotent on url+sha256)
+    root_sha = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
+    root_fetched = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    follow_sha = (
+        success_follow_result.sha256 if hasattr(success_follow_result, "sha256") else ""
+    )  # type: ignore[attr-defined]
+    follow_fetched = (
+        success_follow_result.fetched_at
+        if hasattr(success_follow_result, "fetched_at")
+        else now
+    )  # type: ignore[attr-defined]
     evidence = entry.get("evidence")
     if not isinstance(evidence, list):
         evidence = []
         entry["evidence"] = evidence
-    duplicate = False
-    for ev in evidence:
-        if not isinstance(ev, dict):
-            continue
-        if ev.get("url") == index_url and ev.get("sha256") == sha256:
-            duplicate = True
-            break
-    if not duplicate:
-        new_ev: dict[str, Any] = {
-            "url": index_url,
-            "observed_on": index_url,
-            "sha256": sha256,
-            "fetched_at": fetched_at,
-        }
-        evidence.append(new_ev)
+    # Root evidence
+    duplicate_root = any(
+        isinstance(ev, dict)
+        and ev.get("url") == index_url
+        and ev.get("sha256") == root_sha
+        for ev in evidence
+    )
+    if not duplicate_root:
+        evidence.append(
+            {
+                "url": index_url,
+                "observed_on": index_url,
+                "sha256": root_sha,
+                "fetched_at": root_fetched,
+            }
+        )
+    # Follow evidence (observed_on is root index)
+    follow_url_val = success_follow_final or candidates[0]
+    duplicate_follow = any(
+        isinstance(ev, dict)
+        and ev.get("url") == follow_url_val
+        and ev.get("sha256") == follow_sha
+        for ev in evidence
+    )
+    if not duplicate_follow:
+        evidence.append(
+            {
+                "url": follow_url_val,
+                "observed_on": index_url,
+                "sha256": follow_sha,
+                "fetched_at": follow_fetched,
+            }
+        )
     entry["verified_at"] = now
     entry["verified_by"] = "verify --live"
     if status_before == "needs_review":
@@ -361,13 +583,13 @@ def _verify_minutes_static(
         "kind": "minutes",
         "adapter": adapter,
         "result": "verified",
-        "reason": "ok",
+        "reason": "ok via follow",
         "status_before": status_before,
         "status_after": status_after,
         "index_url": index_url,
-        "final_url": final_url_val,
-        "sha256": sha256,
-        "fetched_at": fetched_at,
+        "final_url": follow_url_val,
+        "sha256": follow_sha,
+        "fetched_at": follow_fetched,
     }
     return updated, report
 

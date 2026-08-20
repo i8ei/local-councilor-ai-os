@@ -292,6 +292,30 @@ def validate_profile(data: dict[str, Any]) -> list[str]:
                                         f"sources.{kind}.verified_at must not be in the future"
                                     )
 
+                # config validation (stdlib only, no guessing)
+                config = entry.get("config")
+                if config is not None:
+                    if not isinstance(config, dict):
+                        errors.append(f"sources.{kind}.config must be an object")
+                    else:
+                        for regex_key in (
+                            "follow_link_regex",
+                            "link_include_regex",
+                            "link_exclude_regex",
+                        ):
+                            val = config.get(regex_key)
+                            if val is not None:
+                                if not isinstance(val, str):
+                                    errors.append(
+                                        f"sources.{kind}.config.{regex_key} must be a string"
+                                    )
+                                elif val.strip():
+                                    try:
+                                        re.compile(val)
+                                    except re.error as exc:
+                                        errors.append(
+                                            f"sources.{kind}.config.{regex_key} is not a valid regex: {exc}"
+                                        )
                 # 推測禁止: if entry URL exists, evidence must have at least 1 and host must match
                 if present_entries:
                     entry_url = None

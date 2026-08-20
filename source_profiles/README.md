@@ -90,6 +90,8 @@ Steps inside `verify_profile` (injectable `client`, no guessing):
 3. Fail closed on `RobotsDenied/OfflineCacheMiss/FetchError`, host drift (`final_url` host != `base_url` host), or structure mismatch (HTML must contain `reiki_*` or `例規` markers). Status stays `needs_review`; exit `2`.
 4. On success: set `verified_at` (UTC ISO8601 Z, now), `verified_by="verify --live"`, append `{url, observed_on, sha256, fetched_at}` to `evidence` (idempotent on `url+sha256`), set `status="ready"`, self-validate via `schema.validate_profile` before saving.
 
+For `minutes/static` the index is checked for a council-scoped minutes document link (`.pdf` or label/URL contains 会議録/議事録 with council token). If none is found and `config.follow_link_regex` is set, the verifier follows at most 3 same-host HTML links whose label or URL (percent-decoded) matches the regex, depth 1 only, using `HttpClient` (robots/low rate/cache). The first follow page containing a council document promotes to `ready` and appends evidence for both the root index and the successful follow page (idempotent on `url+sha256`). No follow occurs when the regex is absent or invalid; invalid regex is a validation/verify error and the profile is not saved. `決算審査` etc. are excluded by choosing a minimal year regex such as `(令和|平成)(元|[0-9]+)年`.
+
 Trust boundary:
 
 - Only a live (or human) verification can promote to `ready`; observatory/preflight hints never auto-promote.

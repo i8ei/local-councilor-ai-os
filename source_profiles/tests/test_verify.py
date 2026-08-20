@@ -462,5 +462,269 @@ class MinutesStaticVerifyTests(unittest.TestCase):
         self.assertEqual(len(ev1), len(ev2))
 
 
+# -------------------------------------------------------------------
+# Follow 1-level synthetic tests (Task C, no network)
+# -------------------------------------------------------------------
+
+FOLLOW_INDEX_URL = MINUTES_INDEX_URL
+FOLLOW_YEAR_URL = "http://www.town.tara.lg.jp/chosei/_1010/_1414/_7097.html"
+FOLLOW_YEAR_URL_2 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/_6753.html"
+FOLLOW_YEAR_URL_3 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/_5163.html"
+FOLLOW_YEAR_URL_4 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/_4489.html"
+
+
+def _base_follow_profile(follow_regex: str = "(令和|平成)(元|[0-9]+)年") -> dict:
+    p = _base_minutes_static_needs_review()
+    cfg = p["sources"]["minutes"].get("config")
+    if not isinstance(cfg, dict):
+        cfg = {}
+        p["sources"]["minutes"]["config"] = cfg
+    cfg["follow_link_regex"] = follow_regex
+    return p
+
+
+def _root_html_with_year_links(extra: str = "") -> str:
+    # Index has no direct PDF, only year page links
+    return f"""
+<html><head><title>会議録</title></head>
+<body><h1>会議録</h1>
+<a href="/chosei/_1010/_1414/_7097.html">令和7年</a>
+<a href="/chosei/_1010/_1414/_6753.html">令和6年</a>
+<a href="/chosei/_1010/_1414/_1454.html">決算審査特別委員会会議録</a>
+{extra}
+</body></html>
+"""
+
+
+def _year_html_with_council_pdf(
+    label: str = "令和7年第1回定例会 1日目 会議録.pdf",
+) -> str:
+    return f"""
+<html><head><title>令和7年</title></head>
+<body><h1>令和7年</h1><h2>定例会</h2>
+<a href="/var/rev0/0021/4208/1265717119.pdf">{label}</a>
+</body></html>
+"""
+
+
+class FollowLinkVerifyTests(unittest.TestCase):
+    def test_follow_success_root_no_pdf_follow_has_doc(self) -> None:
+        profile = _base_follow_profile()
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _root_html_with_year_links())
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_pdf())
+        client = FakeHttpClient(
+            {FOLLOW_INDEX_URL: root_fetch, FOLLOW_YEAR_URL: year_fetch}
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", updated["sources"]["minutes"]["status"])
+        # evidence must contain both root and follow entries with sha256
+        ev = updated["sources"]["minutes"]["evidence"]
+        self.assertTrue(
+            any(e.get("url") == FOLLOW_INDEX_URL and "sha256" in e for e in ev)
+        )
+        self.assertTrue(
+            any(e.get("url") == FOLLOW_YEAR_URL and "sha256" in e for e in ev)
+        )
+        # follow evidence observed_on is index_url
+        self.assertTrue(
+            any(
+                e.get("url") == FOLLOW_YEAR_URL
+                and e.get("observed_on") == FOLLOW_INDEX_URL
+                for e in ev
+            )
+        )
+        self.assertEqual([], validate_profile(updated))
+        # no guessed URL: only fetched the two observed links
+        fetched_urls = [u for u, _ in client.calls]
+        self.assertIn(FOLLOW_INDEX_URL, fetched_urls)
+        self.assertIn(FOLLOW_YEAR_URL, fetched_urls)
+
+    def test_non_matching_link_not_fetched(self) -> None:
+        profile = _base_follow_profile()
+        root_html = _root_html_with_year_links(
+            extra='<a href="/chosei/_1010/_1414/_9999.html">お知らせ</a>'
+        )
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_pdf())
+        client = FakeHttpClient(
+            {FOLLOW_INDEX_URL: root_fetch, FOLLOW_YEAR_URL: year_fetch}
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertNotIn(
+            "https://www.town.tara.lg.jp/chosei/_1010/_1414/_9999.html", fetched
+        )
+        # kessan link must also not be fetched (does not match regex)
+        self.assertNotIn(
+            "https://www.town.tara.lg.jp/chosei/_1010/_1414/_1454.html", fetched
+        )
+
+    def test_external_host_link_not_fetched(self) -> None:
+        profile = _base_follow_profile()
+        root_html = """
+<html><head><title>会議録</title></head>
+<body><h1>会議録</h1>
+<a href="https://evil.example.com/chosei/_1010/_1414/_7097.html">令和7年</a>
+<a href="/chosei/_1010/_1414/_7097.html">令和7年</a>
+</body></html>
+"""
+        # need to ensure evil link would otherwise match but host mismatch prevents fetch
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_pdf())
+        client = FakeHttpClient(
+            {FOLLOW_INDEX_URL: root_fetch, FOLLOW_YEAR_URL: year_fetch}
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertNotIn(
+            "https://evil.example.com/chosei/_1010/_1414/_7097.html", fetched
+        )
+        self.assertIn(FOLLOW_YEAR_URL, fetched)
+
+    def test_max_three_pages(self) -> None:
+        profile = _base_follow_profile()
+        root_html = """
+<html><head><title>会議録</title></head>
+<body><h1>会議録</h1>
+<a href="/chosei/_1010/_1414/_7097.html">令和7年</a>
+<a href="/chosei/_1010/_1414/_6753.html">令和6年</a>
+<a href="/chosei/_1010/_1414/_5163.html">令和5年</a>
+<a href="/chosei/_1010/_1414/_4489.html">令和4年</a>
+</body></html>
+"""
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
+        empty_year = "<html><head><title>令和7年</title></head><body><h1>令和7年</h1><p>no pdf</p></body></html>"
+        fetch1 = make_fetch_result(FOLLOW_YEAR_URL, empty_year)
+        fetch2 = make_fetch_result(FOLLOW_YEAR_URL_2, empty_year)
+        fetch3 = make_fetch_result(FOLLOW_YEAR_URL_3, empty_year)
+        fetch4 = make_fetch_result(FOLLOW_YEAR_URL_4, _year_html_with_council_pdf())
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                FOLLOW_YEAR_URL: fetch1,
+                FOLLOW_YEAR_URL_2: fetch2,
+                FOLLOW_YEAR_URL_3: fetch3,
+                FOLLOW_YEAR_URL_4: fetch4,
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertIn(FOLLOW_YEAR_URL, fetched)
+        self.assertIn(FOLLOW_YEAR_URL_3, fetched)
+        self.assertNotIn(FOLLOW_YEAR_URL_4, fetched)
+        self.assertIn("no_council_document_link", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_depth_one_only(self) -> None:
+        profile = _base_follow_profile()
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _root_html_with_year_links())
+        nested_url = "http://www.town.tara.lg.jp/chosei/_1010/_1414/nested.html"
+        year_html = """
+<html><head><title>令和7年</title></head>
+<body><h1>令和7年</h1>
+<a href="/chosei/_1010/_1414/nested.html">令和7年 詳細</a>
+</body></html>
+"""
+        nested_html = _year_html_with_council_pdf()
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, year_html)
+        nested_fetch = make_fetch_result(nested_url, nested_html)
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                FOLLOW_YEAR_URL: year_fetch,
+                nested_url: nested_fetch,
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertNotIn(nested_url, fetched)
+
+    def test_invalid_regex_safe_fail(self) -> None:
+        profile = _base_follow_profile(follow_regex="[")
+        orig = copy.deepcopy(profile)
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _root_html_with_year_links())
+        client = FakeHttpClient({FOLLOW_INDEX_URL: root_fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("invalid follow_link_regex", report["reason"])
+        self.assertEqual(orig, profile)
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+        # also schema validation must fail for invalid regex
+        errs = validate_profile(profile)
+        self.assertTrue(any("follow_link_regex" in e for e in errs))
+
+    def test_follow_candidate_exists_but_no_doc_stays_needs_review(self) -> None:
+        profile = _base_follow_profile()
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _root_html_with_year_links())
+        empty_html = "<html><head><title>令和7年</title></head><body><h1>令和7年</h1><p>no document</p></body></html>"
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, empty_html)
+        second_fetch = make_fetch_result(FOLLOW_YEAR_URL_2, empty_html)
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                FOLLOW_YEAR_URL: year_fetch,
+                FOLLOW_YEAR_URL_2: second_fetch,
+            }
+        )
+        # root has 2 candidates: _7097 and _6753 (kessan excluded). Both empty.
+        # Provide second year url link in root? Our root already has _6753 as second.
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("no_council_document_link", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_idempotent_follow(self) -> None:
+        profile = _base_follow_profile()
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _root_html_with_year_links())
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_pdf())
+        client = FakeHttpClient(
+            {FOLLOW_INDEX_URL: root_fetch, FOLLOW_YEAR_URL: year_fetch}
+        )
+        updated1, _ = verify_profile(profile, client=client, now=NOW, kind="minutes")
+        self.assertEqual("ready", updated1["sources"]["minutes"]["status"])
+        ev1_len = len(updated1["sources"]["minutes"]["evidence"])
+        updated2, report2 = verify_profile(
+            updated1, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report2["result"])
+        ev2_len = len(updated2["sources"]["minutes"]["evidence"])
+        self.assertEqual(ev1_len, ev2_len)
+
+    def test_percent_decode_match(self) -> None:
+        # URL encoded label still matches
+        profile = _base_follow_profile(follow_regex="令和7年")
+        # href is percent encoded
+        root_html = '<html><head><title>会議録</title></head><body><h1>会議録</h1><a href="/chosei/_1010/_1414/%E4%BB%A4%E5%92%8C7%E5%B9%B4.html">令和7年</a></body></html>'
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
+        encoded_url = "http://www.town.tara.lg.jp/chosei/_1010/_1414/%E4%BB%A4%E5%92%8C7%E5%B9%B4.html"
+        # Fake client expects the resolved canonical url (which keeps encoded form)
+        year_fetch = make_fetch_result(encoded_url, _year_html_with_council_pdf())
+        client = FakeHttpClient({FOLLOW_INDEX_URL: root_fetch, encoded_url: year_fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        # Should match via decoded URL
+        self.assertEqual("verified", report["result"])
+
+
 if __name__ == "__main__":
     unittest.main()

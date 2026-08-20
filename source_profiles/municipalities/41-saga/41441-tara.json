@@ -6,23 +6,36 @@
   "official_home_url": "http://www.town.tara.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T13:52:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
           "observed_on": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html"
+        },
+        {
+          "url": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
+          "observed_on": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
+          "sha256": "0eeb0d47700f787dce76069eebac394632fb1117900242d1a679eda644ed02a1",
+          "fetched_at": "2026-08-20T13:52:49Z"
+        },
+        {
+          "url": "https://www.town.tara.lg.jp/chosei/_1010/_1414/_7097.html",
+          "observed_on": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
+          "sha256": "7c268107d8513145c78df526610b63afc26b00449a42e7fb6ebeba138d50f8f9",
+          "fetched_at": "2026-08-20T13:52:51Z"
         }
       ],
-      "notes": "no_council_document_link: https://www.town.tara.lg.jp/chosei/_1010/_1414.html has title '会議録' but no council-scoped minutes document link (.pdf or label/URL contains 会議録/議事録/minutes with council token); only link is 決算審査特別委員会会議録 (non-council) and footer council nav without minutes doc; checked linked page https://www.town.tara.lg.jp/chosei/_1010.html also has no council minutes PDF/HTML link and no .pdf; no alternative static minutes index observed in directly linked official pages; likely JS-dependent or no static index – keep needs_review for human confirmation",
+      "notes": "索引 https://www.town.tara.lg.jp/chosei/_1010/_1414.html は年度別ページへの静的リンクを列挙（例: /chosei/_1010/_1414/_7097.html「令和7年」）し、各年度ページに12月/9月/6月/3月定例会の日別PDF（日程表/目次/1日目...）が静的に配置（build.pyの発見経路と同じ）。一覧直下に定例会PDFは無く、follow_link_regex '(令和|平成)(元|[0-9]+)年' で同一hostの年度HTMLのみを最大3件辿る（決算審査特別委員会は選択しない）。年度ページに会議録PDFがあれば ready。",
       "config": {
         "council_name": "太良町議会",
         "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
         "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
-        "pdf": true
+        "pdf": true,
+        "follow_link_regex": "(令和|平成)(元|[0-9]+)年"
       }
     },
     "regulations": {
