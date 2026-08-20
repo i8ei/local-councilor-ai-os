@@ -1,6 +1,6 @@
 # 未対応ベンダーに出会ったら
 
-`detect.py` が `voices` や `dbsr`、`discuss`、あるいは `unknown` を返し、取込アダプターがない。これは行き止まりではありません。このリポジトリの立場では、未対応ベンダーの取込は「リポジトリの欠落機能」ではなく、**利用者が自分のAIエージェントと書く領域**です。決算モジュールがPDF抽出を各現場のAIと人に委ね、契約と検算だけを固定しているのと同じ整理です（[抽出ガイダンス](../settlement_review/extraction_guidance.md)参照）。
+`detect.py` が `voices` や `discuss`、あるいは `unknown` を返し、取込アダプターがない。これは行き止まりではありません。このリポジトリの立場では、未対応ベンダーの取込は「リポジトリの欠落機能」ではなく、**利用者が自分のAIエージェントと書く領域**です。決算モジュールがPDF抽出を各現場のAIと人に委ね、契約と検算だけを固定しているのと同じ整理です（[抽出ガイダンス](../settlement_review/extraction_guidance.md)参照）。`dbsr` は現在、組み込みアダプターで対応しています。
 
 実例として、本モジュールのkaigiroku.netアダプターは、公開ページの構造偵察から実装まで、AIエージェントが半日で書いたものです。同じことは、あなたのAIにもできます。
 
@@ -10,7 +10,7 @@
 
 1. **契約**: [`schema.sql`](schema.sql)。会議と発言の正規化形式、来歴（provenance）の必須項目。書かれた取込が満たすべきゴールはこれだけです。
 2. **礼節の基盤**: [`adapters/base.py`](adapters/base.py)。robots.txt確認、1.5秒間隔、キャッシュ、`fetched_at` 記録は実装済みなので、流用させます。自前のfetchを書かせないでください。
-3. **参照実装**: [`adapters/kaigiroku_net.py`](adapters/kaigiroku_net.py)（ベンダーCMS型）と [`adapters/static_html.py`](adapters/static_html.py)（静的型）。「これに倣って書く」と指示します。
+3. **参照実装**: [`adapters/kaigiroku_net.py`](adapters/kaigiroku_net.py)・[`adapters/dbsr.py`](adapters/dbsr.py)（ベンダーCMS型）と [`adapters/static_html.py`](adapters/static_html.py)（静的型）。「これに倣って書く」と指示します。
 
 依頼文に含める制約は、本リポジトリの原則そのままです。
 
