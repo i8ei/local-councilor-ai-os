@@ -351,7 +351,59 @@ class MinutesStaticVerifyTests(unittest.TestCase):
             profile, client=client, now=NOW, kind="minutes"
         )
         self.assertEqual("failed", report["result"])
-        self.assertIn("council_scope_missing", report["reason"])
+        self.assertIn("no_council_document_link", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_generic_title_with_council_pdf_promotes_to_ready(self) -> None:
+        # New rule core: generic title "会議録" still ready if council pdf link exists
+        profile = _base_minutes_static_needs_review()
+        html = """
+<html><head><title>会議録</title></head>
+<body><h1>会議録</h1>
+<a href="/gikai/2024/reiwa6-dai1-teireikai.pdf">令和6年第1回定例会会議録.pdf</a>
+</body></html>
+"""
+        fetch = make_fetch_result(MINUTES_INDEX_URL, html)
+        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", updated["sources"]["minutes"]["status"])
+
+    def test_agri_committee_pdf_only_does_not_promote(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        html = """
+<html><head><title>会議録</title></head>
+<body><h1>会議録</h1>
+<a href="/docs/nougyou.pdf">農業委員会議事録.pdf</a>
+</body></html>
+"""
+        fetch = make_fetch_result(MINUTES_INDEX_URL, html)
+        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("no_council_document_link", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_footer_council_nav_only_does_not_promote(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        html = """
+<html><head><title>太良町ホーム</title></head>
+<body><h1>太良町</h1>
+<p>コンテンツ</p>
+<footer><a href="/gikai/">町議会</a></footer>
+</body></html>
+"""
+        fetch = make_fetch_result(MINUTES_INDEX_URL, html)
+        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("no_council_document_link", report["reason"])
         self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
 
     def test_minutes_no_council_document_link_does_not_promote(self) -> None:

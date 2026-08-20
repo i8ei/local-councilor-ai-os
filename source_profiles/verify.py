@@ -99,6 +99,49 @@ def _is_council_scope(
     return bool(has_text or has_url)
 
 
+def _is_council_document_scope(*, label: str, url: str, observed_on: str) -> bool:
+    """Check council scope for a document link (label/url only, no page_context)."""
+    combined_text = f"{label} {url}"
+    if any(token in combined_text for token in NON_COUNCIL_TOKENS):
+        lower_url = url.lower()
+        lower_obs = observed_on.lower()
+        if not any(
+            tok in lower_url or tok in lower_obs
+            for tok in ("/gikai", "/shigikai", "/council", "/assembly")
+        ):
+            return False
+        if any(t in combined_text for t in ("教育委員会", "農業委員会", "審議会")):
+            return False
+    blob = f"{label} {url} {observed_on}".lower()
+    has_text = any(tok.lower() in blob for tok in COUNCIL_TEXT_TOKENS)
+    if not has_text and "議会" in label:
+        has_text = True
+    has_url = any(
+        tok in url.lower() or tok in observed_on.lower() for tok in COUNCIL_URL_TOKENS
+    )
+    return bool(has_text or has_url)
+
+
+def _is_minutes_document_link(*, label: str, url: str) -> bool:
+    """Return True if link is a minutes document: .pdf or label/URL has minutes token."""
+    ext = Path(urllib.parse.urlsplit(url).path).suffix.lower()
+    lower_url = url.lower()
+    # pdf qualifies regardless of minutes token
+    is_pdf = ext == ".pdf" or lower_url.split("?", 1)[0].endswith(".pdf")
+    if is_pdf:
+        return True
+    decoded_url = urllib.parse.unquote(url)
+    has_minutes = (
+        "会議録" in label
+        or "議事録" in label
+        or "会議録" in decoded_url
+        or "議事録" in decoded_url
+        or "minutes" in label.lower()
+        or "minutes" in lower_url
+    )
+    return bool(has_minutes)
+
+
 def _collapse(value: str) -> str:
     return re.sub(r"\s+", " ", value.replace("\u3000", " ")).strip()
 
@@ -242,43 +285,18 @@ def _verify_minutes_static(
         parser.feed(html_text)
     except Exception:
         pass
-    context = parser.context()
-    # Step 4: council scope for index page
-    if not _is_council_scope(
-        label=context,
-        url=str(final_url_val),
-        observed_on=index_url,
-        page_context=context,
-    ):
-        report = {
-            "municipality": municipality,
-            "kind": "minutes",
-            "adapter": adapter,
-            "result": "failed",
-            "reason": "council_scope_missing: index page lacks council scope (title/H1/URL)",
-            "status_before": status_before,
-            "status_after": status_before,
-            "index_url": index_url,
-            "final_url": final_url_val,
-        }
-        return updated, report
-    # Step 5: council document link existence
+    # New rule: ready iff official host and page has at least one council-scoped minutes document link.
+    # Removed old "title/H1 must have council scope" gate; title council scope is bonus only.
+    # A council minutes document link = (.pdf OR label/URL contains 会議録/議事録/minutes) AND label/URL has council token AND not non-council (rescued only under /gikai etc).
     has_council_doc = False
     for href, label in parser.links:
         resolved = _canonical_url(urllib.parse.urljoin(str(final_url_val), href))
         if resolved is None:
             continue
-        lower_resolved = resolved.lower()
-        ext = Path(urllib.parse.urlsplit(resolved).path).suffix.lower()
-        is_pdf = ext == ".pdf" or lower_resolved.split("?")[0].endswith(".pdf")
-        is_nav = ext in {"", ".html", ".htm", ".php", ".asp", ".aspx"}
-        if not (is_pdf or is_nav):
+        if not _is_minutes_document_link(label=label, url=resolved):
             continue
-        if not _is_council_scope(
-            label=label,
-            url=resolved,
-            observed_on=str(final_url_val),
-            page_context=context,
+        if not _is_council_document_scope(
+            label=label, url=resolved, observed_on=str(final_url_val)
         ):
             continue
         has_council_doc = True
@@ -289,7 +307,7 @@ def _verify_minutes_static(
             "kind": "minutes",
             "adapter": adapter,
             "result": "failed",
-            "reason": "no_council_document_link: page has no council-scoped document/page link (.pdf or minutes HTML)",
+            "reason": "no_council_document_link: page has no council-scoped minutes document link (.pdf or label/URL contains 会議録/議事録/minutes with council token)",
             "status_before": status_before,
             "status_after": status_before,
             "index_url": index_url,

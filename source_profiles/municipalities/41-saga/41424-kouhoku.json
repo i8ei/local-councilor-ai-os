@@ -6,18 +6,28 @@
   "official_home_url": "http://www.town.kouhoku.saga.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.kouhoku.saga.jp/list00721.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.kouhoku.saga.jp/list00188.html",
+      "verified_at": "2026-08-20T13:42:45Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kouhoku.saga.jp/list00721.html",
           "observed_on": "https://www.town.kouhoku.saga.jp/list00721.html"
+        },
+        {
+          "url": "https://www.town.kouhoku.saga.jp/list00188.html",
+          "observed_on": "https://www.town.kouhoku.saga.jp/list00721.html"
+        },
+        {
+          "url": "https://www.town.kouhoku.saga.jp/list00188.html",
+          "observed_on": "https://www.town.kouhoku.saga.jp/list00188.html",
+          "sha256": "090fb84a7ddaa7ca3ca1c20af0c8a3ce82a6eb2b3b65584633f2ec46a3a500ad",
+          "fetched_at": "2026-08-20T13:41:35Z"
         }
       ],
-      "notes": null,
+      "notes": "index_url corrected from list00721 (generic 会議録 list) to list00188 (定例会・臨時会) observed via link on original index; contains council-scoped minutes document links (e.g., 令和8年6月 臨時会 会議録)",
       "config": {
         "council_name": "江北町議会",
         "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
