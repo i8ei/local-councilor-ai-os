@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41401",
+  "prefecture": "佐賀県",
+  "municipality": "有田町",
+  "official_home_url": "http://www.town.arita.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.arita.lg.jp/gikai/list00404.html",
+      "verified_at": "2026-08-20T13:28:20Z",
+      "verified_by": "verify --live",
+      "evidence": [
+        {
+          "url": "https://www.town.arita.lg.jp/gikai/list00404.html",
+          "observed_on": "https://www.town.arita.lg.jp/gikai/list00404.html"
+        },
+        {
+          "url": "https://www.town.arita.lg.jp/gikai/list00404.html",
+          "observed_on": "https://www.town.arita.lg.jp/gikai/list00404.html",
+          "sha256": "fea56ca95b1465d2661b56cd72ed848f489ccfaff0fda155d98f7f13afafe68d",
+          "fetched_at": "2026-08-20T13:28:22Z"
+        }
+      ],
+      "notes": null,
+      "config": {
+        "council_name": "有田町議会",
+        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
+        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
+        "pdf": true
+      }
+    },
+    "regulations": {
+      "status": "ready",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.arita.lg.jp/reiki_int/",
+      "verified_at": "2026-08-20T13:14:21Z",
+      "verified_by": "verify --live",
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www.town.arita.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.arita.lg.jp/"
+        },
+        {
+          "url": "https://www.town.arita.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.arita.lg.jp/reiki_int/",
+          "sha256": "0b8fdc9111c411ffebc0631c427dc9039eebb94198ceb32ff5c54897ab740a85",
+          "fetched_at": "2026-08-20T13:14:22Z"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

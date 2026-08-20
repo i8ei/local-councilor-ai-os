@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41425",
+  "prefecture": "佐賀県",
+  "municipality": "白石町",
+  "official_home_url": "http://www.town.shiroishi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.shiroishi.lg.jp/chousei_machi/gikai/kaigiroku.html",
+      "verified_at": "2026-08-20T13:28:29Z",
+      "verified_by": "verify --live",
+      "evidence": [
+        {
+          "url": "https://www.town.shiroishi.lg.jp/chousei_machi/gikai/kaigiroku.html",
+          "observed_on": "https://www.town.shiroishi.lg.jp/chousei_machi/gikai/kaigiroku.html"
+        },
+        {
+          "url": "https://www.town.shiroishi.lg.jp/chousei_machi/gikai/kaigiroku.html",
+          "observed_on": "https://www.town.shiroishi.lg.jp/chousei_machi/gikai/kaigiroku.html",
+          "sha256": "96aaa08b9a61438258178c17ee8487f869eaa1338c1e32582bbf88d61c4b60c8",
+          "fetched_at": "2026-08-20T13:28:31Z"
+        }
+      ],
+      "notes": null,
+      "config": {
+        "council_name": "白石町議会",
+        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
+        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
+        "pdf": true
+      }
+    },
+    "regulations": {
+      "status": "ready",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.shiroishi.lg.jp/reiki/",
+      "verified_at": "2026-08-20T13:14:26Z",
+      "verified_by": "verify --live",
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www.town.shiroishi.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.shiroishi.lg.jp/"
+        },
+        {
+          "url": "https://www.town.shiroishi.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.shiroishi.lg.jp/reiki/",
+          "sha256": "3faece797b0ef3d21066de8c9d30bb18233882188ad8d1ed84891b41016446e3",
+          "fetched_at": "2026-08-20T13:14:28Z"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

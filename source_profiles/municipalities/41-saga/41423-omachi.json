@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41423",
+  "prefecture": "佐賀県",
+  "municipality": "大町町",
+  "official_home_url": "https://www.town.omachi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.omachi.lg.jp/gikai/list00518.html",
+      "verified_at": "2026-08-20T13:28:22Z",
+      "verified_by": "verify --live",
+      "evidence": [
+        {
+          "url": "https://www.town.omachi.lg.jp/gikai/list00518.html",
+          "observed_on": "https://www.town.omachi.lg.jp/gikai/list00518.html"
+        },
+        {
+          "url": "https://www.town.omachi.lg.jp/gikai/list00518.html",
+          "observed_on": "https://www.town.omachi.lg.jp/gikai/list00518.html",
+          "sha256": "8480ea41dd21e8ef65a062bb092f0fb8017afdf575bc37e383edd5477c07d769",
+          "fetched_at": "2026-08-20T13:28:25Z"
+        }
+      ],
+      "notes": null,
+      "config": {
+        "council_name": "大町町議会",
+        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
+        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
+        "pdf": true
+      }
+    },
+    "regulations": {
+      "status": "unsupported",
+      "adapter": "joureikun",
+      "index_url": "https://www.town.omachi.lg.jp/joureikun/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "notes": "Joureikun 方式 (aggregate/catalog) のため現行 modules 未対応。要専用adapterまたは ingest 拡張",
+      "evidence": [
+        {
+          "url": "https://www.town.omachi.lg.jp/joureikun/index.html",
+          "observed_on": "https://www.town.omachi.lg.jp/"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41203",
+  "prefecture": "佐賀県",
+  "municipality": "鳥栖市",
+  "official_home_url": "http://www.city.tosu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "ready",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/tosu/SpTop.html",
+      "verified_at": "2026-08-20T14:06:45Z",
+      "verified_by": "verify --live",
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/tosu/SpTop.html",
+          "observed_on": "http://www.city.tosu.lg.jp/"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/tosu/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/tosu/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-20T14:05:37Z"
+        }
+      ],
+      "notes": null
+    },
+    "regulations": {
+      "status": "ready",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.tosu/",
+      "verified_at": "2026-08-20T13:13:58Z",
+      "verified_by": "verify --live",
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.tosu/reiki_menu.html",
+          "observed_on": "http://www.city.tosu.lg.jp/"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.tosu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.tosu/",
+          "sha256": "0dffa18f43873cab8e1c9ecd93aa6ab30010fea35d510800689075bd56f3116f",
+          "fetched_at": "2026-08-20T13:13:58Z"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

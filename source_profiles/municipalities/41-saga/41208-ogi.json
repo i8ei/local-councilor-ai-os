@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41208",
+  "prefecture": "佐賀県",
+  "municipality": "小城市",
+  "official_home_url": "http://www.city.ogi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "議会会議録の索引を要人手確認"
+    },
+    "regulations": {
+      "status": "ready",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.ogi.lg.jp/reiki_int/",
+      "verified_at": "2026-08-20T13:14:10Z",
+      "verified_by": "verify --live",
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www.city.ogi.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.ogi.lg.jp/"
+        },
+        {
+          "url": "https://www.city.ogi.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.ogi.lg.jp/reiki_int/",
+          "sha256": "45b0b6fe6decc9e85e368c6614ad7beadaad117c4296b90b59721a55bc4321a0",
+          "fetched_at": "2026-08-20T13:14:11Z"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

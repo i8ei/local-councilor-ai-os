@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41209",
+  "prefecture": "佐賀県",
+  "municipality": "嬉野市",
+  "official_home_url": "http://www.city.ureshino.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ureshino.lg.jp/gikai/hokoku/394.html",
+      "verified_at": "2026-08-20T13:28:16Z",
+      "verified_by": "verify --live",
+      "evidence": [
+        {
+          "url": "https://www.city.ureshino.lg.jp/gikai/hokoku/394.html",
+          "observed_on": "https://www.city.ureshino.lg.jp/gikai/hokoku/394.html"
+        },
+        {
+          "url": "https://www.city.ureshino.lg.jp/gikai/hokoku/394.html",
+          "observed_on": "https://www.city.ureshino.lg.jp/gikai/hokoku/394.html",
+          "sha256": "a50e6036d872c4aa7e59ef25bcb959aac06289305961764a5185db90e4734885",
+          "fetched_at": "2026-08-20T13:28:18Z"
+        }
+      ],
+      "notes": null,
+      "config": {
+        "council_name": "嬉野市議会",
+        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
+        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
+        "pdf": true
+      }
+    },
+    "regulations": {
+      "status": "ready",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.ureshino/",
+      "verified_at": "2026-08-20T13:14:12Z",
+      "verified_by": "verify --live",
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.ureshino/reiki_menu.html",
+          "observed_on": "http://www.city.ureshino.lg.jp/"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.ureshino/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.ureshino/",
+          "sha256": "8ebd232c09eeb596e9c261bae94752168577dc54595818cf3b1fc1269b3c0815",
+          "fetched_at": "2026-08-20T13:14:12Z"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

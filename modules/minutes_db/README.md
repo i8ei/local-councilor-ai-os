@@ -30,6 +30,7 @@ SQLite/FTS5へ格納するTier 2アダプターです。SQLiteは原典の代替
 | kaigiroku.net | 対応 | 対応 | 合成fixture（robots制約でAPIライブ未検証） | tenant URL必須。tenant名は推測しない |
 | 静的HTML/PDF | 対応 | 対応 | 実在1サイトでライブ検証済み | OCR・画像PDF・複雑な表は未対応 |
 | voices系 | 検出のみ | 未対応 | — | 利用者AIが契約に沿って自作 |
+| dbsr系 | 検出のみ | 未対応 | — | 利用者AIが契約に沿って自作 |
 | discuss系 | 検出のみ | 未対応 | — | 利用者AIが契約に沿って自作 |
 | unknown | 検出のみ | 未対応 | — | 公式経路を人が確認して設定 |
 
@@ -201,7 +202,8 @@ FTS5が使えない場合、FTS構文が不正な場合、trigramで扱いにく
 証拠となる一致URLをJSONで返します。
 
 - `kaigiroku_net`: `ssp.kaigiroku.net`へのリンクまたは同ホスト。
-- `voices`: `*.gijiroku.com/voices/`。検出のみで取込未実装。
+- `voices`: `*.gijiroku.com`。検出のみで取込未実装。
+- `dbsr`: `*.dbsr.jp`の`/index.php`。検出のみで取込未実装。
 - `discuss`:既知のホスト/URLシグナル。確証がなければ`unknown`。
 - `static_candidate`:公式ページ上にHTML/PDFの議事録候補リンクがある。
 - `unknown`:根拠となるリンクやパターンがない。

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41202",
+  "prefecture": "佐賀県",
+  "municipality": "唐津市",
+  "official_home_url": "http://www.city.karatsu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "ready",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/karatsu/SpTop.html",
+      "verified_at": "2026-08-20T14:07:09Z",
+      "verified_by": "verify --live",
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/karatsu/SpTop.html",
+          "observed_on": "http://www.city.karatsu.lg.jp/"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/karatsu/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/karatsu/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-20T14:05:34Z"
+        }
+      ],
+      "notes": null
+    },
+    "regulations": {
+      "status": "ready",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/karatsu/",
+      "verified_at": "2026-08-20T13:13:57Z",
+      "verified_by": "verify --live",
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/karatsu/reiki_menu.html",
+          "observed_on": "http://www.city.karatsu.lg.jp/"
+        },
+        {
+          "url": "https://www1.g-reiki.net/karatsu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/karatsu/",
+          "sha256": "e71d42687cebc4a9132fc90078c9980ed35fef49e9e21d9c1f2174e9d56fdefb",
+          "fetched_at": "2026-08-20T13:13:49Z"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

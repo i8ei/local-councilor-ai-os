@@ -58,6 +58,37 @@ NEGATIVE_NAVIGATION_WORDS = (
 )
 
 
+# Council scope detection for static minutes (minutes ready requires council evidence)
+COUNCIL_TEXT_TOKENS = (
+    "市議会",
+    "町議会",
+    "村議会",
+    "区議会",
+    "議会事務局",
+    "本会議",
+    "定例会",
+    "臨時会",
+)
+COUNCIL_URL_TOKENS = (
+    "/gikai",
+    "/shigikai",
+    "/council",
+    "/assembly",
+    "kaigiroku",
+    "gijiroku",
+)
+NON_COUNCIL_TOKENS = (
+    "審議会",
+    "懇話会",
+    "審査会",
+    "教育委員会",
+    "農業委員会",
+    "選挙管理委員会",
+    "総合教育会議",
+    "監査委員",
+)
+
+
 class PreflightError(RuntimeError):
     """Raised when the bounded preflight cannot run safely."""
 
@@ -187,22 +218,56 @@ def _vendor(url: str) -> tuple[str, str] | None:
     parts = urllib.parse.urlsplit(url)
     host = (parts.hostname or "").lower().rstrip(".")
     path = urllib.parse.unquote(parts.path)
+    lower_path = path.lower()
     if host == "ssp.kaigiroku.net":
         if re.match(r"^/tenant/[^/]+(?:/|$)", path, re.I):
             return "minutes", "kaigiroku_net"
         return "minutes", "kaigiroku_net_unconfirmed_tenant"
-    if (host == "gijiroku.com" or host.endswith(".gijiroku.com")) and re.search(
-        r"/voices(?:/|$)", path,
-        re.I,
-    ):
+    if host == "gijiroku.com" or host.endswith(".gijiroku.com"):
         return "minutes", "voices"
+    if host == "dbsr.jp" or host.endswith(".dbsr.jp"):
+        if "/index.php" in lower_path:
+            return "minutes", "dbsr"
     if host == "discussvision.net" or host.endswith(".discussvision.net"):
         return "minutes", "discuss"
+    if host == "d1-law.com" or host.endswith(".d1-law.com"):
+        return "regulations", "d1_law"
     if host == "g-reiki.net" or host.endswith(".g-reiki.net"):
         return "regulations", "g_reiki"
-    if path.lower().endswith("/reiki_menu.html"):
+    if lower_path.endswith("/reiki_menu.html"):
         return "regulations", "g_reiki"
+    if "/joureikun/" in lower_path:
+        return "regulations", "joureikun"
     return None
+
+
+def _is_council_scope(
+    *,
+    label: str,
+    url: str,
+    observed_on: str,
+    page_context: str | None,
+) -> bool:
+    """Return True only if council scope is evidenced and non-council is absent."""
+    combined_text = f"{label} {page_context or ''}"
+    if any(token in combined_text for token in NON_COUNCIL_TOKENS):
+        lower_url = url.lower()
+        lower_obs = observed_on.lower()
+        if not any(
+            tok in lower_url or tok in lower_obs
+            for tok in ("/gikai", "/shigikai", "/council", "/assembly")
+        ):
+            return False
+        if any(t in combined_text for t in ("教育委員会", "農業委員会", "審議会")):
+            return False
+    blob = f"{label} {url} {observed_on} {page_context or ''}".lower()
+    has_text = any(tok.lower() in blob for tok in COUNCIL_TEXT_TOKENS)
+    if not has_text and "議会" in f"{label} {page_context or ''}":
+        has_text = True
+    has_url = any(
+        tok in url.lower() or tok in observed_on.lower() for tok in COUNCIL_URL_TOKENS
+    )
+    return has_text or has_url
 
 
 def _navigation_score(text: str) -> int:
@@ -285,7 +350,7 @@ def _classify_kind(
                 item
                 for item in vendors
                 if item["vendor"]
-                in {"voices", "discuss", "kaigiroku_net_unconfirmed_tenant"}
+                in {"voices", "discuss", "kaigiroku_net_unconfirmed_tenant", "dbsr"}
             ),
             None,
         )
@@ -297,23 +362,35 @@ def _classify_kind(
                 evidence=[unsupported],
                 reason="detected_vendor_has_no_verified_ingest_adapter",
             )
-        static = next(
-            (
-                item
-                for item in matching
-                if item["evidence_type"] == "document_link"
-                and item["official_host"]
-            ),
-            None,
-        )
-        if static:
-            return _result(
-                status="ready",
-                adapter="static_html_pdf",
-                index_url=static["observed_on"],
-                evidence=[static],
-                reason="official_page_links_minutes_document",
+        # Static PDF minutes require council scope (label/context/URL)
+        council_candidates = [
+            item
+            for item in matching
+            if item["evidence_type"] == "document_link" and item["official_host"]
+        ]
+        for cand in council_candidates:
+            ctx = next(
+                (
+                    e["label"]
+                    for e in evidence
+                    if e["evidence_type"] == "page_context"
+                    and e["url"] == cand["observed_on"]
+                ),
+                None,
             )
+            if _is_council_scope(
+                label=cand["label"],
+                url=cand["url"],
+                observed_on=cand["observed_on"],
+                page_context=ctx,
+            ):
+                return _result(
+                    status="ready",
+                    adapter="static_html_pdf",
+                    index_url=cand["observed_on"],
+                    evidence=[cand],
+                    reason="official_page_links_minutes_document",
+                )
 
     if kind == "regulations":
         supported = next(
@@ -331,6 +408,19 @@ def _classify_kind(
                 index_url=supported["url"],
                 evidence=[supported],
                 reason="supported_vendor_linked_from_official_page",
+            )
+        # Known regulations vendors without adapter should be unsupported, not unknown
+        known_reg_vendor = next(
+            (item for item in vendors if item["vendor"] in {"d1_law", "joureikun"}),
+            None,
+        )
+        if known_reg_vendor:
+            return _result(
+                status="unsupported_vendor",
+                adapter=known_reg_vendor["vendor"],
+                index_url=known_reg_vendor["url"],
+                evidence=[known_reg_vendor],
+                reason="detected_vendor_has_no_verified_ingest_adapter",
             )
         unsupported = next(
             (

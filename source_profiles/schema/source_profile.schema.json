@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Municipality Source Profile",
+  "description": "Contract document for municipality source profiles (reference, validated by source_profiles/schema.py without jsonschema dependency).",
+  "type": "object",
+  "required": ["schema_version", "area_code_5", "prefecture", "municipality", "official_home_url", "sources"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "enum": [1],
+      "description": "Schema version"
+    },
+    "area_code_5": {
+      "type": "string",
+      "pattern": "^[0-9]{5}$",
+      "description": "5-digit area code (primary key, matches registry)"
+    },
+    "prefecture": {
+      "type": "string",
+      "description": "Prefecture name (e.g. 佐賀県)"
+    },
+    "municipality": {
+      "type": "string",
+      "description": "Municipality name"
+    },
+    "official_home_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://",
+      "description": "Official home URL, must match registry for drift detection"
+    },
+    "sources": {
+      "type": "object",
+      "required": ["minutes", "regulations", "budget", "settlement"],
+      "properties": {
+        "minutes": { "$ref": "#/definitions/sourceEntry" },
+        "regulations": { "$ref": "#/definitions/sourceEntry" },
+        "budget": { "$ref": "#/definitions/sourceEntry" },
+        "settlement": { "$ref": "#/definitions/sourceEntry" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "sourceEntry": {
+      "type": "object",
+      "required": ["status", "adapter"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ready", "needs_review", "unsupported", "not_found", "blocked", "not_evaluated"]
+        },
+        "adapter": {
+          "type": ["string", "null"],
+          "enum": ["kaigiroku_net", "static", "g_reiki", "dbsr", "voices", "d1_law", "joureikun", "official_document_index", null]
+        },
+        "base_url": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "description": "Required for g_reiki only, mutually exclusive with index_url/tenant_url"
+        },
+        "index_url": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "description": "Required for static/d1_law/joureikun/official_document_index"
+        },
+        "tenant_url": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "description": "Required for kaigiroku_net"
+        },
+        "verified_at": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "description": "UTC ISO8601, required for ready, must not be in the future"
+        },
+        "verified_by": {
+          "type": ["string", "null"]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["url"],
+            "properties": {
+              "url": { "type": "string", "format": "uri" },
+              "observed_on": { "type": ["string", "null"], "format": "uri" },
+              "sha256": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" },
+              "fetched_at": { "type": "string", "format": "date-time" }
+            },
+            "additionalProperties": false
+          },
+          "description": "At least 1 required for ready and whenever entry URL exists; entry URL host must match evidence host"
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "adapter": { "const": "g_reiki" } } },
+          "then": { "required": ["base_url"] }
+        },
+        {
+          "if": { "properties": { "adapter": { "const": "static" } } },
+          "then": { "required": ["index_url"] }
+        },
+        {
+          "if": { "properties": { "adapter": { "const": "kaigiroku_net" } } },
+          "then": { "required": ["tenant_url"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "ready" } } },
+          "then": {
+            "required": ["verified_at", "verified_by", "evidence"],
+            "properties": {
+              "verified_at": { "type": "string" },
+              "verified_by": { "type": "string" },
+              "evidence": { "minItems": 1 }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

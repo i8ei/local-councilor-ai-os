@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41207",
+  "prefecture": "佐賀県",
+  "municipality": "鹿島市",
+  "official_home_url": "http://www.city.saga-kashima.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.saga-kashima.lg.jp/main/32950.html",
+      "verified_at": "2026-08-20T13:41:03Z",
+      "verified_by": "verify --live",
+      "evidence": [
+        {
+          "url": "https://www.city.saga-kashima.lg.jp/main/32950.html",
+          "observed_on": "https://www.city.saga-kashima.lg.jp/main/32950.html"
+        },
+        {
+          "url": "https://www.city.saga-kashima.lg.jp/main/32950.html",
+          "observed_on": "https://www.city.saga-kashima.lg.jp/main/32950.html",
+          "sha256": "fe49cce9ad160418af71b96905f465daab9f87f1f97b7c8ea9fa2264769d464b",
+          "fetched_at": "2026-08-20T13:41:05Z"
+        }
+      ],
+      "notes": null,
+      "config": {
+        "council_name": "鹿島市議会",
+        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
+        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
+        "pdf": true
+      }
+    },
+    "regulations": {
+      "status": "ready",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/kashima/",
+      "verified_at": "2026-08-20T13:14:08Z",
+      "verified_by": "verify --live",
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/kashima/reiki_menu.html",
+          "observed_on": "http://www.city.saga-kashima.lg.jp/"
+        },
+        {
+          "url": "https://www1.g-reiki.net/kashima/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kashima/",
+          "sha256": "2e91cb4f262767eb8481ea53cd71dfa29f11c9680d50cedc8794887a789153b8",
+          "fetched_at": "2026-08-20T13:14:08Z"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

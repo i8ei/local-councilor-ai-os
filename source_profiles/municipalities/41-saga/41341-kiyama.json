@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41341",
+  "prefecture": "佐賀県",
+  "municipality": "基山町",
+  "official_home_url": "http://www.town.kiyama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kiyama.lg.jp/gikai/list01207.html",
+      "verified_at": "2026-08-20T13:28:18Z",
+      "verified_by": "verify --live",
+      "evidence": [
+        {
+          "url": "https://www.town.kiyama.lg.jp/gikai/list01207.html",
+          "observed_on": "https://www.town.kiyama.lg.jp/gikai/list01207.html"
+        },
+        {
+          "url": "https://www.town.kiyama.lg.jp/gikai/list01207.html",
+          "observed_on": "https://www.town.kiyama.lg.jp/gikai/list01207.html",
+          "sha256": "ddb0893e82883bc207e66cda39359e3dc9483145bed3b4cdde0a4778a6fbe931",
+          "fetched_at": "2026-08-20T13:28:20Z"
+        }
+      ],
+      "notes": null,
+      "config": {
+        "council_name": "基山町議会",
+        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
+        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
+        "pdf": true
+      }
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "notes": "旧HTML FRAME構成（static/reiki/reiki.html / mokuji_bunya_chiled.html）のため要確認。JS有効前提",
+      "evidence": [
+        {
+          "url": "https://www.town.kiyama.lg.jp/static/reiki/reiki.html",
+          "observed_on": "http://www.town.kiyama.lg.jp/"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

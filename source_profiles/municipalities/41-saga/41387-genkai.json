@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41387",
+  "prefecture": "佐賀県",
+  "municipality": "玄海町",
+  "official_home_url": "https://www.town.genkai.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "議会会議録の索引を要人手確認"
+    },
+    "regulations": {
+      "status": "ready",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/genkai/",
+      "verified_at": "2026-08-20T13:14:18Z",
+      "verified_by": "verify --live",
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/genkai/reiki_menu.html",
+          "observed_on": "https://www.town.genkai.lg.jp/"
+        },
+        {
+          "url": "http://www1.g-reiki.net/genkai/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/genkai/",
+          "sha256": "3026eeed97580dcc3784afa84fa4454b409094d479f9bc2fa1090c4d72598a6f",
+          "fetched_at": "2026-08-20T13:14:19Z"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}
