@@ -6,12 +6,24 @@
   "official_home_url": "https://www.town.genkai.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "議会会議録の索引を要人手確認"
+      "status": "ready",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/genkai/pg/index.html",
+      "verified_at": "2026-08-20T23:14:45Z",
+      "verified_by": "verify --live",
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/genkai/pg/index.html",
+          "observed_on": "https://www.town.genkai.lg.jp/soshiki/12/"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/genkai/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/genkai/pg/index.html",
+          "sha256": "462cd92967561c565a93953a7e55fe215271338e7579f4fcb533184964d04a5b",
+          "fetched_at": "2026-08-20T23:04:35Z"
+        }
+      ],
+      "notes": "kaigiroku_net tenant live-verified (reached via /soshiki/12/ 議会事務局). 静的年度議事録(/soshiki/12/*.html)も併存するが検索システムはkaigiroku_netが主"
     },
     "regulations": {
       "status": "ready",
