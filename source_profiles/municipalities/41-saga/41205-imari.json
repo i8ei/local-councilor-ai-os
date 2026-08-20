@@ -14,16 +14,22 @@
       "notes": null
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/imari/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T13:14:00Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/imari/reiki_menu.html",
           "observed_on": "http://www.city.imari.saga.jp/"
+        },
+        {
+          "url": "http://www1.g-reiki.net/imari/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/imari/",
+          "sha256": "0090e25900b67841c4fd37d21a33da40789633392d34093e869cc753295dcedb",
+          "fetched_at": "2026-08-20T13:14:04Z"
         }
       ]
     },

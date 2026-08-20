@@ -14,16 +14,22 @@
       "notes": null
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.takeo.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T13:14:05Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
       "evidence": [
         {
           "url": "https://www.city.takeo.lg.jp/reiki/reiki_menu.html",
           "observed_on": "http://www.city.takeo.lg.jp/"
+        },
+        {
+          "url": "https://www.city.takeo.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.takeo.lg.jp/reiki/",
+          "sha256": "427fcd2734cc129e91242b362f701eeda871bcf02ddad4292d172511f91b3c0d",
+          "fetched_at": "2026-08-20T13:14:07Z"
         }
       ]
     },

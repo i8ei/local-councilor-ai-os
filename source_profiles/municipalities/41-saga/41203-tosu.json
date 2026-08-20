@@ -14,16 +14,22 @@
       "notes": null
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.tosu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T13:13:58Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.tosu/reiki_menu.html",
           "observed_on": "http://www.city.tosu.lg.jp/"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.tosu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.tosu/",
+          "sha256": "0dffa18f43873cab8e1c9ecd93aa6ab30010fea35d510800689075bd56f3116f",
+          "fetched_at": "2026-08-20T13:13:58Z"
         }
       ]
     },

@@ -14,16 +14,22 @@
       "notes": null
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.kamimine/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T13:14:17Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.kamimine/reiki_menu.html",
           "observed_on": "http://www.town.kamimine.lg.jp/"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.kamimine/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.kamimine/",
+          "sha256": "97ff1077e60e76bdcb1608a94af9d2bceab3c601afa7ca53e5f5b2ac070e253d",
+          "fetched_at": "2026-08-20T13:14:17Z"
         }
       ]
     },

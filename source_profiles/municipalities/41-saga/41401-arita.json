@@ -14,16 +14,22 @@
       "notes": null
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.arita.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T13:14:21Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
       "evidence": [
         {
           "url": "https://www.town.arita.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.arita.lg.jp/"
+        },
+        {
+          "url": "https://www.town.arita.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.arita.lg.jp/reiki_int/",
+          "sha256": "0b8fdc9111c411ffebc0631c427dc9039eebb94198ceb32ff5c54897ab740a85",
+          "fetched_at": "2026-08-20T13:14:22Z"
         }
       ]
     },

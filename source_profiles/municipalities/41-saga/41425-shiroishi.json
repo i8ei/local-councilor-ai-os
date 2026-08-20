@@ -14,16 +14,22 @@
       "notes": null
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.shiroishi.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T13:14:26Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
       "evidence": [
         {
           "url": "https://www.town.shiroishi.lg.jp/reiki/reiki_menu.html",
           "observed_on": "http://www.town.shiroishi.lg.jp/"
+        },
+        {
+          "url": "https://www.town.shiroishi.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.shiroishi.lg.jp/reiki/",
+          "sha256": "3faece797b0ef3d21066de8c9d30bb18233882188ad8d1ed84891b41016446e3",
+          "fetched_at": "2026-08-20T13:14:28Z"
         }
       ]
     },

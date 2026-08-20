@@ -14,16 +14,22 @@
       "notes": null
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.saga/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-20T13:14:23Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.saga/reiki_menu.html",
           "observed_on": "https://www.city.saga.lg.jp/"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.saga/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.saga/",
+          "sha256": "fe5439ac4db832654d6a9eae88453491d0bd2810583c86f123924db1e2dba33c",
+          "fetched_at": "2026-08-20T13:14:24Z"
         }
       ]
     },
