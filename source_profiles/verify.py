@@ -3,11 +3,50 @@
 from __future__ import annotations  # noqa: I001
 
 import copy
+import re
 import urllib.parse
+from html.parser import HTMLParser
+from pathlib import Path
 from typing import Any
 
 from lcaios.http import CacheTier
 from source_profiles.schema import validate_profile
+
+try:
+    from bootstrap.cli.preflight import (  # type: ignore[import-not-found]
+        COUNCIL_TEXT_TOKENS,
+        COUNCIL_URL_TOKENS,
+        NON_COUNCIL_TOKENS,
+    )
+except Exception:  # pragma: no cover
+    COUNCIL_TEXT_TOKENS = (
+        "市議会",
+        "町議会",
+        "村議会",
+        "区議会",
+        "議会事務局",
+        "本会議",
+        "定例会",
+        "臨時会",
+    )
+    COUNCIL_URL_TOKENS = (
+        "/gikai",
+        "/shigikai",
+        "/council",
+        "/assembly",
+        "kaigiroku",
+        "gijiroku",
+    )
+    NON_COUNCIL_TOKENS = (
+        "審議会",
+        "懇話会",
+        "審査会",
+        "教育委員会",
+        "農業委員会",
+        "選挙管理委員会",
+        "総合教育会議",
+        "監査委員",
+    )
 
 
 def _host(url: str) -> str | None:
@@ -29,6 +68,290 @@ def _has_greiki_structure(html_text: str) -> bool:
     if "例規" in html_text or "条例" in html_text:
         return True
     return False
+
+
+def _is_council_scope(
+    *,
+    label: str,
+    url: str,
+    observed_on: str,
+    page_context: str | None,
+) -> bool:
+    """Replicate bootstrap preflight council scope check."""
+    combined_text = f"{label} {page_context or ''}"
+    if any(token in combined_text for token in NON_COUNCIL_TOKENS):
+        lower_url = url.lower()
+        lower_obs = observed_on.lower()
+        if not any(
+            tok in lower_url or tok in lower_obs
+            for tok in ("/gikai", "/shigikai", "/council", "/assembly")
+        ):
+            return False
+        if any(t in combined_text for t in ("教育委員会", "農業委員会", "審議会")):
+            return False
+    blob = f"{label} {url} {observed_on} {page_context or ''}".lower()
+    has_text = any(tok.lower() in blob for tok in COUNCIL_TEXT_TOKENS)
+    if not has_text and "議会" in f"{label} {page_context or ''}":
+        has_text = True
+    has_url = any(
+        tok in url.lower() or tok in observed_on.lower() for tok in COUNCIL_URL_TOKENS
+    )
+    return bool(has_text or has_url)
+
+
+def _collapse(value: str) -> str:
+    return re.sub(r"\s+", " ", value.replace("\u3000", " ")).strip()
+
+
+class _MinutesPageParser(HTMLParser):
+    """Extract title/H1 context and links for minutes verify."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.links: list[tuple[str, str]] = []
+        self._href: str | None = None
+        self._link_text: list[str] = []
+        self._capture_context = False
+        self._context: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        tag_name = tag.lower()
+        if tag_name in {"title", "h1"}:
+            self._capture_context = True
+        if tag_name == "a" and self._href is None:
+            href = dict(attrs).get("href")
+            if href:
+                self._href = str(href)
+                self._link_text = []
+
+    def handle_data(self, data: str) -> None:
+        if self._capture_context:
+            self._context.append(data)
+        if self._href is not None:
+            self._link_text.append(data)
+
+    def handle_endtag(self, tag: str) -> None:
+        tag_name = tag.lower()
+        if tag_name in {"title", "h1"}:
+            self._capture_context = False
+        if tag_name == "a" and self._href is not None:
+            self.links.append((self._href, _collapse("".join(self._link_text))))
+            self._href = None
+            self._link_text = []
+
+    def context(self) -> str:
+        return _collapse(" ".join(self._context))
+
+
+def _canonical_url(url: str) -> str | None:
+    parts = urllib.parse.urlsplit(url)
+    if parts.scheme.lower() not in {"http", "https"} or not parts.netloc:
+        return None
+    return urllib.parse.urlunsplit(
+        (parts.scheme.lower(), parts.netloc, parts.path or "/", parts.query, "")
+    )
+
+
+def _decode_html(result: Any) -> str:
+    if hasattr(result, "text") and callable(result.text):  # type: ignore[no-any-return]
+        return str(result.text())  # type: ignore[no-any-return,attr-defined]
+    body = result.body if hasattr(result, "body") else b""  # type: ignore[attr-defined]
+    enc = result.encoding if hasattr(result, "encoding") else "utf-8"  # type: ignore[attr-defined]
+    if isinstance(body, bytes):
+        return body.decode(enc or "utf-8", errors="replace")  # type: ignore[union-attr]
+    return str(body)
+
+
+def _verify_minutes_static(
+    profile: dict[str, Any],
+    updated: dict[str, Any],
+    entry: dict[str, Any],
+    *,
+    client: Any,
+    now: str,
+    municipality: str,
+    status_before: Any,
+    adapter: Any,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    index_url = entry.get("index_url")
+    if not isinstance(index_url, str) or not index_url.strip():
+        report: dict[str, Any] = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "missing index_url (cannot derive entry URL without guessing)",
+            "status_before": status_before,
+            "status_after": status_before,
+        }
+        return updated, report
+    # Attempt fetch
+    try:
+        result = client.fetch(index_url, tier=CacheTier.INDEX)
+    except Exception as exc:
+        err_name = type(exc).__name__
+        reason = f"{err_name}: {exc}"
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": reason,
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return updated, report
+    # Host drift check
+    official_home_url = profile.get("official_home_url")
+    entry_host = (
+        _host(str(official_home_url)) if isinstance(official_home_url, str) else None
+    )
+    final_url_val = result.final_url if hasattr(result, "final_url") else index_url  # type: ignore[attr-defined]
+    final_host = _host(str(final_url_val))
+    if entry_host is not None and final_host is not None and entry_host != final_host:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"host drift: official {entry_host!r} -> final {final_host!r}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+    # Decode HTML
+    try:
+        html_text = _decode_html(result)
+    except Exception as exc:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"decode_error: {exc}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return updated, report
+    parser = _MinutesPageParser()
+    try:
+        parser.feed(html_text)
+    except Exception:
+        pass
+    context = parser.context()
+    # Step 4: council scope for index page
+    if not _is_council_scope(
+        label=context,
+        url=str(final_url_val),
+        observed_on=index_url,
+        page_context=context,
+    ):
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "council_scope_missing: index page lacks council scope (title/H1/URL)",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+    # Step 5: council document link existence
+    has_council_doc = False
+    for href, label in parser.links:
+        resolved = _canonical_url(urllib.parse.urljoin(str(final_url_val), href))
+        if resolved is None:
+            continue
+        lower_resolved = resolved.lower()
+        ext = Path(urllib.parse.urlsplit(resolved).path).suffix.lower()
+        is_pdf = ext == ".pdf" or lower_resolved.split("?")[0].endswith(".pdf")
+        is_nav = ext in {"", ".html", ".htm", ".php", ".asp", ".aspx"}
+        if not (is_pdf or is_nav):
+            continue
+        if not _is_council_scope(
+            label=label,
+            url=resolved,
+            observed_on=str(final_url_val),
+            page_context=context,
+        ):
+            continue
+        has_council_doc = True
+        break
+    if not has_council_doc:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "no_council_document_link: page has no council-scoped document/page link (.pdf or minutes HTML)",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+    # All checks passed -> promote
+    sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
+    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    evidence = entry.get("evidence")
+    if not isinstance(evidence, list):
+        evidence = []
+        entry["evidence"] = evidence
+    duplicate = False
+    for ev in evidence:
+        if not isinstance(ev, dict):
+            continue
+        if ev.get("url") == index_url and ev.get("sha256") == sha256:
+            duplicate = True
+            break
+    if not duplicate:
+        new_ev: dict[str, Any] = {
+            "url": index_url,
+            "observed_on": index_url,
+            "sha256": sha256,
+            "fetched_at": fetched_at,
+        }
+        evidence.append(new_ev)
+    entry["verified_at"] = now
+    entry["verified_by"] = "verify --live"
+    if status_before == "needs_review":
+        entry["status"] = "ready"
+    elif status_before != "ready":
+        entry["status"] = "ready"
+    status_after = entry.get("status")
+    errs = validate_profile(updated)
+    if errs:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"post-verify validation failed: {errs}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return copy.deepcopy(profile), report
+    report = {
+        "municipality": municipality,
+        "kind": "minutes",
+        "adapter": adapter,
+        "result": "verified",
+        "reason": "ok",
+        "status_before": status_before,
+        "status_after": status_after,
+        "index_url": index_url,
+        "final_url": final_url_val,
+        "sha256": sha256,
+        "fetched_at": fetched_at,
+    }
+    return updated, report
 
 
 def verify_profile(
@@ -63,7 +386,43 @@ def verify_profile(
     adapter = entry.get("adapter")
     status_before = entry.get("status")
 
-    # Only g_reiki regulations is supported for verify
+    # Minutes: only static is supported in this increment
+    if kind == "minutes":
+        if adapter == "static":
+            return _verify_minutes_static(
+                profile,
+                updated,
+                entry,
+                client=client,
+                now=now,
+                municipality=municipality,
+                status_before=status_before,
+                adapter=adapter,
+            )
+        if adapter == "kaigiroku_net":
+            report = {
+                "municipality": municipality,
+                "kind": kind,
+                "adapter": adapter,
+                "result": "failed",
+                "reason": f"verify unsupported for adapter {adapter!r} kind {kind!r}: この増分では未対応 (kaigiroku_net verify not implemented)",
+                "status_before": status_before,
+                "status_after": status_before,
+            }
+            return updated, report
+        # dbsr / voices / null / other
+        report = {
+            "municipality": municipality,
+            "kind": kind,
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"verify unsupported for adapter {adapter!r} kind {kind!r}: この増分では未対応",
+            "status_before": status_before,
+            "status_after": status_before,
+        }
+        return updated, report
+
+    # Only g_reiki regulations is supported for verify (legacy)
     if adapter != "g_reiki" or kind != "regulations":
         report = {
             "municipality": municipality,

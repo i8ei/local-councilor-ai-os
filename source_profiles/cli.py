@@ -11,7 +11,7 @@ import unicodedata
 from pathlib import Path
 from typing import Any
 
-from lcaios.http import HttpClient, REGULATIONS_USER_AGENT
+from lcaios.http import HttpClient, MINUTES_USER_AGENT, REGULATIONS_USER_AGENT
 
 from source_profiles.schema import (
     validate_profile,  # type: ignore[import-not-found]  # pyright: ignore[reportMissingImports]
@@ -278,20 +278,10 @@ def _cmd_verify(args: argparse.Namespace) -> int:
     adapter = entry.get("adapter") if isinstance(entry, dict) else None
     status_before = entry.get("status") if isinstance(entry, dict) else None
 
-    # Only g_reiki regulations is supported for verify
-    if adapter != "g_reiki" or kind != "regulations":
-        report = {
-            "municipality": municipality,
-            "kind": kind,
-            "adapter": adapter,
-            "result": "failed",
-            "reason": f"verify unsupported for adapter {adapter!r} kind {kind!r}",
-            "status_before": status_before,
-            "status_after": status_before,
-        }
-        print(json.dumps(report, ensure_ascii=False, indent=2))
-        return 2
-
+    # Delegate unsupported check to verify_profile, but keep early exit for unknown entry
+    # Supported combinations: g_reiki/regulations and static/minutes. Others will be
+    # handled by verify_profile which returns failed with proper reason and exit 2.
+    # We still require cache_dir before calling verify_profile.
     if cache_dir is None:
         report = {
             "municipality": municipality,
@@ -306,9 +296,10 @@ def _cmd_verify(args: argparse.Namespace) -> int:
         return 2
 
     try:
+        user_agent = MINUTES_USER_AGENT if kind == "minutes" else REGULATIONS_USER_AGENT
         client = HttpClient(
             cache_dir,
-            user_agent=REGULATIONS_USER_AGENT,
+            user_agent=user_agent,
             offline=offline,
             timeout=90,
         )

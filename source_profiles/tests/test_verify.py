@@ -6,7 +6,7 @@ import copy
 import unittest
 from dataclasses import replace
 
-from lcaios.http import RobotsDeniedError
+from lcaios.http import FetchError, RobotsDeniedError
 from lcaios.tests.http_fakes import FakeHttpClient, make_fetch_result
 from source_profiles.schema import validate_profile
 from source_profiles.verify import verify_profile
@@ -210,6 +210,204 @@ class VerifyTests(unittest.TestCase):
         updated, _ = verify_profile(profile, client=client, now=NOW)
         self.assertEqual(orig, profile)
         self.assertNotEqual(updated, profile)
+
+
+MINUTES_INDEX_URL = "http://www.town.tara.lg.jp/chosei/_1010/_1414.html"
+
+
+def _base_minutes_static_needs_review() -> dict:
+    return {
+        "schema_version": 1,
+        "area_code_5": VALID_AREA,
+        "prefecture": VALID_PREF,
+        "municipality": VALID_MUNI,
+        "official_home_url": VALID_HOME,
+        "sources": {
+            "minutes": {
+                "status": "needs_review",
+                "adapter": "static",
+                "index_url": MINUTES_INDEX_URL,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [
+                    {"url": MINUTES_INDEX_URL, "observed_on": MINUTES_INDEX_URL}
+                ],
+                "notes": None,
+                "config": {
+                    "council_name": "太良町議会",
+                    "link_include_regex": "(?i)(会議録|議事録)",
+                    "link_exclude_regex": "(?i)(審議会)",
+                    "pdf": True,
+                },
+            },
+            "regulations": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "budget": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "settlement": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+        },
+    }
+
+
+def _minutes_council_html_with_pdf() -> str:
+    return """
+<html><head><title>太良町議会 会議録一覧</title></head>
+<body>
+<h1>太良町議会 会議録</h1>
+<p>本会議</p>
+<a href="/chosei/_1010/reiwa7.pdf">令和7年 定例会 会議録 (PDF)</a>
+<a href="/chosei/_1010/other.html">令和7年 定例会 会議録 (HTML)</a>
+</body></html>
+"""
+
+
+class MinutesStaticVerifyTests(unittest.TestCase):
+    def test_minutes_static_promotes_to_ready(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        fetch = make_fetch_result(MINUTES_INDEX_URL, _minutes_council_html_with_pdf())
+        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("needs_review", report["status_before"])
+        self.assertEqual("ready", report["status_after"])
+        self.assertEqual("ready", updated["sources"]["minutes"]["status"])
+        self.assertEqual(NOW, updated["sources"]["minutes"]["verified_at"])
+        self.assertEqual("verify --live", updated["sources"]["minutes"]["verified_by"])
+        ev = updated["sources"]["minutes"]["evidence"]
+        self.assertTrue(any(e.get("sha256") == fetch.sha256 for e in ev))
+        self.assertEqual([], validate_profile(updated))
+
+    def test_minutes_robots_denied_does_not_promote(self) -> None:
+        profile = _base_minutes_static_needs_review()
+
+        class DenyClient:
+            def fetch(self, url: str, *, tier: object, **_: object):  # type: ignore[no-untyped-def]
+                raise RobotsDeniedError("robots")
+
+        client = DenyClient()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )  # type: ignore[arg-type]
+        self.assertEqual("failed", report["result"])
+        self.assertIn("RobotsDenied", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_minutes_404_does_not_promote(self) -> None:
+        profile = _base_minutes_static_needs_review()
+
+        class NotFoundClient:
+            def fetch(self, url: str, *, tier: object, **_: object):  # type: ignore[no-untyped-def]
+                raise FetchError("HTTP 404")
+
+        client = NotFoundClient()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )  # type: ignore[arg-type]
+        self.assertEqual("failed", report["result"])
+        self.assertIn("FetchError", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_minutes_host_drift_does_not_promote(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        fetch = make_fetch_result(MINUTES_INDEX_URL, _minutes_council_html_with_pdf())
+        fetch = replace(
+            fetch, final_url="https://evil.example.com/chosei/_1010/_1414.html"
+        )
+        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("host drift", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_minutes_council_scope_missing_does_not_promote(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        html = '<html><head><title>町ホームページ</title></head><body><h1>お知らせ</h1><a href="/doc.pdf">資料</a></body></html>'
+        fetch = make_fetch_result(MINUTES_INDEX_URL, html)
+        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("council_scope_missing", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_minutes_no_council_document_link_does_not_promote(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        html = """
+<html><head><title>太良町議会 会議録</title></head>
+<body><h1>太良町議会</h1><p>本会議</p><a href="/kiji0036603.pdf">まちづくり推進審議会 議事録</a></body></html>
+"""
+        fetch = make_fetch_result(MINUTES_INDEX_URL, html)
+        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("no_council_document_link", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_minutes_kaigiroku_unsupported(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        profile["sources"]["minutes"]["adapter"] = "kaigiroku_net"  # type: ignore[index]
+        profile["sources"]["minutes"].pop("index_url", None)  # type: ignore[attr-defined]
+        profile["sources"]["minutes"]["tenant_url"] = (
+            "https://ssp.kaigiroku.net/tenant/tara/SpTop.html"  # type: ignore[index]
+        )
+        fetch = make_fetch_result(
+            "https://ssp.kaigiroku.net/tenant/tara/SpTop.html",
+            _minutes_council_html_with_pdf(),
+        )
+        client = FakeHttpClient(
+            {"https://ssp.kaigiroku.net/tenant/tara/SpTop.html": fetch}
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("未対応", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_minutes_idempotent(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        fetch = make_fetch_result(MINUTES_INDEX_URL, _minutes_council_html_with_pdf())
+        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        updated1, report1 = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report1["result"])
+        updated2, report2 = verify_profile(
+            updated1, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report2["result"])
+        ev1 = updated1["sources"]["minutes"]["evidence"]
+        ev2 = updated2["sources"]["minutes"]["evidence"]
+        cnt1 = sum(1 for e in ev1 if e.get("sha256") == fetch.sha256)
+        cnt2 = sum(1 for e in ev2 if e.get("sha256") == fetch.sha256)
+        self.assertEqual(cnt1, cnt2)
+        self.assertEqual(len(ev1), len(ev2))
 
 
 if __name__ == "__main__":

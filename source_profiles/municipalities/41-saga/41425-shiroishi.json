@@ -6,12 +6,24 @@
   "official_home_url": "http://www.town.shiroishi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_evaluated",
-      "adapter": null,
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.shiroishi.lg.jp/chousei_machi/gikai/kaigiroku.html",
       "verified_at": null,
       "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "evidence": [
+        {
+          "url": "https://www.town.shiroishi.lg.jp/chousei_machi/gikai/kaigiroku.html",
+          "observed_on": "https://www.town.shiroishi.lg.jp/chousei_machi/gikai/kaigiroku.html"
+        }
+      ],
+      "notes": null,
+      "config": {
+        "council_name": "白石町議会",
+        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
+        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",
