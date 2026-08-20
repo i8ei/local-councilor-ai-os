@@ -92,6 +92,10 @@ Steps inside `verify_profile` (injectable `client`, no guessing):
 
 For `minutes/static` the index is checked for a council-scoped minutes document link (`.pdf` or label/URL contains 会議録/議事録 with council token). If none is found and `config.follow_link_regex` is set, the verifier follows at most 3 same-host HTML links whose label or URL (percent-decoded) matches the regex, depth 1 only, using `HttpClient` (robots/low rate/cache). The first follow page containing a council document promotes to `ready` and appends evidence for both the root index and the successful follow page (idempotent on `url+sha256`). No follow occurs when the regex is absent or invalid; invalid regex is a validation/verify error and the profile is not saved. `決算審査` etc. are excluded by choosing a minimal year regex such as `(令和|平成)(元|[0-9]+)年`.
 
+For `minutes/kaigiroku_net` the stored `tenant_url` is fetched and promoted only if the host stays on `ssp.kaigiroku.net` and the page carries kaigiroku entrance markers.
+
+For `minutes/dbsr` the stored `index_url` (must be a `*.dbsr.jp` URL containing `/index.php`) is fetched once and promoted only if the host stays on `*.dbsr.jp` and the page carries a minutes hint (会議録/議事録/定例会/臨時会/本会議) together with at least one same-host `/index.php/<id>` detail link. A bare or maintenance page on the vendor host does not promote.
+
 Trust boundary:
 
 - Only a live (or human) verification can promote to `ready`; observatory/preflight hints never auto-promote.

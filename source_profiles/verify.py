@@ -113,6 +113,16 @@ def _has_kaigiroku_entrance(html_text: str, tenant_slug: str) -> bool:
     return False
 
 
+_DBSR_MINUTES_HINT_RE = re.compile(r"(会議録|議事録|定例会|臨時会|本会議)")
+
+
+def _is_dbsr_host(host: str | None) -> bool:
+    if host is None:
+        return False
+    h = host.lower()
+    return h == "dbsr.jp" or h.endswith(".dbsr.jp")
+
+
 def _is_council_scope(
     *,
     label: str,
@@ -792,6 +802,191 @@ def _verify_minutes_kaigiroku_net(
     return updated, report
 
 
+def _has_dbsr_minutes_entrance(
+    html_text: str, links: list[tuple[str, str]], observed_url: str
+) -> bool:
+    """Confirm a dbsr page is an active council minutes index.
+
+    Requires both a minutes hint term and at least one same-host link into an
+    ``/index.php/<id>`` detail page (or an explicit minutes document link). A
+    bare, empty, or error page on the vendor host must not promote.
+    """
+    if not _DBSR_MINUTES_HINT_RE.search(html_text):
+        return False
+    observed_host = _host(observed_url)
+    for href, label in links:
+        resolved = _canonical_url(urllib.parse.urljoin(str(observed_url), href))
+        if resolved is None:
+            continue
+        if _host(resolved) != observed_host:
+            continue
+        path = urllib.parse.urlsplit(resolved).path
+        # A detail page under /index.php/<id>, i.e. more than the bare index.
+        if re.search(r"/index\.php/.+", path):
+            return True
+        if _is_minutes_document_link(label=label, url=resolved):
+            return True
+    return False
+
+
+def _verify_minutes_dbsr(
+    profile: dict[str, Any],
+    updated: dict[str, Any],
+    entry: dict[str, Any],
+    *,
+    client: Any,
+    now: str,
+    municipality: str,
+    status_before: Any,
+    adapter: Any,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    index_url = entry.get("index_url")
+    if not isinstance(index_url, str) or not index_url.strip():
+        report: dict[str, Any] = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "invalid_index_url: missing index_url (cannot derive entry URL without guessing)",
+            "status_before": status_before,
+            "status_after": status_before,
+        }
+        return updated, report
+    index_url = index_url.strip()
+    parts = urllib.parse.urlsplit(index_url)
+    if not _is_dbsr_host(parts.netloc.lower() if parts.netloc else None) or (
+        "/index.php" not in parts.path
+    ):
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"invalid_index_url: index_url {index_url!r} must be a *.dbsr.jp URL containing /index.php",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return updated, report
+    # Fetch only the observed index_url via HttpClient (robots respected)
+    try:
+        result = client.fetch(index_url, tier=CacheTier.INDEX)
+    except Exception as exc:
+        reason = f"{type(exc).__name__}: {exc}"
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": reason,
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return updated, report
+    final_url_val = result.final_url if hasattr(result, "final_url") else index_url  # type: ignore[attr-defined]
+    final_host = _host(str(final_url_val))
+    if not _is_dbsr_host(final_host):
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"host drift: dbsr index -> final {final_host!r}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+    try:
+        html_text = _decode_html(result)
+    except Exception as exc:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"decode_error: {exc}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return updated, report
+    parser = _MinutesPageParser()
+    try:
+        parser.feed(html_text)
+    except Exception:
+        pass
+    if not _has_dbsr_minutes_entrance(html_text, parser.links, str(final_url_val)):
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "structure_mismatch: dbsr index has no minutes hint with an /index.php detail link",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+    # All checks passed -> promote
+    sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
+    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    evidence = entry.get("evidence")
+    if not isinstance(evidence, list):
+        evidence = []
+        entry["evidence"] = evidence
+    duplicate = False
+    for ev in evidence:
+        if not isinstance(ev, dict):
+            continue
+        if ev.get("url") == index_url and ev.get("sha256") == sha256:
+            duplicate = True
+            break
+    if not duplicate:
+        new_ev: dict[str, Any] = {
+            "url": index_url,
+            "observed_on": index_url,
+            "sha256": sha256,
+            "fetched_at": fetched_at,
+        }
+        evidence.append(new_ev)
+    entry["verified_at"] = now
+    entry["verified_by"] = "verify --live"
+    if status_before != "ready":
+        entry["status"] = "ready"
+    status_after = entry.get("status")
+    errs = validate_profile(updated)
+    if errs:
+        report = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"post-verify validation failed: {errs}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return copy.deepcopy(profile), report
+    report = {
+        "municipality": municipality,
+        "kind": "minutes",
+        "adapter": adapter,
+        "result": "verified",
+        "reason": "ok",
+        "status_before": status_before,
+        "status_after": status_after,
+        "index_url": index_url,
+        "final_url": final_url_val,
+        "sha256": sha256,
+        "fetched_at": fetched_at,
+    }
+    return updated, report
+
+
 def verify_profile(
     profile: dict[str, Any],
     *,
@@ -848,7 +1043,18 @@ def verify_profile(
                 status_before=status_before,
                 adapter=adapter,
             )
-        # dbsr / voices / null / other
+        if adapter == "dbsr":
+            return _verify_minutes_dbsr(
+                profile,
+                updated,
+                entry,
+                client=client,
+                now=now,
+                municipality=municipality,
+                status_before=status_before,
+                adapter=adapter,
+            )
+        # voices / null / other
         report = {
             "municipality": municipality,
             "kind": kind,
