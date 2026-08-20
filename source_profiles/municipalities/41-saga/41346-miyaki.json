@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41346",
+  "prefecture": "佐賀県",
+  "municipality": "みやき町",
+  "official_home_url": "http://www.town.miyaki.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "regulations": {
+      "status": "unsupported",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A9170542E",
+      "verified_at": null,
+      "verified_by": null,
+      "notes": "外部 vendor D1-Law (第一法規) のため現行 modules 未対応。要専用adapter",
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A9170542E",
+          "observed_on": "https://www.town.miyaki.lg.jp/sitemap.html"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

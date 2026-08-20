@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41441",
+  "prefecture": "佐賀県",
+  "municipality": "太良町",
+  "official_home_url": "http://www.town.tara.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "regulations": {
+      "status": "ready",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.tara/",
+      "verified_at": "2026-08-20T12:52:47Z",
+      "verified_by": "verify --live",
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.tara/reiki_menu.html",
+          "observed_on": "http://www.town.tara.lg.jp/"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.tara/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.tara/",
+          "sha256": "7265bdfa0d09781d421b81868d5b0f11902e93806408e47cc70101cd68fa47e4",
+          "fetched_at": "2026-08-20T12:52:39Z"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

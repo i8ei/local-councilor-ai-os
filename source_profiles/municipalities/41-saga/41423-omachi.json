@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41423",
+  "prefecture": "佐賀県",
+  "municipality": "大町町",
+  "official_home_url": "https://www.town.omachi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "regulations": {
+      "status": "unsupported",
+      "adapter": "joureikun",
+      "index_url": "https://www.town.omachi.lg.jp/joureikun/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "notes": "Joureikun 方式 (aggregate/catalog) のため現行 modules 未対応。要専用adapterまたは ingest 拡張",
+      "evidence": [
+        {
+          "url": "https://www.town.omachi.lg.jp/joureikun/index.html",
+          "observed_on": "https://www.town.omachi.lg.jp/"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

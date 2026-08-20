@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41204",
+  "prefecture": "佐賀県",
+  "municipality": "多久市",
+  "official_home_url": "https://www.city.taku.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.taku/",
+      "verified_at": null,
+      "verified_by": null,
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.taku/reiki_menu.html",
+          "observed_on": "https://www.city.taku.lg.jp/"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

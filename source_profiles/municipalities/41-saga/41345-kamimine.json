@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "area_code_5": "41345",
+  "prefecture": "佐賀県",
+  "municipality": "上峰町",
+  "official_home_url": "http://www.town.kamimine.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.kamimine/",
+      "verified_at": null,
+      "verified_by": null,
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.kamimine/reiki_menu.html",
+          "observed_on": "http://www.town.kamimine.lg.jp/"
+        }
+      ]
+    },
+    "budget": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    },
+    "settlement": {
+      "status": "not_evaluated",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": null
+    }
+  }
+}

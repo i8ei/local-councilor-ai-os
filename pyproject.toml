@@ -29,12 +29,12 @@ select = ["E", "F", "I", "W", "B"]
 ignore = ["E501"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["lcaios", "bootstrap", "onboarding", "modules"]
+known-first-party = ["lcaios", "bootstrap", "onboarding", "modules", "source_profiles"]
 
 [tool.mypy]
 python_version = "3.11"
 # Type-check every importable package, including the runnable modules.
-files = ["lcaios", "bootstrap", "onboarding", "modules"]
+files = ["lcaios", "bootstrap", "onboarding", "modules", "source_profiles"]
 ignore_missing_imports = true
 warn_unused_ignores = false
 warn_redundant_casts = true
