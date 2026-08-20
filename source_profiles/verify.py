@@ -9,7 +9,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
-from lcaios.http import CacheTier
+from lcaios.http import CacheTier, RobotsDeniedError
 from source_profiles.schema import validate_profile
 
 try:
@@ -802,6 +802,43 @@ def _verify_minutes_kaigiroku_net(
     return updated, report
 
 
+def _first_dbsr_meeting_link(
+    html_text: str, links: list[tuple[str, str]], observed_url: str
+) -> str | None:
+    """Return first same-host meeting link (detail or query-list or document).
+
+    Shared helper for entrance check and robots-aware body probe to avoid
+    duplicating discovery logic. A meeting link is a same-host URL that is
+    either under ``/index.php/<id>``, the observed query-list form
+    ``/index.php?QueryType=New&Template=List`` with a meeting label, or a
+    minutes document link. Requires a minutes hint on the page.
+    """
+    if not _DBSR_MINUTES_HINT_RE.search(html_text):
+        return None
+    observed_host = _host(observed_url)
+    for href, label in links:
+        resolved = _canonical_url(urllib.parse.urljoin(str(observed_url), href))
+        if resolved is None:
+            continue
+        if _host(resolved) != observed_host:
+            continue
+        resolved_parts = urllib.parse.urlsplit(resolved)
+        path = resolved_parts.path
+        if re.search(r"/index\.php/.+", path):
+            return resolved
+        query = urllib.parse.parse_qs(resolved_parts.query)
+        if (
+            path.rstrip("/") == "/index.php"
+            and query.get("QueryType") == ["New"]
+            and query.get("Template") == ["List"]
+            and _DBSR_MINUTES_HINT_RE.search(label)
+        ):
+            return resolved
+        if _is_minutes_document_link(label=label, url=resolved):
+            return resolved
+    return None
+
+
 def _has_dbsr_minutes_entrance(
     html_text: str, links: list[tuple[str, str]], observed_url: str
 ) -> bool:
@@ -812,33 +849,7 @@ def _has_dbsr_minutes_entrance(
     (``QueryType=New&Template=List``) whose label names a meeting. A bare,
     empty, or error page on the vendor host must not promote.
     """
-    if not _DBSR_MINUTES_HINT_RE.search(html_text):
-        return False
-    observed_host = _host(observed_url)
-    for href, label in links:
-        resolved = _canonical_url(urllib.parse.urljoin(str(observed_url), href))
-        if resolved is None:
-            continue
-        if _host(resolved) != observed_host:
-            continue
-        resolved_parts = urllib.parse.urlsplit(resolved)
-        path = resolved_parts.path
-        # A detail page under /index.php/<id>, i.e. more than the bare index.
-        if re.search(r"/index\.php/.+", path):
-            return True
-        # Some dbsr tenants (observed: Kamimine) list meetings as query links
-        # on the bare index instead of path-based detail pages.
-        query = urllib.parse.parse_qs(resolved_parts.query)
-        if (
-            path.rstrip("/") == "/index.php"
-            and query.get("QueryType") == ["New"]
-            and query.get("Template") == ["List"]
-            and _DBSR_MINUTES_HINT_RE.search(label)
-        ):
-            return True
-        if _is_minutes_document_link(label=label, url=resolved):
-            return True
-    return False
+    return _first_dbsr_meeting_link(html_text, links, observed_url) is not None
 
 
 def _verify_minutes_dbsr(
@@ -943,6 +954,94 @@ def _verify_minutes_dbsr(
             "final_url": final_url_val,
         }
         return updated, report
+    # Robots-aware body probe: fetch first meeting link once via HttpClient
+    meeting_url = _first_dbsr_meeting_link(html_text, parser.links, str(final_url_val))
+    if meeting_url is not None:
+        try:
+            _probe_result = client.fetch(meeting_url, tier=CacheTier.INDEX)
+        except RobotsDeniedError as exc:
+            blocked_sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
+            blocked_fetched_at = (
+                result.fetched_at if hasattr(result, "fetched_at") else now
+            )  # type: ignore[attr-defined]
+            evidence = entry.get("evidence")
+            if not isinstance(evidence, list):
+                evidence = []
+                entry["evidence"] = evidence
+            duplicate = False
+            for ev in evidence:
+                if not isinstance(ev, dict):
+                    continue
+                if ev.get("url") == index_url and ev.get("sha256") == blocked_sha256:
+                    duplicate = True
+                    break
+            if not duplicate:
+                blocked_ev: dict[str, Any] = {
+                    "url": index_url,
+                    "observed_on": index_url,
+                    "sha256": blocked_sha256,
+                    "fetched_at": blocked_fetched_at,
+                }
+                evidence.append(blocked_ev)
+            entry["verified_at"] = now
+            entry["verified_by"] = "verify --live"
+            entry["status"] = "blocked"
+            blocked_note = (
+                "minutes bodies are robots-restricted (robots.txt disallows meeting detail/document paths); "
+                "observed Saga dbsr tenants block bodies, so ingestion requires the councilor/user to obtain municipality permission "
+                "(out of scope for automated ingestion)"
+            )
+            existing_notes = entry.get("notes")
+            if (
+                not isinstance(existing_notes, str)
+                or "robots" not in existing_notes.lower()
+            ):
+                if isinstance(existing_notes, str) and existing_notes.strip():
+                    entry["notes"] = existing_notes.rstrip() + " " + blocked_note
+                else:
+                    entry["notes"] = blocked_note
+            errs = validate_profile(updated)
+            if errs:
+                report = {
+                    "municipality": municipality,
+                    "kind": "minutes",
+                    "adapter": adapter,
+                    "result": "failed",
+                    "reason": f"post-verify validation failed: {errs}",
+                    "status_before": status_before,
+                    "status_after": status_before,
+                    "index_url": index_url,
+                }
+                return copy.deepcopy(profile), report
+            report = {
+                "municipality": municipality,
+                "kind": "minutes",
+                "adapter": adapter,
+                "result": "blocked",
+                "reason": f"RobotsDeniedError: {exc} (minutes bodies are robots-restricted)",
+                "status_before": status_before,
+                "status_after": "blocked",
+                "index_url": index_url,
+                "final_url": final_url_val,
+                "sha256": blocked_sha256,
+                "fetched_at": blocked_fetched_at,
+                "meeting_url": meeting_url,
+            }
+            return updated, report
+        except Exception as exc:  # noqa: BLE001
+            reason = f"{type(exc).__name__}: {exc}"
+            report = {
+                "municipality": municipality,
+                "kind": "minutes",
+                "adapter": adapter,
+                "result": "failed",
+                "reason": reason,
+                "status_before": status_before,
+                "status_after": status_before,
+                "index_url": index_url,
+                "final_url": final_url_val,
+            }
+            return updated, report
     # All checks passed -> promote
     sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
     fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]

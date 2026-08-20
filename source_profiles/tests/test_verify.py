@@ -1030,7 +1030,8 @@ class DbsrVerifyTests(unittest.TestCase):
     def test_dbsr_promotes_to_ready(self) -> None:
         profile = _base_dbsr_needs_review()
         fetch = make_fetch_result(DBSR_INDEX_URL, _dbsr_index_html())
-        client = FakeHttpClient({DBSR_INDEX_URL: fetch})
+        detail_fetch = make_fetch_result(DBSR_DETAIL_URL, "<html>detail body</html>")
+        client = FakeHttpClient({DBSR_INDEX_URL: fetch, DBSR_DETAIL_URL: detail_fetch})
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
@@ -1050,24 +1051,29 @@ class DbsrVerifyTests(unittest.TestCase):
             )
         )
         self.assertEqual([], validate_profile(updated))
-        self.assertEqual([DBSR_INDEX_URL], [u for u, _ in client.calls])
+        self.assertEqual(
+            [DBSR_INDEX_URL, DBSR_DETAIL_URL], [u for u, _ in client.calls]
+        )
 
     def test_dbsr_query_list_variant_promotes_to_ready(self) -> None:
         index_url = "http://www.town.kamimine.saga.dbsr.jp/index.php/"
         profile = _base_dbsr_needs_review(index_url=index_url)
         fetch = make_fetch_result(index_url, _dbsr_query_index_html())
-        client = FakeHttpClient({index_url: fetch})
+        query_url = "http://www.town.kamimine.saga.dbsr.jp/index.php/?QueryType=New&Template=List&ListOrder=ASC&Cabinet=1&TermStart=2026-06-05&TermEnd=2026-06-12"
+        query_fetch = make_fetch_result(query_url, "<html>query detail</html>")
+        client = FakeHttpClient({index_url: fetch, query_url: query_fetch})
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
         self.assertEqual("verified", report["result"])
         self.assertEqual("ready", updated["sources"]["minutes"]["status"])
-        self.assertEqual([index_url], [u for u, _ in client.calls])
+        self.assertEqual([index_url, query_url], [u for u, _ in client.calls])
 
     def test_dbsr_evidence_idempotent(self) -> None:
         profile = _base_dbsr_needs_review()
         fetch = make_fetch_result(DBSR_INDEX_URL, _dbsr_index_html())
-        client = FakeHttpClient({DBSR_INDEX_URL: fetch})
+        detail_fetch = make_fetch_result(DBSR_DETAIL_URL, "<html>detail body</html>")
+        client = FakeHttpClient({DBSR_INDEX_URL: fetch, DBSR_DETAIL_URL: detail_fetch})
         once, _ = verify_profile(profile, client=client, now=NOW, kind="minutes")
         twice, _ = verify_profile(once, client=client, now=NOW, kind="minutes")
         self.assertEqual(
@@ -1079,7 +1085,9 @@ class DbsrVerifyTests(unittest.TestCase):
         bad_url = "https://example.com/index.php/"
         orig = _base_dbsr_needs_review(index_url=bad_url)
         profile = copy.deepcopy(orig)
-        client = FakeHttpClient({bad_url: make_fetch_result(bad_url, _dbsr_index_html())})
+        client = FakeHttpClient(
+            {bad_url: make_fetch_result(bad_url, _dbsr_index_html())}
+        )
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
@@ -1091,7 +1099,9 @@ class DbsrVerifyTests(unittest.TestCase):
     def test_dbsr_invalid_index_path(self) -> None:
         bad_url = "https://www.city.kanzaki.saga.dbsr.jp/other.html"
         profile = _base_dbsr_needs_review(index_url=bad_url)
-        client = FakeHttpClient({bad_url: make_fetch_result(bad_url, _dbsr_index_html())})
+        client = FakeHttpClient(
+            {bad_url: make_fetch_result(bad_url, _dbsr_index_html())}
+        )
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
@@ -1101,9 +1111,13 @@ class DbsrVerifyTests(unittest.TestCase):
 
     def test_dbsr_structure_mismatch_does_not_promote(self) -> None:
         # dbsr host but no minutes hint / no detail link -> must not promote
-        html = "<html><head><title>メンテナンス中</title></head><body>準備中</body></html>"
+        html = (
+            "<html><head><title>メンテナンス中</title></head><body>準備中</body></html>"
+        )
         profile = _base_dbsr_needs_review()
-        client = FakeHttpClient({DBSR_INDEX_URL: make_fetch_result(DBSR_INDEX_URL, html)})
+        client = FakeHttpClient(
+            {DBSR_INDEX_URL: make_fetch_result(DBSR_INDEX_URL, html)}
+        )
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
@@ -1146,6 +1160,113 @@ class DbsrVerifyTests(unittest.TestCase):
         self.assertEqual("failed", report["result"])
         self.assertIn("invalid_index_url", report["reason"])
         self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_dbsr_body_robots_denied_becomes_blocked(self) -> None:
+        profile = _base_dbsr_needs_review()
+        fetch = make_fetch_result(DBSR_INDEX_URL, _dbsr_index_html())
+
+        class DenyBodyClient:
+            def __init__(self) -> None:
+                self.calls: list[tuple[str, object]] = []
+
+            def fetch(self, url: str, *, tier: object, **_: object):  # type: ignore[no-untyped-def]
+                self.calls.append((url, tier))  # type: ignore[arg-type]
+                if url == DBSR_DETAIL_URL:
+                    raise RobotsDeniedError("robots.txt disallows")
+                if url == DBSR_INDEX_URL:
+                    return fetch
+                raise AssertionError(f"unexpected url {url}")
+
+        client = DenyBodyClient()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )  # type: ignore[arg-type]
+        self.assertEqual("blocked", report["result"])
+        self.assertIn("RobotsDenied", report["reason"])
+        self.assertIn("robots", report["reason"].lower())
+        self.assertEqual("needs_review", report["status_before"])
+        self.assertEqual("blocked", report["status_after"])
+        self.assertEqual("blocked", updated["sources"]["minutes"]["status"])
+        self.assertEqual(NOW, updated["sources"]["minutes"]["verified_at"])
+        self.assertEqual("verify --live", updated["sources"]["minutes"]["verified_by"])
+        ev = updated["sources"]["minutes"]["evidence"]
+        self.assertTrue(
+            any(
+                e.get("url") == DBSR_INDEX_URL and e.get("sha256") == fetch.sha256
+                for e in ev
+            )
+        )
+        notes = updated["sources"]["minutes"].get("notes") or ""
+        self.assertIn("robots", notes.lower())
+        self.assertEqual([], validate_profile(updated))
+        self.assertEqual(
+            [DBSR_INDEX_URL, DBSR_DETAIL_URL], [u for u, _ in client.calls]
+        )
+
+    def test_dbsr_body_robots_denied_downgrades_ready_to_blocked(self) -> None:
+        profile = _base_dbsr_needs_review()
+        profile["sources"]["minutes"]["status"] = "ready"
+        profile["sources"]["minutes"]["verified_at"] = "2020-01-01T00:00:00Z"
+        profile["sources"]["minutes"]["verified_by"] = "verify --live"
+        profile["sources"]["minutes"]["evidence"] = [
+            {
+                "url": DBSR_INDEX_URL,
+                "observed_on": DBSR_INDEX_URL,
+                "sha256": "a" * 64,
+                "fetched_at": "2020-01-01T00:00:00Z",
+            }
+        ]
+        fetch = make_fetch_result(DBSR_INDEX_URL, _dbsr_index_html())
+
+        class DenyBodyClient2:
+            def __init__(self) -> None:
+                self.calls: list[tuple[str, object]] = []
+
+            def fetch(self, url: str, *, tier: object, **_: object):  # type: ignore[no-untyped-def]
+                self.calls.append((url, tier))  # type: ignore[arg-type]
+                if url == DBSR_DETAIL_URL:
+                    raise RobotsDeniedError("robots.txt disallows")
+                if url == DBSR_INDEX_URL:
+                    return fetch
+                raise AssertionError(f"unexpected url {url}")
+
+        client = DenyBodyClient2()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )  # type: ignore[arg-type]
+        self.assertEqual("blocked", report["result"])
+        self.assertEqual("ready", report["status_before"])
+        self.assertEqual("blocked", report["status_after"])
+        self.assertEqual("blocked", updated["sources"]["minutes"]["status"])
+        self.assertIn(
+            "robots", (updated["sources"]["minutes"].get("notes") or "").lower()
+        )
+        self.assertEqual([], validate_profile(updated))
+
+    def test_dbsr_body_fetch_error_does_not_change_status(self) -> None:
+        profile = _base_dbsr_needs_review()
+        fetch = make_fetch_result(DBSR_INDEX_URL, _dbsr_index_html())
+
+        class FailBodyClient:
+            def __init__(self) -> None:
+                self.calls: list[tuple[str, object]] = []
+
+            def fetch(self, url: str, *, tier: object, **_: object):  # type: ignore[no-untyped-def]
+                self.calls.append((url, tier))  # type: ignore[arg-type]
+                if url == DBSR_DETAIL_URL:
+                    raise FetchError("HTTP 500")
+                if url == DBSR_INDEX_URL:
+                    return fetch
+                raise AssertionError(f"unexpected url {url}")
+
+        client = FailBodyClient()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )  # type: ignore[arg-type]
+        self.assertEqual("failed", report["result"])
+        self.assertIn("FetchError", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+        self.assertEqual("needs_review", report["status_after"])
 
 
 if __name__ == "__main__":
