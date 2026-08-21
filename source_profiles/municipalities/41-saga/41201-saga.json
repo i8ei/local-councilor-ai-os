@@ -6,7 +6,7 @@
   "official_home_url": "https://www.city.saga.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "unsupported",
+      "status": "blocked",
       "adapter": "voices",
       "index_url": "https://sagashi-gikai.gijiroku.com/",
       "verified_at": null,
@@ -17,7 +17,7 @@
           "observed_on": "https://www.city.saga.lg.jp/shisei/shigikai/index.html"
         }
       ],
-      "notes": "voices (gijiroku.com) 方式のため現行 ingest adapter 未対応。議会会議録は https://sagashi-gikai.gijiroku.com/ で外部ベンダー運用"
+      "notes": "voices(gijiroku.com)。会議一覧本体は voices/cgi/voiweb.exe 配下で、robots.txt (User-agent: *) が Disallow: /voices/cgi/（2026-08-21実確認）。礼節あるクロールでは自動取込不可。本文リンクはjavascript:winopen()依存・Shift_JISのため、許可を得た利用者が各自取得する前提（dbsr・江北例規と同じ線引）。"
     },
     "regulations": {
       "status": "ready",

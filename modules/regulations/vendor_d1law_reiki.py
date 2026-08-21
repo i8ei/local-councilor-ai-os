@@ -12,6 +12,9 @@ Kohoku town pattern (live-scouted + live-verified 2026-08-21):
 * Verified live: ``OpenResDataWin(id)`` maps to the observed fixed spec
   ``./<id>/<id>.html`` which is itself a frameset pointing to
   ``<id>_m.html`` (toc) and ``<id>_j.html`` (main text containing ``第N条``).
+  Some tenants (e.g. Kiyama) use a landing page with a real
+  ``<a href=mokuji_bunya.html>`` instead of a FRAMESET entry; the BFS follows
+  either, so both entry shapes work with the same ``--index-url``.
   The adapter derives ``<id>/<id>_j.html`` directly relative to the
   ``index_url`` directory and fetches only that ``_j.html``; the intermediate
   ``<id>.html`` frameset is never fetched. Any fetch failure on a derived
