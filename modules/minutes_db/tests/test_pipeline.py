@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
-from lcaios.http import HttpClient, _RawResponse
+from lcaios.http import FetchError, HttpClient, _RawResponse
 from modules.minutes_db import ingest
 from modules.minutes_db import search as minutes_search
 from modules.minutes_db.context_pack import build_context_pack
@@ -472,6 +472,211 @@ class PipelineTests(unittest.TestCase):
                 )
             },
         )
+
+
+class SkipBrokenDocumentsTests(unittest.TestCase):
+    """Synthetic fixture tests for --skip-broken-documents."""
+
+    def _make_refs(self) -> list[dict[str, object]]:
+        return [
+            {
+                "meeting_id": "meeting_1",
+                "source_url": "https://example.invalid/meeting-1.html",
+                "meeting_name": "会議1",
+                "discovered_from": "https://example.invalid/index.html",
+                "is_pdf": False,
+            },
+            {
+                "meeting_id": "meeting_2",
+                "source_url": "https://example.invalid/meeting-2.html",
+                "meeting_name": "会議2",
+                "discovered_from": "https://example.invalid/index.html",
+                "is_pdf": False,
+            },
+            {
+                "meeting_id": "meeting_3",
+                "source_url": "https://example.invalid/meeting-3.html",
+                "meeting_name": "会議3",
+                "discovered_from": "https://example.invalid/index.html",
+                "is_pdf": False,
+            },
+        ]
+
+    def _good_document(self, ref: dict[str, object], text: str) -> dict[str, object]:
+        doc = synthetic_document(text)
+        meeting = dict(doc["meeting"])  # type: ignore[arg-type]
+        meeting["source_url"] = str(ref["source_url"])
+        meeting["meeting_id"] = str(ref["meeting_id"])
+        meeting["meeting_name"] = str(ref["meeting_name"])
+        doc["meeting"] = meeting
+        provenance = dict(doc["provenance"])  # type: ignore[arg-type]
+        provenance["resolved_url"] = str(ref["source_url"])
+        provenance["discovered_from"] = str(ref["discovered_from"])
+        doc["provenance"] = provenance
+        return doc  # type: ignore[return-value]
+
+    def test_with_flag_404_is_recorded_and_remaining_ingested(self) -> None:
+        refs = self._make_refs()
+        good_1 = self._good_document(refs[0], "防災について質問します。")
+        good_3 = self._good_document(refs[2], "予算について質問します。")
+        error = FetchError("取得に失敗しました: HTTP 404: https://example.invalid/meeting-2.html")
+
+        def fetch_meeting(self: object, meeting_id: object) -> dict[str, object]:
+            mid = str(meeting_id)
+            if mid == "meeting_2":
+                raise error
+            if mid == "meeting_1":
+                return good_1
+            if mid == "meeting_3":
+                return good_3
+            raise AssertionError(f"unexpected meeting_id {mid!r}")
+
+        adapter = type(
+            "StubAdapter",
+            (),
+            {
+                "config": {"council_name": "架空町議会", "coverage": {}},
+                "coverage_candidate_sessions": None,
+                "discovery_candidates": [],
+                "list_meetings": lambda self, limit=None: refs[:limit] if limit is not None else refs,  # type: ignore[no-untyped-def]
+                "fetch_meeting": fetch_meeting,  # type: ignore[arg-type]
+                "adapter_name": "static_html",
+            },
+        )()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            db = Path(tmp) / "minutes.db"
+            args = type(
+                "Args",
+                (),
+                {
+                    "adapter": "static",
+                    "config": str(Path(tmp) / "dummy.json"),
+                    "url": None,
+                    "db": str(db),
+                    "limit": None,
+                    "cache_dir": tmp,
+                    "offline": False,
+                    "refresh": False,
+                    "timeout": 90,
+                    "dry_run": False,
+                    "skip_broken_documents": True,
+                },
+            )()
+            with patch("modules.minutes_db.ingest._make_adapter", return_value=adapter):
+                result = ingest.ingest(args)  # type: ignore[arg-type]
+            self.assertEqual(3, result["meetings"])
+            self.assertEqual(1, result["statuses"].get("fetch_failed", 0))
+            self.assertEqual(2, result["speeches"])
+            conn = sqlite3.connect(db)
+            try:
+                statuses = [row[0] for row in conn.execute("SELECT status FROM provenance").fetchall()]
+                self.assertIn("fetch_failed", statuses)
+                row = conn.execute(
+                    "SELECT issues_json FROM provenance WHERE status = 'fetch_failed'"
+                ).fetchone()
+                self.assertIsNotNone(row)
+                self.assertIn("404", row[0])
+                speech_count = conn.execute("SELECT count(*) FROM speeches").fetchone()[0]
+                self.assertEqual(2, speech_count)
+                meeting_count = conn.execute("SELECT count(*) FROM meetings").fetchone()[0]
+                self.assertEqual(3, meeting_count)
+            finally:
+                conn.close()
+
+    def test_without_flag_still_fails_fast(self) -> None:
+        refs = self._make_refs()[:2]
+        good_1 = self._good_document(refs[0], "防災について質問します。")
+        error = FetchError("取得に失敗しました: HTTP 404: https://example.invalid/meeting-2.html")
+
+        def fetch_meeting(self: object, meeting_id: object) -> dict[str, object]:
+            mid = str(meeting_id)
+            if mid == "meeting_1":
+                return good_1
+            raise error
+
+        adapter = type(
+            "StubAdapter",
+            (),
+            {
+                "config": {"council_name": "架空町議会", "coverage": {}},
+                "coverage_candidate_sessions": None,
+                "discovery_candidates": [],
+                "list_meetings": lambda self, limit=None: refs[:limit] if limit is not None else refs,  # type: ignore[no-untyped-def]
+                "fetch_meeting": fetch_meeting,  # type: ignore[arg-type]
+                "adapter_name": "static_html",
+            },
+        )()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            db = Path(tmp) / "minutes.db"
+            args = type(
+                "Args",
+                (),
+                {
+                    "adapter": "static",
+                    "config": str(Path(tmp) / "dummy.json"),
+                    "url": None,
+                    "db": str(db),
+                    "limit": None,
+                    "cache_dir": tmp,
+                    "offline": False,
+                    "refresh": False,
+                    "timeout": 90,
+                    "dry_run": False,
+                    "skip_broken_documents": False,
+                },
+            )()
+            with patch("modules.minutes_db.ingest._make_adapter", return_value=adapter):
+                with self.assertRaises(FetchError):
+                    ingest.ingest(args)  # type: ignore[arg-type]
+            # default flag is false
+            parser = ingest.build_parser()
+            parsed = parser.parse_args(["--adapter", "static", "--config", "x", "--db", "y"])
+            self.assertFalse(parsed.skip_broken_documents)
+
+    def test_index_failure_still_aborts_even_with_flag(self) -> None:
+        def failing_list(self: object, limit: object = None) -> list[dict[str, object]]:
+            raise FetchError("取得に失敗しました: HTTP 404: https://example.invalid/index.html")
+
+        def _unexpected_fetch(self: object, meeting_id: object) -> dict[str, object]:
+            raise AssertionError("should not be called")
+
+        adapter = type(
+            "StubAdapter",
+            (),
+            {
+                "config": {},
+                "coverage_candidate_sessions": None,
+                "discovery_candidates": [],
+                "list_meetings": failing_list,  # type: ignore[arg-type]
+                "fetch_meeting": _unexpected_fetch,  # type: ignore[arg-type]
+                "adapter_name": "static_html",
+            },
+        )()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            db = Path(tmp) / "minutes.db"
+            args = type(
+                "Args",
+                (),
+                {
+                    "adapter": "static",
+                    "config": str(Path(tmp) / "dummy.json"),
+                    "url": None,
+                    "db": str(db),
+                    "limit": None,
+                    "cache_dir": tmp,
+                    "offline": False,
+                    "refresh": False,
+                    "timeout": 90,
+                    "dry_run": False,
+                    "skip_broken_documents": True,
+                },
+            )()
+            with patch("modules.minutes_db.ingest._make_adapter", return_value=adapter):
+                with self.assertRaises(FetchError):
+                    ingest.ingest(args)  # type: ignore[arg-type]
 
 
 if __name__ == "__main__":
