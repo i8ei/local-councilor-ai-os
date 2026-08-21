@@ -9,6 +9,7 @@ import json
 import sqlite3
 import sys
 from contextlib import closing
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -18,7 +19,7 @@ from lcaios.database import (
     supports_fts5,
     supports_fts5_trigram,
 )
-from lcaios.http import MINUTES_USER_AGENT, HttpClient
+from lcaios.http import MINUTES_USER_AGENT, FetchError, HttpClient
 from lcaios.module_manifest import (
     begin_module_run,
     fail_module_run,
@@ -42,6 +43,53 @@ def stable_id(prefix: str, value: str) -> str:
     """Build a deterministic, readable identifier."""
     digest = hashlib.sha256(value.encode("utf-8")).hexdigest()[:24]
     return f"{prefix}_{digest}"
+
+
+def _fetch_failed_document(
+    ref: dict[str, Any] | str, error_gist: str, adapter: Any
+) -> dict[str, Any]:
+    """Build a minimal fetch_failed document for a meeting that could not be fetched."""
+    if isinstance(ref, dict):
+        source_url = str(ref.get("source_url") or ref.get("url") or "")
+        meeting_id = str(ref.get("meeting_id") or stable_id("meeting", source_url))
+        meeting_name = str(ref.get("meeting_name") or ref.get("title") or source_url)
+        discovered_from = ref.get("discovered_from")
+    else:
+        source_url = str(ref)
+        meeting_id = stable_id("meeting", source_url)
+        meeting_name = source_url
+        discovered_from = None
+    if not source_url:
+        source_url = meeting_id
+    fetched_at = (
+        datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    )
+    config = getattr(adapter, "config", {}) or {}
+    council_name = str(config.get("council_name") or config.get("municipality") or "")
+    adapter_name = str(getattr(adapter, "adapter_name", "static_html"))
+    meeting: dict[str, Any] = {
+        "meeting_id": meeting_id,
+        "council_name": council_name,
+        "meeting_name": meeting_name,
+        "session": config.get("session"),
+        "date": None,
+        "source_url": source_url,
+        "adapter": adapter_name,
+        "fetched_at": fetched_at,
+    }
+    provenance: dict[str, Any] = {
+        "discovered_from": discovered_from,
+        "resolved_url": source_url,
+        "fetched_at": fetched_at,
+        "media_type": None,
+        "content_sha256": None,
+        "adapter": adapter_name,
+        "transform": {"pipeline": "adapter -> normalized meeting/speeches -> SQLite"},
+        "status": "fetch_failed",
+        "cache_path": None,
+        "issues": [error_gist[:500] or type(error_gist).__name__],
+    }
+    return {"meeting": meeting, "speeches": [], "provenance": provenance}
 
 
 def _rebuild_fts(
@@ -300,9 +348,16 @@ def ingest(args: argparse.Namespace) -> dict[str, Any]:
         meeting_count = 0
         speech_count = 0
         statuses: dict[str, int] = {}
+        skip_broken = bool(getattr(args, "skip_broken_documents", False))
         for ref in meeting_refs:
             meeting_ref = ref.get("meeting_id", ref) if isinstance(ref, dict) else ref
-            document = adapter.fetch_meeting(meeting_ref)
+            try:
+                document = adapter.fetch_meeting(meeting_ref)
+            except (FetchError, OSError, RuntimeError) as exc:
+                if not skip_broken:
+                    raise
+                error_gist = str(exc).strip()[:500] or type(exc).__name__
+                document = _fetch_failed_document(ref, error_gist, adapter)
             speech_count += store_meeting(connection, document)
             status = str((document.get("provenance") or {}).get("status", "discovered"))
             statuses[status] = statuses.get(status, 0) + 1
@@ -370,6 +425,14 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="List static candidates without fetching meeting bodies or creating a DB",
     )
+    parser.add_argument(
+        "--skip-broken-documents",
+        action="store_true",
+        help=(
+            "既に発見された会議の本文取得で404/410や接続エラーが出ても"
+            " fetch_failed として記録し残りを続行する（索引/追跡ページの失敗は中断）"
+        ),
+    )
     parser.add_argument("--manifest-dir", type=Path)
     parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
@@ -399,6 +462,9 @@ def main(argv: list[str] | None = None) -> int:
                 "offline": args.offline,
                 "refresh": args.refresh,
                 "timeout": args.timeout,
+                "skip_broken_documents": bool(
+                    getattr(args, "skip_broken_documents", False)
+                ),
             },
         )
         result = ingest(args)

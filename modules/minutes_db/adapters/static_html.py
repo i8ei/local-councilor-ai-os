@@ -318,7 +318,12 @@ def _infer_date(*values: str) -> str | None:
 
 
 class StaticHtmlAdapter(Adapter):
-    """Discover and normalize static municipal minute documents."""
+    """Discover and normalize static municipal minute documents.
+
+    Document-body fetch failures are handled by the ingest layer
+    (--skip-broken-documents) as per-document safe stops; index and
+    follow-page failures still abort.
+    """
 
     adapter_name = "static_html"
 
