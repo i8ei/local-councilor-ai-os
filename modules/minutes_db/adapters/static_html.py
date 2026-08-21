@@ -132,6 +132,62 @@ def _is_b_speaker_candidate(text: str, has_anchor: bool) -> bool:
     return False
 
 
+def _is_div_head_candidate(normalized: str) -> bool:
+    """Check normalized head (full-width spaces removed) for DIV speaker."""
+    t = normalized.strip()
+    if not t or len(t) > 30 or len(t) < 2:
+        return False
+    if any(ch in t for ch in "、。，．") or "・" in t:
+        return False
+    agenda_keywords = (
+        "日程",
+        "議案",
+        "報告",
+        "予算",
+        "条例",
+        "選挙",
+        "追加日程",
+        "発議",
+        "請願",
+        "陳情",
+        "選任",
+        "承認",
+        "同意",
+        "会議",
+        "議会",
+        "議事",
+        "経過",
+        "要旨",
+        "発言者",
+        "について",
+        "令和",
+        "平成",
+        "昭和",
+    )
+    for kw in agenda_keywords:
+        if kw in t:
+            return False
+    if "第" in t or "号" in t:
+        return False
+    if "）" in t and "（" not in t:
+        return False
+    if "（" in t and "）" not in t:
+        return False
+    if t.endswith("長") or t.endswith("委員") or t.endswith("議員"):
+        if re.search(r"[一-龥]", t):
+            return True
+    if re.search(r"[一-龥]", t):
+        if re.match(r"^[一-龥ぁ-んァ-ンー]+(?:（[^）]+）)?$", t):
+            base = re.sub(r"（[^）]+）$", "", t)
+            if 1 <= len(base) <= 4:
+                return True
+    if re.match("^[0-9０-９]+番", t):
+        # numbered like "3番" - allow as head only if it is short and plausible
+        if re.match("^[0-9０-９]+番(?:（[^）]+）)?$", t):
+            return True
+    return False
+
+
 class _DocumentParser(HTMLParser):
     """Collect links, title, and visible text with block boundaries."""
 
@@ -224,8 +280,61 @@ class _DocumentParser(HTMLParser):
             self._current_link_text.append(data)
 
     def visible_text(self) -> str:
-        lines = [_collapse_inline(line) for line in "".join(self._text).splitlines()]
-        return "\n".join(line for line in lines if line)
+        raw_lines = [_collapse_inline(line) for line in "".join(self._text).splitlines()]
+        # Detect whether document has a body marker ("議事の経過" / "発言者")
+        has_body_marker = any(
+            "議事の経過" in candidate.replace("\u3000", "").replace(" ", "").replace("\t", "")
+            or "発言者" in candidate.replace("\u3000", "").replace(" ", "").replace("\t", "")
+            for candidate in raw_lines
+        )
+        converted: list[str] = []
+        in_body = not has_body_marker  # if no marker (isolated test), allow immediately
+        for line in raw_lines:
+            if not line:
+                continue
+            norm_nospace = line.replace("\u3000", "").replace(" ", "").replace("\t", "")
+            if "議事の経過" in norm_nospace or "発言者" in norm_nospace:
+                in_body = True
+                converted.append(line)
+                continue
+            # Already a speaker mark from <B> handling
+            if line[0] in "○◯●◎":
+                converted.append(line)
+                continue
+            # Indented paragraphs (full-width or ASCII) are not speakers
+            if line[0] in " \t\u3000":
+                converted.append(line)
+                continue
+            # Time pattern like "午前 ９時..." should not become speaker
+            if line.startswith("午前") or line.startswith("午後"):
+                converted.append(line)
+                continue
+            if not in_body:
+                converted.append(line)
+                continue
+            # DIV speaker: head (<=12 chars, may contain single "　") + 2+ "　" + body
+            converted_via_div = False
+            for idx in range(len(line) - 1):
+                if line[idx] == "\u3000" and line[idx + 1] == "\u3000":
+                    head = line[:idx].rstrip("　 ")
+                    if not head or len(head) > 12:
+                        continue
+                    body = line[idx:].lstrip("\u3000 \t")
+                    if not body:
+                        continue
+                    normalized = head.replace("\u3000", "").replace(" ", "").replace("\t", "")
+                    if not _is_div_head_candidate(normalized):
+                        continue
+                    # Skip attendance lists: numbered head with another numbered in body
+                    if re.match("^[0-9０-９]+番", normalized) and re.search(r"[0-9０-９]+番", body):
+                        continue
+                    converted.append(f"○{normalized}　{body}")
+                    converted_via_div = True
+                    break
+            if converted_via_div:
+                continue
+            converted.append(line)
+        return "\n".join(converted)
 
 
 def _collapse_inline(value: str) -> str:

@@ -740,5 +740,53 @@ class StaticHtmlBSpeakerTest(unittest.TestCase):
         self.assertGreaterEqual(len(speeches), 1)
 
 
+class StaticHtmlDivSpeakerTest(unittest.TestCase):
+    """旧年代 DIV 行頭話者形式の回帰テスト."""
+
+    def _fetch_with_html(self, html: str) -> list[dict]:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            body = html.encode("utf-8")
+            responses = {
+                INDEX_URL: make_result(
+                    INDEX_URL,
+                    b'<a href="https://example.invalid/council/minutes/b.html">link</a>',
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                ),
+                "https://example.invalid/council/minutes/b.html": make_result(
+                    "https://example.invalid/council/minutes/b.html",
+                    body,
+                    content_type="text/html",
+                    cache_path=root / "meeting.cache",
+                ),
+            }
+            client = FakeHttpClient(responses)
+            adapter = StaticHtmlAdapter(
+                {"index_url": INDEX_URL, "pdf": False},
+                client=client,
+            )
+            ref = adapter.list_meetings()[0]
+            doc = adapter.fetch_meeting(ref["meeting_id"])
+            return doc["speeches"]
+
+    def test_div_speaker_is_segmented(self) -> None:
+        html = "<html><body><div>議　　長　　　３番師田保議員。</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        self.assertTrue(any(s["speaker"] == "議長" for s in speeches))
+        self.assertEqual("議長", speeches[0]["speaker"])
+        self.assertIn("３番師田保議員", speeches[0]["text"])
+
+    def test_div_time_is_not_speaker(self) -> None:
+        html = "<html><body><div>午前　９時３４分　　開会</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        self.assertTrue(all(s["speaker"] is None for s in speeches))
+
+    def test_div_indented_paragraph_is_not_speaker(self) -> None:
+        html = "<html><body><div>　　おはようございます。通常の段落です。</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        self.assertTrue(all(s["speaker"] is None for s in speeches))
+
+
 if __name__ == "__main__":
     unittest.main()
