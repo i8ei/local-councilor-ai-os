@@ -1,0 +1,7 @@
+{
+  "$schema": "https://raw.githubusercontent.com/earendil-works/pi-lens/main/docs/schema.json",
+  "_comment": "Align pi-lens scan scope with the project's own mypy policy: pyproject.toml sets [[tool.mypy.overrides]] module=['*.tests.*','tests.*'] ignore_errors=true, so test files are outside the type gate. Gates remain run_tests.sh / ruff / mypy / git diff --check.",
+  "ignore": [
+    "**/tests/**"
+  ]
+}
