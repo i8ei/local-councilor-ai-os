@@ -65,6 +65,129 @@ _GENERIC_SPEAKER_RE = re.compile(
 )
 
 
+def _is_b_speaker_candidate(text: str, has_anchor: bool) -> bool:
+    """Heuristic for <b>/<strong> speaker marks (湯沢町)."""
+    t = text.strip()
+    if has_anchor:
+        return False
+    if not t:
+        return False
+    if len(t) > 30:
+        return False
+    if "\n" in t or "\r" in t:
+        return False
+    if any(ch in t for ch in "、。，．"):
+        return False
+    if "・" in t:
+        return False
+    # Agenda / heading keywords that never appear in speaker names
+    agenda_keywords = (
+        "日程",
+        "議案",
+        "報告",
+        "予算",
+        "条例",
+        "選挙",
+        "追加日程",
+        "発議",
+        "請願",
+        "陳情",
+        "選任",
+        "承認",
+        "同意",
+        "会議",
+        "議会",
+        "について",
+        "令和",
+        "平成",
+        "昭和",
+    )
+    for kw in agenda_keywords:
+        if kw in t:
+            return False
+    if "第" in t or "号" in t:
+        return False
+    if len(t) < 2:
+        return False
+    # Spaces: only numbered speakers like "7番 氏名" are allowed to contain spaces
+    if "\u3000" in t or " " in t or "\t" in t:
+        if re.match("^[0-9０-９]+番[ \t\u3000]+[^ \t\u3000]+(?:（[^）]+）)?$", t):
+            return True
+        return False
+    # No spaces: must be plausible role or personal name
+    if "）" in t and "（" not in t:
+        return False
+    if "（" in t and "）" not in t:
+        return False
+    # Role-like (ends with 長/委員 etc.) – most湯沢 speakers are roles
+    if t.endswith("長") or t.endswith("委員") or t.endswith("議員"):
+        if re.search(r"[一-龥]", t):
+            return True
+    # Personal name: kanji 1-4 chars optionally with （）
+    if re.search(r"[一-龥]", t):
+        if re.match(r"^[一-龥ぁ-んァ-ンー]+(?:（[^）]+）)?$", t):
+            base = re.sub(r"（[^）]+）$", "", t)
+            if 1 <= len(base) <= 4:
+                return True
+    return False
+
+
+def _is_div_head_candidate(normalized: str) -> bool:
+    """Check normalized head (full-width spaces removed) for DIV speaker."""
+    t = normalized.strip()
+    if not t or len(t) > 30 or len(t) < 2:
+        return False
+    if any(ch in t for ch in "、。，．") or "・" in t:
+        return False
+    agenda_keywords = (
+        "日程",
+        "議案",
+        "報告",
+        "予算",
+        "条例",
+        "選挙",
+        "追加日程",
+        "発議",
+        "請願",
+        "陳情",
+        "選任",
+        "承認",
+        "同意",
+        "会議",
+        "議会",
+        "議事",
+        "経過",
+        "要旨",
+        "発言者",
+        "について",
+        "令和",
+        "平成",
+        "昭和",
+    )
+    for kw in agenda_keywords:
+        if kw in t:
+            return False
+    if "第" in t or "号" in t:
+        return False
+    if "）" in t and "（" not in t:
+        return False
+    if "（" in t and "）" not in t:
+        return False
+    if t.endswith("長") or t.endswith("委員") or t.endswith("議員"):
+        if re.search(r"[一-龥]", t):
+            return True
+    if re.search(r"[一-龥]", t):
+        if re.match(r"^[一-龥ぁ-んァ-ンー]+(?:（[^）]+）)?$", t):
+            base = re.sub(r"（[^）]+）$", "", t)
+            if 1 <= len(base) <= 4:
+                return True
+    if re.match("^[0-9０-９]+番", t):
+        # numbered like "3番" - allow as head only if it is short and plausible
+        if re.match("^[0-9０-９]+番(?:（[^）]+）)?$", t):
+            return True
+    return False
+
+
 class _DocumentParser(HTMLParser):
     """Collect links, title, and visible text with block boundaries."""
 
@@ -77,6 +200,9 @@ class _DocumentParser(HTMLParser):
         self._current_href: str | None = None
         self._current_link_text: list[str] = []
         self._text: list[str] = []
+        self._b_depth = 0
+        self._b_has_anchor = False
+        self._b_buffer: list[str] = []
 
     def handle_starttag(
         self, tag: str, attrs: list[tuple[str, str | None]]
@@ -87,6 +213,13 @@ class _DocumentParser(HTMLParser):
             return
         if self._ignored_depth:
             return
+        if tag in ("b", "strong"):
+            if self._b_depth == 0:
+                self._b_buffer = []
+                self._b_has_anchor = False
+            self._b_depth += 1
+        if self._b_depth > 0 and tag == "a":
+            self._b_has_anchor = True
         if tag in _BLOCK_TAGS:
             self._text.append("\n")
         if tag == "title":
@@ -96,6 +229,11 @@ class _DocumentParser(HTMLParser):
             if href:
                 self._current_href = href
                 self._current_link_text = []
+        if tag in ("frame", "iframe"):
+            src = dict(attrs).get("src")
+            if src:
+                # Treat frame src as a discoverable link (湯沢町のようなFRAMESET対応)
+                self.links.append((src, ""))
 
     def handle_endtag(self, tag: str) -> None:
         tag = tag.lower()
@@ -105,6 +243,18 @@ class _DocumentParser(HTMLParser):
             return
         if self._ignored_depth:
             return
+        if tag in ("b", "strong") and self._b_depth > 0:
+            self._b_depth -= 1
+            if self._b_depth == 0:
+                raw = "".join(self._b_buffer).strip()
+                self._b_buffer = []
+                if raw:
+                    if _is_b_speaker_candidate(raw, self._b_has_anchor):
+                        self._text.append("\n○" + raw + "\n")
+                    else:
+                        # Preserve heading text without speaker mark
+                        self._text.append("\n" + raw + "\n")
+                return
         if tag == "title" and self._title_depth:
             self._title_depth -= 1
         if tag == "a" and self._current_href is not None:
@@ -118,6 +268,11 @@ class _DocumentParser(HTMLParser):
     def handle_data(self, data: str) -> None:
         if self._ignored_depth:
             return
+        if self._b_depth > 0:
+            self._b_buffer.append(data)
+            if self._current_href is not None:
+                self._current_link_text.append(data)
+            return
         self._text.append(data)
         if self._title_depth:
             self.title += data
@@ -125,8 +280,69 @@ class _DocumentParser(HTMLParser):
             self._current_link_text.append(data)
 
     def visible_text(self) -> str:
-        lines = [_collapse_inline(line) for line in "".join(self._text).splitlines()]
-        return "\n".join(line for line in lines if line)
+        raw_split = "".join(self._text).splitlines()
+        raw_lines = [_collapse_inline(line) for line in raw_split]
+        # Detect whether document has a body marker ("議事の経過" / "発言者")
+        has_body_marker = any(
+            "議事の経過" in candidate.replace("\u3000", "").replace(" ", "").replace("\t", "")
+            or "発言者" in candidate.replace("\u3000", "").replace(" ", "").replace("\t", "")
+            for candidate in raw_lines
+        )
+        converted: list[str] = []
+        in_body = not has_body_marker  # if no marker (isolated test), allow immediately
+        for raw, line in zip(raw_split, raw_lines, strict=True):
+            if not line:
+                continue
+            norm_nospace = line.replace("\u3000", "").replace(" ", "").replace("\t", "")
+            if "議事の経過" in norm_nospace or "発言者" in norm_nospace:
+                in_body = True
+                converted.append(line)
+                continue
+            # Already a speaker mark from <B> handling
+            if line[0] in "○◯●◎":
+                converted.append(line)
+                continue
+            # Indented paragraphs (full-width or ASCII) are not speakers - check raw line
+            if raw.startswith(" ") or raw.startswith("\t") or raw.startswith("\u3000"):
+                converted.append(line)
+                continue
+            # Time pattern like "午前 ９時..." should not become speaker
+            if line.startswith("午前") or line.startswith("午後"):
+                converted.append(line)
+                continue
+            if not in_body:
+                converted.append(line)
+                continue
+            # DIV speaker: head (<=12 chars, may contain single "　") + 2+ "　" + body
+            converted_via_div = False
+            for idx in range(len(line) - 1):
+                if line[idx] == "\u3000" and line[idx + 1] == "\u3000":
+                    head = line[:idx].rstrip("　 ")
+                    # head長12は湯沢H15で最長「代表監査委員」(6字)に全角スペース余白を加味した実測上限
+                    if not head or len(head) > 12:
+                        continue
+                    body = line[idx:].lstrip("\u3000 \t")
+                    if not body:
+                        continue
+                    normalized = head.replace("\u3000", "").replace(" ", "").replace("\t", "")
+                    if not _is_div_head_candidate(normalized):
+                        continue
+                    # Skip attendance lists: numbered head with another numbered in body
+                    if re.match("^[0-9０-９]+番", normalized) and re.search(r"[0-9０-９]+番", body):
+                        continue
+                    converted.append(f"○{normalized}　{body}")
+                    converted_via_div = True
+                    break
+            if converted_via_div:
+                continue
+            # Head-only: line is a speaker name alone (e.g., "議　　長" in H1503)
+            if len(line) <= 12:
+                normalized_head = line.replace("\u3000", "").replace(" ", "").replace("\t", "")
+                if _is_div_head_candidate(normalized_head):
+                    converted.append(f"○{normalized_head}")
+                    continue
+            converted.append(line)
+        return "\n".join(converted)
 
 
 def _collapse_inline(value: str) -> str:
@@ -300,6 +516,9 @@ def _fallback_segments(text: str) -> list[dict[str, Any]]:
 
 def _infer_date(*values: str) -> str | None:
     combined = " ".join(value for value in values if value)
+    # Normalize full-width digits to half-width for date parsing (e.g., ３月→3月)
+    fw_map = str.maketrans("０１２３４５６７８９", "0123456789")
+    combined = combined.translate(fw_map)
     western = re.search(r"(?<!\d)(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})日?", combined)
     if western:
         year, month, day = (int(part) for part in western.groups())
@@ -309,12 +528,19 @@ def _infer_date(*values: str) -> str | None:
         r"(令和|平成|昭和)(元|\d{1,2})年\s*(\d{1,2})月\s*(\d{1,2})日",
         combined,
     )
-    if not era:
-        return None
-    bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
-    era_year = 1 if era.group(2) == "元" else int(era.group(2))
-    year = bases[era.group(1)] + era_year
-    return f"{year:04d}-{int(era.group(3)):02d}-{int(era.group(4)):02d}"
+    if era:
+        bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
+        era_year = 1 if era.group(2) == "元" else int(era.group(2))
+        year = bases[era.group(1)] + era_year
+        return f"{year:04d}-{int(era.group(3)):02d}-{int(era.group(4)):02d}"
+    # Fallback: era year + month without day -> use day=1 (for cases like "令和8年3月定例会" with separate "3月 2日" not linked)
+    era_month = re.search(r"(令和|平成|昭和)(元|\d{1,2})年\s*(\d{1,2})月", combined)
+    if era_month:
+        bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
+        era_year = 1 if era_month.group(2) == "元" else int(era_month.group(2))
+        year = bases[era_month.group(1)] + era_year
+        return f"{year:04d}-{int(era_month.group(3)):02d}-01"
+    return None
 
 
 class StaticHtmlAdapter(Adapter):

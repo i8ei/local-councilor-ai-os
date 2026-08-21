@@ -671,5 +671,147 @@ class StaticHtmlDepth2Test(unittest.TestCase):
         )
 
 
+class StaticHtmlBSpeakerTest(unittest.TestCase):
+    """湯沢町 HTML <B>話者マーク対応の回帰テスト."""
+
+    def _fetch_with_html(self, html: str) -> list[dict]:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            body = html.encode("utf-8")
+            responses = {
+                INDEX_URL: make_result(
+                    INDEX_URL,
+                    b'<a href="https://example.invalid/council/minutes/b.html">link</a>',
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                ),
+                "https://example.invalid/council/minutes/b.html": make_result(
+                    "https://example.invalid/council/minutes/b.html",
+                    body,
+                    content_type="text/html",
+                    cache_path=root / "meeting.cache",
+                ),
+            }
+            client = FakeHttpClient(responses)
+            adapter = StaticHtmlAdapter(
+                {"index_url": INDEX_URL, "pdf": False},
+                client=client,
+            )
+            ref = adapter.list_meetings()[0]
+            doc = adapter.fetch_meeting(ref["meeting_id"])
+            return doc["speeches"]
+
+    def test_b_speaker_is_segmented(self) -> None:
+        html = (
+            "<html><body>"
+            "<B>議長</B><br>　皆さん、こんにちは。<br>"
+            "<B>町長</B><br>　答弁します。<br>"
+            "</body></html>"
+        )
+        speeches = self._fetch_with_html(html)
+        speakers = [s["speaker"] for s in speeches]
+        self.assertIn("議長", speakers)
+        self.assertIn("町長", speakers)
+        # strong tagも同様に扱われること
+        html2 = "<html><body><strong>議長</strong><br>　発言です。<br></body></html>"
+        speeches2 = self._fetch_with_html(html2)
+        self.assertEqual("議長", speeches2[0]["speaker"])
+
+    def test_b_with_anchor_is_not_speaker(self) -> None:
+        html = (
+            "<html><body>"
+            '<B><A name="会議録署名議員の指名"></A>日程第１　会議録署名議員の指名</B><br>'
+            "<B>議長</B><br>　日程第１を議題とします。<br>"
+            "</body></html>"
+        )
+        speeches = self._fetch_with_html(html)
+        for s in speeches:
+            self.assertFalse(
+                s["speaker"] is not None and "日程第" in s["speaker"],
+                f"agenda heading became speaker: {s['speaker']}",
+            )
+        self.assertTrue(any(s["speaker"] == "議長" for s in speeches))
+
+    def test_html_without_b_falls_back(self) -> None:
+        html = "<html><body><p>第一段落</p><p>第二段落</p></body></html>"
+        speeches = self._fetch_with_html(html)
+        # fallbackは speaker null の paragraph セグメント
+        self.assertTrue(all(s["speaker"] is None for s in speeches))
+        self.assertGreaterEqual(len(speeches), 1)
+
+
+class StaticHtmlDivSpeakerTest(unittest.TestCase):
+    """旧年代 DIV 行頭話者形式の回帰テスト."""
+
+    def _fetch_with_html(self, html: str) -> list[dict]:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            body = html.encode("utf-8")
+            responses = {
+                INDEX_URL: make_result(
+                    INDEX_URL,
+                    b'<a href="https://example.invalid/council/minutes/b.html">link</a>',
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                ),
+                "https://example.invalid/council/minutes/b.html": make_result(
+                    "https://example.invalid/council/minutes/b.html",
+                    body,
+                    content_type="text/html",
+                    cache_path=root / "meeting.cache",
+                ),
+            }
+            client = FakeHttpClient(responses)
+            adapter = StaticHtmlAdapter(
+                {"index_url": INDEX_URL, "pdf": False},
+                client=client,
+            )
+            ref = adapter.list_meetings()[0]
+            doc = adapter.fetch_meeting(ref["meeting_id"])
+            return doc["speeches"]
+
+    def test_div_speaker_is_segmented(self) -> None:
+        html = "<html><body><div>議　　長　　　３番師田保議員。</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        self.assertTrue(any(s["speaker"] == "議長" for s in speeches))
+        self.assertEqual("議長", speeches[0]["speaker"])
+        self.assertIn("３番師田保議員", speeches[0]["text"])
+
+    def test_div_time_is_not_speaker(self) -> None:
+        html = "<html><body><div>午前　９時３４分　　開会</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        self.assertTrue(all(s["speaker"] is None for s in speeches))
+
+    def test_div_indented_paragraph_is_not_speaker(self) -> None:
+        html = "<html><body><div>　　おはようございます。通常の段落です。</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        self.assertTrue(all(s["speaker"] is None for s in speeches))
+
+    def test_div_indented_town_mayor_is_not_speaker(self) -> None:
+        # 全角インデント付き出席簿は話者にしない（R0804R_01.htmlで再現）
+        html = "<html><body><div>　　　町　　　　　長　　田村正幸</div><div>議　　長　　　発言です。</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        self.assertFalse(any(s["speaker"] == "町長" for s in speeches))
+        self.assertTrue(any("田村正幸" in (s["text"] or "") for s in speeches))
+        self.assertTrue(any(s["speaker"] == "議長" for s in speeches))
+
+    def test_div_head_only_sequence_is_split(self) -> None:
+        html = "<html><body><div>議　　長</div><div>　　本文1です。</div><div>町　　長</div><div>　　本文2です。</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        # 議長と町長がそれぞれヘッドのみで2発言に分割される
+        speakers = [s["speaker"] for s in speeches if s["speaker"] is not None]
+        self.assertEqual(["議長", "町長"], speakers[:2])
+        self.assertIn("本文1", speeches[0]["text"])
+        self.assertIn("本文2", speeches[1]["text"])
+
+    def test_div_head_only_is_converted(self) -> None:
+        html = "<html><body><div>議　　長</div><div>　　おはようございます。本文です。</div><div>町　　長</div><div>　　答弁します。</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        self.assertEqual(2, len([s for s in speeches if s["speaker"] is not None]))
+        self.assertEqual("議長", speeches[0]["speaker"])
+        self.assertIn("おはようございます", speeches[0]["text"])
+        self.assertEqual("町長", speeches[1]["speaker"])
+
+
 if __name__ == "__main__":
     unittest.main()
