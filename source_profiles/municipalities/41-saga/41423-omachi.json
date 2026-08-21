@@ -32,16 +32,23 @@
       }
     },
     "regulations": {
-      "status": "unsupported",
+      "status": "ready",
       "adapter": "joureikun",
       "index_url": "https://www.town.omachi.lg.jp/joureikun/index.html",
-      "verified_at": null,
-      "verified_by": null,
-      "notes": "Joureikun 方式 (aggregate/catalog) のため現行 modules 未対応。要専用adapterまたは ingest 拡張",
+      "verified_at": "2026-08-21T01:08:14Z",
+      "verified_by": "vendor_joureikun --limit 2",
+      "notes": "Joureikun静的catalog構造。vendor_joureikun.pyで--limit 2の実取込成功（2026-08-21、条文分割・検索まで確認）。act/{digits}[_{digits}].htmlパターンは観測済みリンクのみ使用。",
       "evidence": [
         {
-          "url": "https://www.town.omachi.lg.jp/joureikun/index.html",
-          "observed_on": "https://www.town.omachi.lg.jp/"
+          "url": "https://www.town.omachi.lg.jp/joureikun/aggregate/catalog/index.html",
+          "observed_on": "https://www.town.omachi.lg.jp/joureikun/index.html",
+          "sha256": "observed 2026-08-21 scout"
+        },
+        {
+          "url": "https://www.town.omachi.lg.jp/joureikun/act/119000085.html",
+          "observed_on": "https://www.town.omachi.lg.jp/joureikun/aggregate/catalog/index.html",
+          "fetched_at": "2026-08-21T01:08:14Z",
+          "sha256": "07518102ef488924e83bc3389f35b6cb9354f2a32681608a1254489f2f279ce9"
         }
       ]
     },

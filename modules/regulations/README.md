@@ -59,6 +59,31 @@ python3 vendor_greiki.py \
 `ingest.py`と`vendor_greiki.py`はいずれも`--manifest-dir`を受け付け、成功・失敗を
 共通run manifestへ記録します。
 
+## Joureikunベンダーアダプター
+
+Joureikun（条例君）は `aggregate/catalog/index.html` などの静的索引から
+`act/*.html` へ実リンクが並ぶ構成です。`vendor_joureikun.py` は、利用者が
+指定した索引URLだけを対象に、同一ホストのactページを発見・取得します。
+
+```bash
+python3 vendor_joureikun.py   --index-url "https://www.example.jp/joureikun/aggregate/catalog/index.html"   --db regulations.db   --source-name "○○自治体例規集"   --limit 3   --manifest-dir '/path/to/vault/.local-councilor-ai-os/runs/regulations'
+```
+
+## D1-Lawフレーム型ベンダーアダプター
+
+D1-Law（第一法規）の旧フレーム型（`d1w_reiki`）は、FRAMESET入口から
+目次ページ（`bunya_*.html`）へ進み、`javascript:OpenResDataWin('<id>')`
+で文書IDを示す構成です。`vendor_d1law_reiki.py` は、観測済みの固定仕様
+`<id>/<id>_j.html`（本文フレーム）だけを取得します。中間フレームページは
+取得しません。派生URLの取得失敗はその文書の安全停止として記録されます。
+
+```bash
+python3 vendor_d1law_reiki.py   --index-url "https://example.d1-law.com/<area>/d1w_reiki/reiki.html"   --db regulations.db   --source-name "○○自治体例規集"   --limit 3   --manifest-dir '/path/to/vault/.local-councilor-ai-os/runs/regulations'
+```
+
+D1-Lawの検索UI型（opensearch、JS+POST必須）は自動取込のスコープ外です。
+
+
 アダプターは次の順に処理します。
 
 1. 対象ホストの `robots.txt` を確認し、拒否された経路には進みません。

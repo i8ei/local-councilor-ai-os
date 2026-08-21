@@ -36,12 +36,12 @@
       }
     },
     "regulations": {
-      "status": "unsupported",
+      "status": "blocked",
       "adapter": "d1_law",
       "index_url": "https://en3-jg.d1-law.com/kouhoku/d1w_reiki/reiki.html",
       "verified_at": null,
       "verified_by": null,
-      "notes": "外部 vendor D1-Law (第一法規) のため現行 modules 未対応。要専用adapter",
+      "notes": "D1-Law旧フレーム型(d1w_reiki)。静的構造でありvendor_d1law_reiki.pyでadapter実装済み（OpenResDataWin(id) -> <id>/<id>_j.html は実URLで検証済みの固定仕様）。ただしrobots.txt取得時にサーバが接続を切断するため、礼節付きHttpClientはfail-closedで停止する。自動取込は不可。利用者がD1-Lawの利用規約を自身で確認・同意した場合のみ各自で取得する（dbsr議事録と同じ線引）。",
       "evidence": [
         {
           "url": "https://en3-jg.d1-law.com/kouhoku/d1w_reiki/reiki.html",
