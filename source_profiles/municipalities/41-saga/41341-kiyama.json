@@ -32,17 +32,25 @@
       }
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "notes": "旧HTML FRAME構成（static/reiki/reiki.html / mokuji_bunya_chiled.html）のため要確認。JS有効前提",
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-21T03:04:16Z",
+      "verified_by": "vendor_d1law_reiki --limit 2",
+      "notes": "D1-Law旧フレーム型(d1w_reiki)と同一構造。vendor_d1law_reiki.pyで--limit 2の実取込成功（2026-08-21、基山町民憲章ほか、FTS検索まで確認）。entryはFRAMESETでなくlanding pageだが同一adapterで追跡可。",
       "evidence": [
         {
           "url": "https://www.town.kiyama.lg.jp/static/reiki/reiki.html",
-          "observed_on": "http://www.town.kiyama.lg.jp/"
+          "observed_on": "https://www.town.kiyama.lg.jp/",
+          "observed_at": "2026-08-21"
+        },
+        {
+          "url": "https://www.town.kiyama.lg.jp/static/reiki/H401909010520A/H401909010520A_j.html",
+          "observed_on": "https://www.town.kiyama.lg.jp/static/reiki/reiki.html",
+          "fetched_at": "2026-08-21T03:04:16Z",
+          "sha256": "11a54bb8cf4728fdcd8a838b6e1608d5278aa10cc5de29a7abf4b0ee19176b72"
         }
-      ]
+      ],
+      "index_url": "https://www.town.kiyama.lg.jp/static/reiki/reiki.html"
     },
     "budget": {
       "status": "not_evaluated",
