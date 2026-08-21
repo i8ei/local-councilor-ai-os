@@ -280,7 +280,8 @@ class _DocumentParser(HTMLParser):
             self._current_link_text.append(data)
 
     def visible_text(self) -> str:
-        raw_lines = [_collapse_inline(line) for line in "".join(self._text).splitlines()]
+        raw_split = "".join(self._text).splitlines()
+        raw_lines = [_collapse_inline(line) for line in raw_split]
         # Detect whether document has a body marker ("議事の経過" / "発言者")
         has_body_marker = any(
             "議事の経過" in candidate.replace("\u3000", "").replace(" ", "").replace("\t", "")
@@ -289,7 +290,7 @@ class _DocumentParser(HTMLParser):
         )
         converted: list[str] = []
         in_body = not has_body_marker  # if no marker (isolated test), allow immediately
-        for line in raw_lines:
+        for raw, line in zip(raw_split, raw_lines, strict=True):
             if not line:
                 continue
             norm_nospace = line.replace("\u3000", "").replace(" ", "").replace("\t", "")
@@ -301,8 +302,8 @@ class _DocumentParser(HTMLParser):
             if line[0] in "○◯●◎":
                 converted.append(line)
                 continue
-            # Indented paragraphs (full-width or ASCII) are not speakers
-            if line[0] in " \t\u3000":
+            # Indented paragraphs (full-width or ASCII) are not speakers - check raw line
+            if raw.startswith(" ") or raw.startswith("\t") or raw.startswith("\u3000"):
                 converted.append(line)
                 continue
             # Time pattern like "午前 ９時..." should not become speaker
