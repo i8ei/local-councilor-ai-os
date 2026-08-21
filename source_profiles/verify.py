@@ -5,6 +5,7 @@ from __future__ import annotations  # noqa: I001
 import copy
 import re
 import urllib.parse
+from collections import deque
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
@@ -428,7 +429,7 @@ def _verify_minutes_static(
         }
         return updated, report
 
-    # No document on index -> try 1-level follow if configured
+    # No document on index -> try follow (BFS, depth/pages configurable)
     config = entry.get("config")
     follow_regex_raw: str | None = None
     if isinstance(config, dict):
@@ -448,6 +449,68 @@ def _verify_minutes_static(
             "final_url": final_url_val,
         }
         return updated, report
+    # Validate follow_max_depth / follow_max_pages (int, bounded)
+    follow_max_depth = 1
+    follow_max_pages = 3
+    if isinstance(config, dict):
+        if "follow_max_depth" in config:
+            raw_depth = config["follow_max_depth"]
+            if isinstance(raw_depth, bool) or not isinstance(raw_depth, int):
+                report = {
+                    "municipality": municipality,
+                    "kind": "minutes",
+                    "adapter": adapter,
+                    "result": "failed",
+                    "reason": f"invalid follow_max_depth: {raw_depth!r} must be int 1..3",
+                    "status_before": status_before,
+                    "status_after": status_before,
+                    "index_url": index_url,
+                    "final_url": final_url_val,
+                }
+                return updated, report
+            if not (1 <= raw_depth <= 3):
+                report = {
+                    "municipality": municipality,
+                    "kind": "minutes",
+                    "adapter": adapter,
+                    "result": "failed",
+                    "reason": f"invalid follow_max_depth: {raw_depth!r} must be 1..3",
+                    "status_before": status_before,
+                    "status_after": status_before,
+                    "index_url": index_url,
+                    "final_url": final_url_val,
+                }
+                return updated, report
+            follow_max_depth = raw_depth
+        if "follow_max_pages" in config:
+            raw_pages = config["follow_max_pages"]
+            if isinstance(raw_pages, bool) or not isinstance(raw_pages, int):
+                report = {
+                    "municipality": municipality,
+                    "kind": "minutes",
+                    "adapter": adapter,
+                    "result": "failed",
+                    "reason": f"invalid follow_max_pages: {raw_pages!r} must be int 1..10",
+                    "status_before": status_before,
+                    "status_after": status_before,
+                    "index_url": index_url,
+                    "final_url": final_url_val,
+                }
+                return updated, report
+            if not (1 <= raw_pages <= 10):
+                report = {
+                    "municipality": municipality,
+                    "kind": "minutes",
+                    "adapter": adapter,
+                    "result": "failed",
+                    "reason": f"invalid follow_max_pages: {raw_pages!r} must be 1..10",
+                    "status_before": status_before,
+                    "status_after": status_before,
+                    "index_url": index_url,
+                    "final_url": final_url_val,
+                }
+                return updated, report
+            follow_max_pages = raw_pages
     # Validate regex
     try:
         follow_pat = re.compile(follow_regex_raw)
@@ -463,35 +526,47 @@ def _verify_minutes_static(
             "index_url": index_url,
         }
         return updated, report
-    # Collect candidates: same host, HTML only, regex matches label or URL (decoded)
-    candidates: list[str] = []
+    # BFS: at every level same-host, HTML-only, regex match, dedupe.
+    # follow_max_pages caps fetched follow pages; at most 3 candidates are
+    # collected per page (same as the historical depth-1 behavior).
     seen_follow: set[str] = set()
-    for href, label in parser.links:
-        resolved = _canonical_url(urllib.parse.urljoin(str(final_url_val), href))
-        if resolved is None:
-            continue
-        # Host must match official host (no drift)
-        cand_host = _host(resolved)
-        if entry_host is not None and cand_host is not None and cand_host != entry_host:
-            continue
-        # Only HTML links (exclude PDFs)
-        path_lower = Path(urllib.parse.urlsplit(resolved).path).suffix.lower()
-        if path_lower == ".pdf":
-            continue
-        decoded = urllib.parse.unquote(resolved)
-        if not (
-            follow_pat.search(label)
-            or follow_pat.search(resolved)
-            or follow_pat.search(decoded)
-        ):
-            continue
-        if resolved in seen_follow:
-            continue
-        seen_follow.add(resolved)
-        candidates.append(resolved)
-        if len(candidates) >= 3:
-            break
-    if not candidates:
+    per_page_limit = 3
+
+    def _collect_follow_links(
+        links: list[tuple[str, str]], base_url: str, limit: int
+    ) -> list[str]:
+        out: list[str] = []
+        for href, label in links:
+            if len(out) >= limit:
+                break
+            resolved = _canonical_url(urllib.parse.urljoin(str(base_url), href))
+            if resolved is None:
+                continue
+            cand_host = _host(resolved)
+            if (
+                entry_host is not None
+                and cand_host is not None
+                and cand_host != entry_host
+            ):
+                continue
+            path_lower = Path(urllib.parse.urlsplit(resolved).path).suffix.lower()
+            if path_lower == ".pdf":
+                continue
+            decoded = urllib.parse.unquote(resolved)
+            if not (
+                follow_pat.search(label)
+                or follow_pat.search(resolved)
+                or follow_pat.search(decoded)
+            ):
+                continue
+            if resolved in seen_follow:
+                continue
+            seen_follow.add(resolved)
+            out.append(resolved)
+        return out
+
+    initial = _collect_follow_links(parser.links, str(final_url_val), per_page_limit)
+    if not initial:
         report = {
             "municipality": municipality,
             "kind": "minutes",
@@ -504,18 +579,23 @@ def _verify_minutes_static(
             "final_url": final_url_val,
         }
         return updated, report
-    # Try each candidate depth 1 only, no recursion
+    queue: deque[tuple[str, int]] = deque((u, 1) for u in initial)
     last_error: str | None = None
     fetched_any = False
     success_follow_result: Any | None = None
     success_follow_final: str | None = None
-    for cand_url in candidates:
+    fetched_follow_pages = 0
+    while queue:
+        if fetched_follow_pages >= follow_max_pages:
+            break
+        cand_url, cand_depth = queue.popleft()
         try:
             f_result = client.fetch(cand_url, tier=CacheTier.INDEX)
         except Exception as exc:  # noqa: BLE001
             last_error = f"{type(exc).__name__}: {exc}"
             continue
         fetched_any = True
+        fetched_follow_pages += 1
         f_final = f_result.final_url if hasattr(f_result, "final_url") else cand_url  # type: ignore[attr-defined]
         f_host = _host(str(f_final))
         if entry_host is not None and f_host is not None and f_host != entry_host:
@@ -536,6 +616,12 @@ def _verify_minutes_static(
             success_follow_result = f_result
             success_follow_final = str(f_final)
             break
+        if cand_depth < follow_max_depth:
+            next_cands = _collect_follow_links(
+                f_parser.links, str(f_final), per_page_limit
+            )
+            for nxt in next_cands:
+                queue.append((nxt, cand_depth + 1))
     if success_follow_result is None:
         if not fetched_any:
             report = {
@@ -595,7 +681,7 @@ def _verify_minutes_static(
             }
         )
     # Follow evidence (observed_on is root index)
-    follow_url_val = success_follow_final or candidates[0]
+    follow_url_val = success_follow_final or initial[0]
     duplicate_follow = any(
         isinstance(ev, dict)
         and ev.get("url") == follow_url_val

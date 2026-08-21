@@ -6,11 +6,11 @@
   "official_home_url": "http://www.city.takeo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-21T00:41:23Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/",
@@ -19,9 +19,26 @@
         {
           "url": "https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/",
           "observed_on": "https://www.city.takeo.lg.jp/shisei/shigikai/"
+        },
+        {
+          "url": "https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/",
+          "observed_on": "https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/",
+          "sha256": "9465890970fc4ac96f819ce7b61f9a4fd7a89423e4de2528d71ee1e82974d5ff",
+          "fetched_at": "2026-08-21T00:41:25Z"
+        },
+        {
+          "url": "https://www.city.takeo.lg.jp/shisei/shigikai/R7gikai/202603/",
+          "observed_on": "https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/",
+          "sha256": "2860b2c03c197a2a4bfc9e0db2b63cb09d726c6586b37a429cc7a3105dd55efd",
+          "fetched_at": "2026-08-21T00:41:31Z"
         }
       ],
-      "notes": "会議録PDFは公式ホスト www.city.takeo.lg.jp 上の静的PDFだが、索引 https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/ から R7gikai/R8gikai 等の年度ページ、さらに YYYYMM 月別ページを経て到達する2階層深さのため現行verifierのdepth-1 followでは到達不可（例: /shisei/shigikai/ichiran/ -> /shisei/shigikai/R8gikai/ -> /shisei/shigikai/R8gikai/202609/ -> 202609teirei.pdf 等）。robotsは /shisei/shigikai/ を許可。durablesな索引として /shisei/shigikai/ichiran/ を採用し、follow_link_regexはdepth-1では効果が無いため未設定（年度ページ自体に会議録PDFが無く月別ページにPDFが配置）。"
+      "notes": "会議録PDFは公式ホスト www.city.takeo.lg.jp 上の静的PDFだが、索引 https://www.city.takeo.lg.jp/shisei/shigikai/ichiran/ から R7gikai/R8gikai 等の年度ページ、さらに YYYYMM 月別ページを経て到達する2階層深さのため現行verifierのdepth-1 followでは到達不可（例: /shisei/shigikai/ichiran/ -> /shisei/shigikai/R8gikai/ -> /shisei/shigikai/R8gikai/202609/ -> 202609teirei.pdf 等）。robotsは /shisei/shigikai/ を許可。durablesな索引として /shisei/shigikai/ichiran/ を採用し、follow_link_regexはdepth-1では効果が無いため未設定（年度ページ自体に会議録PDFが無く月別ページにPDFが配置）。 2026-08-21: multi-level follow (follow_max_depth=2, follow_max_pages=8) added; regex matches year (R{n}gikai) and month (YYYYMM) pages.",
+      "config": {
+        "follow_link_regex": "(R[0-9]+gikai|20[0-9]{4})",
+        "follow_max_depth": 2,
+        "follow_max_pages": 8
+      }
     },
     "regulations": {
       "status": "ready",
