@@ -334,6 +334,12 @@ class _DocumentParser(HTMLParser):
                     break
             if converted_via_div:
                 continue
+            # Head-only: line is a speaker name alone (e.g., "議　　長" in H1503)
+            if len(line) <= 12:
+                normalized_head = line.replace("\u3000", "").replace(" ", "").replace("\t", "")
+                if _is_div_head_candidate(normalized_head):
+                    converted.append(f"○{normalized_head}")
+                    continue
             converted.append(line)
         return "\n".join(converted)
 

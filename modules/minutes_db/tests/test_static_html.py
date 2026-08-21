@@ -806,6 +806,14 @@ class StaticHtmlDivSpeakerTest(unittest.TestCase):
         speeches = self._fetch_with_html(html)
         self.assertEqual("議長", speeches[0]["speaker"])
 
+    def test_div_head_only_is_converted(self) -> None:
+        html = "<html><body><div>議　　長</div><div>　　おはようございます。本文です。</div><div>町　　長</div><div>　　答弁します。</div></body></html>"
+        speeches = self._fetch_with_html(html)
+        self.assertEqual(2, len([s for s in speeches if s["speaker"] is not None]))
+        self.assertEqual("議長", speeches[0]["speaker"])
+        self.assertIn("おはようございます", speeches[0]["text"])
+        self.assertEqual("町長", speeches[1]["speaker"])
+
 
 if __name__ == "__main__":
     unittest.main()
