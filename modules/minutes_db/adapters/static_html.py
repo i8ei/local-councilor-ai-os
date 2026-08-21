@@ -65,6 +65,73 @@ _GENERIC_SPEAKER_RE = re.compile(
 )
 
 
+def _is_b_speaker_candidate(text: str, has_anchor: bool) -> bool:
+    """Heuristic for <b>/<strong> speaker marks (湯沢町)."""
+    t = text.strip()
+    if has_anchor:
+        return False
+    if not t:
+        return False
+    if len(t) > 30:
+        return False
+    if "\n" in t or "\r" in t:
+        return False
+    if any(ch in t for ch in "、。，．"):
+        return False
+    if "・" in t:
+        return False
+    # Agenda / heading keywords that never appear in speaker names
+    agenda_keywords = (
+        "日程",
+        "議案",
+        "報告",
+        "予算",
+        "条例",
+        "選挙",
+        "追加日程",
+        "発議",
+        "請願",
+        "陳情",
+        "選任",
+        "承認",
+        "同意",
+        "会議",
+        "議会",
+        "について",
+        "令和",
+        "平成",
+        "昭和",
+    )
+    for kw in agenda_keywords:
+        if kw in t:
+            return False
+    if "第" in t or "号" in t:
+        return False
+    if len(t) < 2:
+        return False
+    # Spaces: only numbered speakers like "7番 氏名" are allowed to contain spaces
+    if "\u3000" in t or " " in t or "\t" in t:
+        if re.match("^[0-9０-９]+番[ \t\u3000]+[^ \t\u3000]+(?:（[^）]+）)?$", t):
+            return True
+        return False
+    # No spaces: must be plausible role or personal name
+    if "）" in t and "（" not in t:
+        return False
+    if "（" in t and "）" not in t:
+        return False
+    # Role-like (ends with 長/委員 etc.) – most湯沢 speakers are roles
+    if t.endswith("長") or t.endswith("委員") or t.endswith("議員"):
+        if re.search(r"[一-龥]", t):
+            return True
+    # Personal name: kanji 1-4 chars optionally with （）
+    if re.search(r"[一-龥]", t):
+        if re.match(r"^[一-龥ぁ-んァ-ンー]+(?:（[^）]+）)?$", t):
+            base = re.sub(r"（[^）]+）$", "", t)
+            if 1 <= len(base) <= 4:
+                return True
+    return False
+
+
 class _DocumentParser(HTMLParser):
     """Collect links, title, and visible text with block boundaries."""
 
@@ -77,6 +144,9 @@ class _DocumentParser(HTMLParser):
         self._current_href: str | None = None
         self._current_link_text: list[str] = []
         self._text: list[str] = []
+        self._b_depth = 0
+        self._b_has_anchor = False
+        self._b_buffer: list[str] = []
 
     def handle_starttag(
         self, tag: str, attrs: list[tuple[str, str | None]]
@@ -87,6 +157,13 @@ class _DocumentParser(HTMLParser):
             return
         if self._ignored_depth:
             return
+        if tag in ("b", "strong"):
+            if self._b_depth == 0:
+                self._b_buffer = []
+                self._b_has_anchor = False
+            self._b_depth += 1
+        if self._b_depth > 0 and tag == "a":
+            self._b_has_anchor = True
         if tag in _BLOCK_TAGS:
             self._text.append("\n")
         if tag == "title":
@@ -96,6 +173,11 @@ class _DocumentParser(HTMLParser):
             if href:
                 self._current_href = href
                 self._current_link_text = []
+        if tag in ("frame", "iframe"):
+            src = dict(attrs).get("src")
+            if src:
+                # Treat frame src as a discoverable link (湯沢町のようなFRAMESET対応)
+                self.links.append((src, ""))
 
     def handle_endtag(self, tag: str) -> None:
         tag = tag.lower()
@@ -105,6 +187,18 @@ class _DocumentParser(HTMLParser):
             return
         if self._ignored_depth:
             return
+        if tag in ("b", "strong") and self._b_depth > 0:
+            self._b_depth -= 1
+            if self._b_depth == 0:
+                raw = "".join(self._b_buffer).strip()
+                self._b_buffer = []
+                if raw:
+                    if _is_b_speaker_candidate(raw, self._b_has_anchor):
+                        self._text.append("\n○" + raw + "\n")
+                    else:
+                        # Preserve heading text without speaker mark
+                        self._text.append("\n" + raw + "\n")
+                return
         if tag == "title" and self._title_depth:
             self._title_depth -= 1
         if tag == "a" and self._current_href is not None:
@@ -117,6 +211,11 @@ class _DocumentParser(HTMLParser):
 
     def handle_data(self, data: str) -> None:
         if self._ignored_depth:
+            return
+        if self._b_depth > 0:
+            self._b_buffer.append(data)
+            if self._current_href is not None:
+                self._current_link_text.append(data)
             return
         self._text.append(data)
         if self._title_depth:
@@ -300,6 +399,9 @@ def _fallback_segments(text: str) -> list[dict[str, Any]]:
 
 def _infer_date(*values: str) -> str | None:
     combined = " ".join(value for value in values if value)
+    # Normalize full-width digits to half-width for date parsing (e.g., ３月→3月)
+    fw_map = str.maketrans("０１２３４５６７８９", "0123456789")
+    combined = combined.translate(fw_map)
     western = re.search(r"(?<!\d)(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})日?", combined)
     if western:
         year, month, day = (int(part) for part in western.groups())
@@ -309,12 +411,19 @@ def _infer_date(*values: str) -> str | None:
         r"(令和|平成|昭和)(元|\d{1,2})年\s*(\d{1,2})月\s*(\d{1,2})日",
         combined,
     )
-    if not era:
-        return None
-    bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
-    era_year = 1 if era.group(2) == "元" else int(era.group(2))
-    year = bases[era.group(1)] + era_year
-    return f"{year:04d}-{int(era.group(3)):02d}-{int(era.group(4)):02d}"
+    if era:
+        bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
+        era_year = 1 if era.group(2) == "元" else int(era.group(2))
+        year = bases[era.group(1)] + era_year
+        return f"{year:04d}-{int(era.group(3)):02d}-{int(era.group(4)):02d}"
+    # Fallback: era year + month without day -> use day=1 (for cases like "令和8年3月定例会" with separate "3月 2日" not linked)
+    era_month = re.search(r"(令和|平成|昭和)(元|\d{1,2})年\s*(\d{1,2})月", combined)
+    if era_month:
+        bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
+        era_year = 1 if era_month.group(2) == "元" else int(era_month.group(2))
+        year = bases[era_month.group(1)] + era_year
+        return f"{year:04d}-{int(era_month.group(3)):02d}-01"
+    return None
 
 
 class StaticHtmlAdapter(Adapter):
