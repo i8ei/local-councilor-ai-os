@@ -526,8 +526,11 @@ def _verify_minutes_static(
             "index_url": index_url,
         }
         return updated, report
-    # BFS: at every level same-host, HTML-only, regex match, dedupe, global page cap
+    # BFS: at every level same-host, HTML-only, regex match, dedupe.
+    # follow_max_pages caps fetched follow pages; at most 3 candidates are
+    # collected per page (same as the historical depth-1 behavior).
     seen_follow: set[str] = set()
+    per_page_limit = 3
 
     def _collect_follow_links(
         links: list[tuple[str, str]], base_url: str, limit: int
@@ -562,7 +565,7 @@ def _verify_minutes_static(
             out.append(resolved)
         return out
 
-    initial = _collect_follow_links(parser.links, str(final_url_val), follow_max_pages)
+    initial = _collect_follow_links(parser.links, str(final_url_val), per_page_limit)
     if not initial:
         report = {
             "municipality": municipality,
@@ -581,7 +584,10 @@ def _verify_minutes_static(
     fetched_any = False
     success_follow_result: Any | None = None
     success_follow_final: str | None = None
+    fetched_follow_pages = 0
     while queue:
+        if fetched_follow_pages >= follow_max_pages:
+            break
         cand_url, cand_depth = queue.popleft()
         try:
             f_result = client.fetch(cand_url, tier=CacheTier.INDEX)
@@ -589,6 +595,7 @@ def _verify_minutes_static(
             last_error = f"{type(exc).__name__}: {exc}"
             continue
         fetched_any = True
+        fetched_follow_pages += 1
         f_final = f_result.final_url if hasattr(f_result, "final_url") else cand_url  # type: ignore[attr-defined]
         f_host = _host(str(f_final))
         if entry_host is not None and f_host is not None and f_host != entry_host:
@@ -610,13 +617,11 @@ def _verify_minutes_static(
             success_follow_final = str(f_final)
             break
         if cand_depth < follow_max_depth:
-            remaining = follow_max_pages - len(seen_follow)
-            if remaining > 0:
-                next_cands = _collect_follow_links(
-                    f_parser.links, str(f_final), remaining
-                )
-                for nxt in next_cands:
-                    queue.append((nxt, cand_depth + 1))
+            next_cands = _collect_follow_links(
+                f_parser.links, str(f_final), per_page_limit
+            )
+            for nxt in next_cands:
+                queue.append((nxt, cand_depth + 1))
     if success_follow_result is None:
         if not fetched_any:
             report = {

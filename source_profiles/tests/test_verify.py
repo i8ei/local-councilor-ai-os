@@ -851,6 +851,55 @@ class FollowLinkVerifyTests(unittest.TestCase):
         self.assertIn("no_council_document_link", report["reason"])
         self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
 
+    def test_level1_candidates_do_not_starve_level2(self) -> None:
+        # Regression: an index with 8 year links must not consume the whole
+        # follow_max_pages budget at depth 1; depth-2 month pages must still
+        # be reachable (Takeo-style year -> month -> PDF chain).
+        profile = _base_follow_profile()
+        cfg = profile["sources"]["minutes"]["config"]
+        cfg["follow_max_depth"] = 2
+        cfg["follow_max_pages"] = 8
+        year_links = "\n".join(
+            f'<a href="/chosei/_1010/_1414/_70{i:02d}.html">令和{i}年</a>'
+            for i in range(7, -1, -1)
+        )
+        root_html = f"""
+<html><head><title>会議録</title></head>
+<body><h1>会議録</h1>
+{year_links}
+</body></html>
+"""
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
+        year_urls = {
+            f"http://www.town.tara.lg.jp/chosei/_1010/_1414/_70{i:02d}.html"
+            for i in range(8)
+        }
+        month_url = "http://www.town.tara.lg.jp/chosei/_1010/_1414/_7097m.html"
+        year_html = """
+<html><head><title>令和7年</title></head>
+<body><h1>令和7年</h1>
+<a href="/chosei/_1010/_1414/_7097m.html">令和7年3月</a>
+</body></html>
+"""
+        month_fetch = make_fetch_result(
+            month_url, _year_html_with_council_pdf()
+        )
+        responses = {
+            FOLLOW_INDEX_URL: root_fetch,
+            month_url: month_fetch,
+        }
+        for u in year_urls:
+            responses[u] = make_fetch_result(u, year_html)
+        client = FakeHttpClient(responses)
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", updated["sources"]["minutes"]["status"])
+        fetched = [u for u, _ in client.calls]
+        self.assertIn(month_url, fetched)
+        self.assertLessEqual(len(fetched) - 1, 8)
+
     def test_depth_one_only(self) -> None:
         profile = _base_follow_profile()
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _root_html_with_year_links())

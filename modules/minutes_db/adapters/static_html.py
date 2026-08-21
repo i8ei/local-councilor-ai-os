@@ -614,6 +614,12 @@ class StaticHtmlAdapter(Adapter):
                 return cand_host.lower() == _host.lower()
 
             queue: deque[tuple[str, int]] = deque()
+            # follow_max_pages caps fetched follow pages. When set, at most 3
+            # candidates are collected per page; when null, collection stays
+            # unlimited (historical depth-1 behavior).
+            per_page_limit = 3 if follow_max_pages is not None else None
+            fetched_follow_pages = 0
+            enqueued_from_page = 0
             for href, label in links:
                 normalized = normalized_link(fetched, href)
                 if normalized is None:
@@ -627,13 +633,23 @@ class StaticHtmlAdapter(Adapter):
                     continue
                 if is_excluded(follow_url, label) or follow_url in followed:
                     continue
-                if follow_max_pages is not None and len(followed) >= follow_max_pages:
-                    continue
+                if (
+                    per_page_limit is not None
+                    and enqueued_from_page >= per_page_limit
+                ):
+                    break
                 followed.add(follow_url)
+                enqueued_from_page += 1
                 queue.append((follow_url, 1))
             while queue:
+                if (
+                    follow_max_pages is not None
+                    and fetched_follow_pages >= follow_max_pages
+                ):
+                    break
                 current_url, depth = queue.popleft()
                 current_fetched = self.client.fetch(current_url, tier=CacheTier.INDEX)
+                fetched_follow_pages += 1
                 current_links = parse_links(current_fetched)
                 if discover_from(current_fetched, current_links):
                     return results

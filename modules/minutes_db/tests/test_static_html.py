@@ -561,6 +561,61 @@ class StaticHtmlDepth2Test(unittest.TestCase):
             [u for u, _ in client.calls],
         )
 
+    def test_level1_candidates_do_not_starve_level2(self) -> None:
+        # Regression: many depth-1 candidates must not consume the whole
+        # follow_max_pages budget; depth-2 pages stay reachable.
+        index_url = "https://example.invalid/council/index.html"
+        year_urls = [
+            f"https://example.invalid/council/year/202{i}.html" for i in range(8)
+        ]
+        month_urls = [
+            f"https://example.invalid/council/year/202{i}/03.html" for i in range(8)
+        ]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            index_html = "".join(
+                f'<a href="{u}">202{i}</a>' for i, u in enumerate(year_urls)
+            ).encode()
+            responses: dict[str, FetchResult] = {
+                index_url: make_result(
+                    index_url,
+                    index_html,
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                )
+            }
+            for i, u in enumerate(year_urls):
+                responses[u] = make_result(
+                    u,
+                    f'<a href="{month_urls[i]}">03</a>'.encode(),
+                    content_type="text/html",
+                    cache_path=root / f"year{i}.cache",
+                )
+            for i, m in enumerate(month_urls):
+                responses[m] = make_result(
+                    m,
+                    b'<a href="https://example.invalid/council/year/2027/03/day.pdf">doc.pdf</a>',
+                    content_type="text/html",
+                    cache_path=root / f"month{i}.cache",
+                )
+            client = FakeHttpClient(responses)
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": index_url,
+                    "follow_link_regex": r"20[0-9]{2}",
+                    "link_include_regex": r"\.pdf$",
+                    "pdf": True,
+                    "follow_max_depth": 2,
+                    "follow_max_pages": 8,
+                },
+                client=client,
+            )
+            refs = adapter.list_meetings()
+        self.assertEqual(1, len(refs))
+        fetched = [u for u, _ in client.calls]
+        self.assertTrue(any(m in fetched for m in month_urls))
+        self.assertLessEqual(len(fetched) - 1, 8)
+
     def test_follow_max_depth_validation(self) -> None:
         for bad in [0, 4, "2", True, 1.5, None]:
             with self.subTest(bad=bad):
