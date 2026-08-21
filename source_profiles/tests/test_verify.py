@@ -1269,5 +1269,356 @@ class DbsrVerifyTests(unittest.TestCase):
         self.assertEqual("needs_review", report["status_after"])
 
 
+# -------------------------------------------------------------------
+# Depth-2/3 BFS follow synthetic tests (T-301, no network)
+# -------------------------------------------------------------------
+
+DEPTH2_YEAR_URL = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai.html"
+DEPTH2_MONTH_URL = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai/202609.html"
+DEPTH2_MONTH_URL_2 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai/202610.html"
+
+
+def _base_depth_profile(
+    follow_regex: str = "R8gikai|2026",
+    depth: int | None = None,
+    pages: int | None = None,
+) -> dict:
+    p = _base_follow_profile(follow_regex=follow_regex)
+    cfg = p["sources"]["minutes"].get("config")
+    if not isinstance(cfg, dict):
+        cfg = {}
+        p["sources"]["minutes"]["config"] = cfg
+    if depth is not None:
+        cfg["follow_max_depth"] = depth  # type: ignore[assignment]
+    if pages is not None:
+        cfg["follow_max_pages"] = pages  # type: ignore[assignment]
+    return p
+
+
+def _index_html_depth2() -> str:
+    return f"""
+<html><head><title>会議録</title></head>
+<body><h1>会議録</h1>
+<a href="{DEPTH2_YEAR_URL}">R8gikai</a>
+</body></html>
+"""
+
+
+def _year_html_depth2(month_url: str = DEPTH2_MONTH_URL) -> str:
+    return f"""
+<html><head><title>R8</title></head>
+<body><h1>R8gikai</h1>
+<a href="{month_url}">202609</a>
+</body></html>
+"""
+
+
+def _month_html_with_pdf() -> str:
+    return """
+<html><head><title>202609</title></head>
+<body><h1>202609</h1><h2>定例会</h2>
+<a href="/shisei/shigikai/R8gikai/202609/202609teirei.pdf">令和7年 定例会 会議録.pdf</a>
+</body></html>
+"""
+
+
+class Depth2VerifyTests(unittest.TestCase):
+    def test_depth2_chain_success(self) -> None:
+        profile = _base_depth_profile(depth=2)
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
+        year_fetch = make_fetch_result(DEPTH2_YEAR_URL, _year_html_depth2())
+        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                DEPTH2_YEAR_URL: year_fetch,
+                DEPTH2_MONTH_URL: month_fetch,
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", updated["sources"]["minutes"]["status"])
+        ev = updated["sources"]["minutes"]["evidence"]
+        # bounded evidence: index + successful month page (year not stored)
+        self.assertTrue(any(e.get("url") == FOLLOW_INDEX_URL for e in ev))
+        self.assertTrue(any(e.get("url") == DEPTH2_MONTH_URL for e in ev))
+        self.assertEqual(2, len([e for e in ev if "sha256" in e]))
+        self.assertTrue(
+            any(
+                e.get("observed_on") == FOLLOW_INDEX_URL
+                for e in ev
+                if e.get("url") == DEPTH2_MONTH_URL
+            )
+        )
+        # intermediate year page must not create evidence
+        self.assertFalse(any(e.get("url") == DEPTH2_YEAR_URL for e in ev))
+        fetched = [u for u, _ in client.calls]
+        self.assertIn(FOLLOW_INDEX_URL, fetched)
+        self.assertIn(DEPTH2_YEAR_URL, fetched)
+        self.assertIn(DEPTH2_MONTH_URL, fetched)
+        self.assertEqual([], validate_profile(updated))
+
+    def test_depth1_default_does_not_reach_depth2(self) -> None:
+        profile = _base_depth_profile()  # default depth 1
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
+        year_fetch = make_fetch_result(DEPTH2_YEAR_URL, _year_html_depth2())
+        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                DEPTH2_YEAR_URL: year_fetch,
+                DEPTH2_MONTH_URL: month_fetch,
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertIn(DEPTH2_YEAR_URL, fetched)
+        self.assertNotIn(DEPTH2_MONTH_URL, fetched)
+
+    def test_depth3_chain_success(self) -> None:
+        # index -> year -> month -> day? Actually 3 levels: index->L1->L2->L3(pdf)
+        l1 = DEPTH2_YEAR_URL
+        l2 = DEPTH2_MONTH_URL
+        l3 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai/202609/day.html"
+        profile = _base_depth_profile(depth=3)
+        root_html = f'<html><head><title>会議録</title></head><body><h1>会議録</h1><a href="{l1}">R8gikai</a></body></html>'
+        year_html = f'<html><head><title>y</title></head><body><h1>R8</h1><a href="{l2}">202609</a></body></html>'
+        month_html = f'<html><head><title>m</title></head><body><h1>2026</h1><a href="{l3}">2026-09-01</a></body></html>'
+        day_html = _month_html_with_pdf()
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: make_fetch_result(FOLLOW_INDEX_URL, root_html),
+                l1: make_fetch_result(l1, year_html),
+                l2: make_fetch_result(l2, month_html),
+                l3: make_fetch_result(l3, day_html),
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", updated["sources"]["minutes"]["status"])
+        ev = updated["sources"]["minutes"]["evidence"]
+        self.assertTrue(any(e.get("url") == l3 for e in ev))
+
+    def test_host_drift_not_followed(self) -> None:
+        profile = _base_depth_profile(depth=2)
+        root_html = f"""
+<html><head><title>会議録</title></head>
+<body><h1>会議録</h1>
+<a href="https://evil.example.com/chosei/2026.html">2026</a>
+<a href="{DEPTH2_YEAR_URL}">R8gikai</a>
+</body></html>
+"""
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
+        year_fetch = make_fetch_result(DEPTH2_YEAR_URL, _year_html_depth2())
+        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                DEPTH2_YEAR_URL: year_fetch,
+                DEPTH2_MONTH_URL: month_fetch,
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertNotIn("https://evil.example.com/chosei/2026.html", fetched)
+        self.assertIn(DEPTH2_YEAR_URL, fetched)
+
+    def test_pdf_link_never_followed(self) -> None:
+        profile = _base_depth_profile(follow_regex="R8gikai", depth=2)
+        pdf_url = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai.pdf"
+        root_html = f'<html><head><title>会議録</title></head><body><h1>会議録</h1><a href="{pdf_url}">R8gikai</a><a href="{DEPTH2_YEAR_URL}">R8gikai</a></body></html>'
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
+        year_fetch = make_fetch_result(DEPTH2_YEAR_URL, _year_html_depth2())
+        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
+        # even though pdf link matches regex, it must not be fetched
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                DEPTH2_YEAR_URL: year_fetch,
+                DEPTH2_MONTH_URL: month_fetch,
+                pdf_url: make_fetch_result(pdf_url, _month_html_with_pdf()),
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertNotIn(pdf_url, fetched)
+
+    def test_page_cap_bfs_order(self) -> None:
+        # index has 4 year links, cap 3 -> only first 3 fetched, 4th never
+        y1 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai1.html"
+        y2 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai2.html"
+        y3 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai3.html"
+        y4 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai4.html"
+        profile = _base_depth_profile(depth=1, pages=3)
+        root_html = f"""
+<html><head><title>会議録</title></head><body><h1>会議録</h1>
+<a href="{y1}">R8gikai1</a>
+<a href="{y2}">R8gikai2</a>
+<a href="{y3}">R8gikai3</a>
+<a href="{y4}">R8gikai4</a>
+</body></html>
+"""
+        empty = "<html><head><title>y</title></head><body><h1>R8</h1><p>no doc</p></body></html>"
+        pdf_html = _month_html_with_pdf()
+        # y4 would have the doc but should not be fetched due to cap
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: make_fetch_result(FOLLOW_INDEX_URL, root_html),
+                y1: make_fetch_result(y1, empty),
+                y2: make_fetch_result(y2, empty),
+                y3: make_fetch_result(y3, empty),
+                y4: make_fetch_result(y4, pdf_html),
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertIn(y1, fetched)
+        self.assertIn(y3, fetched)
+        self.assertNotIn(y4, fetched)
+
+    def test_page_cap_across_depths(self) -> None:
+        # BFS with cap 3: index-> y1,y2 (2), y1 expands to m1,m2 but cap limits to 1 new
+        y1 = DEPTH2_YEAR_URL
+        y2 = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai2.html"
+        m1 = DEPTH2_MONTH_URL
+        m2 = DEPTH2_MONTH_URL_2
+        profile = _base_depth_profile(depth=2, pages=3)
+        root_html = f'<html><head><title>会議録</title></head><body><h1>会議録</h1><a href="{y1}">R8gikai</a><a href="{y2}">R8gikai2</a></body></html>'
+        y1_html = f'<html><head><title>y1</title></head><body><h1>R8</h1><a href="{m1}">202609</a><a href="{m2}">202610</a></body></html>'
+        y2_html = "<html><head><title>y2</title></head><body><h1>R8</h1><p>no doc</p></body></html>"
+        # m2 has doc but should be beyond cap if BFS respects global cap
+        m1_html = "<html><head><title>m1</title></head><body><h1>2026</h1><p>no doc</p></body></html>"
+        m2_html = _month_html_with_pdf()
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: make_fetch_result(FOLLOW_INDEX_URL, root_html),
+                y1: make_fetch_result(y1, y1_html),
+                y2: make_fetch_result(y2, y2_html),
+                m1: make_fetch_result(m1, m1_html),
+                m2: make_fetch_result(m2, m2_html),
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        # With cap 3, total discovered pages = y1,y2,m1 (3). m2 not discovered -> not fetched -> fails
+        self.assertEqual("failed", report["result"])
+        fetched = [u for u, _ in client.calls]
+        self.assertIn(y1, fetched)
+        self.assertIn(y2, fetched)
+        self.assertIn(m1, fetched)
+        self.assertNotIn(m2, fetched)
+
+    def test_dedupe_and_percent_decode(self) -> None:
+        profile = _base_depth_profile(follow_regex="R8gikai", depth=2)
+        dup_url = DEPTH2_YEAR_URL
+        root_html = f'<html><head><title>会議録</title></head><body><h1>会議録</h1><a href="{dup_url}">R8gikai</a><a href="{dup_url}">R8gikai</a><a href="/chosei/_1010/_1414/%52%38gikai.html">R8gikai</a></body></html>'
+        # Second encoded form resolves to same URL deduplicated
+        encoded_url = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai.html"
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
+        year_fetch = make_fetch_result(encoded_url, _year_html_depth2())
+        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                encoded_url: year_fetch,
+                DEPTH2_MONTH_URL: month_fetch,
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        fetched_year = [u for u, _ in client.calls if u == encoded_url]
+        self.assertEqual(1, len(fetched_year))
+
+
+class Depth2ConfigValidationTests(unittest.TestCase):
+    def test_invalid_depth_string_fails(self) -> None:
+        profile = _base_depth_profile(depth=2)  # type: ignore[arg-type]
+        profile["sources"]["minutes"]["config"]["follow_max_depth"] = "2"  # type: ignore[index]
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
+        client = FakeHttpClient({FOLLOW_INDEX_URL: root_fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("invalid follow_max_depth", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_invalid_depth_out_of_range(self) -> None:
+        for bad in (0, 4, 10):
+            with self.subTest(bad=bad):
+                profile = _base_depth_profile(depth=bad)
+                root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
+                client = FakeHttpClient({FOLLOW_INDEX_URL: root_fetch})
+                updated, report = verify_profile(
+                    profile, client=client, now=NOW, kind="minutes"
+                )
+                self.assertEqual("failed", report["result"])
+                self.assertIn("invalid follow_max_depth", report["reason"])
+
+    def test_invalid_depth_bool_fails(self) -> None:
+        profile = _base_depth_profile(depth=1)
+        profile["sources"]["minutes"]["config"]["follow_max_depth"] = True  # type: ignore[index]
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
+        client = FakeHttpClient({FOLLOW_INDEX_URL: root_fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("invalid follow_max_depth", report["reason"])
+
+    def test_invalid_pages_string_fails(self) -> None:
+        profile = _base_depth_profile(pages=2)  # type: ignore[arg-type]
+        profile["sources"]["minutes"]["config"]["follow_max_pages"] = "3"  # type: ignore[index]
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
+        client = FakeHttpClient({FOLLOW_INDEX_URL: root_fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("invalid follow_max_pages", report["reason"])
+
+    def test_invalid_pages_out_of_range(self) -> None:
+        for bad in (0, 11, 100):
+            with self.subTest(bad=bad):
+                profile = _base_depth_profile(pages=bad)
+                root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
+                client = FakeHttpClient({FOLLOW_INDEX_URL: root_fetch})
+                updated, report = verify_profile(
+                    profile, client=client, now=NOW, kind="minutes"
+                )
+                self.assertEqual("failed", report["result"])
+                self.assertIn("invalid follow_max_pages", report["reason"])
+
+    def test_invalid_pages_bool_fails(self) -> None:
+        profile = _base_depth_profile(pages=3)
+        profile["sources"]["minutes"]["config"]["follow_max_pages"] = False  # type: ignore[index]
+        root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
+        client = FakeHttpClient({FOLLOW_INDEX_URL: root_fetch})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("invalid follow_max_pages", report["reason"])
+
+
 if __name__ == "__main__":
     unittest.main()

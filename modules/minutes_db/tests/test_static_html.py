@@ -353,5 +353,268 @@ class StaticHtmlAdapterTest(unittest.TestCase):
                 )
 
 
+class StaticHtmlDepth2Test(unittest.TestCase):
+    def test_depth_two_chain_lists_meeting(self) -> None:
+        index_url = "https://example.invalid/council/index.html"
+        year_url = "https://example.invalid/council/year/2024.html"
+        month_url = "https://example.invalid/council/year/2024/01.html"
+        pdf_url = "https://example.invalid/council/year/2024/01/day1.pdf"
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            responses = {
+                index_url: make_result(
+                    index_url,
+                    b'<a href="https://example.invalid/council/year/2024.html">2024\xe5\xb9\xb4</a>',
+                    content_type="text/html; charset=utf-8",
+                    cache_path=root / "index.cache",
+                ),
+                year_url: make_result(
+                    year_url,
+                    b'<a href="https://example.invalid/council/year/2024/01.html">2024-01</a>',
+                    content_type="text/html; charset=utf-8",
+                    cache_path=root / "year.cache",
+                ),
+                month_url: make_result(
+                    month_url,
+                    f'<a href="{pdf_url}">\xe4\xbc\x9a\xe8\xad\xb0\xe9\x8c\xb2.pdf</a>'.encode(),
+                    content_type="text/html; charset=utf-8",
+                    cache_path=root / "month.cache",
+                ),
+            }
+            client = FakeHttpClient(responses)
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": index_url,
+                    "follow_link_regex": r"2024",
+                    "link_include_regex": r"\.pdf$",
+                    "pdf": True,
+                    "follow_max_depth": 2,
+                },
+                client=client,
+            )
+            refs = adapter.list_meetings()
+        self.assertEqual(1, len(refs))
+        self.assertEqual(pdf_url, refs[0]["source_url"])
+        self.assertEqual(month_url, refs[0]["discovered_from"])
+        self.assertEqual(
+            [index_url, year_url, month_url],
+            [u for u, _ in client.calls],
+        )
+
+    def test_default_depth_one_does_not_reach_depth_two(self) -> None:
+        index_url = "https://example.invalid/council/index.html"
+        year_url = "https://example.invalid/council/year/2024.html"
+        month_url = "https://example.invalid/council/year/2024/01.html"
+        pdf_url = "https://example.invalid/council/year/2024/01/day1.pdf"
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            responses = {
+                index_url: make_result(
+                    index_url,
+                    b'<a href="https://example.invalid/council/year/2024.html">2024</a>',
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                ),
+                year_url: make_result(
+                    year_url,
+                    b'<a href="https://example.invalid/council/year/2024/01.html">2024-01</a>',
+                    content_type="text/html",
+                    cache_path=root / "year.cache",
+                ),
+                month_url: make_result(
+                    month_url,
+                    f'<a href="{pdf_url}">doc.pdf</a>'.encode(),
+                    content_type="text/html",
+                    cache_path=root / "month.cache",
+                ),
+            }
+            client = FakeHttpClient(responses)
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": index_url,
+                    "follow_link_regex": r"2024",
+                    "link_include_regex": r"\.pdf$",
+                    "pdf": True,
+                },
+                client=client,
+            )
+            refs = adapter.list_meetings()
+        self.assertEqual(0, len(refs))
+        self.assertEqual([index_url, year_url], [u for u, _ in client.calls])
+        self.assertNotIn(month_url, [u for u, _ in client.calls])
+
+    def test_host_drift_not_followed(self) -> None:
+        index_url = "https://example.invalid/council/index.html"
+        evil_url = "https://evil.example.com/council/year/2024.html"
+        evil_month = "https://evil.example.com/council/year/2024/01.html"
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            responses = {
+                index_url: make_result(
+                    index_url,
+                    f'<a href="{evil_url}">2024</a>'.encode(),
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                ),
+                evil_url: make_result(
+                    evil_url,
+                    f'<a href="{evil_month}">2024-01</a>'.encode(),
+                    content_type="text/html",
+                    cache_path=root / "evil.cache",
+                ),
+            }
+            client = FakeHttpClient(responses)
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": index_url,
+                    "follow_link_regex": r"2024",
+                    "link_include_regex": r"\.pdf$",
+                    "pdf": True,
+                    "follow_max_depth": 2,
+                },
+                client=client,
+            )
+            refs = adapter.list_meetings()
+        self.assertEqual(0, len(refs))
+        self.assertEqual([index_url], [u for u, _ in client.calls])
+
+    def test_pdf_link_not_followed(self) -> None:
+        index_url = "https://example.invalid/council/index.html"
+        pdf_follow = "https://example.invalid/council/year/2024.pdf"
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            responses = {
+                index_url: make_result(
+                    index_url,
+                    f'<a href="{pdf_follow}">2024 pdf</a>'.encode(),
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                ),
+                pdf_follow: make_result(
+                    pdf_follow,
+                    b"%PDF-1.4 fake",
+                    content_type="application/pdf",
+                    cache_path=root / "pdf.cache",
+                ),
+            }
+            client = FakeHttpClient(responses)
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": index_url,
+                    "follow_link_regex": r"2024",
+                    "link_include_regex": r"\.pdf$",
+                    "pdf": True,
+                    "follow_max_depth": 2,
+                },
+                client=client,
+            )
+            refs = adapter.list_meetings()
+        # pdf_follow matches follow regex but must not be fetched as follow page
+        self.assertEqual([index_url], [u for u, _ in client.calls])
+        # but it is discovered as document on index itself (no follow needed)
+        self.assertEqual(1, len(refs))
+        self.assertEqual(pdf_follow, refs[0]["source_url"])
+
+    def test_follow_max_pages_caps_globally(self) -> None:
+        index_url = "https://example.invalid/council/index.html"
+        year_urls = [
+            f"https://example.invalid/council/year/202{i}.html" for i in range(4)
+        ]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            index_html = "".join(
+                f'<a href="{u}">202{i}</a>' for i, u in enumerate(year_urls)
+            ).encode()
+            responses: dict[str, FetchResult] = {
+                index_url: make_result(
+                    index_url,
+                    index_html,
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                )
+            }
+            for i, u in enumerate(year_urls):
+                pdf = f"https://example.invalid/council/year/202{i}/day.pdf"
+                responses[u] = make_result(
+                    u,
+                    f'<a href="{pdf}">doc.pdf</a>'.encode(),
+                    content_type="text/html",
+                    cache_path=root / f"year{i}.cache",
+                )
+            client = FakeHttpClient(responses)
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": index_url,
+                    "follow_link_regex": r"202",
+                    "link_include_regex": r"\.pdf$",
+                    "pdf": True,
+                    "follow_max_depth": 1,
+                    "follow_max_pages": 2,
+                },
+                client=client,
+            )
+            refs = adapter.list_meetings()
+        self.assertEqual(2, len(refs))
+        self.assertEqual(3, len(client.calls))  # index + 2 follow pages
+        self.assertEqual(
+            [index_url, year_urls[0], year_urls[1]],
+            [u for u, _ in client.calls],
+        )
+
+    def test_follow_max_depth_validation(self) -> None:
+        for bad in [0, 4, "2", True, 1.5, None]:
+            with self.subTest(bad=bad):
+                with self.assertRaisesRegex(ValueError, "follow_max_depth"):
+                    StaticHtmlAdapter(
+                        {
+                            "index_url": INDEX_URL,
+                            "follow_max_depth": bad,  # type: ignore[typeddict-item]
+                        },
+                        client=FakeHttpClient({}),
+                    )
+
+    def test_follow_max_pages_validation(self) -> None:
+        for bad in [0, -1, "2", True, 1.5]:
+            with self.subTest(bad=bad):
+                with self.assertRaisesRegex(ValueError, "follow_max_pages"):
+                    StaticHtmlAdapter(
+                        {
+                            "index_url": INDEX_URL,
+                            "follow_max_pages": bad,  # type: ignore[typeddict-item]
+                        },
+                        client=FakeHttpClient({}),
+                    )
+        # None and missing are allowed (unbounded)
+        for good in [None, 1, 3, 100]:
+            with self.subTest(good=good):
+                cfg: dict[str, object] = {"index_url": INDEX_URL}
+                if good is not None:
+                    cfg["follow_max_pages"] = good
+                adapter = StaticHtmlAdapter(cfg, client=FakeHttpClient({}))  # type: ignore[arg-type]
+                self.assertEqual(good, adapter.config["follow_max_pages"])
+
+    def test_detect_capabilities_multi_level(self) -> None:
+        client = FakeHttpClient({})
+        a1 = StaticHtmlAdapter(
+            {"index_url": INDEX_URL, "follow_link_regex": r"x"},
+            client=client,
+        )
+        self.assertEqual(
+            "configured_index_one_level", a1.detect_capabilities()["meeting_discovery"]
+        )
+        a2 = StaticHtmlAdapter(
+            {"index_url": INDEX_URL, "follow_link_regex": r"x", "follow_max_depth": 2},
+            client=client,
+        )
+        self.assertEqual(
+            "configured_index_multi_level",
+            a2.detect_capabilities()["meeting_discovery"],
+        )
+        a3 = StaticHtmlAdapter({"index_url": INDEX_URL}, client=client)
+        self.assertEqual(
+            "configured_index", a3.detect_capabilities()["meeting_discovery"]
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

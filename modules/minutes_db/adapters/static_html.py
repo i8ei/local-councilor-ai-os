@@ -8,6 +8,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+from collections import deque
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
@@ -395,19 +396,47 @@ class StaticHtmlAdapter(Adapter):
         if "pdf" in validated and not isinstance(validated["pdf"], bool):
             raise ValueError("config.pdf must be true or false")
         validated.setdefault("pdf", False)
+        if "follow_max_depth" in validated:
+            raw = validated["follow_max_depth"]
+            if isinstance(raw, bool) or not isinstance(raw, int):
+                raise ValueError(
+                    "config.follow_max_depth must be an integer between 1 and 3"
+                )
+            if not 1 <= raw <= 3:
+                raise ValueError(
+                    "config.follow_max_depth must be an integer between 1 and 3"
+                )
+        else:
+            validated["follow_max_depth"] = 1
+        if "follow_max_pages" in validated:
+            raw = validated["follow_max_pages"]
+            if raw is not None:
+                if isinstance(raw, bool) or not isinstance(raw, int):
+                    raise ValueError(
+                        "config.follow_max_pages must be an integer >= 1 or null"
+                    )
+                if raw < 1:
+                    raise ValueError(
+                        "config.follow_max_pages must be an integer >= 1 or null"
+                    )
+        else:
+            validated["follow_max_pages"] = None
         validated["coverage"] = validate_coverage_config(
             validated.get("coverage")
         )
         return validated
 
     def detect_capabilities(self) -> dict[str, Any]:
+        if self.config.get("follow_link_regex"):
+            if self.config.get("follow_max_depth", 1) > 1:
+                discovery = "configured_index_multi_level"
+            else:
+                discovery = "configured_index_one_level"
+        else:
+            discovery = "configured_index"
         return {
             "adapter": self.adapter_name,
-            "meeting_discovery": (
-                "configured_index_one_level"
-                if self.config.get("follow_link_regex")
-                else "configured_index"
-            ),
+            "meeting_discovery": discovery,
             "formats": ["pdf"] if self.config["pdf"] else ["html"],
             "speaker_segmentation": "heuristic_with_fallback",
             "pdf_text_extractor": shutil.which("pdftotext"),
@@ -572,21 +601,64 @@ class StaticHtmlAdapter(Adapter):
                 return results
             if follow is None:
                 continue
+            follow_max_depth = self.config.get("follow_max_depth", 1)
+            follow_max_pages = self.config.get("follow_max_pages")
+            index_host = urlparse(fetched.final_url).hostname
+
+            def _same_host(candidate: str, _host: str | None = index_host) -> bool:
+                if _host is None:
+                    return True
+                cand_host = urlparse(candidate).hostname
+                if cand_host is None:
+                    return False
+                return cand_host.lower() == _host.lower()
+
+            queue: deque[tuple[str, int]] = deque()
             for href, label in links:
                 normalized = normalized_link(fetched, href)
                 if normalized is None:
                     continue
-                follow_url, _ = normalized
+                follow_url, parsed = normalized
+                if parsed.path.lower().endswith(".pdf"):
+                    continue
+                if not _same_host(follow_url):
+                    continue
                 if not matches(follow, follow_url, label):
                     continue
                 if is_excluded(follow_url, label) or follow_url in followed:
                     continue
+                if follow_max_pages is not None and len(followed) >= follow_max_pages:
+                    continue
                 followed.add(follow_url)
-                follow_result = self.client.fetch(
-                    follow_url, tier=CacheTier.INDEX
-                )
-                if discover_from(follow_result, parse_links(follow_result)):
+                queue.append((follow_url, 1))
+            while queue:
+                current_url, depth = queue.popleft()
+                current_fetched = self.client.fetch(current_url, tier=CacheTier.INDEX)
+                current_links = parse_links(current_fetched)
+                if discover_from(current_fetched, current_links):
                     return results
+                if depth >= follow_max_depth:
+                    continue
+                for href2, label2 in current_links:
+                    normalized2 = normalized_link(current_fetched, href2)
+                    if normalized2 is None:
+                        continue
+                    next_url, parsed2 = normalized2
+                    if parsed2.path.lower().endswith(".pdf"):
+                        continue
+                    if not _same_host(next_url):
+                        continue
+                    if not matches(follow, next_url, label2):
+                        continue
+                    if is_excluded(next_url, label2) or next_url in followed:
+                        continue
+                    if (
+                        follow_max_pages is not None
+                        and len(followed) >= follow_max_pages
+                    ):
+                        continue
+                    followed.add(next_url)
+                    queue.append((next_url, depth + 1))
         return results
 
     def fetch_meeting(self, meeting_id: str | dict[str, Any]) -> dict[str, Any]:
