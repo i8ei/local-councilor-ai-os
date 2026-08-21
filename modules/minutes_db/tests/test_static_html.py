@@ -791,20 +791,18 @@ class StaticHtmlDivSpeakerTest(unittest.TestCase):
         # 全角インデント付き出席簿は話者にしない（R0804R_01.htmlで再現）
         html = "<html><body><div>　　　町　　　　　長　　田村正幸</div><div>議　　長　　　発言です。</div></body></html>"
         speeches = self._fetch_with_html(html)
-        # インデント行は単独で話者にならない
-        self.assertFalse(any(s["speaker"] == "町長" and "田村正幸" in (s["text"] or "") and s["speaker"] is not None and len(speeches) == 1 for s in speeches))
-        # 全体として議長は正しく検出される
+        self.assertFalse(any(s["speaker"] == "町長" for s in speeches))
+        self.assertTrue(any("田村正幸" in (s["text"] or "") for s in speeches))
         self.assertTrue(any(s["speaker"] == "議長" for s in speeches))
-        # 町長田村正幸のテキストが本文に残っていること（食われていない）
-        all_text = " ".join(s["text"] or "" for s in speeches)
-        # インデント行は fallback としてテキストに残るか、少なくとも町長という文字は本文に含まれる
-        # より厳密には、議長発言の前後に町長行のテキストが含まれるか、fallback段落として存在する
-        self.assertIn("町", all_text)
 
-    def test_div_head_without_indent_is_converted(self) -> None:
-        html = "<html><body><div>議　　長　　　３番師田保議員。</div></body></html>"
+    def test_div_head_only_sequence_is_split(self) -> None:
+        html = "<html><body><div>議　　長</div><div>　　本文1です。</div><div>町　　長</div><div>　　本文2です。</div></body></html>"
         speeches = self._fetch_with_html(html)
-        self.assertEqual("議長", speeches[0]["speaker"])
+        # 議長と町長がそれぞれヘッドのみで2発言に分割される
+        speakers = [s["speaker"] for s in speeches if s["speaker"] is not None]
+        self.assertEqual(["議長", "町長"], speakers[:2])
+        self.assertIn("本文1", speeches[0]["text"])
+        self.assertIn("本文2", speeches[1]["text"])
 
     def test_div_head_only_is_converted(self) -> None:
         html = "<html><body><div>議　　長</div><div>　　おはようございます。本文です。</div><div>町　　長</div><div>　　答弁します。</div></body></html>"

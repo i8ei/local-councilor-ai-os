@@ -318,6 +318,7 @@ class _DocumentParser(HTMLParser):
             for idx in range(len(line) - 1):
                 if line[idx] == "\u3000" and line[idx + 1] == "\u3000":
                     head = line[:idx].rstrip("　 ")
+                    # head長12は湯沢H15で最長「代表監査委員」(6字)に全角スペース余白を加味した実測上限
                     if not head or len(head) > 12:
                         continue
                     body = line[idx:].lstrip("\u3000 \t")
