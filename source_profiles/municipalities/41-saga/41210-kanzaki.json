@@ -52,20 +52,48 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kanzaki.saga.jp/main/19988.html",
+      "verified_at": "2026-08-23T01:43:49Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "http://www.city.kanzaki.saga.jp/main/19988.html",
+          "observed_on": "http://www.city.kanzaki.saga.jp/main/7052.html",
+          "sha256": "fd50d3b88fac0adc3c237d8f466c205ef8f082dfd7a0afd71e0a3ab04a7eb82d",
+          "fetched_at": "2026-08-23T01:28:22Z"
+        },
+        {
+          "url": "http://www.city.kanzaki.saga.jp/site_files/file/2026/202603/69ba4f8fdfc93nZwJUQdr.pdf",
+          "observed_on": "http://www.city.kanzaki.saga.jp/main/19988.html",
+          "sha256": "92b723a0b7db64a1f1d67facc52fe2c5563a34555f0292150dc74784b263536e",
+          "fetched_at": "2026-08-23T01:29:03Z"
+        }
+      ],
+      "notes": "deepest_docはP1（一般会計当初予算書の款項区分PDF）；観測年度は予算の状況入口で当年度を中心に並存；テキスト層あり；検算キーは予算書第1表で確認可；年度横断性は当年度中心で過年度は要追加探索；裁定なし。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kanzaki.saga.jp/main/199.html",
+      "verified_at": "2026-08-23T01:43:49Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "http://www.city.kanzaki.saga.jp/main/199.html",
+          "observed_on": "http://www.city.kanzaki.saga.jp/main/7052.html",
+          "sha256": "1c5f05c7439a14bb82513033195a4dd9d728c85786c4bf96f915040fdbf91551",
+          "fetched_at": "2026-08-23T01:28:23Z"
+        },
+        {
+          "url": "http://www.city.kanzaki.saga.jp/site_files/file/2026/202603/69b2438ace9feAQrpzWHt.pdf",
+          "observed_on": "http://www.city.kanzaki.saga.jp/main/199.html",
+          "sha256": "0cb815b0bc94f8211252c07ef2b58affb2e68854e88226e6215c379999cb3c0a",
+          "fetched_at": "2026-08-23T01:28:32Z"
+        }
+      ],
+      "notes": "deepest_docはP1（決算カード・テキスト層あり）；観測年度は決算カード一覧で長期にわたり並存；テキスト層あり；検算キーは決算カードで確認可；年度横断性あり同入口で多数年取得可；裁定なし。"
     }
   }
 }

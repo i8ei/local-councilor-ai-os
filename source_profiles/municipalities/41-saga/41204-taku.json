@@ -46,20 +46,48 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.taku.lg.jp/life/4/23/82/",
+      "verified_at": "2026-08-23T01:43:49Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.city.taku.lg.jp/life/4/23/82/",
+          "observed_on": "https://www.city.taku.lg.jp/life/4/23/",
+          "sha256": "7af022c595573530090d5464ff17314412c8ff192430f137326dc8350ebf9d7a",
+          "fetched_at": "2026-08-23T01:28:50Z"
+        },
+        {
+          "url": "https://www.city.taku.lg.jp/uploaded/attachment/21169.pdf",
+          "observed_on": "https://www.city.taku.lg.jp/life/4/23/82/",
+          "sha256": "8075dd02a2ebeb095506aae339ef92df645fafa3fb973026cc96ace1a422112e",
+          "fetched_at": "2026-08-23T01:27:48Z"
+        }
+      ],
+      "notes": "deepest_docはP1（当初予算書・款項明細PDF）；観測年度は予算一覧で複数年にわたり並存；テキスト層あり；検算キーはサンプル先頭では未検出だが文書全体に階層表あり；年度横断性あり同一入口で過去年度取得可；裁定なし。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.taku.lg.jp/life/4/23/84/",
+      "verified_at": "2026-08-23T01:43:49Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.city.taku.lg.jp/life/4/23/84/",
+          "observed_on": "https://www.city.taku.lg.jp/life/4/23/",
+          "sha256": "1269e2496a297aec89cc3c16cca49cbb95c0aaf09d322908cd086381261c1b14",
+          "fetched_at": "2026-08-23T01:28:51Z"
+        },
+        {
+          "url": "https://www.city.taku.lg.jp/uploaded/attachment/20537.pdf",
+          "observed_on": "https://www.city.taku.lg.jp/life/4/23/84/",
+          "sha256": "2116cf6e62ce8b27f286d2c1cfb574c57a34fb799a720aac8f17289b82f8a195",
+          "fetched_at": "2026-08-23T01:27:49Z"
+        }
+      ],
+      "notes": "deepest_docはP2（決算概要に添付の市報決算特集PDF）；観測年度は決算一覧で複数年にわたり並存；テキスト層あり；検算キーは決算カード側で確認可；年度横断性あり同hubで過去年度取得可；裁定により入口hub自体はreadyとしつつ決算書（款目明細）の有無は要追加確認。"
     }
   }
 }
