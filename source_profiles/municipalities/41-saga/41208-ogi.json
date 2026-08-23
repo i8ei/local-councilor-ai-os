@@ -39,20 +39,44 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ogi.lg.jp/main/1187.html",
+      "verified_at": "2026-08-23T02:27:55Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.city.ogi.lg.jp/main/1187.html",
+          "sha256": "4083194c872828095044aec5e89315e68276d1255ae087fd0b43478518550e63",
+          "fetched_at": "2026-08-23T01:53:48Z"
+        },
+        {
+          "url": "https://www.city.ogi.lg.jp/site_files/file/2026/202603/p1jkmhuc2q1re7psabdr1ich8ra4.pdf",
+          "sha256": "1c0cf8f75c35b3990a0135f7dbaa396c6b7cc3000f770457802d830cc417006e",
+          "fetched_at": "2026-08-23T01:55:58Z"
+        }
+      ],
+      "notes": "hub 1187が予算年度一覧（H20-R8 19年度）を静的列挙。最深は令和8年度当初予算ページ49072だが、確認できた最深文書は当初予算の概要P2（p1jkmhuc2q1re7psabdr1ich8ra4.pdf、200KB、テキスト層あり、歳入総額行はspaced表記・5頁サンプルでは未検出だが主要事業説明書併置）と補正概要のみ。款〜目明細の予算書P1（議案添付形）は財政入口・議会情報1410/1357の静的リンクでは確認できず、市報・広報編集物のみならP2とするv0.2規律によりP2。財政入口自体はready。議会スコープ（農業委員会 13235）は財政スコープと明確に分離し誤検出なし（group_hints対応）。 [deepest_doc=P2]"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ogi.lg.jp/main/1156.html",
+      "verified_at": "2026-08-23T02:27:55Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.city.ogi.lg.jp/main/1156.html",
+          "sha256": "f02ec92fdf063924ea135416f6d9089aac1f3fa64e940029ef48e2379d1b067c",
+          "fetched_at": "2026-08-23T01:53:51Z"
+        },
+        {
+          "url": "https://www.city.ogi.lg.jp/site_files/file/2025/202511/p1jafbt6t8r561tte1bpm1dp91uh34.pdf",
+          "sha256": "651a7dad2de97b070ed88800109943eda88d1fc93a7a34292693a46feca9f463",
+          "fetched_at": "2026-08-23T01:55:59Z"
+        }
+      ],
+      "notes": "hub 1156が決算年度一覧。最深は令和6年度決算ページ48081の決算報告（広報「さくら」抜粋P2）と決算状況P2（119KB）。款〜目明細の決算書/決算カードP1（統一様式）は同入口では確認できず、v0.2規律によりP2と判定（決算カードP1扱いだが現物未確認のためP2）。入口としてはready、年度横断は複数年連続。小城市の予算と同様、財政入口に農業委員会等の議会系文書は含まれず誤検出なし。 [deepest_doc=P2]"
     }
   }
 }

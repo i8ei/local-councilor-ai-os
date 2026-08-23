@@ -50,20 +50,48 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kouhoku.saga.jp/list00165.html",
+      "verified_at": "2026-08-23T02:27:51Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.town.kouhoku.saga.jp/list00165.html",
+          "observed_on": "https://www.town.kouhoku.saga.jp/list00034.html",
+          "sha256": "e6e8fdd086a0edc6f2c47c684a93052a7d276e78d90fe3e07c99e5dffeab40bf",
+          "fetched_at": "2026-08-23T01:53:49Z"
+        },
+        {
+          "url": "https://www.town.kouhoku.saga.jp/kiji0032976/3_2976_up_6h2wvrzh.pdf",
+          "observed_on": "https://www.town.kouhoku.saga.jp/list00165.html",
+          "sha256": "13865abf4be4d3489f45060aaa2b35856c6aab0560d8d28c44284a7fb6086dc6",
+          "fetched_at": "2026-08-23T01:58:02Z"
+        }
+      ],
+      "notes": "deepest_docはP1（令和8年度一般会計予算書3_2976_up_6h2wvrzh.pdf 8頁・テキスト層あり・議案第20号の歳入歳出予算で款項の区分あり・第1表歳入歳出予算で款別明細・空白正規化後も予算条文のため歳入総額は総額表記だが明細で特定可・ファイル名つきでP1主張）。観測年度は予算(年度)hubでH31-R8の8年分が年度横断、補正予算も同入口に併置(P3)、年度横断性あり複数年取得可。財政状況資料集・決算カードは別系統で併存。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kouhoku.saga.jp/list00166.html",
+      "verified_at": "2026-08-23T02:27:51Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.town.kouhoku.saga.jp/list00166.html",
+          "observed_on": "https://www.town.kouhoku.saga.jp/list00034.html",
+          "sha256": "08f598324a24c9170a2fa032ce39c80f46b0a78cad17375817998cdb78bcc32b",
+          "fetched_at": "2026-08-23T01:53:51Z"
+        },
+        {
+          "url": "https://www.town.kouhoku.saga.jp/kiji0032987/3_2987_6980_up_rqaj6doo.pdf",
+          "observed_on": "https://www.town.kouhoku.saga.jp/list00166.html",
+          "sha256": "b8dac5741eca90136e2d970b3508756685f70453142bc04673ec7c9042aa9a1b",
+          "fetched_at": "2026-08-23T01:58:04Z"
+        }
+      ],
+      "notes": "deepest_docはP1（令和6年度決算カード3_2987_6980_up_rqaj6doo.pdf 1頁・Excel→PDF・テキスト層あり・空白正規化後に歳入総額を特定・款別記載・v0.2でP1・目明細フラグなし）。観測年度は決算(年度)hubでR3-R6が並存、決算報告書(款〜目明細の決算書)は本入口で未確認だが決算カードP1で入口としてready、年度横断性あり同入口で複数年取得可。類似団体比較カード・財政状況資料集も財政状況配下に併存。"
     }
   }
 }

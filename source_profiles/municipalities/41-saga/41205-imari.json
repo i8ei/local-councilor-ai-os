@@ -46,20 +46,44 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.imari.lg.jp/6203.htm",
+      "verified_at": "2026-08-23T02:27:43Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.city.imari.lg.jp/6203.htm",
+          "sha256": "d7c22adb5f1e69c136b788e84a87c9593d6e6d69eb048c72e496088878b3499f",
+          "fetched_at": "2026-08-23T02:06:56Z"
+        },
+        {
+          "url": "https://www.city.imari.lg.jp/secure/37403/01_R8ippan_0yosan.pdf",
+          "sha256": "f3bd3160417cb890ef51c1b37cd7562752a6035a51aa358b2aee8a82720ddf29",
+          "fetched_at": "2026-08-23T02:07:58Z"
+        }
+      ],
+      "notes": "deepest_doc=P1。予算・決算hub 6203がH22-R8の年度索引（R8は25890経由25892）。最深は令和8年度一般会計予算書P1（01_R8ippan_0yosan.pdf, 291KB, 議案乙第3号, 款〜目明細の第1表/歳入歳出予算あり, テキスト層あり, 空白正規化後も歳入総額は予算条文のため厳密一致falseだが款別明細で特定可, ファイル名つきでP1主張）と概要P2（R8gaiyou.pdf, 5.5MB）併置。補正予算も25893に併置（P3）。年度横断良好で多年度比較可。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.imari.lg.jp/22853.htm",
+      "verified_at": "2026-08-23T02:27:43Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.city.imari.lg.jp/22853.htm",
+          "sha256": "8f27387bf9a4e223e74923c73296b09f9f31d92abfad6fff9d3afcf03a6b5b95",
+          "fetched_at": "2026-08-23T02:06:59Z"
+        },
+        {
+          "url": "https://www.city.imari.lg.jp/secure/32824/R5kessancard_ippan.pdf",
+          "sha256": "34bc28077806a1e88591a4c7d3fbd0fd50c47d5bc16aa4465c9c28b2af3b8f6f",
+          "fetched_at": "2026-08-23T02:08:02Z"
+        }
+      ],
+      "notes": "deepest_doc=P1。R6年度財政ページ22853経由の決算概要22859が最深。最深は令和5年度決算カードP1（R5kessancard_ippan.pdf, 108KB, テキスト層あり, 空白正規化後に歳入総額行あり, 款別記載, v0.2でP1, 目明細なし）。別系統12713の財政状況資料集はR6-H25のExcel/PDF（R6はxlsx）でDB化最容易だがsettlement最深はカードP1で入口としてready。"
     }
   }
 }

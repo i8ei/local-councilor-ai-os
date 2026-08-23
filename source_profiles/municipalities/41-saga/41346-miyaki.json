@@ -46,20 +46,44 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.miyaki.lg.jp/chosei/zaisei/_1675.html",
+      "verified_at": "2026-08-23T02:27:55Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.town.miyaki.lg.jp/chosei/zaisei/_1675.html",
+          "sha256": "1171327444e59b609d825d1d5201f17c47bcc51740b48eb7ee2c58bfa7522e48",
+          "fetched_at": "2026-08-23T01:54:02Z"
+        },
+        {
+          "url": "https://www.town.miyaki.lg.jp/var/rev0/0029/0819/12646104616.pdf",
+          "sha256": "cc66fdb876df18eb68cf6ac79a0cc003470985602280a1ea7d82b8c001966e0b",
+          "fetched_at": "2026-08-23T01:56:25Z"
+        }
+      ],
+      "notes": "予算hub _1675 がH25-R8年度索引（14年度）を静的列挙。最深は令和8年度当初ページ6592の一般会計当初予算P1（12646104616.pdf、議案第20号、款項明細・第1表/第2表あり、空白正規化後に歳入歳出予算の総額行を検出、ファイル名つき）、主要事項一覧・各特会予算も同ページ併置。Excelは予算側にはなしだが決算側のカードExcelと対になる。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.miyaki.lg.jp/chosei/zaisei/_5864.html",
+      "verified_at": "2026-08-23T02:27:55Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.town.miyaki.lg.jp/chosei/zaisei/_5864.html",
+          "sha256": "1c74e0ee884ffe2516fd0a139558438cbc34c6ae73901f1f688a270be1083ed8",
+          "fetched_at": "2026-08-23T01:54:04Z"
+        },
+        {
+          "url": "https://www.town.miyaki.lg.jp/var/rev0/0026/3992/125929145831.pdf",
+          "sha256": "eeeb1044129e2a6090d052567435c5dac8c49f5b60e5b46da5722c70b94e77cc",
+          "fetched_at": "2026-08-23T01:56:26Z"
+        }
+      ],
+      "notes": "決算hub _5864 がH29-R6年度索引（8年度）。最深は令和6年度決算ページ6430の一般会計歳入歳出決算書P1（125929145831.pdf、事項別明細書で款〜目明細、目次に歳入歳出決算書あり、空白正規化後は明細行で検出、ファイル名つき）、成果報告書も併存。決算カードは別系統/_1189.htmlに全年次で独立公開（P1、款別、目明細なし、Excel必須記録対象）。年度横断は予算/決算とも連続、複数年比較可。"
     }
   }
 }
