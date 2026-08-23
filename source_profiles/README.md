@@ -103,18 +103,18 @@ Trust boundary:
 - No tenant or URL guessing; entry URL is derived only from the stored `base_url`.
 - `--offline` uses only the verified cache; missing cache is a failure, not a network fallback.
 
-## Saga coverage (20)
+## Saga coverage（佐賀20市町の確定状況）
 
-All 80 entries (20 municipalities × minutes/regulations/budget/settlement) are decided as of main `c542b40` (2026-08-23):
+80入口（20市町×議事録/例規/予算/決算）は main `c542b40`（2026-08-23）時点で次のとおりすべて判定済み:
 
-- **minutes**: ready 14 (static 9: 武雄/鹿島/嬉野/基山/有田/大町/江北/白石/太良 + kaigiroku_net 5: 唐津/鳥栖/多久/伊万里/玄海) / blocked 4 (dbsr 3: 神埼/上峰/みやき — index visible but bodies robots-restricted; voices 1: 佐賀) / needs_review 1 (吉野ヶ里 — JS rendering) / unsupported 1 (小城 — db-search.com)
-- **regulations**: ready 17 (g_reiki 15 + d1_law-compatible 1: 基山 + joureikun 1: 大町) / blocked 1 (江北 d1_law — robots-unreachable, fail-closed) / needs_review 1 (吉野ヶ里 — JS rendering) / unsupported 1 (みやき — opensearch-style JS + POST)
-- **budget**: ready 18 / blocked 1 (白石 — robots `Disallow: /var/`, probe-verified) / not_found 1 (玄海 — full search path recorded)
-- **settlement**: ready 18 / blocked 1 (白石) / not_found 1 (大町 — only summary tables found)
+- **議事録（minutes）**: ready 14（static 9: 武雄/鹿島/嬉野/基山/有田/大町/江北/白石/太良 ＋ kaigiroku_net 5: 唐津/鳥栖/多久/伊万里/玄海）/ blocked 4（dbsr 3: 神埼/上峰/みやき — 索引は見えるが本文がrobots制限。voices 1: 佐賀）/ needs_review 1（吉野ヶ里 — JS描画）/ unsupported 1（小城 — db-search.com）
+- **例規（regulations）**: ready 17（g_reiki 15 ＋ d1_law互換 1: 基山 ＋ joureikun 1: 大町）/ blocked 1（江北 d1_law — robots到達不可につきfail-closed）/ needs_review 1（吉野ヶ里 — JS描画）/ unsupported 1（みやき — opensearch型JS＋POST必須）
+- **予算（budget）**: ready 18 / blocked 1（白石 — robots `Disallow: /var/`、実プローブで確認済み）/ not_found 1（玄海 — 探索経路は記録済み）
+- **決算（settlement）**: ready 18 / blocked 1（白石）/ not_found 1（大町 — 総括表のみ確認）
 
-Budget/settlement entries use `official_document_index` with `index_url`. Evidence `sha256/fetched_at` values are taken from HttpClient cache metadata on disk (not from survey envelopes). Ingestion for budget/settlement is out of scope by design: numbers are extracted by the user's AI/human/OCR against the CSV contract in `modules/budget_review` / `modules/settlement_review`, never by a generic extractor.
+予算・決算は adapter=`official_document_index`＋`index_url` で保持する。evidence の `sha256`/`fetched_at` は調査封筒でなく HttpClient キャッシュのメタデータ（on-disk真実）から採用した。取込は設計上スコープ外: 数値の抽出は `modules/budget_review` / `modules/settlement_review` のCSV契約に対して利用者側のAI/人/OCRが行い、汎用抽出器は提供しない。
 
-Note: PR #44 (open at the time of writing) proposes downgrading 有田 minutes from `ready` to `needs_review` after confirming no verbatim minutes are published.
+注: 記録時点でopenしていた PR #44 は、逐語会議録が未公開であることを確認した上で有田のminutesを `ready` から `needs_review` へ降格させる提案。
 
 ## Testing
 
