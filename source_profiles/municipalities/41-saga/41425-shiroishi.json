@@ -52,20 +52,48 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
+      "status": "blocked",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.shiroishi.lg.jp/chousei_machi/zaisei/yosan_shiryou.html",
       "verified_at": null,
       "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "evidence": [
+        {
+          "url": "https://www.town.shiroishi.lg.jp/robots.txt",
+          "observed_on": "https://www.town.shiroishi.lg.jp/",
+          "sha256": "78d9ca5ccb955cff9f5e83fcb67f1aa25d916b1f31158583b6d9835528045dcc",
+          "fetched_at": "2026-08-23T01:53:56Z"
+        },
+        {
+          "url": "https://www.town.shiroishi.lg.jp/chousei_machi/zaisei/yosan_shiryou.html",
+          "observed_on": "https://www.town.shiroishi.lg.jp/chousei_machi/zaisei.html",
+          "sha256": "5973beafd26a125f2f86a45eb68f143f5179a799f7222f21b2e8a29cb98faaf8",
+          "fetched_at": "2026-08-23T01:54:31Z"
+        }
+      ],
+      "notes": "blocked: 入口はyosan_shiryou.htmlでH24-R8の15年分が静的リンクで並び、各年度ページ(_8444 R8等)に一般会計予算書P1(126312112010.pdf 3652KB)が款明細として併存するが、サンプル1本(令和8年度一般会計予算書 https://www.town.shiroishi.lg.jp/var/rev0/0035/9915/126312112010.pdf)の実取得でRobotsDeniedError(/var/rev0/ Disallow)。入口は観測済みだが自動取得不可。deepest_docはP1(予算書)で目明細あり、年度横断性はH24-R8で最も良好、補正も併置。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
+      "status": "blocked",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.shiroishi.lg.jp/chousei_machi/zaisei/kessan_houkoku.html",
       "verified_at": null,
       "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "evidence": [
+        {
+          "url": "https://www.town.shiroishi.lg.jp/robots.txt",
+          "observed_on": "https://www.town.shiroishi.lg.jp/",
+          "sha256": "78d9ca5ccb955cff9f5e83fcb67f1aa25d916b1f31158583b6d9835528045dcc",
+          "fetched_at": "2026-08-23T01:53:56Z"
+        },
+        {
+          "url": "https://www.town.shiroishi.lg.jp/chousei_machi/zaisei/kessan_houkoku.html",
+          "observed_on": "https://www.town.shiroishi.lg.jp/chousei_machi/zaisei.html",
+          "sha256": "6372725e6817f52bbbfeb09af45056e625dfcd35e1122f3909f531a4667a38cf",
+          "fetched_at": "2026-08-23T01:54:33Z"
+        }
+      ],
+      "notes": "blocked: 入口はkessan_houkoku.htmlでH24-R6の13年分が静的リンクで並び、各年度ページ(_8327 R6等)に一般会計決算説明報告書P1(12615113451.pdf)が款〜目明細として併存するが、サンプル1本(令和6年度一般会計決算説明報告書 https://www.town.shiroishi.lg.jp/var/rev0/0034/7685/12615113451.pdf)の実取得でRobotsDeniedError(/var/rev0/ Disallow)。入口は観測済みだが自動取得不可。deepest_docはP1(決算書)で目明細あり、年度横断性あり、決算カード・財政状況資料集は別入口(_1175,_1173)に併存。"
     }
   }
 }

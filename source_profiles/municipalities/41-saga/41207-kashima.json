@@ -52,20 +52,44 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.saga-kashima.lg.jp/main/411.html",
+      "verified_at": "2026-08-23T02:27:43Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "http://www.city.saga-kashima.lg.jp/main/411.html",
+          "sha256": "9f9adb5fc5036db5c088320b4199dc7040774776b15d22ad8ef96c2accf36146",
+          "fetched_at": "2026-08-23T01:59:51Z"
+        },
+        {
+          "url": "https://www.city.saga-kashima.lg.jp/site_files/file/zaisei/yosan/R8nendo/01_yosannsetumeishiryou.pdf",
+          "sha256": "ed41b7f80ce74473ac2eccff56114dd547f699cc3f4be4946d251d2b093250d8",
+          "fetched_at": "2026-08-23T02:08:13Z"
+        }
+      ],
+      "notes": "deepest_doc=P2。予算hub 411がH23-R8の16年分を年度横断で静的列挙。最深は令和8年度予算説明資料P2（01_yosannsetumeishiryou.pdf, 3.1MB, 議案第2号参考資料, 款別集計/性質別/節別比較表と主要事業, テキスト層あり, 款項ありだが当初予算書P1（議案乙号第1表の条例本文）は本入口では未確認, ファイル名つきだがv0.2規律で予算書でなければP2）。年度横断良好。robots許可。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.saga-kashima.lg.jp/main/419.html",
+      "verified_at": "2026-08-23T02:27:43Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "http://www.city.saga-kashima.lg.jp/main/419.html",
+          "sha256": "6bd9b43f34edc656f56ae95b50573314e60c33df2a034f6a325d27602b3e011d",
+          "fetched_at": "2026-08-23T01:59:53Z"
+        },
+        {
+          "url": "https://www.city.saga-kashima.lg.jp/site_files/file/zaisei/kessancard/kessanR06ver01.pdf",
+          "sha256": "b3334c50a82b92319d8e7bb6974b6a770e38e753b9004837494a231f026cc366",
+          "fetched_at": "2026-08-23T02:08:14Z"
+        }
+      ],
+      "notes": "deepest_doc=P1。決算カードhub 419がH元-R6の30年分を年度横断で静的列挙。最深は令和6年度決算カードP1（kessanR06ver01.pdf, 308KB, テキスト層あり, 空白正規化後に歳入総額行あり, 款別記載, v0.2でP1, 目明細なし要フラグ）。別系統412の決算（健全化比率・財政状況資料集Excel/PDF R2xlsx等）も併存でDB化補助。robots許可で取得成功。"
     }
   }
 }

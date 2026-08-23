@@ -52,20 +52,44 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ureshino.lg.jp/shisei/zaisei/_21076.html",
+      "verified_at": "2026-08-23T02:27:55Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.city.ureshino.lg.jp/shisei/zaisei/_21076.html",
+          "sha256": "56ff0ff0d9900a62c028555a55a050404279ba4261ed8b76df5af07948312eec",
+          "fetched_at": "2026-08-23T01:53:53Z"
+        },
+        {
+          "url": "https://www.city.ureshino.lg.jp/var/rev0/0052/0796/12649104111.pdf",
+          "sha256": "b87a085094d222417a0877f7c281d9bcbd57ae8fbf874a89eddb5f08ad0dcaa5",
+          "fetched_at": "2026-08-23T01:56:07Z"
+        }
+      ],
+      "notes": "予算hub _21076 がR25-R8の年度並び（当初予算P1・補正を細分）、各年度の当初予算ページ（例:_32590）に一般会計予算書P1（12649104111.pdf、款〜目明細・第1表款項区分あり）、主要事業説明書P2、下水道予算も併存。先頭5頁はスキャン画像基調でテキスト層なし（pdftotext -l5 empty）のため検算キー一時falseだが文書全体は太良同様後段にテキスト層が存在し得る。ファイル名つきでP1主張。議会ページ議案PDFは別経路の正本だが財政入口で到達可。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ureshino.lg.jp/shisei/zaisei/_21086.html",
+      "verified_at": "2026-08-23T02:27:55Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.city.ureshino.lg.jp/shisei/zaisei/_21086.html",
+          "sha256": "0fd223a7fbf128d06de8f468c38cca9f4fba0baf3d4aa6dab76892a67845d12e",
+          "fetched_at": "2026-08-23T01:53:55Z"
+        },
+        {
+          "url": "https://www.city.ureshino.lg.jp/var/rev0/0048/1274/kextusannsyo.pdf",
+          "sha256": "03397dda00bdf00031d79749645b02c77b9aceb59455b8c2dc59a1f0da35a176",
+          "fetched_at": "2026-08-23T01:56:11Z"
+        }
+      ],
+      "notes": "決算hub _21086 がR25-R6年度並び。最深は令和6年度決算ページ32188の一般会計・特別会計決算書P1（kextusannsyo.pdf、款〜目明細、スキャン基調で先頭5頁テキストなし）、附属書類・健全化比率・決算カードP1（款別統一様式、目明細なし）・主要施策成果説明書も同ページ併存。決算カードはv0.2でP1扱い、目明細フラグ: 決算書=あり/カード=なし。年度横断良好、複数年比較可。前段の予算スキャンと同様、後段テキストの有無は要追加判定。"
     }
   }
 }

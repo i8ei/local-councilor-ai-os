@@ -53,20 +53,34 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.omachi.lg.jp/list00749.html",
+      "verified_at": "2026-08-23T02:27:51Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.town.omachi.lg.jp/list00749.html",
+          "observed_on": "https://www.town.omachi.lg.jp/list00243.html",
+          "sha256": "396e0617069f80741f32bffbb36bcdc420888c8fd9e3ff6ea403fdf52538bfda",
+          "fetched_at": "2026-08-23T01:55:10Z"
+        },
+        {
+          "url": "https://www.town.omachi.lg.jp/kiji0031542/3_1542_shiryou1_w1sr3ai7.pdf",
+          "observed_on": "https://www.town.omachi.lg.jp/list00749.html",
+          "sha256": "3235a3f08eed93864cdb6bf34550ced4c0747a1fff5202e1d44821661ca4e81e",
+          "fetched_at": "2026-08-23T01:57:59Z"
+        }
+      ],
+      "notes": "deepest_docはP2（令和8年度一般会計予算概要資料3_1542_shiryou1_w1sr3ai7.pdf 8頁・Excel→PDF・テキスト層あり・款別概要で予算総額はあるが当初予算書P1の款項目明細は本入口では未確認・検算キーは歳入総額ではなく予算総額表記・v0.2規律によりP2止まりでも入口としてready）。観測年度は予算hubでR4-R8の5年分のみ並ぶ、補正は含まず、財政状況資料集list00296(R6-R2 Excel由来PDFで歳入総額あり)は別系統で併存。"
     },
     "settlement": {
-      "status": "not_evaluated",
+      "status": "not_found",
       "adapter": null,
       "verified_at": null,
       "verified_by": null,
       "evidence": [],
-      "notes": null
+      "notes": "not_found: §3探索(ホーム→行政・財政list00138→財政状況list00243→当初予算概要00749/5か年間00295/財政状況資料集00296→サイトマップ)で決算報告書P1・決算概要P2に該当する一般会計決算文書を確認できず。財政状況資料集00296の令和6年度資料集(3_1551_shiryou1_c8as2lz8.pdf)は歳入総額・歳出総額行を含むが決算書ではなく総括表(参考)のためsettlementとしてはnot_found。議会ページの決算認定議案PDFに明細が含まれる可能性は残るが上限内でP1/P2未発見。Excel資料集はDB化補助として確認済み。"
     }
   }
 }

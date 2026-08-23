@@ -53,20 +53,44 @@
       "index_url": "https://www.town.kiyama.lg.jp/static/reiki/reiki.html"
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kiyama.lg.jp/list02190.html",
+      "verified_at": "2026-08-23T02:27:55Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.town.kiyama.lg.jp/list02190.html",
+          "sha256": "8fb2e98d9b6a7bc0a122f54e3352787d139c8e4623e3c32d29c91bf94b66fdd3",
+          "fetched_at": "2026-08-23T01:54:00Z"
+        },
+        {
+          "url": "https://www.town.kiyama.lg.jp/kiji0036363/3_6363_32801_up_nxdxk774.pdf",
+          "sha256": "13139c8711590aeeea17c6dbaba3cfe016faab74760674a252cb7256bc18c5e8",
+          "fetched_at": "2026-08-23T01:56:14Z"
+        }
+      ],
+      "notes": "予算hub list02190が年度別索引（R2-R8、H29-R1）。最深は令和8年度当初ページkiji0036363の一般会計予算P1（32801予算書・32802説明書で款〜目明細、テキスト層あり、空白正規化後に歳入歳出予算の総額行を検出、ファイル名つき）。補正は同一年度ページ内で年度内追記（10号以上）される構成でDB化時は年度内正規化要。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kiyama.lg.jp/kiji0032207/index.html",
+      "verified_at": "2026-08-23T02:27:55Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.town.kiyama.lg.jp/kiji0032207/index.html",
+          "sha256": "69e3ded1a97917cb0ac89027d6e371a471d45ebaf739fbc581906ffdd02f7dec",
+          "fetched_at": "2026-08-23T01:54:14Z"
+        },
+        {
+          "url": "https://www.town.kiyama.lg.jp/kiji0032207/3_2207_29818_up_zovda1en.pdf",
+          "sha256": "74c41bb7e21e3602f7adbbcdca49224845164188a04b5e5e224411cc4fe5a3f7",
+          "fetched_at": "2026-08-23T01:56:16Z"
+        }
+      ],
+      "notes": "決算hub list02191→kiji0032207が決算数値＋決算カード2系統を年度横断で併置。最深は決算数値PDF P1（29818.pdf、款〜目明細、テキスト層あり、空白正規化後に歳入決算額行を検出）および決算カードP1（款別統一様式、v0.2でP1、目明細なし）。目明細フラグ: 数値=あり/カード=なし。Excel必須記録: 財政状況資料集のExcelは別途存在するが決算数値PDFでDB化可。年度横断H19-R6で18年度連続、複数年比較可。"
     }
   }
 }

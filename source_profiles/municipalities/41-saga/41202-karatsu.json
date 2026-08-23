@@ -46,20 +46,44 @@
       ]
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.karatsu.lg.jp/life/8/50/265/",
+      "verified_at": "2026-08-23T02:27:43Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "http://www.city.karatsu.lg.jp/life/8/50/265/",
+          "sha256": "9f01cb7646743e53bf2248591c5f0a15686abe63e46706053c071dda2983e82f",
+          "fetched_at": "2026-08-23T01:54:23Z"
+        },
+        {
+          "url": "https://www.city.karatsu.lg.jp/uploaded/attachment/23391.pdf",
+          "sha256": "e4ad738139eec545a88c147ad4ebb89e33515ed9d850bafd09308ab1d7820408",
+          "fetched_at": "2026-08-23T02:07:52Z"
+        }
+      ],
+      "notes": "deepest_doc=P1。予算の一覧265がR8-R5の年度索引。最深は令和8年度当初予算（案）P1（23391.pdf, 3.07MB, 議案第X号添付の予算書, テキスト層あり, 空白正規化後に款項明細の第1表あり, ファイル名つきでP1主張）。同時に概要P2（23617.pdf, 600KB）も併置。hub 265経由の公式導線確認済み。補正予算も同入口に年度内複数併置（P3記録）。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.karatsu.lg.jp/page/2659.html",
+      "verified_at": "2026-08-23T02:27:43Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.city.karatsu.lg.jp/page/2659.html",
+          "sha256": "c3ca5f76cf729c5731c5315a23fd7b6e541cca12dccf1e4dc64345ef69aa591d",
+          "fetched_at": "2026-08-23T02:06:25Z"
+        },
+        {
+          "url": "https://www.city.karatsu.lg.jp/uploaded/attachment/24136.pdf",
+          "sha256": "2f45ce4375e4fe9b7e41ba9216ef0b9b7c7067d8e24438d0b7e885a5028cd2bf",
+          "fetched_at": "2026-08-23T02:07:53Z"
+        }
+      ],
+      "notes": "deepest_doc=P1。決算カードを公表します2659がH22-R6の15年分決算カードPDFを年度横断で静的列挙。最深は令和6年度決算カードP1（24136.pdf, 103KB, テキスト層あり, 空白正規化後に歳入総額行を特定, 款別記載, v0.2でP1, 目明細なし要フラグ）。別系統2898（決算状況）には歳入歳出の区分表PDF（4777等）も併存。財政状況資料集2674はR6-H21のExcel由来PDFでDB化補助。robots許可で取得成功。"
     }
   }
 }
