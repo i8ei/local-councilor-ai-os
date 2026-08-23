@@ -22,20 +22,48 @@
       "evidence": []
     },
     "budget": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yoshinogari.lg.jp/lifeinfo/soshiki/zaisei/3/5371.html",
+      "verified_at": "2026-08-23T01:43:49Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.town.yoshinogari.lg.jp/lifeinfo/soshiki/zaisei/3/5371.html",
+          "observed_on": "https://www.town.yoshinogari.lg.jp/lifeinfo/soshiki/zaisei/3/index.html",
+          "sha256": "83951c318cc878e4aa596e72102dbb507ffa8d47743a96851256ce678ff9a30f",
+          "fetched_at": "2026-08-23T01:28:55Z"
+        },
+        {
+          "url": "https://www.town.yoshinogari.lg.jp/material/files/group/6/R080100.pdf",
+          "observed_on": "https://www.town.yoshinogari.lg.jp/lifeinfo/soshiki/zaisei/3/5371.html",
+          "sha256": "05813c52250534577eae224228e4c36fc2ed70440d1d1607d4833fafc9cdcc38",
+          "fetched_at": "2026-08-23T01:30:34Z"
+        }
+      ],
+      "notes": "deepest_docはP1（一般会計当初予算書の款項明細PDF）；観測年度は現年度のみが財政係ページに現存；テキスト層あり；検算キーは本書の総額表記で特定可（厳密文字列は表記揺れ）；年度横断性なしで過去年度は削除・統合済みの模様；裁定によりJS困難は議事録に限定し予算は静的到達でready。"
     },
     "settlement": {
-      "status": "not_evaluated",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": null
+      "status": "ready",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yoshinogari.lg.jp/lifeinfo/soshiki/zaisei/3/1/1/431.html",
+      "verified_at": "2026-08-23T01:43:49Z",
+      "verified_by": "pi-pilot-scout",
+      "evidence": [
+        {
+          "url": "https://www.town.yoshinogari.lg.jp/lifeinfo/soshiki/zaisei/3/1/1/431.html",
+          "observed_on": "https://www.town.yoshinogari.lg.jp/lifeinfo/soshiki/zaisei/3/1/index.html",
+          "sha256": "4947f6bc49700e168efd18fc2dc35a95ec1233ba6fcfdc6a572bffaf3c3fb60e",
+          "fetched_at": "2026-08-23T01:29:56Z"
+        },
+        {
+          "url": "https://www.town.yoshinogari.lg.jp/material/files/group/6/R05_kessan_card.pdf",
+          "observed_on": "https://www.town.yoshinogari.lg.jp/lifeinfo/soshiki/zaisei/3/1/1/431.html",
+          "sha256": "ac687074cca71e8300587f9a12b157cf2266ed1cf02664c3c0c953ecafe8f22c",
+          "fetched_at": "2026-08-23T01:30:36Z"
+        }
+      ],
+      "notes": "deepest_docはP2（決算カード・普通会計）；観測年度は決算カード一覧で長期にわたり並存；テキスト層あり；検算キーは決算カード様式で表記揺れあり；年度横断性あり同入口で多数年取得可；裁定によりP1決算書は未確認だが入口としてはready。"
     }
   }
 }
