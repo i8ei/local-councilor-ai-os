@@ -407,3 +407,20 @@ class GreikiAdapterTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MinIntervalArgTests(unittest.TestCase):
+    def test_min_interval_flag_is_wired(self) -> None:
+        """--min-interval reaches ingest_greiki (shared-host rate limit escape hatch)."""
+
+        import inspect
+
+        src = inspect.getsource(vendor_greiki)
+        self.assertIn("min_interval_seconds=args.min_interval", src)
+        parser = vendor_greiki.build_parser() if hasattr(vendor_greiki, "build_parser") else None
+        if parser is not None:
+            args = parser.parse_args(
+                ["--base-url", "https://www1.g-reiki.net/town.tara/", "--db", "/tmp/x.db",
+                 "--min-interval", "8"]
+            )
+            self.assertEqual(args.min_interval, 8.0)
