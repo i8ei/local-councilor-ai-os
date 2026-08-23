@@ -207,6 +207,23 @@ class ResolveTests(unittest.TestCase):
         )
         self.assertEqual(len(report["followed_pages"]), 2)
 
+    def test_content_subpage_ranking_prefers_year_specific_and_excludes_visited(
+        self,
+    ) -> None:
+        from source_profiles.cli import _rank_content_candidates
+
+        candidates = [
+            {"label": "予算・決算", "url": "https://x.example/hub.html"},
+            {
+                "label": "令和8年度当初予算の概要",
+                "url": "https://x.example/25892.html",
+            },
+            {"label": "お問い合わせ", "url": "https://x.example/contact.html"},
+        ]
+        ranked = _rank_content_candidates(candidates, {"https://x.example/hub.html"})
+        self.assertEqual(ranked[0]["url"], "https://x.example/25892.html")
+        self.assertEqual(len(ranked), 2)
+
     def test_missing_municipality_fails(self) -> None:
         code, report = _run_capture(
             [

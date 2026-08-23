@@ -372,6 +372,57 @@ DOCUMENT_EXTENSIONS = (
 
 
 _YEAR_LABEL_RE = re.compile(r"(令和|平成|昭和)(元|[0-9]+)")
+_CONTENT_LABEL_RE = re.compile(r"(予算|決算|概要|報告|資料)")
+_PRIORITY_LABEL_RE = re.compile(r"(当初|概要|決算報告)")
+
+
+def _rank_content_candidates(
+    candidates: list[dict[str, str]], exclude_urls: set[str]
+) -> list[dict[str, str]]:
+    """Most specific first: year+content labels > content-only labels.
+
+    Already-visited URLs (hub, index) are dropped so navigation links
+    pointing back up the tree never win.
+    """
+
+    def score(item: dict[str, str]) -> tuple[int, int]:
+        label = item["label"]
+        has_year = bool(_YEAR_LABEL_RE.search(label))
+        priority = bool(_PRIORITY_LABEL_RE.search(label))
+        # year+priority (当初/概要/決算報告) beats year-only beats rest
+        base = int(has_year) * 2 + int(priority)
+        return (base, len(label))
+
+    ranked = [c for c in candidates if c["url"] not in exclude_urls]
+    ranked.sort(key=score, reverse=True)
+    return ranked
+
+
+def _content_subpage_links(html: str, page_url: str) -> list[dict[str, str]]:
+    """Same-host HTML links whose label matches content keywords."""
+    parser = _LinkExtractor()
+    try:
+        parser.feed(html)
+    except Exception:
+        pass
+    page_host = urlparse(page_url).netloc
+    candidates: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for href, label in parser.links:
+        absolute = urljoin(page_url, href)
+        parsed = urlparse(absolute)
+        if parsed.scheme not in ("http", "https") or parsed.netloc != page_host:
+            continue
+        if absolute in seen:
+            continue
+        path_lower = parsed.path.lower()
+        if path_lower.endswith(DOCUMENT_EXTENSIONS):
+            continue
+        if not _CONTENT_LABEL_RE.search(label):
+            continue
+        seen.add(absolute)
+        candidates.append({"label": label, "url": absolute})
+    return candidates
 
 
 class _LinkExtractor(HTMLParser):
@@ -560,22 +611,38 @@ def _cmd_resolve(
     documents, year_pages = _extract_document_links(html_text, result.final_url)
     followed_pages: list[dict[str, str]] = []
     if not documents and year_pages:
-        # Year-index hub: documents live one level deeper. Follow up to
-        # follow_pages same-host year pages (depth 1 only), aggregating docs.
+        # Year-index hub: documents live deeper. Follow up to --follow-pages
+        # total same-host pages (depth capped at 2): year pages first; a year
+        # page yielding zero documents may have exactly ONE content sub-page
+        # followed (label matches content keywords).
+        budget = max(0, int(getattr(args, "follow_pages", 8)))
         seen_doc_urls: set[str] = set()
-        for page in year_pages[: max(0, int(getattr(args, "follow_pages", 8)))]:
+
+        def _fetch_page(url: str) -> FetchResult | None:
+            nonlocal budget
+            if budget <= 0:
+                return None
+            budget -= 1
             try:
-                page_result: FetchResult = client.fetch(
-                    page["url"], tier=CacheTier.INDEX
-                )
+                fetched: FetchResult = client.fetch(url, tier=CacheTier.INDEX)
             except Exception:
-                continue  # one broken year page must not kill the run
-            if urlparse(page_result.final_url).netloc != urlparse(entry_url).netloc:
+                return None  # one broken page must not kill the run
+            if urlparse(fetched.final_url).netloc != urlparse(entry_url).netloc:
+                return None
+            return fetched
+
+        for page in year_pages:
+            if budget <= 0:
+                break
+            fetched = _fetch_page(page["url"])
+            if fetched is None:
                 continue
-            page_html = page_result.body.decode(
-                page_result.encoding or "utf-8", errors="replace"
+            page_html = fetched.body.decode(
+                fetched.encoding or "utf-8", errors="replace"
             )
-            page_docs, _ = _extract_document_links(page_html, page_result.final_url)
+            followed_pages.append({"label": page["label"], "url": page["url"]})
+            page_docs, _ = _extract_document_links(page_html, fetched.final_url)
+            added = 0
             for doc in page_docs:
                 if doc["url"] in seen_doc_urls:
                     continue
@@ -584,10 +651,47 @@ def _cmd_resolve(
                     {
                         "label": f"[{page['label']}] {doc['label']}",
                         "url": doc["url"],
-                        "observed_on": page_result.final_url,
+                        "observed_on": fetched.final_url,
                     }
                 )
-            followed_pages.append({"label": page["label"], "url": page["url"]})
+                added += 1
+            if added == 0:
+                # One content sub-page fallback, ranked by label specificity;
+                # already-visited URLs (hub/index) are excluded.
+                sub_candidates = _rank_content_candidates(
+                    _content_subpage_links(page_html, fetched.final_url),
+                    exclude_urls=seen_doc_urls
+                    | {entry_url, page["url"], result.final_url},
+                )
+                if sub_candidates:
+                    sub_fetched = _fetch_page(sub_candidates[0]["url"])
+                    if sub_fetched is not None:
+                        sub_html = sub_fetched.body.decode(
+                            sub_fetched.encoding or "utf-8", errors="replace"
+                        )
+                        followed_pages.append(
+                            {
+                                "label": f"[{page['label']}] {sub_candidates[0]['label']}",
+                                "url": sub_fetched.final_url,
+                            }
+                        )
+                        sub_docs, _ = _extract_document_links(
+                            sub_html, sub_fetched.final_url
+                        )
+                        for doc in sub_docs:
+                            if doc["url"] in seen_doc_urls:
+                                continue
+                            seen_doc_urls.add(doc["url"])
+                            documents.append(
+                                {
+                                    "label": (
+                                        f"[{page['label']}] {sub_candidates[0]['label']}"
+                                        f" {doc['label']}"
+                                    ),
+                                    "url": doc["url"],
+                                    "observed_on": sub_fetched.final_url,
+                                }
+                            )
     report: dict[str, Any] = {
         "municipality": municipality,
         "kind": kind,
