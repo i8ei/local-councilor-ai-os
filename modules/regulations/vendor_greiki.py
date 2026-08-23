@@ -470,6 +470,7 @@ def ingest_greiki(
     offline: bool = False,
     refresh: bool = False,
     timeout: float = 90,
+    min_interval_seconds: float = 1.5,
 ) -> dict[str, Any]:
     """Discover, fetch, and store g-reiki regulations."""
     base_url = normalize_base_url(base_url)
@@ -479,7 +480,7 @@ def ingest_greiki(
         offline=offline,
         refresh=refresh,
         timeout=timeout,
-        min_interval_seconds=1.5,
+        min_interval_seconds=min_interval_seconds,
     )
     refs = discover_documents(base_url, client=client, limit=limit)
     database = Path(db_path)
@@ -543,6 +544,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="取得タイムアウト秒",
     )
     parser.add_argument("--manifest-dir", type=Path)
+    parser.add_argument(
+        "--min-interval",
+        type=float,
+        default=1.5,
+        help="Minimum seconds between requests (raise on shared-host rate limits)",
+    )
     parser.add_argument("--run-id", help=argparse.SUPPRESS)
     return parser
 
@@ -587,6 +594,7 @@ def main(argv: list[str] | None = None) -> int:
             offline=args.offline,
             refresh=args.refresh,
             timeout=args.timeout,
+            min_interval_seconds=args.min_interval,
         )
     except StructureMismatchError as exc:
         fail_module_run(manifest_path, manifest, exc)
