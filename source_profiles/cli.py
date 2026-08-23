@@ -6,6 +6,7 @@ import argparse
 import datetime
 import json
 import os
+import re
 import sys
 import unicodedata
 from html.parser import HTMLParser
@@ -370,6 +371,9 @@ DOCUMENT_EXTENSIONS = (
 )
 
 
+_YEAR_LABEL_RE = re.compile(r"(令和|平成|昭和)(元|[0-9]+)")
+
+
 class _LinkExtractor(HTMLParser):
     """Collect anchor href + label pairs from HTML (stdlib only)."""
 
@@ -416,7 +420,10 @@ def _entry_url_for_resolve(entry: dict[str, Any]) -> str | None:
     return None
 
 
-def _extract_document_links(html: str, page_url: str) -> list[dict[str, str]]:
+def _extract_document_links(
+    html: str, page_url: str
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    """Return (document links, year-labelled sub-page links), same-host only."""
     parser = _LinkExtractor()
     try:
         parser.feed(html)
@@ -425,6 +432,7 @@ def _extract_document_links(html: str, page_url: str) -> list[dict[str, str]]:
     page_host = urlparse(page_url).netloc
     seen: set[str] = set()
     documents: list[dict[str, str]] = []
+    year_pages: list[dict[str, str]] = []
     for href, label in parser.links:
         absolute = urljoin(page_url, href)
         parsed = urlparse(absolute)
@@ -432,14 +440,16 @@ def _extract_document_links(html: str, page_url: str) -> list[dict[str, str]]:
             continue
         if parsed.netloc != page_host:
             continue  # same-host policy: no cross-site document listing
-        path_lower = parsed.path.lower()
-        if not path_lower.endswith(DOCUMENT_EXTENSIONS):
-            continue
         if absolute in seen:
             continue
-        seen.add(absolute)
-        documents.append({"label": label, "url": absolute})
-    return documents
+        path_lower = parsed.path.lower()
+        if path_lower.endswith(DOCUMENT_EXTENSIONS):
+            seen.add(absolute)
+            documents.append({"label": label, "url": absolute})
+        elif _YEAR_LABEL_RE.search(label):
+            seen.add(absolute)
+            year_pages.append({"label": label, "url": absolute})
+    return documents, year_pages
 
 
 def _user_agent_for_kind(kind: str) -> str:
@@ -547,7 +557,37 @@ def _cmd_resolve(
         return 2
 
     html_text = result.body.decode(result.encoding or "utf-8", errors="replace")
-    documents = _extract_document_links(html_text, result.final_url)
+    documents, year_pages = _extract_document_links(html_text, result.final_url)
+    followed_pages: list[dict[str, str]] = []
+    if not documents and year_pages:
+        # Year-index hub: documents live one level deeper. Follow up to
+        # follow_pages same-host year pages (depth 1 only), aggregating docs.
+        seen_doc_urls: set[str] = set()
+        for page in year_pages[: max(0, int(getattr(args, "follow_pages", 8)))]:
+            try:
+                page_result: FetchResult = client.fetch(
+                    page["url"], tier=CacheTier.INDEX
+                )
+            except Exception:
+                continue  # one broken year page must not kill the run
+            if urlparse(page_result.final_url).netloc != urlparse(entry_url).netloc:
+                continue
+            page_html = page_result.body.decode(
+                page_result.encoding or "utf-8", errors="replace"
+            )
+            page_docs, _ = _extract_document_links(page_html, page_result.final_url)
+            for doc in page_docs:
+                if doc["url"] in seen_doc_urls:
+                    continue
+                seen_doc_urls.add(doc["url"])
+                documents.append(
+                    {
+                        "label": f"[{page['label']}] {doc['label']}",
+                        "url": doc["url"],
+                        "observed_on": page_result.final_url,
+                    }
+                )
+            followed_pages.append({"label": page["label"], "url": page["url"]})
     report: dict[str, Any] = {
         "municipality": municipality,
         "kind": kind,
@@ -563,6 +603,8 @@ def _cmd_resolve(
         "documents": documents,
         "cache_dir": str(cache_dir),
     }
+    if followed_pages:
+        report["followed_pages"] = followed_pages
     if warnings:
         report["warnings"] = warnings
 
@@ -680,6 +722,16 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         metavar="N",
         help="Also fetch the N-th document (1-based) from the listing",
+    )
+    p_resolve.add_argument(
+        "--follow-pages",
+        type=int,
+        default=8,
+        metavar="N",
+        help=(
+            "When the index has no documents but year-labelled sub-pages, "
+            "follow at most N of them (depth 1, default 8)"
+        ),
     )
     p_resolve.add_argument(
         "--profiles-dir", help="Override municipalities root directory (for testing)"

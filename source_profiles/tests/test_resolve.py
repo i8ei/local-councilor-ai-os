@@ -179,6 +179,34 @@ class ResolveTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertIn("warnings", report)
 
+    def test_year_hub_follows_subpages_and_aggregates(self) -> None:
+        hub = (
+            b"<html><body>"
+            b'<a href="/zaisei/r8.html">\xe4\xbb\xa4\xe5\x92\x8c8\xe5\xb9\xb4\xe5\xba\xa6</a>'
+            b'<a href="/zaisei/r7.html">\xe4\xbb\xa4\xe5\x92\x8c7\xe5\xb9\xb4\xe5\xba\xa6</a>'
+            b"</body></html>"
+        )
+        r8 = (
+            b"<html><body><a href='/site_files/r8-yosan.pdf'>R8 \xe4\xb8\x88\xe7\xae\x97\xe6\x9b\xb8</a></body></html>"
+        )
+        client = _FakeClient(
+            {
+                "https://www.city.test.example/zaisei/yosan.html": hub,
+                "https://www.city.test.example/zaisei/r8.html": r8,
+                "https://www.city.test.example/zaisei/r7.html": b"<html></html>",
+            }
+        )
+        code, report = _run_capture(self.base, client_factory=lambda: client)
+        self.assertEqual(code, 0)
+        self.assertEqual(report["document_count"], 1)
+        doc = report["documents"][0]
+        self.assertIn("令和8年度", doc["label"])
+        self.assertEqual(
+            doc["url"],
+            "https://www.city.test.example/site_files/r8-yosan.pdf",
+        )
+        self.assertEqual(len(report["followed_pages"]), 2)
+
     def test_missing_municipality_fails(self) -> None:
         code, report = _run_capture(
             [
