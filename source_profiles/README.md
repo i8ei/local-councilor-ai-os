@@ -105,12 +105,16 @@ Trust boundary:
 
 ## Saga coverage (20)
 
-- 15 g_reiki (`needs_review`, base_url verified via preflight + regulations-clusters live recheck): 唐津/鳥栖/伊万里/武雄/鹿島/小城/嬉野/神埼/上峰/玄海/有田/太良/佐賀/多久/白石
-- 2 D1-Law (`unsupported`, index_url): みやき (ops-jg), 江北 (en3-jg)
-- 1 Joureikun (`unsupported`, index_url): 大町
-- 2 needs_review null: 吉野ヶ里 (JS), 基山 (旧HTML FRAME)
+All 80 entries (20 municipalities × minutes/regulations/budget/settlement) are decided as of main `c542b40` (2026-08-23):
 
-Evidence URLs host-match the entry URLs; no guessed tenants.
+- **minutes**: ready 14 (static 9: 武雄/鹿島/嬉野/基山/有田/大町/江北/白石/太良 + kaigiroku_net 5: 唐津/鳥栖/多久/伊万里/玄海) / blocked 4 (dbsr 3: 神埼/上峰/みやき — index visible but bodies robots-restricted; voices 1: 佐賀) / needs_review 1 (吉野ヶ里 — JS rendering) / unsupported 1 (小城 — db-search.com)
+- **regulations**: ready 17 (g_reiki 15 + d1_law-compatible 1: 基山 + joureikun 1: 大町) / blocked 1 (江北 d1_law — robots-unreachable, fail-closed) / needs_review 1 (吉野ヶ里 — JS rendering) / unsupported 1 (みやき — opensearch-style JS + POST)
+- **budget**: ready 18 / blocked 1 (白石 — robots `Disallow: /var/`, probe-verified) / not_found 1 (玄海 — full search path recorded)
+- **settlement**: ready 18 / blocked 1 (白石) / not_found 1 (大町 — only summary tables found)
+
+Budget/settlement entries use `official_document_index` with `index_url`. Evidence `sha256/fetched_at` values are taken from HttpClient cache metadata on disk (not from survey envelopes). Ingestion for budget/settlement is out of scope by design: numbers are extracted by the user's AI/human/OCR against the CSV contract in `modules/budget_review` / `modules/settlement_review`, never by a generic extractor.
+
+Note: PR #44 (open at the time of writing) proposes downgrading 有田 minutes from `ready` to `needs_review` after confirming no verbatim minutes are published.
 
 ## Testing
 
