@@ -6,12 +6,22 @@ import argparse
 import datetime
 import json
 import os
+import re
 import sys
 import unicodedata
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
+from urllib.parse import urljoin, urlparse
 
-from lcaios.http import HttpClient, MINUTES_USER_AGENT, REGULATIONS_USER_AGENT
+from lcaios.http import (
+    BOOTSTRAP_USER_AGENT,
+    CacheTier,
+    FetchResult,
+    HttpClient,
+    MINUTES_USER_AGENT,
+    REGULATIONS_USER_AGENT,
+)
 
 from source_profiles.schema import (
     validate_profile,  # type: ignore[import-not-found]  # pyright: ignore[reportMissingImports]
@@ -351,6 +361,390 @@ def _cmd_verify(args: argparse.Namespace) -> int:
     return 0 if v_report.get("result") in ("verified", "blocked") else 2
 
 
+DOCUMENT_EXTENSIONS = (
+    ".pdf",
+    ".xls",
+    ".xlsx",
+    ".doc",
+    ".docx",
+    ".csv",
+)
+
+
+_YEAR_LABEL_RE = re.compile(r"(令和|平成|昭和)(元|[0-9]+)")
+_CONTENT_LABEL_RE = re.compile(r"(予算|決算|概要|報告|資料)")
+_PRIORITY_LABEL_RE = re.compile(r"(当初|概要|決算報告)")
+
+
+def _rank_content_candidates(
+    candidates: list[dict[str, str]], exclude_urls: set[str]
+) -> list[dict[str, str]]:
+    """Most specific first: year+content labels > content-only labels.
+
+    Already-visited URLs (hub, index) are dropped so navigation links
+    pointing back up the tree never win.
+    """
+
+    def score(item: dict[str, str]) -> tuple[int, int]:
+        label = item["label"]
+        has_year = bool(_YEAR_LABEL_RE.search(label))
+        priority = bool(_PRIORITY_LABEL_RE.search(label))
+        # year+priority (当初/概要/決算報告) beats year-only beats rest
+        base = int(has_year) * 2 + int(priority)
+        return (base, len(label))
+
+    ranked = [c for c in candidates if c["url"] not in exclude_urls]
+    ranked.sort(key=score, reverse=True)
+    return ranked
+
+
+def _content_subpage_links(html: str, page_url: str) -> list[dict[str, str]]:
+    """Same-host HTML links whose label matches content keywords."""
+    parser = _LinkExtractor()
+    try:
+        parser.feed(html)
+    except Exception:
+        pass
+    page_host = urlparse(page_url).netloc
+    candidates: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for href, label in parser.links:
+        absolute = urljoin(page_url, href)
+        parsed = urlparse(absolute)
+        if parsed.scheme not in ("http", "https") or parsed.netloc != page_host:
+            continue
+        if absolute in seen:
+            continue
+        path_lower = parsed.path.lower()
+        if path_lower.endswith(DOCUMENT_EXTENSIONS):
+            continue
+        if not _CONTENT_LABEL_RE.search(label):
+            continue
+        seen.add(absolute)
+        candidates.append({"label": label, "url": absolute})
+    return candidates
+
+
+class _LinkExtractor(HTMLParser):
+    """Collect anchor href + label pairs from HTML (stdlib only)."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.links: list[tuple[str, str]] = []
+        self._href: str | None = None
+        self._chunks: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.lower() != "a":
+            return
+        href = dict(attrs).get("href")
+        if href:
+            self._href = href
+            self._chunks = []
+
+    def handle_data(self, data: str) -> None:
+        if self._href is not None and data.strip():
+            self._chunks.append(data.strip())
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag.lower() != "a" or self._href is None:
+            return
+        label = " ".join(self._chunks)[:120]
+        if not label:
+            label = self._href[:120]
+        self.links.append((self._href, label))
+        self._href = None
+        self._chunks = []
+
+
+def _entry_url_for_resolve(entry: dict[str, Any]) -> str | None:
+    adapter = entry.get("adapter")
+    index_url = entry.get("index_url")
+    base_url = entry.get("base_url")
+    tenant_url = entry.get("tenant_url")
+    if index_url:
+        return str(index_url)
+    if adapter == "g_reiki" and base_url:
+        return str(base_url).rstrip("/") + "/reiki_menu.html"
+    if adapter == "kaigiroku_net" and tenant_url:
+        return str(tenant_url)
+    return None
+
+
+def _extract_document_links(
+    html: str, page_url: str
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    """Return (document links, year-labelled sub-page links), same-host only."""
+    parser = _LinkExtractor()
+    try:
+        parser.feed(html)
+    except Exception:
+        pass  # malformed HTML: keep whatever links were collected
+    page_host = urlparse(page_url).netloc
+    seen: set[str] = set()
+    documents: list[dict[str, str]] = []
+    year_pages: list[dict[str, str]] = []
+    for href, label in parser.links:
+        absolute = urljoin(page_url, href)
+        parsed = urlparse(absolute)
+        if parsed.scheme not in ("http", "https"):
+            continue
+        if parsed.netloc != page_host:
+            continue  # same-host policy: no cross-site document listing
+        if absolute in seen:
+            continue
+        path_lower = parsed.path.lower()
+        if path_lower.endswith(DOCUMENT_EXTENSIONS):
+            seen.add(absolute)
+            documents.append({"label": label, "url": absolute})
+        elif _YEAR_LABEL_RE.search(label):
+            seen.add(absolute)
+            year_pages.append({"label": label, "url": absolute})
+    return documents, year_pages
+
+
+def _user_agent_for_kind(kind: str) -> str:
+    if kind == "minutes":
+        return MINUTES_USER_AGENT
+    if kind in ("budget", "settlement"):
+        return BOOTSTRAP_USER_AGENT
+    return REGULATIONS_USER_AGENT
+
+
+def _cmd_resolve(
+    args: argparse.Namespace,
+    client_factory: Any = None,
+) -> int:
+    kind: str = args.kind
+    municipality: str = args.municipality
+    prefecture: str | None = args.prefecture
+    profiles_dir = getattr(args, "profiles_dir", None)
+    offline = bool(args.offline)
+    get_index: int | None = getattr(args, "get", None)
+
+    resolved = _resolve_profile_by_municipality(
+        municipality, prefecture, base_dir=profiles_dir
+    )
+    if resolved is None:
+        print(
+            json.dumps(
+                {
+                    "municipality": municipality,
+                    "kind": kind,
+                    "result": "failed",
+                    "reason": f"municipality not found: {municipality!r} prefecture={prefecture!r}",
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 2
+    _path, data = resolved
+    sources = data.get("sources", {})
+    entry = sources.get(kind) if isinstance(sources, dict) else None
+    if not isinstance(entry, dict):
+        print(
+            json.dumps(
+                {
+                    "municipality": municipality,
+                    "kind": kind,
+                    "result": "failed",
+                    "reason": f"source kind {kind!r} missing in profile",
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 2
+    status = entry.get("status")
+    adapter = entry.get("adapter")
+    entry_url = _entry_url_for_resolve(entry)
+    warnings: list[str] = []
+    if entry_url is None:
+        print(
+            json.dumps(
+                {
+                    "municipality": municipality,
+                    "kind": kind,
+                    "result": "failed",
+                    "reason": f"no resolvable entry URL (adapter={adapter!r}, status={status!r})",
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 2
+    if status != "ready":
+        warnings.append(
+            f"profile status is {status!r} (not ready); result may be stale or restricted"
+        )
+    cache_dir = Path(args.cache_dir)
+    if client_factory is None:
+        client_factory = lambda: HttpClient(  # noqa: E731
+            cache_dir,
+            user_agent=_user_agent_for_kind(kind),
+            offline=offline,
+        )
+    client = client_factory()
+    try:
+        result: FetchResult = client.fetch(entry_url, tier=CacheTier.INDEX)
+    except Exception as exc:
+        reason = type(exc).__name__
+        detail = str(exc)
+        if "RobotsDenied" in reason:
+            reason = "robots_denied"
+        print(
+            json.dumps(
+                {
+                    "municipality": municipality,
+                    "kind": kind,
+                    "result": "failed",
+                    "reason": f"fetch failed: {reason}: {detail}",
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 2
+
+    html_text = result.body.decode(result.encoding or "utf-8", errors="replace")
+    documents, year_pages = _extract_document_links(html_text, result.final_url)
+    followed_pages: list[dict[str, str]] = []
+    if not documents and year_pages:
+        # Year-index hub: documents live deeper. Follow up to --follow-pages
+        # total same-host pages (depth capped at 2): year pages first; a year
+        # page yielding zero documents may have exactly ONE content sub-page
+        # followed (label matches content keywords).
+        budget = max(0, int(getattr(args, "follow_pages", 8)))
+        seen_doc_urls: set[str] = set()
+
+        def _fetch_page(url: str) -> FetchResult | None:
+            nonlocal budget
+            if budget <= 0:
+                return None
+            budget -= 1
+            try:
+                fetched: FetchResult = client.fetch(url, tier=CacheTier.INDEX)
+            except Exception:
+                return None  # one broken page must not kill the run
+            if urlparse(fetched.final_url).netloc != urlparse(entry_url).netloc:
+                return None
+            return fetched
+
+        for page in year_pages:
+            if budget <= 0:
+                break
+            fetched = _fetch_page(page["url"])
+            if fetched is None:
+                continue
+            page_html = fetched.body.decode(
+                fetched.encoding or "utf-8", errors="replace"
+            )
+            followed_pages.append({"label": page["label"], "url": page["url"]})
+            page_docs, _ = _extract_document_links(page_html, fetched.final_url)
+            added = 0
+            for doc in page_docs:
+                if doc["url"] in seen_doc_urls:
+                    continue
+                seen_doc_urls.add(doc["url"])
+                documents.append(
+                    {
+                        "label": f"[{page['label']}] {doc['label']}",
+                        "url": doc["url"],
+                        "observed_on": fetched.final_url,
+                    }
+                )
+                added += 1
+            if added == 0:
+                # One content sub-page fallback, ranked by label specificity;
+                # already-visited URLs (hub/index) are excluded.
+                sub_candidates = _rank_content_candidates(
+                    _content_subpage_links(page_html, fetched.final_url),
+                    exclude_urls=seen_doc_urls
+                    | {entry_url, page["url"], result.final_url},
+                )
+                if sub_candidates:
+                    sub_fetched = _fetch_page(sub_candidates[0]["url"])
+                    if sub_fetched is not None:
+                        sub_html = sub_fetched.body.decode(
+                            sub_fetched.encoding or "utf-8", errors="replace"
+                        )
+                        followed_pages.append(
+                            {
+                                "label": f"[{page['label']}] {sub_candidates[0]['label']}",
+                                "url": sub_fetched.final_url,
+                            }
+                        )
+                        sub_docs, _ = _extract_document_links(
+                            sub_html, sub_fetched.final_url
+                        )
+                        for doc in sub_docs:
+                            if doc["url"] in seen_doc_urls:
+                                continue
+                            seen_doc_urls.add(doc["url"])
+                            documents.append(
+                                {
+                                    "label": (
+                                        f"[{page['label']}] {sub_candidates[0]['label']}"
+                                        f" {doc['label']}"
+                                    ),
+                                    "url": doc["url"],
+                                    "observed_on": sub_fetched.final_url,
+                                }
+                            )
+    report: dict[str, Any] = {
+        "municipality": municipality,
+        "kind": kind,
+        "status": status,
+        "adapter": adapter,
+        "result": "ok",
+        "index_url": entry_url,
+        "final_url": result.final_url,
+        "fetched_at": result.fetched_at,
+        "sha256": result.sha256,
+        "from_cache": result.from_cache,
+        "document_count": len(documents),
+        "documents": documents,
+        "cache_dir": str(cache_dir),
+    }
+    if followed_pages:
+        report["followed_pages"] = followed_pages
+    if warnings:
+        report["warnings"] = warnings
+
+    if get_index is not None:
+        if get_index < 1 or get_index > len(documents):
+            report["result"] = "failed"
+            report["reason"] = (
+                f"--get {get_index} out of range (1..{len(documents)})"
+            )
+            print(json.dumps(report, ensure_ascii=False, indent=2))
+            return 2
+        doc = documents[get_index - 1]
+        try:
+            doc_result = client.fetch(doc["url"], tier=CacheTier.DOCUMENT)
+        except Exception as exc:
+            reason = type(exc).__name__
+            if "RobotsDenied" in reason:
+                reason = "robots_denied"
+            report["result"] = "failed"
+            report["reason"] = (
+                f"document fetch failed: {reason}: {exc} ({doc['url']})"
+            )
+            print(json.dumps(report, ensure_ascii=False, indent=2))
+            return 2
+        report["fetched_document"] = {
+            "label": doc["label"],
+            "url": doc_result.url,
+            "local_path": str(doc_result.cache_path),
+            "sha256": doc_result.sha256,
+            "fetched_at": doc_result.fetched_at,
+            "from_cache": doc_result.from_cache,
+        }
+    print(json.dumps(report, ensure_ascii=False, indent=2))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="source_profiles.cli")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -407,6 +801,46 @@ def build_parser() -> argparse.ArgumentParser:
         "--profiles-dir", help="Override municipalities root directory (for testing)"
     )
 
+    p_resolve = sub.add_parser(
+        "resolve",
+        help="Resolve a source entry to its index page and document links",
+    )
+    p_resolve.add_argument(
+        "--municipality", required=True, help="Municipality name (e.g. 伊万里市)"
+    )
+    p_resolve.add_argument("--prefecture", help="Prefecture name (e.g. 佐賀県)")
+    p_resolve.add_argument(
+        "--kind",
+        required=True,
+        choices=["regulations", "minutes", "budget", "settlement"],
+        help="Source kind",
+    )
+    p_resolve.add_argument(
+        "--cache-dir", required=True, help="Cache directory for HttpClient"
+    )
+    p_resolve.add_argument(
+        "--offline", action="store_true", help="Use cached responses only"
+    )
+    p_resolve.add_argument(
+        "--get",
+        type=int,
+        metavar="N",
+        help="Also fetch the N-th document (1-based) from the listing",
+    )
+    p_resolve.add_argument(
+        "--follow-pages",
+        type=int,
+        default=8,
+        metavar="N",
+        help=(
+            "When the index has no documents but year-labelled sub-pages, "
+            "follow at most N of them (depth 1, default 8)"
+        ),
+    )
+    p_resolve.add_argument(
+        "--profiles-dir", help="Override municipalities root directory (for testing)"
+    )
+
     return parser
 
 
@@ -423,6 +857,8 @@ def main(argv: list[str] | None = None) -> int:
         return _cmd_ingest_command(args)
     if args.command == "verify":
         return _cmd_verify(args)
+    if args.command == "resolve":
+        return _cmd_resolve(args)
     parser.print_help()
     return 2
 

@@ -116,6 +116,26 @@ Trust boundary:
 
 注: 記録時点でopenしていた PR #44 は、逐語会議録が未公開であることを確認した上で有田のminutesを `ready` から `needs_review` へ降格させる提案。
 
+## Resolve (on-demand document lookup)
+
+`resolve` は profile の入口URLから索引ページを取得（robots遵守・キャッシュ付き）し、同一hostの文書リンク（pdf/xls/doc/csv）をラベル付きで一覧化する。数値の抽出はしない（読み取りは利用者側AI/人/OCR）。
+
+```bash
+# 文書リストをJSONで取得
+python3 -m source_profiles.cli resolve \
+  --municipality "伊万里市" --prefecture "佐賀県" --kind budget --cache-dir /tmp/sp-cache
+
+# 年度ハブ配下のサブページも辿る（既定8ページ、深さ2まで）
+#   ラベルが年度パターンのリンク → 文書0なら「当初/概要/決算報告」ラベルの内容ページ1つを追従
+python3 -m source_profiles.cli resolve ... --follow-pages 8
+
+# N番目の文書をダウンロードしてローカルパス+sha256を返す
+python3 -m source_profiles.cli resolve ... --get 5
+```
+
+- statusが `ready` 以外でも動作するが `warnings` を添える。robots拒否・範囲外の `--get` は exit 2
+- 取得したPDFは HttpClient キャッシュ（sha256キー）に保存され、再実行時はキャッシュヒットする
+
 ## Testing
 
 ```bash
