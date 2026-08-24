@@ -184,15 +184,24 @@ def _detect_encoding(body: bytes, content_type_header: str) -> str:
             _normalize_encoding(meta_match.group(1).decode("ascii", "ignore"))
             or "utf-8"
         )
+    # Fallback order matters: EUC-JP bytes usually decode "successfully" as
+    # cp932 (both are dense variable-width encodings) and would silently
+    # produce mojibake. Trying EUC-JP first is the conventional order; cp932
+    # text then falls through because its 0x81-0x9F lead bytes and 0x40-0x7E
+    # trail bytes are invalid in EUC-JP and raise on first occurrence.
     try:
         body.decode("utf-8")
         return "utf-8"
     except UnicodeDecodeError:
         try:
-            body.decode("cp932")
-            return "cp932"
+            body.decode("euc-jp")
+            return "euc-jp"
         except UnicodeDecodeError:
-            return "utf-8"
+            try:
+                body.decode("cp932")
+                return "cp932"
+            except UnicodeDecodeError:
+                return "utf-8"
 
 
 def _content_type(headers: Mapping[str, str]) -> tuple[str, str]:

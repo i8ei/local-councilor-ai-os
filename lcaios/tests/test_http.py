@@ -222,6 +222,32 @@ class HttpClientTests(unittest.TestCase):
                 page_metadata["requests"][0]["fetched_at"].endswith("Z")
             )
 
+    def test_undeclared_euc_jp_body_decodes_as_euc_jp_not_cp932(self) -> None:
+        # core-01: EUC-JP bytes decode "successfully" under cp932 (dense
+        # variable-width encodings overlap), silently producing mojibake.
+        # The fallback must try EUC-JP before cp932 so declared-free pages
+        # are not corrupted; cp932-only bytes (SJIS trail < 0xA1) must still
+        # resolve to cp932.
+        eucjp_body = "会議録を公開しております".encode("euc-jp")
+        self.assertEqual(
+            http._detect_encoding(eucjp_body, "text/html"), "euc-jp"
+        )
+        # 議 in Shift_JIS = 0x8C 0x7C; trail 0x7C is invalid in EUC-JP, so
+        # the euc-jp attempt must raise and fall through to cp932.
+        sjis_body = "会議録".encode("cp932")
+        self.assertEqual(
+            http._detect_encoding(sjis_body, "text/html"), "cp932"
+        )
+        # Declared charset still wins over the fallback.
+        self.assertEqual(
+            http._detect_encoding(eucjp_body, "text/html; charset=EUC-JP"),
+            "euc-jp",
+        )
+        self.assertEqual(
+            http._detect_encoding(eucjp_body, "text/html; charset=cp932"),
+            "cp932",
+        )
+
     def test_denied_path_is_not_fetched(self) -> None:
         robots = _FakeResponse(
             "https://example.test/robots.txt",
