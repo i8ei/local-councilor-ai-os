@@ -135,6 +135,91 @@ class BenchmarkPipelineTests(unittest.TestCase):
             self.assertEqual(["B町", "A町", "C町"], names)
             self.assertIsNone(result["items"][-1]["value"])
 
+    def test_mixed_monetary_units_rank_normalized_not_raw(self) -> None:
+        # mod-03: 甲町80億円（千円単位 8,000,000）と乙町60億円（円単位
+        # 6,000,000,000）を並べる旧実装は乙町を1位にした。単位を共通スケールへ
+        # 正規化して順位付けし、正規化したことを応答で宣言する。
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            for code, name, value, unit in (
+                ("11111", "甲町", 8_000_000, "千円"),
+                ("22222", "乙町", 6_000_000_000, "円"),
+            ):
+                records = [
+                    dict(
+                        make_record("total_revenue", value, raw_value=str(value)),
+                        unit=unit,
+                    )
+                ]
+                make_bootstrap_db_with_records(
+                    root / code / "municipality.db", code, name, records
+                )
+            out = root / "benchmark.db"
+            build_from_bootstrap.build([root], out)
+            with closing(sqlite3.connect(out)) as connection, connection:
+                result = compare.compare(connection, "total_revenue")
+            names = [item["name"] for item in result["items"]]
+            self.assertEqual(["甲町", "乙町"], names)  # 80億円 > 60億円
+            self.assertEqual(
+                "value_desc_nulls_last_unit_normalized", result["order"]
+            )
+            self.assertIsNotNone(result["unit_normalization"])
+            self.assertEqual(["円", "千円"], result["units"])
+
+    def test_unsortable_mixed_units_refuse_ranking(self) -> None:
+        # mod-03: 指数と円が混在したらランキングを拒否し、行は保持・名称順。
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            for code, name, unit in (
+                ("11111", "A町", "指数"),
+                ("22222", "B町", "千円"),
+            ):
+                records = [
+                    dict(
+                        make_record("total_revenue", 100.0, raw_value="100"),
+                        unit=unit,
+                    )
+                ]
+                make_bootstrap_db_with_records(
+                    root / code / "municipality.db", code, name, records
+                )
+            out = root / "benchmark.db"
+            build_from_bootstrap.build([root], out)
+            with closing(sqlite3.connect(out)) as connection, connection:
+                result = compare.compare(connection, "total_revenue")
+            self.assertEqual("unranked_unit_mismatch", result["order"])
+            self.assertEqual(
+                ["A町", "B町"],
+                [item["name"] for item in result["items"]],
+            )
+            self.assertTrue(
+                any("unit_mismatch" in m for m in result["missing_or_unresolved"])
+            )
+
+    def test_as_of_max_silent_drop_is_reported(self) -> None:
+        # mod-04: --as-of未指定時はMAX(as_of)へ固定され、その時点を持たない
+        # 自治体が黙って消える。名前を missing_or_unresolved に出す。
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            records_new = [make_record("total_revenue", 500.0, as_of="2024年度")]
+            records_old = [make_record("total_revenue", 400.0, as_of="2023年度")]
+            make_bootstrap_db_with_records(
+                root / "a" / "municipality.db", "11111", "A町", records_old
+            )
+            make_bootstrap_db_with_records(
+                root / "b" / "municipality.db", "22222", "B町", records_new
+            )
+            out = root / "benchmark.db"
+            build_from_bootstrap.build([root], out)
+            with closing(sqlite3.connect(out)) as connection, connection:
+                result = compare.compare(connection, "total_revenue")
+            self.assertEqual("2024年度", result["as_of"])
+            self.assertEqual(["B町"], [item["name"] for item in result["items"]])
+            self.assertTrue(
+                any("A町" in m and "latest available 2023年度" in m
+                    for m in result["missing_or_unresolved"])
+            )
+
 
 class BenchmarkPresetTests(unittest.TestCase):
     def test_built_in_preset_declarations(self) -> None:

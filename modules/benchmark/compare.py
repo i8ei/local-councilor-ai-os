@@ -13,6 +13,26 @@ from typing import Any
 
 from .presets import PRESETS, Preset, get_preset
 
+# Monetary unit scales for cross-unit ranking (mod-03). Only these scale
+# deterministically; any other unit (指数・人・世帯など) cannot be converted,
+# so mixed non-scalable units refuse to rank instead of silently comparing
+# raw numbers across different units.
+_UNIT_SCALES: dict[str, float] = {
+    "円": 1.0,
+    "千円": 1_000.0,
+    "百万円": 1_000_000.0,
+    "億円": 100_000_000.0,
+}
+
+
+def _compare_sort_key(item: dict[str, Any]) -> tuple[int, float, str, str]:
+    """Rank key: NULLs last, then (normalized) value desc, then name."""
+    value = item.get("value")
+    if value is None:
+        return (1, 0.0, str(item.get("prefecture") or ""), str(item.get("name") or ""))
+    scale = _UNIT_SCALES.get(str(item.get("unit") or ""), 1.0)
+    return (0, -float(value) * scale, str(item.get("prefecture") or ""), str(item.get("name") or ""))
+
 
 def compare(
     connection: sqlite3.Connection,
@@ -42,14 +62,8 @@ def compare(
         FROM benchmark_indicator AS i
         JOIN benchmark_municipality AS m ON m.area_code_5 = i.area_code_5
         WHERE i.indicator_key = ? AND i.as_of = ?
-        ORDER BY
-            CASE WHEN i.value IS NULL THEN 1 ELSE 0 END,
-            i.value DESC,
-            m.prefecture,
-            m.name
-        LIMIT ?
         """,
-        (indicator, as_of, limit),
+        (indicator, as_of),
     ).fetchall()
     items = [dict(row) for row in rows]
     for item in items:
@@ -57,13 +71,73 @@ def compare(
             item["source_locator"] = json.loads(item["source_locator"])
         except (TypeError, json.JSONDecodeError):
             pass
+    unresolved: list[str] = [] if items else ["indicator/as_of combination not found"]
+
+    # mod-04: an auto/selected as_of silently dropping municipalities that
+    # have the indicator at another vintage was the reported bug; name them.
+    if items:
+        for mrow in connection.execute(
+            """
+            SELECT m.name, m.area_code_5, MAX(i.as_of) AS latest
+            FROM benchmark_indicator AS i
+            JOIN benchmark_municipality AS m ON m.area_code_5 = i.area_code_5
+            WHERE i.indicator_key = ?
+              AND i.area_code_5 NOT IN (
+                  SELECT area_code_5 FROM benchmark_indicator
+                  WHERE indicator_key = ? AND as_of = ?
+              )
+            GROUP BY m.area_code_5
+            ORDER BY m.name
+            """,
+            (indicator, indicator, as_of),
+        ):
+            unresolved.append(
+                f"{mrow['name']} ({mrow['area_code_5']}): no data at {as_of}; "
+                f"latest available {mrow['latest']}"
+            )
+
+    # mod-03: value ranking must not silently mix units (derived-value
+    # computation already refuses on unit_mismatch; compare() was the one
+    # path that ignored units). Normalize when every unit is a known
+    # monetary scale; otherwise refuse to rank and keep rows visible.
+    units = sorted({str(item["unit"]) for item in items if item.get("unit")})
+    cross_unit = len(units) >= 2
+    unit_note: dict[str, Any] | None = None
+    order = "value_desc_nulls_last"
+    if cross_unit:
+        if all(u in _UNIT_SCALES for u in units):
+            order = "value_desc_nulls_last_unit_normalized"
+            unit_note = {
+                "scales": {u: _UNIT_SCALES[u] for u in units},
+                "note": "units normalized to a common scale for ranking; "
+                "each item keeps its own value/unit for display.",
+            }
+        else:
+            order = "unranked_unit_mismatch"
+            unresolved.append(
+                f"unit_mismatch: mixed units {units} include a non-monetary "
+                "unit; ranked comparison refused (rows kept, sorted by name)"
+            )
+    if order == "unranked_unit_mismatch":
+        items.sort(
+            key=lambda item: (
+                str(item.get("prefecture") or ""),
+                str(item.get("name") or ""),
+                str(item.get("area_code_5") or ""),
+            )
+        )
+    else:
+        items.sort(key=_compare_sort_key)
+    returned = items[:limit]
     return {
         "indicator_key": indicator,
         "as_of": as_of,
-        "order": "value_desc_nulls_last",
-        "items": items,
+        "order": order,
+        "unit_normalization": unit_note,
+        "units": units,
+        "items": returned,
         "external_use_note": "対外利用時は各itemsの value/as_of/definition/source_name/source_url を一体で表示する。",
-        "missing_or_unresolved": [] if items else ["indicator/as_of combination not found"],
+        "missing_or_unresolved": unresolved,
     }
 
 
