@@ -3,10 +3,14 @@
 from __future__ import annotations  # noqa: I001
 
 import copy
+import json
+import subprocess
 import unittest
 from dataclasses import replace
+from unittest import mock
+from urllib.parse import urlencode
 
-from lcaios.http import FetchError, RobotsDeniedError
+from lcaios.http import CacheTier, FetchError, RobotsDeniedError
 from lcaios.tests.http_fakes import FakeHttpClient, make_fetch_result
 from source_profiles.schema import validate_profile
 from source_profiles.verify import verify_profile
@@ -102,13 +106,42 @@ NON_GREIKI_HTML = """
 <body><p>Hello world, no markers here.</p></body></html>
 """
 
+KANA_INDEX_URL = BASE_URL + "reiki_kana/kana_default.html"
+GREIKI_DOC_URL = BASE_URL + "reiki_honbun/h001.html"
+
+# Fifty-sound index page linking one regulation document (real discovery path
+# of modules.regulations.vendor_greiki.discover_documents).
+KANA_INDEX_HTML = """
+<html><head><title>例規集 五十音順</title></head>
+<body>
+<a href="../reiki_honbun/h001.html">例規集条例</a>
+</body></html>
+"""
+
+# One regulation body extractable by vendor_greiki (div#primary + 第N条).
+GREIKI_DOC_HTML = """
+<html><head><title>太良町例規集条例</title></head>
+<body><div id="primary">
+<h2>第一条</h2><p>この条例は町の例規について定める。</p>
+</div></body></html>
+"""
+
+
+def _greiki_client(**kwargs: object) -> FakeHttpClient:
+    responses: dict[str, object] = {
+        ENTRY_URL: make_fetch_result(ENTRY_URL, GREIKI_HTML),
+        KANA_INDEX_URL: make_fetch_result(KANA_INDEX_URL, KANA_INDEX_HTML),
+        GREIKI_DOC_URL: make_fetch_result(GREIKI_DOC_URL, GREIKI_DOC_HTML),
+    }
+    responses.update(kwargs)  # type: ignore[arg-type]
+    return FakeHttpClient(responses)  # type: ignore[arg-type]
+
 
 class VerifyTests(unittest.TestCase):
     def test_greiki_needs_review_promotes_to_ready(self) -> None:
         profile = _base_greiki_needs_review()
         fetch = make_fetch_result(ENTRY_URL, GREIKI_HTML)
-        # Ensure final_url is same host (make_fetch_result already does)
-        client = FakeHttpClient({ENTRY_URL: fetch})
+        client = _greiki_client()
         updated, report = verify_profile(profile, client=client, now=NOW)
         self.assertEqual("verified", report["result"])
         self.assertEqual("needs_review", report["status_before"])
@@ -163,7 +196,7 @@ class VerifyTests(unittest.TestCase):
     def test_idempotent_second_verify_no_duplicate(self) -> None:
         profile = _base_greiki_needs_review()
         fetch = make_fetch_result(ENTRY_URL, GREIKI_HTML)
-        client = FakeHttpClient({ENTRY_URL: fetch})
+        client = _greiki_client()
         updated1, report1 = verify_profile(profile, client=client, now=NOW)
         self.assertEqual("verified", report1["result"])
         # Second verify with same sha
@@ -195,8 +228,7 @@ class VerifyTests(unittest.TestCase):
 
     def test_promoted_profile_passes_schema(self) -> None:
         profile = _base_greiki_needs_review()
-        fetch = make_fetch_result(ENTRY_URL, GREIKI_HTML)
-        client = FakeHttpClient({ENTRY_URL: fetch})
+        client = _greiki_client()
         updated, report = verify_profile(profile, client=client, now=NOW)
         self.assertEqual("verified", report["result"])
         errs = validate_profile(updated)
@@ -205,14 +237,222 @@ class VerifyTests(unittest.TestCase):
     def test_original_not_mutated(self) -> None:
         profile = _base_greiki_needs_review()
         orig = copy.deepcopy(profile)
-        fetch = make_fetch_result(ENTRY_URL, GREIKI_HTML)
-        client = FakeHttpClient({ENTRY_URL: fetch})
+        client = _greiki_client()
         updated, _ = verify_profile(profile, client=client, now=NOW)
         self.assertEqual(orig, profile)
         self.assertNotEqual(updated, profile)
 
+    def test_not_evaluated_promotes_to_ready(self) -> None:
+        profile = _base_greiki_needs_review()
+        profile["sources"]["regulations"]["status"] = "not_evaluated"  # type: ignore[index]
+        updated, report = verify_profile(
+            profile, client=_greiki_client(), now=NOW
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("not_evaluated", report["status_before"])
+        self.assertEqual("ready", report["status_after"])
+        self.assertEqual("ready", updated["sources"]["regulations"]["status"])
+
+    def test_blocked_entry_passing_all_checks_stays_blocked(self) -> None:
+        # R1: a human-recorded `blocked` judgement must survive verify --live.
+        profile = _base_greiki_needs_review()
+        profile["sources"]["regulations"]["status"] = "blocked"  # type: ignore[index]
+        updated, report = verify_profile(
+            profile, client=_greiki_client(), now=NOW
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("blocked", report["status_before"])
+        self.assertEqual("blocked", report["status_after"])
+        self.assertIn("withheld", report["reason"])
+        self.assertEqual("blocked", updated["sources"]["regulations"]["status"])
+
+    def test_unsupported_and_not_found_passing_checks_stay_unchanged(self) -> None:
+        for prior in ("unsupported", "not_found"):
+            with self.subTest(prior=prior):
+                profile = _base_minutes_static_needs_review()
+                profile["sources"]["minutes"]["status"] = prior  # type: ignore[index]
+                client = FakeHttpClient(
+                    {
+                        MINUTES_INDEX_URL: make_fetch_result(
+                            MINUTES_INDEX_URL, _minutes_council_html_with_pdf()
+                        ),
+                        MINUTES_DOC_URL: make_fetch_result(
+                            MINUTES_DOC_URL, MINUTES_DOC_HTML
+                        ),
+                    }
+                )
+                updated, report = verify_profile(
+                    profile, client=client, now=NOW, kind="minutes"
+                )
+                self.assertEqual("verified", report["result"])
+                self.assertEqual(prior, report["status_before"])
+                self.assertEqual(prior, report["status_after"])
+                self.assertIn("withheld", report["reason"])
+                self.assertEqual(
+                    prior, updated["sources"]["minutes"]["status"]
+                )
+
+    def test_probe_robots_denied_sets_blocked(self) -> None:
+        # R3: robots denial on the extraction probe -> blocked.
+        def make_deny_doc_client() -> FakeHttpClient:
+            class DenyDocClient(FakeHttpClient):
+                def __init__(self) -> None:
+                    super().__init__(
+                        {
+                            ENTRY_URL: make_fetch_result(ENTRY_URL, GREIKI_HTML),
+                            KANA_INDEX_URL: make_fetch_result(
+                                KANA_INDEX_URL, KANA_INDEX_HTML
+                            ),
+                        }
+                    )
+
+                def fetch(
+                    self, url: str, *, tier: CacheTier, **_: object
+                ) -> object:
+                    self.calls.append((url, tier))
+                    if url == GREIKI_DOC_URL:
+                        raise RobotsDeniedError("robots.txt disallows reiki_honbun")
+                    return self.responses[url]
+
+            return DenyDocClient()
+
+        profile = _base_greiki_needs_review()
+        updated, report = verify_profile(
+            profile, client=make_deny_doc_client(), now=NOW
+        )  # type: ignore[arg-type]
+        self.assertEqual("blocked", report["result"])
+        self.assertIn("RobotsDenied", report["reason"])
+        self.assertEqual("needs_review", report["status_before"])
+        self.assertEqual("blocked", report["status_after"])
+        self.assertEqual("blocked", updated["sources"]["regulations"]["status"])
+        notes = updated["sources"]["regulations"].get("notes") or ""
+        self.assertIn("robots", notes.lower())
+        self.assertEqual([], validate_profile(updated))
+
+    def test_probe_robots_denied_downgrades_ready_to_blocked(self) -> None:
+        def make_deny_doc_client() -> FakeHttpClient:
+            class DenyDocClient(FakeHttpClient):
+                def __init__(self) -> None:
+                    super().__init__(
+                        {
+                            ENTRY_URL: make_fetch_result(ENTRY_URL, GREIKI_HTML),
+                            KANA_INDEX_URL: make_fetch_result(
+                                KANA_INDEX_URL, KANA_INDEX_HTML
+                            ),
+                        }
+                    )
+
+                def fetch(
+                    self, url: str, *, tier: CacheTier, **_: object
+                ) -> object:
+                    self.calls.append((url, tier))
+                    if url == GREIKI_DOC_URL:
+                        raise RobotsDeniedError("robots.txt disallows reiki_honbun")
+                    return self.responses[url]
+
+            return DenyDocClient()
+
+        profile = _base_greiki_needs_review()
+        profile["sources"]["regulations"]["status"] = "ready"  # type: ignore[index]
+
+        updated, report = verify_profile(
+            profile, client=make_deny_doc_client(), now=NOW
+        )
+        self.assertEqual("blocked", report["result"])
+        self.assertEqual("ready", report["status_before"])
+        self.assertEqual("blocked", report["status_after"])
+        self.assertEqual("blocked", updated["sources"]["regulations"]["status"])
+
+    def test_probe_unreachable_leaves_status_unchanged(self) -> None:
+        # R5: 404/network error on the probe document -> failed, status kept.
+        for prior in ("needs_review", "not_evaluated", "ready"):
+            with self.subTest(prior=prior):
+                profile = _base_greiki_needs_review()
+                profile["sources"]["regulations"]["status"] = prior  # type: ignore[index]
+
+                class ErrorDocClient(FakeHttpClient):
+                    def __init__(self) -> None:
+                        super().__init__(
+                            {
+                                ENTRY_URL: make_fetch_result(
+                                    ENTRY_URL, GREIKI_HTML
+                                ),
+                                KANA_INDEX_URL: make_fetch_result(
+                                    KANA_INDEX_URL, KANA_INDEX_HTML
+                                ),
+                            }
+                        )
+
+                    def fetch(
+                        self, url: str, *, tier: CacheTier, **_: object
+                    ) -> object:
+                        self.calls.append((url, tier))
+                        if url == GREIKI_DOC_URL:
+                            raise FetchError("HTTP 404")
+                        return self.responses[url]
+
+                updated, report = verify_profile(
+                    profile, client=ErrorDocClient(), now=NOW
+                )  # type: ignore[arg-type]
+                self.assertEqual("failed", report["result"])
+                self.assertIn("FetchError", report["reason"])
+                self.assertEqual(prior, report["status_after"])
+                self.assertEqual(
+                    prior, updated["sources"]["regulations"]["status"]
+                )
+
+    def test_probe_fetches_exactly_one_document(self) -> None:        # R2: the probe fetches exactly ONE document (DOCUMENT tier);
+        # index navigation stays on INDEX tier. (The menu is fetched twice:
+        # once for verify's own structure check, once by discover_documents.)
+        profile = _base_greiki_needs_review()
+        client = _greiki_client()
+        updated, report = verify_profile(profile, client=client, now=NOW)
+        self.assertEqual("verified", report["result"])
+        doc_calls = [u for u, t in client.calls if t == CacheTier.DOCUMENT]
+        self.assertEqual([GREIKI_DOC_URL], doc_calls)
+        self.assertEqual(4, len(client.calls))
+
+    def test_regulations_without_numbered_articles_stays_needs_review(self) -> None:
+        # C4 regression guard (regulations side): a g-reiki page whose body
+        # is plain prose yields only fallback articles with article_no=None;
+        # that is not structural evidence of a regulation. Never ready.
+        profile = _base_greiki_needs_review()
+        no_article_doc = (
+            '<html><head><title>お知らせ</title></head>'
+            '<body><div id="primary">'
+            "<p>お知らせ</p><p>今月の行事予定をお伝えします。</p>"
+            "</div></body></html>"
+        )
+        client = FakeHttpClient(
+            {
+                ENTRY_URL: make_fetch_result(ENTRY_URL, GREIKI_HTML),
+                KANA_INDEX_URL: make_fetch_result(KANA_INDEX_URL, KANA_INDEX_HTML),
+                GREIKI_DOC_URL: make_fetch_result(
+                    GREIKI_DOC_URL, no_article_doc
+                ),
+            }
+        )
+        updated, report = verify_profile(profile, client=client, now=NOW)
+        self.assertEqual("needs_review", report["result"])
+        self.assertIn("probe_found_no_identifiable_records", report["reason"])
+        self.assertIn("numbered articles", report["reason"])
+        self.assertEqual("needs_review", report["status_after"])
+        self.assertEqual("needs_review", updated["sources"]["regulations"]["status"])
+        notes = updated["sources"]["regulations"].get("notes") or ""
+        self.assertIn("no numbered articles", notes)
+
 
 MINUTES_INDEX_URL = "http://www.town.tara.lg.jp/chosei/_1010/_1414.html"
+MINUTES_DOC_URL = "http://www.town.tara.lg.jp/chosei/_1010/other.html"
+
+# HTML minutes body extractable by StaticHtmlAdapter.segment_speeches.
+MINUTES_DOC_HTML = """
+<html><head><title>令和7年 定例会 会議録</title></head>
+<body>
+<p>○ 議長 開会を宣告します。</p>
+<p>○ 太良太郎 一般質問を行います。</p>
+</body></html>
+"""
 
 
 def _base_minutes_static_needs_review() -> dict:
@@ -237,7 +477,7 @@ def _base_minutes_static_needs_review() -> dict:
                     "council_name": "太良町議会",
                     "link_include_regex": "(?i)(会議録|議事録)",
                     "link_exclude_regex": "(?i)(審議会)",
-                    "pdf": True,
+                    "pdf": False,
                 },
             },
             "regulations": {
@@ -280,11 +520,23 @@ def _minutes_council_html_with_pdf() -> str:
 """
 
 
+def _static_minutes_client() -> FakeHttpClient:
+    # Index page + the extractable HTML minutes document the probe fetches.
+    return FakeHttpClient(
+        {
+            MINUTES_INDEX_URL: make_fetch_result(
+                MINUTES_INDEX_URL, _minutes_council_html_with_pdf()
+            ),
+            MINUTES_DOC_URL: make_fetch_result(MINUTES_DOC_URL, MINUTES_DOC_HTML),
+        }
+    )
+
+
 class MinutesStaticVerifyTests(unittest.TestCase):
     def test_minutes_static_promotes_to_ready(self) -> None:
         profile = _base_minutes_static_needs_review()
         fetch = make_fetch_result(MINUTES_INDEX_URL, _minutes_council_html_with_pdf())
-        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        client = _static_minutes_client()
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
@@ -355,21 +607,138 @@ class MinutesStaticVerifyTests(unittest.TestCase):
         self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
 
     def test_generic_title_with_council_pdf_promotes_to_ready(self) -> None:
-        # New rule core: generic title "会議録" still ready if council pdf link exists
+        # Generic title "会議録" still ready if a council document exists AND
+        # the extraction probe yields >=1 speech record.
         profile = _base_minutes_static_needs_review()
         html = """
 <html><head><title>会議録</title></head>
 <body><h1>会議録</h1>
 <a href="/gikai/2024/reiwa6-dai1-teireikai.pdf">令和6年第1回定例会会議録.pdf</a>
+<a href="/gikai/2024/reiwa6-dai1-teireikai.html">令和6年第1回定例会会議録</a>
 </body></html>
 """
-        fetch = make_fetch_result(MINUTES_INDEX_URL, html)
-        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        doc_url = "http://www.town.tara.lg.jp/gikai/2024/reiwa6-dai1-teireikai.html"
+        client = FakeHttpClient(
+            {
+                MINUTES_INDEX_URL: make_fetch_result(MINUTES_INDEX_URL, html),
+                doc_url: make_fetch_result(doc_url, MINUTES_DOC_HTML),
+            }
+        )
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
         self.assertEqual("verified", report["result"])
         self.assertEqual("ready", updated["sources"]["minutes"]["status"])
+
+    def test_gikaidayori_newsletter_prose_stays_needs_review(self) -> None:
+        # 議会だより / 有田 regression guard (C4): an index link labelled
+        # 会議録 pointing at a newsletter with plain prose but NO speakers
+        # is not verbatim minutes. Fallback paragraph chunks carry no
+        # speaker, so this must never be promoted to ready.
+        profile = _base_minutes_static_needs_review()
+        html = """
+<html><head><title>太良町議会 会議録</title></head>
+<body><h1>太良町議会</h1>
+<a href="/gikai/gikaidayori.html">令和7年 会議録</a>
+</body></html>
+"""
+        doc_url = "http://www.town.tara.lg.jp/gikai/gikaidayori.html"
+        newsletter_doc = (
+            '<html><head><title>議会だより 第120号</title></head><body>'
+            "<p>今号の主な内容をお伝えします。</p>"
+            "<p>先月の町内イベントの様子をご紹介します。</p>"
+            "<p>来月の予定は添付資料をご覧ください。</p>"
+            "</body></html>"
+        )
+        client = FakeHttpClient(
+            {
+                MINUTES_INDEX_URL: make_fetch_result(MINUTES_INDEX_URL, html),
+                doc_url: make_fetch_result(doc_url, newsletter_doc),
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("needs_review", report["result"])
+        self.assertIn("probe_found_no_identifiable_records", report["reason"])
+        self.assertIn("speaker-attributed speeches", report["reason"])
+        self.assertEqual("needs_review", report["status_after"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+        notes = updated["sources"]["minutes"].get("notes") or ""
+        self.assertIn("no speaker-attributed speeches", notes)
+        self.assertNotEqual("ready", updated["sources"]["minutes"]["status"])
+
+    def test_static_probe_robots_denied_downgrades_ready_to_blocked(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        profile["sources"]["minutes"]["status"] = "ready"  # type: ignore[index]
+
+        class DenyStaticDocClient(FakeHttpClient):
+            def __init__(self) -> None:
+                super().__init__(
+                    {
+                        MINUTES_INDEX_URL: make_fetch_result(
+                            MINUTES_INDEX_URL, _minutes_council_html_with_pdf()
+                        ),
+                    }
+                )
+
+            def fetch(self, url: str, *, tier: CacheTier, **_: object) -> object:
+                self.calls.append((url, tier))
+                if url == MINUTES_DOC_URL:
+                    raise RobotsDeniedError("robots.txt disallows /chosei/")
+                return self.responses[url]
+
+        updated, report = verify_profile(
+            profile, client=DenyStaticDocClient(), now=NOW, kind="minutes"
+        )  # type: ignore[arg-type]
+        self.assertEqual("blocked", report["result"])
+        self.assertEqual("ready", report["status_before"])
+        self.assertEqual("blocked", report["status_after"])
+        self.assertEqual("blocked", updated["sources"]["minutes"]["status"])
+        self.assertIn(
+            "robots", (updated["sources"]["minutes"].get("notes") or "").lower()
+        )
+        self.assertEqual([], validate_profile(updated))
+
+    def test_static_probe_unreachable_leaves_status_unchanged(self) -> None:
+        prior_status = "not_evaluated"
+        profile = _base_minutes_static_needs_review()
+        profile["sources"]["minutes"]["status"] = prior_status  # type: ignore[index]
+
+        class ErrorStaticDocClient(FakeHttpClient):
+            def __init__(self) -> None:
+                super().__init__(
+                    {
+                        MINUTES_INDEX_URL: make_fetch_result(
+                            MINUTES_INDEX_URL, _minutes_council_html_with_pdf()
+                        ),
+                    }
+                )
+
+            def fetch(self, url: str, *, tier: CacheTier, **_: object) -> object:
+                self.calls.append((url, tier))
+                if url == MINUTES_DOC_URL:
+                    raise FetchError("HTTP 404")
+                return self.responses[url]
+
+        updated, report = verify_profile(
+            profile, client=ErrorStaticDocClient(), now=NOW, kind="minutes"
+        )  # type: ignore[arg-type]
+        self.assertEqual("failed", report["result"])
+        self.assertIn("FetchError", report["reason"])
+        self.assertEqual(prior_status, report["status_after"])
+        self.assertEqual(prior_status, updated["sources"]["minutes"]["status"])
+
+    def test_static_probe_fetches_exactly_one_document(self) -> None:
+        profile = _base_minutes_static_needs_review()
+        client = _static_minutes_client()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="minutes"
+        )
+        self.assertEqual("verified", report["result"])
+        doc_calls = [u for u, t in client.calls if t == CacheTier.DOCUMENT]
+        self.assertEqual([MINUTES_DOC_URL], doc_calls)
+        self.assertEqual(2, len(client.calls))
 
     def test_agri_committee_pdf_only_does_not_promote(self) -> None:
         profile = _base_minutes_static_needs_review()
@@ -446,7 +815,7 @@ class MinutesStaticVerifyTests(unittest.TestCase):
     def test_minutes_idempotent(self) -> None:
         profile = _base_minutes_static_needs_review()
         fetch = make_fetch_result(MINUTES_INDEX_URL, _minutes_council_html_with_pdf())
-        client = FakeHttpClient({MINUTES_INDEX_URL: fetch})
+        client = _static_minutes_client()
         updated1, report1 = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
@@ -461,6 +830,90 @@ class MinutesStaticVerifyTests(unittest.TestCase):
         cnt2 = sum(1 for e in ev2 if e.get("sha256") == fetch.sha256)
         self.assertEqual(cnt1, cnt2)
         self.assertEqual(len(ev1), len(ev2))
+
+
+class StaticPdfProbeTests(unittest.TestCase):
+    """PDF probe contrast: pdftotext present vs absent (C1-C3).
+
+    Same municipality, same PDF document; only the local tooling differs.
+    A missing pdftotext must be INCONCLUSIVE (status untouched, result
+    failed), never a "yielded no records" demotion.
+    """
+
+    PDF_DOC_URL = "http://www.town.tara.lg.jp/chosei/_1010/reiwa7.pdf"
+
+    def _pdf_profile(self, prior_status: str) -> dict:
+        profile = _base_minutes_static_needs_review()
+        profile["sources"]["minutes"]["status"] = prior_status  # type: ignore[index]
+        profile["sources"]["minutes"]["config"]["pdf"] = True  # type: ignore[index]
+        return profile
+
+    def _pdf_client(self) -> FakeHttpClient:
+        html = (
+            '<html><head><title>太良町議会 会議録</title></head><body>'
+            "<h1>太良町議会 会議録</h1>"
+            f'<a href="{self.PDF_DOC_URL}">令和7年 定例会 会議録 (PDF)</a>'
+            "</body></html>"
+        )
+        return FakeHttpClient(
+            {
+                MINUTES_INDEX_URL: make_fetch_result(MINUTES_INDEX_URL, html),
+                self.PDF_DOC_URL: make_fetch_result(
+                    self.PDF_DOC_URL,
+                    "%PDF-1.4 synthetic minutes pdf",
+                    content_type="application/pdf",
+                ),
+            }
+        )
+
+    def _patch_pdftotext(self, available: bool) -> tuple[mock._patch, ...]:  # type: ignore[name-defined]
+        which_target = "modules.minutes_db.adapters.static_html.shutil.which"
+        run_target = "modules.minutes_db.adapters.static_html.subprocess.run"
+        if not available:
+            return (mock.patch(which_target, return_value=None),)
+        text = "○ 議長 開会を宣告します。\n○ 太良太郎 一般質問を行います。\n"
+        completed = subprocess.CompletedProcess(
+            args=[], returncode=0, stdout=text.encode("utf-8"), stderr=b""
+        )
+        return (
+            mock.patch(which_target, return_value="/usr/bin/pdftotext"),
+            mock.patch(run_target, return_value=completed),
+        )
+
+    def test_pdf_probe_without_pdftotext_is_inconclusive_not_demoted(self) -> None:
+        # C2/C3: the adapter could not read the document, so the probe says
+        # nothing about the source. Status must stay EXACTLY as it was and
+        # the reason must name the adapter status.
+        for prior in ("needs_review", "ready", "not_evaluated"):
+            with self.subTest(prior=prior):
+                profile = self._pdf_profile(prior)
+                (which_patch,) = self._patch_pdftotext(available=False)
+                with which_patch:
+                    updated, report = verify_profile(
+                        profile,
+                        client=self._pdf_client(),
+                        now=NOW,
+                        kind="minutes",
+                    )
+                self.assertEqual("failed", report["result"])
+                self.assertIn("probe_inconclusive", report["reason"])
+                self.assertIn("pdf_cached_pdftotext_unavailable", report["reason"])
+                self.assertEqual(prior, report["status_after"])
+                self.assertEqual(prior, updated["sources"]["minutes"]["status"])
+                notes = updated["sources"]["minutes"].get("notes") or ""
+                self.assertNotIn("yielded no records", notes)
+
+    def test_pdf_probe_with_pdftotext_promotes_to_ready(self) -> None:
+        # A PDF document that extracts successfully promotes to ready.
+        profile = self._pdf_profile("needs_review")
+        which_patch, run_patch = self._patch_pdftotext(available=True)
+        with which_patch, run_patch:
+            updated, report = verify_profile(
+                profile, client=self._pdf_client(), now=NOW, kind="minutes"
+            )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", report["status_after"])
+        self.assertEqual("ready", updated["sources"]["minutes"]["status"])
 
 
 # -------------------------------------------------------------------
@@ -481,6 +934,81 @@ def _kaigiroku_entrance_html(tenant: str = KAI_TENANT_SLUG) -> str:
 <div>ssp.kaigiroku.net tenant {tenant}</div>
 </body></html>
 """
+
+
+KAI_CALLBACK = "lcaoMinutesCallback"
+KAI_API_ROOT = "https://ssp.kaigiroku.net/dnp/search/"
+
+
+def _kaigiroku_api_url(endpoint: str, **params: str) -> str:
+    # Same request shape as KaigirokuNetAdapter._api.
+    query = urlencode(
+        {"tenant_id": KAI_TENANT_SLUG, **params, "callback": KAI_CALLBACK}
+    )
+    return f"{KAI_API_ROOT}{endpoint}?{query}"
+
+
+KAI_COUNCILS_URL = _kaigiroku_api_url("councils/index")
+KAI_YEARS_URL = _kaigiroku_api_url("councils/get_view_years", council_id="c1")
+KAI_INDEX_API_URL = _kaigiroku_api_url(
+    "minutes/get_index", council_id="c1", year="2026"
+)
+KAI_MINUTE_URL = _kaigiroku_api_url(
+    "minutes/get_minute", council_id="c1", schedule_id="s1", minute_id="m1"
+)
+
+
+def _jsonp(payload: object) -> str:
+    return f"{KAI_CALLBACK}({json.dumps(payload, ensure_ascii=False)});"
+
+
+def _kaigiroku_client() -> FakeHttpClient:
+    """Tenant page + the real JSONP API chain used by KaigirokuNetAdapter."""
+    return FakeHttpClient(
+        {
+            KAI_TENANT_URL: make_fetch_result(
+                KAI_TENANT_URL, _kaigiroku_entrance_html()
+            ),
+            KAI_COUNCILS_URL: make_fetch_result(
+                KAI_COUNCILS_URL,
+                _jsonp([{"council_id": "c1", "council_name": "唐津市議会"}]),
+            ),
+            KAI_YEARS_URL: make_fetch_result(
+                KAI_YEARS_URL, _jsonp([{"view_year": "2026"}])
+            ),
+            KAI_INDEX_API_URL: make_fetch_result(
+                KAI_INDEX_API_URL,
+                _jsonp(
+                    [
+                        {
+                            "council_id": "c1",
+                            "schedule_id": "s1",
+                            "minute_id": "m1",
+                            "meeting_name": "令和8年3月定例会",
+                            "date": "2026-03-01",
+                        }
+                    ]
+                ),
+            ),
+            KAI_MINUTE_URL: make_fetch_result(
+                KAI_MINUTE_URL,
+                _jsonp(
+                    [
+                        {
+                            "speech_no": 1,
+                            "speaker_name": "議長",
+                            "speech_text": "開会を宣告します。",
+                        },
+                        {
+                            "speech_no": 2,
+                            "speaker_name": "市長",
+                            "speech_text": "提案理由を説明します。",
+                        },
+                    ]
+                ),
+            ),
+        }
+    )
 
 
 def _base_kaigiroku_needs_review(tenant_url: str = KAI_TENANT_URL) -> dict:
@@ -532,7 +1060,7 @@ class KaigirokuNetVerifyTests(unittest.TestCase):
     def test_kaigiroku_promotes_to_ready(self) -> None:
         profile = _base_kaigiroku_needs_review()
         fetch = make_fetch_result(KAI_TENANT_URL, _kaigiroku_entrance_html())
-        client = FakeHttpClient({KAI_TENANT_URL: fetch})
+        client = _kaigiroku_client()
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
@@ -552,11 +1080,12 @@ class KaigirokuNetVerifyTests(unittest.TestCase):
             )
         )
         self.assertEqual([], validate_profile(updated))
-        # robots forbidden areas must not be fetched
+        # The extraction probe goes through the real adapter's JSONP API
+        # chain (that is where the speeches come from); the shared JS asset
+        # linked from the page is never fetched.
         fetched = [u for u, _ in client.calls]
-        self.assertEqual([KAI_TENANT_URL], fetched)
         self.assertFalse(any("/tenant/js/" in u for u in fetched))
-        self.assertFalse(any("/dnp/search/" in u for u in fetched))
+        self.assertIn(KAI_MINUTE_URL, fetched)
 
     def test_invalid_tenant_url_host_not_kaigiroku(self) -> None:
         orig = _base_kaigiroku_needs_review(
@@ -656,7 +1185,7 @@ class KaigirokuNetVerifyTests(unittest.TestCase):
     def test_idempotent(self) -> None:
         profile = _base_kaigiroku_needs_review()
         fetch = make_fetch_result(KAI_TENANT_URL, _kaigiroku_entrance_html())
-        client = FakeHttpClient({KAI_TENANT_URL: fetch})
+        client = _kaigiroku_client()
         updated1, report1 = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
@@ -672,18 +1201,80 @@ class KaigirokuNetVerifyTests(unittest.TestCase):
         self.assertEqual(cnt1, cnt2)
         self.assertEqual(len(ev1), len(ev2))
 
-    def test_does_not_fetch_robots_forbidden_urls(self) -> None:
+    def test_probe_goes_through_real_api_exactly_one_document(self) -> None:
+        # R2: the kaigiroku probe lists one meeting via the real adapter and
+        # extracts its speeches; the speeches endpoint (the document body) is
+        # fetched exactly once. The shared JS asset linked from the page is
+        # never fetched.
         profile = _base_kaigiroku_needs_review()
-        fetch = make_fetch_result(KAI_TENANT_URL, _kaigiroku_entrance_html())
-        client = FakeHttpClient({KAI_TENANT_URL: fetch})
+        client = _kaigiroku_client()
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
         self.assertEqual("verified", report["result"])
         fetched = [u for u, _ in client.calls]
         self.assertNotIn("https://ssp.kaigiroku.net/tenant/js/app.js", fetched)
-        self.assertNotIn("https://ssp.kaigiroku.net/dnp/search/councils/index", fetched)
-        self.assertEqual(1, len(fetched))
+        minute_calls = [u for u in fetched if u == KAI_MINUTE_URL]
+        self.assertEqual([KAI_MINUTE_URL], minute_calls)
+
+    def _api_robots_denied_client(self) -> FakeHttpClient:
+        """Tenant index fetches fine; every /dnp/search/ API call is robots-denied.
+
+        This is the real-world shape of kaigiroku.net: robots.txt allows the
+        tenant index and forbids the /dnp/search/ API paths.
+        """
+
+        class KaigirokuApiRobotsClient(FakeHttpClient):
+            def __init__(self) -> None:
+                super().__init__(
+                    {
+                        KAI_TENANT_URL: make_fetch_result(
+                            KAI_TENANT_URL, _kaigiroku_entrance_html()
+                        )
+                    }
+                )
+
+            def fetch(self, url: str, *, tier: CacheTier, **_: object) -> object:
+                self.calls.append((url, tier))
+                if url.startswith(KAI_API_ROOT):
+                    raise RobotsDeniedError("robots.txt disallows /dnp/search/")
+                return self.responses[url]
+
+        return KaigirokuApiRobotsClient()
+
+    def test_kaigiroku_api_robots_denied_sets_blocked(self) -> None:
+        profile = _base_kaigiroku_needs_review()
+        updated, report = verify_profile(
+            profile,
+            client=self._api_robots_denied_client(),
+            now=NOW,
+            kind="minutes",
+        )  # type: ignore[arg-type]
+        self.assertEqual("blocked", report["result"])
+        self.assertIn("RobotsDenied", report["reason"])
+        self.assertEqual("needs_review", report["status_before"])
+        self.assertEqual("blocked", report["status_after"])
+        self.assertEqual("blocked", updated["sources"]["minutes"]["status"])
+        notes = updated["sources"]["minutes"].get("notes") or ""
+        self.assertIn("robots", notes.lower())
+        self.assertEqual([], validate_profile(updated))
+
+    def test_kaigiroku_api_robots_denied_downgrades_ready_to_blocked(self) -> None:
+        profile = _base_kaigiroku_needs_review()
+        profile["sources"]["minutes"]["status"] = "ready"  # type: ignore[index]
+        updated, report = verify_profile(
+            profile,
+            client=self._api_robots_denied_client(),
+            now=NOW,
+            kind="minutes",
+        )
+        self.assertEqual("blocked", report["result"])
+        self.assertEqual("ready", report["status_before"])
+        self.assertEqual("blocked", report["status_after"])
+        self.assertEqual("blocked", updated["sources"]["minutes"]["status"])
+        notes = updated["sources"]["minutes"].get("notes") or ""
+        self.assertIn("robots", notes.lower())
+        self.assertEqual([], validate_profile(updated))
 
 
 # -------------------------------------------------------------------
@@ -720,13 +1311,19 @@ def _root_html_with_year_links(extra: str = "") -> str:
 """
 
 
-def _year_html_with_council_pdf(
-    label: str = "令和7年第1回定例会 1日目 会議録.pdf",
+FOLLOW_DOC_URL = "http://www.town.tara.lg.jp/var/rev0/0021/4208/1265717119.html"
+DEPTH2_DOC_URL = (
+    "http://www.town.tara.lg.jp/shisei/shigikai/R8gikai/202609/202609teirei.html"
+)
+
+
+def _year_html_with_council_doc(
+    label: str = "令和7年第1回定例会 1日目 会議録",
 ) -> str:
     return f"""
 <html><head><title>令和7年</title></head>
 <body><h1>令和7年</h1><h2>定例会</h2>
-<a href="/var/rev0/0021/4208/1265717119.pdf">{label}</a>
+<a href="/var/rev0/0021/4208/1265717119.html">{label}</a>
 </body></html>
 """
 
@@ -735,9 +1332,13 @@ class FollowLinkVerifyTests(unittest.TestCase):
     def test_follow_success_root_no_pdf_follow_has_doc(self) -> None:
         profile = _base_follow_profile()
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _root_html_with_year_links())
-        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_pdf())
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_doc())
         client = FakeHttpClient(
-            {FOLLOW_INDEX_URL: root_fetch, FOLLOW_YEAR_URL: year_fetch}
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                FOLLOW_YEAR_URL: year_fetch,
+                FOLLOW_DOC_URL: make_fetch_result(FOLLOW_DOC_URL, MINUTES_DOC_HTML),
+            }
         )
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
@@ -772,9 +1373,13 @@ class FollowLinkVerifyTests(unittest.TestCase):
             extra='<a href="/chosei/_1010/_1414/_9999.html">お知らせ</a>'
         )
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
-        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_pdf())
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_doc())
         client = FakeHttpClient(
-            {FOLLOW_INDEX_URL: root_fetch, FOLLOW_YEAR_URL: year_fetch}
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                FOLLOW_YEAR_URL: year_fetch,
+                FOLLOW_DOC_URL: make_fetch_result(FOLLOW_DOC_URL, MINUTES_DOC_HTML),
+            }
         )
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
@@ -800,9 +1405,13 @@ class FollowLinkVerifyTests(unittest.TestCase):
 """
         # need to ensure evil link would otherwise match but host mismatch prevents fetch
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
-        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_pdf())
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_doc())
         client = FakeHttpClient(
-            {FOLLOW_INDEX_URL: root_fetch, FOLLOW_YEAR_URL: year_fetch}
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                FOLLOW_YEAR_URL: year_fetch,
+                FOLLOW_DOC_URL: make_fetch_result(FOLLOW_DOC_URL, MINUTES_DOC_HTML),
+            }
         )
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
@@ -830,7 +1439,7 @@ class FollowLinkVerifyTests(unittest.TestCase):
         fetch1 = make_fetch_result(FOLLOW_YEAR_URL, empty_year)
         fetch2 = make_fetch_result(FOLLOW_YEAR_URL_2, empty_year)
         fetch3 = make_fetch_result(FOLLOW_YEAR_URL_3, empty_year)
-        fetch4 = make_fetch_result(FOLLOW_YEAR_URL_4, _year_html_with_council_pdf())
+        fetch4 = make_fetch_result(FOLLOW_YEAR_URL_4, _year_html_with_council_doc())
         client = FakeHttpClient(
             {
                 FOLLOW_INDEX_URL: root_fetch,
@@ -882,11 +1491,12 @@ class FollowLinkVerifyTests(unittest.TestCase):
 </body></html>
 """
         month_fetch = make_fetch_result(
-            month_url, _year_html_with_council_pdf()
+            month_url, _year_html_with_council_doc()
         )
         responses = {
             FOLLOW_INDEX_URL: root_fetch,
             month_url: month_fetch,
+            FOLLOW_DOC_URL: make_fetch_result(FOLLOW_DOC_URL, MINUTES_DOC_HTML),
         }
         for u in year_urls:
             responses[u] = make_fetch_result(u, year_html)
@@ -910,7 +1520,7 @@ class FollowLinkVerifyTests(unittest.TestCase):
 <a href="/chosei/_1010/_1414/nested.html">令和7年 詳細</a>
 </body></html>
 """
-        nested_html = _year_html_with_council_pdf()
+        nested_html = _year_html_with_council_doc()
         year_fetch = make_fetch_result(FOLLOW_YEAR_URL, year_html)
         nested_fetch = make_fetch_result(nested_url, nested_html)
         client = FakeHttpClient(
@@ -968,9 +1578,13 @@ class FollowLinkVerifyTests(unittest.TestCase):
     def test_idempotent_follow(self) -> None:
         profile = _base_follow_profile()
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _root_html_with_year_links())
-        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_pdf())
+        year_fetch = make_fetch_result(FOLLOW_YEAR_URL, _year_html_with_council_doc())
         client = FakeHttpClient(
-            {FOLLOW_INDEX_URL: root_fetch, FOLLOW_YEAR_URL: year_fetch}
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                FOLLOW_YEAR_URL: year_fetch,
+                FOLLOW_DOC_URL: make_fetch_result(FOLLOW_DOC_URL, MINUTES_DOC_HTML),
+            }
         )
         updated1, _ = verify_profile(profile, client=client, now=NOW, kind="minutes")
         self.assertEqual("ready", updated1["sources"]["minutes"]["status"])
@@ -990,8 +1604,14 @@ class FollowLinkVerifyTests(unittest.TestCase):
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
         encoded_url = "http://www.town.tara.lg.jp/chosei/_1010/_1414/%E4%BB%A4%E5%92%8C7%E5%B9%B4.html"
         # Fake client expects the resolved canonical url (which keeps encoded form)
-        year_fetch = make_fetch_result(encoded_url, _year_html_with_council_pdf())
-        client = FakeHttpClient({FOLLOW_INDEX_URL: root_fetch, encoded_url: year_fetch})
+        year_fetch = make_fetch_result(encoded_url, _year_html_with_council_doc())
+        client = FakeHttpClient(
+            {
+                FOLLOW_INDEX_URL: root_fetch,
+                encoded_url: year_fetch,
+                FOLLOW_DOC_URL: make_fetch_result(FOLLOW_DOC_URL, MINUTES_DOC_HTML),
+            }
+        )
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
@@ -1013,6 +1633,17 @@ def _dbsr_index_html() -> str:
         "<h1>神埼市議会 会議録</h1>"
         '<a href="/index.php/1001">令和7年6月定例会 会議録</a>'
         '<a href="/index.php/1002">令和7年9月定例会 会議録</a>'
+        "</body></html>"
+    )
+
+
+def _dbsr_meeting_html() -> str:
+    # Meeting detail page with speaker-attributed speeches (C4: fallback
+    # paragraph chunks without speakers do not count as identification).
+    return (
+        "<html><head><title>令和7年6月定例会 本会議</title></head><body>"
+        "<p>○議長（山田太郎）　開会します。</p>"
+        "<p>○市長　提案理由を説明します。</p>"
         "</body></html>"
     )
 
@@ -1079,7 +1710,7 @@ class DbsrVerifyTests(unittest.TestCase):
     def test_dbsr_promotes_to_ready(self) -> None:
         profile = _base_dbsr_needs_review()
         fetch = make_fetch_result(DBSR_INDEX_URL, _dbsr_index_html())
-        detail_fetch = make_fetch_result(DBSR_DETAIL_URL, "<html>detail body</html>")
+        detail_fetch = make_fetch_result(DBSR_DETAIL_URL, _dbsr_meeting_html())
         client = FakeHttpClient({DBSR_INDEX_URL: fetch, DBSR_DETAIL_URL: detail_fetch})
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
@@ -1109,7 +1740,7 @@ class DbsrVerifyTests(unittest.TestCase):
         profile = _base_dbsr_needs_review(index_url=index_url)
         fetch = make_fetch_result(index_url, _dbsr_query_index_html())
         query_url = "http://www.town.kamimine.saga.dbsr.jp/index.php/?QueryType=New&Template=List&ListOrder=ASC&Cabinet=1&TermStart=2026-06-05&TermEnd=2026-06-12"
-        query_fetch = make_fetch_result(query_url, "<html>query detail</html>")
+        query_fetch = make_fetch_result(query_url, _dbsr_meeting_html())
         client = FakeHttpClient({index_url: fetch, query_url: query_fetch})
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
@@ -1121,7 +1752,7 @@ class DbsrVerifyTests(unittest.TestCase):
     def test_dbsr_evidence_idempotent(self) -> None:
         profile = _base_dbsr_needs_review()
         fetch = make_fetch_result(DBSR_INDEX_URL, _dbsr_index_html())
-        detail_fetch = make_fetch_result(DBSR_DETAIL_URL, "<html>detail body</html>")
+        detail_fetch = make_fetch_result(DBSR_DETAIL_URL, _dbsr_meeting_html())
         client = FakeHttpClient({DBSR_INDEX_URL: fetch, DBSR_DETAIL_URL: detail_fetch})
         once, _ = verify_profile(profile, client=client, now=NOW, kind="minutes")
         twice, _ = verify_profile(once, client=client, now=NOW, kind="minutes")
@@ -1362,11 +1993,11 @@ def _year_html_depth2(month_url: str = DEPTH2_MONTH_URL) -> str:
 """
 
 
-def _month_html_with_pdf() -> str:
+def _month_html_with_doc() -> str:
     return """
 <html><head><title>202609</title></head>
 <body><h1>202609</h1><h2>定例会</h2>
-<a href="/shisei/shigikai/R8gikai/202609/202609teirei.pdf">令和7年 定例会 会議録.pdf</a>
+<a href="/shisei/shigikai/R8gikai/202609/202609teirei.html">令和7年 定例会 会議録</a>
 </body></html>
 """
 
@@ -1376,12 +2007,15 @@ class Depth2VerifyTests(unittest.TestCase):
         profile = _base_depth_profile(depth=2)
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
         year_fetch = make_fetch_result(DEPTH2_YEAR_URL, _year_html_depth2())
-        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
+        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_doc())
         client = FakeHttpClient(
             {
                 FOLLOW_INDEX_URL: root_fetch,
                 DEPTH2_YEAR_URL: year_fetch,
                 DEPTH2_MONTH_URL: month_fetch,
+                DEPTH2_DOC_URL: make_fetch_result(
+                    DEPTH2_DOC_URL, MINUTES_DOC_HTML
+                ),
             }
         )
         updated, report = verify_profile(
@@ -1413,12 +2047,15 @@ class Depth2VerifyTests(unittest.TestCase):
         profile = _base_depth_profile()  # default depth 1
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, _index_html_depth2())
         year_fetch = make_fetch_result(DEPTH2_YEAR_URL, _year_html_depth2())
-        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
+        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_doc())
         client = FakeHttpClient(
             {
                 FOLLOW_INDEX_URL: root_fetch,
                 DEPTH2_YEAR_URL: year_fetch,
                 DEPTH2_MONTH_URL: month_fetch,
+                DEPTH2_DOC_URL: make_fetch_result(
+                    DEPTH2_DOC_URL, MINUTES_DOC_HTML
+                ),
             }
         )
         updated, report = verify_profile(
@@ -1438,13 +2075,18 @@ class Depth2VerifyTests(unittest.TestCase):
         root_html = f'<html><head><title>会議録</title></head><body><h1>会議録</h1><a href="{l1}">R8gikai</a></body></html>'
         year_html = f'<html><head><title>y</title></head><body><h1>R8</h1><a href="{l2}">202609</a></body></html>'
         month_html = f'<html><head><title>m</title></head><body><h1>2026</h1><a href="{l3}">2026-09-01</a></body></html>'
-        day_html = _month_html_with_pdf()
+        day_html = '<html><head><title>2026</title></head><body><h1>2026-09-01</h1><a href="202609teirei.html">令和7年 定例会 会議録</a></body></html>'
+        day_doc_url = (
+            "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai/"
+            "202609/202609teirei.html"
+        )
         client = FakeHttpClient(
             {
                 FOLLOW_INDEX_URL: make_fetch_result(FOLLOW_INDEX_URL, root_html),
                 l1: make_fetch_result(l1, year_html),
                 l2: make_fetch_result(l2, month_html),
                 l3: make_fetch_result(l3, day_html),
+                day_doc_url: make_fetch_result(day_doc_url, MINUTES_DOC_HTML),
             }
         )
         updated, report = verify_profile(
@@ -1466,12 +2108,15 @@ class Depth2VerifyTests(unittest.TestCase):
 """
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
         year_fetch = make_fetch_result(DEPTH2_YEAR_URL, _year_html_depth2())
-        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
+        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_doc())
         client = FakeHttpClient(
             {
                 FOLLOW_INDEX_URL: root_fetch,
                 DEPTH2_YEAR_URL: year_fetch,
                 DEPTH2_MONTH_URL: month_fetch,
+                DEPTH2_DOC_URL: make_fetch_result(
+                    DEPTH2_DOC_URL, MINUTES_DOC_HTML
+                ),
             }
         )
         updated, report = verify_profile(
@@ -1483,25 +2128,30 @@ class Depth2VerifyTests(unittest.TestCase):
         self.assertIn(DEPTH2_YEAR_URL, fetched)
 
     def test_pdf_link_never_followed(self) -> None:
+        # A PDF link stops navigation (it counts as a document), but with an
+        # HTML-only config the extraction probe cannot use it: it is never
+        # fetched and the entry is never promoted on it.
         profile = _base_depth_profile(follow_regex="R8gikai", depth=2)
         pdf_url = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai.pdf"
-        root_html = f'<html><head><title>会議録</title></head><body><h1>会議録</h1><a href="{pdf_url}">R8gikai</a><a href="{DEPTH2_YEAR_URL}">R8gikai</a></body></html>'
+        root_html = f'<html><head><title>会議録</title></head><body><h1>会議録</h1><a href="{DEPTH2_YEAR_URL}">R8gikai</a></body></html>'
+        year_html = (
+            '<html><head><title>y</title></head><body><h1>R8</h1>'
+            f'<a href="{pdf_url}">令和7年定例会 会議録</a>'
+            "</body></html>"
+        )
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
-        year_fetch = make_fetch_result(DEPTH2_YEAR_URL, _year_html_depth2())
-        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
-        # even though pdf link matches regex, it must not be fetched
+        year_fetch = make_fetch_result(DEPTH2_YEAR_URL, year_html)
         client = FakeHttpClient(
             {
                 FOLLOW_INDEX_URL: root_fetch,
                 DEPTH2_YEAR_URL: year_fetch,
-                DEPTH2_MONTH_URL: month_fetch,
-                pdf_url: make_fetch_result(pdf_url, _month_html_with_pdf()),
             }
         )
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="minutes"
         )
-        self.assertEqual("verified", report["result"])
+        self.assertEqual("needs_review", report["result"])
+        self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
         fetched = [u for u, _ in client.calls]
         self.assertNotIn(pdf_url, fetched)
 
@@ -1521,7 +2171,7 @@ class Depth2VerifyTests(unittest.TestCase):
 </body></html>
 """
         empty = "<html><head><title>y</title></head><body><h1>R8</h1><p>no doc</p></body></html>"
-        pdf_html = _month_html_with_pdf()
+        pdf_html = _month_html_with_doc()
         # y4 would have the doc but should not be fetched due to cap
         client = FakeHttpClient(
             {
@@ -1553,7 +2203,7 @@ class Depth2VerifyTests(unittest.TestCase):
         y2_html = "<html><head><title>y2</title></head><body><h1>R8</h1><p>no doc</p></body></html>"
         # m2 has doc but should be beyond cap if BFS respects global cap
         m1_html = "<html><head><title>m1</title></head><body><h1>2026</h1><p>no doc</p></body></html>"
-        m2_html = _month_html_with_pdf()
+        m2_html = _month_html_with_doc()
         client = FakeHttpClient(
             {
                 FOLLOW_INDEX_URL: make_fetch_result(FOLLOW_INDEX_URL, root_html),
@@ -1582,12 +2232,15 @@ class Depth2VerifyTests(unittest.TestCase):
         encoded_url = "http://www.town.tara.lg.jp/chosei/_1010/_1414/R8gikai.html"
         root_fetch = make_fetch_result(FOLLOW_INDEX_URL, root_html)
         year_fetch = make_fetch_result(encoded_url, _year_html_depth2())
-        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_pdf())
+        month_fetch = make_fetch_result(DEPTH2_MONTH_URL, _month_html_with_doc())
         client = FakeHttpClient(
             {
                 FOLLOW_INDEX_URL: root_fetch,
                 encoded_url: year_fetch,
                 DEPTH2_MONTH_URL: month_fetch,
+                DEPTH2_DOC_URL: make_fetch_result(
+                    DEPTH2_DOC_URL, MINUTES_DOC_HTML
+                ),
             }
         )
         updated, report = verify_profile(

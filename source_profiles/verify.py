@@ -8,9 +8,13 @@ import urllib.parse
 from collections import deque
 from html.parser import HTMLParser
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 from lcaios.http import CacheTier, RobotsDeniedError
+from modules.minutes_db.adapters.dbsr import DbsrAdapter
+from modules.minutes_db.adapters.kaigiroku_net import KaigirokuNetAdapter
+from modules.minutes_db.adapters.static_html import StaticHtmlAdapter
+from modules.regulations.vendor_greiki import discover_documents, fetch_document
 from source_profiles.schema import validate_profile
 
 try:
@@ -200,6 +204,328 @@ def _collapse(value: str) -> str:
     return re.sub(r"\s+", " ", value.replace("\u3000", " ")).strip()
 
 
+# R1: `ready` may only be granted from these prior statuses.
+_PROMOTABLE_PRIOR_STATUSES = ("needs_review", "not_evaluated")
+
+_ROBOTS_BLOCKED_NOTE = (
+    "document bodies reached through this entry are robots-restricted "
+    "(robots.txt disallows document paths); ingestion requires the "
+    "councilor/user to obtain municipality permission "
+    "(out of scope for automated ingestion)"
+)
+
+
+def _append_note(entry: dict[str, Any], note: str, *, marker: str) -> None:
+    """Append a note once (idempotent on marker)."""
+    existing = entry.get("notes")
+    if isinstance(existing, str) and marker in existing.lower():
+        return
+    if isinstance(existing, str) and existing.strip():
+        entry["notes"] = existing.rstrip() + " " + note
+    else:
+        entry["notes"] = note
+
+
+def _evidence_item(
+    url: str, observed_on: str, result: Any, now: str
+) -> dict[str, Any]:
+    sha256 = result.sha256 if hasattr(result, "sha256") else ""
+    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now
+    return {
+        "url": url,
+        "observed_on": observed_on,
+        "sha256": sha256,
+        "fetched_at": fetched_at,
+    }
+
+
+def _append_pending_evidence(entry: dict[str, Any], items: list[dict[str, Any]]) -> None:
+    """Append evidence idempotently on url+sha256."""
+    evidence = entry.get("evidence")
+    if not isinstance(evidence, list):
+        evidence = []
+        entry["evidence"] = evidence
+    for item in items:
+        duplicate = any(
+            isinstance(ev, dict)
+            and ev.get("url") == item.get("url")
+            and ev.get("sha256") == item.get("sha256")
+            for ev in evidence
+        )
+        if not duplicate:
+            evidence.append(item)
+
+
+def _run_extraction_probe(
+    probe: Callable[[], tuple[list[dict[str, Any]], Any]],
+) -> tuple[str, Any]:
+    """Run one extraction probe; classify outcome as ok/robots/error."""
+    try:
+        return "ok", probe()
+    except RobotsDeniedError as exc:
+        return "robots", exc
+    except Exception as exc:  # noqa: BLE001
+        return "error", exc
+
+
+# Single classification point for the adapter provenance status returned by a
+# probe (C1/C2). "extracted" means the adapter really READ the document, so a
+# zero record count is a verdict about the SOURCE (R4: needs_review).
+# "inconclusive" means the adapter could NOT read the document (e.g. the
+# pdftotext binary was missing), so we learned nothing about the source and
+# must not change the status (R5: failed, status untouched).
+# Any future adapter status meaning "could not read" MUST be declared here,
+# otherwise it will be treated as "the document was read".
+_PROBE_STATUS_CLASSIFICATION: dict[str, str] = {
+    "extracted": "extracted",
+    "html_no_text": "extracted",
+    "text_without_segments": "extracted",
+    "pdf_no_text": "extracted",  # tool ran fine, output empty: document was read
+    "pdf_cached_pdftotext_unavailable": "inconclusive",
+    "pdf_text_extraction_failed": "inconclusive",
+}
+# Statuses not listed above (e.g. kaigiroku_net's "discovered") belong to
+# adapters that RAISE instead of returning unreadable bodies, so their record
+# counts are trusted as-is.
+
+
+def _classify_probe_status(status: Any) -> str:
+    if isinstance(status, str):
+        return _PROBE_STATUS_CLASSIFICATION.get(status, "extracted")
+    return "extracted"
+
+
+# C4: promotion requires STRUCTURAL identification, not a bare record count.
+# Both extractors fall back to paragraph/document chunks so ingestion never
+# loses content; those fallback records carry no identifying field:
+#   minutes     -> speech["speaker"] empty on fallback chunks
+#   regulations -> article["article_no"] None on document fallback
+# A document counts as verified source material only if at least one record
+# carries that field. Do not add keyword heuristics here.
+def _identifiable_records(
+    kind: str, records: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    if kind == "regulations":
+        return [
+            r
+            for r in records
+            if isinstance(r, dict) and str(r.get("article_no") or "").strip()
+        ]
+    return [
+        r
+        for r in records
+        if isinstance(r, dict) and str(r.get("speaker") or "").strip()
+    ]
+
+
+def _finalize_with_probe(
+    probe: Callable[[], tuple[list[dict[str, Any]], Any]],
+    *,
+    updated: dict[str, Any],
+    profile: dict[str, Any],
+    entry: dict[str, Any],
+    status_before: Any,
+    municipality: str,
+    kind: str,
+    adapter: Any,
+    now: str,
+    pending_evidence: list[dict[str, Any]],
+    report_base: dict[str, Any],
+    probe_subject: str,
+    ok_reason: str = "ok",
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Run the R2 extraction probe and finish the entry per R1-R5.
+
+    - robots denial on the probe -> blocked (R3)
+    - any other probe error -> failed, status untouched (R5)
+    - probe INCONCLUSIVE (adapter could not read the document) -> failed,
+      status untouched, reason names the adapter status (R5)
+    - EXTRACTED with 0 records -> needs_review, never ready (R4)
+    - EXTRACTED with >=1 record -> evidence + stamps; promote only per R1
+    """
+    probe_status, probe_payload = _run_extraction_probe(probe)
+    if probe_status == "robots":
+        exc = probe_payload
+        _append_pending_evidence(entry, pending_evidence)
+        entry["verified_at"] = now
+        entry["verified_by"] = "verify --live"
+        entry["status"] = "blocked"
+        _append_note(entry, _ROBOTS_BLOCKED_NOTE, marker="robots")
+        errs = validate_profile(updated)
+        if errs:
+            report = {
+                **report_base,
+                "result": "failed",
+                "reason": f"post-verify validation failed: {errs}",
+                "status_after": status_before,
+            }
+            return copy.deepcopy(profile), report
+        report = {
+            **report_base,
+            "result": "blocked",
+            "reason": f"RobotsDeniedError: {exc} (bodies are robots-restricted)",
+            "status_after": "blocked",
+        }
+        return updated, report
+    if probe_status == "error":
+        exc = probe_payload
+        report = {
+            **report_base,
+            "result": "failed",
+            "reason": f"{type(exc).__name__}: {exc}",
+            "status_after": status_before,
+        }
+        return updated, report
+    records, adapter_status = probe_payload
+    if _classify_probe_status(adapter_status) == "inconclusive":
+        # C3: name the adapter status so a human can tell "install poppler
+        # and re-run" apart from "this site does not publish minutes".
+        report = {
+            **report_base,
+            "result": "failed",
+            "reason": (
+                "probe_inconclusive: the adapter could not read the probed "
+                f"document (adapter status {adapter_status!r}); fix the local "
+                "extraction tooling and re-run"
+            ),
+            "status_after": status_before,
+        }
+        return updated, report
+    if not _identifiable_records(kind, records):
+        # R4: the document was READ, but nothing structurally identifiable
+        # was found (fallback paragraph/document chunks do not count).
+        what = (
+            "numbered articles"
+            if kind == "regulations"
+            else "speaker-attributed speeches"
+        )
+        entry["status"] = "needs_review"
+        _append_note(
+            entry,
+            f"extraction probe read one document at {probe_subject} but found "
+            f"no {what}; reachability alone is not ingest evidence",
+            marker=f"no {what}",
+        )
+        errs = validate_profile(updated)
+        if errs:
+            report = {
+                **report_base,
+                "result": "failed",
+                "reason": f"post-verify validation failed: {errs}",
+                "status_after": status_before,
+            }
+            return copy.deepcopy(profile), report
+        report = {
+            **report_base,
+            "result": "needs_review",
+            "reason": (
+                f"probe_found_no_identifiable_records: probed {probe_subject}; "
+                f"document was read but yielded no {what}"
+            ),
+            "status_after": "needs_review",
+        }
+        return updated, report
+    # Probe succeeded: stamp evidence, then apply the R1 promotion gate.
+    _append_pending_evidence(entry, pending_evidence)
+    entry["verified_at"] = now
+    entry["verified_by"] = "verify --live"
+    promoted = status_before in _PROMOTABLE_PRIOR_STATUSES
+    if promoted:
+        entry["status"] = "ready"
+    errs = validate_profile(updated)
+    if errs:
+        report = {
+            **report_base,
+            "result": "failed",
+            "reason": f"post-verify validation failed: {errs}",
+            "status_after": status_before,
+        }
+        return copy.deepcopy(profile), report
+    reason = (
+        ok_reason
+        if promoted
+        else (
+            f"promotion withheld: prior status {status_before!r}; only "
+            "needs_review/not_evaluated can be promoted to ready"
+        )
+    )
+    report = {
+        **report_base,
+        "result": "verified",
+        "reason": reason,
+        "status_after": entry.get("status"),
+    }
+    return updated, report
+
+
+def _probe_greiki_regulations(
+    *, base_url: str, client: Any
+) -> tuple[list[dict[str, Any]], Any]:
+    """Extract articles from ONE g-reiki regulation via the real extractor."""
+    refs = discover_documents(base_url, client=client, limit=1)
+    payload = fetch_document(refs[0], base_url=base_url, client=client)
+    articles = payload.get("articles")
+    records = (
+        [a for a in articles if isinstance(a, dict)]
+        if isinstance(articles, list)
+        else []
+    )
+    provenance = payload.get("provenance")
+    status = provenance.get("status") if isinstance(provenance, dict) else None
+    return records, status
+
+
+def _probe_static_minutes(
+    *,
+    config: Any,
+    index_url: str,
+    document_url: str,
+    client: Any,
+) -> tuple[list[dict[str, Any]], Any]:
+    """Extract speeches from ONE minutes document via the real static adapter."""
+    cfg = dict(config) if isinstance(config, dict) else {}
+    cfg.setdefault("index_url", [index_url])
+    adapter_obj = StaticHtmlAdapter(cfg, client=client)
+    payload = adapter_obj.fetch_meeting(
+        {
+            "source_url": document_url,
+            "is_pdf": document_url.lower().split("?", 1)[0].endswith(".pdf"),
+        }
+    )
+    speeches = payload.get("speeches")
+    provenance = payload.get("provenance")
+    status = provenance.get("status") if isinstance(provenance, dict) else None
+    return (speeches if isinstance(speeches, list) else []), status
+
+
+def _probe_kaigiroku_minutes(
+    *, tenant_url: str, client: Any
+) -> tuple[list[dict[str, Any]], Any]:
+    """Extract speeches from ONE kaigiroku meeting via the real adapter."""
+    adapter_obj = KaigirokuNetAdapter(tenant_url, client=client)
+    meetings = adapter_obj.list_meetings(limit=1)
+    if not meetings:
+        return [], None
+    payload = adapter_obj.fetch_meeting(meetings[0])
+    speeches = payload.get("speeches")
+    provenance = payload.get("provenance")
+    status = provenance.get("status") if isinstance(provenance, dict) else None
+    return (speeches if isinstance(speeches, list) else []), status
+
+
+def _probe_dbsr_minutes(
+    *, index_url: str, meeting_url: str, client: Any
+) -> tuple[list[dict[str, Any]], Any]:
+    """Extract speeches from ONE dbsr meeting document via the real adapter."""
+    payload = DbsrAdapter(index_url, client=client).fetch_meeting(
+        {"source_url": meeting_url}
+    )
+    speeches = payload.get("speeches")
+    provenance = payload.get("provenance")
+    status = provenance.get("status") if isinstance(provenance, dict) else None
+    return (speeches if isinstance(speeches, list) else []), status
+
+
 class _MinutesPageParser(HTMLParser):
     """Extract title/H1..H6 context and links for minutes verify."""
 
@@ -340,12 +666,13 @@ def _verify_minutes_static(
     except Exception:
         pass
 
-    # New rule: ready iff official host and page has at least one council-scoped minutes document link.
-    # Removed old "title/H1 must have council scope" gate; title council scope is bonus only.
-    # A council minutes document link = (.pdf OR label/URL contains 会議録/議事録/minutes) AND label/URL has council token AND not non-council (rescued only under /gikai etc).
-    def _has_council_doc_on_page(
+    # Council-scoped minutes document link = (.pdf OR label/URL contains
+    # 会議録/議事録/minutes) AND label/URL has council token AND not non-council
+    # (rescued only under /gikai etc).
+    def _council_doc_urls(
         links: list[tuple[str, str]], observed_url: str, page_context: str
-    ) -> bool:
+    ) -> list[str]:
+        urls: list[str] = []
         for href, label in links:
             resolved = _canonical_url(urllib.parse.urljoin(str(observed_url), href))
             if resolved is None:
@@ -355,7 +682,8 @@ def _verify_minutes_static(
             if _is_council_document_scope(
                 label=label, url=resolved, observed_on=str(observed_url)
             ):
-                return True
+                urls.append(resolved)
+                continue
             # Fallback: page context contains council token (e.g., headings 定例会)
             # Allows generic "1日目" PDFs under a council heading to count.
             if page_context and _is_council_scope(
@@ -364,70 +692,104 @@ def _verify_minutes_static(
                 observed_on=str(observed_url),
                 page_context=page_context,
             ):
-                return True
-        return False
+                urls.append(resolved)
+        return urls
+
+    def _has_council_doc_on_page(
+        links: list[tuple[str, str]], observed_url: str, page_context: str
+    ) -> bool:
+        return bool(_council_doc_urls(links, observed_url, page_context))
+
+    def _first_council_doc_url(
+        links: list[tuple[str, str]],
+        observed_url: str,
+        context: str,
+        *,
+        prefer_pdf: bool,
+    ) -> str | None:
+        urls = _council_doc_urls(links, observed_url, context)
+        for url in urls:
+            is_pdf = url.lower().split("?", 1)[0].endswith(".pdf")
+            if is_pdf == prefer_pdf:
+                return url
+        return None
+
+
+    prefer_pdf = (
+        bool(entry["config"].get("pdf"))
+        if isinstance(entry.get("config"), dict)
+        else False
+    )
+
+    def _finalize_static(
+        *,
+        page_result: Any,
+        page_final_url: str,
+        page_links: list[tuple[str, str]],
+        page_context: str,
+        via_follow: bool,
+    ) -> tuple[dict[str, Any], dict[str, Any]]:
+        doc_url = _first_council_doc_url(
+            page_links, page_final_url, page_context, prefer_pdf=prefer_pdf
+        )
+        pending_sources = [(index_url, index_url, result)]
+        if via_follow:
+            pending_sources.append((page_final_url, index_url, page_result))
+        pending_evidence = [
+            _evidence_item(url, observed_on, res, now)
+            for url, observed_on, res in pending_sources
+        ]
+        page_sha = page_result.sha256 if hasattr(page_result, "sha256") else ""
+        page_fetched = (
+            page_result.fetched_at if hasattr(page_result, "fetched_at") else now
+        )
+        report_base = {
+            "municipality": municipality,
+            "kind": "minutes",
+            "adapter": adapter,
+            "status_before": status_before,
+            "index_url": index_url,
+            "final_url": page_final_url,
+            "sha256": page_sha,
+            "fetched_at": page_fetched,
+        }
+        probe_subject = doc_url or "the first council-scoped document link"
+        return _finalize_with_probe(
+            lambda: _probe_static_minutes(
+                config=entry.get("config"),
+                index_url=index_url,
+                document_url=doc_url or "",
+                client=client,
+            )
+            if doc_url is not None
+            else ([], None),
+            updated=updated,
+            profile=profile,
+            entry=entry,
+            status_before=status_before,
+            municipality=municipality,
+            kind="minutes",
+            adapter=adapter,
+            now=now,
+            pending_evidence=pending_evidence,
+            report_base=report_base,
+            probe_subject=str(probe_subject),
+            ok_reason="ok via follow" if via_follow else "ok",
+        )
 
     page_context = parser.context()
     has_council_doc = _has_council_doc_on_page(
         parser.links, str(final_url_val), page_context
     )
     if has_council_doc:
-        # Direct success on index (no follow needed)
-        sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
-        fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
-        evidence = entry.get("evidence")
-        if not isinstance(evidence, list):
-            evidence = []
-            entry["evidence"] = evidence
-        duplicate = False
-        for ev in evidence:
-            if not isinstance(ev, dict):
-                continue
-            if ev.get("url") == index_url and ev.get("sha256") == sha256:
-                duplicate = True
-                break
-        if not duplicate:
-            new_ev: dict[str, Any] = {
-                "url": index_url,
-                "observed_on": index_url,
-                "sha256": sha256,
-                "fetched_at": fetched_at,
-            }
-            evidence.append(new_ev)
-        entry["verified_at"] = now
-        entry["verified_by"] = "verify --live"
-        if status_before == "needs_review":
-            entry["status"] = "ready"
-        elif status_before != "ready":
-            entry["status"] = "ready"
-        status_after = entry.get("status")
-        errs = validate_profile(updated)
-        if errs:
-            report = {
-                "municipality": municipality,
-                "kind": "minutes",
-                "adapter": adapter,
-                "result": "failed",
-                "reason": f"post-verify validation failed: {errs}",
-                "status_before": status_before,
-                "status_after": status_before,
-                "index_url": index_url,
-            }
-            return copy.deepcopy(profile), report
-        report = {
-            "municipality": municipality,
-            "kind": "minutes",
-            "adapter": adapter,
-            "result": "verified",
-            "reason": "ok",
-            "status_before": status_before,
-            "status_after": status_after,
-            "index_url": index_url,
-            "final_url": final_url_val,
-            "sha256": sha256,
-            "fetched_at": fetched_at,
-        }
-        return updated, report
+        # Direct success on index (no follow needed): run the extraction probe.
+        return _finalize_static(
+            page_result=result,
+            page_final_url=str(final_url_val),
+            page_links=parser.links,
+            page_context=page_context,
+            via_follow=False,
+        )
 
     # No document on index -> try follow (BFS, depth/pages configurable)
     config = entry.get("config")
@@ -584,6 +946,8 @@ def _verify_minutes_static(
     fetched_any = False
     success_follow_result: Any | None = None
     success_follow_final: str | None = None
+    success_follow_parser: _MinutesPageParser | None = None
+    success_follow_context: str | None = None
     fetched_follow_pages = 0
     while queue:
         if fetched_follow_pages >= follow_max_pages:
@@ -614,6 +978,8 @@ def _verify_minutes_static(
         f_context = f_parser.context()
         if _has_council_doc_on_page(f_parser.links, str(f_final), f_context):
             success_follow_result = f_result
+            success_follow_parser = f_parser
+            success_follow_context = f_context
             success_follow_final = str(f_final)
             break
         if cand_depth < follow_max_depth:
@@ -649,88 +1015,17 @@ def _verify_minutes_static(
             "final_url": final_url_val,
         }
         return updated, report
-    # Success via follow: add evidence for both root and follow (idempotent on url+sha256)
-    root_sha = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
-    root_fetched = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
-    follow_sha = (
-        success_follow_result.sha256 if hasattr(success_follow_result, "sha256") else ""
-    )  # type: ignore[attr-defined]
-    follow_fetched = (
-        success_follow_result.fetched_at
-        if hasattr(success_follow_result, "fetched_at")
-        else now
-    )  # type: ignore[attr-defined]
-    evidence = entry.get("evidence")
-    if not isinstance(evidence, list):
-        evidence = []
-        entry["evidence"] = evidence
-    # Root evidence
-    duplicate_root = any(
-        isinstance(ev, dict)
-        and ev.get("url") == index_url
-        and ev.get("sha256") == root_sha
-        for ev in evidence
-    )
-    if not duplicate_root:
-        evidence.append(
-            {
-                "url": index_url,
-                "observed_on": index_url,
-                "sha256": root_sha,
-                "fetched_at": root_fetched,
-            }
-        )
-    # Follow evidence (observed_on is root index)
+    # Success via follow: run the extraction probe against a document on the
+    # follow page; evidence covers root and follow page.
     follow_url_val = success_follow_final or initial[0]
-    duplicate_follow = any(
-        isinstance(ev, dict)
-        and ev.get("url") == follow_url_val
-        and ev.get("sha256") == follow_sha
-        for ev in evidence
+    assert success_follow_parser is not None  # narrowing for mypy
+    return _finalize_static(
+        page_result=success_follow_result,
+        page_final_url=follow_url_val,
+        page_links=success_follow_parser.links,
+        page_context=success_follow_context or "",
+        via_follow=True,
     )
-    if not duplicate_follow:
-        evidence.append(
-            {
-                "url": follow_url_val,
-                "observed_on": index_url,
-                "sha256": follow_sha,
-                "fetched_at": follow_fetched,
-            }
-        )
-    entry["verified_at"] = now
-    entry["verified_by"] = "verify --live"
-    if status_before == "needs_review":
-        entry["status"] = "ready"
-    elif status_before != "ready":
-        entry["status"] = "ready"
-    status_after = entry.get("status")
-    errs = validate_profile(updated)
-    if errs:
-        report = {
-            "municipality": municipality,
-            "kind": "minutes",
-            "adapter": adapter,
-            "result": "failed",
-            "reason": f"post-verify validation failed: {errs}",
-            "status_before": status_before,
-            "status_after": status_before,
-            "index_url": index_url,
-        }
-        return copy.deepcopy(profile), report
-    report = {
-        "municipality": municipality,
-        "kind": "minutes",
-        "adapter": adapter,
-        "result": "verified",
-        "reason": "ok via follow",
-        "status_before": status_before,
-        "status_after": status_after,
-        "index_url": index_url,
-        "final_url": follow_url_val,
-        "sha256": follow_sha,
-        "fetched_at": follow_fetched,
-    }
-    return updated, report
 
 
 def _verify_minutes_kaigiroku_net(
@@ -830,62 +1125,38 @@ def _verify_minutes_kaigiroku_net(
             "final_url": final_url_val,
         }
         return updated, report
-    # All checks passed -> promote
+    # Entrance checks passed -> run the R2 extraction probe via the real
+    # kaigiroku adapter (list one meeting, fetch its speeches).
     sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
     fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
-    evidence = entry.get("evidence")
-    if not isinstance(evidence, list):
-        evidence = []
-        entry["evidence"] = evidence
-    duplicate = False
-    for ev in evidence:
-        if not isinstance(ev, dict):
-            continue
-        if ev.get("url") == tenant_url and ev.get("sha256") == sha256:
-            duplicate = True
-            break
-    if not duplicate:
-        new_ev: dict[str, Any] = {
-            "url": tenant_url,
-            "observed_on": tenant_url,
-            "sha256": sha256,
-            "fetched_at": fetched_at,
-        }
-        evidence.append(new_ev)
-    entry["verified_at"] = now
-    entry["verified_by"] = "verify --live"
-    if status_before == "needs_review":
-        entry["status"] = "ready"
-    elif status_before != "ready":
-        entry["status"] = "ready"
-    status_after = entry.get("status")
-    errs = validate_profile(updated)
-    if errs:
-        report = {
-            "municipality": municipality,
-            "kind": "minutes",
-            "adapter": adapter,
-            "result": "failed",
-            "reason": f"post-verify validation failed: {errs}",
-            "status_before": status_before,
-            "status_after": status_before,
-            "tenant_url": tenant_url,
-        }
-        return copy.deepcopy(profile), report
-    report = {
+    pending_evidence = [_evidence_item(tenant_url, tenant_url, result, now)]
+    report_base = {
         "municipality": municipality,
         "kind": "minutes",
         "adapter": adapter,
-        "result": "verified",
-        "reason": "ok",
         "status_before": status_before,
-        "status_after": status_after,
         "tenant_url": tenant_url,
         "final_url": final_url_val,
         "sha256": sha256,
         "fetched_at": fetched_at,
     }
-    return updated, report
+    return _finalize_with_probe(
+        lambda: _probe_kaigiroku_minutes(
+            tenant_url=tenant_url,
+            client=client,
+        ),
+        updated=updated,
+        profile=profile,
+        entry=entry,
+        status_before=status_before,
+        municipality=municipality,
+        kind="minutes",
+        adapter=adapter,
+        now=now,
+        pending_evidence=pending_evidence,
+        report_base=report_base,
+        probe_subject="the first meeting listed by the kaigiroku.net tenant API",
+    )
 
 
 def _first_dbsr_meeting_link(
@@ -1040,148 +1311,45 @@ def _verify_minutes_dbsr(
             "final_url": final_url_val,
         }
         return updated, report
-    # Robots-aware body probe: fetch first meeting link once via HttpClient
+    # Robots-aware extraction probe (R2/R3): fetch the first meeting link
+    # through the real dbsr adapter and require >=1 extracted speech.
     meeting_url = _first_dbsr_meeting_link(html_text, parser.links, str(final_url_val))
-    if meeting_url is not None:
-        try:
-            _probe_result = client.fetch(meeting_url, tier=CacheTier.INDEX)
-        except RobotsDeniedError as exc:
-            blocked_sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
-            blocked_fetched_at = (
-                result.fetched_at if hasattr(result, "fetched_at") else now
-            )  # type: ignore[attr-defined]
-            evidence = entry.get("evidence")
-            if not isinstance(evidence, list):
-                evidence = []
-                entry["evidence"] = evidence
-            duplicate = False
-            for ev in evidence:
-                if not isinstance(ev, dict):
-                    continue
-                if ev.get("url") == index_url and ev.get("sha256") == blocked_sha256:
-                    duplicate = True
-                    break
-            if not duplicate:
-                blocked_ev: dict[str, Any] = {
-                    "url": index_url,
-                    "observed_on": index_url,
-                    "sha256": blocked_sha256,
-                    "fetched_at": blocked_fetched_at,
-                }
-                evidence.append(blocked_ev)
-            entry["verified_at"] = now
-            entry["verified_by"] = "verify --live"
-            entry["status"] = "blocked"
-            blocked_note = (
-                "minutes bodies are robots-restricted (robots.txt disallows meeting detail/document paths); "
-                "observed Saga dbsr tenants block bodies, so ingestion requires the councilor/user to obtain municipality permission "
-                "(out of scope for automated ingestion)"
-            )
-            existing_notes = entry.get("notes")
-            if (
-                not isinstance(existing_notes, str)
-                or "robots" not in existing_notes.lower()
-            ):
-                if isinstance(existing_notes, str) and existing_notes.strip():
-                    entry["notes"] = existing_notes.rstrip() + " " + blocked_note
-                else:
-                    entry["notes"] = blocked_note
-            errs = validate_profile(updated)
-            if errs:
-                report = {
-                    "municipality": municipality,
-                    "kind": "minutes",
-                    "adapter": adapter,
-                    "result": "failed",
-                    "reason": f"post-verify validation failed: {errs}",
-                    "status_before": status_before,
-                    "status_after": status_before,
-                    "index_url": index_url,
-                }
-                return copy.deepcopy(profile), report
-            report = {
-                "municipality": municipality,
-                "kind": "minutes",
-                "adapter": adapter,
-                "result": "blocked",
-                "reason": f"RobotsDeniedError: {exc} (minutes bodies are robots-restricted)",
-                "status_before": status_before,
-                "status_after": "blocked",
-                "index_url": index_url,
-                "final_url": final_url_val,
-                "sha256": blocked_sha256,
-                "fetched_at": blocked_fetched_at,
-                "meeting_url": meeting_url,
-            }
-            return updated, report
-        except Exception as exc:  # noqa: BLE001
-            reason = f"{type(exc).__name__}: {exc}"
-            report = {
-                "municipality": municipality,
-                "kind": "minutes",
-                "adapter": adapter,
-                "result": "failed",
-                "reason": reason,
-                "status_before": status_before,
-                "status_after": status_before,
-                "index_url": index_url,
-                "final_url": final_url_val,
-            }
-            return updated, report
-    # All checks passed -> promote
     sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
     fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
-    evidence = entry.get("evidence")
-    if not isinstance(evidence, list):
-        evidence = []
-        entry["evidence"] = evidence
-    duplicate = False
-    for ev in evidence:
-        if not isinstance(ev, dict):
-            continue
-        if ev.get("url") == index_url and ev.get("sha256") == sha256:
-            duplicate = True
-            break
-    if not duplicate:
-        new_ev: dict[str, Any] = {
-            "url": index_url,
-            "observed_on": index_url,
-            "sha256": sha256,
-            "fetched_at": fetched_at,
-        }
-        evidence.append(new_ev)
-    entry["verified_at"] = now
-    entry["verified_by"] = "verify --live"
-    if status_before != "ready":
-        entry["status"] = "ready"
-    status_after = entry.get("status")
-    errs = validate_profile(updated)
-    if errs:
-        report = {
-            "municipality": municipality,
-            "kind": "minutes",
-            "adapter": adapter,
-            "result": "failed",
-            "reason": f"post-verify validation failed: {errs}",
-            "status_before": status_before,
-            "status_after": status_before,
-            "index_url": index_url,
-        }
-        return copy.deepcopy(profile), report
-    report = {
+    pending_evidence = [_evidence_item(index_url, index_url, result, now)]
+    report_base = {
         "municipality": municipality,
         "kind": "minutes",
         "adapter": adapter,
-        "result": "verified",
-        "reason": "ok",
         "status_before": status_before,
-        "status_after": status_after,
         "index_url": index_url,
         "final_url": final_url_val,
         "sha256": sha256,
         "fetched_at": fetched_at,
+        "meeting_url": meeting_url,
     }
-    return updated, report
+    return _finalize_with_probe(
+        lambda: (
+            _probe_dbsr_minutes(
+                index_url=index_url,
+                meeting_url=meeting_url,
+                client=client,
+            )
+            if meeting_url is not None
+            else ([], None)
+        ),
+        updated=updated,
+        profile=profile,
+        entry=entry,
+        status_before=status_before,
+        municipality=municipality,
+        kind="minutes",
+        adapter=adapter,
+        now=now,
+        pending_evidence=pending_evidence,
+        report_base=report_base,
+        probe_subject=meeting_url or "the first same-host meeting link",
+    )
 
 
 def verify_profile(
@@ -1370,77 +1538,35 @@ def verify_profile(
         }
         return updated, report
 
-    # All checks passed -> promote
-    # Update evidence (idempotent)
+    # All index-level checks passed -> run the R2 extraction probe through
+    # the real vendor_greiki extractor before any promotion is considered.
     sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
     fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
-
-    evidence = entry.get("evidence")
-    if not isinstance(evidence, list):
-        evidence = []
-        entry["evidence"] = evidence
-
-    # Check duplicate url+sha256
-    duplicate = False
-    for ev in evidence:
-        if not isinstance(ev, dict):
-            continue
-        if ev.get("url") == entry_url and ev.get("sha256") == sha256:
-            duplicate = True
-            break
-
-    if not duplicate:
-        new_ev: dict[str, Any] = {
-            "url": entry_url,
-            "observed_on": base_url,
-            "sha256": sha256,
-            "fetched_at": fetched_at,
-        }
-        evidence.append(new_ev)
-
-    entry["verified_at"] = now
-    entry["verified_by"] = "verify --live"
-    # Promote needs_review -> ready, keep ready as ready
-    if status_before == "needs_review":
-        entry["status"] = "ready"
-    elif status_before != "ready":
-        # For other statuses like not_evaluated etc, promote to ready if g_reiki verified
-        # But spec expects only needs_review->ready; keep current behavior for safety
-        entry["status"] = "ready"
-
-    status_after = entry.get("status")
-
-    # Self-validate before saving
-    errs = validate_profile(updated)
-    if errs:
-        # Rollback? Return failed report without considering saved
-        # Restore original status/evidence for report purposes but return failed
-        report = {
-            "municipality": municipality,
-            "kind": kind,
-            "adapter": adapter,
-            "result": "failed",
-            "reason": f"post-verify validation failed: {errs}",
-            "status_before": status_before,
-            "status_after": status_before,
-            "entry_url": entry_url,
-        }
-        # Return original-like updated without promotion? Actually return failed with original profile copy
-        # To avoid partial update, revert to original copy for caller to not save
-        return copy.deepcopy(profile), report
-
     final_url_report = result.final_url if hasattr(result, "final_url") else entry_url  # type: ignore[attr-defined]
-    report = {
+    pending_evidence = [_evidence_item(entry_url, base_url, result, now)]
+    report_base = {
         "municipality": municipality,
         "kind": kind,
         "adapter": adapter,
-        "result": "verified",
-        "reason": "ok",
         "status_before": status_before,
-        "status_after": status_after,
         "entry_url": entry_url,
         "final_url": final_url_report,
         "sha256": sha256,
         "fetched_at": fetched_at,
     }
-    return updated, report
+    return _finalize_with_probe(
+        lambda: _probe_greiki_regulations(base_url=base_url, client=client),
+        updated=updated,
+        profile=profile,
+        entry=entry,
+        status_before=status_before,
+        municipality=municipality,
+        kind=kind,
+        adapter=adapter,
+        now=now,
+        pending_evidence=pending_evidence,
+        report_base=report_base,
+        probe_subject=(
+            "the first regulation document discovered from reiki_menu.html"
+        ),
+    )
