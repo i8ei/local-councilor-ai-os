@@ -812,6 +812,104 @@ class StaticHtmlDivSpeakerTest(unittest.TestCase):
         self.assertIn("おはようございます", speeches[0]["text"])
         self.assertEqual("町長", speeches[1]["speaker"])
 
+    def test_procedural_words_are_not_speakers(self) -> None:
+        # mod-06: 休憩・散会・質疑応答 などの単独行は発言者名にしない。
+        # 長さで締めると議長/委員長/総務課長を巻き添えにするため名指し除外。
+        for head in ("休憩", "散会", "質疑応答", "開会", "閉会"):
+            with self.subTest(head=head):
+                html = (
+                    f"<html><body><div>{head}</div><div>　　本文です。</div>"
+                    "<div>議　　長</div><div>　　発言です。</div></body></html>"
+                )
+                speeches = self._fetch_with_html(html)
+                speakers = [s["speaker"] for s in speeches if s["speaker"] is not None]
+                self.assertNotIn(head, speakers)
+                self.assertIn("議長", speakers)
+
+    def test_role_speakers_survive_after_procedural_filter(self) -> None:
+        # mod-06 regression: 議長・委員長・総務課長 は名指し除外の対象外。
+        html = (
+            "<html><body><div>総務課長</div><div>　　説明します。</div>"
+            "<div>委員長</div><div>　　質疑を受けます。</div></body></html>"
+        )
+        speeches = self._fetch_with_html(html)
+        speakers = [s["speaker"] for s in speeches if s["speaker"] is not None]
+        self.assertEqual(["総務課長", "委員長"], speakers)
+
+    def test_inferred_meeting_date_is_marked(self) -> None:
+        # mod-07: 年月のみ観測で日=01補完した会議日は date_inferred=True で
+        # 区別できる。完整な日付は False。
+        html = (
+            "<html><body><div>議　　長　開会</div>"
+            "<div>総務課長　令和8年3月の定例会のご案内</div></body></html>"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            body = html.encode("utf-8")
+            responses = {
+                INDEX_URL: make_result(
+                    INDEX_URL,
+                    b'<a href="https://example.invalid/council/minutes/b.html">link</a>',
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                ),
+                "https://example.invalid/council/minutes/b.html": make_result(
+                    "https://example.invalid/council/minutes/b.html",
+                    body,
+                    content_type="text/html",
+                    cache_path=root / "meeting.cache",
+                ),
+            }
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": [INDEX_URL],
+                    "council_name": "テスト町議会",
+                },
+                client=FakeHttpClient(responses),
+            )
+            ref = adapter.list_meetings()[0]
+            doc = adapter.fetch_meeting(ref["meeting_id"])
+        meeting = doc["meeting"]
+        self.assertEqual("2026-03-01", meeting["date"])
+        self.assertTrue(meeting["date_inferred"])
+        issues = doc["provenance"]["issues"]
+        self.assertTrue(any("date_inferred" in issue for issue in issues))
+
+    def test_observed_meeting_date_is_not_marked(self) -> None:
+        html = (
+            "<html><body><div>議　　長　開会</div>"
+            "<div>総務課長　令和8年3月5日の定例会のご案内</div></body></html>"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            body = html.encode("utf-8")
+            responses = {
+                INDEX_URL: make_result(
+                    INDEX_URL,
+                    b'<a href="https://example.invalid/council/minutes/b.html">link</a>',
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                ),
+                "https://example.invalid/council/minutes/b.html": make_result(
+                    "https://example.invalid/council/minutes/b.html",
+                    body,
+                    content_type="text/html",
+                    cache_path=root / "meeting.cache",
+                ),
+            }
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": [INDEX_URL],
+                    "council_name": "テスト町議会",
+                },
+                client=FakeHttpClient(responses),
+            )
+            ref = adapter.list_meetings()[0]
+            doc = adapter.fetch_meeting(ref["meeting_id"])
+        meeting = doc["meeting"]
+        self.assertEqual("2026-03-05", meeting["date"])
+        self.assertFalse(meeting["date_inferred"])
+
 
 if __name__ == "__main__":
     unittest.main()

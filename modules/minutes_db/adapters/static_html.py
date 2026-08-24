@@ -132,10 +132,47 @@ def _is_b_speaker_candidate(text: str, has_anchor: bool) -> bool:
     return False
 
 
+# Procedural words that NEVER denote a speaker. They appear as lone lines in
+# minutes (休息・散会・質疑応答・時刻など) and must not be parsed into speaker
+# names. Named exclusion only: a length/marker heuristic would sweep up real
+# speaker lines 議長(27,700行)・委員長(7,593行)・総務課長(1,299行) as
+# collateral (2026-08-24 pi4 review, mod-06).
+_NON_SPEAKER_PROCEDURAL_TERMS = frozenset(
+    {
+        "休憩",
+        "散会",
+        "開会",
+        "閉会",
+        "開議",
+        "閉議",
+        "延会",
+        "中止",
+        "質疑",
+        "応答",
+        "質疑応答",
+        "討議",
+        "討論",
+        "採決",
+        "起立",
+        "拍手",
+        "指摘",
+        "議事進行",
+        "出席者",
+        "欠席者",
+        "傍聴者",
+        "開催",
+        "再開",
+        "進行",
+    }
+)
+
+
 def _is_div_head_candidate(normalized: str) -> bool:
     """Check normalized head (full-width spaces removed) for DIV speaker."""
     t = normalized.strip()
     if not t or len(t) > 30 or len(t) < 2:
+        return False
+    if t in _NON_SPEAKER_PROCEDURAL_TERMS:
         return False
     if any(ch in t for ch in "、。，．") or "・" in t:
         return False
@@ -514,7 +551,14 @@ def _fallback_segments(text: str) -> list[dict[str, Any]]:
     return segments
 
 
-def _infer_date(*values: str) -> str | None:
+def _infer_date(*values: str) -> tuple[str | None, bool]:
+    """Return (date, inferred) from title/text fragments.
+
+    ``inferred=True`` marks values whose DAY (or the date itself) was not
+    observed: the era+month-without-day fallback fabricates day=01. Inferred
+    dates must stay distinguishable from observed ones, per the
+    值・基準日・定義・出典の4点セット principle (2026-08-24 review, mod-07).
+    """
     combined = " ".join(value for value in values if value)
     # Normalize full-width digits to half-width for date parsing (e.g., ３月→3月)
     fw_map = str.maketrans("０１２３４５６７８９", "0123456789")
@@ -522,7 +566,7 @@ def _infer_date(*values: str) -> str | None:
     western = re.search(r"(?<!\d)(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})日?", combined)
     if western:
         year, month, day = (int(part) for part in western.groups())
-        return f"{year:04d}-{month:02d}-{day:02d}"
+        return f"{year:04d}-{month:02d}-{day:02d}", False
 
     era = re.search(
         r"(令和|平成|昭和)(元|\d{1,2})年\s*(\d{1,2})月\s*(\d{1,2})日",
@@ -532,15 +576,15 @@ def _infer_date(*values: str) -> str | None:
         bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
         era_year = 1 if era.group(2) == "元" else int(era.group(2))
         year = bases[era.group(1)] + era_year
-        return f"{year:04d}-{int(era.group(3)):02d}-{int(era.group(4)):02d}"
+        return f"{year:04d}-{int(era.group(3)):02d}-{int(era.group(4)):02d}", False
     # Fallback: era year + month without day -> use day=1 (for cases like "令和8年3月定例会" with separate "3月 2日" not linked)
     era_month = re.search(r"(令和|平成|昭和)(元|\d{1,2})年\s*(\d{1,2})月", combined)
     if era_month:
         bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
         era_year = 1 if era_month.group(2) == "元" else int(era_month.group(2))
         year = bases[era_month.group(1)] + era_year
-        return f"{year:04d}-{int(era_month.group(3)):02d}-01"
-    return None
+        return f"{year:04d}-{int(era_month.group(3)):02d}-01", True
+    return None, False
 
 
 class StaticHtmlAdapter(Adapter):
@@ -939,7 +983,11 @@ class StaticHtmlAdapter(Adapter):
         if text and not speeches:
             status = "text_without_segments"
             issues.append("テキストは取得できましたが、発言単位へ分割できませんでした。")
-        date = _infer_date(title, text[:1000])
+        date, date_inferred = _infer_date(title, text[:1000])
+        if date_inferred:
+            issues.append(
+                f"会議日は年月のみ観測のため日=01として補完 (date_inferred={date})"
+            )
         council_name = str(
             self.config.get("council_name")
             or self.config.get("municipality")
@@ -952,6 +1000,7 @@ class StaticHtmlAdapter(Adapter):
             "meeting_name": title,
             "session": self.config.get("session"),
             "date": date,
+            "date_inferred": date_inferred,
             "source_url": ref["source_url"],
             "adapter": self.adapter_name,
             "fetched_at": fetched.fetched_at,

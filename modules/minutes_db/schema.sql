@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS meetings (
     meeting_name TEXT NOT NULL,
     session TEXT,
     date TEXT,
+    date_inferred INTEGER NOT NULL DEFAULT 0,
     source_url TEXT NOT NULL UNIQUE,
     adapter TEXT NOT NULL,
     fetched_at TEXT NOT NULL

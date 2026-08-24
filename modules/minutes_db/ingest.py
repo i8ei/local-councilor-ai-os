@@ -45,6 +45,19 @@ def stable_id(prefix: str, value: str) -> str:
     return f"{prefix}_{digest}"
 
 
+def _meetings_has_date_inferred(connection: sqlite3.Connection) -> bool:
+    """True when the live meetings table carries the date_inferred column.
+
+    Legacy DBs created before the column existed keep working: the flag is
+    simply not recorded there (no migration; same stance as the settlement
+    schema-decay note). PRAGMA table_info is a cheap catalog lookup.
+    """
+    columns = {
+        row[1] for row in connection.execute("PRAGMA table_info(meetings)")
+    }
+    return "date_inferred" in columns
+
+
 def _fetch_failed_document(
     ref: dict[str, Any] | str, error_gist: str, adapter: Any
 ) -> dict[str, Any]:
@@ -213,6 +226,14 @@ def store_meeting(connection: sqlite3.Connection, document: dict[str, Any]) -> i
             meeting["fetched_at"],
         ),
     )
+    if _meetings_has_date_inferred(connection):
+        connection.execute(
+            """
+            UPDATE meetings SET date_inferred = ?
+            WHERE source_url = ?
+            """,
+            (1 if meeting.get("date_inferred") else 0, source_url),
+        )
     row = connection.execute(
         "SELECT meeting_id FROM meetings WHERE source_url = ?", (source_url,)
     ).fetchone()
