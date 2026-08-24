@@ -6,11 +6,11 @@
   "official_home_url": "https://www.town.omachi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "static",
       "index_url": "https://www.town.omachi.lg.jp/gikai/list00518.html",
-      "verified_at": "2026-08-20T13:28:22Z",
-      "verified_by": "verify --live",
+      "verified_at": null,
+      "verified_by": null,
       "evidence": [
         {
           "url": "https://www.town.omachi.lg.jp/gikai/list00518.html",
@@ -23,7 +23,7 @@
           "fetched_at": "2026-08-20T13:28:25Z"
         }
       ],
-      "notes": null,
+      "notes": "2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
       "config": {
         "council_name": "大町町議会",
         "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
@@ -32,12 +32,12 @@
       }
     },
     "regulations": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "joureikun",
       "index_url": "https://www.town.omachi.lg.jp/joureikun/index.html",
-      "verified_at": "2026-08-21T01:08:14Z",
-      "verified_by": "vendor_joureikun --limit 2",
-      "notes": "Joureikun静的catalog構造。vendor_joureikun.pyで--limit 2の実取込成功（2026-08-21、条文分割・検索まで確認）。act/{digits}[_{digits}].htmlパターンは観測済みリンクのみ使用。",
+      "verified_at": null,
+      "verified_by": null,
+      "notes": "Joureikun静的catalog構造。vendor_joureikun.pyで--limit 2の実取込成功（2026-08-21、条文分割・検索まで確認）。act/{digits}[_{digits}].htmlパターンは観測済みリンクのみ使用。 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
       "evidence": [
         {
           "url": "https://www.town.omachi.lg.jp/joureikun/aggregate/catalog/index.html",

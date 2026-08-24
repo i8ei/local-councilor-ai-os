@@ -6,11 +6,11 @@
   "official_home_url": "http://www.city.saga-kashima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "static",
       "index_url": "https://www.city.saga-kashima.lg.jp/main/32950.html",
-      "verified_at": "2026-08-20T13:41:03Z",
-      "verified_by": "verify --live",
+      "verified_at": null,
+      "verified_by": null,
       "evidence": [
         {
           "url": "https://www.city.saga-kashima.lg.jp/main/32950.html",
@@ -23,7 +23,7 @@
           "fetched_at": "2026-08-20T13:41:05Z"
         }
       ],
-      "notes": null,
+      "notes": "2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
       "config": {
         "council_name": "鹿島市議会",
         "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
@@ -32,12 +32,12 @@
       }
     },
     "regulations": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/kashima/",
-      "verified_at": "2026-08-20T13:14:08Z",
-      "verified_by": "verify --live",
-      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "verified_at": null,
+      "verified_by": null,
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/kashima/reiki_menu.html",

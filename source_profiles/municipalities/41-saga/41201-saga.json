@@ -20,12 +20,12 @@
       "notes": "voices(gijiroku.com)。会議一覧本体は voices/cgi/voiweb.exe 配下で、robots.txt (User-agent: *) が Disallow: /voices/cgi/（2026-08-21実確認）。礼節あるクロールでは自動取込不可。本文リンクはjavascript:winopen()依存・Shift_JISのため、許可を得た利用者が各自取得する前提（dbsr・江北例規と同じ線引）。"
     },
     "regulations": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.saga/",
-      "verified_at": "2026-08-20T13:14:23Z",
-      "verified_by": "verify --live",
-      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest",
+      "verified_at": null,
+      "verified_by": null,
+      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.saga/reiki_menu.html",

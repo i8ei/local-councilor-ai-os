@@ -113,12 +113,21 @@ Trust boundary:
 
 ## Saga coverage（佐賀20市町の確定状況）
 
-80入口（20市町×議事録/例規/予算/決算）は main `c542b40`（2026-08-23）時点で次のとおりすべて判定済み:
+80入口（20市町×議事録/例規/予算/決算）はすべて判定済み。**2026-08-24 に議事録・例規の `ready` を全件取り下げた**（下記）。
 
-- **議事録（minutes）**: ready 14（static 9: 武雄/鹿島/嬉野/基山/有田/大町/江北/白石/太良 ＋ kaigiroku_net 5: 唐津/鳥栖/多久/伊万里/玄海）/ blocked 4（dbsr 3: 神埼/上峰/みやき — 索引は見えるが本文がrobots制限。voices 1: 佐賀）/ needs_review 1（吉野ヶ里 — JS描画）/ unsupported 1（小城 — db-search.com）
-- **例規（regulations）**: ready 17（g_reiki 15 ＋ d1_law互換 1: 基山 ＋ joureikun 1: 大町）/ blocked 1（江北 d1_law — robots到達不可につきfail-closed）/ needs_review 1（吉野ヶ里 — JS描画）/ unsupported 1（みやき — opensearch型JS＋POST必須）
+- **議事録（minutes）**: needs_review 15（adapter候補 static 10: 武雄/鹿島/嬉野/基山/有田/大町/江北/白石/太良/吉野ヶ里 ＋ kaigiroku_net 5: 唐津/鳥栖/多久/伊万里/玄海）/ blocked 4（dbsr 3: 神埼/上峰/みやき — 索引は見えるが本文がrobots制限。voices 1: 佐賀）/ unsupported 1（小城 — db-search.com）
+- **例規（regulations）**: needs_review 18（adapter候補 g_reiki 15 ＋ d1_law互換 1: 基山 ＋ joureikun 1: 大町 ＋ 吉野ヶ里 — JS描画）/ blocked 1（江北 d1_law — robots到達不可につきfail-closed）/ unsupported 1（みやき — opensearch型JS＋POST必須）
 - **予算（budget）**: ready 18 / blocked 1（白石 — robots `Disallow: /var/`、実プローブで確認済み）/ not_found 1（玄海 — 探索経路は記録済み）
 - **決算（settlement）**: ready 18 / blocked 1（白石）/ not_found 1（大町 — 総括表のみ確認）
+
+### 2026-08-24: 議事録・例規の ready 取り下げ（30件）
+
+`ready` の条件を「索引が存在する」から「**取込アダプタが本文からレコードを1件以上抽出できた**」へ変更した。会議録なら発言者の付いた発言、例規なら条番号の付いた条を要求する。旧条件は索引の見た目だけを見ていたため、逐語会議録を公開していない自治体の広報紙PDFを会議録として `ready` にした実例がある（有田町、2026-08-21に手で降格）。
+
+旧条件下で付いた `ready` は新条件を満たすか未検証なので、議事録13件・例規17件を `needs_review` へ戻し、`verified_at` / `verified_by` を消した。`evidence` と `config` はそのまま残してある。**取り戻すには各自治体で `verify --live` を実行する。**
+
+> [!important]
+> **予算・決算の `ready` 18件ずつは意味が異なる。** これらは `preflight` の探索が付けたもので、`verify` に budget/settlement の経路が存在しないため、一度も検証されていない。降格すると戻す手段が無いので今回は据え置いた。この2種の `ready` は「入口を発見した」以上の意味を持たない。verifier を書くまでこの状態が続く。
 
 予算・決算は adapter=`official_document_index`＋`index_url` で保持する。evidence の `sha256`/`fetched_at` は調査封筒でなく HttpClient キャッシュのメタデータ（on-disk真実）から採用した。取込は設計上スコープ外: 数値の抽出は `modules/budget_review` / `modules/settlement_review` のCSV契約に対して利用者側のAI/人/OCRが行い、汎用抽出器は提供しない。
 
