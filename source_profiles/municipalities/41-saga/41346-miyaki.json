@@ -37,7 +37,7 @@
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A9170542E",
       "verified_at": null,
       "verified_by": null,
-      "notes": "外部 vendor D1-Law (第一法規) のため現行 modules 未対応。要専用adapter 2026-08-25: opensearch型API（JSON POST initSearch→SrJbF01/init）はプロトコル解明済みだがセッションCookie必須のため HttpClient（ステートレス設計）と非互換。アダプタ実装は断念・自動取込スコープ外へ確定。プロトコル詳細は Vault フレームワーク/local-councilor-ai-os_d1law-opensearch型プロトコル解明_2026-08-25。利用者側AI/人手での取込を推奨。",
+      "notes": "外部 vendor D1-Law (第一法規) のため現行 modules 未対応。要専用adapter 2026-08-25: opensearch型API（JSON POST initSearch→SrJbF01/init）はプロトコル解明済みだがセッションCookie必須のため HttpClient（ステートレス設計）と非互換。アダプタ実装は断念・自動取込スコープ外へ確定。プロトコル詳細は Vault フレームワーク/local-councilor-ai-os_d1law-opensearch型プロトコル解明_2026-08-25。利用者側AI/人手での取込を推奨。 2026-08-25 確定: 標準リポジトリとしての取り方の検討は終了（opensearch型APIはプロトコル解明済みだがセッションCookie必須でHttpClient設計と非互換・工数対効果で割に合わない）。このリポを使う該当自治体の議員が各自やり方を考える領域。",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A9170542E",
