@@ -339,7 +339,7 @@ def _classify_kind(
         )
         if supported:
             return _result(
-                status="ready",
+                status="needs_review",
                 adapter="kaigiroku_net",
                 index_url=supported["url"],
                 evidence=[supported],
@@ -385,7 +385,7 @@ def _classify_kind(
                 page_context=ctx,
             ):
                 return _result(
-                    status="ready",
+                    status="needs_review",
                     adapter="static_html_pdf",
                     index_url=cand["observed_on"],
                     evidence=[cand],
@@ -403,7 +403,7 @@ def _classify_kind(
         )
         if supported:
             return _result(
-                status="ready",
+                status="needs_review",
                 adapter="g_reiki",
                 index_url=supported["url"],
                 evidence=[supported],
@@ -451,7 +451,7 @@ def _classify_kind(
         )
         if document:
             return _result(
-                status="ready",
+                status="needs_review",
                 adapter="official_document_index",
                 index_url=document["observed_on"],
                 evidence=[document],
@@ -468,7 +468,7 @@ def _classify_kind(
         )
         if context:
             return _result(
-                status="ready",
+                status="needs_review",
                 adapter="official_index",
                 index_url=context["url"],
                 evidence=[context],

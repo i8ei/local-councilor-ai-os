@@ -82,7 +82,7 @@ class MunicipalityPreflightTests(unittest.TestCase):
         }
         client = FakeClient(pages)
         report = preflight_municipality(MUNICIPALITY, client, max_pages=4)  # type: ignore[arg-type]
-        self.assertEqual("ready", report["status"])
+        self.assertEqual("needs_attention", report["status"])
         self.assertEqual("kaigiroku_net", report["sources"]["minutes"]["adapter"])
         self.assertEqual("g_reiki", report["sources"]["regulations"]["adapter"])
         self.assertEqual(
@@ -156,7 +156,7 @@ class MunicipalityPreflightTests(unittest.TestCase):
             client,
             max_pages=4,
         )
-        self.assertEqual("ready", report["sources"]["minutes"]["status"])
+        self.assertEqual("needs_review", report["sources"]["minutes"]["status"])
         self.assertEqual(
             [
                 "https://www.town.example.jp/",
@@ -165,6 +165,132 @@ class MunicipalityPreflightTests(unittest.TestCase):
             ],
             client.urls,
         )
+
+    def test_preflight_never_grants_ready_discovery_only_proposes(self) -> None:
+        """Structural guard: no code path may emit status="ready"."""
+
+        scenarios = [
+            # kaigiroku_net vendor linked from official page
+            {
+                "https://www.town.example.jp/": "<a href='/council/'>町議会</a>",
+                "https://www.town.example.jp/council/": (
+                    "<a href='https://ssp.kaigiroku.net/tenant/example/'>会議録検索</a>"
+                )
+            },
+            # g_reiki vendor linked from official page
+            {
+                "https://www.town.example.jp/": (
+                    "<a href='https://www1.g-reiki.net/example/reiki_menu.html'>例規集</a>"
+                )
+            },
+            # council-scope static PDF minutes
+            {
+                "https://www.town.example.jp/": "<a href='/gikai/minutes.html'>町議会</a>",
+                "https://www.town.example.jp/gikai/minutes.html": (
+                    "<title>町議会 会議録</title>"
+                    "<a href='/files/r7.pdf'>令和7年第1回定例会会議録</a>"
+                )
+            },
+            # budget/settlement document links and matching title context
+            {
+                "https://www.town.example.jp/": "<a href='/finance/'>財政</a>",
+                "https://www.town.example.jp/finance/": (
+                    "<title>予算・決算</title><h1>予算・決算</h1>"
+                    "<a href='/files/r8-budget.pdf'>令和8年度予算書</a>"
+                )
+            },
+        ]
+        for pages in scenarios:
+            client = FakeClient(pages)
+            report = preflight_municipality(  # type: ignore[arg-type]
+                MUNICIPALITY, client, max_pages=2
+            )
+            self._assert_no_ready_status(report)
+
+    def _assert_no_ready_status(self, node: object) -> None:
+        if isinstance(node, dict):
+            self.assertNotEqual("ready", node.get("status"))
+            for value in node.values():
+                self._assert_no_ready_status(value)
+        elif isinstance(node, list):
+            for value in node:
+                self._assert_no_ready_status(value)
+
+    def test_supported_vendor_minutes_proposes_needs_review_with_evidence(
+        self,
+    ) -> None:
+        pages = {
+            "https://www.town.example.jp/": "<a href='/council/'>町議会</a>",
+            "https://www.town.example.jp/council/": (
+                "<a href='https://ssp.kaigiroku.net/tenant/example/'>会議録検索</a>"
+            )
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=2
+        )
+        minutes = report["sources"]["minutes"]
+        self.assertEqual("needs_review", minutes["status"])
+        self.assertEqual("kaigiroku_net", minutes["adapter"])
+        self.assertEqual(
+            "https://ssp.kaigiroku.net/tenant/example/",
+            minutes["index_url"],
+        )
+        self.assertEqual(
+            "supported_vendor_linked_from_official_page", minutes["reason"]
+        )
+        self.assertEqual(1, len(minutes["evidence"]))
+
+    def test_budget_and_settlement_propose_needs_review_keeping_evidence(
+        self,
+    ) -> None:
+        pages = {
+            "https://www.town.example.jp/": "<a href='/finance/'>財政</a>",
+            "https://www.town.example.jp/finance/": """
+                <title>予算・決算</title>
+                <h1>予算・決算</h1>
+                <a href="/files/r8-budget.pdf">令和8年度予算書</a>
+                <a href="/files/r7-settlement.pdf">令和7年度決算書</a>
+            """
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=2
+        )
+        budget = report["sources"]["budget"]
+        settlement = report["sources"]["settlement"]
+        for source in (budget, settlement):
+            self.assertEqual("needs_review", source["status"])
+            self.assertEqual("official_document_index", source["adapter"])
+            self.assertEqual(
+                "https://www.town.example.jp/finance/",
+                source["index_url"],
+            )
+            self.assertEqual(
+                "official_page_links_matching_document", source["reason"]
+            )
+            self.assertEqual(1, len(source["evidence"]))
+
+    def test_matching_title_without_documents_proposes_needs_review(self) -> None:
+        pages = {
+            "https://www.town.example.jp/": "<a href='/newsletter.html'>予算</a>",
+            "https://www.town.example.jp/newsletter.html": (
+                "<title>予算書・決算書</title><h1>予算書・決算書</h1>"
+            )
+        }
+        report = preflight_municipality(  # type: ignore[arg-type]
+            MUNICIPALITY, FakeClient(pages), max_pages=2
+        )
+        budget = report["sources"]["budget"]
+        self.assertEqual("needs_review", budget["status"])
+        self.assertEqual("official_index", budget["adapter"])
+        self.assertEqual(
+            "https://www.town.example.jp/newsletter.html",
+            budget["index_url"],
+        )
+        self.assertEqual(
+            "fetched_official_page_has_matching_title_or_heading",
+            budget["reason"],
+        )
+        self.assertEqual(1, len(budget["evidence"]))
 
     def test_report_writer_refuses_overwrite(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -228,8 +354,10 @@ class MunicipalityPreflightTests(unittest.TestCase):
             ],
             client.urls,
         )
-        self.assertEqual("ready", report["sources"]["budget"]["status"])
-        self.assertEqual("ready", report["sources"]["settlement"]["status"])
+        self.assertEqual("needs_review", report["sources"]["budget"]["status"])
+        self.assertEqual(
+            "needs_review", report["sources"]["settlement"]["status"]
+        )
         self.assertEqual(
             "bundled_observatory",
             report["pages"][1]["discovered_from"],
@@ -379,7 +507,7 @@ class MunicipalityPreflightTests(unittest.TestCase):
         )
         self.assertNotEqual("ready", report["sources"]["minutes"]["status"])
 
-    def test_council_gikai_pdf_remains_ready(self) -> None:
+    def test_council_gikai_pdf_proposes_needs_review(self) -> None:
         pages = {
             "https://www.town.example.jp/": '<a href="/gikai/minutes.html">町議会</a>',
             "https://www.town.example.jp/gikai/minutes.html": """
@@ -390,10 +518,10 @@ class MunicipalityPreflightTests(unittest.TestCase):
         report = preflight_municipality(  # type: ignore[arg-type]
             MUNICIPALITY, FakeClient(pages), max_pages=2
         )
-        self.assertEqual("ready", report["sources"]["minutes"]["status"])
+        self.assertEqual("needs_review", report["sources"]["minutes"]["status"])
         self.assertEqual("static_html_pdf", report["sources"]["minutes"]["adapter"])
 
-    def test_council_url_council_keeps_sitemap_case_ready(self) -> None:
+    def test_council_url_council_keeps_sitemap_case_as_needs_review(self) -> None:
         pages = {
             "https://www.town.example.jp/": '<a href="/council/minutes.html">会議録</a>',
             "https://www.town.example.jp/council/minutes.html": """
@@ -404,7 +532,7 @@ class MunicipalityPreflightTests(unittest.TestCase):
         report = preflight_municipality(  # type: ignore[arg-type]
             MUNICIPALITY, FakeClient(pages), max_pages=2
         )
-        self.assertEqual("ready", report["sources"]["minutes"]["status"])
+        self.assertEqual("needs_review", report["sources"]["minutes"]["status"])
 
     def test_gijiroku_without_voices_path_still_voices(self) -> None:
         pages = {
@@ -462,7 +590,7 @@ class MunicipalityPreflightTests(unittest.TestCase):
         report = preflight_municipality(  # type: ignore[arg-type]
             MUNICIPALITY, FakeClient(pages), max_pages=2
         )
-        self.assertEqual("ready", report["sources"]["minutes"]["status"])
+        self.assertEqual("needs_review", report["sources"]["minutes"]["status"])
         self.assertEqual("static_html_pdf", report["sources"]["minutes"]["adapter"])
 
 
