@@ -249,6 +249,25 @@ def store_meeting(connection: sqlite3.Connection, document: dict[str, Any]) -> i
         )
         stored += 1
 
+    # An ingested document is authoritative for its meeting: drop stale rows
+    # whose seq is absent from the incoming payload. A fetch_failed placeholder
+    # carries no speeches and must never wipe previously ingested ones.
+    if (document.get("provenance") or {}).get("status") != "fetch_failed":
+        incoming_seqs = [
+            int(speech.get("seq", position))
+            for position, speech in enumerate(document.get("speeches") or [], start=1)
+        ]
+        if incoming_seqs:
+            placeholders = ",".join("?" * len(incoming_seqs))
+            connection.execute(
+                f"DELETE FROM speeches WHERE meeting_id = ? AND seq NOT IN ({placeholders})",
+                (meeting_id, *incoming_seqs),
+            )
+        else:
+            connection.execute(
+                "DELETE FROM speeches WHERE meeting_id = ?", (meeting_id,)
+            )
+
     provenance = document.get("provenance") or {}
     resolved_url = str(provenance.get("resolved_url") or source_url)
     provenance_id = str(

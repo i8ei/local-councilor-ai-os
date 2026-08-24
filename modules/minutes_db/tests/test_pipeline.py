@@ -70,6 +70,24 @@ def synthetic_documents(texts: list[str]) -> dict[str, object]:
     return document
 
 
+def fetch_failed_document(source_url: str) -> dict[str, object]:
+    return {
+        "meeting": {
+            "council_name": "架空町議会",
+            "meeting_name": "令和8年第1回定例会",
+            "date": None,
+            "source_url": source_url,
+            "adapter": "static_html",
+            "fetched_at": "2026-07-23T00:00:00Z",
+        },
+        "speeches": [],
+        "provenance": {
+            "resolved_url": source_url,
+            "status": "fetch_failed",
+        },
+    }
+
+
 class PipelineTests(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
@@ -107,6 +125,80 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(1, speech_count)
         self.assertEqual(1, provenance_count)
         self.assertEqual("防災計画を質問します。", text)
+
+    def test_reingest_with_fewer_speeches_removes_stale_rows_and_fts(self) -> None:
+        document = synthetic_documents(
+            [f"発言{n}の防災について述べます。" for n in range(1, 6)]
+        )
+        store_meeting(self.connection, document)
+        self._rebuild_fts()
+        revised = synthetic_documents(
+            [f"発言{n}の防災について述べます。" for n in range(1, 4)]
+        )
+        other = synthetic_documents(["別会議の発言です。"])
+        assert isinstance(other, dict) and isinstance(other["meeting"], dict)
+        other["meeting"]["source_url"] = "https://example.invalid/minutes/meeting-2"
+        store_meeting(self.connection, other)
+        self._rebuild_fts()
+
+        stored = store_meeting(self.connection, revised)
+        self.connection.commit()
+
+        self.assertEqual(3, stored)
+        rows = self.connection.execute(
+            "SELECT seq, text FROM speeches WHERE meeting_id = ("
+            "SELECT meeting_id FROM meetings WHERE source_url ="
+            " 'https://example.invalid/minutes/meeting-1') ORDER BY seq"
+        ).fetchall()
+        self.assertEqual([1, 2, 3], [row[0] for row in rows])
+        stale_fts = self.connection.execute(
+            "SELECT count(*) FROM speeches_fts WHERE speeches_fts MATCH '発言5'"
+        ).fetchone()[0]
+        self.assertEqual(0, stale_fts)
+        kept_fts = self.connection.execute(
+            "SELECT count(*) FROM speeches_fts WHERE speeches_fts MATCH '発言3'"
+        ).fetchone()[0]
+        self.assertEqual(1, kept_fts)
+        other_count = self.connection.execute(
+            "SELECT count(*) FROM speeches WHERE meeting_id = ("
+            "SELECT meeting_id FROM meetings WHERE source_url ="
+            " 'https://example.invalid/minutes/meeting-2')"
+        ).fetchone()[0]
+        self.assertEqual(1, other_count)
+
+    def test_fetch_failed_placeholder_preserves_existing_speeches(self) -> None:
+        document = synthetic_documents(
+            [f"発言{n}の予算について質問します。" for n in range(1, 4)]
+        )
+        store_meeting(self.connection, document)
+        self._rebuild_fts()
+        other = synthetic_documents(["別会議の発言です。"])
+        assert isinstance(other, dict) and isinstance(other["meeting"], dict)
+        other["meeting"]["source_url"] = "https://example.invalid/minutes/meeting-2"
+        store_meeting(self.connection, other)
+
+        placeholder = fetch_failed_document(
+            "https://example.invalid/minutes/meeting-1"
+        )
+        store_meeting(self.connection, placeholder)
+        self.connection.commit()
+
+        rows = self.connection.execute(
+            "SELECT seq, text FROM speeches WHERE meeting_id = ("
+            "SELECT meeting_id FROM meetings WHERE source_url ="
+            " 'https://example.invalid/minutes/meeting-1') ORDER BY seq"
+        ).fetchall()
+        self.assertEqual(3, len(rows))
+        fts_hits = self.connection.execute(
+            "SELECT count(*) FROM speeches_fts WHERE speeches_fts MATCH '質問します'"
+        ).fetchone()[0]
+        self.assertEqual(3, fts_hits)
+        other_count = self.connection.execute(
+            "SELECT count(*) FROM speeches WHERE meeting_id = ("
+            "SELECT meeting_id FROM meetings WHERE source_url ="
+            " 'https://example.invalid/minutes/meeting-2')"
+        ).fetchone()[0]
+        self.assertEqual(1, other_count)
 
     def test_search_and_context_pack_include_provenance(self) -> None:
         source_text = "地域防災計画の見直しについて質問します。"
