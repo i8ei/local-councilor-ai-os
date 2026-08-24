@@ -159,9 +159,10 @@ def _child_values(
         if parent[key] is not None:
             filters.append(f"{key} = :{key}")
             params[key] = parent[key]
+    # Select full rows so callers can apply _amount(), keeping the child
+    # side on the same fallback rule as the parent side.
     return list(connection.execute(
-        f"SELECT {field} AS value, unit FROM budget_line WHERE "
-        + " AND ".join(filters),
+        "SELECT * FROM budget_line WHERE " + " AND ".join(filters),
         params,
     ))
 
@@ -173,7 +174,7 @@ def _child_sum(
     field: str,
 ) -> int | None:
     rows = _child_values(connection, parent, child_grain, field)
-    values = [row["value"] for row in rows if row["value"] is not None]
+    values = [v for row in rows if (v := _amount(row, field)) is not None]
     if not values:
         return None
     return int(sum(values))
@@ -195,19 +196,17 @@ def _check_hierarchy(connection: sqlite3.Connection) -> int:
                 child_grain,
                 "current_year_amount",
             )
-            child_values = [
-                row["value"] for row in child_rows if row["value"] is not None
+            child_entries = [
+                (row, value)
+                for row in child_rows
+                if (value := _amount(row, "current_year_amount")) is not None
             ]
-            if not child_values:
+            if not child_entries:
                 continue
-            child_amount = int(sum(child_values))
+            child_amount = int(sum(value for _, value in child_entries))
             found = True
             child_units = sorted(
-                {
-                    str(row["unit"])
-                    for row in child_rows
-                    if row["value"] is not None
-                }
+                {str(row["unit"]) for row, _ in child_entries}
             )
             if len(child_units) != 1 or child_units[0] != parent["unit"]:
                 print(
