@@ -17,7 +17,14 @@ from lcaios.http import CacheTier, RobotsDeniedError
 from modules.minutes_db.adapters.dbsr import DbsrAdapter
 from modules.minutes_db.adapters.kaigiroku_net import KaigirokuNetAdapter
 from modules.minutes_db.adapters.static_html import StaticHtmlAdapter
-from modules.regulations.vendor_greiki import discover_documents, fetch_document
+from modules.regulations.vendor_greiki import (
+    discover_documents as discover_documents_greiki,
+    fetch_document as fetch_document_greiki,
+)
+from modules.regulations.vendor_joureikun import (
+    discover_documents as discover_documents_joureikun,
+    fetch_document as fetch_document_joureikun,
+)
 from source_profiles.schema import validate_profile
 
 try:
@@ -817,8 +824,27 @@ def _probe_greiki_regulations(
     *, base_url: str, client: Any
 ) -> tuple[list[dict[str, Any]], Any]:
     """Extract articles from ONE g-reiki regulation via the real extractor."""
-    refs = discover_documents(base_url, client=client, limit=1)
-    payload = fetch_document(refs[0], base_url=base_url, client=client)
+    refs = discover_documents_greiki(base_url, client=client, limit=1)
+    payload = fetch_document_greiki(refs[0], base_url=base_url, client=client)
+    articles = payload.get("articles")
+    records = (
+        [a for a in articles if isinstance(a, dict)]
+        if isinstance(articles, list)
+        else []
+    )
+    provenance = payload.get("provenance")
+    status = provenance.get("status") if isinstance(provenance, dict) else None
+    return records, status
+
+
+def _probe_joureikun_regulations(
+    *, index_url: str, client: Any
+) -> tuple[list[dict[str, Any]], Any]:
+    """Extract articles from ONE joureikun act via the real extractor."""
+    refs = discover_documents_joureikun(index_url, client=client, limit=1)
+    if not refs:
+        return [], "no_act_links"
+    payload = fetch_document_joureikun(refs[0], index_url=index_url, client=client)
     articles = payload.get("articles")
     records = (
         [a for a in articles if isinstance(a, dict)]
@@ -1707,6 +1733,93 @@ def _verify_minutes_dbsr(
     )
 
 
+def _verify_joureikun_regulations(
+    profile: dict[str, Any],
+    updated: dict[str, Any],
+    entry: dict[str, Any],
+    *,
+    client: Any,
+    now: str,
+    municipality: str,
+    status_before: Any,
+    adapter: Any,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Verify a joureikun regulations entry (index_url + act links)."""
+    index_url = entry.get("index_url")
+    if not isinstance(index_url, str) or not index_url.strip():
+        report: dict[str, Any] = {
+            "municipality": municipality,
+            "kind": "regulations",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "missing index_url (cannot derive entry URL without guessing)",
+            "status_before": status_before,
+            "status_after": status_before,
+        }
+        return updated, report
+    try:
+        result = client.fetch(index_url, tier=CacheTier.INDEX)
+    except Exception as exc:  # noqa: BLE001
+        report = {
+            "municipality": municipality,
+            "kind": "regulations",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"{type(exc).__name__}: {exc}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return updated, report
+
+    final_url_val = result.final_url if hasattr(result, "final_url") else index_url  # type: ignore[attr-defined]
+    entry_host = _host(str(index_url))
+    final_host = _host(str(final_url_val))
+    if entry_host is not None and final_host is not None and entry_host != final_host:
+        report = {
+            "municipality": municipality,
+            "kind": "regulations",
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"host drift: entry {entry_host!r} -> final {final_host!r}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+
+    sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
+    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    pending_evidence = [_evidence_item(str(final_url_val), str(index_url), result, now)]
+    report_base = {
+        "municipality": municipality,
+        "kind": "regulations",
+        "adapter": adapter,
+        "status_before": status_before,
+        "entry_url": str(final_url_val),
+        "final_url": final_url_val,
+        "sha256": sha256,
+        "fetched_at": fetched_at,
+    }
+    return _finalize_with_probe(
+        lambda: _probe_joureikun_regulations(
+            index_url=str(final_url_val), client=client
+        ),
+        updated=updated,
+        profile=profile,
+        entry=entry,
+        status_before=status_before,
+        municipality=municipality,
+        kind="regulations",
+        adapter=adapter,
+        now=now,
+        pending_evidence=pending_evidence,
+        report_base=report_base,
+        probe_subject="the first regulation document discovered from the joureikun catalog",
+    )
+
+
 def verify_profile(
     profile: dict[str, Any],
     *,
@@ -1814,6 +1927,17 @@ def verify_profile(
         )
 
     # Only g_reiki regulations is supported for verify (legacy)
+    if kind == "regulations" and adapter == "joureikun":
+        return _verify_joureikun_regulations(
+            profile,
+            updated,
+            entry,
+            client=client,
+            now=now,
+            municipality=municipality,
+            status_before=status_before,
+            adapter=adapter,
+        )
     if adapter != "g_reiki" or kind != "regulations":
         report = {
             "municipality": municipality,

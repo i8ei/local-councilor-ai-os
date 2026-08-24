@@ -2634,5 +2634,149 @@ class BudgetSettlementVerifyTests(unittest.TestCase):
         self.assertIn("unsupported", report["reason"])
 
 
+# ---------------------------------------------------------------------------
+# joureikun regulations synthetic tests (no network)
+# ---------------------------------------------------------------------------
+
+JOUREIKUN_INDEX_URL = "https://www.town.omachi.lg.jp/joureikun/index.html"
+JOUREIKUN_ACT_URL = "https://www.town.omachi.lg.jp/joureikun/act/1.html"
+
+JOUREIKUN_INDEX_HTML = (
+    "<html><head><title>大町町例規集</title></head><body>"
+    '<a href="act/1.html">大町町例規集条例</a>'
+    "</body></html>"
+)
+
+JOUREIKUN_ACT_HTML = (
+    "<html><head><title>大町町例規集条例</title></head><body>"
+    "<h2>第一条</h2><p>この条例は町の例規について定める。</p>"
+    "<h2>第二条</h2><p>施行に関して必要な事項は規則で定める。</p>"
+    "</body></html>"
+)
+
+
+def _base_joureikun_needs_review() -> dict:
+    return {
+        "schema_version": 1,
+        "area_code_5": VALID_AREA,
+        "prefecture": VALID_PREF,
+        "municipality": VALID_MUNI,
+        "official_home_url": VALID_HOME,
+        "sources": {
+            "minutes": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "regulations": {
+                "status": "needs_review",
+                "adapter": "joureikun",
+                "index_url": JOUREIKUN_INDEX_URL,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [
+                    {"url": JOUREIKUN_INDEX_URL, "observed_on": VALID_HOME}
+                ],
+                "notes": None,
+            },
+            "budget": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "settlement": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+        },
+    }
+
+
+def _joureikun_client() -> FakeHttpClient:
+    return FakeHttpClient(
+        {
+            JOUREIKUN_INDEX_URL: make_fetch_result(
+                JOUREIKUN_INDEX_URL, JOUREIKUN_INDEX_HTML
+            ),
+            JOUREIKUN_ACT_URL: make_fetch_result(
+                JOUREIKUN_ACT_URL, JOUREIKUN_ACT_HTML
+            ),
+        }
+    )
+
+
+class JoureikunRegulationsVerifyTests(unittest.TestCase):
+    def test_joureikun_promotes_to_ready(self) -> None:
+        # 大町型: joureikun catalog + act pages with numbered articles.
+        profile = _base_joureikun_needs_review()
+        updated, report = verify_profile(
+            profile, client=_joureikun_client(), now=NOW, kind="regulations"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", report["status_after"])
+        self.assertEqual(
+            "ready", updated["sources"]["regulations"]["status"]
+        )
+        self.assertEqual([], validate_profile(updated))
+
+    def test_joureikun_robots_denied_does_not_promote(self) -> None:
+        class DenyClient(FakeHttpClient):
+            def fetch(
+                self, url: str, *, tier: CacheTier, **_: object
+            ) -> object:
+                self.calls.append((url, tier))
+                raise RobotsDeniedError("robots.txt disallows /joureikun/")
+
+        profile = _base_joureikun_needs_review()
+        client = DenyClient(
+            {
+                JOUREIKUN_INDEX_URL: make_fetch_result(
+                    JOUREIKUN_INDEX_URL, JOUREIKUN_INDEX_HTML
+                )
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="regulations"  # type: ignore[arg-type]
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("RobotsDenied", report["reason"])
+        self.assertEqual(
+            "needs_review", updated["sources"]["regulations"]["status"]
+        )
+
+    def test_joureikun_catalog_without_act_links_is_structure_mismatch(
+        self,
+    ) -> None:
+        # Catalog reachable but no act-pattern links: the vendor structure
+        # check raises, which is a safe stop (failed, status untouched) —
+        # same semantics as g_reiki's structure_mismatch.
+        html = (
+            "<html><head><title>例規集</title></head>"
+            '<body><a href="/other/page.html">案内</a></body></html>'
+        )
+        client = FakeHttpClient(
+            {JOUREIKUN_INDEX_URL: make_fetch_result(JOUREIKUN_INDEX_URL, html)}
+        )
+        profile = _base_joureikun_needs_review()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="regulations"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("structure", report["reason"].lower())
+        self.assertEqual(
+            "needs_review", updated["sources"]["regulations"]["status"]
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
