@@ -287,11 +287,21 @@ def _compare_items(rows: Iterable[sqlite3.Row]) -> int:
             expected = row[item_field]
             actual = row[section_field]
             difference = actual - expected
-            print(
-                f"  {amount_label}: 目={expected} 節合計={actual} "
-                f"差額={difference} 単位={row['unit']}"
-            )
             if difference != 0:
+                print(
+                    f"  {amount_label}: 目={expected} 節合計={actual} "
+                    f"差額={difference} 単位={row['unit']}"
+                )
+                # 翌年度繰越: 多くの帳票は節行に繰越列を持たず（section 値は
+                # 全節 0）、繰越は目行にのみ存在する（予算現額-支出済-不用の
+                # 残差）。その構造では節への分解が不可能なので、
+                # 「節合計0 ≠ 目値>0」は異常でなく許容する。逆（節側にだけ
+                # 繰越がある・目側が0）は記帳不整合として failure のまま。
+                if (
+                    section_field == "section_carryover_amount"
+                    and actual == 0
+                ):
+                    continue
                 failures += 1
     if not found:
         print("  欠落=歳出明細")

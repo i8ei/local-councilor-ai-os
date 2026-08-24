@@ -153,6 +153,101 @@ class SettlementCsvIngestTests(unittest.TestCase):
             ingest_csv.ingest_csv("revenue", revenue, db)
             self.assertNotEqual(0, verify_totals.verify(db))
 
+    def test_item_carryover_without_section_carryover_passes(self) -> None:
+        # Real-world finding (太良町 R7, 2026-08-25): many settlement forms
+        # have NO carryover column on section rows (section_carryover all 0),
+        # carryover exists only at the item level (予算現額-支出済-不用の残差).
+        # verify must tolerate 目繰越>0 / 節繰越合計=0 instead of flagging it,
+        # while still catching the reverse (section-only carryover).
+        exp = [
+            {**COMMON, "kan_code": "1", "kan_name": "歳出款",
+             "ko_code": "1", "ko_name": "歳出項1",
+             "moku_code": "1", "moku_name": "歳出目1",
+             "setsu_code": "1", "setsu_name": "報酬", "block_no": "1",
+             "item_budget_current_amount": "1000",
+             "item_spent_amount": "600",
+             "item_carryover_amount": "300",
+             "item_unused_amount": "100",
+             "section_budget_current_amount": "1000",
+             "section_spent_amount": "600",
+             "section_carryover_amount": "0",
+             "section_unused_amount": "100"},
+        ]
+        summary = [
+            {**COMMON, "side": "revenue", "kan_code": "1",
+             "kan_name": "歳入款", "budget_current_amount": "100",
+             "collected_amount": "80", "uncollectible_amount": "5",
+             "outstanding_amount": "15"},
+            {**COMMON, "side": "expenditure", "kan_code": "1",
+             "kan_name": "歳出款", "budget_current_amount": "1000",
+             "spent_amount": "600", "carryover_amount": "300",
+             "unused_amount": "100"},
+        ]
+        revenue = [
+            {**COMMON, "kan_code": "1", "kan_name": "歳入款",
+             "ko_code": "1", "ko_name": "歳入項1",
+             "budget_current_amount": "100", "collected_amount": "80",
+             "uncollectible_amount": "5", "outstanding_amount": "15"},
+        ]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            db = root / "settlement.db"
+            write_csv(root / "summary.csv", summary)
+            write_csv(root / "revenue.csv", revenue)
+            write_csv(root / "expenditure.csv", exp)
+            ingest_csv.ingest_csv("summary", root / "summary.csv", db)
+            ingest_csv.ingest_csv("revenue", root / "revenue.csv", db)
+            ingest_csv.ingest_csv(
+                "expenditure", root / "expenditure.csv", db
+            )
+            self.assertEqual(0, verify_totals.verify(db))
+
+    def test_section_only_carryover_still_fails(self) -> None:
+        # The reverse mismatch (section rows carry carryover but the item row
+        # records none) must remain a failure: it is a booking inconsistency.
+        exp = [
+            {**COMMON, "kan_code": "1", "kan_name": "歳出款",
+             "ko_code": "1", "ko_name": "歳出項1",
+             "moku_code": "1", "moku_name": "歳出目1",
+             "setsu_code": "1", "setsu_name": "報酬", "block_no": "1",
+             "item_budget_current_amount": "1000",
+             "item_spent_amount": "600",
+             "item_carryover_amount": "0",
+             "item_unused_amount": "100",
+             "section_budget_current_amount": "1000",
+             "section_spent_amount": "600",
+             "section_carryover_amount": "300",
+             "section_unused_amount": "100"},
+        ]
+        summary = [
+            {**COMMON, "side": "revenue", "kan_code": "1",
+             "kan_name": "歳入款", "budget_current_amount": "100",
+             "collected_amount": "80", "uncollectible_amount": "5",
+             "outstanding_amount": "15"},
+            {**COMMON, "side": "expenditure", "kan_code": "1",
+             "kan_name": "歳出款", "budget_current_amount": "1000",
+             "spent_amount": "600", "carryover_amount": "0",
+             "unused_amount": "100"},
+        ]
+        revenue = [
+            {**COMMON, "kan_code": "1", "kan_name": "歳入款",
+             "ko_code": "1", "ko_name": "歳入項1",
+             "budget_current_amount": "100", "collected_amount": "80",
+             "uncollectible_amount": "5", "outstanding_amount": "15"},
+        ]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            db = root / "settlement.db"
+            write_csv(root / "summary.csv", summary)
+            write_csv(root / "revenue.csv", revenue)
+            write_csv(root / "expenditure.csv", exp)
+            ingest_csv.ingest_csv("summary", root / "summary.csv", db)
+            ingest_csv.ingest_csv("revenue", root / "revenue.csv", db)
+            ingest_csv.ingest_csv(
+                "expenditure", root / "expenditure.csv", db
+            )
+            self.assertNotEqual(0, verify_totals.verify(db))
+
     def test_manifest_count_rejects_non_allowlisted_table(self) -> None:
         with closing(sqlite3.connect(":memory:")) as connection:
             with self.assertRaisesRegex(ValueError, "Unsupported settlement table"):
