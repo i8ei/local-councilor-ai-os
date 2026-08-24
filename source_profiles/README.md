@@ -98,6 +98,8 @@ Steps inside `verify_profile` (injectable `client`, no guessing):
 
 For `minutes/static` the index is checked for a council-scoped minutes document link (`.pdf` or label/URL contains 会議録/議事録 with council token). If none is found and `config.follow_link_regex` is set, the verifier follows at most 3 same-host HTML links whose label or URL (percent-decoded) matches the regex, depth 1 only, using `HttpClient` (robots/low rate/cache). The first follow page containing a council document selects the probe document, and evidence covers both the root index and the successful follow page (idempotent on `url+sha256`). No follow occurs when the regex is absent or invalid; invalid regex is a validation/verify error and the profile is not saved. `決算審査` etc. are excluded by choosing a minimal year regex such as `(令和|平成)(元|[0-9]+)年`.
 
+For `budget`/`settlement` (`adapter=official_document_index`) the verifier fetches `index_url`, prefers the recorded deepest document from `evidence` (any `.pdf/.xlsx/.xls`), else discovers a same-host budget/settlement-labeled document link from the index HTML, fetches one document and reads it (PDF via `pdftotext`, HTML via text; a missing `pdftotext` binary is INCONCLUSIVE — status untouched, never a verdict or a downgrade). The verdict is `needs_review` (never `ready`) with evidence + note: 構造マーカー（歳入・歳出・款・項・予算額/決算額）を2つ以上確認できたら「確認済み」、確認できなければ「到達したが非構造」。robots拒否は `blocked`。
+
 For `minutes/kaigiroku_net` the stored `tenant_url` is fetched and the probe runs only if the host stays on `ssp.kaigiroku.net` and the page carries kaigiroku entrance markers.
 
 For `minutes/dbsr` the stored `index_url` (must be a `*.dbsr.jp` URL containing `/index.php`) is fetched once and the probe runs only if the host stays on `*.dbsr.jp` and the page carries a minutes hint (会議録/議事録/定例会/臨時会/本会議) together with either a same-host `/index.php/<id>` detail link or the observed query-list form (`/index.php/?QueryType=New&Template=List...` with a meeting label). After the entrance check passes, the verifier probes the first same-host meeting link through the real dbsr adapter (`CacheTier.DOCUMENT`); if the probe is robots-denied the entry is set to `blocked` (R3), any other fetch error leaves the status unchanged (R5), and a reachable body without speaker-attributed speeches stays/becomes `needs_review` (R4). Observed Saga dbsr tenants allow only the bare `/index.php` index in `robots.txt` and block meeting bodies/details, so ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion). A bare or maintenance page on the vendor host does not promote.
@@ -127,7 +129,12 @@ Trust boundary:
 旧条件下で付いた `ready` は新条件を満たすか未検証なので、議事録13件・例規17件を `needs_review` へ戻し、`verified_at` / `verified_by` を消した。`evidence` と `config` はそのまま残してある。**取り戻すには各自治体で `verify --live` を実行する。**
 
 > [!important]
-> **予算・決算の `ready` 18件ずつは意味が異なる。** これらは `preflight` の探索が付けたもので、`verify` に budget/settlement の経路が存在しないため、一度も検証されていない。降格すると戻す手段が無いので今回は据え置いた。この2種の `ready` は「入口を発見した」以上の意味を持たない。verifier を書くまでこの状態が続く。
+> **予算・決算の `ready` 18件ずつは preflight 由来（2026-08-24 時点の記録）。**
+> 2026-08-25 に budget/settlement 用の verifier（`verify --kind budget|settlement`）を書いた。
+> 汎用抽出器は提供しない設計のため verify は予算・決算に `ready` を付けられない
+> （`needs_review`＝入口＋実文書＋構造マーカー確認済み、または `blocked`＝robots。
+> `ready` は取込後に人が付与する）。preflight 由来の `ready` は verify を回すと
+> `needs_review` へ再判定される。
 
 予算・決算は adapter=`official_document_index`＋`index_url` で保持する。evidence の `sha256`/`fetched_at` は調査封筒でなく HttpClient キャッシュのメタデータ（on-disk真実）から採用した。取込は設計上スコープ外: 数値の抽出は `modules/budget_review` / `modules/settlement_review` のCSV契約に対して利用者側のAI/人/OCRが行い、汎用抽出器は提供しない。
 

@@ -674,6 +674,99 @@ class CliTests(unittest.TestCase):
                         "needs_review", on_disk["sources"]["minutes"]["status"]
                     )
 
+    def test_verify_persists_budget_needs_review_verdict(self) -> None:
+        # budget/settlement verifier: a needs_review verdict (structure check
+        # conclusion) must replace the stale preflight-derived status on disk.
+        import copy
+        from unittest import mock
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            cache_dir = tmp_path / "cache"
+            cache_dir.mkdir()
+            profile = _synthetic_greiki_profile("ready")
+            profile["sources"] = {  # type: ignore[index]
+                "minutes": {
+                    "status": "not_evaluated",
+                    "adapter": None,
+                    "verified_at": None,
+                    "verified_by": None,
+                    "evidence": [],
+                    "notes": None,
+                },
+                "regulations": {
+                    "status": "not_evaluated",
+                    "adapter": None,
+                    "verified_at": None,
+                    "verified_by": None,
+                    "evidence": [],
+                    "notes": None,
+                },
+                "budget": {
+                    "status": "ready",
+                    "adapter": "official_document_index",
+                    "index_url": "https://www.town.tara.lg.jp/chosei/_1726/_2042.html",
+                    "verified_at": "2026-08-23T01:43:49Z",
+                    "verified_by": "pi-pilot-scout",
+                    "evidence": [],
+                    "notes": "preflight-derived",
+                },
+                "settlement": {
+                    "status": "not_evaluated",
+                    "adapter": None,
+                    "verified_at": None,
+                    "verified_by": None,
+                    "evidence": [],
+                    "notes": None,
+                },
+            }
+            profile_path = tmp_path / "41441-tara.json"
+            profile_path.write_text(
+                json.dumps(profile, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            updated = copy.deepcopy(profile)
+            updated["sources"]["budget"]["status"] = "needs_review"
+            report = {
+                "municipality": "太良町",
+                "kind": "budget",
+                "adapter": "official_document_index",
+                "result": "needs_review",
+                "reason": "document_structure_confirmed: ...",
+                "status_before": "ready",
+                "status_after": "needs_review",
+            }
+            with mock.patch.object(
+                _cli, "HttpClient", lambda *a, **kw: mock.MagicMock()
+            ):  # type: ignore[arg-type]
+                with mock.patch.object(
+                    _cli, "verify_profile", return_value=(updated, report)
+                ):  # type: ignore[arg-type]
+                    buf = io.StringIO()
+                    with redirect_stdout(buf):
+                        code = main(
+                            [
+                                "verify",
+                                "--municipality",
+                                "太良町",
+                                "--prefecture",
+                                "佐賀県",
+                                "--kind",
+                                "budget",
+                                "--cache-dir",
+                                str(cache_dir),
+                                "--profiles-dir",
+                                str(tmp_path),
+                            ]
+                        )
+                    self.assertEqual(2, code)
+                    out_report = json.loads(buf.getvalue())
+                    self.assertEqual("needs_review", out_report["result"])
+                    on_disk = json.loads(profile_path.read_text(encoding="utf-8"))
+                    self.assertEqual(
+                        "needs_review", on_disk["sources"]["budget"]["status"]
+                    )
+
 
 if __name__ == "__main__":
     unittest.main()

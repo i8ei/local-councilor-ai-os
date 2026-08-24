@@ -4,6 +4,9 @@ from __future__ import annotations  # noqa: I001
 
 import copy
 import re
+import shutil
+import subprocess
+import tempfile
 import urllib.parse
 from collections import deque
 from html.parser import HTMLParser
@@ -157,6 +160,355 @@ def _is_council_scope(
     return bool(has_text or has_url)
 
 
+# ---------------------------------------------------------------------------
+# budget / settlement verification (kind "budget" / "settlement")
+#
+# Boundary: the repo provides NO generic budget/settlement web extractor
+# (extraction_guidance delegates record extraction to the user's AI, and
+# ingest_csv consumes human/AI-made CSVs). So verify can never reach `ready`
+# for these kinds under the ready definition (adapter-extracted records): the
+# reachable honest states are `needs_review` (entry + real document +
+# structural markers confirmed) and `blocked` (robots). A human grants
+# `ready` after ingestion. Preflight-derived `ready` entries are re-verified
+# here and land on needs_review with fresh evidence.
+# ---------------------------------------------------------------------------
+
+_BUDGET_MARKERS = ("歳入", "歳出", "款", "項", "予算額", "予算総額")
+_SETTLEMENT_MARKERS = ("歳入", "歳出", "款", "項", "決算額", "決算総額")
+_BUDGET_DOC_EXTENSIONS = (".pdf", ".xlsx", ".xls")
+
+
+def _is_budget_settlement_document_link(
+    *, label: str, url: str, kind: str
+) -> bool:
+    """A document link whose label/URL matches the budget/settlement theme."""
+    ext = Path(urllib.parse.urlsplit(url).path).suffix.lower()
+    if ext not in _BUDGET_DOC_EXTENSIONS:
+        return False
+    blob = f"{label} {urllib.parse.unquote(url)}".lower()
+    if kind == "settlement":
+        return "決算" in blob
+    return "予算" in blob and "決算" not in blob
+
+
+def _budget_settlement_doc_urls(
+    links: list[tuple[str, str]], observed_url: str, kind: str
+) -> list[str]:
+    out: list[str] = []
+    for href, label in links:
+        resolved = _canonical_url(
+            urllib.parse.urljoin(str(observed_url), href)
+        )
+        if resolved is None:
+            continue
+        if _host(str(resolved)) != _host(str(observed_url)):
+            continue
+        if _is_budget_settlement_document_link(label=label, url=resolved, kind=kind):
+            out.append(resolved)
+    return out
+
+
+def _probe_budget_settlement_doc(
+    *, document_url: str, client: Any
+) -> tuple[str, Any, str]:
+    """Fetch one document and return (text, adapter_status, media_type).
+
+    Mirrors the minutes PDF probe: a missing pdftotext binary is
+    INCONCLUSIVE (learns nothing about the source), never a verdict.
+    """
+    fetched = client.fetch(document_url, tier=CacheTier.DOCUMENT)
+    media_type = (
+        str(fetched.content_type).lower()
+        if hasattr(fetched, "content_type") and fetched.content_type
+        else ""
+    )
+    path_lower = document_url.lower().split("?", 1)[0]
+    is_pdf = path_lower.endswith(".pdf") or media_type == "application/pdf"
+    if is_pdf:
+        tool = shutil.which("pdftotext")
+        if tool is None:
+            return "", "pdf_cached_pdftotext_unavailable", media_type
+        input_path = (
+            Path(fetched.cache_path) if hasattr(fetched, "cache_path") else None  # type: ignore[attr-defined]
+        )
+        temporary_path: str | None = None
+        if input_path is None or not input_path.exists():
+            with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as handle:
+                handle.write(fetched.body)  # type: ignore[attr-defined]
+                temporary_path = handle.name
+            input_path = Path(temporary_path)
+        try:
+            completed: Any = subprocess.run(  # type: ignore[assignment]
+                [tool, "-layout", str(input_path), "-"],
+                check=False,
+                capture_output=True,
+                timeout=120,
+            )
+        except Exception:  # noqa: BLE001
+            # Bare token only: statuses must match _PROBE_STATUS_CLASSIFICATION
+            # exactly, or an error would be misread as "document was read".
+            return "", "pdf_text_extraction_failed", media_type
+        finally:
+            if temporary_path:
+                Path(temporary_path).unlink(missing_ok=True)
+        if completed.returncode != 0:
+            return "", "pdf_text_extraction_failed", media_type
+        text = completed.stdout.decode("utf-8", errors="replace")
+        return text, "extracted", media_type
+    if "html" in media_type or path_lower.endswith((".html", ".htm")):
+        try:
+            return _decode_html(fetched), "extracted", media_type
+        except Exception:  # noqa: BLE001
+            return "", "decode_error", media_type
+    return "", "unprobeable_media_type", media_type
+
+
+_BUDGET_SETTLEMENT_NOTE_READ = (
+    "検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。"
+    "レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。"
+    "取込後に human が ready を付与する。"
+)
+
+
+def _verify_budget_settlement(
+    profile: dict[str, Any],
+    updated: dict[str, Any],
+    entry: dict[str, Any],
+    *,
+    client: Any,
+    now: str,
+    municipality: str,
+    status_before: Any,
+    adapter: Any,
+    kind: str,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Verify a budget/settlement entry: entry alive -> real document -> markers.
+
+    Markers confirmed => needs_review + evidence (never ready, see boundary
+    note above). robots denial => blocked. Unreadable doc / unprobeable
+    format => failed, status untouched.
+    """
+    index_url = entry.get("index_url")
+    if not isinstance(index_url, str) or not index_url.strip():
+        report: dict[str, Any] = {
+            "municipality": municipality,
+            "kind": kind,
+            "adapter": adapter,
+            "result": "failed",
+            "reason": "missing index_url (cannot derive entry URL without guessing)",
+            "status_before": status_before,
+            "status_after": status_before,
+        }
+        return updated, report
+    try:
+        result = client.fetch(index_url, tier=CacheTier.INDEX)
+    except RobotsDeniedError as exc:
+        _append_pending_evidence(entry, [])
+        entry["verified_at"] = now
+        entry["verified_by"] = "verify --live"
+        entry["status"] = "blocked"
+        _append_note(entry, _ROBOTS_BLOCKED_NOTE, marker="robots")
+        report = {
+            "municipality": municipality,
+            "kind": kind,
+            "adapter": adapter,
+            "result": "blocked",
+            "reason": f"RobotsDeniedError: {exc} (bodies are robots-restricted)",
+            "status_before": status_before,
+            "status_after": "blocked",
+        }
+        return updated, report
+    except Exception as exc:  # noqa: BLE001
+        report = {
+            "municipality": municipality,
+            "kind": kind,
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"{type(exc).__name__}: {exc}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+        }
+        return updated, report
+
+    final_url_val = result.final_url if hasattr(result, "final_url") else index_url  # type: ignore[attr-defined]
+    entry_host = _host(str(index_url))
+    final_host = _host(str(final_url_val))
+    if entry_host is not None and final_host is not None and entry_host != final_host:
+        report = {
+            "municipality": municipality,
+            "kind": kind,
+            "adapter": adapter,
+            "result": "failed",
+            "reason": f"host drift: entry {entry_host!r} -> final {final_host!r}",
+            "status_before": status_before,
+            "status_after": status_before,
+            "index_url": index_url,
+            "final_url": final_url_val,
+        }
+        return updated, report
+
+    parser = _MinutesPageParser()
+    try:
+        parser.feed(_decode_html(result))
+    except Exception:
+        pass
+
+    # Prefer the previously recorded deepest document (preflight evidence —
+    # the label is not stored, so extension alone qualifies the candidate;
+    # the marker probe below proves it IS a budget/settlement document),
+    # then discover fresh from the index page.
+    document_url: str | None = None
+    evidence = entry.get("evidence")
+    if isinstance(evidence, list):
+        for item in reversed(evidence):
+            if not isinstance(item, dict):
+                continue
+            url = item.get("url")
+            if not isinstance(url, str):
+                continue
+            ext = Path(urllib.parse.urlsplit(url).path).suffix.lower()
+            if ext in _BUDGET_DOC_EXTENSIONS:
+                document_url = url
+                break
+    if document_url is None:
+        doc_urls = _budget_settlement_doc_urls(
+            parser.links, str(final_url_val), kind
+        )
+        if doc_urls:
+            document_url = doc_urls[0]
+
+    pending_evidence = [
+        _evidence_item(str(final_url_val), str(final_url_val), result, now)
+    ]
+    report_base = {
+        "municipality": municipality,
+        "kind": kind,
+        "adapter": adapter,
+        "status_before": status_before,
+        "index_url": index_url,
+        "final_url": final_url_val,
+    }
+
+    if document_url is None:
+        entry["status"] = "needs_review"
+        _append_pending_evidence(entry, pending_evidence)
+        _append_note(
+            entry,
+            f"入口 {final_url_val} に {kind} の文書リンク（PDF/XLSX・予算/決算ラベル）"
+            "が見つからない; 本文に到達できたとは言えない",
+            marker=f"no {kind} document link",
+        )
+        errs = validate_profile(updated)
+        if errs:
+            report = {
+                **report_base,
+                "result": "failed",
+                "reason": f"post-verify validation failed: {errs}",
+                "status_after": status_before,
+            }
+            return copy.deepcopy(profile), report
+        report = {
+            **report_base,
+            "result": "needs_review",
+            "reason": "no_document_link: entry fetched but no budget/settlement document link found",
+            "status_after": "needs_review",
+        }
+        return updated, report
+
+    probe_status, probe_payload = _run_extraction_probe(
+        lambda: _probe_budget_settlement_doc(
+            document_url=document_url, client=client
+        )
+    )
+    if probe_status == "robots":
+        robots_exc = probe_payload
+        _append_pending_evidence(entry, pending_evidence)
+        entry["verified_at"] = now
+        entry["verified_by"] = "verify --live"
+        entry["status"] = "blocked"
+        _append_note(entry, _ROBOTS_BLOCKED_NOTE, marker="robots")
+        report = {
+            **report_base,
+            "result": "blocked",
+            "reason": f"RobotsDeniedError: {robots_exc} (bodies are robots-restricted)",
+            "status_after": "blocked",
+        }
+        return updated, report
+    if probe_status == "error":
+        probe_err = probe_payload
+        report = {
+            **report_base,
+            "result": "failed",
+            "reason": f"{type(probe_err).__name__}: {probe_err}",
+            "status_after": status_before,
+        }
+        return updated, report
+
+    text, adapter_status, media_type = probe_payload
+    if _classify_probe_status(adapter_status) == "inconclusive" or adapter_status == "unprobeable_media_type":
+        report = {
+            **report_base,
+            "result": "failed",
+            "reason": (
+                "probe_inconclusive: the adapter could not read the probed "
+                f"document (adapter status {adapter_status!r}, media {media_type!r}); "
+                "fix the local extraction tooling and re-run"
+            ),
+            "status_after": status_before,
+        }
+        return updated, report
+
+    markers = _BUDGET_MARKERS if kind == "budget" else _SETTLEMENT_MARKERS
+    confirmed = sum(1 for marker in markers if marker in (text or "")) >= 2
+    _append_pending_evidence(entry, pending_evidence)
+    _append_pending_evidence(
+        entry,
+        [
+            {
+                "url": document_url,
+                "observed_on": str(final_url_val),
+                "fetched_at": now,
+            }
+        ],
+    )
+    entry["status"] = "needs_review"
+    if confirmed:
+        _append_note(entry, _BUDGET_SETTLEMENT_NOTE_READ, marker="structure markers")
+        reason = (
+            f"document_structure_confirmed: {kind} document at {document_url} "
+            f"read with structural markers {list(markers)}; extraction is the "
+            "user's step (no generic extractor), ready stays human-granted"
+        )
+    else:
+        _append_note(
+            entry,
+            f"{kind} document に到達したが構造マーカー（{'・'.join(markers[:3])} 等）"
+            "を確認できなかった",
+            marker="no structure markers",
+        )
+        reason = (
+            f"document_reached_without_markers: {kind} document at {document_url} "
+            "read but no structural markers found"
+        )
+    errs = validate_profile(updated)
+    if errs:
+        report = {
+            **report_base,
+            "result": "failed",
+            "reason": f"post-verify validation failed: {errs}",
+            "status_after": status_before,
+        }
+        return copy.deepcopy(profile), report
+    report = {
+        **report_base,
+        "result": "needs_review",
+        "reason": reason,
+        "status_after": "needs_review",
+    }
+    return updated, report
+
+
 def _is_council_document_scope(*, label: str, url: str, observed_on: str) -> bool:
     """Check council scope for a document link (label/url only, no page_context)."""
     combined_text = f"{label} {url}"
@@ -257,7 +609,7 @@ def _append_pending_evidence(entry: dict[str, Any], items: list[dict[str, Any]])
 
 
 def _run_extraction_probe(
-    probe: Callable[[], tuple[list[dict[str, Any]], Any]],
+    probe: Callable[[], tuple[Any, ...]],
 ) -> tuple[str, Any]:
     """Run one extraction probe; classify outcome as ok/robots/error."""
     try:
@@ -283,6 +635,9 @@ _PROBE_STATUS_CLASSIFICATION: dict[str, str] = {
     "pdf_no_text": "extracted",  # tool ran fine, output empty: document was read
     "pdf_cached_pdftotext_unavailable": "inconclusive",
     "pdf_text_extraction_failed": "inconclusive",
+    # budget/settlement document probe statuses
+    "decode_error": "inconclusive",
+    "unprobeable_media_type": "inconclusive",
 }
 # Statuses not listed above (e.g. kaigiroku_net's "discovered") belong to
 # adapters that RAISE instead of returning unreadable bodies, so their record
@@ -625,11 +980,11 @@ def _verify_minutes_static(
             "index_url": index_url,
         }
         return updated, report
-    # Host drift check
-    official_home_url = profile.get("official_home_url")
-    entry_host = (
-        _host(str(official_home_url)) if isinstance(official_home_url, str) else None
-    )
+    # Host drift check: the entry URL (index_url) is the authority we
+    # fetched; comparing against official_home_url would fail every
+    # legitimate vendor-CMS index (kaigiroku/g-reiki tenants) that lives on
+    # a different host from the municipal home page.
+    entry_host = _host(str(index_url))
     final_url_val = result.final_url if hasattr(result, "final_url") else index_url  # type: ignore[attr-defined]
     final_host = _host(str(final_url_val))
     if entry_host is not None and final_host is not None and entry_host != final_host:
@@ -1430,6 +1785,33 @@ def verify_profile(
             "status_after": status_before,
         }
         return updated, report
+
+    # budget / settlement: entry + real document + structural markers. Never
+    # grants ready (no generic extractor exists; ready stays human-granted
+    # after CSV ingestion) — see the boundary note above the verifier.
+    if kind in ("budget", "settlement"):
+        if adapter != "official_document_index":
+            report = {
+                "municipality": municipality,
+                "kind": kind,
+                "adapter": adapter,
+                "result": "failed",
+                "reason": f"verify unsupported for adapter {adapter!r} kind {kind!r}",
+                "status_before": status_before,
+                "status_after": status_before,
+            }
+            return updated, report
+        return _verify_budget_settlement(
+            profile,
+            updated,
+            entry,
+            client=client,
+            now=now,
+            municipality=municipality,
+            status_before=status_before,
+            adapter=adapter,
+            kind=kind,
+        )
 
     # Only g_reiki regulations is supported for verify (legacy)
     if adapter != "g_reiki" or kind != "regulations":

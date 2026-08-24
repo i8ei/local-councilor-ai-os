@@ -289,8 +289,9 @@ def _cmd_verify(args: argparse.Namespace) -> int:
     status_before = entry.get("status") if isinstance(entry, dict) else None
 
     # Delegate unsupported check to verify_profile, but keep early exit for unknown entry
-    # Supported combinations: g_reiki/regulations and static/minutes. Others will be
-    # handled by verify_profile which returns failed with proper reason and exit 2.
+    # Supported: g_reiki/regulations, static|kaigiroku_net|dbsr/minutes,
+    # official_document_index/{budget,settlement}. Others are handled by
+    # verify_profile which returns failed with proper reason and exit 2.
     # We still require cache_dir before calling verify_profile.
     if cache_dir is None:
         report = {
@@ -334,8 +335,12 @@ def _cmd_verify(args: argparse.Namespace) -> int:
 
     updated, v_report = verify_profile(data, client=client, now=now, kind=kind)
 
-    # If verified or blocked, persist to disk
-    if v_report.get("result") in ("verified", "blocked"):
+    # Persist any verdict that carries a recorded status (verified/blocked/
+    # needs_review). needs_review must reach disk too: a R4 "read but no
+    # identifiable records" or a budget/settlement structure verdict must
+    # replace a stale preflight-derived status instead of silently leaving it
+    # in place (有田 lesson). "failed" carries no new status and is not saved.
+    if v_report.get("result") in ("verified", "blocked", "needs_review"):
         try:
             # Write atomically via temp file
             tmp_path = path.with_suffix(".tmp")

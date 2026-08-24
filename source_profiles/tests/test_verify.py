@@ -550,6 +550,27 @@ class MinutesStaticVerifyTests(unittest.TestCase):
         self.assertTrue(any(e.get("sha256") == fetch.sha256 for e in ev))
         self.assertEqual([], validate_profile(updated))
 
+    def test_minutes_human_downgrade_is_not_promoted_back(self) -> None:
+        # src-06 regression: the 2026-08-20 hand downgrades (有田=needs_review,
+        # 白石=blocked) must survive verify --live even when the entry fetches
+        # and probes cleanly. Prior-ready-only promotion is the gate; 会議録系
+        # minutes では blocked/unsupported/not_found は据え置き。
+        for prior in ("blocked", "unsupported", "not_found"):
+            with self.subTest(prior=prior):
+                profile = _base_minutes_static_needs_review()
+                profile["sources"]["minutes"]["status"] = prior  # type: ignore[index]
+                client = _static_minutes_client()
+                updated, report = verify_profile(
+                    profile, client=client, now=NOW, kind="minutes"
+                )
+                self.assertEqual("verified", report["result"])
+                self.assertEqual(prior, report["status_before"])
+                self.assertEqual(prior, report["status_after"])
+                self.assertIn("withheld", report["reason"])
+                self.assertEqual(
+                    prior, updated["sources"]["minutes"]["status"]
+                )
+
     def test_minutes_robots_denied_does_not_promote(self) -> None:
         profile = _base_minutes_static_needs_review()
 
@@ -593,6 +614,50 @@ class MinutesStaticVerifyTests(unittest.TestCase):
         self.assertEqual("failed", report["result"])
         self.assertIn("host drift", report["reason"])
         self.assertEqual("needs_review", updated["sources"]["minutes"]["status"])
+
+    def test_vendor_host_index_is_not_host_drift(self) -> None:
+        # src-04 regression: the drift reference is the fetched entry URL
+        # (index_url), not official_home_url. A legitimate vendor-CMS index
+        # on a different host from the municipal home must NOT fail the
+        # drift check when it serves its own pages.
+        vendor_index = "https://cms.example.net/tara/gikai.html"
+        vendor_doc = "https://cms.example.net/tara/meeting.pdf"
+        html = (
+            '<html><head><title>太良町議会 会議録</title></head><body>'
+            "<h1>太良町議会 会議録</h1>"
+            f'<a href="{vendor_doc}">令和7年 定例会 会議録 (PDF)</a>'
+            "</body></html>"
+        )
+        profile = _base_minutes_static_needs_review()
+        profile["sources"]["minutes"]["index_url"] = vendor_index  # type: ignore[index]
+        profile["sources"]["minutes"]["config"]["pdf"] = True  # type: ignore[index]
+        client = FakeHttpClient(
+            {
+                vendor_index: make_fetch_result(vendor_index, html),
+                vendor_doc: make_fetch_result(
+                    vendor_doc,
+                    "%PDF-1.4 synthetic",
+                    content_type="application/pdf",
+                ),
+            }
+        )
+        with mock.patch(
+            "modules.minutes_db.adapters.static_html.shutil.which",
+            return_value="/usr/bin/pdftotext",
+        ), mock.patch(
+            "modules.minutes_db.adapters.static_html.subprocess.run",
+            return_value=subprocess.CompletedProcess(
+                args=[],
+                returncode=0,
+                stdout="○議長　開会します。○太良太郎　質問します。".encode(),
+                stderr=b"",
+            ),
+        ):
+            updated, report = verify_profile(
+                profile, client=client, now=NOW, kind="minutes"
+            )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", report["status_after"])
 
     def test_minutes_council_scope_missing_does_not_promote(self) -> None:
         profile = _base_minutes_static_needs_review()
@@ -2320,6 +2385,253 @@ class Depth2ConfigValidationTests(unittest.TestCase):
         )
         self.assertEqual("failed", report["result"])
         self.assertIn("invalid follow_max_pages", report["reason"])
+
+
+# ---------------------------------------------------------------------------
+# budget / settlement synthetic tests (no network)
+# ---------------------------------------------------------------------------
+
+BUDGET_INDEX_URL = "https://www.town.tara.lg.jp/chosei/_1726/_2042.html"
+BUDGET_DOC_URL = "https://www.town.tara.lg.jp/var/rev0/0019/4460/12622610125.pdf"
+SETTLEMENT_DOC_URL = "https://www.town.tara.lg.jp/var/rev0/0020/5006/12633110918.pdf"
+
+
+def _base_budget_ready(kind: str = "budget") -> dict:
+    return {
+        "schema_version": 1,
+        "area_code_5": VALID_AREA,
+        "prefecture": VALID_PREF,
+        "municipality": VALID_MUNI,
+        "official_home_url": VALID_HOME,
+        "sources": {
+            "minutes": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "regulations": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "budget": {
+                "status": "ready",
+                "adapter": "official_document_index",
+                "index_url": BUDGET_INDEX_URL,
+                "verified_at": "2026-08-23T01:43:49Z",
+                "verified_by": "pi-pilot-scout",
+                # preflight-derived deepest document record:
+                "evidence": [
+                    {"url": BUDGET_INDEX_URL, "observed_on": BUDGET_INDEX_URL},
+                    {"url": BUDGET_DOC_URL, "observed_on": BUDGET_INDEX_URL},
+                ],
+                "notes": "preflight-derived",
+            },
+            "settlement": {
+                **({"status": "ready"} if kind == "settlement" else {"status": "not_evaluated"}),
+                "adapter": (
+                    "official_document_index" if kind == "settlement" else None
+                ),
+                "index_url": BUDGET_INDEX_URL if kind == "settlement" else None,
+                "verified_at": (
+                    "2026-08-23T01:43:49Z" if kind == "settlement" else None
+                ),
+                "verified_by": (
+                    "pi-pilot-scout" if kind == "settlement" else None
+                ),
+                "evidence": (
+                    [{"url": SETTLEMENT_DOC_URL, "observed_on": BUDGET_INDEX_URL}]
+                    if kind == "settlement"
+                    else []
+                ),
+                "notes": "preflight-derived" if kind == "settlement" else None,
+            },
+        },
+    }
+
+
+BUDGET_INDEX_HTML = (
+    "<html><head><title>財政（予算・決算）一覧</title></head><body>"
+    "<h1>予算のページ</h1>"
+    f'<a href="{BUDGET_DOC_URL}">令和8年度 当初予算書 (PDF)</a>'
+    "</body></html>"
+)
+
+
+class BudgetSettlementVerifyTests(unittest.TestCase):
+    """budget/settlement: document presence + structural markers.
+
+    Boundary: no generic extractor exists, so verify NEVER grants ready here;
+    the reachable outcomes are needs_review (evidence recorded) and blocked.
+    """
+
+    def _patch_pdftotext(self, text: str) -> tuple[mock._patch, ...]:  # type: ignore[name-defined]
+        which_target = "source_profiles.verify.shutil.which"
+        run_target = "source_profiles.verify.subprocess.run"
+        completed = subprocess.CompletedProcess(
+            args=[], returncode=0, stdout=text.encode("utf-8"), stderr=b""
+        )
+        return (
+            mock.patch(which_target, return_value="/usr/bin/pdftotext"),
+            mock.patch(run_target, return_value=completed),
+        )
+
+    def _budget_client(self, doc_url: str = BUDGET_DOC_URL) -> FakeHttpClient:
+        return FakeHttpClient(
+            {
+                BUDGET_INDEX_URL: make_fetch_result(BUDGET_INDEX_URL, BUDGET_INDEX_HTML),
+                doc_url: make_fetch_result(
+                    doc_url, "%PDF-1.4 synthetic", content_type="application/pdf"
+                ),
+            }
+        )
+
+    def test_budget_structure_confirmed_is_needs_review_not_ready(self) -> None:
+        # preflight-derived ready must be re-verified down to needs_review with
+        # structural evidence; verify cannot re-grant ready (no extractor).
+        profile = _base_budget_ready("budget")
+        which_patch, run_patch = self._patch_pdftotext(
+            "歳入歳出の款項明細。予算総額 12億円。"
+        )
+        with which_patch, run_patch:
+            updated, report = verify_profile(
+                profile, client=self._budget_client(), now=NOW, kind="budget"
+            )
+        self.assertEqual("needs_review", report["result"])
+        self.assertEqual("ready", report["status_before"])
+        self.assertEqual("needs_review", report["status_after"])
+        self.assertIn("document_structure_confirmed", report["reason"])
+        entry = updated["sources"]["budget"]
+        self.assertEqual("needs_review", entry["status"])
+        notes = entry.get("notes") or ""
+        self.assertIn("構造マーカー", notes)
+        self.assertEqual([], validate_profile(updated))
+
+    def test_settlement_structure_confirmed_is_needs_review(self) -> None:
+        profile = _base_budget_ready("settlement")
+        which_patch, run_patch = self._patch_pdftotext(
+            "歳入歳出の決算額。決算総額 10億円。款項明細。"
+        )
+        client = self._budget_client(doc_url=SETTLEMENT_DOC_URL)
+        with which_patch, run_patch:
+            updated, report = verify_profile(
+                profile, client=client, now=NOW, kind="settlement"
+            )
+        self.assertEqual("needs_review", report["result"])
+        self.assertEqual("needs_review", report["status_after"])
+        self.assertIn("document_structure_confirmed", report["reason"])
+        notes = updated["sources"]["settlement"].get("notes") or ""
+        self.assertIn("構造マーカー", notes)
+
+    def test_budget_document_without_markers_stays_needs_review(self) -> None:
+        # Document reached but no 歳入/歳出/款/項 markers: not structure-confirmed.
+        profile = _base_budget_ready("budget")
+        which_patch, run_patch = self._patch_pdftotext("広報お知らせ 予算の説明会を開催します。")
+        with which_patch, run_patch:
+            updated, report = verify_profile(
+                profile, client=self._budget_client(), now=NOW, kind="budget"
+            )
+        self.assertEqual("needs_review", report["result"])
+        self.assertIn("document_reached_without_markers", report["reason"])
+        notes = updated["sources"]["budget"].get("notes") or ""
+        self.assertIn("構造マーカー", notes)
+
+    def test_budget_no_document_link_reports_needs_review(self) -> None:
+        html = (
+            "<html><head><title>財政一覧</title></head><body>"
+            "<a href=\"https://www.town.tara.lg.jp/notice.pdf\">お知らせ (PDF)</a>"
+            "</body></html>"
+        )
+        profile = _base_budget_ready("budget")
+        profile["sources"]["budget"]["evidence"] = []  # type: ignore[index]
+        client = FakeHttpClient({BUDGET_INDEX_URL: make_fetch_result(BUDGET_INDEX_URL, html)})
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="budget"
+        )
+        self.assertEqual("needs_review", report["result"])
+        self.assertIn("no_document_link", report["reason"])
+        self.assertEqual("needs_review", updated["sources"]["budget"]["status"])
+
+    def test_budget_probe_pdftotext_missing_is_inconclusive_untouched(self) -> None:
+        # Local tooling absence must not demote preflight-derived ready.
+        profile = _base_budget_ready("budget")
+        which_patch_off = mock.patch(
+            "source_profiles.verify.shutil.which", return_value=None
+        )
+        with which_patch_off:
+            updated, report = verify_profile(
+                profile, client=self._budget_client(), now=NOW, kind="budget"
+            )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("probe_inconclusive", report["reason"])
+        self.assertIn("pdf_cached_pdftotext_unavailable", report["reason"])
+        self.assertEqual("ready", report["status_after"])
+        self.assertEqual("ready", updated["sources"]["budget"]["status"])
+
+    def test_budget_probe_unprobeable_media_is_inconclusive_untouched(self) -> None:
+        # A non-PDF/non-HTML document (e.g., xlsx) is unprobeable by this
+        # verifier: status stays untouched rather than guessing.
+        profile = _base_budget_ready("budget")
+        doc_url = "https://www.town.tara.lg.jp/var/yosan.xlsx"
+        profile["sources"]["budget"]["evidence"] = [  # type: ignore[index]
+            {"url": doc_url, "observed_on": BUDGET_INDEX_URL}
+        ]
+        client = FakeHttpClient(
+            {
+                BUDGET_INDEX_URL: make_fetch_result(BUDGET_INDEX_URL, BUDGET_INDEX_HTML),
+                doc_url: make_fetch_result(
+                    doc_url, "PK\x03\x04 binary", content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                ),
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="budget"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("probe_inconclusive", report["reason"])
+        self.assertIn("unprobeable_media_type", report["reason"])
+        self.assertEqual("ready", report["status_after"])
+        self.assertEqual("ready", updated["sources"]["budget"]["status"])
+
+    def test_budget_doc_robots_denied_sets_blocked(self) -> None:
+        class DenyDocClient(FakeHttpClient):
+            def fetch(self, url: str, *, tier: CacheTier, **_: object) -> object:
+                self.calls.append((url, tier))
+                if url == BUDGET_DOC_URL:
+                    raise RobotsDeniedError("robots.txt disallows /var/")
+                return self.responses[url]
+
+        profile = _base_budget_ready("budget")
+        client = DenyDocClient(
+            {
+                BUDGET_INDEX_URL: make_fetch_result(BUDGET_INDEX_URL, BUDGET_INDEX_HTML),
+                BUDGET_DOC_URL: make_fetch_result(
+                    BUDGET_DOC_URL, "%PDF-1.4 synthetic", content_type="application/pdf"
+                ),
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="budget"  # type: ignore[arg-type]
+        )
+        self.assertEqual("blocked", report["result"])
+        self.assertEqual("blocked", updated["sources"]["budget"]["status"])
+        notes = updated["sources"]["budget"].get("notes") or ""
+        self.assertIn("robots", notes.lower())
+
+    def test_budget_unsupported_adapter_fails(self) -> None:
+        profile = _base_budget_ready("budget")
+        profile["sources"]["budget"]["adapter"] = "vendor_custom"  # type: ignore[index]
+        updated, report = verify_profile(
+            profile, client=FakeHttpClient({}), now=NOW, kind="budget"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("unsupported", report["reason"])
 
 
 if __name__ == "__main__":
