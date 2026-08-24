@@ -217,6 +217,25 @@ class D1LawAdapterTests(unittest.TestCase):
         self.assertTrue(all(J_URL_1 in item["locator"] for item in articles))
         self.assertEqual("cp932", payload["provenance"]["transform"]["encoding"])
 
+    def test_meta_declared_charset_regex_matches_bytes(self) -> None:
+        match = vendor_d1law_reiki._META_CHARSET_RE.search(
+            b'<meta charset="shift_jis">'
+        )
+        self.assertIsNotNone(match)
+        assert match is not None
+        self.assertEqual(b"shift_jis", match.group(1))
+
+    def test_euc_jp_body_with_meta_charset_decodes_correctly(self) -> None:
+        # Synthetic fixture: page declares EUC-JP in <meta>, no HTTP header.
+        text = "第一条　この条例は、町民の福祉の増進を目的とする。"
+        raw = (
+            '<html><head><meta charset="euc-jp">'
+            f"<title>架空町例規</title></head><body><p>{text}</p></body></html>"
+        ).encode("euc_jp")
+        decoded, encoding = vendor_d1law_reiki.decode_html(raw, None)
+        self.assertEqual("euc-jp", encoding)
+        self.assertIn(text, decoded)
+
     def test_derived_url_failure_is_per_document_safe_stop(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

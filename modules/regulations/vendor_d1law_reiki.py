@@ -88,7 +88,7 @@ _BLOCK_TAGS = {
 }
 _IGNORED_TAGS = {"script", "style", "noscript", "svg"}
 _META_CHARSET_RE = re.compile(
-    rb"<meta[^>]+(?:charset\\s*=\\s*[\"']?\\s*|content\\s*=\\s*[\"'][^\"']*charset=)([a-zA-Z0-9._-]+)",
+    br"<meta[^>]+(?:charset\s*=\s*[\"']?\s*|content\s*=\s*[\"'][^\"']*charset=)([a-zA-Z0-9._-]+)",
     re.I,
 )
 _OPEN_RE = re.compile(r"OpenResDataWin\s*\(\s*['\"]([^'\"\\)]+)['\"]\s*\)", re.I)
