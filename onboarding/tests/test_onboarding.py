@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 import tempfile
 import unittest
@@ -460,6 +461,61 @@ class OnboardingTests(unittest.TestCase):
             )
             self.assertEqual("verified", verification["scaffold_status"])
             self.assertEqual([], verification["failures"])
+
+    def test_verify_scaffold_reports_missing_shelves(self) -> None:
+        # doc-01: verify_scaffold の負例。棚MOCが無いVaultを対象にした
+        # manifestを渡すと complete にならず失敗理由を列挙する。
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            _create_base(vault)
+            manifest_path = vault / "manifest.json"
+            manifest_path.write_text(
+                json.dumps(
+                    {
+                        "target": {"vault_path": str(vault)},
+                        "requested_layout": "scaffold",
+                        "artifacts": [],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with patch(
+                "onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY
+            ):
+                verification = verify_scaffold(manifest_path)
+            self.assertNotEqual("complete", verification["scaffold_status"])
+            self.assertTrue(
+                any("業務棚MOC" in failure for failure in verification["failures"])
+            )
+
+    def test_verify_scaffold_reports_missing_artifact(self) -> None:
+        # doc-01: manifestが存在しないartifactを指すと hash 検査より先に
+        # 「不存在」として失敗を報告する。
+        with tempfile.TemporaryDirectory() as temporary:
+            vault = Path(temporary)
+            _create_base(vault)
+            manifest_path = vault / "manifest.json"
+            ghost = vault / "まだ存在しない.md"
+            manifest_path.write_text(
+                json.dumps(
+                    {
+                        "target": {"vault_path": str(vault)},
+                        "requested_layout": "preserve",
+                        "artifacts": [
+                            {"path": str(ghost), "sha256": "0" * 64}
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with patch(
+                "onboarding.core._probe_obsidian", return_value=OBSIDIAN_READY
+            ):
+                verification = verify_scaffold(manifest_path)
+            self.assertNotEqual("complete", verification["scaffold_status"])
+            self.assertTrue(
+                any("存在しない" in failure for failure in verification["failures"])
+            )
 
     def test_apply_stops_when_target_changes_after_plan(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
