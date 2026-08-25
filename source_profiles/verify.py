@@ -143,9 +143,13 @@ def _is_council_scope(
     label: str,
     url: str,
     observed_on: str,
-    page_context: str | None,
+    page_context: str | None = None,
 ) -> bool:
-    """Replicate bootstrap preflight council scope check."""
+    """Replicate bootstrap preflight council scope check.
+
+    With ``page_context=None`` this doubles as the document-link-only check
+    (formerly _is_council_document_scope).
+    """
     combined_text = f"{label} {page_context or ''}"
     if any(token in combined_text for token in NON_COUNCIL_TOKENS):
         lower_url = url.lower()
@@ -513,29 +517,6 @@ def _verify_budget_settlement(
         "status_after": "needs_review",
     }
     return updated, report
-
-
-def _is_council_document_scope(*, label: str, url: str, observed_on: str) -> bool:
-    """Check council scope for a document link (label/url only, no page_context)."""
-    combined_text = f"{label} {url}"
-    if any(token in combined_text for token in NON_COUNCIL_TOKENS):
-        lower_url = url.lower()
-        lower_obs = observed_on.lower()
-        if not any(
-            tok in lower_url or tok in lower_obs
-            for tok in ("/gikai", "/shigikai", "/council", "/assembly")
-        ):
-            return False
-        if any(t in combined_text for t in ("教育委員会", "農業委員会", "審議会")):
-            return False
-    blob = f"{label} {url} {observed_on}".lower()
-    has_text = any(tok.lower() in blob for tok in COUNCIL_TEXT_TOKENS)
-    if not has_text and "議会" in label:
-        has_text = True
-    has_url = any(
-        tok in url.lower() or tok in observed_on.lower() for tok in COUNCIL_URL_TOKENS
-    )
-    return bool(has_text or has_url)
 
 
 def _is_minutes_document_link(*, label: str, url: str) -> bool:
@@ -1059,7 +1040,7 @@ def _verify_minutes_static(
                 continue
             if not _is_minutes_document_link(label=label, url=resolved):
                 continue
-            if _is_council_document_scope(
+            if _is_council_scope(
                 label=label, url=resolved, observed_on=str(observed_url)
             ):
                 urls.append(resolved)
