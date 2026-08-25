@@ -12,7 +12,6 @@ import sys
 import urllib.parse
 from collections import Counter
 from dataclasses import dataclass
-from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Sequence
@@ -28,6 +27,7 @@ from bootstrap.cli.http import (
 )
 from bootstrap.municipalities import load_metadata, load_registry
 from bootstrap.observatory import ObservatoryError, load_catalog, lookup
+from lcaios.run_manifest import utc_now
 
 SOURCE_KINDS = ("minutes", "regulations", "budget", "settlement")
 DOCUMENT_EXTENSIONS = {".pdf", ".txt", ".xlsx", ".xls", ".csv", ".zip"}
@@ -157,12 +157,6 @@ class PageParser(HTMLParser):
 
 def _collapse(value: str) -> str:
     return re.sub(r"\s+", " ", value.replace("\u3000", " ")).strip()
-
-
-def _utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace(
-        "+00:00", "Z"
-    )
 
 
 def _canonical_url(url: str) -> str | None:
@@ -1049,7 +1043,7 @@ def run_preflight(
     return {
         "schema_version": 1,
         "test_type": "municipality_source_preflight",
-        "generated_at": _utc_now(),
+        "generated_at": utc_now(),
         "status": (
             "ready"
             if status_counts.get("ready", 0) == len(results)

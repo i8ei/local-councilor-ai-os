@@ -7,9 +7,11 @@ import json
 import os
 import sqlite3
 from contextlib import closing
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
+
+from lcaios.run_manifest import utc_now
 
 from .database import evaluate_schema_compatibility, sqlite_read_only_uri
 from .freshness import evaluate_bootstrap_freshness
@@ -53,12 +55,6 @@ ACCEPTED_VERIFICATION_STATES = frozenset(
     {"verified", "reconciled", "verified_source_extraction"}
 )
 SEVERITY_ORDER = {"error": 0, "warning": 1, "info": 2}
-
-
-def _utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace(
-        "+00:00", "Z"
-    )
 
 
 def _warning(
@@ -1420,7 +1416,7 @@ def build_status(
     return {
         "schema_version": SCHEMA_VERSION,
         "product": PRODUCT,
-        "generated_at": _utc_now(),
+        "generated_at": utc_now(),
         "status": _overall_state(overall_inputs),
         "vault": {
             "path": str(vault),

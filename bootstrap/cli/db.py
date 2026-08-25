@@ -5,9 +5,10 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
+
+from lcaios.run_manifest import utc_now
 
 SCHEMA = """
 PRAGMA foreign_keys = ON;
@@ -55,12 +56,6 @@ CREATE TABLE build_metadata (
 
 class DatabaseError(RuntimeError):
     """Raised when the generated database fails validation."""
-
-
-def _utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace(
-        "+00:00", "Z"
-    )
 
 
 def _verification_state(record: dict[str, Any]) -> str:
@@ -160,7 +155,7 @@ def build_database(
             row_count += 1
         build_metadata = {
             "schema_version": "1",
-            "built_at": _utc_now(),
+            "built_at": utc_now(),
             **{
                 key: (
                     value

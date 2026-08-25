@@ -9,24 +9,18 @@ import json
 import re
 import sys
 import urllib.parse
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Sequence
 
 from bootstrap.municipalities import load_metadata, load_registry
 from bootstrap.observatory.catalog import LANES, SOURCE_KINDS
+from lcaios.run_manifest import utc_now
 
 OBSERVATORY_DIR = Path(__file__).resolve().parent
 
 
 class ExportError(RuntimeError):
     """Raised when the explorer export cannot produce a safe snapshot."""
-
-
-def _utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace(
-        "+00:00", "Z"
-    )
 
 
 def _json_value(value: object, fallback: object) -> object:
@@ -345,7 +339,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         manifest = write_snapshot(
             records,
             output_dir=args.output_dir,
-            generated_at=args.generated_at or _utc_now(),
+            generated_at=args.generated_at or utc_now(),
             source_run_id=args.source_run_id,
             depth1_pilot_ids=args.depth1_pilot_id,
             scope_version=args.scope_version,

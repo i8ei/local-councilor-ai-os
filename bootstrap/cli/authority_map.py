@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
+
+from lcaios.run_manifest import utc_now
 
 INDICATOR_INFO = {
     "population_total": (
@@ -56,12 +57,6 @@ INDICATOR_INFO = {
 }
 
 
-def _utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace(
-        "+00:00", "Z"
-    )
-
-
 def _quote(value: Any) -> str:
     return json.dumps(str(value), ensure_ascii=False)
 
@@ -92,7 +87,7 @@ def generate_authority_map(
     lines = [
         "# Generated authority routes. Indicator values are intentionally absent.",
         'schema_version: "1"',
-        f"generated_at: {_quote(_utc_now())}",
+        f"generated_at: {_quote(utc_now())}",
         "municipality:",
         f"  area_code_5: {_quote(municipality['area_code_5'])}",
         (

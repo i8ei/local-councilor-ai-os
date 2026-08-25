@@ -10,9 +10,10 @@ import shutil
 import subprocess
 import unicodedata
 import uuid
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
+
+from lcaios.run_manifest import utc_now
 
 SCHEMA_VERSION = 1
 AUTO_AGENT = "auto"
@@ -93,12 +94,6 @@ PRESERVE_ROLES = frozenset({"vault_home", *PRESERVE_ROLE_BASENAMES})
 
 class OnboardingError(RuntimeError):
     """Raised when a safe onboarding precondition is not met."""
-
-
-def _utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace(
-        "+00:00", "Z"
-    )
 
 
 def _normalize_path_text(value: str) -> str:
@@ -680,7 +675,7 @@ def diagnose_environment(
 
     return {
         "schema_version": SCHEMA_VERSION,
-        "generated_at": _utc_now(),
+        "generated_at": utc_now(),
         "read_only": True,
         "requested_agent": agent,
         "agent": selected_agent or AUTO_AGENT,
@@ -1260,7 +1255,7 @@ def build_plan(
         **plan_seed,
         "status": plan_status,
         "plan_sha256": plan_sha256,
-        "generated_at": _utc_now(),
+        "generated_at": utc_now(),
         "read_only_preview": True,
         "approval_preview": {
             "normal_scoped_actions": [
@@ -1372,8 +1367,8 @@ def apply_scaffold(
             "診断またはファイル状態が計画確認後に変化しました。planを再確認してください"
         )
 
-    started_at = _utc_now()
-    run_id = f"{_utc_now().replace(':', '').replace('-', '')}-{uuid.uuid4().hex[:8]}"
+    started_at = utc_now()
+    run_id = f"{utc_now().replace(':', '').replace('-', '')}-{uuid.uuid4().hex[:8]}"
     run_dir = vault / ".local-councilor-ai-os" / "runs"
     manifest_path = run_dir / f"{run_id}.json"
     manifest_target = _target_status(
@@ -1470,7 +1465,7 @@ def apply_scaffold(
             _atomic_write_json(manifest_path, manifest)
     except Exception as error:
         manifest["status"] = "failed"
-        manifest["finished_at"] = _utc_now()
+        manifest["finished_at"] = utc_now()
         manifest["failures"].append({"message": str(error)})
         _atomic_write_json(manifest_path, manifest)
         if isinstance(error, OnboardingError):
@@ -1480,7 +1475,7 @@ def apply_scaffold(
     manifest["status"] = "incomplete"
     manifest["scaffold_status"] = "complete"
     manifest["profile_status"] = "incomplete"
-    manifest["finished_at"] = _utc_now()
+    manifest["finished_at"] = utc_now()
     manifest["checks"].append(
         {
             "name": "human_profile_confirmation",

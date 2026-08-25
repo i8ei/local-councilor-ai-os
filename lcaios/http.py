@@ -19,6 +19,8 @@ from http.client import HTTPMessage
 from pathlib import Path
 from typing import Any, Mapping
 
+from lcaios.run_manifest import utc_now
+
 BOOTSTRAP_USER_AGENT = (
     "local-councilor-ai-os bootstrap/0.1 "
     "(official public-data research; low rate)"
@@ -109,12 +111,6 @@ class _RawResponse:
     body: bytes
     headers: dict[str, str]
     fetched_at: str
-
-
-def _utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace(
-        "+00:00", "Z"
-    )
 
 
 def _canonical_url(url: str) -> str:
@@ -492,7 +488,7 @@ class HttpClient:
                             str(key): str(value)
                             for key, value in response.headers.items()
                         },
-                        fetched_at=_utc_now(),
+                        fetched_at=utc_now(),
                     )
             except (urllib.error.URLError, TimeoutError, OSError) as error:
                 raise FetchError(f"取得に失敗しました: {url}: {error}") from error
