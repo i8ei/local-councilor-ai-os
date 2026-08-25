@@ -40,7 +40,8 @@ def normalize_name(value: str) -> str:
     return unicodedata.normalize("NFC", value).replace("\u3000", " ").strip()
 
 
-def _expected_code(area_code_5: str) -> str:
+def expected_code(area_code_5: str) -> str:
+    """Append the JIS X 0402 check digit to a five-digit area code."""
     weighted_sum = sum(
         int(digit) * weight
         for digit, weight in zip(area_code_5, (6, 5, 4, 3, 2), strict=True)
@@ -180,7 +181,7 @@ def validate_registry(
         )
         if not re.fullmatch(r"\d{5}", area_code):
             errors.append(f"line {index}: invalid area_code_5: {area_code}")
-        elif local_code != _expected_code(area_code):
+        elif local_code != expected_code(area_code):
             errors.append(
                 f"line {index}: check digit mismatch: {area_code}/{local_code}"
             )

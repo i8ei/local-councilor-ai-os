@@ -9,6 +9,7 @@ from typing import Any
 
 from bootstrap.municipalities import (
     RegistryError,
+    expected_code,
     load_metadata,
 )
 from bootstrap.municipalities import (
@@ -107,12 +108,7 @@ def local_government_code(area_code_5: str) -> str:
 
     if len(area_code_5) != 5 or not area_code_5.isdigit():
         raise ResolveError(f"5桁標準地域コードが不正です: {area_code_5}")
-    weighted_sum = sum(
-        int(digit) * weight
-        for digit, weight in zip(area_code_5, (6, 5, 4, 3, 2), strict=True)
-    )
-    check_digit = (11 - (weighted_sum % 11)) % 10
-    return area_code_5 + str(check_digit)
+    return expected_code(area_code_5)
 
 
 def resolve_municipality(

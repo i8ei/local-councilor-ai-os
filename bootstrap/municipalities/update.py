@@ -29,6 +29,7 @@ from bootstrap.municipalities.registry import (
     DEFAULT_REGISTRY_PATH,
     REQUIRED_COLUMNS,
     RegistryError,
+    expected_code,
     validate_registry,
 )
 
@@ -276,14 +277,6 @@ def _home_rows(page: FetchResult) -> dict[str, str]:
     return result
 
 
-def _expected_code(area_code_5: str) -> str:
-    weighted_sum = sum(
-        int(digit) * weight
-        for digit, weight in zip(area_code_5, (6, 5, 4, 3, 2), strict=True)
-    )
-    return area_code_5 + str((11 - (weighted_sum % 11)) % 10)
-
-
 def build_records(
     *,
     prefectures: dict[str, str],
@@ -310,7 +303,7 @@ def build_records(
             home = homes.get(municipality_name)
             if region is None or home is None:
                 continue
-            if local_code != _expected_code(area_code):
+            if local_code != expected_code(area_code):
                 raise RegistryError(
                     f"J-LIS団体コードの検査数字が不正です: {local_code}"
                 )
