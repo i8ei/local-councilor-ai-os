@@ -8,12 +8,14 @@ document itself, and off-host drift is treated as a safe stop.
 
 from __future__ import annotations
 
-import hashlib
 import re
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urljoin, urlparse
+
+from lcaios.text import collapse_ascii as _collapse_inline
+from lcaios.text import era_year, stable_id
 
 from .base import (  # type: ignore[import-untyped]
     Adapter,
@@ -120,15 +122,6 @@ class _DocumentParser(HTMLParser):
             self.title += data
         if self._current_href is not None:
             self._current_link_text.append(data)
-
-
-def _collapse_inline(value: str) -> str:
-    return re.sub(r"[ \t\r\v]+", " ", value).strip()
-
-
-def _stable_id(prefix: str, value: str) -> str:
-    digest = hashlib.sha256(value.encode("utf-8")).hexdigest()[:24]
-    return f"{prefix}_{digest}"
 
 
 def _strip_speaker_suffix(name: str) -> str:
@@ -298,10 +291,8 @@ def _infer_date(*values: str) -> str | None:
     )
     if not era:
         return None
-    bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
     try:
-        era_year = 1 if era.group(2) == "元" else int(era.group(2))
-        year = bases[era.group(1)] + era_year
+        year = era_year(era.group(1), era.group(2))
         return f"{year:04d}-{int(era.group(3)):02d}-{int(era.group(4)):02d}"
     except (ValueError, TypeError, KeyError):
         return None
@@ -521,7 +512,7 @@ class DbsrAdapter(Adapter):
                     continue
 
                 seen.add(resolved)
-                meeting_id = _stable_id("meeting", resolved)
+                meeting_id = stable_id("meeting", resolved)
                 decoded_filename = Path(unquote(parsed.path)).name or resolved
                 meeting_name = label or decoded_filename
                 # Generic PDF size label fallback
@@ -646,7 +637,7 @@ class DbsrAdapter(Adapter):
             if not source_url:
                 raise ValueError("meeting reference has no source_url")
             ref = dict(meeting_id)
-            ref.setdefault("meeting_id", _stable_id("meeting", source_url))
+            ref.setdefault("meeting_id", stable_id("meeting", source_url))
             ref.setdefault("meeting_name", source_url)
             ref.setdefault("is_pdf", source_url.lower().endswith(".pdf"))
             return ref
@@ -663,7 +654,7 @@ class DbsrAdapter(Adapter):
                         f"Unknown meeting_id {meeting_id!r}; call list_meetings() first"
                     )
                 return {
-                    "meeting_id": _stable_id("meeting", meeting_id),
+                    "meeting_id": stable_id("meeting", meeting_id),
                     "source_url": meeting_id,
                     "meeting_name": Path(parsed.path).name or meeting_id,
                     "discovered_from": None,

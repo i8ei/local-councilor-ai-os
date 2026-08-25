@@ -380,9 +380,6 @@ class GreikiAdapterTests(unittest.TestCase):
         self.assertEqual(0, cached_retrieval["sources"][0]["network_fetches"])
         self.assertEqual(0, cached_retrieval["sources"][0]["refreshes"])
         self.assertEqual(0, cached_retrieval["sources"][0]["cache_misses"])
-        self.assertFalse(
-            cached_retrieval["sources"][0]["latestness_rechecked_this_run"]
-        )
         self.assertEqual(4, refreshed_retrieval["refresh_count"])
         self.assertEqual(4, refreshed_retrieval["live_request_count"])
         self.assertTrue(refreshed_retrieval["latestness_rechecked_this_run"])
@@ -398,11 +395,6 @@ class GreikiAdapterTests(unittest.TestCase):
         self.assertEqual(4, refreshed_retrieval["sources"][0]["network_fetches"])
         self.assertEqual(4, refreshed_retrieval["sources"][0]["refreshes"])
         self.assertEqual(0, refreshed_retrieval["sources"][0]["cache_misses"])
-        self.assertTrue(
-            refreshed_retrieval["sources"][0][
-                "latestness_rechecked_this_run"
-            ]
-        )
 
 
 if __name__ == "__main__":

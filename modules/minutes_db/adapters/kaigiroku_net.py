@@ -16,6 +16,8 @@ from datetime import date
 from typing import Any, Iterable
 from urllib.parse import parse_qs, urlencode, urljoin, urlparse
 
+from lcaios.text import era_year
+
 from .base import Adapter, CacheTier, FetchResult, HttpClient
 
 API_ROOT = "https://ssp.kaigiroku.net/dnp/search/"
@@ -180,11 +182,9 @@ def _normalize_date(value: Any) -> str:
         r"(令和|平成|昭和)(元|\d{1,2})年(\d{1,2})月(\d{1,2})日", text
     )
     if era_match:
-        offsets = {"令和": 2018, "平成": 1988, "昭和": 1925}
-        era_year = 1 if era_match.group(2) == "元" else int(era_match.group(2))
         try:
             return date(
-                offsets[era_match.group(1)] + era_year,
+                era_year(era_match.group(1), era_match.group(2)),
                 int(era_match.group(3)),
                 int(era_match.group(4)),
             ).isoformat()

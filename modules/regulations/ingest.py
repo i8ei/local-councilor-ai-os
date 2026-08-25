@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import re
 import sqlite3
@@ -33,6 +32,8 @@ from lcaios.module_manifest import (
     finish_database_run,
     input_file_record,
 )
+from lcaios.text import collapse_ascii as _collapse
+from lcaios.text import era_year, stable_id
 
 MODULE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = MODULE_DIR.parents[1]
@@ -46,11 +47,6 @@ _BLOCK_TAGS = {
 _IGNORED_TAGS = {"script", "style", "noscript", "svg"}
 _ARTICLE_RE = re.compile(r"^(第[一二三四五六七八九十百千〇零壱弐参0-9]+条(?:の[一二三四五六七八九十百千〇零壱弐参0-9]+)?)(?:[ 　]*(.*))?$")
 _DATE_RE = re.compile(r"(令和|平成|昭和)(元|\d{1,2})年\s*(\d{1,2})月\s*(\d{1,2})日|(?<!\d)(20\d{2})[./年-](\d{1,2})[./月-](\d{1,2})日?")
-
-
-def stable_id(prefix: str, value: str) -> str:
-    """Build a deterministic identifier from a stable source value."""
-    return f"{prefix}_{hashlib.sha256(value.encode('utf-8')).hexdigest()[:24]}"
 
 
 class _HtmlTextParser(HTMLParser):
@@ -114,18 +110,13 @@ class _HtmlTextParser(HTMLParser):
         return "\n".join(line for line in lines if line)
 
 
-def _collapse(value: str) -> str:
-    return re.sub(r"[ \t\r\v]+", " ", value).strip()
-
-
 def _infer_date(text: str) -> str | None:
     match = _DATE_RE.search(text)
     if not match:
         return None
     if match.group(1):
-        bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
-        era_year = 1 if match.group(2) == "元" else int(match.group(2))
-        return f"{bases[match.group(1)] + era_year:04d}-{int(match.group(3)):02d}-{int(match.group(4)):02d}"
+        year = era_year(match.group(1), match.group(2))
+        return f"{year:04d}-{int(match.group(3)):02d}-{int(match.group(4)):02d}"
     return f"{int(match.group(5)):04d}-{int(match.group(6)):02d}-{int(match.group(7)):02d}"
 
 

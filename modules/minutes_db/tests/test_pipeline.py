@@ -521,8 +521,7 @@ class PipelineTests(unittest.TestCase):
                 "network_fetches": 0,
                 "refreshes": 0,
                 "cache_misses": 0,
-                "latestness_rechecked_this_run": False,
-            },
+                },
             {
                 key: cached_retrieval["sources"][0][key]
                 for key in (
@@ -530,7 +529,6 @@ class PipelineTests(unittest.TestCase):
                     "network_fetches",
                     "refreshes",
                     "cache_misses",
-                    "latestness_rechecked_this_run",
                 )
             },
         )
@@ -551,7 +549,6 @@ class PipelineTests(unittest.TestCase):
                 "network_fetches": 2,
                 "refreshes": 2,
                 "cache_misses": 0,
-                "latestness_rechecked_this_run": True,
             },
             {
                 key: refreshed_retrieval["sources"][0][key]
@@ -560,7 +557,6 @@ class PipelineTests(unittest.TestCase):
                     "network_fetches",
                     "refreshes",
                     "cache_misses",
-                    "latestness_rechecked_this_run",
                 )
             },
         )

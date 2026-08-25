@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import hashlib
 import json
 import re
 import shutil
@@ -13,6 +12,9 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urljoin, urlparse
+
+from lcaios.text import collapse_ascii as _collapse_inline
+from lcaios.text import era_year, stable_id
 
 from ..coverage import validate_coverage_config
 from .base import Adapter, CacheTier, FetchResult, HttpClient
@@ -382,16 +384,6 @@ class _DocumentParser(HTMLParser):
         return "\n".join(converted)
 
 
-def _collapse_inline(value: str) -> str:
-    """Normalize ASCII spacing while retaining Japanese full-width separators."""
-    return re.sub(r"[ \t\r\v]+", " ", value).strip()
-
-
-def _stable_id(prefix: str, value: str) -> str:
-    digest = hashlib.sha256(value.encode("utf-8")).hexdigest()[:24]
-    return f"{prefix}_{digest}"
-
-
 def _strip_speaker_suffix(name: str) -> str:
     return re.sub(r"(?:議員)?君$", "", name.strip(" \t\u3000"))
 
@@ -573,16 +565,12 @@ def _infer_date(*values: str) -> tuple[str | None, bool]:
         combined,
     )
     if era:
-        bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
-        era_year = 1 if era.group(2) == "元" else int(era.group(2))
-        year = bases[era.group(1)] + era_year
+        year = era_year(era.group(1), era.group(2))
         return f"{year:04d}-{int(era.group(3)):02d}-{int(era.group(4)):02d}", False
     # Fallback: era year + month without day -> use day=1 (for cases like "令和8年3月定例会" with separate "3月 2日" not linked)
     era_month = re.search(r"(令和|平成|昭和)(元|\d{1,2})年\s*(\d{1,2})月", combined)
     if era_month:
-        bases = {"令和": 2018, "平成": 1988, "昭和": 1925}
-        era_year = 1 if era_month.group(2) == "元" else int(era_month.group(2))
-        year = bases[era_month.group(1)] + era_year
+        year = era_year(era_month.group(1), era_month.group(2))
         return f"{year:04d}-{int(era_month.group(3)):02d}-01", True
     return None, False
 
@@ -839,7 +827,7 @@ class StaticHtmlAdapter(Adapter):
                     )
                     continue
                 seen.add(source_url)
-                meeting_id = _stable_id("meeting", source_url)
+                meeting_id = stable_id("meeting", source_url)
                 decoded_filename = Path(unquote(parsed.path)).name
                 generic_pdf_label = bool(
                     re.fullmatch(r"\s*[（(]?\s*PDF[^）)]*[）)]?\s*", label, re.I)
@@ -1025,7 +1013,7 @@ class StaticHtmlAdapter(Adapter):
             if not source_url:
                 raise ValueError("meeting reference has no source_url")
             ref = dict(meeting_id)
-            ref.setdefault("meeting_id", _stable_id("meeting", source_url))
+            ref.setdefault("meeting_id", stable_id("meeting", source_url))
             ref.setdefault("meeting_name", source_url)
             ref.setdefault("is_pdf", self.config["pdf"])
             return ref
@@ -1034,7 +1022,7 @@ class StaticHtmlAdapter(Adapter):
         parsed = urlparse(meeting_id)
         if parsed.scheme in {"http", "https"}:
             return {
-                "meeting_id": _stable_id("meeting", meeting_id),
+                "meeting_id": stable_id("meeting", meeting_id),
                 "source_url": meeting_id,
                 "meeting_name": Path(parsed.path).name or meeting_id,
                 "discovered_from": None,
