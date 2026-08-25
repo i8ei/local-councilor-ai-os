@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import argparse
 import contextlib
-import hashlib
 import io
 import json
 import sqlite3
@@ -13,12 +12,12 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from .._review_common import sha24
 from . import verify_totals
 
 
 def _stable_id(*parts: Any) -> str:
-    joined = "\n".join(str(part) for part in parts)
-    return "budget_insight_" + hashlib.sha256(joined.encode("utf-8")).hexdigest()[:24]
+    return "budget_insight_" + sha24("\n".join(str(part) for part in parts))
 
 
 def _locator(row: sqlite3.Row) -> Any:

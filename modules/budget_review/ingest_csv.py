@@ -19,6 +19,12 @@ from lcaios.module_manifest import (
     input_file_record,
 )
 
+from .._review_common import (
+    _integer,
+    _json_locator,
+    _none_if_empty,
+)
+
 MODULE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = MODULE_DIR.parents[1]
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
@@ -46,35 +52,6 @@ SIDES = {"revenue", "expenditure"}
 
 def ensure_schema(connection: sqlite3.Connection) -> None:
     connection.executescript(SCHEMA_PATH.read_text(encoding="utf-8"))
-
-
-def _none_if_empty(value: str | None) -> str | None:
-    if value is None:
-        return None
-    stripped = value.strip()
-    return stripped if stripped else None
-
-
-def _integer(value: str | None, field: str) -> int | None:
-    cleaned = _none_if_empty(value)
-    if cleaned is None:
-        return None
-    normalized = cleaned.replace(",", "").replace("△", "-").replace("−", "-")
-    try:
-        return int(normalized)
-    except ValueError as exc:
-        raise ValueError(f"{field} must be an integer-compatible value: {value!r}") from exc
-
-
-def _json_locator(value: str | None) -> str:
-    cleaned = _none_if_empty(value)
-    if cleaned is None:
-        raise ValueError("source_locator is required")
-    try:
-        parsed = json.loads(cleaned)
-    except json.JSONDecodeError:
-        parsed = {"locator": cleaned}
-    return json.dumps(parsed, ensure_ascii=False, sort_keys=True)
 
 
 def _normalize_row(row: dict[str, str | None]) -> dict[str, Any]:
