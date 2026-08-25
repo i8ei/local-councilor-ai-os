@@ -58,6 +58,8 @@ from modules.regulations.ingest import (
     store_document,
 )
 
+from ._parsers import FrameLinkParser
+
 MODULE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = MODULE_DIR.parents[1]
 DEFAULT_CACHE_DIR = MODULE_DIR / ".cache" / "d1law"
@@ -151,38 +153,6 @@ def decode_html(body: bytes, declared_encoding: str | None = None) -> tuple[str,
             continue
     return body.decode("utf-8", errors="replace"), "utf-8"
 
-
-class _LinkParser(HTMLParser):
-    """Collect frame srcs and anchor hrefs without evaluating scripts."""
-
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.base_href: str | None = None
-        self.links: list[tuple[str, str, str]] = []
-        self._href: str | None = None
-        self._link_text: list[str] = []
-
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        tag = tag.lower()
-        attributes = dict(attrs)
-        if tag == "base" and attributes.get("href") and self.base_href is None:
-            self.base_href = attributes["href"]
-        if tag == "a" and attributes.get("href"):
-            self._href = attributes["href"]
-            self._link_text = []
-        src = attributes.get("src")
-        if tag in {"frame", "iframe"} and src:
-            self.links.append((src, "", tag))
-
-    def handle_endtag(self, tag: str) -> None:
-        if tag.lower() == "a" and self._href is not None:
-            self.links.append((self._href, _collapse("".join(self._link_text)), "a"))
-            self._href = None
-            self._link_text = []
-
-    def handle_data(self, data: str) -> None:
-        if self._href is not None:
-            self._link_text.append(data)
 
 
 class _D1TextParser(HTMLParser):
@@ -286,7 +256,7 @@ def _page_links(
     index_url: str,
 ) -> tuple[list[tuple[str, str, str]], str]:
     html, encoding = decode_html(fetched.body, fetched.encoding)
-    parser = _LinkParser()
+    parser = FrameLinkParser()
     parser.feed(html)
     resolution_base = fetched.final_url
     if parser.base_href:

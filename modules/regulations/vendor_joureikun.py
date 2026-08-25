@@ -36,6 +36,8 @@ from modules.regulations.ingest import (
     store_document,
 )
 
+from ._parsers import LinkParser
+
 MODULE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = MODULE_DIR.parents[1]
 DEFAULT_CACHE_DIR = MODULE_DIR / ".cache" / "joureikun"
@@ -124,35 +126,6 @@ def _is_act_url(url: str, index_url: str) -> bool:
     return bool(_ACT_RE.search(path))
 
 
-class _LinkParser(HTMLParser):
-    """Collect actual HTML links without evaluating scripts."""
-
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.base_href: str | None = None
-        self.links: list[tuple[str, str]] = []
-        self._href: str | None = None
-        self._link_text: list[str] = []
-
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        tag = tag.lower()
-        attributes = dict(attrs)
-        if tag == "base" and attributes.get("href") and self.base_href is None:
-            self.base_href = attributes["href"]
-        if tag == "a" and attributes.get("href"):
-            self._href = attributes["href"]
-            self._link_text = []
-
-    def handle_endtag(self, tag: str) -> None:
-        if tag.lower() == "a" and self._href is not None:
-            self.links.append((self._href, _collapse("".join(self._link_text))))
-            self._href = None
-            self._link_text = []
-
-    def handle_data(self, data: str) -> None:
-        if self._href is not None:
-            self._link_text.append(data)
-
 
 class _TextParser(HTMLParser):
     """Extract visible text and title from a joureikun act page."""
@@ -207,7 +180,7 @@ def _page_links(
     index_url: str,
 ) -> list[tuple[str, str]]:
     html = fetched.text()
-    parser = _LinkParser()
+    parser = LinkParser()
     parser.feed(html)
     resolution_base = fetched.final_url
     if parser.base_href:
