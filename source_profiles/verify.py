@@ -565,11 +565,17 @@ def _append_note(entry: dict[str, Any], note: str, *, marker: str) -> None:
         entry["notes"] = note
 
 
+def _fetch_meta(result: Any, now: str) -> tuple[str, str]:
+    """Return (sha256, fetched_at) tolerating minimal fake clients."""
+    sha256 = result.sha256 if hasattr(result, "sha256") else ""
+    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now
+    return str(sha256), str(fetched_at)
+
+
 def _evidence_item(
     url: str, observed_on: str, result: Any, now: str
 ) -> dict[str, Any]:
-    sha256 = result.sha256 if hasattr(result, "sha256") else ""
-    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now
+    sha256, fetched_at = _fetch_meta(result, now)
     return {
         "url": url,
         "observed_on": observed_on,
@@ -1488,8 +1494,7 @@ def _verify_minutes_kaigiroku_net(
         return updated, report
     # Entrance checks passed -> run the R2 extraction probe via the real
     # kaigiroku adapter (list one meeting, fetch its speeches).
-    sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
-    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    sha256, fetched_at = _fetch_meta(result, now)
     pending_evidence = [_evidence_item(tenant_url, tenant_url, result, now)]
     report_base = {
         "municipality": municipality,
@@ -1675,8 +1680,7 @@ def _verify_minutes_dbsr(
     # Robots-aware extraction probe (R2/R3): fetch the first meeting link
     # through the real dbsr adapter and require >=1 extracted speech.
     meeting_url = _first_dbsr_meeting_link(html_text, parser.links, str(final_url_val))
-    sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
-    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    sha256, fetched_at = _fetch_meta(result, now)
     pending_evidence = [_evidence_item(index_url, index_url, result, now)]
     report_base = {
         "municipality": municipality,
@@ -1769,8 +1773,7 @@ def _verify_joureikun_regulations(
         }
         return updated, report
 
-    sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
-    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    sha256, fetched_at = _fetch_meta(result, now)
     pending_evidence = [_evidence_item(str(final_url_val), str(index_url), result, now)]
     report_base = {
         "municipality": municipality,
@@ -2026,8 +2029,7 @@ def verify_profile(
 
     # All index-level checks passed -> run the R2 extraction probe through
     # the real vendor_greiki extractor before any promotion is considered.
-    sha256 = result.sha256 if hasattr(result, "sha256") else ""  # type: ignore[attr-defined]
-    fetched_at = result.fetched_at if hasattr(result, "fetched_at") else now  # type: ignore[attr-defined]
+    sha256, fetched_at = _fetch_meta(result, now)
     final_url_report = result.final_url if hasattr(result, "final_url") else entry_url  # type: ignore[attr-defined]
     pending_evidence = [_evidence_item(entry_url, base_url, result, now)]
     report_base = {
