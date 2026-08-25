@@ -54,7 +54,7 @@ DB を削除した状態から、保存済み原典、取得メタデータ、�
 
 ## 検証状態
 
-正規語彙は[根拠データ契約](evidence_schema.md)と同じ `draft`、`discovered`、`verified`、`reconciled`、`rejected` とする。状態だけを変更せず、確認日時、確認者、実施した検査、未解決事項を伴わせる。
+正規語彙と「状態だけを進めない」規則は[根拠データ契約](evidence_schema.md)に従う。
 
 既存の bootstrap 実装にある `verified_source_extraction` は契約境界で `verified`、`needs_review` は問題を付けた `draft` へ正規化する。`reconciled` は同じ意味で使う。予算と決算など合計突合が必要なデータは、差額ゼロを確認するまで `reconciled` にしない。
 

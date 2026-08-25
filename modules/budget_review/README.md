@@ -17,7 +17,7 @@
 | `failure_patterns.md` | 予算PDF・入力時の典型的な失敗 |
 | `budget_settlement_bridge.md` | 予算レビューと決算レビューの接続方針 |
 
-CSVは正本ではなく、SQLiteへ投入するための中間入力形式である。検索、検算、分析候補生成はSQLite上で行う。
+検索、検算、分析候補生成はSQLite上で行う。CSVの扱いは[入力契約](sqlite_input_contract.md)のとおりである。
 
 ## 使い方
 

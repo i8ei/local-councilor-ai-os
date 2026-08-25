@@ -92,7 +92,7 @@ D1-Lawの検索UI型（opensearch、JS+POST必須）は自動取込のスコー�
 4. 50音索引に実在する `reiki_honbun/` リンクだけを列挙し、本文の `div#primary` を取得します。
 5. 既存の `regulation_documents`、`regulation_articles`、`regulation_provenance` に保存します。
 
-標準入口または50音索引の期待構造が見つからない場合は、別URLを試行せず `structure_mismatch` で停止します。本文はUTF-8、Shift_JIS/Windows-31J（CP932）を判定してデコードします。各文書には索引上の `source_url`、各条には解決後URLと抽出本文行を組み合わせた `locator` を保存します。取得には正直なUser-Agent `local-councilor-ai-os regulations ingester (research; low rate)`、1.5秒以上の直列間隔、SHA-256つきローカルキャッシュを使い、`fetched_at` を来歴に残します。
+標準入口または50音索引の期待構造が見つからない場合は、別URLを試行せず `structure_mismatch` で停止します。本文はUTF-8、Shift_JIS/Windows-31J（CP932）を判定してデコードします。各文書には索引上の `source_url`、各条には解決後URLと抽出本文行を組み合わせた `locator` を保存します。取得礼節（User-Agent・間隔・キャッシュ）は `ingest.py` と同じ取得器のとおり。
 
 全件取得は遅いことが正常です。例規数と50音索引数に応じて数十分かかり、実運用例では1自治体の全件取得に約22分を要しました。これはアクセス間隔を短縮しないための意図的な設計です。初回は `--limit 3` 程度から始め、DB内の条分割と公式画面を照合してから全件取得してください。
 

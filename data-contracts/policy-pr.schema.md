@@ -93,38 +93,17 @@ title: "<手当ての名称>"
 issue_ref: "<見立てへの参照>"
 primary_lever_level: "<national | prefecture | municipality>"
 lever_reason: "<その層をツボと判断した理由>"
-current_system:
-  - level: "<national | prefecture | municipality>"
-    rule_or_operation: "<現行制度・運用>"
-    gap: "<地域で生じる差、または null>"
-observed_problem:
-  - claim: "<確認済みの現象>"
-    evidence_refs: ["<evidence_id>"]
-proposed_changes:
-  - actor: "<実施主体>"
-    change: "<変更差分>"
-    scope: "<対象・期間・実証範囲>"
-    evidence_refs: ["<evidence_id>"]
-expected_effects:
-  - beneficiary: "<届く相手>"
-    effect: "<期待する変化>"
-    indicator: "<観測指標>"
-side_effects_and_objections:
-  - id: "<risk-id>"
-    statement: "<副作用または反対論>"
-mitigations:
-  - risk_ref: "<risk-id>"
-    action: "<対策>"
-    observation: "<観測方法>"
+# current_system / observed_problem / proposed_changes / expected_effects /
+# side_effects_and_objections / mitigations は各節の注釈付きYAMLどおり。
 outreach_options:
   - "<general-question | committee-proposal | opinion-letter | prefecture-request | ministry-inquiry>"
 follow_up:
   first_check_on: "<YYYY-MM-DD>"
   observation: "<予算化・制度化・実施・利用・効果>"
   review_or_exit_condition: "<修正または中止する条件>"
-status: "<drafting | reviewing | ready | submitted | accepted | partially_accepted | declined | monitoring | closed>"
+status: "<上記 status 節の語彙どおり>"
 ```
 
 ## 外部利用条件
 
-外部へ変換する事実は、[根拠データ契約](evidence_schema.md)で原則 `verified` または `reconciled` とする。出力先が一般質問、意見書、県要請、省庁照会のいずれでも、自動送信しない。最終的な宛先、表現、提出、公開は議員本人が決める。
+事実の検証状態は[根拠データ契約](evidence_schema.md)に従う。出力先が一般質問、意見書、県要請、省庁照会のいずれでも、自動送信しない。最終的な宛先、表現、提出、公開は議員本人が決める。

@@ -14,15 +14,7 @@
 | `revenue` | 歳入明細 | 款・項 |
 | `expenditure` | 歳出明細 | 款・項・目・節 |
 
-投入順は `summary`、`revenue`、`expenditure` を推奨する。最後に必ず `verify_totals.py` を実行する。
-
-```sh
-python3 -m modules.settlement_review.ingest_csv summary summary.csv --db settlement.db
-python3 -m modules.settlement_review.ingest_csv revenue revenue.csv --db settlement.db
-python3 -m modules.settlement_review.ingest_csv expenditure expenditure.csv --db settlement.db
-python3 -m modules.settlement_review.verify_totals settlement.db
-```
-
+投入順は `summary`、`revenue`、`expenditure` を推奨する。投入コマンドの全体像は[README](README.md)を参照。最後に必ず `verify_totals.py` を実行する。
 ## 共通必須列
 
 すべてのCSVに次の列を置く。

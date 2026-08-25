@@ -72,11 +72,7 @@ affected_people:
 current_problem: >
   <現象の事実記述>
 evidence:
-  - type: "<根拠の種類>"
-    detail: "<根拠が示す一つの事実>"
-    source: "<公表主体・文書・索引位置>"
-    as_of: "<YYYY-MM-or-YYYY-MM-DD>"
-    verification: "<public | verified | 要裏取り | 一次推計>"
+  # 上記「evidence の5点」と同じ簡易形
 administrative_level:
   - "<municipality | prefecture | national>"
 status: "<investigating | framed | archived>"

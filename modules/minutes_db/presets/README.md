@@ -54,10 +54,7 @@ python3 ingest.py \
    python3 coverage.py --db minutes.db --config municipality.json
    ```
 
-   `presiding_officer_presence`、`document_counts_by_year`、
-   `session_document_coverage`（アダプターが候補数を実測した場合のみ）、
-   `zero_segment_documents`を確認します。`attention_required: true`は取込失敗では
-   なく、原典索引との照合が必要という注意です。少数件の検索が成功し、1件を
+   診断4項目と`advisory`の扱いは[README『取込範囲の診断』](../README.md#取込範囲の診断)に従います。少数件の検索が成功し、1件を
    原典と照合できても、コーパス全体が揃っている証明にはなりません。
 
 期待する文書が0件、関係のない資料が混入、または必要なページがさらに深い場合は、

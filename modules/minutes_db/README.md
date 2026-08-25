@@ -202,13 +202,13 @@ FTS5が使えない場合、FTS構文が不正な場合、trigramで扱いにく
 証拠となる一致URLをJSONで返します。
 
 - `kaigiroku_net`: `ssp.kaigiroku.net`へのリンクまたは同ホスト。
-- `voices`: `*.gijiroku.com`。検出のみで取込未実装。
-- `dbsr`: `*.dbsr.jp`の`/index.php`。観測済み`--url`を指定して取込可能。
+- `voices`: `*.gijiroku.com`。
+- `dbsr`: `*.dbsr.jp`の`/index.php`。
 - `discuss`:既知のホスト/URLシグナル。確証がなければ`unknown`。
 - `static_candidate`:公式ページ上にHTML/PDFの議事録候補リンクがある。
 - `unknown`:根拠となるリンクやパターンがない。
 
-検出はtenant名や不透明なURLを推測しません。誤分類を避けるため、不確かな
+各区分の取込可否は上の「対応アダプター」表のとおり。検出はtenant名や不透明なURLを推測しません。誤分類を避けるため、不確かな
 Discuss判定や単なる一般ページは`unknown`に戻します。
 
 ## テストとライブ検証
