@@ -79,6 +79,38 @@ def _is_http_url(value: Any) -> bool:
         return False
 
 
+def _validate_evidence_entries(
+    kind: str,
+    evidence: list[Any],
+    *,
+    url_required: bool,
+) -> list[str]:
+    """Validate the shape of evidence entries (url/observed_on).
+
+    With ``url_required=True`` (the ready branch) a missing/invalid url is an
+    error; otherwise only a *present but invalid* url errors. ``observed_on``
+    may always be null.
+    """
+    errors: list[str] = []
+    for idx, ev in enumerate(evidence):
+        if not isinstance(ev, dict):
+            errors.append(f"sources.{kind}.evidence[{idx}] must be an object")
+            continue
+        url = ev.get("url")
+        if url_required and (not isinstance(url, str) or not _is_http_url(url)):
+            errors.append(f"sources.{kind}.evidence[{idx}].url must be http(s) URL")
+        elif not url_required and url is not None and (
+            not isinstance(url, str) or not _is_http_url(url)
+        ):
+            errors.append(f"sources.{kind}.evidence[{idx}].url must be http(s) URL")
+        obs = ev.get("observed_on")
+        if obs is not None and (not isinstance(obs, str) or not _is_http_url(obs)):
+            errors.append(
+                f"sources.{kind}.evidence[{idx}].observed_on must be http(s) URL or null"
+            )
+    return errors
+
+
 def validate_profile(data: dict[str, Any]) -> list[str]:
     """Validate a source profile dict and return error messages (empty = ok)."""
     errors: list[str] = []
@@ -219,25 +251,11 @@ def validate_profile(data: dict[str, Any]) -> list[str]:
                             f"sources.{kind}: ready requires evidence with at least 1 entry"
                         )
                     else:
-                        # validate evidence entries
-                        for idx, ev in enumerate(evidence):
-                            if not isinstance(ev, dict):
-                                errors.append(
-                                    f"sources.{kind}.evidence[{idx}] must be an object"
-                                )
-                                continue
-                            url = ev.get("url")
-                            obs = ev.get("observed_on")
-                            if not isinstance(url, str) or not _is_http_url(url):
-                                errors.append(
-                                    f"sources.{kind}.evidence[{idx}].url must be http(s) URL"
-                                )
-                            if obs is not None and (
-                                not isinstance(obs, str) or not _is_http_url(obs)
-                            ):
-                                errors.append(
-                                    f"sources.{kind}.evidence[{idx}].observed_on must be http(s) URL or null"
-                                )
+                        errors.extend(
+                            _validate_evidence_entries(
+                                kind, evidence, url_required=True
+                            )
+                        )
 
                 else:
                     # For non-ready, if evidence present, validate its shape
@@ -246,26 +264,11 @@ def validate_profile(data: dict[str, Any]) -> list[str]:
                         if not isinstance(evidence, list):
                             errors.append(f"sources.{kind}.evidence must be a list")
                         else:
-                            for idx, ev in enumerate(evidence):
-                                if not isinstance(ev, dict):
-                                    errors.append(
-                                        f"sources.{kind}.evidence[{idx}] must be an object"
-                                    )
-                                    continue
-                                url = ev.get("url")
-                                obs = ev.get("observed_on")
-                                if url is not None and (
-                                    not isinstance(url, str) or not _is_http_url(url)
-                                ):
-                                    errors.append(
-                                        f"sources.{kind}.evidence[{idx}].url must be http(s) URL"
-                                    )
-                                if obs is not None and (
-                                    not isinstance(obs, str) or not _is_http_url(obs)
-                                ):
-                                    errors.append(
-                                        f"sources.{kind}.evidence[{idx}].observed_on must be http(s) URL"
-                                    )
+                            errors.extend(
+                                _validate_evidence_entries(
+                                    kind, evidence, url_required=False
+                                )
+                            )
 
                     # verified_at if present must be valid ISO8601 and not future
                     ver_at = entry.get("verified_at")
