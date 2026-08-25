@@ -95,11 +95,6 @@ def validate_profile(data: dict[str, Any]) -> list[str]:
         if key not in data:
             errors.append(f"missing required key: {key}")
 
-    # Early exit if missing keys prevents further checks, but continue to report multiple
-    if errors:
-        # still check basics that exist
-        pass
-
     # schema_version
     if "schema_version" in data and data["schema_version"] != 1:
         errors.append("schema_version must be 1")

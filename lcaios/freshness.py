@@ -145,8 +145,6 @@ def _evaluate_source(
         "state": state,
         "reason": reason,
         "source_periods": periods,
-        "retrieved_at": _format_datetime(checked_at),
-        "latest_period_checked": periods,
         "checked_at": _format_datetime(checked_at),
         "check_due_at": _format_datetime(due_at),
         "recommended_check_interval_days": interval_days or None,

@@ -230,13 +230,6 @@ def _check_hierarchy(connection: sqlite3.Connection) -> int:
     return failures
 
 
-def _total_amounts(connection: sqlite3.Connection, key: tuple[Any, ...]) -> dict[str, int]:
-    return {
-        side: amount
-        for side, (amount, _unit) in _total_entries(connection, key).items()
-    }
-
-
 def _total_entries(
     connection: sqlite3.Connection,
     key: tuple[Any, ...],

@@ -121,10 +121,6 @@ class _DocumentParser(HTMLParser):
         if self._current_href is not None:
             self._current_link_text.append(data)
 
-    def visible_text(self, body: bytes, encoding: str) -> str:
-        # Fallback: also collect plain text from body outside tags
-        return ""
-
 
 def _collapse_inline(value: str) -> str:
     return re.sub(r"[ \t\r\v]+", " ", value).strip()

@@ -292,13 +292,11 @@ class HttpClient:
                     "network_fetches": 0,
                     "refreshes": 0,
                     "cache_misses": 0,
-                    "latestness_rechecked_this_run": True,
                 },
             )
             status = item["status"]
             if status == "cache_hit":
                 source["cache_hits"] += 1
-                source["latestness_rechecked_this_run"] = False
             elif status == "refreshed":
                 source["refreshes"] += 1
                 source["network_fetches"] += 1
@@ -306,7 +304,6 @@ class HttpClient:
                 source["network_fetches"] += 1
             elif status == "cache_miss":
                 source["cache_misses"] += 1
-                source["latestness_rechecked_this_run"] = False
         return {
             "cache_directory": str(self.cache_dir.resolve(strict=False)),
             "offline": self.offline,

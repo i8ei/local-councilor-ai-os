@@ -307,10 +307,9 @@ def _cmd_verify(args: argparse.Namespace) -> int:
         return 2
 
     try:
-        user_agent = MINUTES_USER_AGENT if kind == "minutes" else REGULATIONS_USER_AGENT
         client = HttpClient(
             cache_dir,
-            user_agent=user_agent,
+            user_agent=_user_agent_for_kind(kind),
             offline=offline,
             timeout=90,
         )

@@ -310,7 +310,6 @@ def _verify_budget_settlement(
     try:
         result = client.fetch(index_url, tier=CacheTier.INDEX)
     except RobotsDeniedError as exc:
-        _append_pending_evidence(entry, [])
         entry["verified_at"] = now
         entry["verified_by"] = "verify --live"
         entry["status"] = "blocked"
