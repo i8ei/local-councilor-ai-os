@@ -7,7 +7,7 @@ Municipality source profiles: verified entry points for ingestion modules.
 ```text
 source_profiles/
   schema.py                          # validator (stdlib only)
-  cli.py                             # validate / ingest-command
+  cli.py                             # validate / ingest-command / verify / resolve
   __main__.py                        # python3 -m source_profiles.cli
   schema/source_profile.schema.json  # contract (draft-07, reference)
   municipalities/41-saga/*.json      # 1 file per municipality
