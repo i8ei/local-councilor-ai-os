@@ -9,11 +9,11 @@ import os
 import re
 import sys
 import unicodedata
-from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin, urlparse
 
+from lcaios.html import LinkParser
 from lcaios.http import (
     BOOTSTRAP_USER_AGENT,
     CacheTier,
@@ -404,7 +404,7 @@ def _rank_content_candidates(
 
 def _content_subpage_links(html: str, page_url: str) -> list[dict[str, str]]:
     """Same-host HTML links whose label matches content keywords."""
-    parser = _LinkExtractor()
+    parser = LinkParser()
     try:
         parser.feed(html)
     except Exception:
@@ -412,7 +412,8 @@ def _content_subpage_links(html: str, page_url: str) -> list[dict[str, str]]:
     page_host = urlparse(page_url).netloc
     candidates: list[dict[str, str]] = []
     seen: set[str] = set()
-    for href, label in parser.links:
+    for href, raw_label in parser.links:
+        label = raw_label[:120] or href[:120]
         absolute = urljoin(page_url, href)
         parsed = urlparse(absolute)
         if parsed.scheme not in ("http", "https") or parsed.netloc != page_host:
@@ -427,38 +428,6 @@ def _content_subpage_links(html: str, page_url: str) -> list[dict[str, str]]:
         seen.add(absolute)
         candidates.append({"label": label, "url": absolute})
     return candidates
-
-
-class _LinkExtractor(HTMLParser):
-    """Collect anchor href + label pairs from HTML (stdlib only)."""
-
-    def __init__(self) -> None:
-        super().__init__()
-        self.links: list[tuple[str, str]] = []
-        self._href: str | None = None
-        self._chunks: list[str] = []
-
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag.lower() != "a":
-            return
-        href = dict(attrs).get("href")
-        if href:
-            self._href = href
-            self._chunks = []
-
-    def handle_data(self, data: str) -> None:
-        if self._href is not None and data.strip():
-            self._chunks.append(data.strip())
-
-    def handle_endtag(self, tag: str) -> None:
-        if tag.lower() != "a" or self._href is None:
-            return
-        label = " ".join(self._chunks)[:120]
-        if not label:
-            label = self._href[:120]
-        self.links.append((self._href, label))
-        self._href = None
-        self._chunks = []
 
 
 def _entry_url_for_resolve(entry: dict[str, Any]) -> str | None:
@@ -479,7 +448,7 @@ def _extract_document_links(
     html: str, page_url: str
 ) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     """Return (document links, year-labelled sub-page links), same-host only."""
-    parser = _LinkExtractor()
+    parser = LinkParser()
     try:
         parser.feed(html)
     except Exception:
@@ -488,7 +457,8 @@ def _extract_document_links(
     seen: set[str] = set()
     documents: list[dict[str, str]] = []
     year_pages: list[dict[str, str]] = []
-    for href, label in parser.links:
+    for href, raw_label in parser.links:
+        label = raw_label[:120] or href[:120]
         absolute = urljoin(page_url, href)
         parsed = urlparse(absolute)
         if parsed.scheme not in ("http", "https"):

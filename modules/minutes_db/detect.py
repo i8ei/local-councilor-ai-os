@@ -8,9 +8,10 @@ import json
 import re
 import sys
 import urllib.parse
-from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
+
+from lcaios.html import LinkParser
 
 from .adapters.base import (
     MINUTES_USER_AGENT,
@@ -69,36 +70,6 @@ def _has_council_scope(text: str) -> bool:
     if any(tok in lower for tok in _COUNCIL_URL_TOKENS):
         return True
     return False
-
-
-class _PageLinks(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.links: list[tuple[str, str]] = []
-        self.page_text: list[str] = []
-        self._href: str | None = None
-        self._anchor_text: list[str] = []
-
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag.lower() != "a":
-            return
-        attributes = {key.lower(): value for key, value in attrs}
-        self._href = attributes.get("href")
-        self._anchor_text = []
-
-    def handle_data(self, data: str) -> None:
-        cleaned = " ".join(data.split())
-        if not cleaned:
-            return
-        self.page_text.append(cleaned)
-        if self._href is not None:
-            self._anchor_text.append(cleaned)
-
-    def handle_endtag(self, tag: str) -> None:
-        if tag.lower() == "a" and self._href is not None:
-            self.links.append((self._href, " ".join(self._anchor_text)))
-            self._href = None
-            self._anchor_text = []
 
 
 def _host_matches(host: str, suffix: str) -> bool:
@@ -171,10 +142,10 @@ def detect_url(
             result = client.fetch(url, tier=CacheTier.INDEX)
             fetched_at = result.fetched_at
             final_url = result.final_url
-            parser = _PageLinks()
+            parser = LinkParser()
             parser.feed(result.text())
             links = parser.links
-            page_text = " ".join(parser.page_text)
+            page_text = " ".join(parser.visible_text)
         except (FetchError, ValueError) as error:
             fetch_error = str(error)
 

@@ -10,9 +10,10 @@ import shutil
 import subprocess
 import sys
 import urllib.parse
-from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Sequence
+
+from lcaios.html import LinkParser
 
 from .http import BOOTSTRAP_USER_AGENT, CacheTier, FetchError, HttpClient
 
@@ -41,68 +42,6 @@ OPTIONS = {
 }
 
 
-class _LinkParser(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.links: list[dict[str, str]] = []
-        self._href: str | None = None
-        self._text: list[str] = []
-        self._in_title = False
-        self._in_h1 = False
-        self._title_text: list[str] = []
-        self._h1_text: list[str] = []
-
-    def handle_starttag(
-        self,
-        tag: str,
-        attrs: list[tuple[str, str | None]],
-    ) -> None:
-        tag_name = tag.lower()
-        if tag_name == "title":
-            self._in_title = True
-        elif tag_name == "h1":
-            self._in_h1 = True
-        if tag_name != "a" or self._href is not None:
-            return
-        href = dict(attrs).get("href")
-        if href:
-            self._href = href
-            self._text = []
-
-    def handle_data(self, data: str) -> None:
-        if self._in_title:
-            self._title_text.append(data)
-        if self._in_h1:
-            self._h1_text.append(data)
-        if self._href is not None:
-            self._text.append(data)
-
-    def handle_endtag(self, tag: str) -> None:
-        tag_name = tag.lower()
-        if tag_name == "a" and self._href is not None:
-            self.links.append(
-                {
-                    "href": self._href,
-                    "text": re.sub(r"\s+", " ", "".join(self._text)).strip(),
-                }
-            )
-            self._href = None
-            self._text = []
-        if tag_name == "title":
-            self._in_title = False
-        elif tag_name == "h1":
-            self._in_h1 = False
-
-    def page_context(self) -> str:
-        """Return normalized title and primary heading text."""
-
-        return re.sub(
-            r"\s+",
-            " ",
-            " ".join((*self._title_text, *self._h1_text)),
-        ).strip()
-
-
 def diagnose_index(
     *,
     index_url: str,
@@ -113,9 +52,9 @@ def diagnose_index(
 ) -> dict[str, Any]:
     """Return candidate documents and confirmation options from one HTML page."""
 
-    parser = _LinkParser()
+    parser = LinkParser(capture_context=True)
     parser.feed(html)
-    page_evidence = parser.page_context()
+    page_evidence = parser.context()
     page_kinds = {
         kind
         for kind, keywords in PAGE_KEYWORDS.items()
@@ -123,12 +62,12 @@ def diagnose_index(
     }
     candidates: list[dict[str, Any]] = []
     candidate_by_url: dict[str, dict[str, Any]] = {}
-    for link in parser.links:
-        resolved_url = urllib.parse.urljoin(final_url, link["href"])
+    for href, label in parser.links:
+        resolved_url = urllib.parse.urljoin(final_url, href)
         parts = urllib.parse.urlsplit(resolved_url)
         if parts.scheme not in {"http", "https"} or not parts.netloc:
             continue
-        evidence = f"{link['text']} {urllib.parse.unquote(parts.path)}"
+        evidence = f"{label} {urllib.parse.unquote(parts.path)}"
         direct_kinds = {
             kind
             for kind, keywords in KEYWORDS.items()
@@ -148,8 +87,8 @@ def diagnose_index(
         existing = candidate_by_url.get(canonical)
         if existing:
             fallback_title = Path(parts.path).name
-            if link["text"] and existing["title"] == fallback_title:
-                existing["title"] = link["text"]
+            if label and existing["title"] == fallback_title:
+                existing["title"] = label
             existing["kinds"] = [
                 kind
                 for kind in KEYWORDS
@@ -161,7 +100,7 @@ def diagnose_index(
                 )
             continue
         candidate = {
-            "title": link["text"] or Path(parts.path).name,
+            "title": label or Path(parts.path).name,
             "url": canonical,
             "kinds": kinds,
             "format": extension.removeprefix("."),

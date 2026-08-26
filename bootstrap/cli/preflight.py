@@ -12,7 +12,6 @@ import sys
 import urllib.parse
 from collections import Counter
 from dataclasses import dataclass
-from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -27,6 +26,7 @@ from bootstrap.cli.http import (
 )
 from bootstrap.municipalities import load_metadata, load_registry
 from bootstrap.observatory import ObservatoryError, load_catalog, lookup
+from lcaios.html import LinkParser
 from lcaios.run_manifest import utc_now
 
 SOURCE_KINDS = ("minutes", "regulations", "budget", "settlement")
@@ -91,68 +91,6 @@ NON_COUNCIL_TOKENS = (
 
 class PreflightError(RuntimeError):
     """Raised when the bounded preflight cannot run safely."""
-
-
-@dataclass(frozen=True)
-class Link:
-    """One observed HTML link."""
-
-    href: str
-    label: str
-
-
-class PageParser(HTMLParser):
-    """Extract page context and ordinary anchors without executing scripts."""
-
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.links: list[Link] = []
-        self._href: str | None = None
-        self._link_text: list[str] = []
-        self._capture_context = False
-        self._context: list[str] = []
-        self.script_count = 0
-
-    def handle_starttag(
-        self,
-        tag: str,
-        attrs: list[tuple[str, str | None]],
-    ) -> None:
-        tag_name = tag.lower()
-        if tag_name == "script":
-            self.script_count += 1
-        if tag_name in {"title", "h1"}:
-            self._capture_context = True
-        if tag_name == "a" and self._href is None:
-            href = dict(attrs).get("href")
-            if href:
-                self._href = str(href)
-                self._link_text = []
-
-    def handle_data(self, data: str) -> None:
-        if self._capture_context:
-            self._context.append(data)
-        if self._href is not None:
-            self._link_text.append(data)
-
-    def handle_endtag(self, tag: str) -> None:
-        tag_name = tag.lower()
-        if tag_name in {"title", "h1"}:
-            self._capture_context = False
-        if tag_name == "a" and self._href is not None:
-            self.links.append(
-                Link(
-                    href=self._href,
-                    label=_collapse("".join(self._link_text)),
-                )
-            )
-            self._href = None
-            self._link_text = []
-
-    def context(self) -> str:
-        """Return normalized title and H1 evidence."""
-
-        return _collapse(" ".join(self._context))
 
 
 def _collapse(value: str) -> str:
@@ -828,7 +766,7 @@ def preflight_municipality(
             )
             continue
 
-        parser = PageParser()
+        parser = LinkParser(capture_context=True)
         parser.feed(fetched.text())
         if depth == 0 and len(parser.links) < 10 and parser.script_count >= 2:
             dynamic_navigation = True
@@ -852,13 +790,13 @@ def preflight_municipality(
                     }
                 )
 
-        for link in parser.links:
+        for href, label in parser.links:
             resolved = _canonical_url(
-                urllib.parse.urljoin(fetched.final_url, link.href)
+                urllib.parse.urljoin(fetched.final_url, href)
             )
             if resolved is None:
                 continue
-            text = _evidence_text(resolved, link.label)
+            text = _evidence_text(resolved, label)
             if any(word in text for word in NEGATIVE_NAVIGATION_WORDS):
                 continue
             strong_kinds = _matching_kinds(text, keywords=STRONG_KEYWORDS)
@@ -886,7 +824,7 @@ def preflight_municipality(
                             "evidence_type": evidence_type,
                             "url": resolved,
                             "observed_on": fetched.final_url,
-                            "label": link.label,
+                            "label": label,
                             "kinds": kinds,
                             "official_host": official,
                             "vendor": vendor[1] if vendor else None,
@@ -912,7 +850,7 @@ def preflight_municipality(
                         next(sequence),
                         resolved,
                         fetched.final_url,
-                        link.label,
+                        label,
                     ),
                 )
                 queued.add(resolved)
