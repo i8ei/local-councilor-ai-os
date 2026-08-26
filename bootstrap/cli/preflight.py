@@ -11,7 +11,6 @@ import re
 import sys
 import urllib.parse
 from collections import Counter
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Sequence
 
