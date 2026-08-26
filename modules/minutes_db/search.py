@@ -136,6 +136,19 @@ def _short_trigram_query(
     return len(literal) < 3
 
 
+_BENIGN_FTS_ERROR_PATTERNS = ("syntax error", "no such table", "no such column")
+
+
+def _is_benign_fts_error(exc: sqlite3.OperationalError) -> bool:
+    """True for expected FTS states (bad query syntax, absent/older schema).
+
+    Anything else (corruption, disk errors) must surface instead of silently
+    degrading every search to the LIKE scan.
+    """
+    text = str(exc)
+    return any(pattern in text for pattern in _BENIGN_FTS_ERROR_PATTERNS)
+
+
 def search_with_report(
     connection: sqlite3.Connection, query: str, k: int = 10
 ) -> tuple[list[dict[str, Any]], SearchReport]:
@@ -198,6 +211,8 @@ def search_with_report(
                     }
             fallback_reason = "no_fts_matches"
         except sqlite3.OperationalError as exc:
+            if not _is_benign_fts_error(exc):
+                raise
             fts_error = str(exc)
             fallback_reason = "fts_error"
 
