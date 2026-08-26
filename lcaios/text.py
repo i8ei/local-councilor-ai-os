@@ -8,24 +8,21 @@ from __future__ import annotations
 
 import hashlib
 import re
+from typing import Any
 
 ERA_BASES: dict[str, int] = {"令和": 2018, "平成": 1988, "昭和": 1925}
 
 
-def stable_id(prefix: str, value: str) -> str:
+def stable_id(prefix: str, *parts: Any) -> str:
     """Build a deterministic identifier: ``prefix_`` + 24 hex chars."""
-    digest = hashlib.sha256(value.encode("utf-8")).hexdigest()[:24]
+    joined = "\n".join(str(part) for part in parts)
+    digest = hashlib.sha256(joined.encode("utf-8")).hexdigest()[:24]
     return f"{prefix}_{digest}"
 
 
 def collapse_ascii(value: str) -> str:
     """Normalize ASCII whitespace while keeping Japanese full-width spaces."""
     return re.sub(r"[ \t\r\v]+", " ", value).strip()
-
-
-def collapse_fullwidth(value: str) -> str:
-    """Collapse ASCII and full-width whitespace to single spaces."""
-    return re.sub(r"[ \t\r\v\u3000]+", " ", value).strip()
 
 
 def era_year(era_name: str, era_number: int | str) -> int:

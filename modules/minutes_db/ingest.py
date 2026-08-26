@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import sqlite3
 import sys
@@ -27,6 +26,7 @@ from lcaios.module_manifest import (
     finish_dry_run,
     input_file_record,
 )
+from lcaios.text import stable_id
 
 from .adapters.dbsr import DbsrAdapter
 from .adapters.kaigiroku_net import KaigirokuNetAdapter
@@ -37,12 +37,6 @@ MODULE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = MODULE_DIR.parents[1]
 SCHEMA_PATH = MODULE_DIR / "schema.sql"
 DEFAULT_CACHE_DIR = MODULE_DIR / ".cache"
-
-
-def stable_id(prefix: str, value: str) -> str:
-    """Build a deterministic, readable identifier."""
-    digest = hashlib.sha256(value.encode("utf-8")).hexdigest()[:24]
-    return f"{prefix}_{digest}"
 
 
 def _meetings_has_date_inferred(connection: sqlite3.Connection) -> bool:

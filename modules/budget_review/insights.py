@@ -12,12 +12,9 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from .._review_common import sha24
+from lcaios.text import stable_id
+
 from . import verify_totals
-
-
-def _stable_id(*parts: Any) -> str:
-    return "budget_insight_" + sha24("\n".join(str(part) for part in parts))
 
 
 def _locator(row: sqlite3.Row) -> Any:
@@ -61,7 +58,7 @@ def _candidate(
     formula: str,
 ) -> dict[str, Any]:
     return {
-        "candidate_id": _stable_id(kind, row["id"], value),
+        "candidate_id": stable_id("budget_insight", kind, row["id"], value),
         "analysis_kind": kind,
         "statement": statement,
         "value": value,

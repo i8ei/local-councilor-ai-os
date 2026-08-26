@@ -9,17 +9,11 @@ from __future__ import annotations
 
 import hashlib
 import json
-from typing import Any
 
 
 def sha24(value: str) -> str:
     """24-hex-char sha256 digest of the UTF-8 text."""
     return hashlib.sha256(value.encode("utf-8")).hexdigest()[:24]
-
-
-def stable_id(*parts: Any) -> str:
-    """Build a deterministic id from the parts (joined with newlines)."""
-    return sha24("\n".join(str(part) for part in parts))
 
 
 def none_if_empty(value: str | None) -> str | None:
