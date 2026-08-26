@@ -13,7 +13,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Callable
 
-from lcaios.http import CacheTier, RobotsDeniedError
+from lcaios.http import CacheTier, RobotsDeniedError, canonical_url
 from modules.minutes_db.adapters.dbsr import DbsrAdapter
 from modules.minutes_db.adapters.kaigiroku_net import KaigirokuNetAdapter
 from modules.minutes_db.adapters.static_html import StaticHtmlAdapter
@@ -207,7 +207,7 @@ def _budget_settlement_doc_urls(
 ) -> list[str]:
     out: list[str] = []
     for href, label in links:
-        resolved = _canonical_url(
+        resolved = canonical_url(
             urllib.parse.urljoin(str(observed_url), href)
         )
         if resolved is None:
@@ -933,15 +933,6 @@ class _MinutesPageParser(HTMLParser):
         return _collapse(" ".join(self._context))
 
 
-def _canonical_url(url: str) -> str | None:
-    parts = urllib.parse.urlsplit(url)
-    if parts.scheme.lower() not in {"http", "https"} or not parts.netloc:
-        return None
-    return urllib.parse.urlunsplit(
-        (parts.scheme.lower(), parts.netloc, parts.path or "/", parts.query, "")
-    )
-
-
 def _decode_html(result: Any) -> str:
     if hasattr(result, "text") and callable(result.text):  # type: ignore[no-any-return]
         return str(result.text())  # type: ignore[no-any-return,attr-defined]
@@ -1041,7 +1032,7 @@ def _verify_minutes_static(
     ) -> list[str]:
         urls: list[str] = []
         for href, label in links:
-            resolved = _canonical_url(urllib.parse.urljoin(str(observed_url), href))
+            resolved = canonical_url(urllib.parse.urljoin(str(observed_url), href))
             if resolved is None:
                 continue
             if not _is_minutes_document_link(label=label, url=resolved):
@@ -1268,7 +1259,7 @@ def _verify_minutes_static(
         for href, label in links:
             if len(out) >= limit:
                 break
-            resolved = _canonical_url(urllib.parse.urljoin(str(base_url), href))
+            resolved = canonical_url(urllib.parse.urljoin(str(base_url), href))
             if resolved is None:
                 continue
             cand_host = _host(resolved)
@@ -1540,7 +1531,7 @@ def _first_dbsr_meeting_link(
         return None
     observed_host = _host(observed_url)
     for href, label in links:
-        resolved = _canonical_url(urllib.parse.urljoin(str(observed_url), href))
+        resolved = canonical_url(urllib.parse.urljoin(str(observed_url), href))
         if resolved is None:
             continue
         if _host(resolved) != observed_host:

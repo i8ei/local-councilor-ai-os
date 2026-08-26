@@ -17,7 +17,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from http.client import HTTPMessage
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any, Literal, Mapping, overload
 
 from lcaios.run_manifest import utc_now
 
@@ -113,15 +113,31 @@ class _RawResponse:
     fetched_at: str
 
 
-def _canonical_url(url: str) -> str:
+@overload
+def canonical_url(url: str, *, strict: Literal[True] = ...) -> str: ...
+
+
+@overload
+def canonical_url(url: str, *, strict: Literal[False]) -> str | None: ...
+
+
+def canonical_url(url: str, *, strict: bool = True) -> str | None:
+    """Normalize an http(s) URL (lowercase scheme/host, drop fragment).
+
+    With ``strict=True`` raise FetchError on invalid URLs; otherwise return
+    None for them.
+    """
     parts = urllib.parse.urlsplit(url)
     if parts.scheme.lower() not in {"http", "https"} or not parts.netloc:
-        raise FetchError(f"HTTP(S) URL が必要です: {url}")
-    if parts.username or parts.password:
+        if strict:
+            raise FetchError(f"HTTP(S) URL が必要です: {url}")
+        return None
+    if strict and (parts.username or parts.password):
         raise FetchError("認証情報を含む URL は取得できません")
     return urllib.parse.urlunsplit(
         (parts.scheme.lower(), parts.netloc, parts.path or "/", parts.query, "")
     )
+
 
 
 def _redact_url(url: str, sensitive_query_keys: set[str]) -> str:
@@ -477,7 +493,7 @@ class HttpClient:
                 except urllib.error.HTTPError as error:
                     response = error
                 with response:
-                    response_url = _canonical_url(response.geturl() or url)
+                    response_url = canonical_url(response.geturl() or url)
                     return _RawResponse(
                         url=response_url,
                         status=int(
@@ -500,7 +516,7 @@ class HttpClient:
         location = response.headers.get("Location", response.headers.get("location"))
         if not location:
             raise FetchError(f"Location のないリダイレクトです: {response.url}")
-        return _canonical_url(urllib.parse.urljoin(response.url, location))
+        return canonical_url(urllib.parse.urljoin(response.url, location))
 
     def _robots_parser(self, url: str) -> urllib.robotparser.RobotFileParser:
         origin = _origin(url)
@@ -582,9 +598,16 @@ class HttpClient:
         cache_key: str | None = None,
         sensitive_query_keys: set[str] | None = None,
     ) -> FetchResult:
-        """Fetch a URL or return its verified cached response."""
+        """Fetch a URL or return its verified cached response.
 
-        requested_url = _canonical_url(url)
+        When ``cache_key`` is omitted, the key is derived from the URL with
+        ``sensitive_query_keys`` values REDACTED. Two URLs differing only in a
+        redacted value therefore share one cache entry (first fetch wins) —
+        pass an explicit ``cache_key`` when the secret value changes the
+        response identity.
+        """
+
+        requested_url = canonical_url(url)
         secret_keys = sensitive_query_keys or set()
         safe_url = _redact_url(requested_url, secret_keys)
         key = cache_key or "url:" + safe_url
