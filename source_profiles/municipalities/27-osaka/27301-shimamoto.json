@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.shimamoto.lg.jp/life/5/37/196/ (label: 島本町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shimamoto.lg.jp/life/5/36/188/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shimamoto.lg.jp/life/5/36/188/",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.shimamoto.lg.jp/life/5/36/188/",
           "sha256": "af3d7c2326df1a51437b4d15e0be1a22b71289613c14b6ecade518ee17679707",
           "fetched_at": "2026-08-27T09:51:15Z"
+        },
+        {
+          "url": "https://www.town.shimamoto.lg.jp/uploaded/attachment/2435.pdf",
+          "observed_on": "https://www.town.shimamoto.lg.jp/soshiki/8/1862.html",
+          "sha256": "bb95283509cfb76573f26453888a751a9757312ab12c6c1fa2c18d14a02ff0b9",
+          "fetched_at": "2026-08-27T23:21:27Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.shimamoto.lg.jp/life/5/36/188/ (label: 予算書) 入口 https://www.town.shimamoto.lg.jp/life/5/36/188/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shimamoto.lg.jp/life/5/36/188/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2435.pdf「一般会計予算書（PDF：2.6MB）」, sha256:bb952835）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

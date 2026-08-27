@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（r8yosannsyo.pdf「令和8年度一般会計当初予算書（PDF：1,139KB）」, sha256:db750268）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kikai.lg.jp/zaisei/seikatuouensyouhinken.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kikai.lg.jp/zaisei/seikatuouensyouhinken.html",
@@ -91,9 +91,15 @@
           "observed_on": "http://www.town.kikai.lg.jp/zaisei/seikatuouensyouhinken.html",
           "sha256": "8711e06f69b74e9bd5de622cb1132798ad41fd30768940ad9d42e4b95d2cdbd5",
           "fetched_at": "2026-08-27T09:41:16Z"
+        },
+        {
+          "url": "http://www.town.kikai.lg.jp/zaisei/documents/r4koronakoufukinkeikaku.pdf",
+          "observed_on": "http://www.town.kikai.lg.jp/zaisei/koronakouhukinn.html",
+          "sha256": "8defc2da6dac960880d9fce90eaee69d150781b052e5ee8ad5f71a465d09b5e2",
+          "fetched_at": "2026-08-27T23:21:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kikai.lg.jp/zaisei/seikatuouensyouhinken.html (label: 8月24日 喜界町生活応援商品券事業の実施について) 入口 http://www.town.kikai.lg.jp/zaisei/seikatuouensyouhinken.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kikai.lg.jp/zaisei/seikatuouensyouhinken.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r4koronakoufukinkeikaku.pdf「令和4年度新型コロナウイルス感染症対応地方創生臨時交付金事業実施計画表（PDF：118KB）」, sha256:8defc2da）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

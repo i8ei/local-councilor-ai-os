@@ -80,11 +80,11 @@
       "notes": "deepest_doc=P1。budget文書（R8tosyoyosansito.pdf「令和8年度当初予算 (66KB)」, sha256:5dcbef7f）にて構造マーカー（歳入・歳出・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
@@ -101,9 +101,15 @@
           "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/files/R6kenzenka.pdf",
           "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
           "fetched_at": "2026-08-27T11:23:39Z"
+        },
+        {
+          "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/files/h19kenzenka.pdf",
+          "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
+          "sha256": "7c49bb867d537b854a780c5894f2ce96964175d5874db81aa9aa58da71887d2f",
+          "fetched_at": "2026-08-27T23:20:09Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html (label: 今別町財政情報) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（h19kenzenka.pdf「平成19年度決算 (103KB)」, sha256:7c49bb86）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

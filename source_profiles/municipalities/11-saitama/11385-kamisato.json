@@ -83,19 +83,31 @@
       "notes": "deepest_doc=P1。budget文書（8gatsu_hosei_ippan.pdf「令和8年度 一般会計8月補正予算書（第2号）(PDF：70KB)」, sha256:6cf0b030）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kamisato.saitama.jp/7589.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kamisato.saitama.jp/7589.htm",
           "observed_on": "http://www.town.kamisato.saitama.jp/1004.htm",
           "fetched_at": "2026-08-27T07:07:03Z"
+        },
+        {
+          "url": "http://www.town.kamisato.saitama.jp/7589.htm",
+          "observed_on": "http://www.town.kamisato.saitama.jp/",
+          "sha256": "e7c8a655f3fbc2d4f6d744aaf6c07f0bedaef8bb4489c4e706941bda2af4c65f",
+          "fetched_at": "2026-08-27T10:22:23Z"
+        },
+        {
+          "url": "https://www.town.kamisato.saitama.jp/secure/1843/R4zaiseihakusyo.xlsx",
+          "observed_on": "https://www.town.kamisato.saitama.jp/1786.htm",
+          "sha256": "399f8bf2840d8858dcfb8526dfe3bbad27e5908ec0ff4a9316bdd543636c88c9",
+          "fetched_at": "2026-08-27T23:20:23Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kamisato.saitama.jp/7589.htm (label: 決算の状況)"
+      "notes": "deepest_doc=P1。settlement文書（R4zaiseihakusyo.xlsx「令和4年度財政状況資料集(xlsx:636KB)」, sha256:399f8bf2）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.ibaraki-sakai.lg.jp/page/page000794.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html",
           "sha256": "8bd15b55ac3332783f70372935da6b435d86cf65090cd2b42490cd5ef6bc256c",
           "fetched_at": "2026-08-27T10:17:56Z"
+        },
+        {
+          "url": "https://www.town.ibaraki-sakai.lg.jp/data/doc/1743063336_doc_20_0.pdf",
+          "observed_on": "https://www.town.ibaraki-sakai.lg.jp/page/page000673.html",
+          "sha256": "7d93c1f1bf792cac33e709498f58fddbc1b82bad726897ab9d5c899b347e695f",
+          "fetched_at": "2026-08-27T23:20:12Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html (label: 財政情報) 入口 https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1743063336_doc_20_0.pdf「一般会計」, sha256:7d93c1f1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

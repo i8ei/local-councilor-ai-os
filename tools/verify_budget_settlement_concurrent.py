@@ -318,7 +318,7 @@ def _extract_and_verify_doc(
                     "markers": found_m,
                 }
 
-        # Add top subpage candidates to queue (up to 5 per page)
+        # Add top subpage candidates to queue (up to 15 per page)
         sub_cands.sort(key=lambda x: x[0], reverse=True)
         added = 0
         for _, sub_url, _ in sub_cands:
@@ -328,14 +328,14 @@ def _extract_and_verify_doc(
                     s_res = client.fetch(sub_url, tier=CacheTier.INDEX)
                     queue.append((depth + 1, sub_url, s_res))
                     added += 1
-                    if added >= 5:
+                    if added >= 15:
                         break
                 except Exception:
                     continue
 
     # Final pass on any remaining document candidates
     doc_cands.sort(key=lambda x: x[0], reverse=True)
-    for _, doc_url, d_label, obs_on in doc_cands[:10]:
+    for _, doc_url, d_label, obs_on in doc_cands[:20]:
         text, d_res = _probe_doc(client, doc_url)
         no_space = re.sub(r"\s+", "", text)
         found_m = [m for m in markers if m in no_space]

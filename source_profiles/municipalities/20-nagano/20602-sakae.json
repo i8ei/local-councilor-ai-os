@@ -67,11 +67,11 @@
       "notes": "deepest_doc=P1。budget文書（R08_______.pdf「当初予算書 (PDF 1.64MB)」, sha256:2f182937）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.sakae.nagano.jp/sonsei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.sakae.nagano.jp/sonsei/zaisei/",
@@ -83,9 +83,15 @@
           "observed_on": "http://www.vill.sakae.nagano.jp/sonsei/zaisei/",
           "sha256": "2207a2b92f1a84e2452f1b7fa86d000c20991a962b4ae7d0ec19075c46d5e831",
           "fetched_at": "2026-08-27T10:13:47Z"
+        },
+        {
+          "url": "http://www.vill.sakae.nagano.jp/fs/4/0/6/8/8/_/_R4__________.pdf",
+          "observed_on": "http://www.vill.sakae.nagano.jp/docs/522.html",
+          "sha256": "1154a80fcf43d68ca8fd9aef64bb2125c23d7055095b930fbea744d66e70714b",
+          "fetched_at": "2026-08-27T23:20:40Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.sakae.nagano.jp/sonsei/zaisei/ (label: 財政・行政改革) 入口 http://www.vill.sakae.nagano.jp/sonsei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.sakae.nagano.jp/sonsei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（_R4__________.pdf「【R4決算財政分析】概要編 (PDF 902KB)」, sha256:1154a80f）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

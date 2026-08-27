@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.city.yashio.lg.jp/reiki/reiki_menu.html (label: 八潮市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yashio.lg.jp/shisei/zaiseijokyo/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yashio.lg.jp/shisei/zaiseijokyo/yosan/index.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.yashio.lg.jp/shisei/zaiseijokyo/yosan/index.html",
           "sha256": "dc86aedf00c705c55022d09292a68b09f9bc57eb91d712ea470452b000126385",
           "fetched_at": "2026-08-27T10:21:21Z"
+        },
+        {
+          "url": "http://www.city.yashio.lg.jp/shisei/zaiseijokyo/yosan/index.html",
+          "observed_on": "http://www.city.yashio.lg.jp/",
+          "sha256": "dc86aedf00c705c55022d09292a68b09f9bc57eb91d712ea470452b000126385",
+          "fetched_at": "2026-08-27T10:21:21Z"
+        },
+        {
+          "url": "https://www.city.yashio.lg.jp/shisei/zaiseijokyo/yosan/r8/tosyoyosan/R8yosanngaiyou.files/R8gaiyou.pdf",
+          "observed_on": "https://www.city.yashio.lg.jp/shisei/zaiseijokyo/yosan/r8/tosyoyosan/R8yosanngaiyou.html",
+          "sha256": "051b7e36b3e275a38325aae1e13412ee15383d1a447cb0986d28daa8df058f1f",
+          "fetched_at": "2026-08-27T23:22:38Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.yashio.lg.jp/shisei/zaiseijokyo/yosan/index.html (label: 予算) 入口 https://www.city.yashio.lg.jp/shisei/zaiseijokyo/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8gaiyou.pdf「令和8年度当初予算の概要（PDF：2,257KB）」, sha256:051b7e36）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.higashimatsushima.miyagi.jp/shisei/reiki-kansa/index.html (label: 例規・監査)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.higashimatsushima.miyagi.jp/shisei/yosan-zaisei-kaikaku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashimatsushima.miyagi.jp/shisei/yosan-zaisei-kaikaku/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.higashimatsushima.miyagi.jp:443/shisei/yosan-zaisei-kaikaku/index.html",
           "sha256": "56f4d03501303a924ecadf43851797820f13ac0e34086dcf14e7410c15830576",
           "fetched_at": "2026-08-27T10:33:51Z"
+        },
+        {
+          "url": "http://www.city.higashimatsushima.miyagi.jp/shisei/yosan-zaisei-kaikaku/index.html",
+          "observed_on": "http://www.city.higashimatsushima.miyagi.jp/",
+          "sha256": "56f4d03501303a924ecadf43851797820f13ac0e34086dcf14e7410c15830576",
+          "fetched_at": "2026-08-27T10:33:51Z"
+        },
+        {
+          "url": "https://www.city.higashimatsushima.miyagi.jp:443/shisei/yosan-zaisei-kaikaku/shinozaisei/balanceseet.files/R6houkokusyo.pdf",
+          "observed_on": "https://www.city.higashimatsushima.miyagi.jp:443/shisei/yosan-zaisei-kaikaku/shinozaisei/balanceseet.html",
+          "sha256": "fd0c139a43f630d0ccc13b4ba00e3d35276e61d42c63aa30f60c81f333a2f693",
+          "fetched_at": "2026-08-27T23:20:06Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.higashimatsushima.miyagi.jp/shisei/yosan-zaisei-kaikaku/index.html (label: 予算・財政・行財政改革) 入口 https://www.city.higashimatsushima.miyagi.jp:443/shisei/yosan-zaisei-kaikaku/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6houkokusyo.pdf「令和6年度財務分析報告書（PDF：501KB）」, sha256:fd0c139a）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

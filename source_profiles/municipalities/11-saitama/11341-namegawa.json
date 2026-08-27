@@ -51,11 +51,11 @@
       "index_url": "https://en3-jg.d1-law.com/namegawa/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
@@ -67,16 +67,22 @@
           "observed_on": "https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
           "sha256": "6da6b227cb0c22e651a15dee86cece3eec4e12d8c8513261421a23ab977bee1b",
           "fetched_at": "2026-08-27T10:22:25Z"
+        },
+        {
+          "url": "https://www.town.namegawa.saitama.jp/material/files/group/2/H30_yosansyo.pdf",
+          "observed_on": "https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/1409.html",
+          "sha256": "d3ce3cdbb9a257ca7f5d1ca32dce540940f35270049adff1bf5f2c0fbe78fcda",
+          "fetched_at": "2026-08-27T23:21:11Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（H30_yosansyo.pdf「平成30年度 予算書 (PDFファイル: 31.0MB)」, sha256:d3ce3cdb）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
@@ -88,9 +94,15 @@
           "observed_on": "https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
           "sha256": "6da6b227cb0c22e651a15dee86cece3eec4e12d8c8513261421a23ab977bee1b",
           "fetched_at": "2026-08-27T10:22:25Z"
+        },
+        {
+          "url": "https://www.town.namegawa.saitama.jp/material/files/group/2/H30kessannsyo.pdf",
+          "observed_on": "https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/1409.html",
+          "sha256": "1023bed44bf1af76026df47d0640ecd9fae3708c4045ca6c4fdf38ac4dd1416b",
+          "fetched_at": "2026-08-27T23:22:46Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.namegawa.saitama.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H30kessannsyo.pdf「平成30年度 決算書 (PDFファイル: 29.4MB)」, sha256:1023bed4）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

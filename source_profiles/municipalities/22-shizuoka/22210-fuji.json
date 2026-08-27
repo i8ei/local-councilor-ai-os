@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.fuji.shizuoka.jp/shiseijoho/index.html (label: 例規・条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html",
           "sha256": "12d287a022a2f27bafea1460ea19c9ad76fa8c9535fb203cd385ace0731fdaf1",
           "fetched_at": "2026-08-27T10:14:27Z"
+        },
+        {
+          "url": "https://www.city.fuji.shizuoka.jp/documents/5152/222101aza_2024.xlsx",
+          "observed_on": "http://www.city.fuji.shizuoka.jp/1010050000/p005192.html",
+          "sha256": "7ddcac95335b703a01470e15438b4132cb381b6039885f01f8d73572b9c46311",
+          "fetched_at": "2026-08-27T23:20:40Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html (label: ふるさと納税) 入口 http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（222101aza_2024.xlsx「令和6年度財政状況資料集（エクセル：561KB）」, sha256:7ddcac95）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

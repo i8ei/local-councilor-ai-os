@@ -35,11 +35,11 @@
       "base_url": "https://www.city.kanazawa.ishikawa.jp/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html",
           "sha256": "608bcc6b8de979cf51790075f1412d2dea6c48d4ec35d85912a1627e3ed00e1a",
           "fetched_at": "2026-08-27T10:05:25Z"
+        },
+        {
+          "url": "https://www4.city.kanazawa.lg.jp/material/files/group/16/R8_aramashi.pdf",
+          "observed_on": "https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/zaisei_yosan_kessan/12866.html",
+          "sha256": "76ea7baad2377bc350a3f989c2c626e91029b521223dfe12ad1baf6f6e51314e",
+          "fetched_at": "2026-08-27T23:20:32Z"
         }
       ],
-      "notes": "Observed finance section at https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_aramashi.pdf「令和8年度金沢市予算のあらまし (PDFファイル: 2.1MB)」, sha256:76ea7baa）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html",
           "sha256": "608bcc6b8de979cf51790075f1412d2dea6c48d4ec35d85912a1627e3ed00e1a",
           "fetched_at": "2026-08-27T10:05:25Z"
+        },
+        {
+          "url": "https://www4.city.kanazawa.lg.jp/material/files/group/16/zaiseijoukyousiryousyuu_2024.xlsx",
+          "observed_on": "https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/zaisei_yosan_kessan/12866.html",
+          "sha256": "06b20cba9a3da3765a9a86dce625d19e56e62faad3ab821125579720f89045b3",
+          "fetched_at": "2026-08-27T23:20:36Z"
         }
       ],
-      "notes": "Observed finance section at https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www4.city.kanazawa.lg.jp/shiseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijoukyousiryousyuu_2024.xlsx「財政状況資料集(令和6年度決算) (Excelファイル: 558.4KB)」, sha256:06b20cba）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

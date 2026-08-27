@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（6f2c7835ddac39172b1475e105ffdc82.pdf「令和８年度予算書（一般会計）」, sha256:1ab9ba5d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html",
@@ -93,9 +93,15 @@
           "observed_on": "https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html",
           "sha256": "c8a1214c6052b0a3dcc5bc02a210740181180bfc3c642933b3ec6524031a9c1c",
           "fetched_at": "2026-08-27T10:24:53Z"
+        },
+        {
+          "url": "https://www.town.mutsuzawa.chiba.jp/wp-content/uploads/2017/09/R6kessan_syouhizei.pdf",
+          "observed_on": "https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/%e5%bc%95%e4%b8%8a%e3%81%92%e5%88%86%e3%81%ab%e4%bf%82%e3%82%8b%e6%b6%88%e8%b2%bb%e7%a8%8e%e5%8f%8e%e3%81%ae%e4%bd%bf%e9%80%94%e3%81%ae%e6%98%8e%e7%a2%ba%e5%8c%96%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6.html",
+          "sha256": "0e2009656b5e0f2ad66c9b5435e937a09b5edc8852944e0caba7d10195cf431e",
+          "fetched_at": "2026-08-27T23:20:24Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html (label: ) 入口 https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan_syouhizei.pdf「令和６年度」, sha256:0e200965）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

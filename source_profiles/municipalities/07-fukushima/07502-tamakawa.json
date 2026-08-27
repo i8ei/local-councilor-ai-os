@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.vill.tamakawa.fukushima.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
@@ -51,24 +51,48 @@
           "observed_on": "https://www.vill.tamakawa.fukushima.jp:443/outline/finance.html",
           "sha256": "ca1eaadff28ec2c7c90ceca5faa993be346d7293a9f164600a261875702071ae",
           "fetched_at": "2026-08-27T10:38:06Z"
+        },
+        {
+          "url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
+          "observed_on": "http://www.vill.tamakawa.fukushima.jp/",
+          "sha256": "ca1eaadff28ec2c7c90ceca5faa993be346d7293a9f164600a261875702071ae",
+          "fetched_at": "2026-08-27T10:38:06Z"
+        },
+        {
+          "url": "https://www.vill.tamakawa.fukushima.jp:443/blogfiles/R2zaisei-2.xlsx",
+          "observed_on": "https://www.vill.tamakawa.fukushima.jp:443/outline/finance.html",
+          "sha256": "cf793cea48f2d2029168dceb3bc45a055fff24b9c3abf5714e59c9b2d120fa50",
+          "fetched_at": "2026-08-27T23:20:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.tamakawa.fukushima.jp/outline/finance.html (label: 財政状況) 入口 https://www.vill.tamakawa.fukushima.jp:443/outline/finance.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R2zaisei-2.xlsx「令和2年度」, sha256:cf793cea）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
           "observed_on": "http://www.vill.tamakawa.fukushima.jp/home.html",
           "fetched_at": "2026-08-27T08:05:32Z"
+        },
+        {
+          "url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
+          "observed_on": "http://www.vill.tamakawa.fukushima.jp/",
+          "sha256": "ca1eaadff28ec2c7c90ceca5faa993be346d7293a9f164600a261875702071ae",
+          "fetched_at": "2026-08-27T10:38:06Z"
+        },
+        {
+          "url": "https://www.vill.tamakawa.fukushima.jp:443/Templates/PDF/21zaibun.pdf",
+          "observed_on": "https://www.vill.tamakawa.fukushima.jp:443/outline/finance.html",
+          "sha256": "a6fb983a3dd1bc5424b8dee6cf1ce8015b28db62e218117eb1e524bd15f6b4b1",
+          "fetched_at": "2026-08-27T23:20:13Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.tamakawa.fukushima.jp/outline/finance.html (label: 財政状況)"
+      "notes": "deepest_doc=P1。settlement文書（21zaibun.pdf「平成21年度決算」, sha256:a6fb983a）にて構造マーカー（歳入・歳出・節・決算額等）を確認済み。"
     }
   }
 }

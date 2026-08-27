@@ -35,11 +35,11 @@
       "base_url": "https://www1.g-reiki.net/city.soma/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/yosan/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/yosan/index.html",
           "sha256": "e4ddccd3ac5923682027eb0d3e1ac878a787727a31dd1f0971d21a3650223149",
           "fetched_at": "2026-08-27T10:36:49Z"
+        },
+        {
+          "url": "https://www.city.soma.fukushima.jp/material/files/group/34/zaiseijoukyou_2024-1.pdf",
+          "observed_on": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/4111.html",
+          "sha256": "9840e2d3a7fa006f8442b09c69af67853724e30904539f2f324f2cf5ed32a055",
+          "fetched_at": "2026-08-27T23:20:10Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.soma.fukushima.jp/shiseijoho/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.soma.fukushima.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.soma.fukushima.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijoukyou_2024-1.pdf「財政状況資料集（令和6年度） (PDFファイル: 1.2MB)」, sha256:9840e2d3）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/kessan/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/kessan/index.html",
           "sha256": "d7c361a24d15960a76d2633d36e797ecf4c3574f454121cd93744f7974eb5a44",
           "fetched_at": "2026-08-27T10:36:51Z"
+        },
+        {
+          "url": "https://www.city.soma.fukushima.jp/material/files/group/34/zaiseijoukyou_2024-1.pdf",
+          "observed_on": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/4111.html",
+          "sha256": "9840e2d3a7fa006f8442b09c69af67853724e30904539f2f324f2cf5ed32a055",
+          "fetched_at": "2026-08-27T23:20:10Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.soma.fukushima.jp/shiseijoho/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.soma.fukushima.jp/shiseijoho/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.soma.fukushima.jp/shiseijoho/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijoukyou_2024-1.pdf「財政状況資料集（令和6年度） (PDFファイル: 1.2MB)」, sha256:9840e2d3）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

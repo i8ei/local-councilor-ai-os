@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at http://www.town.matsushige.tokushima.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.matsushige.tokushima.jp/docs/2015111700952/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T23:20:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.matsushige.tokushima.jp/docs/2015111700952/",
@@ -72,9 +72,21 @@
           "url": "https://www.town.matsushige.tokushima.jp/docs/2015111700952/file_contents/R8yosan.pdf",
           "observed_on": "https://www.town.matsushige.tokushima.jp/docs/2015111700952/",
           "fetched_at": "2026-08-27T11:00:55Z"
+        },
+        {
+          "url": "http://www.town.matsushige.tokushima.jp/docs/2015111700952/",
+          "observed_on": "http://www.town.matsushige.tokushima.jp/",
+          "sha256": "7ae23d3b35fca7bb0e52d5b1d8e522c653e5b1298163a8a4ea08ed895c8d481e",
+          "fetched_at": "2026-08-27T09:46:22Z"
+        },
+        {
+          "url": "https://www.town.matsushige.tokushima.jp/docs/2015111700952/file_contents/18_zaiseizyoukyou_2023.xlsx",
+          "observed_on": "https://www.town.matsushige.tokushima.jp/docs/2015111700952/",
+          "sha256": "396978f8c21f29969e91370398be0309901d774ac0c51e766bd1f4c05190c3da",
+          "fetched_at": "2026-08-27T13:43:18Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.matsushige.tokushima.jp/docs/2015111700952/ (label: 町の財政) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（18_zaiseizyoukyou_2023.xlsx「令和５年度[XLSX：851KB]」, sha256:396978f8）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",
