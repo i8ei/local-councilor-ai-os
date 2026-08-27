@@ -103,6 +103,16 @@ python3 -m modules.regulations.search \
   --query '空き家'
 ```
 
+### Step 4. 自治体データ見取り図（MOC）を生成する
+手元に取り込んだ議事録・例規・決算・比較指標データベースを走査し、収録期間や発言数、決算総括表をまとめた「見取り図（MOC）」ノートを1発で生成・更新できます。
+
+```bash
+# Vault内に 00_自治体データ見取り図.md を自動生成・更新
+python3 -m lcaios dashboard \
+  --vault '/path/to/your/obsidian-vault' \
+  --write-vault
+```
+
 さらに本格的に運用する場合は、Obsidian Vaultと連携させて環境を診断します。
 
 ```bash

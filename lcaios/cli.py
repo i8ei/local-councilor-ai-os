@@ -9,6 +9,11 @@ import sys
 from pathlib import Path
 from typing import Any, Sequence
 
+from .dashboard import (
+    build_dashboard_report,
+    find_candidate_databases,
+    render_dashboard_markdown,
+)
 from .database import verify_bootstrap_database
 from .doctor import run_doctor
 from .lifecycle import (
@@ -146,6 +151,28 @@ def build_parser() -> argparse.ArgumentParser:
         description="地方議員AI運用OSの統一された読み取り専用状態確認",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
+    dashboard = subparsers.add_parser(
+        "dashboard",
+        help="自治体データ（議事録・例規・決算・統計）の見取り図（MOC）を生成",
+    )
+    dashboard.add_argument("--vault", type=Path, help="Vaultまたはノートディレクトリ")
+    dashboard.add_argument(
+        "--db", type=Path, nargs="+", help="検査対象のSQLite DBファイル"
+    )
+    dashboard.add_argument(
+        "--data-dir", type=Path, nargs="+", help="DBを探索するディレクトリ"
+    )
+    dashboard.add_argument(
+        "--format",
+        choices=("json", "markdown"),
+        default="markdown",
+    )
+    dashboard.add_argument("--out", type=Path, help="出力先ファイル")
+    dashboard.add_argument(
+        "--write-vault",
+        action="store_true",
+        help="Vault内の00_自治体データ見取り図.mdへ直接保存",
+    )
     doctor = subparsers.add_parser(
         "doctor",
         help="診断・readiness・次の一手を1コマンドで読み取り専用に確認",
@@ -578,6 +605,52 @@ def _render_smoke_test(report: dict[str, Any]) -> str:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
+        if args.command == "dashboard":
+            search_dirs: list[Path] = []
+            if args.vault:
+                search_dirs.append(args.vault)
+                search_dirs.append(args.vault / ".local-councilor-ai-os" / "data")
+            if args.data_dir:
+                search_dirs.extend(args.data_dir)
+
+            db_paths: list[Path] = []
+            if args.db:
+                db_paths.extend(args.db)
+            if search_dirs:
+                db_paths.extend(find_candidate_databases(search_dirs))
+
+            if not db_paths:
+                print(
+                    "ERROR: 検査対象のデータベースが見つかりませんでした。--db, --data-dir, または --vault を指定してください。",
+                    file=sys.stderr,
+                )
+                return 2
+
+            unique_dbs = []
+            seen = set()
+            for p in db_paths:
+                resolved = p.resolve()
+                if resolved not in seen and resolved.is_file():
+                    seen.add(resolved)
+                    unique_dbs.append(p)
+
+            report = build_dashboard_report(unique_dbs, vault_path=args.vault)
+
+            if args.format == "json":
+                output_content = json.dumps(report, ensure_ascii=False, indent=2)
+            else:
+                output_content = render_dashboard_markdown(report)
+
+            if args.write_vault and args.vault:
+                target_file = args.vault / "00_自治体データ見取り図.md"
+                target_file.write_text(output_content, encoding="utf-8")
+                print(f"見取り図を更新しました: {target_file}")
+            elif args.out:
+                args.out.write_text(output_content, encoding="utf-8")
+                print(f"見取り図を出力しました: {args.out}")
+            else:
+                print(output_content)
+            return 0
         if args.command == "doctor":
             report = run_doctor(
                 args.vault,
