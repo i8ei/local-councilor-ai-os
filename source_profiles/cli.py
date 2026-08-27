@@ -226,15 +226,41 @@ def _cmd_ingest_command(args: argparse.Namespace) -> int:
         print(cmd)
         return 0
 
+    if adapter == "d1_law" and status in {"ready", "needs_review"}:
+        index_url = entry.get("index_url")
+        if not isinstance(index_url, str) or not index_url.strip():
+            print(f"profile {path} d1_law missing index_url", file=sys.stderr)
+            return 2
+        db_path = f"/tmp/{area}-reg.db"
+        source_name = f"{muni_name}例規集"
+        cmd = f'python3 modules/regulations/vendor_d1law_reiki.py --index-url {index_url} --db {db_path} --source-name "{source_name}" --limit {limit}'
+        if status == "needs_review":
+            print("# NEEDS LIVE VERIFICATION")
+        print(cmd)
+        return 0
+
+    if adapter == "joureikun" and status in {"ready", "needs_review"}:
+        index_url = entry.get("index_url")
+        if not isinstance(index_url, str) or not index_url.strip():
+            print(f"profile {path} joureikun missing index_url", file=sys.stderr)
+            return 2
+        db_path = f"/tmp/{area}-reg.db"
+        source_name = f"{muni_name}例規集"
+        cmd = f'python3 modules/regulations/vendor_joureikun.py --index-url {index_url} --db {db_path} --source-name "{source_name}" --limit {limit}'
+        if status == "needs_review":
+            print("# NEEDS LIVE VERIFICATION")
+        print(cmd)
+        return 0
+
     # Unsupported path
     reason_parts: list[str] = []
     if adapter is None:
         reason_parts.append("adapter is null (no supported ingestion method)")
-    elif adapter in {"d1_law", "joureikun", "dbsr", "voices"}:
-        reason_parts.append(f"adapter {adapter} is not supported by vendor_greiki")
+    elif adapter in {"dbsr", "voices"}:
+        reason_parts.append(f"adapter {adapter} is not supported by regulations ingest")
     else:
         reason_parts.append(
-            f"adapter {adapter!r} with status {status!r} cannot be ingested via g_reiki"
+            f"adapter {adapter!r} with status {status!r} cannot be ingested via regulations"
         )
 
     reason = "; ".join(reason_parts)
