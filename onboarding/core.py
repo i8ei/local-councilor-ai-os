@@ -1511,8 +1511,18 @@ def verify_scaffold(
     except (OSError, json.JSONDecodeError) as error:
         raise OnboardingError(f"manifestを読み取れません: {error}") from error
     vault = Path(str(manifest.get("target", {}).get("vault_path", ""))).resolve()
-    if not vault.is_dir() or not (vault / ".obsidian").is_dir():
-        raise OnboardingError("manifestの対象Vaultが存在しないか、Vaultではありません")
+    if not vault.is_dir():
+        raise OnboardingError("manifestの対象Vaultが存在しません")
+    has_obsidian = (vault / ".obsidian").is_dir()
+    has_instruction = any(
+        (vault / name).is_file()
+        for name in ("CLAUDE.md", "AGENTS.md", "AGENTS.override.md")
+    )
+    if not has_obsidian and not has_instruction:
+        raise OnboardingError(
+            "manifestの対象がVault（.obsidian）でも、指示ファイル"
+            "（CLAUDE.md/AGENTS.md）のある非Obsidian環境でもありません"
+        )
     agent = str(manifest.get("target", {}).get("agent", "codex"))
     diagnosis = diagnose_environment(
         vault,
@@ -1522,10 +1532,14 @@ def verify_scaffold(
     checks: list[dict[str, Any]] = []
     failures: list[str] = []
 
-    cli_status = diagnosis["capabilities"]["obsidian_cli"]["status"]
-    checks.append({"name": "obsidian_cli_target", "status": cli_status})
-    if cli_status != "reuse":
-        failures.append("Obsidian CLIの対象Vault確認に失敗")
+    if has_obsidian:
+        cli_status = diagnosis["capabilities"]["obsidian_cli"]["status"]
+        checks.append({"name": "obsidian_cli_target", "status": cli_status})
+        if cli_status != "reuse":
+            failures.append("Obsidian CLIの対象Vault確認に失敗")
+    else:
+        # Non-Obsidian environment: the CLI/Vault check is not applicable.
+        checks.append({"name": "obsidian_cli_target", "status": "optional"})
 
     artifacts = manifest.get("artifacts", [])
     for artifact in artifacts:

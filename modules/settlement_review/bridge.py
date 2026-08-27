@@ -59,20 +59,33 @@ def _detect_expenditure_schema(tables: set[str], conn: sqlite3.Connection) -> di
         c = conn.cursor()
         c.execute("PRAGMA table_info(settlement_expenditure);")
         cols = {row[1] for row in c.fetchall()}
-        if {"fiscal_year", "budget_current_amount", "spent_amount", "unused_amount"}.issubset(cols):
+        required = {
+            "fiscal_year",
+            "kan_code",
+            "kan_name",
+            "ko_code",
+            "ko_name",
+            "moku_code",
+            "moku_name",
+            "item_budget_current_amount",
+            "item_spent_amount",
+            "item_carryover_amount",
+            "item_unused_amount",
+        }
+        if required.issubset(cols):
             return {
                 "table": "settlement_expenditure",
                 "year": "fiscal_year",
-                "kuan": "category_name",
-                "kou": "category_name",
-                "moku": "item_name",
-                "budget": "budget_current_amount",
-                "spent": "spent_amount",
-                "carryover": "carryover_amount",
-                "unused": "unused_amount",
-                "kuan_no": "category_code",
-                "kou_no": "category_code",
-                "moku_no": "item_code",
+                "kuan": "kan_name",
+                "kou": "ko_name",
+                "moku": "moku_name",
+                "budget": "item_budget_current_amount",
+                "spent": "item_spent_amount",
+                "carryover": "item_carryover_amount",
+                "unused": "item_unused_amount",
+                "kuan_no": "kan_code",
+                "kou_no": "ko_code",
+                "moku_no": "moku_code",
             }
     return None
 
@@ -100,14 +113,25 @@ def _detect_revenue_schema(tables: set[str], conn: sqlite3.Connection) -> dict[s
         c = conn.cursor()
         c.execute("PRAGMA table_info(settlement_revenue);")
         cols = {row[1] for row in c.fetchall()}
-        if {"fiscal_year", "collected_amount"}.issubset(cols):
+        required = {
+            "fiscal_year",
+            "kan_code",
+            "kan_name",
+            "ko_code",
+            "ko_name",
+            "budget_current_amount",
+            "collected_amount",
+            "uncollectible_amount",
+            "outstanding_amount",
+        }
+        if required.issubset(cols):
             return {
                 "table": "settlement_revenue",
                 "year": "fiscal_year",
-                "kuan": "category_name",
-                "kou": "category_name",
-                "kuan_no": "category_code",
-                "kou_no": "category_code",
+                "kuan": "kan_name",
+                "kou": "ko_name",
+                "kuan_no": "kan_code",
+                "kou_no": "ko_code",
                 "budget": "budget_current_amount",
                 "settled": "budget_current_amount",
                 "collected": "collected_amount",
@@ -560,8 +584,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         else:
             print(output_content)
         return 0
-    except BridgeError as error:
-        print(f"ERROR: {error}", file=sys.stderr)
+    except (BridgeError, sqlite3.Error) as error:
+        prefix = "ERROR" if isinstance(error, BridgeError) else "ERROR: データベースエラー"
+        print(f"{prefix}: {error}", file=sys.stderr)
         return 2
 
 

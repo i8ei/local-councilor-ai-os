@@ -15,6 +15,9 @@ from modules.settlement_review.bridge import (
     run_bridge_analysis,
     validate_database,
 )
+from modules.settlement_review.tests import create_fixtures
+
+MODULE_DIR = Path(__file__).resolve().parents[1]
 
 
 class BridgeTests(unittest.TestCase):
@@ -175,6 +178,53 @@ class BridgeTests(unittest.TestCase):
         self.assertTrue(out_json.is_file())
         data = json.loads(out_json.read_text(encoding="utf-8"))
         self.assertEqual(data["schema_version"], "lcaios-bridge/1")
+
+    def test_integration_on_real_settlement_schema_fixture(self) -> None:
+        """The bridge must run end-to-end against the module's own real
+        schema (schema.sql), not just the hand-rolled test schema."""
+
+        create_fixtures.main()
+        passing = MODULE_DIR / "tests" / "passing.db"
+
+        # The real settlement_revenue/settlement_expenditure tables must be
+        # detected (previously the wrong column requirement made the bridge
+        # raise BridgeError on its own database).
+        conn = sqlite3.connect(passing)
+        try:
+            val = validate_database(conn)
+        finally:
+            conn.close()
+        self.assertEqual(val["exp_schema"]["table"], "settlement_expenditure")
+        self.assertEqual(val["rev_schema"]["table"], "settlement_revenue")
+        self.assertGreaterEqual(val["total_records"], 1)
+
+        # With permissive thresholds the single-year fixture still surfaces
+        # persistent unused, carryover, and uncollected revenue.
+        report = run_bridge_analysis(
+            passing,
+            min_unused_years=1,
+            min_unused_amount=1,
+            min_unused_rate=0.0,
+            min_carryover_years=1,
+            min_outstanding_amount=1,
+        )
+        self.assertEqual(report["schema_version"], "lcaios-bridge/1")
+        # 例目1 (budget 60, spent 40, unused 15) is flagged at the item grain.
+        self.assertTrue(
+            any("例目1" in item["moku_name"] for item in report["persistent_unused"])
+        )
+        self.assertTrue(report["carried_forward_chains"])
+        self.assertTrue(
+            all(row["amount_outstanding"] >= 1 for row in report["revenue_uncollected"])
+        )
+
+    def test_cli_returns_2_on_database_error(self) -> None:
+        """A corrupt / unreadable database must exit 2, not traceback."""
+
+        broken = self.work_dir / "broken.db"
+        broken.write_bytes(b"this is not a sqlite database at all")
+        ret = main(["--db", str(broken)])
+        self.assertEqual(ret, 2)
 
 
 if __name__ == "__main__":

@@ -46,9 +46,13 @@ def inspect_database(db_path: Path) -> dict[str, Any] | None:
             return _inspect_regulations_db(conn, db_path)
 
         # 3. Settlement DB
-        if "summary" in tables or "settlement_summary" in tables:
-            table_name = "summary" if "summary" in tables else "settlement_summary"
-            return _inspect_settlement_db(conn, db_path, table_name)
+        if (
+            "settlement_summary" in tables
+            or "summary" in tables
+            or "expenditure" in tables
+            or "revenue" in tables
+        ):
+            return _inspect_settlement_db(conn, db_path, tables)
 
         # 4. Benchmark DB
         if "municipality" in tables and "indicator" in tables:
@@ -155,35 +159,26 @@ def _inspect_regulations_db(conn: sqlite3.Connection, db_path: Path) -> dict[str
     }
 
 
-def _inspect_settlement_db(conn: sqlite3.Connection, db_path: Path, table_name: str) -> dict[str, Any]:
-    c = conn.cursor()
-    c.execute(f"PRAGMA table_info({table_name});")
-    cols = {r["name"] for r in c.fetchall()}
+def _inspect_settlement_db(
+    conn: sqlite3.Connection,
+    db_path: Path,
+    tables: set[str],
+) -> dict[str, Any]:
+    """Aggregate settlement revenue/expenditure per fiscal year.
 
-    records = []
-    if "fiscal_year" in cols:
-        rev_col = "revenue_settled" if "revenue_settled" in cols else "revenue"
-        exp_col = "exp_settled" if "exp_settled" in cols else "expenditure"
-        bal_col = "balance" if "balance" in cols else None
+    Supports the three ledger shapes that appear in this repo:
+    ``settlement_summary`` (side-column kan-ledger), a legacy ``summary``
+    table with explicit revenue/expenditure/balance columns, and the
+    operational ``expenditure``/``revenue`` pair.
+    """
 
-        query = f"SELECT fiscal_year, {rev_col}, {exp_col}"
-        if bal_col:
-            query += f", {bal_col}"
-        query += f" FROM {table_name} ORDER BY fiscal_year ASC;"
-
-        try:
-            c.execute(query)
-            for row in c.fetchall():
-                rec = {
-                    "fiscal_year": row["fiscal_year"],
-                    "revenue_settled": row[rev_col],
-                    "expenditure_settled": row[exp_col],
-                }
-                if bal_col:
-                    rec["balance"] = row[bal_col]
-                records.append(rec)
-        except sqlite3.Error:
-            pass
+    records: list[dict[str, Any]] = []
+    if "settlement_summary" in tables:
+        records = _read_settlement_summary(conn)
+    elif "summary" in tables:
+        records = _read_summary_columns(conn, "summary")
+    elif "revenue" in tables and "expenditure" in tables:
+        records = _read_ledger_settlement(conn)
 
     return {
         "db_type": "settlement",
@@ -191,6 +186,113 @@ def _inspect_settlement_db(conn: sqlite3.Connection, db_path: Path, table_name: 
         "db_name": db_path.name,
         "records": records,
     }
+
+
+def _read_settlement_summary(conn: sqlite3.Connection) -> list[dict[str, Any]]:
+    """Aggregate settlement_summary (kan ledger with a side column)."""
+
+    c = conn.cursor()
+    try:
+        c.execute("""
+            SELECT
+                fiscal_year,
+                COALESCE(SUM(CASE WHEN side = 'revenue' THEN collected_amount END), 0)
+                    AS revenue_settled,
+                COALESCE(SUM(CASE WHEN side = 'expenditure' THEN spent_amount END), 0)
+                    AS expenditure_settled
+            FROM settlement_summary
+            GROUP BY fiscal_year
+            ORDER BY fiscal_year ASC;
+        """)
+        records: list[dict[str, Any]] = []
+        for row in c.fetchall():
+            revenue = row["revenue_settled"] or 0
+            expenditure = row["expenditure_settled"] or 0
+            records.append({
+                "fiscal_year": row["fiscal_year"],
+                "revenue_settled": revenue,
+                "expenditure_settled": expenditure,
+                "balance": revenue - expenditure,
+            })
+        return records
+    except sqlite3.Error:
+        return []
+
+
+def _read_summary_columns(conn: sqlite3.Connection, table_name: str) -> list[dict[str, Any]]:
+    """Read a legacy ``summary`` table with explicit column names."""
+
+    c = conn.cursor()
+    c.execute(f"PRAGMA table_info({table_name});")
+    cols = {r["name"] for r in c.fetchall()}
+    if "fiscal_year" not in cols:
+        return []
+    rev_col = "revenue_settled" if "revenue_settled" in cols else "revenue"
+    exp_col = "exp_settled" if "exp_settled" in cols else "expenditure"
+    bal_col = "balance" if "balance" in cols else None
+    if rev_col not in cols or exp_col not in cols:
+        return []
+    query = (
+        f"SELECT fiscal_year, {rev_col} AS revenue_settled, "
+        f"{exp_col} AS expenditure_settled"
+    )
+    if bal_col:
+        query += f", {bal_col} AS balance"
+    query += f" FROM {table_name} ORDER BY fiscal_year ASC;"
+    try:
+        records: list[dict[str, Any]] = []
+        for row in c.execute(query):
+            rec = {
+                "fiscal_year": row["fiscal_year"],
+                "revenue_settled": row["revenue_settled"],
+                "expenditure_settled": row["expenditure_settled"],
+            }
+            if bal_col:
+                rec["balance"] = row["balance"]
+            records.append(rec)
+        return records
+    except sqlite3.Error:
+        return []
+
+
+def _read_ledger_settlement(conn: sqlite3.Connection) -> list[dict[str, Any]]:
+    """Read the operational ``expenditure``/``revenue`` pair."""
+
+    def _per_year(table: str, candidate_cols: tuple[str, ...]) -> dict[int, int]:
+        c = conn.cursor()
+        c.execute(f"PRAGMA table_info({table});")
+        cols = {r["name"] for r in c.fetchall()}
+        if "fiscal_year" not in cols:
+            return {}
+        col = next((name for name in candidate_cols if name in cols), None)
+        if col is None:
+            return {}
+        try:
+            result: dict[int, int] = {}
+            for row in c.execute(
+                f"SELECT fiscal_year, SUM({col}) AS v FROM {table} GROUP BY fiscal_year"
+            ):
+                value = row["v"]
+                result[row["fiscal_year"]] = int(value) if value is not None else 0
+            return result
+        except sqlite3.Error:
+            return {}
+
+    revenue = _per_year("revenue", ("amount_collected", "collected_amount"))
+    expenditure = _per_year(
+        "expenditure", ("amount_spent", "spent_amount")
+    )
+    records: list[dict[str, Any]] = []
+    for year in sorted(set(revenue) | set(expenditure)):
+        rev = revenue.get(year, 0)
+        expd = expenditure.get(year, 0)
+        records.append({
+            "fiscal_year": year,
+            "revenue_settled": rev,
+            "expenditure_settled": expd,
+            "balance": rev - expd,
+        })
+    return records
 
 
 def _inspect_benchmark_db(conn: sqlite3.Connection, db_path: Path) -> dict[str, Any]:
@@ -245,7 +347,11 @@ def build_dashboard_report(
 
     entries: list[dict[str, Any]] = []
     for db_path in db_paths:
-        info = inspect_database(db_path)
+        try:
+            info = inspect_database(db_path)
+        except sqlite3.Error:
+            # A corrupt or non-SQLite file must not abort the whole report.
+            continue
         if info:
             entries.append(info)
 
@@ -429,6 +535,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     )
 
     args = parser.parse_args(argv)
+
+    if args.write_vault and not args.vault:
+        print(
+            "ERROR: --write-vault には --vault の指定が必要です",
+            file=sys.stderr,
+        )
+        return 2
 
     search_dirs: list[Path] = []
     if args.vault:

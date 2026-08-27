@@ -573,6 +573,11 @@ class OnboardingTests(unittest.TestCase):
             self.assertTrue((workspace / "一般質問").is_dir())
             self.assertTrue((workspace / "予算決算").is_dir())
             self.assertTrue((workspace / ROOT_MOC).is_file())
+            # verify_scaffold must pass without .obsidian when an instruction
+            # file (CLAUDE.md) exists.
+            verification = verify_scaffold(manifest["manifest"])
+            self.assertEqual("verified", verification["scaffold_status"])
+            self.assertEqual([], verification["failures"])
 
 
 if __name__ == "__main__":

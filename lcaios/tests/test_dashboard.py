@@ -226,6 +226,43 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(data["schema_version"], "lcaios-dashboard/1")
         self.assertEqual(len(data["databases"]), 1)
 
+    def test_inspect_settlement_summary_from_real_fixture(self) -> None:
+        """Aggregate the real settlement_review schema (settlement_summary)."""
+
+        from modules.settlement_review.tests import create_fixtures
+
+        create_fixtures.main()
+        passing = (
+            Path(__file__).resolve().parents[2]
+            / "modules"
+            / "settlement_review"
+            / "tests"
+            / "passing.db"
+        )
+        info = inspect_database(passing)
+        self.assertIsNotNone(info)
+        assert info is not None
+        self.assertEqual(info["db_type"], "settlement")
+        # Fixture: revenue collected=80, expenditure spent=70 (fiscal 2099).
+        by_year = {r["fiscal_year"]: r for r in info["records"]}
+        rec = by_year[2099]
+        self.assertEqual(rec["revenue_settled"], 80)
+        self.assertEqual(rec["expenditure_settled"], 70)
+        self.assertEqual(rec["balance"], 10)
+
+    def test_build_report_skips_corrupt_database(self) -> None:
+        """A corrupt / non-SQLite file must not abort the whole report."""
+
+        corrupt = self.work_dir / "corrupt.db"
+        corrupt.write_bytes(b"this is not a sqlite database at all" * 10)
+        report = build_dashboard_report([self.settlement_db, corrupt])
+        self.assertEqual(len(report["databases"]), 1)
+        self.assertEqual(report["databases"][0]["db_type"], "settlement")
+
+    def test_main_write_vault_without_vault_flag_errors(self) -> None:
+        ret = main(["--write-vault"])
+        self.assertEqual(ret, 2)
+
 
 if __name__ == "__main__":
     unittest.main()
