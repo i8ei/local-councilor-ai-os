@@ -244,8 +244,6 @@ def _handoff_steps(
     if selected_agent and (
         selection_status != "reuse"
         or not active_instruction
-        or not registered
-        or obsidian_status != "reuse"
     ):
         steps.append(
             "完了後に再診断: "
@@ -620,15 +618,14 @@ def diagnose_environment(
         )
     else:
         obsidian_cli = _status(
-            "handoff_required",
-            "obsidianコマンドがPATHにない。基盤セットアップへ戻る",
+            "optional",
+            "obsidianコマンドがPATHにありません（推奨環境）。Markdownワークスペースとして利用可能",
         )
 
     if (
-        registered
+        exists
         and client_selection["status"] == "reuse"
         and active_instruction
-        and obsidian_cli["status"] == "reuse"
     ):
         recommended_mode = "integrate"
     elif client_selection["status"] == "needs-confirmation":
@@ -1166,13 +1163,9 @@ def build_plan(
         )
     if selected_mode == "integrate":
         if capabilities["vault_directory"]["status"] != "reuse":
-            blockers.append("対象Vaultディレクトリが存在しない")
-        if capabilities["vault_registered"]["status"] != "reuse":
-            blockers.append("対象フォルダがObsidian Vaultとして開かれていない")
+            blockers.append("対象ディレクトリが存在しない")
         if capabilities["instruction_file"]["status"] != "reuse":
-            blockers.append("Vaultで有効なAI指示ファイルを確認できない")
-        if capabilities["obsidian_cli"]["status"] != "reuse":
-            blockers.append("Obsidian CLIの対象Vault絶対パス・検索疎通を確認できない")
+            blockers.append("ワークスペースで有効なAI指示ファイルを確認できない")
         blockers.extend(
             f"既存ファイルの安全条件を満たさない: {item['target']}"
             for item in actions

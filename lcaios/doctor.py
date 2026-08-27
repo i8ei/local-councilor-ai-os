@@ -28,9 +28,7 @@ def recommend_next(
     foundation_ready = requirements.get("foundation_ready") == "ready"
     handoff_keys = (
         "ai_client_selection",
-        "vault_registered",
         "instruction_file",
-        "obsidian_cli",
     )
     if not foundation_ready and (
         diagnosis.get("recommended_mode") == "full"
@@ -42,7 +40,7 @@ def recommend_next(
         return {
             "next_command": "python3 -m onboarding diagnose --vault <vault>",
             "reason": (
-                "Obsidian・AI基盤が未整備。claude-obsidian-setupで基盤を整えてから戻る"
+                "AI基盤（CLI・指示ファイル）が未整備。基盤を整えてから戻る"
             ),
             "exit_code": 3,
         }

@@ -1264,19 +1264,18 @@ def _foundation(
     ]
     if not vault.is_dir():
         state = "unavailable"
-        detail = "Vault候補が存在しません"
-    elif not (vault / ".obsidian").is_dir():
-        state = "incomplete"
-        detail = "Obsidian Vaultとして登録されていません"
+        detail = "ノートディレクトリが存在しません"
     elif not guides:
         state = "incomplete"
-        detail = "有効なAIガイドがありません"
-    elif not onboarding.get("obsidian_cli_confirmed"):
-        state = "incomplete"
-        detail = "Obsidian CLIの対象Vault確認が記録されていません"
+        detail = "有効なAIガイド（CLAUDE.md / AGENTS.md）がありません"
     else:
         state = "ready"
-        detail = "Vault、AIガイド、Obsidian CLI確認済みmanifestを確認"
+        if (vault / ".obsidian").is_dir() and onboarding.get("obsidian_cli_confirmed"):
+            detail = "Vault、AIガイド、Obsidian CLI確認済みmanifestを確認"
+        elif (vault / ".obsidian").is_dir():
+            detail = "Obsidian VaultおよびAIガイドを確認"
+        else:
+            detail = "ノートディレクトリおよびAIガイドを確認（Obsidian未設定）"
     return {"state": state, "detail": detail, "guides": guides}
 
 

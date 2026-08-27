@@ -538,23 +538,41 @@ class OnboardingTests(unittest.TestCase):
                         plan,
                         accepted_plan_sha256=plan["plan_sha256"],
                     )
-            self.assertEqual("changed\n", (vault / ROOT_MOC).read_text(encoding="utf-8"))
-
-    def test_full_mode_is_handoff_and_cannot_apply(self) -> None:
+    def test_diagnosis_and_scaffold_succeeds_without_obsidian(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
-            vault = Path(temporary)
-            diagnosis = diagnose_environment(vault, probe_obsidian=False)
-            plan = build_plan(
-                diagnosis,
-                mode="full",
-                repo_root=REPO_ROOT,
-            )
-            self.assertEqual("handoff_required", plan["status"])
-            with self.assertRaisesRegex(OnboardingError, "integrate"):
-                apply_scaffold(
+            workspace = Path(temporary)
+            # Plain directory with only CLAUDE.md (no .obsidian, no obsidian CLI)
+            (workspace / "CLAUDE.md").write_text("# Instructions\n", encoding="utf-8")
+            with patch(
+                "onboarding.core.shutil.which",
+                side_effect=_which_with("claude"),
+            ):
+                diagnosis = diagnose_environment(workspace, agent="claude")
+
+                self.assertEqual("integrate", diagnosis["recommended_mode"])
+                self.assertEqual(
+                    "optional",
+                    diagnosis["capabilities"]["obsidian_cli"]["status"],
+                )
+                self.assertFalse((workspace / ".obsidian").exists())
+
+                plan = build_plan(
+                    diagnosis,
+                    mode="integrate",
+                    features=("core",),
+                    repo_root=REPO_ROOT,
+                )
+                self.assertEqual("ready", plan["status"])
+
+                manifest = apply_scaffold(
                     plan,
                     accepted_plan_sha256=plan["plan_sha256"],
                 )
+            self.assertEqual("complete", manifest["scaffold_status"])
+            self.assertEqual("incomplete", manifest["status"])
+            self.assertTrue((workspace / "一般質問").is_dir())
+            self.assertTrue((workspace / "予算決算").is_dir())
+            self.assertTrue((workspace / ROOT_MOC).is_file())
 
 
 if __name__ == "__main__":

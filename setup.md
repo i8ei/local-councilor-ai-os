@@ -2,15 +2,18 @@
 
 ## 前提
 
-このプロファイルは、Obsidian Vault、AIエージェント、保存規約が [`claude-obsidian-setup`](https://github.com/i8ei/claude-obsidian-setup) で構築済みであることを前提とする。Obsidian は単なる保存先ではなく、MOC、wikilink、backlink、frontmatter、lifecycle、検算記録、公開前レビュー、答弁後追跡を接続する判断層である。Obsidian がない環境では、このセットアップを開始しない。SQLiteや各CLIは単体のデータツールとして実行できるが、それは本OSの一部部品であり、運用体験の完了とは扱わない。基盤を置き換えず、地方議会実務の棚、プロファイル、ワークフロー、公開情報の検索層を上に追加する。
+本OSは、Markdownワークスペース（またはObsidian Vault）とAIエージェント（Claude Code / Codex / Antigravity等）が構築済みであることを前提とします。
 
-セットアップはAIエージェントとの対話で一段階ずつ進める。各段階は「確認、実行、検証、停止」で閉じ、次へ自動で進まない。開始前に作成先、既存物、外部通信、生成物、巻き戻し対象と理由を示し、明示承認を得る。実行時は作成記録を残す。同名ファイルは自動上書きせず、差分を示して承認された項目だけを統合する。不合格なら未完了として停止する。
+- **推奨ビューア（Obsidian）**: MOC、wikilink、backlink、検算記録の閲覧、および外出先・議場へのスマホ同期を行う場合は、[Obsidian](https://obsidian.md/) および [`claude-obsidian-setup`](https://github.com/i8ei/claude-obsidian-setup) による環境構築を推奨します。
+- **その他のエディタ（VS Code / Cursor等）**: Obsidian がない環境でも、単なるMarkdownフォルダとして全く同じ棚・MOC・検算・AI協働機能を利用できます。
 
-## 段階0 Obsidian・AI環境・権限
+セットアップはAIエージェントとの対話で一段階ずつ進めます。各段階は「確認、実行、検証、停止」で閉じ、次へ自動で進みません。開始前に作成先、既存物、外部通信、生成物、巻き戻し対象と理由を示し、明示承認を得ます。実行時は作成記録を残します。同名ファイルは自動上書きせず、差分を示して承認された項目だけを統合します。不合格なら未完了として停止します。
+
+## 段階0 ワークスペース・AI環境・権限
 
 ### 確認
 
-最初に、利用者と一緒にObsidianを起動し、対象Vaultの名前と絶対パスを確認する。新規Vaultの作成、Obsidian CLIの有効化、Claude Code／Codexの基本設定、グローバルなSkillや権限設定は基盤側の`claude-obsidian-setup`が担当する。本リポジトリはそれらを自動で変更しない。
+最初に、対象フォルダ（Vault）の名前と絶対パスを確認します。新規Vaultの作成、Obsidian CLIの有効化、Claude Code／Codexの基本設定、グローバルなSkillや権限設定をフルセットで整える場合は基盤側の`claude-obsidian-setup`が担当します。本リポジトリはそれらを自動で変更しません。
 
 既存Vaultの現在地、Tier 1 DB、鮮度、次に実行すべき1コマンドまでまとめて確認する場合は、読み取り専用の統一入口を使う。
 
