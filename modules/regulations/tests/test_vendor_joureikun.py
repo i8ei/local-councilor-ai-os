@@ -472,6 +472,31 @@ class JoureikunAdapterTests(unittest.TestCase):
         self.assertEqual(2, refreshed_retrieval["live_request_count"])  # type: ignore[index]
         self.assertTrue(refreshed_retrieval["latestness_rechecked_this_run"])  # type: ignore[index]
 
+    def test_discover_documents_resolves_landing_page(self) -> None:
+        landing_url = "https://public.joureikun.jp/okoppe_town/reiki/"
+        cat_url = "https://public.joureikun.jp/okoppe_town/reiki/aggregate/catalog/index.html"
+        landing_html = """<html><body>
+        <button onclick="location.href='aggregate/catalog/index.html'">例規一覧</button>
+        </body></html>"""
+        catalog_html = """<html><body>
+        <ul><li><a href="../../act/119000078.html">興部町条例</a></li></ul>
+        </body></html>"""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmp = Path(tmpdir)
+            client = FakeHttpClient(
+                {
+                    landing_url: result(landing_url, landing_html, tmp / "landing.html"),
+                    cat_url: result(cat_url, catalog_html, tmp / "cat.html"),
+                }
+            )
+            refs = vendor_joureikun.discover_documents(landing_url, client=client)
+            self.assertEqual(1, len(refs))
+            self.assertEqual(
+                "https://public.joureikun.jp/okoppe_town/reiki/act/119000078.html",
+                refs[0]["source_url"],
+            )
+            self.assertEqual("興部町条例", refs[0]["title"])
+
 
 if __name__ == "__main__":
     unittest.main()
