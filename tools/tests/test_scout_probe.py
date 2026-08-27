@@ -2,9 +2,8 @@
 
 import unittest
 from unittest.mock import MagicMock
-from pathlib import Path
 
-from tools.scout_profiles import probe_vendor_regulations, probe_vendor_minutes
+from tools.scout_profiles import probe_vendor_minutes, probe_vendor_regulations
 
 
 class ScoutProbeTests(unittest.TestCase):
