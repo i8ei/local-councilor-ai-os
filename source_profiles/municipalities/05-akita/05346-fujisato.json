@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.fujisato.akita.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.fujisato.akita.jp/town/c613/teireirinji/3471",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.fujisato.akita.jp/town/c613/teireirinji/3471",
           "observed_on": "http://www.town.fujisato.akita.jp/",
           "fetched_at": "2026-08-27T07:32:21Z"
+        },
+        {
+          "url": "http://www.town.fujisato.akita.jp/town/c613/teireirinji/3471",
+          "observed_on": "http://www.town.fujisato.akita.jp/town/c613/teireirinji/3471",
+          "sha256": "e9d3d270b87ace1494d0c695c8f80bb155648d27006b7aaf06cd0678fe27c7d3",
+          "fetched_at": "2026-08-27T10:35:27Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.fujisato.akita.jp/town/c613/teireirinji/3471 (label: 8月24日 令和８年第２回臨時会会議録について) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.town.fujisato.akita.jp/town/c613/teireirinji/3471 (label: 8月24日 令和８年第２回臨時会会議録について) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

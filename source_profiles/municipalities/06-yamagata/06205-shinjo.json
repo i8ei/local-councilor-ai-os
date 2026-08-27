@@ -6,19 +6,28 @@
   "official_home_url": "http://www.city.shinjo.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.shinjo.yamagata.jp/s015/030/010/20150322115800.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shinjo.yamagata.jp/s015/030/010/20150322115800.html",
           "observed_on": "http://www.city.shinjo.yamagata.jp/060/index.html",
           "fetched_at": "2026-08-27T07:39:31Z"
+        },
+        {
+          "url": "http://www.city.shinjo.yamagata.jp/s015/030/010/20150322115800.html",
+          "observed_on": "http://www.city.shinjo.yamagata.jp/s015/030/010/20150322115800.html",
+          "sha256": "2e57cb10f6b22ef5b01317bb2b180720dc09456aa0affae3253ae266742e8a42",
+          "fetched_at": "2026-08-27T10:36:45Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.shinjo.yamagata.jp/s015/030/010/20150322115800.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.city.shinjo.yamagata.jp/s015/030/010/20150322115800.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

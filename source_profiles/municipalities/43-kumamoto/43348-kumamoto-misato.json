@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.kumamoto-misato.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.kumamoto-misato.lg.jp/gyosei/gikai/2/1645.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumamoto-misato.lg.jp/gyosei/gikai/2/1645.html",
           "observed_on": "https://www.town.kumamoto-misato.lg.jp/gyosei/gikai/2/index.html",
           "fetched_at": "2026-08-27T05:36:38Z"
+        },
+        {
+          "url": "https://www.town.kumamoto-misato.lg.jp/gyosei/gikai/2/1645.html",
+          "observed_on": "https://www.town.kumamoto-misato.lg.jp/gyosei/gikai/2/1645.html",
+          "sha256": "6ca78a7a10f925dd99e2103e1d6883b44fc4b2d5f0262b0f67434a73ffbb8ef9",
+          "fetched_at": "2026-08-27T09:38:13Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.kumamoto-misato.lg.jp/gyosei/gikai/2/1645.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.town.kumamoto-misato.lg.jp/gyosei/gikai/2/1645.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

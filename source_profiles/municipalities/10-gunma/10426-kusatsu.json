@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.kusatsu.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.kusatsu.gunma.jp/www/contents/1654156951891/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kusatsu.gunma.jp/www/contents/1654156951891/index.html",
           "observed_on": "https://www.town.kusatsu.gunma.jp/www/genre/1484895645017/",
           "fetched_at": "2026-08-27T06:42:45Z"
+        },
+        {
+          "url": "https://www.town.kusatsu.gunma.jp/www/contents/1654156951891/index.html",
+          "observed_on": "https://www.town.kusatsu.gunma.jp/www/contents/1654156951891/index.html",
+          "sha256": "891d5b29317df997f82a6507c0fe85db6e6cb9afa1c3f26ecbc94f835b416153",
+          "fetched_at": "2026-08-27T10:19:40Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.kusatsu.gunma.jp/www/contents/1654156951891/index.html (label: 草津町議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.town.kusatsu.gunma.jp/www/contents/1654156951891/index.html (label: 草津町議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

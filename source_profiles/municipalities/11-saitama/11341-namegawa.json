@@ -6,19 +6,28 @@
   "official_home_url": "https://www.town.namegawa.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.namegawa.saitama.jp/choseijoho/gikai/2236.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.namegawa.saitama.jp/choseijoho/gikai/2236.html",
           "observed_on": "https://www.town.namegawa.saitama.jp/choseijoho/index.html",
           "fetched_at": "2026-08-27T07:03:05Z"
+        },
+        {
+          "url": "https://www.town.namegawa.saitama.jp/choseijoho/gikai/2236.html",
+          "observed_on": "https://www.town.namegawa.saitama.jp/choseijoho/gikai/2236.html",
+          "sha256": "8a07937eb3cd0c9bb880c793621317f964ae35b583d3de67b958784445ea3c12",
+          "fetched_at": "2026-08-27T10:22:24Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.namegawa.saitama.jp/choseijoho/gikai/2236.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.town.namegawa.saitama.jp/choseijoho/gikai/2236.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

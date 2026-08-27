@@ -6,19 +6,28 @@
   "official_home_url": "https://www.vill.fudai.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.vill.fudai.iwate.jp/docs/300.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.fudai.iwate.jp/docs/300.html",
           "observed_on": "https://www.vill.fudai.iwate.jp/soshiki/gikai/",
           "fetched_at": "2026-08-27T07:15:37Z"
+        },
+        {
+          "url": "https://www.vill.fudai.iwate.jp/docs/300.html",
+          "observed_on": "https://www.vill.fudai.iwate.jp/docs/300.html",
+          "sha256": "ec2adb83b3637b72918acabdd092779742e8b0aab89db83772ee803d36d4103d",
+          "fetched_at": "2026-08-27T10:33:53Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.vill.fudai.iwate.jp/docs/300.html (label: 議事録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.vill.fudai.iwate.jp/docs/300.html (label: 議事録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

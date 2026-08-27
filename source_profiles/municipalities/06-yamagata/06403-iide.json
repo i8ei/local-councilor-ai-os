@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.iide.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.iide.yamagata.jp/004/R40210.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.iide.yamagata.jp/004/R40210.html",
           "observed_on": "http://www.town.iide.yamagata.jp/iidemachiwoshiru/chougikai/index.html",
           "fetched_at": "2026-08-27T07:49:12Z"
+        },
+        {
+          "url": "https://www.town.iide.yamagata.jp/004/R40210.html",
+          "observed_on": "https://www.town.iide.yamagata.jp/004/R40210.html",
+          "sha256": "6e786e7fb6aa8fb3228bb632ef561e738fbf1c20629997806a4dce37cf2a957e",
+          "fetched_at": "2026-08-27T10:36:34Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.iide.yamagata.jp/004/R40210.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.town.iide.yamagata.jp/004/R40210.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

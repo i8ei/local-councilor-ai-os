@@ -1212,6 +1212,11 @@ def _verify_minutes_static(
         doc_url = _first_council_doc_url(
             page_links, page_final_url, page_context, prefer_pdf=prefer_pdf
         )
+        is_pdf_doc = bool(doc_url and doc_url.lower().split("?", 1)[0].endswith(".pdf"))
+        cfg = copy.deepcopy(entry.get("config")) if isinstance(entry.get("config"), dict) else {}
+        if is_pdf_doc:
+            cfg["pdf"] = True
+
         pending_sources = [(index_url, index_url, result)]
         if via_follow:
             pending_sources.append((page_final_url, index_url, page_result))
@@ -1234,15 +1239,20 @@ def _verify_minutes_static(
             "fetched_at": page_fetched,
         }
         probe_subject = doc_url or "the first council-scoped document link"
-        return _finalize_with_probe(
-            lambda: _probe_static_minutes(
-                config=entry.get("config"),
+
+        def _probe_and_record():
+            records, status = _probe_static_minutes(
+                config=cfg,
                 index_url=index_url,
                 document_url=doc_url or "",
                 client=client,
             )
-            if doc_url is not None
-            else ([], None),
+            if records and is_pdf_doc:
+                entry.setdefault("config", {})["pdf"] = True
+            return records, status
+
+        return _finalize_with_probe(
+            _probe_and_record if doc_url is not None else (lambda: ([], None)),
             updated=updated,
             profile=profile,
             entry=entry,

@@ -6,19 +6,28 @@
   "official_home_url": "http://www.city.takahama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.takahama.lg.jp/site/gikai/1529.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.takahama.lg.jp/site/gikai/1529.html",
           "observed_on": "http://www.city.takahama.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T08:06:01Z"
+        },
+        {
+          "url": "http://www.city.takahama.lg.jp/site/gikai/1529.html",
+          "observed_on": "http://www.city.takahama.lg.jp/site/gikai/1529.html",
+          "sha256": "90e53c950fca7f428f00be160d99122564aff08b81c35ec0b509b76e45adcfb0",
+          "fetched_at": "2026-08-27T10:15:31Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.takahama.lg.jp/site/gikai/1529.html (label: 定例会 会議録－検索) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.city.takahama.lg.jp/site/gikai/1529.html (label: 定例会 会議録－検索) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.nakanojo.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.nakanojo.gunma.jp/site/nakanojo-gikai/1097.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nakanojo.gunma.jp/site/nakanojo-gikai/1097.html",
           "observed_on": "http://www.town.nakanojo.gunma.jp/site/nakanojo-gikai/",
           "fetched_at": "2026-08-27T06:41:47Z"
+        },
+        {
+          "url": "http://www.town.nakanojo.gunma.jp/site/nakanojo-gikai/1097.html",
+          "observed_on": "http://www.town.nakanojo.gunma.jp/site/nakanojo-gikai/1097.html",
+          "sha256": "b83342e43cc6cd15e43454b0ff9b4c5208e8e1ff69d526b053c5cfff08f5e6a1",
+          "fetched_at": "2026-08-27T10:19:45Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.nakanojo.gunma.jp/site/nakanojo-gikai/1097.html (label: 会議録｜中之条町議会) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.town.nakanojo.gunma.jp/site/nakanojo-gikai/1097.html (label: 会議録｜中之条町議会) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

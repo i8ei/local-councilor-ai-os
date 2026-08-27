@@ -6,19 +6,28 @@
   "official_home_url": "https://www.town.uryu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.uryu.hokkaido.jp/docs/4719.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.uryu.hokkaido.jp/docs/4719.html",
           "observed_on": "https://www.town.uryu.hokkaido.jp/soshiki/gikai/",
           "fetched_at": "2026-08-27T06:23:19Z"
+        },
+        {
+          "url": "https://www.town.uryu.hokkaido.jp/docs/4719.html",
+          "observed_on": "https://www.town.uryu.hokkaido.jp/docs/4719.html",
+          "sha256": "916bc92ff7cf4d0a8ff7c13968ad332cc41b78d2b9c0aae87cba3d73efe97389",
+          "fetched_at": "2026-08-27T10:30:24Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.uryu.hokkaido.jp/docs/4719.html (label: 2026年4月1日 議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.town.uryu.hokkaido.jp/docs/4719.html (label: 2026年4月1日 議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

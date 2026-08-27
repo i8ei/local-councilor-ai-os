@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.ora.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.ora.gunma.jp/s049/070/020/080/gikai-kaigiroku-R8.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ora.gunma.jp/s049/070/020/080/gikai-kaigiroku-R8.html",
           "observed_on": "http://www.town.ora.gunma.jp/li/070/index.html",
           "fetched_at": "2026-08-27T06:47:22Z"
+        },
+        {
+          "url": "http://www.town.ora.gunma.jp/s049/070/020/080/gikai-kaigiroku-R8.html",
+          "observed_on": "http://www.town.ora.gunma.jp/s049/070/020/080/gikai-kaigiroku-R8.html",
+          "sha256": "efa9ab399760b622da0e0a02793c427ae5c96e38a94c7232d3fd3a540d982a66",
+          "fetched_at": "2026-08-27T10:20:10Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.ora.gunma.jp/s049/070/020/080/gikai-kaigiroku-R8.html (label: 令和8年第1回定例会（3月）の会議録を掲載しました) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.town.ora.gunma.jp/s049/070/020/080/gikai-kaigiroku-R8.html (label: 令和8年第1回定例会（3月）の会議録を掲載しました) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

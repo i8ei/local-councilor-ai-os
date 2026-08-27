@@ -6,19 +6,28 @@
   "official_home_url": "http://www.vill.tanohata.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.vill.tanohata.iwate.jp/docs/2018022800049/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tanohata.iwate.jp/docs/2018022800049/",
           "observed_on": "http://www.vill.tanohata.iwate.jp/bunya/gyousei/",
           "fetched_at": "2026-08-27T07:14:25Z"
+        },
+        {
+          "url": "http://www.vill.tanohata.iwate.jp/docs/2018022800049/",
+          "observed_on": "http://www.vill.tanohata.iwate.jp/docs/2018022800049/",
+          "sha256": "b390146273fc68b241f718e1f1631e3eb0859e5e27d8c5b2507c5a7f82d2df39",
+          "fetched_at": "2026-08-27T10:33:40Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.vill.tanohata.iwate.jp/docs/2018022800049/ (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.vill.tanohata.iwate.jp/docs/2018022800049/ (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",
