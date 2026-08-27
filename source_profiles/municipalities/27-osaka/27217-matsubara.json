@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at https://www.city.matsubara.lg.jp/docs/page8606.html (label: 議会議事録検索) extraction probe read one document at http://ssp.kaigiroku.net/tenant/matsubara/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T15:51:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://en3-jg.d1-law.com/matsubara/d1w_reiki/reiki.html",
           "observed_on": "https://www.city.matsubara.lg.jp/",
           "fetched_at": "2026-08-27T06:31:44Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/matsubara/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/matsubara/d1w_reiki/reiki.html",
+          "sha256": "3e459dd8756916643164c46b90be5c5749eda9e15df9de393695e2f258b532d7",
+          "fetched_at": "2026-08-27T16:04:58Z"
         }
       ],
       "notes": "Observed g_reiki at https://en3-jg.d1-law.com/matsubara/d1w_reiki/reiki.html (label: 例規集)",
-      "index_url": "https://en3-jg.d1-law.com/matsubara/d1w_reiki/"
+      "index_url": "https://en3-jg.d1-law.com/matsubara/d1w_reiki/reiki.html"
     },
     "budget": {
       "status": "ready",

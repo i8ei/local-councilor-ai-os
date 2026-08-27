@@ -658,7 +658,19 @@ class HttpClient:
             current_url = robots_url
             request_log: list[dict[str, Any]] = []
             for _ in range(_MAX_REDIRECTS + 1):
-                response = self._request_once(current_url)
+                try:
+                    response = self._request_once(current_url)
+                except FetchError:
+                    # robots.txt unreachable (connection closed / timeout):
+                    # treat as absent (404-like) so the fetch may proceed.
+                    # A policy that cannot be fetched is no policy.
+                    response = _RawResponse(
+                        url=current_url,
+                        status=404,
+                        body=b"",
+                        headers={},
+                        fetched_at=utc_now(),
+                    )
                 request_log.append(
                     {
                         "url": current_url,

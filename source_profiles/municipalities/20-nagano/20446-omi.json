@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at http://www.vill.omi.nagano.jp/omimura/gikai/gikaijimukyoku536.html (label: 議事録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence [再挑戦対象: 実PDFへfollowして再検証]"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T15:51:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://en3-jg.d1-law.com/omi/d1w_reiki/reiki.html",
           "observed_on": "http://www.vill.omi.nagano.jp/",
           "fetched_at": "2026-08-27T07:16:57Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/omi/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/omi/d1w_reiki/reiki.html",
+          "sha256": "1d78d28cb501af495e45fc24cf88c53a37bb15d012b5abc124f7bed7b25d2710",
+          "fetched_at": "2026-08-27T16:01:34Z"
         }
       ],
       "notes": "Observed g_reiki at https://en3-jg.d1-law.com/omi/d1w_reiki/reiki.html (label: 例規集)",
-      "index_url": "https://en3-jg.d1-law.com/omi/d1w_reiki/"
+      "index_url": "https://en3-jg.d1-law.com/omi/d1w_reiki/reiki.html"
     },
     "budget": {
       "status": "not_found",

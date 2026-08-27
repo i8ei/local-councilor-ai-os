@@ -27,19 +27,25 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/haga/SpTop.html (label: 議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T15:51:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://en3-jg.d1-law.com/haga/d1w_reiki/reiki.html",
           "observed_on": "https://www.town.tochigi-haga.lg.jp/",
           "fetched_at": "2026-08-27T06:23:14Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/haga/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/haga/d1w_reiki/reiki.html",
+          "sha256": "1716d62481227fd5ecf01f96b38f965a4823a4c3fb81e69c78f6c201b76f9a0a",
+          "fetched_at": "2026-08-27T15:56:01Z"
         }
       ],
       "notes": "Observed g_reiki at https://en3-jg.d1-law.com/haga/d1w_reiki/reiki.html (label: 例規集)",
-      "index_url": "https://en3-jg.d1-law.com/haga/d1w_reiki/"
+      "index_url": "https://en3-jg.d1-law.com/haga/d1w_reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",
