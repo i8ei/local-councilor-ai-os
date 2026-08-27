@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.town.shika.lg.jp/site/gikai/list23-19.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "https://www1.g-reiki.net/shika/reiki_kana/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "https://www1.g-reiki.net/shika/",
+      "verified_at": "2026-08-27T21:44:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/shika/reiki_kana/r_50_to.html",
           "observed_on": "http://www.town.shika.lg.jp/",
           "fetched_at": "2026-08-27T06:20:10Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/shika/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/shika/",
+          "sha256": "db182fcec398096ac56623ea1aed350594c8b110cdf2d3f5d57f661d19769cff",
+          "fetched_at": "2026-08-27T21:44:19Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/shika/reiki_kana/r_50_to.html (label: 志賀町例規集)"

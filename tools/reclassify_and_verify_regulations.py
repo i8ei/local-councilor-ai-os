@@ -42,7 +42,40 @@ def reclassify_profiles() -> list[tuple[str, Path, dict]]:
         elif "g-reiki.net" in url.lower() or "reiki.metro.tokyo" in url.lower():
             new_ad = "g_reiki"
 
-        if new_ad != ad:
+        # URL normalization
+        modified_url = False
+        if new_ad == "d1_law":
+            curr_url = reg.get("index_url") or reg.get("base_url") or ""
+            # e.g., .../d1w_reiki/H404901010016/H404901010016.html -> .../d1w_reiki/reiki.html
+            if "/d1w_reiki/" in curr_url and not curr_url.endswith("/d1w_reiki/reiki.html"):
+                prefix = curr_url.split("/d1w_reiki/")[0]
+                norm_url = f"{prefix}/d1w_reiki/reiki.html"
+                if norm_url != curr_url:
+                    reg["index_url"] = norm_url
+                    if "base_url" in reg:
+                        del reg["base_url"]
+                    modified_url = True
+            elif curr_url.endswith("/reiki.html"):
+                if "base_url" in reg:
+                    reg["index_url"] = reg.pop("base_url")
+                    modified_url = True
+        elif new_ad == "g_reiki":
+            curr_url = reg.get("base_url") or reg.get("index_url") or ""
+            # Strip trailing specific page/subfolder if present
+            norm_url = curr_url
+            for suffix in ("/reiki_menu.html", "/reiki_taikei/", "/reiki_taikei", "/reiki_honbun/", "/reiki_honbun", "/reiki_kana/", "/reiki_kana"):
+                if norm_url.endswith(suffix):
+                    norm_url = norm_url[:-len(suffix)]
+                    if not norm_url.endswith("/"):
+                        norm_url += "/"
+                    break
+            if norm_url != curr_url:
+                reg["base_url"] = norm_url
+                if "index_url" in reg:
+                    del reg["index_url"]
+                modified_url = True
+
+        if new_ad != ad or modified_url:
             reg["adapter"] = new_ad
             if new_ad in {"d1_law", "joureikun"} and "base_url" in reg:
                 reg["index_url"] = reg.pop("base_url")

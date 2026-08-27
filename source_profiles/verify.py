@@ -84,6 +84,60 @@ def _host(url: str) -> str | None:
         return None
 
 
+def _is_allowed_host_drift(
+    entry_host: str | None,
+    final_host: str | None,
+    *,
+    adapter: str | None = None,
+    kind: str | None = None,
+) -> bool:
+    """Check if redirection between entry_host and final_host is a safe, allowed transition."""
+    if entry_host is None or final_host is None:
+        return False
+    if entry_host == final_host:
+        return True
+
+    def _strip_www(h: str) -> str:
+        return h[4:] if h.startswith("www.") else h
+
+    # 1. www. prefix normalization: asukamura.jp <-> www.asukamura.jp
+    if _strip_www(entry_host) == _strip_www(final_host):
+        return True
+
+    # 2. Domain migration / transition within same municipality prefix:
+    # e.g., www.city.naruto.tokushima.jp -> www.city.naruto.lg.jp
+    # e.g., reiki.town.kumenan.okayama.jp -> reiki.town.kumenan.lg.jp
+    # e.g., www.city.kashiwara.osaka.jp -> www.city.kashiwara.lg.jp
+    # e.g., www.mikurasima.jp -> www.vill.mikurasima.tokyo.jp
+    e_clean = _strip_www(entry_host)
+    f_clean = _strip_www(final_host)
+    e_parts = e_clean.split(".")
+    f_parts = f_clean.split(".")
+    if (
+        entry_host.endswith(".jp")
+        and final_host.endswith(".jp")
+        and len(e_parts) >= 2
+        and len(f_parts) >= 2
+    ):
+        if e_parts[0] == f_parts[0]:
+            return True
+        if len(e_parts) >= 3 and len(f_parts) >= 3 and e_parts[-3] == f_parts[-3]:
+            return True
+
+    # 3. Municipality domain redirecting to official vendor domain for that adapter
+    if adapter == "d1_law":
+        if final_host.endswith(".d1-law.com"):
+            return True
+    elif adapter == "g_reiki":
+        if final_host.endswith(".g-reiki.net") or final_host.endswith(".legal-square.com"):
+            return True
+    elif adapter == "joureikun":
+        if "joureikun" in final_host:
+            return True
+
+    return False
+
+
 def _has_greiki_structure(html_text: str) -> bool:
     low = html_text.lower()
     markers = ["reiki_honbun", "reiki_kana", "reiki_menu", "reiki_taikei", "reiki-base"]
@@ -817,15 +871,23 @@ def _finalize_with_probe(
     return updated, report
 
 
+def _probe_sort_key(ref: dict[str, Any]) -> int:
+    title = str(ref.get("title") or "")
+    if any(k in title for k in ("条例", "規則", "規程", "会則")):
+        return 0
+    return 1
+
+
 def _probe_greiki_regulations(
     *, base_url: str, client: Any
 ) -> tuple[list[dict[str, Any]], Any]:
     """Extract articles from g-reiki regulations via the real extractor."""
-    refs = discover_documents_greiki(base_url, client=client, limit=15)
+    refs = discover_documents_greiki(base_url, client=client, limit=30)
     if not refs:
         return [], "no_act_links"
     last_payload: dict[str, Any] | None = None
-    for ref in refs:
+    sorted_refs = sorted(refs, key=_probe_sort_key)
+    for ref in sorted_refs:
         payload = fetch_document_greiki(ref, base_url=base_url, client=client)
         last_payload = payload
         articles = payload.get("articles")
@@ -857,11 +919,12 @@ def _probe_joureikun_regulations(
     *, index_url: str, client: Any
 ) -> tuple[list[dict[str, Any]], Any]:
     """Extract articles from joureikun regulations via the real extractor."""
-    refs = discover_documents_joureikun(index_url, client=client, limit=15)
+    refs = discover_documents_joureikun(index_url, client=client, limit=30)
     if not refs:
         return [], "no_act_links"
     last_payload: dict[str, Any] | None = None
-    for ref in refs:
+    sorted_refs = sorted(refs, key=_probe_sort_key)
+    for ref in sorted_refs:
         payload = fetch_document_joureikun(ref, index_url=index_url, client=client)
         last_payload = payload
         articles = payload.get("articles")
@@ -893,11 +956,12 @@ def _probe_d1law_regulations(
     *, index_url: str, client: Any
 ) -> tuple[list[dict[str, Any]], Any]:
     """Extract articles from D1-Law regulation via the real extractor."""
-    refs = discover_documents_d1law(index_url, client=client, limit=10)
+    refs = discover_documents_d1law(index_url, client=client, limit=30)
     if not refs:
         return [], "no_act_links"
     last_payload: dict[str, Any] | None = None
-    for ref in refs:
+    sorted_refs = sorted(refs, key=_probe_sort_key)
+    for ref in sorted_refs:
         payload = fetch_document_d1law(ref, index_url=index_url, client=client)
         last_payload = payload
         articles = payload.get("articles")
@@ -929,11 +993,12 @@ def _probe_d1law_opensearch_regulations(
     *, index_url: str, client: Any
 ) -> tuple[list[dict[str, Any]], Any]:
     """Extract articles from D1-Law OpenSearch regulations via the real extractor."""
-    refs = discover_documents_d1law_opensearch(index_url, client=client, limit=10)
+    refs = discover_documents_d1law_opensearch(index_url, client=client, limit=30)
     if not refs:
         return [], "no_act_links"
     last_payload: dict[str, Any] | None = None
-    for ref in refs:
+    sorted_refs = sorted(refs, key=_probe_sort_key)
+    for ref in sorted_refs:
         payload = fetch_document_d1law_opensearch(ref, index_url=index_url, client=client)
         last_payload = payload
         articles = payload.get("articles")
@@ -1889,7 +1954,9 @@ def _verify_joureikun_regulations(
     final_url_val = result.final_url if hasattr(result, "final_url") else index_url  # type: ignore[attr-defined]
     entry_host = _host(str(index_url))
     final_host = _host(str(final_url_val))
-    if entry_host is not None and final_host is not None and entry_host != final_host:
+    if not _is_allowed_host_drift(
+        entry_host, final_host, adapter=adapter, kind="regulations"
+    ):
         report = {
             "municipality": municipality,
             "kind": "regulations",
@@ -1902,6 +1969,9 @@ def _verify_joureikun_regulations(
             "final_url": final_url_val,
         }
         return updated, report
+
+    if final_url_val != index_url:
+        entry["index_url"] = str(final_url_val)
 
     sha256, fetched_at = _fetch_meta(result, now)
     pending_evidence = [_evidence_item(str(final_url_val), str(index_url), result, now)]
@@ -1975,7 +2045,9 @@ def _verify_d1law_regulations(
     final_url_val = result.final_url if hasattr(result, "final_url") else index_url  # type: ignore[attr-defined]
     entry_host = _host(str(index_url))
     final_host = _host(str(final_url_val))
-    if entry_host is not None and final_host is not None and entry_host != final_host:
+    if not _is_allowed_host_drift(
+        entry_host, final_host, adapter=adapter, kind="regulations"
+    ):
         report = {
             "municipality": municipality,
             "kind": "regulations",
@@ -1988,6 +2060,9 @@ def _verify_d1law_regulations(
             "final_url": final_url_val,
         }
         return updated, report
+
+    if final_url_val != index_url:
+        entry["index_url"] = str(final_url_val)
 
     sha256, fetched_at = _fetch_meta(result, now)
     pending_evidence = [_evidence_item(str(final_url_val), str(index_url), result, now)]
@@ -2205,7 +2280,7 @@ def verify_profile(
     entry_host = _host(base_url)
     final_url_val = result.final_url if hasattr(result, "final_url") else entry_url
     final_host = _host(final_url_val)
-    if entry_host is not None and final_host is not None and entry_host != final_host:
+    if not _is_allowed_host_drift(entry_host, final_host, adapter=adapter, kind=kind):
         report = {
             "municipality": municipality,
             "kind": kind,
@@ -2218,6 +2293,12 @@ def verify_profile(
             "final_url": final_url_val,
         }
         return updated, report
+
+    actual_base_url = base_url
+    final_url_str = str(final_url_val)
+    if entry_host != final_host and "reiki_menu.html" in final_url_str:
+        actual_base_url = final_url_str.rsplit("reiki_menu.html", 1)[0]
+        entry["base_url"] = actual_base_url
 
     # Structure check: decode HTML
     try:
@@ -2262,7 +2343,7 @@ def verify_profile(
     # the real vendor_greiki extractor before any promotion is considered.
     sha256, fetched_at = _fetch_meta(result, now)
     final_url_report = result.final_url if hasattr(result, "final_url") else entry_url  # type: ignore[attr-defined]
-    pending_evidence = [_evidence_item(entry_url, base_url, result, now)]
+    pending_evidence = [_evidence_item(str(final_url_report), base_url, result, now)]
     report_base = {
         "municipality": municipality,
         "kind": kind,
@@ -2274,7 +2355,7 @@ def verify_profile(
         "fetched_at": fetched_at,
     }
     return _finalize_with_probe(
-        lambda: _probe_greiki_regulations(base_url=base_url, client=client),
+        lambda: _probe_greiki_regulations(base_url=actual_base_url, client=client),
         updated=updated,
         profile=profile,
         entry=entry,

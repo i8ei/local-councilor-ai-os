@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.town.sue.fukuoka.jp/gyosei/gikai/1/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "https://www1.g-reiki.net/sue/reiki_kana/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "https://www1.g-reiki.net/sue/",
+      "verified_at": "2026-08-27T21:44:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/sue/reiki_kana/r_50_su.html",
           "observed_on": "http://www.town.sue.fukuoka.jp/",
           "fetched_at": "2026-08-27T04:19:37Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/sue/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/sue/",
+          "sha256": "9c960ceaeb7a2a635ca8b601fb1c93a0302610761fb8e941850f16eefba6deec",
+          "fetched_at": "2026-08-27T21:44:30Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/sue/reiki_kana/r_50_su.html (label: 例規集)"

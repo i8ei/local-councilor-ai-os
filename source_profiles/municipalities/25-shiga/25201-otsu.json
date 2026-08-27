@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "http://www1.g-reiki.net/city.otsu/reiki_taikei/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "http://www1.g-reiki.net/city.otsu/",
+      "verified_at": "2026-08-27T21:44:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/city.otsu/reiki_taikei/r_taikei_03_01.html",
           "observed_on": "https://www.city.otsu.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:06:40Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/city.otsu/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/city.otsu/",
+          "sha256": "4012e0b7e86301878f628dd84bd4419216e6e3c628a672f5eca4be007ae943d6",
+          "fetched_at": "2026-08-27T21:44:25Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city.otsu/reiki_taikei/r_taikei_03_01.html (label: )"

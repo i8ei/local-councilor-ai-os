@@ -30,16 +30,22 @@
       }
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "http://www.town.iide.yamagata.jp/reiki_int/reiki_taikei/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "http://www.town.iide.yamagata.jp/reiki_int/",
+      "verified_at": "2026-08-27T21:44:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.iide.yamagata.jp/reiki_int/reiki_taikei/taikei_default.html",
           "observed_on": "http://www.town.iide.yamagata.jp/",
           "fetched_at": "2026-08-27T07:47:56Z"
+        },
+        {
+          "url": "http://www.town.iide.yamagata.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.iide.yamagata.jp/reiki_int/",
+          "sha256": "bdab0f8898d8ab550a8d4477da346137151e2b2523e12a020bed6c8413ce5d88",
+          "fetched_at": "2026-08-27T21:44:16Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.iide.yamagata.jp/reiki_int/reiki_taikei/taikei_default.html (label: » 飯豊町例規集)"

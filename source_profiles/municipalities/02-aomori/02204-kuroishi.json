@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.kuroishi.aomori.jp/shisei/gikai/gikai_kaigiroku.html (label: 過去の会議録についてはこちら をクリックしてください) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence [再挑戦対象: 実PDFへfollowして再検証]"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "https://www1.g-reiki.net/city.kuroishi/reiki_honbun/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "https://www1.g-reiki.net/city.kuroishi/",
+      "verified_at": "2026-08-27T21:44:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.kuroishi/reiki_honbun/c005RG00000058.html",
           "observed_on": "http://www.city.kuroishi.aomori.jp/shisei/gikai/index.html",
           "fetched_at": "2026-08-27T06:57:38Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.kuroishi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.kuroishi/",
+          "sha256": "0bd6dcac23e210d5cbb5a54c085eb790a62f0cc1e98f653535731833f0a5bd47",
+          "fetched_at": "2026-08-27T21:44:15Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kuroishi/reiki_honbun/c005RG00000058.html (label: 黒石市議会基本条例)"

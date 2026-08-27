@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/naruto/WebView/rd/council.html (label: こちら)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "http://www.city.naruto.tokushima.jp/contents/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "https://www.city.naruto.lg.jp/contents/reiki_int/",
+      "verified_at": "2026-08-27T21:44:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.naruto.tokushima.jp/contents/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.naruto.tokushima.jp/",
           "fetched_at": "2026-08-27T06:37:55Z"
+        },
+        {
+          "url": "https://www.city.naruto.lg.jp/contents/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.naruto.tokushima.jp/contents/reiki_int/",
+          "sha256": "ac8d8ea3d971bfe63c518f529a319e5688fe08f1a79fc5f273488e62ee131d7a",
+          "fetched_at": "2026-08-27T09:45:46Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.naruto.tokushima.jp/contents/reiki_int/reiki_menu.html (label: 条例・規則)"

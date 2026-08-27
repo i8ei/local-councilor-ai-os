@@ -30,16 +30,22 @@
       }
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "https://www1.g-reiki.net/uchinada/reiki_taikei/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "https://www1.g-reiki.net/uchinada/",
+      "verified_at": "2026-08-27T21:44:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/uchinada/reiki_taikei/taikei_default.html",
           "observed_on": "http://www.town.uchinada.lg.jp/",
           "fetched_at": "2026-08-27T06:19:58Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/uchinada/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/uchinada/",
+          "sha256": "fb04d0504753c4161bd88ee2bf379ced5a635d006df55834f1c5b934efa2d1c3",
+          "fetched_at": "2026-08-27T21:44:18Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/uchinada/reiki_taikei/taikei_default.html (label: )"

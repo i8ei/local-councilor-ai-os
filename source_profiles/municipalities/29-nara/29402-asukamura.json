@@ -29,16 +29,22 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "https://asukamura.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "https://www.asukamura.jp/reiki/",
+      "verified_at": "2026-08-27T21:44:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://asukamura.jp/reiki/reiki_menu.html",
           "observed_on": "https://asukamura.jp/",
           "fetched_at": "2026-08-27T07:06:27Z"
+        },
+        {
+          "url": "https://www.asukamura.jp/reiki/reiki_menu.html",
+          "observed_on": "https://asukamura.jp/reiki/",
+          "sha256": "17acab4d3f9d2737795942dd48069c2d0ea0e358a7014abe0936484e0cb56cf4",
+          "fetched_at": "2026-08-27T09:53:03Z"
         }
       ],
       "notes": "Observed g_reiki at https://asukamura.jp/reiki/reiki_menu.html (label: 例規集)"

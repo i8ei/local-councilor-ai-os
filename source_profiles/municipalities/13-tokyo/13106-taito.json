@@ -29,16 +29,22 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "http://www1.g-reiki.net/taito/reiki_taikei/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "http://www1.g-reiki.net/taito/",
+      "verified_at": "2026-08-27T21:44:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/taito/reiki_taikei/r_taikei_02_01.html",
           "observed_on": "http://www.city.taito.lg.jp/kugikai/index.html",
           "fetched_at": "2026-08-27T07:33:39Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/taito/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/taito/",
+          "sha256": "098b87edd7613c30dd180322e37a83911b5deb60684d3a3ecd45ff5a3aad5fed",
+          "fetched_at": "2026-08-27T21:44:18Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/taito/reiki_taikei/r_taikei_02_01.html (label: 区議会関連例規集)"

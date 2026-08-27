@@ -29,16 +29,22 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "https://www.vill.tozawa.yamagata.jp/reiki_int/reiki_taikei/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "https://www.vill.tozawa.yamagata.jp/reiki_int/",
+      "verified_at": "2026-08-27T21:44:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.tozawa.yamagata.jp/reiki_int/reiki_taikei/taikei_default.html",
           "observed_on": "http://www.vill.tozawa.yamagata.jp/",
           "fetched_at": "2026-08-27T07:46:54Z"
+        },
+        {
+          "url": "https://www.vill.tozawa.yamagata.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.vill.tozawa.yamagata.jp/reiki_int/",
+          "sha256": "b931abb305e3eb5ff689ac1061d00048bbdc843e9bf0d483937588a757a6baa4",
+          "fetched_at": "2026-08-27T21:44:16Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.vill.tozawa.yamagata.jp/reiki_int/reiki_taikei/taikei_default.html (label: 例規集)"

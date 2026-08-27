@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kitaakita/SpTop.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "https://www.city.kitaakita.akita.jp/ex/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "https://www1.g-reiki.net/city.kitaakita/",
+      "verified_at": "2026-08-27T21:44:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kitaakita.akita.jp/ex/reiki/reiki.html",
           "observed_on": "http://www.city.kitaakita.akita.jp/",
           "fetched_at": "2026-08-27T07:31:15Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.kitaakita/reiki_menu.html",
+          "observed_on": "https://www.city.kitaakita.akita.jp/ex/reiki/",
+          "sha256": "1633582d81e6b25a8833dc24475f51e135f0fffd9baf74f471859f6ce320a1ec",
+          "fetched_at": "2026-08-27T10:34:52Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.kitaakita.akita.jp/ex/reiki/reiki.html (label: 北秋田市例規集)"

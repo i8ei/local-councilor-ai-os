@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "http://reiki.town.kumenan.okayama.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "base_url": "https://reiki.town.kumenan.lg.jp/",
+      "verified_at": "2026-08-27T21:44:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://reiki.town.kumenan.okayama.jp/reiki_menu.html",
           "observed_on": "https://www.town.kumenan.lg.jp/",
           "fetched_at": "2026-08-27T06:21:36Z"
+        },
+        {
+          "url": "https://reiki.town.kumenan.lg.jp/reiki_menu.html",
+          "observed_on": "http://reiki.town.kumenan.okayama.jp/",
+          "sha256": "04eb8bf5585ab3e4f9d7bd5aed2c6ad0608968df7d56c820aae45651354b4cb9",
+          "fetched_at": "2026-08-27T09:44:24Z"
         }
       ],
       "notes": "Observed g_reiki at http://reiki.town.kumenan.okayama.jp/reiki_menu.html (label: 町例規集)"

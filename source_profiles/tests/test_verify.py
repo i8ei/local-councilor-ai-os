@@ -175,7 +175,7 @@ class VerifyTests(unittest.TestCase):
     def test_host_drift_does_not_promote(self) -> None:
         profile = _base_greiki_needs_review()
         fetch = make_fetch_result(ENTRY_URL, GREIKI_HTML)
-        # Simulate redirect to different host
+        # Simulate redirect to completely unrelated host
         drift_url = "https://evil.example.com/reiki_menu.html"
         fetch = replace(fetch, final_url=drift_url)
         client = FakeHttpClient({ENTRY_URL: fetch})
@@ -183,6 +183,44 @@ class VerifyTests(unittest.TestCase):
         self.assertEqual("failed", report["result"])
         self.assertIn("host drift", report["reason"])
         self.assertEqual("needs_review", updated["sources"]["regulations"]["status"])
+
+    def test_allowed_host_drift_www_normalization(self) -> None:
+        profile = _base_greiki_needs_review()
+        profile["sources"]["regulations"]["base_url"] = "http://town.tara.lg.jp/reiki/"
+        raw_entry = "http://town.tara.lg.jp/reiki/reiki_menu.html"
+        www_entry = "https://www.town.tara.lg.jp/reiki/reiki_menu.html"
+        www_kana = "https://www.town.tara.lg.jp/reiki/reiki_kana/kana_default.html"
+        www_doc = "https://www.town.tara.lg.jp/reiki/reiki_honbun/h001.html"
+        fetch_entry = replace(make_fetch_result(raw_entry, GREIKI_HTML), final_url=www_entry)
+        client = FakeHttpClient({
+            raw_entry: fetch_entry,
+            www_entry: make_fetch_result(www_entry, GREIKI_HTML),
+            www_kana: make_fetch_result(www_kana, KANA_INDEX_HTML),
+            www_doc: make_fetch_result(www_doc, GREIKI_DOC_HTML),
+        })
+        updated, report = verify_profile(profile, client=client, now=NOW)
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", updated["sources"]["regulations"]["status"])
+        self.assertEqual("https://www.town.tara.lg.jp/reiki/", updated["sources"]["regulations"]["base_url"])
+
+    def test_allowed_host_drift_vendor_redirection(self) -> None:
+        profile = _base_greiki_needs_review()
+        profile["sources"]["regulations"]["base_url"] = "http://www.town.tara.lg.jp/reiki/"
+        raw_entry = "http://www.town.tara.lg.jp/reiki/reiki_menu.html"
+        vendor_entry = "https://www1.g-reiki.net/town.tara/reiki_menu.html"
+        vendor_kana = "https://www1.g-reiki.net/town.tara/reiki_kana/kana_default.html"
+        vendor_doc = "https://www1.g-reiki.net/town.tara/reiki_honbun/h001.html"
+        fetch_entry = replace(make_fetch_result(raw_entry, GREIKI_HTML), final_url=vendor_entry)
+        client = FakeHttpClient({
+            raw_entry: fetch_entry,
+            vendor_entry: make_fetch_result(vendor_entry, GREIKI_HTML),
+            vendor_kana: make_fetch_result(vendor_kana, KANA_INDEX_HTML),
+            vendor_doc: make_fetch_result(vendor_doc, GREIKI_DOC_HTML),
+        })
+        updated, report = verify_profile(profile, client=client, now=NOW)
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", updated["sources"]["regulations"]["status"])
+        self.assertEqual("https://www1.g-reiki.net/town.tara/", updated["sources"]["regulations"]["base_url"])
 
     def test_host_with_explicit_port_is_not_host_drift(self) -> None:
         profile = _base_greiki_needs_review()
