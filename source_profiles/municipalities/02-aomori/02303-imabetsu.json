@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.imabetsu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.imabetsu.lg.jp/gyousei/gikai/2025-0317-1111-1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.imabetsu.lg.jp/gyousei/gikai/",
+      "verified_at": "2026-08-27T23:14:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.imabetsu.lg.jp/gyousei/gikai/2025-0317-1111-1.html",
           "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/",
           "fetched_at": "2026-08-27T06:58:27Z"
+        },
+        {
+          "url": "https://www.town.imabetsu.lg.jp/gyousei/gikai/",
+          "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/gikai/",
+          "sha256": "9928907cb78047767f70136707d18f18cfa80e16ef0acaee33c68e80d40d3073",
+          "fetched_at": "2026-08-27T13:25:45Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.imabetsu.lg.jp/gyousei/gikai/2025-0317-1111-1.html (label: 町議会定例会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence [再挑戦対象: 実PDFへfollowして再検証]"

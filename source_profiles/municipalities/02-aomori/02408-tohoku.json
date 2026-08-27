@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.tohoku.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.tohoku.lg.jp/chousei/info/info_yakuba_03-54.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.tohoku.lg.jp:443/chousei/gikai/gikai.html",
+      "verified_at": "2026-08-27T23:14:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tohoku.lg.jp/chousei/info/info_yakuba_03-54.html",
           "observed_on": "http://www.town.tohoku.lg.jp/top.html",
           "fetched_at": "2026-08-27T07:03:01Z"
+        },
+        {
+          "url": "https://www.town.tohoku.lg.jp:443/chousei/gikai/gikai.html",
+          "observed_on": "https://www.town.tohoku.lg.jp:443/chousei/gikai/gikai.html",
+          "sha256": "8858f316b24c6133089255eec4d89f4049fa2e57fe17af2428864ac2ed8a724b",
+          "fetched_at": "2026-08-27T13:25:43Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.tohoku.lg.jp/chousei/info/info_yakuba_03-54.html (label: 企画課「東北町地域公共交通会議の会議録」を更新)"

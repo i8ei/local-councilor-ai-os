@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.miyagi-osato.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.miyagi-osato.lg.jp/site/oosato-gikai/kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.miyagi-osato.lg.jp:443/site/oosato-gikai/",
+      "verified_at": "2026-08-27T23:14:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miyagi-osato.lg.jp/site/oosato-gikai/kaigiroku.html",
           "observed_on": "http://www.town.miyagi-osato.lg.jp/",
           "fetched_at": "2026-08-27T07:25:14Z"
+        },
+        {
+          "url": "https://www.town.miyagi-osato.lg.jp:443/site/oosato-gikai/",
+          "observed_on": "https://www.town.miyagi-osato.lg.jp:443/site/oosato-gikai/",
+          "sha256": "c59737683a19fedb0caaf94f27715b4e6eaf67feab7f8fa199d1795e52bdd034",
+          "fetched_at": "2026-08-27T23:14:12Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.miyagi-osato.lg.jp/site/oosato-gikai/kaigiroku.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence [再挑戦対象: 実PDFへfollowして再検証]"

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.uda.nara.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.uda.nara.jp/site/gikai/list11.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.uda.lg.jp/site/gikai/list11.html#skip",
+      "verified_at": "2026-08-27T23:14:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.uda.nara.jp/site/gikai/list11.html",
           "observed_on": "http://www.city.uda.nara.jp/adv/ba.php?id=13",
           "fetched_at": "2026-08-27T07:03:01Z"
+        },
+        {
+          "url": "https://www.city.uda.lg.jp/site/gikai/list11.html#skip",
+          "observed_on": "https://www.city.uda.lg.jp/site/gikai/list11.html#skip",
+          "sha256": "7cfe7cf6e0f669f7500c899dd583f815f79cc0adbd58c989e608e157a86e57ee",
+          "fetched_at": "2026-08-27T23:14:12Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.uda.nara.jp/site/gikai/list11.html (label: 会議録（本会議）)"

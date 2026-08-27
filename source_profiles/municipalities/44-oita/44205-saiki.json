@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.saiki.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.saiki.oita.jp/gikai/list00843.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.saiki.oita.jp/gikai/default.html",
+      "verified_at": "2026-08-27T23:14:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.saiki.oita.jp/gikai/list00843.html",
           "observed_on": "https://www.city.saiki.oita.jp/gikai/default.html",
           "fetched_at": "2026-08-27T06:20:54Z"
+        },
+        {
+          "url": "https://www.city.saiki.oita.jp/gikai/default.html",
+          "observed_on": "https://www.city.saiki.oita.jp/gikai/default.html",
+          "sha256": "b31e74c1b77f1b6540f351ee3c558ec832b74ccdfe404f6885a197e9872410f5",
+          "fetched_at": "2026-08-27T14:10:20Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.saiki.oita.jp/gikai/list00843.html (label: 会議録)"

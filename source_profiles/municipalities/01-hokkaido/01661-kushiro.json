@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.kushiro.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.kushiro.lg.jp/gikai/gijiroku/2026.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "http://www.town.kushiro.lg.jp/gikai/",
+      "verified_at": "2026-08-27T23:14:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kushiro.lg.jp/gikai/gijiroku/2026.html",
           "observed_on": "http://www.town.kushiro.lg.jp/",
           "fetched_at": "2026-08-27T06:52:16Z"
+        },
+        {
+          "url": "http://www.town.kushiro.lg.jp/gikai/",
+          "observed_on": "http://www.town.kushiro.lg.jp/gikai/",
+          "sha256": "1f86c5ee03d77036a490ae4e49d234180d4bf9c7e555e4d1b5717a3a7d560fb9",
+          "fetched_at": "2026-08-27T13:25:25Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.kushiro.lg.jp/gikai/gijiroku/2026.html (label: 2026年8月27日 更新 【釧路町議会】令和8年第3回定例会の会期予定等を更新) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence [再挑戦対象: 実PDFへfollowして再検証]"
