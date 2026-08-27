@@ -150,7 +150,6 @@ def _score_subpage(label: str, url: str, kind: str) -> int:
 
 
 def _score_doc(label: str, url: str, kind: str) -> int:
-    l_low = label.lower()
     u_low = urllib.parse.unquote(url).lower()
 
     score = 0
