@@ -94,6 +94,7 @@ _META_CHARSET_RE = re.compile(
     re.I,
 )
 _OPEN_RE = re.compile(r"OpenResDataWin\s*\(\s*['\"]([^'\"\\)]+)['\"]\s*\)", re.I)
+_DIRECT_J_RE = re.compile(r"(?:^|/)([A-Za-z0-9_]+)/\1_j\.html?$", re.I)
 
 
 class StructureMismatchError(RuntimeError):
@@ -314,10 +315,14 @@ def discover_documents(
         links, _encoding = _page_links(fetched, index_url)
 
         for href, label, _kind in links:
+            doc_id: str | None = None
             match = _OPEN_RE.search(href)
-            if not match:
-                continue
-            doc_id = match.group(1).strip()
+            if match:
+                doc_id = match.group(1).strip()
+            else:
+                d_match = _DIRECT_J_RE.search(href)
+                if d_match:
+                    doc_id = d_match.group(1).strip()
             if not doc_id or doc_id in seen_ids:
                 continue
             seen_ids.add(doc_id)
@@ -340,7 +345,7 @@ def discover_documents(
                 return refs
 
         for href, _label, _kind in links:
-            if _OPEN_RE.search(href):
+            if _OPEN_RE.search(href) or _DIRECT_J_RE.search(href):
                 continue
             if href.strip().lower().startswith("javascript:"):
                 continue
@@ -365,7 +370,7 @@ def discover_documents(
             queue.append(resolved)
             queued.add(resolved)
 
-    if queue:
+    if queue and not refs:
         raise StructureMismatchError(
             "D1-Law index navigation exceeded the safety page bound"
         )

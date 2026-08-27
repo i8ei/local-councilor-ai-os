@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.kyoto.lg.jp/menu5/category/75-2-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/kyoto/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T23:10:21Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kyoto.lg.jp/menu5/category/75-2-0-0-0-0-0-0-0-0.html",
           "observed_on": "https://www.city.kyoto.lg.jp/menu5/index.html",
           "fetched_at": "2026-08-27T06:14:40Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/kyoto/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/kyoto/d1w_reiki/reiki.html",
+          "sha256": "207c7ef48a528c046602f51a2e8235cf13cbcc03fad4be32c8714e79acf0f6a8",
+          "fetched_at": "2026-08-27T16:25:25Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.kyoto.lg.jp/menu5/category/75-2-0-0-0-0-0-0-0-0.html (label: 条例・規則)"
