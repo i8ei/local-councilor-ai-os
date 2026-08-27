@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.mimata.lg.jp/categories/index/kaigiroku (label: 定例会・臨時会会議録) extraction probe read one document at https://www.town.mimata.lg.jp/contents/2535.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "official_document_index",
+      "status": "ready",
+      "adapter": "joureikun",
       "index_url": "https://public1.legalcrud.com/mimata_town/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:00:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://public1.legalcrud.com/mimata_town/reiki/",
           "observed_on": "http://www.town.mimata.lg.jp/main",
           "fetched_at": "2026-08-27T06:28:07Z"
+        },
+        {
+          "url": "https://public1.legalcrud.com/mimata_town/reiki/",
+          "observed_on": "https://public1.legalcrud.com/mimata_town/reiki/",
+          "sha256": "47ee12cd8839da06ef39d18c28e99cc9fd44e4159b37a82c0ae9ba3e5a053590",
+          "fetched_at": "2026-08-27T12:44:00Z"
         }
       ],
       "notes": "Observed regulations index at https://public1.legalcrud.com/mimata_town/reiki/ (label: 三股町例規集)"

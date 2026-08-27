@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.choshi.chiba.jp/shisei/index0181.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.choshi.chiba.jp/shisei/index0181.html",
           "observed_on": "http://www.city.choshi.chiba.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:09:33Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.choshi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.choshi/",
+          "sha256": "470748f3310db77e0444f727ab9ab5cd54e2bd84f53e35c57226ad91c009346a",
+          "fetched_at": "2026-08-27T12:50:39Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.choshi.chiba.jp/shisei/index0181.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.choshi.chiba.jp/shisei/index0181.html (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/city.choshi/"
     },
     "budget": {
       "status": "needs_review",

@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.ichikikushikino.lg.jp/gikai1/gijirokukensaku.html (label: 議会議事録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.ichikikushikino.lg.jp/shise/reikishu.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ichikikushikino.lg.jp/shise/reikishu.html",
           "observed_on": "http://www.city.ichikikushikino.lg.jp/shise/index.html",
           "fetched_at": "2026-08-27T06:40:09Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.ichikikushikino/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.ichikikushikino/",
+          "sha256": "6a512d502dd83169e47d3da8a6a3d764e4e2a9a51718bb66f5578c21a10a2e76",
+          "fetched_at": "2026-08-27T12:56:59Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.ichikikushikino.lg.jp/shise/reikishu.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.ichikikushikino.lg.jp/shise/reikishu.html (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/city.ichikikushikino/"
     },
     "budget": {
       "status": "needs_review",

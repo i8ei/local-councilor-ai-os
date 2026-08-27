@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.tokunoshima-town.org/gikaijimukyoku/chose/gikai/kaigiroku/index.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.tokunoshima-town.org/soumuka/chose/johokokai/reikisyu.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC2A9B",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.tokunoshima-town.org/soumuka/chose/johokokai/reikisyu.html",
           "observed_on": "http://www.tokunoshima-town.org/chose/index.html",
           "fetched_at": "2026-08-27T06:46:55Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91BC2A9B",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC2A9B",
+          "sha256": "1237c3ef90d7efaeebc9e978956bfb1762c01b46cfa8f945dce4037fbd8bb45a",
+          "fetched_at": "2026-08-27T12:57:05Z"
         }
       ],
       "notes": "Observed regulations index at http://www.tokunoshima-town.org/soumuka/chose/johokokai/reikisyu.html (label: 徳之島町例規集)"

@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.hamura.tokyo.jp/0000002437.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8016A4B1",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hamura.tokyo.jp/0000002437.html",
           "observed_on": "http://www.city.hamura.tokyo.jp/",
           "fetched_at": "2026-08-27T07:48:48Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8016A4B1",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8016A4B1",
+          "sha256": "06085db03665f2e7c3cffb8c4d2d8c3a75a37c6e145dba980630e4ff7b26aeb2",
+          "fetched_at": "2026-08-27T12:50:55Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.hamura.tokyo.jp/0000002437.html (label: 例規集のページをみる)"

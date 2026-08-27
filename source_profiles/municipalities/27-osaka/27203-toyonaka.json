@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.toyonaka.osaka.jp/joho/reiki/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toyonaka.osaka.jp/joho/reiki/index.html",
           "observed_on": "http://www.city.toyonaka.osaka.jp/",
           "fetched_at": "2026-08-27T06:26:35Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/toyonaka/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/toyonaka/",
+          "sha256": "c78c6df3ea879e3545fde78af8f37d8c770043e0799f709366434da77d70722b",
+          "fetched_at": "2026-08-27T12:53:47Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.toyonaka.osaka.jp/joho/reiki/index.html (label: 条例・規則等)"
+      "notes": "Observed regulations index at http://www.city.toyonaka.osaka.jp/joho/reiki/index.html (label: 条例・規則等)",
+      "base_url": "http://www1.g-reiki.net/toyonaka/"
     },
     "budget": {
       "status": "needs_review",

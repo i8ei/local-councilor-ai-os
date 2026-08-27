@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/353.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/353.html",
           "observed_on": "https://www.city.kitahiroshima.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:03:57Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/kitahiroshima/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/kitahiroshima/",
+          "sha256": "d40b5d847df26482f62f423862946032d7564f7bb804f506b476bbe626c05c0d",
+          "fetched_at": "2026-08-27T12:48:01Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/353.html (label: 例規集)"
+      "notes": "Observed regulations index at https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/353.html (label: 例規集)",
+      "base_url": "http://www1.g-reiki.net/kitahiroshima/"
     },
     "budget": {
       "status": "needs_review",

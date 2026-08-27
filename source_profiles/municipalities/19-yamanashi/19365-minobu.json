@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.minobu.lg.jp/page/1455.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.minobu.lg.jp/adv/ba.php?id=35",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "joureikun",
+      "index_url": "https://public1.legalcrud.com/minobu_town/reiki/aggregate/whatsnew/index.html",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.minobu.lg.jp/adv/ba.php?id=35",
           "observed_on": "https://www.town.minobu.lg.jp/index2.html",
           "fetched_at": "2026-08-27T06:42:22Z"
+        },
+        {
+          "url": "https://public1.legalcrud.com/minobu_town/reiki/aggregate/whatsnew/index.html",
+          "observed_on": "https://public1.legalcrud.com/minobu_town/reiki/aggregate/whatsnew/index.html",
+          "sha256": "7e0d9474a977b3ca9fae61dbcd7417cab3f455ea06ba746dba9f88a5fb09fc7d",
+          "fetched_at": "2026-08-27T12:51:13Z"
         }
       ],
       "notes": "Observed regulations index at https://www.town.minobu.lg.jp/adv/ba.php?id=35 (label: 例規集)"

@@ -21,19 +21,25 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/sakata/WebView/rd/council.html (label: )"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.sakata.lg.jp/shisei/syokai/reikishu.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sakata.lg.jp/shisei/syokai/reikishu.html",
           "observed_on": "http://www.city.sakata.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:38:50Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.sakata/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.sakata/",
+          "sha256": "a3b8d7b2d7f84de168f619d765279f06f98496742acf7d8ec24238ae39ca3409",
+          "fetched_at": "2026-08-27T12:48:32Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.sakata.lg.jp/shisei/syokai/reikishu.html (label: )"
+      "notes": "Observed regulations index at http://www.city.sakata.lg.jp/shisei/syokai/reikishu.html (label: )",
+      "base_url": "https://www1.g-reiki.net/city.sakata/"
     },
     "budget": {
       "status": "needs_review",

@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at http://www.city.yokote.lg.jp/shigikai/1001553/1003538/index.html (label: 会議録) extraction probe read one document at http://ssp.kaigiroku.net/tenant/yokote/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.yokote.lg.jp/shisei/1001180/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yokote.lg.jp/shisei/1001180/index.html",
           "observed_on": "http://www.city.yokote.lg.jp/",
           "fetched_at": "2026-08-27T07:28:28Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.yokote/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.yokote/",
+          "sha256": "4eeaa82e353418f608e42195920484710f0c1ff47d5772b5c6aa8b443f43ab4e",
+          "fetched_at": "2026-08-27T12:48:30Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.yokote.lg.jp/shisei/1001180/index.html (label: 条例・規則・例規集)"
+      "notes": "Observed regulations index at http://www.city.yokote.lg.jp/shisei/1001180/index.html (label: 条例・規則・例規集)",
+      "base_url": "https://www1.g-reiki.net/city.yokote/"
     },
     "budget": {
       "status": "needs_review",

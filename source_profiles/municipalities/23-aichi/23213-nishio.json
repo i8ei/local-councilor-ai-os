@@ -27,16 +27,22 @@
       "notes": "Observed dbsr at http://www.city.nishio.aichi.dbsr.jp/index.php/ (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.nishio.aichi.jp/shisei/1010633.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85833112",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nishio.aichi.jp/shisei/1010633.html",
           "observed_on": "http://www.city.nishio.aichi.jp/",
           "fetched_at": "2026-08-27T07:59:48Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85833112",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85833112",
+          "sha256": "8ce9d7d5c5591893338adf9fdc4abc7beb64af20adcfb924f8340fe20aa6ca7e",
+          "fetched_at": "2026-08-27T12:52:54Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.nishio.aichi.jp/shisei/1010633.html (label: 西尾市例規集)"

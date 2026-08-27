@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.tsushima.lg.jp/shisei/reikisyuu.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A858330B2",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tsushima.lg.jp/shisei/reikisyuu.html",
           "observed_on": "http://www.city.tsushima.lg.jp/",
           "fetched_at": "2026-08-27T07:58:10Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A858330B2",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A858330B2",
+          "sha256": "baa128c6e75130839c954b463910e11d0585ebdf4a469c705ca87b44d61c4e28",
+          "fetched_at": "2026-08-27T12:52:53Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.tsushima.lg.jp/shisei/reikisyuu.html (label: 例規集)"

@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/okegawa/SpTop.html (label: 桶川市議会会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.okegawa.lg.jp/soshiki/soumubu/soumu/shiyakusho/jourei/2049.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95910",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.okegawa.lg.jp/soshiki/soumubu/soumu/shiyakusho/jourei/2049.html",
           "observed_on": "http://www.city.okegawa.lg.jp/",
           "fetched_at": "2026-08-27T06:56:47Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95910",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95910",
+          "sha256": "fc3fff5623b5dfb65241de84e1fc85d2e2018ae8b0ce89ac1e439527689b470e",
+          "fetched_at": "2026-08-27T12:49:56Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.okegawa.lg.jp/soshiki/soumubu/soumu/shiyakusho/jourei/2049.html (label: 桶川市例規集)"

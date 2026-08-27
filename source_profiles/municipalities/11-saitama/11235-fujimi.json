@@ -21,19 +21,25 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/fujimi/WebView/rd/council.html (label: 議会中継)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.fujimi.saitama.jp/shisei/16jyourei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fujimi.saitama.jp/shisei/16jyourei.html",
           "observed_on": "http://www.city.fujimi.saitama.jp/",
           "fetched_at": "2026-08-27T06:57:30Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/fujimi/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/fujimi/",
+          "sha256": "48707163587fcc5905addd5978e0bc95a7f684b1e8956592a25e9fa30c958348",
+          "fetched_at": "2026-08-27T12:49:58Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.fujimi.saitama.jp/shisei/16jyourei.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.fujimi.saitama.jp/shisei/16jyourei.html (label: 例規集)",
+      "base_url": "http://www1.g-reiki.net/fujimi/"
     },
     "budget": {
       "status": "needs_review",

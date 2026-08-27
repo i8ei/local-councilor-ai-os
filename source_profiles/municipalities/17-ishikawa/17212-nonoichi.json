@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.nonoichi.lg.jp/life/4/40/264/ (label: 会議録検索システム)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.nonoichi.lg.jp/life/4/35/176/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A80544991",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nonoichi.lg.jp/life/4/35/176/",
           "observed_on": "http://www.city.nonoichi.lg.jp/life/4/",
           "fetched_at": "2026-08-27T06:19:27Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A80544991",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A80544991",
+          "sha256": "e7fcb5f4d3bd7869a4b5c57a0c5b77bd942763d63866c0206ddd1c2b7bb42d0d",
+          "fetched_at": "2026-08-27T12:51:10Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.nonoichi.lg.jp/life/4/35/176/ (label: 条例・規則)"

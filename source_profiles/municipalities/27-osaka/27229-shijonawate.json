@@ -21,19 +21,25 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/shijonawate/WebView/rd/council_1.html (label: 議会中継配信ページはこちら)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.shijonawate.lg.jp/page/101122.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shijonawate.lg.jp/page/101122.html",
           "observed_on": "http://www.city.shijonawate.lg.jp/",
           "fetched_at": "2026-08-27T06:36:47Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/shijonawate/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/shijonawate/",
+          "sha256": "9e41f5b35a0b4db838317b2dcdafc3269b1c5a86529ec8b9b204c9687ce5d76c",
+          "fetched_at": "2026-08-27T12:54:13Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.shijonawate.lg.jp/page/101122.html (label: 四條畷市例規集)"
+      "notes": "Observed regulations index at http://www.city.shijonawate.lg.jp/page/101122.html (label: 四條畷市例規集)",
+      "base_url": "https://www1.g-reiki.net/shijonawate/"
     },
     "budget": {
       "status": "needs_review",

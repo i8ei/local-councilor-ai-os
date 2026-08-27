@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.town.aizubange.fukushima.jp/site/gikai/9700.html (label: 会議録一覧（定例会・臨時会）)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.aizubange.fukushima.jp/life/6/35/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.aizubange.fukushima.jp/life/6/35/",
           "observed_on": "http://www.town.aizubange.fukushima.jp/",
           "fetched_at": "2026-08-27T07:59:17Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.aizubange/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.aizubange/",
+          "sha256": "372e7b9d8d5053c7bae175e794006719999e8e4c35b7b172421f6f3fba26b36e",
+          "fetched_at": "2026-08-27T12:49:06Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.aizubange.fukushima.jp/life/6/35/ (label: 条例・規則)"
+      "notes": "Observed regulations index at http://www.town.aizubange.fukushima.jp/life/6/35/ (label: 条例・規則)",
+      "base_url": "https://www1.g-reiki.net/town.aizubange/"
     },
     "budget": {
       "status": "needs_review",

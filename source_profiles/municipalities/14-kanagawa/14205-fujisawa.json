@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.fujisawa.kanagawa.jp/shise/reki/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A80260D3F",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fujisawa.kanagawa.jp/shise/reki/index.html",
           "observed_on": "http://www.city.fujisawa.kanagawa.jp/",
           "fetched_at": "2026-08-27T07:59:33Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A80260D3F",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A80260D3F",
+          "sha256": "1c5ccaaad435f18f51d4303efb4db8a40f043578ffbc585564fd35f890b36075",
+          "fetched_at": "2026-08-27T12:51:01Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.fujisawa.kanagawa.jp/shise/reki/index.html (label: 条例・規則・告示・公告)"

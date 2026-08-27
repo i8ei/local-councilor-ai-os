@@ -27,19 +27,25 @@
       "notes": "Observed dbsr at https://www.town.kami.hyogo.dbsr.jp/index.php/ (label: 香美町議会会議録（外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.mikata-kami.lg.jp/gyouseijouhou/4705.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mikata-kami.lg.jp/gyouseijouhou/4705.html",
           "observed_on": "https://www.town.mikata-kami.lg.jp/gyouseijouhou/index.html",
           "fetched_at": "2026-08-27T06:58:01Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.mikata-kami/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.mikata-kami/",
+          "sha256": "a9627195acf422bdd3ca917ddedf220938f1dbc992adcf2f714f78a1269220d0",
+          "fetched_at": "2026-08-27T12:54:31Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.mikata-kami.lg.jp/gyouseijouhou/4705.html (label: 例規集)"
+      "notes": "Observed regulations index at https://www.town.mikata-kami.lg.jp/gyouseijouhou/4705.html (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/town.mikata-kami/"
     },
     "budget": {
       "status": "needs_review",

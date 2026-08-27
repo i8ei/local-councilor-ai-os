@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.miyama.lg.jp/li/shisei/150/040/index.html (label: 市議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.miyama.lg.jp/s003/shisei/020/20200106081000.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyama.lg.jp/s003/shisei/020/20200106081000.html",
           "observed_on": "http://www.city.miyama.lg.jp/",
           "fetched_at": "2026-08-27T04:17:23Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.miyama/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.miyama/",
+          "sha256": "4237be66cfbb00e3c55a4682aefbf34a8d4d1cd4233964516f020530b54081b5",
+          "fetched_at": "2026-08-27T12:56:09Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.miyama.lg.jp/s003/shisei/020/20200106081000.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.miyama.lg.jp/s003/shisei/020/20200106081000.html (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/city.miyama/"
     },
     "budget": {
       "status": "needs_review",

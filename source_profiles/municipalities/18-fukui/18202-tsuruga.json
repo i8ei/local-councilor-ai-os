@@ -27,16 +27,22 @@
       "notes": "Observed dbsr at https://www.city.tsuruga.fukui.dbsr.jp/index.php/ (label: 会議録検索 ＜外部リンク＞) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.tsuruga.lg.jp/life/7/29/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8063B27C",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsuruga.lg.jp/life/7/29/",
           "observed_on": "https://www.city.tsuruga.lg.jp/life/7/",
           "fetched_at": "2026-08-27T06:22:24Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8063B27C",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8063B27C",
+          "sha256": "628112619d3f1642313bd985ae474c926c9da1ffe8a8888bd7f917a54aa77245",
+          "fetched_at": "2026-08-27T12:51:12Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.tsuruga.lg.jp/life/7/29/ (label: 条例・規則)"

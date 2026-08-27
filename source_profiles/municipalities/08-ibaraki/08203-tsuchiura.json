@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.tsuchiura.lg.jp/shisei/page001482.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "http://ops-jg.d1-law.com/opensearch/?jctcd=8A7A5E8F3D",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tsuchiura.lg.jp/shisei/page001482.html",
           "observed_on": "http://www.city.tsuchiura.lg.jp/",
           "fetched_at": "2026-08-27T05:57:20Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A5E8F3D",
+          "observed_on": "http://ops-jg.d1-law.com/opensearch/?jctcd=8A7A5E8F3D",
+          "sha256": "059d0c80a35d61fbd9b902ce062acfb7ce6cbdb7323f57fe41c89e59adaeb1e6",
+          "fetched_at": "2026-08-27T12:49:22Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.tsuchiura.lg.jp/shisei/page001482.html (label: 条例・規則)"

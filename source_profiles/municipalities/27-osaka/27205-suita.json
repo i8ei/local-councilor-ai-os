@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/suita/WebView/rd/council_1.html (label: 市議会9月定例会の日程・中継はこちら)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.suita.osaka.jp/shisei/1020093/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://www2.city.suita.osaka.jp/reiki/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.suita.osaka.jp/shisei/1020093/index.html",
           "observed_on": "http://www.city.suita.osaka.jp/",
           "fetched_at": "2026-08-27T06:27:12Z"
+        },
+        {
+          "url": "https://www2.city.suita.osaka.jp/reiki/d1w_reiki/reiki.html",
+          "observed_on": "https://www2.city.suita.osaka.jp/reiki/d1w_reiki/reiki.html",
+          "sha256": "d32113a8bd7af4f996ab24127c700427aeaa491264e9f2b5ab8ff6322550beb7",
+          "fetched_at": "2026-08-27T12:53:50Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.suita.osaka.jp/shisei/1020093/index.html (label: 条例・規則)"

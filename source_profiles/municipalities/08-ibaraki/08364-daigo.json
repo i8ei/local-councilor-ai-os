@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.daigo.ibaraki.jp/page/page005508.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.daigo.ibaraki.jp/page/page005508.html",
           "observed_on": "http://www.town.daigo.ibaraki.jp/page/dir003281.html",
           "fetched_at": "2026-08-27T06:14:46Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.daigo.ibaraki/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.daigo.ibaraki/",
+          "sha256": "563364156baf3e34231f58d39ef3efac5a04dc772b7a531cbd7a72781198c038",
+          "fetched_at": "2026-08-27T12:49:27Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.daigo.ibaraki.jp/page/page005508.html (label: 大子町例規集)"
+      "notes": "Observed regulations index at http://www.town.daigo.ibaraki.jp/page/page005508.html (label: 大子町例規集)",
+      "base_url": "https://www1.g-reiki.net/town.daigo.ibaraki/"
     },
     "budget": {
       "status": "needs_review",

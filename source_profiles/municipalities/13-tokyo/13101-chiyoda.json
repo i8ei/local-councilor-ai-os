@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.chiyoda.lg.jp/koho/kuse/gaiyo/rekishu.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8016805F",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chiyoda.lg.jp/koho/kuse/gaiyo/rekishu.html",
           "observed_on": "http://www.city.chiyoda.lg.jp/",
           "fetched_at": "2026-08-27T07:29:15Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A8016805F",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8016805F",
+          "sha256": "ef25a03f3ea284077d6d89171dcaecf2c032fbca5bf629269d0aaba2152e0112",
+          "fetched_at": "2026-08-27T12:50:49Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.chiyoda.lg.jp/koho/kuse/gaiyo/rekishu.html (label: 例規集)"

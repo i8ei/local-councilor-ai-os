@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www.city.otaru.lg.jp/categories/bunya/gikai/kaigoroku/ (label: 市議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.otaru.lg.jp/docs/2020120801538/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.otaru.lg.jp/docs/2020120801538/",
           "observed_on": "https://www.city.otaru.lg.jp/",
           "fetched_at": "2026-08-27T05:57:03Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/city.otaru/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/city.otaru/",
+          "sha256": "d78fa25bfc714a784c081abd342a949aee475fc82886e06ea3bdbb1dec4a10f3",
+          "fetched_at": "2026-08-27T12:48:01Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.otaru.lg.jp/docs/2020120801538/ (label: 例規集)"
+      "notes": "Observed regulations index at https://www.city.otaru.lg.jp/docs/2020120801538/ (label: 例規集)",
+      "base_url": "http://www1.g-reiki.net/city.otaru/"
     },
     "budget": {
       "status": "needs_review",

@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.town.kasuya.fukuoka.jp/li/080/030/index.html (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.kasuya.fukuoka.jp/s005/010/020/050/20191218212915.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "joureikun",
+      "index_url": "https://public1.legalcrud.com/kasuya_town/reiki/",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kasuya.fukuoka.jp/s005/010/020/050/20191218212915.html",
           "observed_on": "http://www.town.kasuya.fukuoka.jp/",
           "fetched_at": "2026-08-27T04:20:31Z"
+        },
+        {
+          "url": "https://public1.legalcrud.com/kasuya_town/reiki/",
+          "observed_on": "https://public1.legalcrud.com/kasuya_town/reiki/",
+          "sha256": "779366e1b08e3eb706f49b7b84aaae797defca894a0be50bf1d3ee4c988b87c2",
+          "fetched_at": "2026-08-27T12:56:13Z"
         }
       ],
       "notes": "Observed regulations index at http://www.town.kasuya.fukuoka.jp/s005/010/020/050/20191218212915.html (label: 条例・例規集)"

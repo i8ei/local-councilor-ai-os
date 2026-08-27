@@ -21,16 +21,22 @@
       "notes": "Observed voices at http://warabi.gijiroku.com/gikai/ (label: 蕨市議会)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.warabi.saitama.jp/shisei/vision/reiki/1002871.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF958AD",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.warabi.saitama.jp/shisei/vision/reiki/1002871.html",
           "observed_on": "http://www.city.warabi.saitama.jp/",
           "fetched_at": "2026-08-27T06:52:43Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF958AD",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF958AD",
+          "sha256": "d020bcf6bb218e696187b8f92ffe6f3a27403e599622f2eff372a28c7ab2be08",
+          "fetched_at": "2026-08-27T12:49:52Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.warabi.saitama.jp/shisei/vision/reiki/1002871.html (label: 蕨市例規集)"

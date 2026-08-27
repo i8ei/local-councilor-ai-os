@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.city.minamiashigara.kanagawa.jp/gikai/gijiroku/ (label: 市議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.minamiashigara.kanagawa.jp/machi/soshiki/jyourei/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A80260DA6",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.minamiashigara.kanagawa.jp/machi/soshiki/jyourei/",
           "observed_on": "http://www.city.minamiashigara.kanagawa.jp/",
           "fetched_at": "2026-08-27T08:04:06Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80260DA6",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A80260DA6",
+          "sha256": "68dd958987d42334501760e6e440384e2c47d563d06b8f16558f99fd0502a11f",
+          "fetched_at": "2026-08-27T12:51:02Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.minamiashigara.kanagawa.jp/machi/soshiki/jyourei/ (label: 条例・例規)"

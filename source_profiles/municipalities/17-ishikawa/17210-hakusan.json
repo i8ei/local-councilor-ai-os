@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at http://www.city.hakusan.lg.jp/shigikai/index.html (label: 会議録検索や議会録画検索、議員の紹介など 市議会に関する情報はこちら) extraction probe read one document at http://ssp.kaigiroku.net/tenant/hakusan/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.hakusan.lg.jp/shisei/1007582/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hakusan.lg.jp/shisei/1007582/index.html",
           "observed_on": "http://www.city.hakusan.lg.jp/",
           "fetched_at": "2026-08-27T06:13:20Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/hakusan/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/hakusan/",
+          "sha256": "5c2f13ca7007d419c012a19d439cc5d240d98086647a8107944233b7751e3d50",
+          "fetched_at": "2026-08-27T12:51:10Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.hakusan.lg.jp/shisei/1007582/index.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.hakusan.lg.jp/shisei/1007582/index.html (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/hakusan/"
     },
     "budget": {
       "status": "needs_review",

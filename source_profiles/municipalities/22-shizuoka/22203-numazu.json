@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
-      "index_url": "http://www.city.numazu.shizuoka.jp/d1w_reiki/index.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8573C75D",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.numazu.shizuoka.jp/d1w_reiki/index.htm",
           "observed_on": "http://www.city.numazu.shizuoka.jp/",
           "fetched_at": "2026-08-27T07:40:14Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8573C75D",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8573C75D",
+          "sha256": "45823f035e29d8699c59a8e12fc67b937204c8336bab25c4049dfc809a10ccb8",
+          "fetched_at": "2026-08-27T12:52:42Z"
         }
       ],
       "notes": "Observed d1_law at http://www.city.numazu.shizuoka.jp/d1w_reiki/index.htm (label: 例規集)"

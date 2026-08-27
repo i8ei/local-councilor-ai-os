@@ -21,19 +21,25 @@
       "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/murayama/WebView/rd/council.html (label: 議会中継（ライブ中継・録画中継、外部リンク）（外部サイト）)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.murayama.lg.jp/shisei/gaiyo/reikishuu.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.murayama.lg.jp/shisei/gaiyo/reikishuu.html",
           "observed_on": "http://www.city.murayama.lg.jp/",
           "fetched_at": "2026-08-27T07:39:08Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.murayama/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.murayama/",
+          "sha256": "43b2374e69ffacc9d8956e49921fe3d11690576f52245b3a7ef4b4d63e027629",
+          "fetched_at": "2026-08-27T12:48:34Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.murayama.lg.jp/shisei/gaiyo/reikishuu.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.murayama.lg.jp/shisei/gaiyo/reikishuu.html (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/city.murayama/"
     },
     "budget": {
       "status": "needs_review",

@@ -27,19 +27,25 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/omihachiman/pg/index.html (label: 12.会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.omihachiman.lg.jp/gyosei/jorei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.omihachiman.lg.jp/gyosei/jorei/index.html",
           "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:07:45Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.omihachiman/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.omihachiman/",
+          "sha256": "4e7a7674906c40b50e307072d2e88087b78c558ec8afe45186649ddde41b9d9c",
+          "fetched_at": "2026-08-27T12:53:39Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.omihachiman.lg.jp/gyosei/jorei/index.html (label: 条例・規則・要綱)"
+      "notes": "Observed regulations index at https://www.city.omihachiman.lg.jp/gyosei/jorei/index.html (label: 条例・規則・要綱)",
+      "base_url": "https://www1.g-reiki.net/city.omihachiman/"
     },
     "budget": {
       "status": "needs_review",
