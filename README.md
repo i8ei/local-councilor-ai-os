@@ -23,7 +23,7 @@
 
 地方議員の実務で最も時間を奪われる**「資料探し」「過去答弁の確認」「数字の検算」「出典の照合」を手元のPCとAIに肩代わりさせる**オープンソース（OSS）です。
 
-自治体の公式ウェブサイトから議事録・条例・予算決算データを手元（SQLiteデータベース）に取り込み、[Obsidian](https://obsidian.md/) や AIコーディングエージェント（Claude Code / Codex / Antigravity 等）と連携して、**事実に基づいた強い質問や政策提案を素早く組み立てる**ことができます。
+自治体の公式ウェブサイトから議事録・条例・予算決算データを手元（SQLiteデータベース）に取り込み、Markdownエディタ（[Obsidian](https://obsidian.md/) / VS Code / Cursor 等）や AIコーディングエージェント（Claude Code / Codex / Antigravity 等）と連携して、**事実に基づいた強い質問や政策提案を素早く組み立てる**ことができます。
 
 外部ライブラリへの依存はゼロ（Python 3.11+ 標準ライブラリのみ）。あなたのPC内だけで安全・軽快に完結します。
 
@@ -36,11 +36,12 @@
 | 自治体の議事録検索システムが使いづらく、過去の町長・課長答弁を探すのに半日かかる | 手元のSQLite/FTS5から**1秒で全文検索**。該当発言と文脈を瞬時にリスト化 |
 | 関連する条例や規則の条文を探し、最新の改正状況を追うのが大変 | 自治体の全例規を手元にインデックス化。**条番号やキーワードで即座に参照** |
 | 予算書・決算書の数字が多く、手計算や電卓での検算や前年比較に追われる | **コマンド1発で検算**。歳入歳出の一致、款項目の突合差額ゼロを機械的に検証 |
-| 一般質問の原稿作りで、根拠の裏取りや出典リンクの整理に追われる | **出典URL・根拠データ・反対論・副作用**が最初から揃ったObsidianノートを自動生成 |
+| 決算書を見ても「不用額が多すぎる事業」や「毎年繰り返される繰越」を見つけるのが大変 | **0.1秒で多年度を横断分析**。不用額常態化（過大見積もり）や連続繰越を自動抽出 |
+| 一般質問の原稿作りで、根拠の裏取りや出典リンクの整理に追われる | **出典URL・根拠データ・反対論・副作用**が最初から揃った質問ノートを自動生成 |
 
 ---
 
-## 3つのコア機能
+## 4つのコア機能
 
 ### 1. 議事録・例規の爆速ローカル検索
 過去数年〜十数年分の議事録（数万〜数十万件の発言）や例規集を手元のローカルDBに取り込みます。
@@ -52,8 +53,11 @@ Webサイトの重い検索画面を開くことなく、日本語のあいま�
 - 款・項・目・節の階層合計突合
 - 前年度比較・補正前後の差額検証
 
-### 3. 「見立て → ツボ → 手当て」による質問・提案設計
-住民相談や現場の課題を、単なる感情論や要望で終わらせず、行政が動かせる具体的な提案へと昇華させるワークフロー（[ツボ探し](workflows/policy-tsubo.md)）を標準装備しています。
+### 3. 多年度決算分析と予算ブリッジ
+複数年度の決算データを横断し、**「不用額の常態化（前年踏襲・見積もり過大）」「連続繰越（事業停滞）」「歳入の未収金」** を0トークン・一瞬で抽出します。9月決算審査の指摘を翌年3月の当初予算案の減額査定へと直結（ブリッジ）させます。
+
+### 4. 「見立て → ツボ → 手当て」による質問・提案設計
+住民相談や現場の課題を、単なる感情論や要望で終わらせず、行政が動かせる具体的な提案へと昇華させる実務ワークフロー（[ツボ探し](workflows/policy-tsubo.md)、[決算多年度審査](workflows/08-settlement-budget-review.md)等）を標準装備しています。
 
 ```text
 1. 見立て: 何がどこで詰まっているか？（事実と意見を分ける）
@@ -103,21 +107,33 @@ python3 -m modules.regulations.search \
   --query '空き家'
 ```
 
-### Step 4. 自治体データ見取り図（MOC）を生成する
+### Step 4. 多年度の予算決算分析を実行する（Bridge）
+複数年度の決算データから、不用額常態化（見積もり過大）や連続繰越を0トークン・一瞬で抽出します。
+
+```bash
+# Markdown形式で分析レポートを表示
+python3 -m modules.settlement_review.bridge \
+  --db /path/to/settlement_multi.db \
+  --min-years 2 \
+  --min-unused-amount 1000000 \
+  --min-unused-rate 0.15
+```
+
+### Step 5. 自治体データ見取り図（MOC）を生成する
 手元に取り込んだ議事録・例規・決算・比較指標データベースを走査し、収録期間や発言数、決算総括表をまとめた「見取り図（MOC）」ノートを1発で生成・更新できます。
 
 ```bash
-# Vault内に 00_自治体データ見取り図.md を自動生成・更新
+# ワークスペース内に 00_自治体データ見取り図.md を自動生成・更新
 python3 -m lcaios dashboard \
-  --vault '/path/to/your/obsidian-vault' \
+  --vault '/path/to/your/markdown-workspace' \
   --write-vault
 ```
 
-さらに本格的に運用する場合は、Obsidian Vaultと連携させて環境を診断します。
+さらに本格的に運用する場合は、環境診断コマンドで状態をチェックします。
 
 ```bash
-# 環境とVaultの準備状況を診断
-python3 -m lcaios doctor --vault '/path/to/your/obsidian-vault'
+# 環境とワークスペースの準備状況を診断
+python3 -m lcaios doctor --vault '/path/to/your/markdown-workspace'
 ```
 
 詳しい導入ステップは [`setup.md`](setup.md) をご覧ください。
@@ -140,14 +156,14 @@ python3 -m lcaios doctor --vault '/path/to/your/obsidian-vault'
 ```text
 local-councilor-ai-os/
 ├── bootstrap/       # 自治体の基礎データ探索・入口診断 (preflight)
-├── lcaios/          # OS制御層 (doctor / status / verify / backup)
+├── lcaios/          # OS制御層 (doctor / status / dashboard / backup)
 ├── modules/         # 各種データ処理モジュール
 │   ├── minutes_db/        # 議事録の取込・FTS5全文検索
 │   ├── regulations/       # 例規集の取込・条文検索
 │   ├── budget_review/     # 予算書の構造化・自動検算
-│   └── settlement_review/ # 決算書の突合・異常値検証
-├── templates/       # Obsidian質問設計・政策提案テンプレート
-├── workflows/       # 実務ワークフロー (ツボ探し等)
+│   └── settlement_review/ # 決算書の突合・多年度ブリッジ分析
+├── templates/       # 質問設計・政策提案テンプレート
+├── workflows/       # 実務ワークフロー (ツボ探し・決算審査等)
 ├── data-contracts/  # 各種データのスキーマ定義
 └── source_profiles/ # 全国の自治体ソース確定プロファイル
 ```
@@ -170,12 +186,12 @@ local-councilor-ai-os/
 ## 開発・テスト
 
 ```bash
-# 全自動テストの実行 (480+ tests)
+# 全自動テストの実行 (500+ tests)
 ./run_tests.sh
 
 # 静的解析・型チェック
 ruff check .
-mypy lcaios bootstrap modules source_profiles
+mypy .
 ```
 
 ## ライセンス

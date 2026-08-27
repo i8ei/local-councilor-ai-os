@@ -1,8 +1,11 @@
-# 導入診断とVault scaffold
+# 導入診断とワークスペース scaffold
 
-`onboarding`は、既存のClaude Code、Codex、Obsidian環境を壊さず、地方議員AI運用OSに必要な不足分だけを追加する入口である。
+`onboarding`は、既存のClaude Code、Codex、Obsidian／Markdown環境を壊さず、地方議員AI運用OSに必要な不足分だけを追加する入口である。
 
 診断と計画は読み取り専用で、ファイルを作らない。計画のSHA-256を確認して`scaffold`へ渡した場合だけ、存在しない棚、MOC、profile、テンプレートを作る。既存ファイルは上書き・統合・削除しない。
+
+- **推奨環境（Obsidian）**: MOCやグラフビュー、スマホ同期を行う場合はObsidian CLI連携（`obsidian vaults verbose` / `vault info=path`）を推奨。
+- **プレーンMarkdown環境（VS Code / Cursor等）**: Obsidian CLIや`.obsidian`がない場合でも、`CLAUDE.md`または`AGENTS.md`が存在するフォルダであれば`integrate`モードで棚・MOC・テンプレートのscaffoldが可能。
 
 ## 1. 読み取り専用診断
 
@@ -11,17 +14,11 @@ python3 -m onboarding diagnose \
   --vault '/absolute/path/to/vault'
 ```
 
-既定で、次の3段階をすべて確認する。
+AIクライアントを指定しない場合は`auto`診断になる。Claude CodeまたはCodexの片方だけが利用可能なら自動選択し、両方なら`--agent claude`または`--agent codex`を選ぶため終了コード2で停止する。Codexは`AGENTS.override.md`、次に`AGENTS.md`、Claude Codeは`CLAUDE.md`を有効なガイドとして確認する。
 
-- `obsidian vaults verbose`に対象Vaultの絶対パスが完全一致する
-- 対象Vault名を明示した`vault info=path`が同じ絶対パスを返す
-- 対象Vault名を明示した検索コマンドが終了コード0になる
+選択したAIクライアントのCLIやガイドファイルが一切ない場合は`handoff_required`になる。必要なガイド、クライアント固有の権限確認、参照先、引数を含む再診断コマンドを表示する。自動インストール、ガイドの自動作成、グローバル設定変更は行わない。
 
-AIクライアントを指定しない場合は`auto`診断になる。Claude CodeまたはCodexの片方だけが利用可能なら自動選択し、両方なら`--agent claude`または`--agent codex`を選ぶため終了コード2で停止する。Codexは`AGENTS.override.md`、次に`AGENTS.md`、Claude Codeは`CLAUDE.md`を有効なVaultガイドとして確認する。
-
-Obsidian CLIがない、Vaultとして開かれていない、選択したAIクライアントのCLIやVaultガイドがない場合は`handoff_required`になる。必要なガイド、クライアント固有の権限確認、`claude-obsidian-setup`の参照先、引数を含む再診断コマンドを表示する。自動インストール、ガイドの自動作成、グローバル設定変更は行わない。
-
-診断は、Vault登録、指示ファイル、主要CLI、既存scaffold、`ESTAT_APPID`の有無、権限上の確認事項を返す。認証情報の値は表示しない。OS上の書き込み可否と、AIクライアントのwritable rootsは別物なので、後者は`needs-confirmation`として残す。
+診断は、ワークスペース登録、指示ファイル、主要CLI、既存scaffold、`ESTAT_APPID`の有無、権限上の確認事項を返す。認証情報の値は表示しない。OS上の書き込み可否と、AIクライアントのwritable rootsは別物なので、後者は`needs-confirmation`として残す。
 
 既存Vaultでは、深さ3以内の既存ディレクトリ名から`一般質問`、`予算`、`決算`、`広報`、`住民の声`、`証拠台帳`、template等の役割候補を探す。一意な候補が2件以上あれば`recommended_layout: preserve`とし、固定8棚を「未導入」と誤認しない。診断は候補を読むだけで、対応表を作成しない。
 
