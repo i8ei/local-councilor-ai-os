@@ -226,21 +226,15 @@ class VerifyTests(unittest.TestCase):
         self.assertEqual(cnt1, cnt2)
         self.assertEqual(len(ev1), len(ev2))
 
-    def test_d1_law_verify_fails(self) -> None:
-        profile = _base_d1law()
-        fetch = make_fetch_result(
-            "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A9170542E",
-            GREIKI_HTML,
-        )
-        client = FakeHttpClient(
-            {
-                "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A9170542E": fetch
-            }
-        )
+    def test_unknown_adapter_verify_fails(self) -> None:
+        profile = _base_greiki_needs_review()
+        profile["sources"]["regulations"]["adapter"] = "unknown_vendor"
+        fetch = make_fetch_result(ENTRY_URL, GREIKI_HTML)
+        client = FakeHttpClient({ENTRY_URL: fetch})
         updated, report = verify_profile(profile, client=client, now=NOW)
         self.assertEqual("failed", report["result"])
         self.assertIn("unsupported", report["reason"])
-        self.assertEqual("unsupported", updated["sources"]["regulations"]["status"])
+        self.assertEqual("needs_review", updated["sources"]["regulations"]["status"])
 
     def test_promoted_profile_passes_schema(self) -> None:
         profile = _base_greiki_needs_review()
@@ -2784,6 +2778,156 @@ class JoureikunRegulationsVerifyTests(unittest.TestCase):
             {JOUREIKUN_INDEX_URL: make_fetch_result(JOUREIKUN_INDEX_URL, html)}
         )
         profile = _base_joureikun_needs_review()
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="regulations"
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("structure", report["reason"].lower())
+        self.assertEqual(
+            "needs_review", updated["sources"]["regulations"]["status"]
+        )
+
+
+# ---------------------------------------------------------------------------
+# d1_law regulations synthetic tests (no network)
+# ---------------------------------------------------------------------------
+
+D1LAW_INDEX_URL = "https://example.invalid/d1law/reiki.html"
+D1LAW_MOKUJI_URL = "https://example.invalid/d1law/mokuji_bunya.html"
+D1LAW_BUNYA_URL = "https://example.invalid/d1law/bunya_0010000.html"
+D1LAW_DOC_ID = "r0001"
+D1LAW_J_URL = f"https://example.invalid/d1law/{D1LAW_DOC_ID}/{D1LAW_DOC_ID}_j.html"
+
+D1LAW_REIKI_HTML = """<html><head><title>Reiki</title></head>
+<frameset cols="30%,70%">
+<frame src="mokuji_bunya.html">
+<frame src="bunya_0010000.html">
+</frameset></html>"""
+
+D1LAW_MOKUJI_HTML = """<html><body>
+<a href="bunya_0010000.html">総規</a>
+</body></html>"""
+
+D1LAW_BUNYA_HTML = f"""<html><body>
+<a href="javascript:OpenResDataWin('{D1LAW_DOC_ID}')" title="例規1">テスト例規</a>
+</body></html>"""
+
+D1LAW_J_HTML = """<html><head><title>テスト例規</title></head><body>
+<div class="main-text">
+<h2>第1条</h2>
+<p>この条例は、テストのために定める。</p>
+<h2>第2条</h2>
+<p>この条例は、公布の日から施行する。</p>
+</div></body></html>"""
+
+
+def _base_d1law_needs_review() -> dict:
+    return {
+        "schema_version": 1,
+        "area_code_5": VALID_AREA,
+        "prefecture": VALID_PREF,
+        "municipality": VALID_MUNI,
+        "official_home_url": VALID_HOME,
+        "sources": {
+            "minutes": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "regulations": {
+                "status": "needs_review",
+                "adapter": "d1_law",
+                "index_url": D1LAW_INDEX_URL,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [
+                    {"url": D1LAW_INDEX_URL, "observed_on": VALID_HOME}
+                ],
+                "notes": None,
+            },
+            "budget": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+            "settlement": {
+                "status": "not_evaluated",
+                "adapter": None,
+                "verified_at": None,
+                "verified_by": None,
+                "evidence": [],
+                "notes": None,
+            },
+        },
+    }
+
+
+def _d1law_client() -> FakeHttpClient:
+    return FakeHttpClient(
+        {
+            D1LAW_INDEX_URL: make_fetch_result(D1LAW_INDEX_URL, D1LAW_REIKI_HTML),
+            D1LAW_MOKUJI_URL: make_fetch_result(D1LAW_MOKUJI_URL, D1LAW_MOKUJI_HTML),
+            D1LAW_BUNYA_URL: make_fetch_result(D1LAW_BUNYA_URL, D1LAW_BUNYA_HTML),
+            D1LAW_J_URL: make_fetch_result(D1LAW_J_URL, D1LAW_J_HTML),
+        }
+    )
+
+
+class D1LawRegulationsVerifyTests(unittest.TestCase):
+    def test_d1law_promotes_to_ready(self) -> None:
+        profile = _base_d1law_needs_review()
+        updated, report = verify_profile(
+            profile, client=_d1law_client(), now=NOW, kind="regulations"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", report["status_after"])
+        self.assertEqual(
+            "ready", updated["sources"]["regulations"]["status"]
+        )
+        self.assertEqual([], validate_profile(updated))
+
+    def test_d1law_robots_denied_does_not_promote(self) -> None:
+        class DenyClient(FakeHttpClient):
+            def fetch(
+                self, url: str, *, tier: CacheTier, **_: object
+            ) -> object:
+                self.calls.append((url, tier))
+                raise RobotsDeniedError("robots.txt disallows /d1law/")
+
+        profile = _base_d1law_needs_review()
+        client = DenyClient(
+            {
+                D1LAW_INDEX_URL: make_fetch_result(
+                    D1LAW_INDEX_URL, D1LAW_REIKI_HTML
+                )
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="regulations"  # type: ignore[arg-type]
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("RobotsDenied", report["reason"])
+        self.assertEqual(
+            "needs_review", updated["sources"]["regulations"]["status"]
+        )
+
+    def test_d1law_catalog_without_open_links_is_structure_mismatch(
+        self,
+    ) -> None:
+        html = (
+            "<html><head><title>例規集</title></head>"
+            "<body><p>案内</p></body></html>"
+        )
+        client = FakeHttpClient(
+            {D1LAW_INDEX_URL: make_fetch_result(D1LAW_INDEX_URL, html)}
+        )
+        profile = _base_d1law_needs_review()
         updated, report = verify_profile(
             profile, client=client, now=NOW, kind="regulations"
         )
