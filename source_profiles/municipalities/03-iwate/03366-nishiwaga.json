@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.nishiwaga.lg.jp/reikishu/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A11AA78",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nishiwaga.lg.jp/reikishu/index.html",
           "observed_on": "https://www.town.nishiwaga.lg.jp/",
           "fetched_at": "2026-08-27T07:11:35Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A11AA78",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A11AA78",
+          "sha256": "42c486610147b21ed270c45bf9fcb3839ff92452ce154d028ebc5d8d56cc851c",
+          "fetched_at": "2026-08-27T12:48:12Z"
         }
       ],
       "notes": "Observed regulations index at https://www.town.nishiwaga.lg.jp/reikishu/index.html (label: 例規集)"

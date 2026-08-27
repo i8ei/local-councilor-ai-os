@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=34959",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=34959",
           "observed_on": "http://www.city.imizu.toyama.jp/",
           "fetched_at": "2026-08-27T06:09:40Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/imizu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/imizu/",
+          "sha256": "42e49de380046f6d0649258370182e0ae7a0f3556548e2b2140266e5087271c7",
+          "fetched_at": "2026-08-27T12:51:08Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=34959 (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=34959 (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/imizu/"
     },
     "budget": {
       "status": "needs_review",

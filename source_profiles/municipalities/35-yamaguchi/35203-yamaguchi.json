@@ -27,19 +27,25 @@
       "notes": "Observed dbsr at https://www.city.yamaguchi.yamaguchi.dbsr.jp/index.php/ (label: 本会議（定例会・臨時会）会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.yamaguchi.lg.jp/soshiki/3/5630.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yamaguchi.lg.jp/soshiki/3/5630.html",
           "observed_on": "http://www.city.yamaguchi.lg.jp/",
           "fetched_at": "2026-08-27T06:32:36Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/yamaguchi/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/yamaguchi/",
+          "sha256": "da17ee0e168cd20d91704eb097a6c10530d8db563280e68c7eb2620abb1b73a5",
+          "fetched_at": "2026-08-27T12:55:18Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.yamaguchi.lg.jp/soshiki/3/5630.html (label: 山口市例規集)"
+      "notes": "Observed regulations index at http://www.city.yamaguchi.lg.jp/soshiki/3/5630.html (label: 山口市例規集)",
+      "base_url": "http://www1.g-reiki.net/yamaguchi/"
     },
     "budget": {
       "status": "needs_review",

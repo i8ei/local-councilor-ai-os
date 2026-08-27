@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.nakijin.jp/pagtop/kakuka/somuka/3/1348.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.nakijin.jp/pagtop/kakuka/somuka/3/1348.html",
           "observed_on": "https://www.nakijin.jp/pagtop/index.html",
           "fetched_at": "2026-08-27T06:52:27Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/nakijin/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/nakijin/",
+          "sha256": "9e241ad994a0a4a002b7b60daff4e6e919965d269da5e981c49b1901a64f9bdd",
+          "fetched_at": "2026-08-27T12:57:14Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.nakijin.jp/pagtop/kakuka/somuka/3/1348.html (label: 今帰仁村例規集)"
+      "notes": "Observed regulations index at https://www.nakijin.jp/pagtop/kakuka/somuka/3/1348.html (label: 今帰仁村例規集)",
+      "base_url": "https://www1.g-reiki.net/nakijin/"
     },
     "budget": {
       "status": "needs_review",

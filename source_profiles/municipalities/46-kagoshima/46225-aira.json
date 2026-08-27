@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.city.aira.lg.jp/gyosei/gikai/kiroku/index.html (label: 議会記録（日程・一般質問通告・会議録）)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.aira.lg.jp/gyosei/reiki/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BBB3DF",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aira.lg.jp/gyosei/reiki/index.html",
           "observed_on": "http://www.city.aira.lg.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:42:03Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91BBB3DF",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BBB3DF",
+          "sha256": "b1af5d05c8d7f39b1e2f3c827057cc3142bf172725760791a2d22be1205c316d",
+          "fetched_at": "2026-08-27T12:57:01Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.aira.lg.jp/gyosei/reiki/index.html (label: 例規・条例)"

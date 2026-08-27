@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.tamano.lg.jp/site/gikai/1808.html (label: 本会議 会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.tamano.lg.jp/soshiki/5/1115.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tamano.lg.jp/soshiki/5/1115.html",
           "observed_on": "http://www.city.tamano.lg.jp/",
           "fetched_at": "2026-08-27T06:14:28Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.tamano/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.tamano/",
+          "sha256": "54c12846365b0ff9bfe679c6b85056ed2437d7c9e9088dd924172cfc275df444",
+          "fetched_at": "2026-08-27T12:55:05Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.tamano.lg.jp/soshiki/5/1115.html (label: 玉野市例規集)"
+      "notes": "Observed regulations index at http://www.city.tamano.lg.jp/soshiki/5/1115.html (label: 玉野市例規集)",
+      "base_url": "https://www1.g-reiki.net/city.tamano/"
     },
     "budget": {
       "status": "needs_review",

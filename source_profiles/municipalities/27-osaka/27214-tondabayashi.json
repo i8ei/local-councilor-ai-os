@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www.city.tondabayashi.lg.jp/site/gikai/kaigiroku.html (label: 会議録の閲覧・検索)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.tondabayashi.lg.jp/life/5/28/103/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tondabayashi.lg.jp/life/5/28/103/",
           "observed_on": "https://www.city.tondabayashi.lg.jp/index2.html",
           "fetched_at": "2026-08-27T06:31:16Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/tondabayashi/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/tondabayashi/",
+          "sha256": "c4d6cc993d6336cff6cffbad85cf618bcbeeaf648d742ea18936b2f3629c8d65",
+          "fetched_at": "2026-08-27T12:53:57Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.tondabayashi.lg.jp/life/5/28/103/ (label: 条例・規則)"
+      "notes": "Observed regulations index at https://www.city.tondabayashi.lg.jp/life/5/28/103/ (label: 条例・規則)",
+      "base_url": "http://www1.g-reiki.net/tondabayashi/"
     },
     "budget": {
       "status": "needs_review",

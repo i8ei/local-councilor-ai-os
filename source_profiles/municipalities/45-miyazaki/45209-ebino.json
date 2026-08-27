@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.city.ebino.lg.jp/gyosei_shisei/gikai/gian_giji/2392.html (label: 市議会会議録検索(外部))"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.ebino.lg.jp/benri_service/reikishu/3001.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91AC49D3",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ebino.lg.jp/benri_service/reikishu/3001.html",
           "observed_on": "http://www.city.ebino.lg.jp/",
           "fetched_at": "2026-08-27T06:27:27Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC49D3",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91AC49D3",
+          "sha256": "1375c56c1760f927032b7451be77a624e4e1e4f741f8db83e0280dcbab53cb32",
+          "fetched_at": "2026-08-27T12:56:56Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.ebino.lg.jp/benri_service/reikishu/3001.html (label: 例規集)"

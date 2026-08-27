@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www2.city.toda.saitama.jp/gikai/toda-f9fzqijq2awo0kaj/GD038/GD038_001?contents=000004&menu=000018 (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.toda.saitama.jp/soshiki/151/syomu-superreikibase.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toda.saitama.jp/soshiki/151/syomu-superreikibase.html",
           "observed_on": "http://www.city.toda.saitama.jp/",
           "fetched_at": "2026-08-27T06:53:07Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/toda/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/toda/",
+          "sha256": "cd5f5a8b82f58f02f9587d9b5f964565c259ffc9aa06d197b4832022e680e4e6",
+          "fetched_at": "2026-08-27T12:49:54Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.toda.saitama.jp/soshiki/151/syomu-superreikibase.html (label: 戸田市例規集)"
+      "notes": "Observed regulations index at http://www.city.toda.saitama.jp/soshiki/151/syomu-superreikibase.html (label: 戸田市例規集)",
+      "base_url": "http://www1.g-reiki.net/toda/"
     },
     "budget": {
       "status": "needs_review",

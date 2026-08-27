@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www.town.shikaoi.lg.jp/gikai/gijiroku/ (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.shikaoi.lg.jp/gyosei/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shikaoi.lg.jp/gyosei/reiki/",
           "observed_on": "https://www.town.shikaoi.lg.jp/",
           "fetched_at": "2026-08-27T06:47:15Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/shikaoi/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/shikaoi/",
+          "sha256": "a0941c0abfe9401ff9bb797f34acebfd595c77269c11c7cbf5c0e17b8257f1a6",
+          "fetched_at": "2026-08-27T12:48:02Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.shikaoi.lg.jp/gyosei/reiki/ (label: 鹿追町 例規集)"
+      "notes": "Observed regulations index at https://www.town.shikaoi.lg.jp/gyosei/reiki/ (label: 鹿追町 例規集)",
+      "base_url": "http://www1.g-reiki.net/shikaoi/"
     },
     "budget": {
       "status": "needs_review",

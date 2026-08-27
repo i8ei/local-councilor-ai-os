@@ -821,7 +821,7 @@ def _probe_greiki_regulations(
     *, base_url: str, client: Any
 ) -> tuple[list[dict[str, Any]], Any]:
     """Extract articles from g-reiki regulations via the real extractor."""
-    refs = discover_documents_greiki(base_url, client=client, limit=5)
+    refs = discover_documents_greiki(base_url, client=client, limit=15)
     if not refs:
         return [], "no_act_links"
     last_payload: dict[str, Any] | None = None
@@ -857,7 +857,7 @@ def _probe_joureikun_regulations(
     *, index_url: str, client: Any
 ) -> tuple[list[dict[str, Any]], Any]:
     """Extract articles from joureikun regulations via the real extractor."""
-    refs = discover_documents_joureikun(index_url, client=client, limit=5)
+    refs = discover_documents_joureikun(index_url, client=client, limit=15)
     if not refs:
         return [], "no_act_links"
     last_payload: dict[str, Any] | None = None
@@ -892,20 +892,37 @@ def _probe_joureikun_regulations(
 def _probe_d1law_regulations(
     *, index_url: str, client: Any
 ) -> tuple[list[dict[str, Any]], Any]:
-    """Extract articles from ONE D1-Law regulation via the real extractor."""
-    refs = discover_documents_d1law(index_url, client=client, limit=1)
+    """Extract articles from D1-Law regulation via the real extractor."""
+    refs = discover_documents_d1law(index_url, client=client, limit=10)
     if not refs:
         return [], "no_act_links"
-    payload = fetch_document_d1law(refs[0], index_url=index_url, client=client)
-    articles = payload.get("articles")
-    records = (
-        [a for a in articles if isinstance(a, dict)]
-        if isinstance(articles, list)
-        else []
-    )
-    provenance = payload.get("provenance")
-    status = provenance.get("status") if isinstance(provenance, dict) else None
-    return records, status
+    last_payload: dict[str, Any] | None = None
+    for ref in refs:
+        payload = fetch_document_d1law(ref, index_url=index_url, client=client)
+        last_payload = payload
+        articles = payload.get("articles")
+        records = (
+            [a for a in articles if isinstance(a, dict)]
+            if isinstance(articles, list)
+            else []
+        )
+        if any(a.get("article_no") for a in records):
+            provenance = payload.get("provenance")
+            status = provenance.get("status") if isinstance(provenance, dict) else None
+            return records, status
+
+    if last_payload:
+        articles = last_payload.get("articles")
+        records = (
+            [a for a in articles if isinstance(a, dict)]
+            if isinstance(articles, list)
+            else []
+        )
+        provenance = last_payload.get("provenance")
+        status = provenance.get("status") if isinstance(provenance, dict) else None
+        return records, status
+
+    return [], "no_act_links"
 
 
 def _probe_d1law_opensearch_regulations(

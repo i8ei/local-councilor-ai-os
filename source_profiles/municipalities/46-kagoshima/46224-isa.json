@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www.city.isa.kagoshima.jp/politics/gikai/%e8%ad%b0%e4%bc%9a%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%8d%e3%83%83%e3%83%88%e4%b8%ad%e7%b6%99%e3%83%bb%e4%bc%9a%e8%ad%b0%e9%8c%b2/ (label: 議会インターネット中継・会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.isa.kagoshima.jp/politics/plan/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.isa.kagoshima.jp/politics/plan/reiki/",
           "observed_on": "https://www.city.isa.kagoshima.jp/politics/",
           "fetched_at": "2026-08-27T06:41:55Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/isa/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/isa/",
+          "sha256": "d6ce0c80519be2cfa387ce7764b90fc9f3bebe188ecc3ae1af9e8e3493001fd5",
+          "fetched_at": "2026-08-27T12:57:01Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.isa.kagoshima.jp/politics/plan/reiki/ (label: 例規集)"
+      "notes": "Observed regulations index at https://www.city.isa.kagoshima.jp/politics/plan/reiki/ (label: 例規集)",
+      "base_url": "http://www1.g-reiki.net/isa/"
     },
     "budget": {
       "status": "needs_review",

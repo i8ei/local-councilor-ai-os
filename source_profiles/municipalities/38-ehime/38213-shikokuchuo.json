@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www.city.shikokuchuo.ehime.jp/site/gikai/2791.html (label: 会議録閲覧・検索)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.shikokuchuo.ehime.jp/soshiki/2/4088.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shikokuchuo.ehime.jp/soshiki/2/4088.html",
           "observed_on": "https://www.city.shikokuchuo.ehime.jp/index2.html",
           "fetched_at": "2026-08-27T07:01:34Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/shikokuchuo/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/shikokuchuo/",
+          "sha256": "d0d6065d00908f2d0af2cbdd8875a4e7ac008b50dce4dffd9692ed829c3ef060",
+          "fetched_at": "2026-08-27T12:55:34Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.shikokuchuo.ehime.jp/soshiki/2/4088.html (label: 例規集)"
+      "notes": "Observed regulations index at https://www.city.shikokuchuo.ehime.jp/soshiki/2/4088.html (label: 例規集)",
+      "base_url": "http://www1.g-reiki.net/shikokuchuo/"
     },
     "budget": {
       "status": "needs_review",

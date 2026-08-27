@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.urasoe.lg.jp/category/bunya/johokokai/jorei/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.urasoe.lg.jp/category/bunya/johokokai/jorei/",
           "observed_on": "https://www.city.urasoe.lg.jp/",
           "fetched_at": "2026-08-27T06:48:31Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/urasoe/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/urasoe/",
+          "sha256": "0c79aa30ee8aff151a4e89476ad8b2d54c517cf30e7af7326a3acf66ba8e4330",
+          "fetched_at": "2026-08-27T12:57:10Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.urasoe.lg.jp/category/bunya/johokokai/jorei/ (label: 条例・例規集)"
+      "notes": "Observed regulations index at https://www.city.urasoe.lg.jp/category/bunya/johokokai/jorei/ (label: 条例・例規集)",
+      "base_url": "https://www1.g-reiki.net/urasoe/"
     },
     "budget": {
       "status": "needs_review",

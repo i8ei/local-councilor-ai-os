@@ -27,19 +27,25 @@
       "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/nanto/SpTop.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.nanto.toyama.jp/gyoseijoho/jorei-kisoku-yoko/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nanto.toyama.jp/gyoseijoho/jorei-kisoku-yoko/index.html",
           "observed_on": "https://www.city.nanto.toyama.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:09:52Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/nanto/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/nanto/",
+          "sha256": "871461f624d2b452ea873e6c18d0d6bfd5281495a7cb7e50422cba5610227d7f",
+          "fetched_at": "2026-08-27T12:51:08Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.nanto.toyama.jp/gyoseijoho/jorei-kisoku-yoko/index.html (label: 条例・規則・要綱)"
+      "notes": "Observed regulations index at https://www.city.nanto.toyama.jp/gyoseijoho/jorei-kisoku-yoko/index.html (label: 条例・規則・要綱)",
+      "base_url": "https://www1.g-reiki.net/nanto/"
     },
     "budget": {
       "status": "needs_review",

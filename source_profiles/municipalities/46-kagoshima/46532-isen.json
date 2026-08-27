@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.town.isen.kagoshima.jp/gikai/chosejoho/gikai/kaigiroku.html (label: 会議録(平成21年～令和2年))"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/reki-jore/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "http://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC2A9D",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/reki-jore/index.html",
           "observed_on": "http://www.town.isen.kagoshima.jp/",
           "fetched_at": "2026-08-27T06:47:09Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91BC2A9D",
+          "observed_on": "http://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC2A9D",
+          "sha256": "3f1197b1d106376e98f214e5cb2eec658010e2dffb4ca94aec91efa4b3e9e8cc",
+          "fetched_at": "2026-08-27T12:57:06Z"
         }
       ],
       "notes": "Observed regulations index at http://www.town.isen.kagoshima.jp/mirai/chosejoho/reki-jore/index.html (label: 例規・条例)"

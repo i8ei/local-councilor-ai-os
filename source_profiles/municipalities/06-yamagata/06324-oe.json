@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.oe.yamagata.jp/government/rekisyu/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oe.yamagata.jp/government/rekisyu/",
           "observed_on": "http://www.town.oe.yamagata.jp/",
           "fetched_at": "2026-08-27T07:43:29Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.oe.yamagata/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.oe.yamagata/",
+          "sha256": "4fe1ae517ef0391604339520c551441b92040b7d5f5aecf251e460993a79b5e4",
+          "fetched_at": "2026-08-27T12:48:39Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.oe.yamagata.jp/government/rekisyu/ (label: 例規集)"
+      "notes": "Observed regulations index at http://www.town.oe.yamagata.jp/government/rekisyu/ (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/town.oe.yamagata/"
     },
     "budget": {
       "status": "needs_review",

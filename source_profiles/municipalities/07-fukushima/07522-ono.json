@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html (label: 令和8年会議録（議会事務局）) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "official_document_index",
+      "status": "ready",
+      "adapter": "joureikun",
       "index_url": "https://public1.legalcrud.com/ono_town/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:00:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://public1.legalcrud.com/ono_town/reiki/",
           "observed_on": "http://www.town.ono.fukushima.jp/home.html",
           "fetched_at": "2026-08-27T08:08:02Z"
+        },
+        {
+          "url": "https://public1.legalcrud.com/ono_town/reiki/",
+          "observed_on": "https://public1.legalcrud.com/ono_town/reiki/",
+          "sha256": "30aa9c144a14dcd49d450f35670894b51ad6a7eac9cb86cb6ff5780fe6ecab58",
+          "fetched_at": "2026-08-27T12:43:49Z"
         }
       ],
       "notes": "Observed regulations index at https://public1.legalcrud.com/ono_town/reiki/ (label: )"

@@ -21,16 +21,22 @@
       "notes": "Observed voices at http://sapporo.gijiroku.com/voices/ (label: 会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.sapporo.jp/shisei/jorei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "http://www.city.sapporo.jp/ncms/reiki/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T12:00:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sapporo.jp/shisei/jorei/index.html",
           "observed_on": "https://www.city.sapporo.jp/",
           "fetched_at": "2026-08-27T05:57:00Z"
+        },
+        {
+          "url": "https://www.city.sapporo.jp/ncms/reiki/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.sapporo.jp/ncms/reiki/d1w_reiki/reiki.html",
+          "sha256": "3b45c6a961d84e75e23b0f8093518fef5242346c4b51bcea79ec02b84500bc78",
+          "fetched_at": "2026-08-27T12:45:24Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.sapporo.jp/shisei/jorei/index.html (label: 条例・規則・告示・統計)"

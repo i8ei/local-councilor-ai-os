@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www.town.oarai.lg.jp/oaraigikai/%e8%ad%b0%e4%ba%8b%e9%8c%b2 (label: 議事録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.oarai.lg.jp/category/chouseijouhou/joureikisoku/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.oarai.lg.jp/category/chouseijouhou/joureikisoku/",
           "observed_on": "http://www.town.oarai.lg.jp/",
           "fetched_at": "2026-08-27T06:10:58Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.oarai/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.oarai/",
+          "sha256": "573aa32b685b5df6b41e06d70359b4c5984fca140c9bc972e3b75ca58ce8eb75",
+          "fetched_at": "2026-08-27T12:49:26Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.oarai.lg.jp/category/chouseijouhou/joureikisoku/ (label: 条例・規則)"
+      "notes": "Observed regulations index at https://www.town.oarai.lg.jp/category/chouseijouhou/joureikisoku/ (label: 条例・規則)",
+      "base_url": "https://www1.g-reiki.net/town.oarai/"
     },
     "budget": {
       "status": "needs_review",

@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.niiza.lg.jp/soshiki/52/kaigirokukennsakusisutemu.html (label: 会議録検索システム)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.niiza.lg.jp/life/20/118/615/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.niiza.lg.jp/life/20/118/615/",
           "observed_on": "http://www.city.niiza.lg.jp/life/20/",
           "fetched_at": "2026-08-27T06:57:01Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/niiza/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/niiza/",
+          "sha256": "98411e737a4818e8cc9764c0fc9b664374e4db4866c01995ab04f5613e75df6d",
+          "fetched_at": "2026-08-27T12:49:55Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.niiza.lg.jp/life/20/118/615/ (label: 例規集・要綱集)"
+      "notes": "Observed regulations index at http://www.city.niiza.lg.jp/life/20/118/615/ (label: 例規集・要綱集)",
+      "base_url": "http://www1.g-reiki.net/niiza/"
     },
     "budget": {
       "status": "needs_review",

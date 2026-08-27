@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.city.nakama.lg.jp/site/gikai/list47-150.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.nakama.lg.jp/soshiki/2/1987.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8F45644C44",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nakama.lg.jp/soshiki/2/1987.html",
           "observed_on": "http://www.city.nakama.lg.jp/",
           "fetched_at": "2026-08-27T04:11:55Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8F45644C44",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8F45644C44",
+          "sha256": "754f72b712a424da3ce70e09928be06f228bf1ffcb3135ba8cf68daabbd27140",
+          "fetched_at": "2026-08-27T12:55:59Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.nakama.lg.jp/soshiki/2/1987.html (label: 条例・例規集)"

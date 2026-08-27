@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.akashi.lg.jp/seisaku/kouhou_ka/shise/jorei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85D03F3D",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.akashi.lg.jp/seisaku/kouhou_ka/shise/jorei/index.html",
           "observed_on": "http://www.city.akashi.lg.jp/shise/index.html",
           "fetched_at": "2026-08-27T06:43:47Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85D03F3D",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85D03F3D",
+          "sha256": "d60d8c7631d60317a6fcd06d308e6c9b27a5f0cd224b573ad01b8b3c2f20484d",
+          "fetched_at": "2026-08-27T12:54:24Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.akashi.lg.jp/seisaku/kouhou_ka/shise/jorei/index.html (label: 明石市例規類集)"

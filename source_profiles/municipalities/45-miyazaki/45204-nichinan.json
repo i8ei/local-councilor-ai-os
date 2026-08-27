@@ -27,16 +27,22 @@
       "notes": "Observed dbsr at https://www.city.nichinan.miyazaki.dbsr.jp/index.php/ (label: 議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.nichinan.lg.jp/gyoseijoho/4697.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CE",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nichinan.lg.jp/gyoseijoho/4697.html",
           "observed_on": "https://www.city.nichinan.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:25:48Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CE",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CE",
+          "sha256": "7df256edaa62180bb65df58b42db6323148f1add38fe7353e1b8a20a2db085c3",
+          "fetched_at": "2026-08-27T12:56:53Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.nichinan.lg.jp/gyoseijoho/4697.html (label: 日南市例規集)"

@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www.city.sabae.fukui.jp/about_city/shigikai/hongikai-kaigiroku.html (label: 本会議の会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.sabae.fukui.jp/about_city/onlineservise/saishin-kaise-jorei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sabae.fukui.jp/about_city/onlineservise/saishin-kaise-jorei.html",
           "observed_on": "https://www.city.sabae.fukui.jp/",
           "fetched_at": "2026-08-27T06:22:47Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/city.sabae/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/city.sabae/",
+          "sha256": "7fecc7d915bcf1dd7a920086c3a31d5b7bf4570cc0442ccf160a7ad66ac9bade",
+          "fetched_at": "2026-08-27T12:51:13Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.sabae.fukui.jp/about_city/onlineservise/saishin-kaise-jorei.html (label: 条例規則集)"
+      "notes": "Observed regulations index at https://www.city.sabae.fukui.jp/about_city/onlineservise/saishin-kaise-jorei.html (label: 条例規則集)",
+      "base_url": "http://www1.g-reiki.net/city.sabae/"
     },
     "budget": {
       "status": "needs_review",

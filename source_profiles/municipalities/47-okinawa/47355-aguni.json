@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.vill.aguni.okinawa.jp/sonsei/754.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB45D2",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.aguni.okinawa.jp/sonsei/754.html",
           "observed_on": "https://www.vill.aguni.okinawa.jp/sonsei/index.html",
           "fetched_at": "2026-08-27T06:56:56Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB45D2",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB45D2",
+          "sha256": "bd6ebb555abe828be4dd9c42cb78298477740abc54a2fec23785e4713cbc55f7",
+          "fetched_at": "2026-08-27T12:57:19Z"
         }
       ],
       "notes": "Observed regulations index at https://www.vill.aguni.okinawa.jp/sonsei/754.html (label: 粟国村例規集)"

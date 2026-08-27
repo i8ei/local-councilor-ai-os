@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www.town.noheji.aomori.jp/life/chosei/gikai/2787 (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.noheji.aomori.jp/life/chosei/reikishu",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.noheji.aomori.jp/life/chosei/reikishu",
           "observed_on": "https://www.town.noheji.aomori.jp/sitemap",
           "fetched_at": "2026-08-27T07:02:16Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.noheji.aomori/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.noheji.aomori/",
+          "sha256": "5cc04184f21b0282e35f936e55bf33f53297f20bc61107017259ae588dd1d8c6",
+          "fetched_at": "2026-08-27T12:48:04Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.noheji.aomori.jp/life/chosei/reikishu (label: 例規集)"
+      "notes": "Observed regulations index at https://www.town.noheji.aomori.jp/life/chosei/reikishu (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/town.noheji.aomori/"
     },
     "budget": {
       "status": "needs_review",

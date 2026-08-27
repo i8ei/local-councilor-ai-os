@@ -21,19 +21,25 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/miyako/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.town.miyako.lg.jp%2Fgenre%2F0010%2F0051%2F0002.html (label: 映像配信（外部リンク）)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.miyako.lg.jp/genre/0010/0051/0013.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miyako.lg.jp/genre/0010/0051/0013.html",
           "observed_on": "http://www.town.miyako.lg.jp/",
           "fetched_at": "2026-08-27T04:28:01Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.miyako/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.miyako/",
+          "sha256": "e1fc47d76bee4af679b52aa18817bccbf4607c898f9aa4b8bd4cce37a4b4635c",
+          "fetched_at": "2026-08-27T12:56:18Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.miyako.lg.jp/genre/0010/0051/0013.html (label: 条例・規則・要綱)"
+      "notes": "Observed regulations index at http://www.town.miyako.lg.jp/genre/0010/0051/0013.html (label: 条例・規則・要綱)",
+      "base_url": "https://www1.g-reiki.net/town.miyako/"
     },
     "budget": {
       "status": "needs_review",

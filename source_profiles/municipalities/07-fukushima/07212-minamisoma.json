@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.minamisoma.lg.jp/portal/service/joreikisoku_reikishu/4200.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.minamisoma.lg.jp/portal/service/joreikisoku_reikishu/4200.html",
           "observed_on": "https://www.city.minamisoma.lg.jp/portal/index.html",
           "fetched_at": "2026-08-27T07:55:06Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.minamisoma/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.minamisoma/",
+          "sha256": "9fc5094c455af11b253125a0703c4e8e1561f45f481b1b2fec165462d8aba1db",
+          "fetched_at": "2026-08-27T12:48:56Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.minamisoma.lg.jp/portal/service/joreikisoku_reikishu/4200.html (label: 例規集 条例、規則など)"
+      "notes": "Observed regulations index at https://www.city.minamisoma.lg.jp/portal/service/joreikisoku_reikishu/4200.html (label: 例規集 条例、規則など)",
+      "base_url": "https://www1.g-reiki.net/city.minamisoma/"
     },
     "budget": {
       "status": "needs_review",

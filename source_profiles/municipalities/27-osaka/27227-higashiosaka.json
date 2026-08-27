@@ -21,16 +21,22 @@
       "notes": "Observed voices at https://higashiosaka.gijiroku.com/gikai/ (label: 東大阪市議会 別ウィンドウで開く)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.higashiosaka.lg.jp/category/20-14-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85C0D6B1",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashiosaka.lg.jp/category/20-14-0-0-0-0-0-0-0-0.html",
           "observed_on": "http://www.city.higashiosaka.lg.jp/",
           "fetched_at": "2026-08-27T06:35:39Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85C0D6B1",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85C0D6B1",
+          "sha256": "7b60d0824667b5b10502001f7349e39cae012c56b2cd17c91caed2535ca8fc80",
+          "fetched_at": "2026-08-27T12:54:11Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.higashiosaka.lg.jp/category/20-14-0-0-0-0-0-0-0-0.html (label: 法令・条例・規則)"

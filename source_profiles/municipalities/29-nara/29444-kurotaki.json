@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.vill.kurotaki.nara.jp/gyosei/%e4%be%8b%e8%a6%8f%e9%9b%86/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85DFF900",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.kurotaki.nara.jp/gyosei/%e4%be%8b%e8%a6%8f%e9%9b%86/",
           "observed_on": "http://www.vill.kurotaki.nara.jp/sitemap/",
           "fetched_at": "2026-08-27T07:11:03Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85DFF900",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85DFF900",
+          "sha256": "7fdc0c1e338da56312756a1e91013df61f76b3f4c3de202884590abec52af4fa",
+          "fetched_at": "2026-08-27T12:54:44Z"
         }
       ],
       "notes": "Observed regulations index at https://www.vill.kurotaki.nara.jp/gyosei/%e4%be%8b%e8%a6%8f%e9%9b%86/ (label: 例規集)"

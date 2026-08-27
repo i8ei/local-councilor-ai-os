@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.amami.lg.jp/somu/shise/reki/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.amami.lg.jp/somu/shise/reki/index.html",
           "observed_on": "https://www.city.amami.lg.jp/shise/index.html",
           "fetched_at": "2026-08-27T06:42:14Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.amami/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.amami/",
+          "sha256": "9120f14f66796700e5e8356cae5a52bf6014a567aa285d156d6041fdb9432d95",
+          "fetched_at": "2026-08-27T12:57:00Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.amami.lg.jp/somu/shise/reki/index.html (label: 例規集)"
+      "notes": "Observed regulations index at https://www.city.amami.lg.jp/somu/shise/reki/index.html (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/city.amami/"
     },
     "budget": {
       "status": "needs_review",

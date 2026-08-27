@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.town.nankan.lg.jp/tyosei/gikai/gijiroku/ (label: 会議・議事録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.nankan.lg.jp/tyosei/reikishu/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nankan.lg.jp/tyosei/reikishu/",
           "observed_on": "http://www.town.nankan.lg.jp/",
           "fetched_at": "2026-08-27T05:37:24Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.nankan/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.nankan/",
+          "sha256": "72c828b871b3066655ec373c827bd4be0f4343ac339e11be79dfe6e4f34f4e99",
+          "fetched_at": "2026-08-27T12:56:39Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.nankan.lg.jp/tyosei/reikishu/ (label: 例規集・要綱集)"
+      "notes": "Observed regulations index at http://www.town.nankan.lg.jp/tyosei/reikishu/ (label: 例規集・要綱集)",
+      "base_url": "https://www1.g-reiki.net/town.nankan/"
     },
     "budget": {
       "status": "needs_review",

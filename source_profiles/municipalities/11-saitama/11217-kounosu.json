@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.city.kounosu.saitama.jp/site/gikai/2499.html (label: 会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.kounosu.saitama.jp/page/13328.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95856",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kounosu.saitama.jp/page/13328.html",
           "observed_on": "http://www.city.kounosu.saitama.jp/",
           "fetched_at": "2026-08-27T06:50:18Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95856",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95856",
+          "sha256": "b873b821bf0cb5eb2517016509437fd98ca51033dc876349e3f963ba49d3a5c7",
+          "fetched_at": "2026-08-27T12:49:48Z"
         }
       ],
       "notes": "Observed regulations index at http://www.city.kounosu.saitama.jp/page/13328.html (label: 鴻巣市例規集)"

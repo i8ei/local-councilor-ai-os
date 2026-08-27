@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.town.aichi-togo.lg.jp/gyoseijoho/togochogikai/9678.html (label: 議事録検索システム)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.aichi-togo.lg.jp/gyoseijoho/jorei_kisoku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85835820",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aichi-togo.lg.jp/gyoseijoho/jorei_kisoku/index.html",
           "observed_on": "https://www.town.aichi-togo.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T08:10:51Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85835820",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85835820",
+          "sha256": "ab82398f1e73771c7c0da74013368a78e8605a5e6afc4134659921d1de2268e7",
+          "fetched_at": "2026-08-27T12:52:57Z"
         }
       ],
       "notes": "Observed regulations index at https://www.town.aichi-togo.lg.jp/gyoseijoho/jorei_kisoku/index.html (label: 条例・規則)"

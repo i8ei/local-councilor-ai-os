@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.soma.fukushima.jp/shiseijoho/kokai/4200.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T12:48:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.soma.fukushima.jp/shiseijoho/kokai/4200.html",
           "observed_on": "https://www.city.soma.fukushima.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T07:53:44Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.soma/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.soma/",
+          "sha256": "13b08ac2e9e38491f358d2d13e0bf6636ad5bfceac17e99b06bcdabe44deddca",
+          "fetched_at": "2026-08-27T12:48:54Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.soma.fukushima.jp/shiseijoho/kokai/4200.html (label: 公開用例規集)"
+      "notes": "Observed regulations index at https://www.city.soma.fukushima.jp/shiseijoho/kokai/4200.html (label: 公開用例規集)",
+      "base_url": "https://www1.g-reiki.net/city.soma/"
     },
     "budget": {
       "status": "needs_review",
