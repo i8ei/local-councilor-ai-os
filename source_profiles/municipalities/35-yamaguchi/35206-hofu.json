@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.hofu.yamaguchi.jp/site/sigikai/kaigiroku.html (label: 定例会・臨時会の会議録一覧)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.hofu.yamaguchi.jp/reiki1/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hofu.yamaguchi.jp/reiki1/reiki_menu.html",
           "observed_on": "http://www.city.hofu.yamaguchi.jp/",
           "fetched_at": "2026-08-27T06:33:18Z"
+        },
+        {
+          "url": "http://www.city.hofu.yamaguchi.jp/reiki1/reiki_menu.html",
+          "observed_on": "http://www.city.hofu.yamaguchi.jp/reiki1/",
+          "sha256": "9c62aee47501cad35663c61a50687f1d8c25ec0eb2ffc8d60f8e729e5d221743",
+          "fetched_at": "2026-08-27T09:45:18Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.hofu.yamaguchi.jp/reiki1/reiki_menu.html (label: 例規集)"

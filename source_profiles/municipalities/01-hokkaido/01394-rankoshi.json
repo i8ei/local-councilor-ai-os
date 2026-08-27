@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.rankoshi.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.rankoshi.hokkaido.jp/administration/town/detail.html?content=301",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:30:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.rankoshi.hokkaido.jp/administration/town/detail.html?content=301",
           "observed_on": "http://www.town.rankoshi.hokkaido.jp/administration/town/category/?category=48",
           "fetched_at": "2026-08-27T06:13:58Z"
+        },
+        {
+          "url": "http://www.town.rankoshi.hokkaido.jp/administration/town/detail.html?content=301",
+          "observed_on": "http://www.town.rankoshi.hokkaido.jp/administration/town/detail.html?content=301",
+          "sha256": "35f82e6ce5a6782cfb347dee9eb7d041cf8f2fd145727e7c89acece2f02da8ea",
+          "fetched_at": "2026-08-27T10:30:56Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.rankoshi.hokkaido.jp/administration/town/detail.html?content=301 (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/rankoshi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:29:43Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/rankoshi/reiki_menu.html",
           "observed_on": "http://www.town.rankoshi.hokkaido.jp/administration/",
           "fetched_at": "2026-08-27T06:13:39Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/rankoshi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/rankoshi/",
+          "sha256": "d2efc1446c6bb448973a22cd9af6a21e00cb41527120677239abd27ef231a07c",
+          "fetched_at": "2026-08-27T10:30:05Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/rankoshi/reiki_menu.html (label: 例規集)"

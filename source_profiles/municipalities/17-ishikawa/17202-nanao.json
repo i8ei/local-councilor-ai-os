@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.nanao.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/nanao/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:06:06Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/nanao/SpTop.html",
           "observed_on": "http://www.city.nanao.lg.jp/gikaijimu/shise/shigikai/index.html",
           "fetched_at": "2026-08-27T06:12:04Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/nanao/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/nanao/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:06:06Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/nanao/SpTop.html (label: 会議録の閲覧と検索（外部サイト）)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/nanao/SpTop.html (label: 会議録の閲覧と検索（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/nanao/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:05:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/nanao/reiki_menu.html",
           "observed_on": "http://www.city.nanao.lg.jp/",
           "fetched_at": "2026-08-27T06:11:48Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/nanao/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/nanao/",
+          "sha256": "783f00dddfb26dbc4f0168e3335fae929adfae640cd1dd37c31dda3a7893651d",
+          "fetched_at": "2026-08-27T10:05:32Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/nanao/reiki_menu.html (label: 七尾市例規集（外部サイト）)"

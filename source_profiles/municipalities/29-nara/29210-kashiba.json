@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.kashiba.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:52:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html",
           "observed_on": "http://www.city.kashiba.lg.jp/site/shigikai/",
           "fetched_at": "2026-08-27T07:02:32Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html",
+          "sha256": "181fe8caa1cc6cc59e6b51c96f81570015b4b560f766b688711942bef2cbd032",
+          "fetched_at": "2026-08-27T09:52:34Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html (label: 会議録検索)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

@@ -6,19 +6,25 @@
   "official_home_url": "http://www.town.aikawa.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:27:50Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html",
           "observed_on": "https://www.town.aikawa.kanagawa.jp/assembly/index.html",
           "fetched_at": "2026-08-27T08:10:51Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:27:50Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html (label: )"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -33,7 +39,7 @@
           "fetched_at": "2026-08-27T08:10:18Z"
         }
       ],
-      "notes": "Observed g_reiki at https://www.town.aikawa.kanagawa.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
+      "notes": "Observed g_reiki at https://www.town.aikawa.kanagawa.jp/section/reiki_int/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
           "observed_on": "https://www.town.aikawa.kanagawa.jp/info/index.html",
           "fetched_at": "2026-08-27T08:10:36Z"
+        },
+        {
+          "url": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
+          "observed_on": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
+          "sha256": "2272f72fbdcf85d2091cad69dc2716a000f9fdfe433ca74c09566a57ea2609c4",
+          "fetched_at": "2026-08-27T10:27:52Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html (label: 予算・決算・財政)"
+      "notes": "Observed budget link at https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html (label: 予算・決算・財政) 入口 https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
           "observed_on": "https://www.town.aikawa.kanagawa.jp/info/index.html",
           "fetched_at": "2026-08-27T08:10:36Z"
+        },
+        {
+          "url": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
+          "observed_on": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
+          "sha256": "2272f72fbdcf85d2091cad69dc2716a000f9fdfe433ca74c09566a57ea2609c4",
+          "fetched_at": "2026-08-27T10:27:52Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html (label: 予算・決算・財政)"
+      "notes": "Observed settlement link at https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html (label: 予算・決算・財政) 入口 https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

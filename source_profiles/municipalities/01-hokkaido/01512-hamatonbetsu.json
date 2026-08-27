@@ -14,49 +14,67 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/hamatonbetsu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:30:58Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/hamatonbetsu/reiki_menu.html",
           "observed_on": "http://www.town.hamatonbetsu.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:33:50Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/hamatonbetsu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/hamatonbetsu/",
+          "sha256": "2912b2267fda87fae0780fa12311a65f1cd774894efd1a5c7e578a7aadece332",
+          "fetched_at": "2026-08-27T10:30:58Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/hamatonbetsu/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=242",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:31:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=242",
           "observed_on": "http://www.town.hamatonbetsu.hokkaido.jp/category/?category=50",
           "fetched_at": "2026-08-27T06:34:12Z"
+        },
+        {
+          "url": "http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=242",
+          "observed_on": "http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=242",
+          "sha256": "7347e900b7e9302a191aec33f0ab420ce68e8f1d449079de57559cdf399bb657",
+          "fetched_at": "2026-08-27T10:31:08Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=242 (label: 予算)"
+      "notes": "Observed budget link at http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=242 (label: 予算) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=254",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:31:08Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=254",
           "observed_on": "http://www.town.hamatonbetsu.hokkaido.jp/category/?category=50",
           "fetched_at": "2026-08-27T06:34:12Z"
+        },
+        {
+          "url": "http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=254",
+          "observed_on": "http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=254",
+          "sha256": "56974341415c28cb78bcbb00fe2681e4e2fa1031375711ae75f550ebebdc3244",
+          "fetched_at": "2026-08-27T10:31:09Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=254 (label: 決算カード)"
+      "notes": "Observed settlement link at http://www.town.hamatonbetsu.hokkaido.jp/town/detail.php?content=254 (label: 決算カード) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     }
   }
 }

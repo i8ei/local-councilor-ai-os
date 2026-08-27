@@ -6,31 +6,43 @@
   "official_home_url": "https://www.city.rikuzentakata.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/rikuzentakata/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:32:51Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/rikuzentakata/pg/index.html",
           "observed_on": "https://www.city.rikuzentakata.iwate.jp/shisei_shinokeikaku/shigikai/index.html",
           "fetched_at": "2026-08-27T07:08:45Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/rikuzentakata/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/rikuzentakata/pg/index.html",
+          "sha256": "edd53582f611b8fe1f51f16c10cc0337887c16aa425c77206a89574a3d138e61",
+          "fetched_at": "2026-08-27T10:32:52Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/rikuzentakata/pg/index.html (label: 陸前高田市会議録検索)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/rikuzentakata/pg/index.html (label: 陸前高田市会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.rikuzentakata.iwate.jp/section/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:32:45Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.rikuzentakata.iwate.jp/section/reiki/reiki_menu.html",
           "observed_on": "https://www.city.rikuzentakata.iwate.jp/",
           "fetched_at": "2026-08-27T07:08:31Z"
+        },
+        {
+          "url": "https://www.city.rikuzentakata.iwate.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.rikuzentakata.iwate.jp/section/reiki/",
+          "sha256": "46a045b54c7dc2717c0feb39ef975a39204a11af11055fb372118e21fcbb17cd",
+          "fetched_at": "2026-08-27T10:32:47Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.rikuzentakata.iwate.jp/section/reiki/reiki_menu.html (label: 条例・例規)"

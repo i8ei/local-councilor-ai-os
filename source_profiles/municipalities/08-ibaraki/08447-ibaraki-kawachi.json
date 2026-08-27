@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.ibaraki-kawachi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.ibaraki-kawachi.lg.jp/page/dir000122.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:55Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ibaraki-kawachi.lg.jp/page/dir000122.html",
           "observed_on": "http://www.town.ibaraki-kawachi.lg.jp/page/dir000016.html",
           "fetched_at": "2026-08-27T06:16:57Z"
+        },
+        {
+          "url": "http://www.town.ibaraki-kawachi.lg.jp/page/dir000122.html",
+          "observed_on": "http://www.town.ibaraki-kawachi.lg.jp/page/dir000122.html",
+          "sha256": "39bec6cbbe53b2db3552866c581f827b8b179f7cbebbc1e27bf53f4bc575b36e",
+          "fetched_at": "2026-08-27T10:18:01Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.ibaraki-kawachi.lg.jp/page/dir000122.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.ibaraki-kawachi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:49Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.ibaraki-kawachi/reiki_menu.html",
           "observed_on": "http://www.town.ibaraki-kawachi.lg.jp/",
           "fetched_at": "2026-08-27T06:13:55Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.ibaraki-kawachi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.ibaraki-kawachi/",
+          "sha256": "aa8a796dc1fdd155119dd0c0ced3ecafbe16e153e6a63502a20b8f9e0ba4d43c",
+          "fetched_at": "2026-08-27T10:17:49Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.ibaraki-kawachi/reiki_menu.html (label: 河内町例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.town.ibaraki-kawachi.lg.jp/page/dir001533.html",
           "observed_on": "http://www.town.ibaraki-kawachi.lg.jp/page/dir000008.html",
           "fetched_at": "2026-08-27T06:16:36Z"
+        },
+        {
+          "url": "https://www.town.ibaraki-kawachi.lg.jp/page/dir001533.html",
+          "observed_on": "https://www.town.ibaraki-kawachi.lg.jp/page/dir001533.html",
+          "sha256": "2a735b8ef21f78af0ebd2cb79ccc0278fc4c7a6c72df9ba29447ebdacb636af1",
+          "fetched_at": "2026-08-27T10:18:06Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ibaraki-kawachi.lg.jp/page/dir001533.html (label: 町の予算)"
+      "notes": "Observed budget link at http://www.town.ibaraki-kawachi.lg.jp/page/dir001533.html (label: 町の予算) 入口 https://www.town.ibaraki-kawachi.lg.jp/page/dir001533.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.town.ibaraki-kawachi.lg.jp/page/dir000100.html",
           "observed_on": "http://www.town.ibaraki-kawachi.lg.jp/page/dir000008.html",
           "fetched_at": "2026-08-27T06:16:36Z"
+        },
+        {
+          "url": "https://www.town.ibaraki-kawachi.lg.jp/page/dir000100.html",
+          "observed_on": "https://www.town.ibaraki-kawachi.lg.jp/page/dir000100.html",
+          "sha256": "30fbf39405b382f888f7a4129c06544a4ccf28005d1136577733d9aaca4c82ae",
+          "fetched_at": "2026-08-27T10:18:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ibaraki-kawachi.lg.jp/page/dir000100.html (label: 財政)"
+      "notes": "Observed finance section at http://www.town.ibaraki-kawachi.lg.jp/page/dir000100.html (label: 財政) 入口 https://www.town.ibaraki-kawachi.lg.jp/page/dir000100.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

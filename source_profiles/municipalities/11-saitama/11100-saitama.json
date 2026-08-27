@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/saitama/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:20:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/saitama/pg/index.html",
           "observed_on": "http://www.city.saitama.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:46:29Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/saitama/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/saitama/pg/index.html",
+          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
+          "fetched_at": "2026-08-27T10:20:16Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/saitama/pg/index.html (label: )"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/saitama/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

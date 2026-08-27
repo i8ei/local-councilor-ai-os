@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.settsu.osaka.jp/section/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:50:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.settsu.osaka.jp/section/reiki/reiki_menu.html",
           "observed_on": "http://www.city.settsu.osaka.jp/",
           "fetched_at": "2026-08-27T06:32:58Z"
+        },
+        {
+          "url": "https://www.city.settsu.osaka.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.settsu.osaka.jp/section/reiki/",
+          "sha256": "7228e483d1397cf90512cd1dcf0836702f65c1d8638b39ea2d799fc08a94cb9b",
+          "fetched_at": "2026-08-27T09:50:49Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.settsu.osaka.jp/section/reiki/reiki_menu.html (label: 市例規集)"
@@ -54,9 +60,15 @@
           "url": "https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html",
           "observed_on": "http://www.city.settsu.osaka.jp/",
           "fetched_at": "2026-08-27T06:32:58Z"
+        },
+        {
+          "url": "https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html",
+          "observed_on": "https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html",
+          "sha256": "e6958caf2b5ca8bbc01adf94ed76ed759aaf099bf4be027998776e839255d2ba",
+          "fetched_at": "2026-08-27T09:50:57Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html (label: 摂津市中期財政計画)"
+      "notes": "Observed finance section at https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html (label: 摂津市中期財政計画) 入口 https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

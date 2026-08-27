@@ -6,16 +6,22 @@
   "official_home_url": "https://www.city.ashibetsu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/kensaku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:28:46Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/kensaku/",
           "observed_on": "https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/",
           "fetched_at": "2026-08-27T06:02:05Z"
+        },
+        {
+          "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/kensaku/",
+          "observed_on": "https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/kensaku/",
+          "sha256": "cad9a0542f13fb2332a61ef84eec1073b1e6954365f33cdbc10fdf539f1cdb9c",
+          "fetched_at": "2026-08-27T10:28:48Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/kensaku/ (label: 会議録検索システム)"
@@ -39,9 +45,15 @@
           "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
           "observed_on": "https://www.city.ashibetsu.hokkaido.jp/",
           "fetched_at": "2026-08-27T05:58:58Z"
+        },
+        {
+          "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
+          "observed_on": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
+          "sha256": "65f6163e8b18955a97fd407af65645294064330b1e815897ae264217e6323652",
+          "fetched_at": "2026-08-27T10:28:50Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ (label: 市の財政)"
+      "notes": "Observed finance section at https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ (label: 市の財政) 入口 https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
           "observed_on": "https://www.city.ashibetsu.hokkaido.jp/",
           "fetched_at": "2026-08-27T05:58:58Z"
+        },
+        {
+          "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
+          "observed_on": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
+          "sha256": "65f6163e8b18955a97fd407af65645294064330b1e815897ae264217e6323652",
+          "fetched_at": "2026-08-27T10:28:50Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ (label: 市の財政)"
+      "notes": "Observed finance section at https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ (label: 市の財政) 入口 https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

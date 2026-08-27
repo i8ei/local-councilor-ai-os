@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.munakata.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "http://www.city.munakata.fukuoka.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.munakata.fukuoka.dbsr.jp/index.php/",
           "observed_on": "http://www.city.munakata.lg.jp/list00151.html",
           "fetched_at": "2026-08-27T04:13:59Z"
+        },
+        {
+          "url": "http://www.city.munakata.fukuoka.dbsr.jp/index.php/",
+          "observed_on": "http://www.city.munakata.fukuoka.dbsr.jp/index.php/",
+          "sha256": "422f69c2c0c1a66c5c97c5e17803d5a06aa5363834ea3f41c352289cde68cd39",
+          "fetched_at": "2026-08-27T09:35:53Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.munakata.fukuoka.dbsr.jp/index.php/ (label: 会議録の検索と閲覧)"
+      "notes": "Observed dbsr at http://www.city.munakata.fukuoka.dbsr.jp/index.php/ (label: 会議録の検索と閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.munakata/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:42Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.munakata/reiki_menu.html",
           "observed_on": "http://www.city.munakata.lg.jp/",
           "fetched_at": "2026-08-27T04:13:49Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.munakata/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.munakata/",
+          "sha256": "89582bfa6c20dc99744606d3a78418fd753b31da13ee8415b0feda09c1e4c9e3",
+          "fetched_at": "2026-08-27T09:35:42Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.munakata/reiki_menu.html (label: 例規集)"

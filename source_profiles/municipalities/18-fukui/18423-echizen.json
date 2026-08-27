@@ -6,31 +6,43 @@
   "official_home_url": "https://www.town.echizen.fukui.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.echizen.fukui.jp/chousei/04/06/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:07:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.echizen.fukui.jp/chousei/04/06/index.html",
           "observed_on": "https://www.town.echizen.fukui.jp/chousei/04/index.html",
           "fetched_at": "2026-08-27T06:25:44Z"
+        },
+        {
+          "url": "https://www.town.echizen.fukui.jp/chousei/04/06/index.html",
+          "observed_on": "https://www.town.echizen.fukui.jp/chousei/04/06/index.html",
+          "sha256": "2d6330e9df084a4d2e88abb9304b888bd7b9ddcc672db9fc0122c91da05d4e91",
+          "fetched_at": "2026-08-27T10:07:35Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.echizen.fukui.jp/chousei/04/06/index.html (label: 本会議会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/echizen/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:06:51Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/echizen/reiki_menu.html",
           "observed_on": "https://www1.g-reiki.net/echizen/reiki_menu.html",
           "fetched_at": "2026-08-27T06:26:00Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/echizen/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/echizen/",
+          "sha256": "8787d18c1f04092556dea8bdc604ba83470ff9c8cd7c7ad5b2ef0be72e0dde68",
+          "fetched_at": "2026-08-27T10:07:01Z"
         }
       ],
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/echizen/reiki_menu.html for 越前町"

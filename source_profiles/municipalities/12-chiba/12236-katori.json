@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/katori/WebView/rd/council.html (label: 議会中継)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.katori/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:23:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.katori/reiki_menu.html",
           "observed_on": "http://www.city.katori.lg.jp/",
           "fetched_at": "2026-08-27T07:22:11Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.katori/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.katori/",
+          "sha256": "a9edb193b1dcfdb9aad39e945aa26dd02de218b96c914145b8e2f1330c8d1033",
+          "fetched_at": "2026-08-27T10:23:43Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.katori/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.katori.lg.jp/government/zaisei/index.html",
           "observed_on": "http://www.city.katori.lg.jp/",
           "fetched_at": "2026-08-27T07:22:11Z"
+        },
+        {
+          "url": "https://www.city.katori.lg.jp/government/zaisei/index.html",
+          "observed_on": "https://www.city.katori.lg.jp/government/zaisei/index.html",
+          "sha256": "221cd6a06fd8a1997eb9e7ce64dbcee9585388bee9e69ef0c88cdb51583cb42a",
+          "fetched_at": "2026-08-27T10:24:21Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.katori.lg.jp/government/zaisei/index.html (label: 財政状況)"
+      "notes": "Observed finance section at http://www.city.katori.lg.jp/government/zaisei/index.html (label: 財政状況) 入口 https://www.city.katori.lg.jp/government/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.katori.lg.jp/government/zaisei/index.html",
           "observed_on": "http://www.city.katori.lg.jp/",
           "fetched_at": "2026-08-27T07:22:11Z"
+        },
+        {
+          "url": "https://www.city.katori.lg.jp/government/zaisei/index.html",
+          "observed_on": "https://www.city.katori.lg.jp/government/zaisei/index.html",
+          "sha256": "221cd6a06fd8a1997eb9e7ce64dbcee9585388bee9e69ef0c88cdb51583cb42a",
+          "fetched_at": "2026-08-27T10:24:21Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.katori.lg.jp/government/zaisei/index.html (label: 財政状況)"
+      "notes": "Observed finance section at http://www.city.katori.lg.jp/government/zaisei/index.html (label: 財政状況) 入口 https://www.city.katori.lg.jp/government/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

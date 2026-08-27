@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.chita.lg.jp/category/bunya/shisei/shigikai/kaigirokukensaku/ (label: 会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.chita.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:15:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chita.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.chita.lg.jp/",
           "fetched_at": "2026-08-27T08:03:56Z"
+        },
+        {
+          "url": "http://www.city.chita.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.chita.lg.jp/reiki_int/",
+          "sha256": "de28c9f3f1f6d683f6609f8c2d71dd0b8f1f6437c30e7a6f69c3a9efe61debf6",
+          "fetched_at": "2026-08-27T10:15:30Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.chita.lg.jp/reiki_int/reiki_menu.html (label: 条例・規則)"

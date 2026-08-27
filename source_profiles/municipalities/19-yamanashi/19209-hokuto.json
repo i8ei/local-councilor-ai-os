@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.hokuto.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.hokuto.yamanashi.jp/life/hokuto/gikai/gijiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:08:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hokuto.yamanashi.jp/life/hokuto/gikai/gijiroku/",
           "observed_on": "http://www.city.hokuto.yamanashi.jp/life/hokuto/",
           "fetched_at": "2026-08-27T06:34:40Z"
+        },
+        {
+          "url": "http://www.city.hokuto.yamanashi.jp/life/hokuto/gikai/gijiroku/",
+          "observed_on": "http://www.city.hokuto.yamanashi.jp/life/hokuto/gikai/gijiroku/",
+          "sha256": "0f1e8032b121ee70b9b59725041b6ed66b33a7f32d4382607bef52212d5735de",
+          "fetched_at": "2026-08-27T10:08:30Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.hokuto.yamanashi.jp/life/hokuto/gikai/gijiroku/ (label: 市議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.hokuto.yamanashi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:07:42Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.hokuto.yamanashi/reiki_menu.html",
           "observed_on": "http://www.city.hokuto.yamanashi.jp/",
           "fetched_at": "2026-08-27T06:34:24Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.hokuto.yamanashi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.hokuto.yamanashi/",
+          "sha256": "5ec7b3e0d3d73bf7ae8fd8aadbf3b81ac75cecd0b94e557d95e204cdc6f5103b",
+          "fetched_at": "2026-08-27T10:07:52Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.hokuto.yamanashi/reiki_menu.html (label: 北杜市例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
           "observed_on": "http://www.city.hokuto.yamanashi.jp/",
           "fetched_at": "2026-08-27T06:34:24Z"
+        },
+        {
+          "url": "https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
+          "observed_on": "https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
+          "sha256": "b20a2d1f4f037a982f8c0efd5bea80be929e895557ee3d87560892f72bc11e90",
+          "fetched_at": "2026-08-27T10:08:35Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ (label: 財政)"
+      "notes": "Observed finance section at http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ (label: 財政) 入口 https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
           "observed_on": "http://www.city.hokuto.yamanashi.jp/",
           "fetched_at": "2026-08-27T06:34:24Z"
+        },
+        {
+          "url": "https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
+          "observed_on": "https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
+          "sha256": "b20a2d1f4f037a982f8c0efd5bea80be929e895557ee3d87560892f72bc11e90",
+          "fetched_at": "2026-08-27T10:08:35Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ (label: 財政)"
+      "notes": "Observed finance section at http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ (label: 財政) 入口 https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

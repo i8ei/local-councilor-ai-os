@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.omura.nagasaki.jp/shise/shigikai/shingikekka/kaigiroku/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/omura/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:37:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/omura/reiki_menu.html",
           "observed_on": "http://www.city.omura.nagasaki.jp/",
           "fetched_at": "2026-08-27T05:22:12Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/omura/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/omura/",
+          "sha256": "e26fe55a0be0cfe3a383a9e1cc5daa22e3ece586bfb48f4a5de244a8382b1dd5",
+          "fetched_at": "2026-08-27T09:37:24Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/omura/reiki_menu.html (label: 例規集)"

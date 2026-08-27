@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.aioi.lg.jp/site/gikai/page-kaigirokueturan.html (label: 会議録の閲覧・検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.aioi.lg.jp/reiki/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:51:39Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aioi.lg.jp/reiki/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.aioi.lg.jp/",
           "fetched_at": "2026-08-27T06:45:08Z"
+        },
+        {
+          "url": "http://www.city.aioi.lg.jp/reiki/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.aioi.lg.jp/reiki/reiki_int/",
+          "sha256": "283d16ce208387a474d96e8a66546ccf5ae0a19d151b17a824863749c8a656af",
+          "fetched_at": "2026-08-27T09:51:45Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.aioi.lg.jp/reiki/reiki_int/reiki_menu.html (label: 条例・例規集)"

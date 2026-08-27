@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.iida.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/iida/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:09:08Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/iida/SpTop.html",
           "observed_on": "http://www.city.iida.lg.jp/site/assembly/teireikai0809.html",
           "fetched_at": "2026-08-27T06:57:46Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/iida/SpTop.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/iida/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:09:09Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/iida/SpTop.html (label: 会議録検索システム （外部リンク）)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/iida/SpTop.html (label: 会議録検索システム （外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "not_found",

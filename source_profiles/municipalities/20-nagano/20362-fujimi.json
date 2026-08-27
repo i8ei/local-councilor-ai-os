@@ -21,16 +21,22 @@
       "notes": "Observed voices at http://fujimi.gijiroku.com/voices/ (label: 町議会会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town-fujimi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:09:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town-fujimi/reiki_menu.html",
           "observed_on": "http://www.town.fujimi.lg.jp/",
           "fetched_at": "2026-08-27T07:06:17Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town-fujimi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town-fujimi/",
+          "sha256": "fc16a5f49e650891b7194d01cafa44f0870ef8023aa78d86126e741982d0afb9",
+          "fetched_at": "2026-08-27T10:09:56Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town-fujimi/reiki_menu.html (label: 例規類集)"

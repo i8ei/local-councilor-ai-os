@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.miyazaki.miyazaki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:39:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
           "observed_on": "http://www.city.miyazaki.miyazaki.jp/parliament/",
           "fetched_at": "2026-08-27T06:25:02Z"
+        },
+        {
+          "url": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
+          "observed_on": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
+          "sha256": "544f2e5c9927aad7ace6661928b7aeb4f1fb8315d1428411285ecbbbf2545063",
+          "fetched_at": "2026-08-27T09:39:41Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.miyazaki.miyazaki.dbsr.jp/index.php (label: 会議録検索)"
+      "notes": "Observed dbsr at http://www.city.miyazaki.miyazaki.dbsr.jp/index.php (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "http://www.city.miyazaki.miyazaki.jp/city/finance/",
           "observed_on": "http://www.city.miyazaki.miyazaki.jp/city/",
           "fetched_at": "2026-08-27T06:24:16Z"
+        },
+        {
+          "url": "https://www.city.miyazaki.miyazaki.jp/city/finance/",
+          "observed_on": "https://www.city.miyazaki.miyazaki.jp/city/finance/",
+          "sha256": "ac550a5cf7d0472ec321378952471086ade0c808c5f90690663e171dea826c64",
+          "fetched_at": "2026-08-27T09:39:47Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.miyazaki.miyazaki.jp/city/finance/ (label: 財政・行政改革)"
+      "notes": "Observed finance section at http://www.city.miyazaki.miyazaki.jp/city/finance/ (label: 財政・行政改革) 入口 https://www.city.miyazaki.miyazaki.jp/city/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",

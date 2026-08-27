@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.koge.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.koge.lg.jp/chosei/gikai/3022.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:37:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.koge.lg.jp/chosei/gikai/3022.html",
           "observed_on": "https://www.town.koge.lg.jp/chosei/gikai/index.html",
           "fetched_at": "2026-08-27T04:28:40Z"
+        },
+        {
+          "url": "https://www.town.koge.lg.jp/chosei/gikai/3022.html",
+          "observed_on": "https://www.town.koge.lg.jp/chosei/gikai/3022.html",
+          "sha256": "72c877a3841b7fd0763d1793d653f8e5f9c67a4ef4d955137f23798abe102455",
+          "fetched_at": "2026-08-27T09:37:11Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.koge.lg.jp/chosei/gikai/3022.html (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
           "observed_on": "https://www.town.koge.lg.jp/sitemap.html",
           "fetched_at": "2026-08-27T04:28:39Z"
+        },
+        {
+          "url": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
+          "sha256": "db923c8298c1617cd5163b4b559c040215643fb78f88fb1ef2106c95f7a63f6e",
+          "fetched_at": "2026-08-27T09:37:14Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.koge.lg.jp/chosei/zaisei/index.html (label: 財政情報)"
+      "notes": "Observed finance section at https://www.town.koge.lg.jp/chosei/zaisei/index.html (label: 財政情報) 入口 https://www.town.koge.lg.jp/chosei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
           "observed_on": "https://www.town.koge.lg.jp/sitemap.html",
           "fetched_at": "2026-08-27T04:28:39Z"
+        },
+        {
+          "url": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
+          "sha256": "db923c8298c1617cd5163b4b559c040215643fb78f88fb1ef2106c95f7a63f6e",
+          "fetched_at": "2026-08-27T09:37:14Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.koge.lg.jp/chosei/zaisei/index.html (label: 財政情報)"
+      "notes": "Observed finance section at https://www.town.koge.lg.jp/chosei/zaisei/index.html (label: 財政情報) 入口 https://www.town.koge.lg.jp/chosei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

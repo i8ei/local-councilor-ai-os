@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.nakagawa.lg.jp/site/gikai/kensaku.html (label: 会議録検索システム)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.nakagawa/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:36:07Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.nakagawa/reiki_menu.html",
           "observed_on": "http://www.city.nakagawa.lg.jp/",
           "fetched_at": "2026-08-27T04:18:19Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.nakagawa/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.nakagawa/",
+          "sha256": "065f85618f990d29a0fac9f248a6c1575dd6e367cb1d3935e916a83980cbdd16",
+          "fetched_at": "2026-08-27T09:36:07Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.nakagawa/reiki_menu.html (label: 例規集)"

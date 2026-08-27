@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.koshu.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.koshu.yamanashi.jp/category/bunya/shigikai/gikairoku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:08:39Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.koshu.yamanashi.jp/category/bunya/shigikai/gikairoku/",
           "observed_on": "http://www.city.koshu.yamanashi.jp/category/bunya/shigikai/",
           "fetched_at": "2026-08-27T06:48:20Z"
+        },
+        {
+          "url": "http://www.city.koshu.yamanashi.jp/category/bunya/shigikai/gikairoku/",
+          "observed_on": "http://www.city.koshu.yamanashi.jp/category/bunya/shigikai/gikairoku/",
+          "sha256": "fa96351fe601c310c6a206e275f3db8b8c0f0754a552a816df14fe6fbd9e8b68",
+          "fetched_at": "2026-08-27T10:08:45Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.koshu.yamanashi.jp/category/bunya/shigikai/gikairoku/ (label: 会議録の検索と閲覧)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/koshu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:08:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/koshu/reiki_menu.html",
           "observed_on": "http://www.city.koshu.yamanashi.jp/",
           "fetched_at": "2026-08-27T06:40:26Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/koshu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/koshu/",
+          "sha256": "78ecf823c1783ea32eaa6745c92cac122721fa74d7e1b5cdde7d3a0efc019959",
+          "fetched_at": "2026-08-27T10:08:16Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/koshu/reiki_menu.html (label: 甲州市例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
           "observed_on": "http://www.city.koshu.yamanashi.jp/",
           "fetched_at": "2026-08-27T06:40:26Z"
+        },
+        {
+          "url": "https://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
+          "observed_on": "https://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
+          "sha256": "e1990a3a4e5628cccf88f060621f729a0a5907711bb71bc930d591997ebeca4b",
+          "fetched_at": "2026-08-27T10:08:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.koshu.yamanashi.jp/category/bunya/zaise/ (label: 財政)"
+      "notes": "Observed finance section at http://www.city.koshu.yamanashi.jp/category/bunya/zaise/ (label: 財政) 入口 https://www.city.koshu.yamanashi.jp/category/bunya/zaise/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
           "observed_on": "http://www.city.koshu.yamanashi.jp/",
           "fetched_at": "2026-08-27T06:40:26Z"
+        },
+        {
+          "url": "https://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
+          "observed_on": "https://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
+          "sha256": "e1990a3a4e5628cccf88f060621f729a0a5907711bb71bc930d591997ebeca4b",
+          "fetched_at": "2026-08-27T10:08:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.koshu.yamanashi.jp/category/bunya/zaise/ (label: 財政)"
+      "notes": "Observed finance section at http://www.city.koshu.yamanashi.jp/category/bunya/zaise/ (label: 財政) 入口 https://www.city.koshu.yamanashi.jp/category/bunya/zaise/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

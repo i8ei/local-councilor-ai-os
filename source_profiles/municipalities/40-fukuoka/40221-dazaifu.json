@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.dazaifu.lg.jp/site/gikai/list99-11.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.dazaifu.lg.jp/soumu/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:43Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.dazaifu.lg.jp/soumu/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.dazaifu.lg.jp/",
           "fetched_at": "2026-08-27T04:14:14Z"
+        },
+        {
+          "url": "http://www.city.dazaifu.lg.jp/soumu/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.dazaifu.lg.jp/soumu/reiki_int/",
+          "sha256": "e8d1d7b0c71750cf0c24e78e140828b757e81aa87e88be3ab5affd8faaa36ac4",
+          "fetched_at": "2026-08-27T09:35:49Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.dazaifu.lg.jp/soumu/reiki_int/reiki_menu.html (label: 例規集)"

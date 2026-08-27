@@ -6,19 +6,25 @@
   "official_home_url": "https://www.city.uonuma.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/uonuma/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:26Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/uonuma/SpTop.html",
           "observed_on": "https://www.city.uonuma.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:03:49Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/uonuma/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/uonuma/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:04:26Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/uonuma/SpTop.html (label: 会議録検索)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/uonuma/SpTop.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

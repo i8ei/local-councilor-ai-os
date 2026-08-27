@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.akitakata.jp/ja/parliament/gikai201/ (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/akitakata/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:44:53Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/akitakata/reiki_menu.html",
           "observed_on": "http://www.akitakata.jp/",
           "fetched_at": "2026-08-27T06:27:47Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/akitakata/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/akitakata/",
+          "sha256": "64deea4aedcc60583535a0dee31e18c0fbab6f2118608fe97ec4b48770bec282",
+          "fetched_at": "2026-08-27T09:44:54Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/akitakata/reiki_menu.html (label: 例規集)"

@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.setouchi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:44:26Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html",
           "observed_on": "http://www.city.setouchi.lg.jp/site/setouchishigikai/",
           "fetched_at": "2026-08-27T06:17:46Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html",
+          "sha256": "97792a62ca47d9934201c843588a8e7002f3f18459a291e3a62c65237d73b4c8",
+          "fetched_at": "2026-08-27T09:44:27Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html (label: 会議録の検索はこちら（外部リンクです・別ウインドウで開きます）)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html (label: 会議録の検索はこちら（外部リンクです・別ウインドウで開きます）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/setouchi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:51Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/setouchi/reiki_menu.html",
           "observed_on": "http://www.city.setouchi.lg.jp/life/5/",
           "fetched_at": "2026-08-27T06:17:06Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/setouchi/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/setouchi/",
+          "sha256": "5170d966d33fcbe4fa8f637adb06239b0c3a3dc8b68f51095b8c6c4143ffc316",
+          "fetched_at": "2026-08-27T09:44:04Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/setouchi/reiki_menu.html (label: 市の条例・規則)"

@@ -6,31 +6,43 @@
   "official_home_url": "https://www.town.otofuke.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "http://www.town.otofuke.hokkaido.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:31:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.otofuke.hokkaido.dbsr.jp/index.php/",
           "observed_on": "https://www.town.otofuke.hokkaido.jp/gikai/",
           "fetched_at": "2026-08-27T06:47:24Z"
+        },
+        {
+          "url": "http://www.town.otofuke.hokkaido.dbsr.jp/index.php/",
+          "observed_on": "http://www.town.otofuke.hokkaido.dbsr.jp/index.php/",
+          "sha256": "25c7013b9d77e00a083e04cbda9862974093acc67ee9c9759da36d90169da4d3",
+          "fetched_at": "2026-08-27T10:31:37Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.town.otofuke.hokkaido.dbsr.jp/index.php/ (label: 会議録検索)"
+      "notes": "Observed dbsr at http://www.town.otofuke.hokkaido.dbsr.jp/index.php/ (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/otofuke/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:31:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/otofuke/reiki_menu.html",
           "observed_on": "https://www.town.otofuke.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:46:18Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/otofuke/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/otofuke/",
+          "sha256": "c468bfa40d29e94e65b1abe625976a073fded6a624ffe52b4145635620dd9d65",
+          "fetched_at": "2026-08-27T10:31:24Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/otofuke/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/",
           "observed_on": "https://www.town.otofuke.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:46:18Z"
+        },
+        {
+          "url": "https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/",
+          "observed_on": "https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/",
+          "sha256": "8a9ebb7df3acecd813bcb8bcb0e1f2c64a78ef0371d638428782d832dbcda81d",
+          "fetched_at": "2026-08-27T10:31:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/ (label: 町の財政・計画)"
+      "notes": "Observed finance section at https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/ (label: 町の財政・計画) 入口 https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://sovagroup.co.jp/media_service/financial-statement",
           "observed_on": "https://www.town.otofuke.hokkaido.jp/banner_click.php?url=https%3A%2F%2Fsovagroup.co.jp%2Fmedia_top%2F%26id%3D17",
           "fetched_at": "2026-08-27T06:46:37Z"
+        },
+        {
+          "url": "https://sovagroup.co.jp/media_service/financial-statement/",
+          "observed_on": "https://sovagroup.co.jp/media_service/financial-statement/",
+          "sha256": "cc7b573183a5d999c70f7d434d737aca1d0050d64c1194f77516f3069b91bc75",
+          "fetched_at": "2026-08-27T10:31:44Z"
         }
       ],
-      "notes": "Observed settlement link at https://sovagroup.co.jp/media_service/financial-statement (label: 決算申告)"
+      "notes": "Observed settlement link at https://sovagroup.co.jp/media_service/financial-statement (label: 決算申告) 入口 https://sovagroup.co.jp/media_service/financial-statement/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

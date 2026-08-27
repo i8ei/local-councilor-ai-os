@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.ono.fukui.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.ono.fukui.jp/shisei/shigikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:06:30Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ono.fukui.jp/shisei/shigikai/kaigiroku/index.html",
           "observed_on": "http://www.city.ono.fukui.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:22:32Z"
+        },
+        {
+          "url": "http://www.city.ono.fukui.jp/shisei/shigikai/kaigiroku/index.html",
+          "observed_on": "http://www.city.ono.fukui.jp/shisei/shigikai/kaigiroku/index.html",
+          "sha256": "f9ec74a671b4bb0e5da0e81d506d116439b3fbc59e12c34f4e828552e6cf559b",
+          "fetched_at": "2026-08-27T10:06:32Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.ono.fukui.jp/shisei/shigikai/kaigiroku/index.html (label: 本会議録の検索)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.ono.fukui.jp/shisei/zaisei/yosan/index.html",
           "observed_on": "http://www.city.ono.fukui.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:22:32Z"
+        },
+        {
+          "url": "http://www.city.ono.fukui.jp/shisei/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.ono.fukui.jp/shisei/zaisei/yosan/index.html",
+          "sha256": "3a6b5174462983a48440127d55613fbb4c75e6ad5aca6f854424b062e5e3623f",
+          "fetched_at": "2026-08-27T10:06:34Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.ono.fukui.jp/shisei/zaisei/yosan/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.ono.fukui.jp/shisei/zaisei/yosan/index.html (label: 予算) 入口 http://www.city.ono.fukui.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html",
           "observed_on": "http://www.city.ono.fukui.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:22:32Z"
+        },
+        {
+          "url": "http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html",
+          "observed_on": "http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html",
+          "sha256": "aed3aa4575f7b33c7edfda323b8301455ccbb52793cb4e3b2baaaad633838a6a",
+          "fetched_at": "2026-08-27T10:06:36Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html (label: 決算) 入口 http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

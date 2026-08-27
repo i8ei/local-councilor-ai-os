@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.watari.miyagi.jp/council/detail.php?content=1085 (label: 会議録検索システム（令和2年3月開催以降のものはこちらで公開しております）)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.watari.miyagi.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:34:01Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.watari.miyagi.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.watari.miyagi.jp/",
           "fetched_at": "2026-08-27T07:22:27Z"
+        },
+        {
+          "url": "http://www.town.watari.miyagi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.watari.miyagi.jp/reiki_int/",
+          "sha256": "bcf39c6ba1ddf523abb74004f73fec177e134547e40b31c82dd2a45d3fca4442",
+          "fetched_at": "2026-08-27T10:34:02Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.watari.miyagi.jp/reiki_int/reiki_menu.html (label: 例規集)"

@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.amakusa.kumamoto.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:38:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html",
           "observed_on": "https://www.city.amakusa.kumamoto.jp/list00630.html",
           "fetched_at": "2026-08-27T05:35:26Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T09:38:09Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html (label: 会議録)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www2.city.amakusa.kumamoto.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:38:02Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www2.city.amakusa.kumamoto.jp/reiki/reiki_menu.html",
           "observed_on": "https://www.city.amakusa.kumamoto.jp/default.html",
           "fetched_at": "2026-08-27T05:35:24Z"
+        },
+        {
+          "url": "http://www2.city.amakusa.kumamoto.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www2.city.amakusa.kumamoto.jp/reiki/",
+          "sha256": "cde7772221baa2b7ae6ba6a01bfb27e837aa40ac2a537dcfc612e27fc8085f99",
+          "fetched_at": "2026-08-27T09:38:04Z"
         }
       ],
       "notes": "Observed g_reiki at http://www2.city.amakusa.kumamoto.jp/reiki/reiki_menu.html (label: 例規集)"

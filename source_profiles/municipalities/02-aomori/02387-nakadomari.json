@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.nakadomari.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:32:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gikai/kaigiroku/index.html",
           "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:02:29Z"
+        },
+        {
+          "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/gikai/kaigiroku/index.html",
+          "sha256": "f35c05aef64a4540b67690ca00f2aae52184f302d3fd777c5087d4a0adcd1ab8",
+          "fetched_at": "2026-08-27T10:32:18Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.nakadomari.lg.jp/gyoseijoho/gikai/kaigiroku/index.html (label: 会議録)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
           "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:02:29Z"
+        },
+        {
+          "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
+          "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
+          "sha256": "2cdee86a4c9ad7f236caa643e6d7d2a2822b169f84fa739285464556234e0d06",
+          "fetched_at": "2026-08-27T10:32:21Z"
+        },
+        {
+          "url": "https://www.town.nakadomari.lg.jp/material/files/group/4/R8tousyoyosan.pdf",
+          "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
+          "fetched_at": "2026-08-27T10:32:20Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html (label: 予算)"
+      "notes": "Observed budget link at https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,15 @@
           "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html",
           "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:02:29Z"
+        },
+        {
+          "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "sha256": "e94d4d6ada6aad78999ccdde889c08664a0c063c4983db6f4f7e4be9d31dd2a6",
+          "fetched_at": "2026-08-27T10:32:28Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

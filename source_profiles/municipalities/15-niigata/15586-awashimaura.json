@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.vill.awashimaura.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.awashimaura.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "https://www.vill.awashimaura.lg.jp/information/administration/",
           "fetched_at": "2026-08-27T06:06:59Z"
+        },
+        {
+          "url": "https://www.vill.awashimaura.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.vill.awashimaura.lg.jp/reiki_int/",
+          "sha256": "c6e2eaca34dc3a50dd6649c0dc1dc70acf1332be5b909660700a9dacb6bb7857",
+          "fetched_at": "2026-08-27T10:04:40Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.vill.awashimaura.lg.jp/reiki_int/reiki_menu.html (label: 粟島浦村例規類集（外部リンク）)"
@@ -39,9 +45,15 @@
           "url": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/03/27cd4b825c3e78b7b37f5f508bdaed22.pdf",
           "observed_on": "https://www.vill.awashimaura.lg.jp/information/administration/",
           "fetched_at": "2026-08-27T06:06:59Z"
+        },
+        {
+          "url": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/03/27cd4b825c3e78b7b37f5f508bdaed22.pdf",
+          "observed_on": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/03/27cd4b825c3e78b7b37f5f508bdaed22.pdf",
+          "sha256": "c1b8a2ddea6a7a9accbb53cd31b5cbc6572a86213a51d28a8949347238f5b5c1",
+          "fetched_at": "2026-08-27T10:04:46Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/03/27cd4b825c3e78b7b37f5f508bdaed22.pdf (label: R8予算参考資料)"
+      "notes": "Observed budget link at https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/03/27cd4b825c3e78b7b37f5f508bdaed22.pdf (label: R8予算参考資料) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/07/8478df6ff9dfb7b51add33b80a93cebb-1.pdf",
           "observed_on": "https://www.vill.awashimaura.lg.jp/information/administration/",
           "fetched_at": "2026-08-27T06:06:59Z"
+        },
+        {
+          "url": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/07/8478df6ff9dfb7b51add33b80a93cebb-1.pdf",
+          "observed_on": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/07/8478df6ff9dfb7b51add33b80a93cebb-1.pdf",
+          "sha256": "6d59ae3167032d846b02fe931555396adf136e4515f37ef55745011826997130",
+          "fetched_at": "2026-08-27T10:04:48Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/07/8478df6ff9dfb7b51add33b80a93cebb-1.pdf (label: R6決算参考資料)"
+      "notes": "Observed settlement link at https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/07/8478df6ff9dfb7b51add33b80a93cebb-1.pdf (label: R6決算参考資料) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

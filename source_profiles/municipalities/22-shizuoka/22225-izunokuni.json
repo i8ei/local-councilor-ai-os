@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.izunokuni.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:14:48Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html",
           "observed_on": "http://www.city.izunokuni.shizuoka.jp/gikai/shisei/gikai/index.html",
           "fetched_at": "2026-08-27T07:48:20Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html",
+          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
+          "fetched_at": "2026-08-27T10:14:48Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html (label: 市議会議事録は「伊豆の国市議会会議録」ページをご覧ください。（外部サイトへリンク）)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html (label: 市議会議事録は「伊豆の国市議会会議録」ページをご覧ください。（外部サイトへリンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.izunokuni/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:14:37Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.izunokuni/reiki_menu.html",
           "observed_on": "http://www.city.izunokuni.shizuoka.jp/",
           "fetched_at": "2026-08-27T07:47:27Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.izunokuni/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.izunokuni/",
+          "sha256": "86c1cb76537a093e726d2fa572dd542c0880d99d7325d376d89d6f585d4c8fc0",
+          "fetched_at": "2026-08-27T10:14:40Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.izunokuni/reiki_menu.html (label: 例規集（外部サイトへリンク）)"

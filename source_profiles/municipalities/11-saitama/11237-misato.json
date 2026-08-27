@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/misato/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:21:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/misato/reiki_menu.html",
           "observed_on": "http://www.city.misato.lg.jp/",
           "fetched_at": "2026-08-27T06:57:42Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/misato/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/misato/",
+          "sha256": "6529e17c8338d09b43063c8c895155a31018289c97cfb143e312caee8f52ad21",
+          "fetched_at": "2026-08-27T10:21:16Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/misato/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html",
           "observed_on": "https://www.city.misato.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T06:58:06Z"
+        },
+        {
+          "url": "https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html",
+          "sha256": "ba904d82d56dbbda842f89113b7983bc0872c4f3330b1b9e0579e8c6eb0440c6",
+          "fetched_at": "2026-08-27T10:21:28Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html",
           "observed_on": "https://www.city.misato.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T06:58:06Z"
+        },
+        {
+          "url": "https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html",
+          "sha256": "ba904d82d56dbbda842f89113b7983bc0872c4f3330b1b9e0579e8c6eb0440c6",
+          "fetched_at": "2026-08-27T10:21:28Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.misato.lg.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

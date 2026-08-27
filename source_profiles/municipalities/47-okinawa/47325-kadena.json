@@ -6,31 +6,43 @@
   "official_home_url": "https://www.town.kadena.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/kadena/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:41:39Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/kadena/SpTop.html",
           "observed_on": "http://www.kadena-gikai.jp/",
           "fetched_at": "2026-08-27T06:55:20Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/kadena/SpTop.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/kadena/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T09:41:41Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kadena/SpTop.html (label: )"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kadena/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/kadena/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:41:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/kadena/reiki_menu.html",
           "observed_on": "https://www.town.kadena.okinawa.jp/",
           "fetched_at": "2026-08-27T06:54:38Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/kadena/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/kadena/",
+          "sha256": "0e27a46b37003cd09082c5e7fe697f6875a90d5e3c698cc7152f0bb91e210155",
+          "fetched_at": "2026-08-27T09:41:17Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kadena/reiki_menu.html (label: )"

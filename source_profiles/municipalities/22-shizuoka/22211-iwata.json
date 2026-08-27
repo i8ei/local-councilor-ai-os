@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.iwata.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/iwata/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:14:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/iwata/pg/index.html",
           "observed_on": "http://www.city.iwata.shizuoka.jp/shigikai/index.html",
           "fetched_at": "2026-08-27T07:43:35Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/iwata/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/iwata/pg/index.html",
+          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
+          "fetched_at": "2026-08-27T10:14:22Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/iwata/pg/index.html (label: 会議録検索システム)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/iwata/pg/index.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/yosan/index.html",
           "observed_on": "http://www.city.iwata.shizuoka.jp/shiseijouhou/index.html",
           "fetched_at": "2026-08-27T07:43:02Z"
+        },
+        {
+          "url": "https://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/yosan/index.html",
+          "observed_on": "https://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/yosan/index.html",
+          "sha256": "6d7b9b02b963e80e6f2108e5ceae68b4b76e100271582a6f32b188f5e5ab2002",
+          "fetched_at": "2026-08-27T10:14:29Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/yosan/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/yosan/index.html (label: 予算) 入口 https://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/kessan/index.html",
           "observed_on": "http://www.city.iwata.shizuoka.jp/shiseijouhou/index.html",
           "fetched_at": "2026-08-27T07:43:02Z"
+        },
+        {
+          "url": "https://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/kessan/index.html",
+          "observed_on": "https://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/kessan/index.html",
+          "sha256": "d55956365c29ed7c584c28a98c98ee6fcadf6244d5e3ad553f823f77e092c579",
+          "fetched_at": "2026-08-27T10:14:32Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/kessan/index.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/kessan/index.html (label: 決算) 入口 https://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

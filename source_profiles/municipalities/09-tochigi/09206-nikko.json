@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.nikko.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/nikko/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:02Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/nikko/pg/index.html",
           "observed_on": "https://www.city.nikko.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:18:48Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/nikko/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/nikko/pg/index.html",
+          "sha256": "a2db850e06a2ec9735543b4ed91bfff88a265110bcbac535a698f0af08f06ca3",
+          "fetched_at": "2026-08-27T10:18:03Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/nikko/pg/index.html (label: 日光市議会「会議録」)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/nikko/pg/index.html (label: 日光市議会「会議録」) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "not_found",

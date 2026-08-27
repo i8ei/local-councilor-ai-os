@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.keisen.fukuoka.jp/gikai/kaigiroku.php (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/keisen/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:36:25Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/keisen/reiki_menu.html",
           "observed_on": "http://www.town.keisen.fukuoka.jp/",
           "fetched_at": "2026-08-27T04:23:19Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/keisen/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/keisen/",
+          "sha256": "cefd8c8d38b455d5a97bff32609eb9fe791dab293a11bbb5b5cfd4f506152e66",
+          "fetched_at": "2026-08-27T09:36:32Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/keisen/reiki_menu.html (label: )"

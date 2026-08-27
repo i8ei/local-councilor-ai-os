@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.kensakusystem.jp/kinokawa/index.html (label: 本会議会議録の検索と閲覧（令和2年1月以降）(外部リンク）)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/kinokawa/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:53:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/kinokawa/reiki_menu.html",
           "observed_on": "http://www.city.kinokawa.lg.jp/",
           "fetched_at": "2026-08-27T07:19:50Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/kinokawa/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kinokawa/",
+          "sha256": "c62dee742212574389887ed90e58249dce35d3ea2cb233e954653efa7d4e24f8",
+          "fetched_at": "2026-08-27T09:53:22Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kinokawa/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.kinokawa.lg.jp/008/index.html",
           "observed_on": "http://www.city.kinokawa.lg.jp/",
           "fetched_at": "2026-08-27T07:19:50Z"
+        },
+        {
+          "url": "https://www.city.kinokawa.lg.jp/008/index.html",
+          "observed_on": "https://www.city.kinokawa.lg.jp/008/index.html",
+          "sha256": "a8c65ed618454dfca0019e8904eb4a6f6bb0572056d0ae45899e33e41df04c87",
+          "fetched_at": "2026-08-27T09:53:33Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kinokawa.lg.jp/008/index.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.kinokawa.lg.jp/008/index.html (label: 財政) 入口 https://www.city.kinokawa.lg.jp/008/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.kinokawa.lg.jp/008/index.html",
           "observed_on": "http://www.city.kinokawa.lg.jp/",
           "fetched_at": "2026-08-27T07:19:50Z"
+        },
+        {
+          "url": "https://www.city.kinokawa.lg.jp/008/index.html",
+          "observed_on": "https://www.city.kinokawa.lg.jp/008/index.html",
+          "sha256": "a8c65ed618454dfca0019e8904eb4a6f6bb0572056d0ae45899e33e41df04c87",
+          "fetched_at": "2026-08-27T09:53:33Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kinokawa.lg.jp/008/index.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.kinokawa.lg.jp/008/index.html (label: 財政) 入口 https://www.city.kinokawa.lg.jp/008/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

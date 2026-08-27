@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.tokamachi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:23Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
           "observed_on": "https://www.city.tokamachi.lg.jp/shisei_machizukuri/tokamachishigikai/index.html",
           "fetched_at": "2026-08-27T05:57:58Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:04:24Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html (label: )"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.tokamachi.lg.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tokamachi.lg.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.tokamachi.lg.jp/",
           "fetched_at": "2026-08-27T05:57:31Z"
+        },
+        {
+          "url": "https://www.city.tokamachi.lg.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.tokamachi.lg.jp/section/reiki_int/",
+          "sha256": "90e3e9496a2d91aa3bbcacbdbe0101c0f45ca8a4598ba56e1bb66fd0d374a6b8",
+          "fetched_at": "2026-08-27T10:04:19Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.tokamachi.lg.jp/section/reiki_int/reiki_menu.html (label: 例規集)"

@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.tomi.nagano.jp/file/185785.pdf (label: 議事録(pdf 167 kb))"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/tomi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:09:26Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/tomi/reiki_menu.html",
           "observed_on": "http://www.city.tomi.nagano.jp/",
           "fetched_at": "2026-08-27T07:00:32Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/tomi/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/tomi/",
+          "sha256": "8cff8dc79b546939a621b6dbb1c07d789d8f8368209ccc077a9f911120bddde5",
+          "fetched_at": "2026-08-27T10:09:37Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/tomi/reiki_menu.html (label: )"
@@ -46,9 +52,15 @@
           "url": "http://www.city.tomi.nagano.jp/category/zaisei/index.html",
           "observed_on": "http://www.city.tomi.nagano.jp/",
           "fetched_at": "2026-08-27T07:00:32Z"
+        },
+        {
+          "url": "https://www.city.tomi.nagano.jp/category/zaisei/index.html",
+          "observed_on": "https://www.city.tomi.nagano.jp/category/zaisei/index.html",
+          "sha256": "58dced0d6409b9454e4b654a8865000c14fa70c2c9b21b4a1bf50de2c01d5269",
+          "fetched_at": "2026-08-27T10:09:54Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tomi.nagano.jp/category/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.tomi.nagano.jp/category/zaisei/index.html (label: 財政) 入口 https://www.city.tomi.nagano.jp/category/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.tomi.nagano.jp/category/zaisei/index.html",
           "observed_on": "http://www.city.tomi.nagano.jp/",
           "fetched_at": "2026-08-27T07:00:32Z"
+        },
+        {
+          "url": "https://www.city.tomi.nagano.jp/category/zaisei/index.html",
+          "observed_on": "https://www.city.tomi.nagano.jp/category/zaisei/index.html",
+          "sha256": "58dced0d6409b9454e4b654a8865000c14fa70c2c9b21b4a1bf50de2c01d5269",
+          "fetched_at": "2026-08-27T10:09:54Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tomi.nagano.jp/category/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.tomi.nagano.jp/category/zaisei/index.html (label: 財政) 入口 https://www.city.tomi.nagano.jp/category/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

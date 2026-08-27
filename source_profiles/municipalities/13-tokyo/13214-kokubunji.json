@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.kokubunji.tokyo.jp/area/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:25:52Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kokubunji.tokyo.jp/area/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.kokubunji.tokyo.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:45:56Z"
+        },
+        {
+          "url": "http://www.city.kokubunji.tokyo.jp/area/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.kokubunji.tokyo.jp/area/reiki_int/",
+          "sha256": "c749f59713929eb69f9073ea6e7fc2b958bba735c97476839be1f97c5f0bc000",
+          "fetched_at": "2026-08-27T10:25:58Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.kokubunji.tokyo.jp/area/reiki_int/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "http://www.city.kokubunji.tokyo.jp/shisei/zaisei/yosan/index.html",
           "observed_on": "http://www.city.kokubunji.tokyo.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:45:56Z"
+        },
+        {
+          "url": "https://www.city.kokubunji.tokyo.jp/shisei/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.kokubunji.tokyo.jp/shisei/zaisei/yosan/index.html",
+          "sha256": "8e3346e9001581a5eaee826d02f38af798dedca2ce4e6a1b1eb9fec0ae1ecd55",
+          "fetched_at": "2026-08-27T10:26:06Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kokubunji.tokyo.jp/shisei/zaisei/yosan/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.kokubunji.tokyo.jp/shisei/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.kokubunji.tokyo.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "http://www.city.kokubunji.tokyo.jp/shisei/zaisei/kessan/index.html",
           "observed_on": "http://www.city.kokubunji.tokyo.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:45:56Z"
+        },
+        {
+          "url": "https://www.city.kokubunji.tokyo.jp/shisei/zaisei/kessan/index.html",
+          "observed_on": "https://www.city.kokubunji.tokyo.jp/shisei/zaisei/kessan/index.html",
+          "sha256": "bdd0eda6da9b662d47045cc82f2dacea02d0fe3f249905be3ea9d3213a0dc88a",
+          "fetched_at": "2026-08-27T10:26:09Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kokubunji.tokyo.jp/shisei/zaisei/kessan/index.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.kokubunji.tokyo.jp/shisei/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.kokubunji.tokyo.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

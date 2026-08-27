@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.chikusei.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/chikusei/MinuteSearch.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:26Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/chikusei/MinuteSearch.html",
           "observed_on": "http://www.city.chikusei.lg.jp/gyousei/gikai/",
           "fetched_at": "2026-08-27T06:07:08Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/chikusei/MinuteSearch.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/chikusei/MinuteSearch.html",
+          "sha256": "59ad7a8d29bf29f14b19bcd6d5994e5b32794a58df97e8637e16ae1d14981e76",
+          "fetched_at": "2026-08-27T10:17:28Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chikusei/MinuteSearch.html (label: 本会議会議録検索)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chikusei/MinuteSearch.html (label: 本会議会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "not_found",
@@ -39,9 +45,15 @@
           "url": "https://www.city.chikusei.lg.jp/data/doc/1779432759_doc_281_0.pdf",
           "observed_on": "https://www.city.chikusei.lg.jp/gyousei/gikai/gikai-news/page013700.html",
           "fetched_at": "2026-08-27T06:08:09Z"
+        },
+        {
+          "url": "https://www.city.chikusei.lg.jp/data/doc/1779432759_doc_281_0.pdf",
+          "observed_on": "https://www.city.chikusei.lg.jp/data/doc/1779432759_doc_281_0.pdf",
+          "sha256": "3ec6cb38a49f091c86f3490dfa3920413940e0a36b1f39b1a14880e9bd787390",
+          "fetched_at": "2026-08-27T10:17:29Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.chikusei.lg.jp/data/doc/1779432759_doc_281_0.pdf (label: 処分事件報告について（令和７年度筑西市一般会計補正予算（第10号））)"
+      "notes": "Observed budget link at https://www.city.chikusei.lg.jp/data/doc/1779432759_doc_281_0.pdf (label: 処分事件報告について（令和７年度筑西市一般会計補正予算（第10号））) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "not_found",

@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.osakasayama.osaka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/osakasayama/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:51:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/osakasayama/SpTop.html",
           "observed_on": "http://www.city.osakasayama.osaka.jp/",
           "fetched_at": "2026-08-27T06:37:05Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/osakasayama/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/osakasayama/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T09:51:12Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/osakasayama/SpTop.html (label: 議会会議録検索)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/osakasayama/SpTop.html (label: 議会会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/osakasayama/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:51:07Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/osakasayama/reiki_menu.html",
           "observed_on": "http://www.city.osakasayama.osaka.jp/",
           "fetched_at": "2026-08-27T06:37:05Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/osakasayama/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/osakasayama/",
+          "sha256": "cd4032da4f24200dfc12a57184bf7e7d7f681f7b669ef8af5efad33f30febfda",
+          "fetched_at": "2026-08-27T09:51:07Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/osakasayama/reiki_menu.html (label: 例規集)"

@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.aizuwakamatsu.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/aizuwakamatsu/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:36:42Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/aizuwakamatsu/SpTop.html",
           "observed_on": "http://www.city.aizuwakamatsu.fukushima.jp/",
           "fetched_at": "2026-08-27T07:50:00Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/aizuwakamatsu/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/aizuwakamatsu/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:36:42Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/aizuwakamatsu/SpTop.html (label: 会議録検索システム)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/aizuwakamatsu/SpTop.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.aizuwakamatsu.fukushima.jp/j/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:36:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.aizuwakamatsu.fukushima.jp/j/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.aizuwakamatsu.fukushima.jp/",
           "fetched_at": "2026-08-27T07:50:00Z"
+        },
+        {
+          "url": "https://www.city.aizuwakamatsu.fukushima.jp/j/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.aizuwakamatsu.fukushima.jp/j/reiki_int/",
+          "sha256": "421779d45c71f78977954eaf8f4bd21cd77d6bfac7202d5a7b4082c82b40323a",
+          "fetched_at": "2026-08-27T10:36:38Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.aizuwakamatsu.fukushima.jp/j/reiki_int/reiki_menu.html (label: 会津若松市例規集)"

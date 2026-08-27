@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.narashino.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.narashino.lg.jp/joho/shigikai/kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:23:14Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.narashino.lg.jp/joho/shigikai/kaigiroku.html",
           "observed_on": "https://www.city.narashino.lg.jp/joho/shigikai/index.html",
           "fetched_at": "2026-08-27T07:15:00Z"
+        },
+        {
+          "url": "https://www.city.narashino.lg.jp/joho/shigikai/kaigiroku.html",
+          "observed_on": "https://www.city.narashino.lg.jp/joho/shigikai/kaigiroku.html",
+          "sha256": "f307862d41493e54fdd7bec429c9d53aa297e5ffb140bfd160f40a20595c9d4d",
+          "fetched_at": "2026-08-27T10:23:16Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.narashino.lg.jp/joho/shigikai/kaigiroku.html (label: 会議録の検索・閲覧)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/narashino/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:22:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/narashino/reiki_menu.html",
           "observed_on": "https://www.city.narashino.lg.jp/joho/index.html",
           "fetched_at": "2026-08-27T07:14:21Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/narashino/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/narashino/",
+          "sha256": "de7e520c7b45f602a976a0b18cf303c39ade4eb6e0fd4388b4d8e18b3381507c",
+          "fetched_at": "2026-08-27T10:22:58Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/narashino/reiki_menu.html (label: 習志野市例規集)"
@@ -46,9 +58,15 @@
           "url": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html",
           "observed_on": "https://www.city.narashino.lg.jp/joho/index.html",
           "fetched_at": "2026-08-27T07:14:21Z"
+        },
+        {
+          "url": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html",
+          "observed_on": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html",
+          "sha256": "7de5aafb8685b221419544873d387fc06407f5bb047523aa33f5419e65caed63",
+          "fetched_at": "2026-08-27T10:23:17Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html (label: 財政・会計)"
+      "notes": "Observed finance section at https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html (label: 財政・会計) 入口 https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html",
           "observed_on": "https://www.city.narashino.lg.jp/joho/index.html",
           "fetched_at": "2026-08-27T07:14:21Z"
+        },
+        {
+          "url": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html",
+          "observed_on": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html",
+          "sha256": "7de5aafb8685b221419544873d387fc06407f5bb047523aa33f5419e65caed63",
+          "fetched_at": "2026-08-27T10:23:17Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html (label: 財政・会計)"
+      "notes": "Observed finance section at https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html (label: 財政・会計) 入口 https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

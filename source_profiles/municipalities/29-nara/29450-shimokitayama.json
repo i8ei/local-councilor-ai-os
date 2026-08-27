@@ -32,9 +32,20 @@
           "url": "http://www.vill.shimokitayama.nara.jp/yakuba/post_22.html",
           "observed_on": "https://www.vill.shimokitayama.nara.jp/yakuba/yakuba4.html",
           "fetched_at": "2026-08-27T07:14:44Z"
+        },
+        {
+          "url": "https://www.vill.shimokitayama.nara.jp/yakuba/post_22.html",
+          "observed_on": "https://www.vill.shimokitayama.nara.jp/yakuba/post_22.html",
+          "sha256": "757413f2e4b1b78b82a3a9a88baee6ce36200a693921842be6f39c08fb33248d",
+          "fetched_at": "2026-08-27T09:53:15Z"
+        },
+        {
+          "url": "http://www.vill.shimokitayama.nara.jp/yakuba/file/d9e222f6aab96d92071933863a2ae0e0194c391f.pdf",
+          "observed_on": "https://www.vill.shimokitayama.nara.jp/yakuba/post_22.html",
+          "fetched_at": "2026-08-27T09:53:09Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.shimokitayama.nara.jp/yakuba/post_22.html (label: 令和６年度予算書)"
+      "notes": "Observed budget link at http://www.vill.shimokitayama.nara.jp/yakuba/post_22.html (label: 令和６年度予算書) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
@@ -47,9 +58,15 @@
           "url": "http://www.vill.shimokitayama.nara.jp/yakuba/file/ad8fd3a43baae5db1fa2989efc7c1291a06eca5d.pdf",
           "observed_on": "https://www.vill.shimokitayama.nara.jp/yakuba/yakuba4.html",
           "fetched_at": "2026-08-27T07:14:44Z"
+        },
+        {
+          "url": "https://www.vill.shimokitayama.nara.jp/yakuba/file/ad8fd3a43baae5db1fa2989efc7c1291a06eca5d.pdf",
+          "observed_on": "https://www.vill.shimokitayama.nara.jp/yakuba/file/ad8fd3a43baae5db1fa2989efc7c1291a06eca5d.pdf",
+          "sha256": "faa127d77be944060a9e408f3ad052e2aec4954e27faec4a862fd8c2b9768c3e",
+          "fetched_at": "2026-08-27T09:53:21Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.shimokitayama.nara.jp/yakuba/file/ad8fd3a43baae5db1fa2989efc7c1291a06eca5d.pdf (label: 令和２年度決算・引き上げ分に係る地方消費税交付金使用用途明示資料)"
+      "notes": "Observed settlement link at http://www.vill.shimokitayama.nara.jp/yakuba/file/ad8fd3a43baae5db1fa2989efc7c1291a06eca5d.pdf (label: 令和２年度決算・引き上げ分に係る地方消費税交付金使用用途明示資料) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

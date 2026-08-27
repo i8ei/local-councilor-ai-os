@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.sango.nara.jp/site/kaigi-gijiroku/ (label: 会議録・議事録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.sango/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:52:44Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.sango/reiki_menu.html",
           "observed_on": "http://www.town.sango.nara.jp/",
           "fetched_at": "2026-08-27T07:03:40Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.sango/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.sango/",
+          "sha256": "14b71dc230148b73912e0cdd3b2f9cecbbeefca2c50a541de7aae6e0cc1dae66",
+          "fetched_at": "2026-08-27T09:52:46Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.sango/reiki_menu.html (label: 例規集)"

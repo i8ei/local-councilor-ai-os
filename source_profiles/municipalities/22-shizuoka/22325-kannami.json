@@ -6,19 +6,25 @@
   "official_home_url": "http://www.town.kannami.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/kannami/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:14:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/kannami/SpTop.html",
           "observed_on": "https://www.town.kannami.shizuoka.jp/gikai/815.html",
           "fetched_at": "2026-08-27T07:56:15Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/kannami/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/kannami/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:14:54Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kannami/SpTop.html (label: 函南町議会会議録検索システム)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kannami/SpTop.html (label: 函南町議会会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -33,7 +39,7 @@
           "fetched_at": "2026-08-27T07:51:02Z"
         }
       ],
-      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.kannami.shizuoka/reiki_menu.html (label: 例規集)"
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.kannami.shizuoka/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "https://www.town.kannami.shizuoka.jp/material/files/group/19/R08-3-yosan.pdf",
           "observed_on": "https://www.town.kannami.shizuoka.jp/gikai/815.html",
           "fetched_at": "2026-08-27T07:56:15Z"
+        },
+        {
+          "url": "https://www.town.kannami.shizuoka.jp/material/files/group/19/R08-3-yosan.pdf",
+          "observed_on": "https://www.town.kannami.shizuoka.jp/material/files/group/19/R08-3-yosan.pdf",
+          "sha256": "e310311fcfecb611395e39ea5cb57a239e535a065375d401b371e98247551f7a",
+          "fetched_at": "2026-08-27T10:14:56Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kannami.shizuoka.jp/material/files/group/19/R08-3-yosan.pdf (label: 令和8年度予算分科会審査報告書 (PDFファイル: 332.9KB))"
+      "notes": "Observed budget link at https://www.town.kannami.shizuoka.jp/material/files/group/19/R08-3-yosan.pdf (label: 令和8年度予算分科会審査報告書 (PDFファイル: 332.9KB)) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.kannami.shizuoka.jp/material/files/group/19/kessann.pdf",
           "observed_on": "https://www.town.kannami.shizuoka.jp/gikai/815.html",
           "fetched_at": "2026-08-27T07:56:15Z"
+        },
+        {
+          "url": "https://www.town.kannami.shizuoka.jp/material/files/group/19/kessann.pdf",
+          "observed_on": "https://www.town.kannami.shizuoka.jp/material/files/group/19/kessann.pdf",
+          "sha256": "f356cc1dd075edcbf373f77199d27ab441063408e30b4517ab41971b37cad4cd",
+          "fetched_at": "2026-08-27T10:14:57Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.kannami.shizuoka.jp/material/files/group/19/kessann.pdf (label: 令和6年度決算分科会審査報告書 (PDFファイル: 309.7KB))"
+      "notes": "Observed settlement link at https://www.town.kannami.shizuoka.jp/material/files/group/19/kessann.pdf (label: 令和6年度決算分科会審査報告書 (PDFファイル: 309.7KB)) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

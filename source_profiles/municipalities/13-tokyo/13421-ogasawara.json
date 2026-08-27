@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.vill.ogasawara.tokyo.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:26:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.ogasawara.tokyo.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.vill.ogasawara.tokyo.jp/",
           "fetched_at": "2026-08-27T07:56:00Z"
+        },
+        {
+          "url": "http://www.vill.ogasawara.tokyo.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.ogasawara.tokyo.jp/reiki_int/",
+          "sha256": "e42f74a03cb39d2d772bc0d13fe6e2b381256690222c538513df6a7a4ed13b4d",
+          "fetched_at": "2026-08-27T10:26:40Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.vill.ogasawara.tokyo.jp/reiki_int/reiki_menu.html (label: )"
@@ -39,9 +45,15 @@
           "url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
           "observed_on": "http://www.vill.ogasawara.tokyo.jp/",
           "fetched_at": "2026-08-27T07:56:00Z"
+        },
+        {
+          "url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
+          "observed_on": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
+          "sha256": "49981cfa1d717bd9692fe78d5d161d223d20d9ed066b8ba28cd0b0302056fd61",
+          "fetched_at": "2026-08-27T10:26:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.ogasawara.tokyo.jp/zaisei/ (label: 財政課)"
+      "notes": "Observed finance section at https://www.vill.ogasawara.tokyo.jp/zaisei/ (label: 財政課) 入口 https://www.vill.ogasawara.tokyo.jp/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
           "observed_on": "http://www.vill.ogasawara.tokyo.jp/",
           "fetched_at": "2026-08-27T07:56:00Z"
+        },
+        {
+          "url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
+          "observed_on": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
+          "sha256": "49981cfa1d717bd9692fe78d5d161d223d20d9ed066b8ba28cd0b0302056fd61",
+          "fetched_at": "2026-08-27T10:26:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.ogasawara.tokyo.jp/zaisei/ (label: 財政課)"
+      "notes": "Observed finance section at https://www.vill.ogasawara.tokyo.jp/zaisei/ (label: 財政課) 入口 https://www.vill.ogasawara.tokyo.jp/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

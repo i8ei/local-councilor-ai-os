@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.watarai.lg.jp/category_list.php?frmCd=8-6-0-0-0 (label: 定例会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/watarai/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:48:58Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/watarai/reiki_menu.html",
           "observed_on": "http://www.town.watarai.lg.jp/",
           "fetched_at": "2026-08-27T06:03:47Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/watarai/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/watarai/",
+          "sha256": "07b3076b56c985db27f823f3a59f787482a461d0d3588bc405e31cef10fb67e6",
+          "fetched_at": "2026-08-27T09:49:00Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/watarai/reiki_menu.html (label: )"

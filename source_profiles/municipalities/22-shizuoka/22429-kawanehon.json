@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.kawanehon.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.kawanehon.shizuoka.jp/chosei/iinnkai_kaigi/kaigi/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:15:06Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kawanehon.shizuoka.jp/chosei/iinnkai_kaigi/kaigi/index.html",
           "observed_on": "https://www.town.kawanehon.shizuoka.jp/chosei/index.html",
           "fetched_at": "2026-08-27T07:53:23Z"
+        },
+        {
+          "url": "https://www.town.kawanehon.shizuoka.jp/chosei/iinnkai_kaigi/kaigi/index.html",
+          "observed_on": "https://www.town.kawanehon.shizuoka.jp/chosei/iinnkai_kaigi/kaigi/index.html",
+          "sha256": "efd1e4e0394fd276100fccdeadf3014ef06649ab30d7e2dc57fa6043ec30cc67",
+          "fetched_at": "2026-08-27T10:15:07Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.kawanehon.shizuoka.jp/chosei/iinnkai_kaigi/kaigi/index.html (label: 会議録の公表)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.kawanehon.shizuoka.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:14:55Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kawanehon.shizuoka.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.kawanehon.shizuoka.jp/",
           "fetched_at": "2026-08-27T07:52:55Z"
+        },
+        {
+          "url": "http://www.town.kawanehon.shizuoka.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.kawanehon.shizuoka.jp/section/reiki_int/",
+          "sha256": "acf95e8885d651a14a63ffbeeec33a9b1cbe79f0a4b4d119ad414d2fce18cd9b",
+          "fetched_at": "2026-08-27T10:15:01Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.kawanehon.shizuoka.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "https://www.town.kawanehon.shizuoka.jp/chosei/tyousei_1/16191.html",
           "observed_on": "https://www.town.kawanehon.shizuoka.jp/chosei/index.html",
           "fetched_at": "2026-08-27T07:53:23Z"
+        },
+        {
+          "url": "https://www.town.kawanehon.shizuoka.jp/chosei/tyousei_1/16191.html",
+          "observed_on": "https://www.town.kawanehon.shizuoka.jp/chosei/tyousei_1/16191.html",
+          "sha256": "0a613563b0a62772b79f9b9b3dd8a01ad6318a3eff9558e5cd43af23689dd400",
+          "fetched_at": "2026-08-27T10:15:10Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kawanehon.shizuoka.jp/chosei/tyousei_1/16191.html (label: 年度別予算書一覧)"
+      "notes": "Observed budget link at https://www.town.kawanehon.shizuoka.jp/chosei/tyousei_1/16191.html (label: 年度別予算書一覧) 入口 https://www.town.kawanehon.shizuoka.jp/chosei/tyousei_1/16191.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.town.kawanehon.shizuoka.jp/chosei/1/16301.html",
           "observed_on": "https://www.town.kawanehon.shizuoka.jp/chosei/index.html",
           "fetched_at": "2026-08-27T07:53:23Z"
+        },
+        {
+          "url": "https://www.town.kawanehon.shizuoka.jp/chosei/1/16301.html",
+          "observed_on": "https://www.town.kawanehon.shizuoka.jp/chosei/1/16301.html",
+          "sha256": "23acf6e9a538040bea520f3cc1542b414781fd39b42279c0da88c49947a00bde",
+          "fetched_at": "2026-08-27T10:15:11Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.kawanehon.shizuoka.jp/chosei/1/16301.html (label: 令和6年度決算財政状況資料集を公表します)"
+      "notes": "Observed settlement link at https://www.town.kawanehon.shizuoka.jp/chosei/1/16301.html (label: 令和6年度決算財政状況資料集を公表します) 入口 https://www.town.kawanehon.shizuoka.jp/chosei/1/16301.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.mima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.mima.lg.jp/gyosei/shisei/gikai/kaigiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.mima.lg.jp/gyosei/shisei/gikai/kaigiroku/",
           "observed_on": "http://www.city.mima.lg.jp/gyosei/shisei/gikai/",
           "fetched_at": "2026-08-27T06:43:18Z"
+        },
+        {
+          "url": "http://www.city.mima.lg.jp/gyosei/shisei/gikai/kaigiroku/",
+          "observed_on": "http://www.city.mima.lg.jp/gyosei/shisei/gikai/kaigiroku/",
+          "sha256": "6cc6792989d27d4d89636fc782316f47726b50e4ef0b4fb4c11ee14168ea4ba2",
+          "fetched_at": "2026-08-27T09:46:02Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.mima.lg.jp/gyosei/shisei/gikai/kaigiroku/ (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.mima.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:49Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.mima.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.mima.lg.jp/gyosei/",
           "fetched_at": "2026-08-27T06:39:35Z"
+        },
+        {
+          "url": "https://www.city.mima.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.mima.lg.jp/reiki_int/",
+          "sha256": "987522131804efd8c938487497103ffcf90c138f216c7e6bece036d343c2405c",
+          "fetched_at": "2026-08-27T09:45:51Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.mima.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"

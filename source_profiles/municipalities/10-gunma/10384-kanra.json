@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.kanra.lg.jp/gikai/kaigiroku/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/kanra/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:19:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/kanra/reiki_menu.html",
           "observed_on": "https://www.town.kanra.lg.jp/",
           "fetched_at": "2026-08-27T06:39:27Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/kanra/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/kanra/",
+          "sha256": "e3e72a913a8c5ef1cba93c49bc9a0cf665cf59057b108aa247c16dd0cd79944f",
+          "fetched_at": "2026-08-27T10:19:38Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kanra/reiki_menu.html (label: 甘楽町例規集)"

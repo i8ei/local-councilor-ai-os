@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.mashiko.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mashiko.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "https://www.town.mashiko.lg.jp/",
           "fetched_at": "2026-08-27T06:21:40Z"
+        },
+        {
+          "url": "https://www.town.mashiko.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.mashiko.lg.jp/reiki_int/",
+          "sha256": "d6ed57ba98957a01eab8861788fe41c68a685f498325d852e2ef71852ea46591",
+          "fetched_at": "2026-08-27T10:18:14Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.mashiko.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "https://www.town.mashiko.lg.jp/page/dir003535.html",
           "observed_on": "https://www.town.mashiko.lg.jp/page/dir000003.html",
           "fetched_at": "2026-08-27T06:22:09Z"
+        },
+        {
+          "url": "https://www.town.mashiko.lg.jp/page/dir003535.html",
+          "observed_on": "https://www.town.mashiko.lg.jp/page/dir003535.html",
+          "sha256": "2848c532993fcabe9e95b765d70d0478b8a20f6023ff0412857b220b361edfa7",
+          "fetched_at": "2026-08-27T10:18:20Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.mashiko.lg.jp/page/dir003535.html (label: 当初予算書)"
+      "notes": "Observed budget link at https://www.town.mashiko.lg.jp/page/dir003535.html (label: 当初予算書) 入口 https://www.town.mashiko.lg.jp/page/dir003535.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,20 @@
           "url": "https://www.town.mashiko.lg.jp/page/page000394.html",
           "observed_on": "https://www.town.mashiko.lg.jp/page/dir000003.html",
           "fetched_at": "2026-08-27T06:22:09Z"
+        },
+        {
+          "url": "https://www.town.mashiko.lg.jp/page/page000394.html",
+          "observed_on": "https://www.town.mashiko.lg.jp/page/page000394.html",
+          "sha256": "8feefb8e6b1fd3dd3c52fbed19ea4216fdda4252a160ecff30a7b6f4506d9b64",
+          "fetched_at": "2026-08-27T10:18:21Z"
+        },
+        {
+          "url": "https://www.town.mashiko.lg.jp/data/doc/1758095012_doc_94_0.pdf",
+          "observed_on": "https://www.town.mashiko.lg.jp/page/page000394.html",
+          "fetched_at": "2026-08-27T10:18:20Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.mashiko.lg.jp/page/page000394.html (label: 決算概要（年度別）)"
+      "notes": "Observed settlement link at https://www.town.mashiko.lg.jp/page/page000394.html (label: 決算概要（年度別）) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

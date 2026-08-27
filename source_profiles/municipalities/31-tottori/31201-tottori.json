@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.tottori.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:42:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
           "observed_on": "http://www.city.tottori.lg.jp/site/shigikai/",
           "fetched_at": "2026-08-27T05:57:42Z"
+        },
+        {
+          "url": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
+          "observed_on": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
+          "sha256": "26ed1aedb054cfe939ae6e844a963eb5ff1a96861501d6ccf537d1f57623e5bd",
+          "fetched_at": "2026-08-27T09:42:37Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.tottori.tottori.dbsr.jp/index.php/ (label: )"
+      "notes": "Observed dbsr at https://www.city.tottori.tottori.dbsr.jp/index.php/ (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.tottori/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:42:30Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.tottori/reiki_menu.html",
           "observed_on": "http://www.city.tottori.lg.jp/",
           "fetched_at": "2026-08-27T05:56:32Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.tottori/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.tottori/",
+          "sha256": "a204675029ddfccc35ccc6cf68ec5b2bb4f500778f9ca1e478a3bc3e9e08bdce",
+          "fetched_at": "2026-08-27T09:42:30Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.tottori/reiki_menu.html (label: 条例・規則（例規集）)"

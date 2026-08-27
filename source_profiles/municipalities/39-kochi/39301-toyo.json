@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.toyo.kochi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.toyo.kochi.jp/gikai-toyo/kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:47:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.toyo.kochi.jp/gikai-toyo/kaigiroku.html",
           "observed_on": "http://www.town.toyo.kochi.jp/gikai-toyo/",
           "fetched_at": "2026-08-27T07:11:08Z"
+        },
+        {
+          "url": "http://www.town.toyo.kochi.jp/gikai-toyo/kaigiroku.html",
+          "observed_on": "http://www.town.toyo.kochi.jp/gikai-toyo/kaigiroku.html",
+          "sha256": "d8206b4d681a53a542456b630c79221d5ad49803c10b0f6b2c87825993c11647",
+          "fetched_at": "2026-08-27T09:47:22Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.toyo.kochi.jp/gikai-toyo/kaigiroku.html (label: 会議録の閲覧)"
@@ -39,9 +45,15 @@
           "url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
           "observed_on": "http://www.town.toyo.kochi.jp/contents/a02b07.php",
           "fetched_at": "2026-08-27T07:10:43Z"
+        },
+        {
+          "url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+          "observed_on": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+          "sha256": "05d91b1aca1b7c9d0a11d95e76783e10eee204fbf318b8b5afd9ff0285182bd6",
+          "fetched_at": "2026-08-27T09:47:24Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.toyo.kochi.jp/contents/info0541.php (label: 財政状況資料集)"
+      "notes": "Observed finance section at http://www.town.toyo.kochi.jp/contents/info0541.php (label: 財政状況資料集) 入口 http://www.town.toyo.kochi.jp/contents/info0541.php に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,20 @@
           "url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
           "observed_on": "http://www.town.toyo.kochi.jp/contents/a02b07.php",
           "fetched_at": "2026-08-27T07:10:43Z"
+        },
+        {
+          "url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+          "observed_on": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+          "sha256": "05d91b1aca1b7c9d0a11d95e76783e10eee204fbf318b8b5afd9ff0285182bd6",
+          "fetched_at": "2026-08-27T09:47:24Z"
+        },
+        {
+          "url": "http://www.town.toyo.kochi.jp/pbfile/m000541/pbf20220302165015.pdf",
+          "observed_on": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+          "fetched_at": "2026-08-27T09:47:24Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.toyo.kochi.jp/contents/info0541.php (label: 財政状況資料集)"
+      "notes": "Observed finance section at http://www.town.toyo.kochi.jp/contents/info0541.php (label: 財政状況資料集) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

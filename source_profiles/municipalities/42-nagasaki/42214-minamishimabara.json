@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.minamishimabara.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/minamishimabara/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:37:48Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/minamishimabara/SpTop.html",
           "observed_on": "https://www.city.minamishimabara.lg.jp/gikai/default.html",
           "fetched_at": "2026-08-27T05:26:22Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/minamishimabara/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/minamishimabara/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T09:37:48Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/minamishimabara/SpTop.html (label: 会議録の検索と閲覧)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/minamishimabara/SpTop.html (label: 会議録の検索と閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.minamishimabara/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:37:29Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.minamishimabara/reiki_menu.html",
           "observed_on": "https://www.city.minamishimabara.lg.jp/default.html",
           "fetched_at": "2026-08-27T05:26:10Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.minamishimabara/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.minamishimabara/",
+          "sha256": "fce0ca4ad25984fc3c1de3a923fe946158a57174a5895218d751152e3f455914",
+          "fetched_at": "2026-08-27T09:37:33Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.minamishimabara/reiki_menu.html (label: 条例・規則（例規集）)"

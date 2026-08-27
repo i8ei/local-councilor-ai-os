@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.masuda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.masuda.lg.jp/shiseijoho/masudashigikai/kaigirokukensaku_gikaichukei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:42:58Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.masuda.lg.jp/shiseijoho/masudashigikai/kaigirokukensaku_gikaichukei/index.html",
           "observed_on": "https://www.city.masuda.lg.jp/shiseijoho/masudashigikai/index.html",
           "fetched_at": "2026-08-27T06:08:28Z"
+        },
+        {
+          "url": "https://www.city.masuda.lg.jp/shiseijoho/masudashigikai/kaigirokukensaku_gikaichukei/index.html",
+          "observed_on": "https://www.city.masuda.lg.jp/shiseijoho/masudashigikai/kaigirokukensaku_gikaichukei/index.html",
+          "sha256": "56a73d9641aa4b4f315d897fd6c9e87e679dda87b7c029d9670bfda741b6b813",
+          "fetched_at": "2026-08-27T09:43:00Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.masuda.lg.jp/shiseijoho/masudashigikai/kaigirokukensaku_gikaichukei/index.html (label: 会議録検索・議会中継)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/masuda/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:42:51Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/masuda/reiki_menu.html",
           "observed_on": "http://www.city.masuda.lg.jp/",
           "fetched_at": "2026-08-27T06:05:12Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/masuda/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/masuda/",
+          "sha256": "67e0a9136b214a9c847a25f79a99eae09ab5b8b50e21aa6240f4eaaea8ca26ae",
+          "fetched_at": "2026-08-27T09:42:52Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/masuda/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html",
           "observed_on": "https://www.city.masuda.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T06:05:37Z"
+        },
+        {
+          "url": "https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html",
+          "sha256": "403154e2a6daa694da9320b0f1a567e8e42accbefef613850a9539574cff25ef",
+          "fetched_at": "2026-08-27T09:43:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html",
           "observed_on": "https://www.city.masuda.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T06:05:37Z"
+        },
+        {
+          "url": "https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html",
+          "sha256": "403154e2a6daa694da9320b0f1a567e8e42accbefef613850a9539574cff25ef",
+          "fetched_at": "2026-08-27T09:43:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.masuda.lg.jp/shiseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

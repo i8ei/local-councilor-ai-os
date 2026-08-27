@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.nagomi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.nagomi.lg.jp/chougikai/kaigiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:38:29Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nagomi.lg.jp/chougikai/kaigiroku/",
           "observed_on": "http://www.town.nagomi.lg.jp/chougikai",
           "fetched_at": "2026-08-27T05:38:50Z"
+        },
+        {
+          "url": "http://www.town.nagomi.lg.jp/chougikai/kaigiroku/",
+          "observed_on": "http://www.town.nagomi.lg.jp/chougikai/kaigiroku/",
+          "sha256": "af0420003c9f8c3785e71d3f161bee98de0ee5ea98f9bda2058a6028eb4e5af9",
+          "fetched_at": "2026-08-27T09:38:35Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.nagomi.lg.jp/chougikai/kaigiroku/ (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.nagomi.lg.jp/nagomitown/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:38:23Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nagomi.lg.jp/nagomitown/reiki/reiki_menu.html",
           "observed_on": "http://www.town.nagomi.lg.jp/",
           "fetched_at": "2026-08-27T05:38:46Z"
+        },
+        {
+          "url": "https://www.town.nagomi.lg.jp/nagomitown/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.nagomi.lg.jp/nagomitown/reiki/",
+          "sha256": "1a37c61391f3c1a8ba8dac272ffa1b2bb653b9f98b1510b79280ce95a4f8433b",
+          "fetched_at": "2026-08-27T09:38:24Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.nagomi.lg.jp/nagomitown/reiki/reiki_menu.html (label: 例規集)"

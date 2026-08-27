@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.ohi.fukui.jp/1002/1007/1218/83/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/ohi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:07:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/ohi/reiki_menu.html",
           "observed_on": "https://www.town.ohi.fukui.jp/",
           "fetched_at": "2026-08-27T06:26:34Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/ohi/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/ohi/",
+          "sha256": "185c7d18ffefaafd14e77f91e8e3910f95bdd42d0e8f67133a6d1191101e0b77",
+          "fetched_at": "2026-08-27T10:07:31Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/ohi/reiki_menu.html (label: )"

@@ -6,31 +6,43 @@
   "official_home_url": "https://www.town.yahaba.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/gijiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:33:08Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/gijiroku/",
           "observed_on": "https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/top/",
           "fetched_at": "2026-08-27T07:12:03Z"
+        },
+        {
+          "url": "https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/gijiroku/",
+          "observed_on": "https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/gijiroku/",
+          "sha256": "94b4d55aa8bb43cdcd017ae21aca2df83aa2f70c63b8afbb2750681193b58035",
+          "fetched_at": "2026-08-27T10:33:10Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/gijiroku/ (label: 会議議事録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.yahaba.iwate.jp/contents/18reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:33:02Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yahaba.iwate.jp/contents/18reiki/reiki_menu.html",
           "observed_on": "https://www.town.yahaba.iwate.jp/",
           "fetched_at": "2026-08-27T07:11:19Z"
+        },
+        {
+          "url": "https://www.town.yahaba.iwate.jp/contents/18reiki/reiki_menu.html",
+          "observed_on": "https://www.town.yahaba.iwate.jp/contents/18reiki/",
+          "sha256": "879c15dc1f51b018cf16251b41f3696ba5728ac41c4f6aad6fa49d2607d7cb58",
+          "fetched_at": "2026-08-27T10:33:04Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.yahaba.iwate.jp/contents/18reiki/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
           "observed_on": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/kurashi/2022032000016/",
           "fetched_at": "2026-08-27T07:12:47Z"
+        },
+        {
+          "url": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
+          "observed_on": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
+          "sha256": "266e0fb94e56c35bdb9f252a48f77fed49dc116254cce30ebb711f7dbabad8ae",
+          "fetched_at": "2026-08-27T10:33:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yahaba.iwate.jp/soshiki/kikaku/ (label: 企画財政課)"
+      "notes": "Observed finance section at https://www.town.yahaba.iwate.jp/soshiki/kikaku/ (label: 企画財政課) 入口 https://www.town.yahaba.iwate.jp/soshiki/kikaku/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
           "observed_on": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/kurashi/2022032000016/",
           "fetched_at": "2026-08-27T07:12:47Z"
+        },
+        {
+          "url": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
+          "observed_on": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
+          "sha256": "266e0fb94e56c35bdb9f252a48f77fed49dc116254cce30ebb711f7dbabad8ae",
+          "fetched_at": "2026-08-27T10:33:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yahaba.iwate.jp/soshiki/kikaku/ (label: 企画財政課)"
+      "notes": "Observed finance section at https://www.town.yahaba.iwate.jp/soshiki/kikaku/ (label: 企画財政課) 入口 https://www.town.yahaba.iwate.jp/soshiki/kikaku/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

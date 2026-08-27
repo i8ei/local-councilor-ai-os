@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.kofu.yamanashi.jp/shise/gikai/kaigiroku/index.html (label: 会議録の検索と閲覧)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/kofu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:07:14Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/kofu/reiki_menu.html",
           "observed_on": "http://www.city.kofu.yamanashi.jp/",
           "fetched_at": "2026-08-27T06:26:50Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/kofu/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/kofu/",
+          "sha256": "f7e65be11f743f0d3908616d4df3227695c5551af502f1adc0ff7faf3127153c",
+          "fetched_at": "2026-08-27T10:07:36Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kofu/reiki_menu.html (label: 例規集)"

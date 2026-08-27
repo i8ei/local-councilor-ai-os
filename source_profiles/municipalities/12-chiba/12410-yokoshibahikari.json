@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.yokoshibahikari.chiba.jp/site/gikai/list20-138.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/yokoshibahikari/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:24:23Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/yokoshibahikari/reiki_menu.html",
           "observed_on": "http://www.town.yokoshibahikari.chiba.jp/",
           "fetched_at": "2026-08-27T07:26:56Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/yokoshibahikari/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/yokoshibahikari/",
+          "sha256": "1fa2221f1807dc21b7e88297d35dc7333ebe0b9be49b5ee26bbbe94025b82bbc",
+          "fetched_at": "2026-08-27T10:24:34Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/yokoshibahikari/reiki_menu.html (label: 例規集)"

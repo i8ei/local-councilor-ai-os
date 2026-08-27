@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.yashio.lg.jp/gikai/index.html (label: 八潮市議会 会議日程、議会名簿、会議録の検索など)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.yashio.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:21:06Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yashio.lg.jp/reiki/reiki_menu.html",
           "observed_on": "http://www.city.yashio.lg.jp/",
           "fetched_at": "2026-08-27T06:57:19Z"
+        },
+        {
+          "url": "https://www.city.yashio.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.yashio.lg.jp/reiki/",
+          "sha256": "2b1873b5a516066babf63c4ef5bbdd7b8f7d470f6b4d9fa1dd44c5699b3297bf",
+          "fetched_at": "2026-08-27T10:21:07Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.yashio.lg.jp/reiki/reiki_menu.html (label: 八潮市例規集)"

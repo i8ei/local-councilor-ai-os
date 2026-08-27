@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.onomichi.hiroshima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/onomichi/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:44:41Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/onomichi/pg/index.html",
           "observed_on": "http://www.city.onomichi.hiroshima.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:26:26Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/onomichi/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/onomichi/pg/index.html",
+          "sha256": "8bcdc995804965afdf2c35bd5ad89d6f2fe4278f86719524830f482a5d107a0e",
+          "fetched_at": "2026-08-27T09:44:46Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/onomichi/pg/index.html (label: )"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/onomichi/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

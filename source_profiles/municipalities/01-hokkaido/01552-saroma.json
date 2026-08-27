@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.saroma.hokkaido.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:31:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.saroma.hokkaido.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.saroma.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:38:52Z"
+        },
+        {
+          "url": "https://www.town.saroma.hokkaido.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.saroma.hokkaido.jp/reiki_int/",
+          "sha256": "a0ba5b429701f00d09990950a53165af2dbe276f33ff35ce65186a3fb525f191",
+          "fetched_at": "2026-08-27T10:31:14Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.saroma.hokkaido.jp/reiki_int/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
           "observed_on": "http://www.town.saroma.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:38:52Z"
+        },
+        {
+          "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+          "sha256": "ae69f10b597ef2e6e9d8bf7b26389c470893846b4b947b0e980e6589318b0eb0",
+          "fetched_at": "2026-08-27T10:31:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ (label: 企画財政課)"
+      "notes": "Observed finance section at http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ (label: 企画財政課) 入口 http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
           "observed_on": "http://www.town.saroma.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:38:52Z"
+        },
+        {
+          "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+          "sha256": "ae69f10b597ef2e6e9d8bf7b26389c470893846b4b947b0e980e6589318b0eb0",
+          "fetched_at": "2026-08-27T10:31:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ (label: 企画財政課)"
+      "notes": "Observed finance section at http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ (label: 企画財政課) 入口 http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.shikama.miyagi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2363.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:34:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2363.html",
           "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/index.html",
           "fetched_at": "2026-08-27T07:26:22Z"
+        },
+        {
+          "url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2363.html",
+          "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/2363.html",
+          "sha256": "d172bc3bf88c5d9ba0cdedd8cedbdb71736b1c2fdd595887b3080d622406f5ec",
+          "fetched_at": "2026-08-27T10:34:14Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.shikama.miyagi.jp/chosei/gikai/2363.html (label: 会議録・議事録)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
           "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/index.html",
           "fetched_at": "2026-08-27T07:26:22Z"
+        },
+        {
+          "url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
+          "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
+          "sha256": "48de237f355d3987a07f06efaab781c98273b312ea96cafd7754dd2e31a94cb4",
+          "fetched_at": "2026-08-27T10:34:17Z"
+        },
+        {
+          "url": "https://www.town.shikama.miyagi.jp/material/files/group/15/yosanR70310.pdf",
+          "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
+          "fetched_at": "2026-08-27T10:34:15Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html (label: 予算・決算特別委員会会議録)"
+      "notes": "Observed budget link at https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html (label: 予算・決算特別委員会会議録) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
           "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/index.html",
           "fetched_at": "2026-08-27T07:26:22Z"
+        },
+        {
+          "url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
+          "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
+          "sha256": "48de237f355d3987a07f06efaab781c98273b312ea96cafd7754dd2e31a94cb4",
+          "fetched_at": "2026-08-27T10:34:17Z"
+        },
+        {
+          "url": "https://www.town.shikama.miyagi.jp/material/files/group/15/kextusanR6-1.pdf",
+          "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
+          "fetched_at": "2026-08-27T10:34:19Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html (label: 予算・決算特別委員会会議録)"
+      "notes": "Observed settlement link at https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html (label: 予算・決算特別委員会会議録) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

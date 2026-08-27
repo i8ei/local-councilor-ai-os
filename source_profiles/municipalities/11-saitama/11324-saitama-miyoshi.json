@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.saitama-miyoshi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:21:51Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html",
           "observed_on": "http://www.town.saitama-miyoshi.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T07:03:04Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:21:52Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html (label: 本会議 会議録検索)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html (label: 本会議 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/saitama-miyoshi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:21:32Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/saitama-miyoshi/reiki_menu.html",
           "observed_on": "http://www.town.saitama-miyoshi.lg.jp/",
           "fetched_at": "2026-08-27T07:02:01Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/saitama-miyoshi/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/saitama-miyoshi/",
+          "sha256": "549b5eb4ab288edb334762f5a82a76b4d90f9ecdcea3f224138b278d888d9f90",
+          "fetched_at": "2026-08-27T10:21:40Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/saitama-miyoshi/reiki_menu.html (label: 町例規集 （外部サイト）)"

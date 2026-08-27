@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.tomisato.lg.jp/category/2-3-8-0-0-0-0-0-0-0.html (label: 市議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.tomisato/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:23:28Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.tomisato/reiki_menu.html",
           "observed_on": "http://www.city.tomisato.lg.jp/",
           "fetched_at": "2026-08-27T07:21:16Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.tomisato/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.tomisato/",
+          "sha256": "83b345e9f07ef6867159cec7a694633daac06e7634046dd4b02640bb89b7e6d5",
+          "fetched_at": "2026-08-27T10:23:35Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.tomisato/reiki_menu.html (label: 例規集)"

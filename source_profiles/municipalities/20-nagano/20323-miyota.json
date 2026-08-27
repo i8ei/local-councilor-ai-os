@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.miyota.nagano.jp/category/kaigiroku/index.html (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.miyota.nagano/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:09:44Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.miyota.nagano/reiki_menu.html",
           "observed_on": "http://www.town.miyota.nagano.jp/index2.html",
           "fetched_at": "2026-08-27T07:04:30Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.miyota.nagano/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.miyota.nagano/",
+          "sha256": "ca2cb6608f745b6b79c7ff3fa3400f1a886e880a8ad159185e1bc0abf8fa47fb",
+          "fetched_at": "2026-08-27T10:09:46Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.miyota.nagano/reiki_menu.html (label: 御代田町例規集)"

@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.chikugo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/chikugo/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:37Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/chikugo/pg/index.html",
           "observed_on": "http://www.city.chikugo.lg.jp/gikai.html",
           "fetched_at": "2026-08-27T04:10:32Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/chikugo/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/chikugo/pg/index.html",
+          "sha256": "e9a232c5eab9c00014c8725d7f200e6cdb3542c14ae6741892fcb1052e541419",
+          "fetched_at": "2026-08-27T09:35:43Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chikugo/pg/index.html (label: 会議録)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chikugo/pg/index.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.chikugo.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:27Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chikugo.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.chikugo.lg.jp/",
           "fetched_at": "2026-08-27T04:10:29Z"
+        },
+        {
+          "url": "http://www.city.chikugo.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.chikugo.lg.jp/reiki_int/",
+          "sha256": "d1734f87698f8cef979383d609f532f9e47cc291463a0585277fff018dc576d2",
+          "fetched_at": "2026-08-27T09:35:33Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.chikugo.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"

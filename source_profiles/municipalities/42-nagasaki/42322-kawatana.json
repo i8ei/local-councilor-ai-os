@@ -21,34 +21,46 @@
       "notes": "Observed council minutes index at http://www.kawatana.jp/cat05/c5-11/post_267/index.html (label: 04.会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/kawatana/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:37:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/kawatana/reiki_menu.html",
           "observed_on": "http://www.kawatana.jp/",
           "fetched_at": "2026-08-27T05:27:39Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/kawatana/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kawatana/",
+          "sha256": "418e0362b4eb5a550c8c3c35d92a9ea2891d671ee39ccae77ed94162c2e06a9f",
+          "fetched_at": "2026-08-27T09:37:40Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kawatana/reiki_menu.html (label: 川棚町の例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "official_document_index",
       "index_url": "http://www.kawatana.jp/cat05/c5-02/2pdf_104kb/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:37:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.kawatana.jp/cat05/c5-02/2pdf_104kb/index.html",
           "observed_on": "http://www.kawatana.jp/cat05/index.html",
           "fetched_at": "2026-08-27T06:07:10Z"
+        },
+        {
+          "url": "http://www.kawatana.jp/cat05/c5-02/2pdf_104kb/index.html",
+          "observed_on": "http://www.kawatana.jp/cat05/c5-02/2pdf_104kb/index.html",
+          "sha256": "8c2d6667ed35bccff9a53a1f84083017c4115bb4b20acda4afac39081772d581",
+          "fetched_at": "2026-08-27T09:37:57Z"
         }
       ],
-      "notes": "Observed budget link at http://www.kawatana.jp/cat05/c5-02/2pdf_104kb/index.html (label: 地方消費税交付金（社会保障財源化分）充当状況 令和８年度分当初予算)"
+      "notes": "Observed budget link at http://www.kawatana.jp/cat05/c5-02/2pdf_104kb/index.html (label: 地方消費税交付金（社会保障財源化分）充当状況 令和８年度分当初予算) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.kawatana.jp/cat05/c5-02/30pdf_174kb/index.html",
           "observed_on": "http://www.kawatana.jp/cat05/index.html",
           "fetched_at": "2026-08-27T06:07:10Z"
+        },
+        {
+          "url": "http://www.kawatana.jp/cat05/c5-02/30pdf_174kb/index.html",
+          "observed_on": "http://www.kawatana.jp/cat05/c5-02/30pdf_174kb/index.html",
+          "sha256": "3d41c42db47d403c4c89626bf340d5caaf7f3e0e232754409afe63942bfb8a4d",
+          "fetched_at": "2026-08-27T09:37:59Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.kawatana.jp/cat05/c5-02/30pdf_174kb/index.html (label: 地方消費税交付金（社会保障財源化分）充当状況 令和6年度分決算)"
+      "notes": "Observed settlement link at http://www.kawatana.jp/cat05/c5-02/30pdf_174kb/index.html (label: 地方消費税交付金（社会保障財源化分）充当状況 令和6年度分決算) 入口 http://www.kawatana.jp/cat05/c5-02/30pdf_174kb/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

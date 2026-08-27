@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/nakai/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:27:11Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/nakai/reiki_menu.html",
           "observed_on": "http://www.town.nakai.kanagawa.jp/",
           "fetched_at": "2026-08-27T08:06:29Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/nakai/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/nakai/",
+          "sha256": "fbf3d8491708c4068a2c5ab356095fabbbe1bd006f2f5a4c4e066fd288065aaa",
+          "fetched_at": "2026-08-27T10:27:47Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/nakai/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
           "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/index.html",
           "fetched_at": "2026-08-27T08:06:44Z"
+        },
+        {
+          "url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
+          "sha256": "ff0a73a64898eb63accaf1691a9b31a4bb48d0f3abdad1f3c289380acddffbec",
+          "fetched_at": "2026-08-27T10:28:21Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
           "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/index.html",
           "fetched_at": "2026-08-27T08:06:44Z"
+        },
+        {
+          "url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
+          "sha256": "ff0a73a64898eb63accaf1691a9b31a4bb48d0f3abdad1f3c289380acddffbec",
+          "fetched_at": "2026-08-27T10:28:21Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

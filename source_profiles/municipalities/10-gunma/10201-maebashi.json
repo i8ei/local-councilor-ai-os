@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.maebashi.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "http://www.city.maebashi.gunma.dbsr.jp/index.php",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:25Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.maebashi.gunma.dbsr.jp/index.php",
           "observed_on": "https://www.city.maebashi.gunma.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:31:13Z"
+        },
+        {
+          "url": "http://www.city.maebashi.gunma.dbsr.jp/index.php",
+          "observed_on": "http://www.city.maebashi.gunma.dbsr.jp/index.php",
+          "sha256": "be62351ca9b2cdb950617dccd898e786b0a23e3af873bc3e30833eb3056b8d50",
+          "fetched_at": "2026-08-27T10:18:32Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.maebashi.gunma.dbsr.jp/index.php (label: )"
+      "notes": "Observed dbsr at http://www.city.maebashi.gunma.dbsr.jp/index.php (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
           "observed_on": "https://www.city.maebashi.gunma.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:25:44Z"
+        },
+        {
+          "url": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
+          "observed_on": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
+          "sha256": "c32d3dbd0716cc5059e93b933aba11d76065fdf3ce0ac4f01a3cc8086dc6e038",
+          "fetched_at": "2026-08-27T10:18:34Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.maebashi.gunma.jp/gyosei/2/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.city.maebashi.gunma.jp/gyosei/2/index.html (label: 行財政) 入口 https://www.city.maebashi.gunma.jp/gyosei/2/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
           "observed_on": "https://www.city.maebashi.gunma.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:25:44Z"
+        },
+        {
+          "url": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
+          "observed_on": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
+          "sha256": "c32d3dbd0716cc5059e93b933aba11d76065fdf3ce0ac4f01a3cc8086dc6e038",
+          "fetched_at": "2026-08-27T10:18:34Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.maebashi.gunma.jp/gyosei/2/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.city.maebashi.gunma.jp/gyosei/2/index.html (label: 行財政) 入口 https://www.city.maebashi.gunma.jp/gyosei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

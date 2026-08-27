@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www2.vill.otoineppu.hokkaido.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:30:50Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www2.vill.otoineppu.hokkaido.jp/reiki/reiki_menu.html",
           "observed_on": "http://www.vill.otoineppu.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:29:03Z"
+        },
+        {
+          "url": "http://www2.vill.otoineppu.hokkaido.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www2.vill.otoineppu.hokkaido.jp/reiki/",
+          "sha256": "cf10dd281addf17cc8f8e4aebacae588470274bfc3ab4da669f668a70f1d9f91",
+          "fetched_at": "2026-08-27T10:30:52Z"
         }
       ],
       "notes": "Observed g_reiki at http://www2.vill.otoineppu.hokkaido.jp/reiki/reiki_menu.html (label: )"
@@ -39,9 +45,20 @@
           "url": "http://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html",
           "observed_on": "http://www.vill.otoineppu.hokkaido.jp/gyousei/index.html",
           "fetched_at": "2026-08-27T06:29:38Z"
+        },
+        {
+          "url": "https://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html",
+          "observed_on": "https://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html",
+          "sha256": "5d9c20934698feee8ab6a218b3f0321cde0d93b21bc4d5386590e3796e08c1fc",
+          "fetched_at": "2026-08-27T10:31:03Z"
+        },
+        {
+          "url": "https://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/files/h30chihousyouhizeisito-yosan.pdf",
+          "observed_on": "https://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html",
+          "fetched_at": "2026-08-27T10:30:57Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html (label: 行財政報告)"
+      "notes": "Observed finance section at http://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html (label: 行財政報告) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +71,20 @@
           "url": "http://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html",
           "observed_on": "http://www.vill.otoineppu.hokkaido.jp/gyousei/index.html",
           "fetched_at": "2026-08-27T06:29:38Z"
+        },
+        {
+          "url": "https://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html",
+          "observed_on": "https://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html",
+          "sha256": "5d9c20934698feee8ab6a218b3f0321cde0d93b21bc4d5386590e3796e08c1fc",
+          "fetched_at": "2026-08-27T10:31:03Z"
+        },
+        {
+          "url": "https://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/files/H19hiritsu.pdf",
+          "observed_on": "https://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html",
+          "fetched_at": "2026-08-27T10:31:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html (label: 行財政報告)"
+      "notes": "Observed finance section at http://www.vill.otoineppu.hokkaido.jp/gyousei/gyouzaisei/gyouzaiseihoukoku.html (label: 行財政報告) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     }
   }
 }

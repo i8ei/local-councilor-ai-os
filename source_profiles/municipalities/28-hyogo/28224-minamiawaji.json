@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.minamiawaji.hyogo.jp/site/gikai/list269-474.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/city.minamiawaji/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:52:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/city.minamiawaji/reiki_menu.html",
           "observed_on": "http://www.city.minamiawaji.hyogo.jp/",
           "fetched_at": "2026-08-27T06:52:04Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/city.minamiawaji/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/city.minamiawaji/",
+          "sha256": "58b439e6d8863766a10be4de8c5c096dc088f8ded54d6cda299cdff2e66d1744",
+          "fetched_at": "2026-08-27T09:52:01Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city.minamiawaji/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.minamiawaji.hyogo.jp/uploaded/attachment/324730.pdf",
           "observed_on": "http://www.city.minamiawaji.hyogo.jp/site/gikai/gianichiran.html",
           "fetched_at": "2026-08-27T06:52:22Z"
+        },
+        {
+          "url": "https://www.city.minamiawaji.hyogo.jp/uploaded/attachment/324730.pdf",
+          "observed_on": "https://www.city.minamiawaji.hyogo.jp/uploaded/attachment/324730.pdf",
+          "sha256": "9c8dfaaf79e71f11cda2249a752914d4578c944e9dc588e1ea078133242c9f85",
+          "fetched_at": "2026-08-27T09:52:16Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.minamiawaji.hyogo.jp/uploaded/attachment/324730.pdf (label: 議案第9号 ※令和8年度当初予算（一般会計） [PDFファイル／3.01MB])"
+      "notes": "Observed budget link at http://www.city.minamiawaji.hyogo.jp/uploaded/attachment/324730.pdf (label: 議案第9号 ※令和8年度当初予算（一般会計） [PDFファイル／3.01MB]) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "not_found",

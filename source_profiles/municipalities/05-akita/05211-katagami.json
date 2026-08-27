@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.katagami.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:34:37Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/kaigiroku/index.html",
           "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/index.html",
           "fetched_at": "2026-08-27T07:30:58Z"
+        },
+        {
+          "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/kaigiroku/index.html",
+          "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/kaigiroku/index.html",
+          "sha256": "576af12c97cfe9a54c10542dcb4f385ed1cac6e32a849dc591bad09cb2c6814e",
+          "fetched_at": "2026-08-27T10:34:39Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/kaigiroku/index.html (label: 市議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.katagami.lg.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:34:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.katagami.lg.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "https://www.city.katagami.lg.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T07:30:46Z"
+        },
+        {
+          "url": "https://www.city.katagami.lg.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.katagami.lg.jp/section/reiki_int/",
+          "sha256": "c36303ae154dca402f5c11360463ff1757293cac3accfc66a52080261ad4e311",
+          "fetched_at": "2026-08-27T10:34:33Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.katagami.lg.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,20 @@
           "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
           "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:31:25Z"
+        },
+        {
+          "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
+          "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
+          "sha256": "d0b695401f29290a0ba3257d79e0804150cd8ab807887179fbf03199038fa988",
+          "fetched_at": "2026-08-27T10:34:42Z"
+        },
+        {
+          "url": "https://www.city.katagami.lg.jp/material/files/group/4/9gatuhoseigaiyou2.pdf",
+          "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
+          "fetched_at": "2026-08-27T10:34:41Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html (label: 予算概要)"
+      "notes": "Observed budget link at https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html (label: 予算概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",

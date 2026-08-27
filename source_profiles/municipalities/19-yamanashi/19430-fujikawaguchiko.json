@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.fujikawaguchiko.lg.jp/info/info.php?if_id=4031&ca_id=16 (label: 会議録の検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/fujikawaguchiko/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:08:46Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/fujikawaguchiko/reiki_menu.html",
           "observed_on": "http://www.town.fujikawaguchiko.lg.jp/",
           "fetched_at": "2026-08-27T06:51:12Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/fujikawaguchiko/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/fujikawaguchiko/",
+          "sha256": "009af099b60dc4909b7663a7c0f85e52bdc3d263bdd8fa5087b75d8274486436",
+          "fetched_at": "2026-08-27T10:08:55Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/fujikawaguchiko/reiki_menu.html (label: 富士河口湖町例規集)"
@@ -46,9 +52,15 @@
           "url": "https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20",
           "observed_on": "http://www.town.fujikawaguchiko.lg.jp/",
           "fetched_at": "2026-08-27T06:51:12Z"
+        },
+        {
+          "url": "https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20",
+          "observed_on": "https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20",
+          "sha256": "1c2eab832379c08d0106003a150a8130eeda69ec034b0dc1d5d9913652dda6fe",
+          "fetched_at": "2026-08-27T10:09:28Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 (label: 予算・決算)"
+      "notes": "Observed budget link at https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 (label: 予算・決算) 入口 https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20",
           "observed_on": "http://www.town.fujikawaguchiko.lg.jp/",
           "fetched_at": "2026-08-27T06:51:12Z"
+        },
+        {
+          "url": "https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20",
+          "observed_on": "https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20",
+          "sha256": "1c2eab832379c08d0106003a150a8130eeda69ec034b0dc1d5d9913652dda6fe",
+          "fetched_at": "2026-08-27T10:09:28Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 (label: 予算・決算)"
+      "notes": "Observed settlement link at https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 (label: 予算・決算) 入口 https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

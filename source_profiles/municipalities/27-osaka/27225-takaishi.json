@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T06:34:01Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.gijiroku.jp/takaishi/index.html (label: )"
+      "notes": "Observed council minutes index at https://www.gijiroku.jp/takaishi/index.html (label: ) extraction probe read one document at https://ssp.kaigiroku.net/tenant/takaishi/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.takaishi.lg.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:50:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.takaishi.lg.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.takaishi.lg.jp/",
           "fetched_at": "2026-08-27T06:34:01Z"
+        },
+        {
+          "url": "http://www.city.takaishi.lg.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.takaishi.lg.jp/section/reiki_int/",
+          "sha256": "ad4e028f0d8bed82b3dbf6de6e55e2b18b53b5d5336dcc2543b377ffe3c80891",
+          "fetched_at": "2026-08-27T09:51:00Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.takaishi.lg.jp/section/reiki_int/reiki_menu.html (label: 例規集)"

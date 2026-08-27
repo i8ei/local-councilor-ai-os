@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.city.kumano.lg.jp/administration/?category=112 (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.kumano.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:48:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kumano.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "https://www.city.kumano.lg.jp/",
           "fetched_at": "2026-08-27T05:58:31Z"
+        },
+        {
+          "url": "https://www.city.kumano.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.kumano.lg.jp/reiki_int/",
+          "sha256": "031029dcdd08ed7983430fa98c63d401a539d07ba414c824417d56583527b9c0",
+          "fetched_at": "2026-08-27T09:49:05Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.kumano.lg.jp/reiki_int/reiki_menu.html (label: )"

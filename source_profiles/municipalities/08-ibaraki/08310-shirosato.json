@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.shirosato.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.shirosato.lg.jp/shiroatomachigikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shirosato.lg.jp/shiroatomachigikai/kaigiroku/index.html",
           "observed_on": "http://www.town.shirosato.lg.jp/section.php?code=1",
           "fetched_at": "2026-08-27T06:14:09Z"
+        },
+        {
+          "url": "https://www.town.shirosato.lg.jp/shiroatomachigikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.shirosato.lg.jp/shiroatomachigikai/kaigiroku/index.html",
+          "sha256": "e3939a17cca5dbf736929a9e11d1fc87c2635f3c9a6955806631e812eaf63e8c",
+          "fetched_at": "2026-08-27T10:17:50Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.shirosato.lg.jp/shiroatomachigikai/kaigiroku/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.shirosato.lg.jp/data/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:39Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shirosato.lg.jp/data/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.shirosato.lg.jp/kurashi/",
           "fetched_at": "2026-08-27T06:12:11Z"
+        },
+        {
+          "url": "http://www.town.shirosato.lg.jp/data/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.shirosato.lg.jp/data/reiki_int/",
+          "sha256": "e90dee0885a966de0bdeb94a8777f2c3db60d9d17502c38a121b66532d0ad167",
+          "fetched_at": "2026-08-27T10:17:42Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.shirosato.lg.jp/data/reiki_int/reiki_menu.html (label: 例規集)"

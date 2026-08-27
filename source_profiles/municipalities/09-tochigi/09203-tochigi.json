@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.tochigi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:59Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html",
           "observed_on": "http://www.city.tochigi.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:17:55Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html",
+          "sha256": "a63bfa9ef8eff9104c52c09680efafa6ddc7081c4052817a4aa4209bc4fdaffb",
+          "fetched_at": "2026-08-27T10:18:01Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html (label: )"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

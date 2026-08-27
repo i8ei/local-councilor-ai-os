@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.kujukuri.chiba.jp/category/5-8-7-0-0.html (label: 議会会議録検索システム)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/kujukuri/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:24:20Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/kujukuri/reiki_menu.html",
           "observed_on": "http://www.town.kujukuri.chiba.jp/",
           "fetched_at": "2026-08-27T07:25:32Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/kujukuri/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/kujukuri/",
+          "sha256": "0aea152b6e1410743fa01b10413047419071d10e1115e44276a84b1ff862beb1",
+          "fetched_at": "2026-08-27T10:24:39Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kujukuri/reiki_menu.html (label: 例規集)"

@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.ube.yamaguchi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/ube/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:02Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/ube/pg/index.html",
           "observed_on": "http://www.city.ube.yamaguchi.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:33:00Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/ube/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/ube/pg/index.html",
+          "sha256": "ec9dead9696d99f7f43247879d773cbe6cb99886102616263b000c71be53f591",
+          "fetched_at": "2026-08-27T09:45:03Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ube/pg/index.html (label: 宇部市議会 会議録検索システム（外部サイトへリンク）)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ube/pg/index.html (label: 宇部市議会 会議録検索システム（外部サイトへリンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

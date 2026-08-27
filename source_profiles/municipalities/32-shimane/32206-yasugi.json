@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.yasugi.shimane.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
           "observed_on": "http://www.city.yasugi.shimane.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:05:54Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
+          "sha256": "c696dc56cd3b41ee9f1fc5859ef86fd9244f1fef1f3cc64a7e90b3e14e6a8cdf",
+          "fetched_at": "2026-08-27T09:43:17Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html (label: 会議録検索（外部サイト）)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html (label: 会議録検索（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.yasugi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:42:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.yasugi/reiki_menu.html",
           "observed_on": "http://www.city.yasugi.shimane.jp/",
           "fetched_at": "2026-08-27T06:05:35Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.yasugi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.yasugi/",
+          "sha256": "702d4c01ba67f73531621b949209184986d2cf61db8d66a8f1234932440cc4dd",
+          "fetched_at": "2026-08-27T09:42:56Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.yasugi/reiki_menu.html (label: 例規集（外部サイト）)"

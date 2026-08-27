@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.murakami.lg.jp/site/shigikai/list363-1187.html (label: 定例会・臨時会 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/murakami/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:20Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/murakami/reiki_menu.html",
           "observed_on": "http://www.city.murakami.lg.jp/",
           "fetched_at": "2026-08-27T05:58:13Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/murakami/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/murakami/",
+          "sha256": "f0e7c0d4ece5cb0e65e929b0b20f2a1e25695e96ac9b513413195fb656bf4fde",
+          "fetched_at": "2026-08-27T10:04:20Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/murakami/reiki_menu.html (label: 例規集)"

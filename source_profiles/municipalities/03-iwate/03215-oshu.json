@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T07:10:39Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.oshu.iwate.jp/gikai/3586.html (label: 会議録検索システム)"
+      "notes": "Observed council minutes index at https://www.city.oshu.iwate.jp/gikai/3586.html (label: 会議録検索システム) extraction probe read one document at http://ssp.kaigiroku.net/tenant/oshu/pg/ but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.oshu.iwate.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:32:52Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.oshu.iwate.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "https://www.city.oshu.iwate.jp/",
           "fetched_at": "2026-08-27T07:10:00Z"
+        },
+        {
+          "url": "https://www.city.oshu.iwate.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.oshu.iwate.jp/section/reiki_int/",
+          "sha256": "b327ec5880a869ef0e8a6554856027de3c39037df9e52d97303405805ca1f95e",
+          "fetched_at": "2026-08-27T10:32:54Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.oshu.iwate.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/1/index.html",
           "observed_on": "https://www.city.oshu.iwate.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T07:10:14Z"
+        },
+        {
+          "url": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/1/index.html",
+          "observed_on": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/1/index.html",
+          "sha256": "54b6dc7a224575c37bb2d054c1ceb9b702311ea877d78e528255c2e38769fe94",
+          "fetched_at": "2026-08-27T10:33:02Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.oshu.iwate.jp/gyosei/gyozaisei/1/index.html (label: 各年度当初予算)"
+      "notes": "Observed budget link at https://www.city.oshu.iwate.jp/gyosei/gyozaisei/1/index.html (label: 各年度当初予算) 入口 https://www.city.oshu.iwate.jp/gyosei/gyozaisei/1/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/2/index.html",
           "observed_on": "https://www.city.oshu.iwate.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T07:10:14Z"
+        },
+        {
+          "url": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/2/index.html",
+          "observed_on": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/2/index.html",
+          "sha256": "48080d9a58d8f97a65500391573df07d4c358fd6298a8081eef37f899aa334a6",
+          "fetched_at": "2026-08-27T10:33:03Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.oshu.iwate.jp/gyosei/gyozaisei/2/index.html (label: 各年度決算)"
+      "notes": "Observed settlement link at https://www.city.oshu.iwate.jp/gyosei/gyozaisei/2/index.html (label: 各年度決算) 入口 https://www.city.oshu.iwate.jp/gyosei/gyozaisei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

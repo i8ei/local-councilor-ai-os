@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.omitama.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.omitama.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.omitama.lg.jp/",
           "fetched_at": "2026-08-27T06:10:06Z"
+        },
+        {
+          "url": "http://www.city.omitama.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.omitama.lg.jp/reiki_int/",
+          "sha256": "a892730b7bb4721807523fa7059659a0bd7a9b8a1aee5fa6fb0780ccea80ca4d",
+          "fetched_at": "2026-08-27T10:17:42Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.omitama.lg.jp/reiki_int/reiki_menu.html (label: )"
@@ -39,9 +45,15 @@
           "url": "http://www.city.omitama.lg.jp/0049/genre1-0-001.html",
           "observed_on": "http://www.city.omitama.lg.jp/",
           "fetched_at": "2026-08-27T06:10:06Z"
+        },
+        {
+          "url": "https://www.city.omitama.lg.jp/0049/genre1-0-001.html",
+          "observed_on": "https://www.city.omitama.lg.jp/0049/genre1-0-001.html",
+          "sha256": "25a80d7f511870c0e620863e27ff47bff5d269540a73a87a7dfdbb24165bc3bb",
+          "fetched_at": "2026-08-27T10:17:50Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.omitama.lg.jp/0049/genre1-0-001.html (label: 予算／決算)"
+      "notes": "Observed budget link at http://www.city.omitama.lg.jp/0049/genre1-0-001.html (label: 予算／決算) 入口 https://www.city.omitama.lg.jp/0049/genre1-0-001.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "http://www.city.omitama.lg.jp/0049/genre1-0-001.html",
           "observed_on": "http://www.city.omitama.lg.jp/",
           "fetched_at": "2026-08-27T06:10:06Z"
+        },
+        {
+          "url": "https://www.city.omitama.lg.jp/0049/genre1-0-001.html",
+          "observed_on": "https://www.city.omitama.lg.jp/0049/genre1-0-001.html",
+          "sha256": "25a80d7f511870c0e620863e27ff47bff5d269540a73a87a7dfdbb24165bc3bb",
+          "fetched_at": "2026-08-27T10:17:50Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.omitama.lg.jp/0049/genre1-0-001.html (label: 予算／決算)"
+      "notes": "Observed settlement link at http://www.city.omitama.lg.jp/0049/genre1-0-001.html (label: 予算／決算) 入口 https://www.city.omitama.lg.jp/0049/genre1-0-001.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

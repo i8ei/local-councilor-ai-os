@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T06:46:14Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.tamamura.lg.jp/docs/2026052200043/ (label: 令和8年玉村町議会会議録)"
+      "notes": "Observed council minutes index at http://www.town.tamamura.lg.jp/docs/2026052200043/ (label: 令和8年玉村町議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/tamamura/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:19:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/tamamura/reiki_menu.html",
           "observed_on": "http://www.town.tamamura.lg.jp/top.html",
           "fetched_at": "2026-08-27T06:43:27Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/tamamura/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/tamamura/",
+          "sha256": "276ebc774c92ab08666e3db7733b5993b46513ecea358e8be30b1845b67d67ac",
+          "fetched_at": "2026-08-27T10:19:55Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tamamura/reiki_menu.html (label: 玉村町例規集)"
@@ -46,9 +52,15 @@
           "url": "http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/",
           "observed_on": "http://www.town.tamamura.lg.jp/navi/chosei/",
           "fetched_at": "2026-08-27T06:43:52Z"
+        },
+        {
+          "url": "https://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/",
+          "observed_on": "https://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/",
+          "sha256": "3910a1df205798c40b2d85aa0ebfcb4638e755e7855cffc75d2c885f0a6e9bb2",
+          "fetched_at": "2026-08-27T10:20:31Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/ (label: 財政)"
+      "notes": "Observed finance section at http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/ (label: 財政) 入口 https://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.tamamura.lg.jp/docs/2026032700013/",
           "observed_on": "http://www.town.tamamura.lg.jp/category/bunya/chosei/",
           "fetched_at": "2026-08-27T06:46:14Z"
+        },
+        {
+          "url": "https://www.town.tamamura.lg.jp/docs/2026032700013/",
+          "observed_on": "https://www.town.tamamura.lg.jp/docs/2026032700013/",
+          "sha256": "e99178d7e7b6b8595a0609609e8023d5e52516b773e3c9f6a9205e0af6343ca2",
+          "fetched_at": "2026-08-27T10:20:34Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tamamura.lg.jp/docs/2026032700013/ (label: 令和6年度決算 新地方公会計制度による財務書類・固定資産台帳)"
+      "notes": "Observed settlement link at http://www.town.tamamura.lg.jp/docs/2026032700013/ (label: 令和6年度決算 新地方公会計制度による財務書類・固定資産台帳) 入口 https://www.town.tamamura.lg.jp/docs/2026032700013/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T06:13:46Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.ibaraki.lg.jp/gyousei/gyousei/gikai/000586.html (label: 会議録)"
+      "notes": "Observed council minutes index at http://www.town.ibaraki.lg.jp/gyousei/gyousei/gikai/000586.html (label: 会議録) extraction probe read one document at https://ssp.kaigiroku.net/tenant/ibaraki/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.ibaraki.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ibaraki.lg.jp/reiki_int/?idSubTop=1",
           "observed_on": "http://www.town.ibaraki.lg.jp/",
           "fetched_at": "2026-08-27T06:10:44Z"
+        },
+        {
+          "url": "http://www.town.ibaraki.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.ibaraki.lg.jp/reiki_int/",
+          "sha256": "f87121819770c39cdfa4574d4a106fef308f9e09d9c3c960b2dd2006037ee4d5",
+          "fetched_at": "2026-08-27T10:17:45Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.ibaraki.lg.jp/reiki_int/?idSubTop=1 (label: )"
@@ -46,9 +52,15 @@
           "url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html",
           "observed_on": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/index.html",
           "fetched_at": "2026-08-27T06:11:26Z"
+        },
+        {
+          "url": "https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html",
+          "observed_on": "https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html",
+          "sha256": "913167f50dc2325113c345927a856519a351206a23d9ef7fa60a4d4b1662e69a",
+          "fetched_at": "2026-08-27T10:17:55Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html (label: 予算書)"
+      "notes": "Observed budget link at http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html (label: 予算書) 入口 https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html",
           "observed_on": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/index.html",
           "fetched_at": "2026-08-27T06:11:26Z"
+        },
+        {
+          "url": "https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html",
+          "observed_on": "https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html",
+          "sha256": "a22f88fe766535ab880b9eab281d76d6562ff4473322ee403b58ad9530d076fb",
+          "fetched_at": "2026-08-27T10:17:58Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html (label: 決算・財政状況)"
+      "notes": "Observed settlement link at http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html (label: 決算・財政状況) 入口 https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

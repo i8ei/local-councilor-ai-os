@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.joetsu.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/joetsu/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:27Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/joetsu/SpTop.html",
           "observed_on": "http://www.city.joetsu.niigata.jp/site/gikai/teireikairinnzika-shintyaku.html",
           "fetched_at": "2026-08-27T06:04:30Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/joetsu/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/joetsu/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:04:28Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/joetsu/SpTop.html (label: 会議録の検索)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/joetsu/SpTop.html (label: 会議録の検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

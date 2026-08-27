@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.maniwa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/maniwa/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:44:06Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/maniwa/pg/index.html",
           "observed_on": "http://www.city.maniwa.lg.jp/soshiki/49/",
           "fetched_at": "2026-08-27T06:20:51Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/maniwa/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/maniwa/pg/index.html",
+          "sha256": "8c1a227e2dd132eeb0c9296f298eb212a2c85617c59ea27af9ed04760e326cde",
+          "fetched_at": "2026-08-27T09:44:06Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/maniwa/pg/index.html (label: 真庭市議会会議録)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/maniwa/pg/index.html (label: 真庭市議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.maniwa.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:55Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.maniwa.lg.jp/reiki/reiki_menu.html",
           "observed_on": "http://www.city.maniwa.lg.jp/",
           "fetched_at": "2026-08-27T06:16:51Z"
+        },
+        {
+          "url": "http://www.city.maniwa.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.maniwa.lg.jp/reiki/",
+          "sha256": "fd634f3d90917915c9868f44df92d6b2060b6c977a3154508aaea04c0d18bc5b",
+          "fetched_at": "2026-08-27T09:44:01Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.maniwa.lg.jp/reiki/reiki_menu.html (label: 真庭市例規集)"

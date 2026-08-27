@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.ogano.lg.jp/cms/wp-content/uploads/2018/08/shingikaigijiroku1.pdf (label: ■第１回会議録【平成30年 1月26日（金）】)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.ogano.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:22:04Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ogano.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.ogano.lg.jp/",
           "fetched_at": "2026-08-27T07:05:02Z"
+        },
+        {
+          "url": "http://www.town.ogano.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.ogano.lg.jp/reiki_int/",
+          "sha256": "826d9f64339f7a744cee4f5f797d978628c54162cac147313c06955b0419d663",
+          "fetched_at": "2026-08-27T10:22:10Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.ogano.lg.jp/reiki_int/reiki_menu.html (label: 町例規集)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.ogano.lg.jp/chousei-jouhou/finance/",
           "observed_on": "http://www.town.ogano.lg.jp/",
           "fetched_at": "2026-08-27T07:05:02Z"
+        },
+        {
+          "url": "https://www.town.ogano.lg.jp/chousei-jouhou/finance/",
+          "observed_on": "https://www.town.ogano.lg.jp/chousei-jouhou/finance/",
+          "sha256": "a0f6972b06d48032d6a9160d6039eef02eda9498f3c849f7514c3b6db7ac1880",
+          "fetched_at": "2026-08-27T10:22:18Z"
+        },
+        {
+          "url": "https://www.town.ogano.lg.jp/cms/wp-content/uploads/2026/03/R8yosansyo.pdf",
+          "observed_on": "https://www.town.ogano.lg.jp/chousei-jouhou/finance/",
+          "fetched_at": "2026-08-27T10:22:16Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ogano.lg.jp/chousei-jouhou/finance/ (label: 財政)"
+      "notes": "Observed finance section at https://www.town.ogano.lg.jp/chousei-jouhou/finance/ (label: 財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.ogano.lg.jp/chousei-jouhou/finance/",
           "observed_on": "http://www.town.ogano.lg.jp/",
           "fetched_at": "2026-08-27T07:05:02Z"
+        },
+        {
+          "url": "https://www.town.ogano.lg.jp/chousei-jouhou/finance/",
+          "observed_on": "https://www.town.ogano.lg.jp/chousei-jouhou/finance/",
+          "sha256": "a0f6972b06d48032d6a9160d6039eef02eda9498f3c849f7514c3b6db7ac1880",
+          "fetched_at": "2026-08-27T10:22:18Z"
+        },
+        {
+          "url": "https://www.town.ogano.lg.jp/cms/wp-content/uploads/2025/10/nendobetu2.pdf",
+          "observed_on": "https://www.town.ogano.lg.jp/chousei-jouhou/finance/",
+          "fetched_at": "2026-08-27T10:22:24Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ogano.lg.jp/chousei-jouhou/finance/ (label: 財政)"
+      "notes": "Observed finance section at https://www.town.ogano.lg.jp/chousei-jouhou/finance/ (label: 財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

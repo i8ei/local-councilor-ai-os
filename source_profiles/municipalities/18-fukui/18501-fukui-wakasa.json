@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T06:27:02Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.fukui-wakasa.lg.jp/gyoseijoho/wakasachogikai/1197.html (label: 会議録)"
+      "notes": "Observed council minutes index at https://www.town.fukui-wakasa.lg.jp/gyoseijoho/wakasachogikai/1197.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/fukui-wakasa/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:07:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/fukui-wakasa/reiki_menu.html",
           "observed_on": "https://www.town.fukui-wakasa.lg.jp/",
           "fetched_at": "2026-08-27T06:26:43Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/fukui-wakasa/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/fukui-wakasa/",
+          "sha256": "f677311a31687714c6762e4353695f15b278054b35f1bd91fc6588ab8f326d9a",
+          "fetched_at": "2026-08-27T10:07:22Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/fukui-wakasa/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html",
           "observed_on": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:27:02Z"
+        },
+        {
+          "url": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html",
+          "observed_on": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html",
+          "sha256": "1d831c6a1c6024a2461d76d515170049451fdbd45ba4e21fae7f04440b175c97",
+          "fetched_at": "2026-08-27T10:07:57Z"
+        },
+        {
+          "url": "https://www.town.fukui-wakasa.lg.jp/material/files/group/3/20250415.pdf",
+          "observed_on": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html",
+          "fetched_at": "2026-08-27T10:07:56Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html (label: 予算)"
+      "notes": "Observed budget link at https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html (label: 予算) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1506.html",
           "observed_on": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:27:02Z"
+        },
+        {
+          "url": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1506.html",
+          "observed_on": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1506.html",
+          "sha256": "6c7d2adb40878b2ae4ac2dd46c3f5161bf93588a608552e5017ef4c7b5d92bac",
+          "fetched_at": "2026-08-27T10:08:03Z"
+        },
+        {
+          "url": "https://www.town.fukui-wakasa.lg.jp/material/files/group/3/20250930.pdf",
+          "observed_on": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1506.html",
+          "fetched_at": "2026-08-27T10:08:01Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1506.html (label: 決算)"
+      "notes": "Observed settlement link at https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1506.html (label: 決算) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     }
   }
 }

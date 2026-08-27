@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T06:54:30Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.motobu.okinawa.jp/doc/2023103100062/ (label: 会議録)"
+      "notes": "Observed council minutes index at https://www.town.motobu.okinawa.jp/doc/2023103100062/ (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.reiki.town.motobu.okinawa.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:41:06Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.reiki.town.motobu.okinawa.jp/reiki_menu.html",
           "observed_on": "https://www.town.motobu.okinawa.jp/",
           "fetched_at": "2026-08-27T06:52:39Z"
+        },
+        {
+          "url": "http://www.reiki.town.motobu.okinawa.jp/reiki_menu.html",
+          "observed_on": "http://www.reiki.town.motobu.okinawa.jp/",
+          "sha256": "751e260cae8ecc9566d711cedda6d7a0444b63e161e571049109214447f1fb73",
+          "fetched_at": "2026-08-27T09:41:08Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.reiki.town.motobu.okinawa.jp/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
           "observed_on": "https://www.town.motobu.okinawa.jp/",
           "fetched_at": "2026-08-27T06:52:39Z"
+        },
+        {
+          "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
+          "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
+          "sha256": "33b199d047bb4f0a479606cdeff32d55a99b21f5e624103648d08b06325ca1e3",
+          "fetched_at": "2026-08-27T09:41:16Z"
+        },
+        {
+          "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/file_contents/R8tousyoyosan.pdf",
+          "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
+          "fetched_at": "2026-08-27T09:41:15Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.motobu.okinawa.jp/doc/2023110900198/ (label: 予算、財政)"
+      "notes": "Observed budget link at https://www.town.motobu.okinawa.jp/doc/2023110900198/ (label: 予算、財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
           "observed_on": "https://www.town.motobu.okinawa.jp/",
           "fetched_at": "2026-08-27T06:52:39Z"
+        },
+        {
+          "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
+          "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
+          "sha256": "33b199d047bb4f0a479606cdeff32d55a99b21f5e624103648d08b06325ca1e3",
+          "fetched_at": "2026-08-27T09:41:16Z"
+        },
+        {
+          "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/file_contents/kessansho_r6.pdf",
+          "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
+          "fetched_at": "2026-08-27T09:41:18Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.motobu.okinawa.jp/doc/2023110900198/ (label: 予算、財政)"
+      "notes": "Observed finance section at https://www.town.motobu.okinawa.jp/doc/2023110900198/ (label: 予算、財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/oji/WebView/rd/council_1.html (label: 本会議インターネット中継)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.oji.nara.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:53:02Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.oji.nara.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.oji.nara.jp/",
           "fetched_at": "2026-08-27T07:08:55Z"
+        },
+        {
+          "url": "https://www.town.oji.nara.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.oji.nara.jp/reiki_int/",
+          "sha256": "a3bfac8cb8b6005cc514f4807c1a06a822d3fc195250a5a85b95c1c1bcd0d61a",
+          "fetched_at": "2026-08-27T09:53:03Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.oji.nara.jp/reiki_int/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "http://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html",
           "observed_on": "http://www.town.oji.nara.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:09:19Z"
+        },
+        {
+          "url": "https://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html",
+          "sha256": "7eaa16b2b35a581374c81d003c206d345e3eca8fa5bd2be49d47f0306347a3e2",
+          "fetched_at": "2026-08-27T09:53:14Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at http://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html",
           "observed_on": "http://www.town.oji.nara.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:09:19Z"
+        },
+        {
+          "url": "https://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html",
+          "sha256": "7eaa16b2b35a581374c81d003c206d345e3eca8fa5bd2be49d47f0306347a3e2",
+          "fetched_at": "2026-08-27T09:53:14Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at http://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.oji.nara.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

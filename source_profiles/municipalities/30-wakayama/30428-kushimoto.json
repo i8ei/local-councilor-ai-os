@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.kushimoto.wakayama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.kushimoto.wakayama.jp/gikai/kaigiroku_search.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:54:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kushimoto.wakayama.jp/gikai/kaigiroku_search.html",
           "observed_on": "http://www.town.kushimoto.wakayama.jp/",
           "fetched_at": "2026-08-27T07:28:16Z"
+        },
+        {
+          "url": "http://www.town.kushimoto.wakayama.jp/gikai/kaigiroku_search.html",
+          "observed_on": "http://www.town.kushimoto.wakayama.jp/gikai/kaigiroku_search.html",
+          "sha256": "7c12cfa00cab28e2c89859b75b204c161513ff1fbd04eebed5e0f7ba52aa0341",
+          "fetched_at": "2026-08-27T09:54:06Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.kushimoto.wakayama.jp/gikai/kaigiroku_search.html (label: 会議録検索システムについて（令和8年第2回定例会分を更新）)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.kushimoto.wakayama.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:53:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kushimoto.wakayama.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.kushimoto.wakayama.jp/",
           "fetched_at": "2026-08-27T07:28:16Z"
+        },
+        {
+          "url": "https://www.town.kushimoto.wakayama.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.kushimoto.wakayama.jp/reiki_int/",
+          "sha256": "ed1df08f80fe74c9e7b581a1987e12bcec575870b144aa45092e5040d4576870",
+          "fetched_at": "2026-08-27T09:53:55Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.kushimoto.wakayama.jp/reiki_int/reiki_menu.html (label: )"
@@ -54,9 +66,20 @@
           "url": "http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
           "observed_on": "http://www.town.kushimoto.wakayama.jp/gikai/index.html",
           "fetched_at": "2026-08-27T07:28:36Z"
+        },
+        {
+          "url": "https://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
+          "observed_on": "https://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
+          "sha256": "c5603640a581f8b1ce34b9335413f0549095c4a707f05346886d5c63d8dc9455",
+          "fetched_at": "2026-08-27T09:54:10Z"
+        },
+        {
+          "url": "https://www.town.kushimoto.wakayama.jp/gikai/files/kessanshinsa-houkoku_r6.pdf",
+          "observed_on": "https://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
+          "fetched_at": "2026-08-27T09:54:08Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html (label: 決算審査特別委員会報告書)"
+      "notes": "Observed settlement link at http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html (label: 決算審査特別委員会報告書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

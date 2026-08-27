@@ -6,19 +6,25 @@
   "official_home_url": "https://www.city.nago.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:40:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html",
           "observed_on": "https://www.city.nago.okinawa.jp/soshiki/gikai-nav/2018070300089/",
           "fetched_at": "2026-08-27T06:50:58Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html",
+          "sha256": "3732538daccf2968f04c26fde739c98a7ab4f2e1a199d563964ba9257eeeaac2",
+          "fetched_at": "2026-08-27T09:40:56Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html (label: (パソコン用))"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html (label: (パソコン用)) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
