@@ -530,10 +530,11 @@ def main(argv: list[str] | None = None) -> int:
     try:
         manifest_path, manifest = begin_module_run(
             args.manifest_dir,
+            run_type="regulations",
+            repo_root=REPO_ROOT,
             run_id=args.run_id,
-            module="regulations",
-            command="vendor_d1law_opensearch",
-            parameters={
+            requested={
+                "adapter": "d1law_opensearch",
                 "index_url": args.index_url,
                 "db": str(args.db),
                 "limit": args.limit,
@@ -558,13 +559,14 @@ def main(argv: list[str] | None = None) -> int:
             finish_database_run(
                 manifest_path,
                 manifest,
-                database_path=args.db,
-                summary={
+                database=args.db,
+                artifact_kind="d1law_database",
+                scope={"adapter": "d1law_opensearch", "action": "ingest"},
+                coverage={
                     "documents": report.get("documents", 0),
                     "articles": report.get("articles", 0),
                     "statuses": report.get("statuses", {}),
                 },
-                retrieval=report.get("retrieval"),
             )
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return 0

@@ -1213,7 +1213,8 @@ def _verify_minutes_static(
             page_links, page_final_url, page_context, prefer_pdf=prefer_pdf
         )
         is_pdf_doc = bool(doc_url and doc_url.lower().split("?", 1)[0].endswith(".pdf"))
-        cfg = copy.deepcopy(entry.get("config")) if isinstance(entry.get("config"), dict) else {}
+        raw_cfg = entry.get("config")
+        cfg: dict[str, Any] = copy.deepcopy(raw_cfg) if isinstance(raw_cfg, dict) else {}
         if is_pdf_doc:
             cfg["pdf"] = True
 
