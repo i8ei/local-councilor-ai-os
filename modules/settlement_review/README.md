@@ -15,6 +15,7 @@
 | `ingest_csv.py` | 人または個別AIが確認した取込用CSVをSQLiteへ投入する |
 | `verify_totals.py` | 歳入の項から款、歳出の節から目、目から款を差額ゼロで突合する |
 | `insights.py` | 検算を通ったDBから、人が確認する分析候補をJSONで出す |
+| `bridge.py` | 多年度DBから不用額常態化・連続繰越・未収金を0トークンで高速分析する |
 | `insight_spec.md` | 分析候補と証拠台帳への受け渡しを定義する |
 | `csv_templates.py` | SQLiteへ投入する取込用CSVのヘッダー雛形を出力する |
 | `extraction_guidance.md` | PDF抽出を個別AIや人に任せる際の依頼方針 |
@@ -61,9 +62,9 @@ CSVを読み込むのは `ingest_csv.py` だが、検索、検算、分析候補
 `lcaios status`で`module_ready:settlement`にするには、取込manifestだけでなく、
 `settlement_reconciliation`が成功した検算manifestが必要である。
 
-## 分析候補
+## 分析候補（単年度）
 
-検算を通ったDBから、人が確認する候補を生成する。
+検算を通ったDBから、人が確認する単年度の候補を生成する。
 
 ```sh
 python3 -m modules.settlement_review.insights settlement.db \
@@ -73,6 +74,24 @@ python3 -m modules.settlement_review.insights settlement.db \
 ```
 
 `insights.py` は実行時に `verify_totals.py` を通し、検算に失敗したDBでは候補を生成しない。出力は「大きな不用額」「大きな繰越」「大きな収入未済」などの確認候補であり、原因や妥当性を断定しない。
+
+## 多年度ブリッジ分析（不用額常態化・連続繰越・未収金）
+
+複数年度の決算データ（R4〜R7など）を蓄積したDBから、不用額の常態化（見積もり過大）や連続繰越（事業遅延）を0トークン・高速に抽出する。
+
+```sh
+# Markdownレポート出力
+python3 -m modules.settlement_review.bridge \
+  --db /path/to/settlement_multi.db \
+  --min-years 2 \
+  --min-unused-amount 1000000 \
+  --min-unused-rate 0.15
+
+# LLM連携用 JSON 出力
+python3 -m modules.settlement_review.bridge \
+  --db /path/to/settlement_multi.db \
+  --format json
+```
 
 ## 検算フィクスチャ
 
