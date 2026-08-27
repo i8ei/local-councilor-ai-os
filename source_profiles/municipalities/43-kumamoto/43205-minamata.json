@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.city.minamata.lg.jp/gikai/list00628.html (label: 議会会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A918D772F",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:50:43Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A918D772F",
           "observed_on": "https://www.city.minamata.lg.jp/default.html",
           "fetched_at": "2026-08-27T05:32:29Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A918D772F",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A918D772F",
+          "sha256": "2efbccebcb52f5baba0c2dc99655b72804af4dbd436ae309e8290adec6931763",
+          "fetched_at": "2026-08-27T11:50:50Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A918D772F (label: 例規集)"
@@ -54,7 +60,7 @@
           "fetched_at": "2026-08-27T09:37:55Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.minamata.lg.jp/list00415.html (label: 予算) 入口 https://www.city.minamata.lg.jp/list00415.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed budget link at https://www.city.minamata.lg.jp/list00415.html (label: 予算) 入口 https://www.city.minamata.lg.jp/list00415.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamata.lg.jp/list00415.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -75,7 +81,7 @@
           "fetched_at": "2026-08-27T09:37:57Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.minamata.lg.jp/list00335.html (label: 行政・財政) 入口 https://www.city.minamata.lg.jp/list00335.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at https://www.city.minamata.lg.jp/list00335.html (label: 行政・財政) 入口 https://www.city.minamata.lg.jp/list00335.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamata.lg.jp/list00335.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

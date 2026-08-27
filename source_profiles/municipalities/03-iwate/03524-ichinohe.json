@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ichinohe/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A11F7CA",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A11F7CA",
           "observed_on": "https://www.town.ichinohe.iwate.jp/",
           "fetched_at": "2026-08-27T07:14:59Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A11F7CA",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A11F7CA",
+          "sha256": "c0506b822abcd96ab03b4fdabf2b9069cac67f956a97da94b2ecb63e29f60a7a",
+          "fetched_at": "2026-08-27T12:09:16Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A11F7CA (label: 例規集 Regular regulations)"

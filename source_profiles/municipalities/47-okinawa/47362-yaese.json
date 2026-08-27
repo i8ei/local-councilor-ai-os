@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yaese/pg/index.html (label: 議会議事録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB4634",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:52:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB4634",
           "observed_on": "https://www.town.yaese.lg.jp/",
           "fetched_at": "2026-08-27T06:59:49Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB4634",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB4634",
+          "sha256": "076d5fbf38a0d1270ac123b08848c372de767ec9f96dac6aeb6b238f74466af9",
+          "fetched_at": "2026-08-27T11:52:16Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB4634 (label: 例規集)"
@@ -60,7 +66,7 @@
           "fetched_at": "2026-08-27T09:41:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課) 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課) 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -81,7 +87,7 @@
           "fetched_at": "2026-08-27T09:41:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課) 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課) 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

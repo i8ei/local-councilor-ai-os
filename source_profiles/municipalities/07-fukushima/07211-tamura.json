@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.tamura.lg.jp/site/gikai/kaigiroku-ichiran.html (label: 会議録検索システム) extraction probe read one document at http://ssp.kaigiroku.net/tenant/tamura/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F2650",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F2650",
           "observed_on": "http://www.city.tamura.lg.jp/home.html",
           "fetched_at": "2026-08-27T07:55:00Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F2650",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F2650",
+          "sha256": "abe079ca889823b2ab0f7bd0dfdd6f21592ad347b3d36586f7e5e5d8279a7f30",
+          "fetched_at": "2026-08-27T12:09:21Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F2650 (label: 田村市例規集)"

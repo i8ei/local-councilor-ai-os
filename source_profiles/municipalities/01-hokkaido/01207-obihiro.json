@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.city.obihiro.hokkaido.jp/shisei/shigikai/chukei/index.html (label: 議会インターネット中継・会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A79F434B1",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A79F434B1",
           "observed_on": "https://www.city.obihiro.hokkaido.jp/shisei/index.html",
           "fetched_at": "2026-08-27T05:58:45Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A79F434B1",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A79F434B1",
+          "sha256": "3e1f01128d2eccc7d7a5377df629cb728e33e907b840d8d4d8229a007b2cd1ea",
+          "fetched_at": "2026-08-27T12:08:55Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A79F434B1 (label: 帯広市例規集)"

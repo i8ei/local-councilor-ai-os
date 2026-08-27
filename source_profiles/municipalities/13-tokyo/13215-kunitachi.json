@@ -27,16 +27,22 @@
       "notes": "Observed dbsr at https://www.city.kunitachi.tokyo.dbsr.jp/index.php/ (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A8016A454",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A8016A454",
           "observed_on": "http://www.city.kunitachi.tokyo.jp/",
           "fetched_at": "2026-08-27T07:45:46Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A8016A454",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A8016A454",
+          "sha256": "b988924fbf83cf3f62cc5ea033607d3a975a882bdb1cf0ff23f7a5d777a9f39e",
+          "fetched_at": "2026-08-27T12:09:56Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A8016A454 (label: 国立市 例規類集)"

@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/sodegaura/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.city.sodegaura.lg.jp%2F (label: 議会中継の映像配信へのリンク（外部サイト）)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A80073B63",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A80073B63",
           "observed_on": "http://www.city.sodegaura.lg.jp/",
           "fetched_at": "2026-08-27T07:19:11Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A80073B63",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A80073B63",
+          "sha256": "3c30eb93df2cc199a2df29a7998180416bdf0324f084bf6a80f66f006656e20f",
+          "fetched_at": "2026-08-27T12:09:48Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A80073B63 (label: 例規集)"

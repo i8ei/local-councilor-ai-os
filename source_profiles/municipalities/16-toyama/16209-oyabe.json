@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.city.oyabe.toyama.jp/shigikai/1003372/1001607.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8CDA46A4E3",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:49:39Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8CDA46A4E3",
           "observed_on": "http://www.city.oyabe.toyama.jp/",
           "fetched_at": "2026-08-27T06:09:22Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8CDA46A4E3",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8CDA46A4E3",
+          "sha256": "12b94d7ee5afb3e20999408e6fbbeec7c69368d17ce033d192ad4447a676d3c7",
+          "fetched_at": "2026-08-27T11:49:41Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8CDA46A4E3 (label: 例規集)"
@@ -60,7 +66,7 @@
           "fetched_at": "2026-08-27T10:05:02Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html (label: 財政・予算・決算) 入口 https://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed budget link at http://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html (label: 財政・予算・決算) 入口 https://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -81,7 +87,7 @@
           "fetched_at": "2026-08-27T10:05:02Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html (label: 財政・予算・決算) 入口 https://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed settlement link at http://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html (label: 財政・予算・決算) 入口 https://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.oyabe.toyama.jp/shiseijyouhou/1001787/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

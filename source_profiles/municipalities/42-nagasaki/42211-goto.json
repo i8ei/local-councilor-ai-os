@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.goto.nagasaki.jp/s001/010/010/010/030/20190316030522.html (label: 五島市議会会議録検索システム（外部リンク）) extraction probe read one document at https://ssp.kaigiroku.net/tenant/goto/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrJbF01/init?jctcd=8A917E0E40&houcd=H422901010034&no=9&totalCount=22&fromJsp=SrMj",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:50:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrJbF01/init?jctcd=8A917E0E40&houcd=H422901010034&no=9&totalCount=22&fromJsp=SrMj",
           "observed_on": "http://www.city.goto.nagasaki.jp/s001/010/010/010/050/20190316024932.html",
           "fetched_at": "2026-08-27T05:24:38Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrJbF01/init?jctcd=8A917E0E40&houcd=H422901010034&no=9&totalCount=22&fromJsp=SrMj",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrJbF01/init?jctcd=8A917E0E40&houcd=H422901010034&no=9&totalCount=22&fromJsp=SrMj",
+          "sha256": "37cde0087054d01794a8617ee26a0109444684db2fad2bc9471a552a07b30b41",
+          "fetched_at": "2026-08-27T11:50:41Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrJbF01/init?jctcd=8A917E0E40&houcd=H422901010034&no=9&totalCount=22&fromJsp=SrMj (label: 五島市議会議員政治倫理条例)"
@@ -54,7 +60,7 @@
           "fetched_at": "2026-08-27T09:37:33Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.goto.nagasaki.jp/li/shisei/070/index.html (label: 市の財政) 入口 https://www.city.goto.nagasaki.jp:443/li/shisei/070/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at http://www.city.goto.nagasaki.jp/li/shisei/070/index.html (label: 市の財政) 入口 https://www.city.goto.nagasaki.jp:443/li/shisei/070/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.goto.nagasaki.jp:443/li/shisei/070/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -75,7 +81,7 @@
           "fetched_at": "2026-08-27T09:37:33Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.goto.nagasaki.jp/li/shisei/070/index.html (label: 市の財政) 入口 https://www.city.goto.nagasaki.jp:443/li/shisei/070/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at http://www.city.goto.nagasaki.jp/li/shisei/070/index.html (label: 市の財政) 入口 https://www.city.goto.nagasaki.jp:443/li/shisei/070/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.goto.nagasaki.jp:443/li/shisei/070/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

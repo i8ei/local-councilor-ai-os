@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.tokorozawa.saitama.jp/shiseijoho/shingikai/kaigiroku/index.html (label: 会議録等)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF957F2",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:49:49Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF957F2",
           "observed_on": "http://www.city.tokorozawa.saitama.jp/",
           "fetched_at": "2026-08-27T06:47:43Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF957F2",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF957F2",
+          "sha256": "13942978c6d912e1fe0f44099631798b96aade9127d293bb9cb171d412f476d0",
+          "fetched_at": "2026-08-27T11:49:49Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF957F2 (label: 所沢市 例規集)"

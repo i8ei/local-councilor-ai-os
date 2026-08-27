@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at https://www.city.kasukabe.lg.jp/shiseijoho/fuzokukikanto/kaigiichiran_kaigikaisainooshirase_kekkagaiyo_kaigiroku/index.html (label: 会議一覧(会議開催のお知らせ・結果概要・会議録))"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95853",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:49:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95853",
           "observed_on": "http://www.city.kasukabe.lg.jp/",
           "fetched_at": "2026-08-27T06:49:30Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95853",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95853",
+          "sha256": "43c8b261946cdeff02495f6c4b3aefe33b97662b9131ba2a1622bce5a76546e4",
+          "fetched_at": "2026-08-27T11:48:31Z"
         }
       ],
-      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95853 (label: 例規集)"
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95853 (label: 例規集) extraction probe read one document at the first regulation document discovered from D1-Law index but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
       "status": "needs_review",

@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.town.onjuku.chiba.jp/sub5/4/gikai/gijiroku/ (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A80078B0F",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A80078B0F",
           "observed_on": "http://www.town.onjuku.chiba.jp/",
           "fetched_at": "2026-08-27T07:28:52Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078B0F",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A80078B0F",
+          "sha256": "f0f7acd3f4b83f9181f7046f1a59e954dfe45fdd1450675a8a2fc1cf87283e03",
+          "fetched_at": "2026-08-27T12:09:52Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A80078B0F (label: 例規集)"

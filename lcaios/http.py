@@ -107,7 +107,9 @@ class _NoRedirectHandler(urllib.request.HTTPRedirectHandler):
         return None
 
 
-_OPENER = urllib.request.build_opener(_NoRedirectHandler())
+_OPENER = urllib.request.build_opener(
+    _NoRedirectHandler(), urllib.request.HTTPCookieProcessor()
+)
 
 
 @dataclass(frozen=True)

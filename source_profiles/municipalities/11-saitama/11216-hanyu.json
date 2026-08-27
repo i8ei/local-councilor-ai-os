@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95855",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95855",
           "observed_on": "http://www.city.hanyu.lg.jp/",
           "fetched_at": "2026-08-27T06:50:09Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7FF95855",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95855",
+          "sha256": "6c7d6eacef4149f7aa3ffc96a746f729ba98fa2bb7b0d21a7e59f4340ec43cd9",
+          "fetched_at": "2026-08-27T12:09:29Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95855 (label: 例規集)"

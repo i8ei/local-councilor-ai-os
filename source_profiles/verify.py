@@ -17,6 +17,10 @@ from lcaios.http import CacheTier, RobotsDeniedError, canonical_url
 from modules.minutes_db.adapters.dbsr import DbsrAdapter
 from modules.minutes_db.adapters.kaigiroku_net import KaigirokuNetAdapter
 from modules.minutes_db.adapters.static_html import StaticHtmlAdapter
+from modules.regulations.vendor_d1law_opensearch import (
+    discover_documents as discover_documents_d1law_opensearch,
+    fetch_document as fetch_document_d1law_opensearch,
+)
 from modules.regulations.vendor_d1law_reiki import (
     discover_documents as discover_documents_d1law,
     fetch_document as fetch_document_d1law,
@@ -866,6 +870,42 @@ def _probe_d1law_regulations(
     provenance = payload.get("provenance")
     status = provenance.get("status") if isinstance(provenance, dict) else None
     return records, status
+
+
+def _probe_d1law_opensearch_regulations(
+    *, index_url: str, client: Any
+) -> tuple[list[dict[str, Any]], Any]:
+    """Extract articles from D1-Law OpenSearch regulations via the real extractor."""
+    refs = discover_documents_d1law_opensearch(index_url, client=client, limit=10)
+    if not refs:
+        return [], "no_act_links"
+    last_payload: dict[str, Any] | None = None
+    for ref in refs:
+        payload = fetch_document_d1law_opensearch(ref, index_url=index_url, client=client)
+        last_payload = payload
+        articles = payload.get("articles")
+        records = (
+            [a for a in articles if isinstance(a, dict)]
+            if isinstance(articles, list)
+            else []
+        )
+        if any(a.get("article_no") for a in records):
+            provenance = payload.get("provenance")
+            status = provenance.get("status") if isinstance(provenance, dict) else None
+            return records, status
+
+    if last_payload:
+        articles = last_payload.get("articles")
+        records = (
+            [a for a in articles if isinstance(a, dict)]
+            if isinstance(articles, list)
+            else []
+        )
+        provenance = last_payload.get("provenance")
+        status = provenance.get("status") if isinstance(provenance, dict) else None
+        return records, status
+
+    return [], "no_act_links"
 
 
 def _probe_static_minutes(
@@ -1897,10 +1937,14 @@ def _verify_d1law_regulations(
         "sha256": sha256,
         "fetched_at": fetched_at,
     }
+    is_opensearch = "opensearch" in str(index_url).lower() or "jctcd=" in str(index_url).lower()
+    probe_fn = (
+        (lambda: _probe_d1law_opensearch_regulations(index_url=str(final_url_val), client=client))
+        if is_opensearch
+        else (lambda: _probe_d1law_regulations(index_url=str(final_url_val), client=client))
+    )
     return _finalize_with_probe(
-        lambda: _probe_d1law_regulations(
-            index_url=str(final_url_val), client=client
-        ),
+        probe_fn,
         updated=updated,
         profile=profile,
         entry=entry,

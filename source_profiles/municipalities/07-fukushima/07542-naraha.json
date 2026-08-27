@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F9DD2",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F9DD2",
           "observed_on": "http://www.town.naraha.lg.jp/",
           "fetched_at": "2026-08-27T08:08:37Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A4F9DD2",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F9DD2",
+          "sha256": "f75b0c45a1f57e03641c6ee2be3b8d80537f32832f0a302c45346bd1c2432b81",
+          "fetched_at": "2026-08-27T12:09:25Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F9DD2 (label: 例規集)"

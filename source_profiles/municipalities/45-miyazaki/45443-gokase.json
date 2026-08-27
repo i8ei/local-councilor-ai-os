@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.town.gokase.miyazaki.jp/kakuka/gikai/honkaigi/kaigiroku/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC9A3F",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:51:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC9A3F",
           "observed_on": "https://www.town.gokase.miyazaki.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:34:05Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC9A3F",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC9A3F",
+          "sha256": "a41c26413c8156915fe9715f805b8470cc33d45acde42a425cf07225d78e7532",
+          "fetched_at": "2026-08-27T11:51:32Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC9A3F (label: )"

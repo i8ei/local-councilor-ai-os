@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.city.fussa.tokyo.jp/assembly/outline/1000433.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8016A457",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8016A457",
           "observed_on": "http://www.city.fussa.tokyo.jp/",
           "fetched_at": "2026-08-27T07:45:59Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8016A457",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8016A457",
+          "sha256": "94676b9cdb0522ab203f8f3e8cfd3862f6b706d22e7fb7d471804e5bed2630d2",
+          "fetched_at": "2026-08-27T12:09:58Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A8016A457 (label: 福生市例規集)"

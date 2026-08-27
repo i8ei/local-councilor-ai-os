@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.city.inuyama.aichi.jp/shisei/gikai/1000467/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85833114",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85833114",
           "observed_on": "http://www.city.inuyama.aichi.jp/shisei/index.html",
           "fetched_at": "2026-08-27T08:01:19Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85833114",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85833114",
+          "sha256": "444b457ba22ce9e08c82f66dc92827a6172150d48f35ca643013ecdeb5fa112d",
+          "fetched_at": "2026-08-27T12:12:32Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85833114 (label: 例規集・要綱集)"

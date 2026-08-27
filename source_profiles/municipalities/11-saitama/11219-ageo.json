@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/ageo/WebView/rd/council.html (label: 議会中継)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95858",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95858",
           "observed_on": "http://www.city.ageo.lg.jp/",
           "fetched_at": "2026-08-27T06:51:43Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7FF95858",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95858",
+          "sha256": "dcef74fec0268da1798cfe5c0bd556d384671e8655053570e455ae66ffeb928f",
+          "fetched_at": "2026-08-27T12:09:30Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95858 (label: 上尾市例規集)"

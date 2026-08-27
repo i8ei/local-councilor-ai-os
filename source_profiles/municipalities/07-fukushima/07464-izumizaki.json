@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.vill.izumizaki.fukushima.jp/muragikai/page000511.html (label: 会議録検索システム)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F772A",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F772A",
           "observed_on": "http://www.vill.izumizaki.fukushima.jp/",
           "fetched_at": "2026-08-27T08:02:13Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F772A",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F772A",
+          "sha256": "a6def4e54aadb16994d6d9418f43f19992318e574f2b5dd50c9d6ce448f71d06",
+          "fetched_at": "2026-08-27T12:09:24Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F772A (label: 例規集)"

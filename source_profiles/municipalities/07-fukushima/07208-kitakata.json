@@ -21,16 +21,22 @@
       "notes": "Observed dbsr at https://www.city.kitakata.fukushima.dbsr.jp/ (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F25F2",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F25F2",
           "observed_on": "http://www.city.kitakata.fukushima.jp/",
           "fetched_at": "2026-08-27T07:53:03Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A4F25F2",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F25F2",
+          "sha256": "94ca3789cbad32c53f58d160201566c6b839fbbcf95936b2cc7e7a3e1293f0ef",
+          "fetched_at": "2026-08-27T12:09:20Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F25F2 (label: 例規集)"
