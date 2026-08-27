@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.nogi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.nogi.lg.jp/cyousei/akiya_taisaku/akiya_giziroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nogi.lg.jp/cyousei/akiya_taisaku/akiya_giziroku/",
           "observed_on": "http://www.town.nogi.lg.jp/cyousei/",
           "fetched_at": "2026-08-27T06:24:09Z"
+        },
+        {
+          "url": "https://www.town.nogi.lg.jp/cyousei/akiya_taisaku/akiya_giziroku/",
+          "observed_on": "https://www.town.nogi.lg.jp/cyousei/akiya_taisaku/akiya_giziroku/",
+          "sha256": "a629107e5bd3f342f9c004d7d3e3e59407985c2027ff2dc271aa62738d77abeb",
+          "fetched_at": "2026-08-27T10:18:15Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.nogi.lg.jp/cyousei/akiya_taisaku/akiya_giziroku/ (label: 野木町空家等対策協議会議事録)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html",
           "observed_on": "http://www.town.nogi.lg.jp/cyousei/",
           "fetched_at": "2026-08-27T06:24:09Z"
+        },
+        {
+          "url": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html",
+          "observed_on": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html",
+          "sha256": "bc6ebb4506d060508210683936d2e2e95d0ec4de3d3bc8737b9006394fb60005",
+          "fetched_at": "2026-08-27T10:18:16Z"
+        },
+        {
+          "url": "https://www.town.nogi.lg.jp/data/doc/1773896990_doc_53_0.pdf",
+          "observed_on": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html",
+          "fetched_at": "2026-08-27T10:18:15Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html (label: 当初予算書)"
+      "notes": "Observed budget link at https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html (label: 当初予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html",
           "observed_on": "http://www.town.nogi.lg.jp/cyousei/",
           "fetched_at": "2026-08-27T06:24:09Z"
+        },
+        {
+          "url": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html",
+          "observed_on": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html",
+          "sha256": "9df3800419b2f8181c84243e5dc9ec1df47d45a2f7da722873f0c5ac16289b47",
+          "fetched_at": "2026-08-27T10:18:20Z"
+        },
+        {
+          "url": "https://www.town.nogi.lg.jp/data/doc/1760660929_doc_53_0.pdf",
+          "observed_on": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html",
+          "fetched_at": "2026-08-27T10:18:20Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html (label: 決算書)"
+      "notes": "Observed settlement link at https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html (label: 決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.vill.ogimi.okinawa.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:41:01Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.ogimi.okinawa.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "http://www.vill.ogimi.okinawa.jp/",
           "fetched_at": "2026-08-27T06:51:50Z"
+        },
+        {
+          "url": "http://www.vill.ogimi.okinawa.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.ogimi.okinawa.jp/section/reiki_int/",
+          "sha256": "1a784de49f45d194598e56c4bdf6afc12dbf5c7acadc9670832d3545bc910853",
+          "fetched_at": "2026-08-27T09:41:07Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.vill.ogimi.okinawa.jp/section/reiki_int/reiki_menu.html (label: 大宜味村例規集)"
@@ -39,9 +45,20 @@
           "url": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
           "observed_on": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/402.html",
           "fetched_at": "2026-08-27T06:52:42Z"
+        },
+        {
+          "url": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
+          "observed_on": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
+          "sha256": "55e6ae288533bd7d1cb186010e4b01f7e2f0b2a9d6891bc50b46777210b5fcf5",
+          "fetched_at": "2026-08-27T09:41:14Z"
+        },
+        {
+          "url": "https://www.vill.ogimi.okinawa.jp/material/files/group/8/R2ippannkaikeitousyoyosann.pdf",
+          "observed_on": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
+          "fetched_at": "2026-08-27T09:41:12Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html (label: 当初予算の公表について)"
+      "notes": "Observed budget link at https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html (label: 当初予算の公表について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +71,15 @@
           "url": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html",
           "observed_on": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/index.html",
           "fetched_at": "2026-08-27T06:52:02Z"
+        },
+        {
+          "url": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html",
+          "sha256": "43ba3e6de2c7c1024c91e1c318e5b93aef0d1859ae066c682c9e11281e95e112",
+          "fetched_at": "2026-08-27T09:41:16Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

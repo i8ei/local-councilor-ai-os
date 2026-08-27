@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T06:19:34Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.yoichi.hokkaido.jp/gikai/kaigiroku/index.html (label: )"
+      "notes": "Observed council minutes index at http://www.town.yoichi.hokkaido.jp/gikai/kaigiroku/index.html (label: ) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.yoichi.hokkaido.jp/reikishu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:29:57Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yoichi.hokkaido.jp/reikishu/reiki_menu.html",
           "observed_on": "http://www.town.yoichi.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:17:45Z"
+        },
+        {
+          "url": "https://www.town.yoichi.hokkaido.jp/reikishu/reiki_menu.html",
+          "observed_on": "https://www.town.yoichi.hokkaido.jp/reikishu/",
+          "sha256": "a6363917c919bd12aad41edc163000a31554756055e778d729e0b37d95b90fb8",
+          "fetched_at": "2026-08-27T10:29:59Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.yoichi.hokkaido.jp/reikishu/reiki_menu.html (label: )"
@@ -46,9 +52,15 @@
           "url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
           "observed_on": "http://www.town.yoichi.hokkaido.jp/chousei/index.html",
           "fetched_at": "2026-08-27T06:18:00Z"
+        },
+        {
+          "url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
+          "observed_on": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
+          "sha256": "dd6eb79e995bbc9a0d5b14686b3de1139cac59fb7613997d55dd0d3bb703c130",
+          "fetched_at": "2026-08-27T10:30:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html (label: 財政・会計)"
+      "notes": "Observed finance section at http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html (label: 財政・会計) 入口 http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
           "observed_on": "http://www.town.yoichi.hokkaido.jp/chousei/index.html",
           "fetched_at": "2026-08-27T06:18:00Z"
+        },
+        {
+          "url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
+          "observed_on": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
+          "sha256": "dd6eb79e995bbc9a0d5b14686b3de1139cac59fb7613997d55dd0d3bb703c130",
+          "fetched_at": "2026-08-27T10:30:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html (label: 財政・会計)"
+      "notes": "Observed finance section at http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html (label: 財政・会計) 入口 http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

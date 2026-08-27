@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.kota.lg.jp/site/gikai/list11-78.html (label: 議事録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/kota/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:16:40Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/kota/reiki_menu.html",
           "observed_on": "http://www.town.kota.lg.jp/",
           "fetched_at": "2026-08-27T08:14:01Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/kota/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kota/",
+          "sha256": "dfacbd6b66aac1ded6c7fdb726c9a22bf133808a5ab559c3cab563af1166a111",
+          "fetched_at": "2026-08-27T10:16:45Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kota/reiki_menu.html (label: 例規集)"

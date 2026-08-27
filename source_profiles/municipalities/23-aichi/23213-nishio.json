@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.nishio.aichi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "http://www.city.nishio.aichi.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:15:11Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nishio.aichi.dbsr.jp/index.php/",
           "observed_on": "http://www.city.nishio.aichi.jp/gikai/index.html",
           "fetched_at": "2026-08-27T08:00:34Z"
+        },
+        {
+          "url": "http://www.city.nishio.aichi.dbsr.jp/index.php/",
+          "observed_on": "http://www.city.nishio.aichi.dbsr.jp/index.php/",
+          "sha256": "a3ffe4bebe4a9bddd10b94c2415bb531f6135291566b0ec414069ebc4d2a0a38",
+          "fetched_at": "2026-08-27T10:15:17Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.nishio.aichi.dbsr.jp/index.php/ (label: )"
+      "notes": "Observed dbsr at http://www.city.nishio.aichi.dbsr.jp/index.php/ (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

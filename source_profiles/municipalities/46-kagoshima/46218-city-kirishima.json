@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city-kirishima.jp/hisyokouhou/shise/shigikai/kaigiroku/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/city-kirishima/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:40:20Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/city-kirishima/reiki_menu.html",
           "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/index.html",
           "fetched_at": "2026-08-27T06:39:57Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/city-kirishima/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/city-kirishima/",
+          "sha256": "cb45af7f0bdde1c71ce90088a6d4b6f1fd4a9163e361245ab1669232981a06b8",
+          "fetched_at": "2026-08-27T09:40:26Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city-kirishima/reiki_menu.html (label: 条例・例規)"

@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.hirao.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.hirao.lg.jp/soshiki/gikai/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hirao.lg.jp/soshiki/gikai/gikai/kaigiroku/index.html",
           "observed_on": "https://www.town.hirao.lg.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:37:25Z"
+        },
+        {
+          "url": "https://www.town.hirao.lg.jp/soshiki/gikai/gikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.hirao.lg.jp/soshiki/gikai/gikai/kaigiroku/index.html",
+          "sha256": "ee583706fdd9145366380a74a894a8761662d6499cd13a62e041ed45e832518e",
+          "fetched_at": "2026-08-27T09:45:39Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.hirao.lg.jp/soshiki/gikai/gikai/kaigiroku/index.html (label: 定例会・臨時会の会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.hirao.lg.jp/section/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hirao.lg.jp/section/reiki/reiki_menu.html",
           "observed_on": "http://www.town.hirao.lg.jp/",
           "fetched_at": "2026-08-27T06:37:01Z"
+        },
+        {
+          "url": "https://www.town.hirao.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.hirao.lg.jp/section/reiki/",
+          "sha256": "7313b96584e09deb15bdfb0f41be6dca8f5a04fecc76fa488c4217b0f49b4d0a",
+          "fetched_at": "2026-08-27T09:45:33Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.hirao.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,20 @@
           "url": "https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html",
           "observed_on": "https://www.town.hirao.lg.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:37:25Z"
+        },
+        {
+          "url": "https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html",
+          "observed_on": "https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html",
+          "sha256": "bdbbbb189af5592a94561dd54088f6b51d3e0a757a77c32eec5e3ffe98cadc98",
+          "fetched_at": "2026-08-27T09:45:42Z"
+        },
+        {
+          "url": "https://www.town.hirao.lg.jp/material/files/group/8/tousyoyosann_gaiyou_2026.pdf",
+          "observed_on": "https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html",
+          "fetched_at": "2026-08-27T09:45:41Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html (label: 当初予算の概要)"
+      "notes": "Observed budget link at https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html (label: 当初予算の概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +84,20 @@
           "url": "https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html",
           "observed_on": "https://www.town.hirao.lg.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:37:25Z"
+        },
+        {
+          "url": "https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html",
+          "observed_on": "https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html",
+          "sha256": "1cfcc3e63777996d0afc7fd8083933f548f162692503cff065476abab83c5cdf",
+          "fetched_at": "2026-08-27T09:45:45Z"
+        },
+        {
+          "url": "https://www.town.hirao.lg.jp/material/files/group/8/kessanjokyo2024.pdf",
+          "observed_on": "https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html",
+          "fetched_at": "2026-08-27T09:45:45Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html (label: 決算の状況)"
+      "notes": "Observed settlement link at https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html (label: 決算の状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

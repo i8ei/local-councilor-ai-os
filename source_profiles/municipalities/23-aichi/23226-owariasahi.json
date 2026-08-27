@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/owariasahi/WebView/rd/council_1.html?referrer=https%3A%2F%2Fsmart.discussvision.net%2Fsmart%2Ftenant%2Fowariasahi%2FWebView%2F (label: 本会議中継・録画（開催日から概ね2日後に配信）)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/owariasahi.city/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:15:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/owariasahi.city/reiki_menu.html",
           "observed_on": "http://www.city.owariasahi.lg.jp/index2.html",
           "fetched_at": "2026-08-27T08:05:12Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/owariasahi.city/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/owariasahi.city/",
+          "sha256": "7de38f449b6e548007647c98003b7ae623910bc2c99387b036eb6df4ffdb876a",
+          "fetched_at": "2026-08-27T10:15:29Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/owariasahi.city/reiki_menu.html (label: 例規集)"

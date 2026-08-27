@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/kaga/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:05:32Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/kaga/reiki_menu.html",
           "observed_on": "http://www.city.kaga.ishikawa.jp/",
           "fetched_at": "2026-08-27T06:12:36Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/kaga/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kaga/",
+          "sha256": "ce82c613dd8f6af5dd9e3cae39f0a2f0f9790d0a7087d599fb7c7c745f5ffbcd",
+          "fetched_at": "2026-08-27T10:05:43Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kaga/reiki_menu.html (label: 加賀市例規集)"
@@ -39,9 +45,15 @@
           "url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html",
           "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/index.html",
           "fetched_at": "2026-08-27T06:19:22Z"
+        },
+        {
+          "url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html",
+          "sha256": "1d1fd5b7474422bd74c47791dec32cec8246228bd9840d7912258ecf9932ac20",
+          "fetched_at": "2026-08-27T10:06:12Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html (label: 予算)"
+      "notes": "Observed budget link at https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html",
           "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/index.html",
           "fetched_at": "2026-08-27T06:19:22Z"
+        },
+        {
+          "url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html",
+          "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html",
+          "sha256": "08994a7b8ff710f75ba649c34fde91fbb407a4aaa53793866278bcb7f04c56de",
+          "fetched_at": "2026-08-27T10:06:13Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html (label: 決算)"
+      "notes": "Observed settlement link at https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

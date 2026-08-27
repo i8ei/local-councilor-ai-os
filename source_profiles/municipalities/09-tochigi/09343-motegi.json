@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.motegi.tochigi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=17800&syurui=1",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=17800&syurui=1",
           "observed_on": "http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=12&syurui=0",
           "fetched_at": "2026-08-27T06:23:34Z"
+        },
+        {
+          "url": "http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=17800&syurui=1",
+          "observed_on": "http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=17800&syurui=1",
+          "sha256": "c173e0b2f8b85f1df76d36542481702fa5b79b228181c1ecae6b7e1de36edaaa",
+          "fetched_at": "2026-08-27T10:18:23Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=17800&syurui=1 (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.motegi.tochigi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.motegi.tochigi/reiki_menu.html",
           "observed_on": "http://www.town.motegi.tochigi.jp/",
           "fetched_at": "2026-08-27T06:22:38Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.motegi.tochigi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.motegi.tochigi/",
+          "sha256": "9913d78ddd40ad2c337060bfe89040438493c877c6a5d20af5ec9ae89e711a52",
+          "fetched_at": "2026-08-27T10:18:12Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.motegi.tochigi/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1",
           "observed_on": "http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=11&syurui=0",
           "fetched_at": "2026-08-27T06:22:56Z"
+        },
+        {
+          "url": "https://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1",
+          "observed_on": "https://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1",
+          "sha256": "d7b198660e859e41970aa85a645e411be4638ce86a377c31551b4ae3436c052f",
+          "fetched_at": "2026-08-27T10:18:28Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1 (label: 財政)"
+      "notes": "Observed finance section at http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1 (label: 財政) 入口 https://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1",
           "observed_on": "http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=11&syurui=0",
           "fetched_at": "2026-08-27T06:22:56Z"
+        },
+        {
+          "url": "https://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1",
+          "observed_on": "https://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1",
+          "sha256": "d7b198660e859e41970aa85a645e411be4638ce86a377c31551b4ae3436c052f",
+          "fetched_at": "2026-08-27T10:18:28Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1 (label: 財政)"
+      "notes": "Observed finance section at http://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1 (label: 財政) 入口 https://www.town.motegi.tochigi.jp/motegi/nextpage.php?cd=46753&syurui=1 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

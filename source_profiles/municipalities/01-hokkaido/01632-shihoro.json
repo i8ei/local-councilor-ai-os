@@ -6,31 +6,43 @@
   "official_home_url": "https://www.shihoro.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.shihoro.jp/assembly/minutes/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:31:37Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.shihoro.jp/assembly/minutes/",
           "observed_on": "https://www.shihoro.jp/assembly/",
           "fetched_at": "2026-08-27T06:47:19Z"
+        },
+        {
+          "url": "https://www.shihoro.jp/assembly/minutes/",
+          "observed_on": "https://www.shihoro.jp/assembly/minutes/",
+          "sha256": "1e4ec02bbad8a1b7b20cf96eebc8417447eb1d5767b10d4661157a1102270c46",
+          "fetched_at": "2026-08-27T10:31:38Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.shihoro.jp/assembly/minutes/ (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/shihoro/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:31:26Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/shihoro/reiki_menu.html",
           "observed_on": "https://www.shihoro.jp/",
           "fetched_at": "2026-08-27T06:46:30Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/shihoro/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/shihoro/",
+          "sha256": "15a36b2bca8a7de161fc2312d3c088767365ffa05639336310c39d6da1aed426",
+          "fetched_at": "2026-08-27T10:31:29Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/shihoro/reiki_menu.html (label: 例規集)"

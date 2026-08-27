@@ -6,31 +6,43 @@
   "official_home_url": "http://www.iwami.gr.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/iwami/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:42:37Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/iwami/pg/index.html",
           "observed_on": "http://www.iwami.gr.jp/item/12972.htm",
           "fetched_at": "2026-08-27T05:59:22Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/iwami/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/iwami/pg/index.html",
+          "sha256": "c4c4de00bca9b23502300feb62679050871f19da6642264854efdeab3e09db66",
+          "fetched_at": "2026-08-27T09:42:39Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/iwami/pg/index.html (label: 会議録の検索・閲覧)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/iwami/pg/index.html (label: 会議録の検索・閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.iwami.gr.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:42:30Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.iwami.gr.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.iwami.gr.jp/",
           "fetched_at": "2026-08-27T05:56:44Z"
+        },
+        {
+          "url": "http://www.iwami.gr.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.iwami.gr.jp/reiki_int/",
+          "sha256": "e09eb82186664c55217bdaacf9d7afa62f2fe6cdb2e8cb299e384c621a9a4c6c",
+          "fetched_at": "2026-08-27T09:42:32Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.iwami.gr.jp/reiki_int/reiki_menu.html (label: 条例・例規集)"

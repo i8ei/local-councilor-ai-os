@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.satsumasendai.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.satsumasendai.lg.jp/shigikai/2/9238.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:40:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.satsumasendai.lg.jp/shigikai/2/9238.html",
           "observed_on": "https://www.city.satsumasendai.lg.jp/shigikai/2/index.html",
           "fetched_at": "2026-08-27T06:39:33Z"
+        },
+        {
+          "url": "https://www.city.satsumasendai.lg.jp/shigikai/2/9238.html",
+          "observed_on": "https://www.city.satsumasendai.lg.jp/shigikai/2/9238.html",
+          "sha256": "ed618f76d83eeab871f1a5d745263f4ae31ccd168c86aa941a5aa586d9903348",
+          "fetched_at": "2026-08-27T09:40:26Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.satsumasendai.lg.jp/shigikai/2/9238.html (label: 本会議の会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.satsumasendai/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:40:18Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.satsumasendai/reiki_menu.html",
           "observed_on": "http://www.city.satsumasendai.lg.jp/",
           "fetched_at": "2026-08-27T06:38:00Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.satsumasendai/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.satsumasendai/",
+          "sha256": "034c6fa1f02ba25f8a2fb5cf4da0c8c9ad6992f013df0bb2cfaed9a9074a0479",
+          "fetched_at": "2026-08-27T09:40:18Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.satsumasendai/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
           "observed_on": "https://www.city.satsumasendai.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:38:20Z"
+        },
+        {
+          "url": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "sha256": "ab518dbc595edf0cf885e5c944d994dbaad20e97157bad567ce0738a8e18c76c",
+          "fetched_at": "2026-08-27T09:40:28Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html (label: 財政) 入口 https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
           "observed_on": "https://www.city.satsumasendai.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:38:20Z"
+        },
+        {
+          "url": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "sha256": "ab518dbc595edf0cf885e5c944d994dbaad20e97157bad567ce0738a8e18c76c",
+          "fetched_at": "2026-08-27T09:40:28Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html (label: 財政) 入口 https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

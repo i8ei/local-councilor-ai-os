@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.matsusaka.mie.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/matsusaka/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:48:29Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/matsusaka/SpTop.html",
           "observed_on": "http://www.city.matsusaka.mie.jp/site/gikai/",
           "fetched_at": "2026-08-27T05:58:27Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/matsusaka/SpTop.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/matsusaka/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T09:48:30Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/matsusaka/SpTop.html (label: 会議録の検索)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/matsusaka/SpTop.html (label: 会議録の検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

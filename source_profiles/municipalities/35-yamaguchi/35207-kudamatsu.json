@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.kudamatsu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:23Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html",
           "observed_on": "http://www.city.kudamatsu.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:37:42Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html",
+          "sha256": "9c84a5dc0f5d5852b5ed7942ee97fbe4e2b70acb47ace1b1eff4f5769f05dc4a",
+          "fetched_at": "2026-08-27T09:45:25Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html (label: 会議録検索システム)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.kudamatsu.lg.jp/kudahp/reiki/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kudamatsu.lg.jp/kudahp/reiki/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.kudamatsu.lg.jp/",
           "fetched_at": "2026-08-27T06:33:30Z"
+        },
+        {
+          "url": "http://www.city.kudamatsu.lg.jp/kudahp/reiki/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.kudamatsu.lg.jp/kudahp/reiki/reiki_int/",
+          "sha256": "ab6dc41a095ca7f42f50c506be1d6aea193190061e6817cb03e2792d972ff38d",
+          "fetched_at": "2026-08-27T09:45:18Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.kudamatsu.lg.jp/kudahp/reiki/reiki_int/reiki_menu.html (label: 条例・規則)"

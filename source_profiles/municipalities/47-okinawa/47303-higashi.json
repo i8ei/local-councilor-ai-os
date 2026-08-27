@@ -6,19 +6,25 @@
   "official_home_url": "https://www.vill.higashi.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/higashi/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:41:02Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/higashi/pg/index.html",
           "observed_on": "https://www.vill.higashi.okinawa.jp/",
           "fetched_at": "2026-08-27T06:52:12Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/higashi/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/higashi/pg/index.html",
+          "sha256": "dad2971768c10407d4a161367f5ded0009828586f588f34e3a171aab989b8a3d",
+          "fetched_at": "2026-08-27T09:41:03Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/higashi/pg/index.html (label: 東村議会議事録)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/higashi/pg/index.html (label: 東村議会議事録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html",
           "observed_on": "https://www.vill.higashi.okinawa.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:52:26Z"
+        },
+        {
+          "url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+          "sha256": "5dcf8784e2f46adf31d3febd8ad31d24549fdf5e71783473fdecfe854ca4d481",
+          "fetched_at": "2026-08-27T09:41:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,20 @@
           "url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/678.html",
           "observed_on": "https://www.vill.higashi.okinawa.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:52:26Z"
+        },
+        {
+          "url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/678.html",
+          "observed_on": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/678.html",
+          "sha256": "0ebb6d1bae544d8ee3e233040ebd675aa768a1c6e30372d10480c0c0661dd83d",
+          "fetched_at": "2026-08-27T09:41:07Z"
+        },
+        {
+          "url": "https://www.vill.higashi.okinawa.jp/material/files/group/2/R6futuukaikeizaimushohyou.pdf",
+          "observed_on": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/678.html",
+          "fetched_at": "2026-08-27T09:41:06Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/678.html (label: 決算に係る財務諸表)"
+      "notes": "Observed settlement link at https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/678.html (label: 決算に係る財務諸表) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     }
   }
 }

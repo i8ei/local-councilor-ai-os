@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.gamagori.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/gamagori/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:15:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/gamagori/pg/index.html",
           "observed_on": "http://www.city.gamagori.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T08:01:22Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/gamagori/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/gamagori/pg/index.html",
+          "sha256": "05788e3de8088a1268db21bac969a0a9168e3f2764c130cfda60c71e667e6ca6",
+          "fetched_at": "2026-08-27T10:15:18Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/gamagori/pg/index.html (label: 会議録の検索と閲覧)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/gamagori/pg/index.html (label: 会議録の検索と閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/gamagori/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:15:11Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/gamagori/reiki_menu.html",
           "observed_on": "http://www.city.gamagori.lg.jp/",
           "fetched_at": "2026-08-27T08:00:15Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/gamagori/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/gamagori/",
+          "sha256": "33c1ee12309e3eac249328f811948fb54788b445ea134815d8d23855068edaad",
+          "fetched_at": "2026-08-27T10:15:11Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/gamagori/reiki_menu.html (label: 蒲郡市例規集)"

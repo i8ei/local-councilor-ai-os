@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.matsuno.ehime.jp/site/gikai/list156.html (label: 会議録の一覧を見る)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.matsuno.ehime/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:46:52Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.matsuno.ehime/reiki_menu.html",
           "observed_on": "http://www.town.matsuno.ehime.jp/index2.html",
           "fetched_at": "2026-08-27T07:05:24Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.matsuno.ehime/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.matsuno.ehime/",
+          "sha256": "2cea9337ddbb68be6029584354d580e6b20945552f88a56638c83f9ef25f6368",
+          "fetched_at": "2026-08-27T09:46:55Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.matsuno.ehime/reiki_menu.html (label: 松野町例規集)"

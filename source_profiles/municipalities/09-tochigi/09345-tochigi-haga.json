@@ -6,19 +6,25 @@
   "official_home_url": "https://www.town.tochigi-haga.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/haga/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:48Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/haga/SpTop.html",
           "observed_on": "https://www.town.tochigi-haga.lg.jp/",
           "fetched_at": "2026-08-27T06:23:14Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/haga/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/haga/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:18:48Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/haga/SpTop.html (label: 議会会議録)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/haga/SpTop.html (label: 議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

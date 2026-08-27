@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.kuroshio.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.kuroshio.lg.jp/pb/cont/281",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:47:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kuroshio.lg.jp/pb/cont/281",
           "observed_on": "https://www.town.kuroshio.lg.jp/pb/cont/277",
           "fetched_at": "2026-08-27T07:19:44Z"
+        },
+        {
+          "url": "https://www.town.kuroshio.lg.jp/pb/cont/281",
+          "observed_on": "https://www.town.kuroshio.lg.jp/pb/cont/281",
+          "sha256": "c80d3186f1bb4c11c7dfaaa7a2fd6fe6789b05632e23aecd7dd097d6f0aa0040",
+          "fetched_at": "2026-08-27T09:47:57Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.kuroshio.lg.jp/pb/cont/281 (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.kuroshio.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:47:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kuroshio.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.kuroshio.lg.jp/",
           "fetched_at": "2026-08-27T07:19:26Z"
+        },
+        {
+          "url": "https://www.town.kuroshio.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.kuroshio.lg.jp/reiki_int/",
+          "sha256": "9677bed38c9a3bc148e692008787943f5add1017750460a999c55c96a7b607a8",
+          "fetched_at": "2026-08-27T09:47:49Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.kuroshio.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"

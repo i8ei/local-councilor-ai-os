@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.yachimata.lg.jp/site/yachimatasigikai/45705.html (label: 市議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.yachimata/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:23:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.yachimata/reiki_menu.html",
           "observed_on": "http://www.city.yachimata.lg.jp/",
           "fetched_at": "2026-08-27T07:20:17Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.yachimata/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.yachimata/",
+          "sha256": "9606927e14408c7cc6788b2ef0a1383188b429423f51960a88a711576e4b67a1",
+          "fetched_at": "2026-08-27T10:23:29Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.yachimata/reiki_menu.html (label: 市例規集)"

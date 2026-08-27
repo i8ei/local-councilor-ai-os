@@ -6,31 +6,43 @@
   "official_home_url": "https://www.city.uto.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/uto/MinuteSearch.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:38:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/uto/MinuteSearch.html",
           "observed_on": "https://www.city.uto.lg.jp/article/view/1255/730.html",
           "fetched_at": "2026-08-27T05:34:09Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/uto/MinuteSearch.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/uto/MinuteSearch.html",
+          "sha256": "3732538daccf2968f04c26fde739c98a7ab4f2e1a199d563964ba9257eeeaac2",
+          "fetched_at": "2026-08-27T09:38:23Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/uto/MinuteSearch.html (label: 宇土市議会会議録検索システム)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/uto/MinuteSearch.html (label: 宇土市議会会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/uto-city/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:37:55Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/uto-city/reiki_menu.html",
           "observed_on": "https://www.city.uto.lg.jp/",
           "fetched_at": "2026-08-27T05:34:04Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/uto-city/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/uto-city/",
+          "sha256": "8adc88310a378a812daf282b6f42dd8ac4779e1c58deb9c2169d997eb20843a6",
+          "fetched_at": "2026-08-27T09:38:00Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/uto-city/reiki_menu.html (label: )"

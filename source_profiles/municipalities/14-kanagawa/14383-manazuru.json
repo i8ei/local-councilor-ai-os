@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.kensakusystem.jp/manazuru/sapphire.html (label: 真鶴町議会議事録検索システム)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.manazuru.kanagawa/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:27:39Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.manazuru.kanagawa/reiki_menu.html",
           "observed_on": "http://www.town.manazuru.kanagawa.jp/",
           "fetched_at": "2026-08-27T08:09:12Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.manazuru.kanagawa/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.manazuru.kanagawa/",
+          "sha256": "73a339d8fe4b8b6ae4160f101175c47996608df1eba1e684a122bc4325ef0113",
+          "fetched_at": "2026-08-27T10:27:50Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.manazuru.kanagawa/reiki_menu.html (label: 真鶴町例規集)"

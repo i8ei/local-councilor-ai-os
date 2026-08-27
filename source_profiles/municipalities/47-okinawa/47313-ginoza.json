@@ -6,31 +6,43 @@
   "official_home_url": "http://www.vill.ginoza.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:41:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
           "observed_on": "https://www.vill.ginoza.okinawa.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:53:32Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
+          "sha256": "e9a232c5eab9c00014c8725d7f200e6cdb3542c14ae6741892fcb1052e541419",
+          "fetched_at": "2026-08-27T09:41:16Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html (label: 村議会議事録システムはこちら)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html (label: 村議会議事録システムはこちら) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/vill.ginoza/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:41:08Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/vill.ginoza/reiki_menu.html",
           "observed_on": "https://www1.g-reiki.net/vill.ginoza/reiki_menu.html",
           "fetched_at": "2026-08-27T06:57:15Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/vill.ginoza/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/vill.ginoza/",
+          "sha256": "6c9dc40de0b8575bd0571d3a391fda8baf43e5b9b99289703585453e4f76d8c1",
+          "fetched_at": "2026-08-27T09:41:09Z"
         }
       ],
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/vill.ginoza/reiki_menu.html for 宜野座村"

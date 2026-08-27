@@ -21,16 +21,22 @@
       "notes": "Observed dbsr at http://www.city.kani.gifu.dbsr.jp/ (label: 本会議会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/kani/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:12:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/kani/reiki_menu.html",
           "observed_on": "http://www.city.kani.lg.jp/",
           "fetched_at": "2026-08-27T07:29:29Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/kani/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kani/",
+          "sha256": "792431a26c04e6f4dbc09655d2b38e8fdce8ff2dddb474ddffb9602cbd94b406",
+          "fetched_at": "2026-08-27T10:12:54Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kani/reiki_menu.html (label: 例規集)"

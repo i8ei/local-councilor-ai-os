@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/konan/WebView/rd/council_1.html (label: 議会映像中継（生中継、過去一年の一般質問）はこちらからご覧になれます)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/konan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:15:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/konan/reiki_menu.html",
           "observed_on": "http://www.city.konan.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T08:02:47Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/konan/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/konan/",
+          "sha256": "1e85b6b7cb3573bd71a2eab7b9730c6b89c0eee68b446ea0fe319fa40c3e1fd9",
+          "fetched_at": "2026-08-27T10:15:17Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/konan/reiki_menu.html (label: 例規集)"

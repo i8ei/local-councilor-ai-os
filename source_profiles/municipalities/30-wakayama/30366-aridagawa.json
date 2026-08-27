@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.aridagawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.aridagawa.lg.jp/top/kakuka/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:53:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aridagawa.lg.jp/top/kakuka/gikai/kaigiroku/index.html",
           "observed_on": "https://www.town.aridagawa.lg.jp/top/kakuka/index.html",
           "fetched_at": "2026-08-27T07:24:33Z"
+        },
+        {
+          "url": "https://www.town.aridagawa.lg.jp/top/kakuka/gikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.aridagawa.lg.jp/top/kakuka/gikai/kaigiroku/index.html",
+          "sha256": "6c07e9d8758e5f29f0fb0c74a8a393155cfc1b958e56b6bc35cf53ee2c0b676e",
+          "fetched_at": "2026-08-27T09:53:36Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.aridagawa.lg.jp/top/kakuka/gikai/kaigiroku/index.html (label: 本会議会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.aridagawa.lg.jp/section/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:53:28Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aridagawa.lg.jp/section/reiki/reiki_menu.html",
           "observed_on": "https://www.town.aridagawa.lg.jp/top/index.html",
           "fetched_at": "2026-08-27T07:22:28Z"
+        },
+        {
+          "url": "https://www.town.aridagawa.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.aridagawa.lg.jp/section/reiki/",
+          "sha256": "4521ba3c3752de3fc06dab79aa5c143beb6fab852e726c5531c16cda307920ae",
+          "fetched_at": "2026-08-27T09:53:30Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.aridagawa.lg.jp/section/reiki/reiki_menu.html (label: 有田川町 例規集)"
@@ -46,9 +58,15 @@
           "url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
           "observed_on": "https://www.town.aridagawa.lg.jp/top/chosei/index.html",
           "fetched_at": "2026-08-27T07:24:17Z"
+        },
+        {
+          "url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
+          "observed_on": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
+          "sha256": "276cb899f00ca69c3da10ba4c2470a6203568e9b7f96d0c0cdb1c8dc09a8f532",
+          "fetched_at": "2026-08-27T09:53:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.aridagawa.lg.jp/top/chosei/2/index.html (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.aridagawa.lg.jp/top/chosei/2/index.html (label: 財政状況) 入口 https://www.town.aridagawa.lg.jp/top/chosei/2/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
           "observed_on": "https://www.town.aridagawa.lg.jp/top/chosei/index.html",
           "fetched_at": "2026-08-27T07:24:17Z"
+        },
+        {
+          "url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
+          "observed_on": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
+          "sha256": "276cb899f00ca69c3da10ba4c2470a6203568e9b7f96d0c0cdb1c8dc09a8f532",
+          "fetched_at": "2026-08-27T09:53:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.aridagawa.lg.jp/top/chosei/2/index.html (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.aridagawa.lg.jp/top/chosei/2/index.html (label: 財政状況) 入口 https://www.town.aridagawa.lg.jp/top/chosei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

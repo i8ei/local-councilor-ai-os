@@ -6,19 +6,25 @@
   "official_home_url": "https://www.town.yaese.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/yaese/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:41:41Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/yaese/pg/index.html",
           "observed_on": "https://www.town.yaese.lg.jp/",
           "fetched_at": "2026-08-27T06:59:49Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/yaese/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/yaese/pg/index.html",
+          "sha256": "05788e3de8088a1268db21bac969a0a9168e3f2764c130cfda60c71e667e6ca6",
+          "fetched_at": "2026-08-27T09:41:44Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yaese/pg/index.html (label: 議会議事録検索システム)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yaese/pg/index.html (label: 議会議事録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
           "observed_on": "https://www.town.yaese.lg.jp/docs/2025021000028/",
           "fetched_at": "2026-08-27T07:01:58Z"
+        },
+        {
+          "url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
+          "observed_on": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
+          "sha256": "edfa5d69267742265787b550dd6b2a61b8d08176cca945e3667f5d9563a85aa2",
+          "fetched_at": "2026-08-27T09:41:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課)"
+      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課) 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
           "observed_on": "https://www.town.yaese.lg.jp/docs/2025021000028/",
           "fetched_at": "2026-08-27T07:01:58Z"
+        },
+        {
+          "url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
+          "observed_on": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
+          "sha256": "edfa5d69267742265787b550dd6b2a61b8d08176cca945e3667f5d9563a85aa2",
+          "fetched_at": "2026-08-27T09:41:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課)"
+      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課) 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

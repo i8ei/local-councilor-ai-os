@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.kure.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/kure/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:44:40Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/kure/pg/index.html",
           "observed_on": "http://www.city.kure.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:26:19Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/kure/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/kure/pg/index.html",
+          "sha256": "8ff1dec86b5210299d5826d99b809f85943c3a29a1131b8d083855c649f2929b",
+          "fetched_at": "2026-08-27T09:44:45Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kure/pg/index.html (label: )"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kure/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

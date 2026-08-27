@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.kakuda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "https://www.city.kakuda.miyagi.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:34:23Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kakuda.miyagi.dbsr.jp/index.php/",
           "observed_on": "http://www.city.kakuda.lg.jp/life/3/",
           "fetched_at": "2026-08-27T07:18:11Z"
+        },
+        {
+          "url": "https://www.city.kakuda.miyagi.dbsr.jp/index.php/",
+          "observed_on": "https://www.city.kakuda.miyagi.dbsr.jp/index.php/",
+          "sha256": "2202224ad15330ea9596ceb07491cbab7a642c69e4be22d7db26ccba84bb8935",
+          "fetched_at": "2026-08-27T10:34:25Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.kakuda.miyagi.dbsr.jp/index.php/ (label: 角田市議会会議録)"
+      "notes": "Observed dbsr at https://www.city.kakuda.miyagi.dbsr.jp/index.php/ (label: 角田市議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

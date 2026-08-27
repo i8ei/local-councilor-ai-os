@@ -6,31 +6,43 @@
   "official_home_url": "https://www.city.kasuga.fukuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "http://www.city.kasuga.fukuoka.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:41Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kasuga.fukuoka.dbsr.jp/index.php/",
           "observed_on": "https://www.city.kasuga.fukuoka.jp/gikai/index.html",
           "fetched_at": "2026-08-27T04:13:14Z"
+        },
+        {
+          "url": "http://www.city.kasuga.fukuoka.dbsr.jp/index.php/",
+          "observed_on": "http://www.city.kasuga.fukuoka.dbsr.jp/index.php/",
+          "sha256": "5752c636df1e9367668e3f46018bfa40cb6cbea4952ce32def14589a45f287dc",
+          "fetched_at": "2026-08-27T09:35:47Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.kasuga.fukuoka.dbsr.jp/index.php/ (label: )"
+      "notes": "Observed dbsr at http://www.city.kasuga.fukuoka.dbsr.jp/index.php/ (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.kasuga.fukuoka/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.kasuga.fukuoka/reiki_menu.html",
           "observed_on": "https://www.city.kasuga.fukuoka.jp/",
           "fetched_at": "2026-08-27T04:13:09Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.kasuga.fukuoka/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.kasuga.fukuoka/",
+          "sha256": "3597c58ec09be19005bbf0da137126b517aaff6894640b0a3d1cb3e65962d1bc",
+          "fetched_at": "2026-08-27T09:35:36Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kasuga.fukuoka/reiki_menu.html (label: 春日市例規集)"

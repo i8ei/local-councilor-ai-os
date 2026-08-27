@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.tokushima-naka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/naka/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:46:06Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/naka/SpTop.html",
           "observed_on": "https://www.town.tokushima-naka.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:46:31Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/naka/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/naka/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T09:46:06Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/naka/SpTop.html (label: )"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/naka/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.tokushima-naka/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:59Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.tokushima-naka/reiki_menu.html",
           "observed_on": "https://www.town.tokushima-naka.lg.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:44:02Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.tokushima-naka/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.tokushima-naka/",
+          "sha256": "f52138c178ea0b0abdad1231384346bfbd2b5c63278eb689a34721a696ce6bd3",
+          "fetched_at": "2026-08-27T09:45:59Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.tokushima-naka/reiki_menu.html (label: 例規集)"

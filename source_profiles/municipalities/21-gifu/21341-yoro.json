@@ -6,19 +6,25 @@
   "official_home_url": "http://www.town.yoro.gifu.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "static",
       "index_url": "http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:13:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html",
           "observed_on": "http://www.town.yoro.gifu.jp/government/assembly/index.html",
           "fetched_at": "2026-08-27T07:32:48Z"
+        },
+        {
+          "url": "http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html",
+          "observed_on": "http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html",
+          "sha256": "39574d295d8490e00841d8e6f79f39588176ee055deb575cc79db66a3afe96d2",
+          "fetched_at": "2026-08-27T10:13:30Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html (label: 会議録)"
+      "notes": "Observed council minutes index at http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "http://www.town.yoro.gifu.jp/government/administration/1002453/index.html",
           "observed_on": "http://www.town.yoro.gifu.jp/government/index.html",
           "fetched_at": "2026-08-27T07:32:35Z"
+        },
+        {
+          "url": "https://www.town.yoro.gifu.jp/government/administration/1002453/index.html",
+          "observed_on": "https://www.town.yoro.gifu.jp/government/administration/1002453/index.html",
+          "sha256": "59bef5c485d06f5f971d02b46ad79b17a3caffe5a17415236c7f70ea5eaa54b1",
+          "fetched_at": "2026-08-27T10:13:33Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.yoro.gifu.jp/government/administration/1002453/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.town.yoro.gifu.jp/government/administration/1002453/index.html (label: 予算) 入口 https://www.town.yoro.gifu.jp/government/administration/1002453/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.yoro.gifu.jp/government/administration/index.html",
           "observed_on": "http://www.town.yoro.gifu.jp/",
           "fetched_at": "2026-08-27T07:32:21Z"
+        },
+        {
+          "url": "https://www.town.yoro.gifu.jp/government/administration/index.html",
+          "observed_on": "https://www.town.yoro.gifu.jp/government/administration/index.html",
+          "sha256": "5790a05036cfb2d3e4e3a0cf095af6256ee3fbfeba7571d474f58568eaf44ed0",
+          "fetched_at": "2026-08-27T10:13:36Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yoro.gifu.jp/government/administration/index.html (label: 行財政)"
+      "notes": "Observed finance section at http://www.town.yoro.gifu.jp/government/administration/index.html (label: 行財政) 入口 https://www.town.yoro.gifu.jp/government/administration/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

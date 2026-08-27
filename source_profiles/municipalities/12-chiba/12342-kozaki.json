@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.kozaki.chiba.jp/profile/gikai/2026-0303-1701-31.html (label: 神崎町議会本会議録画配信 (001))"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/kozaki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:24:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/kozaki/reiki_menu.html",
           "observed_on": "http://www.town.kozaki.chiba.jp/",
           "fetched_at": "2026-08-27T07:23:10Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/kozaki/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kozaki/",
+          "sha256": "234b4a1b2a373e10bc8ea062f338ab557a8c0e5ce0ecf53b8526f9f9f79b5b49",
+          "fetched_at": "2026-08-27T10:24:18Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kozaki/reiki_menu.html (label: 神崎町例規集)"

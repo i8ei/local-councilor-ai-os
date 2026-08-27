@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.otsuki.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:07:43Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html",
           "observed_on": "http://www.city.otsuki.yamanashi.jp/shigikai/index.html",
           "fetched_at": "2026-08-27T06:33:58Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html",
+          "sha256": "6938dded445ec6f450d5513ed19f67c3f605e8cda958ad28fcf726f02c2feca3",
+          "fetched_at": "2026-08-27T10:07:45Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html (label: 会議録の検索と閲覧)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html (label: 会議録の検索と閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -33,7 +39,7 @@
           "fetched_at": "2026-08-27T06:33:17Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.city.otsuki.yamanashi.jp/reiki/reiki_menu.html (label: 例規集)"
+      "notes": "Observed g_reiki at http://www.city.otsuki.yamanashi.jp/reiki/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
       "status": "needs_review",

@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T05:59:41Z"
         }
       ],
-      "notes": "Observed council minutes index at https://mombetsu.jp/gikai/minutes/ (label: 会議録・議決結果等一覧)"
+      "notes": "Observed council minutes index at https://mombetsu.jp/gikai/minutes/ (label: 会議録・議決結果等一覧) extraction probe read one document at https://mombetsu.jp/gikai/minutes/ but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://mombetsu.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:28:50Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://mombetsu.jp/reiki/reiki_menu.html",
           "observed_on": "https://mombetsu.jp/",
           "fetched_at": "2026-08-27T05:59:12Z"
+        },
+        {
+          "url": "https://mombetsu.jp/reiki/reiki_menu.html",
+          "observed_on": "https://mombetsu.jp/reiki/",
+          "sha256": "60889864b32a552f36d94e0fc0bdf0f2a05b93762e3635928dbd4312e339337d",
+          "fetched_at": "2026-08-27T10:28:52Z"
         }
       ],
       "notes": "Observed g_reiki at https://mombetsu.jp/reiki/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "https://mombetsu.jp/administration/?category=55",
           "observed_on": "https://mombetsu.jp/",
           "fetched_at": "2026-08-27T05:59:12Z"
+        },
+        {
+          "url": "https://mombetsu.jp/administration/?category=55",
+          "observed_on": "https://mombetsu.jp/administration/?category=55",
+          "sha256": "0ab348364eb180cf7c2a37ff0b71faf112d3d1bbfa605e60b0f75bc9e8a67e74",
+          "fetched_at": "2026-08-27T10:29:00Z"
         }
       ],
-      "notes": "Observed finance section at https://mombetsu.jp/administration/?category=55 (label: 紋別市の財政)"
+      "notes": "Observed finance section at https://mombetsu.jp/administration/?category=55 (label: 紋別市の財政) 入口 https://mombetsu.jp/administration/?category=55 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://mombetsu.jp/administration/?category=55",
           "observed_on": "https://mombetsu.jp/",
           "fetched_at": "2026-08-27T05:59:12Z"
+        },
+        {
+          "url": "https://mombetsu.jp/administration/?category=55",
+          "observed_on": "https://mombetsu.jp/administration/?category=55",
+          "sha256": "0ab348364eb180cf7c2a37ff0b71faf112d3d1bbfa605e60b0f75bc9e8a67e74",
+          "fetched_at": "2026-08-27T10:29:00Z"
         }
       ],
-      "notes": "Observed finance section at https://mombetsu.jp/administration/?category=55 (label: 紋別市の財政)"
+      "notes": "Observed finance section at https://mombetsu.jp/administration/?category=55 (label: 紋別市の財政) 入口 https://mombetsu.jp/administration/?category=55 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

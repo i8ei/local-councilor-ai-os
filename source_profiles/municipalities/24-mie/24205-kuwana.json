@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.kuwana.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "https://www.city.kuwana.mie.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:48:29Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kuwana.mie.dbsr.jp/index.php/",
           "observed_on": "http://www.city.kuwana.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T05:58:05Z"
+        },
+        {
+          "url": "https://www.city.kuwana.mie.dbsr.jp/index.php/",
+          "observed_on": "https://www.city.kuwana.mie.dbsr.jp/index.php/",
+          "sha256": "f01204c3f386814b289ef71314b775462e5ee61692ab633569344605509a2423",
+          "fetched_at": "2026-08-27T09:48:30Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.kuwana.mie.dbsr.jp/index.php/ (label: 会議録検索)"
+      "notes": "Observed dbsr at https://www.city.kuwana.mie.dbsr.jp/index.php/ (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.kasaoka.okayama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:45Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html",
           "observed_on": "http://www.city.kasaoka.okayama.jp/site/gikai/72905.html",
           "fetched_at": "2026-08-27T06:16:14Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html",
+          "sha256": "755d87e3c87d93b683fe70c55753eb817836bf6badb74053646665ecec4041cf",
+          "fetched_at": "2026-08-27T09:43:47Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html (label: 会議録検索)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.kasaoka.okayama.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kasaoka.okayama.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.kasaoka.okayama.jp/",
           "fetched_at": "2026-08-27T06:15:09Z"
+        },
+        {
+          "url": "http://www.city.kasaoka.okayama.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.kasaoka.okayama.jp/reiki_int/",
+          "sha256": "ee87c02b70154b5d19ca9b6fe5f5dfb0b1e82f352d404a4b3f81549191aa9b86",
+          "fetched_at": "2026-08-27T09:43:41Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.kasaoka.okayama.jp/reiki_int/reiki_menu.html (label: 例規集)"

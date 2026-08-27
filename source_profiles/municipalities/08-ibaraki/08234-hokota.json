@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.hokota.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.hokota.lg.jp/page/page000060.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hokota.lg.jp/page/page000060.html",
           "observed_on": "http://www.city.hokota.lg.jp/page/dir000030.html",
           "fetched_at": "2026-08-27T06:10:51Z"
+        },
+        {
+          "url": "http://www.city.hokota.lg.jp/page/page000060.html",
+          "observed_on": "http://www.city.hokota.lg.jp/page/page000060.html",
+          "sha256": "9fdedbfb7868900836dffed68c9e539092f32f126aaf60e2086b6f80e9dc68ce",
+          "fetched_at": "2026-08-27T10:17:40Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.hokota.lg.jp/page/page000060.html (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.hokota.lg.jp/page/dir000195.html",
           "observed_on": "http://www.city.hokota.lg.jp/page/dir000007.html",
           "fetched_at": "2026-08-27T06:12:38Z"
+        },
+        {
+          "url": "https://www.city.hokota.lg.jp/page/dir000195.html",
+          "observed_on": "https://www.city.hokota.lg.jp/page/dir000195.html",
+          "sha256": "37b8102943f0381f77c849ab5f4f98ba2128567ec1f6c425b6cafb1bbe92c789",
+          "fetched_at": "2026-08-27T10:17:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hokota.lg.jp/page/dir000195.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.hokota.lg.jp/page/dir000195.html (label: 財政) 入口 https://www.city.hokota.lg.jp/page/dir000195.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.hokota.lg.jp/page/dir000195.html",
           "observed_on": "http://www.city.hokota.lg.jp/page/dir000007.html",
           "fetched_at": "2026-08-27T06:12:38Z"
+        },
+        {
+          "url": "https://www.city.hokota.lg.jp/page/dir000195.html",
+          "observed_on": "https://www.city.hokota.lg.jp/page/dir000195.html",
+          "sha256": "37b8102943f0381f77c849ab5f4f98ba2128567ec1f6c425b6cafb1bbe92c789",
+          "fetched_at": "2026-08-27T10:17:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hokota.lg.jp/page/dir000195.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.hokota.lg.jp/page/dir000195.html (label: 財政) 入口 https://www.city.hokota.lg.jp/page/dir000195.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

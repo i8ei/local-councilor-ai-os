@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.ichikawamisato.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:08:29Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html",
           "observed_on": "http://www.town.ichikawamisato.yamanashi.jp/",
           "fetched_at": "2026-08-27T06:41:07Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html",
+          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
+          "fetched_at": "2026-08-27T10:08:29Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html (label: 議会会議録)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html (label: 議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.ichikawamisato.yamanashi.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:08:18Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ichikawamisato.yamanashi.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.ichikawamisato.yamanashi.jp/",
           "fetched_at": "2026-08-27T06:41:07Z"
+        },
+        {
+          "url": "http://www.town.ichikawamisato.yamanashi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.ichikawamisato.yamanashi.jp/reiki_int/",
+          "sha256": "3452f8fb775ebc4df0819cca0c19afbf1d83b1ab9dfc80acaed51e8044630845",
+          "fetched_at": "2026-08-27T10:08:24Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.ichikawamisato.yamanashi.jp/reiki_int/reiki_menu.html (label: 市川三郷町例規集)"

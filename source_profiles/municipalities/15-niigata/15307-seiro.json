@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T06:04:45Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.seiro.niigata.jp/7/11/2877.html (label: 会議録)"
+      "notes": "Observed council minutes index at https://www.town.seiro.niigata.jp/7/11/2877.html (label: 会議録) extraction probe read one document at https://www.town.seiro.niigata.jp/section/gikai/kaigiroku.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.seiro/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:29Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.seiro/reiki_menu.html",
           "observed_on": "https://www.town.seiro.niigata.jp/7/index.html",
           "fetched_at": "2026-08-27T06:04:27Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.seiro/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.seiro/",
+          "sha256": "9681fed2b8bddb638905bbcb84ee0133dd4246b48993c1aaff412371e8907eaf",
+          "fetched_at": "2026-08-27T10:04:31Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.seiro/reiki_menu.html (label: 聖籠町例規集（外部リンク）)"
@@ -46,9 +52,15 @@
           "url": "https://www.town.seiro.niigata.jp/7/7/index.html",
           "observed_on": "https://www.town.seiro.niigata.jp/7/index.html",
           "fetched_at": "2026-08-27T06:04:27Z"
+        },
+        {
+          "url": "https://www.town.seiro.niigata.jp/7/7/index.html",
+          "observed_on": "https://www.town.seiro.niigata.jp/7/7/index.html",
+          "sha256": "18af74c1a50977c440e6ac3f2cf15270d851aea876374f44055d67f8a84e49d6",
+          "fetched_at": "2026-08-27T10:04:52Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.seiro.niigata.jp/7/7/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.town.seiro.niigata.jp/7/7/index.html (label: 財政) 入口 https://www.town.seiro.niigata.jp/7/7/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.seiro.niigata.jp/7/7/index.html",
           "observed_on": "https://www.town.seiro.niigata.jp/7/index.html",
           "fetched_at": "2026-08-27T06:04:27Z"
+        },
+        {
+          "url": "https://www.town.seiro.niigata.jp/7/7/index.html",
+          "observed_on": "https://www.town.seiro.niigata.jp/7/7/index.html",
+          "sha256": "18af74c1a50977c440e6ac3f2cf15270d851aea876374f44055d67f8a84e49d6",
+          "fetched_at": "2026-08-27T10:04:52Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.seiro.niigata.jp/7/7/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.town.seiro.niigata.jp/7/7/index.html (label: 財政) 入口 https://www.town.seiro.niigata.jp/7/7/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

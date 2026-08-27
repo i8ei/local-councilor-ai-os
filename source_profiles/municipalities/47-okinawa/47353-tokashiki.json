@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T06:57:55Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.vill.tokashiki.okinawa.jp/gyoseijoho/tokashikisongikai/2/2122.html (label: 令和4年度 渡嘉敷村子ども議会会議録)"
+      "notes": "Observed council minutes index at https://www.vill.tokashiki.okinawa.jp/gyoseijoho/tokashikisongikai/2/2122.html (label: 令和4年度 渡嘉敷村子ども議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/tokashiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:41:20Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/tokashiki/reiki_menu.html",
           "observed_on": "http://www.vill.tokashiki.okinawa.jp/",
           "fetched_at": "2026-08-27T06:56:22Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/tokashiki/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/tokashiki/",
+          "sha256": "44d2f912b4446bc6a1085eab02a70bab33401e63b21bcbc789a761c8b7c19eb3",
+          "fetched_at": "2026-08-27T09:41:26Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tokashiki/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html",
           "observed_on": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:56:38Z"
+        },
+        {
+          "url": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+          "sha256": "43eeb633266ca62cb798f4c52db9d1a633d89ad626441f3bef0b133132ef1fe7",
+          "fetched_at": "2026-08-27T09:41:57Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html",
           "observed_on": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:56:38Z"
+        },
+        {
+          "url": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+          "sha256": "43eeb633266ca62cb798f4c52db9d1a633d89ad626441f3bef0b133132ef1fe7",
+          "fetched_at": "2026-08-27T09:41:57Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

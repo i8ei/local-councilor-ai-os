@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.kamitonda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.kamitonda.lg.jp/chosei/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:53:49Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kamitonda.lg.jp/chosei/gikai/kaigiroku/index.html",
           "observed_on": "http://www.town.kamitonda.lg.jp/chosei/gikai/index.html",
           "fetched_at": "2026-08-27T07:27:22Z"
+        },
+        {
+          "url": "http://www.town.kamitonda.lg.jp/chosei/gikai/kaigiroku/index.html",
+          "observed_on": "http://www.town.kamitonda.lg.jp/chosei/gikai/kaigiroku/index.html",
+          "sha256": "36dd97b2cb98794e19e8c38d6b64628a2aafcba451f36e19eae103546f74f9dd",
+          "fetched_at": "2026-08-27T09:53:50Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.kamitonda.lg.jp/chosei/gikai/kaigiroku/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.kamitonda.lg.jp/section/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:53:43Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kamitonda.lg.jp/section/reiki/reiki_menu.html",
           "observed_on": "http://www.town.kamitonda.lg.jp/",
           "fetched_at": "2026-08-27T07:26:26Z"
+        },
+        {
+          "url": "http://www.town.kamitonda.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.kamitonda.lg.jp/section/reiki/",
+          "sha256": "d791dcc0cddd8aed5a0f31aa9e246fc05fc5c49127508e75bd3cdd297448aaad",
+          "fetched_at": "2026-08-27T09:53:44Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.kamitonda.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html",
           "observed_on": "http://www.town.kamitonda.lg.jp/chosei/index.html",
           "fetched_at": "2026-08-27T07:27:43Z"
+        },
+        {
+          "url": "http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html",
+          "observed_on": "http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html",
+          "sha256": "34ec1c74d4c38d56a949a82697867265e660195811559ec709be6bf5454eed74",
+          "fetched_at": "2026-08-27T09:53:55Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html (label: 財政状況)"
+      "notes": "Observed finance section at http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html (label: 財政状況) 入口 http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html",
           "observed_on": "http://www.town.kamitonda.lg.jp/chosei/index.html",
           "fetched_at": "2026-08-27T07:27:43Z"
+        },
+        {
+          "url": "http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html",
+          "observed_on": "http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html",
+          "sha256": "34ec1c74d4c38d56a949a82697867265e660195811559ec709be6bf5454eed74",
+          "fetched_at": "2026-08-27T09:53:55Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html (label: 財政状況)"
+      "notes": "Observed finance section at http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html (label: 財政状況) 入口 http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

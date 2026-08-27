@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.ibaraki-koga.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/koga/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:11Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/koga/pg/index.html",
           "observed_on": "https://www.city.ibaraki-koga.lg.jp/citycouncil/7692.html",
           "fetched_at": "2026-08-27T06:00:37Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/koga/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/koga/pg/index.html",
+          "sha256": "5a95aabcdcd29ce09b8cea0c052ab3b6bc603b660d45252e41cc1275dbcdf75a",
+          "fetched_at": "2026-08-27T10:17:12Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/koga/pg/index.html (label: 会議録検索システム（別ウインドウで開きます）)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/koga/pg/index.html (label: 会議録検索システム（別ウインドウで開きます）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "not_found",

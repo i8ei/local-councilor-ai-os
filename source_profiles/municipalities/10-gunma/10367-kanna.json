@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/kanna/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:19:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/kanna/reiki_menu.html",
           "observed_on": "http://www.town.kanna.gunma.jp/",
           "fetched_at": "2026-08-27T06:38:17Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/kanna/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kanna/",
+          "sha256": "994f4c5b627079ddd55181d1c383f7788f6da1a0c95745a5205d4ffd77b9771b",
+          "fetched_at": "2026-08-27T10:19:17Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kanna/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html",
           "observed_on": "https://www.town.kanna.gunma.jp/gyouseijouhou/index.html",
           "fetched_at": "2026-08-27T06:38:39Z"
+        },
+        {
+          "url": "https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html",
+          "observed_on": "https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html",
+          "sha256": "a1d2f342ca3816315f751f4c02a21633c99c92c4ef049df3ffd7fce0ffbe1fa6",
+          "fetched_at": "2026-08-27T10:19:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html",
           "observed_on": "https://www.town.kanna.gunma.jp/gyouseijouhou/index.html",
           "fetched_at": "2026-08-27T06:38:39Z"
+        },
+        {
+          "url": "https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html",
+          "observed_on": "https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html",
+          "sha256": "a1d2f342ca3816315f751f4c02a21633c99c92c4ef049df3ffd7fce0ffbe1fa6",
+          "fetched_at": "2026-08-27T10:19:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.kanna.gunma.jp/gyouseijouhou/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

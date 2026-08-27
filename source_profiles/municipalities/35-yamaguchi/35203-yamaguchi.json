@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.yamaguchi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "https://www.city.yamaguchi.yamaguchi.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:08Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yamaguchi.yamaguchi.dbsr.jp/index.php/",
           "observed_on": "http://www.city.yamaguchi.lg.jp/site/shiseijoho/",
           "fetched_at": "2026-08-27T06:36:31Z"
+        },
+        {
+          "url": "https://www.city.yamaguchi.yamaguchi.dbsr.jp/index.php/",
+          "observed_on": "https://www.city.yamaguchi.yamaguchi.dbsr.jp/index.php/",
+          "sha256": "27d591ae452910b4db10da5cb9bcdbb0a175a483807805ae52e160bcee49426e",
+          "fetched_at": "2026-08-27T09:45:09Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.yamaguchi.yamaguchi.dbsr.jp/index.php/ (label: 本会議（定例会・臨時会）会議録)"
+      "notes": "Observed dbsr at https://www.city.yamaguchi.yamaguchi.dbsr.jp/index.php/ (label: 本会議（定例会・臨時会）会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

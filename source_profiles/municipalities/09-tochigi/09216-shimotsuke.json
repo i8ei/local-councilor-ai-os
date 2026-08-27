@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.shimotsuke.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/shimotsuke/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/shimotsuke/SpTop.html",
           "observed_on": "http://www.city.shimotsuke.lg.jp/0000/genre-02-3.html",
           "fetched_at": "2026-08-27T06:22:25Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/shimotsuke/SpTop.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/shimotsuke/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:18:09Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/shimotsuke/SpTop.html (label: )"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/shimotsuke/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "http://www.city.shimotsuke.lg.jp/0014/genre1-3-001.html",
           "observed_on": "http://www.city.shimotsuke.lg.jp/0814/info-0000002770-3.html",
           "fetched_at": "2026-08-27T06:22:12Z"
+        },
+        {
+          "url": "http://www.city.shimotsuke.lg.jp/0014/genre1-3-001.html",
+          "observed_on": "http://www.city.shimotsuke.lg.jp/0014/genre1-3-001.html",
+          "sha256": "adb848d1b96c9a500ae1bfdfbc5c3ca27871a46d09d4ec675a3c2717a195dd11",
+          "fetched_at": "2026-08-27T10:18:11Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.shimotsuke.lg.jp/0014/genre1-3-001.html (label: 予算・財政)"
+      "notes": "Observed budget link at http://www.city.shimotsuke.lg.jp/0014/genre1-3-001.html (label: 予算・財政) 入口 http://www.city.shimotsuke.lg.jp/0014/genre1-3-001.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.shimotsuke.lg.jp/0189/genre2-3-001.html",
           "observed_on": "http://www.city.shimotsuke.lg.jp/0000/genre-02-3.html",
           "fetched_at": "2026-08-27T06:22:25Z"
+        },
+        {
+          "url": "http://www.city.shimotsuke.lg.jp/0189/genre2-3-001.html",
+          "observed_on": "http://www.city.shimotsuke.lg.jp/0189/genre2-3-001.html",
+          "sha256": "4797f426b5e52b1695489a7cce1c3fb7de90cc504935e79976262aa758c31bf1",
+          "fetched_at": "2026-08-27T10:18:12Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.shimotsuke.lg.jp/0189/genre2-3-001.html (label: 決算・財務諸表)"
+      "notes": "Observed settlement link at http://www.city.shimotsuke.lg.jp/0189/genre2-3-001.html (label: 決算・財務諸表) 入口 http://www.city.shimotsuke.lg.jp/0189/genre2-3-001.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

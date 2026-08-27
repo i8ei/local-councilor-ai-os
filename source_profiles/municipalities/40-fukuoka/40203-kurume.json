@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.kurume.fukuoka.jp/1100keikaku/2060jouhoukoukai/3060kaigiroku/ (label: 附属機関等の会議録・会議資料)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.city.kurume.fukuoka.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:23Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.city.kurume.fukuoka.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.kurume.fukuoka.jp/",
           "fetched_at": "2026-08-27T04:07:22Z"
+        },
+        {
+          "url": "http://www1.city.kurume.fukuoka.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www1.city.kurume.fukuoka.jp/reiki_int/",
+          "sha256": "76ad58deae47f8f12959c59c3cd925a695ba9f3ae490ee1341420ece78409d3c",
+          "fetched_at": "2026-08-27T09:35:29Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.city.kurume.fukuoka.jp/reiki_int/reiki_menu.html (label: 例規集)"

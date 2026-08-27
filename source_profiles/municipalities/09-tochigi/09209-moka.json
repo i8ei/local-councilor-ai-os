@@ -6,19 +6,25 @@
   "official_home_url": "https://www.city.moka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/moka/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/moka/pg/index.html",
           "observed_on": "https://www.city.moka.lg.jp/kakuka/gizi/gyomu/gikai/index.html",
           "fetched_at": "2026-08-27T06:19:26Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/moka/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/moka/pg/index.html",
+          "sha256": "c68550b6003cdf8e9b77637320ef64397eb9dab73b7fd6b9bc3f3b5c34df2a1e",
+          "fetched_at": "2026-08-27T10:18:06Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/moka/pg/index.html (label: 議会議事録検索)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/moka/pg/index.html (label: 議会議事録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
           "observed_on": "https://www.city.moka.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:19:06Z"
+        },
+        {
+          "url": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
+          "observed_on": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
+          "sha256": "9ba66ab4143761f56dcdcc4df92dbc52ff66a16ee5f1ff967a4e7c9feeca9a10",
+          "fetched_at": "2026-08-27T10:18:08Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.moka.lg.jp/shisei/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.city.moka.lg.jp/shisei/gyozaisei/index.html (label: 行財政) 入口 https://www.city.moka.lg.jp/shisei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
           "observed_on": "https://www.city.moka.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:19:06Z"
+        },
+        {
+          "url": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
+          "observed_on": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
+          "sha256": "9ba66ab4143761f56dcdcc4df92dbc52ff66a16ee5f1ff967a4e7c9feeca9a10",
+          "fetched_at": "2026-08-27T10:18:08Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.moka.lg.jp/shisei/gyozaisei/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.city.moka.lg.jp/shisei/gyozaisei/index.html (label: 行財政) 入口 https://www.city.moka.lg.jp/shisei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

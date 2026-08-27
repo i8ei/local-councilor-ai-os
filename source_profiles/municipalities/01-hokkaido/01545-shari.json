@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.shari.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://gikai-sharitown.net/r8giji.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:31:04Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://gikai-sharitown.net/r8giji.html",
           "observed_on": "http://gikai-sharitown.net/",
           "fetched_at": "2026-08-27T06:39:52Z"
+        },
+        {
+          "url": "http://gikai-sharitown.net/r8giji.html",
+          "observed_on": "http://gikai-sharitown.net/r8giji.html",
+          "sha256": "46d413528df9ad08f52b66f8a8c15eac0d51bf32ac1634ba3730b53f790b7607",
+          "fetched_at": "2026-08-27T10:31:06Z"
         }
       ],
       "notes": "Observed council minutes index at http://gikai-sharitown.net/r8giji.html (label: 議事日程・会議録 令和8年)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html",
           "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/index.html",
           "fetched_at": "2026-08-27T06:37:57Z"
+        },
+        {
+          "url": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html",
+          "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html",
+          "sha256": "8510850960971fec739f3968767655e5f224ee0f0c0aa5f37b7f1693197e09db",
+          "fetched_at": "2026-08-27T10:31:08Z"
+        },
+        {
+          "url": "https://www.town.shari.hokkaido.jp/material/files/group/4/R8yosan_gaiyou.pdf",
+          "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html",
+          "fetched_at": "2026-08-27T10:31:07Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html (label: 斜里町予算の概要について)"
+      "notes": "Observed budget link at https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html (label: 斜里町予算の概要について) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html",
           "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/index.html",
           "fetched_at": "2026-08-27T06:37:57Z"
+        },
+        {
+          "url": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html",
+          "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html",
+          "sha256": "2816b5c267d91c32d227fd5709cea0656bfa1dfbc1898d2334552db7ef83272a",
+          "fetched_at": "2026-08-27T10:31:11Z"
+        },
+        {
+          "url": "https://www.town.shari.hokkaido.jp/material/files/group/4/2012-0613-1052.pdf",
+          "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html",
+          "fetched_at": "2026-08-27T10:31:10Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html (label: 斜里町の決算状況)"
+      "notes": "Observed settlement link at https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html (label: 斜里町の決算状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

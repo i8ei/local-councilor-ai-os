@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.nagara.chiba.jp/site/gikai/9653.html (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/nagara/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:24:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/nagara/reiki_menu.html",
           "observed_on": "http://www.town.nagara.chiba.jp/",
           "fetched_at": "2026-08-27T07:27:36Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/nagara/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/nagara/",
+          "sha256": "fce88854057ba19a578af4e28b5e0efd7e6392dea63a5f37485213aa5fc6f2a2",
+          "fetched_at": "2026-08-27T10:25:03Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/nagara/reiki_menu.html (label: 例規集)"

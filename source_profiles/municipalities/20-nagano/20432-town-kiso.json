@@ -29,11 +29,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8556CB69 (label: 木曽町 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "official_document_index",
       "index_url": "http://www.town-kiso.com/files/file/box/a8/a839d265730dd3b1f18eb731a4ee861db45c93b5.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:11:01Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town-kiso.com/files/file/box/a8/a839d265730dd3b1f18eb731a4ee861db45c93b5.pdf",
@@ -41,7 +41,7 @@
           "fetched_at": "2026-08-27T07:18:20Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town-kiso.com/files/file/box/a8/a839d265730dd3b1f18eb731a4ee861db45c93b5.pdf (label: 日程第３_議案第47号_令和８年度木曽町一般会計補正予算（第３号）.pdf(962.60 KB))"
+      "notes": "Observed budget link at http://www.town-kiso.com/files/file/box/a8/a839d265730dd3b1f18eb731a4ee861db45c93b5.pdf (label: 日程第３_議案第47号_令和８年度木曽町一般会計補正予算（第３号）.pdf(962.60 KB)) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +54,15 @@
           "url": "http://www.town-kiso.com/chousei/chousei/",
           "observed_on": "http://www.town-kiso.com/",
           "fetched_at": "2026-08-27T07:16:27Z"
+        },
+        {
+          "url": "https://www.town-kiso.com/chousei/chousei/",
+          "observed_on": "https://www.town-kiso.com/chousei/chousei/",
+          "sha256": "c8bdf2cd6e6491936d4ad863eeeed25405d3558e4dce01938d3320476b91953a",
+          "fetched_at": "2026-08-27T10:11:07Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town-kiso.com/chousei/chousei/ (label: 財政運営)"
+      "notes": "Observed finance section at http://www.town-kiso.com/chousei/chousei/ (label: 財政運営) 入口 https://www.town-kiso.com/chousei/chousei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

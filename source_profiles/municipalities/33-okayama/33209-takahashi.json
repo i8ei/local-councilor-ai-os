@@ -6,31 +6,43 @@
   "official_home_url": "https://www.city.takahashi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html ",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:53Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html ",
           "observed_on": "https://www.city.takahashi.lg.jp/site/gikai/teireikai8-9-1.html",
           "fetched_at": "2026-08-27T06:16:00Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html",
+          "sha256": "c5e1c8eea403723dc9a8a75175c7f85adaa6c6c57bfed13af62e27d6c3b41a32",
+          "fetched_at": "2026-08-27T09:43:54Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html  (label: 会議録閲覧・検索)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html  (label: 会議録閲覧・検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.takahashi.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:46Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.takahashi.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "https://www.city.takahashi.lg.jp/",
           "fetched_at": "2026-08-27T06:15:44Z"
+        },
+        {
+          "url": "https://www.city.takahashi.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.takahashi.lg.jp/reiki_int/",
+          "sha256": "842895ca88de5ab7cf71088c999de5e639a50c9877a2ed55b54b648ad63b7ea3",
+          "fetched_at": "2026-08-27T09:43:48Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.takahashi.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"

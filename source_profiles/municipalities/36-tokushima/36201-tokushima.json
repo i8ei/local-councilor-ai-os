@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T06:37:57Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.tokushima.tokushima.jp/shigikai/kensaku.html (label: 会議録の閲覧・検索)"
+      "notes": "Observed council minutes index at http://www.city.tokushima.tokushima.jp/shigikai/kensaku.html (label: 会議録の閲覧・検索) extraction probe read one document at http://voices.city.tokushima.tokushima.jp/ but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +46,20 @@
           "url": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html",
           "observed_on": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/20160727.html",
           "fetched_at": "2026-08-27T06:40:42Z"
+        },
+        {
+          "url": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html",
+          "observed_on": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html",
+          "sha256": "1ae0f70540137e0c6de02e95a4bb7865535608e9c7578bd3bc19af1d8703f66a",
+          "fetched_at": "2026-08-27T09:45:37Z"
+        },
+        {
+          "url": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.files/gov_r5.pdf",
+          "observed_on": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html",
+          "fetched_at": "2026-08-27T09:45:37Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html (label: 令和5年度に向けた国の予算及び施策に関する重要事項要望)"
+      "notes": "Observed budget link at http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html (label: 令和5年度に向けた国の予算及び施策に関する重要事項要望) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +72,15 @@
           "url": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/kigyoukaikei.html",
           "observed_on": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/20160727.html",
           "fetched_at": "2026-08-27T06:40:42Z"
+        },
+        {
+          "url": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/kigyoukaikei.html",
+          "observed_on": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/kigyoukaikei.html",
+          "sha256": "2593bbf37ab92376af4ff4159995b02d717c0a4ec6a7ce78bdc9e0faf63bf21a",
+          "fetched_at": "2026-08-27T09:45:40Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/kigyoukaikei.html (label: 令和6年度各企業会計決算)"
+      "notes": "Observed settlement link at http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/kigyoukaikei.html (label: 令和6年度各企業会計決算) 入口 http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/kigyoukaikei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

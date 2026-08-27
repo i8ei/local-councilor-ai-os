@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.chichibu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:20:53Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html",
           "observed_on": "http://www.city.chichibu.lg.jp/1894.html",
           "fetched_at": "2026-08-27T06:47:54Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html",
+          "sha256": "a736b74f03129a0fea8afd0e2e2748f110eced1bb7f1beb4e42e9f14e32481ea",
+          "fetched_at": "2026-08-27T10:20:55Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html (label: 会議録（会議録検索システム）)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html (label: 会議録（会議録検索システム）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/chichibu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:20:30Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/chichibu/reiki_menu.html",
           "observed_on": "http://www.city.chichibu.lg.jp/",
           "fetched_at": "2026-08-27T06:47:10Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/chichibu/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/chichibu/",
+          "sha256": "3942e9816c59bd7c308404c5b098a86cffcc4e4d4373f2abc8d5dba253bafc66",
+          "fetched_at": "2026-08-27T10:20:38Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/chichibu/reiki_menu.html (label: 例規集)"

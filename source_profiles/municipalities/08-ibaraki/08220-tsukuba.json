@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/tsukuba/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/tsukuba/reiki_menu.html",
           "observed_on": "http://www.city.tsukuba.lg.jp/",
           "fetched_at": "2026-08-27T06:02:19Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/tsukuba/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/tsukuba/",
+          "sha256": "d09e12f6d0dc5d40044a661586ee06f126b84b410faeb354de946e5de9262042",
+          "fetched_at": "2026-08-27T10:17:20Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tsukuba/reiki_menu.html (label: つくば市の 条例・規則)"
@@ -47,9 +53,15 @@
           "url": "https://www.city.tsukuba.lg.jp/mayor/1004263.html",
           "observed_on": "http://www.city.tsukuba.lg.jp/",
           "fetched_at": "2026-08-27T06:02:19Z"
+        },
+        {
+          "url": "https://www.city.tsukuba.lg.jp/mayor/1004263.html",
+          "observed_on": "https://www.city.tsukuba.lg.jp/mayor/1004263.html",
+          "sha256": "d4723aa7d40ca62eaeda7853ab9bf8fde71937e6a73da87a5934fcf315a8ac4b",
+          "fetched_at": "2026-08-27T10:17:34Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.tsukuba.lg.jp/mayor/1004263.html (label: 市政運営の所信と主要施策の概要)"
+      "notes": "Observed settlement link at https://www.city.tsukuba.lg.jp/mayor/1004263.html (label: 市政運営の所信と主要施策の概要) 入口 https://www.city.tsukuba.lg.jp/mayor/1004263.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.shimosuwa.lg.jp/www/contents/1001000001264/index.html (label: 本会議の会議録はどこで閲覧できますか。)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/shimosuwa/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:09:53Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/shimosuwa/reiki_menu.html",
           "observed_on": "http://www.town.shimosuwa.lg.jp/",
           "fetched_at": "2026-08-27T07:05:45Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/shimosuwa/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/shimosuwa/",
+          "sha256": "439c47812b63c47130fbf9b630de51c5e5c9bfa07725b6153f48213093db8e5c",
+          "fetched_at": "2026-08-27T10:09:53Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/shimosuwa/reiki_menu.html (label: 例規集)"

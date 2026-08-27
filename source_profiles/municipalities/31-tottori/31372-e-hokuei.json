@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.kensakusystem.jp/hokuei/ (label: 会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.e-hokuei.net/chosei/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:42:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.e-hokuei.net/chosei/reiki/reiki_menu.html",
           "observed_on": "http://www.e-hokuei.net/life/6/",
           "fetched_at": "2026-08-27T05:59:05Z"
+        },
+        {
+          "url": "http://www.e-hokuei.net/chosei/reiki/reiki_menu.html",
+          "observed_on": "http://www.e-hokuei.net/chosei/reiki/",
+          "sha256": "3d9cc1e009ce7331903e3efe82ad905a4088664c3f40a767d444365efd4fe8c9",
+          "fetched_at": "2026-08-27T09:42:42Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.e-hokuei.net/chosei/reiki/reiki_menu.html (label: 例規集)"

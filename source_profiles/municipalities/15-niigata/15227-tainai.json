@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.tainai.niigata.jp/gyose/gikai/kaigiroku2.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/tainai/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:29Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/tainai/reiki_menu.html",
           "observed_on": "http://www.city.tainai.niigata.jp/",
           "fetched_at": "2026-08-27T06:02:55Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/tainai/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/tainai/",
+          "sha256": "8d6241b3f4a3265655b2d5680d0e0c1b85c048738beb1a43d7c2458d95f546b8",
+          "fetched_at": "2026-08-27T10:04:29Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tainai/reiki_menu.html (label: 例規集)"

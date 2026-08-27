@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.saijo.ehime.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/saijo/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:46:50Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/saijo/pg/index.html",
           "observed_on": "http://www.city.saijo.ehime.jp/site/gikai/",
           "fetched_at": "2026-08-27T07:01:52Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/saijo/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/saijo/pg/index.html",
+          "sha256": "edf84d87a35157842ac94706e61e9585488af8639efcbdccb24c702c6c912261",
+          "fetched_at": "2026-08-27T09:46:50Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/saijo/pg/index.html (label: )"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/saijo/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.saijo.ehime/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:46:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.saijo.ehime/reiki_menu.html",
           "observed_on": "http://www.city.saijo.ehime.jp/",
           "fetched_at": "2026-08-27T06:59:42Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.saijo.ehime/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.saijo.ehime/",
+          "sha256": "acabb8cf2771f7824b04b014b72951f94ab8f7965c9649d1141f873e6c203198",
+          "fetched_at": "2026-08-27T09:46:42Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.saijo.ehime/reiki_menu.html (label: 例規集)"

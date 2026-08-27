@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.mihara.hiroshima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/mihara/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:44:51Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/mihara/pg/index.html",
           "observed_on": "http://www.city.mihara.hiroshima.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:26:24Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/mihara/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/mihara/pg/index.html",
+          "sha256": "06ad3f7f8fd47c886297a2b6b3d2ee710b53ca3dc76f8dd63cad643a5a3ba5df",
+          "fetched_at": "2026-08-27T09:44:53Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/mihara/pg/index.html (label: )"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/mihara/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.mihara.hiroshima.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:44:40Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.mihara.hiroshima.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.mihara.hiroshima.jp/",
           "fetched_at": "2026-08-27T06:24:36Z"
+        },
+        {
+          "url": "http://www.city.mihara.hiroshima.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.mihara.hiroshima.jp/reiki_int/",
+          "sha256": "e1d21067e6ddffa1c99fe5c8809c8ee271a1b0d59b80f495fb9f04761d08df1b",
+          "fetched_at": "2026-08-27T09:44:47Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.mihara.hiroshima.jp/reiki_int/reiki_menu.html (label: 例規集)"

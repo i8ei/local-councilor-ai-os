@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.wako.lg.jp/shisei/1006222/1006526/index.html (label: 会議録等)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/wako/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:20:57Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/wako/reiki_menu.html",
           "observed_on": "http://www.city.wako.lg.jp/",
           "fetched_at": "2026-08-27T06:56:11Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/wako/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/wako/",
+          "sha256": "f7ed7c3b2465c57ab3cc4184c8b21f596d055b4494adad949d57be9e46e348d5",
+          "fetched_at": "2026-08-27T10:21:02Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/wako/reiki_menu.html (label: 例規集)"

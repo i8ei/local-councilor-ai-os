@@ -6,19 +6,25 @@
   "official_home_url": "http://www.town.okagaki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/okagaki/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:36:23Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/okagaki/pg/index.html",
           "observed_on": "http://www.town.okagaki.lg.jp/",
           "fetched_at": "2026-08-27T04:21:39Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/okagaki/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/okagaki/pg/index.html",
+          "sha256": "66ed482851919cd7396a55fd515f01b092e14c8fb33a79643cb4a2baff8c9142",
+          "fetched_at": "2026-08-27T09:36:23Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/okagaki/pg/index.html (label: 議事録検索システム)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/okagaki/pg/index.html (label: 議事録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

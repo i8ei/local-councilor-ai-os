@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.kitanagoya.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/kitanagoya/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:15:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/kitanagoya/SpTop.html",
           "observed_on": "http://www.city.kitanagoya.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T08:09:23Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/kitanagoya/SpTop.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/kitanagoya/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:15:49Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kitanagoya/SpTop.html (label: 会議録検索システム)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kitanagoya/SpTop.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www2.city.kitanagoya.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:15:41Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www2.city.kitanagoya.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.kitanagoya.lg.jp/",
           "fetched_at": "2026-08-27T08:08:17Z"
+        },
+        {
+          "url": "https://www2.city.kitanagoya.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www2.city.kitanagoya.lg.jp/reiki_int/",
+          "sha256": "38775c5e1c1bc73dae11a1e302b6974373c9ce36afa4334e647e9dc225704f4d",
+          "fetched_at": "2026-08-27T10:15:43Z"
         }
       ],
       "notes": "Observed g_reiki at https://www2.city.kitanagoya.lg.jp/reiki_int/reiki_menu.html (label: 北名古屋市例規集)"

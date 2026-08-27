@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T07:07:15Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.muroto.kochi.jp/pages/page3592.php (label: ２０２６（令和８）年 会議録)"
+      "notes": "Observed council minutes index at http://www.city.muroto.kochi.jp/pages/page3592.php (label: ２０２６（令和８）年 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.muroto.kochi.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:47:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.muroto.kochi.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.muroto.kochi.jp/top.php",
           "fetched_at": "2026-08-27T07:06:33Z"
+        },
+        {
+          "url": "http://www.city.muroto.kochi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.muroto.kochi.jp/reiki_int/",
+          "sha256": "16d98ed0e2ae353a85776224ab56bd94161c476d47a31b7aa23af2eda3c1561d",
+          "fetched_at": "2026-08-27T09:47:12Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.muroto.kochi.jp/reiki_int/reiki_menu.html (label: 室戸市例規集)"

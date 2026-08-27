@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.kurashiki.okayama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/kurashiki/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:18Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/kurashiki/pg/index.html",
           "observed_on": "http://www.city.kurashiki.okayama.jp/cityinfo/assembly/index.html",
           "fetched_at": "2026-08-27T06:14:06Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/kurashiki/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/kurashiki/pg/index.html",
+          "sha256": "412c27ca02cf2ae1b9640d405bbc3c84724a7cfd18e8cf2f616315fc1e6ab251",
+          "fetched_at": "2026-08-27T09:43:19Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kurashiki/pg/index.html (label: 倉敷市議会会議録検索)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kurashiki/pg/index.html (label: 倉敷市議会会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

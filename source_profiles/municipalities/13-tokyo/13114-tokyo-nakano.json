@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/nakano/WebView/rd/council_1.html (label: )"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.tokyo-nakano.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:25:28Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tokyo-nakano.lg.jp/reiki/reiki_menu.html",
           "observed_on": "http://www.city.tokyo-nakano.lg.jp/",
           "fetched_at": "2026-08-27T07:35:00Z"
+        },
+        {
+          "url": "https://www.city.tokyo-nakano.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.tokyo-nakano.lg.jp/reiki/",
+          "sha256": "1080e5dfcac0555e2ab9879eb7c2f02c4ad9d43f2234d31ffde7780cd4ef6445",
+          "fetched_at": "2026-08-27T10:25:30Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.tokyo-nakano.lg.jp/reiki/reiki_menu.html (label: 条例・規則集)"
@@ -46,9 +52,15 @@
           "url": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=10",
           "observed_on": "https://kugikai-nakano.jp/",
           "fetched_at": "2026-08-27T07:35:18Z"
+        },
+        {
+          "url": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=10",
+          "observed_on": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=10",
+          "sha256": "2210e67bb4056bc4dedb36f484f934c8b27043ad38206997fbc7109e56ef4fb7",
+          "fetched_at": "2026-08-27T10:25:39Z"
         }
       ],
-      "notes": "Observed budget link at https://kugikai-nakano.jp/iinkai2.html?iinkai_id=10 (label: 予算特別委員会)"
+      "notes": "Observed budget link at https://kugikai-nakano.jp/iinkai2.html?iinkai_id=10 (label: 予算特別委員会) 入口 https://kugikai-nakano.jp/iinkai2.html?iinkai_id=10 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=11",
           "observed_on": "https://kugikai-nakano.jp/",
           "fetched_at": "2026-08-27T07:35:18Z"
+        },
+        {
+          "url": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=11",
+          "observed_on": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=11",
+          "sha256": "519a25a9c82f37cd7a90f9a3ff0314d3273f98088ff675bc3a400338a2d3540f",
+          "fetched_at": "2026-08-27T10:25:41Z"
         }
       ],
-      "notes": "Observed settlement link at https://kugikai-nakano.jp/iinkai2.html?iinkai_id=11 (label: 決算特別委員会)"
+      "notes": "Observed settlement link at https://kugikai-nakano.jp/iinkai2.html?iinkai_id=11 (label: 決算特別委員会) 入口 https://kugikai-nakano.jp/iinkai2.html?iinkai_id=11 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.kanie.aichi.jp/site/gikai/gikai-kaigiroku.html (label: 会議録一覧)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/kanie/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:16:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/kanie/reiki_menu.html",
           "observed_on": "http://www.town.kanie.aichi.jp/",
           "fetched_at": "2026-08-27T08:11:58Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/kanie/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kanie/",
+          "sha256": "0be4323b6579eb41162c8d5e267593a13235345c0f4d9c8d15fc2f06d53952af",
+          "fetched_at": "2026-08-27T10:16:26Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kanie/reiki_menu.html (label: 例規集)"

@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/city.kyotango/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:50:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/city.kyotango/reiki_menu.html",
           "observed_on": "https://www.city.kyotango.lg.jp/top/index.html",
           "fetched_at": "2026-08-27T06:19:45Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/city.kyotango/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/city.kyotango/",
+          "sha256": "cae3b5270fbc88723d2563913b2430c726b27c8a4e4f2066ff0c597e6ee03489",
+          "fetched_at": "2026-08-27T09:50:02Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city.kyotango/reiki_menu.html (label: 京丹後市例規集)"
@@ -39,9 +45,15 @@
           "url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
           "observed_on": "https://www.city.kyotango.lg.jp/top/soshiki/index.html",
           "fetched_at": "2026-08-27T06:19:08Z"
+        },
+        {
+          "url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
+          "observed_on": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
+          "sha256": "28b55ab9f75284ef49140bd115912f81e0ba161c8ae3ec8dc022b9e3d886afe5",
+          "fetched_at": "2026-08-27T09:50:09Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html (label: 財政課)"
+      "notes": "Observed finance section at https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html (label: 財政課) 入口 https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
           "observed_on": "https://www.city.kyotango.lg.jp/top/soshiki/index.html",
           "fetched_at": "2026-08-27T06:19:08Z"
+        },
+        {
+          "url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
+          "observed_on": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
+          "sha256": "28b55ab9f75284ef49140bd115912f81e0ba161c8ae3ec8dc022b9e3d886afe5",
+          "fetched_at": "2026-08-27T09:50:09Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html (label: 財政課)"
+      "notes": "Observed finance section at https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html (label: 財政課) 入口 https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

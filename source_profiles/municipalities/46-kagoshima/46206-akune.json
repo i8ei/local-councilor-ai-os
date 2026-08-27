@@ -6,31 +6,43 @@
   "official_home_url": "https://www.city.akune.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.akune.lg.jp/shiseijoho/gikai/1385.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:40:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.akune.lg.jp/shiseijoho/gikai/1385.html",
           "observed_on": "https://www.city.akune.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T06:37:27Z"
+        },
+        {
+          "url": "https://www.city.akune.lg.jp/shiseijoho/gikai/1385.html",
+          "observed_on": "https://www.city.akune.lg.jp/shiseijoho/gikai/1385.html",
+          "sha256": "db6ed1ccf4a15eeda77e2f010b8904486ef91ab4ca7f50ea51b05ac3dc43f2be",
+          "fetched_at": "2026-08-27T09:40:18Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.akune.lg.jp/shiseijoho/gikai/1385.html (label: 市議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.akune.lg.jp/section/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:40:11Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.akune.lg.jp/section/reiki/reiki_menu.html",
           "observed_on": "https://www.city.akune.lg.jp/",
           "fetched_at": "2026-08-27T06:37:06Z"
+        },
+        {
+          "url": "https://www.city.akune.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.akune.lg.jp/section/reiki/",
+          "sha256": "23f8cea943df3574da5ee064a3720250d233b8e8e099ab25781cc72cb948fbfb",
+          "fetched_at": "2026-08-27T09:40:12Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.akune.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,20 @@
           "url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
           "observed_on": "https://www.city.akune.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T06:37:27Z"
+        },
+        {
+          "url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
+          "observed_on": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
+          "sha256": "0b2c393c42817066b6ad7aa5620383e48e76cddefbfa77a172c63701edf1b8ed",
+          "fetched_at": "2026-08-27T09:40:26Z"
+        },
+        {
+          "url": "https://www.city.akune.lg.jp/material/files/group/75/r08_yosanhenseihoshin.pdf",
+          "observed_on": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
+          "fetched_at": "2026-08-27T09:40:26Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html (label: 予算)"
+      "notes": "Observed budget link at https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +84,15 @@
           "url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/index.html",
           "observed_on": "https://www.city.akune.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T06:37:27Z"
+        },
+        {
+          "url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.akune.lg.jp/shiseijoho/zaisei/index.html",
+          "sha256": "f11f4a646df5ef9a1aeafb60f0b71067a4327565bdc7fc492d78dc29fb676c80",
+          "fetched_at": "2026-08-27T09:40:29Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.akune.lg.jp/shiseijoho/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.akune.lg.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.akune.lg.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

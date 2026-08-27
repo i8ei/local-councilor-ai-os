@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.himi.toyama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/1/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:05:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/1/index.html",
           "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/index.html",
           "fetched_at": "2026-08-27T06:08:25Z"
+        },
+        {
+          "url": "https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/1/index.html",
+          "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/1/index.html",
+          "sha256": "2dfa5e37f752a0d476abe4424c67ffef231133b015e831b05e27824d34e06768",
+          "fetched_at": "2026-08-27T10:05:21Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/1/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/himi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:41Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/himi/reiki_menu.html",
           "observed_on": "https://www.city.himi.toyama.jp/gyosei/index.html",
           "fetched_at": "2026-08-27T06:07:54Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/himi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/himi/",
+          "sha256": "933946fe1b38a7303f466389e983c2c49c97566c82325ac922aa095dbbf7e213",
+          "fetched_at": "2026-08-27T10:04:49Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/himi/reiki_menu.html (label: )"
@@ -46,9 +58,15 @@
           "url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
           "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/index.html",
           "fetched_at": "2026-08-27T06:08:10Z"
+        },
+        {
+          "url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
+          "sha256": "04fdb29cfe98b6c305baab9c305a40babac2e50f2d82d27ac3395ecebda16bd3",
+          "fetched_at": "2026-08-27T10:05:24Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
           "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/index.html",
           "fetched_at": "2026-08-27T06:08:10Z"
+        },
+        {
+          "url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
+          "sha256": "04fdb29cfe98b6c305baab9c305a40babac2e50f2d82d27ac3395ecebda16bd3",
+          "fetched_at": "2026-08-27T10:05:24Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

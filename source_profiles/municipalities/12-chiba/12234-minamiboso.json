@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.minamiboso.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "http://www.city.minamiboso.chiba.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:24:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.minamiboso.chiba.dbsr.jp/index.php/",
           "observed_on": "http://www.city.minamiboso.chiba.jp/",
           "fetched_at": "2026-08-27T07:21:31Z"
+        },
+        {
+          "url": "http://www.city.minamiboso.chiba.dbsr.jp/index.php/",
+          "observed_on": "http://www.city.minamiboso.chiba.dbsr.jp/index.php/",
+          "sha256": "fe77076388dc640a65e3efb5a6ec33f4349404adb02064bc7dbea9b51f4659a8",
+          "fetched_at": "2026-08-27T10:24:16Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.minamiboso.chiba.dbsr.jp/index.php/ (label: 市議会会議録検索)"
+      "notes": "Observed dbsr at http://www.city.minamiboso.chiba.dbsr.jp/index.php/ (label: 市議会会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/minamiboso/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:23:30Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/minamiboso/reiki_menu.html",
           "observed_on": "http://www.city.minamiboso.chiba.jp/",
           "fetched_at": "2026-08-27T07:21:31Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/minamiboso/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/minamiboso/",
+          "sha256": "aa7c318d8224d199855dd3a0d46eb855d8c5a9931378eec3f25a6939057bfac6",
+          "fetched_at": "2026-08-27T10:23:38Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/minamiboso/reiki_menu.html (label: 例規集)"

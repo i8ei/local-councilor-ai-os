@@ -6,16 +6,22 @@
   "official_home_url": "http://www.vill.katashina.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/gikai/2016-0330-1855-38.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:19:42Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/gikai/2016-0330-1855-38.html",
           "observed_on": "http://www.vill.katashina.gunma.jp/",
           "fetched_at": "2026-08-27T06:42:06Z"
+        },
+        {
+          "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/gikai/2016-0330-1855-38.html",
+          "observed_on": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/gikai/2016-0330-1855-38.html",
+          "sha256": "a53425841b9dd71d7a70d696038496a1d7ccf2fb87e43ff10e010527667c8c91",
+          "fetched_at": "2026-08-27T10:19:43Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.vill.katashina.gunma.jp/gaiyou/kakuka/gikai/2016-0330-1855-38.html (label: 議会会議録)"
@@ -46,9 +52,20 @@
           "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
           "observed_on": "http://www.vill.katashina.gunma.jp/",
           "fetched_at": "2026-08-27T06:42:06Z"
+        },
+        {
+          "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
+          "observed_on": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
+          "sha256": "1716407615115075dbbc8c7a92c003119ff907186e6533a36c3e05935e121148",
+          "fetched_at": "2026-08-27T10:19:45Z"
+        },
+        {
+          "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/files/R8yosan.pdf",
+          "observed_on": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
+          "fetched_at": "2026-08-27T10:19:44Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html (label: 片品村の財政)"
+      "notes": "Observed finance section at http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html (label: 片品村の財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
           "observed_on": "http://www.vill.katashina.gunma.jp/",
           "fetched_at": "2026-08-27T06:42:06Z"
+        },
+        {
+          "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
+          "observed_on": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
+          "sha256": "1716407615115075dbbc8c7a92c003119ff907186e6533a36c3e05935e121148",
+          "fetched_at": "2026-08-27T10:19:45Z"
+        },
+        {
+          "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/files/R6_kessan.pdf",
+          "observed_on": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
+          "fetched_at": "2026-08-27T10:19:47Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html (label: 片品村の財政)"
+      "notes": "Observed finance section at http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html (label: 片品村の財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

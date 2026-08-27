@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/midori/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.city.midori.gunma.jp%2F (label: みどり市議会インターネット中継を見る)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/midori/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:18:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/midori/reiki_menu.html",
           "observed_on": "http://www.city.midori.gunma.jp/",
           "fetched_at": "2026-08-27T06:36:27Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/midori/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/midori/",
+          "sha256": "1e475ed8045e50b2d821e665fb833694ef86823fd9456c3fd7eab2d03dd86686",
+          "fetched_at": "2026-08-27T10:18:54Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/midori/reiki_menu.html (label: 例規集)"

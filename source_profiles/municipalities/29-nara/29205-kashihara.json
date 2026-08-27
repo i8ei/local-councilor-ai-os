@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.kashihara.nara.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:52:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
           "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/gikai/index.html",
           "fetched_at": "2026-08-27T07:00:47Z"
+        },
+        {
+          "url": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
+          "observed_on": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
+          "sha256": "06329e793d747db03be08cbe8c487b5684f4b6c15c9c24a8618b4f02d936cb92",
+          "fetched_at": "2026-08-27T09:52:33Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.kashihara.nara.dbsr.jp/index.php/ (label: 会議録)"
+      "notes": "Observed dbsr at https://www.city.kashihara.nara.dbsr.jp/index.php/ (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
           "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T07:00:35Z"
+        },
+        {
+          "url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
+          "sha256": "65c7b7135d21b7b55ab0d3b4180cc7f856c7fd435ab82c821823343b3487e34a",
+          "fetched_at": "2026-08-27T09:52:33Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
           "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T07:00:35Z"
+        },
+        {
+          "url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
+          "sha256": "65c7b7135d21b7b55ab0d3b4180cc7f856c7fd435ab82c821823343b3487e34a",
+          "fetched_at": "2026-08-27T09:52:33Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

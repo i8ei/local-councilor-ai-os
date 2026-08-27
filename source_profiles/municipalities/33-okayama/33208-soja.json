@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.soja.okayama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/soja/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:44:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/soja/pg/index.html",
           "observed_on": "http://www.city.soja.okayama.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:16:26Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/soja/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/soja/pg/index.html",
+          "sha256": "4f27713c58a3d1cf105028017efa96908a578e5320eb96d16900865fc6298ddd",
+          "fetched_at": "2026-08-27T09:44:10Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/soja/pg/index.html (label: )"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/soja/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/soja/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/soja/reiki_menu.html",
           "observed_on": "http://www.city.soja.okayama.jp/",
           "fetched_at": "2026-08-27T06:15:39Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/soja/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/soja/",
+          "sha256": "ff9a1b1f1caf7165e2debd53f24a80d572f874ed05af4ab19f66b43f2220aacb",
+          "fetched_at": "2026-08-27T09:43:46Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/soja/reiki_menu.html (label: 条例・規則)"

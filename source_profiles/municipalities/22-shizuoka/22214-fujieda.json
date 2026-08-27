@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.fujieda.shizuoka.jp/static/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:14:25Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fujieda.shizuoka.jp/static/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.fujieda.shizuoka.jp/",
           "fetched_at": "2026-08-27T07:44:06Z"
+        },
+        {
+          "url": "http://www.city.fujieda.shizuoka.jp/static/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.fujieda.shizuoka.jp/static/reiki_int/",
+          "sha256": "0b1250debc272ce6ada5114400f8543684dd195cfde342967fab3e90e814a9c6",
+          "fetched_at": "2026-08-27T10:14:31Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.fujieda.shizuoka.jp/static/reiki_int/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
           "observed_on": "https://www.city.fujieda.shizuoka.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:44:25Z"
+        },
+        {
+          "url": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
+          "sha256": "ed2a2f8410100c13d27e21b1b7af9826eda88aa17bf85c7f880f38668e47b95d",
+          "fetched_at": "2026-08-27T10:14:38Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html (label: 財政（予算・決算ほか）)"
+      "notes": "Observed budget link at https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html (label: 財政（予算・決算ほか）) 入口 https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
           "observed_on": "https://www.city.fujieda.shizuoka.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:44:25Z"
+        },
+        {
+          "url": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
+          "sha256": "ed2a2f8410100c13d27e21b1b7af9826eda88aa17bf85c7f880f38668e47b95d",
+          "fetched_at": "2026-08-27T10:14:38Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html (label: 財政（予算・決算ほか）)"
+      "notes": "Observed settlement link at https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html (label: 財政（予算・決算ほか）) 入口 https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

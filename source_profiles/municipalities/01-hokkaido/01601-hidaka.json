@@ -6,19 +6,25 @@
   "official_home_url": "http://www.town.hidaka.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/hidakahokkaido/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:31:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/hidakahokkaido/pg/index.html",
           "observed_on": "http://www.town.hidaka.hokkaido.jp/administration/?content=1471",
           "fetched_at": "2026-08-27T06:46:46Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/hidakahokkaido/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/hidakahokkaido/pg/index.html",
+          "sha256": "a2dbd98e428a0e03617ee24975529bd6bc403c4161c5e753c36aeaf453a2d774",
+          "fetched_at": "2026-08-27T10:31:24Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/hidakahokkaido/pg/index.html (label: 日高町議会 会議録検索)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/hidakahokkaido/pg/index.html (label: 日高町議会 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

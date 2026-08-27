@@ -6,19 +6,25 @@
   "official_home_url": "http://www.town.kanda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:36:53Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
           "observed_on": "http://www.town.kanda.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T04:27:38Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
+          "sha256": "c8151f761255ad2d242302187a8b6d309cce8ba68f1d8f6109e5a1bd886280cd",
+          "fetched_at": "2026-08-27T09:36:53Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kanda/pg/index.html (label: 議会録検索＜外部リンク＞)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kanda/pg/index.html (label: 議会録検索＜外部リンク＞) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.gotsu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:43:32Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html",
           "observed_on": "http://www.city.gotsu.lg.jp/site/gikai/41842.html",
           "fetched_at": "2026-08-27T06:06:26Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html",
+          "sha256": "d819b2408068d15346c41a8fcc3edcfec72ca49d340158c6d62bcb3d8912669c",
+          "fetched_at": "2026-08-27T09:43:32Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html (label: 市議会会議録検索)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html (label: 市議会会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/city.gotsu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:42:55Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/city.gotsu/reiki_menu.html",
           "observed_on": "http://www.city.gotsu.lg.jp/",
           "fetched_at": "2026-08-27T06:05:50Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/city.gotsu/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/city.gotsu/",
+          "sha256": "0dc369443755be327e7ec1e1658828360f3febc20c07f2ca455b79c49f987a67",
+          "fetched_at": "2026-08-27T09:43:04Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city.gotsu/reiki_menu.html (label: 例規集)"

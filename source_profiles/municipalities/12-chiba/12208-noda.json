@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.noda.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:22:46Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
           "observed_on": "http://www.city.noda.chiba.jp/gikai/index.html",
           "fetched_at": "2026-08-27T07:12:34Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
+          "sha256": "23c00312f362ec9c56f02ad5b0d4fcb7b38d12abbedeb10cb4489730f34669af",
+          "fetched_at": "2026-08-27T10:22:46Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/noda/pg/index.html (label: 会議録検索（外部リンク）)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/noda/pg/index.html (label: 会議録検索（外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.morimachi.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/gikai/gikaikatsudo/1237.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:14:55Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/gikai/gikaikatsudo/1237.html",
           "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/gikai/gikaikatsudo/index.html",
           "fetched_at": "2026-08-27T07:58:21Z"
+        },
+        {
+          "url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/gikai/gikaikatsudo/1237.html",
+          "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/gikai/gikaikatsudo/1237.html",
+          "sha256": "c07341bea1738a43b9d93badb63419938eeca314aa9810fb9453da3b49615048",
+          "fetched_at": "2026-08-27T10:14:57Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/gikai/gikaikatsudo/1237.html (label: 会議録について)"
@@ -39,9 +45,20 @@
           "url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html",
           "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/index.html",
           "fetched_at": "2026-08-27T07:55:03Z"
+        },
+        {
+          "url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html",
+          "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html",
+          "sha256": "9bcfeac4fdff19b94c43699d4d15e38211aaf64f9f18f9c28fd5f54c149571fd",
+          "fetched_at": "2026-08-27T10:15:00Z"
+        },
+        {
+          "url": "https://www.town.morimachi.shizuoka.jp/material/files/group/4/reiwa8nendoippankaikeiyosan.pdf",
+          "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html",
+          "fetched_at": "2026-08-27T10:14:59Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html (label: 当初予算)"
+      "notes": "Observed budget link at https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html (label: 当初予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +71,15 @@
           "url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html",
           "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/index.html",
           "fetched_at": "2026-08-27T07:55:03Z"
+        },
+        {
+          "url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html",
+          "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html",
+          "sha256": "5a9265e8a830995b102d62e63de83a1b63696522a6455eaacc937a6b84f88aee",
+          "fetched_at": "2026-08-27T10:15:05Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html (label: 財政) 入口 https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

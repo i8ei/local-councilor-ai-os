@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.isehara.kanagawa.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:26:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.isehara.kanagawa.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.isehara.kanagawa.jp/top.html",
           "fetched_at": "2026-08-27T08:03:40Z"
+        },
+        {
+          "url": "http://www.city.isehara.kanagawa.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.isehara.kanagawa.jp/reiki_int/",
+          "sha256": "5a1e3b8dcaa40f3111d2cc5c253824033c1d3aef00a49b4437a1f205bc70acab",
+          "fetched_at": "2026-08-27T10:27:00Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.isehara.kanagawa.jp/reiki_int/reiki_menu.html (label: 条例・規則)"
@@ -39,9 +45,15 @@
           "url": "http://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/yosan/",
           "observed_on": "http://www.city.isehara.kanagawa.jp/categories/bunya/shisei/",
           "fetched_at": "2026-08-27T08:04:00Z"
+        },
+        {
+          "url": "https://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/yosan/",
+          "observed_on": "https://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/yosan/",
+          "sha256": "b78bffa57ce4661ab52d72da44c11da5398a40d39ac9f280cb5f1d6f75b69993",
+          "fetched_at": "2026-08-27T10:27:08Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/yosan/ (label: 予算)"
+      "notes": "Observed budget link at http://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/yosan/ (label: 予算) 入口 https://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "http://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/kessan/",
           "observed_on": "http://www.city.isehara.kanagawa.jp/categories/bunya/shisei/",
           "fetched_at": "2026-08-27T08:04:00Z"
+        },
+        {
+          "url": "https://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/kessan/",
+          "observed_on": "https://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/kessan/",
+          "sha256": "e6490f56333216ac5f87a609ef4402a7afcd8dab2635f54377f9cd8ade2e8dc0",
+          "fetched_at": "2026-08-27T10:27:11Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/kessan/ (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/kessan/ (label: 決算) 入口 https://www.city.isehara.kanagawa.jp/categories/bunya/shisei/gyosei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

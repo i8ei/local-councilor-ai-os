@@ -21,16 +21,22 @@
       "notes": "Observed dbsr at https://www.city.yabu.hyogo.dbsr.jp/ (label: 会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.yabu.hyogo.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:51:58Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yabu.hyogo.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.yabu.hyogo.jp/",
           "fetched_at": "2026-08-27T06:50:58Z"
+        },
+        {
+          "url": "https://www.city.yabu.hyogo.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.yabu.hyogo.jp/section/reiki_int/",
+          "sha256": "8972e0ec70d96db88fe861f523e12474fcf6fe262dd047301fd13129579597fe",
+          "fetched_at": "2026-08-27T09:51:59Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.yabu.hyogo.jp/section/reiki_int/reiki_menu.html (label: 例規集)"

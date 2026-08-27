@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.bungotakada.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:39:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
           "observed_on": "http://www.city.bungotakada.oita.jp/site/gikai-subsite/",
           "fetched_at": "2026-08-27T06:20:48Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
+          "sha256": "d2f65b1830dd37acad87b306b06a5fc6184a427514887c99b19204f1c323c3c3",
+          "fetched_at": "2026-08-27T09:39:12Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html (label: 会議録検索システム（外部リンク）)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html (label: 会議録検索システム（外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "not_found",

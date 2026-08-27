@@ -6,31 +6,43 @@
   "official_home_url": "https://www.town.sannohe.aomori.jp/index.html",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.sannohe.aomori.jp/choseijoho/gikai/gikaijouhou/3/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.sannohe.aomori.jp/choseijoho/gikai/gikaijouhou/3/index.html",
           "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/gikai/gikaijouhou/index.html",
           "fetched_at": "2026-08-27T07:05:19Z"
+        },
+        {
+          "url": "https://www.town.sannohe.aomori.jp/choseijoho/gikai/gikaijouhou/3/index.html",
+          "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/gikai/gikaijouhou/3/index.html",
+          "sha256": "6fec4c07cedb88192715f8b939b486e3ee9e1ef2b6d938f2bc4b1a275d86c32a",
+          "fetched_at": "2026-08-27T10:32:37Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.sannohe.aomori.jp/choseijoho/gikai/gikaijouhou/3/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.sannohe.aomori.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:32:29Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.sannohe.aomori.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "https://www.town.sannohe.aomori.jp/index.html",
           "fetched_at": "2026-08-27T07:04:14Z"
+        },
+        {
+          "url": "https://www.town.sannohe.aomori.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.sannohe.aomori.jp/section/reiki_int/",
+          "sha256": "1acb23a658a3d12628013c81a5658cd5cb5349c43c19bfa6e9075c55f27a5902",
+          "fetched_at": "2026-08-27T10:32:31Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.sannohe.aomori.jp/section/reiki_int/reiki_menu.html (label: )"
@@ -46,9 +58,20 @@
           "url": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
           "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/index.html",
           "fetched_at": "2026-08-27T07:04:48Z"
+        },
+        {
+          "url": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
+          "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
+          "sha256": "88cac330b30d9d0d5d9e8de7a033514e50c0638a24b3086b11a53e72946149c5",
+          "fetched_at": "2026-08-27T10:32:40Z"
+        },
+        {
+          "url": "https://www.town.sannohe.aomori.jp/material/files/group/3/R8gaiyou_yosan.pdf",
+          "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
+          "fetched_at": "2026-08-27T10:32:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html (label: 財政情報)"
+      "notes": "Observed finance section at https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +84,20 @@
           "url": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
           "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/index.html",
           "fetched_at": "2026-08-27T07:04:48Z"
+        },
+        {
+          "url": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
+          "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
+          "sha256": "88cac330b30d9d0d5d9e8de7a033514e50c0638a24b3086b11a53e72946149c5",
+          "fetched_at": "2026-08-27T10:32:40Z"
+        },
+        {
+          "url": "https://www.town.sannohe.aomori.jp/material/files/group/3/r6kessan.pdf",
+          "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
+          "fetched_at": "2026-08-27T10:32:42Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html (label: 財政情報)"
+      "notes": "Observed finance section at https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

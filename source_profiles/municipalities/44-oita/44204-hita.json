@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.hita.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/hita/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:39:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/hita/pg/index.html",
           "observed_on": "http://www.city.hita.oita.jp/site/gikai/17561.html",
           "fetched_at": "2026-08-27T06:18:07Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/hita/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/hita/pg/index.html",
+          "sha256": "b2df4f5f4a02c1e1804a41f49cac415991539df791a82a00dad361b4eec777b6",
+          "fetched_at": "2026-08-27T09:39:05Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/hita/pg/index.html (label: 会議録検索システム（外部サイト）)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/hita/pg/index.html (label: 会議録検索システム（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

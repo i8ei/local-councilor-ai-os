@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.city.abashiri.hokkaido.jp/site/gikai/1581.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.abashiri/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:28:44Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.abashiri/reiki_menu.html",
           "observed_on": "https://www.city.abashiri.hokkaido.jp/",
           "fetched_at": "2026-08-27T05:58:00Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.abashiri/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.abashiri/",
+          "sha256": "1c0b889c16f6d63ef157a488cd724099e756475cc7a8160674456028359e01d5",
+          "fetched_at": "2026-08-27T10:29:05Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.abashiri/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf",
           "observed_on": "https://www.city.abashiri.hokkaido.jp/site/gikai/1567.html",
           "fetched_at": "2026-08-27T06:00:14Z"
+        },
+        {
+          "url": "https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf",
+          "observed_on": "https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf",
+          "sha256": "6559450fae14253fe4aaddee61ad0dfe8609ed3fe56d3b27ec04f5e7632c2190",
+          "fetched_at": "2026-08-27T10:29:19Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf (label: 令和8年度網走市一般会計補正予算事項別明細書 [PDFファイル／95KB])"
+      "notes": "Observed budget link at https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf (label: 令和8年度網走市一般会計補正予算事項別明細書 [PDFファイル／95KB]) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",

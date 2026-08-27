@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.awa.lg.jp/jyorei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:45:48Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.awa.lg.jp/jyorei/reiki_menu.html",
           "observed_on": "http://www.city.awa.lg.jp/",
           "fetched_at": "2026-08-27T06:39:06Z"
+        },
+        {
+          "url": "http://www.city.awa.lg.jp/jyorei/reiki_menu.html",
+          "observed_on": "http://www.city.awa.lg.jp/jyorei/",
+          "sha256": "69d9d5f9b1d444a2e831191c8fa961200f3aad31e49d2bdb49f049f110792ba6",
+          "fetched_at": "2026-08-27T09:45:54Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.awa.lg.jp/jyorei/reiki_menu.html (label: 条例・例規集)"
@@ -39,9 +45,15 @@
           "url": "http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
           "observed_on": "http://www.city.awa.lg.jp/",
           "fetched_at": "2026-08-27T06:39:06Z"
+        },
+        {
+          "url": "https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
+          "observed_on": "https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
+          "sha256": "58830d22154836867509d54a8b8aadd57260fb911902badf047868cb047d562e",
+          "fetched_at": "2026-08-27T09:46:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ (label: 財政状況)"
+      "notes": "Observed finance section at http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ (label: 財政状況) 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
           "observed_on": "http://www.city.awa.lg.jp/",
           "fetched_at": "2026-08-27T06:39:06Z"
+        },
+        {
+          "url": "https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
+          "observed_on": "https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
+          "sha256": "58830d22154836867509d54a8b8aadd57260fb911902badf047868cb047d562e",
+          "fetched_at": "2026-08-27T09:46:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ (label: 財政状況)"
+      "notes": "Observed finance section at http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ (label: 財政状況) 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

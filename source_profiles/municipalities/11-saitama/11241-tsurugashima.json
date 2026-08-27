@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.tsurugashima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:21:20Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html",
           "observed_on": "http://www.city.tsurugashima.lg.jp/gikai/",
           "fetched_at": "2026-08-27T07:01:37Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html",
+          "sha256": "c66faaee050330ad4feb3ba623f633cd3c8d7c428fa18c747e9ed038548d7980",
+          "fetched_at": "2026-08-27T10:21:21Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html (label: 会議録閲覧)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html (label: 会議録閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +52,15 @@
           "url": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/",
           "observed_on": "http://www.city.tsurugashima.lg.jp/gyousei/",
           "fetched_at": "2026-08-27T06:59:04Z"
+        },
+        {
+          "url": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/",
+          "observed_on": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/",
+          "sha256": "53f01cd31ca6a79588986450eb81b0d13aa8eeeb4f134b453a8ba72d9a15f470",
+          "fetched_at": "2026-08-27T10:21:22Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/ (label: 予算)"
+      "notes": "Observed budget link at https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/ (label: 予算) 入口 https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/",
           "observed_on": "http://www.city.tsurugashima.lg.jp/gyousei/",
           "fetched_at": "2026-08-27T06:59:04Z"
+        },
+        {
+          "url": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/",
+          "observed_on": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/",
+          "sha256": "020e01225dfccc32376386d5e1e0052bb1c0fa4617ba000b858659613beefa91",
+          "fetched_at": "2026-08-27T10:21:24Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/ (label: 決算)"
+      "notes": "Observed settlement link at https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/ (label: 決算) 入口 https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

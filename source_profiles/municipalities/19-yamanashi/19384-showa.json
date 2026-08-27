@@ -6,19 +6,25 @@
   "official_home_url": "http://www.town.showa.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/showa/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:08:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/showa/pg/index.html",
           "observed_on": "http://www.town.showa.yamanashi.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:50:09Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/showa/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/showa/pg/index.html",
+          "sha256": "a8805c656c662ac7efd2e619212add89f5c000073d348a745913ab113b5a6150",
+          "fetched_at": "2026-08-27T10:08:35Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/showa/pg/index.html (label: 議事録)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/showa/pg/index.html (label: 議事録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "not_found",

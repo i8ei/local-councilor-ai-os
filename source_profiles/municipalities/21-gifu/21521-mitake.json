@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T07:40:30Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.mitake.lg.jp/portal/town/parliament/post0003625/ (label: 会議録)"
+      "notes": "Observed council minutes index at https://www.town.mitake.lg.jp/portal/town/parliament/post0003625/ (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +46,15 @@
           "url": "https://www.town.mitake.lg.jp/news/news0090984/",
           "observed_on": "https://www.town.mitake.lg.jp/portal/town/",
           "fetched_at": "2026-08-27T07:38:34Z"
+        },
+        {
+          "url": "https://www.town.mitake.lg.jp/news/news0090984/",
+          "observed_on": "https://www.town.mitake.lg.jp/news/news0090984/",
+          "sha256": "7899ef97e8c021162e650964b64f56917e91577764a8a4c096ad9a01b0aeb9ea",
+          "fetched_at": "2026-08-27T10:14:09Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.mitake.lg.jp/news/news0090984/ (label: 2025年7月02日 【令和７年度】太陽光発電設備・蓄電池補助制度の予算枠の追加について（県補助分）)"
+      "notes": "Observed budget link at https://www.town.mitake.lg.jp/news/news0090984/ (label: 2025年7月02日 【令和７年度】太陽光発電設備・蓄電池補助制度の予算枠の追加について（県補助分）) 入口 https://www.town.mitake.lg.jp/news/news0090984/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +67,15 @@
           "url": "https://www.town.mitake.lg.jp/portal/town/finance/",
           "observed_on": "https://www.town.mitake.lg.jp/",
           "fetched_at": "2026-08-27T07:38:19Z"
+        },
+        {
+          "url": "https://www.town.mitake.lg.jp/portal/town/finance/",
+          "observed_on": "https://www.town.mitake.lg.jp/portal/town/finance/",
+          "sha256": "e198129dd7b8b01ebb5232815135e492a86eaf7010b8fc70da07b1309b5bc52e",
+          "fetched_at": "2026-08-27T10:14:11Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mitake.lg.jp/portal/town/finance/ (label: 財政)"
+      "notes": "Observed finance section at https://www.town.mitake.lg.jp/portal/town/finance/ (label: 財政) 入口 https://www.town.mitake.lg.jp/portal/town/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -18,19 +18,25 @@
           "fetched_at": "2026-08-27T06:01:01Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/hisayama_gikai/1697.html (label: 久山町議会 会議録)"
+      "notes": "Observed council minutes index at https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/hisayama_gikai/1697.html (label: 久山町議会 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.hisayama/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:36:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.hisayama/reiki_menu.html",
           "observed_on": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/index.html",
           "fetched_at": "2026-08-27T06:01:01Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.hisayama/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.hisayama/",
+          "sha256": "a4b6f4e85b436edc3cc38ea94b14a80ba67d23e399370803e65ce0c3acae0d4a",
+          "fetched_at": "2026-08-27T09:36:17Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.hisayama/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/yosan/index.html",
           "observed_on": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/index.html",
           "fetched_at": "2026-08-27T06:01:01Z"
+        },
+        {
+          "url": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/yosan/index.html",
+          "observed_on": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/yosan/index.html",
+          "sha256": "f00725f3bb96ddf6f4ba93050d4ca7aa43cda73053bbb761008806ed5a3f6833",
+          "fetched_at": "2026-08-27T09:36:26Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/yosan/index.html (label: 予算)"
+      "notes": "Observed budget link at https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/yosan/index.html (label: 予算) 入口 https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html",
           "observed_on": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/index.html",
           "fetched_at": "2026-08-27T06:01:01Z"
+        },
+        {
+          "url": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html",
+          "observed_on": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html",
+          "sha256": "ea4ebfa6e5eb098ee270767ffab0b385a2c7f6549a98a131078f29c584abc1ec",
+          "fetched_at": "2026-08-27T09:36:27Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html (label: 決算)"
+      "notes": "Observed settlement link at https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html (label: 決算) 入口 https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

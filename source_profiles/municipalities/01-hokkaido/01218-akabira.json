@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.city.akabira.hokkaido.jp/docs/2013011000349.html (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.akabira.hokkaido.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:28:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.akabira.hokkaido.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.akabira.hokkaido.jp/",
           "fetched_at": "2026-08-27T05:59:08Z"
+        },
+        {
+          "url": "https://www.city.akabira.hokkaido.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.akabira.hokkaido.jp/reiki_int/",
+          "sha256": "b1b3016449075d8351988c578b7cfcc03a308fe301b4044cd27b86d5640b0546",
+          "fetched_at": "2026-08-27T10:28:49Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.city.akabira.hokkaido.jp/reiki_int/reiki_menu.html (label: )"
@@ -46,9 +52,15 @@
           "url": "http://www.city.akabira.hokkaido.jp/section/zaisei/",
           "observed_on": "http://www.city.akabira.hokkaido.jp/docs/2018041000024.html",
           "fetched_at": "2026-08-27T05:59:26Z"
+        },
+        {
+          "url": "https://www.city.akabira.hokkaido.jp/section/zaisei/",
+          "observed_on": "https://www.city.akabira.hokkaido.jp/section/zaisei/",
+          "sha256": "ff2b6f2590ac6db7991e04778c2176a3bbadeba99e92bc9253714840d68d64fa",
+          "fetched_at": "2026-08-27T10:28:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.akabira.hokkaido.jp/section/zaisei/ (label: 財政課)"
+      "notes": "Observed finance section at http://www.city.akabira.hokkaido.jp/section/zaisei/ (label: 財政課) 入口 https://www.city.akabira.hokkaido.jp/section/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.akabira.hokkaido.jp/section/zaisei/",
           "observed_on": "http://www.city.akabira.hokkaido.jp/docs/2018041000024.html",
           "fetched_at": "2026-08-27T05:59:26Z"
+        },
+        {
+          "url": "https://www.city.akabira.hokkaido.jp/section/zaisei/",
+          "observed_on": "https://www.city.akabira.hokkaido.jp/section/zaisei/",
+          "sha256": "ff2b6f2590ac6db7991e04778c2176a3bbadeba99e92bc9253714840d68d64fa",
+          "fetched_at": "2026-08-27T10:28:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.akabira.hokkaido.jp/section/zaisei/ (label: 財政課)"
+      "notes": "Observed finance section at http://www.city.akabira.hokkaido.jp/section/zaisei/ (label: 財政課) 入口 https://www.city.akabira.hokkaido.jp/section/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

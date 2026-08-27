@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.mitaka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.gikai.city.mitaka.tokyo.jp/reference/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:26:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.gikai.city.mitaka.tokyo.jp/reference/index.html",
           "observed_on": "https://www.gikai.city.mitaka.tokyo.jp/",
           "fetched_at": "2026-08-27T07:43:38Z"
+        },
+        {
+          "url": "https://www.gikai.city.mitaka.tokyo.jp/reference/index.html",
+          "observed_on": "https://www.gikai.city.mitaka.tokyo.jp/reference/index.html",
+          "sha256": "1799bd1501693bcec551d9059b3ebcd4c52f0f2aacd849d5286c5d0ecf938680",
+          "fetched_at": "2026-08-27T10:26:11Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.gikai.city.mitaka.tokyo.jp/reference/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/city.mitaka/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:25:44Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/city.mitaka/reiki_menu.html",
           "observed_on": "http://www.city.mitaka.lg.jp/",
           "fetched_at": "2026-08-27T07:42:09Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/city.mitaka/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/city.mitaka/",
+          "sha256": "591b399b72ce371dec3c4633b14828aadeec9d7ee4729ff0d9c6b62aa1d3ca9e",
+          "fetched_at": "2026-08-27T10:25:56Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city.mitaka/reiki_menu.html (label: 三鷹市例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.city.mitaka.lg.jp/c_categories/index05009001.html",
           "observed_on": "http://www.city.mitaka.lg.jp/sub05/",
           "fetched_at": "2026-08-27T07:42:28Z"
+        },
+        {
+          "url": "https://www.city.mitaka.lg.jp/c_categories/index05009001.html",
+          "observed_on": "https://www.city.mitaka.lg.jp/c_categories/index05009001.html",
+          "sha256": "8d89fddac581b35ce5f26a13987b0a19ef2725cca19eb504e5e112526cde0ea4",
+          "fetched_at": "2026-08-27T10:26:19Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.mitaka.lg.jp/c_categories/index05009001.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.mitaka.lg.jp/c_categories/index05009001.html (label: 財政) 入口 https://www.city.mitaka.lg.jp/c_categories/index05009001.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.city.mitaka.lg.jp/c_categories/index05009001.html",
           "observed_on": "http://www.city.mitaka.lg.jp/sub05/",
           "fetched_at": "2026-08-27T07:42:28Z"
+        },
+        {
+          "url": "https://www.city.mitaka.lg.jp/c_categories/index05009001.html",
+          "observed_on": "https://www.city.mitaka.lg.jp/c_categories/index05009001.html",
+          "sha256": "8d89fddac581b35ce5f26a13987b0a19ef2725cca19eb504e5e112526cde0ea4",
+          "fetched_at": "2026-08-27T10:26:19Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.mitaka.lg.jp/c_categories/index05009001.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.mitaka.lg.jp/c_categories/index05009001.html (label: 財政) 入口 https://www.city.mitaka.lg.jp/c_categories/index05009001.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

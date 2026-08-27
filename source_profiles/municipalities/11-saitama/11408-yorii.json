@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.yorii.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/yorii/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:22:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/yorii/pg/index.html",
           "observed_on": "http://www.town.yorii.saitama.jp/site/gikai/",
           "fetched_at": "2026-08-27T07:08:54Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/yorii/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/yorii/pg/index.html",
+          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
+          "fetched_at": "2026-08-27T10:22:17Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yorii/pg/index.html (label: 会議録の検索と閲覧)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yorii/pg/index.html (label: 会議録の検索と閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/yorii/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:22:11Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/yorii/reiki_menu.html",
           "observed_on": "http://www.town.yorii.saitama.jp/",
           "fetched_at": "2026-08-27T07:06:55Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/yorii/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/yorii/",
+          "sha256": "899ae4b1a76086edd9af79b1f14d9db06d4cc650ef43916748af081e0913bd89",
+          "fetched_at": "2026-08-27T10:22:11Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/yorii/reiki_menu.html (label: 例規集)"

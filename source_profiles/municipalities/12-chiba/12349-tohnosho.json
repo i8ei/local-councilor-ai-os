@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.tohnosho.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.tohnosho.chiba.jp/soshiki/gikaijimukyoku/gyomu/tonoshochogikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:24:54Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tohnosho.chiba.jp/soshiki/gikaijimukyoku/gyomu/tonoshochogikai/kaigiroku/index.html",
           "observed_on": "https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:25:11Z"
+        },
+        {
+          "url": "https://www.town.tohnosho.chiba.jp/soshiki/gikaijimukyoku/gyomu/tonoshochogikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.tohnosho.chiba.jp/soshiki/gikaijimukyoku/gyomu/tonoshochogikai/kaigiroku/index.html",
+          "sha256": "50aa96c2a7e1fb9df9686fb305af7a393a1c0023f5611ca095536f7f402f9fef",
+          "fetched_at": "2026-08-27T10:24:56Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.tohnosho.chiba.jp/soshiki/gikaijimukyoku/gyomu/tonoshochogikai/kaigiroku/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/tohnosho/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:24:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/tohnosho/reiki_menu.html",
           "observed_on": "http://www.town.tohnosho.chiba.jp/",
           "fetched_at": "2026-08-27T07:24:51Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/tohnosho/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/tohnosho/",
+          "sha256": "38e38e683ea3c8491ebe39f87a7473b8329b188f44eda1c6569c76a8bf1be252",
+          "fetched_at": "2026-08-27T10:24:22Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tohnosho/reiki_menu.html (label: 東庄町例規集)"
@@ -46,9 +58,15 @@
           "url": "https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html",
           "observed_on": "https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:25:11Z"
+        },
+        {
+          "url": "https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html",
+          "observed_on": "https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html",
+          "sha256": "357d4a17b3f0cd72252fd73ebe35127b71765b22788fda25ac2e26f90a0decac",
+          "fetched_at": "2026-08-27T10:24:59Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html (label: 行財政)"
+      "notes": "Observed finance section at https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html (label: 行財政) 入口 https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.town.tohnosho.chiba.jp/gyoseijoho/seisaku_keikaku/2227.html",
           "observed_on": "https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:25:11Z"
+        },
+        {
+          "url": "https://www.town.tohnosho.chiba.jp/gyoseijoho/seisaku_keikaku/2227.html",
+          "observed_on": "https://www.town.tohnosho.chiba.jp/gyoseijoho/seisaku_keikaku/2227.html",
+          "sha256": "4480d409c2d146287a0d7917921f87e69ef58206f12e1d781ee254dddacd7331",
+          "fetched_at": "2026-08-27T10:25:00Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.tohnosho.chiba.jp/gyoseijoho/seisaku_keikaku/2227.html (label: 主要施策)"
+      "notes": "Observed settlement link at https://www.town.tohnosho.chiba.jp/gyoseijoho/seisaku_keikaku/2227.html (label: 主要施策) 入口 https://www.town.tohnosho.chiba.jp/gyoseijoho/seisaku_keikaku/2227.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

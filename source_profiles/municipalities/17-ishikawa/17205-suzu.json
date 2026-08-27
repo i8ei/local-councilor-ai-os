@@ -6,31 +6,43 @@
   "official_home_url": "https://www.city.suzu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
       "index_url": "https://www.city.suzu.ishikawa.dbsr.jp/index.php/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:06:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.suzu.ishikawa.dbsr.jp/index.php/",
           "observed_on": "https://www.city.suzu.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:13:30Z"
+        },
+        {
+          "url": "https://www.city.suzu.ishikawa.dbsr.jp/index.php/",
+          "observed_on": "https://www.city.suzu.ishikawa.dbsr.jp/index.php/",
+          "sha256": "e761d53cb6639e56da94697b5fc9947d89d9e427d65573ec7538c8fa2db85489",
+          "fetched_at": "2026-08-27T10:06:10Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.suzu.ishikawa.dbsr.jp/index.php/ (label: 珠洲市議会会議録検索システム)"
+      "notes": "Observed dbsr at https://www.city.suzu.ishikawa.dbsr.jp/index.php/ (label: 珠洲市議会会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/suzu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:05:27Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/suzu/reiki_menu.html",
           "observed_on": "https://www.city.suzu.lg.jp/",
           "fetched_at": "2026-08-27T06:12:28Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/suzu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/suzu/",
+          "sha256": "0dfa2b70941c898d105059a918d9a423ca3bd1c3b4271599759bad61687d4678",
+          "fetched_at": "2026-08-27T10:05:37Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/suzu/reiki_menu.html (label: 例規集)"

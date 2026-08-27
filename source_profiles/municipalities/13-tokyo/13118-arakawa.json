@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.arakawa.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/arakawa/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:25:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/arakawa/pg/index.html",
           "observed_on": "http://www.city.arakawa.tokyo.jp/gikaisenkyo/kugikai/kugikai.html",
           "fetched_at": "2026-08-27T07:36:51Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/arakawa/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/arakawa/pg/index.html",
+          "sha256": "f2558d6abab3ae6f5992bedd67018446b1c441c87547a672e5eb69eefcab9452",
+          "fetched_at": "2026-08-27T10:25:33Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/arakawa/pg/index.html (label: 会議録閲覧)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/arakawa/pg/index.html (label: 会議録閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

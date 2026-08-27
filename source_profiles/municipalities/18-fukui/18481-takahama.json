@@ -6,31 +6,43 @@
   "official_home_url": "https://www.town.takahama.fukui.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.takahama.fukui.jp/gikai/gijiroku-search/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:07:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.takahama.fukui.jp/gikai/gijiroku-search/index.html",
           "observed_on": "https://www.town.takahama.fukui.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:26:37Z"
+        },
+        {
+          "url": "https://www.town.takahama.fukui.jp/gikai/gijiroku-search/index.html",
+          "observed_on": "https://www.town.takahama.fukui.jp/gikai/gijiroku-search/index.html",
+          "sha256": "912ef2e2b748fc6ac7fef38d1702b199ff12944043acbd6db65685ca6728c7a9",
+          "fetched_at": "2026-08-27T10:07:13Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.takahama.fukui.jp/gikai/gijiroku-search/index.html (label: 議事録検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.takahama.fukui.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:07:04Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.takahama.fukui.jp/reiki/reiki_menu.html",
           "observed_on": "https://www.town.takahama.fukui.jp/",
           "fetched_at": "2026-08-27T06:26:24Z"
+        },
+        {
+          "url": "http://www.town.takahama.fukui.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.takahama.fukui.jp/reiki/",
+          "sha256": "9389f742f2bc9fc660ca4846081ed5794d43db1031ce690cd113e23c240f7cec",
+          "fetched_at": "2026-08-27T10:07:05Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.takahama.fukui.jp/reiki/reiki_menu.html (label: 例規集)"

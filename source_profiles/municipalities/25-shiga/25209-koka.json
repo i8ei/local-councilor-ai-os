@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.koka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/koka/MinuteSearch.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:49:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/koka/MinuteSearch.html",
           "observed_on": "http://www.city.koka.lg.jp/council/",
           "fetched_at": "2026-08-27T06:09:28Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/koka/MinuteSearch.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/koka/MinuteSearch.html",
+          "sha256": "3732538daccf2968f04c26fde739c98a7ab4f2e1a199d563964ba9257eeeaac2",
+          "fetched_at": "2026-08-27T09:49:26Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/koka/MinuteSearch.html (label: 議事録検索)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/koka/MinuteSearch.html (label: 議事録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "needs_review",

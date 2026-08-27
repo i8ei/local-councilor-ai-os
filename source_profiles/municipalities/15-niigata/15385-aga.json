@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.aga.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
           "observed_on": "https://www.town.aga.niigata.jp/agachogikai/1188.html",
           "fetched_at": "2026-08-27T06:07:45Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
+          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
+          "fetched_at": "2026-08-27T10:04:38Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/aga/pg/index.html (label: 会議録検索はこちらから（外部サイト）)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/aga/pg/index.html (label: 会議録検索はこちらから（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.aga.niigata.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:04:30Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aga.niigata.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.aga.niigata.jp/",
           "fetched_at": "2026-08-27T06:04:53Z"
+        },
+        {
+          "url": "https://www.town.aga.niigata.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.aga.niigata.jp/section/reiki_int/",
+          "sha256": "77c107bd1827cfdda121bea5f8310e5288913366b2d11d1a99d0d15acaad1685",
+          "fetched_at": "2026-08-27T10:04:32Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.aga.niigata.jp/section/reiki_int/reiki_menu.html (label: 例規集 Regular regulations)"

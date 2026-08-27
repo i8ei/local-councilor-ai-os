@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.tomamae.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:30:53Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tomamae.lg.jp/reiki/reiki_menu.html",
           "observed_on": "http://www.town.tomamae.lg.jp/",
           "fetched_at": "2026-08-27T06:30:54Z"
+        },
+        {
+          "url": "http://www.town.tomamae.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.tomamae.lg.jp/reiki/",
+          "sha256": "cc0333dfd56503ba190c58d49fc577244258fccb75c84fe1878ef03637225466",
+          "fetched_at": "2026-08-27T10:30:55Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.tomamae.lg.jp/reiki/reiki_menu.html (label: 例規集)"
@@ -54,9 +60,15 @@
           "url": "http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html",
           "observed_on": "http://www.town.tomamae.lg.jp/",
           "fetched_at": "2026-08-27T06:30:54Z"
+        },
+        {
+          "url": "http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html",
+          "observed_on": "http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html",
+          "sha256": "541401027517f6e09be93501224f928997696e5fd0aab494a421958032c4cb6d",
+          "fetched_at": "2026-08-27T10:31:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html (label: 財政・統計資料)"
+      "notes": "Observed finance section at http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html (label: 財政・統計資料) 入口 http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

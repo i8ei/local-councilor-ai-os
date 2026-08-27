@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.wazuka.lg.jp/material/files/group/15/teireikai_gijiroku202635.pdf (label: 定例会1日目 (PDFファイル: 897.6KB))"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.wazuka.lg.jp/section/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:50:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.wazuka.lg.jp/section/reiki/reiki_menu.html",
           "observed_on": "https://www.town.wazuka.lg.jp/mokuteki/choseijoho/index.html",
           "fetched_at": "2026-08-27T06:22:44Z"
+        },
+        {
+          "url": "https://www.town.wazuka.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.wazuka.lg.jp/section/reiki/",
+          "sha256": "cb0829b47d88dcd5dbbd22c2a17327eb2f64ab9f84c3cf785e0df19e7d5bedb8",
+          "fetched_at": "2026-08-27T09:50:14Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.wazuka.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "https://www.town.wazuka.lg.jp/material/files/group/15/R8311_yosaniinnkai.pdf",
           "observed_on": "https://www.town.wazuka.lg.jp/kakukanogoannai/gikaijimukyoku/machigikai/4533.html",
           "fetched_at": "2026-08-27T06:25:13Z"
+        },
+        {
+          "url": "https://www.town.wazuka.lg.jp/material/files/group/15/R8311_yosaniinnkai.pdf",
+          "observed_on": "https://www.town.wazuka.lg.jp/material/files/group/15/R8311_yosaniinnkai.pdf",
+          "sha256": "0b2f242bd81c3f34879aa874ca2684c63058d8b8dc832ecb1f9750d59bc34176",
+          "fetched_at": "2026-08-27T09:50:21Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.wazuka.lg.jp/material/files/group/15/R8311_yosaniinnkai.pdf (label: 予算特別委員会1日目 (PDFファイル: 698.0KB))"
+      "notes": "Observed budget link at https://www.town.wazuka.lg.jp/material/files/group/15/R8311_yosaniinnkai.pdf (label: 予算特別委員会1日目 (PDFファイル: 698.0KB)) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html",
           "observed_on": "https://www.town.wazuka.lg.jp/mokuteki/choseijoho/index.html",
           "fetched_at": "2026-08-27T06:22:44Z"
+        },
+        {
+          "url": "https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html",
+          "observed_on": "https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html",
+          "sha256": "f997bf3ef0d09cfb0404fee1598ddc5dd8f8097060ad3d62f2a16ce79720e033",
+          "fetched_at": "2026-08-27T09:50:23Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html (label: 財政) 入口 https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

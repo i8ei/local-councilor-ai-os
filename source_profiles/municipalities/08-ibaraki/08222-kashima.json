@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.kashima.ibaraki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/kashima/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:32Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/kashima/pg/index.html",
           "observed_on": "http://www.city.kashima.ibaraki.jp/site/19gikai/",
           "fetched_at": "2026-08-27T06:05:02Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/kashima/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/kashima/pg/index.html",
+          "sha256": "e775be2d76b84be31ee0f1d0af5547cea66b9ce83a0d5df9d2a87b98f54b316c",
+          "fetched_at": "2026-08-27T10:17:33Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kashima/pg/index.html (label: )"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kashima/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.kashima.ibaraki.jp/13reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kashima.ibaraki.jp/13reiki/reiki_menu.html",
           "observed_on": "http://www.city.kashima.ibaraki.jp/index2.html",
           "fetched_at": "2026-08-27T06:04:09Z"
+        },
+        {
+          "url": "http://www.city.kashima.ibaraki.jp/13reiki/reiki_menu.html",
+          "observed_on": "http://www.city.kashima.ibaraki.jp/13reiki/",
+          "sha256": "0b802c96347857473500d0c0510d9c1d88e4fff49e3f4b294604e32187594261",
+          "fetched_at": "2026-08-27T10:17:28Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.kashima.ibaraki.jp/13reiki/reiki_menu.html (label: 条例・規則)"

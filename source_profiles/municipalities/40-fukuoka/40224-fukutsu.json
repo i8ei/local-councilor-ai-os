@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.fukutsu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/fukutsu/MinuteSearch.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:59Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/fukutsu/MinuteSearch.html",
           "observed_on": "https://www.city.fukutsu.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T04:15:14Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/fukutsu/MinuteSearch.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/fukutsu/MinuteSearch.html",
+          "sha256": "3732538daccf2968f04c26fde739c98a7ab4f2e1a199d563964ba9257eeeaac2",
+          "fetched_at": "2026-08-27T09:35:59Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/fukutsu/MinuteSearch.html (label: )"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/fukutsu/MinuteSearch.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.fukutsu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:35:46Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.fukutsu/reiki_menu.html",
           "observed_on": "http://www.city.fukutsu.lg.jp/",
           "fetched_at": "2026-08-27T04:15:11Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.fukutsu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.fukutsu/",
+          "sha256": "d77fab28556523cac0c29df0aa562a4baf2fc605b0487826e116457785120993",
+          "fetched_at": "2026-08-27T09:35:48Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.fukutsu/reiki_menu.html (label: )"
@@ -46,9 +58,15 @@
           "url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
           "observed_on": "https://www.city.fukutsu.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T05:57:24Z"
+        },
+        {
+          "url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
+          "sha256": "6715dbd2d2d878e8b45f87fa90406bb57ead8ecb9ae9a2b462b06eb352aa1892",
+          "fetched_at": "2026-08-27T09:36:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
           "observed_on": "https://www.city.fukutsu.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T05:57:24Z"
+        },
+        {
+          "url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
+          "sha256": "6715dbd2d2d878e8b45f87fa90406bb57ead8ecb9ae9a2b462b06eb352aa1892",
+          "fetched_at": "2026-08-27T09:36:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

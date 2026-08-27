@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.kadogawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/kadogawa/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:40:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/kadogawa/pg/index.html",
           "observed_on": "https://www.town.kadogawa.lg.jp/administration/parliament/",
           "fetched_at": "2026-08-27T06:32:57Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/kadogawa/pg/index.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/kadogawa/pg/index.html",
+          "sha256": "11ba72e61d555e0812420e612692052ecc739574467334eeb9b9a8e779fd2e18",
+          "fetched_at": "2026-08-27T09:40:11Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kadogawa/pg/index.html (label: 議事録検索システム（外部リンク）)"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kadogawa/pg/index.html (label: 議事録検索システム（外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.kadogawa.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:39:59Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kadogawa.lg.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.kadogawa.lg.jp/",
           "fetched_at": "2026-08-27T06:31:40Z"
+        },
+        {
+          "url": "http://www.town.kadogawa.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.kadogawa.lg.jp/reiki_int/",
+          "sha256": "cb35a4f385ce40374c005428cbf5a2a2c8a91127ce009eae3ae46c2e9c025cb2",
+          "fetched_at": "2026-08-27T09:40:05Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.kadogawa.lg.jp/reiki_int/reiki_menu.html (label: )"

@@ -6,31 +6,43 @@
   "official_home_url": "https://www.town.oguchi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:16:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
           "observed_on": "https://www.town.oguchi.lg.jp/2675.htm",
           "fetched_at": "2026-08-27T08:11:27Z"
+        },
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
+          "observed_on": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
+          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
+          "fetched_at": "2026-08-27T10:16:14Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html (label: )"
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.oguchi.lg.jp/FTPdirect/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:16:06Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.oguchi.lg.jp/FTPdirect/reiki_int/reiki_menu.html",
           "observed_on": "https://www.town.oguchi.lg.jp/",
           "fetched_at": "2026-08-27T08:11:10Z"
+        },
+        {
+          "url": "https://www.town.oguchi.lg.jp/FTPdirect/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.oguchi.lg.jp/FTPdirect/reiki_int/",
+          "sha256": "580f17c9ae75f1a19442ecaa3361c1fa7bd057d421c9e87d08ea67861838cf0b",
+          "fetched_at": "2026-08-27T10:16:08Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.oguchi.lg.jp/FTPdirect/reiki_int/reiki_menu.html (label: 例規集検索システム)"

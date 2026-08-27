@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.nankan.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.nankan.lg.jp/tyosei/gikai/gijiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T09:38:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nankan.lg.jp/tyosei/gikai/gijiroku/",
           "observed_on": "http://www.town.nankan.lg.jp/tyosei/gikai/",
           "fetched_at": "2026-08-27T05:37:27Z"
+        },
+        {
+          "url": "http://www.town.nankan.lg.jp/tyosei/gikai/gijiroku/",
+          "observed_on": "http://www.town.nankan.lg.jp/tyosei/gikai/gijiroku/",
+          "sha256": "d85114cb45404cde9282d18bc0fc7ce8bb463695e22fd28b2edee2109b24d303",
+          "fetched_at": "2026-08-27T09:38:21Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.nankan.lg.jp/tyosei/gikai/gijiroku/ (label: 会議・議事録)"
@@ -46,9 +52,15 @@
           "url": "http://www.town.nankan.lg.jp/tyosei/zaisei/",
           "observed_on": "http://www.town.nankan.lg.jp/",
           "fetched_at": "2026-08-27T05:37:24Z"
+        },
+        {
+          "url": "https://www.town.nankan.lg.jp/tyosei/zaisei/",
+          "observed_on": "https://www.town.nankan.lg.jp/tyosei/zaisei/",
+          "sha256": "f0bd6d5a4aa4a1345c9119ee9f8914885d6ca8cfa5753a73737e84608ce93fe3",
+          "fetched_at": "2026-08-27T09:38:26Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nankan.lg.jp/tyosei/zaisei/ (label: 町の財政)"
+      "notes": "Observed finance section at http://www.town.nankan.lg.jp/tyosei/zaisei/ (label: 町の財政) 入口 https://www.town.nankan.lg.jp/tyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.nankan.lg.jp/tyosei/zaisei/",
           "observed_on": "http://www.town.nankan.lg.jp/",
           "fetched_at": "2026-08-27T05:37:24Z"
+        },
+        {
+          "url": "https://www.town.nankan.lg.jp/tyosei/zaisei/",
+          "observed_on": "https://www.town.nankan.lg.jp/tyosei/zaisei/",
+          "sha256": "f0bd6d5a4aa4a1345c9119ee9f8914885d6ca8cfa5753a73737e84608ce93fe3",
+          "fetched_at": "2026-08-27T09:38:26Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nankan.lg.jp/tyosei/zaisei/ (label: 町の財政)"
+      "notes": "Observed finance section at http://www.town.nankan.lg.jp/tyosei/zaisei/ (label: 町の財政) 入口 https://www.town.nankan.lg.jp/tyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

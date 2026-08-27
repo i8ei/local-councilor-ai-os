@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/naka/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:17:25Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/naka/reiki_menu.html",
           "observed_on": "http://www.city.naka.lg.jp/",
           "fetched_at": "2026-08-27T06:04:59Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/naka/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/naka/",
+          "sha256": "afe7508a2509096ae80959cb8afaa0572b9e9a953155bef6acc043efcff8b397",
+          "fetched_at": "2026-08-27T10:17:34Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/naka/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,20 @@
           "url": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
           "observed_on": "http://www.city.naka.lg.jp/gyousei/",
           "fetched_at": "2026-08-27T06:05:17Z"
+        },
+        {
+          "url": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
+          "observed_on": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
+          "sha256": "bb97e2c53fd76be2539e88a80d5525dd8b2a8fa4f899c01d469b9ce723a1c83a",
+          "fetched_at": "2026-08-27T10:17:43Z"
+        },
+        {
+          "url": "https://www.city.naka.lg.jp/data/doc/1772083394_doc_269_0.pdf",
+          "observed_on": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
+          "fetched_at": "2026-08-27T10:17:41Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html (label: 那珂市予算書)"
+      "notes": "Observed budget link at https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html (label: 那珂市予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +71,20 @@
           "url": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
           "observed_on": "http://www.city.naka.lg.jp/gyousei/",
           "fetched_at": "2026-08-27T06:05:17Z"
+        },
+        {
+          "url": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
+          "observed_on": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
+          "sha256": "115ced925313db22b2130170fa268224977f8a128156d26036b843f6057c1bb5",
+          "fetched_at": "2026-08-27T10:17:46Z"
+        },
+        {
+          "url": "https://www.city.naka.lg.jp/data/doc/1758076838_doc_49_0.pdf",
+          "observed_on": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
+          "fetched_at": "2026-08-27T10:17:45Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html (label: 那珂市決算書)"
+      "notes": "Observed settlement link at https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html (label: 那珂市決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

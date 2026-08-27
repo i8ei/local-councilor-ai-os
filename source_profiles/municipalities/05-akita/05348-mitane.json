@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.mitane.akita.jp/gyoseijoho/kaigiroku/index.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.mitane/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:34:46Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.mitane/reiki_menu.html",
           "observed_on": "http://www.town.mitane.akita.jp/",
           "fetched_at": "2026-08-27T07:32:57Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.mitane/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.mitane/",
+          "sha256": "6f9c96ab8b67b02e64acde1cb267cd9a3240153b2d3bb58e90ed10963e568e2d",
+          "fetched_at": "2026-08-27T10:34:56Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.mitane/reiki_menu.html (label: 例規集)"
@@ -46,9 +52,15 @@
           "url": "https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html",
           "observed_on": "https://www.town.mitane.akita.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:33:15Z"
+        },
+        {
+          "url": "https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html",
+          "observed_on": "https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html",
+          "sha256": "b20194b2961d12167cc37858d843d397c2f4740e755e6c808efd2cd589885d09",
+          "fetched_at": "2026-08-27T10:35:35Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html (label: 財政) 入口 https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html",
           "observed_on": "https://www.town.mitane.akita.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:33:15Z"
+        },
+        {
+          "url": "https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html",
+          "observed_on": "https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html",
+          "sha256": "b20194b2961d12167cc37858d843d397c2f4740e755e6c808efd2cd589885d09",
+          "fetched_at": "2026-08-27T10:35:35Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html (label: 財政) 入口 https://www.town.mitane.akita.jp/gyoseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

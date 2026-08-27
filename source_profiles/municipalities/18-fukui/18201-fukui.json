@@ -6,31 +6,43 @@
   "official_home_url": "https://www.city.fukui.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "kaigiroku_net",
       "tenant_url": "https://ssp.kaigiroku.net/tenant/fukui/pg/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:07:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ssp.kaigiroku.net/tenant/fukui/pg/index.html",
           "observed_on": "https://www.city.fukui.lg.jp/shigikai/index.html",
           "fetched_at": "2026-08-27T06:22:39Z"
+        },
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/fukui/pg/index.html",
+          "observed_on": "https://ssp.kaigiroku.net/tenant/fukui/pg/index.html",
+          "sha256": "1bb5447a7693ce45f83d6c027e926057eda355a4ea8213a005842cce799d6748",
+          "fetched_at": "2026-08-27T10:07:00Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/fukui/pg/index.html (label: 会議録等)"
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/fukui/pg/index.html (label: 会議録等) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.fukui/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:06:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.fukui/reiki_menu.html",
           "observed_on": "https://www.city.fukui.lg.jp/",
           "fetched_at": "2026-08-27T06:21:54Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.fukui/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.fukui/",
+          "sha256": "5cc19313fdd4c2cd8cc9662091c9323710acc77c39bd445ad0d67924eb55f33b",
+          "fetched_at": "2026-08-27T10:06:30Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.fukui/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "https://www.city.fukui.lg.jp/sisei/zaisei/yosan/index.html",
           "observed_on": "https://www.city.fukui.lg.jp/sisei/index.html",
           "fetched_at": "2026-08-27T06:22:08Z"
+        },
+        {
+          "url": "https://www.city.fukui.lg.jp/sisei/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.fukui.lg.jp/sisei/zaisei/yosan/index.html",
+          "sha256": "d4f4b5bc898de7608f510b79636dc4a28de05a6cdf1356cda427d5af0a3eac12",
+          "fetched_at": "2026-08-27T10:07:03Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.fukui.lg.jp/sisei/zaisei/yosan/index.html (label: 予算)"
+      "notes": "Observed budget link at https://www.city.fukui.lg.jp/sisei/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.fukui.lg.jp/sisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html",
           "observed_on": "https://www.city.fukui.lg.jp/sisei/index.html",
           "fetched_at": "2026-08-27T06:22:08Z"
+        },
+        {
+          "url": "https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html",
+          "observed_on": "https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html",
+          "sha256": "cbb2fb19cff0f6e1aed69a6cef5c20b1a8e3e96c9f1ae673cd9bc17ce850530c",
+          "fetched_at": "2026-08-27T10:07:04Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html (label: 決算)"
+      "notes": "Observed settlement link at https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

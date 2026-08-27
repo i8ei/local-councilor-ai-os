@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/ichinoseki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:32:45Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/ichinoseki/reiki_menu.html",
           "observed_on": "https://www.city.ichinoseki.iwate.jp/",
           "fetched_at": "2026-08-27T07:08:19Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/ichinoseki/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/ichinoseki/",
+          "sha256": "912c107f3a740dd6ea125d3bf5340cd9c080eb603e91b745eee2d3fe8b7170f5",
+          "fetched_at": "2026-08-27T10:32:50Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/ichinoseki/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf",
           "observed_on": "https://www.city.ichinoseki.iwate.jp/archive/contents-123807",
           "fetched_at": "2026-08-27T07:08:46Z"
+        },
+        {
+          "url": "https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf",
+          "observed_on": "https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf",
+          "sha256": "7f4abf304ca12bfed6f1d82d10b3843083d740e9bae95f65140360b9bfc3818d",
+          "fetched_at": "2026-08-27T10:33:05Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf (label: 補助金および負担金の状況（令和7年度当初予算）（PDF）)"
+      "notes": "Observed budget link at https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf (label: 補助金および負担金の状況（令和7年度当初予算）（PDF）) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
