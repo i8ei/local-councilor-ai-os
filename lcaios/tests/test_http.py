@@ -13,10 +13,13 @@ _DISCOVERY_ROOT = os.path.dirname(os.path.dirname(__file__))
 if _DISCOVERY_ROOT in sys.path:
     sys.path.remove(_DISCOVERY_ROOT)
 
+import concurrent.futures
 import email.message
 import hashlib
 import json
 import tempfile
+import threading
+import time
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
@@ -133,7 +136,7 @@ def _write_cached(
 
 class HttpClientTests(unittest.TestCase):
     def setUp(self) -> None:
-        http._LAST_REQUEST_AT = None
+        http.reset_throttle_state()
 
     def test_required_user_agent_and_tier_have_no_defaults(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -645,7 +648,7 @@ class HttpClientTests(unittest.TestCase):
         ]
         self.assertEqual(sent_agents, ["client-one", "client-two"])
 
-    def test_throttle_is_shared_across_client_instances(self) -> None:
+    def test_throttle_is_shared_across_client_instances_on_one_host(self) -> None:
         responses = [
             _FakeResponse("https://example.test/one", b"one"),
             _FakeResponse("https://example.test/two", b"two"),
@@ -666,13 +669,43 @@ class HttpClientTests(unittest.TestCase):
                 mock.patch.object(
                     http.time,
                     "monotonic",
-                    side_effect=[10.0, 10.0, 10.25, 11.5],
+                    # claim slot for /one, read clock for /two, claim it
+                    side_effect=[10.0, 10.25, 11.5],
                 ),
                 mock.patch.object(http.time, "sleep") as slept,
             ):
                 first._request_once("https://example.test/one")
                 second._request_once("https://example.test/two")
         slept.assert_called_once_with(1.25)
+
+    def test_throttle_is_not_shared_between_hosts(self) -> None:
+        responses = [
+            _FakeResponse("https://one.test/a", b"one"),
+            _FakeResponse("https://two.test/a", b"two"),
+        ]
+        with tempfile.TemporaryDirectory() as temporary:
+            first = HttpClient(
+                temporary,
+                user_agent="one",
+                min_interval_seconds=99,
+            )
+            second = HttpClient(
+                temporary,
+                user_agent="two",
+                min_interval_seconds=99,
+            )
+            with (
+                mock.patch.object(http._OPENER, "open", side_effect=responses),
+                mock.patch.object(
+                    http.time,
+                    "monotonic",
+                    side_effect=[10.0, 10.25],
+                ),
+                mock.patch.object(http.time, "sleep") as slept,
+            ):
+                first._request_once("https://one.test/a")
+                second._request_once("https://two.test/a")
+        slept.assert_not_called()
 
     def test_retry_on_429_with_retry_after_header(self) -> None:
         rate_limited = _FakeResponse(
@@ -759,6 +792,121 @@ class FakeHttpClientTests(unittest.TestCase):
                 set(client.retrieval_report()),
                 set(real.retrieval_report()),
             )
+
+
+class PerHostThrottleTests(unittest.TestCase):
+    """Politeness is per host: one host is paced, unrelated hosts are not."""
+
+    def setUp(self) -> None:
+        http.reset_throttle_state()
+
+    @staticmethod
+    def _opener(log: list[tuple[str, float, float]], hold: float):
+        append_lock = threading.Lock()
+
+        def _open(request, *args, **kwargs):  # type: ignore[no-untyped-def]
+            url = request.full_url
+            started = time.monotonic()
+            time.sleep(hold)
+            with append_lock:
+                log.append((url, started, time.monotonic()))
+            if url.endswith("/robots.txt"):
+                return _FakeResponse(url, b"User-agent: *\nAllow: /\n")
+            return _FakeResponse(url, b"<p>ok</p>", content_type="text/html")
+
+        return _open
+
+    def test_throttle_host_key_drops_leading_www(self) -> None:
+        self.assertEqual(
+            http._throttle_host("https://www.city.example.test/a"),
+            "city.example.test",
+        )
+        self.assertEqual(
+            http._throttle_host("https://city.example.test/a"),
+            "city.example.test",
+        )
+        self.assertNotEqual(
+            http._throttle_host("https://a.example.test/"),
+            http._throttle_host("https://b.example.test/"),
+        )
+
+    def test_same_host_requests_are_serialised_and_spaced(self) -> None:
+        interval = 0.3
+        log: list[tuple[str, float, float]] = []
+        with tempfile.TemporaryDirectory() as temporary:
+            with mock.patch.object(
+                http._OPENER, "open", side_effect=self._opener(log, hold=0.05)
+            ):
+
+                def run(path: str) -> None:
+                    HttpClient(
+                        temporary,
+                        user_agent="test",
+                        min_interval_seconds=interval,
+                    ).fetch(f"https://same.test/{path}", tier=CacheTier.DOCUMENT)
+
+                with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+                    list(pool.map(run, ["a", "b"]))
+
+        self.assertGreaterEqual(len(log), 2)
+        spans = sorted((start, end) for _, start, end in log)
+        for (first_start, first_end), (second_start, _) in zip(
+            spans, spans[1:], strict=False
+        ):
+            self.assertLessEqual(
+                first_end, second_start + 1e-6, "same-host requests overlapped"
+            )
+            self.assertGreaterEqual(
+                second_start - first_start,
+                interval * 0.9,
+                "same-host requests were not spaced by min_interval_seconds",
+            )
+
+    def test_different_hosts_do_not_wait_on_each_other(self) -> None:
+        # Long enough that a single global throttle would dominate the timing.
+        interval = 2.0
+        hosts = ("first.test", "second.test")
+        with tempfile.TemporaryDirectory() as temporary:
+            with mock.patch.object(
+                http._OPENER, "open", side_effect=self._opener([], hold=0.0)
+            ):
+                # Warm the on-disk robots.txt cache so the timed section below
+                # makes exactly one request per host.
+                for host in hosts:
+                    HttpClient(
+                        temporary, user_agent="test", min_interval_seconds=0
+                    ).fetch(f"https://{host}/warm", tier=CacheTier.DOCUMENT)
+
+            http.reset_throttle_state()
+            log: list[tuple[str, float, float]] = []
+            with mock.patch.object(
+                http._OPENER, "open", side_effect=self._opener(log, hold=0.1)
+            ):
+
+                def run(host: str) -> None:
+                    HttpClient(
+                        temporary,
+                        user_agent="test",
+                        min_interval_seconds=interval,
+                    ).fetch(f"https://{host}/page", tier=CacheTier.DOCUMENT)
+
+                started = time.monotonic()
+                with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+                    list(pool.map(run, hosts))
+                elapsed = time.monotonic() - started
+
+        # Order is not asserted: with a per-host gate the two run concurrently,
+        # so which one lands first is genuinely undetermined.
+        self.assertEqual(
+            sorted(url for url, _, _ in log),
+            sorted(f"https://{host}/page" for host in hosts),
+            "expected exactly one request per host; robots cache was not reused",
+        )
+        self.assertLess(
+            elapsed,
+            interval,
+            "unrelated hosts waited on each other's throttle",
+        )
 
 
 if __name__ == "__main__":
