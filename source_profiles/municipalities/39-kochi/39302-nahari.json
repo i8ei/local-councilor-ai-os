@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at http://www.town.nahari.kochi.jp/life/dtl.php?hdnKey=1121 (label: ふるさと納税に関する住民説明会の議事録の公表について)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www.town.nahari.kochi.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nahari.kochi.jp/reiki/reiki.html",
           "observed_on": "http://www.town.nahari.kochi.jp/index2.php",
           "fetched_at": "2026-08-27T07:11:11Z"
+        },
+        {
+          "url": "https://www.town.nahari.kochi.jp/reiki/reiki.html",
+          "observed_on": "http://www.town.nahari.kochi.jp/reiki/reiki.html",
+          "sha256": "b7d96f8703d3f92f1b29632b8509bb9c3b1efa57686ab44303ae664f70958cb8",
+          "fetched_at": "2026-08-27T21:54:53Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.town.nahari.kochi.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at http://www.town.nahari.kochi.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "https://www.town.nahari.kochi.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

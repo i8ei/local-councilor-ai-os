@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.town.shimanto.lg.jp/gijiroku/ (label: 議会議事録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "https://www.town.shimanto.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shimanto.lg.jp/reiki/reiki.html",
           "observed_on": "http://www.town.shimanto.lg.jp/",
           "fetched_at": "2026-08-27T07:18:12Z"
+        },
+        {
+          "url": "https://www.town.shimanto.lg.jp/reiki/reiki.html",
+          "observed_on": "https://www.town.shimanto.lg.jp/reiki/reiki.html",
+          "sha256": "89f95d78e344dcf1799f40250206ad8e4c15512e222a5bba5e3e81df96762b48",
+          "fetched_at": "2026-08-27T21:54:53Z"
         }
       ],
-      "notes": "Observed g_reiki at https://www.town.shimanto.lg.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at https://www.town.shimanto.lg.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "https://www.town.shimanto.lg.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

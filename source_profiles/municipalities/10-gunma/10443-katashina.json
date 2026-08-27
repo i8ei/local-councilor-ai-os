@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.vill.katashina.gunma.jp/gaiyou/kakuka/gikai/2016-0330-1855-38.html (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www.vill.katashina.gunma.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:04:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.katashina.gunma.jp/reiki/reiki.html",
           "observed_on": "http://www.vill.katashina.gunma.jp/",
           "fetched_at": "2026-08-27T06:42:06Z"
+        },
+        {
+          "url": "http://www.vill.katashina.gunma.jp/reiki/reiki.html",
+          "observed_on": "http://www.vill.katashina.gunma.jp/reiki/reiki.html",
+          "sha256": "418972717f6b16933e173474320965bf0514b85b73c3b34c810557b2e41a64bc",
+          "fetched_at": "2026-08-27T21:54:52Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.vill.katashina.gunma.jp/reiki/reiki.html (label: )"
+      "notes": "Observed g_reiki at http://www.vill.katashina.gunma.jp/reiki/reiki.html (label: )",
+      "index_url": "http://www.vill.katashina.gunma.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

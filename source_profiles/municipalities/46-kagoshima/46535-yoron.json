@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.yoron.jp/gikai/list00404.html (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "https://www.yoron.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.yoron.jp/reiki/reiki.html",
           "observed_on": "http://www.yoron.jp/default.html",
           "fetched_at": "2026-08-27T06:48:07Z"
+        },
+        {
+          "url": "https://www.yoron.jp/reiki/reiki.html",
+          "observed_on": "https://www.yoron.jp/reiki/reiki.html",
+          "sha256": "277618446f7679b849b25d2d9b782c86ad17b5312795ab0b02aecd5844d33dc6",
+          "fetched_at": "2026-08-27T21:57:32Z"
         }
       ],
-      "notes": "Observed g_reiki at https://www.yoron.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at https://www.yoron.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "https://www.yoron.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "ready",

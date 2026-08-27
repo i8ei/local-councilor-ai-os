@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.city.takahagi.ibaraki.jp/gyousei/gikai/page002472.html (label: 会議録の閲覧)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.takahagi.ibaraki.jp/gyousei/gikai/page007820.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/takahagi/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T21:56:48Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.takahagi.ibaraki.jp/gyousei/gikai/page007820.html",
           "observed_on": "https://www.city.takahagi.ibaraki.jp/gyousei/gikai/page000319.html",
           "fetched_at": "2026-08-27T06:01:17Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/takahagi/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/takahagi/d1w_reiki/reiki.html",
+          "sha256": "19fd0435cb81264dd050f5c6664e1655709d45a2a5866dce3e6c1090e09d97f0",
+          "fetched_at": "2026-08-27T16:25:24Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.takahagi.ibaraki.jp/gyousei/gikai/page007820.html (label: 条例・規則（議会に関するもの）)"

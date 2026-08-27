@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www.vill.noda.iwate.jp/section/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:04:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.noda.iwate.jp/section/reiki/reiki.html",
           "observed_on": "https://www.vill.noda.iwate.jp/gyoseijoho/koho_kocho/nodamura_homepage/703.html",
           "fetched_at": "2026-08-27T07:17:04Z"
+        },
+        {
+          "url": "https://www.vill.noda.iwate.jp:443/section/reiki/reiki.html",
+          "observed_on": "http://www.vill.noda.iwate.jp/section/reiki/reiki.html",
+          "sha256": "b4e4bf5679f5d35daf005df627869051fa788318d58933a7ea240e68e7edacca",
+          "fetched_at": "2026-08-27T21:54:41Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.vill.noda.iwate.jp/section/reiki/reiki.html (label: http://www.vill.noda.iwate.jp/section/reiki/reiki.html)"
+      "notes": "Observed g_reiki at http://www.vill.noda.iwate.jp/section/reiki/reiki.html (label: http://www.vill.noda.iwate.jp/section/reiki/reiki.html)",
+      "index_url": "https://www.vill.noda.iwate.jp:443/section/reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

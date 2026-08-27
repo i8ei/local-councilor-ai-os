@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www.town.yamanobe.yamagata.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:04:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yamanobe.yamagata.jp/reiki/reiki.html",
           "observed_on": "http://www.town.yamanobe.yamagata.jp/",
           "fetched_at": "2026-08-27T07:42:08Z"
+        },
+        {
+          "url": "https://www.town.yamanobe.yamagata.jp:443/reiki/reiki.html",
+          "observed_on": "http://www.town.yamanobe.yamagata.jp/reiki/reiki.html",
+          "sha256": "e862d44bbe08d59e81c74c4e87d4a7978d0fbbfb3d382556145ef0be5dff2013",
+          "fetched_at": "2026-08-27T21:54:44Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.town.yamanobe.yamagata.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at http://www.town.yamanobe.yamagata.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "https://www.town.yamanobe.yamagata.jp:443/reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

@@ -38,19 +38,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www.city.kure.lg.jp/~reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kure.lg.jp/~reiki/reiki.html",
           "observed_on": "http://www.city.kure.lg.jp/",
           "fetched_at": "2026-08-27T06:23:04Z"
+        },
+        {
+          "url": "https://www.city.kure.lg.jp/~reiki/reiki.html",
+          "observed_on": "http://www.city.kure.lg.jp/~reiki/reiki.html",
+          "sha256": "f630ea1fa2c2c486d10a9792f374e5424865415b26fb7c05f45c47ea585aa1c8",
+          "fetched_at": "2026-08-27T21:54:53Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.city.kure.lg.jp/~reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at http://www.city.kure.lg.jp/~reiki/reiki.html (label: 例規集)",
+      "index_url": "https://www.city.kure.lg.jp/~reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

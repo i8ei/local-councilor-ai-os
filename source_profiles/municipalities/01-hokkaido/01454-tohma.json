@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://town.tohma.hokkaido.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:04:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://town.tohma.hokkaido.jp/reiki/reiki.html",
           "observed_on": "http://town.tohma.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:23:36Z"
+        },
+        {
+          "url": "https://www.town.tohma.hokkaido.jp/reiki/reiki.html",
+          "observed_on": "http://town.tohma.hokkaido.jp/reiki/reiki.html",
+          "sha256": "a76952e26f61cb698c182ec250c5a4386a249110aed94c1843525dedb3040516",
+          "fetched_at": "2026-08-27T21:54:29Z"
         }
       ],
-      "notes": "Observed g_reiki at http://town.tohma.hokkaido.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at http://town.tohma.hokkaido.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "https://www.town.tohma.hokkaido.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "not_found",

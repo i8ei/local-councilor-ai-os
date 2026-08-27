@@ -27,19 +27,25 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/hidakahokkaido/pg/index.html (label: 日高町議会 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www.town.hidaka.hokkaido.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:04:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hidaka.hokkaido.jp/reiki/reiki.html",
           "observed_on": "http://www.town.hidaka.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:43:57Z"
+        },
+        {
+          "url": "http://www.town.hidaka.hokkaido.jp/reiki/reiki.html",
+          "observed_on": "http://www.town.hidaka.hokkaido.jp/reiki/reiki.html",
+          "sha256": "7da9e703b8f04580af3a2e8a8587262a7432fc7373549b2f13e0363e423730eb",
+          "fetched_at": "2026-08-27T21:54:35Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.town.hidaka.hokkaido.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at http://www.town.hidaka.hokkaido.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "http://www.town.hidaka.hokkaido.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "not_found",

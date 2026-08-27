@@ -27,9 +27,8 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html (label: (パソコン用)) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "official_document_index",
-      "index_url": "https://krq909.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "status": "unsupported",
+      "adapter": "g_reiki",
       "verified_at": null,
       "verified_by": null,
       "evidence": [
@@ -39,7 +38,8 @@
           "fetched_at": "2026-08-27T06:49:25Z"
         }
       ],
-      "notes": "Observed regulations index at https://krq909.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 名護市例規集)"
+      "notes": "ぎょうせい HAS-Shohin (JSF POSTセッション必須・静的URLなし)",
+      "base_url": "https://krq909.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
       "status": "not_found",

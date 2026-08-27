@@ -307,7 +307,18 @@ def discover_documents(
 
     while queue and len(visited) < MAX_NAVIGATION_PAGES:
         page_url = queue.popleft()
-        fetched = client.fetch(page_url, tier=CacheTier.INDEX)
+        try:
+            fetched = client.fetch(page_url, tier=CacheTier.INDEX)
+        except (RobotsDeniedError, RobotsUnavailableError):
+            raise
+        except (FetchError, OSError):
+            if page_url == entry_url:
+                for fallback_name in ("reiki.html", ""):
+                    alt_url = urllib.parse.urljoin(base_url, fallback_name)
+                    if alt_url not in visited and alt_url not in queued:
+                        queue.append(alt_url)
+                        queued.add(alt_url)
+            continue
         if not _same_tenant(fetched.final_url, base_url):
             raise StructureMismatchError(
                 "g-reiki entry/index redirected outside the supplied tenant base URL"

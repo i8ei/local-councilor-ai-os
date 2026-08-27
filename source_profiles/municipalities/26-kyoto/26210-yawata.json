@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.yawata.kyoto.jp/category/1-6-1-0-0-0-0-0-0-0.html (label: 会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "https://www.city.yawata.kyoto.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yawata.kyoto.jp/reiki/reiki.html",
           "observed_on": "http://www.city.yawata.kyoto.jp/",
           "fetched_at": "2026-08-27T06:18:01Z"
+        },
+        {
+          "url": "https://www.city.yawata.kyoto.jp/reiki/reiki.html",
+          "observed_on": "https://www.city.yawata.kyoto.jp/reiki/reiki.html",
+          "sha256": "78f827167719bb55a86ecc74fd9c28576375454aced35abd2103c4943e87951d",
+          "fetched_at": "2026-08-27T21:54:53Z"
         }
       ],
-      "notes": "Observed g_reiki at https://www.city.yawata.kyoto.jp/reiki/reiki.html (label: 条例・規則)"
+      "notes": "Observed g_reiki at https://www.city.yawata.kyoto.jp/reiki/reiki.html (label: 条例・規則)",
+      "index_url": "https://www.city.yawata.kyoto.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

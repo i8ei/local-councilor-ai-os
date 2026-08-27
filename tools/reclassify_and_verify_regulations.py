@@ -39,8 +39,23 @@ def reclassify_profiles() -> list[tuple[str, Path, dict]]:
             new_ad = "d1_law"
         elif "joureikun" in url.lower():
             new_ad = "joureikun"
-        elif "g-reiki.net" in url.lower() or "reiki.metro.tokyo" in url.lower():
+        elif "g-reiki.net" in url.lower() or "reiki.metro.tokyo" in url.lower() or "legal-square.com" in url.lower():
             new_ad = "g_reiki"
+        elif reg.get("status") == "needs_review":
+            # Check cached/fetch for D1W static structure
+            test_urls = [url]
+            if url.endswith("/"):
+                test_urls.append(url + "reiki.html")
+            for tu in test_urls:
+                try:
+                    c = HttpClient(CACHE_DIR, user_agent=REGULATIONS_USER_AGENT, timeout=5)
+                    res = c.fetch(tu)
+                    txt = res.text()
+                    if "mokuji_bunya" in txt or "OpenResDataWin" in txt or "D1W" in txt or "bunya_" in txt:
+                        new_ad = "d1_law"
+                        break
+                except Exception:
+                    pass
 
         # URL normalization
         modified_url = False
@@ -59,6 +74,11 @@ def reclassify_profiles() -> list[tuple[str, Path, dict]]:
                 if "base_url" in reg:
                     reg["index_url"] = reg.pop("base_url")
                     modified_url = True
+            elif curr_url.endswith("/"):
+                reg["index_url"] = curr_url + "reiki.html"
+                if "base_url" in reg:
+                    del reg["base_url"]
+                modified_url = True
         elif new_ad == "g_reiki":
             curr_url = reg.get("base_url") or reg.get("index_url") or ""
             # Strip trailing specific page/subfolder if present

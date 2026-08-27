@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.arida.lg.jp/shigikai/honkaigiroku/index.html (label: 本会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www2.city.arida.lg.jp/e_reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www2.city.arida.lg.jp/e_reiki/reiki.html",
           "observed_on": "http://www.city.arida.lg.jp/",
           "fetched_at": "2026-08-27T07:17:48Z"
+        },
+        {
+          "url": "http://www2.city.arida.lg.jp/e_reiki/reiki.html",
+          "observed_on": "http://www2.city.arida.lg.jp/e_reiki/reiki.html",
+          "sha256": "2999dd6868bc4c8a67a17519ddcae0732de30860a8a3e371f27591c4f1395de9",
+          "fetched_at": "2026-08-27T21:54:52Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www2.city.arida.lg.jp/e_reiki/reiki.html (label: )"
+      "notes": "Observed g_reiki at http://www2.city.arida.lg.jp/e_reiki/reiki.html (label: )",
+      "index_url": "http://www2.city.arida.lg.jp/e_reiki/reiki.html"
     },
     "budget": {
       "status": "not_found",

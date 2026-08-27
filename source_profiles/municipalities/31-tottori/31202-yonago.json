@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.yonago.lg.jp/2924.htm (label: 会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "https://reiki.city.yonago.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://reiki.city.yonago.lg.jp/reiki/reiki.html",
           "observed_on": "http://www.city.yonago.lg.jp/",
           "fetched_at": "2026-08-27T05:56:37Z"
+        },
+        {
+          "url": "https://reiki.city.yonago.lg.jp/reiki/reiki.html",
+          "observed_on": "https://reiki.city.yonago.lg.jp/reiki/reiki.html",
+          "sha256": "4b44fa1c56a7021479e434d39f9564c1a881a4ffc501b8d93667b9a361ce3c2e",
+          "fetched_at": "2026-08-27T21:54:53Z"
         }
       ],
-      "notes": "Observed g_reiki at https://reiki.city.yonago.lg.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at https://reiki.city.yonago.lg.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "https://reiki.city.yonago.lg.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

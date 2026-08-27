@@ -21,9 +21,8 @@
       "notes": "Observed council minutes index at http://www.city.matsuyama.ehime.jp/shisei/opendata/metadata/town-kaigiroku-sedai.html (label: 【世代別・職業別】会議禄) extraction probe read one document at https://www.city.matsuyama.ehime.jp/shisei/opendata/metadata/town-kaigiroku-sedai.files/79H270218.docx but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "official_document_index",
-      "index_url": "https://kro202.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "status": "unsupported",
+      "adapter": "g_reiki",
       "verified_at": null,
       "verified_by": null,
       "evidence": [
@@ -33,7 +32,8 @@
           "fetched_at": "2026-08-27T06:57:21Z"
         }
       ],
-      "notes": "Observed regulations index at https://kro202.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 条例・規則)"
+      "notes": "ぎょうせい HAS-Shohin (JSF POSTセッション必須・静的URLなし)",
+      "base_url": "https://kro202.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
       "status": "ready",

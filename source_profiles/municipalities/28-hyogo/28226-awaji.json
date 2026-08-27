@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.awaji.lg.jp/site/gikai/list74-174.html (label: 会議録について)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www.city.awaji.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.awaji.lg.jp/reiki/reiki.html",
           "observed_on": "http://www.city.awaji.lg.jp/",
           "fetched_at": "2026-08-27T06:53:51Z"
+        },
+        {
+          "url": "https://www.city.awaji.lg.jp/reiki/reiki.html",
+          "observed_on": "http://www.city.awaji.lg.jp/reiki/reiki.html",
+          "sha256": "193c2c5a5a79f50aad5fe0c089010f7b5a8333874fe119908625d2328cc9aa5a",
+          "fetched_at": "2026-08-27T21:54:52Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.city.awaji.lg.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at http://www.city.awaji.lg.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "https://www.city.awaji.lg.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.city.komatsushima.lg.jp/gikai/kaigiroku/ (label: 会議録の閲覧・検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www2.city.komatsushima.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T21:56:48Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www2.city.komatsushima.lg.jp/reiki/reiki.html",
           "observed_on": "https://www.city.komatsushima.lg.jp/index2.html",
           "fetched_at": "2026-08-27T06:38:49Z"
+        },
+        {
+          "url": "https://www2.city.komatsushima.lg.jp/reiki/reiki.html",
+          "observed_on": "https://www2.city.komatsushima.lg.jp/reiki/",
+          "sha256": "82b2d484e41cca52507cdbb1bfd381173a637e285b9e94f79d378686fca45a48",
+          "fetched_at": "2026-08-27T21:54:53Z"
         }
       ],
       "notes": "Observed g_reiki at https://www2.city.komatsushima.lg.jp/reiki/reiki.html (label: 例規集)"

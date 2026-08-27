@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.sumoto.lg.jp/soshiki/2/10814.html (label: 2月定例会の会議録を掲載しました)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www.city.sumoto.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sumoto.lg.jp/reiki/reiki.html",
           "observed_on": "http://www.city.sumoto.lg.jp/",
           "fetched_at": "2026-08-27T06:44:21Z"
+        },
+        {
+          "url": "https://www.city.sumoto.lg.jp/reiki/reiki.html",
+          "observed_on": "http://www.city.sumoto.lg.jp/reiki/reiki.html",
+          "sha256": "8e6787405f1f272b289e2ac5ded6b5b352d11064cf84c9a21497499a14f5af83",
+          "fetched_at": "2026-08-27T21:54:52Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.city.sumoto.lg.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at http://www.city.sumoto.lg.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "https://www.city.sumoto.lg.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "ready",

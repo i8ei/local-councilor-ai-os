@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://www.town.ine.kyoto.jp/chosei/gikai/4/index.html (label: 議事録及び議会日程)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "https://www.town.ine.kyoto.jp/section/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ine.kyoto.jp/section/reiki/reiki.html",
           "observed_on": "http://www.town.ine.kyoto.jp/",
           "fetched_at": "2026-08-27T06:23:57Z"
+        },
+        {
+          "url": "https://www.town.ine.kyoto.jp/section/reiki/reiki.html",
+          "observed_on": "https://www.town.ine.kyoto.jp/section/reiki/reiki.html",
+          "sha256": "5ccc16ae1749efdb28b7fc126f143d19f519c8a0693330c427fb3d15041b31de",
+          "fetched_at": "2026-08-27T21:54:52Z"
         }
       ],
-      "notes": "Observed g_reiki at https://www.town.ine.kyoto.jp/section/reiki/reiki.html (label: 伊根町例規集)"
+      "notes": "Observed g_reiki at https://www.town.ine.kyoto.jp/section/reiki/reiki.html (label: 伊根町例規集)",
+      "index_url": "https://www.town.ine.kyoto.jp/section/reiki/reiki.html"
     },
     "budget": {
       "status": "ready",

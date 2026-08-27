@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "g_reiki",
-      "base_url": "http://www.town.yasuda.kochi.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "verified_at": "2026-08-27T22:05:16Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yasuda.kochi.jp/reiki/reiki.html",
           "observed_on": "http://www.town.yasuda.kochi.jp/index2.php",
           "fetched_at": "2026-08-27T07:11:43Z"
+        },
+        {
+          "url": "https://www.town.yasuda.kochi.jp/reiki/reiki.html",
+          "observed_on": "http://www.town.yasuda.kochi.jp/reiki/reiki.html",
+          "sha256": "bb8e988d90b9dac876d4e91ee43f131e792d0c05ed926fe4df813c66d4b425ea",
+          "fetched_at": "2026-08-27T21:54:53Z"
         }
       ],
-      "notes": "Observed g_reiki at http://www.town.yasuda.kochi.jp/reiki/reiki.html (label: 例規集)"
+      "notes": "Observed g_reiki at http://www.town.yasuda.kochi.jp/reiki/reiki.html (label: 例規集)",
+      "index_url": "https://www.town.yasuda.kochi.jp/reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

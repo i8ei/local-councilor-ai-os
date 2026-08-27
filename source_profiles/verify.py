@@ -2261,20 +2261,44 @@ def verify_profile(
     try:
         result = client.fetch(entry_url, tier=CacheTier.INDEX)
     except Exception as exc:
-        # Distinguish robots/offline/fetch
-        err_name = type(exc).__name__
-        reason = f"{err_name}: {exc}"
-        report = {
-            "municipality": municipality,
-            "kind": kind,
-            "adapter": adapter,
-            "result": "failed",
-            "reason": reason,
-            "status_before": status_before,
-            "status_after": status_before,
-            "entry_url": entry_url,
-        }
-        return updated, report
+        fallback_result = None
+        for fallback_name in ("reiki.html", ""):
+            alt_url = urllib.parse.urljoin(base_url, fallback_name)
+            try:
+                alt_res = client.fetch(alt_url, tier=CacheTier.INDEX)
+                txt = alt_res.text() if hasattr(alt_res, "text") and callable(alt_res.text) else ""
+                if "reiki_menu.html" in txt:
+                    menu_url = urllib.parse.urljoin(alt_res.final_url, "reiki_menu.html")
+                    try:
+                        menu_res = client.fetch(menu_url, tier=CacheTier.INDEX)
+                        entry_url = menu_url
+                        fallback_result = menu_res
+                        break
+                    except Exception:
+                        pass
+                if _has_greiki_structure(txt):
+                    entry_url = alt_res.final_url
+                    fallback_result = alt_res
+                    break
+            except Exception:
+                continue
+        if fallback_result is not None:
+            result = fallback_result
+        else:
+            # Distinguish robots/offline/fetch
+            err_name = type(exc).__name__
+            reason = f"{err_name}: {exc}"
+            report = {
+                "municipality": municipality,
+                "kind": kind,
+                "adapter": adapter,
+                "result": "failed",
+                "reason": reason,
+                "status_before": status_before,
+                "status_after": status_before,
+                "entry_url": entry_url,
+            }
+            return updated, report
 
     # Host drift check
     entry_host = _host(base_url)

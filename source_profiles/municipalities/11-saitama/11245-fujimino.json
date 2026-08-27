@@ -21,9 +21,8 @@
       "notes": "Observed council minutes index at https://www.city.fujimino.saitama.jp/shinojoho/shigikai/3412.html (label: 会議録検索と閲覧) extraction probe read one document at http://ssp.kaigiroku.net/tenant/fujimino/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "official_document_index",
-      "index_url": "https://krr224.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "status": "unsupported",
+      "adapter": "g_reiki",
       "verified_at": null,
       "verified_by": null,
       "evidence": [
@@ -33,7 +32,8 @@
           "fetched_at": "2026-08-27T07:00:26Z"
         }
       ],
-      "notes": "Observed regulations index at https://krr224.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 例規集)"
+      "notes": "ぎょうせい HAS-Shohin (JSF POSTセッション必須・静的URLなし)",
+      "base_url": "https://krr224.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
       "status": "not_found",
