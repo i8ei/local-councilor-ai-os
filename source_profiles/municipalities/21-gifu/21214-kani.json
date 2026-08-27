@@ -6,9 +6,9 @@
   "official_home_url": "http://www.city.kani.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "dbsr",
-      "index_url": "http://www.city.kani.gifu.dbsr.jp/",
+      "index_url": "http://www.city.kani.gifu.dbsr.jp/index.php",
       "verified_at": null,
       "verified_by": null,
       "evidence": [
@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T07:30:30Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.kani.gifu.dbsr.jp/ (label: 本会議会議録)"
+      "notes": "dbsr.jp は robots.txt によりアクセス拒否 (fail-closed)"
     },
     "regulations": {
       "status": "ready",
