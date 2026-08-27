@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08203",
+  "prefecture": "茨城県",
+  "municipality": "土浦市",
+  "official_home_url": "http://www.city.tsuchiura.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.tsuchiura.lg.jp/shisei/page001482.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tsuchiura.lg.jp/shisei/page001482.html",
+          "observed_on": "http://www.city.tsuchiura.lg.jp/",
+          "fetched_at": "2026-08-27T05:57:20Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.tsuchiura.lg.jp/shisei/page001482.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tsuchiura.lg.jp/shisei/shisei-info/page022703.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tsuchiura.lg.jp/shisei/shisei-info/page022703.html",
+          "observed_on": "http://www.city.tsuchiura.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T05:57:56Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.tsuchiura.lg.jp/shisei/shisei-info/page022703.html (label: 物価高騰対応重点支援地方創生臨時交付金活用事業（令和7年度第7回土浦市一般会計補正予算）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/",
+          "observed_on": "http://www.city.tsuchiura.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T05:57:56Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/ (label: 決算書)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44205",
+  "prefecture": "大分県",
+  "municipality": "佐伯市",
+  "official_home_url": "http://www.city.saiki.oita.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.saiki.oita.jp/gikai/list00843.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.saiki.oita.jp/gikai/list00843.html",
+          "observed_on": "https://www.city.saiki.oita.jp/gikai/default.html",
+          "fetched_at": "2026-08-27T06:20:54Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.saiki.oita.jp/gikai/list00843.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.saiki.oita.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.saiki.oita.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.saiki.oita.jp/",
+          "fetched_at": "2026-08-27T06:17:13Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.saiki.oita.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
+          "observed_on": "http://www.city.saiki.oita.jp/",
+          "fetched_at": "2026-08-27T06:17:13Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.saiki.oita.jp/kiji0031997/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
+          "observed_on": "http://www.city.saiki.oita.jp/",
+          "fetched_at": "2026-08-27T06:17:13Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.saiki.oita.jp/kiji0031990/index.html (label: 決算)"
+    }
+  }
+}

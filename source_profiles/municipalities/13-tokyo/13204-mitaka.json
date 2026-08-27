@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13204",
+  "prefecture": "東京都",
+  "municipality": "三鷹市",
+  "official_home_url": "http://www.city.mitaka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.gikai.city.mitaka.tokyo.jp/reference/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.gikai.city.mitaka.tokyo.jp/reference/index.html",
+          "observed_on": "https://www.gikai.city.mitaka.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:43:38Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.gikai.city.mitaka.tokyo.jp/reference/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/city.mitaka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/city.mitaka/reiki_menu.html",
+          "observed_on": "http://www.city.mitaka.lg.jp/",
+          "fetched_at": "2026-08-27T07:42:09Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/city.mitaka/reiki_menu.html (label: 三鷹市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.mitaka.lg.jp/c_categories/index05009001.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mitaka.lg.jp/c_categories/index05009001.html",
+          "observed_on": "http://www.city.mitaka.lg.jp/sub05/",
+          "fetched_at": "2026-08-27T07:42:28Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.mitaka.lg.jp/c_categories/index05009001.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.mitaka.lg.jp/c_categories/index05009001.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mitaka.lg.jp/c_categories/index05009001.html",
+          "observed_on": "http://www.city.mitaka.lg.jp/sub05/",
+          "fetched_at": "2026-08-27T07:42:28Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.mitaka.lg.jp/c_categories/index05009001.html (label: 財政)"
+    }
+  }
+}

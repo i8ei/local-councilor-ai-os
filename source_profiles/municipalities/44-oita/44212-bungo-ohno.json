@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44212",
+  "prefecture": "大分県",
+  "municipality": "豊後大野市",
+  "official_home_url": "http://www.bungo-ohno.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.bungo-ohno.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.bungo-ohno.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.bungo-ohno.jp/",
+          "fetched_at": "2026-08-27T06:20:39Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.bungo-ohno.jp/reiki/reiki_menu.html (label: 豊後大野市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.bungo-ohno.jp/categories/bunyabetsu/seisaku_zaisei_etc/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.bungo-ohno.jp/categories/bunyabetsu/seisaku_zaisei_etc/",
+          "observed_on": "http://www.bungo-ohno.jp/",
+          "fetched_at": "2026-08-27T06:20:39Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.bungo-ohno.jp/categories/bunyabetsu/seisaku_zaisei_etc/ (label: まちづくり・財政・管財・各種計画・人事・各支所・その他)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.bungo-ohno.jp/categories/bunyabetsu/seisaku_zaisei_etc/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.bungo-ohno.jp/categories/bunyabetsu/seisaku_zaisei_etc/",
+          "observed_on": "http://www.bungo-ohno.jp/",
+          "fetched_at": "2026-08-27T06:20:39Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.bungo-ohno.jp/categories/bunyabetsu/seisaku_zaisei_etc/ (label: まちづくり・財政・管財・各種計画・人事・各支所・その他)"
+    }
+  }
+}

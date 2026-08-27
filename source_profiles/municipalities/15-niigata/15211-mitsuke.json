@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15211",
+  "prefecture": "新潟県",
+  "municipality": "見附市",
+  "official_home_url": "http://www.city.mitsuke.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www2.city.mitsuke.niigata.jp/database/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www2.city.mitsuke.niigata.jp/database/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.mitsuke.niigata.jp/",
+          "fetched_at": "2026-08-27T05:57:54Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www2.city.mitsuke.niigata.jp/database/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.mitsuke.niigata.jp/life/6/26/166/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mitsuke.niigata.jp/life/6/26/166/",
+          "observed_on": "http://www.city.mitsuke.niigata.jp/life/6/",
+          "fetched_at": "2026-08-27T05:58:18Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.mitsuke.niigata.jp/life/6/26/166/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.mitsuke.niigata.jp/life/6/26/166/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mitsuke.niigata.jp/life/6/26/166/",
+          "observed_on": "http://www.city.mitsuke.niigata.jp/life/6/",
+          "fetched_at": "2026-08-27T05:58:18Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.mitsuke.niigata.jp/life/6/26/166/ (label: 予算・決算)"
+    }
+  }
+}

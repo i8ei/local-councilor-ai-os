@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47302",
+  "prefecture": "沖縄県",
+  "municipality": "大宜味村",
+  "official_home_url": "http://www.vill.ogimi.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.vill.ogimi.okinawa.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.ogimi.okinawa.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.ogimi.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:51:50Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.vill.ogimi.okinawa.jp/section/reiki_int/reiki_menu.html (label: 大宜味村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
+          "observed_on": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/402.html",
+          "fetched_at": "2026-08-27T06:52:42Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html (label: 当初予算の公表について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:52:02Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

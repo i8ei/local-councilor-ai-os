@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "34431",
+  "prefecture": "広島県",
+  "municipality": "大崎上島町",
+  "official_home_url": "http://www.town.osakikamijima.hiroshima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.osakikamijima.hiroshima.jp/machizukuri/chogikai/3954.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.osakikamijima.hiroshima.jp/machizukuri/chogikai/3954.html",
+          "observed_on": "https://www.town.osakikamijima.hiroshima.jp/machizukuri/chogikai/index.html",
+          "fetched_at": "2026-08-27T06:31:35Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.osakikamijima.hiroshima.jp/machizukuri/chogikai/3954.html (label: 議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/osakikamijima/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/osakikamijima/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/osakikamijima/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:35:50Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/osakikamijima/reiki_menu.html for 大崎上島町"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27210",
+  "prefecture": "大阪府",
+  "municipality": "枚方市",
+  "official_home_url": "http://www.city.hirakata.osaka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.hirakata.osaka.jp/0000000472.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hirakata.osaka.jp/0000000472.html",
+          "observed_on": "http://www.city.hirakata.osaka.jp/",
+          "fetched_at": "2026-08-27T06:28:05Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.hirakata.osaka.jp/0000000472.html (label: 枚⽅市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.hirakata.osaka.jp/category/6-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:28:35Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.hirakata.osaka.jp/category/6-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:28:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html (label: 予算・決算)"
+    }
+  }
+}

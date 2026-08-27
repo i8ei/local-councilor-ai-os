@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28220",
+  "prefecture": "兵庫県",
+  "municipality": "加西市",
+  "official_home_url": "http://www.city.kasai.hyogo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.kasai.hyogo.jp/site/gikai/56588.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kasai.hyogo.jp/site/gikai/56588.html",
+          "observed_on": "http://www.city.kasai.hyogo.jp/site/gikai",
+          "fetched_at": "2026-08-27T06:50:46Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.kasai.hyogo.jp/site/gikai/56588.html (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.kasai.hyogo.jp/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kasai.hyogo.jp/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.kasai.hyogo.jp/",
+          "fetched_at": "2026-08-27T06:50:27Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.kasai.hyogo.jp/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

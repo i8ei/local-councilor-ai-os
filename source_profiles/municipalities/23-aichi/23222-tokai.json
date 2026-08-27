@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "23222",
+  "prefecture": "愛知県",
+  "municipality": "東海市",
+  "official_home_url": "http://www.city.tokai.aichi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/tokai-city/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/tokai-city/reiki_menu.html",
+          "observed_on": "http://www.city.tokai.aichi.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T08:03:35Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/tokai-city/reiki_menu.html (label: 東海市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tokai.aichi.jp/shisei/1003714/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tokai.aichi.jp/shisei/1003714/index.html",
+          "observed_on": "http://www.city.tokai.aichi.jp/",
+          "fetched_at": "2026-08-27T08:02:59Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.tokai.aichi.jp/shisei/1003714/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tokai.aichi.jp/shisei/1003714/1003715/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tokai.aichi.jp/shisei/1003714/1003715/index.html",
+          "observed_on": "http://www.city.tokai.aichi.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T08:03:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.tokai.aichi.jp/shisei/1003714/1003715/index.html (label: 予算・決算)"
+    }
+  }
+}

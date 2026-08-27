@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01561",
+  "prefecture": "北海道",
+  "municipality": "興部町",
+  "official_home_url": "https://www.town.okoppe.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "joureikun",
+      "index_url": "https://public.joureikun.jp/okoppe_town/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://public.joureikun.jp/okoppe_town/reiki/",
+          "observed_on": "https://www.town.okoppe.lg.jp/",
+          "fetched_at": "2026-08-27T06:40:15Z"
+        }
+      ],
+      "notes": "Observed joureikun at https://public.joureikun.jp/okoppe_town/reiki/ (label: 例規集 (外部サイト))"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6.html?cp=nbm3tm0000001tkm&cs=city02s9",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6.html?cp=nbm3tm0000001tkm&cs=city02s9",
+          "observed_on": "https://www.town.okoppe.lg.jp/cms/category/gyosei.html",
+          "fetched_at": "2026-08-27T06:40:31Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6.html?cp=nbm3tm0000001tkm&cs=city02s9 (label: 興部町の財政・予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.okoppe.lg.jp/cms/category/gyosei.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.okoppe.lg.jp/cms/category/gyosei.html",
+          "observed_on": "https://www.town.okoppe.lg.jp/",
+          "fetched_at": "2026-08-27T06:40:15Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.okoppe.lg.jp/cms/category/gyosei.html (label: 財政・統計資料)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11231",
+  "prefecture": "埼玉県",
+  "municipality": "桶川市",
+  "official_home_url": "http://www.city.okegawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/okegawa/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/okegawa/SpTop.html",
+          "observed_on": "http://www.city.okegawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:56:47Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/okegawa/SpTop.html (label: 桶川市議会会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.okegawa.lg.jp/soshiki/soumubu/soumu/shiyakusho/jourei/2049.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.okegawa.lg.jp/soshiki/soumubu/soumu/shiyakusho/jourei/2049.html",
+          "observed_on": "http://www.city.okegawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:56:47Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.okegawa.lg.jp/soshiki/soumubu/soumu/shiyakusho/jourei/2049.html (label: 桶川市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.okegawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:56:47Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.okegawa.lg.jp/shisei/zaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.okegawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:56:47Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.okegawa.lg.jp/shisei/zaisei/index.html (label: 行財政)"
+    }
+  }
+}

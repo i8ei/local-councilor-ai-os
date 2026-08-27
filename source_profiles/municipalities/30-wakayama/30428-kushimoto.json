@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "30428",
+  "prefecture": "和歌山県",
+  "municipality": "串本町",
+  "official_home_url": "http://www.town.kushimoto.wakayama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.kushimoto.wakayama.jp/gikai/kaigiroku_search.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kushimoto.wakayama.jp/gikai/kaigiroku_search.html",
+          "observed_on": "http://www.town.kushimoto.wakayama.jp/",
+          "fetched_at": "2026-08-27T07:28:16Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.kushimoto.wakayama.jp/gikai/kaigiroku_search.html (label: 会議録検索システムについて（令和8年第2回定例会分を更新）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.kushimoto.wakayama.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kushimoto.wakayama.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.kushimoto.wakayama.jp/",
+          "fetched_at": "2026-08-27T07:28:16Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.kushimoto.wakayama.jp/reiki_int/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
+          "observed_on": "http://www.town.kushimoto.wakayama.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T07:28:36Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html (label: 決算審査特別委員会報告書)"
+    }
+  }
+}

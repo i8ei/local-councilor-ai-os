@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "46220",
+  "prefecture": "鹿児島県",
+  "municipality": "南さつま市",
+  "official_home_url": "http://www.city.minamisatsuma.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/minamisatsuma/WebView/rd/council_1.html?referrer=http%3A%2F%2Fwww.city.minamisatsuma.lg.jp%2F",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/minamisatsuma/WebView/rd/council_1.html?referrer=http%3A%2F%2Fwww.city.minamisatsuma.lg.jp%2F",
+          "observed_on": "https://www.city.minamisatsuma.lg.jp/shigikai/",
+          "fetched_at": "2026-08-27T06:42:51Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/minamisatsuma/WebView/rd/council_1.html?referrer=http%3A%2F%2Fwww.city.minamisatsuma.lg.jp%2F (label: 議会中継・録画映像（外部サイトへリンク）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.minamisatsuma.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minamisatsuma.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.minamisatsuma.lg.jp/top/",
+          "fetched_at": "2026-08-27T06:40:43Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.minamisatsuma.lg.jp/reiki_int/reiki_menu.html (label: 条例・例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.minamisatsuma.lg.jp/shisei/zaisei/yosan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minamisatsuma.lg.jp/shisei/zaisei/yosan/",
+          "observed_on": "https://www.city.minamisatsuma.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T06:41:21Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.minamisatsuma.lg.jp/shisei/zaisei/yosan/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.minamisatsuma.lg.jp/shisei/zaisei/ketsusan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minamisatsuma.lg.jp/shisei/zaisei/ketsusan/",
+          "observed_on": "https://www.city.minamisatsuma.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T06:41:21Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.minamisatsuma.lg.jp/shisei/zaisei/ketsusan/ (label: 決算)"
+    }
+  }
+}

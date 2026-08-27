@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47382",
+  "prefecture": "沖縄県",
+  "municipality": "与那国町",
+  "official_home_url": "https://www.town.yonaguni.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.yonaguni.okinawa.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yonaguni.okinawa.jp/reiki_menu.html",
+          "observed_on": "https://www.town.yonaguni.okinawa.jp/",
+          "fetched_at": "2026-08-27T07:00:23Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.yonaguni.okinawa.jp/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yonaguni.okinawa.jp/docs/2026042100032/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yonaguni.okinawa.jp/docs/2026042100032/",
+          "observed_on": "https://www.town.yonaguni.okinawa.jp/category/bunya/chosei/",
+          "fetched_at": "2026-08-27T07:00:36Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.yonaguni.okinawa.jp/docs/2026042100032/ (label: 令和７年度補正予算分重点支援地方交付金の活用状況について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yonaguni.okinawa.jp/docs/2022071900018/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yonaguni.okinawa.jp/docs/2022071900018/",
+          "observed_on": "https://www.town.yonaguni.okinawa.jp/category/bunya/chosei/",
+          "fetched_at": "2026-08-27T07:00:36Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.yonaguni.okinawa.jp/docs/2022071900018/ (label: 主要施策の成果)"
+    }
+  }
+}

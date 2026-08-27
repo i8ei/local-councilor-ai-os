@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14213",
+  "prefecture": "神奈川県",
+  "municipality": "大和市",
+  "official_home_url": "http://www.city.yamato.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/jorei_kisoku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/jorei_kisoku/index.html",
+          "observed_on": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T08:02:37Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.yamato.lg.jp/gyosei/shiseijoho/jorei_kisoku/index.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/seisaku_keikaku/kuni_kennoshisaku_seido_yosannikansuruyobo/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/seisaku_keikaku/kuni_kennoshisaku_seido_yosannikansuruyobo/index.html",
+          "observed_on": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T08:02:37Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.yamato.lg.jp/gyosei/shiseijoho/seisaku_keikaku/kuni_kennoshisaku_seido_yosannikansuruyobo/index.html (label: 国・県の施策・制度・予算に関する要望)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/shinoshokai/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/shinoshokai/zaisei/index.html",
+          "observed_on": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T08:02:37Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.yamato.lg.jp/gyosei/shiseijoho/shinoshokai/zaisei/index.html (label: 財政)"
+    }
+  }
+}

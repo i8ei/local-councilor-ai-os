@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01516",
+  "prefecture": "北海道",
+  "municipality": "豊富町",
+  "official_home_url": "https://www.town.toyotomi.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=134",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=134",
+          "observed_on": "https://www.town.toyotomi.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:35:11Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=134 (label: 例規集 (外部サイト))"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

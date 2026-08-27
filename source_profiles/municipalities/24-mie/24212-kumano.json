@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "24212",
+  "prefecture": "三重県",
+  "municipality": "熊野市",
+  "official_home_url": "https://www.city.kumano.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.kumano.lg.jp/administration/?category=112",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kumano.lg.jp/administration/?category=112",
+          "observed_on": "https://www.city.kumano.lg.jp/administration/?category=57",
+          "fetched_at": "2026-08-27T05:59:46Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.kumano.lg.jp/administration/?category=112 (label: 議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.kumano.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kumano.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.kumano.lg.jp/",
+          "fetched_at": "2026-08-27T05:58:31Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.kumano.lg.jp/reiki_int/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kumano.lg.jp/administration/?content=2722",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kumano.lg.jp/administration/?content=2722",
+          "observed_on": "https://www.city.kumano.lg.jp/",
+          "fetched_at": "2026-08-27T05:58:31Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.kumano.lg.jp/administration/?content=2722 (label: 予算の概要 令和8年度)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kumano.lg.jp/administration/?category=66",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kumano.lg.jp/administration/?category=66",
+          "observed_on": "https://www.city.kumano.lg.jp/",
+          "fetched_at": "2026-08-27T05:58:31Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kumano.lg.jp/administration/?category=66 (label: 財政)"
+    }
+  }
+}

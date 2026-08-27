@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39202",
+  "prefecture": "高知県",
+  "municipality": "室戸市",
+  "official_home_url": "http://www.city.muroto.kochi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.muroto.kochi.jp/pages/page3592.php",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.muroto.kochi.jp/pages/page3592.php",
+          "observed_on": "http://www.city.muroto.kochi.jp/navi/a02b08.php",
+          "fetched_at": "2026-08-27T07:07:15Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.muroto.kochi.jp/pages/page3592.php (label: ２０２６（令和８）年 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.muroto.kochi.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.muroto.kochi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.muroto.kochi.jp/top.php",
+          "fetched_at": "2026-08-27T07:06:33Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.muroto.kochi.jp/reiki_int/reiki_menu.html (label: 室戸市例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47211",
+  "prefecture": "沖縄県",
+  "municipality": "沖縄市",
+  "official_home_url": "https://www.city.okinawa.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html",
+          "observed_on": "https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html",
+          "fetched_at": "2026-08-27T06:50:12Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html (label: 例規・条例)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html",
+          "observed_on": "https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html",
+          "fetched_at": "2026-08-27T06:50:12Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.okinawa.okinawa.jp/shiseijouhou/yosanzaisei/kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.okinawa.okinawa.jp/shiseijouhou/yosanzaisei/kessan/index.html",
+          "observed_on": "https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html",
+          "fetched_at": "2026-08-27T06:50:12Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.okinawa.okinawa.jp/shiseijouhou/yosanzaisei/kessan/index.html (label: 決算)"
+    }
+  }
+}

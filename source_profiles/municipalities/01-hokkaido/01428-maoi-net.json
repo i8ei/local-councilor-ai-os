@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01428",
+  "prefecture": "北海道",
+  "municipality": "長沼町",
+  "official_home_url": "https://www.maoi-net.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/maoi.naganuma/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/maoi.naganuma/reiki_menu.html",
+          "observed_on": "https://www.maoi-net.jp/",
+          "fetched_at": "2026-08-27T06:19:56Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/maoi.naganuma/reiki_menu.html (label: 長沼町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.maoi-net.jp/gyosei/keikaku/gyozaiseikaikaku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.maoi-net.jp/gyosei/keikaku/gyozaiseikaikaku/",
+          "observed_on": "https://www.maoi-net.jp/gyosei/",
+          "fetched_at": "2026-08-27T06:20:23Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.maoi-net.jp/gyosei/keikaku/gyozaiseikaikaku/ (label: 行財政改革)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.maoi-net.jp/gyosei/keikaku/gyozaiseikaikaku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.maoi-net.jp/gyosei/keikaku/gyozaiseikaikaku/",
+          "observed_on": "https://www.maoi-net.jp/gyosei/",
+          "fetched_at": "2026-08-27T06:20:23Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.maoi-net.jp/gyosei/keikaku/gyozaiseikaikaku/ (label: 行財政改革)"
+    }
+  }
+}

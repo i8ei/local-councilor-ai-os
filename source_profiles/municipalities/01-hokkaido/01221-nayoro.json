@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01221",
+  "prefecture": "北海道",
+  "municipality": "名寄市",
+  "official_home_url": "http://www.city.nayoro.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/nayoro/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/nayoro/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.nayoro.lg.jp/",
+          "fetched_at": "2026-08-27T06:00:08Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/nayoro/d1w_reiki/reiki.html (label: 名寄市例規類集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

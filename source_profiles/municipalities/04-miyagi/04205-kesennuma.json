@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "04205",
+  "prefecture": "宮城県",
+  "municipality": "気仙沼市",
+  "official_home_url": "http://www.kesennuma.miyagi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.city.kesennuma.miyagi.dbsr.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kesennuma.miyagi.dbsr.jp/",
+          "observed_on": "http://www.kesennuma.miyagi.jp/li/shisei/160/index.html",
+          "fetched_at": "2026-08-27T07:19:14Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.city.kesennuma.miyagi.dbsr.jp/ (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/kesennuma.miyagi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/kesennuma.miyagi/reiki_menu.html",
+          "observed_on": "http://www.kesennuma.miyagi.jp/li/shisei/index.html",
+          "fetched_at": "2026-08-27T07:16:49Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/kesennuma.miyagi/reiki_menu.html (label: 例規集（外部サイト）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.kesennuma.miyagi.jp/li/shisei/040/010/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.kesennuma.miyagi.jp/li/shisei/040/010/index.html",
+          "observed_on": "http://www.kesennuma.miyagi.jp/li/shisei/index.html",
+          "fetched_at": "2026-08-27T07:16:49Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.kesennuma.miyagi.jp/li/shisei/040/010/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.kesennuma.miyagi.jp/li/shisei/040/020/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.kesennuma.miyagi.jp/li/shisei/040/020/index.html",
+          "observed_on": "http://www.kesennuma.miyagi.jp/li/shisei/index.html",
+          "fetched_at": "2026-08-27T07:16:49Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.kesennuma.miyagi.jp/li/shisei/040/020/index.html (label: 決算)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02343",
+  "prefecture": "青森県",
+  "municipality": "西目屋村",
+  "official_home_url": "https://www.nishimeya.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.nishimeya.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.nishimeya.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.nishimeya.jp/2.html",
+          "fetched_at": "2026-08-27T06:59:56Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.nishimeya.jp/section/reiki_int/reiki_menu.html (label: 西目屋村例規集へのリンク)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.nishimeya.jp/sonseijoho/index.html",
+          "fetched_at": "2026-08-27T06:59:06Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.nishimeya.jp/sonseijoho/index.html",
+          "fetched_at": "2026-08-27T06:59:06Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

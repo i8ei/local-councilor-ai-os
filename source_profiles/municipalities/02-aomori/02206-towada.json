@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02206",
+  "prefecture": "青森県",
+  "municipality": "十和田市",
+  "official_home_url": "https://www.city.towada.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.towada.lg.jp/shisei/gikai/kaigiroku-kensaku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.towada.lg.jp/shisei/gikai/kaigiroku-kensaku.html",
+          "observed_on": "https://www.city.towada.lg.jp/shisei/gikai/",
+          "fetched_at": "2026-08-27T06:57:48Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.towada.lg.jp/shisei/gikai/kaigiroku-kensaku.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.towada.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.towada.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.towada.lg.jp/",
+          "fetched_at": "2026-08-27T06:57:13Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.towada.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.towada.lg.jp/shisei/gyousei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.towada.lg.jp/shisei/gyousei/",
+          "observed_on": "https://www.city.towada.lg.jp/",
+          "fetched_at": "2026-08-27T06:57:13Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.towada.lg.jp/shisei/gyousei/ (label: 行政・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.towada.lg.jp/shisei/gyousei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.towada.lg.jp/shisei/gyousei/",
+          "observed_on": "https://www.city.towada.lg.jp/",
+          "fetched_at": "2026-08-27T06:57:13Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.towada.lg.jp/shisei/gyousei/ (label: 行政・財政)"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47209",
+  "prefecture": "沖縄県",
+  "municipality": "名護市",
+  "official_home_url": "https://www.city.nago.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html",
+          "observed_on": "https://www.city.nago.okinawa.jp/soshiki/gikai-nav/2018070300089/",
+          "fetched_at": "2026-08-27T06:50:58Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/nago/MinuteSearch.html (label: (パソコン用))"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krq909.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krq909.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "https://www.city.nago.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:49:25Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krq909.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 名護市例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

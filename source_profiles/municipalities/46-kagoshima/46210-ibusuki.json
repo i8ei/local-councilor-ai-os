@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "46210",
+  "prefecture": "鹿児島県",
+  "municipality": "指宿市",
+  "official_home_url": "http://www.city.ibusuki.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.ibusuki.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ibusuki.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.ibusuki.lg.jp/main/",
+          "fetched_at": "2026-08-27T06:38:03Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.ibusuki.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ibusuki.lg.jp/main/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ibusuki.lg.jp/main/shisei/zaisei/",
+          "observed_on": "http://www.city.ibusuki.lg.jp/main/",
+          "fetched_at": "2026-08-27T06:38:03Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.ibusuki.lg.jp/main/shisei/zaisei/ (label: 財政・財産)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ibusuki.lg.jp/main/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ibusuki.lg.jp/main/shisei/zaisei/",
+          "observed_on": "http://www.city.ibusuki.lg.jp/main/",
+          "fetched_at": "2026-08-27T06:38:03Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.ibusuki.lg.jp/main/shisei/zaisei/ (label: 財政・財産)"
+    }
+  }
+}

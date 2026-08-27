@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20386",
+  "prefecture": "長野県",
+  "municipality": "中川村",
+  "official_home_url": "http://www.vill.nakagawa.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.vill.nakagawa.nagano.jp/site/rinia/list32-192.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.nakagawa.nagano.jp/site/rinia/list32-192.html",
+          "observed_on": "http://www.vill.nakagawa.nagano.jp/site/rinia/",
+          "fetched_at": "2026-08-27T07:08:50Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.vill.nakagawa.nagano.jp/site/rinia/list32-192.html (label: 議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.nakagawa.nagano/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.nakagawa.nagano/reiki_menu.html",
+          "observed_on": "http://www.vill.nakagawa.nagano.jp/",
+          "fetched_at": "2026-08-27T07:07:39Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.nakagawa.nagano/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.nakagawa.nagano.jp/life/4/28/121/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.nakagawa.nagano.jp/life/4/28/121/",
+          "observed_on": "http://www.vill.nakagawa.nagano.jp/life/4/",
+          "fetched_at": "2026-08-27T07:08:14Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.vill.nakagawa.nagano.jp/life/4/28/121/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.nakagawa.nagano.jp/life/4/28/121/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.nakagawa.nagano.jp/life/4/28/121/",
+          "observed_on": "http://www.vill.nakagawa.nagano.jp/life/4/",
+          "fetched_at": "2026-08-27T07:08:14Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.vill.nakagawa.nagano.jp/life/4/28/121/ (label: 予算・決算)"
+    }
+  }
+}

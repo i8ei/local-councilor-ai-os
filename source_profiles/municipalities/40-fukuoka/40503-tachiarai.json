@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40503",
+  "prefecture": "福岡県",
+  "municipality": "大刀洗町",
+  "official_home_url": "http://www.town.tachiarai.fukuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.tachiarai.fukuoka.jp/list00612.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tachiarai.fukuoka.jp/list00612.html",
+          "observed_on": "https://www.town.tachiarai.fukuoka.jp/list00817.html",
+          "fetched_at": "2026-08-27T04:24:22Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.tachiarai.fukuoka.jp/list00612.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.tachiarai.fukuoka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.tachiarai.fukuoka/reiki_menu.html",
+          "observed_on": "http://www.town.tachiarai.fukuoka.jp/",
+          "fetched_at": "2026-08-27T04:24:20Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.tachiarai.fukuoka/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.tachiarai.fukuoka.jp/list00319.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tachiarai.fukuoka.jp/list00319.html",
+          "observed_on": "http://www.town.tachiarai.fukuoka.jp/",
+          "fetched_at": "2026-08-27T04:24:20Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.tachiarai.fukuoka.jp/list00319.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.tachiarai.fukuoka.jp/list00320.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tachiarai.fukuoka.jp/list00320.html",
+          "observed_on": "http://www.town.tachiarai.fukuoka.jp/",
+          "fetched_at": "2026-08-27T04:24:20Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.tachiarai.fukuoka.jp/list00320.html (label: 決算)"
+    }
+  }
+}

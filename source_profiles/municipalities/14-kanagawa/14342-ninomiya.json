@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14342",
+  "prefecture": "神奈川県",
+  "municipality": "二宮町",
+  "official_home_url": "http://www.town.ninomiya.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.ninomiya.kanagawa.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ninomiya.kanagawa.jp/reiki/reiki.html",
+          "observed_on": "http://www.town.ninomiya.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:06:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.ninomiya.kanagawa.jp/reiki/reiki.html (label: 町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ninomiya.kanagawa.jp/0000000359.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ninomiya.kanagawa.jp/0000000359.html",
+          "observed_on": "https://www.town.ninomiya.kanagawa.jp/category/5-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T08:06:35Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.ninomiya.kanagawa.jp/0000000359.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ninomiya.kanagawa.jp/0000000361.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ninomiya.kanagawa.jp/0000000361.html",
+          "observed_on": "https://www.town.ninomiya.kanagawa.jp/category/5-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T08:06:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.ninomiya.kanagawa.jp/0000000361.html (label: 決算)"
+    }
+  }
+}

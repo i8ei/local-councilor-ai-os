@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11242",
+  "prefecture": "埼玉県",
+  "municipality": "日高市",
+  "official_home_url": "http://www.city.hidaka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/hidaka/d1w_reiki/H404901010016/H404901010016.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/hidaka/d1w_reiki/H404901010016/H404901010016.html",
+          "observed_on": "https://www.city.hidaka.lg.jp/soshiki/gikai/gikai/iinkai/17123.html",
+          "fetched_at": "2026-08-27T07:01:17Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://en3-jg.d1-law.com/hidaka/d1w_reiki/H404901010016/H404901010016.html (label: 日高市議会委員会条例)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hidaka.lg.jp/information/79/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hidaka.lg.jp/information/79/index.html",
+          "observed_on": "https://www.city.hidaka.lg.jp/information/index.html",
+          "fetched_at": "2026-08-27T06:59:35Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.hidaka.lg.jp/information/79/index.html (label: 政策・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hidaka.lg.jp/information/21/17872.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hidaka.lg.jp/information/21/17872.html",
+          "observed_on": "https://www.city.hidaka.lg.jp/information/index.html",
+          "fetched_at": "2026-08-27T06:59:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.hidaka.lg.jp/information/21/17872.html (label: 過去の決算の審査意見)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07301",
+  "prefecture": "福島県",
+  "municipality": "桑折町",
+  "official_home_url": "http://www.town.koori.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.town.koori.fukushima.dbsr.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.koori.fukushima.dbsr.jp/",
+          "observed_on": "http://www.town.koori.fukushima.jp/site/gikai/",
+          "fetched_at": "2026-08-27T07:56:07Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.town.koori.fukushima.dbsr.jp/ (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/koori/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/koori/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.koori.fukushima.jp/",
+          "fetched_at": "2026-08-27T07:55:29Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/koori/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.koori.fukushima.jp/soshiki/3/2184.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.koori.fukushima.jp/soshiki/3/2184.html",
+          "observed_on": "http://www.town.koori.fukushima.jp/",
+          "fetched_at": "2026-08-27T07:55:29Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.koori.fukushima.jp/soshiki/3/2184.html (label: 町の事業と予算)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11381",
+  "prefecture": "埼玉県",
+  "municipality": "美里町",
+  "official_home_url": "http://www.town.saitama-misato.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/misato/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/misato/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.saitama-misato.lg.jp/",
+          "fetched_at": "2026-08-27T07:05:35Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/misato/d1w_reiki/reiki.html (label: 条例・規則等)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.saitama-misato.lg.jp/soshiki/1-3-0-0-0_2.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.saitama-misato.lg.jp/soshiki/1-3-0-0-0_2.html",
+          "observed_on": "http://www.town.saitama-misato.lg.jp/0000002725.html",
+          "fetched_at": "2026-08-27T07:08:13Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.saitama-misato.lg.jp/soshiki/1-3-0-0-0_2.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.saitama-misato.lg.jp/soshiki/1-3-0-0-0_3.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.saitama-misato.lg.jp/soshiki/1-3-0-0-0_3.html",
+          "observed_on": "http://www.town.saitama-misato.lg.jp/0000002725.html",
+          "fetched_at": "2026-08-27T07:08:13Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.saitama-misato.lg.jp/soshiki/1-3-0-0-0_3.html (label: 決算)"
+    }
+  }
+}

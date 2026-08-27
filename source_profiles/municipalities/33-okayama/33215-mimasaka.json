@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "33215",
+  "prefecture": "岡山県",
+  "municipality": "美作市",
+  "official_home_url": "http://www.city.mimasaka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.mimasaka.lg.jp/section/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mimasaka.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.mimasaka.lg.jp/",
+          "fetched_at": "2026-08-27T06:17:04Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.mimasaka.lg.jp/section/reiki/reiki_menu.html (label: 美作市例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

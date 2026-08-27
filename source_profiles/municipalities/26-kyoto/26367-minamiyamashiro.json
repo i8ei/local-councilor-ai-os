@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26367",
+  "prefecture": "京都府",
+  "municipality": "南山城村",
+  "official_home_url": "http://www.vill.minamiyamashiro.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.vill.minamiyamashiro.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.minamiyamashiro.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.vill.minamiyamashiro.lg.jp/",
+          "fetched_at": "2026-08-27T06:23:01Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.vill.minamiyamashiro.lg.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.minamiyamashiro.lg.jp/category/24-4-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.minamiyamashiro.lg.jp/category/24-4-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.vill.minamiyamashiro.lg.jp/category/24-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:23:35Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.vill.minamiyamashiro.lg.jp/category/24-4-0-0-0-0-0-0-0-0.html (label: 財政・予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.vill.minamiyamashiro.lg.jp/category/24-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:23:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html (label: 決算・財政指標)"
+    }
+  }
+}

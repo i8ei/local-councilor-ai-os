@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01403",
+  "prefecture": "北海道",
+  "municipality": "泊村",
+  "official_home_url": "https://www.vill.tomari.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=131",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=131",
+          "observed_on": "https://www.vill.tomari.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:15:16Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=131 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.tomari.hokkaido.jp/docs/4537.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.tomari.hokkaido.jp/docs/4537.html",
+          "observed_on": "https://www.vill.tomari.hokkaido.jp/machizukuri/gyosei/",
+          "fetched_at": "2026-08-27T06:16:01Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.vill.tomari.hokkaido.jp/docs/4537.html (label: 令和３年度予算における地方消費税率引上げ分に伴う、地方消費税交付金の増収分の使途の公表について ( 2021年7月29日 ))"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.tomari.hokkaido.jp/docs/5936.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.tomari.hokkaido.jp/docs/5936.html",
+          "observed_on": "https://www.vill.tomari.hokkaido.jp/machizukuri/gyosei/",
+          "fetched_at": "2026-08-27T06:16:01Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.vill.tomari.hokkaido.jp/docs/5936.html (label: 決算に基づく健全化判断比率等について ( 2025年9月24日 ))"
+    }
+  }
+}

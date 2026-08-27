@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12100",
+  "prefecture": "千葉県",
+  "municipality": "千葉市",
+  "official_home_url": "http://www.city.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "https://chiba-city.gijiroku.com/index.asp",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://chiba-city.gijiroku.com/index.asp",
+          "observed_on": "http://www.city.chiba.jp/shigikai/top.html",
+          "fetched_at": "2026-08-27T07:12:49Z"
+        }
+      ],
+      "notes": "Observed voices at https://chiba-city.gijiroku.com/index.asp (label: 議会中継)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/chiba/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/chiba/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/chiba/reiki_menu.html",
+          "fetched_at": "2026-08-27T07:13:10Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/chiba/reiki_menu.html for 千葉市"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo",
+          "observed_on": "http://www.city.chiba.jp/",
+          "fetched_at": "2026-08-27T07:08:24Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo (label: 市の予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo",
+          "observed_on": "http://www.city.chiba.jp/",
+          "fetched_at": "2026-08-27T07:08:24Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo (label: 市の予算・決算)"
+    }
+  }
+}

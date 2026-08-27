@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03201",
+  "prefecture": "岩手県",
+  "municipality": "盛岡市",
+  "official_home_url": "https://www.city.morioka.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.morioka.iwate.jp/shisei/reiki/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.morioka.iwate.jp/shisei/reiki/index.html",
+          "observed_on": "https://www.city.morioka.iwate.jp/site/1000040.html",
+          "fetched_at": "2026-08-27T07:06:51Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.morioka.iwate.jp/shisei/reiki/index.html (label: 例規)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.morioka.iwate.jp/shisei/zaisei/suii/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.morioka.iwate.jp/shisei/zaisei/suii/index.html",
+          "observed_on": "https://www.city.morioka.iwate.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:07:16Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.morioka.iwate.jp/shisei/zaisei/suii/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.morioka.iwate.jp/shisei/zaisei/1010723/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.morioka.iwate.jp/shisei/zaisei/1010723/index.html",
+          "observed_on": "https://www.city.morioka.iwate.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:07:16Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.morioka.iwate.jp/shisei/zaisei/1010723/index.html (label: 決算)"
+    }
+  }
+}

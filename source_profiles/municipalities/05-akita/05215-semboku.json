@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "05215",
+  "prefecture": "秋田県",
+  "municipality": "仙北市",
+  "official_home_url": "http://www.city.semboku.akita.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.semboku.akita.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.semboku.akita.jp/reiki/reiki.html",
+          "observed_on": "http://www.city.semboku.akita.jp/",
+          "fetched_at": "2026-08-27T07:31:39Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.semboku.akita.jp/reiki/reiki.html (label: 仙北市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.semboku.akita.jp/government/information/yosantop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.semboku.akita.jp/government/information/yosantop.html",
+          "observed_on": "https://www.city.semboku.akita.jp/government/information/public.html",
+          "fetched_at": "2026-08-27T07:34:09Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.semboku.akita.jp/government/information/yosantop.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.semboku.akita.jp/government/information/kessanjyokyo.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.semboku.akita.jp/government/information/kessanjyokyo.html",
+          "observed_on": "https://www.city.semboku.akita.jp/government/information/public.html",
+          "fetched_at": "2026-08-27T07:34:09Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.semboku.akita.jp/government/information/kessanjyokyo.html (label: 決算)"
+    }
+  }
+}

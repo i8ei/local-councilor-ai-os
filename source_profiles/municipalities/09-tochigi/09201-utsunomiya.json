@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "09201",
+  "prefecture": "栃木県",
+  "municipality": "宇都宮市",
+  "official_home_url": "http://www.city.utsunomiya.tochigi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kensakusystem.jp/utsunomiya/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kensakusystem.jp/utsunomiya/index.html",
+          "observed_on": "http://www.city.utsunomiya.tochigi.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:17:49Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kensakusystem.jp/utsunomiya/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.utsunomiya.tochigi.jp/shisei/johokokai/1010401.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.utsunomiya.tochigi.jp/shisei/johokokai/1010401.html",
+          "observed_on": "http://www.city.utsunomiya.tochigi.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:16:45Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.utsunomiya.tochigi.jp/shisei/johokokai/1010401.html (label: 宇都宮市例規類集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.utsunomiya.tochigi.jp/shisei/johokokai/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.utsunomiya.tochigi.jp/shisei/johokokai/zaisei/index.html",
+          "observed_on": "http://www.city.utsunomiya.tochigi.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:16:45Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.utsunomiya.tochigi.jp/shisei/johokokai/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.utsunomiya.tochigi.jp/shisei/johokokai/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.utsunomiya.tochigi.jp/shisei/johokokai/zaisei/index.html",
+          "observed_on": "http://www.city.utsunomiya.tochigi.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:16:45Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.utsunomiya.tochigi.jp/shisei/johokokai/zaisei/index.html (label: 財政)"
+    }
+  }
+}

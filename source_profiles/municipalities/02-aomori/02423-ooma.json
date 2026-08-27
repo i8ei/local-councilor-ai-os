@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02423",
+  "prefecture": "青森県",
+  "municipality": "大間町",
+  "official_home_url": "https://www.town.ooma.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/ooma/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/ooma/d1w_reiki/reiki.html",
+          "observed_on": "https://www.town.ooma.lg.jp/",
+          "fetched_at": "2026-08-27T07:03:14Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/ooma/d1w_reiki/reiki.html (label: 大間町の例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ooma.lg.jp/organization/kikakukeiei/news/2026-0611-0850-21.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ooma.lg.jp/organization/kikakukeiei/news/2026-0611-0850-21.html",
+          "observed_on": "https://www.town.ooma.lg.jp/",
+          "fetched_at": "2026-08-27T07:03:14Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ooma.lg.jp/organization/kikakukeiei/news/2026-0611-0850-21.html (label: 令和７年度大間町財政状況（後期） [2026-06-11 企画経営課])"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ooma.lg.jp/organization/kikakukeiei/news/2026-0611-0850-21.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ooma.lg.jp/organization/kikakukeiei/news/2026-0611-0850-21.html",
+          "observed_on": "https://www.town.ooma.lg.jp/",
+          "fetched_at": "2026-08-27T07:03:14Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ooma.lg.jp/organization/kikakukeiei/news/2026-0611-0850-21.html (label: 令和７年度大間町財政状況（後期） [2026-06-11 企画経営課])"
+    }
+  }
+}

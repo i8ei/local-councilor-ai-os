@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14401",
+  "prefecture": "神奈川県",
+  "municipality": "愛川町",
+  "official_home_url": "http://www.town.aikawa.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html",
+          "observed_on": "https://www.town.aikawa.kanagawa.jp/assembly/index.html",
+          "fetched_at": "2026-08-27T08:10:51Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.aikawa.kanagawa.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aikawa.kanagawa.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.aikawa.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:10:18Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.aikawa.kanagawa.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
+          "observed_on": "https://www.town.aikawa.kanagawa.jp/info/index.html",
+          "fetched_at": "2026-08-27T08:10:36Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html (label: 予算・決算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html",
+          "observed_on": "https://www.town.aikawa.kanagawa.jp/info/index.html",
+          "fetched_at": "2026-08-27T08:10:36Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.aikawa.kanagawa.jp/info/yosan_kessai_zaisei/index.html (label: 予算・決算・財政)"
+    }
+  }
+}

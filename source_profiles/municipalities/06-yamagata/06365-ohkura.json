@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06365",
+  "prefecture": "山形県",
+  "municipality": "大蔵村",
+  "official_home_url": "http://www.vill.ohkura.yamagata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/okurasongikai/2301.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/okurasongikai/2301.html",
+          "observed_on": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:46:42Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.vill.ohkura.yamagata.jp/gyoseijoho/okurasongikai/2301.html (label: 大蔵村議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.vill.ohkura.yamagata.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ohkura.yamagata.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.ohkura.yamagata.jp/",
+          "fetched_at": "2026-08-27T07:46:21Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.vill.ohkura.yamagata.jp/section/reiki_int/reiki_menu.html (label: 大蔵村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:46:42Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.ohkura.yamagata.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:46:42Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.ohkura.yamagata.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

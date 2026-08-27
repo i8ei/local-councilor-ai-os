@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "33211",
+  "prefecture": "岡山県",
+  "municipality": "備前市",
+  "official_home_url": "http://www.city.bizen.okayama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krr138.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krr138.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.bizen.okayama.jp/",
+          "fetched_at": "2026-08-27T06:16:23Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krr138.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.bizen.okayama.jp/soshiki/6/619.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.bizen.okayama.jp/soshiki/6/619.html",
+          "observed_on": "http://www.city.bizen.okayama.jp/",
+          "fetched_at": "2026-08-27T06:16:23Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.bizen.okayama.jp/soshiki/6/619.html (label: 予算の概要について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.bizen.okayama.jp/life/3/19/75/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.bizen.okayama.jp/life/3/19/75/",
+          "observed_on": "http://www.city.bizen.okayama.jp/life/3/",
+          "fetched_at": "2026-08-27T06:17:19Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.bizen.okayama.jp/life/3/19/75/ (label: 行財政)"
+    }
+  }
+}

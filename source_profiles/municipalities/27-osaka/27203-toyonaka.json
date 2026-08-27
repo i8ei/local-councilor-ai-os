@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27203",
+  "prefecture": "大阪府",
+  "municipality": "豊中市",
+  "official_home_url": "http://www.city.toyonaka.osaka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.toyonaka.osaka.jp/joho/reiki/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.toyonaka.osaka.jp/joho/reiki/index.html",
+          "observed_on": "http://www.city.toyonaka.osaka.jp/",
+          "fetched_at": "2026-08-27T06:26:35Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.toyonaka.osaka.jp/joho/reiki/index.html (label: 条例・規則等)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html",
+          "observed_on": "http://www.city.toyonaka.osaka.jp/",
+          "fetched_at": "2026-08-27T06:26:35Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html (label: 財政状況（予算・決算）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html",
+          "observed_on": "http://www.city.toyonaka.osaka.jp/",
+          "fetched_at": "2026-08-27T06:26:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html (label: 財政状況（予算・決算）)"
+    }
+  }
+}

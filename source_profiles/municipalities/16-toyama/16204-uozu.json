@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "16204",
+  "prefecture": "富山県",
+  "municipality": "魚津市",
+  "official_home_url": "http://www.city.uozu.toyama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=46&topkb=C",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=46&topkb=C",
+          "observed_on": "http://www.city.uozu.toyama.jp/",
+          "fetched_at": "2026-08-27T06:06:50Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=46&topkb=C (label: 例規)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=10&topkb=C",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=10&topkb=C",
+          "observed_on": "http://www.city.uozu.toyama.jp/",
+          "fetched_at": "2026-08-27T06:06:50Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=10&topkb=C (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=10&topkb=C",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=10&topkb=C",
+          "observed_on": "http://www.city.uozu.toyama.jp/",
+          "fetched_at": "2026-08-27T06:06:50Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=10&topkb=C (label: 財政)"
+    }
+  }
+}

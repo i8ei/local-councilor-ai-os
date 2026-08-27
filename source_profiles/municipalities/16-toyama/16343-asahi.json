@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "16343",
+  "prefecture": "富山県",
+  "municipality": "朝日町",
+  "official_home_url": "http://www.town.asahi.toyama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.asahi.toyama.jp/chosei/gyosei/gikai/1452071479231.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.asahi.toyama.jp/chosei/gyosei/gikai/1452071479231.html",
+          "observed_on": "https://www.town.asahi.toyama.jp/chosei/gyosei/gikai/index.html",
+          "fetched_at": "2026-08-27T06:12:15Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.asahi.toyama.jp/chosei/gyosei/gikai/1452071479231.html (label: 会議録（平成28年12月以前）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/asahi.toyama/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/asahi.toyama/reiki_menu.html",
+          "observed_on": "https://www.town.asahi.toyama.jp/chosei/index.html",
+          "fetched_at": "2026-08-27T06:11:52Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/asahi.toyama/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html",
+          "observed_on": "https://www.town.asahi.toyama.jp/chosei/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:11:27Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.asahi.toyama.jp/chosei/gyosei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.asahi.toyama.jp/chosei/gyosei/zaisei/index.html",
+          "observed_on": "https://www.town.asahi.toyama.jp/chosei/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:11:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.asahi.toyama.jp/chosei/gyosei/zaisei/index.html (label: 財政状況等)"
+    }
+  }
+}

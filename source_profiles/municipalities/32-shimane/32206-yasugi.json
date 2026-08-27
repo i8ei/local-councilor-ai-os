@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "32206",
+  "prefecture": "島根県",
+  "municipality": "安来市",
+  "official_home_url": "http://www.city.yasugi.shimane.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
+          "observed_on": "http://www.city.yasugi.shimane.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:05:54Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html (label: 会議録検索（外部サイト）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.yasugi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.yasugi/reiki_menu.html",
+          "observed_on": "http://www.city.yasugi.shimane.jp/",
+          "fetched_at": "2026-08-27T06:05:35Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.yasugi/reiki_menu.html (label: 例規集（外部サイト）)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

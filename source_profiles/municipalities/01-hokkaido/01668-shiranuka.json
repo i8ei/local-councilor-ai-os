@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01668",
+  "prefecture": "北海道",
+  "municipality": "白糠町",
+  "official_home_url": "https://www.town.shiranuka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.shiranuka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.shiranuka/reiki_menu.html",
+          "observed_on": "https://www.town.shiranuka.lg.jp/",
+          "fetched_at": "2026-08-27T06:53:41Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.shiranuka/reiki_menu.html (label: 白糠町例規集 （外部サイト） 新規ページで開きます)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
+          "observed_on": "https://www.town.shiranuka.lg.jp/",
+          "fetched_at": "2026-08-27T06:53:41Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
+          "observed_on": "https://www.town.shiranuka.lg.jp/",
+          "fetched_at": "2026-08-27T06:53:41Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html (label: 財政)"
+    }
+  }
+}

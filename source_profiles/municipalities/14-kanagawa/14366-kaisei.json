@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14366",
+  "prefecture": "神奈川県",
+  "municipality": "開成町",
+  "official_home_url": "http://www.town.kaisei.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.kaisei.kanagawa.jp/menu/24",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kaisei.kanagawa.jp/menu/24",
+          "observed_on": "http://www.town.kaisei.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:07:58Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.kaisei.kanagawa.jp/menu/24 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kaisei.kanagawa.jp/info/2508",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kaisei.kanagawa.jp/info/2508",
+          "observed_on": "http://www.town.kaisei.kanagawa.jp/mg/29",
+          "fetched_at": "2026-08-27T08:10:08Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.kaisei.kanagawa.jp/info/2508 (label: 令和８年度予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kaisei.kanagawa.jp/info/8",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kaisei.kanagawa.jp/info/8",
+          "observed_on": "http://www.town.kaisei.kanagawa.jp/mg/29",
+          "fetched_at": "2026-08-27T08:10:08Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.kaisei.kanagawa.jp/info/8 (label: 決算に関するご案内)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01219",
+  "prefecture": "北海道",
+  "municipality": "紋別市",
+  "official_home_url": "https://mombetsu.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://mombetsu.jp/gikai/minutes/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://mombetsu.jp/gikai/minutes/",
+          "observed_on": "https://mombetsu.jp/gikai/",
+          "fetched_at": "2026-08-27T05:59:41Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://mombetsu.jp/gikai/minutes/ (label: 会議録・議決結果等一覧)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://mombetsu.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://mombetsu.jp/reiki/reiki_menu.html",
+          "observed_on": "https://mombetsu.jp/",
+          "fetched_at": "2026-08-27T05:59:12Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://mombetsu.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://mombetsu.jp/administration/?category=55",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://mombetsu.jp/administration/?category=55",
+          "observed_on": "https://mombetsu.jp/",
+          "fetched_at": "2026-08-27T05:59:12Z"
+        }
+      ],
+      "notes": "Observed finance section at https://mombetsu.jp/administration/?category=55 (label: 紋別市の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://mombetsu.jp/administration/?category=55",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://mombetsu.jp/administration/?category=55",
+          "observed_on": "https://mombetsu.jp/",
+          "fetched_at": "2026-08-27T05:59:12Z"
+        }
+      ],
+      "notes": "Observed finance section at https://mombetsu.jp/administration/?category=55 (label: 紋別市の財政)"
+    }
+  }
+}

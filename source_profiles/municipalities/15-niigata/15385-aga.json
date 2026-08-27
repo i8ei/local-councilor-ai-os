@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15385",
+  "prefecture": "新潟県",
+  "municipality": "阿賀町",
+  "official_home_url": "http://www.town.aga.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
+          "observed_on": "https://www.town.aga.niigata.jp/agachogikai/1188.html",
+          "fetched_at": "2026-08-27T06:07:45Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/aga/pg/index.html (label: 会議録検索はこちらから（外部サイト）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.aga.niigata.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aga.niigata.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.aga.niigata.jp/",
+          "fetched_at": "2026-08-27T06:04:53Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.aga.niigata.jp/section/reiki_int/reiki_menu.html (label: 例規集 Regular regulations)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

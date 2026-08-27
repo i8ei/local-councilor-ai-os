@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40401",
+  "prefecture": "福岡県",
+  "municipality": "小竹町",
+  "official_home_url": "http://town.kotake.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://town.kotake.lg.jp/hpkiji/pub/hpkiji/pub/List.aspx?c_id=3&class_set_id=6&class_id=547",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://town.kotake.lg.jp/hpkiji/pub/hpkiji/pub/List.aspx?c_id=3&class_set_id=6&class_id=547",
+          "observed_on": "https://town.kotake.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=532",
+          "fetched_at": "2026-08-27T04:22:36Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://town.kotake.lg.jp/hpkiji/pub/hpkiji/pub/List.aspx?c_id=3&class_set_id=6&class_id=547 (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/town-kotake/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/town-kotake/reiki_menu.html",
+          "observed_on": "http://town.kotake.lg.jp/",
+          "fetched_at": "2026-08-27T04:22:27Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/town-kotake/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://town.kotake.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=634",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://town.kotake.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=634",
+          "observed_on": "http://town.kotake.lg.jp/",
+          "fetched_at": "2026-08-27T04:22:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://town.kotake.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=634 (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://town.kotake.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=634",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://town.kotake.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=634",
+          "observed_on": "http://town.kotake.lg.jp/",
+          "fetched_at": "2026-08-27T04:22:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://town.kotake.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=634 (label: 財政状況)"
+    }
+  }
+}

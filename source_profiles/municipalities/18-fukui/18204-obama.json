@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "18204",
+  "prefecture": "福井県",
+  "municipality": "小浜市",
+  "official_home_url": "https://www1.city.obama.fukui.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/obama/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/obama/reiki_menu.html",
+          "observed_on": "https://www1.city.obama.fukui.jp/",
+          "fetched_at": "2026-08-27T06:22:15Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/obama/reiki_menu.html (label: 小浜市条例（例規集）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www1.city.obama.fukui.jp/inquiry/mailform250.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.city.obama.fukui.jp/inquiry/mailform250.html",
+          "observed_on": "https://www1.city.obama.fukui.jp/shisei/obamashinitsuite/p000000a.html",
+          "fetched_at": "2026-08-27T06:22:44Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www1.city.obama.fukui.jp/inquiry/mailform250.html (label: 財政課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www1.city.obama.fukui.jp/inquiry/mailform250.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.city.obama.fukui.jp/inquiry/mailform250.html",
+          "observed_on": "https://www1.city.obama.fukui.jp/shisei/obamashinitsuite/p000000a.html",
+          "fetched_at": "2026-08-27T06:22:44Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www1.city.obama.fukui.jp/inquiry/mailform250.html (label: 財政課)"
+    }
+  }
+}

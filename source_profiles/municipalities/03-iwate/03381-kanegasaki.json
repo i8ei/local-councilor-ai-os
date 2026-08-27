@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03381",
+  "prefecture": "岩手県",
+  "municipality": "金ケ崎町",
+  "official_home_url": "https://www.town.kanegasaki.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.kanegasaki.iwate/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.kanegasaki.iwate/reiki_menu.html",
+          "observed_on": "https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/",
+          "fetched_at": "2026-08-27T07:12:08Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.kanegasaki.iwate/reiki_menu.html (label: 金ケ崎町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kanegasaki.iwate.jp/docs/2026022000031/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kanegasaki.iwate.jp/docs/2026022000031/",
+          "observed_on": "https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/",
+          "fetched_at": "2026-08-27T07:12:08Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.kanegasaki.iwate.jp/docs/2026022000031/ (label: 当初予算について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/zaisei/",
+          "observed_on": "https://www.town.kanegasaki.iwate.jp/",
+          "fetched_at": "2026-08-27T07:11:54Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/zaisei/ (label: 財政)"
+    }
+  }
+}

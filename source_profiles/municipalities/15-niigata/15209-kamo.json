@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15209",
+  "prefecture": "新潟県",
+  "municipality": "加茂市",
+  "official_home_url": "http://www.city.kamo.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.kamo.niigata.jp/docs/327883.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kamo.niigata.jp/docs/327883.html",
+          "observed_on": "http://www.city.kamo.niigata.jp/",
+          "fetched_at": "2026-08-27T05:57:05Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.kamo.niigata.jp/docs/327883.html (label: 令和8年加茂市議会6月定例会の会議録を掲載しました)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80357693",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80357693",
+          "observed_on": "http://www.city.kamo.niigata.jp/",
+          "fetched_at": "2026-08-27T05:57:05Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80357693 (label: 加茂市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kamo.niigata.jp/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kamo.niigata.jp/shisei/zaisei/",
+          "observed_on": "http://www.city.kamo.niigata.jp/shisei/",
+          "fetched_at": "2026-08-27T05:57:43Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kamo.niigata.jp/shisei/zaisei/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kamo.niigata.jp/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kamo.niigata.jp/shisei/zaisei/",
+          "observed_on": "http://www.city.kamo.niigata.jp/shisei/",
+          "fetched_at": "2026-08-27T05:57:43Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kamo.niigata.jp/shisei/zaisei/ (label: 財政)"
+    }
+  }
+}

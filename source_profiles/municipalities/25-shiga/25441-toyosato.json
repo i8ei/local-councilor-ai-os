@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "25441",
+  "prefecture": "滋賀県",
+  "municipality": "豊郷町",
+  "official_home_url": "http://www.town.toyosato.shiga.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.toyosato.shiga.jp/reiki/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.toyosato.shiga.jp/reiki/index.html",
+          "observed_on": "http://www.town.toyosato.shiga.jp/",
+          "fetched_at": "2026-08-27T06:12:39Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.toyosato.shiga.jp/reiki/index.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.toyosato.shiga.jp/category/29-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:13:30Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.toyosato.shiga.jp/category/29-2-1-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.toyosato.shiga.jp/category/29-2-1-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.toyosato.shiga.jp/category/29-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:13:30Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.toyosato.shiga.jp/category/29-2-1-0-0-0-0-0-0-0.html (label: 決算)"
+    }
+  }
+}

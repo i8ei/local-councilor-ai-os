@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "30366",
+  "prefecture": "和歌山県",
+  "municipality": "有田川町",
+  "official_home_url": "http://www.town.aridagawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.aridagawa.lg.jp/top/kakuka/gikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aridagawa.lg.jp/top/kakuka/gikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.aridagawa.lg.jp/top/kakuka/index.html",
+          "fetched_at": "2026-08-27T07:24:33Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.aridagawa.lg.jp/top/kakuka/gikai/kaigiroku/index.html (label: 本会議会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.aridagawa.lg.jp/section/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aridagawa.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.aridagawa.lg.jp/top/index.html",
+          "fetched_at": "2026-08-27T07:22:28Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.aridagawa.lg.jp/section/reiki/reiki_menu.html (label: 有田川町 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
+          "observed_on": "https://www.town.aridagawa.lg.jp/top/chosei/index.html",
+          "fetched_at": "2026-08-27T07:24:17Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.aridagawa.lg.jp/top/chosei/2/index.html (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
+          "observed_on": "https://www.town.aridagawa.lg.jp/top/chosei/index.html",
+          "fetched_at": "2026-08-27T07:24:17Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.aridagawa.lg.jp/top/chosei/2/index.html (label: 財政状況)"
+    }
+  }
+}

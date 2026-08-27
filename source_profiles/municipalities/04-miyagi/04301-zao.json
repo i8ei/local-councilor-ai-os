@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "04301",
+  "prefecture": "宮城県",
+  "municipality": "蔵王町",
+  "official_home_url": "http://www.town.zao.miyagi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/gijiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/gijiroku/index.html",
+          "observed_on": "http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/index.html",
+          "fetched_at": "2026-08-27T07:22:02Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/gijiroku/index.html (label: 議会会議録の公開)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.zao.miyagi.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.zao.miyagi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.zao.miyagi.jp/",
+          "fetched_at": "2026-08-27T07:20:25Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.zao.miyagi.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

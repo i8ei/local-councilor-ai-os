@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28204",
+  "prefecture": "兵庫県",
+  "municipality": "西宮市",
+  "official_home_url": "http://www.nishi.or.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.nishi.or.jp/shisei/jorei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.nishi.or.jp/shisei/jorei/index.html",
+          "observed_on": "http://www.nishi.or.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:43:30Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.nishi.or.jp/shisei/jorei/index.html (label: 条例・規則・要綱)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.nishi.or.jp/shisei/zaiseijoho/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.nishi.or.jp/shisei/zaiseijoho/index.html",
+          "observed_on": "http://www.nishi.or.jp/",
+          "fetched_at": "2026-08-27T06:43:11Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.nishi.or.jp/shisei/zaiseijoho/index.html (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.nishi.or.jp/shisei/zaiseijoho/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.nishi.or.jp/shisei/zaiseijoho/index.html",
+          "observed_on": "http://www.nishi.or.jp/",
+          "fetched_at": "2026-08-27T06:43:11Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.nishi.or.jp/shisei/zaiseijoho/index.html (label: 財政情報)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47329",
+  "prefecture": "沖縄県",
+  "municipality": "西原町",
+  "official_home_url": "http://www.town.nishihara.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.nishihara.okinawa.jp/life/5/19/106/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nishihara.okinawa.jp/life/5/19/106/",
+          "observed_on": "http://www.town.nishihara.okinawa.jp/life/5/",
+          "fetched_at": "2026-08-27T06:56:02Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.nishihara.okinawa.jp/life/5/19/106/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/nishihara/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/nishihara/reiki_menu.html",
+          "observed_on": "http://www.town.nishihara.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:55:39Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/nishihara/reiki_menu.html (label: 西原町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.nishihara.okinawa.jp/life/5/22/123/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nishihara.okinawa.jp/life/5/22/123/",
+          "observed_on": "http://www.town.nishihara.okinawa.jp/life/5/",
+          "fetched_at": "2026-08-27T06:56:02Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.nishihara.okinawa.jp/life/5/22/123/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.nishihara.okinawa.jp/life/5/22/124/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nishihara.okinawa.jp/life/5/22/124/",
+          "observed_on": "http://www.town.nishihara.okinawa.jp/life/5/",
+          "fetched_at": "2026-08-27T06:56:02Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.nishihara.okinawa.jp/life/5/22/124/ (label: 決算)"
+    }
+  }
+}

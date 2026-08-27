@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03209",
+  "prefecture": "岩手県",
+  "municipality": "一関市",
+  "official_home_url": "https://www.city.ichinoseki.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/ichinoseki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/ichinoseki/reiki_menu.html",
+          "observed_on": "https://www.city.ichinoseki.iwate.jp/",
+          "fetched_at": "2026-08-27T07:08:19Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/ichinoseki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf",
+          "observed_on": "https://www.city.ichinoseki.iwate.jp/archive/contents-123807",
+          "fetched_at": "2026-08-27T07:08:46Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf (label: 補助金および負担金の状況（令和7年度当初予算）（PDF）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ichinoseki.iwate.jp/genre/shisei-jouhou/finances",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ichinoseki.iwate.jp/genre/shisei-jouhou/finances",
+          "observed_on": "https://www.city.ichinoseki.iwate.jp/",
+          "fetched_at": "2026-08-27T07:08:19Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.ichinoseki.iwate.jp/genre/shisei-jouhou/finances (label: 財政情報)"
+    }
+  }
+}

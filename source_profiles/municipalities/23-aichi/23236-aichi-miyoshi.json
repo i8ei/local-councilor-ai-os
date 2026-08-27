@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "23236",
+  "prefecture": "愛知県",
+  "municipality": "みよし市",
+  "official_home_url": "http://www.city.aichi-miyoshi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kensakusystem.jp/miyoshi-c/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kensakusystem.jp/miyoshi-c/index.html",
+          "observed_on": "https://www.city.aichi-miyoshi.lg.jp/soshiki/gikai/1/150.html",
+          "fetched_at": "2026-08-27T08:10:25Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kensakusystem.jp/miyoshi-c/index.html (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/aichi-miyoshi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/aichi-miyoshi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/aichi-miyoshi/reiki_menu.html",
+          "fetched_at": "2026-08-27T08:14:42Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/aichi-miyoshi/reiki_menu.html for みよし市"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.aichi-miyoshi.lg.jp/soshiki/keieikikaku/zaisei/1/11566.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.aichi-miyoshi.lg.jp/soshiki/keieikikaku/zaisei/1/11566.html",
+          "observed_on": "http://www.city.aichi-miyoshi.lg.jp/",
+          "fetched_at": "2026-08-27T08:09:39Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.aichi-miyoshi.lg.jp/soshiki/keieikikaku/zaisei/1/11566.html (label: )"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.aichi-miyoshi.lg.jp/soshiki/keieikikaku/zaisei/1/11566.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.aichi-miyoshi.lg.jp/soshiki/keieikikaku/zaisei/1/11566.html",
+          "observed_on": "http://www.city.aichi-miyoshi.lg.jp/",
+          "fetched_at": "2026-08-27T08:09:39Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.aichi-miyoshi.lg.jp/soshiki/keieikikaku/zaisei/1/11566.html (label: )"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22100",
+  "prefecture": "静岡県",
+  "municipality": "静岡市",
+  "official_home_url": "https://www.city.shizuoka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.shizuoka.lg.jp/p000214.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shizuoka.lg.jp/p000214.html",
+          "observed_on": "https://www.city.shizuoka.lg.jp/p000214.html",
+          "fetched_at": "2026-08-27T07:40:06Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.shizuoka.lg.jp/p000214.html (label: 条例・規則・要綱)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shizuoka.lg.jp/p000291.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shizuoka.lg.jp/p000291.html",
+          "observed_on": "https://www.city.shizuoka.lg.jp/p000214.html",
+          "fetched_at": "2026-08-27T07:40:06Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.shizuoka.lg.jp/p000291.html (label: 予算・決算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shizuoka.lg.jp/p000291.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shizuoka.lg.jp/p000291.html",
+          "observed_on": "https://www.city.shizuoka.lg.jp/p000214.html",
+          "fetched_at": "2026-08-27T07:40:06Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.shizuoka.lg.jp/p000291.html (label: 予算・決算・財政)"
+    }
+  }
+}

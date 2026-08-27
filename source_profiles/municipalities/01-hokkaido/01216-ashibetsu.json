@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01216",
+  "prefecture": "北海道",
+  "municipality": "芦別市",
+  "official_home_url": "https://www.city.ashibetsu.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/kensaku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/kensaku/",
+          "observed_on": "https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/",
+          "fetched_at": "2026-08-27T06:02:05Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.ashibetsu.hokkaido.jp/shisei/gikai/kensaku/ (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
+          "observed_on": "https://www.city.ashibetsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T05:58:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ (label: 市の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
+          "observed_on": "https://www.city.ashibetsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T05:58:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ (label: 市の財政)"
+    }
+  }
+}

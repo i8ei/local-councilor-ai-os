@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39344",
+  "prefecture": "高知県",
+  "municipality": "大豊町",
+  "official_home_url": "http://www.town.otoyo.kochi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/otoyo/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/otoyo/d1w_reiki/reiki.htm",
+          "observed_on": "http://www.town.otoyo.kochi.jp/index2.php",
+          "fetched_at": "2026-08-27T07:14:03Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/otoyo/d1w_reiki/reiki.htm (label: 大豊町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.otoyo.kochi.jp/life/detail.php?hdnKey=957",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.otoyo.kochi.jp/life/detail.php?hdnKey=957",
+          "observed_on": "http://www.town.otoyo.kochi.jp/life/list.php?hdnSKBN=A&hdnCat=9200&hdnJPN=%C6%FC%CB%DC%B8%EC",
+          "fetched_at": "2026-08-27T07:14:20Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.otoyo.kochi.jp/life/detail.php?hdnKey=957 (label: 財政状況資料集の公表)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.otoyo.kochi.jp/life/detail.php?hdnKey=1457",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.otoyo.kochi.jp/life/detail.php?hdnKey=1457",
+          "observed_on": "http://www.town.otoyo.kochi.jp/life/list.php?hdnSKBN=A&hdnCat=9200&hdnJPN=%C6%FC%CB%DC%B8%EC",
+          "fetched_at": "2026-08-27T07:14:20Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.otoyo.kochi.jp/life/detail.php?hdnKey=1457 (label: 健全化判断比率・資金不足比率を公表します（令和７年度決算）)"
+    }
+  }
+}

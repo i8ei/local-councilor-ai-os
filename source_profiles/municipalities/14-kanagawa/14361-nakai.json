@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14361",
+  "prefecture": "神奈川県",
+  "municipality": "中井町",
+  "official_home_url": "http://www.town.nakai.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/nakai/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/nakai/reiki_menu.html",
+          "observed_on": "http://www.town.nakai.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:06:29Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/nakai/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/index.html",
+          "fetched_at": "2026-08-27T08:06:44Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/index.html",
+          "fetched_at": "2026-08-27T08:06:44Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

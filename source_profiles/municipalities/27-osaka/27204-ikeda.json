@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27204",
+  "prefecture": "大阪府",
+  "municipality": "池田市",
+  "official_home_url": "http://www.city.ikeda.osaka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/ikeda-city/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/ikeda-city/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.ikeda.osaka.jp/",
+          "fetched_at": "2026-08-27T06:27:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/ikeda-city/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html",
+          "observed_on": "http://www.city.ikeda.osaka.jp/",
+          "fetched_at": "2026-08-27T06:27:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html",
+          "observed_on": "http://www.city.ikeda.osaka.jp/",
+          "fetched_at": "2026-08-27T06:27:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

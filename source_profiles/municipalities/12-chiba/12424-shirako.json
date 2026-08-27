@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12424",
+  "prefecture": "千葉県",
+  "municipality": "白子町",
+  "official_home_url": "http://www.town.shirako.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078A46",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078A46",
+          "observed_on": "http://www.town.shirako.lg.jp/",
+          "fetched_at": "2026-08-27T07:27:29Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078A46 (label: 例規集（条例・規則）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shirako.lg.jp/0000000788.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shirako.lg.jp/0000000788.html",
+          "observed_on": "http://www.town.shirako.lg.jp/",
+          "fetched_at": "2026-08-27T07:27:29Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.shirako.lg.jp/0000000788.html (label: 当初予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.shirako.lg.jp/",
+          "fetched_at": "2026-08-27T07:27:29Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html (label: 財政)"
+    }
+  }
+}

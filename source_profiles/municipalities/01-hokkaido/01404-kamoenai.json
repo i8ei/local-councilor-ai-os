@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01404",
+  "prefecture": "北海道",
+  "municipality": "神恵内村",
+  "official_home_url": "https://www.vill.kamoenai.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000455.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000455.html",
+          "observed_on": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00001573.html",
+          "fetched_at": "2026-08-27T06:19:04Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000455.html (label: 財政状況資料集)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000456.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000456.html",
+          "observed_on": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00001573.html",
+          "fetched_at": "2026-08-27T06:19:04Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000456.html (label: 普通会計決算財政比較分析表及び歳出比較分析表)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01214",
+  "prefecture": "北海道",
+  "municipality": "稚内市",
+  "official_home_url": "https://www.city.wakkanai.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.wakkanai.hokkaido.jp/banner_click.php?url=http%3A%2F%2Fssp.kaigiroku.net%2Ftenant%2Fwakkanai%2Fpg%2Findex.html%26id%3D29",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.wakkanai.hokkaido.jp/banner_click.php?url=http%3A%2F%2Fssp.kaigiroku.net%2Ftenant%2Fwakkanai%2Fpg%2Findex.html%26id%3D29",
+          "observed_on": "https://www.city.wakkanai.hokkaido.jp/gikai/",
+          "fetched_at": "2026-08-27T05:59:31Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.wakkanai.hokkaido.jp/banner_click.php?url=http%3A%2F%2Fssp.kaigiroku.net%2Ftenant%2Fwakkanai%2Fpg%2Findex.html%26id%3D29 (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.wakkanai.hokkaido.jp/data/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.wakkanai.hokkaido.jp/data/reiki/reiki.html",
+          "observed_on": "https://www.city.wakkanai.hokkaido.jp/",
+          "fetched_at": "2026-08-27T05:58:26Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.wakkanai.hokkaido.jp/data/reiki/reiki.html (label: 稚内市の条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
+          "observed_on": "https://www.city.wakkanai.hokkaido.jp/shisei/",
+          "fetched_at": "2026-08-27T05:58:39Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/ (label: 予算・決算・財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
+          "observed_on": "https://www.city.wakkanai.hokkaido.jp/shisei/",
+          "fetched_at": "2026-08-27T05:58:39Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/ (label: 予算・決算・財政状況)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40602",
+  "prefecture": "福岡県",
+  "municipality": "添田町",
+  "official_home_url": "https://www.town.soeda.fukuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.soeda.fukuoka.jp/adv/ba.php?id=26",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.soeda.fukuoka.jp/adv/ba.php?id=26",
+          "observed_on": "https://www.town.soeda.fukuoka.jp/",
+          "fetched_at": "2026-08-27T04:25:23Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.town.soeda.fukuoka.jp/adv/ba.php?id=26 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.soeda.fukuoka.jp/life/6/24/99/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.soeda.fukuoka.jp/life/6/24/99/",
+          "observed_on": "https://www.town.soeda.fukuoka.jp/life/6/",
+          "fetched_at": "2026-08-27T06:02:04Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.soeda.fukuoka.jp/life/6/24/99/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.soeda.fukuoka.jp/life/6/24/99/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.soeda.fukuoka.jp/life/6/24/99/",
+          "observed_on": "https://www.town.soeda.fukuoka.jp/life/6/",
+          "fetched_at": "2026-08-27T06:02:04Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.soeda.fukuoka.jp/life/6/24/99/ (label: 予算・決算)"
+    }
+  }
+}

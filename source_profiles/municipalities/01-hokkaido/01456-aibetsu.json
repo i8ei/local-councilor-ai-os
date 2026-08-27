@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01456",
+  "prefecture": "北海道",
+  "municipality": "愛別町",
+  "official_home_url": "https://www.town.aibetsu.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.aibetsu.hokkaido.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aibetsu.hokkaido.jp/reiki/reiki.html",
+          "observed_on": "https://www.town.aibetsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:23:46Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.aibetsu.hokkaido.jp/reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.aibetsu.hokkaido.jp/08/03",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aibetsu.hokkaido.jp/08/03",
+          "observed_on": "https://www.town.aibetsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:23:46Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.aibetsu.hokkaido.jp/08/03 (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.aibetsu.hokkaido.jp/08/03",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.aibetsu.hokkaido.jp/08/03",
+          "observed_on": "https://www.town.aibetsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:23:46Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.aibetsu.hokkaido.jp/08/03 (label: 財政情報)"
+    }
+  }
+}

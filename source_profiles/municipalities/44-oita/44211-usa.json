@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44211",
+  "prefecture": "大分県",
+  "municipality": "宇佐市",
+  "official_home_url": "http://www.city.usa.oita.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.city.usa.oita.dbsr.jp/index.php/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.usa.oita.dbsr.jp/index.php/",
+          "observed_on": "https://www.city.usa.oita.jp/sougo/soshiki/20/gikai/index.html",
+          "fetched_at": "2026-08-27T06:20:15Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.city.usa.oita.dbsr.jp/index.php/ (label: 宇佐市議会会議録（検索システム）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/usa/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/usa/d1w_reiki/reiki.html",
+          "observed_on": "https://www.city.usa.oita.jp/sougo/shisei/index.html",
+          "fetched_at": "2026-08-27T06:19:57Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/usa/d1w_reiki/reiki.html (label: 宇佐市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.usa.oita.jp/sougo/oshirase/24806.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.usa.oita.jp/sougo/oshirase/24806.html",
+          "observed_on": "http://www.city.usa.oita.jp/",
+          "fetched_at": "2026-08-27T06:19:39Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.usa.oita.jp/sougo/oshirase/24806.html (label: 宇佐市行財政改革推進プランのパブリックコメントを募集します)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.usa.oita.jp/sougo/oshirase/24806.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.usa.oita.jp/sougo/oshirase/24806.html",
+          "observed_on": "http://www.city.usa.oita.jp/",
+          "fetched_at": "2026-08-27T06:19:39Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.usa.oita.jp/sougo/oshirase/24806.html (label: 宇佐市行財政改革推進プランのパブリックコメントを募集します)"
+    }
+  }
+}

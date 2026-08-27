@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27220",
+  "prefecture": "大阪府",
+  "municipality": "箕面市",
+  "official_home_url": "http://www.city.minoh.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/minoh/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/minoh/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/minoh/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:36:03Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/minoh/reiki_menu.html for 箕面市"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.minoh.lg.jp/shisei/kakukaannai/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.minoh.lg.jp/shisei/kakukaannai/index.html",
+          "observed_on": "http://www.city.minoh.lg.jp/",
+          "fetched_at": "2026-08-27T06:32:13Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.minoh.lg.jp/shisei/kakukaannai/index.html (label: 当初予算と事業の紹介)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html",
+          "observed_on": "http://www.city.minoh.lg.jp/",
+          "fetched_at": "2026-08-27T06:32:13Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html (label: 2026年8月27日 行政評価の実施状況)"
+    }
+  }
+}

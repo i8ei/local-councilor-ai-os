@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27362",
+  "prefecture": "大阪府",
+  "municipality": "田尻町",
+  "official_home_url": "http://www.town.tajiri.osaka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85C0FFB4",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85C0FFB4",
+          "observed_on": "http://www.town.tajiri.osaka.jp/",
+          "fetched_at": "2026-08-27T06:39:46Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85C0FFB4 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.town.tajiri.osaka.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:40:08Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.town.tajiri.osaka.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:40:08Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    }
+  }
+}

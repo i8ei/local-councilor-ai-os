@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13307",
+  "prefecture": "東京都",
+  "municipality": "檜原村",
+  "official_home_url": "http://www.vill.hinohara.tokyo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/hinohara/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/hinohara/reiki_menu.html",
+          "observed_on": "http://www.vill.hinohara.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:50:29Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/hinohara/reiki_menu.html (label: 檜原村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.hinohara.tokyo.jp/category/2-8-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.hinohara.tokyo.jp/category/2-8-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.vill.hinohara.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:50:29Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.hinohara.tokyo.jp/category/2-8-0-0-0-0-0-0-0-0.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.hinohara.tokyo.jp/category/2-8-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.hinohara.tokyo.jp/category/2-8-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.vill.hinohara.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:50:29Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.hinohara.tokyo.jp/category/2-8-0-0-0-0-0-0-0-0.html (label: 財政)"
+    }
+  }
+}

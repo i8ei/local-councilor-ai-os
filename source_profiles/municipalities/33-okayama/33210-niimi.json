@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "33210",
+  "prefecture": "岡山県",
+  "municipality": "新見市",
+  "official_home_url": "http://www.city.niimi.okayama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.niimi.okayama.jp/gyosei/category_top/index/gyosei_category1_6.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.niimi.okayama.jp/gyosei/category_top/index/gyosei_category1_6.html",
+          "observed_on": "http://www.city.niimi.okayama.jp/",
+          "fetched_at": "2026-08-27T06:16:11Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.niimi.okayama.jp/gyosei/category_top/index/gyosei_category1_6.html (label: 新見市例規)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/1966.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/1966.html",
+          "observed_on": "https://www.city.niimi.okayama.jp/gyosei/category_top/index/gyosei_category1_1.html",
+          "fetched_at": "2026-08-27T06:20:05Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/1966.html (label: 一般会計予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/4253.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/4253.html",
+          "observed_on": "https://www.city.niimi.okayama.jp/gyosei/category_top/index/gyosei_category1_1.html",
+          "fetched_at": "2026-08-27T06:20:05Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/4253.html (label: 一般会計決算)"
+    }
+  }
+}

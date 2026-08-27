@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12329",
+  "prefecture": "千葉県",
+  "municipality": "栄町",
+  "official_home_url": "http://www.town.sakae.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.kensakusystem.jp/sakae/sophia.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.kensakusystem.jp/sakae/sophia.html",
+          "observed_on": "http://www.town.sakae.chiba.jp/gikai/",
+          "fetched_at": "2026-08-27T07:25:24Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.kensakusystem.jp/sakae/sophia.html (label: 本会議会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.sakae.chiba.jp/gikai/page001435.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.sakae.chiba.jp/gikai/page001435.html",
+          "observed_on": "http://www.town.sakae.chiba.jp/gikai/",
+          "fetched_at": "2026-08-27T07:25:24Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.sakae.chiba.jp/gikai/page001435.html (label: 議会例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

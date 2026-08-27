@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01433",
+  "prefecture": "北海道",
+  "municipality": "妹背牛町",
+  "official_home_url": "http://www.town.moseushi.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.moseushi.hokkaido.jp/gikai/gijiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.moseushi.hokkaido.jp/gikai/gijiroku/index.html",
+          "observed_on": "http://www.town.moseushi.hokkaido.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:23:16Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.moseushi.hokkaido.jp/gikai/gijiroku/index.html (label: 詳しくはこちら)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=193",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=193",
+          "observed_on": "http://www.town.moseushi.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:21:52Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=193 (label: 妹背牛町条例例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

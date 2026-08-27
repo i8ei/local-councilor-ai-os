@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15100",
+  "prefecture": "新潟県",
+  "municipality": "新潟市",
+  "official_home_url": "http://www.city.niigata.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.niigata.lg.jp/shisei/jorei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.niigata.lg.jp/shisei/jorei/index.html",
+          "observed_on": "http://www.city.niigata.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T05:57:34Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.niigata.lg.jp/shisei/jorei/index.html (label: 条例・規則・要綱・公報)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.niigata.lg.jp/shisei/zaimu/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.niigata.lg.jp/shisei/zaimu/index.html",
+          "observed_on": "http://www.city.niigata.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T05:57:34Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.niigata.lg.jp/shisei/zaimu/index.html (label: 財政・市債・IR)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.niigata.lg.jp/shisei/zaimu/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.niigata.lg.jp/shisei/zaimu/index.html",
+          "observed_on": "http://www.city.niigata.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T05:57:34Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.niigata.lg.jp/shisei/zaimu/index.html (label: 財政・市債・IR)"
+    }
+  }
+}

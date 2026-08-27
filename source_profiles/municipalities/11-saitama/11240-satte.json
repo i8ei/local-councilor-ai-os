@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11240",
+  "prefecture": "埼玉県",
+  "municipality": "幸手市",
+  "official_home_url": "http://www.city.satte.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/satte/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/satte/reiki_menu.html",
+          "observed_on": "http://www.city.satte.lg.jp/",
+          "fetched_at": "2026-08-27T06:58:31Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/satte/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.satte.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:58:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.satte.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:58:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

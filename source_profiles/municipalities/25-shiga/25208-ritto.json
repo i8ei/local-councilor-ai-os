@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "25208",
+  "prefecture": "滋賀県",
+  "municipality": "栗東市",
+  "official_home_url": "http://www.city.ritto.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.ritto.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ritto.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.ritto.lg.jp/",
+          "fetched_at": "2026-08-27T06:08:59Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.ritto.lg.jp/reiki/reiki_menu.html (label: 条例・規則（例規集）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.ritto.lg.jp/",
+          "fetched_at": "2026-08-27T06:08:59Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.ritto.lg.jp/shisei/zaisei/index.html (label: )"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.ritto.lg.jp/",
+          "fetched_at": "2026-08-27T06:08:59Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.ritto.lg.jp/shisei/zaisei/index.html (label: )"
+    }
+  }
+}

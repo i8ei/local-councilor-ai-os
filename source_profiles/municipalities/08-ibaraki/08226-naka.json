@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08226",
+  "prefecture": "茨城県",
+  "municipality": "那珂市",
+  "official_home_url": "http://www.city.naka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/naka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/naka/reiki_menu.html",
+          "observed_on": "http://www.city.naka.lg.jp/",
+          "fetched_at": "2026-08-27T06:04:59Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/naka/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
+          "observed_on": "http://www.city.naka.lg.jp/gyousei/",
+          "fetched_at": "2026-08-27T06:05:17Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html (label: 那珂市予算書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
+          "observed_on": "http://www.city.naka.lg.jp/gyousei/",
+          "fetched_at": "2026-08-27T06:05:17Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html (label: 那珂市決算書)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "25204",
+  "prefecture": "滋賀県",
+  "municipality": "近江八幡市",
+  "official_home_url": "https://www.city.omihachiman.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/omihachiman/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/omihachiman/pg/index.html",
+          "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/shigikai/index.html",
+          "fetched_at": "2026-08-27T06:08:39Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/omihachiman/pg/index.html (label: 12.会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.omihachiman.lg.jp/gyosei/jorei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.omihachiman.lg.jp/gyosei/jorei/index.html",
+          "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:07:45Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.omihachiman.lg.jp/gyosei/jorei/index.html (label: 条例・規則・要綱)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
+          "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:07:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
+          "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:07:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

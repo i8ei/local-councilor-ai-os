@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11202",
+  "prefecture": "埼玉県",
+  "municipality": "熊谷市",
+  "official_home_url": "http://www.city.kumagaya.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kumagaya/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kumagaya/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.kumagaya.lg.jp/",
+          "fetched_at": "2026-08-27T06:46:40Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kumagaya/d1w_reiki/reiki.html (label: 熊谷市例規集（外部サイト）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kumagaya.lg.jp/about/zaisei/yosantuite/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kumagaya.lg.jp/about/zaisei/yosantuite/index.html",
+          "observed_on": "http://www.city.kumagaya.lg.jp/about/index.html",
+          "fetched_at": "2026-08-27T06:47:13Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.kumagaya.lg.jp/about/zaisei/yosantuite/index.html (label: 予算について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kumagaya.lg.jp/about/zaisei/kesantuite/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kumagaya.lg.jp/about/zaisei/kesantuite/index.html",
+          "observed_on": "http://www.city.kumagaya.lg.jp/about/index.html",
+          "fetched_at": "2026-08-27T06:47:13Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.kumagaya.lg.jp/about/zaisei/kesantuite/index.html (label: 決算について)"
+    }
+  }
+}

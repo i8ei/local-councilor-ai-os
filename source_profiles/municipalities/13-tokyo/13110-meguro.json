@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13110",
+  "prefecture": "東京都",
+  "municipality": "目黒区",
+  "official_home_url": "http://www.city.meguro.tokyo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.meguro.tokyo.jp/kouhou/kusei/kouchou/kondan.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.meguro.tokyo.jp/kouhou/kusei/kouchou/kondan.html",
+          "observed_on": "http://www.city.meguro.tokyo.jp/kouhou/kusei/kouchou/homepage.html",
+          "fetched_at": "2026-08-27T07:33:48Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.meguro.tokyo.jp/kouhou/kusei/kouchou/kondan.html (label: 「区民と区長のまちづくり懇談会」の会議録をご覧になれます)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/meguro/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/meguro/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/meguro/reiki_menu.html",
+          "fetched_at": "2026-08-27T07:37:12Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/meguro/reiki_menu.html for 目黒区"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.meguro.tokyo.jp/hisho/kusei/yosan/furusatonozei.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.meguro.tokyo.jp/hisho/kusei/yosan/furusatonozei.html",
+          "observed_on": "http://www.city.meguro.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:33:31Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.meguro.tokyo.jp/hisho/kusei/yosan/furusatonozei.html (label: 目黒区のふるさと納税)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.meguro.tokyo.jp/kusei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.meguro.tokyo.jp/kusei/yosan/index.html",
+          "observed_on": "http://www.city.meguro.tokyo.jp/kusei/kugikai/index.html",
+          "fetched_at": "2026-08-27T07:34:19Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.meguro.tokyo.jp/kusei/yosan/index.html (label: 予算・財政)"
+    }
+  }
+}

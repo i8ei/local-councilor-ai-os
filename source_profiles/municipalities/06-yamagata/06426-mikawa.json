@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06426",
+  "prefecture": "山形県",
+  "municipality": "三川町",
+  "official_home_url": "http://www.town.mikawa.yamagata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.mikawa.yamagata.jp/mikawa/jyourei.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.mikawa.yamagata.jp/mikawa/jyourei.html",
+          "observed_on": "http://www.town.mikawa.yamagata.jp/",
+          "fetched_at": "2026-08-27T07:48:49Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.mikawa.yamagata.jp/mikawa/jyourei.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.mikawa.yamagata.jp/town/matisiryou/mikawa-digest.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.mikawa.yamagata.jp/town/matisiryou/mikawa-digest.html",
+          "observed_on": "http://www.town.mikawa.yamagata.jp/town/index.html",
+          "fetched_at": "2026-08-27T07:49:15Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.mikawa.yamagata.jp/town/matisiryou/mikawa-digest.html (label: 令和8年度三川町のわかりやすい予算書について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.mikawa.yamagata.jp/town/gyouzaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.mikawa.yamagata.jp/town/gyouzaisei/index.html",
+          "observed_on": "http://www.town.mikawa.yamagata.jp/town/index.html",
+          "fetched_at": "2026-08-27T07:49:15Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.mikawa.yamagata.jp/town/gyouzaisei/index.html (label: 行財政)"
+    }
+  }
+}

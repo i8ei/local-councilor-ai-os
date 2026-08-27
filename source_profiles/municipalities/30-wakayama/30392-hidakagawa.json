@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "30392",
+  "prefecture": "和歌山県",
+  "municipality": "日高川町",
+  "official_home_url": "http://www.town.hidakagawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.hidakagawa.lg.jp/gikai/boutyou.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.hidakagawa.lg.jp/gikai/boutyou.html",
+          "observed_on": "http://www.town.hidakagawa.lg.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T07:26:46Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.hidakagawa.lg.jp/gikai/boutyou.html (label: 傍聴・会議録の閲覧)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://reiki.town.hidakagawa.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://reiki.town.hidakagawa.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.hidakagawa.lg.jp/",
+          "fetched_at": "2026-08-27T07:25:26Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://reiki.town.hidakagawa.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html",
+          "observed_on": "http://www.town.hidakagawa.lg.jp/",
+          "fetched_at": "2026-08-27T07:25:26Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html",
+          "observed_on": "http://www.town.hidakagawa.lg.jp/",
+          "fetched_at": "2026-08-27T07:25:26Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html (label: 財政)"
+    }
+  }
+}

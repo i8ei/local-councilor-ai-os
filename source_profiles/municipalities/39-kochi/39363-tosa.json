@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39363",
+  "prefecture": "高知県",
+  "municipality": "土佐町",
+  "official_home_url": "http://www.town.tosa.kochi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.tosa.kochi.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tosa.kochi.jp/reiki/reiki.html",
+          "observed_on": "http://www.town.tosa.kochi.jp/",
+          "fetched_at": "2026-08-27T07:13:58Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.tosa.kochi.jp/reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.tosa.kochi.jp/life/detail.php?hdnKey=178",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tosa.kochi.jp/life/detail.php?hdnKey=178",
+          "observed_on": "http://www.town.tosa.kochi.jp/",
+          "fetched_at": "2026-08-27T07:13:58Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.tosa.kochi.jp/life/detail.php?hdnKey=178 (label: 土佐町脱炭素社会推進総合補助金 土佐町脱炭素社会推進総合補助金町の産業、民生、運輸の各分野において2050 年度までにそれらの温室効果ガス排出量を実質ゼロとすることを目指す取組に要する経費に対し、予算の範囲内で補助金を交付することにより、地球全体の温暖化の抑制及び脱炭素化に寄与するとともに、脱炭素化の効果を土佐町全域に裨益させることを...)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tosa.kochi.jp/life/detail.php?hdnKey=458",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tosa.kochi.jp/life/detail.php?hdnKey=458",
+          "observed_on": "http://www.town.tosa.kochi.jp/life/kurashi.php",
+          "fetched_at": "2026-08-27T07:14:15Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.tosa.kochi.jp/life/detail.php?hdnKey=458 (label: 経営比較分析表(令和6年度決算))"
+    }
+  }
+}

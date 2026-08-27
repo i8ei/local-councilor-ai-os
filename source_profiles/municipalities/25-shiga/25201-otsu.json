@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "25201",
+  "prefecture": "滋賀県",
+  "municipality": "大津市",
+  "official_home_url": "http://www.city.otsu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/city.otsu/reiki_taikei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/city.otsu/reiki_taikei/r_taikei_03_01.html",
+          "observed_on": "https://www.city.otsu.lg.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:06:40Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/city.otsu/reiki_taikei/r_taikei_03_01.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.otsu.lg.jp/shisei/z/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.otsu.lg.jp/shisei/z/index.html",
+          "observed_on": "https://www.city.otsu.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:06:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.otsu.lg.jp/shisei/z/index.html (label: 行財政改革)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.otsu.lg.jp/shisei/z/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.otsu.lg.jp/shisei/z/index.html",
+          "observed_on": "https://www.city.otsu.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:06:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.otsu.lg.jp/shisei/z/index.html (label: 行財政改革)"
+    }
+  }
+}

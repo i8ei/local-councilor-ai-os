@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03485",
+  "prefecture": "岩手県",
+  "municipality": "普代村",
+  "official_home_url": "https://www.vill.fudai.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.vill.fudai.iwate.jp/docs/300.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.fudai.iwate.jp/docs/300.html",
+          "observed_on": "https://www.vill.fudai.iwate.jp/soshiki/gikai/",
+          "fetched_at": "2026-08-27T07:15:37Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.vill.fudai.iwate.jp/docs/300.html (label: 議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/fudai/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/fudai/d1w_reiki/reiki.html",
+          "observed_on": "https://www.vill.fudai.iwate.jp/top.html",
+          "fetched_at": "2026-08-27T07:14:28Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/fudai/d1w_reiki/reiki.html (label: 普代村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.fudai.iwate.jp/docs/143.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.fudai.iwate.jp/docs/143.html",
+          "observed_on": "https://www.vill.fudai.iwate.jp/gyousei/gyousei-info/",
+          "fetched_at": "2026-08-27T07:14:56Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.fudai.iwate.jp/docs/143.html (label: 普代村財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.fudai.iwate.jp/docs/143.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.fudai.iwate.jp/docs/143.html",
+          "observed_on": "https://www.vill.fudai.iwate.jp/gyousei/gyousei-info/",
+          "fetched_at": "2026-08-27T07:14:56Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.fudai.iwate.jp/docs/143.html (label: 普代村財政情報)"
+    }
+  }
+}

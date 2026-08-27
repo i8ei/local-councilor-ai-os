@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01210",
+  "prefecture": "北海道",
+  "municipality": "岩見沢市",
+  "official_home_url": "https://www.city.iwamizawa.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "https://iwamizawa-gikai.gijiroku.com/index.asp",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://iwamizawa-gikai.gijiroku.com/index.asp",
+          "observed_on": "https://www.city.iwamizawa.hokkaido.jp/soshiki/gikai_jimukyoku/iwamizawashigikai/index.html",
+          "fetched_at": "2026-08-27T05:58:06Z"
+        }
+      ],
+      "notes": "Observed voices at https://iwamizawa-gikai.gijiroku.com/index.asp (label: 会議録検索システム（外部ページへ）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/jorei_kisoku_yoko/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/jorei_kisoku_yoko/index.html",
+          "observed_on": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T05:57:53Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.iwamizawa.hokkaido.jp/shiseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T05:57:53Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T05:57:53Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

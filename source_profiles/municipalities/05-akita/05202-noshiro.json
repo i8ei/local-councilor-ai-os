@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "05202",
+  "prefecture": "秋田県",
+  "municipality": "能代市",
+  "official_home_url": "https://www.city.noshiro.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.noshiro.lg.jp/city/gikai/kaigiroku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.noshiro.lg.jp/city/gikai/kaigiroku/",
+          "observed_on": "https://www.city.noshiro.lg.jp/city/",
+          "fetched_at": "2026-08-27T07:28:15Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.noshiro.lg.jp/city/gikai/kaigiroku/ (label: 市議会会議録の検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.noshiro.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.noshiro.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.noshiro.lg.jp/city/",
+          "fetched_at": "2026-08-27T07:28:15Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.noshiro.lg.jp/reiki/reiki_menu.html (label: 能代市例規集（内容現在R8.3.31）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.noshiro.lg.jp/city/yosan-kessan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.noshiro.lg.jp/city/yosan-kessan/",
+          "observed_on": "https://www.city.noshiro.lg.jp/",
+          "fetched_at": "2026-08-27T07:27:59Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.noshiro.lg.jp/city/yosan-kessan/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.noshiro.lg.jp/city/yosan-kessan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.noshiro.lg.jp/city/yosan-kessan/",
+          "observed_on": "https://www.city.noshiro.lg.jp/",
+          "fetched_at": "2026-08-27T07:27:59Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.noshiro.lg.jp/city/yosan-kessan/ (label: 予算・決算)"
+    }
+  }
+}

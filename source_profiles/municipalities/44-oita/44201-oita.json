@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44201",
+  "prefecture": "大分県",
+  "municipality": "大分市",
+  "official_home_url": "http://www.city.oita.oita.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://krq502.legal-square.com/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krq502.legal-square.com/reiki/reiki.html",
+          "observed_on": "http://www.city.oita.oita.jp/",
+          "fetched_at": "2026-08-27T06:16:20Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://krq502.legal-square.com/reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
+          "observed_on": "http://www.city.oita.oita.jp/",
+          "fetched_at": "2026-08-27T06:16:20Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
+          "observed_on": "http://www.city.oita.oita.jp/",
+          "fetched_at": "2026-08-27T06:16:20Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html (label: 財政状況)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22207",
+  "prefecture": "静岡県",
+  "municipality": "富士宮市",
+  "official_home_url": "http://www.city.fujinomiya.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.fujinomiya.lg.jp/4010100000/p003486.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.fujinomiya.lg.jp/4010100000/p003486.html",
+          "observed_on": "http://www.city.fujinomiya.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:41:59Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.fujinomiya.lg.jp/4010100000/p003486.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.fujinomiya.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:41:59Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
+          "observed_on": "http://www.city.fujinomiya.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:41:59Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.fujinomiya.lg.jp/6010000000/p003006.html (label: 決算審査、健全化判断比率等審査)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15586",
+  "prefecture": "新潟県",
+  "municipality": "粟島浦村",
+  "official_home_url": "http://www.vill.awashimaura.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.vill.awashimaura.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.awashimaura.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.vill.awashimaura.lg.jp/information/administration/",
+          "fetched_at": "2026-08-27T06:06:59Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.vill.awashimaura.lg.jp/reiki_int/reiki_menu.html (label: 粟島浦村例規類集（外部リンク）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/03/27cd4b825c3e78b7b37f5f508bdaed22.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/03/27cd4b825c3e78b7b37f5f508bdaed22.pdf",
+          "observed_on": "https://www.vill.awashimaura.lg.jp/information/administration/",
+          "fetched_at": "2026-08-27T06:06:59Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/03/27cd4b825c3e78b7b37f5f508bdaed22.pdf (label: R8予算参考資料)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/07/8478df6ff9dfb7b51add33b80a93cebb-1.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/07/8478df6ff9dfb7b51add33b80a93cebb-1.pdf",
+          "observed_on": "https://www.vill.awashimaura.lg.jp/information/administration/",
+          "fetched_at": "2026-08-27T06:06:59Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.vill.awashimaura.lg.jp/wp-content/uploads/2026/07/8478df6ff9dfb7b51add33b80a93cebb-1.pdf (label: R6決算参考資料)"
+    }
+  }
+}

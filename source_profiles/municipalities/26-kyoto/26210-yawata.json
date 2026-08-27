@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26210",
+  "prefecture": "京都府",
+  "municipality": "八幡市",
+  "official_home_url": "http://www.city.yawata.kyoto.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.yawata.kyoto.jp/category/1-6-1-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.yawata.kyoto.jp/category/1-6-1-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.yawata.kyoto.jp/category/1-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:18:21Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.yawata.kyoto.jp/category/1-6-1-0-0-0-0-0-0-0.html (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.yawata.kyoto.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.yawata.kyoto.jp/reiki/reiki.html",
+          "observed_on": "http://www.city.yawata.kyoto.jp/",
+          "fetched_at": "2026-08-27T06:18:01Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.yawata.kyoto.jp/reiki/reiki.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.yawata.kyoto.jp/category/1-9-3-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.yawata.kyoto.jp/category/1-9-3-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.yawata.kyoto.jp/category/1-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:18:21Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.yawata.kyoto.jp/category/1-9-3-0-0-0-0-0-0-0.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.yawata.kyoto.jp/category/1-9-2-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.yawata.kyoto.jp/category/1-9-2-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.yawata.kyoto.jp/category/1-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:18:21Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.yawata.kyoto.jp/category/1-9-2-0-0-0-0-0-0-0.html (label: 決算)"
+    }
+  }
+}

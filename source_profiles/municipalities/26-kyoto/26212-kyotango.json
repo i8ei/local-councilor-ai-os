@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26212",
+  "prefecture": "京都府",
+  "municipality": "京丹後市",
+  "official_home_url": "http://www.city.kyotango.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/city.kyotango/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/city.kyotango/reiki_menu.html",
+          "observed_on": "https://www.city.kyotango.lg.jp/top/index.html",
+          "fetched_at": "2026-08-27T06:19:45Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/city.kyotango/reiki_menu.html (label: 京丹後市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
+          "observed_on": "https://www.city.kyotango.lg.jp/top/soshiki/index.html",
+          "fetched_at": "2026-08-27T06:19:08Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html (label: 財政課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
+          "observed_on": "https://www.city.kyotango.lg.jp/top/soshiki/index.html",
+          "fetched_at": "2026-08-27T06:19:08Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html (label: 財政課)"
+    }
+  }
+}

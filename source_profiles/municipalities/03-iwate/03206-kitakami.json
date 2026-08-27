@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03206",
+  "prefecture": "岩手県",
+  "municipality": "北上市",
+  "official_home_url": "https://www.city.kitakami.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/kitakami/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/kitakami/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/kitakami/reiki_menu.html",
+          "fetched_at": "2026-08-27T07:07:35Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/kitakami/reiki_menu.html for 北上市"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

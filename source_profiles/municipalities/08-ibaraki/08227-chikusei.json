@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08227",
+  "prefecture": "茨城県",
+  "municipality": "筑西市",
+  "official_home_url": "http://www.city.chikusei.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/chikusei/MinuteSearch.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/chikusei/MinuteSearch.html",
+          "observed_on": "http://www.city.chikusei.lg.jp/gyousei/gikai/",
+          "fetched_at": "2026-08-27T06:07:08Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chikusei/MinuteSearch.html (label: 本会議会議録検索)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.chikusei.lg.jp/data/doc/1779432759_doc_281_0.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.chikusei.lg.jp/data/doc/1779432759_doc_281_0.pdf",
+          "observed_on": "https://www.city.chikusei.lg.jp/gyousei/gikai/gikai-news/page013700.html",
+          "fetched_at": "2026-08-27T06:08:09Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.chikusei.lg.jp/data/doc/1779432759_doc_281_0.pdf (label: 処分事件報告について（令和７年度筑西市一般会計補正予算（第10号））)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

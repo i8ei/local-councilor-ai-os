@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "04581",
+  "prefecture": "宮城県",
+  "municipality": "女川町",
+  "official_home_url": "http://www.town.onagawa.miyagi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.town.onagawa.miyagi.dbsr.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.onagawa.miyagi.dbsr.jp/",
+          "observed_on": "https://gikai-town-onagawa.jp/",
+          "fetched_at": "2026-08-27T07:28:08Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.town.onagawa.miyagi.dbsr.jp/ (label: 会議録の公開について)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/onagawa/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/onagawa/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.onagawa.miyagi.jp/05_19.html",
+          "fetched_at": "2026-08-27T07:27:31Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/onagawa/d1w_reiki/reiki.html (label: 女川町例規集（外部サイト）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.onagawa.miyagi.jp/pdf/chosei/r07_bukka_koutou_katsuyoujokyo2.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.onagawa.miyagi.jp/pdf/chosei/r07_bukka_koutou_katsuyoujokyo2.pdf",
+          "observed_on": "http://www.town.onagawa.miyagi.jp/05_19.html",
+          "fetched_at": "2026-08-27T07:27:31Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.onagawa.miyagi.jp/pdf/chosei/r07_bukka_koutou_katsuyoujokyo2.pdf (label: 令和7年度補正予算分の重点支援地方交付金の活用状況（PDF形式：109KB）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.onagawa.miyagi.jp/05_19_02.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.onagawa.miyagi.jp/05_19_02.html",
+          "observed_on": "http://www.town.onagawa.miyagi.jp/05_19.html",
+          "fetched_at": "2026-08-27T07:27:31Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.onagawa.miyagi.jp/05_19_02.html (label: 財政状況)"
+    }
+  }
+}

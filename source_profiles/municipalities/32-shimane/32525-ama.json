@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "32525",
+  "prefecture": "島根県",
+  "municipality": "海士町",
+  "official_home_url": "http://www.town.ama.shimane.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.ama.shimane.jp/chousei/jourei",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ama.shimane.jp/chousei/jourei",
+          "observed_on": "http://www.town.ama.shimane.jp/chousei/",
+          "fetched_at": "2026-08-27T06:11:39Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.ama.shimane.jp/chousei/jourei (label: 条例・規則（例規集）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.ama.shimane.jp/chousei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ama.shimane.jp/chousei/zaisei/",
+          "observed_on": "http://www.town.ama.shimane.jp/chousei/",
+          "fetched_at": "2026-08-27T06:11:39Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.ama.shimane.jp/chousei/zaisei/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.ama.shimane.jp/chousei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ama.shimane.jp/chousei/zaisei/",
+          "observed_on": "http://www.town.ama.shimane.jp/chousei/",
+          "fetched_at": "2026-08-27T06:11:39Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.ama.shimane.jp/chousei/zaisei/ (label: 財政)"
+    }
+  }
+}

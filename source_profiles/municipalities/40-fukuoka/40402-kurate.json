@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40402",
+  "prefecture": "福岡県",
+  "municipality": "鞍手町",
+  "official_home_url": "http://www.town.kurate.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.kurate.lg.jp/gikai/minutes/2026.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kurate.lg.jp/gikai/minutes/2026.html",
+          "observed_on": "http://www.town.kurate.lg.jp/",
+          "fetched_at": "2026-08-27T04:22:51Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.kurate.lg.jp/gikai/minutes/2026.html (label: 令和8年議会会期日程・会議録の閲覧)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A916110C4",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A916110C4",
+          "observed_on": "http://www.town.kurate.lg.jp/nougyou/tyoujuhigai-nyusatsu.html",
+          "fetched_at": "2026-08-27T04:22:57Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A916110C4 (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

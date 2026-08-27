@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "19202",
+  "prefecture": "山梨県",
+  "municipality": "富士吉田市",
+  "official_home_url": "http://www.city.fujiyoshida.yamanashi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/fujiyoshida/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/fujiyoshida/SpTop.html",
+          "observed_on": "http://www.city.fujiyoshida.yamanashi.jp/site/gikai/",
+          "fetched_at": "2026-08-27T06:33:02Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/fujiyoshida/SpTop.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/fujiyoshida/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/fujiyoshida/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/fujiyoshida/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:42:11Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/fujiyoshida/reiki_menu.html for 富士吉田市"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

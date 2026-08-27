@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "31201",
+  "prefecture": "鳥取県",
+  "municipality": "鳥取市",
+  "official_home_url": "http://www.city.tottori.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
+          "observed_on": "http://www.city.tottori.lg.jp/site/shigikai/",
+          "fetched_at": "2026-08-27T05:57:42Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.city.tottori.tottori.dbsr.jp/index.php/ (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.tottori/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.tottori/reiki_menu.html",
+          "observed_on": "http://www.city.tottori.lg.jp/",
+          "fetched_at": "2026-08-27T05:56:32Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.tottori/reiki_menu.html (label: 条例・規則（例規集）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tottori.lg.jp/life/7/55/248/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tottori.lg.jp/life/7/55/248/",
+          "observed_on": "http://www.city.tottori.lg.jp/life/7/",
+          "fetched_at": "2026-08-27T05:57:18Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.tottori.lg.jp/life/7/55/248/ (label: 予算関係)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tottori.lg.jp/life/7/55/249/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tottori.lg.jp/life/7/55/249/",
+          "observed_on": "http://www.city.tottori.lg.jp/life/7/",
+          "fetched_at": "2026-08-27T05:57:18Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.tottori.lg.jp/life/7/55/249/ (label: 決算関連)"
+    }
+  }
+}

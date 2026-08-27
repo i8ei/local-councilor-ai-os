@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13421",
+  "prefecture": "東京都",
+  "municipality": "小笠原村",
+  "official_home_url": "http://www.vill.ogasawara.tokyo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.vill.ogasawara.tokyo.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.ogasawara.tokyo.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.ogasawara.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:56:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.vill.ogasawara.tokyo.jp/reiki_int/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
+          "observed_on": "http://www.vill.ogasawara.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:56:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.ogasawara.tokyo.jp/zaisei/ (label: 財政課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
+          "observed_on": "http://www.vill.ogasawara.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:56:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.ogasawara.tokyo.jp/zaisei/ (label: 財政課)"
+    }
+  }
+}

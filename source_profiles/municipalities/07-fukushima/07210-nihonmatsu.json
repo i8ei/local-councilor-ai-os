@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07210",
+  "prefecture": "福島県",
+  "municipality": "二本松市",
+  "official_home_url": "http://www.city.nihonmatsu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.nihonmatsu.lg.jp/shisei/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nihonmatsu.lg.jp/shisei/reiki/",
+          "observed_on": "http://www.city.nihonmatsu.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T07:54:42Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.nihonmatsu.lg.jp/shisei/reiki/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/yosan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/yosan/",
+          "observed_on": "http://www.city.nihonmatsu.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T07:54:42Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.nihonmatsu.lg.jp/shisei/zaisei/yosan/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/kessan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/kessan/",
+          "observed_on": "http://www.city.nihonmatsu.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T07:54:42Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.nihonmatsu.lg.jp/shisei/zaisei/kessan/ (label: 決算)"
+    }
+  }
+}

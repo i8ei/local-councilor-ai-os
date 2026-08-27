@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "23424",
+  "prefecture": "愛知県",
+  "municipality": "大治町",
+  "official_home_url": "http://www.town.oharu.aichi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.oharu.aichi.jp/item/6119.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.oharu.aichi.jp/item/6119.htm",
+          "observed_on": "http://www.town.oharu.aichi.jp/gikai/",
+          "fetched_at": "2026-08-27T08:12:45Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.oharu.aichi.jp/item/6119.htm (label: 会議録 令和8年3月定例会)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/oharu/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/oharu/reiki_menu.html",
+          "observed_on": "http://www.town.oharu.aichi.jp/",
+          "fetched_at": "2026-08-27T08:11:51Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/oharu/reiki_menu.html (label: 大治町例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

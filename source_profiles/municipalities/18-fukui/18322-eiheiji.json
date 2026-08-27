@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "18322",
+  "prefecture": "福井県",
+  "municipality": "永平寺町",
+  "official_home_url": "https://www.town.eiheiji.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.eiheiji-gikai.jp/minutes",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.eiheiji-gikai.jp/minutes",
+          "observed_on": "https://www.eiheiji-gikai.jp/",
+          "fetched_at": "2026-08-27T06:26:08Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.eiheiji-gikai.jp/minutes (label: 議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/eiheiji/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/eiheiji/reiki_menu.html",
+          "observed_on": "https://www.town.eiheiji.lg.jp/",
+          "fetched_at": "2026-08-27T06:23:29Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/eiheiji/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.eiheiji.lg.jp/950/p002868.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.eiheiji.lg.jp/950/p002868.html",
+          "observed_on": "https://www.town.eiheiji.lg.jp/200/300/index.html",
+          "fetched_at": "2026-08-27T06:23:41Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.eiheiji.lg.jp/950/p002868.html (label: 行財政改革の推進)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.eiheiji.lg.jp/200/300/303/p011799.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.eiheiji.lg.jp/200/300/303/p011799.html",
+          "observed_on": "https://www.town.eiheiji.lg.jp/200/300/index.html",
+          "fetched_at": "2026-08-27T06:23:41Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.eiheiji.lg.jp/200/300/303/p011799.html (label: 令和6年度決算の概要を公表)"
+    }
+  }
+}

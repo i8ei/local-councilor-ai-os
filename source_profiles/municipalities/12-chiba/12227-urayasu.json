@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12227",
+  "prefecture": "千葉県",
+  "municipality": "浦安市",
+  "official_home_url": "http://www.city.urayasu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://krg028.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://krg028.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.urayasu.lg.jp/",
+          "fetched_at": "2026-08-27T07:17:33Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://krg028.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 市例規集検索)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.urayasu.lg.jp/shisei/zaisei/yosan/1046970.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.urayasu.lg.jp/shisei/zaisei/yosan/1046970.html",
+          "observed_on": "http://www.city.urayasu.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:17:53Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.urayasu.lg.jp/shisei/zaisei/yosan/1046970.html (label: 令和8年度予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html",
+          "observed_on": "http://www.city.urayasu.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:17:53Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html (label: 市の決算)"
+    }
+  }
+}

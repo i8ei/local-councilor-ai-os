@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20588",
+  "prefecture": "長野県",
+  "municipality": "小川村",
+  "official_home_url": "http://www.vill.ogawa.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.vill.ogawa.nagano.jp/docs/64436.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.ogawa.nagano.jp/docs/64436.html",
+          "observed_on": "http://www.vill.ogawa.nagano.jp/village/parliament/",
+          "fetched_at": "2026-08-27T07:24:26Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.vill.ogawa.nagano.jp/docs/64436.html (label: 議会 会議録)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.ogawa.nagano.jp/village/finance/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.ogawa.nagano.jp/village/finance/",
+          "observed_on": "http://www.vill.ogawa.nagano.jp/village/",
+          "fetched_at": "2026-08-27T07:23:46Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.ogawa.nagano.jp/village/finance/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.ogawa.nagano.jp/docs/82870.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.ogawa.nagano.jp/docs/82870.html",
+          "observed_on": "http://www.vill.ogawa.nagano.jp/",
+          "fetched_at": "2026-08-27T07:23:29Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.vill.ogawa.nagano.jp/docs/82870.html (label: 【議会事務局からお知らせ】９月定例会招集 ～補正予算案、令和７年度決算認定を審議予定～)"
+    }
+  }
+}

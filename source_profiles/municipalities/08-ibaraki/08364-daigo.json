@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08364",
+  "prefecture": "茨城県",
+  "municipality": "大子町",
+  "official_home_url": "http://www.town.daigo.ibaraki.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.daigo.ibaraki.jp/page/page005508.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.daigo.ibaraki.jp/page/page005508.html",
+          "observed_on": "http://www.town.daigo.ibaraki.jp/page/dir003281.html",
+          "fetched_at": "2026-08-27T06:14:46Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.daigo.ibaraki.jp/page/page005508.html (label: 大子町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.daigo.ibaraki.jp/page/page002539.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.daigo.ibaraki.jp/page/page002539.html",
+          "observed_on": "http://www.town.daigo.ibaraki.jp/page/dir003281.html",
+          "fetched_at": "2026-08-27T06:14:46Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.daigo.ibaraki.jp/page/page002539.html (label: 大子町の予算書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.daigo.ibaraki.jp/page/page005044.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.daigo.ibaraki.jp/page/page005044.html",
+          "observed_on": "http://www.town.daigo.ibaraki.jp/page/dir003281.html",
+          "fetched_at": "2026-08-27T06:14:46Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.daigo.ibaraki.jp/page/page005044.html (label: 大子町の決算書)"
+    }
+  }
+}

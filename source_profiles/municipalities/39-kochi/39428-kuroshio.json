@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39428",
+  "prefecture": "高知県",
+  "municipality": "黒潮町",
+  "official_home_url": "http://www.town.kuroshio.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.kuroshio.lg.jp/pb/cont/281",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kuroshio.lg.jp/pb/cont/281",
+          "observed_on": "https://www.town.kuroshio.lg.jp/pb/cont/277",
+          "fetched_at": "2026-08-27T07:19:44Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.kuroshio.lg.jp/pb/cont/281 (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.kuroshio.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kuroshio.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.kuroshio.lg.jp/",
+          "fetched_at": "2026-08-27T07:19:26Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.kuroshio.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

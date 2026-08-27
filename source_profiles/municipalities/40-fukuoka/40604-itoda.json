@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40604",
+  "prefecture": "福岡県",
+  "municipality": "糸田町",
+  "official_home_url": "http://www.town.itoda.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/itoda/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/itoda/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.itoda.lg.jp/",
+          "fetched_at": "2026-08-27T04:25:44Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/itoda/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.itoda.lg.jp/administration/financial_affairs",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.itoda.lg.jp/administration/financial_affairs",
+          "observed_on": "https://www.town.itoda.lg.jp/administration/board/stream_gikai.html",
+          "fetched_at": "2026-08-27T04:25:48Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.itoda.lg.jp/administration/financial_affairs (label: 町の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.itoda.lg.jp/administration/financial_affairs",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.itoda.lg.jp/administration/financial_affairs",
+          "observed_on": "https://www.town.itoda.lg.jp/administration/board/stream_gikai.html",
+          "fetched_at": "2026-08-27T04:25:48Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.itoda.lg.jp/administration/financial_affairs (label: 町の財政)"
+    }
+  }
+}

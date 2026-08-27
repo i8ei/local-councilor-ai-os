@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01100",
+  "prefecture": "北海道",
+  "municipality": "札幌市",
+  "official_home_url": "https://www.city.sapporo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "http://sapporo.gijiroku.com/voices/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://sapporo.gijiroku.com/voices/",
+          "observed_on": "https://www.city.sapporo.jp/",
+          "fetched_at": "2026-08-27T05:57:00Z"
+        }
+      ],
+      "notes": "Observed voices at http://sapporo.gijiroku.com/voices/ (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.sapporo.jp/shisei/jorei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sapporo.jp/shisei/jorei/index.html",
+          "observed_on": "https://www.city.sapporo.jp/",
+          "fetched_at": "2026-08-27T05:57:00Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.sapporo.jp/shisei/jorei/index.html (label: 条例・規則・告示・統計)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
+          "observed_on": "https://www.city.sapporo.jp/",
+          "fetched_at": "2026-08-27T05:57:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html (label: 入札・契約)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
+          "observed_on": "https://www.city.sapporo.jp/",
+          "fetched_at": "2026-08-27T05:57:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html (label: 入札・契約)"
+    }
+  }
+}

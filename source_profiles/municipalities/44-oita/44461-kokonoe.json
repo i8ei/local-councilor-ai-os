@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44461",
+  "prefecture": "大分県",
+  "municipality": "九重町",
+  "official_home_url": "http://www.town.kokonoe.oita.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/kokonoe/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/kokonoe/reiki_menu.html",
+          "observed_on": "http://www.town.kokonoe.oita.jp/",
+          "fetched_at": "2026-08-27T06:22:53Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/kokonoe/reiki_menu.html (label: 九重町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kokonoe.oita.jp/docs/2021071300019/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kokonoe.oita.jp/docs/2021071300019/",
+          "observed_on": "http://www.town.kokonoe.oita.jp/categories/chousei/gyousei/",
+          "fetched_at": "2026-08-27T06:25:51Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.kokonoe.oita.jp/docs/2021071300019/ (label: 地方消費税交付金（社会保障財源化分）の予算額について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kokonoe.oita.jp/docs/2017020300056/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kokonoe.oita.jp/docs/2017020300056/",
+          "observed_on": "http://www.town.kokonoe.oita.jp/categories/chousei/gyousei/",
+          "fetched_at": "2026-08-27T06:25:51Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.kokonoe.oita.jp/docs/2017020300056/ (label: 地方消費税交付金（社会保障財源化分）の決算額について)"
+    }
+  }
+}

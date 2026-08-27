@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43510",
+  "prefecture": "熊本県",
+  "municipality": "相良村",
+  "official_home_url": "http://www.vill.sagara.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.vill.sagara.lg.jp/reiki/reiki_honbun/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.sagara.lg.jp/reiki/reiki_honbun/q479RG00000815_1.html",
+          "observed_on": "http://www.vill.sagara.lg.jp/reiki/reiki_miseko/miseko_default.html",
+          "fetched_at": "2026-08-27T05:48:35Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.vill.sagara.lg.jp/reiki/reiki_honbun/q479RG00000815_1.html (label: 相良村立義務教育学校設置条例)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

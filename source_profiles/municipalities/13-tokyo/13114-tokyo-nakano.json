@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13114",
+  "prefecture": "東京都",
+  "municipality": "中野区",
+  "official_home_url": "http://www.city.tokyo-nakano.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/nakano/WebView/rd/council_1.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/nakano/WebView/rd/council_1.html",
+          "observed_on": "https://kugikai-nakano.jp/",
+          "fetched_at": "2026-08-27T07:35:18Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/nakano/WebView/rd/council_1.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.tokyo-nakano.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tokyo-nakano.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.tokyo-nakano.lg.jp/",
+          "fetched_at": "2026-08-27T07:35:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.tokyo-nakano.lg.jp/reiki/reiki_menu.html (label: 条例・規則集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=10",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=10",
+          "observed_on": "https://kugikai-nakano.jp/",
+          "fetched_at": "2026-08-27T07:35:18Z"
+        }
+      ],
+      "notes": "Observed budget link at https://kugikai-nakano.jp/iinkai2.html?iinkai_id=10 (label: 予算特別委員会)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=11",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://kugikai-nakano.jp/iinkai2.html?iinkai_id=11",
+          "observed_on": "https://kugikai-nakano.jp/",
+          "fetched_at": "2026-08-27T07:35:18Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://kugikai-nakano.jp/iinkai2.html?iinkai_id=11 (label: 決算特別委員会)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "24441",
+  "prefecture": "三重県",
+  "municipality": "多気町",
+  "official_home_url": "http://www.town.taki.mie.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/kaigiroku/index.html",
+          "observed_on": "https://www.town.taki.mie.jp/life/chosei_joho/3909.html",
+          "fetched_at": "2026-08-27T06:04:54Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/kaigiroku/index.html (label: 一般質問会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.taki.mie.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.taki.mie.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.taki.mie.jp/life/index.html",
+          "fetched_at": "2026-08-27T06:03:12Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.taki.mie.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.taki.mie.jp/life/chosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.taki.mie.jp/life/chosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.town.taki.mie.jp/life/chosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:03:34Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.taki.mie.jp/life/chosei_joho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.taki.mie.jp/life/chosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.taki.mie.jp/life/chosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.town.taki.mie.jp/life/chosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:03:34Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.taki.mie.jp/life/chosei_joho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "37404",
+  "prefecture": "香川県",
+  "municipality": "多度津町",
+  "official_home_url": "http://www.town.tadotsu.kagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.tadotsu.kagawa.jp/choseijoho/tadotsuchogikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tadotsu.kagawa.jp/choseijoho/tadotsuchogikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.tadotsu.kagawa.jp/choseijoho/index.html",
+          "fetched_at": "2026-08-27T06:56:54Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.tadotsu.kagawa.jp/choseijoho/tadotsuchogikai/kaigiroku/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.tadotsu/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.tadotsu/reiki_menu.html",
+          "observed_on": "http://www.town.tadotsu.kagawa.jp/",
+          "fetched_at": "2026-08-27T06:56:38Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.tadotsu/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html",
+          "observed_on": "https://www.town.tadotsu.kagawa.jp/choseijoho/index.html",
+          "fetched_at": "2026-08-27T06:56:54Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html",
+          "observed_on": "https://www.town.tadotsu.kagawa.jp/choseijoho/index.html",
+          "fetched_at": "2026-08-27T06:56:54Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html (label: 予算・決算)"
+    }
+  }
+}

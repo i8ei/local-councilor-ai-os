@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26201",
+  "prefecture": "京都府",
+  "municipality": "福知山市",
+  "official_home_url": "https://www.city.fukuchiyama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.fukuchiyama.lg.jp/uploaded/life/88146_153921_misc.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fukuchiyama.lg.jp/uploaded/life/88146_153921_misc.pdf",
+          "observed_on": "https://www.city.fukuchiyama.lg.jp/soshiki/39/23842.html",
+          "fetched_at": "2026-08-27T06:14:54Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.fukuchiyama.lg.jp/uploaded/life/88146_153921_misc.pdf (label: 令和元年度第1回議事録 [PDFファイル／194KB])"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.fukuchiyama.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fukuchiyama.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.fukuchiyama.lg.jp/index2.html",
+          "fetched_at": "2026-08-27T06:14:10Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.fukuchiyama.lg.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.fukuchiyama.lg.jp/site/yosan/88131.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fukuchiyama.lg.jp/site/yosan/88131.html",
+          "observed_on": "https://www.city.fukuchiyama.lg.jp/life/4/",
+          "fetched_at": "2026-08-27T06:14:36Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.fukuchiyama.lg.jp/site/yosan/88131.html (label: 令和8年第3回（9月）定例会補正予算などの提案議案について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.fukuchiyama.lg.jp/life/4/22/89/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fukuchiyama.lg.jp/life/4/22/89/",
+          "observed_on": "https://www.city.fukuchiyama.lg.jp/life/4/",
+          "fetched_at": "2026-08-27T06:14:36Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.fukuchiyama.lg.jp/life/4/22/89/ (label: 決算)"
+    }
+  }
+}

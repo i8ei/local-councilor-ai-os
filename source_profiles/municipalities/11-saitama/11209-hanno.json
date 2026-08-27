@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11209",
+  "prefecture": "埼玉県",
+  "municipality": "飯能市",
+  "official_home_url": "https://www.city.hanno.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.hanno/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.hanno/reiki_menu.html",
+          "observed_on": "https://www.city.hanno.lg.jp/",
+          "fetched_at": "2026-08-27T06:47:46Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.hanno/reiki_menu.html (label: 例規類集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.hanno.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:48:06Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.hanno.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:48:06Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html (label: 財政)"
+    }
+  }
+}

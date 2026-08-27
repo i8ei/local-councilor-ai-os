@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "09345",
+  "prefecture": "栃木県",
+  "municipality": "芳賀町",
+  "official_home_url": "https://www.town.tochigi-haga.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/haga/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/haga/SpTop.html",
+          "observed_on": "https://www.town.tochigi-haga.lg.jp/",
+          "fetched_at": "2026-08-27T06:23:14Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/haga/SpTop.html (label: 議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/haga/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/haga/d1w_reiki/reiki.html",
+          "observed_on": "https://www.town.tochigi-haga.lg.jp/",
+          "fetched_at": "2026-08-27T06:23:14Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/haga/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
+          "observed_on": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/gikai/index.html",
+          "fetched_at": "2026-08-27T06:25:05Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
+          "observed_on": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/gikai/index.html",
+          "fetched_at": "2026-08-27T06:25:05Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html (label: 財政情報)"
+    }
+  }
+}

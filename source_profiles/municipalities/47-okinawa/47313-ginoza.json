@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47313",
+  "prefecture": "沖縄県",
+  "municipality": "宜野座村",
+  "official_home_url": "http://www.vill.ginoza.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
+          "observed_on": "https://www.vill.ginoza.okinawa.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:53:32Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html (label: 村議会議事録システムはこちら)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.ginoza/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.ginoza/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/vill.ginoza/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:57:15Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/vill.ginoza/reiki_menu.html for 宜野座村"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

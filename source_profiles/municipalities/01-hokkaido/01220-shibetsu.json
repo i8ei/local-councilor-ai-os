@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01220",
+  "prefecture": "北海道",
+  "municipality": "士別市",
+  "official_home_url": "https://www.city.shibetsu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/kaigiroku-giketukekka/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/kaigiroku-giketukekka/index.html",
+          "observed_on": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/index.html",
+          "fetched_at": "2026-08-27T06:00:26Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/kaigiroku-giketukekka/index.html (label: 会議録・議決結果)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/756.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/756.html",
+          "observed_on": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/index.html",
+          "fetched_at": "2026-08-27T06:00:26Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/756.html (label: 予算審査)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/1378.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/1378.html",
+          "observed_on": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/index.html",
+          "fetched_at": "2026-08-27T06:00:26Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/1378.html (label: 決算審査)"
+    }
+  }
+}

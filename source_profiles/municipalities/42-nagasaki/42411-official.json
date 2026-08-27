@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "42411",
+  "prefecture": "長崎県",
+  "municipality": "新上五島町",
+  "official_home_url": "http://official.shinkamigoto.net/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00002x4",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00002x4",
+          "observed_on": "http://official.shinkamigoto.net/goto_kurashi.php?wcid=i00001x1",
+          "fetched_at": "2026-08-27T06:07:40Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://official.shinkamigoto.net/goto_chosei.php?wcid=l00002x4 (label: ) 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A917E5D28",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A917E5D28",
+          "observed_on": "http://official.shinkamigoto.net/",
+          "fetched_at": "2026-08-27T05:29:03Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A917E5D28 (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
+          "observed_on": "http://official.shinkamigoto.net/",
+          "fetched_at": "2026-08-27T05:29:03Z"
+        }
+      ],
+      "notes": "Observed finance section at http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004 (label: 町の計画・行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
+          "observed_on": "http://official.shinkamigoto.net/",
+          "fetched_at": "2026-08-27T05:29:03Z"
+        }
+      ],
+      "notes": "Observed finance section at http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004 (label: 町の計画・行財政)"
+    }
+  }
+}

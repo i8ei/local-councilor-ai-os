@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39402",
+  "prefecture": "高知県",
+  "municipality": "佐川町",
+  "official_home_url": "http://www.town.sakawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.sakawa.lg.jp/life/dtl.php?hdnKey=3155",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.sakawa.lg.jp/life/dtl.php?hdnKey=3155",
+          "observed_on": "http://www.town.sakawa.lg.jp/",
+          "fetched_at": "2026-08-27T07:16:07Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.sakawa.lg.jp/life/dtl.php?hdnKey=3155 (label: 佐川町議会議事録を掲載しました)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.sakawa.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.sakawa.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.sakawa.lg.jp/",
+          "fetched_at": "2026-08-27T07:16:07Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.sakawa.lg.jp/reiki/reiki_menu.html (label: 佐川町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.sakawa.lg.jp/life/tyosei.php",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.sakawa.lg.jp/life/tyosei.php",
+          "observed_on": "http://www.town.sakawa.lg.jp/life/tyosei.php",
+          "fetched_at": "2026-08-27T07:16:34Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.sakawa.lg.jp/life/tyosei.php (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.sakawa.lg.jp/life/dtl.php?hdnKey=2975",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.sakawa.lg.jp/life/dtl.php?hdnKey=2975",
+          "observed_on": "http://www.town.sakawa.lg.jp/life/tyosei.php",
+          "fetched_at": "2026-08-27T07:16:34Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.sakawa.lg.jp/life/dtl.php?hdnKey=2975 (label: 【令和6年度決算】佐川町公会計に係る財務諸表の公表について)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40544",
+  "prefecture": "福岡県",
+  "municipality": "広川町",
+  "official_home_url": "http://www.town.hirokawa.fukuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.hirokawa.fukuoka.jp/soshiki/gikai_jimukyoku/1/1/1/1/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hirokawa.fukuoka.jp/soshiki/gikai_jimukyoku/1/1/1/1/index.html",
+          "observed_on": "https://www.town.hirokawa.fukuoka.jp/soshiki/gikai_jimukyoku/1/1/1/index.html",
+          "fetched_at": "2026-08-27T04:44:50Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.hirokawa.fukuoka.jp/soshiki/gikai_jimukyoku/1/1/1/1/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.hirokawa.fukuoka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.hirokawa.fukuoka/reiki_menu.html",
+          "observed_on": "http://www.town.hirokawa.fukuoka.jp/",
+          "fetched_at": "2026-08-27T04:25:11Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.hirokawa.fukuoka/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.hirokawa.fukuoka.jp/chosei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hirokawa.fukuoka.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.hirokawa.fukuoka.jp/chosei/index.html",
+          "fetched_at": "2026-08-27T04:44:46Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.hirokawa.fukuoka.jp/chosei/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.hirokawa.fukuoka.jp/chosei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hirokawa.fukuoka.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.hirokawa.fukuoka.jp/chosei/index.html",
+          "fetched_at": "2026-08-27T04:44:46Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.hirokawa.fukuoka.jp/chosei/zaisei/index.html (label: 財政)"
+    }
+  }
+}

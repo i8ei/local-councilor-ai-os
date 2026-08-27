@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01544",
+  "prefecture": "北海道",
+  "municipality": "津別町",
+  "official_home_url": "https://www.town.tsubetsu.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html",
+          "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/index.html",
+          "fetched_at": "2026-08-27T06:38:23Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A79F4AC94",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A79F4AC94",
+          "observed_on": "https://www.town.tsubetsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:37:10Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A79F4AC94 (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
+          "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/index.html",
+          "fetched_at": "2026-08-27T06:37:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
+          "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/index.html",
+          "fetched_at": "2026-08-27T06:37:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html (label: 財政情報)"
+    }
+  }
+}

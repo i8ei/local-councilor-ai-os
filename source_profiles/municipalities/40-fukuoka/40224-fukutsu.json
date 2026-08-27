@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40224",
+  "prefecture": "福岡県",
+  "municipality": "福津市",
+  "official_home_url": "http://www.city.fukutsu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/fukutsu/MinuteSearch.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/fukutsu/MinuteSearch.html",
+          "observed_on": "https://www.city.fukutsu.lg.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T04:15:14Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/fukutsu/MinuteSearch.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.fukutsu/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.fukutsu/reiki_menu.html",
+          "observed_on": "http://www.city.fukutsu.lg.jp/",
+          "fetched_at": "2026-08-27T04:15:11Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.fukutsu/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.fukutsu.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T05:57:24Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.fukutsu.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T05:57:24Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html (label: 財政)"
+    }
+  }
+}

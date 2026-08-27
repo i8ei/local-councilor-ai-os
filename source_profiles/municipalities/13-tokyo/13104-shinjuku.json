@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13104",
+  "prefecture": "東京都",
+  "municipality": "新宿区",
+  "official_home_url": "http://www.city.shinjuku.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.shinjuku.lg.jp/kusei/index09.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shinjuku.lg.jp/kusei/index09.html",
+          "observed_on": "http://www.city.shinjuku.lg.jp/",
+          "fetched_at": "2026-08-27T07:29:51Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.shinjuku.lg.jp/kusei/index09.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
+          "observed_on": "http://www.city.shinjuku.lg.jp/",
+          "fetched_at": "2026-08-27T07:29:51Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.shinjuku.lg.jp/kusei/index06.html (label: 財政・会計・公有財産)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
+          "observed_on": "http://www.city.shinjuku.lg.jp/",
+          "fetched_at": "2026-08-27T07:29:51Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.shinjuku.lg.jp/kusei/index06.html (label: 財政・会計・公有財産)"
+    }
+  }
+}

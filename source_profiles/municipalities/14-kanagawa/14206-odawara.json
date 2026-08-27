@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14206",
+  "prefecture": "神奈川県",
+  "municipality": "小田原市",
+  "official_home_url": "http://www.city.odawara.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
+          "observed_on": "http://www.city.odawara.kanagawa.jp/",
+          "fetched_at": "2026-08-27T07:59:39Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.odawara.kanagawa.jp/field/municipality/finance/ (label: 予算 / 決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
+          "observed_on": "http://www.city.odawara.kanagawa.jp/",
+          "fetched_at": "2026-08-27T07:59:39Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.odawara.kanagawa.jp/field/municipality/finance/ (label: 予算 / 決算)"
+    }
+  }
+}

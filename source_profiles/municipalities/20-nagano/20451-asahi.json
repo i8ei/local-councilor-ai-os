@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20451",
+  "prefecture": "長野県",
+  "municipality": "朝日村",
+  "official_home_url": "http://www.vill.asahi.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.vill.asahi.nagano.jp/special/asahimuragikai/giketsu_kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.asahi.nagano.jp/special/asahimuragikai/giketsu_kaigiroku/index.html",
+          "observed_on": "https://www.vill.asahi.nagano.jp/special/asahimuragikai/index.html",
+          "fetched_at": "2026-08-27T07:18:56Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.vill.asahi.nagano.jp/special/asahimuragikai/giketsu_kaigiroku/index.html (label: 議決・会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.asahi.nagano/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.asahi.nagano/reiki_menu.html",
+          "observed_on": "http://www.vill.asahi.nagano.jp/",
+          "fetched_at": "2026-08-27T07:18:14Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.asahi.nagano/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.asahi.nagano.jp/official/sonseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.asahi.nagano.jp/official/sonseijoho/zaisei/index.html",
+          "observed_on": "https://www.vill.asahi.nagano.jp/official/sonseijoho/index.html",
+          "fetched_at": "2026-08-27T07:18:38Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.asahi.nagano.jp/official/sonseijoho/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.asahi.nagano.jp/official/sonseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.asahi.nagano.jp/official/sonseijoho/zaisei/index.html",
+          "observed_on": "https://www.vill.asahi.nagano.jp/official/sonseijoho/index.html",
+          "fetched_at": "2026-08-27T07:18:38Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.asahi.nagano.jp/official/sonseijoho/zaisei/index.html (label: 財政)"
+    }
+  }
+}

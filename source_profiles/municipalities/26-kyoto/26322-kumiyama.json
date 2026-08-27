@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26322",
+  "prefecture": "京都府",
+  "municipality": "久御山町",
+  "official_home_url": "http://www.town.kumiyama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.kumiyama.lg.jp/selfcontents/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kumiyama.lg.jp/selfcontents/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.kumiyama.lg.jp/",
+          "fetched_at": "2026-08-27T06:20:26Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.kumiyama.lg.jp/selfcontents/reiki_int/reiki_menu.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.kumiyama.lg.jp/category/4-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:20:59Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.kumiyama.lg.jp/category/4-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:20:59Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html (label: 財政状況)"
+    }
+  }
+}

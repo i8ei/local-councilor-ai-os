@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20407",
+  "prefecture": "長野県",
+  "municipality": "阿智村",
+  "official_home_url": "https://www.vill.achi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.achi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.achi/reiki_menu.html",
+          "observed_on": "https://www.vill.achi.lg.jp/",
+          "fetched_at": "2026-08-27T07:09:07Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.achi/reiki_menu.html (label: 阿智村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.achi.lg.jp/life/3/3/49/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.achi.lg.jp/life/3/3/49/",
+          "observed_on": "https://www.vill.achi.lg.jp/",
+          "fetched_at": "2026-08-27T07:09:07Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.achi.lg.jp/life/3/3/49/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.achi.lg.jp/life/3/3/49/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.achi.lg.jp/life/3/3/49/",
+          "observed_on": "https://www.vill.achi.lg.jp/",
+          "fetched_at": "2026-08-27T07:09:07Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.achi.lg.jp/life/3/3/49/ (label: 財政)"
+    }
+  }
+}

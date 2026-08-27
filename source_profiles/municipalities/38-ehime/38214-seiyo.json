@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "38214",
+  "prefecture": "愛媛県",
+  "municipality": "西予市",
+  "official_home_url": "http://www.city.seiyo.ehime.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/yosann/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/yosann/index.html",
+          "observed_on": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/index.html",
+          "fetched_at": "2026-08-27T07:03:21Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/yosann/index.html (label: 予算編成方針・予算の概要)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/403.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/403.html",
+          "observed_on": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/index.html",
+          "fetched_at": "2026-08-27T07:03:21Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/403.html (label: 【報告】公営企業に係る経営比較分析表（令和6年度決算）の公表)"
+    }
+  }
+}

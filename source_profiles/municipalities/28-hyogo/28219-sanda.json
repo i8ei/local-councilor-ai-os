@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28219",
+  "prefecture": "兵庫県",
+  "municipality": "三田市",
+  "official_home_url": "http://www.city.sanda.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krb500.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krb500.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.sanda.lg.jp/",
+          "fetched_at": "2026-08-27T06:50:00Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krb500.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 例規集検索)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.city.sanda.lg.jp/shisei_joho/index.html",
+          "fetched_at": "2026-08-27T06:50:17Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.city.sanda.lg.jp/shisei_joho/index.html",
+          "fetched_at": "2026-08-27T06:50:17Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

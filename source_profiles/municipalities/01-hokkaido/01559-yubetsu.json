@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01559",
+  "prefecture": "北海道",
+  "municipality": "湧別町",
+  "official_home_url": "https://www.town.yubetsu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=15",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=15",
+          "observed_on": "https://www.town.yubetsu.lg.jp/administration/topics/",
+          "fetched_at": "2026-08-27T06:40:02Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.town.yubetsu.lg.jp/administration/town/category/?category=15 (label: 例規・各種計画)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
+          "observed_on": "https://www.town.yubetsu.lg.jp/administration/topics/",
+          "fetched_at": "2026-08-27T06:40:02Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.yubetsu.lg.jp/administration/town/category/?category=16 (label: 財政・公営企業)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
+          "observed_on": "https://www.town.yubetsu.lg.jp/administration/topics/",
+          "fetched_at": "2026-08-27T06:40:02Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.yubetsu.lg.jp/administration/town/category/?category=16 (label: 財政・公営企業)"
+    }
+  }
+}

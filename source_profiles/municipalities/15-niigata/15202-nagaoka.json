@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15202",
+  "prefecture": "新潟県",
+  "municipality": "長岡市",
+  "official_home_url": "http://www.city.nagaoka.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.nagaoka.niigata.jp/shisei/cate03/jyourei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.nagaoka.niigata.jp/shisei/cate03/jyourei/",
+          "observed_on": "http://www.city.nagaoka.niigata.jp/shisei/cate03/index.html",
+          "fetched_at": "2026-08-27T05:57:40Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.nagaoka.niigata.jp/shisei/cate03/jyourei/ (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/",
+          "observed_on": "http://www.city.nagaoka.niigata.jp/shisei/cate03/index.html",
+          "fetched_at": "2026-08-27T05:57:40Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/",
+          "observed_on": "http://www.city.nagaoka.niigata.jp/shisei/cate03/index.html",
+          "fetched_at": "2026-08-27T05:57:40Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/ (label: 財政)"
+    }
+  }
+}

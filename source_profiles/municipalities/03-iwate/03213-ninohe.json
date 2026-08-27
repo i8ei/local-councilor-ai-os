@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03213",
+  "prefecture": "岩手県",
+  "municipality": "二戸市",
+  "official_home_url": "https://www.city.ninohe.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.ninohe.lg.jp/info/20",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ninohe.lg.jp/info/20",
+          "observed_on": "https://www.city.ninohe.lg.jp/menu/21",
+          "fetched_at": "2026-08-27T07:09:56Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.ninohe.lg.jp/info/20 (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.ninohe.lg.jp/menu/24",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ninohe.lg.jp/menu/24",
+          "observed_on": "https://www.city.ninohe.lg.jp/",
+          "fetched_at": "2026-08-27T07:09:06Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.ninohe.lg.jp/menu/24 (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

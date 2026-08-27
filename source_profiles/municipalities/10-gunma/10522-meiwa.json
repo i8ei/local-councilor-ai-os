@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10522",
+  "prefecture": "群馬県",
+  "municipality": "明和町",
+  "official_home_url": "http://www.town.meiwa.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/meiwa/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/meiwa/reiki_menu.html",
+          "observed_on": "http://www.town.meiwa.gunma.jp/",
+          "fetched_at": "2026-08-27T06:44:03Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/meiwa/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.meiwa.gunma.jp/material/files/group/7/syuushiyosannsyo.doc",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.meiwa.gunma.jp/material/files/group/7/syuushiyosannsyo.doc",
+          "observed_on": "https://www.town.meiwa.gunma.jp/life/topics/5810.html",
+          "fetched_at": "2026-08-27T06:44:50Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.meiwa.gunma.jp/material/files/group/7/syuushiyosannsyo.doc (label: 収支予算書（様式第3号） (Wordファイル: 21.0KB))"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.meiwa.gunma.jp/life/gyoseijoho/12/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.meiwa.gunma.jp/life/gyoseijoho/12/index.html",
+          "observed_on": "https://www.town.meiwa.gunma.jp/life/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:44:26Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.meiwa.gunma.jp/life/gyoseijoho/12/index.html (label: 財政)"
+    }
+  }
+}

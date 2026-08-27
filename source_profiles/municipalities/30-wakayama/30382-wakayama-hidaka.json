@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "30382",
+  "prefecture": "和歌山県",
+  "municipality": "日高町",
+  "official_home_url": "http://www.town.wakayama-hidaka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.wakayama-hidaka.lg.jp/other-contents/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.wakayama-hidaka.lg.jp/other-contents/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.wakayama-hidaka.lg.jp/",
+          "fetched_at": "2026-08-27T07:23:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.wakayama-hidaka.lg.jp/other-contents/reiki_int/reiki_menu.html (label: 町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
+          "observed_on": "http://www.town.wakayama-hidaka.lg.jp/",
+          "fetched_at": "2026-08-27T07:23:00Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
+          "observed_on": "http://www.town.wakayama-hidaka.lg.jp/",
+          "fetched_at": "2026-08-27T07:23:00Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ (label: 行財政)"
+    }
+  }
+}

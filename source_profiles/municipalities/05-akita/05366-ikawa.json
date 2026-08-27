@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "05366",
+  "prefecture": "秋田県",
+  "municipality": "井川町",
+  "official_home_url": "http://www.town.ikawa.akita.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.ikawa.akita.jp/page/4365.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ikawa.akita.jp/page/4365.html",
+          "observed_on": "http://www.town.ikawa.akita.jp/life/6/",
+          "fetched_at": "2026-08-27T07:34:44Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.ikawa.akita.jp/page/4365.html (label: 令和7年度補正予算分物価高騰対応重点支援地方創生臨時交付金事業の活用状況について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.ikawa.akita.jp/life/6/30/111/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ikawa.akita.jp/life/6/30/111/",
+          "observed_on": "http://www.town.ikawa.akita.jp/life/6/",
+          "fetched_at": "2026-08-27T07:34:44Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.ikawa.akita.jp/life/6/30/111/ (label: 予算・決算)"
+    }
+  }
+}

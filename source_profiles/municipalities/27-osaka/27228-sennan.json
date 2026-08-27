@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27228",
+  "prefecture": "大阪府",
+  "municipality": "泉南市",
+  "official_home_url": "http://www.city.sennan.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://www.ur-net.go.jp/chintai_portal/tenant/west/80_199.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.ur-net.go.jp/chintai_portal/tenant/west/80_199.html",
+          "observed_on": "http://www.city.sennan.lg.jp/",
+          "fetched_at": "2026-08-27T06:36:00Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://www.ur-net.go.jp/chintai_portal/tenant/west/80_199.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/sennan/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/sennan/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.sennan.lg.jp/",
+          "fetched_at": "2026-08-27T06:36:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/sennan/d1w_reiki/reiki.html (label: 泉南市例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

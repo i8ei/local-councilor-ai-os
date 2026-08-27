@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44322",
+  "prefecture": "大分県",
+  "municipality": "姫島村",
+  "official_home_url": "http://www.himeshima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.himeshima.jp/kurashi/shuugyou-shoureikin/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.himeshima.jp/kurashi/shuugyou-shoureikin/",
+          "observed_on": "http://www.himeshima.jp/",
+          "fetched_at": "2026-08-27T06:22:15Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.himeshima.jp/kurashi/shuugyou-shoureikin/ (label: 就業奨励金)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.himeshima.jp/about/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.himeshima.jp/about/zaisei/",
+          "observed_on": "http://www.himeshima.jp/about/son-gikai/",
+          "fetched_at": "2026-08-27T06:23:00Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.himeshima.jp/about/zaisei/ (label: 財政状況資料集)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.himeshima.jp/about/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.himeshima.jp/about/zaisei/",
+          "observed_on": "http://www.himeshima.jp/about/son-gikai/",
+          "fetched_at": "2026-08-27T06:23:00Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.himeshima.jp/about/zaisei/ (label: 財政状況資料集)"
+    }
+  }
+}

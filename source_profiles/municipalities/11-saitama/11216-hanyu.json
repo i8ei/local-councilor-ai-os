@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11216",
+  "prefecture": "埼玉県",
+  "municipality": "羽生市",
+  "official_home_url": "http://www.city.hanyu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95855",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95855",
+          "observed_on": "http://www.city.hanyu.lg.jp/",
+          "fetched_at": "2026-08-27T06:50:09Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95855 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/yosan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/yosan/",
+          "observed_on": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/",
+          "fetched_at": "2026-08-27T06:50:50Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/yosan/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/kessan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/kessan/",
+          "observed_on": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/",
+          "fetched_at": "2026-08-27T06:50:50Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/kessan/ (label: 決算)"
+    }
+  }
+}

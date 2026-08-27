@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47207",
+  "prefecture": "沖縄県",
+  "municipality": "石垣市",
+  "official_home_url": "https://www.city.ishigaki.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krq907.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krq907.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "https://www.city.ishigaki.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:48:28Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krq907.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 例規検索システム)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/index.html",
+          "fetched_at": "2026-08-27T06:48:55Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/index.html",
+          "fetched_at": "2026-08-27T06:48:55Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    }
+  }
+}

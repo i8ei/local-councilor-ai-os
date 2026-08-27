@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "35213",
+  "prefecture": "山口県",
+  "municipality": "美祢市",
+  "official_home_url": "http://www2.city.mine.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www2.city.mine.lg.jp/gyosei/shigikai/11159.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www2.city.mine.lg.jp/gyosei/shigikai/11159.html",
+          "observed_on": "https://www2.city.mine.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:35:27Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www2.city.mine.lg.jp/gyosei/shigikai/11159.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www2.city.mine.lg.jp/section/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www2.city.mine.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "http://www2.city.mine.lg.jp/",
+          "fetched_at": "2026-08-27T06:35:03Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www2.city.mine.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www2.city.mine.lg.jp/gyosei/joho/3788.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www2.city.mine.lg.jp/gyosei/joho/3788.html",
+          "observed_on": "https://www2.city.mine.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:35:27Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www2.city.mine.lg.jp/gyosei/joho/3788.html (label: 平成30年度一般会計補正予算に係る専決処分の不承認とその後の措置等について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www2.city.mine.lg.jp/gyosei/joho/3751.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www2.city.mine.lg.jp/gyosei/joho/3751.html",
+          "observed_on": "https://www2.city.mine.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:35:27Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www2.city.mine.lg.jp/gyosei/joho/3751.html (label: 平成29年度美祢市一般会計決算及び平成29年度美祢市農業集落排水事業特別会計決算不認定に係る措置の報告について)"
+    }
+  }
+}

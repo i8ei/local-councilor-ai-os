@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "46222",
+  "prefecture": "鹿児島県",
+  "municipality": "奄美市",
+  "official_home_url": "https://www.city.amami.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.amami.lg.jp/somu/shise/reki/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.amami.lg.jp/somu/shise/reki/index.html",
+          "observed_on": "https://www.city.amami.lg.jp/shise/index.html",
+          "fetched_at": "2026-08-27T06:42:14Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.amami.lg.jp/somu/shise/reki/index.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.amami.lg.jp/zaisei/shise/kokoku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.amami.lg.jp/zaisei/shise/kokoku.html",
+          "observed_on": "https://www.city.amami.lg.jp/",
+          "fetched_at": "2026-08-27T06:41:11Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.amami.lg.jp/zaisei/shise/kokoku.html (label: 奄美市有料広告について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.amami.lg.jp/zaisei/shise/kokoku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.amami.lg.jp/zaisei/shise/kokoku.html",
+          "observed_on": "https://www.city.amami.lg.jp/",
+          "fetched_at": "2026-08-27T06:41:11Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.amami.lg.jp/zaisei/shise/kokoku.html (label: 奄美市有料広告について)"
+    }
+  }
+}

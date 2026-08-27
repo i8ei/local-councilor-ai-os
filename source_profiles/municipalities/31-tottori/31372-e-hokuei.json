@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "31372",
+  "prefecture": "鳥取県",
+  "municipality": "北栄町",
+  "official_home_url": "http://www.e-hokuei.net/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kensakusystem.jp/hokuei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kensakusystem.jp/hokuei/",
+          "observed_on": "http://www.e-hokuei.net/site/gikai/",
+          "fetched_at": "2026-08-27T05:59:50Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kensakusystem.jp/hokuei/ (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.e-hokuei.net/chosei/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.e-hokuei.net/chosei/reiki/reiki_menu.html",
+          "observed_on": "http://www.e-hokuei.net/life/6/",
+          "fetched_at": "2026-08-27T05:59:05Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.e-hokuei.net/chosei/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.e-hokuei.net/life/6/28/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.e-hokuei.net/life/6/28/",
+          "observed_on": "http://www.e-hokuei.net/",
+          "fetched_at": "2026-08-27T05:58:46Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.e-hokuei.net/life/6/28/ (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.e-hokuei.net/life/6/28/118/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.e-hokuei.net/life/6/28/118/",
+          "observed_on": "http://www.e-hokuei.net/life/6/",
+          "fetched_at": "2026-08-27T05:59:05Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.e-hokuei.net/life/6/28/118/ (label: 決算・財政状況)"
+    }
+  }
+}

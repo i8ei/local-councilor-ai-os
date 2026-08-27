@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "45405",
+  "prefecture": "宮崎県",
+  "municipality": "川南町",
+  "official_home_url": "http://www.town.kawaminami.miyazaki.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.kawaminami.miyazaki.jp/site/gikai/1028.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kawaminami.miyazaki.jp/site/gikai/1028.html",
+          "observed_on": "http://www.town.kawaminami.miyazaki.jp/site/gikai/",
+          "fetched_at": "2026-08-27T06:31:21Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.kawaminami.miyazaki.jp/site/gikai/1028.html (label: 川南町議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kawaminami/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kawaminami/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.kawaminami.miyazaki.jp/",
+          "fetched_at": "2026-08-27T06:31:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kawaminami/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kawaminami.miyazaki.jp/soshiki/14/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kawaminami.miyazaki.jp/soshiki/14/",
+          "observed_on": "http://www.town.kawaminami.miyazaki.jp/",
+          "fetched_at": "2026-08-27T06:31:00Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.kawaminami.miyazaki.jp/soshiki/14/ (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kawaminami.miyazaki.jp/soshiki/14/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kawaminami.miyazaki.jp/soshiki/14/",
+          "observed_on": "http://www.town.kawaminami.miyazaki.jp/",
+          "fetched_at": "2026-08-27T06:31:00Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.kawaminami.miyazaki.jp/soshiki/14/ (label: 財政情報)"
+    }
+  }
+}

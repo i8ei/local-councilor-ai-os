@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15210",
+  "prefecture": "新潟県",
+  "municipality": "十日町市",
+  "official_home_url": "http://www.city.tokamachi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
+          "observed_on": "https://www.city.tokamachi.lg.jp/shisei_machizukuri/tokamachishigikai/index.html",
+          "fetched_at": "2026-08-27T05:57:58Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.tokamachi.lg.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tokamachi.lg.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.tokamachi.lg.jp/",
+          "fetched_at": "2026-08-27T05:57:31Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.tokamachi.lg.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01571",
+  "prefecture": "北海道",
+  "municipality": "豊浦町",
+  "official_home_url": "https://www.town.toyoura.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.toyoura.hokkaido.jp/contents/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.toyoura.hokkaido.jp/contents/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.toyoura.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:42:23Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.toyoura.hokkaido.jp/contents/reiki/reiki_menu.html (label: 豊浦町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
+          "observed_on": "https://www.town.toyoura.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:42:23Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html (label: 財政・予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
+          "observed_on": "https://www.town.toyoura.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:42:23Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html (label: 財政・予算・決算)"
+    }
+  }
+}

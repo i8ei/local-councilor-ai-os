@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11219",
+  "prefecture": "埼玉県",
+  "municipality": "上尾市",
+  "official_home_url": "http://www.city.ageo.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/ageo/WebView/rd/council.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/ageo/WebView/rd/council.html",
+          "observed_on": "http://www.city.ageo.lg.jp/site/shigikai/",
+          "fetched_at": "2026-08-27T06:52:50Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/ageo/WebView/rd/council.html (label: 議会中継)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95858",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95858",
+          "observed_on": "http://www.city.ageo.lg.jp/",
+          "fetched_at": "2026-08-27T06:51:43Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95858 (label: 上尾市例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ageo.lg.jp/page/079118083101.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ageo.lg.jp/page/079118083101.html",
+          "observed_on": "http://www.city.ageo.lg.jp/",
+          "fetched_at": "2026-08-27T06:51:43Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.ageo.lg.jp/page/079118083101.html (label: 決算審査・健全化判断比率審査・内部統制評価報告書審査等の結果)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "23229",
+  "prefecture": "愛知県",
+  "municipality": "豊明市",
+  "official_home_url": "http://www.city.toyoake.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.city.toyoake.aichi.dbsr.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.toyoake.aichi.dbsr.jp/",
+          "observed_on": "http://www.city.toyoake.lg.jp/3172.htm",
+          "fetched_at": "2026-08-27T08:06:53Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.city.toyoake.aichi.dbsr.jp/ (label: 本会議会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/toyoake/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/toyoake/reiki_menu.html",
+          "observed_on": "http://www.city.toyoake.lg.jp/",
+          "fetched_at": "2026-08-27T08:05:47Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/toyoake/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.toyoake.lg.jp/2934.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.toyoake.lg.jp/2934.htm",
+          "observed_on": "http://www.city.toyoake.lg.jp/1004.htm",
+          "fetched_at": "2026-08-27T08:06:11Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.toyoake.lg.jp/2934.htm (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.toyoake.lg.jp/2935.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.toyoake.lg.jp/2935.htm",
+          "observed_on": "http://www.city.toyoake.lg.jp/1004.htm",
+          "fetched_at": "2026-08-27T08:06:11Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.toyoake.lg.jp/2935.htm (label: 決算)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15307",
+  "prefecture": "新潟県",
+  "municipality": "聖籠町",
+  "official_home_url": "http://www.town.seiro.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.seiro.niigata.jp/7/11/2877.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.seiro.niigata.jp/7/11/2877.html",
+          "observed_on": "https://www.town.seiro.niigata.jp/7/11/index.html",
+          "fetched_at": "2026-08-27T06:04:45Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.seiro.niigata.jp/7/11/2877.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.seiro/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.seiro/reiki_menu.html",
+          "observed_on": "https://www.town.seiro.niigata.jp/7/index.html",
+          "fetched_at": "2026-08-27T06:04:27Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.seiro/reiki_menu.html (label: 聖籠町例規集（外部リンク）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.seiro.niigata.jp/7/7/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.seiro.niigata.jp/7/7/index.html",
+          "observed_on": "https://www.town.seiro.niigata.jp/7/index.html",
+          "fetched_at": "2026-08-27T06:04:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.seiro.niigata.jp/7/7/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.seiro.niigata.jp/7/7/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.seiro.niigata.jp/7/7/index.html",
+          "observed_on": "https://www.town.seiro.niigata.jp/7/index.html",
+          "fetched_at": "2026-08-27T06:04:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.seiro.niigata.jp/7/7/index.html (label: 財政)"
+    }
+  }
+}

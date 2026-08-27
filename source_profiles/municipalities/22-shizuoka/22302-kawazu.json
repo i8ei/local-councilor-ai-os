@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22302",
+  "prefecture": "静岡県",
+  "municipality": "河津町",
+  "official_home_url": "http://www.town.kawazu.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.kawazu.shizuoka.jp/16069/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/16069/",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/category/topics/page/2/",
+          "fetched_at": "2026-08-27T07:51:44Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.kawazu.shizuoka.jp/16069/ (label: 町議会からのお知らせ（令和７年第４回定例会、令和８年第１回臨時会 会議録の掲載）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kawazu/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kawazu/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.kawazu.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:50:16Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kawazu/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/",
+          "fetched_at": "2026-08-27T07:50:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/ (label: 財政・給与)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/",
+          "fetched_at": "2026-08-27T07:50:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/ (label: 財政・給与)"
+    }
+  }
+}

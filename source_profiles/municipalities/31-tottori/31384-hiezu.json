@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "31384",
+  "prefecture": "鳥取県",
+  "municipality": "日吉津村",
+  "official_home_url": "http://www.hiezu.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.hiezu.jp/clc/y59vcnkh",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.hiezu.jp/clc/y59vcnkh",
+          "observed_on": "https://www.hiezu.jp/category/%e5%90%84%e8%aa%b2%e4%b8%80%e8%a6%a7/%e8%ad%b0%e4%bc%9a%e4%ba%8b%e5%8b%99%e5%b1%80/",
+          "fetched_at": "2026-08-27T06:03:27Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.hiezu.jp/clc/y59vcnkh (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.hiezu.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.hiezu.jp/reiki/",
+          "observed_on": "http://www.hiezu.jp/",
+          "fetched_at": "2026-08-27T05:59:40Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.hiezu.jp/reiki/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

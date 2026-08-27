@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20211",
+  "prefecture": "長野県",
+  "municipality": "中野市",
+  "official_home_url": "http://www.city.nakano.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/nakano/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/nakano/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.nakano.nagano.jp/",
+          "fetched_at": "2026-08-27T06:57:59Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/nakano/d1w_reiki/reiki.html (label: 例規集（条例・規則検索）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.nakano.nagano.jp/docs/2016031000023/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.nakano.nagano.jp/docs/2016031000023/",
+          "observed_on": "http://www.city.nakano.nagano.jp/categories/bunya/gyosei/",
+          "fetched_at": "2026-08-27T06:58:21Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.nakano.nagano.jp/docs/2016031000023/ (label: 予算概要)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.nakano.nagano.jp/docs/2025093000025/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.nakano.nagano.jp/docs/2025093000025/",
+          "observed_on": "http://www.city.nakano.nagano.jp/categories/bunya/gyosei/",
+          "fetched_at": "2026-08-27T06:58:21Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.nakano.nagano.jp/docs/2025093000025/ (label: 決算)"
+    }
+  }
+}

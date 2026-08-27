@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02304",
+  "prefecture": "青森県",
+  "municipality": "蓬田村",
+  "official_home_url": "https://www.vill.yomogita.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.vill.yomogita.lg.jp/sonsei/gikai/gijiroku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.yomogita.lg.jp/sonsei/gikai/gijiroku.html",
+          "observed_on": "https://www.vill.yomogita.lg.jp/",
+          "fetched_at": "2026-08-27T06:58:25Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.vill.yomogita.lg.jp/sonsei/gikai/gijiroku.html (label: 議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.yomogita/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.yomogita/reiki_menu.html",
+          "observed_on": "https://www.vill.yomogita.lg.jp/",
+          "fetched_at": "2026-08-27T06:58:25Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.yomogita/reiki_menu.html (label: 蓬田村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
+          "observed_on": "https://www.vill.yomogita.lg.jp/",
+          "fetched_at": "2026-08-27T06:58:25Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.yomogita.lg.jp/sonsei/zaisei/ (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
+          "observed_on": "https://www.vill.yomogita.lg.jp/",
+          "fetched_at": "2026-08-27T06:58:25Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.yomogita.lg.jp/sonsei/zaisei/ (label: 財政情報)"
+    }
+  }
+}

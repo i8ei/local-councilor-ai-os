@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27205",
+  "prefecture": "大阪府",
+  "municipality": "吹田市",
+  "official_home_url": "http://www.city.suita.osaka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/suita/WebView/rd/council_1.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/suita/WebView/rd/council_1.html",
+          "observed_on": "http://www.city.suita.osaka.jp/",
+          "fetched_at": "2026-08-27T06:27:12Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/suita/WebView/rd/council_1.html (label: 市議会9月定例会の日程・中継はこちら)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.suita.osaka.jp/shisei/1020093/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.suita.osaka.jp/shisei/1020093/index.html",
+          "observed_on": "http://www.city.suita.osaka.jp/",
+          "fetched_at": "2026-08-27T06:27:12Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.suita.osaka.jp/shisei/1020093/index.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
+          "observed_on": "http://www.city.suita.osaka.jp/",
+          "fetched_at": "2026-08-27T06:27:12Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.suita.osaka.jp/shisei/1018870/index.html (label: 市の財政・会計)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
+          "observed_on": "http://www.city.suita.osaka.jp/",
+          "fetched_at": "2026-08-27T06:27:12Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.suita.osaka.jp/shisei/1018870/index.html (label: 市の財政・会計)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12441",
+  "prefecture": "千葉県",
+  "municipality": "大多喜町",
+  "official_home_url": "http://www.town.otaki.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.otaki.chiba.jp/gyousei/gikai/1423.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.otaki.chiba.jp/gyousei/gikai/1423.html",
+          "observed_on": "https://www.town.otaki.chiba.jp/gyousei/gikai/index.html",
+          "fetched_at": "2026-08-27T07:28:43Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.otaki.chiba.jp/gyousei/gikai/1423.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/otaki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/otaki/reiki_menu.html",
+          "observed_on": "http://www.town.otaki.chiba.jp/",
+          "fetched_at": "2026-08-27T07:28:13Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/otaki/reiki_menu.html (label: 大多喜町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html",
+          "observed_on": "https://www.town.otaki.chiba.jp/gyousei/index.html",
+          "fetched_at": "2026-08-27T07:28:30Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html (label: 財政・政策・計画)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html",
+          "observed_on": "https://www.town.otaki.chiba.jp/gyousei/index.html",
+          "fetched_at": "2026-08-27T07:28:30Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html (label: 財政・政策・計画)"
+    }
+  }
+}

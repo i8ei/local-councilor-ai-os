@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07408",
+  "prefecture": "福島県",
+  "municipality": "猪苗代町",
+  "official_home_url": "http://www.town.inawashiro.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.inawashiro.fukushima.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.inawashiro.fukushima.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.inawashiro.fukushima.jp/index2.html",
+          "fetched_at": "2026-08-27T07:59:04Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.inawashiro.fukushima.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
+          "observed_on": "http://www.town.inawashiro.fukushima.jp/life/5/",
+          "fetched_at": "2026-08-27T07:59:53Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.inawashiro.fukushima.jp/life/5/22/ (label: 財政・例規)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
+          "observed_on": "http://www.town.inawashiro.fukushima.jp/life/5/",
+          "fetched_at": "2026-08-27T07:59:53Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.inawashiro.fukushima.jp/life/5/22/ (label: 財政・例規)"
+    }
+  }
+}

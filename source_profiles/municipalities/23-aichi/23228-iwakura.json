@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "23228",
+  "prefecture": "愛知県",
+  "municipality": "岩倉市",
+  "official_home_url": "http://www.city.iwakura.aichi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85833172",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85833172",
+          "observed_on": "https://www.city.iwakura.aichi.jp/0000006318.html",
+          "fetched_at": "2026-08-27T08:05:27Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85833172 (label: こちら （別ウインドウで開く）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.iwakura.aichi.jp/0000007773.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.iwakura.aichi.jp/0000007773.html",
+          "observed_on": "https://www.city.iwakura.aichi.jp/category/5-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T08:05:07Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.iwakura.aichi.jp/0000007773.html (label: 令和8年度予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.iwakura.aichi.jp/0000007065.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.iwakura.aichi.jp/0000007065.html",
+          "observed_on": "http://www.city.iwakura.aichi.jp/",
+          "fetched_at": "2026-08-27T08:04:49Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.iwakura.aichi.jp/0000007065.html (label: 水道事業および公共下水道事業の決算をお知らせします)"
+    }
+  }
+}

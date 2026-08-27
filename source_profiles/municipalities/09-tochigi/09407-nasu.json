@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "09407",
+  "prefecture": "栃木県",
+  "municipality": "那須町",
+  "official_home_url": "http://www.town.nasu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.nasu/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.nasu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.nasu/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:34:23Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/town.nasu/reiki_menu.html for 那須町"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
+          "observed_on": "https://www.town.nasu.lg.jp/0258/info-0000004015-1.html",
+          "fetched_at": "2026-08-27T06:24:59Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.nasu.lg.jp/0047/genre1-1-001.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
+          "observed_on": "https://www.town.nasu.lg.jp/0258/info-0000004015-1.html",
+          "fetched_at": "2026-08-27T06:24:59Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.nasu.lg.jp/0047/genre1-1-001.html (label: 行財政)"
+    }
+  }
+}

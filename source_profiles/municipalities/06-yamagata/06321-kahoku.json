@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06321",
+  "prefecture": "山形県",
+  "municipality": "河北町",
+  "official_home_url": "http://www.town.kahoku.yamagata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kahoku/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kahoku/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.kahoku.yamagata.jp/",
+          "fetched_at": "2026-08-27T07:42:25Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kahoku/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
+          "observed_on": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/index.html",
+          "fetched_at": "2026-08-27T07:42:46Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
+          "observed_on": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/index.html",
+          "fetched_at": "2026-08-27T07:42:46Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html (label: 行財政)"
+    }
+  }
+}

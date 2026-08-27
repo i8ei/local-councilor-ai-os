@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "33213",
+  "prefecture": "岡山県",
+  "municipality": "赤磐市",
+  "official_home_url": "http://www.city.akaiwa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.akaiwa.lg.jp/shisei/gikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akaiwa.lg.jp/shisei/gikai/kaigiroku/index.html",
+          "observed_on": "https://www.city.akaiwa.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:17:08Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.akaiwa.lg.jp/shisei/gikai/kaigiroku/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/akaiwa_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/akaiwa_reiki/reiki_menu.html",
+          "observed_on": "http://www.city.akaiwa.lg.jp/",
+          "fetched_at": "2026-08-27T06:16:41Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/akaiwa_reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.akaiwa.lg.jp/shisei/gyousei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akaiwa.lg.jp/shisei/gyousei/yosan/index.html",
+          "observed_on": "https://www.city.akaiwa.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:17:08Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.akaiwa.lg.jp/shisei/gyousei/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html",
+          "observed_on": "https://www.city.akaiwa.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:17:08Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html (label: 決算)"
+    }
+  }
+}

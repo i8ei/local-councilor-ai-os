@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01472",
+  "prefecture": "北海道",
+  "municipality": "幌加内町",
+  "official_home_url": "https://www.town.horokanai.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.horokanai.hokkaido.jp/gikai/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.horokanai.hokkaido.jp/gikai/",
+          "observed_on": "https://www.town.horokanai.hokkaido.jp/gikai/",
+          "fetched_at": "2026-08-27T06:30:39Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.horokanai.hokkaido.jp/gikai/ (label: 会議録・審議結果)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://houmu.h-chosonkai.gr.jp/~reikidb/top/search/t:0.42313800%201501574809",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://houmu.h-chosonkai.gr.jp/~reikidb/top/search/t:0.42313800%201501574809",
+          "observed_on": "https://www.town.horokanai.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:29:34Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/top/search/t:0.42313800%201501574809 (label: 幌加内町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan",
+          "observed_on": "https://www.town.horokanai.hokkaido.jp/gikai/",
+          "fetched_at": "2026-08-27T06:30:39Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan (label: 予算審査特別委員会)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan",
+          "observed_on": "https://www.town.horokanai.hokkaido.jp/gikai/",
+          "fetched_at": "2026-08-27T06:30:39Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan (label: 決算審査特別委員会)"
+    }
+  }
+}

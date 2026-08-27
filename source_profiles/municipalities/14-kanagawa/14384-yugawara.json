@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14384",
+  "prefecture": "神奈川県",
+  "municipality": "湯河原町",
+  "official_home_url": "http://www.town.yugawara.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.town.yugawara.kanagawa.dbsr.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yugawara.kanagawa.dbsr.jp/",
+          "observed_on": "http://www.town.yugawara.kanagawa.jp/site/yugawara-gikai/",
+          "fetched_at": "2026-08-27T08:11:15Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.town.yugawara.kanagawa.dbsr.jp/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/yugawara/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/yugawara/reiki_menu.html",
+          "observed_on": "http://www.town.yugawara.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:10:01Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/yugawara/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

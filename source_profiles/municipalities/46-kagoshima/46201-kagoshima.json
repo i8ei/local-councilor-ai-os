@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "46201",
+  "prefecture": "鹿児島県",
+  "municipality": "鹿児島市",
+  "official_home_url": "http://www.city.kagoshima.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://g-reiki.city.kagoshima.lg.jp/kagoshima2/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://g-reiki.city.kagoshima.lg.jp/kagoshima2/reiki_menu.html",
+          "observed_on": "http://www.city.kagoshima.lg.jp/",
+          "fetched_at": "2026-08-27T06:34:59Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://g-reiki.city.kagoshima.lg.jp/kagoshima2/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kagoshima.lg.jp/kikakuzaisei/zaisei/zaisei/shise/yosan/oensite/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kagoshima.lg.jp/kikakuzaisei/zaisei/zaisei/shise/yosan/oensite/index.html",
+          "observed_on": "http://www.city.kagoshima.lg.jp/",
+          "fetched_at": "2026-08-27T06:34:59Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.kagoshima.lg.jp/kikakuzaisei/zaisei/zaisei/shise/yosan/oensite/index.html (label: ふるさと納税)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kagoshima.lg.jp/shise/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kagoshima.lg.jp/shise/yosan/index.html",
+          "observed_on": "http://www.city.kagoshima.lg.jp/shise/index.html",
+          "fetched_at": "2026-08-27T06:35:17Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.kagoshima.lg.jp/shise/yosan/index.html (label: 予算・決算・財政)"
+    }
+  }
+}

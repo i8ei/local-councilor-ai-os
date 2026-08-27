@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "05213",
+  "prefecture": "秋田県",
+  "municipality": "北秋田市",
+  "official_home_url": "http://www.city.kitaakita.akita.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/kitaakita/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/kitaakita/SpTop.html",
+          "observed_on": "http://www.city.kitaakita.akita.jp/",
+          "fetched_at": "2026-08-27T07:31:15Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kitaakita/SpTop.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.kitaakita.akita.jp/ex/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kitaakita.akita.jp/ex/reiki/reiki.html",
+          "observed_on": "http://www.city.kitaakita.akita.jp/",
+          "fetched_at": "2026-08-27T07:31:15Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.kitaakita.akita.jp/ex/reiki/reiki.html (label: 北秋田市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
+          "observed_on": "http://www.city.kitaakita.akita.jp/",
+          "fetched_at": "2026-08-27T07:31:15Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei (label: 財務部財政課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
+          "observed_on": "http://www.city.kitaakita.akita.jp/",
+          "fetched_at": "2026-08-27T07:31:15Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei (label: 財務部財政課)"
+    }
+  }
+}

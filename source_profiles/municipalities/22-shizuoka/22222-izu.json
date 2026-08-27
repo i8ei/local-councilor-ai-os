@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22222",
+  "prefecture": "静岡県",
+  "municipality": "伊豆市",
+  "official_home_url": "http://www.city.izu.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8573C81C",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8573C81C",
+          "observed_on": "http://www.city.izu.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:46:26Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8573C81C (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.izu.shizuoka.jp/shiseijoho/8/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.izu.shizuoka.jp/shiseijoho/8/index.html",
+          "observed_on": "https://www.city.izu.shizuoka.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:46:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.izu.shizuoka.jp/shiseijoho/8/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.izu.shizuoka.jp/shiseijoho/8/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.izu.shizuoka.jp/shiseijoho/8/index.html",
+          "observed_on": "https://www.city.izu.shizuoka.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:46:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.izu.shizuoka.jp/shiseijoho/8/index.html (label: 行財政)"
+    }
+  }
+}

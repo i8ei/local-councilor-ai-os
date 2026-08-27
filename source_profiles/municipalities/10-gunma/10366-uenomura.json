@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10366",
+  "prefecture": "群馬県",
+  "municipality": "上野村",
+  "official_home_url": "http://www.uenomura.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/uenomura/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/uenomura/reiki_menu.html",
+          "observed_on": "http://www.uenomura.jp/admin/politics/",
+          "fetched_at": "2026-08-27T06:37:45Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/uenomura/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.uenomura.jp/admin/politics/zaisei/kouhyou.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.uenomura.jp/admin/politics/zaisei/kouhyou.html",
+          "observed_on": "http://www.uenomura.jp/sitemap.html",
+          "fetched_at": "2026-08-27T06:40:23Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.uenomura.jp/admin/politics/zaisei/kouhyou.html (label: 財政状況の公表等)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.uenomura.jp/admin/politics/zaisei/kessan.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.uenomura.jp/admin/politics/zaisei/kessan.html",
+          "observed_on": "http://www.uenomura.jp/sitemap.html",
+          "fetched_at": "2026-08-27T06:40:23Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.uenomura.jp/admin/politics/zaisei/kessan.html (label: 決算)"
+    }
+  }
+}

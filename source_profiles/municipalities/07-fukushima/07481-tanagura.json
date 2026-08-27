@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07481",
+  "prefecture": "福島県",
+  "municipality": "棚倉町",
+  "official_home_url": "http://www.town.tanagura.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.tanagura.fukushima.jp/chosei/gikai/page000763.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tanagura.fukushima.jp/chosei/gikai/page000763.html",
+          "observed_on": "http://www.town.tanagura.fukushima.jp/chosei/",
+          "fetched_at": "2026-08-27T08:03:03Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.tanagura.fukushima.jp/chosei/gikai/page000763.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.tanagura.fukushima.jp/search.php?keyword=%E4%BE%8B%E8%A6%8F%E9%9B%86",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tanagura.fukushima.jp/search.php?keyword=%E4%BE%8B%E8%A6%8F%E9%9B%86",
+          "observed_on": "http://www.town.tanagura.fukushima.jp/",
+          "fetched_at": "2026-08-27T08:02:41Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.town.tanagura.fukushima.jp/search.php?keyword=%E4%BE%8B%E8%A6%8F%E9%9B%86 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinoyosan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinoyosan/",
+          "observed_on": "http://www.town.tanagura.fukushima.jp/chosei/",
+          "fetched_at": "2026-08-27T08:03:03Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinoyosan/ (label: 町の予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/",
+          "observed_on": "http://www.town.tanagura.fukushima.jp/chosei/",
+          "fetched_at": "2026-08-27T08:03:03Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/ (label: 町の決算)"
+    }
+  }
+}

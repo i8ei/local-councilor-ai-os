@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27231",
+  "prefecture": "大阪府",
+  "municipality": "大阪狭山市",
+  "official_home_url": "http://www.city.osakasayama.osaka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/osakasayama/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/osakasayama/SpTop.html",
+          "observed_on": "http://www.city.osakasayama.osaka.jp/",
+          "fetched_at": "2026-08-27T06:37:05Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/osakasayama/SpTop.html (label: 議会会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/osakasayama/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/osakasayama/reiki_menu.html",
+          "observed_on": "http://www.city.osakasayama.osaka.jp/",
+          "fetched_at": "2026-08-27T06:37:05Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/osakasayama/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "37341",
+  "prefecture": "香川県",
+  "municipality": "三木町",
+  "official_home_url": "http://www.town.miki.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.miki.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.miki.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.miki.lg.jp/index2.php",
+          "fetched_at": "2026-08-27T06:55:02Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.miki.lg.jp/reiki_int/reiki_menu.html (label: 三木町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.miki.lg.jp/life/list.php?list.php?hdnSKBN=B&hdnCat=116",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.miki.lg.jp/life/list.php?list.php?hdnSKBN=B&hdnCat=116",
+          "observed_on": "http://www.town.miki.lg.jp/index2.php",
+          "fetched_at": "2026-08-27T06:55:02Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.miki.lg.jp/life/list.php?list.php?hdnSKBN=B&hdnCat=116 (label: 町行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.miki.lg.jp/life/list.php?list.php?hdnSKBN=B&hdnCat=116",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.miki.lg.jp/life/list.php?list.php?hdnSKBN=B&hdnCat=116",
+          "observed_on": "http://www.town.miki.lg.jp/index2.php",
+          "fetched_at": "2026-08-27T06:55:02Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.miki.lg.jp/life/list.php?list.php?hdnSKBN=B&hdnCat=116 (label: 町行財政)"
+    }
+  }
+}

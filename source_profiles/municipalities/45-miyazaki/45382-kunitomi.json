@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "45382",
+  "prefecture": "宮崎県",
+  "municipality": "国富町",
+  "official_home_url": "http://www.town.kunitomi.miyazaki.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.kunitomi.miyazaki.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kunitomi.miyazaki.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.kunitomi.miyazaki.jp/main/",
+          "fetched_at": "2026-08-27T06:28:36Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.kunitomi.miyazaki.jp/reiki_int/reiki_menu.html (label: 国富町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
+          "observed_on": "http://www.town.kunitomi.miyazaki.jp/main/administration/hurusato/page001255.html",
+          "fetched_at": "2026-08-27T06:28:51Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html (label: 予算や決算で使用される用語の解説について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
+          "observed_on": "http://www.town.kunitomi.miyazaki.jp/main/administration/hurusato/page001255.html",
+          "fetched_at": "2026-08-27T06:28:51Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html (label: 予算や決算で使用される用語の解説について)"
+    }
+  }
+}

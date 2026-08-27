@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28225",
+  "prefecture": "兵庫県",
+  "municipality": "朝来市",
+  "official_home_url": "http://www.city.asago.hyogo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.asago.hyogo.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.asago.hyogo.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.asago.hyogo.jp/",
+          "fetched_at": "2026-08-27T06:52:37Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.asago.hyogo.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.asago.hyogo.jp/reiki/reiki_honbun/r166RG00001111.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.asago.hyogo.jp/reiki/reiki_honbun/r166RG00001111.html",
+          "observed_on": "http://www.city.asago.hyogo.jp/reiki/reiki_honbun/r166RG00001111.html",
+          "fetched_at": "2026-08-27T06:55:07Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.asago.hyogo.jp/reiki/reiki_honbun/r166RG00001111.html (label: 第19条 (財政運営))"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.asago.hyogo.jp/reiki/reiki_honbun/r166RG00001111.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.asago.hyogo.jp/reiki/reiki_honbun/r166RG00001111.html",
+          "observed_on": "http://www.city.asago.hyogo.jp/reiki/reiki_honbun/r166RG00001111.html",
+          "fetched_at": "2026-08-27T06:55:07Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.asago.hyogo.jp/reiki/reiki_honbun/r166RG00001111.html (label: 第19条 (財政運営))"
+    }
+  }
+}

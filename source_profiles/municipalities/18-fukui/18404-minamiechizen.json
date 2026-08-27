@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "18404",
+  "prefecture": "福井県",
+  "municipality": "南越前町",
+  "official_home_url": "https://www.town.minamiechizen.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.minamiechizen/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.minamiechizen/reiki_menu.html",
+          "observed_on": "https://www.town.minamiechizen.lg.jp/",
+          "fetched_at": "2026-08-27T06:24:58Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.minamiechizen/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
+          "observed_on": "https://www.town.minamiechizen.lg.jp/",
+          "fetched_at": "2026-08-27T06:24:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.minamiechizen.lg.jp/tyousei/702/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
+          "observed_on": "https://www.town.minamiechizen.lg.jp/",
+          "fetched_at": "2026-08-27T06:24:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.minamiechizen.lg.jp/tyousei/702/index.html (label: 財政)"
+    }
+  }
+}

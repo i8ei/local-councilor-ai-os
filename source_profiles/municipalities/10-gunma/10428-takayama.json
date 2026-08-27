@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10428",
+  "prefecture": "群馬県",
+  "municipality": "高山村",
+  "official_home_url": "http://vill.takayama.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://vill.takayama.gunma.jp/gikai/gijiroku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://vill.takayama.gunma.jp/gikai/gijiroku.html",
+          "observed_on": "http://vill.takayama.gunma.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:45:03Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://vill.takayama.gunma.jp/gikai/gijiroku.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/takayama/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/takayama/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/takayama/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:46:25Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/takayama/reiki_menu.html for 高山村"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

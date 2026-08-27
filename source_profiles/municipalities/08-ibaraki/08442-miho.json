@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08442",
+  "prefecture": "茨城県",
+  "municipality": "美浦村",
+  "official_home_url": "http://www.vill.miho.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.vill.miho.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.miho.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.miho.lg.jp/",
+          "fetched_at": "2026-08-27T06:13:07Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.vill.miho.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/",
+          "observed_on": "http://www.vill.miho.lg.jp/gyousei/",
+          "fetched_at": "2026-08-27T06:13:27Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/",
+          "observed_on": "http://www.vill.miho.lg.jp/gyousei/",
+          "fetched_at": "2026-08-27T06:13:27Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/ (label: 決算)"
+    }
+  }
+}

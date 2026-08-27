@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40646",
+  "prefecture": "福岡県",
+  "municipality": "上毛町",
+  "official_home_url": "http://www.town.koge.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.koge.lg.jp/chosei/gikai/3022.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.koge.lg.jp/chosei/gikai/3022.html",
+          "observed_on": "https://www.town.koge.lg.jp/chosei/gikai/index.html",
+          "fetched_at": "2026-08-27T04:28:40Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.koge.lg.jp/chosei/gikai/3022.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A9161613A",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A9161613A",
+          "observed_on": "http://www.town.koge.lg.jp/",
+          "fetched_at": "2026-08-27T04:28:37Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A9161613A (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.koge.lg.jp/sitemap.html",
+          "fetched_at": "2026-08-27T04:28:39Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.koge.lg.jp/chosei/zaisei/index.html (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.koge.lg.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.koge.lg.jp/sitemap.html",
+          "fetched_at": "2026-08-27T04:28:39Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.koge.lg.jp/chosei/zaisei/index.html (label: 財政情報)"
+    }
+  }
+}

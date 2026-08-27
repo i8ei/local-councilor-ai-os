@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20306",
+  "prefecture": "長野県",
+  "municipality": "南相木村",
+  "official_home_url": "http://www.minamiaiki.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/minamiaiki/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/minamiaiki/d1w_reiki/reiki.html",
+          "observed_on": "http://www.minamiaiki.jp/mainpage.htm",
+          "fetched_at": "2026-08-27T07:02:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/minamiaiki/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.minamiaiki.jp/gyousei.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.minamiaiki.jp/gyousei.htm",
+          "observed_on": "http://www.minamiaiki.jp/gyousei.htm",
+          "fetched_at": "2026-08-27T07:02:43Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.minamiaiki.jp/gyousei.htm (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.minamiaiki.jp/gyousei.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.minamiaiki.jp/gyousei.htm",
+          "observed_on": "http://www.minamiaiki.jp/gyousei.htm",
+          "fetched_at": "2026-08-27T07:02:43Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.minamiaiki.jp/gyousei.htm (label: 財政)"
+    }
+  }
+}

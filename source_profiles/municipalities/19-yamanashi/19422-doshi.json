@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "19422",
+  "prefecture": "山梨県",
+  "municipality": "道志村",
+  "official_home_url": "http://www.vill.doshi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7",
+          "observed_on": "http://www.vill.doshi.lg.jp/ka/info.php?if_id=713&ka_id=7",
+          "fetched_at": "2026-08-27T06:49:29Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7 (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/doshi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/doshi/reiki_menu.html",
+          "observed_on": "http://www.vill.doshi.lg.jp/",
+          "fetched_at": "2026-08-27T06:48:40Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/doshi/reiki_menu.html (label: 道志村 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
+          "observed_on": "http://www.vill.doshi.lg.jp/",
+          "fetched_at": "2026-08-27T06:48:40Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 (label: 給与・財政・行革)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
+          "observed_on": "http://www.vill.doshi.lg.jp/",
+          "fetched_at": "2026-08-27T06:48:40Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 (label: 給与・財政・行革)"
+    }
+  }
+}

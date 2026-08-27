@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "16208",
+  "prefecture": "富山県",
+  "municipality": "砺波市",
+  "official_home_url": "http://www.city.tonami.toyama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/tonami/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/tonami/reiki_menu.html",
+          "observed_on": "http://www.city.tonami.toyama.jp/",
+          "fetched_at": "2026-08-27T06:09:03Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/tonami/reiki_menu.html (label: 砺波市例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

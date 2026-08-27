@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "25442",
+  "prefecture": "滋賀県",
+  "municipality": "甲良町",
+  "official_home_url": "http://www.kouratown.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kouratown.jp/cyonososhiki/gikaijimukyoku/gijikakari/chogikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kouratown.jp/cyonososhiki/gikaijimukyoku/gijikakari/chogikai/kaigiroku/index.html",
+          "observed_on": "https://www.kouratown.jp/cyonososhiki/gikaijimukyoku/gijikakari/chogikai/index.html",
+          "fetched_at": "2026-08-27T06:13:12Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kouratown.jp/cyonososhiki/gikaijimukyoku/gijikakari/chogikai/kaigiroku/index.html (label: 議会の日程、質問、議決結果、会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.kouratown.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kouratown.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.kouratown.jp/",
+          "fetched_at": "2026-08-27T06:12:59Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.kouratown.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

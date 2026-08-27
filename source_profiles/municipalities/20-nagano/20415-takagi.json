@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20415",
+  "prefecture": "長野県",
+  "municipality": "喬木村",
+  "official_home_url": "https://www.vill.takagi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/takagi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/takagi/reiki_menu.html",
+          "observed_on": "https://www.vill.takagi.lg.jp/top.html",
+          "fetched_at": "2026-08-27T07:12:47Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/takagi/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.takagi.lg.jp/soshiki/ou_KikakuZaiseiKa/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.takagi.lg.jp/soshiki/ou_KikakuZaiseiKa/",
+          "observed_on": "https://www.vill.takagi.lg.jp/doc/2026081000010/",
+          "fetched_at": "2026-08-27T07:14:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.takagi.lg.jp/soshiki/ou_KikakuZaiseiKa/ (label: 企画財政課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.takagi.lg.jp/soshiki/ou_KikakuZaiseiKa/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.takagi.lg.jp/soshiki/ou_KikakuZaiseiKa/",
+          "observed_on": "https://www.vill.takagi.lg.jp/doc/2026081000010/",
+          "fetched_at": "2026-08-27T07:14:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.takagi.lg.jp/soshiki/ou_KikakuZaiseiKa/ (label: 企画財政課)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02301",
+  "prefecture": "青森県",
+  "municipality": "平内町",
+  "official_home_url": "https://www.town.hiranai.aomori.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.hiranai.aomori.jp/chosei/gikai/1422.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hiranai.aomori.jp/chosei/gikai/1422.html",
+          "observed_on": "https://www.town.hiranai.aomori.jp/chosei/gikai/index.html",
+          "fetched_at": "2026-08-27T06:58:36Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.hiranai.aomori.jp/chosei/gikai/1422.html (label: 定例会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/hiranai/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/hiranai/d1w_reiki/reiki.html",
+          "observed_on": "https://www.town.hiranai.aomori.jp/",
+          "fetched_at": "2026-08-27T06:58:06Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/hiranai/d1w_reiki/reiki.html (label: 平内町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.hiranai.aomori.jp/chosei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hiranai.aomori.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.hiranai.aomori.jp/chosei/index.html",
+          "fetched_at": "2026-08-27T06:58:22Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.hiranai.aomori.jp/chosei/zaisei/index.html (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.hiranai.aomori.jp/chosei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hiranai.aomori.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.hiranai.aomori.jp/chosei/index.html",
+          "fetched_at": "2026-08-27T06:58:22Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.hiranai.aomori.jp/chosei/zaisei/index.html (label: 財政状況)"
+    }
+  }
+}

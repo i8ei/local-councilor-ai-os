@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07464",
+  "prefecture": "福島県",
+  "municipality": "泉崎村",
+  "official_home_url": "http://www.vill.izumizaki.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.vill.izumizaki.fukushima.jp/muragikai/page000511.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.izumizaki.fukushima.jp/muragikai/page000511.html",
+          "observed_on": "http://www.vill.izumizaki.fukushima.jp/",
+          "fetched_at": "2026-08-27T08:02:13Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.vill.izumizaki.fukushima.jp/muragikai/page000511.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F772A",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F772A",
+          "observed_on": "http://www.vill.izumizaki.fukushima.jp/",
+          "fetched_at": "2026-08-27T08:02:13Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F772A (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
+          "observed_on": "http://www.vill.izumizaki.fukushima.jp/gyosei/",
+          "fetched_at": "2026-08-27T08:02:47Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/ (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
+          "observed_on": "http://www.vill.izumizaki.fukushima.jp/gyosei/",
+          "fetched_at": "2026-08-27T08:02:47Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/ (label: 財政情報)"
+    }
+  }
+}

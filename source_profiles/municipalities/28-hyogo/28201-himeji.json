@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28201",
+  "prefecture": "兵庫県",
+  "municipality": "姫路市",
+  "official_home_url": "http://www.city.himeji.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.himeji.lg.jp/shisei/category/5-1-5-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.himeji.lg.jp/shisei/category/5-1-5-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.himeji.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:43:35Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.himeji.lg.jp/shisei/category/5-1-5-0-0-0-0-0-0-0.html (label: 法制（条例・規則・要綱など）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.himeji.lg.jp/shisei/category/5-5-7-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.himeji.lg.jp/shisei/category/5-5-7-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.himeji.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:43:35Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.himeji.lg.jp/shisei/category/5-5-7-0-0-0-0-0-0-0.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.himeji.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:43:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html (label: 決算)"
+    }
+  }
+}

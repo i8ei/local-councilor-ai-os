@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20422",
+  "prefecture": "長野県",
+  "municipality": "上松町",
+  "official_home_url": "http://www.town.agematsu.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://reiki.town.agematsu.nagano.jp/reiki_honbun/e769RG00000013.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://reiki.town.agematsu.nagano.jp/reiki_honbun/e769RG00000013.html",
+          "observed_on": "http://reiki.town.agematsu.nagano.jp/reiki_honbun/e769RG00000013.html",
+          "fetched_at": "2026-08-27T07:17:43Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://reiki.town.agematsu.nagano.jp/reiki_honbun/e769RG00000013.html (label: 第16章 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://reiki.town.agematsu.nagano.jp/reiki_honbun/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://reiki.town.agematsu.nagano.jp/reiki_honbun/e769RG00000417.html",
+          "observed_on": "http://reiki.town.agematsu.nagano.jp/reiki_taikei/r_taikei_02.html",
+          "fetched_at": "2026-08-27T07:15:31Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://reiki.town.agematsu.nagano.jp/reiki_honbun/e769RG00000417.html (label: 上松町議会基本条例)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

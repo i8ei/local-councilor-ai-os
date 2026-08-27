@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02406",
+  "prefecture": "青森県",
+  "municipality": "横浜町",
+  "official_home_url": "http://www.town.yokohama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.yokohama.lg.jp/index.cfm/10,0,47,html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yokohama.lg.jp/index.cfm/10,0,47,html",
+          "observed_on": "http://www.town.yokohama.lg.jp/index.cfm/10,html",
+          "fetched_at": "2026-08-27T07:02:46Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.yokohama.lg.jp/index.cfm/10,0,47,html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/yokohama/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/yokohama/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.yokohama.lg.jp/",
+          "fetched_at": "2026-08-27T07:02:27Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/yokohama/d1w_reiki/reiki.html (label: 横浜町例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

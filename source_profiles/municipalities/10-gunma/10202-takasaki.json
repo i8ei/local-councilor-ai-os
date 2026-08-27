@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10202",
+  "prefecture": "群馬県",
+  "municipality": "高崎市",
+  "official_home_url": "http://www.city.takasaki.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "https://takasaki.gijiroku.com/voices/help_broadcasting.asp",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://takasaki.gijiroku.com/voices/help_broadcasting.asp",
+          "observed_on": "http://www.city.takasaki.gunma.jp/site/gikai/",
+          "fetched_at": "2026-08-27T06:25:50Z"
+        }
+      ],
+      "notes": "Observed voices at https://takasaki.gijiroku.com/voices/help_broadcasting.asp (label: 議会中継・会議録検索システム（外部サイトへ移動します）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.takasaki.gunma.jp/page/3495.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.takasaki.gunma.jp/page/3495.html",
+          "observed_on": "http://www.city.takasaki.gunma.jp/",
+          "fetched_at": "2026-08-27T06:25:32Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.takasaki.gunma.jp/page/3495.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

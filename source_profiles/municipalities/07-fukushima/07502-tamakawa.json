@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07502",
+  "prefecture": "福島県",
+  "municipality": "玉川村",
+  "official_home_url": "http://www.vill.tamakawa.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.vill.tamakawa.fukushima.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.tamakawa.fukushima.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.tamakawa.fukushima.jp/home.html",
+          "fetched_at": "2026-08-27T08:05:32Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.vill.tamakawa.fukushima.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
+          "observed_on": "http://www.vill.tamakawa.fukushima.jp/home.html",
+          "fetched_at": "2026-08-27T08:05:32Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.tamakawa.fukushima.jp/outline/finance.html (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
+          "observed_on": "http://www.vill.tamakawa.fukushima.jp/home.html",
+          "fetched_at": "2026-08-27T08:05:32Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.tamakawa.fukushima.jp/outline/finance.html (label: 財政状況)"
+    }
+  }
+}

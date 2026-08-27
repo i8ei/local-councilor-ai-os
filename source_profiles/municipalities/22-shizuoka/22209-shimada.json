@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22209",
+  "prefecture": "静岡県",
+  "municipality": "島田市",
+  "official_home_url": "http://www.city.shimada.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/reki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/reki/",
+          "observed_on": "http://www.city.shimada.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:41:38Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.shimada.shizuoka.jp/gyosei/shisei/reki/ (label: 例規・条例)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/",
+          "observed_on": "http://www.city.shimada.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:41:38Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/ (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/",
+          "observed_on": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/",
+          "fetched_at": "2026-08-27T07:41:56Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/ (label: 予算・決算)"
+    }
+  }
+}

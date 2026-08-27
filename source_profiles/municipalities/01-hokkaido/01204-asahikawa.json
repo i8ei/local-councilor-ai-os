@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01204",
+  "prefecture": "北海道",
+  "municipality": "旭川市",
+  "official_home_url": "https://www.city.asahikawa.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.asahikawa.hokkaido.jp/700/731/732/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/700/731/732/index.html",
+          "observed_on": "https://www.city.asahikawa.hokkaido.jp/700/index.html",
+          "fetched_at": "2026-08-27T05:58:11Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.asahikawa.hokkaido.jp/700/731/732/index.html (label: 予算と主な事業)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.asahikawa.hokkaido.jp/700/731/733/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/700/731/733/index.html",
+          "observed_on": "https://www.city.asahikawa.hokkaido.jp/700/index.html",
+          "fetched_at": "2026-08-27T05:58:11Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.asahikawa.hokkaido.jp/700/731/733/index.html (label: 決算の概要)"
+    }
+  }
+}

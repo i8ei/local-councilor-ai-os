@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02205",
+  "prefecture": "青森県",
+  "municipality": "五所川原市",
+  "official_home_url": "https://www.city.goshogawara.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
+          "observed_on": "https://www.city.goshogawara.lg.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:57:20Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html (label: 会議録閲覧)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
+          "observed_on": "https://www.city.goshogawara.lg.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:57:20Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html (label: 令和8年第2回定例会本会議会議録、予算特別委員会会議録)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

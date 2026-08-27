@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "34100",
+  "prefecture": "広島県",
+  "municipality": "広島市",
+  "official_home_url": "http://www.city.hiroshima.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "https://hiroshima.gijiroku.com/index.asp",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://hiroshima.gijiroku.com/index.asp",
+          "observed_on": "http://www.city.hiroshima.lg.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:23:07Z"
+        }
+      ],
+      "notes": "Observed voices at https://hiroshima.gijiroku.com/index.asp (label: 詳しく見る)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.hiroshima.lg.jp/",
+          "fetched_at": "2026-08-27T06:22:23Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html (label: 市の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.hiroshima.lg.jp/",
+          "fetched_at": "2026-08-27T06:22:23Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html (label: 市の財政)"
+    }
+  }
+}

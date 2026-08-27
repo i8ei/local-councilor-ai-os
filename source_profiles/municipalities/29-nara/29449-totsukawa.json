@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "29449",
+  "prefecture": "奈良県",
+  "municipality": "十津川村",
+  "official_home_url": "http://www.vill.totsukawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.totsukawa.lg.jp/administration/gyousei/pdf/kohukin_r7.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.totsukawa.lg.jp/administration/gyousei/pdf/kohukin_r7.pdf",
+          "observed_on": "http://www.vill.totsukawa.lg.jp/administration/gyousei/",
+          "fetched_at": "2026-08-27T07:12:58Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.vill.totsukawa.lg.jp/administration/gyousei/pdf/kohukin_r7.pdf (label: 令和7年度補正予算 重点支援地方交付金の活用状況（PDF文書）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.totsukawa.lg.jp/administration/gyousei/pdf/tax/r6-01.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.totsukawa.lg.jp/administration/gyousei/pdf/tax/r6-01.pdf",
+          "observed_on": "http://www.vill.totsukawa.lg.jp/administration/gyousei/",
+          "fetched_at": "2026-08-27T07:12:58Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.vill.totsukawa.lg.jp/administration/gyousei/pdf/tax/r6-01.pdf (label: 令和6年度決算（PDF文書）)"
+    }
+  }
+}

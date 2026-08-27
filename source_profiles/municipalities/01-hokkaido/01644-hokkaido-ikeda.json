@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01644",
+  "prefecture": "北海道",
+  "municipality": "池田町",
+  "official_home_url": "https://www.town.hokkaido-ikeda.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
+          "observed_on": "https://www.town.hokkaido-ikeda.lg.jp/",
+          "fetched_at": "2026-08-27T06:49:47Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/ (label: まちの財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
+          "observed_on": "https://www.town.hokkaido-ikeda.lg.jp/",
+          "fetched_at": "2026-08-27T06:49:47Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/ (label: まちの財政)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "29444",
+  "prefecture": "奈良県",
+  "municipality": "黒滝村",
+  "official_home_url": "http://www.vill.kurotaki.nara.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.vill.kurotaki.nara.jp/gyosei/%e4%be%8b%e8%a6%8f%e9%9b%86/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.kurotaki.nara.jp/gyosei/%e4%be%8b%e8%a6%8f%e9%9b%86/",
+          "observed_on": "http://www.vill.kurotaki.nara.jp/sitemap/",
+          "fetched_at": "2026-08-27T07:11:03Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.vill.kurotaki.nara.jp/gyosei/%e4%be%8b%e8%a6%8f%e9%9b%86/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.kurotaki.nara.jp/gyosei/yosansyo_r08/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.kurotaki.nara.jp/gyosei/yosansyo_r08/",
+          "observed_on": "http://www.vill.kurotaki.nara.jp/sitemap/",
+          "fetched_at": "2026-08-27T07:11:03Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.vill.kurotaki.nara.jp/gyosei/yosansyo_r08/ (label: 令和８年度 予算書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/",
+          "observed_on": "http://www.vill.kurotaki.nara.jp/sitemap/",
+          "fetched_at": "2026-08-27T07:11:03Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/ (label: 行財政改革の取り組み)"
+    }
+  }
+}

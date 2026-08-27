@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "29206",
+  "prefecture": "奈良県",
+  "municipality": "桜井市",
+  "official_home_url": "http://www.city.sakurai.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.sakurai.lg.jp/sosiki/gikaijimukyoku/kaigirokukensaku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sakurai.lg.jp/sosiki/gikaijimukyoku/kaigirokukensaku/index.html",
+          "observed_on": "https://www.city.sakurai.lg.jp/sosiki/gikaijimukyoku/index.html",
+          "fetched_at": "2026-08-27T07:04:12Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.sakurai.lg.jp/sosiki/gikaijimukyoku/kaigirokukensaku/index.html (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/sakurai/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/sakurai/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.sakurai.lg.jp/",
+          "fetched_at": "2026-08-27T07:00:29Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/sakurai/d1w_reiki/reiki.html (label: 桜井市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sakurai.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sakurai.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.sakurai.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:00:53Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.sakurai.lg.jp/shisei/zaisei/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sakurai.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sakurai.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.sakurai.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:00:53Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.sakurai.lg.jp/shisei/zaisei/index.html (label: 予算・財政)"
+    }
+  }
+}

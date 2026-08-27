@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03322",
+  "prefecture": "岩手県",
+  "municipality": "矢巾町",
+  "official_home_url": "https://www.town.yahaba.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/gijiroku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/gijiroku/",
+          "observed_on": "https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/top/",
+          "fetched_at": "2026-08-27T07:12:03Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.yahaba.iwate.jp/soshiki/gikai/yahabagikai/gijiroku/ (label: 会議議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.yahaba.iwate.jp/contents/18reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yahaba.iwate.jp/contents/18reiki/reiki_menu.html",
+          "observed_on": "https://www.town.yahaba.iwate.jp/",
+          "fetched_at": "2026-08-27T07:11:19Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.yahaba.iwate.jp/contents/18reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
+          "observed_on": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/kurashi/2022032000016/",
+          "fetched_at": "2026-08-27T07:12:47Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.yahaba.iwate.jp/soshiki/kikaku/ (label: 企画財政課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/",
+          "observed_on": "https://www.town.yahaba.iwate.jp/soshiki/kikaku/kurashi/2022032000016/",
+          "fetched_at": "2026-08-27T07:12:47Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.yahaba.iwate.jp/soshiki/kikaku/ (label: 企画財政課)"
+    }
+  }
+}

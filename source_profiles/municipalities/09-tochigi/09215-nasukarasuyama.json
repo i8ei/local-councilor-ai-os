@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "09215",
+  "prefecture": "栃木県",
+  "municipality": "那須烏山市",
+  "official_home_url": "http://www.city.nasukarasuyama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A6DF8F4",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A6DF8F4",
+          "observed_on": "http://www.city.nasukarasuyama.lg.jp/",
+          "fetched_at": "2026-08-27T06:21:08Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A6DF8F4 (label: 那須烏山市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/",
+          "observed_on": "http://www.city.nasukarasuyama.lg.jp/city-administration/",
+          "fetched_at": "2026-08-27T06:21:28Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/settlement/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/settlement/",
+          "observed_on": "http://www.city.nasukarasuyama.lg.jp/city-administration/",
+          "fetched_at": "2026-08-27T06:21:28Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.nasukarasuyama.lg.jp/city-administration/finance/settlement/ (label: 決算)"
+    }
+  }
+}

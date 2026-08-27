@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13103",
+  "prefecture": "東京都",
+  "municipality": "港区",
+  "official_home_url": "http://www.city.minato.tokyo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.gikai.city.minato.tokyo.jp/category/5-12-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.gikai.city.minato.tokyo.jp/category/5-12-0-0-0.html",
+          "observed_on": "https://www.gikai.city.minato.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:30:27Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.gikai.city.minato.tokyo.jp/category/5-12-0-0-0.html (label: 区議会の予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.gikai.city.minato.tokyo.jp/category/5-12-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.gikai.city.minato.tokyo.jp/category/5-12-0-0-0.html",
+          "observed_on": "https://www.gikai.city.minato.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:30:27Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.gikai.city.minato.tokyo.jp/category/5-12-0-0-0.html (label: 区議会の予算・決算)"
+    }
+  }
+}

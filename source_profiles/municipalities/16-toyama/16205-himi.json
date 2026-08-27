@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "16205",
+  "prefecture": "富山県",
+  "municipality": "氷見市",
+  "official_home_url": "http://www.city.himi.toyama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/1/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/1/index.html",
+          "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/index.html",
+          "fetched_at": "2026-08-27T06:08:25Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.himi.toyama.jp/gyosei/shisei/shigikai/1/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/himi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/himi/reiki_menu.html",
+          "observed_on": "https://www.city.himi.toyama.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:07:54Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/himi/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/index.html",
+          "fetched_at": "2026-08-27T06:08:10Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/index.html",
+          "fetched_at": "2026-08-27T06:08:10Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html (label: 財政)"
+    }
+  }
+}

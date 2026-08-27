@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "05368",
+  "prefecture": "秋田県",
+  "municipality": "大潟村",
+  "official_home_url": "https://www.vill.ogata.akita.jp/genre/living",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/ogata/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/ogata/reiki_menu.html",
+          "observed_on": "https://www.vill.ogata.akita.jp/genre/administration",
+          "fetched_at": "2026-08-27T07:34:23Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/ogata/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.ogata.akita.jp/uploads/public/archive_0000000516_00/令和8年度当初予算_地方消費税交付金（社会保障財源化分）が充てられる社会保障施策に要する経費.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ogata.akita.jp/uploads/public/archive_0000000516_00/令和8年度当初予算_地方消費税交付金（社会保障財源化分）が充てられる社会保障施策に要する経費.pdf",
+          "observed_on": "https://www.vill.ogata.akita.jp/archive/contents-106",
+          "fetched_at": "2026-08-27T07:37:07Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.vill.ogata.akita.jp/uploads/public/archive_0000000516_00/令和8年度当初予算_地方消費税交付金（社会保障財源化分）が充てられる社会保障施策に要する経費.pdf (label: 令和8年度当初予算_地方消費税交付金（社会保障財源化分）が充てられる社会保障施策に要する経費.pdf)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.ogata.akita.jp/uploads/public/archive_0000000516_00/令和6年度決算_地方消費税交付金（社会保障財源化分）が充てられる社会保障施策に要する経費.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.ogata.akita.jp/uploads/public/archive_0000000516_00/令和6年度決算_地方消費税交付金（社会保障財源化分）が充てられる社会保障施策に要する経費.pdf",
+          "observed_on": "https://www.vill.ogata.akita.jp/archive/contents-106",
+          "fetched_at": "2026-08-27T07:37:07Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.vill.ogata.akita.jp/uploads/public/archive_0000000516_00/令和6年度決算_地方消費税交付金（社会保障財源化分）が充てられる社会保障施策に要する経費.pdf (label: 令和6年度決算_地方消費税交付金（社会保障財源化分）が充てられる社会保障施策に要する経費.pdf)"
+    }
+  }
+}

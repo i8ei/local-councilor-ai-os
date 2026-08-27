@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47357",
+  "prefecture": "沖縄県",
+  "municipality": "南大東村",
+  "official_home_url": "http://www.vill.minamidaito.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/minamidaito/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/minamidaito/reiki_menu.html",
+          "observed_on": "http://www.vill.minamidaito.okinawa.jp/index2.html",
+          "fetched_at": "2026-08-27T06:58:22Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/minamidaito/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.minamidaito.okinawa.jp/life/5/21",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.minamidaito.okinawa.jp/life/5/21",
+          "observed_on": "http://www.vill.minamidaito.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:58:05Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.minamidaito.okinawa.jp/life/5/21 (label: 村の取り組み・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.minamidaito.okinawa.jp/page/351.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.minamidaito.okinawa.jp/page/351.html",
+          "observed_on": "http://www.vill.minamidaito.okinawa.jp/life/5/21",
+          "fetched_at": "2026-08-27T07:01:02Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.vill.minamidaito.okinawa.jp/page/351.html (label: 決算に基づく健全化判断比率等の算定結果の公表)"
+    }
+  }
+}

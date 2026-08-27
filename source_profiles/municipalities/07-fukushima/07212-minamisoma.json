@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07212",
+  "prefecture": "福島県",
+  "municipality": "南相馬市",
+  "official_home_url": "http://www.city.minamisoma.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.minamisoma.lg.jp/portal/service/joreikisoku_reikishu/4200.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minamisoma.lg.jp/portal/service/joreikisoku_reikishu/4200.html",
+          "observed_on": "https://www.city.minamisoma.lg.jp/portal/index.html",
+          "fetched_at": "2026-08-27T07:55:06Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.minamisoma.lg.jp/portal/service/joreikisoku_reikishu/4200.html (label: 例規集 条例、規則など)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/index.html",
+          "observed_on": "https://www.city.minamisoma.lg.jp/portal/admin/index.html",
+          "fetched_at": "2026-08-27T07:57:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/index.html (label: 地域活動・行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.minamisoma.lg.jp/portal/admin/kansa/1/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minamisoma.lg.jp/portal/admin/kansa/1/index.html",
+          "observed_on": "https://www.city.minamisoma.lg.jp/portal/admin/index.html",
+          "fetched_at": "2026-08-27T07:57:58Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.minamisoma.lg.jp/portal/admin/kansa/1/index.html (label: 決算審査)"
+    }
+  }
+}

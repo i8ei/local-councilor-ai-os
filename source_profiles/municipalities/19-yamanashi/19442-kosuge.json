@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "19442",
+  "prefecture": "山梨県",
+  "municipality": "小菅村",
+  "official_home_url": "http://www.vill.kosuge.yamanashi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.kosuge/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.kosuge/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/vill.kosuge/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:57:13Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/vill.kosuge/reiki_menu.html for 小菅村"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
+          "observed_on": "http://www.vill.kosuge.yamanashi.jp/",
+          "fetched_at": "2026-08-27T06:51:45Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.kosuge.yamanashi.jp/living/soumu (label: 村の取り組みに関すること 総務課 人事行政運営、財政、税政、選挙、防災、ふるさと納税、出納事務全般、消防団、CATV、公共交通（村営バス）、統計 など 総務課のページへ)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
+          "observed_on": "http://www.vill.kosuge.yamanashi.jp/",
+          "fetched_at": "2026-08-27T06:51:45Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.kosuge.yamanashi.jp/living/soumu (label: 村の取り組みに関すること 総務課 人事行政運営、財政、税政、選挙、防災、ふるさと納税、出納事務全般、消防団、CATV、公共交通（村営バス）、統計 など 総務課のページへ)"
+    }
+  }
+}

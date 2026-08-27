@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13102",
+  "prefecture": "東京都",
+  "municipality": "中央区",
+  "official_home_url": "http://www.city.chuo.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kugikai.city.chuo.lg.jp/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kugikai.city.chuo.lg.jp/kaigiroku/index.html",
+          "observed_on": "https://www.kugikai.city.chuo.lg.jp/",
+          "fetched_at": "2026-08-27T07:30:24Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kugikai.city.chuo.lg.jp/kaigiroku/index.html (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krg103.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krg103.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "https://www.kugikai.city.chuo.lg.jp/",
+          "fetched_at": "2026-08-27T07:30:24Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krg103.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 中央区例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.kugikai.city.chuo.lg.jp/kaigiroku/index.cgi?keyword=&andor_search=and&synonym_search=1&speak=q&giin=0&post=0&kaigi=10&kaigi_old=0&kaigi_old=0&kikan=1&start_year=38&start_month=3&start_day=4&end_year=38&end_month=3&end_day=11&search=%E6%A4%9C%E7%B4%A2",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kugikai.city.chuo.lg.jp/kaigiroku/index.cgi?keyword=&andor_search=and&synonym_search=1&speak=q&giin=0&post=0&kaigi=10&kaigi_old=0&kaigi_old=0&kikan=1&start_year=38&start_month=3&start_day=4&end_year=38&end_month=3&end_day=11&search=%E6%A4%9C%E7%B4%A2",
+          "observed_on": "https://www.kugikai.city.chuo.lg.jp/",
+          "fetched_at": "2026-08-27T07:30:24Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.kugikai.city.chuo.lg.jp/kaigiroku/index.cgi?keyword=&andor_search=and&synonym_search=1&speak=q&giin=0&post=0&kaigi=10&kaigi_old=0&kaigi_old=0&kikan=1&start_year=38&start_month=3&start_day=4&end_year=38&end_month=3&end_day=11&search=%E6%A4%9C%E7%B4%A2 (label: 令和8年予算特別委員会（3/4～3/11）の会議録を掲載しました。（7月15日）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.kugikai.city.chuo.lg.jp/calendar/index.html?year=2026&month=8&kaigi=11",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kugikai.city.chuo.lg.jp/calendar/index.html?year=2026&month=8&kaigi=11",
+          "observed_on": "https://www.kugikai.city.chuo.lg.jp/calendar/index.html",
+          "fetched_at": "2026-08-27T07:33:10Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.kugikai.city.chuo.lg.jp/calendar/index.html?year=2026&month=8&kaigi=11 (label: 決算特別委員会)"
+    }
+  }
+}

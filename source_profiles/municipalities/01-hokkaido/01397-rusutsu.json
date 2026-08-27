@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01397",
+  "prefecture": "北海道",
+  "municipality": "留寿都村",
+  "official_home_url": "https://www.vill.rusutsu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://www.vill.rusutsu.lg.jp/banner_click.php?url=https%3A%2F%2Fen3-jg.d1-law.com%2Frusutsu%2Fd1w_reiki%2Freiki.htm&id=29&type=2",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.rusutsu.lg.jp/banner_click.php?url=https%3A%2F%2Fen3-jg.d1-law.com%2Frusutsu%2Fd1w_reiki%2Freiki.htm&id=29&type=2",
+          "observed_on": "https://www.vill.rusutsu.lg.jp/",
+          "fetched_at": "2026-08-27T06:14:07Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://www.vill.rusutsu.lg.jp/banner_click.php?url=https%3A%2F%2Fen3-jg.d1-law.com%2Frusutsu%2Fd1w_reiki%2Freiki.htm&id=29&type=2 (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
+          "observed_on": "https://www.vill.rusutsu.lg.jp/hotnews/category/6.html",
+          "fetched_at": "2026-08-27T06:15:07Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.rusutsu.lg.jp/hotnews/category/165.html (label: 村の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
+          "observed_on": "https://www.vill.rusutsu.lg.jp/hotnews/category/6.html",
+          "fetched_at": "2026-08-27T06:15:07Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.rusutsu.lg.jp/hotnews/category/165.html (label: 村の財政)"
+    }
+  }
+}

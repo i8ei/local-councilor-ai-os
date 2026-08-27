@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13210",
+  "prefecture": "東京都",
+  "municipality": "小金井市",
+  "official_home_url": "http://www.city.koganei.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8016A44F",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8016A44F",
+          "observed_on": "http://www.city.koganei.lg.jp/",
+          "fetched_at": "2026-08-27T07:44:16Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8016A44F (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.koganei.lg.jp/shisei/zaiseiyosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.koganei.lg.jp/shisei/zaiseiyosan/index.html",
+          "observed_on": "http://www.city.koganei.lg.jp/",
+          "fetched_at": "2026-08-27T07:44:16Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.koganei.lg.jp/shisei/zaiseiyosan/index.html (label: 財政・予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.koganei.lg.jp/shisei/zaiseiyosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.koganei.lg.jp/shisei/zaiseiyosan/index.html",
+          "observed_on": "http://www.city.koganei.lg.jp/",
+          "fetched_at": "2026-08-27T07:44:16Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.koganei.lg.jp/shisei/zaiseiyosan/index.html (label: 財政・予算)"
+    }
+  }
+}

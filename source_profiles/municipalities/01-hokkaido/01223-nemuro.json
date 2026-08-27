@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01223",
+  "prefecture": "北海道",
+  "municipality": "根室市",
+  "official_home_url": "http://www.city.nemuro.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/nemuro/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/nemuro/d1w_reiki/reiki.html",
+          "observed_on": "https://www.city.nemuro.hokkaido.jp/lifeinfo/index.html",
+          "fetched_at": "2026-08-27T06:01:09Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/nemuro/d1w_reiki/reiki.html (label: 根室市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.nemuro.hokkaido.jp/lifeinfo/topics/5092.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nemuro.hokkaido.jp/lifeinfo/topics/5092.html",
+          "observed_on": "https://www.city.nemuro.hokkaido.jp/lifeinfo/index.html",
+          "fetched_at": "2026-08-27T06:01:09Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.nemuro.hokkaido.jp/lifeinfo/topics/5092.html (label: 令和8年度当初予算の概要を掲載しました)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

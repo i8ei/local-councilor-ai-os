@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03301",
+  "prefecture": "岩手県",
+  "municipality": "雫石町",
+  "official_home_url": "https://www.town.shizukuishi.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/shizukuishi/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.town.shizukuishi.iwate.jp%2F",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/shizukuishi/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.town.shizukuishi.iwate.jp%2F",
+          "observed_on": "https://www.town.shizukuishi.iwate.jp/top.html",
+          "fetched_at": "2026-08-27T07:10:29Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/shizukuishi/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.town.shizukuishi.iwate.jp%2F (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/shizukuishi/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/shizukuishi/d1w_reiki/reiki.html",
+          "observed_on": "https://www.town.shizukuishi.iwate.jp/top.html",
+          "fetched_at": "2026-08-27T07:10:29Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/shizukuishi/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

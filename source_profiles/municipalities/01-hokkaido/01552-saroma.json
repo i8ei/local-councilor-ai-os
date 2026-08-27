@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01552",
+  "prefecture": "北海道",
+  "municipality": "佐呂間町",
+  "official_home_url": "http://www.town.saroma.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.saroma.hokkaido.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.saroma.hokkaido.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:38:52Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.saroma.hokkaido.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:38:52Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ (label: 企画財政課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:38:52Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ (label: 企画財政課)"
+    }
+  }
+}

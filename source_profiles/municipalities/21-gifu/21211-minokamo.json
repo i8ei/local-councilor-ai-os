@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "21211",
+  "prefecture": "岐阜県",
+  "municipality": "美濃加茂市",
+  "official_home_url": "https://www.city.minokamo.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/minokamo/WebView/rd/council_1.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/minokamo/WebView/rd/council_1.html",
+          "observed_on": "https://www.city.minokamo.lg.jp/adv/ba.php?id=11",
+          "fetched_at": "2026-08-27T07:29:11Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/minokamo/WebView/rd/council_1.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/minokamo/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/minokamo/reiki_menu.html",
+          "observed_on": "https://www.city.minokamo.lg.jp/",
+          "fetched_at": "2026-08-27T07:28:26Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/minokamo/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.minokamo.lg.jp/life/5/23/147/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minokamo.lg.jp/life/5/23/147/",
+          "observed_on": "https://www.city.minokamo.lg.jp/life/5/",
+          "fetched_at": "2026-08-27T07:28:41Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.minokamo.lg.jp/life/5/23/147/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.minokamo.lg.jp/life/5/23/147/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minokamo.lg.jp/life/5/23/147/",
+          "observed_on": "https://www.city.minokamo.lg.jp/life/5/",
+          "fetched_at": "2026-08-27T07:28:41Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.minokamo.lg.jp/life/5/23/147/ (label: 予算・決算)"
+    }
+  }
+}

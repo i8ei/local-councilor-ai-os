@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36207",
+  "prefecture": "徳島県",
+  "municipality": "美馬市",
+  "official_home_url": "http://www.city.mima.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.mima.lg.jp/gyosei/shisei/gikai/kaigiroku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mima.lg.jp/gyosei/shisei/gikai/kaigiroku/",
+          "observed_on": "http://www.city.mima.lg.jp/gyosei/shisei/gikai/",
+          "fetched_at": "2026-08-27T06:43:18Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.mima.lg.jp/gyosei/shisei/gikai/kaigiroku/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.mima.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.mima.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.mima.lg.jp/gyosei/",
+          "fetched_at": "2026-08-27T06:39:35Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.mima.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.mima.lg.jp/gyosei/docs/2686229.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mima.lg.jp/gyosei/docs/2686229.html",
+          "observed_on": "http://www.city.mima.lg.jp/",
+          "fetched_at": "2026-08-27T06:39:18Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.mima.lg.jp/gyosei/docs/2686229.html (label: 「新たな財政構造改革プラン」第１回策定委員会を開催しました)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.mima.lg.jp/gyosei/docs/2686229.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mima.lg.jp/gyosei/docs/2686229.html",
+          "observed_on": "http://www.city.mima.lg.jp/",
+          "fetched_at": "2026-08-27T06:39:18Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.mima.lg.jp/gyosei/docs/2686229.html (label: 「新たな財政構造改革プラン」第１回策定委員会を開催しました)"
+    }
+  }
+}

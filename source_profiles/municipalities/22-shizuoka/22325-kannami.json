@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22325",
+  "prefecture": "静岡県",
+  "municipality": "函南町",
+  "official_home_url": "http://www.town.kannami.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/kannami/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/kannami/SpTop.html",
+          "observed_on": "https://www.town.kannami.shizuoka.jp/gikai/815.html",
+          "fetched_at": "2026-08-27T07:56:15Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kannami/SpTop.html (label: 函南町議会会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.kannami.shizuoka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.kannami.shizuoka/reiki_menu.html",
+          "observed_on": "http://www.town.kannami.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:51:02Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.kannami.shizuoka/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kannami.shizuoka.jp/material/files/group/19/R08-3-yosan.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kannami.shizuoka.jp/material/files/group/19/R08-3-yosan.pdf",
+          "observed_on": "https://www.town.kannami.shizuoka.jp/gikai/815.html",
+          "fetched_at": "2026-08-27T07:56:15Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.kannami.shizuoka.jp/material/files/group/19/R08-3-yosan.pdf (label: 令和8年度予算分科会審査報告書 (PDFファイル: 332.9KB))"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kannami.shizuoka.jp/material/files/group/19/kessann.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kannami.shizuoka.jp/material/files/group/19/kessann.pdf",
+          "observed_on": "https://www.town.kannami.shizuoka.jp/gikai/815.html",
+          "fetched_at": "2026-08-27T07:56:15Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.kannami.shizuoka.jp/material/files/group/19/kessann.pdf (label: 令和6年度決算分科会審査報告書 (PDFファイル: 309.7KB))"
+    }
+  }
+}

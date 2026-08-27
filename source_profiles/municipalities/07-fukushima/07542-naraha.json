@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07542",
+  "prefecture": "福島県",
+  "municipality": "楢葉町",
+  "official_home_url": "http://www.town.naraha.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F9DD2",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F9DD2",
+          "observed_on": "http://www.town.naraha.lg.jp/",
+          "fetched_at": "2026-08-27T08:08:37Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F9DD2 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.naraha.lg.jp/admin/cat327/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.naraha.lg.jp/admin/cat327/",
+          "observed_on": "http://www.town.naraha.lg.jp/",
+          "fetched_at": "2026-08-27T08:08:37Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.naraha.lg.jp/admin/cat327/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.naraha.lg.jp/admin/cat327/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.naraha.lg.jp/admin/cat327/",
+          "observed_on": "http://www.town.naraha.lg.jp/",
+          "fetched_at": "2026-08-27T08:08:37Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.naraha.lg.jp/admin/cat327/ (label: 予算・決算)"
+    }
+  }
+}

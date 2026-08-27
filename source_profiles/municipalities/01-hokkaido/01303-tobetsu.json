@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01303",
+  "prefecture": "北海道",
+  "municipality": "当別町",
+  "official_home_url": "http://www.town.tobetsu.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.tobetsu.hokkaido.jp/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tobetsu.hokkaido.jp/d1w_reiki/reiki.htm",
+          "observed_on": "http://www.town.tobetsu.hokkaido.jp/index2.html",
+          "fetched_at": "2026-08-27T06:05:47Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.tobetsu.hokkaido.jp/d1w_reiki/reiki.htm (label: 当別町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
+          "observed_on": "http://www.town.tobetsu.hokkaido.jp/index2.html",
+          "fetched_at": "2026-08-27T06:05:47Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.tobetsu.hokkaido.jp/life/4/70/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
+          "observed_on": "http://www.town.tobetsu.hokkaido.jp/index2.html",
+          "fetched_at": "2026-08-27T06:05:47Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.tobetsu.hokkaido.jp/life/4/70/ (label: 財政)"
+    }
+  }
+}

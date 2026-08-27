@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03484",
+  "prefecture": "岩手県",
+  "municipality": "田野畑村",
+  "official_home_url": "http://www.vill.tanohata.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.vill.tanohata.iwate.jp/docs/2018022800049/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.tanohata.iwate.jp/docs/2018022800049/",
+          "observed_on": "http://www.vill.tanohata.iwate.jp/bunya/gyousei/",
+          "fetched_at": "2026-08-27T07:14:25Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.vill.tanohata.iwate.jp/docs/2018022800049/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.tanohata.iwate/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.tanohata.iwate/reiki_menu.html",
+          "observed_on": "http://www.vill.tanohata.iwate.jp/top.html",
+          "fetched_at": "2026-08-27T07:14:08Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.tanohata.iwate/reiki_menu.html (label: 田野畑村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.tanohata.iwate.jp/docs/2025031800014/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.tanohata.iwate.jp/docs/2025031800014/",
+          "observed_on": "http://www.vill.tanohata.iwate.jp/bunya/gyousei/",
+          "fetched_at": "2026-08-27T07:14:25Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.vill.tanohata.iwate.jp/docs/2025031800014/ (label: 令和7年度予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.tanohata.iwate.jp/docs/2017110900012/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.tanohata.iwate.jp/docs/2017110900012/",
+          "observed_on": "http://www.vill.tanohata.iwate.jp/top.html",
+          "fetched_at": "2026-08-27T07:14:08Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.tanohata.iwate.jp/docs/2017110900012/ (label: 財政情報)"
+    }
+  }
+}

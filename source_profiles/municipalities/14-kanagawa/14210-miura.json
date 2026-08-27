@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14210",
+  "prefecture": "神奈川県",
+  "municipality": "三浦市",
+  "official_home_url": "http://www.city.miura.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kensakusystem.jp/miura/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kensakusystem.jp/miura/index.html",
+          "observed_on": "https://www.city.miura.kanagawa.jp/shiseijoho/miura_shigikai/index.html",
+          "fetched_at": "2026-08-27T08:03:41Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kensakusystem.jp/miura/index.html (label: 会議録の閲覧と検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.miura.kanagawa.jp/shiseijoho/jorei_kisoku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.miura.kanagawa.jp/shiseijoho/jorei_kisoku/index.html",
+          "observed_on": "https://www.city.miura.kanagawa.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T08:02:05Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.miura.kanagawa.jp/shiseijoho/jorei_kisoku/index.html (label: 条例・規則・要綱)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
+          "observed_on": "https://www.city.miura.kanagawa.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T08:02:05Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html (label: 財政・公売)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
+          "observed_on": "https://www.city.miura.kanagawa.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T08:02:05Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html (label: 財政・公売)"
+    }
+  }
+}

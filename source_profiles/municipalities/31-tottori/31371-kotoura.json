@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "31371",
+  "prefecture": "鳥取県",
+  "municipality": "琴浦町",
+  "official_home_url": "http://www.town.kotoura.tottori.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/kotoura/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/kotoura/reiki_menu.html",
+          "observed_on": "http://www.town.kotoura.tottori.jp/docs/2015032000032/",
+          "fetched_at": "2026-08-27T06:02:45Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/kotoura/reiki_menu.html (label: コチラ)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kotoura.tottori.jp/docs/2016030500012/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kotoura.tottori.jp/docs/2016030500012/",
+          "observed_on": "http://www.town.kotoura.tottori.jp/bunya/gyoseimachizukuri/",
+          "fetched_at": "2026-08-27T05:58:36Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.kotoura.tottori.jp/docs/2016030500012/ (label: 琴浦町の予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kotoura.tottori.jp/docs/2014071700118/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kotoura.tottori.jp/docs/2014071700118/",
+          "observed_on": "http://www.town.kotoura.tottori.jp/bunya/gyoseimachizukuri/",
+          "fetched_at": "2026-08-27T05:58:36Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.kotoura.tottori.jp/docs/2014071700118/ (label: 琴浦町決算の状況)"
+    }
+  }
+}

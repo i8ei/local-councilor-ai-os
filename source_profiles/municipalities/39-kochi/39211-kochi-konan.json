@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39211",
+  "prefecture": "高知県",
+  "municipality": "香南市",
+  "official_home_url": "http://www.city.kochi-konan.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.city.konan.kochi.dbsr.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.konan.kochi.dbsr.jp/",
+          "observed_on": "https://www.city.kochi-konan.lg.jp/shiseijoho/konanshigikai/index.html",
+          "fetched_at": "2026-08-27T07:11:32Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.city.konan.kochi.dbsr.jp/ (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.kochi-konan.lg.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kochi-konan.lg.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.kochi-konan.lg.jp/",
+          "fetched_at": "2026-08-27T07:09:50Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.kochi-konan.lg.jp/section/reiki_int/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kochi-konan.lg.jp/shiseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kochi-konan.lg.jp/shiseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.kochi-konan.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:10:16Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kochi-konan.lg.jp/shiseijoho/gyozaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kochi-konan.lg.jp/shiseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kochi-konan.lg.jp/shiseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.kochi-konan.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:10:16Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kochi-konan.lg.jp/shiseijoho/gyozaisei/index.html (label: 財政)"
+    }
+  }
+}

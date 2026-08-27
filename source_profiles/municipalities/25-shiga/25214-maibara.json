@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "25214",
+  "prefecture": "滋賀県",
+  "municipality": "米原市",
+  "official_home_url": "http://www.city.maibara.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.maibara.lg.jp/reiki/reiki_honbun/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.maibara.lg.jp/reiki/reiki_honbun/r108RG00001716.html",
+          "observed_on": "https://www.city.maibara.lg.jp/topics/24182.html",
+          "fetched_at": "2026-08-27T06:13:17Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.maibara.lg.jp/reiki/reiki_honbun/r108RG00001716.html (label: 米原市不当要求行為等対策条例)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.maibara.lg.jp/shisei/zaisei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.maibara.lg.jp/shisei/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.maibara.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:11:21Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.maibara.lg.jp/shisei/zaisei/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.maibara.lg.jp/shisei/plan/other/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.maibara.lg.jp/shisei/plan/other/index.html",
+          "observed_on": "https://www.city.maibara.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:11:21Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.maibara.lg.jp/shisei/plan/other/index.html (label: その他の主要施策など)"
+    }
+  }
+}

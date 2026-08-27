@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "46501",
+  "prefecture": "鹿児島県",
+  "municipality": "中種子町",
+  "official_home_url": "http://town.nakatane.kagoshima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://town.nakatane.kagoshima.jp/gikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://town.nakatane.kagoshima.jp/gikai/kaigiroku/index.html",
+          "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/gikai/index.html",
+          "fetched_at": "2026-08-27T06:45:55Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://town.nakatane.kagoshima.jp/gikai/kaigiroku/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/reki-jore/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/reki-jore/index.html",
+          "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/gikai/index.html",
+          "fetched_at": "2026-08-27T06:45:55Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://town.nakatane.kagoshima.jp/koho/machinojoho/reki-jore/index.html (label: 例規・条例)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
+          "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/gikai/index.html",
+          "fetched_at": "2026-08-27T06:45:55Z"
+        }
+      ],
+      "notes": "Observed budget link at http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
+          "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/gikai/index.html",
+          "fetched_at": "2026-08-27T06:45:55Z"
+        }
+      ],
+      "notes": "Observed finance section at http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html (label: 予算・財政)"
+    }
+  }
+}

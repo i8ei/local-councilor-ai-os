@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10204",
+  "prefecture": "群馬県",
+  "municipality": "伊勢崎市",
+  "official_home_url": "http://www.city.isesaki.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.isesaki.lg.jp/section/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.isesaki.lg.jp/section/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.isesaki.lg.jp/",
+          "fetched_at": "2026-08-27T06:31:21Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.isesaki.lg.jp/section/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.isesaki.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.isesaki.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.city.isesaki.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:31:51Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.isesaki.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.isesaki.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.isesaki.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.city.isesaki.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:31:51Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.isesaki.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    }
+  }
+}

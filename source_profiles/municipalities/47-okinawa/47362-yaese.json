@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47362",
+  "prefecture": "沖縄県",
+  "municipality": "八重瀬町",
+  "official_home_url": "https://www.town.yaese.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/yaese/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/yaese/pg/index.html",
+          "observed_on": "https://www.town.yaese.lg.jp/",
+          "fetched_at": "2026-08-27T06:59:49Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yaese/pg/index.html (label: 議会議事録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB4634",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB4634",
+          "observed_on": "https://www.town.yaese.lg.jp/",
+          "fetched_at": "2026-08-27T06:59:49Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB4634 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
+          "observed_on": "https://www.town.yaese.lg.jp/docs/2025021000028/",
+          "fetched_at": "2026-08-27T07:01:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
+          "observed_on": "https://www.town.yaese.lg.jp/docs/2025021000028/",
+          "fetched_at": "2026-08-27T07:01:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課)"
+    }
+  }
+}

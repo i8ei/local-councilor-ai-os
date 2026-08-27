@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27223",
+  "prefecture": "大阪府",
+  "municipality": "門真市",
+  "official_home_url": "http://www.city.kadoma.osaka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kadoma/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kadoma/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.kadoma.osaka.jp/",
+          "fetched_at": "2026-08-27T06:32:49Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kadoma/d1w_reiki/reiki.html (label: 門真市条例・例規)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kadoma.osaka.jp/shisei/zaisei/3/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kadoma.osaka.jp/shisei/zaisei/3/index.html",
+          "observed_on": "https://www.city.kadoma.osaka.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:33:10Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.kadoma.osaka.jp/shisei/zaisei/3/index.html (label: 予算概要)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html",
+          "observed_on": "https://www.city.kadoma.osaka.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:33:10Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html (label: 決算カード)"
+    }
+  }
+}

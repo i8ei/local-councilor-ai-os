@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "35502",
+  "prefecture": "山口県",
+  "municipality": "阿武町",
+  "official_home_url": "http://www.town.abu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://townabu2.sakura.ne.jp/guide/giziroku2/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://townabu2.sakura.ne.jp/guide/giziroku2/",
+          "observed_on": "https://www.town.abu.lg.jp/guide//?id=shomei",
+          "fetched_at": "2026-08-27T06:37:39Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://townabu2.sakura.ne.jp/guide/giziroku2/ (label: 議会の議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://townabu2.sakura.ne.jp/wp/wp-content/themes/abucho_work/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://townabu2.sakura.ne.jp/wp/wp-content/themes/abucho_work/reiki_menu.html",
+          "observed_on": "http://www.town.abu.lg.jp/",
+          "fetched_at": "2026-08-27T06:37:21Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://townabu2.sakura.ne.jp/wp/wp-content/themes/abucho_work/reiki_menu.html (label: 阿武町例規集（条例）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://townabu2.sakura.ne.jp/guide/zaiseinituite/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://townabu2.sakura.ne.jp/guide/zaiseinituite/",
+          "observed_on": "https://www.town.abu.lg.jp/guide//?id=shomei",
+          "fetched_at": "2026-08-27T06:37:39Z"
+        }
+      ],
+      "notes": "Observed finance section at https://townabu2.sakura.ne.jp/guide/zaiseinituite/ (label: 財政について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://townabu2.sakura.ne.jp/guide/zaiseinituite/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://townabu2.sakura.ne.jp/guide/zaiseinituite/",
+          "observed_on": "https://www.town.abu.lg.jp/guide//?id=shomei",
+          "fetched_at": "2026-08-27T06:37:39Z"
+        }
+      ],
+      "notes": "Observed finance section at https://townabu2.sakura.ne.jp/guide/zaiseinituite/ (label: 財政について)"
+    }
+  }
+}

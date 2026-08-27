@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43482",
+  "prefecture": "熊本県",
+  "municipality": "芦北町",
+  "official_home_url": "https://www.town.ashikita.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.ashikita.lg.jp/assets/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ashikita.lg.jp/assets/reiki/reiki.html",
+          "observed_on": "https://www.town.ashikita.lg.jp/index.php",
+          "fetched_at": "2026-08-27T05:45:16Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.ashikita.lg.jp/assets/reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ashikita.lg.jp/chosei/zaisei",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ashikita.lg.jp/chosei/zaisei",
+          "observed_on": "https://www.town.ashikita.lg.jp/index.php",
+          "fetched_at": "2026-08-27T05:45:16Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ashikita.lg.jp/chosei/zaisei (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ashikita.lg.jp/chosei/zaisei",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ashikita.lg.jp/chosei/zaisei",
+          "observed_on": "https://www.town.ashikita.lg.jp/index.php",
+          "fetched_at": "2026-08-27T05:45:16Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ashikita.lg.jp/chosei/zaisei (label: 財政)"
+    }
+  }
+}

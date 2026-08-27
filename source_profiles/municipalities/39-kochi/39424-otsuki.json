@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39424",
+  "prefecture": "高知県",
+  "municipality": "大月町",
+  "official_home_url": "http://www.town.otsuki.kochi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8BE51B76",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8BE51B76",
+          "observed_on": "http://www.town.otsuki.kochi.jp/index2.php",
+          "fetched_at": "2026-08-27T07:19:07Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A8BE51B76 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.otsuki.kochi.jp/life/dtl.php?hdnKey=2558",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.otsuki.kochi.jp/life/dtl.php?hdnKey=2558",
+          "observed_on": "https://www.town.otsuki.kochi.jp/life/catglist.php?hdnCat=100",
+          "fetched_at": "2026-08-27T07:20:09Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.otsuki.kochi.jp/life/dtl.php?hdnKey=2558 (label: 令和６年度財政状況資料集の公表について...)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.otsuki.kochi.jp/life/dtl.php?hdnKey=2558",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.otsuki.kochi.jp/life/dtl.php?hdnKey=2558",
+          "observed_on": "https://www.town.otsuki.kochi.jp/life/catglist.php?hdnCat=100",
+          "fetched_at": "2026-08-27T07:20:09Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.otsuki.kochi.jp/life/dtl.php?hdnKey=2558 (label: 令和６年度財政状況資料集の公表について...)"
+    }
+  }
+}

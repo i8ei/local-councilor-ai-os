@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11245",
+  "prefecture": "埼玉県",
+  "municipality": "ふじみ野市",
+  "official_home_url": "http://www.city.fujimino.saitama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.fujimino.saitama.jp/shinojoho/shigikai/3412.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fujimino.saitama.jp/shinojoho/shigikai/3412.html",
+          "observed_on": "https://www.city.fujimino.saitama.jp/shinojoho/shigikai/index.html",
+          "fetched_at": "2026-08-27T07:00:41Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.fujimino.saitama.jp/shinojoho/shigikai/3412.html (label: 会議録検索と閲覧)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krr224.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krr224.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.fujimino.saitama.jp/",
+          "fetched_at": "2026-08-27T07:00:26Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krr224.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

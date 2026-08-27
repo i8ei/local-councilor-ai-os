@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47314",
+  "prefecture": "沖縄県",
+  "municipality": "金武町",
+  "official_home_url": "https://www.town.kin.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/kin/WebView/rd/council_1.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/kin/WebView/rd/council_1.html",
+          "observed_on": "https://www.town.kin.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:53:43Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/kin/WebView/rd/council_1.html (label: 議会中継)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krq919.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krq919.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "https://www.town.kin.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:53:43Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krq919.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 金武町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kin.okinawa.jp/gyoseijoho/gyozaisei/1158.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kin.okinawa.jp/gyoseijoho/gyozaisei/1158.html",
+          "observed_on": "https://www.town.kin.okinawa.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:53:55Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.kin.okinawa.jp/gyoseijoho/gyozaisei/1158.html (label: 予算書（当初予算）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kin.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kin.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.kin.okinawa.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:53:55Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kin.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

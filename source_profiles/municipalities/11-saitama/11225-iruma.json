@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11225",
+  "prefecture": "埼玉県",
+  "municipality": "入間市",
+  "official_home_url": "http://www.city.iruma.saitama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/iruma/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/iruma/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/iruma/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:58:04Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/iruma/reiki_menu.html for 入間市"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.city.iruma.saitama.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:53:43Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.city.iruma.saitama.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:53:43Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

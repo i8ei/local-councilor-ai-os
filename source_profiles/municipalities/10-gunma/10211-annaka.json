@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10211",
+  "prefecture": "群馬県",
+  "municipality": "安中市",
+  "official_home_url": "http://www.city.annaka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/annaka/WebView/rd/council.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/annaka/WebView/rd/council.html",
+          "observed_on": "http://www.city.annaka.lg.jp/site/gikai/",
+          "fetched_at": "2026-08-27T06:36:02Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/annaka/WebView/rd/council.html (label: インターネット議会中継はこちら)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/annaka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/annaka/reiki_menu.html",
+          "observed_on": "http://www.city.annaka.lg.jp/",
+          "fetched_at": "2026-08-27T06:35:44Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/annaka/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

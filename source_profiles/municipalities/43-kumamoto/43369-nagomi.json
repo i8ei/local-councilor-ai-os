@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43369",
+  "prefecture": "熊本県",
+  "municipality": "和水町",
+  "official_home_url": "http://www.town.nagomi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.nagomi.lg.jp/chougikai/kaigiroku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nagomi.lg.jp/chougikai/kaigiroku/",
+          "observed_on": "http://www.town.nagomi.lg.jp/chougikai",
+          "fetched_at": "2026-08-27T05:38:50Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.nagomi.lg.jp/chougikai/kaigiroku/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.nagomi.lg.jp/nagomitown/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nagomi.lg.jp/nagomitown/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.nagomi.lg.jp/",
+          "fetched_at": "2026-08-27T05:38:46Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.nagomi.lg.jp/nagomitown/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/17440791896922/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/17440791896922/",
+          "observed_on": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/177389619720156",
+          "fetched_at": "2026-08-27T05:38:47Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/17440791896922/ (label: 令和7年度予算の概要について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/3_4316/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/3_4316/",
+          "observed_on": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/177389619720156",
+          "fetched_at": "2026-08-27T05:38:47Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/3_4316/ (label: 主要施策成果報告書)"
+    }
+  }
+}

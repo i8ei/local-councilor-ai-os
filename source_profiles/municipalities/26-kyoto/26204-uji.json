@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26204",
+  "prefecture": "京都府",
+  "municipality": "宇治市",
+  "official_home_url": "http://www.city.uji.kyoto.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/uji/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/uji/pg/index.html",
+          "observed_on": "http://www.city.uji.kyoto.jp/site/gikaijimukyoku/",
+          "fetched_at": "2026-08-27T06:15:23Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/uji/pg/index.html (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://reiki-web.city.uji.kyoto.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://reiki-web.city.uji.kyoto.jp/reiki/",
+          "observed_on": "http://www.city.uji.kyoto.jp/",
+          "fetched_at": "2026-08-27T06:15:02Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://reiki-web.city.uji.kyoto.jp/reiki/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "16210",
+  "prefecture": "富山県",
+  "municipality": "南砺市",
+  "official_home_url": "http://www.city.nanto.toyama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/nanto/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/nanto/SpTop.html",
+          "observed_on": "https://www.nanto-shigikai.jp/",
+          "fetched_at": "2026-08-27T06:10:26Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/nanto/SpTop.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.nanto.toyama.jp/gyoseijoho/jorei-kisoku-yoko/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nanto.toyama.jp/gyoseijoho/jorei-kisoku-yoko/index.html",
+          "observed_on": "https://www.city.nanto.toyama.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:09:52Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.nanto.toyama.jp/gyoseijoho/jorei-kisoku-yoko/index.html (label: 条例・規則・要綱)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.nanto.toyama.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nanto.toyama.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.nanto.toyama.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:09:52Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.nanto.toyama.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.nanto.toyama.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nanto.toyama.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.nanto.toyama.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:09:52Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.nanto.toyama.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

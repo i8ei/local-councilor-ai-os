@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "18382",
+  "prefecture": "福井県",
+  "municipality": "池田町",
+  "official_home_url": "https://www.town.ikeda.fukui.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.ikeda.fukui.jp/contents/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ikeda.fukui.jp/contents/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.ikeda.fukui.jp/",
+          "fetched_at": "2026-08-27T06:24:49Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.ikeda.fukui.jp/contents/reiki/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

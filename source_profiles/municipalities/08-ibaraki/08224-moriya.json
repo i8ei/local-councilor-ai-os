@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08224",
+  "prefecture": "茨城県",
+  "municipality": "守谷市",
+  "official_home_url": "http://www.city.moriya.ibaraki.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "http://moriya.gijiroku.com/g07_Video_Search.asp",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://moriya.gijiroku.com/g07_Video_Search.asp",
+          "observed_on": "http://www.city.moriya.ibaraki.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:05:08Z"
+        }
+      ],
+      "notes": "Observed voices at http://moriya.gijiroku.com/g07_Video_Search.asp (label: 本会議録画配信)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.moriya/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.moriya/reiki_menu.html",
+          "observed_on": "http://www.city.moriya.ibaraki.jp/",
+          "fetched_at": "2026-08-27T06:04:21Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.moriya/reiki_menu.html (label: 守谷市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
+          "observed_on": "http://www.city.moriya.ibaraki.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:04:41Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
+          "observed_on": "http://www.city.moriya.ibaraki.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:04:41Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html (label: 予算・決算)"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "29447",
+  "prefecture": "奈良県",
+  "municipality": "野迫川村",
+  "official_home_url": "http://www.vill.nosegawa.nara.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.nosegawa.nara.jp/top/village_government/administration/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.nosegawa.nara.jp/top/village_government/administration/zaisei/index.html",
+          "observed_on": "https://www.vill.nosegawa.nara.jp/top/village_government/index.html",
+          "fetched_at": "2026-08-27T07:15:13Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.nosegawa.nara.jp/top/village_government/administration/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.nosegawa.nara.jp/top/village_government/administration/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.nosegawa.nara.jp/top/village_government/administration/zaisei/index.html",
+          "observed_on": "https://www.vill.nosegawa.nara.jp/top/village_government/index.html",
+          "fetched_at": "2026-08-27T07:15:13Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.nosegawa.nara.jp/top/village_government/administration/zaisei/index.html (label: 財政)"
+    }
+  }
+}

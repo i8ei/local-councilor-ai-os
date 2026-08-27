@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27207",
+  "prefecture": "大阪府",
+  "municipality": "高槻市",
+  "official_home_url": "http://www.city.takatsuki.osaka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.kensakusystem.jp/takatsuki/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.kensakusystem.jp/takatsuki/index.html",
+          "observed_on": "http://www.city.takatsuki.osaka.jp/site/takatsukishigikai/",
+          "fetched_at": "2026-08-27T06:29:10Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.kensakusystem.jp/takatsuki/index.html (label: 高槻市議会会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.takatsuki.osaka.jp/life/9/93/499/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.takatsuki.osaka.jp/life/9/93/499/",
+          "observed_on": "http://www.city.takatsuki.osaka.jp/life/9/",
+          "fetched_at": "2026-08-27T06:28:26Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.takatsuki.osaka.jp/life/9/93/499/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.takatsuki.osaka.jp/life/9/86/468/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.takatsuki.osaka.jp/life/9/86/468/",
+          "observed_on": "http://www.city.takatsuki.osaka.jp/life/9/",
+          "fetched_at": "2026-08-27T06:28:26Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.takatsuki.osaka.jp/life/9/86/468/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.takatsuki.osaka.jp/life/9/86/468/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.takatsuki.osaka.jp/life/9/86/468/",
+          "observed_on": "http://www.city.takatsuki.osaka.jp/life/9/",
+          "fetched_at": "2026-08-27T06:28:26Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.takatsuki.osaka.jp/life/9/86/468/ (label: 予算・決算)"
+    }
+  }
+}

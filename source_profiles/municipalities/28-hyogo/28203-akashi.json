@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28203",
+  "prefecture": "兵庫県",
+  "municipality": "明石市",
+  "official_home_url": "http://www.city.akashi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.akashi.lg.jp/seisaku/kouhou_ka/shise/jorei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.akashi.lg.jp/seisaku/kouhou_ka/shise/jorei/index.html",
+          "observed_on": "http://www.city.akashi.lg.jp/shise/index.html",
+          "fetched_at": "2026-08-27T06:43:47Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.akashi.lg.jp/seisaku/kouhou_ka/shise/jorei/index.html (label: 明石市例規類集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.akashi.lg.jp/shise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.akashi.lg.jp/shise/index.html",
+          "observed_on": "http://www.city.akashi.lg.jp/shise/index.html",
+          "fetched_at": "2026-08-27T06:43:47Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.akashi.lg.jp/shise/index.html (label: 財政・予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.akashi.lg.jp/shise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.akashi.lg.jp/shise/index.html",
+          "observed_on": "http://www.city.akashi.lg.jp/shise/index.html",
+          "fetched_at": "2026-08-27T06:43:47Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.akashi.lg.jp/shise/index.html (label: 財政・予算)"
+    }
+  }
+}

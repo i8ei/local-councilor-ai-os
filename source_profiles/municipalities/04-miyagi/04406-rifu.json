@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "04406",
+  "prefecture": "宮城県",
+  "municipality": "利府町",
+  "official_home_url": "http://www.town.rifu.miyagi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.rifu.miyagi.jp/section/reiki/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.rifu.miyagi.jp/section/reiki/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.rifu.miyagi.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T07:24:34Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.rifu.miyagi.jp/section/reiki/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
+          "observed_on": "https://www.town.rifu.miyagi.jp/sitemap/index.html",
+          "fetched_at": "2026-08-27T07:23:53Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
+          "observed_on": "https://www.town.rifu.miyagi.jp/sitemap/index.html",
+          "fetched_at": "2026-08-27T07:23:53Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html (label: 予算・財政)"
+    }
+  }
+}

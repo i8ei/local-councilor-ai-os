@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15342",
+  "prefecture": "新潟県",
+  "municipality": "弥彦村",
+  "official_home_url": "http://www.vill.yahiko.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.vill.yahiko.niigata.jp/assets/images/content/content_20251215_164057.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.yahiko.niigata.jp/assets/images/content/content_20251215_164057.pdf",
+          "observed_on": "http://www.vill.yahiko.niigata.jp/administration/?content=273",
+          "fetched_at": "2026-08-27T06:05:53Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.vill.yahiko.niigata.jp/assets/images/content/content_20251215_164057.pdf (label: 会議録 [PDF｜167.1KB])"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.yahiko/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.yahiko/reiki_menu.html",
+          "observed_on": "http://www.vill.yahiko.niigata.jp/",
+          "fetched_at": "2026-08-27T06:04:15Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.yahiko/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.yahiko.niigata.jp/administration/?category=55",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.yahiko.niigata.jp/administration/?category=55",
+          "observed_on": "http://www.vill.yahiko.niigata.jp/",
+          "fetched_at": "2026-08-27T06:04:15Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.vill.yahiko.niigata.jp/administration/?category=55 (label: 補正予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.yahiko.niigata.jp/administration/?category=119",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.yahiko.niigata.jp/administration/?category=119",
+          "observed_on": "http://www.vill.yahiko.niigata.jp/",
+          "fetched_at": "2026-08-27T06:04:15Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.yahiko.niigata.jp/administration/?category=119 (label: 財政情報)"
+    }
+  }
+}

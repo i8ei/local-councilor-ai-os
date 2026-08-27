@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "19214",
+  "prefecture": "山梨県",
+  "municipality": "中央市",
+  "official_home_url": "http://www.city.chuo.yamanashi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/chuo/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/chuo/pg/index.html",
+          "observed_on": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/2854.html",
+          "fetched_at": "2026-08-27T06:50:03Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chuo/pg/index.html (label: 中央市議会会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.chuo.yamanashi.jp/section/reiki_int/reiki_honbun/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.chuo.yamanashi.jp/section/reiki_int/reiki_honbun/r333RG00000585.html",
+          "observed_on": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/4345.html",
+          "fetched_at": "2026-08-27T06:50:22Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.chuo.yamanashi.jp/section/reiki_int/reiki_honbun/r333RG00000585.html (label: https://www.city.chuo.yamanashi.jp/section/reiki_int/reiki_honbun/r333RG00000585.html)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/4345.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/4345.html",
+          "observed_on": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/index.html",
+          "fetched_at": "2026-08-27T06:42:14Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.chuo.yamanashi.jp/introduction/shigikai/4345.html (label: 政務活動費の決算状況)"
+    }
+  }
+}

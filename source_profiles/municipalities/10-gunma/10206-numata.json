@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10206",
+  "prefecture": "群馬県",
+  "municipality": "沼田市",
+  "official_home_url": "http://www.city.numata.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.numata.gunma.jp/gikai/honkaigi/1004426.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.numata.gunma.jp/gikai/honkaigi/1004426.html",
+          "observed_on": "http://www.city.numata.gunma.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:32:30Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.numata.gunma.jp/gikai/honkaigi/1004426.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/numata/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/numata/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/numata/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:36:05Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/numata/reiki_menu.html for 沼田市"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.numata.gunma.jp/event/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.numata.gunma.jp/event/zaisei/index.html",
+          "observed_on": "http://www.city.numata.gunma.jp/sitemap.html",
+          "fetched_at": "2026-08-27T06:32:09Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.numata.gunma.jp/event/zaisei/index.html (label: 資産活用課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.numata.gunma.jp/event/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.numata.gunma.jp/event/zaisei/index.html",
+          "observed_on": "http://www.city.numata.gunma.jp/sitemap.html",
+          "fetched_at": "2026-08-27T06:32:09Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.numata.gunma.jp/event/zaisei/index.html (label: 資産活用課)"
+    }
+  }
+}

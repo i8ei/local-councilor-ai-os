@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "09204",
+  "prefecture": "栃木県",
+  "municipality": "佐野市",
+  "official_home_url": "http://www.city.sano.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/sano/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.city.sano.lg.jp%2Fsp%2Fshigikai%2F2%2Findex.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/sano/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.city.sano.lg.jp%2Fsp%2Fshigikai%2F2%2Findex.html",
+          "observed_on": "https://www.city.sano.lg.jp/sp/shigikai/index.html",
+          "fetched_at": "2026-08-27T06:18:32Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/sano/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.city.sano.lg.jp%2Fsp%2Fshigikai%2F2%2Findex.html (label: 議会中継・録画配信)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A6DF88E",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A6DF88E",
+          "observed_on": "https://www.city.sano.lg.jp/kurashi_gyosei/index.html",
+          "fetched_at": "2026-08-27T06:17:41Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A6DF88E (label: Rulebook 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
+          "observed_on": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/index.html",
+          "fetched_at": "2026-08-27T06:17:59Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
+          "observed_on": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/index.html",
+          "fetched_at": "2026-08-27T06:17:59Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html (label: 予算・財政)"
+    }
+  }
+}

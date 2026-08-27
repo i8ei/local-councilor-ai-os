@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "38201",
+  "prefecture": "愛媛県",
+  "municipality": "松山市",
+  "official_home_url": "http://www.city.matsuyama.ehime.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.matsuyama.ehime.jp/shisei/opendata/metadata/town-kaigiroku-sedai.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.matsuyama.ehime.jp/shisei/opendata/metadata/town-kaigiroku-sedai.html",
+          "observed_on": "http://www.city.matsuyama.ehime.jp/shisei/opendata/top.html",
+          "fetched_at": "2026-08-27T06:58:39Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.matsuyama.ehime.jp/shisei/opendata/metadata/town-kaigiroku-sedai.html (label: 【世代別・職業別】会議禄)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://kro202.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://kro202.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.matsuyama.ehime.jp/",
+          "fetched_at": "2026-08-27T06:57:21Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://kro202.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.matsuyama.ehime.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:58:04Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
+          "observed_on": "http://www.city.matsuyama.ehime.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:58:04Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html (label: 各会計決算審査意見)"
+    }
+  }
+}

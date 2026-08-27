@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47303",
+  "prefecture": "沖縄県",
+  "municipality": "東村",
+  "official_home_url": "https://www.vill.higashi.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/higashi/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/higashi/pg/index.html",
+          "observed_on": "https://www.vill.higashi.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:52:12Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/higashi/pg/index.html (label: 東村議会議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB43E1",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB43E1",
+          "observed_on": "https://www.vill.higashi.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:52:12Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB43E1 (label: 東村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.higashi.okinawa.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:52:26Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/678.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/678.html",
+          "observed_on": "https://www.vill.higashi.okinawa.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:52:26Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/678.html (label: 決算に係る財務諸表)"
+    }
+  }
+}
