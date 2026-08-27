@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.town.shibata.miyagi.jp/index.cfm/82,0,169,297,html (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.shibata.miyagi.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:20:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shibata.miyagi.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.shibata.miyagi.jp/",
           "fetched_at": "2026-08-27T07:21:30Z"
+        },
+        {
+          "url": "https://www.town.shibata.miyagi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.shibata.miyagi.jp/reiki_int/",
+          "sha256": "6f54f9d8360483c9981bec46d493488d1d785f6dd07cc429b6d77d5dd5d97c26",
+          "fetched_at": "2026-08-27T10:33:58Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.shibata.miyagi.jp/reiki_int/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

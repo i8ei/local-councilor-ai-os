@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.vill.asahi.nagano.jp/special/asahimuragikai/giketsu_kaigiroku/index.html (label: 議決・会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/vill.asahi.nagano/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/vill.asahi.nagano/reiki_menu.html",
           "observed_on": "http://www.vill.asahi.nagano.jp/",
           "fetched_at": "2026-08-27T07:18:14Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/vill.asahi.nagano/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/vill.asahi.nagano/",
+          "sha256": "d027a7c468c97471fb30083ca94cb56a956530cce6aa8b91cb48e4e5753d3bb2",
+          "fetched_at": "2026-08-27T10:11:12Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.asahi.nagano/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

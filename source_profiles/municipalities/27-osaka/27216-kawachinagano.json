@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.city.kawachinagano.lg.jp/site/gikai/list42-644.html (label: 議事録の閲覧)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.kawachinagano.lg.jp/static/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kawachinagano.lg.jp/static/reiki/reiki_menu.html",
           "observed_on": "http://www.city.kawachinagano.lg.jp/",
           "fetched_at": "2026-08-27T06:31:25Z"
+        },
+        {
+          "url": "http://www.city.kawachinagano.lg.jp/static/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.kawachinagano.lg.jp/static/reiki/",
+          "sha256": "222da7565f12fdbca2eb77e9dcd5d8657b17c49d2e6bf0d977b4c7783c560382",
+          "fetched_at": "2026-08-27T09:50:43Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.kawachinagano.lg.jp/static/reiki/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

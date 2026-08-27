@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kamagaya/pg/index.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.kamagaya/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.kamagaya/reiki_menu.html",
           "observed_on": "http://www.city.kamagaya.chiba.jp/",
           "fetched_at": "2026-08-27T07:16:45Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.kamagaya/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.kamagaya/",
+          "sha256": "f264070de62ba71ef7c9249f80bcff7c0524bbfa4b03fc08d9a509e9edb2e7e8",
+          "fetched_at": "2026-08-27T10:23:14Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kamagaya/reiki_menu.html (label: 条例・規則検索（外部サイト）) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

@@ -26,11 +26,11 @@
       "notes": "kaigiroku_net tenant live-verified (reached via /soshiki/12/ 議会事務局). 静的年度議事録(/soshiki/12/*.html)も併存するが検索システムはkaigiroku_netが主 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/genkai/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
       "evidence": [
         {

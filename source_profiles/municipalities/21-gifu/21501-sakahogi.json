@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/sakahogi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/sakahogi/reiki_menu.html",
           "observed_on": "https://www1.g-reiki.net/sakahogi/reiki_menu.html",
           "fetched_at": "2026-08-27T07:36:12Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/sakahogi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/sakahogi/",
+          "sha256": "b36b9bc93d70d3c0a367e841655a95348a6f874ca68c5a002e0f948f1a16ec0e",
+          "fetched_at": "2026-08-27T10:13:51Z"
         }
       ],
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/sakahogi/reiki_menu.html for 坂祝町 extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

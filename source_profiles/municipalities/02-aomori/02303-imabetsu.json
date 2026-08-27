@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.imabetsu.lg.jp/gyousei/gikai/2025-0317-1111-1.html (label: 町議会定例会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.imabetsu.lg.jp/gyousei/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:20:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.imabetsu.lg.jp/gyousei/reiki/reiki_menu.html",
           "observed_on": "https://www.town.imabetsu.lg.jp/",
           "fetched_at": "2026-08-27T06:58:12Z"
+        },
+        {
+          "url": "https://www.town.imabetsu.lg.jp/gyousei/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/reiki/",
+          "sha256": "7a4bd8a6f29a0d2441b01091072a63723ac278f0c017ab9e422e9b271a9085f8",
+          "fetched_at": "2026-08-27T10:32:00Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.imabetsu.lg.jp/gyousei/reiki/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

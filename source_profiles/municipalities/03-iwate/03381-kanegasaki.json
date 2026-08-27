@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.kanegasaki.iwate/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:20:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.kanegasaki.iwate/reiki_menu.html",
           "observed_on": "https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/",
           "fetched_at": "2026-08-27T07:12:08Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.kanegasaki.iwate/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.kanegasaki.iwate/",
+          "sha256": "c57e437a61b2e7db95b3b1601acc990b5bf6204200a3c8240722ac2b1b95350d",
+          "fetched_at": "2026-08-27T10:33:12Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.kanegasaki.iwate/reiki_menu.html (label: 金ケ崎町例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

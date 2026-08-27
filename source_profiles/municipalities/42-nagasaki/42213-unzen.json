@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/unzen/pg/index.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/unzen/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/unzen/reiki_menu.html",
           "observed_on": "http://www.city.unzen.nagasaki.jp/",
           "fetched_at": "2026-08-27T05:25:37Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/unzen/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/unzen/",
+          "sha256": "cc1dc57f4e0b528d728e8675fb6a85887a2a0fad63ce88bb2d1514ba082b0332",
+          "fetched_at": "2026-08-27T09:37:31Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/unzen/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

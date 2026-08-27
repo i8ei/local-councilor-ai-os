@@ -28,11 +28,11 @@
       "notes": "Site redesigned to a UTF-8 CMS with kijiXXXX detail pages. On the '会議録・定例会' index (list00404.html) the 会議録 (verbatim minutes) column - list01104/00984/00946 (2026-2024) and list00422/00423/00424 (2023-2021) - is empty for every year (no PDF or detail links). Only the 議会だより (council newsletter) column has PDFs (e.g. list00942 -> kiji0032976 -> '有田町議会だよりNo.71'), which are newsletters, not speaker-attributed minutes. No external kaigiroku/gijiroku/voices minutes system found. Downgraded from ready (the 2026-08-20 ready was over-claimed: the verifier confirmed only the index page existed, not PDF reachability). needs_review: a councilor should confirm with the town whether verbatim minutes are published offline or are planned online."
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.arita.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
       "evidence": [
         {

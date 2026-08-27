@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.kensakusystem.jp/togitsu-s/index.html (label: 会議録の検索と閲覧（外部リンク）)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.togitsu/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.togitsu/reiki_menu.html",
           "observed_on": "http://www.town.togitsu.nagasaki.jp/",
           "fetched_at": "2026-08-27T05:27:00Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.togitsu/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.togitsu/",
+          "sha256": "ed8f37391af5ab258cbcee5e727b2a0ea2b1ec869285f3beeca73c81bbaa34f4",
+          "fetched_at": "2026-08-27T09:37:37Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.togitsu/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

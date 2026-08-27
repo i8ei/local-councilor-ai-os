@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.town.rokunohe.aomori.jp/docs/2023051900005/ (label: 会議録の閲覧)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/rokunohe/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:20:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/rokunohe/reiki_menu.html",
           "observed_on": "https://www.town.rokunohe.aomori.jp/",
           "fetched_at": "2026-08-27T07:02:05Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/rokunohe/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/rokunohe/",
+          "sha256": "10c1e6c55d429759e263ad170bcb11a3acd987cd65cc9cfa834e6b3a82bf4c8a",
+          "fetched_at": "2026-08-27T10:32:23Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/rokunohe/reiki_menu.html (label: 六戸例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

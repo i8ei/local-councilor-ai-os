@@ -32,11 +32,11 @@
       "notes": "dbsr index live-verified; minutes bodies are robots-restricted (robots.txt allows only the bare /index.php index and disallows meeting detail/document paths), so automated body ingestion is blocked and requires the councilor/user to obtain municipality permission"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.kamimine/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
       "evidence": [
         {
@@ -48,6 +48,12 @@
           "observed_on": "https://www1.g-reiki.net/town.kamimine/",
           "sha256": "97ff1077e60e76bdcb1608a94af9d2bceab3c601afa7ca53e5f5b2ac070e253d",
           "fetched_at": "2026-08-20T13:14:17Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.kamimine/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.kamimine/",
+          "sha256": "54539b3b72dd7ce5bb3deb5cd21f1edb793cb6c33c9444f99390dfed3c881fb7",
+          "fetched_at": "2026-08-27T12:36:20Z"
         }
       ]
     },

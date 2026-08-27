@@ -27,16 +27,22 @@
       "notes": "Observed dbsr at https://www.city.fuchu.tokyo.dbsr.jp/index.php/ (label: 市議会会議録検索（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/city.fuchu.tokyo/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/city.fuchu.tokyo/reiki_menu.html",
           "observed_on": "http://www.city.fuchu.tokyo.jp/",
           "fetched_at": "2026-08-27T07:42:41Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.fuchu.tokyo/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.fuchu.tokyo/",
+          "sha256": "b482a9f4bb672f92d92ab5f2783766403a9c63ec977b144c111144488b93e021",
+          "fetched_at": "2026-08-27T10:25:53Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.fuchu.tokyo/reiki_menu.html (label: 例規検索（外部サイト）) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

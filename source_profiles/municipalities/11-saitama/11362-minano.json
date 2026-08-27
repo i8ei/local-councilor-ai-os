@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.minano.saitama.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:20:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.minano.saitama.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.minano.saitama.jp/",
           "fetched_at": "2026-08-27T07:04:26Z"
+        },
+        {
+          "url": "https://www.town.minano.saitama.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.minano.saitama.jp/reiki_int/",
+          "sha256": "ca2422a898c0b563eee3342c00afdf58e23e5193cf0b913db4b9b56b9f059efe",
+          "fetched_at": "2026-08-27T10:22:01Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.minano.saitama.jp/reiki_int/reiki_menu.html (label: ) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

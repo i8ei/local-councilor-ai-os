@@ -21,16 +21,22 @@
       "notes": "Observed voices at https://fukagawa.gijiroku.com/voices/index.asp (label: 市議会会議録検索 （別サイト） （新規ウィンドウで開きます）)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/fukagawa/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:20:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/fukagawa/reiki_menu.html",
           "observed_on": "https://www.city.fukagawa.lg.jp/",
           "fetched_at": "2026-08-27T06:02:26Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/fukagawa/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/fukagawa/",
+          "sha256": "f67bd922a1a9ac8837ac803ee0ff84a1871286033d26e73ad325a076a9daad35",
+          "fetched_at": "2026-08-27T10:29:14Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/fukagawa/reiki_menu.html (label: 深川市の条例や規則 （別サイト） （新規ウィンドウで開きます）) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
