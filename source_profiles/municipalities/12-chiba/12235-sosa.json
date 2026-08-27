@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/sosa/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/sosa/reiki_menu.html",
           "observed_on": "http://www.city.sosa.lg.jp/page/dir000033.html",
           "fetched_at": "2026-08-27T07:22:16Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/sosa/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/sosa/",
+          "sha256": "3043a0a15b0538ebba93c8482d5e37161c5259be30fbc9cbc6338eb13e08fb14",
+          "fetched_at": "2026-08-27T10:23:40Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/sosa/reiki_menu.html (label: 匝瑳市例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.yusui.kagoshima.jp/reiki/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yusui.kagoshima.jp/reiki/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.yusui.kagoshima.jp/",
           "fetched_at": "2026-08-27T06:42:47Z"
+        },
+        {
+          "url": "http://www.town.yusui.kagoshima.jp/reiki/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.yusui.kagoshima.jp/reiki/reiki_int/",
+          "sha256": "96f413666e9a399922e9cfabad170d72f2d3fc0db4e471a3f64bbceb2517c900",
+          "fetched_at": "2026-08-27T09:40:40Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.yusui.kagoshima.jp/reiki/reiki_int/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

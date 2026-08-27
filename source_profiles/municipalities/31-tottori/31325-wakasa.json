@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.wakasa.tottori.jp/gyoseijoho/gikai/1469.html (label: 若桜町議会の会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.wakasa.tottori.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.wakasa.tottori.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.wakasa.tottori.jp/",
           "fetched_at": "2026-08-27T05:56:57Z"
+        },
+        {
+          "url": "https://www.town.wakasa.tottori.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.wakasa.tottori.jp/section/reiki_int/",
+          "sha256": "40aaf6a2da69d63d7d41a843857402712629879ba60d9e9471977a7b40c53783",
+          "fetched_at": "2026-08-27T09:42:32Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.wakasa.tottori.jp/section/reiki_int/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

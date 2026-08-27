@@ -144,7 +144,7 @@ class RunVerifyBlockTests(unittest.TestCase):
             for _k, entry in data.get("sources", {}).items():
                 if entry.get("status") == "ready":
                     ready_count += 1
-        self.assertEqual(ready_count, 38, "Expected exactly 38 ready entries in 41-saga")
+        self.assertEqual(ready_count, 53, "Expected exactly 53 ready entries in 41-saga")
 
         # Collect promotable tasks
         tasks = collect_promotable_tasks(saga_files, already_completed=set())

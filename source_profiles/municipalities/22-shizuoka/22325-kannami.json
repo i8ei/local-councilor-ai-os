@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kannami/SpTop.html (label: 函南町議会会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.kannami.shizuoka/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.kannami.shizuoka/reiki_menu.html",
           "observed_on": "http://www.town.kannami.shizuoka.jp/",
           "fetched_at": "2026-08-27T07:51:02Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.kannami.shizuoka/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.kannami.shizuoka/",
+          "sha256": "5adf4793b7d115cdefce53dee0345baa78064c2ec0c76bb276aa0c4acef3b553",
+          "fetched_at": "2026-08-27T10:14:49Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.kannami.shizuoka/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

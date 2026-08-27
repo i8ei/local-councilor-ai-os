@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.shiwa.iwate/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:20:13Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.shiwa.iwate/reiki_menu.html",
           "observed_on": "https://www.town.shiwa.iwate.jp/",
           "fetched_at": "2026-08-27T07:11:07Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.shiwa.iwate/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.shiwa.iwate/",
+          "sha256": "bc0480476b203d2eb9228d9bfce38744fd52bb20351664c31f0e29f9538aa2ef",
+          "fetched_at": "2026-08-27T10:33:10Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.shiwa.iwate/reiki_menu.html (label: 紫波町例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

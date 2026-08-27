@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.vill.iheya.okinawa.jp/site/sanngyou/2653.html (label: 第5回伊平屋村産業経済活性化協議会の議事録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/iheya/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/iheya/reiki_menu.html",
           "observed_on": "http://www.vill.iheya.okinawa.jp/",
           "fetched_at": "2026-08-27T06:58:45Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/iheya/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/iheya/",
+          "sha256": "eff230c4d7a2f464c67a09d3de8d9db3904b2a9718bd8e11783d9653b33cca96",
+          "fetched_at": "2026-08-27T09:41:41Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/iheya/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

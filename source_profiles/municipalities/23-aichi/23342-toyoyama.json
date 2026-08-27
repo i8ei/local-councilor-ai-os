@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.toyoyama.lg.jp/chosei/singikai/1007232/1001270.html (label: 令和8年度豊山町安全なまちづくり協議会議事録を掲載しました) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www1.g-reiki.net/toyoyama/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www1.g-reiki.net/toyoyama/reiki_menu.html",
           "observed_on": "http://www.town.toyoyama.lg.jp/chosei/index.html",
           "fetched_at": "2026-08-27T08:11:43Z"
+        },
+        {
+          "url": "http://www1.g-reiki.net/toyoyama/reiki_menu.html",
+          "observed_on": "http://www1.g-reiki.net/toyoyama/",
+          "sha256": "edacc71298ff06dcc2ec61ebaf792c6ef4dc720d157e306fcc56194563b9969d",
+          "fetched_at": "2026-08-27T10:16:17Z"
         }
       ],
       "notes": "Observed g_reiki at http://www1.g-reiki.net/toyoyama/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/aikawa/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.town.aikawa.kanagawa.jp/section/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aikawa.kanagawa.jp/section/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.aikawa.kanagawa.jp/",
           "fetched_at": "2026-08-27T08:10:18Z"
+        },
+        {
+          "url": "https://www.town.aikawa.kanagawa.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.aikawa.kanagawa.jp/section/reiki_int/",
+          "sha256": "69141494962411d515ff71f74391efafc968e42897269424001d00048979cc89",
+          "fetched_at": "2026-08-27T10:27:46Z"
         }
       ],
       "notes": "Observed g_reiki at https://www.town.aikawa.kanagawa.jp/section/reiki_int/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

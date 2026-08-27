@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.town.aisho.shiga.jp/chosei/chogikai/4/index.html (label: 議事録検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.aisho.shiga.jp/section/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.aisho.shiga.jp/section/reiki_menu.html",
           "observed_on": "http://www.town.aisho.shiga.jp/",
           "fetched_at": "2026-08-27T06:12:07Z"
+        },
+        {
+          "url": "http://www.town.aisho.shiga.jp/section/reiki_menu.html",
+          "observed_on": "http://www.town.aisho.shiga.jp/section/",
+          "sha256": "8a22559e6fdcaf6f9716668232c8d01215f531587f16b40f17a642ad769f75ac",
+          "fetched_at": "2026-08-27T09:49:43Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.aisho.shiga.jp/section/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"

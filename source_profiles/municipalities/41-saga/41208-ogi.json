@@ -19,11 +19,11 @@
       "notes": "議会の会議録は db-search.com（http://www.db-search.com/ogi-c/index.php/）で外部ベンダー運用のため現行 ingest adapter 未対応（robots Disallow:/）。preflight で検出した https://www.city.ogi.lg.jp/main/13235.html（農業委員会議事録）は議会会議録ではないため false positive"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www.city.ogi.lg.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:32:36Z",
+      "verified_by": "verify --live",
       "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
       "evidence": [
         {
@@ -35,6 +35,12 @@
           "observed_on": "https://www.city.ogi.lg.jp/reiki_int/",
           "sha256": "45b0b6fe6decc9e85e368c6614ad7beadaad117c4296b90b59721a55bc4321a0",
           "fetched_at": "2026-08-20T13:14:11Z"
+        },
+        {
+          "url": "https://www.city.ogi.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.ogi.lg.jp/reiki_int/",
+          "sha256": "84fec59b2f2b02a8f7ba1ef54fb80c10c63b6709255db7e013221a5a1849ab39",
+          "fetched_at": "2026-08-27T12:36:19Z"
         }
       ]
     },
