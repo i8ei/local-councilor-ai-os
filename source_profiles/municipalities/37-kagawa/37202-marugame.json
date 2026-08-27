@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.city.marugame.lg.jp/site/gikai/1311.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "joureikun",
       "index_url": "https://lg.joureikun.jp/marugame_city/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:00:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://lg.joureikun.jp/marugame_city/reiki/",
           "observed_on": "http://www.city.marugame.lg.jp/",
           "fetched_at": "2026-08-27T06:51:05Z"
+        },
+        {
+          "url": "https://lg.joureikun.jp/marugame_city/reiki/",
+          "observed_on": "https://lg.joureikun.jp/marugame_city/reiki/",
+          "sha256": "a8b836afb6416c8a94aed75e1685446d827951ef09e6b2b711797b3f758cbfe3",
+          "fetched_at": "2026-08-27T09:46:14Z"
         }
       ],
       "notes": "Observed joureikun at https://lg.joureikun.jp/marugame_city/reiki/ (label: 例規集)"

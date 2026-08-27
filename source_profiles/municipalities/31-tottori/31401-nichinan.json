@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "joureikun",
       "index_url": "https://lg.joureikun.jp/nichinan_town/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:00:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://lg.joureikun.jp/nichinan_town/",
           "observed_on": "http://www.town.nichinan.lg.jp/",
           "fetched_at": "2026-08-27T06:02:57Z"
+        },
+        {
+          "url": "https://lg.joureikun.jp/nichinan_town/",
+          "observed_on": "https://lg.joureikun.jp/nichinan_town/",
+          "sha256": "46c59566a231485936cf88ad290183286df5e461bdb3a9fb4aef07d1b3cb7d8c",
+          "fetched_at": "2026-08-27T09:42:45Z"
         }
       ],
       "notes": "Observed joureikun at https://lg.joureikun.jp/nichinan_town/ (label: 例規集)"

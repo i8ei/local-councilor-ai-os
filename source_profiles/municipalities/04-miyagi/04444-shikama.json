@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.town.shikama.miyagi.jp/chosei/gikai/2363.html (label: 会議録・議事録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "joureikun",
       "index_url": "https://public.joureikun.jp/shikama_town/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:00:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://public.joureikun.jp/shikama_town/reiki/",
           "observed_on": "http://www.town.shikama.miyagi.jp/",
           "fetched_at": "2026-08-27T07:25:45Z"
+        },
+        {
+          "url": "https://public.joureikun.jp/shikama_town/reiki/",
+          "observed_on": "https://public.joureikun.jp/shikama_town/reiki/",
+          "sha256": "85df61ff1b51e47d0657a1ef757fb6213204a72262abde712f02fd80d3346b3a",
+          "fetched_at": "2026-08-27T10:34:12Z"
         }
       ],
       "notes": "Observed joureikun at https://public.joureikun.jp/shikama_town/reiki/ (label: 例規集)"

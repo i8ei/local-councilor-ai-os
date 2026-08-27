@@ -66,7 +66,7 @@ _BLOCK_TAGS = {
     "tr",
 }
 _IGNORED_TAGS = {"script", "style", "noscript", "svg"}
-_ACT_RE = re.compile(r"/joureikun/act/\d+(?:_\d+)?\.html$", re.I)
+_ACT_RE = re.compile(r"/act/\d+(?:_\d+)?\.html$", re.I)
 
 
 class StructureMismatchError(RuntimeError):
@@ -96,10 +96,12 @@ def normalize_index_url(value: str) -> str:
 def _same_host(url: str, index_url: str) -> bool:
     parsed = urllib.parse.urlsplit(url)
     base = urllib.parse.urlsplit(index_url)
+    parsed_host = (parsed.hostname or "").lower()
+    base_host = (base.hostname or "").lower()
     return (
         parsed.scheme.lower() in {"http", "https"}
         and base.scheme.lower() in {"http", "https"}
-        and parsed.netloc.lower() == base.netloc.lower()
+        and parsed_host == base_host
     )
 
 
@@ -229,6 +231,49 @@ def discover_documents(
         )
         if limit is not None and len(refs) >= limit:
             break
+
+    # If no act links found directly, follow landing page to aggregate/catalog/index.html
+    if not refs:
+        base_dir = fetched.final_url if fetched.final_url.endswith("/") else fetched.final_url + "/"
+        catalog_candidates = [
+            urllib.parse.urljoin(base_dir, "aggregate/catalog/index.html"),
+            urllib.parse.urljoin(base_dir, "catalog/index.html"),
+            urllib.parse.urljoin(base_dir, "aggregate/field/index.html"),
+        ]
+        for url, _ in links:
+            if "catalog" in url.lower() or "aggregate" in url.lower():
+                if url not in catalog_candidates:
+                    catalog_candidates.append(url)
+
+        for cat_url in catalog_candidates:
+            if not _same_host(cat_url, index_url):
+                continue
+            try:
+                cat_fetched = client.fetch(cat_url, tier=CacheTier.INDEX)
+            except Exception:
+                continue
+            if not _same_host(cat_fetched.final_url, index_url):
+                continue
+            cat_links = _page_links(cat_fetched, index_url)
+            for url, label in cat_links:
+                if not _is_act_url(url, index_url):
+                    continue
+                if url in seen:
+                    continue
+                seen.add(url)
+                refs.append(
+                    {
+                        "document_id": stable_id("regdoc", url),
+                        "source_url": url,
+                        "title": label or Path(urllib.parse.urlsplit(url).path).name,
+                        "discovered_from": cat_fetched.final_url,
+                    }
+                )
+                if limit is not None and len(refs) >= limit:
+                    break
+            if refs:
+                break
+
     if not refs:
         raise StructureMismatchError(
             "expected joureikun act links were not found in the catalog"

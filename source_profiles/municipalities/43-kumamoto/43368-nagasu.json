@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.town.nagasu.lg.jp/gyosei/gikai/gijiroku/ (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "joureikun",
       "index_url": "https://public.joureikun.jp/nagasu_town/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:00:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://public.joureikun.jp/nagasu_town/reiki/",
           "observed_on": "http://www.town.nagasu.lg.jp/",
           "fetched_at": "2026-08-27T05:38:05Z"
+        },
+        {
+          "url": "https://public.joureikun.jp/nagasu_town/reiki/",
+          "observed_on": "https://public.joureikun.jp/nagasu_town/reiki/",
+          "sha256": "11f206018186a5e71caa8e4dcf1ec017e67ed5350b1de6e45060ac408c7cb2db",
+          "fetched_at": "2026-08-27T09:38:18Z"
         }
       ],
       "notes": "Observed joureikun at https://public.joureikun.jp/nagasu_town/reiki/ (label: 例規集)"
