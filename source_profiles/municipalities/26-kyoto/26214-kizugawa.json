@@ -29,16 +29,22 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.kizugawa.lg.jp/0000002093.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/kizugawa/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kizugawa.lg.jp/0000002093.html",
           "observed_on": "http://www.city.kizugawa.lg.jp/",
           "fetched_at": "2026-08-27T06:19:27Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/kizugawa/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/kizugawa/d1w_reiki/reiki.html",
+          "sha256": "72dce9532a8da71a2fb9a0eb5fd2a665abf432ba200a43a78c19d0e2a4e22d48",
+          "fetched_at": "2026-08-27T16:25:26Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.kizugawa.lg.jp/0000002093.html (label: 例規集)"

@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.tsuruta.lg.jp/syoukai/syoukai-gyousei/reikishu.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/tsuruta/d1w_reiki/reiki.html ",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tsuruta.lg.jp/syoukai/syoukai-gyousei/reikishu.html",
           "observed_on": "https://www.town.tsuruta.lg.jp/syoukai/syoukai-gyousei/index.html",
           "fetched_at": "2026-08-27T07:01:32Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/tsuruta/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/tsuruta/d1w_reiki/reiki.html ",
+          "sha256": "b3600ffb982254fb1bbafb668fcc85b54c1f15ee331cecf418450234ec1c506d",
+          "fetched_at": "2026-08-27T16:25:23Z"
         }
       ],
       "notes": "Observed regulations index at https://www.town.tsuruta.lg.jp/syoukai/syoukai-gyousei/reikishu.html (label: 例規集)"

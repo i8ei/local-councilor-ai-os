@@ -29,16 +29,22 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.miyazaki-misato.lg.jp/list00213.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/misato-miyazaki/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miyazaki-misato.lg.jp/list00213.html",
           "observed_on": "http://www.town.miyazaki-misato.lg.jp/",
           "fetched_at": "2026-08-27T06:33:09Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/misato-miyazaki/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/misato-miyazaki/d1w_reiki/reiki.html",
+          "sha256": "6a28106c44c201a2ed85791281728717b42e5f02afa7e872ca1f24774dc7b75f",
+          "fetched_at": "2026-08-27T16:26:12Z"
         }
       ],
       "notes": "Observed regulations index at http://www.town.miyazaki-misato.lg.jp/list00213.html (label: 例規集)"

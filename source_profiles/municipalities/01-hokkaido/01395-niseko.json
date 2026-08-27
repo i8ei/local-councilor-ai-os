@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.town.niseko.lg.jp/chosei/gikai/kaigi/ (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.niseko.lg.jp/chosei/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/niseko/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.niseko.lg.jp/chosei/reiki/",
           "observed_on": "https://www.town.niseko.lg.jp/",
           "fetched_at": "2026-08-27T06:13:36Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/niseko/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/niseko/d1w_reiki/reiki.html",
+          "sha256": "383725dfdde7f813cab46030391588811d1b1278ba0add65c3655726aa7a444e",
+          "fetched_at": "2026-08-27T16:25:23Z"
         }
       ],
       "notes": "Observed regulations index at https://www.town.niseko.lg.jp/chosei/reiki/ (label: ニセコ町例規集)"

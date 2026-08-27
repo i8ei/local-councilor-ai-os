@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.vill.samegawa.fukushima.jp/page/dir000624.html (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.vill.samegawa.fukushima.jp/page/page000154.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/samegawa/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.samegawa.fukushima.jp/page/page000154.html",
           "observed_on": "http://www.vill.samegawa.fukushima.jp/page/dir000061.html",
           "fetched_at": "2026-08-27T08:04:30Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/samegawa/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/samegawa/d1w_reiki/reiki.html",
+          "sha256": "7efc474e341a63ed1b37b3a3f85f7d9cf88ed8496e182062d8ecb1ea155073e7",
+          "fetched_at": "2026-08-27T16:25:24Z"
         }
       ],
       "notes": "Observed regulations index at http://www.vill.samegawa.fukushima.jp/page/page000154.html (label: 例規集)"

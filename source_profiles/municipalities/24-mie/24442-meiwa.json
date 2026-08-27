@@ -38,16 +38,22 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.meiwa.mie.jp/gyosei_joho/2585.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/meiwa/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.meiwa.mie.jp/gyosei_joho/2585.html",
           "observed_on": "https://www.town.meiwa.mie.jp/gyosei_joho/index.html",
           "fetched_at": "2026-08-27T06:03:37Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/meiwa/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/meiwa/d1w_reiki/reiki.html",
+          "sha256": "7a0c773ae99caf289092c3d66c44844a372bf54ae6f2708141fd1f9e2d6a2456",
+          "fetched_at": "2026-08-27T16:25:25Z"
         }
       ],
       "notes": "Observed regulations index at https://www.town.meiwa.mie.jp/gyosei_joho/2585.html (label: 例規集)"

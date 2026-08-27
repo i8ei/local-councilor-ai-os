@@ -29,16 +29,22 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.tsurugashima.lg.jp/gyousei/gaiyou/page004162.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/tsurugashima/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsurugashima.lg.jp/gyousei/gaiyou/page004162.html",
           "observed_on": "http://www.city.tsurugashima.lg.jp/",
           "fetched_at": "2026-08-27T06:58:42Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/tsurugashima/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/tsurugashima/d1w_reiki/reiki.html",
+          "sha256": "0c20f1e2c7d12d9d7df5a9de072d3f53e15a6a7c7b5fd408d451c207d90b49d2",
+          "fetched_at": "2026-08-27T16:25:24Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.tsurugashima.lg.jp/gyousei/gaiyou/page004162.html (label: 例規集)"
