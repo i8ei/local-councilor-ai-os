@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.town.kanan.osaka.jp/gyoseijoho/gikai/1/index.html (label: 定例会議等会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.kanan.osaka.jp/gyoseijoho/seisaku_keikaku/4343.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/kanan/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kanan.osaka.jp/gyoseijoho/seisaku_keikaku/4343.html",
           "observed_on": "http://www.town.kanan.osaka.jp/",
           "fetched_at": "2026-08-27T06:40:28Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/kanan/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/kanan/d1w_reiki/reiki.html",
+          "sha256": "34bae4a9e37e1385bda2c4b44fa6724fe7e1679f77252552259a5b80f74d00b5",
+          "fetched_at": "2026-08-27T16:25:27Z"
         }
       ],
       "notes": "Observed regulations index at https://www.town.kanan.osaka.jp/gyoseijoho/seisaku_keikaku/4343.html (label: 例規集)"

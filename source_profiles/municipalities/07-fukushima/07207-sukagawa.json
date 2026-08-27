@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.sukagawa.fukushima.jp/shisei/gyoseiunei/jorei_kisoku_reikisyu/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/sukagawa/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sukagawa.fukushima.jp/shisei/gyoseiunei/jorei_kisoku_reikisyu/index.html",
           "observed_on": "https://www.city.sukagawa.fukushima.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:51:57Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/sukagawa/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/sukagawa/d1w_reiki/reiki.html",
+          "sha256": "4817ddeac336c1a4c365fa5ea67b81807908be01034050e5149785a9b9787fb9",
+          "fetched_at": "2026-08-27T16:25:23Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.sukagawa.fukushima.jp/shisei/gyoseiunei/jorei_kisoku_reikisyu/index.html (label: 条例・規則など例規集)"

@@ -6,6 +6,7 @@ from __future__ import annotations
 import concurrent.futures
 import datetime
 import json
+import os
 import re
 import sys
 import urllib.parse
@@ -18,7 +19,9 @@ from lcaios.http import REGULATIONS_USER_AGENT, CacheTier, HttpClient
 from source_profiles.schema import validate_profile
 from source_profiles.verify import verify_profile
 
-MUNI_DIR = REPO_ROOT / "source_profiles" / "municipalities"
+MUNI_DIR = Path(
+    os.environ.get("LCAIOS_MUNI_DIR", REPO_ROOT / "source_profiles" / "municipalities")
+)
 CACHE_DIR = REPO_ROOT / ".tasks" / "cache" / "verify"
 
 VENDOR_PATTERNS = [
@@ -112,7 +115,8 @@ def process_municipality(task: tuple[int, int, Path, dict, str]) -> tuple[str, b
             )
             return f"[{idx:3d}/{total:3d}] {muni_name:12s} -> READY discovered ({adapter}: {resolved_url})!", True
         else:
-            return f"[{idx:3d}/{total:3d}] {muni_name:12s} -> discovered ({adapter}) but verify failed: {report.get('reason')[:50]}", False
+            reason = report.get("reason") or ""
+            return f"[{idx:3d}/{total:3d}] {muni_name:12s} -> discovered ({adapter}) but verify failed: {reason[:50]}", False
     except Exception as exc:
         return f"[{idx:3d}/{total:3d}] {muni_name:12s} -> error: {type(exc).__name__}: {str(exc)[:50]}", False
 

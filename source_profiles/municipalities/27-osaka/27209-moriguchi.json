@@ -29,16 +29,22 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.moriguchi.osaka.jp/kakukanoannai/somubu/hoseibunshoka/3452.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://en3-jg.d1-law.com/moriguchi/d1w_reiki/reiki.html",
+      "verified_at": "2026-08-27T16:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.moriguchi.osaka.jp/kakukanoannai/somubu/hoseibunshoka/3452.html",
           "observed_on": "http://www.city.moriguchi.osaka.jp/",
           "fetched_at": "2026-08-27T06:27:53Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/moriguchi/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/moriguchi/d1w_reiki/reiki.html",
+          "sha256": "319a4bceeebda85b17ea96680d6a961f4e498524e8056c840f1133492eb56143",
+          "fetched_at": "2026-08-27T16:25:27Z"
         }
       ],
       "notes": "Observed regulations index at https://www.city.moriguchi.osaka.jp/kakukanoannai/somubu/hoseibunshoka/3452.html (label: 守口市例規集)"
