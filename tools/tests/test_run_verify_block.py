@@ -12,17 +12,14 @@ from unittest import mock
 
 from source_profiles.verify import _PROMOTABLE_PRIOR_STATUSES
 from tools.run_verify_block import (
-    BLOCKS,
     KINDS,
     ThreadLocalStdout,
     build_parser,
     collect_promotable_tasks,
     find_profile_paths,
     group_tasks_by_municipality,
-    main,
     print_summary,
     run_verify_block,
-    verify_municipality_worker,
     verify_task,
 )
 
@@ -144,7 +141,7 @@ class RunVerifyBlockTests(unittest.TestCase):
         ready_count = 0
         for f in saga_files:
             data = json.loads(f.read_text(encoding="utf-8"))
-            for k, entry in data.get("sources", {}).items():
+            for _k, entry in data.get("sources", {}).items():
                 if entry.get("status") == "ready":
                     ready_count += 1
         self.assertEqual(ready_count, 38, "Expected exactly 38 ready entries in 41-saga")

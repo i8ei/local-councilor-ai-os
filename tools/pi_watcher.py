@@ -62,7 +62,7 @@ def _process_one(handoff: Path) -> bool:
                 r = json.loads(residual.read_text(encoding="utf-8"))
                 if r:
                     print(f"pi_watcher: residual {len(r)} cases need Tier2 manual (web_search/fetch)", flush=True)
-                    print(f"  next: pi should web_search each residual's name + '議事録/例規集' and update profile", flush=True)
+                    print("  next: pi should web_search each residual's name + '議事録/例規集' and update profile", flush=True)
             except Exception:
                 pass
         return True

@@ -3,9 +3,7 @@
 from __future__ import annotations
 
 import argparse
-import datetime
 import json
-import re
 import sys
 import urllib.parse
 from pathlib import Path
@@ -79,10 +77,10 @@ def probe_vendor_minutes(muni_name: str, slug: str, client: HttpClient) -> dict[
     """Safely probe major minutes vendors with strict municipality name verification."""
     clean_slug = slug.removeprefix("town-").removeprefix("vill-").removeprefix("city-")
     candidates = [
-        ("kaigiroku_net", f"https://ssp.kaigiroku.net/tenant/{clean_slug}/SpTop.html", f"https://ssp.kaigiroku.net/tenant/{clean_slug}/"),
-        ("kaigiroku_net", f"https://ssp.kaigiroku.net/tenant/{clean_slug}/MinuteSearch.html", f"https://ssp.kaigiroku.net/tenant/{clean_slug}/"),
+        ("kaigiroku_net", f"https://ssp.kaigiroku.net/tenant/{clean_slug}/SpTop.html"),
+        ("kaigiroku_net", f"https://ssp.kaigiroku.net/tenant/{clean_slug}/MinuteSearch.html"),
     ]
-    for adapter, check_url, tenant_url in candidates:
+    for adapter, check_url in candidates:
         try:
             res = client.fetch(check_url, tier=CacheTier.INDEX)
             text = res.text()
@@ -342,7 +340,9 @@ def scout_municipality(
                     }
                 errors = validate_profile(profile)
                 if errors:
-                    raise ValueError(f"Validation error for {profile_path}: {errors}")
+                    raise ValueError(
+                        f"Validation error for {profile_path}: {errors}"
+                    ) from None
                 with profile_path.open("w", encoding="utf-8") as f:
                     json.dump(profile, f, ensure_ascii=False, indent=2)
                     f.write("\n")

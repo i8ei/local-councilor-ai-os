@@ -19,10 +19,9 @@ BLOCKS = {
     "tohoku_hokkaido": ["01", "02", "03", "04", "05", "06", "07"],
 }
 
+
 from lcaios.http import BOOTSTRAP_USER_AGENT, HttpClient
 from tools.scout_profiles import scout_municipality
-from source_profiles.schema import validate_profile
-import json
 
 print_lock = threading.Lock()
 

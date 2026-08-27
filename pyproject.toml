@@ -28,6 +28,11 @@ select = ["E", "F", "I", "W", "B"]
 # Line length is reported by the formatter, not the linter.
 ignore = ["E501"]
 
+[tool.ruff.lint.per-file-ignores]
+# tools/ scripts are run directly (python3 tools/x.py), so they insert the
+# repo root into sys.path before importing first-party packages.
+"tools/*" = ["E402"]
+
 [tool.ruff.lint.isort]
 known-first-party = ["lcaios", "bootstrap", "onboarding", "modules", "source_profiles"]
 
