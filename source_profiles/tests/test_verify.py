@@ -2938,5 +2938,105 @@ class D1LawRegulationsVerifyTests(unittest.TestCase):
         )
 
 
+# ---------------------------------------------------------------------------
+# d1_law opensearch regulations synthetic tests (no network)
+# ---------------------------------------------------------------------------
+
+D1LAW_OPENSEARCH_INDEX_URL = "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95853"
+D1LAW_OPENSEARCH_INIT_URL = (
+    "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95853"
+)
+D1LAW_OPENSEARCH_SEARCH_URL = (
+    "https://ops-jg.d1-law.com/opensearch/SrMjF01/search?typeSearch=SrMj_Genko&mokujicd=001:00:00"
+)
+D1LAW_OPENSEARCH_DOC_URL = (
+    "https://ops-jg.d1-law.com/opensearch/SrJbF01/init?jctcd=8A7FF95853&houcd=H417901010001&fromJsp=SrMj"
+)
+
+D1LAW_OPENSEARCH_INIT_HTML = """<html><head><title>春日部市例規集</title></head><body>
+<div id="mokujiSearch"><ul class="treeview"><li id="treeGenko">
+<a title="第１ 例規" href="javascript:void(0)" onclick="mkjG('001:00:00');">第１ 例規</a>
+</li></ul></div></body></html>"""
+
+D1LAW_OPENSEARCH_SEARCH_HTML = """<html><head><title>検索結果</title></head><body>
+<table><tr><td>
+<a href="javascript:void(0)" onClick="doViewJobunFromJsp('8A7FF95853', 'H417901010001', null, null, '1', '1', null, 'SrMj'); return false;">
+春日部市役所の位置を定める条例</a>（平成17年10月１日条例第１号）
+</td></tr></table></body></html>"""
+
+D1LAW_OPENSEARCH_DOC_HTML = """<html><head><title>春日部市役所の位置を定める条例 春日部市例規集</title></head><body>
+<div id="honbunArea">
+<div class="contents-lineheight-2">春日部市役所の位置を定める条例</div>
+<div class="contents-lineheight-2">第１条 この条例は、市役所の位置を定める。</div>
+</div></body></html>"""
+
+
+def _base_d1law_opensearch_needs_review() -> dict:
+    profile = _base_d1law_needs_review()
+    profile["sources"]["regulations"]["index_url"] = D1LAW_OPENSEARCH_INDEX_URL
+    profile["sources"]["regulations"]["evidence"] = [
+        {"url": D1LAW_OPENSEARCH_INDEX_URL, "observed_on": VALID_HOME}
+    ]
+    return profile
+
+
+def _d1law_opensearch_client() -> FakeHttpClient:
+    return FakeHttpClient(
+        {
+            D1LAW_OPENSEARCH_INDEX_URL: make_fetch_result(
+                D1LAW_OPENSEARCH_INDEX_URL, D1LAW_OPENSEARCH_INIT_HTML
+            ),
+            D1LAW_OPENSEARCH_INIT_URL: make_fetch_result(
+                D1LAW_OPENSEARCH_INIT_URL, D1LAW_OPENSEARCH_INIT_HTML
+            ),
+            D1LAW_OPENSEARCH_SEARCH_URL: make_fetch_result(
+                D1LAW_OPENSEARCH_SEARCH_URL, D1LAW_OPENSEARCH_SEARCH_HTML
+            ),
+            D1LAW_OPENSEARCH_DOC_URL: make_fetch_result(
+                D1LAW_OPENSEARCH_DOC_URL, D1LAW_OPENSEARCH_DOC_HTML
+            ),
+        }
+    )
+
+
+class D1LawOpenSearchRegulationsVerifyTests(unittest.TestCase):
+    def test_d1law_opensearch_promotes_to_ready(self) -> None:
+        profile = _base_d1law_opensearch_needs_review()
+        updated, report = verify_profile(
+            profile, client=_d1law_opensearch_client(), now=NOW, kind="regulations"
+        )
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", report["status_after"])
+        self.assertEqual(
+            "ready", updated["sources"]["regulations"]["status"]
+        )
+        self.assertEqual([], validate_profile(updated))
+
+    def test_d1law_opensearch_robots_denied_does_not_promote(self) -> None:
+        class DenyClient(FakeHttpClient):
+            def fetch(
+                self, url: str, *, tier: CacheTier, **_: object
+            ) -> object:
+                self.calls.append((url, tier))
+                raise RobotsDeniedError("robots.txt disallows /opensearch/")
+
+        profile = _base_d1law_opensearch_needs_review()
+        client = DenyClient(
+            {
+                D1LAW_OPENSEARCH_INDEX_URL: make_fetch_result(
+                    D1LAW_OPENSEARCH_INDEX_URL, D1LAW_OPENSEARCH_INIT_HTML
+                )
+            }
+        )
+        updated, report = verify_profile(
+            profile, client=client, now=NOW, kind="regulations"  # type: ignore[arg-type]
+        )
+        self.assertEqual("failed", report["result"])
+        self.assertIn("RobotsDenied", report["reason"])
+        self.assertEqual(
+            "needs_review", updated["sources"]["regulations"]["status"]
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

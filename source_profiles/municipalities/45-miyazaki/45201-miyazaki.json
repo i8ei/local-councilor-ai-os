@@ -27,16 +27,22 @@
       "notes": "Observed dbsr at http://www.city.miyazaki.miyazaki.dbsr.jp/index.php (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CB",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:51:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CB",
           "observed_on": "http://www.city.miyazaki.miyazaki.jp/",
           "fetched_at": "2026-08-27T06:23:53Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CB",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CB",
+          "sha256": "9b173d569822b42adc637f71c7f278b300c127223e0a5d6e327400b58b6dc217",
+          "fetched_at": "2026-08-27T11:51:22Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CB (label: 例規集)"
@@ -60,7 +66,7 @@
           "fetched_at": "2026-08-27T09:39:47Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.miyazaki.miyazaki.jp/city/finance/ (label: 財政・行政改革) 入口 https://www.city.miyazaki.miyazaki.jp/city/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyazaki.miyazaki.jp/city/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at http://www.city.miyazaki.miyazaki.jp/city/finance/ (label: 財政・行政改革) 入口 https://www.city.miyazaki.miyazaki.jp/city/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyazaki.miyazaki.jp/city/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyazaki.miyazaki.jp/city/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -81,7 +87,7 @@
           "fetched_at": "2026-08-27T09:39:50Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.miyazaki.miyazaki.jp/parliament/commission/special-committee/138105.html (label: 決算審査特別委員会) 入口 https://www.city.miyazaki.miyazaki.jp/parliament/commission/special-committee/138105.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed settlement link at http://www.city.miyazaki.miyazaki.jp/parliament/commission/special-committee/138105.html (label: 決算審査特別委員会) 入口 https://www.city.miyazaki.miyazaki.jp/parliament/commission/special-committee/138105.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyazaki.miyazaki.jp/parliament/commission/special-committee/138105.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

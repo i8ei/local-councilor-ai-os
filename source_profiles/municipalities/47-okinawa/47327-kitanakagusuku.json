@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB44A5",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:52:07Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB44A5",
           "observed_on": "http://www.vill.kitanakagusuku.lg.jp/",
           "fetched_at": "2026-08-27T06:55:02Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB44A5",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB44A5",
+          "sha256": "c56fc70a18261244dc9f6b26086e411be2589f060f0dadc51ed49ebc337751c0",
+          "fetched_at": "2026-08-27T11:52:09Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB44A5 (label: )"

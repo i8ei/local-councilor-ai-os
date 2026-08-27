@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85C1007F",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:59:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85C1007F",
           "observed_on": "http://www.vill.chihayaakasaka.osaka.jp/",
           "fetched_at": "2026-08-27T06:41:05Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85C1007F",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85C1007F",
+          "sha256": "5cf707851c2a9339b24f3db3a494336421b91685d7c1399dcd225b5cf7ba006c",
+          "fetched_at": "2026-08-27T11:59:38Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A85C1007F (label: 例規集)"

@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.komae.tokyo.jp/index.cfm/46,73878,html (label: 会議録のひろば)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8CDA186958",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8CDA186958",
           "observed_on": "http://www.city.komae.tokyo.jp/",
           "fetched_at": "2026-08-27T07:46:02Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8CDA186958",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8CDA186958",
+          "sha256": "2cd6e0e84b69a953f382b270c48da414f0afbc91fa16b5fb3812291cf65169e7",
+          "fetched_at": "2026-08-27T12:09:59Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8CDA186958 (label: 例規類集(条例・規則等))"

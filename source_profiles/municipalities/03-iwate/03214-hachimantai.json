@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at https://www.city.hachimantai.lg.jp/site/gikai/30029.html (label: 令和8年（2026年）会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A118113",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A118113",
           "observed_on": "https://www.city.hachimantai.lg.jp/",
           "fetched_at": "2026-08-27T07:09:21Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A118113",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A118113",
+          "sha256": "b985546a68b13246c2ae407ff6a25bb9e9420215be500cc20b3811da97d0e9ec",
+          "fetched_at": "2026-08-27T12:09:14Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A118113 (label: 例規集)"

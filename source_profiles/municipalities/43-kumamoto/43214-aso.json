@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.city.aso.kumamoto.jp/municipal/city_council/city_council/conference_proceedings/ (label: 会議録の閲覧)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A918D7793",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:50:46Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A918D7793",
           "observed_on": "http://www.city.aso.kumamoto.jp/",
           "fetched_at": "2026-08-27T05:34:58Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A918D7793",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A918D7793",
+          "sha256": "d5a9bfdd3afcafe20bfabc67723d456500b22451227777c9782bda6ddc73861a",
+          "fetched_at": "2026-08-27T11:50:48Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A918D7793 (label: 例規集（条例・規則）)"

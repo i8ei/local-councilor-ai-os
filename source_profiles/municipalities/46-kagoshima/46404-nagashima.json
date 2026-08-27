@@ -21,16 +21,22 @@
       "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/nagashima/WebView/rd/council_1.html (label: 町議会中継)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC0206",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:51:41Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC0206",
           "observed_on": "https://www.town.nagashima.lg.jp/",
           "fetched_at": "2026-08-27T06:42:35Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91BC0206",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC0206",
+          "sha256": "e739b32c98304ae5530e98a470a23e684fa7ff456377c304cce1732b020067ec",
+          "fetched_at": "2026-08-27T11:51:42Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC0206 (label: )"
@@ -54,7 +60,7 @@
           "fetched_at": "2026-08-27T09:40:36Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nagashima.lg.jp/administration/ad0007/ (label: 財政情報一覧) 入口 https://www.town.nagashima.lg.jp/administration/ad0007/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at https://www.town.nagashima.lg.jp/administration/ad0007/ (label: 財政情報一覧) 入口 https://www.town.nagashima.lg.jp/administration/ad0007/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nagashima.lg.jp/administration/ad0007/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -80,7 +86,7 @@
           "fetched_at": "2026-08-27T10:57:55Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nagashima.lg.jp/administration/ad0007/ (label: 財政情報一覧) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "Observed finance section at https://www.town.nagashima.lg.jp/administration/ad0007/ (label: 財政情報一覧) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     }
   }
 }

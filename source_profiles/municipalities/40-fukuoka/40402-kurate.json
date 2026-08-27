@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.town.kurate.lg.jp/gikai/minutes/2026.html (label: 令和8年議会会期日程・会議録の閲覧)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A916110C4",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:50:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A916110C4",
           "observed_on": "http://www.town.kurate.lg.jp/nougyou/tyoujuhigai-nyusatsu.html",
           "fetched_at": "2026-08-27T04:22:57Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A916110C4",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A916110C4",
+          "sha256": "9494863463ecb8cb260a06c23338dc198771917607b4621c40eb7ec29da2b2aa",
+          "fetched_at": "2026-08-27T11:50:27Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A916110C4 (label: 条例・規則)"

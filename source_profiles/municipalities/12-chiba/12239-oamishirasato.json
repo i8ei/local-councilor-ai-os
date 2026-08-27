@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.city.oamishirasato.lg.jp/category/68-4-0-0-0-0-0-0-0-0.html (label: 会議録) extraction probe read one document at http://ssp.kaigiroku.net/tenant/oamishirasato/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078984",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078984",
           "observed_on": "https://www.city.oamishirasato.lg.jp/category/63-0-0-0-0-0-0-0-0-0.html",
           "fetched_at": "2026-08-27T07:23:42Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078984",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078984",
+          "sha256": "38ee54051d2b503a7713d98de4b119df91f5aedfd6d6451de148b25f45f7dbb4",
+          "fetched_at": "2026-08-27T12:09:49Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078984 (label: 例規集)"

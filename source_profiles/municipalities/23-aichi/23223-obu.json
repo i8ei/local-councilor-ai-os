@@ -21,16 +21,22 @@
       "notes": "Observed voices at https://obu.gijiroku.com/g07_Shitsumon.asp?kword1=&kaigi=241&giin1=&kubun= (label: 一般質問事項 （外部リンク）)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "http://ops-jg.d1-law.com/opensearch/?jctcd=8A8583316D",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://ops-jg.d1-law.com/opensearch/?jctcd=8A8583316D",
           "observed_on": "http://www.city.obu.aichi.jp/shisei/index.html",
           "fetched_at": "2026-08-27T08:04:06Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A8583316D",
+          "observed_on": "http://ops-jg.d1-law.com/opensearch/?jctcd=8A8583316D",
+          "sha256": "5693d4695ad46ab7a506cd8610cfcfc7dac76b383ed753e64edcf2bca716bfab",
+          "fetched_at": "2026-08-27T12:12:37Z"
         }
       ],
       "notes": "Observed d1_law at http://ops-jg.d1-law.com/opensearch/?jctcd=8A8583316D (label: 大府市例規類集)"

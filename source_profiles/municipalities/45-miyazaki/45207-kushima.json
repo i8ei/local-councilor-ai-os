@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91AC49D1",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:51:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91AC49D1",
           "observed_on": "https://www.city.kushima.lg.jp/main/",
           "fetched_at": "2026-08-27T06:28:20Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC49D1",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91AC49D1",
+          "sha256": "f706f66a448a001f0c7c23ff7f9f1605cc11fe3018c72cfec2fb6b7cfc576a71",
+          "fetched_at": "2026-08-27T11:51:26Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A91AC49D1 (label: 串間市例規集)"
@@ -52,7 +58,7 @@
           "fetched_at": "2026-08-27T09:39:44Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html (label: 令和８年度予算 事項別明細書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "Observed budget link at https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html (label: 令和８年度予算 事項別明細書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -73,7 +79,7 @@
           "fetched_at": "2026-08-27T09:39:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html (label: 令和８年度予算 事項別明細書) 入口 https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html (label: 令和８年度予算 事項別明細書) 入口 https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

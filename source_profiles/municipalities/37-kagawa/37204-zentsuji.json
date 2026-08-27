@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/zentsuji/pg/index.html (label: 会議録の閲覧・検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC5F92E",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:04:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC5F92E",
           "observed_on": "http://www.city.zentsuji.kagawa.jp/",
           "fetched_at": "2026-08-27T06:51:58Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC5F92E",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC5F92E",
+          "sha256": "3d3d21b800714b38f9789acd6a724fa6698cb60921cedb0c08bf00bd44069ab4",
+          "fetched_at": "2026-08-27T12:04:36Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC5F92E (label: 例規集)"

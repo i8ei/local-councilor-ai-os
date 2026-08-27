@@ -21,16 +21,22 @@
       "notes": "Observed voices at https://hayama-gikai.gijiroku.com/ (label: )"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A802634AF",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A802634AF",
           "observed_on": "http://www.town.hayama.lg.jp/",
           "fetched_at": "2026-08-27T08:04:58Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A802634AF",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A802634AF",
+          "sha256": "30909c69cc0c1e9e4bc0514f2a1f901c2e51c1156cb51d4b7575fe458be233bd",
+          "fetched_at": "2026-08-27T12:10:01Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A802634AF (label: 例規集)"

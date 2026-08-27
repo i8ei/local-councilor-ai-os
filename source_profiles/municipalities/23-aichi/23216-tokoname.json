@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tokoname/SpTop.html (label: 議会会議録検索 （外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85833115",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:11:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85833115",
           "observed_on": "http://www.city.tokoname.aichi.jp/1000059.html",
           "fetched_at": "2026-08-27T08:01:23Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85833115",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A85833115",
+          "sha256": "708d652a1daaf9fababf35ac3fd087a2e488a5459ad091f2485f4a88a74891a4",
+          "fetched_at": "2026-08-27T12:12:33Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A85833115 (label: 例規集(条例・規則等) （外部リンク）)"

@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at https://www.town.noto.lg.jp/chosei/5417.html (label: 令和8年 能登町議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
       "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80549A69",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T12:03:57Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80549A69",
           "observed_on": "http://www.town.noto.lg.jp/",
           "fetched_at": "2026-08-27T06:21:47Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80549A69",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80549A69",
+          "sha256": "eeec79bd616324c1f64366ce9bd305e36d0ae54568b209cb3b67df2e9f0bd38e",
+          "fetched_at": "2026-08-27T12:03:57Z"
         }
       ],
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80549A69 (label: )"
@@ -54,7 +60,7 @@
           "fetched_at": "2026-08-27T10:06:23Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.noto.lg.jp/chosei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at https://www.town.noto.lg.jp/chosei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -75,7 +81,7 @@
           "fetched_at": "2026-08-27T10:06:23Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.noto.lg.jp/chosei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "Observed finance section at https://www.town.noto.lg.jp/chosei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

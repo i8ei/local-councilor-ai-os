@@ -233,7 +233,9 @@ def _cmd_ingest_command(args: argparse.Namespace) -> int:
             return 2
         db_path = f"/tmp/{area}-reg.db"
         source_name = f"{muni_name}例規集"
-        cmd = f'python3 modules/regulations/vendor_d1law_reiki.py --index-url {index_url} --db {db_path} --source-name "{source_name}" --limit {limit}'
+        is_opensearch = "opensearch" in index_url.lower() or "jctcd=" in index_url.lower()
+        script = "vendor_d1law_opensearch.py" if is_opensearch else "vendor_d1law_reiki.py"
+        cmd = f'python3 modules/regulations/{script} --index-url "{index_url}" --db {db_path} --source-name "{source_name}" --limit {limit}'
         if status == "needs_review":
             print("# NEEDS LIVE VERIFICATION")
         print(cmd)
