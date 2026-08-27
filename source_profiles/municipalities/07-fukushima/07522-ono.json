@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.ono.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html",
           "observed_on": "http://www.town.ono.fukushima.jp/life/4/19/",
           "fetched_at": "2026-08-27T08:08:20Z"
+        },
+        {
+          "url": "http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html",
+          "observed_on": "http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html",
+          "sha256": "fbf9f590d8beeb335268c6b16f4e374ed88409f275f8fdb5c21861f938bf20c0",
+          "fetched_at": "2026-08-27T10:38:10Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html (label: 令和8年会議録（議会事務局）) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html (label: 令和8年会議録（議会事務局）) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

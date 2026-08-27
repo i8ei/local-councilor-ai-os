@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.hisayama.fukuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/hisayama_gikai/1697.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/hisayama_gikai/1697.html",
           "observed_on": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/index.html",
           "fetched_at": "2026-08-27T06:01:01Z"
+        },
+        {
+          "url": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/hisayama_gikai/1697.html",
+          "observed_on": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/hisayama_gikai/1697.html",
+          "sha256": "d5f0a611a5b02091b91f4b472294fc88c3c27a8d054afea192e97772ff77d12b",
+          "fetched_at": "2026-08-27T09:36:24Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/hisayama_gikai/1697.html (label: 久山町議会 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/hisayama_gikai/1697.html (label: 久山町議会 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

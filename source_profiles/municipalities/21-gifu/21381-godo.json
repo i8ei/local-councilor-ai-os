@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.godo.gifu.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.godo.gifu.jp/contents/gikai/gikai08.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.godo.gifu.jp/contents/gikai/gikai08.html",
           "observed_on": "http://www.town.godo.gifu.jp/contents/gikai/gikai01.html",
           "fetched_at": "2026-08-27T07:34:45Z"
+        },
+        {
+          "url": "http://www.town.godo.gifu.jp/contents/gikai/gikai08.html",
+          "observed_on": "http://www.town.godo.gifu.jp/contents/gikai/gikai08.html",
+          "sha256": "e905edd50305232c657b1725ad355f6ef5beeb10e126ae878030340764442e5c",
+          "fetched_at": "2026-08-27T10:13:56Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.godo.gifu.jp/contents/gikai/gikai08.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.town.godo.gifu.jp/contents/gikai/gikai08.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

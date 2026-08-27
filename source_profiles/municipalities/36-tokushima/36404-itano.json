@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.itano.tokushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.itano.tokushima.jp/docs/2026052000025/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.itano.tokushima.jp/docs/2026052000025/",
           "observed_on": "http://www.town.itano.tokushima.jp/soshiki/gikai/",
           "fetched_at": "2026-08-27T06:48:23Z"
+        },
+        {
+          "url": "http://www.town.itano.tokushima.jp/docs/2026052000025/",
+          "observed_on": "http://www.town.itano.tokushima.jp/docs/2026052000025/",
+          "sha256": "bcb2582f3c8bd51fd8eb42bbee04fd850bd755986b1e790cc9d66bdb1c400d0b",
+          "fetched_at": "2026-08-27T09:46:19Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.itano.tokushima.jp/docs/2026052000025/ (label: 令和８年第１回板野町議会定例会 会議録・一般質問者一覧) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.town.itano.tokushima.jp/docs/2026052000025/ (label: 令和８年第１回板野町議会定例会 会議録・一般質問者一覧) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

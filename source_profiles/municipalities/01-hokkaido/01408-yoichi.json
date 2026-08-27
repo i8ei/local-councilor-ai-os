@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.yoichi.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.yoichi.hokkaido.jp/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoichi.hokkaido.jp/gikai/kaigiroku/index.html",
           "observed_on": "http://www.town.yoichi.hokkaido.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:19:34Z"
+        },
+        {
+          "url": "http://www.town.yoichi.hokkaido.jp/gikai/kaigiroku/index.html",
+          "observed_on": "http://www.town.yoichi.hokkaido.jp/gikai/kaigiroku/index.html",
+          "sha256": "eb2390a6ba83efa9b8dc87b50adb0c56fdd1ee26785ed94cc6252ba6bd2fa8f4",
+          "fetched_at": "2026-08-27T10:30:06Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.yoichi.hokkaido.jp/gikai/kaigiroku/index.html (label: ) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.town.yoichi.hokkaido.jp/gikai/kaigiroku/index.html (label: ) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

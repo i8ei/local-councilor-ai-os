@@ -6,19 +6,28 @@
   "official_home_url": "http://www.tokunoshima-town.org/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.tokunoshima-town.org/gikaijimukyoku/chose/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.tokunoshima-town.org/gikaijimukyoku/chose/gikai/kaigiroku/index.html",
           "observed_on": "http://www.tokunoshima-town.org/chose/index.html",
           "fetched_at": "2026-08-27T06:46:55Z"
+        },
+        {
+          "url": "http://www.tokunoshima-town.org/gikaijimukyoku/chose/gikai/kaigiroku/index.html",
+          "observed_on": "http://www.tokunoshima-town.org/gikaijimukyoku/chose/gikai/kaigiroku/index.html",
+          "sha256": "d411c096eaf8903141a7e95ad26bfe85cbec6df43d27faf63f5c154bd9ad75df",
+          "fetched_at": "2026-08-27T09:40:50Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.tokunoshima-town.org/gikaijimukyoku/chose/gikai/kaigiroku/index.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.tokunoshima-town.org/gikaijimukyoku/chose/gikai/kaigiroku/index.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

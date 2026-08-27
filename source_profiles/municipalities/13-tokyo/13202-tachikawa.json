@@ -6,19 +6,28 @@
   "official_home_url": "http://www.city.tachikawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.tachikawa.lg.jp/shisei/sanka/1006064/1006089/1006261/1006274/1027940.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tachikawa.lg.jp/shisei/sanka/1006064/1006089/1006261/1006274/1027940.html",
           "observed_on": "http://www.city.tachikawa.lg.jp/shisei/1021105.html",
           "fetched_at": "2026-08-27T07:41:45Z"
+        },
+        {
+          "url": "http://www.city.tachikawa.lg.jp/shisei/sanka/1006064/1006089/1006261/1006274/1027940.html",
+          "observed_on": "http://www.city.tachikawa.lg.jp/shisei/sanka/1006064/1006089/1006261/1006274/1027940.html",
+          "sha256": "0f1fdce8d7b5621089e83c65a32e2db4f2ac07fbbc193fe80d887fdac1b5dccd",
+          "fetched_at": "2026-08-27T10:25:46Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.tachikawa.lg.jp/shisei/sanka/1006064/1006089/1006261/1006274/1027940.html (label: 令和8年度第1回立川市医療的ケア児支援関係者会議議事録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.city.tachikawa.lg.jp/shisei/sanka/1006064/1006089/1006261/1006274/1027940.html (label: 令和8年度第1回立川市医療的ケア児支援関係者会議議事録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

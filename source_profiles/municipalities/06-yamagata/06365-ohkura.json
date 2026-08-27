@@ -6,19 +6,28 @@
   "official_home_url": "http://www.vill.ohkura.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/okurasongikai/2301.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/okurasongikai/2301.html",
           "observed_on": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:46:42Z"
+        },
+        {
+          "url": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/okurasongikai/2301.html",
+          "observed_on": "https://www.vill.ohkura.yamagata.jp/gyoseijoho/okurasongikai/2301.html",
+          "sha256": "193e46b1e2ba76894e23a038db3fa39749a6c4ae9155de57aa497ec44a7c1c3c",
+          "fetched_at": "2026-08-27T10:36:17Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.vill.ohkura.yamagata.jp/gyoseijoho/okurasongikai/2301.html (label: 大蔵村議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.vill.ohkura.yamagata.jp/gyoseijoho/okurasongikai/2301.html (label: 大蔵村議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

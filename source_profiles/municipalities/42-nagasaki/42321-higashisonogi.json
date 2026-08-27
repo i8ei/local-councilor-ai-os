@@ -6,19 +6,28 @@
   "official_home_url": "https://www.town.higashisonogi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.higashisonogi.lg.jp/gyoseijoho/gikai/796.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.higashisonogi.lg.jp/gyoseijoho/gikai/796.html",
           "observed_on": "https://www.town.higashisonogi.lg.jp/gyoseijoho/gikai/index.html",
           "fetched_at": "2026-08-27T05:27:21Z"
+        },
+        {
+          "url": "https://www.town.higashisonogi.lg.jp/gyoseijoho/gikai/796.html",
+          "observed_on": "https://www.town.higashisonogi.lg.jp/gyoseijoho/gikai/796.html",
+          "sha256": "cac15e8b410b248b40b273508ef48ee41a4ca00b039c158d60b8d1662fd8d3e3",
+          "fetched_at": "2026-08-27T09:37:42Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.higashisonogi.lg.jp/gyoseijoho/gikai/796.html (label: 東彼杵町議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.town.higashisonogi.lg.jp/gyoseijoho/gikai/796.html (label: 東彼杵町議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

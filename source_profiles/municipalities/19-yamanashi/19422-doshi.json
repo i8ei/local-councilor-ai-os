@@ -6,19 +6,28 @@
   "official_home_url": "http://www.vill.doshi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7",
           "observed_on": "http://www.vill.doshi.lg.jp/ka/info.php?if_id=713&ka_id=7",
           "fetched_at": "2026-08-27T06:49:29Z"
+        },
+        {
+          "url": "http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7",
+          "observed_on": "http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7",
+          "sha256": "517b628941e494d47895a7f13354e7117c558cd7cdffa817c51024970b958be7",
+          "fetched_at": "2026-08-27T10:09:05Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7 (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7 (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

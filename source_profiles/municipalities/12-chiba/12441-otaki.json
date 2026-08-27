@@ -6,19 +6,28 @@
   "official_home_url": "http://www.town.otaki.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.otaki.chiba.jp/gyousei/gikai/1423.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.otaki.chiba.jp/gyousei/gikai/1423.html",
           "observed_on": "https://www.town.otaki.chiba.jp/gyousei/gikai/index.html",
           "fetched_at": "2026-08-27T07:28:43Z"
+        },
+        {
+          "url": "https://www.town.otaki.chiba.jp/gyousei/gikai/1423.html",
+          "observed_on": "https://www.town.otaki.chiba.jp/gyousei/gikai/1423.html",
+          "sha256": "4790a0cc38410a6e20dc93bcc7c097467d6ea0b49145a943b3ad08136018058e",
+          "fetched_at": "2026-08-27T10:25:50Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.otaki.chiba.jp/gyousei/gikai/1423.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.town.otaki.chiba.jp/gyousei/gikai/1423.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "ready",

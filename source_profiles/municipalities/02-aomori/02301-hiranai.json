@@ -6,19 +6,28 @@
   "official_home_url": "https://www.town.hiranai.aomori.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.hiranai.aomori.jp/chosei/gikai/1422.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hiranai.aomori.jp/chosei/gikai/1422.html",
           "observed_on": "https://www.town.hiranai.aomori.jp/chosei/gikai/index.html",
           "fetched_at": "2026-08-27T06:58:36Z"
+        },
+        {
+          "url": "https://www.town.hiranai.aomori.jp/chosei/gikai/1422.html",
+          "observed_on": "https://www.town.hiranai.aomori.jp/chosei/gikai/1422.html",
+          "sha256": "2be4cf3d08114a38dc69549d283f86a9022fc20801ebca76b4d3976a14459e00",
+          "fetched_at": "2026-08-27T10:32:15Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.hiranai.aomori.jp/chosei/gikai/1422.html (label: 定例会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.town.hiranai.aomori.jp/chosei/gikai/1422.html (label: 定例会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

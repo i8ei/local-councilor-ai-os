@@ -6,19 +6,28 @@
   "official_home_url": "http://www.vill.shingo.aomori.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.vill.shingo.aomori.jp/page-30802/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:12:12Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.shingo.aomori.jp/page-30802/",
           "observed_on": "http://www.vill.shingo.aomori.jp/",
           "fetched_at": "2026-08-27T07:06:30Z"
+        },
+        {
+          "url": "https://www.vill.shingo.aomori.jp/page-30802/",
+          "observed_on": "https://www.vill.shingo.aomori.jp/page-30802/",
+          "sha256": "991729497bd3f88d320c5c12898e22de4cfde95ef023ad03a0b646aabd710c94",
+          "fetched_at": "2026-08-27T10:32:38Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.vill.shingo.aomori.jp/page-30802/ (label: 新郷村議会 会議録を更新しました。) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "notes": "Observed council minutes index at https://www.vill.shingo.aomori.jp/page-30802/ (label: 新郷村議会 会議録を更新しました。) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "not_found",
