@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A9160EADB (label: 志免町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shime.lg.jp/life/3/8/45/ ",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shime.lg.jp/life/3/8/45/ ",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.town.shime.lg.jp/life/3/8/45/",
           "sha256": "ccc7e4cbe2b7ea852aea849ee390d5911abb0d7b781008ca140a74645bf2af07",
           "fetched_at": "2026-08-27T09:36:21Z"
+        },
+        {
+          "url": "http://www.town.shime.lg.jp/life/3/8/45/ ",
+          "observed_on": "http://www.town.shime.lg.jp/",
+          "sha256": "ccc7e4cbe2b7ea852aea849ee390d5911abb0d7b781008ca140a74645bf2af07",
+          "fetched_at": "2026-08-27T09:36:21Z"
+        },
+        {
+          "url": "https://www.town.shime.lg.jp/uploaded/attachment/28542.pdf",
+          "observed_on": "https://www.town.shime.lg.jp/soshiki/2/r8hoseiyosan.html",
+          "sha256": "65711034e0575b01026fb385ddaf652d789a7c97ba9cb0cc54066095fbef0d1a",
+          "fetched_at": "2026-08-27T13:45:04Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shime.lg.jp/life/3/8/45/  (label: 町の財政情報) 入口 https://www.town.shime.lg.jp/life/3/8/45/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shime.lg.jp/life/3/8/45/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（28542.pdf「令和8年度一般会計補正予算書（補正第1号） [PDFファイル／195KB]」, sha256:65711034）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

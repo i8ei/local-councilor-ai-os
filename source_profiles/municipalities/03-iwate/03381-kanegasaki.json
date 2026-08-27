@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.kanegasaki.iwate/reiki_menu.html (label: 金ケ崎町例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kanegasaki.iwate.jp/docs/2026022000031/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kanegasaki.iwate.jp/docs/2026022000031/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.kanegasaki.iwate.jp/docs/2026022000031/",
           "sha256": "42c945098640513281680949b0342e207cae3dcaecd5e14ec534b72e37fe4dfd",
           "fetched_at": "2026-08-27T10:33:36Z"
+        },
+        {
+          "url": "https://www.town.kanegasaki.iwate.jp/articles/2025031800045/file_contents/202501ippan.pdf",
+          "observed_on": "https://www.town.kanegasaki.iwate.jp/articles/2025031800045/",
+          "sha256": "d45c19364d88d68e32276f7bf3e493f3d027916c8f3465e8e5ab60fa6729b4e4",
+          "fetched_at": "2026-08-27T13:27:30Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kanegasaki.iwate.jp/docs/2026022000031/ (label: 当初予算について) 入口 https://www.town.kanegasaki.iwate.jp/docs/2026022000031/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（202501ippan.pdf「令和７年度一般会計予算書[PDF：1.35MB]」, sha256:d45c1936）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/zaisei/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/zaisei/",
           "sha256": "0e5b75c8d2b12d210b4eaf6f5e2c10167efd499d2263448ecd97156002973951",
           "fetched_at": "2026-08-27T10:33:38Z"
+        },
+        {
+          "url": "https://www.town.kanegasaki.iwate.jp/docs/2021031900013/file_contents/zaiseijoukyousiryoushuH27.xlsx",
+          "observed_on": "https://www.town.kanegasaki.iwate.jp/docs/2021031900013/",
+          "sha256": "07ccb0da3405259c919e03fdaef86f173324182b24210a73ddb7be3386d7d8e5",
+          "fetched_at": "2026-08-27T13:27:32Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/zaisei/ (label: 財政) 入口 https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanegasaki.iwate.jp/categories/bunya/gyousei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijoukyousiryoushuH27.xlsx「平成２７年度決算[XLSX：521KB]」, sha256:07ccb0da）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

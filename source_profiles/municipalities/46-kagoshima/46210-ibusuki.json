@@ -68,11 +68,11 @@
       "notes": "deepest_doc=P1。budget文書（%E4%BB%A4%E5%92%8C%EF%BC%98%E5%B9%B4%E5%BA%A6%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E6%9B%B8.pdf「令和8年度 当初予算書」, sha256:3f795a43）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ibusuki.lg.jp/main/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ibusuki.lg.jp/main/shisei/zaisei/",
@@ -84,9 +84,21 @@
           "observed_on": "https://www.city.ibusuki.lg.jp/main/shisei/zaisei/",
           "sha256": "bf264505e563a718bf69b91d4651acddd19dd7a19ed24726cf8fb490cb61b501",
           "fetched_at": "2026-08-27T09:40:25Z"
+        },
+        {
+          "url": "http://www.city.ibusuki.lg.jp/main/shisei/zaisei/",
+          "observed_on": "http://www.city.ibusuki.lg.jp/",
+          "sha256": "bf264505e563a718bf69b91d4651acddd19dd7a19ed24726cf8fb490cb61b501",
+          "fetched_at": "2026-08-27T09:40:25Z"
+        },
+        {
+          "url": "https://www.city.ibusuki.lg.jp/main/uploads/zaisei/docs/R6%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97%E6%9B%B8%EF%BC%88%E7%B5%B1%E5%90%88%EF%BC%89.pdf",
+          "observed_on": "https://www.city.ibusuki.lg.jp/main/shisei/zaisei/zaisei/page029350.html",
+          "sha256": "efd2b6ebbba0d3025b8d5b746a05ebc6bea15c3d64165b16d286b9f085adec07",
+          "fetched_at": "2026-08-27T13:47:36Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ibusuki.lg.jp/main/shisei/zaisei/ (label: 財政・財産) 入口 https://www.city.ibusuki.lg.jp/main/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ibusuki.lg.jp/main/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97%E6%9B%B8%EF%BC%88%E7%B5%B1%E5%90%88%EF%BC%89.pdf「令和6年度 一般会計決算書」, sha256:efd2b6eb）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

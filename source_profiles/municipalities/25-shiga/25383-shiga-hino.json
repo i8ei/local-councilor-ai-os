@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（R8gaiyou.pdf「令和8年度当初予算の概要.pdfサイズ：1.23MB」, sha256:e6444f2f）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shiga-hino.lg.jp/category/32-16-4-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shiga-hino.lg.jp/category/32-16-4-0-0-0-0-0-0-0.html",
@@ -91,9 +91,15 @@
           "observed_on": "https://www.town.shiga-hino.lg.jp/category/32-16-4-0-0-0-0-0-0-0.html",
           "sha256": "98d557febb4b4bfa5a1b0313b93de9db62c985c077c07462a0a212e247b3acec",
           "fetched_at": "2026-08-27T09:49:41Z"
+        },
+        {
+          "url": "https://www.town.shiga-hino.lg.jp/cmsfiles/contents/0000005/5571/R6_kessansinsaikensyo.pdf",
+          "observed_on": "https://www.town.shiga-hino.lg.jp/0000005571.html",
+          "sha256": "8ad53a92a0040f79eac144d6d91d2f587478d164ee3c4c2f143c95991ffc5385",
+          "fetched_at": "2026-08-27T13:39:26Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.shiga-hino.lg.jp/category/32-16-4-0-0-0-0-0-0-0.html (label: 監査委員決算審査意見書) 入口 https://www.town.shiga-hino.lg.jp/category/32-16-4-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shiga-hino.lg.jp/category/32-16-4-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_kessansinsaikensyo.pdf「令和6年度日野町各会計決算審査意見書.pdf(サイズ：1.96MB)」, sha256:8ad53a92）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

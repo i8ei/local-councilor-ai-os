@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.oumu.hokkaido/reiki_menu.html (label: 雄武町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html",
           "sha256": "007a4acc0979beba29a8525e934a9380fa7b2cae8444177eb93d47b7f14d6bd2",
           "fetched_at": "2026-08-27T10:31:22Z"
+        },
+        {
+          "url": "https://www.town.oumu.hokkaido.jp/material/files/group/4/R8yosannsyo.pdf",
+          "observed_on": "https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/4164.html",
+          "sha256": "425f30c92bed88ff7e03f29bd2791d467ba9bddba5f031beeec7d8f362c58ded",
+          "fetched_at": "2026-08-27T13:26:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html (label: 財政情報) 入口 https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosannsyo.pdf「令和8年度わかりやすい予算書 (PDFファイル: 917.4KB)」, sha256:425f30c9）にて構造マーカー（歳入・歳出・節・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html",
           "sha256": "007a4acc0979beba29a8525e934a9380fa7b2cae8444177eb93d47b7f14d6bd2",
           "fetched_at": "2026-08-27T10:31:22Z"
+        },
+        {
+          "url": "https://www.town.oumu.hokkaido.jp/material/files/group/4/R6wakariyasuikessann.pdf",
+          "observed_on": "https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/4164.html",
+          "sha256": "14419a34b573dbbb36a0461771a651a0991acd6123e2ce701442848ec6124f1d",
+          "fetched_at": "2026-08-27T13:26:42Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html (label: 財政情報) 入口 https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.oumu.hokkaido.jp/gyoseijoho/zaiseijoho/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6wakariyasuikessann.pdf「令和6年度わかりやすい決算書 (PDFファイル: 1.4MB)」, sha256:14419a34）にて構造マーカー（歳入・歳出・決算額・決算総額等）を確認済み。"
     }
   }
 }

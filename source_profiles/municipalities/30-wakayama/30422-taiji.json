@@ -38,11 +38,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.taiji.wakayama.jp/tyousei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.taiji.wakayama.jp/tyousei/zaisei/index.html",
@@ -54,9 +54,15 @@
           "observed_on": "https://www.town.taiji.wakayama.jp/tyousei/zaisei/index.html",
           "sha256": "cdd8fe9adc86ab79f4fafe35b22f6f9d47de49eb3a00146bdd468a1747aa8f0d",
           "fetched_at": "2026-08-27T09:53:50Z"
+        },
+        {
+          "url": "https://www.town.taiji.wakayama.jp/tyousei/zaisei/zaiseijokyou/files/h26zaiseijyoukyousiryousyu.pdf",
+          "observed_on": "https://www.town.taiji.wakayama.jp/tyousei/zaisei/zaiseijokyou/index.html",
+          "sha256": "1b21b88824064d8cc8222b42cbcffbd5a076b8169232e1867c542798c48d5de3",
+          "fetched_at": "2026-08-27T13:41:55Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.taiji.wakayama.jp/tyousei/zaisei/index.html (label: 財政について) 入口 https://www.town.taiji.wakayama.jp/tyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taiji.wakayama.jp/tyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taiji.wakayama.jp/tyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（h26zaiseijyoukyousiryousyu.pdf「平成26年度財政状況資料集 (1304KB)」, sha256:1b21b888）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

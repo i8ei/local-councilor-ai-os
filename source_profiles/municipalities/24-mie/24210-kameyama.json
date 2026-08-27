@@ -35,11 +35,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/kameyama/reiki_menu.html for 亀山市"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kameyama.mie.jp/shisei/2024052000014/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kameyama.mie.jp/shisei/2024052000014/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.kameyama.mie.jp/shisei/2024052000014/",
           "sha256": "787d03da4ca7143f9369e693f1c27a03bdfc6849b90caeab4dd0394562387933",
           "fetched_at": "2026-08-27T09:48:54Z"
+        },
+        {
+          "url": "http://www.city.kameyama.mie.jp/shisei/2024052000014/",
+          "observed_on": "http://www.city.kameyama.mie.jp/",
+          "sha256": "787d03da4ca7143f9369e693f1c27a03bdfc6849b90caeab4dd0394562387933",
+          "fetched_at": "2026-08-27T09:48:54Z"
+        },
+        {
+          "url": "https://www.city.kameyama.mie.jp/shisei/2024052000014/file_contents/honbutohoushin2024.pdf",
+          "observed_on": "https://www.city.kameyama.mie.jp/shisei/2024052000014/",
+          "sha256": "cfea65a47bdad1f5f37852ce79d85ff46e228e375bc161dad27f2963c77d89c3",
+          "fetched_at": "2026-08-27T13:38:57Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kameyama.mie.jp/shisei/2024052000014/ (label: 財政構造改革骨太方針2024) 入口 https://www.city.kameyama.mie.jp/shisei/2024052000014/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kameyama.mie.jp/shisei/2024052000014/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（honbutohoushin2024.pdf「財政構造改革骨太方針2024 ～次代へつなぐ、財政構造の刷新を～[PDF：440KB]」, sha256:cfea65a4）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

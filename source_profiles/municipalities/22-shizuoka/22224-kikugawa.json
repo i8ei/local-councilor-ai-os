@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kikugawa/reiki_menu.html (label: 菊川市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html",
@@ -66,16 +66,22 @@
           "observed_on": "http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html",
           "sha256": "74338111f4c1c41cc248eae9773624d80ed1e0bc4369b4978c8b7f1cec54978a",
           "fetched_at": "2026-08-27T10:14:48Z"
+        },
+        {
+          "url": "http://www.city.kikugawa.shizuoka.jp/zaisei/documents/00_r8tousyoyosansyo.pdf",
+          "observed_on": "http://www.city.kikugawa.shizuoka.jp/zaisei/r8yosan.html",
+          "sha256": "6f8aba78459a9921431283564ebd97b78fdb208346dff6a933c511c81cb6d90c",
+          "fetched_at": "2026-08-27T13:37:41Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html (label: 財政・予算・決算) 入口 http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（00_r8tousyoyosansyo.pdf「当初予算書（PDF：2,165KB）」, sha256:6f8aba78）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html",
@@ -87,9 +93,15 @@
           "observed_on": "http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html",
           "sha256": "74338111f4c1c41cc248eae9773624d80ed1e0bc4369b4978c8b7f1cec54978a",
           "fetched_at": "2026-08-27T10:14:48Z"
+        },
+        {
+          "url": "http://www.city.kikugawa.shizuoka.jp/zaisei/documents/r6_kessannsyo1-8.pdf",
+          "observed_on": "http://www.city.kikugawa.shizuoka.jp/zaisei/kessan.html",
+          "sha256": "5d9549abba70c5ea1cb0ca10e1968a988b1acb4817cc2aa65768295ea10c263c",
+          "fetched_at": "2026-08-27T13:37:41Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html (label: 財政・予算・決算) 入口 http://www.city.kikugawa.shizuoka.jp/zaisei/zaisei_yosan_kessan.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6_kessannsyo1-8.pdf「一般会計歳入歳出決算書（PDF：114KB）」, sha256:5d9549ab）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

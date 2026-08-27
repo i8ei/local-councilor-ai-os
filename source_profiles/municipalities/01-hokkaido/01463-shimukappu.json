@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.vill.shimukappu.lg.jp/shimukappu/section/soumu/nmudtq0000001trk.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html",
           "sha256": "9c2418640bab9fb1fa9b6e56da886d327925ea3fe645ee657dd315fadaf2c229",
           "fetched_at": "2026-08-27T10:30:50Z"
+        },
+        {
+          "url": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5-att/e2be5g0000001jhu.pdf",
+          "observed_on": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html",
+          "sha256": "a84c513514832d456833b1cfa96a183ac2ea29a9a0cf25e7f898c9b100fec571",
+          "fetched_at": "2026-08-27T13:26:08Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html (label: 広報しむかっぷ 2026年8月号 占冠村民スポーツレクリエーション大会 令和7年度財政執行状況 「少年の主張」全道大会決定 ※写真の都合により、表紙へのTOPICS記載は省略しております) 入口 https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（e2be5g0000001jhu.pdf「6～7ページ：令和7年度 財政執行状況 （PDF:301KB）」, sha256:a84c5135）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html",
           "sha256": "9c2418640bab9fb1fa9b6e56da886d327925ea3fe645ee657dd315fadaf2c229",
           "fetched_at": "2026-08-27T10:30:50Z"
+        },
+        {
+          "url": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5-att/e2be5g0000001jhu.pdf",
+          "observed_on": "https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html",
+          "sha256": "a84c513514832d456833b1cfa96a183ac2ea29a9a0cf25e7f898c9b100fec571",
+          "fetched_at": "2026-08-27T13:26:08Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html (label: 広報しむかっぷ 2026年8月号 占冠村民スポーツレクリエーション大会 令和7年度財政執行状況 「少年の主張」全道大会決定 ※写真の都合により、表紙へのTOPICS記載は省略しております) 入口 https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.shimukappu.lg.jp/shimukappu/section/kikaku/e2be5g0000001jc5.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（e2be5g0000001jhu.pdf「6～7ページ：令和7年度 財政執行状況 （PDF:301KB）」, sha256:a84c5135）にて構造マーカー（歳入・歳出・収入済額・支出済額等）を確認済み。"
     }
   }
 }

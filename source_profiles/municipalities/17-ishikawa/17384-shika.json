@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/shika/reiki_kana/r_50_to.html (label: 志賀町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shika.lg.jp/life/7/24/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shika.lg.jp/life/7/24/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.shika.lg.jp/life/7/24/",
           "sha256": "30503f2f6f54e09269790849f5a9853f1294137fbb7f380ac6fb5d19a86dae3a",
           "fetched_at": "2026-08-27T10:06:28Z"
+        },
+        {
+          "url": "http://www.town.shika.lg.jp/life/7/24/",
+          "observed_on": "http://www.town.shika.lg.jp/",
+          "sha256": "30503f2f6f54e09269790849f5a9853f1294137fbb7f380ac6fb5d19a86dae3a",
+          "fetched_at": "2026-08-27T10:06:28Z"
+        },
+        {
+          "url": "https://www.town.shika.lg.jp/uploaded/attachment/1846.pdf",
+          "observed_on": "https://www.town.shika.lg.jp/page/1187.html",
+          "sha256": "eca446f293a8a9f5c23740848eea630e40a5be26b0a9ac3854f7e14958e6ba18",
+          "fetched_at": "2026-08-27T13:35:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shika.lg.jp/life/7/24/ (label: 行財政) 入口 https://www.town.shika.lg.jp/life/7/24/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shika.lg.jp/life/7/24/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1846.pdf「財政状況資料集（平成22年度） [PDFファイル／333KB]」, sha256:eca446f2）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

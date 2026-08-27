@@ -53,11 +53,11 @@
       "index_url": "http://www.town.tobetsu.hokkaido.jp/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
@@ -69,16 +69,28 @@
           "observed_on": "https://www.town.tobetsu.hokkaido.jp/life/4/70/",
           "sha256": "4c3029d972c7e5c4cb1ec7aa7c89d27cdd939b4bc0a78472728086e20a97f578",
           "fetched_at": "2026-08-27T10:29:32Z"
+        },
+        {
+          "url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
+          "observed_on": "http://www.town.tobetsu.hokkaido.jp/",
+          "sha256": "4c3029d972c7e5c4cb1ec7aa7c89d27cdd939b4bc0a78472728086e20a97f578",
+          "fetched_at": "2026-08-27T10:29:32Z"
+        },
+        {
+          "url": "https://www.town.tobetsu.hokkaido.jp/uploaded/attachment/8587.pdf",
+          "observed_on": "https://www.town.tobetsu.hokkaido.jp/soshiki/zaisei/1590.html",
+          "sha256": "25d7f49b0edebd55c4d19f4f8bac41e11d52e910f2e201ec822b02c959866bf8",
+          "fetched_at": "2026-08-27T13:25:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tobetsu.hokkaido.jp/life/4/70/ (label: 財政) 入口 https://www.town.tobetsu.hokkaido.jp/life/4/70/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8587.pdf「平成27年度当別町一般会計予算書」, sha256:25d7f49b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
@@ -90,9 +102,21 @@
           "observed_on": "https://www.town.tobetsu.hokkaido.jp/life/4/70/",
           "sha256": "4c3029d972c7e5c4cb1ec7aa7c89d27cdd939b4bc0a78472728086e20a97f578",
           "fetched_at": "2026-08-27T10:29:32Z"
+        },
+        {
+          "url": "http://www.town.tobetsu.hokkaido.jp/life/4/70/",
+          "observed_on": "http://www.town.tobetsu.hokkaido.jp/",
+          "sha256": "4c3029d972c7e5c4cb1ec7aa7c89d27cdd939b4bc0a78472728086e20a97f578",
+          "fetched_at": "2026-08-27T10:29:32Z"
+        },
+        {
+          "url": "https://www.town.tobetsu.hokkaido.jp/uploaded/attachment/28497.pdf",
+          "observed_on": "https://www.town.tobetsu.hokkaido.jp/soshiki/zaisei/51426.html",
+          "sha256": "74440e2bb461f463669b45de1b2328c76e1998f54ffa0cebc485b554bd21348b",
+          "fetched_at": "2026-08-27T13:25:48Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tobetsu.hokkaido.jp/life/4/70/ (label: 財政) 入口 https://www.town.tobetsu.hokkaido.jp/life/4/70/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（28497.pdf「令和６年度当別町歳入歳出決算書及び事項別明細書 [PDFファイル／574KB]」, sha256:74440e2b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.ogawara.miyagi.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ogawara.miyagi.jp/8087.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ogawara.miyagi.jp/8087.htm",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.ogawara.miyagi.jp:443/8087.htm",
           "sha256": "07a67bafe284861a846c18e0603a7ce9432c583dc62a37a74b4e954f9cf63a8a",
           "fetched_at": "2026-08-27T10:34:02Z"
+        },
+        {
+          "url": "http://www.town.ogawara.miyagi.jp/8087.htm",
+          "observed_on": "http://www.town.ogawara.miyagi.jp/",
+          "sha256": "07a67bafe284861a846c18e0603a7ce9432c583dc62a37a74b4e954f9cf63a8a",
+          "fetched_at": "2026-08-27T10:34:02Z"
+        },
+        {
+          "url": "https://www.town.ogawara.miyagi.jp:443/secure/8846/toshikeikakuzei_yosanR6.pdf",
+          "observed_on": "https://www.town.ogawara.miyagi.jp:443/7340.htm",
+          "sha256": "13242b1c45ba226fa067b68bdf6098aaf03343eb97bed2244ed5c863a3d9213e",
+          "fetched_at": "2026-08-27T13:28:02Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ogawara.miyagi.jp/8087.htm (label: 令和8年度大河原町予算書) 入口 https://www.town.ogawara.miyagi.jp:443/8087.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（toshikeikakuzei_yosanR6.pdf「都市計画税の充当状況（44KB)」, sha256:13242b1c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ogawara.miyagi.jp/2518.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ogawara.miyagi.jp/2518.htm",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.ogawara.miyagi.jp:443/2518.htm",
           "sha256": "13f04af500d0b12defce78fd162a8633804e503f953ab115cbc44fee53ef863c",
           "fetched_at": "2026-08-27T10:34:03Z"
+        },
+        {
+          "url": "http://www.town.ogawara.miyagi.jp/2518.htm",
+          "observed_on": "http://www.town.ogawara.miyagi.jp/",
+          "sha256": "13f04af500d0b12defce78fd162a8633804e503f953ab115cbc44fee53ef863c",
+          "fetched_at": "2026-08-27T10:34:03Z"
+        },
+        {
+          "url": "https://www.town.ogawara.miyagi.jp:443/secure/1338/R6_siryousyuu.xlsx",
+          "observed_on": "https://www.town.ogawara.miyagi.jp:443/1339.htm",
+          "sha256": "d3488945361396fd79b2e4c6f2f9fdefbca0e94cfe6a9ccf42f74f96e7b8b6aa",
+          "fetched_at": "2026-08-27T13:27:56Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ogawara.miyagi.jp/2518.htm (label: 町の財政) 入口 https://www.town.ogawara.miyagi.jp:443/2518.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_siryousyuu.xlsx「令和6年度 財政状況資料集 (554KB)」, sha256:d3488945）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

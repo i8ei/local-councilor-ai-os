@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（40380.pdf「令和7年度一般会計予算書[PDFファイル／3.1MB]」, sha256:3a6677dc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sodegaura.lg.jp/life/18/161/1331/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sodegaura.lg.jp/life/18/161/1331/",
@@ -91,9 +91,21 @@
           "observed_on": "https://www.city.sodegaura.lg.jp/life/18/161/1331/",
           "sha256": "1d8a44b547eb6bb83a6d448b6bd675dbabff6be63b5a4835497e0b09b0681eec",
           "fetched_at": "2026-08-27T10:23:27Z"
+        },
+        {
+          "url": "http://www.city.sodegaura.lg.jp/life/18/161/1331/",
+          "observed_on": "http://www.city.sodegaura.lg.jp/",
+          "sha256": "1d8a44b547eb6bb83a6d448b6bd675dbabff6be63b5a4835497e0b09b0681eec",
+          "fetched_at": "2026-08-27T10:23:27Z"
+        },
+        {
+          "url": "https://www.city.sodegaura.lg.jp/uploaded/attachment/42749.pdf",
+          "observed_on": "https://www.city.sodegaura.lg.jp/soshiki/zaisei/6kessan.html",
+          "sha256": "54b2137ea31511026d7834979da3aa3d16bab79fec74de11b3ce941be2df448e",
+          "fetched_at": "2026-08-27T13:32:59Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.sodegaura.lg.jp/life/18/161/1331/ (label: 決算) 入口 https://www.city.sodegaura.lg.jp/life/18/161/1331/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（42749.pdf「決算書（全体） [PDFファイル／12.03MB]」, sha256:54b2137e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

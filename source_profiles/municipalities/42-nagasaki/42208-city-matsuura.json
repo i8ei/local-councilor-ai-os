@@ -63,11 +63,11 @@
       "notes": "deepest_doc=P1。budget文書（H24hoseidaiichi.pdf「平成24年度6月補正予算（案） (PDFファイル: 227.5KB)」, sha256:d7ab38b1）にて構造マーカー（歳入・歳出・予算総額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city-matsuura.jp/top/shiseijoho/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city-matsuura.jp/top/shiseijoho/kessan/index.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.city-matsuura.jp/top/shiseijoho/kessan/index.html",
           "sha256": "0da133da7ca5ab7dc1bcdbee3f375394dcdcd28708446288a138fd63b91732b1",
           "fetched_at": "2026-08-27T09:37:27Z"
+        },
+        {
+          "url": "https://www.city-matsuura.jp/material/files/group/4/2013zaiseijyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city-matsuura.jp/top/shiseijoho/kessan/2469.html",
+          "sha256": "aa3e8d9f405e4c6a19c07e603a85d7dbabaa4a27af83d89653d7c2e5f07534a4",
+          "fetched_at": "2026-08-27T13:45:39Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city-matsuura.jp/top/shiseijoho/kessan/index.html (label: 決算) 入口 https://www.city-matsuura.jp/top/shiseijoho/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city-matsuura.jp/top/shiseijoho/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city-matsuura.jp/top/shiseijoho/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2013zaiseijyoukyousiryousyuu.xlsx「財政状況資料集（平成25年度） (Excelファイル: 327.8KB)」, sha256:aa3e8d9f）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

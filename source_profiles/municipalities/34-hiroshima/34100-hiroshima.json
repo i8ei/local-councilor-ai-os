@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（zaiseijijyou3.pdf「令和7年度下半期財政事情の公表（12～15ページ） （PDF 533.1KB）」, sha256:648f4ec7）にて構造マーカー（歳入・歳出・予算現額・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html",
@@ -78,9 +78,21 @@
           "observed_on": "https://www.city.hiroshima.lg.jp/shisei/zaisei/index.html",
           "sha256": "780a429a6c81d47dc47081a719d62eff4709aba360b3cd45ec490d5bdb7bf6ad",
           "fetched_at": "2026-08-27T09:44:39Z"
+        },
+        {
+          "url": "http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.hiroshima.lg.jp/",
+          "sha256": "780a429a6c81d47dc47081a719d62eff4709aba360b3cd45ec490d5bdb7bf6ad",
+          "fetched_at": "2026-08-27T09:44:39Z"
+        },
+        {
+          "url": "https://www.city.hiroshima.lg.jp/_res/projects/default_project/_page_/001/019/017/zaiseijijyou3.pdf",
+          "observed_on": "https://www.city.hiroshima.lg.jp/shisei/zaisei/1019017.html",
+          "sha256": "648f4ec77f84511db5ae1995b5c1e6365b5f76af7774fd1ac390a3c8f04605a3",
+          "fetched_at": "2026-08-27T13:42:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hiroshima.lg.jp/shisei/zaisei/index.html (label: 市の財政) 入口 https://www.city.hiroshima.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hiroshima.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijijyou3.pdf「令和7年度下半期財政事情の公表（12～15ページ） （PDF 533.1KB）」, sha256:648f4ec7）にて構造マーカー（歳入・歳出・予算現額・収入済額等）を確認済み。"
     }
   }
 }

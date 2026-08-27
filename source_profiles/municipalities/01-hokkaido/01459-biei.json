@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/top/search/t:0.58448000%201556097800 (label: 美瑛町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://town.biei.hokkaido.jp/administration/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://town.biei.hokkaido.jp/administration/finance/",
@@ -63,16 +63,22 @@
           "url": "https://town.biei.hokkaido.jp/files/00000000/00000062/01_r8_ippan_yosansyo.pdf",
           "observed_on": "https://town.biei.hokkaido.jp/administration/finance/",
           "fetched_at": "2026-08-27T11:22:50Z"
+        },
+        {
+          "url": "https://town.biei.hokkaido.jp/files/00000000/00000062/03_r8_yosansetsumei.pdf",
+          "observed_on": "https://town.biei.hokkaido.jp/administration/finance/",
+          "sha256": "da2a48207eb34906ca1d47502d5194f7af245e1d9238c3c007704d70677a049c",
+          "fetched_at": "2026-08-27T13:26:12Z"
         }
       ],
-      "notes": "Observed finance section at https://town.biei.hokkaido.jp/administration/finance/ (label: 財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（03_r8_yosansetsumei.pdf「令和８年度予算説明書」, sha256:da2a4820）にて構造マーカー（歳入・歳出・款・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://town.biei.hokkaido.jp/administration/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://town.biei.hokkaido.jp/administration/finance/",
@@ -89,9 +95,15 @@
           "url": "https://town.biei.hokkaido.jp/files/00000000/00000062/r6_kessan_ippan.pdf",
           "observed_on": "https://town.biei.hokkaido.jp/administration/finance/",
           "fetched_at": "2026-08-27T11:22:54Z"
+        },
+        {
+          "url": "https://town.biei.hokkaido.jp/files/00000000/00000062/r6_kessan_ippan.pdf",
+          "observed_on": "https://town.biei.hokkaido.jp/administration/finance/",
+          "sha256": "1b46827731c19705cf342ee108d7a3e4bbc02765d89a4a84cdc5884bfaa191b9",
+          "fetched_at": "2026-08-27T11:22:54Z"
         }
       ],
-      "notes": "Observed finance section at https://town.biei.hokkaido.jp/administration/finance/ (label: 財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r6_kessan_ippan.pdf「令和６年度決算書（一般会計）」, sha256:1b468277）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

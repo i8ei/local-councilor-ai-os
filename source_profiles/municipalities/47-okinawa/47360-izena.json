@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://vill.izena.okinawa.jp/information/1600906561/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://vill.izena.okinawa.jp/information/1600906561/",
@@ -51,9 +51,15 @@
           "observed_on": "https://vill.izena.okinawa.jp/information/1600906561/",
           "sha256": "56005dbc0daca46cb447581311df828b7d546289bf56d2f13d01c43f8dd4cf8c",
           "fetched_at": "2026-08-27T09:41:37Z"
+        },
+        {
+          "url": "https://vill.izena.okinawa.jp/userfiles/files/h30.xlsx",
+          "observed_on": "https://vill.izena.okinawa.jp/information/1600906561/1600907141/",
+          "sha256": "0f1ff57eb33d0139e9c6d54e7e24dff21e65d6a20eb6ed73c0842c3d072cd8b7",
+          "fetched_at": "2026-08-27T13:48:28Z"
         }
       ],
-      "notes": "Observed finance section at https://vill.izena.okinawa.jp/information/1600906561/ (label: 財政) 入口 https://vill.izena.okinawa.jp/information/1600906561/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://vill.izena.okinawa.jp/information/1600906561/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（h30.xlsx「平成30年度財政状況」, sha256:0f1ff57e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

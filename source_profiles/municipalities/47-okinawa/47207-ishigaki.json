@@ -29,11 +29,11 @@
       "base_url": "https://krq907.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html",
@@ -45,9 +45,15 @@
           "observed_on": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html",
           "sha256": "54bf9207d0494fc2b6de938afa2c51ce2387d19d22ff0c0e607c4e64e85ccbc8",
           "fetched_at": "2026-08-27T09:40:57Z"
+        },
+        {
+          "url": "https://www.city.ishigaki.okinawa.jp/material/files/group/4/2024zaijoukyou.xlsx",
+          "observed_on": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/2549.html",
+          "sha256": "92eb45ee8053a851358775f51ef07ff352fce2fbae1a0d9b51a494f8b875de75",
+          "fetched_at": "2026-08-27T13:47:59Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/shisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2024zaijoukyou.xlsx「令和6年度財政状況資料集 (Excelファイル: 885.8KB)」, sha256:92eb45ee）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

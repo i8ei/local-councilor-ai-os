@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（43201.pdf「令和8年度当初予算（案）について [PDFファイル／412KB]」, sha256:e86232b5）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tottori.lg.jp/life/7/55/249/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tottori.lg.jp/life/7/55/249/",
@@ -99,9 +99,21 @@
           "observed_on": "https://www.city.tottori.lg.jp/life/7/55/249/",
           "sha256": "ab93dff2d7645e111add32b5fb738d798e5ce52d7a7651971b18b9da10b205e7",
           "fetched_at": "2026-08-27T09:42:46Z"
+        },
+        {
+          "url": "http://www.city.tottori.lg.jp/life/7/55/249/",
+          "observed_on": "http://www.city.tottori.lg.jp/",
+          "sha256": "ab93dff2d7645e111add32b5fb738d798e5ce52d7a7651971b18b9da10b205e7",
+          "fetched_at": "2026-08-27T09:42:46Z"
+        },
+        {
+          "url": "https://www.city.tottori.lg.jp/uploaded/attachment/29402.pdf",
+          "observed_on": "https://www.city.tottori.lg.jp/page/6298.html",
+          "sha256": "575604310baa0fb9bf67e11d4aaca0a02e011d2395a23c16a61eb6bddf4797d4",
+          "fetched_at": "2026-08-27T13:42:00Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tottori.lg.jp/life/7/55/249/ (label: 決算関連) 入口 https://www.city.tottori.lg.jp/life/7/55/249/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tottori.lg.jp/life/7/55/249/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（29402.pdf「【令和6年度】鳥取市歳入歳出決算書 [PDFファイル／3.07MB]」, sha256:57560431）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

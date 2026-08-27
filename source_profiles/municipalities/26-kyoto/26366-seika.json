@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at https://www.town.seika.kyoto.jp/kakuka/somu/2/2/5/3/2183.html (label: 条例・例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html",
@@ -69,9 +69,15 @@
           "observed_on": "https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html",
           "sha256": "1e24c326c76029fe6c36c7cdf103bc25e4f42a6657a65495fa6095ab4ac93576",
           "fetched_at": "2026-08-27T09:50:17Z"
+        },
+        {
+          "url": "https://www.town.seika.kyoto.jp/material/files/group/5/R8yosansyo.pdf",
+          "observed_on": "https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/5602.html",
+          "sha256": "d81862641382a7ee69c403daa303b6b2110a3be0b0e810c15b8e9e461e7f276b",
+          "fetched_at": "2026-08-27T13:39:59Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html (label: 予算) 入口 https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosansyo.pdf「令和8年度 (PDFファイル: 8.2MB)」, sha256:d8186264）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

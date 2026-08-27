@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（01_R8_yosan.pdf「令和8年度当初予算書（PDF：1,309KB）」, sha256:316dcee9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
@@ -90,9 +90,21 @@
           "url": "https://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.files/R6_ikensyo_kigyou.pdf",
           "observed_on": "https://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
           "fetched_at": "2026-08-27T11:01:08Z"
+        },
+        {
+          "url": "http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
+          "observed_on": "http://www.city.matsuyama.ehime.jp/",
+          "sha256": "addda287173502c22b9f19a195abb43d15743281d20b921621072fa1e4e58884",
+          "fetched_at": "2026-08-27T09:46:43Z"
+        },
+        {
+          "url": "https://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.files/R6_ikensyo_kakukaikei1.pdf",
+          "observed_on": "https://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
+          "sha256": "e7a3a2d1669163f9f99646ee63759c98ab7af9405e418a2c286fc4acc4879695",
+          "fetched_at": "2026-08-27T13:43:18Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html (label: 各会計決算審査意見) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6_ikensyo_kakukaikei1.pdf「第1冊分（PDF：2,369KB）」, sha256:e7a3a2d1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www.nishimeya.jp/section/reiki_int/reiki_menu.html (label: 西目屋村例規集へのリンク)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
           "sha256": "7837d48fc4d3f03181b83bcad673bb3c5ec1f99b3d626962b24854bcc19a6fcd",
           "fetched_at": "2026-08-27T10:32:14Z"
+        },
+        {
+          "url": "https://www.nishimeya.jp/material/files/group/3/R6zai.xlsx",
+          "observed_on": "https://www.nishimeya.jp/sonseijoho/gyozaisei/401.html",
+          "sha256": "0b849b270a67041dc2e59cb70d23770570d3a235e92320c536172097f3174b69",
+          "fetched_at": "2026-08-27T13:27:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zai.xlsx「令和6年度財政状況資料集 (Excelファイル: 556.7KB)」, sha256:0b849b27）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html",
           "sha256": "7837d48fc4d3f03181b83bcad673bb3c5ec1f99b3d626962b24854bcc19a6fcd",
           "fetched_at": "2026-08-27T10:32:14Z"
+        },
+        {
+          "url": "https://www.nishimeya.jp/material/files/group/3/R6zai.xlsx",
+          "observed_on": "https://www.nishimeya.jp/sonseijoho/gyozaisei/401.html",
+          "sha256": "0b849b270a67041dc2e59cb70d23770570d3a235e92320c536172097f3174b69",
+          "fetched_at": "2026-08-27T13:27:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.nishimeya.jp/sonseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zai.xlsx「令和6年度財政状況資料集 (Excelファイル: 556.7KB)」, sha256:0b849b27）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

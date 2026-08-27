@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.city.kashiwazaki.lg.jp/shiseijoho/reiki_jorei/index.html (label: 例規・条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kashiwazaki.lg.jp/shiseijoho/yosan_kessan_zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kashiwazaki.lg.jp/shiseijoho/yosan_kessan_zaisei/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.city.kashiwazaki.lg.jp/shiseijoho/yosan_kessan_zaisei/index.html",
           "sha256": "79acfb6672ea7fc13ea8fb177b1fe68171014ee556a015bfb54702c7746b4897",
           "fetched_at": "2026-08-27T10:04:21Z"
+        },
+        {
+          "url": "https://www.city.kashiwazaki.lg.jp/material/files/group/9/digital_yosansyo_saisyutsu.xlsx",
+          "observed_on": "https://www.city.kashiwazaki.lg.jp/shiseijoho/yosan_kessan_zaisei/24645.html",
+          "sha256": "f4a4965050fe02e7ccb551baff71729e561667bb5e91ae7fc389e1b8ce9c9f7c",
+          "fetched_at": "2026-08-27T13:35:06Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kashiwazaki.lg.jp/shiseijoho/yosan_kessan_zaisei/index.html (label: 予算・決算・財政) 入口 https://www.city.kashiwazaki.lg.jp/shiseijoho/yosan_kessan_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashiwazaki.lg.jp/shiseijoho/yosan_kessan_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashiwazaki.lg.jp/shiseijoho/yosan_kessan_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashiwazaki.lg.jp/shiseijoho/yosan_kessan_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（digital_yosansyo_saisyutsu.xlsx「デジタル予算書（歳出） (Excelファイル: 5.3MB)」, sha256:f4a49650）にて構造マーカー（款・項・節・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

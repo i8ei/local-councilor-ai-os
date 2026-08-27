@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html",
           "sha256": "404ccf2b43fec29f7c3c9b5cf0e61f0c05d397f6c2f903ca69426b7533616068",
           "fetched_at": "2026-08-27T09:38:55Z"
+        },
+        {
+          "url": "http://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html",
+          "observed_on": "http://www.town.taragi.lg.jp/",
+          "sha256": "404ccf2b43fec29f7c3c9b5cf0e61f0c05d397f6c2f903ca69426b7533616068",
+          "fetched_at": "2026-08-27T09:38:55Z"
+        },
+        {
+          "url": "https://www.town.taragi.lg.jp/material/files/group/2/R7shimohannkizaiseijoukyou.pdf",
+          "observed_on": "https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/oshirase/195.html",
+          "sha256": "64bf20097e147b11197e1ddffcf419ee95624d3be1357020705dbed9c3417361",
+          "fetched_at": "2026-08-27T13:46:40Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html (label: 財政) 入口 https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7shimohannkizaiseijoukyou.pdf「令和7年度下半期 (PDFファイル: 504.7KB)」, sha256:64bf2009）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/chosei/reiki_menu.html (label: 条例・規則等検索)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html",
           "sha256": "5ec5946442caa2dec657f8e795ef81ba52d18ce71adcefd71b437d6b22009c12",
           "fetched_at": "2026-08-27T10:25:24Z"
+        },
+        {
+          "url": "https://www.vill.chosei.chiba.jp/cmsfiles/contents/0000002/2684/R8.ippan05.pdf",
+          "observed_on": "https://www.vill.chosei.chiba.jp/0000002684.html",
+          "sha256": "ec225f6e0293b205d08a6dfb0570da5ba048997820b0910d4632f35832cea0c3",
+          "fetched_at": "2026-08-27T13:33:09Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html (label: 予算・決算・財政状況) 入口 https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8.ippan05.pdf「5月補正予算書 （一般会計）(PDF形式、148.94KB)」, sha256:ec225f6e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

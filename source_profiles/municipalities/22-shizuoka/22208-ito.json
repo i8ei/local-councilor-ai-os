@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html",
@@ -38,9 +38,15 @@
           "observed_on": "https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html",
           "sha256": "0f7951522d59fa9cabc9720cb6203001514f4579e4a096f82c3969562156b36e",
           "fetched_at": "2026-08-27T10:14:21Z"
+        },
+        {
+          "url": "https://www.city.ito.shizuoka.jp/material/files/group/7/R8ippan.pdf",
+          "observed_on": "https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/yosan/14248.html",
+          "sha256": "9cd75d9fc0ddbd9b35f932f372e8ca527454dc6fe21b2762b433c5bd297156da",
+          "fetched_at": "2026-08-27T13:37:30Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8ippan.pdf「令和8年度一般会計当初予算 (PDFファイル: 3.3MB)」, sha256:9cd75d9f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

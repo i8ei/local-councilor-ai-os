@@ -48,11 +48,11 @@
       "index_url": "https://en3-jg.d1-law.com/haga/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
           "sha256": "eadf17968858831a2c7c4fcbda079ea14ced38f1de1ffc594212fcf3982a8d8c",
           "fetched_at": "2026-08-27T10:18:50Z"
+        },
+        {
+          "url": "https://www.town.tochigi-haga.lg.jp/chouseijouhou/zaiseijouhou/zaiseijoukyou/documents/r6zaiseijokyosiryosyu.xlsx",
+          "observed_on": "https://www.town.tochigi-haga.lg.jp/chouseijouhou/zaiseijouhou/zaiseijoukyou/index.html",
+          "sha256": "40a162ed9c36e8d582bdbac59c2490fd5ab0da117e0060acf37a96de1da8e4f1",
+          "fetched_at": "2026-08-27T13:31:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html (label: 財政情報) 入口 https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6zaiseijokyosiryosyu.xlsx「令和6年度財政状況資料集」, sha256:40a162ed）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html",
           "sha256": "eadf17968858831a2c7c4fcbda079ea14ced38f1de1ffc594212fcf3982a8d8c",
           "fetched_at": "2026-08-27T10:18:50Z"
+        },
+        {
+          "url": "https://www.town.tochigi-haga.lg.jp/chouseijouhou/zaiseijouhou/kessan/documents/r6kessannsyomatome_kanseiban.pdf",
+          "observed_on": "https://www.town.tochigi-haga.lg.jp/chouseijouhou/zaiseijouhou/kessan/r6_kessan.html",
+          "sha256": "f77d108d094a146a7cd0be67867d11ed372af40596dcf2a652b2c26103ad1091",
+          "fetched_at": "2026-08-27T13:31:04Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html (label: 財政情報) 入口 https://www.town.tochigi-haga.lg.jp/menu/torikumi/zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessannsyomatome_kanseiban.pdf「令和6年度決算書（PDF：7,167KB）」, sha256:f77d108d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

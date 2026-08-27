@@ -35,11 +35,11 @@
       "index_url": "https://en3-jg.d1-law.com/kitashiobara/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.kitashiobara.fukushima.jp/life/5/23/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.kitashiobara.fukushima.jp/life/5/23/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.vill.kitashiobara.fukushima.jp:443/life/5/23/",
           "sha256": "5a5a62893545087a48430917831d586e6629499d6d5f79b9ccb3b94dfe602095",
           "fetched_at": "2026-08-27T10:37:45Z"
+        },
+        {
+          "url": "http://www.vill.kitashiobara.fukushima.jp/life/5/23/",
+          "observed_on": "http://www.vill.kitashiobara.fukushima.jp/",
+          "sha256": "5a5a62893545087a48430917831d586e6629499d6d5f79b9ccb3b94dfe602095",
+          "fetched_at": "2026-08-27T10:37:45Z"
+        },
+        {
+          "url": "https://www.vill.kitashiobara.fukushima.jp:443/uploaded/attachment/5591.pdf",
+          "observed_on": "https://www.vill.kitashiobara.fukushima.jp:443/soshiki/somukikaku/4179.html",
+          "sha256": "fc0230de012e270c7f6677336a9d62d5b37306ef91c0f1132af070d0152dc39b",
+          "fetched_at": "2026-08-27T13:29:42Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.kitashiobara.fukushima.jp/life/5/23/ (label: 財政・例規) 入口 https://www.vill.kitashiobara.fukushima.jp:443/life/5/23/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（5591.pdf「一般会計当初予算書 [PDFファイル／1.6MB]」, sha256:fc0230de）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

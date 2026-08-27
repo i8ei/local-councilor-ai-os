@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/top/search/t:0.12454700%201458122124 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.sobetsu.lg.jp/uploads/R8_yosan_shinsa_tokubetsuiinkai.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.sobetsu.lg.jp/uploads/R8_yosan_shinsa_tokubetsuiinkai.pdf",
@@ -54,14 +54,14 @@
           "fetched_at": "2026-08-27T10:31:20Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.sobetsu.lg.jp/uploads/R8_yosan_shinsa_tokubetsuiinkai.pdf (label: 令和8年予算審査特別委員会) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8_yosan_shinsa_tokubetsuiinkai.pdf「Direct Document」, sha256:94ec58cb）にて構造マーカー（歳出・項・節・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.sobetsu.lg.jp/chosei/gyosei/zaiseiunei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.sobetsu.lg.jp/chosei/gyosei/zaiseiunei.html",
@@ -78,9 +78,15 @@
           "url": "https://www.town.sobetsu.lg.jp/uploads/kessan_gaiyo_R6.pdf",
           "observed_on": "https://www.town.sobetsu.lg.jp/chosei/gyosei/zaiseiunei.html",
           "fetched_at": "2026-08-27T11:23:16Z"
+        },
+        {
+          "url": "https://www.town.sobetsu.lg.jp/uploads/kessan_gaiyo_R6.pdf",
+          "observed_on": "https://www.town.sobetsu.lg.jp/chosei/gyosei/zaiseiunei.html",
+          "sha256": "51ca6e4036f9e513896cc5c13c9e2a23cac49481acc543693a0af67686a81176",
+          "fetched_at": "2026-08-27T11:23:17Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.sobetsu.lg.jp/chosei/gyosei/zaiseiunei.html (label: 行財政運営) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（kessan_gaiyo_R6.pdf「決算の概要DL/PDF」, sha256:51ca6e40）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

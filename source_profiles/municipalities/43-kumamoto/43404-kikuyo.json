@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kikuyo/reiki_menu.html (label: 例規集 入札・契約情報)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kikuyo.lg.jp/list00242.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kikuyo.lg.jp/list00242.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.kikuyo.lg.jp/list00242.html",
           "sha256": "3015224273d87d236734b4123aacb81d590187fb104a68186cb4a2d4dc23717f",
           "fetched_at": "2026-08-27T09:38:46Z"
+        },
+        {
+          "url": "http://www.town.kikuyo.lg.jp/list00242.html",
+          "observed_on": "http://www.town.kikuyo.lg.jp/",
+          "sha256": "3015224273d87d236734b4123aacb81d590187fb104a68186cb4a2d4dc23717f",
+          "fetched_at": "2026-08-27T09:38:46Z"
+        },
+        {
+          "url": "https://www.town.kikuyo.lg.jp/kiji0035379/3_5379_22061_up_1s0rzcdu.pdf",
+          "observed_on": "https://www.town.kikuyo.lg.jp/kiji0035379/index.html",
+          "sha256": "971938f5f8a534ad4d5c388155aac9dd3a568b4b23f07edcc936f66f65fd5d6f",
+          "fetched_at": "2026-08-27T13:46:10Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kikuyo.lg.jp/list00242.html (label: 予算) 入口 https://www.town.kikuyo.lg.jp/list00242.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kikuyo.lg.jp/list00242.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_5379_22061_up_1s0rzcdu.pdf「一般会計当初予算（PDF：716.2キロバイト）」, sha256:971938f5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

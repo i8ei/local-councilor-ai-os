@@ -42,11 +42,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A8BC64815 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kotohira.kagawa.jp/life/4/20/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kotohira.kagawa.jp/life/4/20/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.town.kotohira.kagawa.jp/life/4/20/",
           "sha256": "ec193bde85d86d37b5700fa22090c783dd653cffda06d1e58ceb9a0ea51f76ca",
           "fetched_at": "2026-08-27T09:46:34Z"
+        },
+        {
+          "url": "http://www.town.kotohira.kagawa.jp/life/4/20/",
+          "observed_on": "http://www.town.kotohira.kagawa.jp/",
+          "sha256": "ec193bde85d86d37b5700fa22090c783dd653cffda06d1e58ceb9a0ea51f76ca",
+          "fetched_at": "2026-08-27T09:46:34Z"
+        },
+        {
+          "url": "https://www.town.kotohira.kagawa.jp/uploaded/attachment/6026.pdf",
+          "observed_on": "https://www.town.kotohira.kagawa.jp/soshiki/4/1695.html",
+          "sha256": "365da91ac5dc026a6a37b6895db500b674038ed499eff84eb9878a07c73a13a9",
+          "fetched_at": "2026-08-27T13:43:19Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kotohira.kagawa.jp/life/4/20/ (label: 財政) 入口 https://www.town.kotohira.kagawa.jp/life/4/20/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kotohira.kagawa.jp/life/4/20/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（6026.pdf「令和８年度 [PDFファイル／583KB]」, sha256:365da91a）にて構造マーカー（歳入・歳出・款・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

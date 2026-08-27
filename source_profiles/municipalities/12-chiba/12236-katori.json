@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.katori/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.katori.lg.jp/government/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.katori.lg.jp/government/zaisei/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.katori.lg.jp/government/zaisei/index.html",
           "sha256": "221cd6a06fd8a1997eb9e7ce64dbcee9585388bee9e69ef0c88cdb51583cb42a",
           "fetched_at": "2026-08-27T10:24:21Z"
+        },
+        {
+          "url": "http://www.city.katori.lg.jp/government/zaisei/index.html",
+          "observed_on": "http://www.city.katori.lg.jp/",
+          "sha256": "221cd6a06fd8a1997eb9e7ce64dbcee9585388bee9e69ef0c88cdb51583cb42a",
+          "fetched_at": "2026-08-27T10:24:21Z"
+        },
+        {
+          "url": "https://www.city.katori.lg.jp/government/zaisei/yosan.files/R8_tousho.pdf",
+          "observed_on": "https://www.city.katori.lg.jp/government/zaisei/yosan.html",
+          "sha256": "59336786b9f06812722625e8fe64081469447f0619024afaff5d9709f84b12fa",
+          "fetched_at": "2026-08-27T13:33:18Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.katori.lg.jp/government/zaisei/index.html (label: 財政状況) 入口 https://www.city.katori.lg.jp/government/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.katori.lg.jp/government/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_tousho.pdf「令和8年度当初予算書（PDF：15,876KB）」, sha256:59336786）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

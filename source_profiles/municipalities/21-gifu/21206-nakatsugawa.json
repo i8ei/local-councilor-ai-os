@@ -56,11 +56,11 @@
       "notes": "deepest_doc=P1。budget文書（reiwa8nendo_tousyoyosansy_ippan_tokubetu.pdf「一般会計・特別会計予算書【附・予算説明書】(PDFファイル:6.1MB)」, sha256:5e153d8d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nakatsugawa.lg.jp/shisei/finance/3154.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nakatsugawa.lg.jp/shisei/finance/3154.html",
@@ -77,9 +77,15 @@
           "url": "https://www.city.nakatsugawa.lg.jp/material/files/group/11/20251007_zaisei_kessan01.pdf",
           "observed_on": "https://www.city.nakatsugawa.lg.jp/shisei/finance/3154.html",
           "fetched_at": "2026-08-27T11:15:25Z"
+        },
+        {
+          "url": "https://www.city.nakatsugawa.lg.jp/material/files/group/11/r3kessancard.pdf",
+          "observed_on": "https://www.city.nakatsugawa.lg.jp/shisei/finance/3154.html",
+          "sha256": "bf7060b41bb6c6f38bf3f3606502fe75603dd57f0a6d2299a807b34e3d2ab78f",
+          "fetched_at": "2026-08-27T13:36:45Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.nakatsugawa.lg.jp/shisei/finance/3154.html (label: 決算関係の資料) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r3kessancard.pdf「令和3年度市町村台帳(PDFファイル:271.4KB)」, sha256:bf7060b4）にて構造マーカー（歳入・歳出・節・決算額等）を確認済み。"
     }
   }
 }

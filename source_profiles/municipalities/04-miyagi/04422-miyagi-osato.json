@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/osato/reiki_menu.html (label: 町例規集 ＜外部リンク＞)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.miyagi-osato.lg.jp/soshiki/zaisei/simeikekka080424.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miyagi-osato.lg.jp/soshiki/zaisei/simeikekka080424.html",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.town.miyagi-osato.lg.jp:443/soshiki/zaisei/simeikekka080424.html",
           "sha256": "bd22a0f6ba29cd1bb3c97ec47a04ce7343cabd183cdd4fbc599d46e696a9f090",
           "fetched_at": "2026-08-27T10:34:47Z"
+        },
+        {
+          "url": "http://www.town.miyagi-osato.lg.jp/soshiki/zaisei/simeikekka080424.html",
+          "observed_on": "http://www.town.miyagi-osato.lg.jp/",
+          "sha256": "bd22a0f6ba29cd1bb3c97ec47a04ce7343cabd183cdd4fbc599d46e696a9f090",
+          "fetched_at": "2026-08-27T10:34:47Z"
+        },
+        {
+          "url": "https://www.town.miyagi-osato.lg.jp:443/uploaded/attachment/8962.pdf",
+          "observed_on": "https://www.town.miyagi-osato.lg.jp:443/soshiki/zaisei/yosan-kessan.html",
+          "sha256": "93b5ea6d29a747fe4aebd29b7c15a37295e32b8aa104ec4af86bc68506ac83dc",
+          "fetched_at": "2026-08-27T13:28:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.miyagi-osato.lg.jp/soshiki/zaisei/simeikekka080424.html (label: 令和8年度入札結果) 入口 https://www.town.miyagi-osato.lg.jp:443/soshiki/zaisei/simeikekka080424.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8962.pdf「当初予算」, sha256:93b5ea6d）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.miyagi-osato.lg.jp/soshiki/zaisei/simeikekka080424.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miyagi-osato.lg.jp/soshiki/zaisei/simeikekka080424.html",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.town.miyagi-osato.lg.jp:443/soshiki/zaisei/simeikekka080424.html",
           "sha256": "bd22a0f6ba29cd1bb3c97ec47a04ce7343cabd183cdd4fbc599d46e696a9f090",
           "fetched_at": "2026-08-27T10:34:47Z"
+        },
+        {
+          "url": "http://www.town.miyagi-osato.lg.jp/soshiki/zaisei/simeikekka080424.html",
+          "observed_on": "http://www.town.miyagi-osato.lg.jp/",
+          "sha256": "bd22a0f6ba29cd1bb3c97ec47a04ce7343cabd183cdd4fbc599d46e696a9f090",
+          "fetched_at": "2026-08-27T10:34:47Z"
+        },
+        {
+          "url": "https://www.town.miyagi-osato.lg.jp:443/uploaded/attachment/8945.pdf",
+          "observed_on": "https://www.town.miyagi-osato.lg.jp:443/soshiki/zaisei/yosan-kessan.html",
+          "sha256": "5a94a7f83d531ee906e9f4a791fa95ba3943908b2f5ebd503c11d00dad97f064",
+          "fetched_at": "2026-08-27T13:28:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.miyagi-osato.lg.jp/soshiki/zaisei/simeikekka080424.html (label: 令和8年度入札結果) 入口 https://www.town.miyagi-osato.lg.jp:443/soshiki/zaisei/simeikekka080424.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（8945.pdf「決算」, sha256:5a94a7f8）にて構造マーカー（歳入・歳出・決算額等）を確認済み。"
     }
   }
 }

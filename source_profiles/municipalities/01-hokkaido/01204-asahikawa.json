@@ -37,11 +37,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.asahikawa.hokkaido.jp/700/731/732/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.asahikawa.hokkaido.jp/700/731/732/index.html",
@@ -53,16 +53,22 @@
           "observed_on": "https://www.city.asahikawa.hokkaido.jp/700/731/732/index.html",
           "sha256": "2220f383449479a8d1f365e8b19f33194b8ffa26a4bac884bb457b98aa7a1ec4",
           "fetched_at": "2026-08-27T10:28:42Z"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/700/731/732/d083385_d/fil/R8yosansyo.pdf",
+          "observed_on": "https://www.city.asahikawa.hokkaido.jp/700/731/732/d083385.html",
+          "sha256": "b5bf33bf80a4b278dc324e91fbd14ca625f88f4be8d7d9fd47eceb11ab3b7a43",
+          "fetched_at": "2026-08-27T13:21:18Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.asahikawa.hokkaido.jp/700/731/732/index.html (label: 予算と主な事業) 入口 https://www.city.asahikawa.hokkaido.jp/700/731/732/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.asahikawa.hokkaido.jp/700/731/732/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosansyo.pdf「令和8年度 予算書（PDF形式 2,755キロバイト）」, sha256:b5bf33bf）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.asahikawa.hokkaido.jp/700/731/733/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.asahikawa.hokkaido.jp/700/731/733/index.html",
@@ -74,9 +80,15 @@
           "observed_on": "https://www.city.asahikawa.hokkaido.jp/700/731/733/index.html",
           "sha256": "bd69e98d600e2f3de8a6e2342095e9f47326fbd3112655711103ba53bb94d3a6",
           "fetched_at": "2026-08-27T10:28:43Z"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/700/731/733/d067521_d/fil/R6card.pdf",
+          "observed_on": "https://www.city.asahikawa.hokkaido.jp/700/731/733/d067521.html",
+          "sha256": "f34767023f254f302cd3c9b83a508c3752c55a93bb24a9562f9b8219e6d8255f",
+          "fetched_at": "2026-08-27T13:22:24Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.asahikawa.hokkaido.jp/700/731/733/index.html (label: 決算の概要) 入口 https://www.city.asahikawa.hokkaido.jp/700/731/733/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.asahikawa.hokkaido.jp/700/731/733/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6card.pdf「令和6年度 決算カード（PDF形式 99キロバイト）」, sha256:f3476702）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

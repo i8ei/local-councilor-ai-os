@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（point2026.pdf「令和8年度当初予算案ポイント」, sha256:8bd1349f）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hashima.lg.jp/4549.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hashima.lg.jp/4549.html",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.city.hashima.lg.jp/4549.html",
           "sha256": "c51ebdb4c9c905c4c55d1cb13ef4c31e415afa0f416775bde0a0025cef98bdfb",
           "fetched_at": "2026-08-27T10:12:48Z"
+        },
+        {
+          "url": "http://www.city.hashima.lg.jp/4549.html",
+          "observed_on": "http://www.city.hashima.lg.jp/",
+          "sha256": "c51ebdb4c9c905c4c55d1cb13ef4c31e415afa0f416775bde0a0025cef98bdfb",
+          "fetched_at": "2026-08-27T10:12:48Z"
+        },
+        {
+          "url": "https://www.city.hashima.lg.jp/secure/1524/R6kessansyo.pdf",
+          "observed_on": "https://www.city.hashima.lg.jp/1531.html",
+          "sha256": "1646e5342dfe7b5377468259ebfb40d76d42cb2d0930b4a7a5c40cdc7f7070e7",
+          "fetched_at": "2026-08-27T13:36:49Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.hashima.lg.jp/4549.html (label: 決算) 入口 https://www.city.hashima.lg.jp/4549.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hashima.lg.jp/4549.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansyo.pdf「令和6年度決算書（サイズ：2341KB）」, sha256:1646e534）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

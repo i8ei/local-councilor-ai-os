@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.ryugasaki.ibaraki.jp/shisei/jorei_reiki/index.html (label: 条例・例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html",
@@ -60,16 +60,22 @@
           "observed_on": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html",
           "sha256": "e3ec8cc4ee4d94a71223af530a1d6d7d34ffedf690574b956053c04496c357f5",
           "fetched_at": "2026-08-27T10:17:15Z"
+        },
+        {
+          "url": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/yosan/yosangaiyou.files/R8yosangaiyoh.pdf",
+          "observed_on": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/yosan/yosangaiyou.html",
+          "sha256": "c71fe535cdb1742c198dfe6b08a1b1ba975e1dae92737a5933e5de1ff1d386c3",
+          "fetched_at": "2026-08-27T13:30:18Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html (label: 予算・決算・財政情報) 入口 http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosangaiyoh.pdf「一括ダウンロードする(PDF:5,222KB)」, sha256:c71fe535）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html",
@@ -81,9 +87,15 @@
           "observed_on": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html",
           "sha256": "e3ec8cc4ee4d94a71223af530a1d6d7d34ffedf690574b956053c04496c357f5",
           "fetched_at": "2026-08-27T10:17:15Z"
+        },
+        {
+          "url": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/kessan/zaiseijoukyou.files/082082_ryugasaki_2024.xlsx",
+          "observed_on": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/kessan/zaiseijoukyou.html",
+          "sha256": "5682ffeb969c2f3ac237f312e00bf16a1c60cc3c64a6ff7796c01f7d25d1309e",
+          "fetched_at": "2026-08-27T13:30:15Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html (label: 予算・決算・財政情報) 入口 http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/yosankessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（082082_ryugasaki_2024.xlsx「令和6年度決算財政状況資料集(エクセル:583KB)」, sha256:5682ffeb）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

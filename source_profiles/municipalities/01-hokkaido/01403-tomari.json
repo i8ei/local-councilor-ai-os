@@ -29,26 +29,38 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=131 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.tomari.hokkaido.jp/docs/4537.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.tomari.hokkaido.jp/docs/4537.html",
           "observed_on": "https://www.vill.tomari.hokkaido.jp/machizukuri/gyosei/",
           "fetched_at": "2026-08-27T06:16:01Z"
+        },
+        {
+          "url": "https://www.vill.tomari.hokkaido.jp/docs/4537.html",
+          "observed_on": "https://www.vill.tomari.hokkaido.jp/",
+          "sha256": "2f1c85a13c72ab794b29b6fe8ab7eca15742049e391c60bdff26dfb5fa94044d",
+          "fetched_at": "2026-08-27T10:29:54Z"
+        },
+        {
+          "url": "https://www.vill.tomari.hokkaido.jp/fs/4/4/0/2/_/____________________.xlsx",
+          "observed_on": "https://www.vill.tomari.hokkaido.jp/docs/4537.html",
+          "sha256": "620684936994c888ebceddef111da1cb854eacf24ce4deff6cf1eb8e8f4de31e",
+          "fetched_at": "2026-08-27T11:22:35Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.tomari.hokkaido.jp/docs/4537.html (label: 令和３年度予算における地方消費税率引上げ分に伴う、地方消費税交付金の増収分の使途の公表について ( 2021年7月29日 ))"
+      "notes": "deepest_doc=P1。budget文書（____________________.xlsx「地方消費税交付金（社会保障）予算について.xlsx (XLSX 13.6KB)」, sha256:62068493）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.tomari.hokkaido.jp/docs/5936.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.tomari.hokkaido.jp/docs/5936.html",
@@ -65,9 +77,15 @@
           "url": "https://www.vill.tomari.hokkaido.jp/fs/1/1/6/4/8/_/__5_______________.pdf",
           "observed_on": "https://www.vill.tomari.hokkaido.jp/docs/5936.html",
           "fetched_at": "2026-08-27T11:22:36Z"
+        },
+        {
+          "url": "https://www.vill.tomari.hokkaido.jp/fs/1/2/2/0/5/_/__6__________.xlsx",
+          "observed_on": "https://www.vill.tomari.hokkaido.jp/docs/6021.html",
+          "sha256": "2d9098a4cd898e11c0adb2dde1496e14de49d65e99dfe78dfca1759dedab216b",
+          "fetched_at": "2026-08-27T13:26:08Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.tomari.hokkaido.jp/docs/5936.html (label: 決算に基づく健全化判断比率等について ( 2025年9月24日 )) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（__6__________.xlsx「令和6年度 財政状況資料集 (XLSX 530KB)」, sha256:2d9098a4）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

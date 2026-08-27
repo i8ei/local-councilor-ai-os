@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/ichinoseki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf",
@@ -53,14 +53,14 @@
           "fetched_at": "2026-08-27T10:33:05Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000002088_00/20250808-105730.pdf (label: 補助金および負担金の状況（令和7年度当初予算）（PDF）) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（20250808-105730.pdf「Direct Document」, sha256:7f4abf30）にて構造マーカー（予算額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ichinoseki.iwate.jp/genre/shisei-jouhou/finances",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ichinoseki.iwate.jp/genre/shisei-jouhou/finances",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.city.ichinoseki.iwate.jp/genre/shisei-jouhou/finances",
           "sha256": "14c0165f51e5fadd69a0de7a204e93e8b8081f84e0f22e18438988ccc7c47281",
           "fetched_at": "2026-08-27T10:33:07Z"
+        },
+        {
+          "url": "https://www.city.ichinoseki.iwate.jp/uploads/public/archive_0000000999_00/20250415-095041.xlsx",
+          "observed_on": "https://www.city.ichinoseki.iwate.jp/archive/contents-48694",
+          "sha256": "d0ef7a11614d2a45531f4b608f16346f835d5299d5344d9ec08ee0e906ae4e9c",
+          "fetched_at": "2026-08-27T13:27:23Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ichinoseki.iwate.jp/genre/shisei-jouhou/finances (label: 財政情報) 入口 https://www.city.ichinoseki.iwate.jp/genre/shisei-jouhou/finances に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20250415-095041.xlsx「令和5年度一関市財政状況資料集（Excel） [417KB]」, sha256:d0ef7a11）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

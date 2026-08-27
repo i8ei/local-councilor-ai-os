@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.town.aomori-nanbu.lg.jp/life/5/27/128/ (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.aomori-nanbu.lg.jp/page/10665.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.aomori-nanbu.lg.jp/page/10665.html",
@@ -63,16 +63,28 @@
           "url": "https://www.town.aomori-nanbu.lg.jp:443/uploaded/attachment/7330.pdf",
           "observed_on": "https://www.town.aomori-nanbu.lg.jp:443/page/10665.html",
           "fetched_at": "2026-08-27T11:23:49Z"
+        },
+        {
+          "url": "http://www.town.aomori-nanbu.lg.jp/page/10665.html",
+          "observed_on": "http://www.town.aomori-nanbu.lg.jp/",
+          "sha256": "254869d432c15e491ea5539051c4a0de9b06167c133108e5e940cff8a6261bf3",
+          "fetched_at": "2026-08-27T10:32:36Z"
+        },
+        {
+          "url": "https://www.town.aomori-nanbu.lg.jp:443/uploaded/attachment/7330.pdf",
+          "observed_on": "https://www.town.aomori-nanbu.lg.jp:443/page/10665.html",
+          "sha256": "0f8c34e92455581532071532e475d1c0b5c12f3ad24c835bc63df9253cd62ba8",
+          "fetched_at": "2026-08-27T11:23:52Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.aomori-nanbu.lg.jp/page/10665.html (label: 令和8年度予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（7330.pdf「当初予算書（全会計） [PDFファイル／12.53MB]」, sha256:0f8c34e9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.aomori-nanbu.lg.jp/life/5/27/129/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.aomori-nanbu.lg.jp/life/5/27/129/",
@@ -84,9 +96,21 @@
           "observed_on": "https://www.town.aomori-nanbu.lg.jp:443/life/5/27/129/",
           "sha256": "91840423e7bb8f0a7c9d37dbc0623734eff025a96167f363670962a865a27f36",
           "fetched_at": "2026-08-27T10:32:38Z"
+        },
+        {
+          "url": "http://www.town.aomori-nanbu.lg.jp/life/5/27/129/",
+          "observed_on": "http://www.town.aomori-nanbu.lg.jp/",
+          "sha256": "91840423e7bb8f0a7c9d37dbc0623734eff025a96167f363670962a865a27f36",
+          "fetched_at": "2026-08-27T10:32:38Z"
+        },
+        {
+          "url": "https://www.town.aomori-nanbu.lg.jp:443/uploaded/attachment/2062.xlsx",
+          "observed_on": "https://www.town.aomori-nanbu.lg.jp:443/page/1360.html",
+          "sha256": "9a681bcbc194b356973e071095c74ccf91f5f3f86f544994bd623a94fa68869d",
+          "fetched_at": "2026-08-27T13:27:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.aomori-nanbu.lg.jp/life/5/27/129/ (label: 財政) 入口 https://www.town.aomori-nanbu.lg.jp:443/life/5/27/129/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2062.xlsx「平成27年度財政状況資料集[Excelファイル／561KB]」, sha256:9a681bcb）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

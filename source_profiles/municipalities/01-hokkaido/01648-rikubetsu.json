@@ -44,11 +44,11 @@
       "notes": "Observed d1_law at https://www.rikubetsu.jp/d1w_reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.rikubetsu.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.rikubetsu.jp/chosei/zaisei/",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.rikubetsu.jp/chosei/zaisei/",
           "sha256": "57f22e1e205ce147cb8babf775d838cf5c4518de8250369ad84a895621354ce6",
           "fetched_at": "2026-08-27T10:31:35Z"
+        },
+        {
+          "url": "https://www.rikubetsu.jp/file/contents/140/26336/zaiseijyoukyoushiryousyuu_2024.xlsx",
+          "observed_on": "https://www.rikubetsu.jp/chosei/zaisei/zaisei_ichiran/",
+          "sha256": "f63e3ce1e747295501cc6d2b21c9c10354959a100e6e0afcdd3683549c42ef97",
+          "fetched_at": "2026-08-27T13:26:58Z"
         }
       ],
-      "notes": "Observed finance section at https://www.rikubetsu.jp/chosei/zaisei/ (label: 財政) 入口 https://www.rikubetsu.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijyoukyoushiryousyuu_2024.xlsx「令和６年度財政状況資料集」, sha256:f63e3ce1）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.rikubetsu.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.rikubetsu.jp/chosei/zaisei/",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.rikubetsu.jp/chosei/zaisei/",
           "sha256": "57f22e1e205ce147cb8babf775d838cf5c4518de8250369ad84a895621354ce6",
           "fetched_at": "2026-08-27T10:31:35Z"
+        },
+        {
+          "url": "https://www.rikubetsu.jp/file/contents/140/26336/zaiseijyoukyoushiryousyuu_2024.xlsx",
+          "observed_on": "https://www.rikubetsu.jp/chosei/zaisei/zaisei_ichiran/",
+          "sha256": "f63e3ce1e747295501cc6d2b21c9c10354959a100e6e0afcdd3683549c42ef97",
+          "fetched_at": "2026-08-27T13:26:58Z"
         }
       ],
-      "notes": "Observed finance section at https://www.rikubetsu.jp/chosei/zaisei/ (label: 財政) 入口 https://www.rikubetsu.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijyoukyoushiryousyuu_2024.xlsx「令和６年度財政状況資料集」, sha256:f63e3ce1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

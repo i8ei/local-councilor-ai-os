@@ -68,11 +68,11 @@
       "notes": "deepest_doc=P1。budget文書（7toushoyosan.pdf「令和7年度 一般会計当初予算」, sha256:f66a36ff）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html",
@@ -84,9 +84,21 @@
           "observed_on": "https://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html",
           "sha256": "9c116dc8934ba57f0be7d289507790e1ced687b4ed4a834eb2a5740b4bd8e2df",
           "fetched_at": "2026-08-27T09:50:30Z"
+        },
+        {
+          "url": "http://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.vill.minamiyamashiro.lg.jp/",
+          "sha256": "9c116dc8934ba57f0be7d289507790e1ced687b4ed4a834eb2a5740b4bd8e2df",
+          "fetched_at": "2026-08-27T09:50:30Z"
+        },
+        {
+          "url": "https://www.vill.minamiyamashiro.lg.jp/cmsfiles/contents/0000002/2691/kaisetsu(siryoushuu).pdf",
+          "observed_on": "https://www.vill.minamiyamashiro.lg.jp/0000002691.html",
+          "sha256": "7f64f67b8c1de851366d50fc98a812f09ff9c0f72a40538b2824cfac1e61fdcd",
+          "fetched_at": "2026-08-27T13:39:48Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html (label: 決算・財政指標) 入口 https://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.minamiyamashiro.lg.jp/category/24-4-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kaisetsu(siryoushuu).pdf「財政状況資料集の主な用語の説明 (PDF形式、195.93KB)」, sha256:7f64f67b）にて構造マーカー（歳入・歳出・決算総額・実質収支等）を確認済み。"
     }
   }
 }

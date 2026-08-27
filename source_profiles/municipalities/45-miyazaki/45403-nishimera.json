@@ -48,11 +48,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/vill.nishimera/reiki_menu.html for 西米良村"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05",
           "sha256": "bdd3f7e259cb067064ada6771d601209d0f0509c9230a15d7925df040f44616d",
           "fetched_at": "2026-08-27T09:40:07Z"
+        },
+        {
+          "url": "https://www.vill.nishimera.lg.jp/village/wp-content/uploads/2025/03/6b5a41c2f4b58f41b205491f153eb370.pdf",
+          "observed_on": "https://www.vill.nishimera.lg.jp/village/c-00-admininfo/c-05/10004978",
+          "sha256": "dac80e125b96bc07bd91ef5c98c3213012cad82832bd424b99f300c3584fed58",
+          "fetched_at": "2026-08-27T13:47:15Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05 (label: 財政) 入口 https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（6b5a41c2f4b58f41b205491f153eb370.pdf「令和８年度当初予算主要事業」, sha256:dac80e12）にて構造マーカー（節・予算額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

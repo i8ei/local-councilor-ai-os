@@ -35,11 +35,11 @@
       "index_url": "https://www.city.tatebayashi.gunma.jp/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
           "sha256": "50d075604ddecd9913d2edcb3fd5785b656b3342528a5b736b7d54e65d6d17f4",
           "fetched_at": "2026-08-27T10:18:42Z"
+        },
+        {
+          "url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
+          "observed_on": "http://www.city.tatebayashi.gunma.jp/",
+          "sha256": "50d075604ddecd9913d2edcb3fd5785b656b3342528a5b736b7d54e65d6d17f4",
+          "fetched_at": "2026-08-27T10:18:42Z"
+        },
+        {
+          "url": "https://www.city.tatebayashi.gunma.jp/s005/shisei/080/030/R8.aramashi.pdf",
+          "observed_on": "https://www.city.tatebayashi.gunma.jp/s005/shisei/080/030/20200102235000.html",
+          "sha256": "0cd3632ea6803586157c56f1f1a880a01b8149031b2f73734831e33f1388cbc2",
+          "fetched_at": "2026-08-27T13:31:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html (label: 財政) 入口 https://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8.aramashi.pdf「令和8年度予算のあらまし」, sha256:0cd3632e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
           "sha256": "50d075604ddecd9913d2edcb3fd5785b656b3342528a5b736b7d54e65d6d17f4",
           "fetched_at": "2026-08-27T10:18:42Z"
+        },
+        {
+          "url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
+          "observed_on": "http://www.city.tatebayashi.gunma.jp/",
+          "sha256": "50d075604ddecd9913d2edcb3fd5785b656b3342528a5b736b7d54e65d6d17f4",
+          "fetched_at": "2026-08-27T10:18:42Z"
+        },
+        {
+          "url": "https://www.city.tatebayashi.gunma.jp/s005/shisei/080/020/6card.pdf",
+          "observed_on": "https://www.city.tatebayashi.gunma.jp/s005/shisei/080/020/20200103000000.html",
+          "sha256": "7106fc4eb4a6b679b844fc08700ffc1fe4064de82408ba8981689607ea740013",
+          "fetched_at": "2026-08-27T13:31:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html (label: 財政) 入口 https://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6card.pdf「令和6年度決算カード」, sha256:7106fc4e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（R06zaiseijoukyou.xlsx「小林市財政状況資料集(令和6年度) (Excelファイル: 527.3KB)」, sha256:be0b4103）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html",
@@ -90,9 +90,15 @@
           "url": "https://www.city.kobayashi.lg.jp/material/files/group/32/06-sainyuusaishutuikennsho-kikinnunnyoujoukyouikennsho.pdf",
           "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html",
           "fetched_at": "2026-08-27T10:57:36Z"
+        },
+        {
+          "url": "https://www.city.kobayashi.lg.jp/material/files/group/32/06-sainyuusaishutuikennsho-kikinnunnyoujoukyouikennsho.pdf",
+          "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html",
+          "sha256": "a199c3ca37adbec16b5fa27ea5fa21f8a9f899df01e225c946e5cf65919d1dbc",
+          "fetched_at": "2026-08-27T10:57:38Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html (label: 決算審査意見書及び基金運用状況審査意見書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（06-sainyuusaishutuikennsho-kikinnunnyoujoukyouikennsho.pdf「令和6年度 歳入歳出決算意見書、基金運用状況審査意見書 (PDFファイル: 6.5MB)」, sha256:a199c3ca）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

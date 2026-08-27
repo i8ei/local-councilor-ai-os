@@ -35,11 +35,11 @@
       "index_url": "https://en3-jg.d1-law.com/fukusaki/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html",
           "sha256": "a373812ca904dd5ff28a2ec7086271bb18e290fca97d9e1d51bcad185b1abe7b",
           "fetched_at": "2026-08-27T09:52:52Z"
+        },
+        {
+          "url": "http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.fukusaki.hyogo.jp/",
+          "sha256": "a373812ca904dd5ff28a2ec7086271bb18e290fca97d9e1d51bcad185b1abe7b",
+          "fetched_at": "2026-08-27T09:52:52Z"
+        },
+        {
+          "url": "https://www.town.fukusaki.hyogo.jp/cmsfiles/contents/0000000/267/R6siryou.pdf",
+          "observed_on": "https://www.town.fukusaki.hyogo.jp/0000000267.html",
+          "sha256": "289bde849eba53667279dd1c7f86ce0fe88d16e5c6cf9b3b14ce0bd4a08048d3",
+          "fetched_at": "2026-08-27T13:41:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html (label: 財政情報) 入口 https://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6siryou.pdf「市町村財政状況資料集（令和6年度普通会計決算） (ファイル名：R6siryou.pdf サイズ：506.01KB)」, sha256:289bde84）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.vill.ogasawara.tokyo.jp/reiki_int/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
           "sha256": "49981cfa1d717bd9692fe78d5d161d223d20d9ed066b8ba28cd0b0302056fd61",
           "fetched_at": "2026-08-27T10:26:46Z"
+        },
+        {
+          "url": "https://www.vill.ogasawara.tokyo.jp/wp-content/uploads/sites/2/2025/03/d1fa95352563ac6ca95ba46829dd01dd.pdf",
+          "observed_on": "https://www.vill.ogasawara.tokyo.jp/zaisei/zaisei_yosan.html",
+          "sha256": "2e456e0ce1475872c0179bc91d93e5fdfb2a8466d763a9ec44884a1d77a44701",
+          "fetched_at": "2026-08-27T13:34:19Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.ogasawara.tokyo.jp/zaisei/ (label: 財政課) 入口 https://www.vill.ogasawara.tokyo.jp/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.ogasawara.tokyo.jp/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（d1fa95352563ac6ca95ba46829dd01dd.pdf「令和７年度簡易水道事業会計当初予算書」, sha256:2e456e0c）にて構造マーカー（款・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.vill.ogasawara.tokyo.jp/zaisei/",
           "sha256": "49981cfa1d717bd9692fe78d5d161d223d20d9ed066b8ba28cd0b0302056fd61",
           "fetched_at": "2026-08-27T10:26:46Z"
+        },
+        {
+          "url": "https://www.vill.ogasawara.tokyo.jp/wp-content/uploads/sites/2/2026/04/da99e54c71a37d421febb979d37cb345.pdf",
+          "observed_on": "https://www.vill.ogasawara.tokyo.jp/zaisei/zaisei_kessan.html",
+          "sha256": "d7505d90f43d4cb2aecac89c77753a05843c9c09a89bc742d3c2df30179f69f3",
+          "fetched_at": "2026-08-27T13:34:20Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.ogasawara.tokyo.jp/zaisei/ (label: 財政課) 入口 https://www.vill.ogasawara.tokyo.jp/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.ogasawara.tokyo.jp/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（da99e54c71a37d421febb979d37cb345.pdf「決算カード（令和６年度） (PDF形式： 197KB)」, sha256:d7505d90）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

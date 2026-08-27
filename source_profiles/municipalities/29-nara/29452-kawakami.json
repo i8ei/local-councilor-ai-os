@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.kawakami.nara.jp/life/docs/2023022200034/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.kawakami.nara.jp/life/docs/2023022200034/",
@@ -38,9 +38,21 @@
           "observed_on": "https://www.vill.kawakami.nara.jp/life/docs/2023022200034/",
           "sha256": "46617e29fda627a4095e1c4bb13a84ec9987a3f3f35495577ee2c9a8df94c82f",
           "fetched_at": "2026-08-27T09:53:15Z"
+        },
+        {
+          "url": "http://www.vill.kawakami.nara.jp/life/docs/2023022200034/",
+          "observed_on": "http://www.vill.kawakami.nara.jp/",
+          "sha256": "46617e29fda627a4095e1c4bb13a84ec9987a3f3f35495577ee2c9a8df94c82f",
+          "fetched_at": "2026-08-27T09:53:15Z"
+        },
+        {
+          "url": "https://www.vill.kawakami.nara.jp/life/docs/2017051200059/file_contents/H27zaiseijokyo.xlsx",
+          "observed_on": "https://www.vill.kawakami.nara.jp/life/docs/2017051200059/",
+          "sha256": "3ff364892cbee2b1931f2338683976ea0ad62ef9b04fbaef09476549e9fce48a",
+          "fetched_at": "2026-08-27T13:41:40Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.kawakami.nara.jp/life/docs/2023022200034/ (label: 財政状況) 入口 https://www.vill.kawakami.nara.jp/life/docs/2023022200034/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.kawakami.nara.jp/life/docs/2023022200034/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（H27zaiseijokyo.xlsx「財政状況資料集（H27年度決算）(582KB)」, sha256:3ff36489）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

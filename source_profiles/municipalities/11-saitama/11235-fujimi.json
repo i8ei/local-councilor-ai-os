@@ -50,11 +50,11 @@
       "base_url": "http://www1.g-reiki.net/fujimi/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.fujimi.saitama.jp/shisei/04zaisei/01yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fujimi.saitama.jp/shisei/04zaisei/01yosan/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.fujimi.saitama.jp/shisei/04zaisei/01yosan/index.html",
           "sha256": "bbfdf7aa2209aaa475db63999d57404cfab819ce2dfb71caa9f4708bafa32444",
           "fetched_at": "2026-08-27T10:21:16Z"
+        },
+        {
+          "url": "http://www.city.fujimi.saitama.jp/shisei/04zaisei/01yosan/index.html",
+          "observed_on": "http://www.city.fujimi.saitama.jp/",
+          "sha256": "bbfdf7aa2209aaa475db63999d57404cfab819ce2dfb71caa9f4708bafa32444",
+          "fetched_at": "2026-08-27T10:21:16Z"
+        },
+        {
+          "url": "https://www.city.fujimi.saitama.jp/shisei/04zaisei/01yosan/yosanhenseikatei.files/R8youkyuujoukyou.pdf",
+          "observed_on": "https://www.city.fujimi.saitama.jp/shisei/04zaisei/01yosan/yosanhenseikatei.html",
+          "sha256": "04643bcefab7956a4a4493e3c9dd7cc6cbdb9bfbd0124c3373f72164e2a32269",
+          "fetched_at": "2026-08-27T13:31:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.fujimi.saitama.jp/shisei/04zaisei/01yosan/index.html (label: 予算) 入口 https://www.city.fujimi.saitama.jp/shisei/04zaisei/01yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8youkyuujoukyou.pdf「令和8年度当初予算の要求状況（PDF：478KB）」, sha256:04643bce）にて構造マーカー（節・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.fujimi.saitama.jp/shisei/04zaisei/02kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fujimi.saitama.jp/shisei/04zaisei/02kessan/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.fujimi.saitama.jp/shisei/04zaisei/02kessan/index.html",
           "sha256": "b085bad0307929173e808c5688d84c3ffe7781563a832806e4f6cc9c85c3cdfc",
           "fetched_at": "2026-08-27T10:21:19Z"
+        },
+        {
+          "url": "http://www.city.fujimi.saitama.jp/shisei/04zaisei/02kessan/index.html",
+          "observed_on": "http://www.city.fujimi.saitama.jp/",
+          "sha256": "b085bad0307929173e808c5688d84c3ffe7781563a832806e4f6cc9c85c3cdfc",
+          "fetched_at": "2026-08-27T10:21:19Z"
+        },
+        {
+          "url": "https://www.city.fujimi.saitama.jp/shisei/04zaisei/02kessan/kessanshiryo.files/kessanncardmikataR3.pdf",
+          "observed_on": "https://www.city.fujimi.saitama.jp/shisei/04zaisei/02kessan/kessanshiryo.html",
+          "sha256": "ed3235989f86229876b131c3a7bbce8157201a5447fcf805f2a551b146be9758",
+          "fetched_at": "2026-08-27T13:31:59Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.fujimi.saitama.jp/shisei/04zaisei/02kessan/index.html (label: 決算) 入口 https://www.city.fujimi.saitama.jp/shisei/04zaisei/02kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessanncardmikataR3.pdf「(注記)決算カードの見かた（PDF：350KB）」, sha256:ed323598）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.city.kariya.lg.jp/shisei/1004769.html (label: 刈谷市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kariya.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kariya.lg.jp/shisei/zaisei/index.html",
@@ -45,9 +45,21 @@
           "observed_on": "https://www.city.kariya.lg.jp/shisei/zaisei/index.html",
           "sha256": "217b688e6f1ad0b7e415381f73bc825158ef5574f3cc3978923bb364a5e384d2",
           "fetched_at": "2026-08-27T10:15:16Z"
+        },
+        {
+          "url": "http://www.city.kariya.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.kariya.lg.jp/",
+          "sha256": "217b688e6f1ad0b7e415381f73bc825158ef5574f3cc3978923bb364a5e384d2",
+          "fetched_at": "2026-08-27T10:15:16Z"
+        },
+        {
+          "url": "https://www.city.kariya.lg.jp/_res/projects/default_project/_page_/001/017/657/r8tousyoyosannsyo.pdf",
+          "observed_on": "https://www.city.kariya.lg.jp/shisei/zaisei/1017657/index.html",
+          "sha256": "d0b95cab40a9061f7a80c6e0f51798dc29c8328568d63b7cf035f3e70a74fdce",
+          "fetched_at": "2026-08-27T13:38:06Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kariya.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.kariya.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8tousyoyosannsyo.pdf「令和8年度刈谷市各会計予算書 （PDF 4.8MB）」, sha256:d0b95cab）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

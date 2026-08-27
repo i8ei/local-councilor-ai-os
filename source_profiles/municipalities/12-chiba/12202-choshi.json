@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（000067401.pdf「令和8年度銚子市のわかりやすい予算書 （PDFファイル : 5.5MB）」, sha256:2a7fbc8b）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.choshi.chiba.jp/shisei/index0340.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.choshi.chiba.jp/shisei/index0340.html",
@@ -99,9 +99,21 @@
           "observed_on": "https://www.city.choshi.chiba.jp/shisei/index0340.html",
           "sha256": "b0d188d7add4db3463e429f7a3a9b2aeebfc67bebdcfd2ed425aeff12641a5b5",
           "fetched_at": "2026-08-27T10:22:36Z"
+        },
+        {
+          "url": "http://www.city.choshi.chiba.jp/shisei/index0340.html",
+          "observed_on": "http://www.city.choshi.chiba.jp/",
+          "sha256": "b0d188d7add4db3463e429f7a3a9b2aeebfc67bebdcfd2ed425aeff12641a5b5",
+          "fetched_at": "2026-08-27T10:22:36Z"
+        },
+        {
+          "url": "https://www.city.choshi.chiba.jp/content/000060732.pdf",
+          "observed_on": "https://www.city.choshi.chiba.jp/shisei/page030059.html",
+          "sha256": "7e30d5a5d2b7209e6787bfd19063bc2d13ce4230f8c6ae6ee03f00702e214220",
+          "fetched_at": "2026-08-27T13:32:31Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.choshi.chiba.jp/shisei/index0340.html (label: 決算) 入口 https://www.city.choshi.chiba.jp/shisei/index0340.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.choshi.chiba.jp/shisei/index0340.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（000060732.pdf「令和6年度 一般会計歳入歳出決算書 （PDFファイル : 1.8MB）」, sha256:7e30d5a5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

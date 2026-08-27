@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www.city.towada.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.towada.lg.jp/shisei/gyousei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.towada.lg.jp/shisei/gyousei/",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.towada.lg.jp/shisei/gyousei/",
           "sha256": "62b4ae6eef6146dbfcad690c4980ecf22001075b298d503828fe9f066fd9b82e",
           "fetched_at": "2026-08-27T10:31:49Z"
+        },
+        {
+          "url": "https://www.city.towada.lg.jp/shisei/gyousei/zaisei/files/R6zaiseijoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.towada.lg.jp/shisei/gyousei/zaisei/zaiseishiryou.html",
+          "sha256": "4b275b9e8c4203b238cd6e3f63eadd7e8a54b3a78939a61c2c5b38b2501a09aa",
+          "fetched_at": "2026-08-27T13:27:08Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.towada.lg.jp/shisei/gyousei/ (label: 行政・財政) 入口 https://www.city.towada.lg.jp/shisei/gyousei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zaiseijoukyousiryousyuu.xlsx「令和６年度財政状況資料集 (556KB)」, sha256:4b275b9e）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.towada.lg.jp/shisei/gyousei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.towada.lg.jp/shisei/gyousei/",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.towada.lg.jp/shisei/gyousei/",
           "sha256": "62b4ae6eef6146dbfcad690c4980ecf22001075b298d503828fe9f066fd9b82e",
           "fetched_at": "2026-08-27T10:31:49Z"
+        },
+        {
+          "url": "https://www.city.towada.lg.jp/shisei/gyousei/zaisei/files/R6zaiseijoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.towada.lg.jp/shisei/gyousei/zaisei/zaiseishiryou.html",
+          "sha256": "4b275b9e8c4203b238cd6e3f63eadd7e8a54b3a78939a61c2c5b38b2501a09aa",
+          "fetched_at": "2026-08-27T13:27:08Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.towada.lg.jp/shisei/gyousei/ (label: 行政・財政) 入口 https://www.city.towada.lg.jp/shisei/gyousei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijoukyousiryousyuu.xlsx「令和６年度財政状況資料集 (556KB)」, sha256:4b275b9e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

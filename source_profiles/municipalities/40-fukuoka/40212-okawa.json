@@ -51,11 +51,11 @@
       "index_url": "https://en3-jg.d1-law.com/okawa/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.okawa.lg.jp/100/060/010/20230220151538.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.okawa.lg.jp/100/060/010/20230220151538.html",
@@ -67,9 +67,15 @@
           "observed_on": "http://www.city.okawa.lg.jp/100/060/010/20230220151538.html",
           "sha256": "149ba1e2cbbbf45173262c2ba996aa896ca99e61f6a1448be6b9b1c07ba1d767",
           "fetched_at": "2026-08-27T09:35:45Z"
+        },
+        {
+          "url": "http://www.city.okawa.lg.jp/s004/010/010/010/fs2024.pdf",
+          "observed_on": "http://www.city.okawa.lg.jp/s004/010/010/010/20150121205026.html",
+          "sha256": "dedf02aafcff8c68e46f740f0ae57d469d15cd4223e1f45da7856cf269f3ee73",
+          "fetched_at": "2026-08-27T13:44:43Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.okawa.lg.jp/100/060/010/20230220151538.html (label: 予算) 入口 http://www.city.okawa.lg.jp/100/060/010/20230220151538.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.okawa.lg.jp/100/060/010/20230220151538.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（fs2024.pdf「令和6年度_統一的な基準による財務書類（PDF:254 KB）」, sha256:dedf02aa）にて構造マーカー（項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

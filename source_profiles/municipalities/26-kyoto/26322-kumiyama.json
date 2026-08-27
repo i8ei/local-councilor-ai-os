@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（kumiyama-20242026032715443841.xlsx「令和6年度決算 財政状況資料集 (サイズ：541.85KB)」, sha256:a1b0e4ff）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
@@ -93,9 +93,15 @@
           "observed_on": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
           "sha256": "9dfdef514e161c5c3e027c738c0e7855923ea02ce55bc6eb9ff0bf7e330cf3a7",
           "fetched_at": "2026-08-27T09:50:16Z"
+        },
+        {
+          "url": "https://www.town.kumiyama.lg.jp/cmsfiles/contents/0000000/997/R6kessan_2026032715443841.pdf",
+          "observed_on": "https://www.town.kumiyama.lg.jp/0000000997.html",
+          "sha256": "aa2f35b693b3fb54aab6697171244d5afbc2785972525c09c72a9c01ebe18634",
+          "fetched_at": "2026-08-27T13:39:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html (label: 財政状況) 入口 https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan_2026032715443841.pdf「令和6年度決算カード (サイズ：94.80KB)」, sha256:aa2f35b6）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

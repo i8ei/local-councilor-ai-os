@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.abiko.chiba/reiki_menu.html (label: 条例・例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
           "sha256": "9678f654fe9682d2356da61b84bfa04dc38cdc99c92d9e06cde43472637a2fb0",
           "fetched_at": "2026-08-27T10:23:28Z"
+        },
+        {
+          "url": "http://www.city.abiko.chiba.jp/shisei/zaisei/opendateyosannsyo.files/R8_tousyoyosan_data.xlsx",
+          "observed_on": "http://www.city.abiko.chiba.jp/shisei/zaisei/opendateyosannsyo.html",
+          "sha256": "832b76b94d92f9b9efd831073370ef4fb6af7334ca1c7cefebc29205ac8fec7e",
+          "fetched_at": "2026-08-27T13:32:42Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.abiko.chiba.jp/shisei/zaisei/index.html (label: 財政) 入口 http://www.city.abiko.chiba.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.abiko.chiba.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_tousyoyosan_data.xlsx「令和8年度_当初予算（Excel：298KB）」, sha256:832b76b9）にて構造マーカー（款・項・節・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
@@ -96,9 +102,15 @@
           "observed_on": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
           "sha256": "9678f654fe9682d2356da61b84bfa04dc38cdc99c92d9e06cde43472637a2fb0",
           "fetched_at": "2026-08-27T10:23:28Z"
+        },
+        {
+          "url": "http://www.city.abiko.chiba.jp/shisei/zaisei/opendatekessannsyo.files/R6_kessan_data.xlsx",
+          "observed_on": "http://www.city.abiko.chiba.jp/shisei/zaisei/opendatekessannsyo.html",
+          "sha256": "9965f1cc0bb5db54a297a051d97e1c37e236b649271a2ebfcf03011dcd3f8c2f",
+          "fetched_at": "2026-08-27T13:32:41Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.abiko.chiba.jp/shisei/zaisei/index.html (label: 財政) 入口 http://www.city.abiko.chiba.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.abiko.chiba.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_kessan_data.xlsx「令和6年度_決算（Excel：413KB）」, sha256:9965f1cc）にて構造マーカー（款・項・節・決算額等）を確認済み。"
     }
   }
 }

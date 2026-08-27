@@ -50,11 +50,11 @@
       "index_url": "https://www.vill.noda.iwate.jp:443/section/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "f5d5c17a7eaed7362bb61fc58d3833753d0de3f14b9cacc61552648394ef5a0e",
           "fetched_at": "2026-08-27T10:33:28Z"
+        },
+        {
+          "url": "https://www.vill.noda.iwate.jp/material/files/group/4/R7ippann.pdf",
+          "observed_on": "https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/1790.html",
+          "sha256": "9712f80277530a4be185f47cf521cee1d456481abae262bc406c566e7002479a",
+          "fetched_at": "2026-08-27T13:27:40Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html (label: 財政) 入口 https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7ippann.pdf「令和7年度一般会計当初予算 (PDFファイル: 1.1MB)」, sha256:9712f802）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "f5d5c17a7eaed7362bb61fc58d3833753d0de3f14b9cacc61552648394ef5a0e",
           "fetched_at": "2026-08-27T10:33:28Z"
+        },
+        {
+          "url": "https://www.vill.noda.iwate.jp/material/files/group/4/R6zaiseijyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/1086.html",
+          "sha256": "56dafe325d1918e284db8ec3dc762c960a8797314b993383e593481fc6428ec2",
+          "fetched_at": "2026-08-27T13:27:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html (label: 財政) 入口 https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.noda.iwate.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijyoukyousiryousyuu.xlsx「令和6年度財政状況資料集 (Excelファイル: 579.7KB)」, sha256:56dafe32）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.inashiki.lg.jp/page/dir000006.html (label: 稲敷市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.inashiki.lg.jp/page/dir000081.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inashiki.lg.jp/page/dir000081.html",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.inashiki.lg.jp/page/dir000081.html",
           "sha256": "3de5807087b783b08374fd83868f5348242a48c07c6df142218029d18c838d77",
           "fetched_at": "2026-08-27T10:17:33Z"
+        },
+        {
+          "url": "http://www.city.inashiki.lg.jp/page/dir000081.html",
+          "observed_on": "http://www.city.inashiki.lg.jp/",
+          "sha256": "3de5807087b783b08374fd83868f5348242a48c07c6df142218029d18c838d77",
+          "fetched_at": "2026-08-27T10:17:33Z"
+        },
+        {
+          "url": "https://www.city.inashiki.lg.jp/data/doc/1774313777_doc_143_0.pdf",
+          "observed_on": "https://www.city.inashiki.lg.jp/page/page000314.html",
+          "sha256": "53bf2aa7f961037526a30edd656893d1aba6fa722e2c1d73d783adb7a5b2776a",
+          "fetched_at": "2026-08-27T13:30:28Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.inashiki.lg.jp/page/dir000081.html (label: 予算・決算・財政) 入口 https://www.city.inashiki.lg.jp/page/dir000081.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.inashiki.lg.jp/page/dir000081.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1774313777_doc_143_0.pdf「予算概要 令和８年度」, sha256:53bf2aa7）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.inashiki.lg.jp/page/dir000081.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inashiki.lg.jp/page/dir000081.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.inashiki.lg.jp/page/dir000081.html",
           "sha256": "3de5807087b783b08374fd83868f5348242a48c07c6df142218029d18c838d77",
           "fetched_at": "2026-08-27T10:17:33Z"
+        },
+        {
+          "url": "http://www.city.inashiki.lg.jp/page/dir000081.html",
+          "observed_on": "http://www.city.inashiki.lg.jp/",
+          "sha256": "3de5807087b783b08374fd83868f5348242a48c07c6df142218029d18c838d77",
+          "fetched_at": "2026-08-27T10:17:33Z"
+        },
+        {
+          "url": "https://www.city.inashiki.lg.jp/data/doc/1762917584_doc_143_0.pdf",
+          "observed_on": "https://www.city.inashiki.lg.jp/page/page000316.html",
+          "sha256": "b45cedcb705a81b8ea547387032c6f48bbd7d1e9c1a8efbd6152fcf51e6a2c12",
+          "fetched_at": "2026-08-27T13:30:34Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.inashiki.lg.jp/page/dir000081.html (label: 予算・決算・財政) 入口 https://www.city.inashiki.lg.jp/page/dir000081.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.inashiki.lg.jp/page/dir000081.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1762917584_doc_143_0.pdf「稲敷市主要な施策の成果（令和6年度）」, sha256:b45cedcb）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

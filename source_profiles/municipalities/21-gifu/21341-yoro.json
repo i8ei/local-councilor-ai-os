@@ -50,11 +50,11 @@
       "base_url": "http://reiki.town.yoro.gifu.jp/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yoro.gifu.jp/government/administration/1002453/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoro.gifu.jp/government/administration/1002453/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.town.yoro.gifu.jp/government/administration/1002453/index.html",
           "sha256": "59bef5c485d06f5f971d02b46ad79b17a3caffe5a17415236c7f70ea5eaa54b1",
           "fetched_at": "2026-08-27T10:13:33Z"
+        },
+        {
+          "url": "http://www.town.yoro.gifu.jp/government/administration/1002453/index.html",
+          "observed_on": "http://www.town.yoro.gifu.jp/",
+          "sha256": "59bef5c485d06f5f971d02b46ad79b17a3caffe5a17415236c7f70ea5eaa54b1",
+          "fetched_at": "2026-08-27T10:13:33Z"
+        },
+        {
+          "url": "https://www.town.yoro.gifu.jp/_res/projects/default_project/_page_/001/002/455/8-0.pdf",
+          "observed_on": "https://www.town.yoro.gifu.jp/government/administration/1002453/1002455.html",
+          "sha256": "04d58ac0eba9e5f60a6f33ca941d39ddeb5320caa59d8924c07681837b26bd80",
+          "fetched_at": "2026-08-27T13:36:57Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.yoro.gifu.jp/government/administration/1002453/index.html (label: 予算) 入口 https://www.town.yoro.gifu.jp/government/administration/1002453/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yoro.gifu.jp/government/administration/1002453/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yoro.gifu.jp/government/administration/1002453/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8-0.pdf「各会計 当初予算 （PDF 1.2 MB）」, sha256:04d58ac0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yoro.gifu.jp/government/administration/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoro.gifu.jp/government/administration/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.town.yoro.gifu.jp/government/administration/index.html",
           "sha256": "5790a05036cfb2d3e4e3a0cf095af6256ee3fbfeba7571d474f58568eaf44ed0",
           "fetched_at": "2026-08-27T10:13:36Z"
+        },
+        {
+          "url": "http://www.town.yoro.gifu.jp/government/administration/index.html",
+          "observed_on": "http://www.town.yoro.gifu.jp/",
+          "sha256": "5790a05036cfb2d3e4e3a0cf095af6256ee3fbfeba7571d474f58568eaf44ed0",
+          "fetched_at": "2026-08-27T10:13:36Z"
+        },
+        {
+          "url": "https://www.town.yoro.gifu.jp/_res/projects/default_project/_page_/001/002/463/2024.xlsx",
+          "observed_on": "https://www.town.yoro.gifu.jp/government/administration/1002457/1002463.html",
+          "sha256": "b87c8e2ff50a91cb2b591f630dd444e646f334ab06e2af989724453fdf1d688c",
+          "fetched_at": "2026-08-27T13:36:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yoro.gifu.jp/government/administration/index.html (label: 行財政) 入口 https://www.town.yoro.gifu.jp/government/administration/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yoro.gifu.jp/government/administration/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yoro.gifu.jp/government/administration/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2024.xlsx「【財政状況資料集】 213411 養老町 2024 （Excel 560.0 KB）」, sha256:b87c8e2f）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.ebina/reiki_menu.html (label: 海老名市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ebina.kanagawa.jp/shisei/zaisei/zaisei/1003926.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ebina.kanagawa.jp/shisei/zaisei/zaisei/1003926.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.ebina.kanagawa.jp/shisei/zaisei/zaisei/1003926.html",
           "sha256": "1642605a55892c9b9c4897de36da3c5207aa04a59890f598ec3ed520f0e82a94",
           "fetched_at": "2026-08-27T10:28:20Z"
+        },
+        {
+          "url": "http://www.city.ebina.kanagawa.jp/shisei/zaisei/zaisei/1003926.html",
+          "observed_on": "http://www.city.ebina.kanagawa.jp/",
+          "sha256": "1642605a55892c9b9c4897de36da3c5207aa04a59890f598ec3ed520f0e82a94",
+          "fetched_at": "2026-08-27T10:28:20Z"
+        },
+        {
+          "url": "https://www.city.ebina.kanagawa.jp/_res/projects/default_project/_page_/001/003/926/yuuryoukoukoku-kijun.pdf",
+          "observed_on": "https://www.city.ebina.kanagawa.jp/shisei/zaisei/zaisei/1003926.html",
+          "sha256": "5df3b7230b7886b8c41de21c8c2dca4abfcb8a489f60c8e754b164c58bdb2a9a",
+          "fetched_at": "2026-08-27T13:34:28Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ebina.kanagawa.jp/shisei/zaisei/zaisei/1003926.html (label: 有料広告事業について) 入口 https://www.city.ebina.kanagawa.jp/shisei/zaisei/zaisei/1003926.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yuuryoukoukoku-kijun.pdf「海老名市有料広告掲載基準 （PDF 281.2KB）」, sha256:5df3b723）にて構造マーカー（項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

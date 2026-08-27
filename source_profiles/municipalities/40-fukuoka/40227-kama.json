@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kama/reiki_menu.html (label: 例規集＜外部サイト＞)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kama.lg.jp/life/4/22/21/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kama.lg.jp/life/4/22/21/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.kama.lg.jp/life/4/22/21/",
           "sha256": "3b5715e5e3d76fdb2272f8c1f8c0db9be3b0225b1a3364a61a444cc5d0c73f66",
           "fetched_at": "2026-08-27T09:36:14Z"
+        },
+        {
+          "url": "http://www.city.kama.lg.jp/life/4/22/21/",
+          "observed_on": "http://www.city.kama.lg.jp/",
+          "sha256": "3b5715e5e3d76fdb2272f8c1f8c0db9be3b0225b1a3364a61a444cc5d0c73f66",
+          "fetched_at": "2026-08-27T09:36:14Z"
+        },
+        {
+          "url": "https://www.city.kama.lg.jp/uploaded/attachment/23180.pdf",
+          "observed_on": "https://www.city.kama.lg.jp/soshiki/5/2060.html",
+          "sha256": "8e717458fcd737682567f5ecacc8ba08006c5c7465b0976776651c7e39c67427",
+          "fetched_at": "2026-08-27T13:44:57Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kama.lg.jp/life/4/22/21/ (label: 予算) 入口 https://www.city.kama.lg.jp/life/4/22/21/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kama.lg.jp/life/4/22/21/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（23180.pdf「嘉麻市のまちづくり [PDFファイル／3.9MB]」, sha256:8e717458）にて構造マーカー（歳入・歳出・款・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

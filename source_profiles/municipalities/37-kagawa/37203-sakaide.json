@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.sakaide.lg.jp/life/4/64/ (label: 坂出市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sakaide.lg.jp/life/4/28/133/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sakaide.lg.jp/life/4/28/133/",
@@ -60,9 +60,21 @@
           "observed_on": "https://www.city.sakaide.lg.jp/life/4/28/133/",
           "sha256": "22584eea71ee313288710728a84678ffaafaa31f83f6287a8430c2cddeda4aee",
           "fetched_at": "2026-08-27T09:46:21Z"
+        },
+        {
+          "url": "http://www.city.sakaide.lg.jp/life/4/28/133/",
+          "observed_on": "http://www.city.sakaide.lg.jp/",
+          "sha256": "22584eea71ee313288710728a84678ffaafaa31f83f6287a8430c2cddeda4aee",
+          "fetched_at": "2026-08-27T09:46:21Z"
+        },
+        {
+          "url": "https://www.city.sakaide.lg.jp/uploaded/attachment/40322.pdf",
+          "observed_on": "https://www.city.sakaide.lg.jp/soshiki/zaimu/yosan.html",
+          "sha256": "2d723b0d60830a370c3c98aa702009c18674658499237a39d796a006645e1b8a",
+          "fetched_at": "2026-08-27T13:43:10Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.sakaide.lg.jp/life/4/28/133/ (label: 予算・決算・財政状況) 入口 https://www.city.sakaide.lg.jp/life/4/28/133/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sakaide.lg.jp/life/4/28/133/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（40322.pdf「令和8年度予算の概要」, sha256:2d723b0d）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

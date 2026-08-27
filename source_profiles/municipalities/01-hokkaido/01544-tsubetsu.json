@@ -60,11 +60,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A79F4AC94 (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
@@ -76,16 +76,22 @@
           "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
           "sha256": "d598f2cf8c7c901bce6934ecfa318aed9be537b59f8d5de013c46f4eab63cf2a",
           "fetched_at": "2026-08-27T10:31:08Z"
+        },
+        {
+          "url": "https://www.town.tsubetsu.hokkaido.jp/material/files/group/14/R8yosann.pdf",
+          "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/4313.html",
+          "sha256": "d3aa4f1721b261741c00d8ee1ed3c20fe565e385e13a4a33db3463cc0f3b340e",
+          "fetched_at": "2026-08-27T13:26:30Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html (label: 財政情報) 入口 https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosann.pdf「令和8年度予算原案の概要 (PDFファイル: 730.6KB)」, sha256:d3aa4f17）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
@@ -97,9 +103,15 @@
           "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html",
           "sha256": "d598f2cf8c7c901bce6934ecfa318aed9be537b59f8d5de013c46f4eab63cf2a",
           "fetched_at": "2026-08-27T10:31:08Z"
+        },
+        {
+          "url": "https://www.town.tsubetsu.hokkaido.jp/material/files/group/14/06zaiseijyoukyou.xlsx",
+          "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/4319.html",
+          "sha256": "3708b54e9e02a212f05d24c9ce24ca1cabd34d6e5c49a8bf68d9e8192b53332a",
+          "fetched_at": "2026-08-27T13:26:29Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html (label: 財政情報) 入口 https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tsubetsu.hokkaido.jp/choseijoho/zaiseijoho/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（06zaiseijyoukyou.xlsx「令和6年度財政状況資料集 (Excelファイル: 550.0KB)」, sha256:3708b54e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

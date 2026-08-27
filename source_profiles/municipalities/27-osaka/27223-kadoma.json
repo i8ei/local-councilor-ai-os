@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（za_sakuteihousin.pdf「平成27年度予算編成策定方針 (PDFファイル: 786.3KB)」, sha256:0abb2190）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html",
@@ -78,9 +78,15 @@
           "observed_on": "https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html",
           "sha256": "0e4f9c42d8d20f351616511a9e339a8b6dc561d1fbe0c4ebf7f25fc0b0de54d6",
           "fetched_at": "2026-08-27T09:51:14Z"
+        },
+        {
+          "url": "https://www.city.kadoma.osaka.jp/material/files/group/4/R6kessancard.pdf",
+          "observed_on": "https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html",
+          "sha256": "d70fcd8e9665a597bb69b32ecc3ac31f84b56c7c10997b777d44117a2f037cc3",
+          "fetched_at": "2026-08-27T13:40:17Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html (label: 決算カード) 入口 https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kadoma.osaka.jp/shisei/zaisei/5618.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessancard.pdf「令和6(2024)年度 (PDFファイル: 172.5KB)」, sha256:d70fcd8e）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

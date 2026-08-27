@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（3_421_43_hikaku(H16).pdf「平成16年度財政比較分析表 （PDF：17.1キロバイト）」, sha256:f98c00fd）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.yamae.lg.jp/list00224.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.yamae.lg.jp/list00224.html",
@@ -99,9 +99,21 @@
           "observed_on": "https://www.vill.yamae.lg.jp/list00224.html",
           "sha256": "bb31c7b2f4274b8cbdebbb5bc3bbae0d0bfebb0e897a6a7ffa55ba9b3ebaa56c",
           "fetched_at": "2026-08-27T09:39:04Z"
+        },
+        {
+          "url": "http://www.vill.yamae.lg.jp/list00224.html",
+          "observed_on": "http://www.vill.yamae.lg.jp/",
+          "sha256": "bb31c7b2f4274b8cbdebbb5bc3bbae0d0bfebb0e897a6a7ffa55ba9b3ebaa56c",
+          "fetched_at": "2026-08-27T09:39:04Z"
+        },
+        {
+          "url": "https://www.vill.yamae.lg.jp/kiji003421/3_421_53_H26kessansiryou.xlsx",
+          "observed_on": "https://www.vill.yamae.lg.jp/kiji003421/index.html",
+          "sha256": "5ea123388dca3ba62c4bbef8c83b7ac67a8de7b3ac348075179e4a62c689fb0f",
+          "fetched_at": "2026-08-27T13:46:39Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.yamae.lg.jp/list00224.html (label: 予算・決算) 入口 https://www.vill.yamae.lg.jp/list00224.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.yamae.lg.jp/list00224.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_421_53_H26kessansiryou.xlsx「平成26年度財政比較分析表 （エクセル：346.5キロバイト）」, sha256:5ea12338）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

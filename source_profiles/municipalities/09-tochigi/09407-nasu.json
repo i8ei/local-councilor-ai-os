@@ -35,11 +35,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/town.nasu/reiki_menu.html for 那須町"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
           "sha256": "6385297e670baaaef18defde94272ba19083fff98f6ec3ceebd81013e40c1cce",
           "fetched_at": "2026-08-27T10:18:47Z"
+        },
+        {
+          "url": "https://www.town.nasu.lg.jp/manage/contents/upload/69b25fe434966.pdf",
+          "observed_on": "https://www.town.nasu.lg.jp/0257/info-0000000340-1.html",
+          "sha256": "5bb9efc996f58479e07c068fdd85164a266911e1395d21698091baac4fd97d53",
+          "fetched_at": "2026-08-27T13:31:03Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nasu.lg.jp/0047/genre1-1-001.html (label: 行財政) 入口 https://www.town.nasu.lg.jp/0047/genre1-1-001.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nasu.lg.jp/0047/genre1-1-001.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（69b25fe434966.pdf「令和8年度当初予算書〔水道事業会計〕(pdf 730 KB)」, sha256:5bb9efc9）にて構造マーカー（款・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.town.nasu.lg.jp/0047/genre1-1-001.html",
           "sha256": "6385297e670baaaef18defde94272ba19083fff98f6ec3ceebd81013e40c1cce",
           "fetched_at": "2026-08-27T10:18:47Z"
+        },
+        {
+          "url": "https://www.town.nasu.lg.jp/manage/contents/upload/69b89db3e8a31.xlsx",
+          "observed_on": "https://www.town.nasu.lg.jp/0257/info-0000003122-1.html",
+          "sha256": "5601ff62a3d8d5e6a75a5ddcb9d24911bbdcc706626081f867ac559923968ef8",
+          "fetched_at": "2026-08-27T13:30:58Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nasu.lg.jp/0047/genre1-1-001.html (label: 行財政) 入口 https://www.town.nasu.lg.jp/0047/genre1-1-001.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nasu.lg.jp/0047/genre1-1-001.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（69b89db3e8a31.xlsx「令和6年度財政状況資料集〔令和8年3月23日掲載〕(xlsx 550 KB)」, sha256:5601ff62）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

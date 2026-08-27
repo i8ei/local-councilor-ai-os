@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.town.toyosato.shiga.jp/reiki/index.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html",
@@ -45,9 +45,15 @@
           "observed_on": "https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html",
           "sha256": "cf879366c51229c3a8b644ed1c5d82fd5197ff888aaa41ccb0cec022e4529807",
           "fetched_at": "2026-08-27T09:49:40Z"
+        },
+        {
+          "url": "https://www.town.toyosato.shiga.jp/cmsfiles/contents/0000000/182/0805zaiseijijyou.pdf",
+          "observed_on": "https://www.town.toyosato.shiga.jp/0000000182.html",
+          "sha256": "2e75568b2854df982437c550d1fb58208461f4e32665a3bc43d992d9f070a8ee",
+          "fetched_at": "2026-08-27T13:39:30Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html (label: 財政状況) 入口 https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（0805zaiseijijyou.pdf「財政事情(1.17MB)」, sha256:2e75568b）にて構造マーカー（歳入・歳出・款・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

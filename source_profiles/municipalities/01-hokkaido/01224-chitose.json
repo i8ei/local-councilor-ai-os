@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.city.chitose.lg.jp/c70/1002791/1002849/index.html (label: 例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.chitose.lg.jp/c70/1002791/1002816/1002817/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.chitose.lg.jp/c70/1002791/1002816/1002817/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.chitose.lg.jp/c70/1002791/1002816/1002817/index.html",
           "sha256": "242fcb59058bd5d1d1e9dbb885a323767fbb72ce1e48552c32290bbdf94d0e16",
           "fetched_at": "2026-08-27T10:29:09Z"
+        },
+        {
+          "url": "https://www.city.chitose.lg.jp/_res/projects/default_project/_page_/001/003/937/_________6_______.pdf",
+          "observed_on": "https://www.city.chitose.lg.jp/c70/1002791/1002816/1002817/1003937.html",
+          "sha256": "4e33b15b6857ec66a05c18692ff84fbe5052148a14fb685a37d29c4ffc83ea36",
+          "fetched_at": "2026-08-27T13:25:46Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.chitose.lg.jp/c70/1002791/1002816/1002817/index.html (label: 予算) 入口 https://www.city.chitose.lg.jp/c70/1002791/1002816/1002817/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.chitose.lg.jp/c70/1002791/1002816/1002817/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（_________6_______.pdf「パンフレット 令和6年度予算の概要 （PDF 1.3 MB）」, sha256:4e33b15b）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.chitose.lg.jp/c70/1002791/1002816/1002818/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.chitose.lg.jp/c70/1002791/1002816/1002818/index.html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.chitose.lg.jp/c70/1002791/1002816/1002818/index.html",
           "sha256": "8a07e74d7ac88dcc36e95663ed84d4ad0fe9900b44c9f88d1a20efd52b4802b0",
           "fetched_at": "2026-08-27T10:29:11Z"
+        },
+        {
+          "url": "https://www.city.chitose.lg.jp/_res/projects/default_project/_page_/001/003/914/r4______.pdf",
+          "observed_on": "https://www.city.chitose.lg.jp/c70/1002791/1002816/1002818/1003914.html",
+          "sha256": "7454c64278c17d44978d938be22db6801fb0785c75671a9ca9f250403867b945",
+          "fetched_at": "2026-08-27T13:25:45Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.chitose.lg.jp/c70/1002791/1002816/1002818/index.html (label: 決算) 入口 https://www.city.chitose.lg.jp/c70/1002791/1002816/1002818/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.chitose.lg.jp/c70/1002791/1002816/1002818/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r4______.pdf「令和4年度全文一括 （PDF 8.4 MB）」, sha256:7454c642）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

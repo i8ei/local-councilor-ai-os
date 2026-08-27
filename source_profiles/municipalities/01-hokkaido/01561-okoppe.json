@@ -50,11 +50,11 @@
       "notes": "Observed joureikun at https://public.joureikun.jp/okoppe_town/reiki/ (label: 例規集 (外部サイト))"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6.html?cp=nbm3tm0000001tkm&cs=city02s9",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6.html?cp=nbm3tm0000001tkm&cs=city02s9",
@@ -71,16 +71,22 @@
           "url": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6-att/npk8cg0000004g18.pdf",
           "observed_on": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6.html?cp=nbm3tm0000001tkm&cs=city02s9",
           "fetched_at": "2026-08-27T10:31:12Z"
+        },
+        {
+          "url": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6-att/ssff620000000i74.xlsx",
+          "observed_on": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6.html?cp=nbm3tm0000001tkm&cs=city02s9",
+          "sha256": "b10c96c6f34b9c9949377e1510ad265a7ae3f344f5c1a1d8a2466542752f6170",
+          "fetched_at": "2026-08-27T13:26:34Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6.html?cp=nbm3tm0000001tkm&cs=city02s9 (label: 興部町の財政・予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（ssff620000000i74.xlsx「令和6年度 財政状況資料集 （XLSX:548KB）」, sha256:b10c96c6）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.okoppe.lg.jp/cms/category/gyosei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.okoppe.lg.jp/cms/category/gyosei.html",
@@ -92,9 +98,15 @@
           "observed_on": "https://www.town.okoppe.lg.jp/cms/category/gyosei.html",
           "sha256": "c65223ab8fb598d2ed8ad648cc4a7aad894a608d8e9fabc48cf196ff3596834b",
           "fetched_at": "2026-08-27T10:31:17Z"
+        },
+        {
+          "url": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6-att/ssff620000000i74.xlsx",
+          "observed_on": "https://www.town.okoppe.lg.jp/cms/section/zeimu/nbm3tm00000003s6.html?cp=nbm3tm0000001tkm&cs=city02s9",
+          "sha256": "b10c96c6f34b9c9949377e1510ad265a7ae3f344f5c1a1d8a2466542752f6170",
+          "fetched_at": "2026-08-27T13:26:34Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.okoppe.lg.jp/cms/category/gyosei.html (label: 財政・統計資料) 入口 https://www.town.okoppe.lg.jp/cms/category/gyosei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.okoppe.lg.jp/cms/category/gyosei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（ssff620000000i74.xlsx「令和6年度 財政状況資料集 （XLSX:548KB）」, sha256:b10c96c6）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

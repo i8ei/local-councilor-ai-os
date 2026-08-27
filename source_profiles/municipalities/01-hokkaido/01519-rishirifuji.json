@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=206 (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm",
           "sha256": "bfb89ecd8ae4226fdf25c3abd7c403ee3513e56eded131a8c2d1f671782dd386",
           "fetched_at": "2026-08-27T10:31:06Z"
+        },
+        {
+          "url": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/secure/1152/2024R6zaiseijoukyousiryousyuu01519.xlsx",
+          "observed_on": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm",
+          "sha256": "485363fe68827b65e8bf18d9f8200fb870f00bd865c66645b965e12d98b28b83",
+          "fetched_at": "2026-08-27T13:26:25Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm (label: 財政) 入口 https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2024R6zaiseijoukyousiryousyuu01519.xlsx「〇令和６年度財政状況資料集」, sha256:485363fe）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm",
           "sha256": "bfb89ecd8ae4226fdf25c3abd7c403ee3513e56eded131a8c2d1f671782dd386",
           "fetched_at": "2026-08-27T10:31:06Z"
+        },
+        {
+          "url": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/secure/1152/2024R6zaiseijoukyousiryousyuu01519.xlsx",
+          "observed_on": "https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm",
+          "sha256": "485363fe68827b65e8bf18d9f8200fb870f00bd865c66645b965e12d98b28b83",
+          "fetched_at": "2026-08-27T13:26:25Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm (label: 財政) 入口 https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.rishirifuji.hokkaido.jp/rishirifuji/1144.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2024R6zaiseijoukyousiryousyuu01519.xlsx「〇令和６年度財政状況資料集」, sha256:485363fe）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

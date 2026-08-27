@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/fujikawaguchiko/reiki_menu.html (label: 富士河口湖町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20",
           "sha256": "1c2eab832379c08d0106003a150a8130eeda69ec034b0dc1d5d9913652dda6fe",
           "fetched_at": "2026-08-27T10:09:28Z"
+        },
+        {
+          "url": "https://www.town.fujikawaguchiko.lg.jp/upload/file/soumu/zaisei/yosan/31yosan%20ga.pdf",
+          "observed_on": "https://www.town.fujikawaguchiko.lg.jp/info/info.php?if_id=4871&ca_id=20",
+          "sha256": "ccaa44ec1ef1bb856e5001b11824dca3146ebac59228f1b430f583655a0d3747",
+          "fetched_at": "2026-08-27T13:36:49Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 (label: 予算・決算) 入口 https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fujikawaguchiko.lg.jp/info/list.php?ca_id=20 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（31yosan%20ga.pdf「歳入歳出当初予算額の状況及び町債の状況」, sha256:ccaa44ec）にて構造マーカー（歳入・歳出・款・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

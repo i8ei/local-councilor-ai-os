@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/top/search (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html",
@@ -65,16 +65,22 @@
           "url": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc-att/ik8a6q00000006y6.pdf",
           "observed_on": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html",
           "fetched_at": "2026-08-27T11:22:55Z"
+        },
+        {
+          "url": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc-att/onb6dr000000034o.pdf",
+          "observed_on": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html",
+          "sha256": "6fa002868b7b437c8cd9a13684b9c4ebc538efed609f7174bf3f2812f1e01cf7",
+          "fetched_at": "2026-08-27T13:26:33Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html (label: 財政状況) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（onb6dr000000034o.pdf「令和7年度予算の概要 （PDF:9.45MB）」, sha256:6fa00286）にて構造マーカー（歳入・歳出・節・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html",
@@ -91,9 +97,15 @@
           "url": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc-att/H19kessan.pdf",
           "observed_on": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html",
           "fetched_at": "2026-08-27T11:23:16Z"
+        },
+        {
+          "url": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc-att/ik8a6q00000004ln.xlsx",
+          "observed_on": "https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html",
+          "sha256": "25152b7a50045b6a62932adbd51fcaaa95d167367dc74d0fbea01ddab21aca1c",
+          "fetched_at": "2026-08-27T13:26:35Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakagawa.hokkaido.jp/section/kikakuzaisei/b02d3l0000001elc.html (label: 財政状況) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（ik8a6q00000004ln.xlsx「令和6年度 財政状況資料集 （XLSX:547KB）」, sha256:25152b7a）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

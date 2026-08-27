@@ -42,11 +42,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F2650 (label: 田村市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tamura.lg.jp/soshiki/3/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tamura.lg.jp/soshiki/3/",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.city.tamura.lg.jp:443/soshiki/3/",
           "sha256": "1e3bb176b5a1ce316b7461ea99619e5c63657a50ffa4264f06e66c48d9df3c55",
           "fetched_at": "2026-08-27T10:36:55Z"
+        },
+        {
+          "url": "http://www.city.tamura.lg.jp/soshiki/3/",
+          "observed_on": "http://www.city.tamura.lg.jp/",
+          "sha256": "1e3bb176b5a1ce316b7461ea99619e5c63657a50ffa4264f06e66c48d9df3c55",
+          "fetched_at": "2026-08-27T10:36:55Z"
+        },
+        {
+          "url": "https://www.city.tamura.lg.jp:443/uploaded/attachment/22640.pdf",
+          "observed_on": "https://www.city.tamura.lg.jp:443/soshiki/3/zaiseikohyo.html",
+          "sha256": "199a0048bba9297d00406be5a940eceeaf272befda18ca7e2017fdb0e7ad0447",
+          "fetched_at": "2026-08-27T13:29:21Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tamura.lg.jp/soshiki/3/ (label: 財政課) 入口 https://www.city.tamura.lg.jp:443/soshiki/3/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（22640.pdf「【用語解説】 [PDFファイル／46KB]」, sha256:199a0048）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tamura.lg.jp/soshiki/3/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tamura.lg.jp/soshiki/3/",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.city.tamura.lg.jp:443/soshiki/3/",
           "sha256": "1e3bb176b5a1ce316b7461ea99619e5c63657a50ffa4264f06e66c48d9df3c55",
           "fetched_at": "2026-08-27T10:36:55Z"
+        },
+        {
+          "url": "http://www.city.tamura.lg.jp/soshiki/3/",
+          "observed_on": "http://www.city.tamura.lg.jp/",
+          "sha256": "1e3bb176b5a1ce316b7461ea99619e5c63657a50ffa4264f06e66c48d9df3c55",
+          "fetched_at": "2026-08-27T10:36:55Z"
+        },
+        {
+          "url": "https://www.city.tamura.lg.jp:443/soshiki/3/assets/%E4%BB%A4%E5%92%8C6%E5%B9%B4%E5%BA%A6%E3%80%80%E7%94%B0%E6%9D%91%E5%B8%82%E3%81%AE%E8%B2%A1%E5%8B%99%E6%9B%B8%E9%A1%9E%EF%BC%94%E8%A1%A8.pdf",
+          "observed_on": "https://www.city.tamura.lg.jp:443/soshiki/3/zaimu-shorui4.html",
+          "sha256": "3068e5b6f56d0213f9c1df61a10c80daf324c8e64d1786cc66146d2e69c7bdc5",
+          "fetched_at": "2026-08-27T13:29:23Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tamura.lg.jp/soshiki/3/ (label: 財政課) 入口 https://www.city.tamura.lg.jp:443/soshiki/3/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E4%BB%A4%E5%92%8C6%E5%B9%B4%E5%BA%A6%E3%80%80%E7%94%B0%E6%9D%91%E5%B8%82%E3%81%AE%E8%B2%A1%E5%8B%99%E6%9B%B8%E9%A1%9E%EF%BC%94%E8%A1%A8.pdf「令和6年度 田村市の財務書類４表 (2.5MB)」, sha256:3068e5b6）にて構造マーカー（項・地方債等）を確認済み。"
     }
   }
 }

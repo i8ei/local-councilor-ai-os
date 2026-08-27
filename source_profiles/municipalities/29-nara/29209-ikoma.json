@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www.city.ikoma.lg.jp/html/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ikoma.lg.jp/category/2-14-1-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ikoma.lg.jp/category/2-14-1-0-0-0-0-0-0-0.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.city.ikoma.lg.jp/category/2-14-1-0-0-0-0-0-0-0.html",
           "sha256": "5d028d41be584dd1e9cf08d6042e7a659c3e37a3490f1422b8f0b3aacac75542",
           "fetched_at": "2026-08-27T09:52:41Z"
+        },
+        {
+          "url": "https://www.city.ikoma.lg.jp/cmsfiles/contents/0000039/39458/yosann8-2.pdf",
+          "observed_on": "https://www.city.ikoma.lg.jp/0000039458.html",
+          "sha256": "2733353b0fa82300a718d7a8359c68dc1b5cb0698d45012f1c47287c0583af68",
+          "fetched_at": "2026-08-27T13:41:22Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.ikoma.lg.jp/category/2-14-1-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.ikoma.lg.jp/category/2-14-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ikoma.lg.jp/category/2-14-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yosann8-2.pdf「予算書 (PDF形式、803.60KB)」, sha256:2733353b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.itabashi.tokyo.jp/kusei/jorei/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
           "sha256": "4ad771bb6f11749cb282f3d4eb073059a2ad3455b16a9f698bdb14e52aca27a6",
           "fetched_at": "2026-08-27T10:25:39Z"
+        },
+        {
+          "url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
+          "observed_on": "http://www.city.itabashi.tokyo.jp/",
+          "sha256": "4ad771bb6f11749cb282f3d4eb073059a2ad3455b16a9f698bdb14e52aca27a6",
+          "fetched_at": "2026-08-27T10:25:39Z"
+        },
+        {
+          "url": "https://www.city.itabashi.tokyo.jp/_res/projects/default_project/_page_/001/040/463/r5_gaiyou2.pdf",
+          "observed_on": "https://www.city.itabashi.tokyo.jp/kusei/zaisei/1040463.html",
+          "sha256": "5bb90cfdf93eea5156c08622238c4d6cc0ec1d19d377055a5a8945d2af91b2c8",
+          "fetched_at": "2026-08-27T13:33:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html (label: 財政) 入口 https://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r5_gaiyou2.pdf「令和5年度 予算の概要 （PDF 6.5MB）」, sha256:5bb90cfd）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
           "sha256": "4ad771bb6f11749cb282f3d4eb073059a2ad3455b16a9f698bdb14e52aca27a6",
           "fetched_at": "2026-08-27T10:25:39Z"
+        },
+        {
+          "url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
+          "observed_on": "http://www.city.itabashi.tokyo.jp/",
+          "sha256": "4ad771bb6f11749cb282f3d4eb073059a2ad3455b16a9f698bdb14e52aca27a6",
+          "fetched_at": "2026-08-27T10:25:39Z"
+        },
+        {
+          "url": "https://www.city.itabashi.tokyo.jp/_res/projects/default_project/_page_/001/040/463/r6hakusyo2.pdf",
+          "observed_on": "https://www.city.itabashi.tokyo.jp/kusei/zaisei/1040463.html",
+          "sha256": "79bfdd37bce68c84d7ccff5428b00b65bd8c63bf6b460743ca87af0991b353da",
+          "fetched_at": "2026-08-27T13:33:39Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html (label: 財政) 入口 https://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6hakusyo2.pdf「令和6年度財政白書 （PDF 3.1MB）」, sha256:79bfdd37）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.ibara.okayama/reiki_menu.html (label: 例規検索)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ibara.okayama.jp/life/6/24/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ibara.okayama.jp/life/6/24/",
@@ -64,9 +64,15 @@
           "observed_on": "http://www.city.ibara.okayama.jp/life/6/24/",
           "sha256": "8d111bb9ee3a14dfea87415641441e5819eb2799f022c5f92c06c445d74c55d8",
           "fetched_at": "2026-08-27T09:44:08Z"
+        },
+        {
+          "url": "http://www.city.ibara.okayama.jp/uploaded/attachment/11573.pdf",
+          "observed_on": "http://www.city.ibara.okayama.jp/soshiki/6/1757.html",
+          "sha256": "dcb6d76ee12e614fd2ede3adff8d444f398b0d36c799216c24a36b25e3d71133",
+          "fetched_at": "2026-08-27T13:42:14Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ibara.okayama.jp/life/6/24/ (label: 計画・施策・財政) 入口 http://www.city.ibara.okayama.jp/life/6/24/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.ibara.okayama.jp/life/6/24/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（11573.pdf「令和8年度6月補正予算書 [PDFファイル／245KB]」, sha256:dcb6d76e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

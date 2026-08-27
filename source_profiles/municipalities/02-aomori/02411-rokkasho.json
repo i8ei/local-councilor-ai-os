@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.rokkasho.jp/index.cfm/11,21957,html (label: お知らせ～六ヶ所村第一次産業緊急燃油高騰対策予算成立いたしました) 入口 http://www.rokkasho.jp/index.cfm/11,21957,html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.rokkasho.jp/index.cfm/11,0,31,122,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.rokkasho.jp/index.cfm/11,0,31,122,html",
@@ -85,9 +85,15 @@
           "observed_on": "http://www.rokkasho.jp/index.cfm/11,0,31,122,html",
           "sha256": "8a080f962643881a8b5efd066e1dcd09601fd833b7fd460c44ef182f067459d7",
           "fetched_at": "2026-08-27T10:32:28Z"
+        },
+        {
+          "url": "http://www.rokkasho.jp/index.cfm/11,5897,c,html/5897/20260316-144702.xlsx",
+          "observed_on": "http://www.rokkasho.jp/index.cfm/11,5897,31,122,html",
+          "sha256": "170dd10ca5a83601aa8803910d3bc01dd16af601258c7b56b315d181b982c1bf",
+          "fetched_at": "2026-08-27T13:27:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.rokkasho.jp/index.cfm/11,0,31,122,html (label: 財政課) 入口 http://www.rokkasho.jp/index.cfm/11,0,31,122,html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.rokkasho.jp/index.cfm/11,0,31,122,html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20260316-144702.xlsx「令和６年度財政状況資料集.xlsx [ 600 KB xlsxファイル]」, sha256:170dd10c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

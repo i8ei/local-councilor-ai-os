@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kisarazu/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -75,9 +75,15 @@
           "observed_on": "https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "69e30e470f0add369806d4c93ca9bbf535d365773c8e311af2472953ac4cefa8",
           "fetched_at": "2026-08-27T10:22:54Z"
+        },
+        {
+          "url": "https://www.city.kisarazu.lg.jp/material/files/group/12/R8_ippan.pdf",
+          "observed_on": "https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/7241.html",
+          "sha256": "9b103f11b022637c89717b646c50c21c9e84b4e7d7cc754ee2e125c77e91010c",
+          "fetched_at": "2026-08-27T13:32:32Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_ippan.pdf「(2)一般会計歳入歳出予算書等 (PDFファイル: 900.0KB)」, sha256:9b103f11）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.amagi.lg.jp/chosei/gyoseionline/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/",
           "sha256": "aa327d919e0bff342ba2abfc23fc4aecd51dd31d90fc800b4610b4bde4f8ef35",
           "fetched_at": "2026-08-27T09:40:53Z"
+        },
+        {
+          "url": "https://www.town.amagi.lg.jp/fs/2/8/8/3/1/_/R8___________.pdf",
+          "observed_on": "https://www.town.amagi.lg.jp/docs/5187.html",
+          "sha256": "d989eee82e5da6660a359bbd8e2ee6164866adeac5d47c03dbd8b6f371ca18b8",
+          "fetched_at": "2026-08-27T13:47:54Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/ (label: 予算) 入口 https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8___________.pdf「R8年度 天城町当初予算書 (PDF 2.32MB)」, sha256:d989eee8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

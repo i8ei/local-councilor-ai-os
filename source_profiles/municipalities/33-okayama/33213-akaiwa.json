@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（R4-tousho-yosansho.pdf「予算書(PDFファイル:6.9MB)」, sha256:f8c24aa0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html",
@@ -91,9 +91,15 @@
           "observed_on": "https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html",
           "sha256": "78866b71b24b438ae9896e09ddbd44cd462952cf9ba31116432b6bde7152d50f",
           "fetched_at": "2026-08-27T09:44:40Z"
+        },
+        {
+          "url": "https://www.city.akaiwa.lg.jp/material/files/group/24/r6kessansyo.pdf",
+          "observed_on": "https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/12506.html",
+          "sha256": "45b41546eea96be75f0cf768f39d7a6a6efa5b3da6557908adbe3f051eb84e94",
+          "fetched_at": "2026-08-27T13:42:27Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html (label: 決算) 入口 https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.akaiwa.lg.jp/shisei/gyousei/kextusan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessansyo.pdf「令和6年度 一般会計・特別会計決算書 水道事業会計決算書 下水道事業会計決算書 (PDFファイル: 8.3MB)」, sha256:45b41546）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

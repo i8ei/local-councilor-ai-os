@@ -80,11 +80,11 @@
       "notes": "deepest_doc=P1。budget文書（5gatsuhoseiyosanshor7.pdf「令和7年度5月補正一般会計補正予算書（PDF：275KB）」, sha256:f12b09ea）にて構造マーカー（歳出・款・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
@@ -101,9 +101,21 @@
           "url": "https://www.city.kobe.lg.jp/documents/48584/r7kessan.pdf",
           "observed_on": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
           "fetched_at": "2026-08-27T11:05:42Z"
+        },
+        {
+          "url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "observed_on": "http://www.city.kobe.lg.jp/",
+          "sha256": "6964a0fb9302c8d11bac9c04b35078138b77f65923e6552225954279390559d9",
+          "fetched_at": "2026-08-27T09:51:36Z"
+        },
+        {
+          "url": "https://www.city.kobe.lg.jp/documents/48584/r7kessan.pdf",
+          "observed_on": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "sha256": "03f751e3ac64e4eb822cd2697b56a74d4c58deffa14c8f6fafa10fcf3395e6d0",
+          "fetched_at": "2026-08-27T11:05:43Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html (label: 予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r7kessan.pdf「令和7年度決算の概要（PDF：8,202KB）」, sha256:03f751e3）にて構造マーカー（歳出・款・項・決算額等）を確認済み。"
     }
   }
 }

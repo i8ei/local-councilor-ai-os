@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/ebetsu-shi/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ebetsu.hokkaido.jp/site/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ebetsu.hokkaido.jp/site/zaisei/",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.city.ebetsu.hokkaido.jp/site/zaisei/",
           "sha256": "bb109d22d771685d29126eae9552caf361fb90894c39759cf893aea77b7b41bd",
           "fetched_at": "2026-08-27T10:29:25Z"
+        },
+        {
+          "url": "http://www.city.ebetsu.hokkaido.jp/site/zaisei/",
+          "observed_on": "http://www.city.ebetsu.hokkaido.jp/",
+          "sha256": "bb109d22d771685d29126eae9552caf361fb90894c39759cf893aea77b7b41bd",
+          "fetched_at": "2026-08-27T10:29:25Z"
+        },
+        {
+          "url": "https://www.city.ebetsu.hokkaido.jp/uploaded/attachment/79625.pdf",
+          "observed_on": "https://www.city.ebetsu.hokkaido.jp/site/zaisei/86222.html",
+          "sha256": "fb1174464635aa816cac80854b31c0a4119007aa09b14f1575c14c0f19cfba2b",
+          "fetched_at": "2026-08-27T13:25:39Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ebetsu.hokkaido.jp/site/zaisei/ (label: 財政状況) 入口 https://www.city.ebetsu.hokkaido.jp/site/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（79625.pdf「令和８年度当初予算案概要 [PDFファイル／261KB]」, sha256:fb117446）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ebetsu.hokkaido.jp/site/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ebetsu.hokkaido.jp/site/zaisei/",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.city.ebetsu.hokkaido.jp/site/zaisei/",
           "sha256": "bb109d22d771685d29126eae9552caf361fb90894c39759cf893aea77b7b41bd",
           "fetched_at": "2026-08-27T10:29:25Z"
+        },
+        {
+          "url": "http://www.city.ebetsu.hokkaido.jp/site/zaisei/",
+          "observed_on": "http://www.city.ebetsu.hokkaido.jp/",
+          "sha256": "bb109d22d771685d29126eae9552caf361fb90894c39759cf893aea77b7b41bd",
+          "fetched_at": "2026-08-27T10:29:25Z"
+        },
+        {
+          "url": "https://www.city.ebetsu.hokkaido.jp/uploaded/attachment/80433.xlsx",
+          "observed_on": "https://www.city.ebetsu.hokkaido.jp/site/zaisei/15792.html",
+          "sha256": "563c2d8735c9a312931fac01e064e728537ae3c2263dd8eb358d02cb3c6009cc",
+          "fetched_at": "2026-08-27T13:25:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ebetsu.hokkaido.jp/site/zaisei/ (label: 財政状況) 入口 https://www.city.ebetsu.hokkaido.jp/site/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（80433.xlsx「「財政状況資料集」令和６年度 [Excelファイル／572KB]」, sha256:563c2d87）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

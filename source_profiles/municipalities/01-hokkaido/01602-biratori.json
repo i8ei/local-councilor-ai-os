@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.biratori.hokkaido.jp/choseijoho/jorei/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html",
           "sha256": "3b606924d03f0e6db57eb5600dfddbf42562bc0ede9a180fe8fa01239d64af7a",
           "fetched_at": "2026-08-27T10:31:27Z"
+        },
+        {
+          "url": "https://www.town.biratori.hokkaido.jp/material/files/group/2/R6_zaiseijyoukyousiryou.xlsx",
+          "observed_on": "https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/yosan_kessan/970.html",
+          "sha256": "280c7b3c2be81b43a5e207861c8101db9df790a3d4f80dd9dd62a67a24717370",
+          "fetched_at": "2026-08-27T13:26:57Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html (label: まちの財政) 入口 https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6_zaiseijyoukyousiryou.xlsx「令和6年度_財政状況資料集 (Excelファイル: 559.4KB)」, sha256:280c7b3c）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html",
           "sha256": "3b606924d03f0e6db57eb5600dfddbf42562bc0ede9a180fe8fa01239d64af7a",
           "fetched_at": "2026-08-27T10:31:27Z"
+        },
+        {
+          "url": "https://www.town.biratori.hokkaido.jp/material/files/group/2/R4kessan.pdf",
+          "observed_on": "https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/yosan_kessan/970.html",
+          "sha256": "3412bf3daa8b41e14f013efbc651fe2f615f9b1fb51c12d4bbc2aa364d302096",
+          "fetched_at": "2026-08-27T13:27:01Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html (label: まちの財政) 入口 https://www.town.biratori.hokkaido.jp/choseijoho/machinozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R4kessan.pdf「令和4年度_平取町決算説明書 (PDFファイル: 2.0MB)」, sha256:3412bf3d）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

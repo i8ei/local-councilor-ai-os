@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city-yuzawa.jp/life/4/42/ (label: 例規 情報公開)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city-yuzawa.jp/life/4/35/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city-yuzawa.jp/life/4/35/",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.city-yuzawa.jp:443/life/4/35/",
           "sha256": "4784f52d8bb15441452234235e2c0c4b2cff7a87c97e4e1c205d36448704a266",
           "fetched_at": "2026-08-27T10:34:34Z"
+        },
+        {
+          "url": "http://www.city-yuzawa.jp/life/4/35/",
+          "observed_on": "http://www.city-yuzawa.jp/",
+          "sha256": "4784f52d8bb15441452234235e2c0c4b2cff7a87c97e4e1c205d36448704a266",
+          "fetched_at": "2026-08-27T10:34:34Z"
+        },
+        {
+          "url": "https://www.city-yuzawa.jp:443/uploaded/attachment/35187.pdf",
+          "observed_on": "https://www.city-yuzawa.jp:443/soshiki/12/6358.html",
+          "sha256": "6720f27d6df5a8f1a23be90b1a22f9c0825798766274e6b9e24e0089651502d8",
+          "fetched_at": "2026-08-27T13:28:21Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city-yuzawa.jp/life/4/35/ (label: 財政) 入口 https://www.city-yuzawa.jp:443/life/4/35/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（35187.pdf「令和8年度湯沢市当初予算書（一般会計・特別会計） [PDFファイル／1.64MB]」, sha256:6720f27d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city-yuzawa.jp/life/4/35/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city-yuzawa.jp/life/4/35/",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.city-yuzawa.jp:443/life/4/35/",
           "sha256": "4784f52d8bb15441452234235e2c0c4b2cff7a87c97e4e1c205d36448704a266",
           "fetched_at": "2026-08-27T10:34:34Z"
+        },
+        {
+          "url": "http://www.city-yuzawa.jp/life/4/35/",
+          "observed_on": "http://www.city-yuzawa.jp/",
+          "sha256": "4784f52d8bb15441452234235e2c0c4b2cff7a87c97e4e1c205d36448704a266",
+          "fetched_at": "2026-08-27T10:34:34Z"
+        },
+        {
+          "url": "https://www.city-yuzawa.jp:443/uploaded/attachment/35180.pdf",
+          "observed_on": "https://www.city-yuzawa.jp:443/soshiki/12/6359.html",
+          "sha256": "7a2a034d1f8bababf7f9cd4345b2837460c5744a0102f4de7902e70f194c7a01",
+          "fetched_at": "2026-08-27T13:28:18Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city-yuzawa.jp/life/4/35/ (label: 財政) 入口 https://www.city-yuzawa.jp:443/life/4/35/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（35180.pdf「令和6年度決算書（一般会計・特別会計） [PDFファイル／2.23MB]」, sha256:7a2a034d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

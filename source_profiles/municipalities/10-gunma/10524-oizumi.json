@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/oizumi/reiki_menu.html (label: 例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.oizumi.gunma.jp/li/gyosei/130/030/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oizumi.gunma.jp/li/gyosei/130/030/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.town.oizumi.gunma.jp/li/gyosei/130/030/index.html",
           "sha256": "ce3e3e70cc63bac7a1fa27bf19d9797c73099bd29715cae998a94c365622282a",
           "fetched_at": "2026-08-27T10:20:37Z"
+        },
+        {
+          "url": "http://www.town.oizumi.gunma.jp/li/gyosei/130/030/index.html",
+          "observed_on": "http://www.town.oizumi.gunma.jp/",
+          "sha256": "ce3e3e70cc63bac7a1fa27bf19d9797c73099bd29715cae998a94c365622282a",
+          "fetched_at": "2026-08-27T10:20:37Z"
+        },
+        {
+          "url": "https://www.town.oizumi.gunma.jp/s039/06/010/010/010/020/r6zaiseijyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.town.oizumi.gunma.jp/s039/06/010/010/010/020/20200729165229.html",
+          "sha256": "8bfef3931b3c38fbe970d16d33bd2ab35874e68e1af6a2439a9e2fb99ea79ff9",
+          "fetched_at": "2026-08-27T13:31:22Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.oizumi.gunma.jp/li/gyosei/130/030/index.html (label: 予算) 入口 https://www.town.oizumi.gunma.jp/li/gyosei/130/030/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6zaiseijyoukyousiryousyuu.xlsx「財政状況資料集（令和6年度）（EXCEL：549KB）」, sha256:8bfef393）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.oizumi.gunma.jp/li/gyosei/130/010/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oizumi.gunma.jp/li/gyosei/130/010/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.town.oizumi.gunma.jp/li/gyosei/130/010/index.html",
           "sha256": "12fdaa6ee8769f644af9f89dda9f84bf1330cae9357617494498d09b1f8bc148",
           "fetched_at": "2026-08-27T10:20:40Z"
+        },
+        {
+          "url": "http://www.town.oizumi.gunma.jp/li/gyosei/130/010/index.html",
+          "observed_on": "http://www.town.oizumi.gunma.jp/",
+          "sha256": "12fdaa6ee8769f644af9f89dda9f84bf1330cae9357617494498d09b1f8bc148",
+          "fetched_at": "2026-08-27T10:20:40Z"
+        },
+        {
+          "url": "https://www.town.oizumi.gunma.jp/s026/gyosei/010/010/2024/R6kessansho4.pdf",
+          "observed_on": "https://www.town.oizumi.gunma.jp/s026/gyosei/010/010/010/20200720132809.html",
+          "sha256": "0b18eb30a0228a6389fbec2e6b7c0083a9019ab0c89f0833bcfb1d4261b37a22",
+          "fetched_at": "2026-08-27T13:31:21Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.oizumi.gunma.jp/li/gyosei/130/010/index.html (label: 決算) 入口 https://www.town.oizumi.gunma.jp/li/gyosei/130/010/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansho4.pdf「令和6年度歳入歳出決算書（PDF：3.3MB）」, sha256:0b18eb30）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

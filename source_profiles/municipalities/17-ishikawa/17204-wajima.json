@@ -35,11 +35,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8054492E (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
           "sha256": "b6dc330e8994ebcb07bcc84d8c6a4dcbf0efbe93e70f65a93a76a45b0be765b1",
           "fetched_at": "2026-08-27T10:05:32Z"
+        },
+        {
+          "url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
+          "observed_on": "http://www.city.wajima.ishikawa.jp/",
+          "sha256": "b6dc330e8994ebcb07bcc84d8c6a4dcbf0efbe93e70f65a93a76a45b0be765b1",
+          "fetched_at": "2026-08-27T10:05:32Z"
+        },
+        {
+          "url": "https://www.city.wajima.ishikawa.jp/docs/2015032500037/file_contents/file_2026131692747_1.pdf",
+          "observed_on": "https://www.city.wajima.ishikawa.jp/docs/2015032500037/",
+          "sha256": "7565fc10f895c69e6b3368f67e00cc186b29ae17312ddb3d05241dcacb899ddd",
+          "fetched_at": "2026-08-27T13:35:36Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ (label: 財政状況) 入口 https://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（file_2026131692747_1.pdf「予算の概要[PDF：700KB]」, sha256:7565fc10）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

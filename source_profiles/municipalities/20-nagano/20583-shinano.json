@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（__7_____________________________.pdf「令和7年度当初予算案の概要及び予算説明書(予算案の概要部分のみ) (PDF 940KB)」, sha256:1b810cbe）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shinano.lg.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shinano.lg.jp/chosei/zaisei/",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.town.shinano.lg.jp/chosei/zaisei/",
           "sha256": "2f633127e4ca73dc8dafb5659cdf11b1a27f1ffb8572cfc051a2a4ffc1ec3c8f",
           "fetched_at": "2026-08-27T10:13:32Z"
+        },
+        {
+          "url": "https://www.town.shinano.lg.jp/fs/7/7/7/9/4/5/_/H30kessan.pdf",
+          "observed_on": "https://www.town.shinano.lg.jp/docs/417.html",
+          "sha256": "3390ebca8bc53cab6669588ef6f837d89ae5e68de28d7dff5d83e33ae992765b",
+          "fetched_at": "2026-08-27T13:36:44Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shinano.lg.jp/chosei/zaisei/ (label: 財政・行政改革) 入口 https://www.town.shinano.lg.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H30kessan.pdf「平成30年度 (PDF 150KB)」, sha256:3390ebca）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

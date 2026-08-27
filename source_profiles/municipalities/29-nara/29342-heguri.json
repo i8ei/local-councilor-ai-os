@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.heguri.nara/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.heguri.nara.jp/life/4/17/52/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.heguri.nara.jp/life/4/17/52/",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.town.heguri.nara.jp/life/4/17/52/",
           "sha256": "9f445b82f32328a70eff8b71db60af68ebc0c76c52d24033b7da6ed8475829d9",
           "fetched_at": "2026-08-27T09:52:57Z"
+        },
+        {
+          "url": "http://www.town.heguri.nara.jp/life/4/17/52/",
+          "observed_on": "http://www.town.heguri.nara.jp/",
+          "sha256": "9f445b82f32328a70eff8b71db60af68ebc0c76c52d24033b7da6ed8475829d9",
+          "fetched_at": "2026-08-27T09:52:57Z"
+        },
+        {
+          "url": "https://www.town.heguri.nara.jp/uploaded/attachment/12633.pdf",
+          "observed_on": "https://www.town.heguri.nara.jp/soshiki/5/1834.html",
+          "sha256": "e24fdb4094a47469c6d49c3b285985c23e75a9d488069f991bcf80d5ef6e76c3",
+          "fetched_at": "2026-08-27T13:41:26Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.heguri.nara.jp/life/4/17/52/ (label: 予算・決算・財政状況) 入口 https://www.town.heguri.nara.jp/life/4/17/52/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.heguri.nara.jp/life/4/17/52/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（12633.pdf「令和8年度当初予算 [PDFファイル／2.65MB]」, sha256:e24fdb40）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

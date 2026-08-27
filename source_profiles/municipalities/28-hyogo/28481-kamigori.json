@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（zaiseijokyosiryosyu_2024.xlsx「令和6年度(Excelファイル:556.5KB)」, sha256:c278b901）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html",
@@ -93,9 +93,15 @@
           "observed_on": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html",
           "sha256": "e8462cb01c5dda30d211d2bfd4332d890378fb0b8de4efded4f05f95904d702f",
           "fetched_at": "2026-08-27T09:52:30Z"
+        },
+        {
+          "url": "https://www.town.kamigori.hyogo.jp/material/files/group/63/zaiseijokyosiryosyu_2024.xlsx",
+          "observed_on": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/3423.html",
+          "sha256": "c278b9010f77c234bd06184797ac7e07bfe6c08d29443ae8c199aeeefe4079a3",
+          "fetched_at": "2026-08-27T13:41:14Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijokyosiryosyu_2024.xlsx「令和6年度(Excelファイル:556.5KB)」, sha256:c278b901）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

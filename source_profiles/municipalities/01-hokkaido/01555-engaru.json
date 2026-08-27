@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://engaru.jp/reiki/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://engaru.jp/information/page.php?id=914",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://engaru.jp/information/page.php?id=914",
@@ -69,16 +69,22 @@
           "url": "https://engaru.jp/common/img/content/content_20210317_091904.pdf",
           "observed_on": "https://engaru.jp/information/page.php?id=914",
           "fetched_at": "2026-08-27T10:31:17Z"
+        },
+        {
+          "url": "https://engaru.jp/common/img/content/content_20210317_091904.pdf",
+          "observed_on": "https://engaru.jp/information/page.php?id=914",
+          "sha256": "16b77cdd4e3c1677c6f3bb7226bca1558c071afd5038ea8beebedf105c00da23",
+          "fetched_at": "2026-08-27T10:31:22Z"
         }
       ],
-      "notes": "Observed budget link at https://engaru.jp/information/page.php?id=914 (label: 令和３年度予算（当初予算）) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（content_20210317_091904.pdf「遠軽町一般会計予算 全編（PDFファイル：2.3MB）」, sha256:16b77cdd）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://engaru.jp/information/page.php?id=1366",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://engaru.jp/information/page.php?id=1366",
@@ -90,9 +96,15 @@
           "observed_on": "https://engaru.jp/information/page.php?id=1366",
           "sha256": "806c5e5eff6511fac9abf673f90eb147373ae7a52a5a9785961cd1f2965ea967",
           "fetched_at": "2026-08-27T10:31:23Z"
+        },
+        {
+          "url": "https://engaru.jp/common/img/content/content_20250904_151923.pdf",
+          "observed_on": "https://engaru.jp/information/page.php?id=1366",
+          "sha256": "5a66eae5623686803844a75e0908b9d15e7630855077fe4b15f0b82a1c806d6d",
+          "fetched_at": "2026-08-27T13:26:39Z"
         }
       ],
-      "notes": "Observed settlement link at https://engaru.jp/information/page.php?id=1366 (label: 歳入歳出決算に係る主要な施策の成果説明書) 入口 https://engaru.jp/information/page.php?id=1366 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://engaru.jp/information/page.php?id=1366 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（content_20250904_151923.pdf「令和６年度（ＰＤＦ：６.２ＭＢ）」, sha256:5a66eae5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "base_url": "http://www1.g-reiki.net/shikaoi/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
           "sha256": "02a55de5c1554d8c97d7f2f96d4b26d7a13fbf010892dabe32ce676edd234696",
           "fetched_at": "2026-08-27T10:31:31Z"
+        },
+        {
+          "url": "https://www.town.shikaoi.lg.jp/file/contents/3617/33241/Zai_016349_Shikaoi_2024.xlsx",
+          "observed_on": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/zaisei_jokyo/",
+          "sha256": "84327724acc13fd7aa3f9c45bc581e29c0278cce4f4dd43d2ead6f331251c4a7",
+          "fetched_at": "2026-08-27T13:26:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ (label: 財政状況) 入口 https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（Zai_016349_Shikaoi_2024.xlsx「令和6年度財政状況資料集」, sha256:84327724）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
           "sha256": "02a55de5c1554d8c97d7f2f96d4b26d7a13fbf010892dabe32ce676edd234696",
           "fetched_at": "2026-08-27T10:31:31Z"
+        },
+        {
+          "url": "https://www.town.shikaoi.lg.jp/file/contents/3617/33241/Zai_016349_Shikaoi_2024.xlsx",
+          "observed_on": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/zaisei_jokyo/",
+          "sha256": "84327724acc13fd7aa3f9c45bc581e29c0278cce4f4dd43d2ead6f331251c4a7",
+          "fetched_at": "2026-08-27T13:26:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ (label: 財政状況) 入口 https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（Zai_016349_Shikaoi_2024.xlsx「令和6年度財政状況資料集」, sha256:84327724）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

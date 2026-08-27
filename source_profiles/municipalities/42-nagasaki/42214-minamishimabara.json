@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.minamishimabara/reiki_menu.html (label: 条例・規則（例規集）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.minamishimabara.lg.jp/list00140.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.minamishimabara.lg.jp/list00140.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.city.minamishimabara.lg.jp/list00140.html",
           "sha256": "5a6f26154a28f364878f9daecc8b869f05b5591f3c5a57e927bece72f46e85f2",
           "fetched_at": "2026-08-27T09:37:51Z"
+        },
+        {
+          "url": "https://www.city.minamishimabara.lg.jp/kiji00312637/3_12637_shiryou1_71o5xkkc.pdf",
+          "observed_on": "https://www.city.minamishimabara.lg.jp/list00448.html",
+          "sha256": "9bd6244e01e705f703b9431540ec36af90d2e610be3a601e73f1d195d62e1740",
+          "fetched_at": "2026-08-27T13:45:48Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.minamishimabara.lg.jp/list00140.html (label: 市の財政・行政) 入口 https://www.city.minamishimabara.lg.jp/list00140.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamishimabara.lg.jp/list00140.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_12637_shiryou1_71o5xkkc.pdf「令和7年度下半期財政状況の公表 （PDF：697.2キロバイト）」, sha256:9bd6244e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

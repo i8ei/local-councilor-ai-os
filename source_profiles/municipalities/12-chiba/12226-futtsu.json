@@ -36,11 +36,11 @@
       "base_url": "https://krg027.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.futtsu.lg.jp/category/2-11-1-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.futtsu.lg.jp/category/2-11-1-0-0-0-0-0-0-0.html",
@@ -52,9 +52,15 @@
           "observed_on": "https://www.city.futtsu.lg.jp/category/2-11-1-0-0-0-0-0-0-0.html",
           "sha256": "b2b8920ec6724e814964e7994217c5efa00b56f3ff47723faf52ea3695022be3",
           "fetched_at": "2026-08-27T10:23:22Z"
+        },
+        {
+          "url": "https://www.city.futtsu.lg.jp/cmsfiles/contents/0000000/178/R8tousyo_ippan.pdf",
+          "observed_on": "https://www.city.futtsu.lg.jp/0000000178.html",
+          "sha256": "fd1999a5e05ed5e3cbf15fe28a469f13c3a2c91c7bb909895ffc4cf618ef071b",
+          "fetched_at": "2026-08-27T13:32:51Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.futtsu.lg.jp/category/2-11-1-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.futtsu.lg.jp/category/2-11-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyo_ippan.pdf「令和8年度当初予算書（一般会計） （サイズ:1.79MB）」, sha256:fd1999a5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

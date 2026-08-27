@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html",
           "sha256": "86b8be1a607a73ce4c0f73608dcd217a6a21178a6ee95ff3c35ef3c100423f19",
           "fetched_at": "2026-08-27T10:31:49Z"
+        },
+        {
+          "url": "https://www.city.hachinohe.aomori.jp/material/files/group/19/R7_1gatu_rinji.pdf",
+          "observed_on": "https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/24074.html",
+          "sha256": "3cbd609fbaa49a853cde588c8770cca2574040f867349cff4fc9f4a7ac7a393b",
+          "fetched_at": "2026-08-27T13:27:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html (label: 財政) 入口 https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7_1gatu_rinji.pdf「令和7年度1月補正予算の概要 (PDFファイル: 89.4KB)」, sha256:3cbd609f）にて構造マーカー（予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html",
           "sha256": "86b8be1a607a73ce4c0f73608dcd217a6a21178a6ee95ff3c35ef3c100423f19",
           "fetched_at": "2026-08-27T10:31:49Z"
+        },
+        {
+          "url": "https://www.city.hachinohe.aomori.jp/material/files/group/19/r2_kessancard.pdf",
+          "observed_on": "https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/14189.html",
+          "sha256": "47f40c95b38a477b1693f15f78c02cd936166f40caf9c5637e3a2fbd1a360276",
+          "fetched_at": "2026-08-27T13:27:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html (label: 財政) 入口 https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hachinohe.aomori.jp/gyoseijoho/tokeijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r2_kessancard.pdf「令和2年度普通会計決算カード (PDFファイル: 312.8KB)」, sha256:47f40c95）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

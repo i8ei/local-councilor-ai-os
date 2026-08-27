@@ -42,11 +42,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A4F772A (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
           "sha256": "fce7ef85c2319067786eebc2b965090bb54015c1c1d6f6c42da440786d6d2ec0",
           "fetched_at": "2026-08-27T10:37:41Z"
+        },
+        {
+          "url": "https://www.vill.izumizaki.fukushima.jp/data/doc/1785284312_doc_12_0.xlsx",
+          "observed_on": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/zaiseijokyo/page000270.html",
+          "sha256": "430c3456cc3ee6b45880b61628541355edbacdf19c7e9488da3ede95da69ae4f",
+          "fetched_at": "2026-08-27T13:29:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/ (label: 財政情報) 入口 https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1785284312_doc_12_0.xlsx「令和６年度財政状況資料集 [EXCEL形式／552.86KB]」, sha256:430c3456）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/",
           "sha256": "fce7ef85c2319067786eebc2b965090bb54015c1c1d6f6c42da440786d6d2ec0",
           "fetched_at": "2026-08-27T10:37:41Z"
+        },
+        {
+          "url": "https://www.vill.izumizaki.fukushima.jp/data/doc/1785284312_doc_12_0.xlsx",
+          "observed_on": "https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/zaiseijokyo/page000270.html",
+          "sha256": "430c3456cc3ee6b45880b61628541355edbacdf19c7e9488da3ede95da69ae4f",
+          "fetched_at": "2026-08-27T13:29:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/ (label: 財政情報) 入口 https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.izumizaki.fukushima.jp/gyosei/zaiseijoho/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1785284312_doc_12_0.xlsx「令和６年度財政状況資料集 [EXCEL形式／552.86KB]」, sha256:430c3456）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

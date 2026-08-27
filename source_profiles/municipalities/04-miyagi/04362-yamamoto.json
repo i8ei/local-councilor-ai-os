@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrJbF01/init?jctcd=8A7A2113C4&houcd=H422901010018&no=1&totalCount=6&jbnJiten=5030716 (label: 山元町議会基本条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yamamoto.miyagi.jp/site/gikai/list73-323.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yamamoto.miyagi.jp/site/gikai/list73-323.html",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.yamamoto.miyagi.jp:443/site/gikai/list73-323.html",
           "sha256": "b13e3b5a9c1ffcdcdd781ba1db5db464bd3d70cb1ccbc1774f84a3dc98d0f285",
           "fetched_at": "2026-08-27T10:34:06Z"
+        },
+        {
+          "url": "http://www.town.yamamoto.miyagi.jp/site/gikai/list73-323.html",
+          "observed_on": "http://www.town.yamamoto.miyagi.jp/",
+          "sha256": "b13e3b5a9c1ffcdcdd781ba1db5db464bd3d70cb1ccbc1774f84a3dc98d0f285",
+          "fetched_at": "2026-08-27T10:34:06Z"
+        },
+        {
+          "url": "https://www.town.yamamoto.miyagi.jp:443/uploaded/attachment/19925.pdf",
+          "observed_on": "https://www.town.yamamoto.miyagi.jp:443/soshiki/3/12613.html",
+          "sha256": "71b6496bd4483a1b67f0854a9ff9c3ffadacf29278138382f85df9e5b7c776c0",
+          "fetched_at": "2026-08-27T13:27:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.yamamoto.miyagi.jp/site/gikai/list73-323.html (label: 予算・決算特別委員会) 入口 https://www.town.yamamoto.miyagi.jp:443/site/gikai/list73-323.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（19925.pdf「令和8年度 [PDFファイル／269KB]」, sha256:71b6496b）にて構造マーカー（歳出・項・節・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yamamoto.miyagi.jp/site/gikai/list73-323.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yamamoto.miyagi.jp/site/gikai/list73-323.html",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.yamamoto.miyagi.jp:443/site/gikai/list73-323.html",
           "sha256": "b13e3b5a9c1ffcdcdd781ba1db5db464bd3d70cb1ccbc1774f84a3dc98d0f285",
           "fetched_at": "2026-08-27T10:34:06Z"
+        },
+        {
+          "url": "http://www.town.yamamoto.miyagi.jp/site/gikai/list73-323.html",
+          "observed_on": "http://www.town.yamamoto.miyagi.jp/",
+          "sha256": "b13e3b5a9c1ffcdcdd781ba1db5db464bd3d70cb1ccbc1774f84a3dc98d0f285",
+          "fetched_at": "2026-08-27T10:34:06Z"
+        },
+        {
+          "url": "https://www.town.yamamoto.miyagi.jp:443/uploaded/attachment/19451.pdf",
+          "observed_on": "https://www.town.yamamoto.miyagi.jp:443/soshiki/3/27790.html",
+          "sha256": "67bd6618edfc554087a7c564233a49a2a79c7ec0163b8d52f2c40d25fd443ae9",
+          "fetched_at": "2026-08-27T13:27:59Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.yamamoto.miyagi.jp/site/gikai/list73-323.html (label: 予算・決算特別委員会) 入口 https://www.town.yamamoto.miyagi.jp:443/site/gikai/list73-323.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（19451.pdf「令和6年度（決算） [PDFファイル／67KB]」, sha256:67bd6618）にて構造マーカー（歳入・歳出・地方債等）を確認済み。"
     }
   }
 }

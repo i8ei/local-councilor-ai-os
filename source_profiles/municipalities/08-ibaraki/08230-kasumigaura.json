@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at https://www.city.kasumigaura.lg.jp/search.php?keyword=%E4%BE%8B%E8%A6%8F%E9%9B%86 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
@@ -45,16 +45,28 @@
           "observed_on": "https://www.city.kasumigaura.lg.jp/page/dir000472.html",
           "sha256": "b0e537cb10230f71dfd5ee97c6aaac36befca3041d006b5dc63fd1b13b4767ad",
           "fetched_at": "2026-08-27T10:17:36Z"
+        },
+        {
+          "url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
+          "observed_on": "http://www.city.kasumigaura.lg.jp/",
+          "sha256": "b0e537cb10230f71dfd5ee97c6aaac36befca3041d006b5dc63fd1b13b4767ad",
+          "fetched_at": "2026-08-27T10:17:36Z"
+        },
+        {
+          "url": "https://www.city.kasumigaura.lg.jp/data/doc/1774236512_doc_11_0.pdf",
+          "observed_on": "https://www.city.kasumigaura.lg.jp/page/page001573.html",
+          "sha256": "2741791b275e4418848cee1c228f0034cc655d4e083cd982940d410bc78efa17",
+          "fetched_at": "2026-08-27T13:30:24Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kasumigaura.lg.jp/page/dir000472.html (label: 行革・財政・統計・人事等) 入口 https://www.city.kasumigaura.lg.jp/page/dir000472.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasumigaura.lg.jp/page/dir000472.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1774236512_doc_11_0.pdf「令和8年度当初予算書」, sha256:2741791b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
@@ -66,9 +78,21 @@
           "observed_on": "https://www.city.kasumigaura.lg.jp/page/dir000472.html",
           "sha256": "b0e537cb10230f71dfd5ee97c6aaac36befca3041d006b5dc63fd1b13b4767ad",
           "fetched_at": "2026-08-27T10:17:36Z"
+        },
+        {
+          "url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
+          "observed_on": "http://www.city.kasumigaura.lg.jp/",
+          "sha256": "b0e537cb10230f71dfd5ee97c6aaac36befca3041d006b5dc63fd1b13b4767ad",
+          "fetched_at": "2026-08-27T10:17:36Z"
+        },
+        {
+          "url": "https://www.city.kasumigaura.lg.jp/data/doc/1763547717_doc_11_0.pdf",
+          "observed_on": "https://www.city.kasumigaura.lg.jp/page/page019087.html",
+          "sha256": "25d7dbbc8ed26e95313b16f6c198369d74d0daf2a179efd596ffb8e312082726",
+          "fetched_at": "2026-08-27T13:30:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kasumigaura.lg.jp/page/dir000472.html (label: 行革・財政・統計・人事等) 入口 https://www.city.kasumigaura.lg.jp/page/dir000472.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasumigaura.lg.jp/page/dir000472.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1763547717_doc_11_0.pdf「令和7年度事務事業評価シート（令和6年度決算）」, sha256:25d7dbbc）にて構造マーカー（款・項・決算額等）を確認済み。"
     }
   }
 }

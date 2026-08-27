@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.city.akabira.hokkaido.jp/reiki_int/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.akabira.hokkaido.jp/section/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.akabira.hokkaido.jp/section/zaisei/",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.city.akabira.hokkaido.jp/section/zaisei/",
           "sha256": "ff2b6f2590ac6db7991e04778c2176a3bbadeba99e92bc9253714840d68d64fa",
           "fetched_at": "2026-08-27T10:28:59Z"
+        },
+        {
+          "url": "http://www.city.akabira.hokkaido.jp/section/zaisei/",
+          "observed_on": "http://www.city.akabira.hokkaido.jp/",
+          "sha256": "ff2b6f2590ac6db7991e04778c2176a3bbadeba99e92bc9253714840d68d64fa",
+          "fetched_at": "2026-08-27T10:28:59Z"
+        },
+        {
+          "url": "https://www.city.akabira.hokkaido.jp/fs/2/2/6/2/2/_/h22zaiseijyokyosiryoshu.pdf",
+          "observed_on": "https://www.city.akabira.hokkaido.jp/docs/974.html",
+          "sha256": "c0633e439f8d74cd73044cccb1c13b74d29d65d013b8fd1add9d43e998a2e6d0",
+          "fetched_at": "2026-08-27T13:25:40Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.akabira.hokkaido.jp/section/zaisei/ (label: 財政課) 入口 https://www.city.akabira.hokkaido.jp/section/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.akabira.hokkaido.jp/section/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（h22zaiseijyokyosiryoshu.pdf「平成22年度財政状況資料集 (PDF 1.56MB)」, sha256:c0633e43）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.akabira.hokkaido.jp/section/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.akabira.hokkaido.jp/section/zaisei/",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.city.akabira.hokkaido.jp/section/zaisei/",
           "sha256": "ff2b6f2590ac6db7991e04778c2176a3bbadeba99e92bc9253714840d68d64fa",
           "fetched_at": "2026-08-27T10:28:59Z"
+        },
+        {
+          "url": "http://www.city.akabira.hokkaido.jp/section/zaisei/",
+          "observed_on": "http://www.city.akabira.hokkaido.jp/",
+          "sha256": "ff2b6f2590ac6db7991e04778c2176a3bbadeba99e92bc9253714840d68d64fa",
+          "fetched_at": "2026-08-27T10:28:59Z"
+        },
+        {
+          "url": "https://www.city.akabira.hokkaido.jp/fs/2/2/6/2/2/_/h22zaiseijyokyosiryoshu.pdf",
+          "observed_on": "https://www.city.akabira.hokkaido.jp/docs/974.html",
+          "sha256": "c0633e439f8d74cd73044cccb1c13b74d29d65d013b8fd1add9d43e998a2e6d0",
+          "fetched_at": "2026-08-27T13:25:40Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.akabira.hokkaido.jp/section/zaisei/ (label: 財政課) 入口 https://www.city.akabira.hokkaido.jp/section/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.akabira.hokkaido.jp/section/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（h22zaiseijyokyosiryoshu.pdf「平成22年度財政状況資料集 (PDF 1.56MB)」, sha256:c0633e43）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

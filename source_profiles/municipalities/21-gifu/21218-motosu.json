@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.motosu/reiki_menu.html (label: 本巣市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.motosu.lg.jp/category/5-15-5-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.motosu.lg.jp/category/5-15-5-0-0-0-0-0-0-0.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.city.motosu.lg.jp/category/5-15-5-0-0-0-0-0-0-0.html",
           "sha256": "1925ac109c6c1e0819575ec3100d7c47e9fbaa0c318b053f8835029923a9cca1",
           "fetched_at": "2026-08-27T10:13:25Z"
+        },
+        {
+          "url": "https://www.city.motosu.lg.jp/cmsfiles/contents/0000000/177/R7_zaisei_kami.pdf",
+          "observed_on": "https://www.city.motosu.lg.jp/0000000177.html",
+          "sha256": "b4d4eb9695d3fa4209ada693f0f36d2864374aaa8e67f1d9699a633e2fc2f3ab",
+          "fetched_at": "2026-08-27T13:36:51Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.motosu.lg.jp/category/5-15-5-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.motosu.lg.jp/category/5-15-5-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.motosu.lg.jp/category/5-15-5-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7_zaisei_kami.pdf「上半期（令和7年9月30日）(PDF形式、102.81KB)」, sha256:b4d4eb96）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.motosu.lg.jp/category/5-15-2-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.motosu.lg.jp/category/5-15-2-0-0-0-0-0-0-0.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.city.motosu.lg.jp/category/5-15-2-0-0-0-0-0-0-0.html",
           "sha256": "fca4fbf3f52ab4ae610b4dccbc86914ece4179d1b92024149dc693d7c1f2a342",
           "fetched_at": "2026-08-27T10:13:27Z"
+        },
+        {
+          "url": "https://www.city.motosu.lg.jp/cmsfiles/contents/0000000/2/R06-kessan.pdf",
+          "observed_on": "https://www.city.motosu.lg.jp/0000000002.html",
+          "sha256": "f477d60f65cb2e49338322b5de89063fa0c7ae05cd3130e1fea4d3317bb7a45c",
+          "fetched_at": "2026-08-27T13:36:53Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.motosu.lg.jp/category/5-15-2-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.city.motosu.lg.jp/category/5-15-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.motosu.lg.jp/category/5-15-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06-kessan.pdf「令和6年度 (PDF形式、85.91KB)」, sha256:f477d60f）にて構造マーカー（歳入・歳出・決算額・予算現額等）を確認済み。"
     }
   }
 }

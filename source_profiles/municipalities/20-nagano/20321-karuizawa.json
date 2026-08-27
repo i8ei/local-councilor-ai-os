@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/karuizawa/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.karuizawa.lg.jp/life/6/24/118/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.karuizawa.lg.jp/life/6/24/118/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.town.karuizawa.lg.jp/life/6/24/118/",
           "sha256": "20f4e45d87a55d1ffecb8ac76d2875de1b8393f2aca890d12c4a26da9762ba96",
           "fetched_at": "2026-08-27T10:10:40Z"
+        },
+        {
+          "url": "http://www.town.karuizawa.lg.jp/life/6/24/118/",
+          "observed_on": "http://www.town.karuizawa.lg.jp/",
+          "sha256": "20f4e45d87a55d1ffecb8ac76d2875de1b8393f2aca890d12c4a26da9762ba96",
+          "fetched_at": "2026-08-27T10:10:40Z"
+        },
+        {
+          "url": "https://www.town.karuizawa.lg.jp/uploaded/attachment/8576.pdf",
+          "observed_on": "https://www.town.karuizawa.lg.jp/page/20479.html",
+          "sha256": "d85f745fde7b7390546a82a00deebb74c751bd3220602ec8a0953c4d341cba31",
+          "fetched_at": "2026-08-27T13:36:30Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.karuizawa.lg.jp/life/6/24/118/ (label: 予算) 入口 https://www.town.karuizawa.lg.jp/life/6/24/118/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.karuizawa.lg.jp/life/6/24/118/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8576.pdf「一般会計・特別会計当初予算書 [PDFファイル／2.69MB]」, sha256:d85f745f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.city.yawatahama.ehime.jp/reiki/reiki_menu.html (label: 八幡浜市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yawatahama.ehime.jp/category/bunya/gyosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yawatahama.ehime.jp/category/bunya/gyosei/zaisei/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.yawatahama.ehime.jp/category/bunya/gyosei/zaisei/",
           "sha256": "b125ea68e7954c68dfa9ce2967e4a2601d1b3ba0317e5f5d2ef481d0486dc4dc",
           "fetched_at": "2026-08-27T09:46:48Z"
+        },
+        {
+          "url": "http://www.city.yawatahama.ehime.jp/category/bunya/gyosei/zaisei/",
+          "observed_on": "http://www.city.yawatahama.ehime.jp/",
+          "sha256": "b125ea68e7954c68dfa9ce2967e4a2601d1b3ba0317e5f5d2ef481d0486dc4dc",
+          "fetched_at": "2026-08-27T09:46:48Z"
+        },
+        {
+          "url": "https://www.city.yawatahama.ehime.jp/doc/2022110400011/file_contents/202604-1.pdf",
+          "observed_on": "https://www.city.yawatahama.ehime.jp/doc/2022110400011/",
+          "sha256": "f8a0f8cd4da8edd530a1454cb99d3e74b597e339ab578497471ee1d3a1bd9bab",
+          "fetched_at": "2026-08-27T13:43:23Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.yawatahama.ehime.jp/category/bunya/gyosei/zaisei/ (label: 財政状況) 入口 https://www.city.yawatahama.ehime.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yawatahama.ehime.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yawatahama.ehime.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（202604-1.pdf「令和8年度当初予算（一般）」, sha256:f8a0f8cd）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

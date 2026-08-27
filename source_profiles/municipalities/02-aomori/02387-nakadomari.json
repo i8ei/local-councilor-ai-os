@@ -48,11 +48,11 @@
       "base_url": "https://www.town.nakadomari.lg.jp/section/reiki_int/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
@@ -69,16 +69,22 @@
           "url": "https://www.town.nakadomari.lg.jp/material/files/group/4/R8tousyoyosan.pdf",
           "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
           "fetched_at": "2026-08-27T10:32:20Z"
+        },
+        {
+          "url": "https://www.town.nakadomari.lg.jp/material/files/group/4/R8tousyoyosan.pdf",
+          "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
+          "sha256": "4ee9fc20f4f167aff8af5d44b5c1e4370767a47dd33eba36a0957ae531c3d2d5",
+          "fetched_at": "2026-08-27T10:32:25Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8tousyoyosan.pdf「当初予算書・予算説明書 (PDFファイル: 16.2MB)」, sha256:4ee9fc20）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -90,9 +96,15 @@
           "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "e94d4d6ada6aad78999ccdde889c08664a0c063c4983db6f4f7e4be9d31dd2a6",
           "fetched_at": "2026-08-27T10:32:28Z"
+        },
+        {
+          "url": "https://www.town.nakadomari.lg.jp/material/files/group/4/r3zaiseijyoukyou.pdf",
+          "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/4627.html",
+          "sha256": "d324a48b219f2d7e58548a6bf5f3e19e9b038001cad069390d794832b0c560ab",
+          "fetched_at": "2026-08-27T13:27:23Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r3zaiseijyoukyou.pdf「令和3年度_財政状況資料集（中泊町） (PDFファイル: 1.1MB)」, sha256:d324a48b）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.nishigo/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/1237.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/1237.html",
@@ -63,16 +63,22 @@
           "url": "https://www.vill.nishigo.fukushima.jp/material/files/group/3/R8_toushoyosankigyoukaikei.pdf",
           "observed_on": "https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/1237.html",
           "fetched_at": "2026-08-27T10:37:59Z"
+        },
+        {
+          "url": "https://www.vill.nishigo.fukushima.jp/material/files/group/3/R8_toushoyosankigyoukaikei.pdf",
+          "observed_on": "https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/1237.html",
+          "sha256": "54a8c0ed91cf6b02024fd4c37320edc8006d6f1f2c55b835db7df66671c36661",
+          "fetched_at": "2026-08-27T10:38:02Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/1237.html (label: 予算の公表) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8_toushoyosankigyoukaikei.pdf「令和8年度当初予算（企業会計）」, sha256:54a8c0ed）にて構造マーカー（款・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/5370.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/5370.html",
@@ -89,9 +95,15 @@
           "url": "https://www.vill.nishigo.fukushima.jp/material/files/group/15/kessansyo_R5.pdf",
           "observed_on": "https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/5370.html",
           "fetched_at": "2026-08-27T10:38:02Z"
+        },
+        {
+          "url": "https://www.vill.nishigo.fukushima.jp/material/files/group/15/kessansyo_R6.pdf",
+          "observed_on": "https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/5370.html",
+          "sha256": "0ded3502349caa436193ed6b73e1690777d58047d4b11920e6b5c59c36941b4a",
+          "fetched_at": "2026-08-27T13:29:43Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.nishigo.fukushima.jp/sonseijoho/zaisei/5370.html (label: 決算書) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（kessansyo_R6.pdf「・令和6年度西郷村歳入歳出決算書 (PDFファイル: 917.0KB)」, sha256:0ded3502）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

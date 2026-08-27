@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at http://www.town.ajigasawa.lg.jp/reiki_int/reiki_honbun/c016RG00000975.html (label: 鰺ヶ沢町弔詞に関する規程)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html",
@@ -67,24 +67,42 @@
           "observed_on": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html",
           "sha256": "021fd5d57bf320ea07cc6b1bf960f2b7ec26e8888f095a603ecfed8d25a80101",
           "fetched_at": "2026-08-27T10:32:06Z"
+        },
+        {
+          "url": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.files/R6zaiseijokyo.xlsx",
+          "observed_on": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html",
+          "sha256": "5ccf16970178f73c91610bd1df7109477ac47a8489bfc898feb1c4ec9d8fb6f4",
+          "fetched_at": "2026-08-27T10:32:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html (label: 財政) 入口 http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zaiseijokyo.xlsx「財政状況資料集（令和6年度決算）（エクセル：561KB）」, sha256:5ccf1697）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html",
           "observed_on": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/index.html",
           "fetched_at": "2026-08-27T06:59:03Z"
+        },
+        {
+          "url": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html",
+          "observed_on": "http://www.town.ajigasawa.lg.jp/",
+          "sha256": "021fd5d57bf320ea07cc6b1bf960f2b7ec26e8888f095a603ecfed8d25a80101",
+          "fetched_at": "2026-08-27T10:32:06Z"
+        },
+        {
+          "url": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.files/R6zaiseijokyo.xlsx",
+          "observed_on": "http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html",
+          "sha256": "5ccf16970178f73c91610bd1df7109477ac47a8489bfc898feb1c4ec9d8fb6f4",
+          "fetched_at": "2026-08-27T10:32:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ajigasawa.lg.jp/gyosei_jyoho/zaisei.html (label: 財政)"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijokyo.xlsx「財政状況資料集（令和6年度決算）（エクセル：561KB）」, sha256:5ccf1697）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

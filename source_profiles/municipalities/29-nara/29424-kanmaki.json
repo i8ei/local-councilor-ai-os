@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.kanmaki.nara.jp/choseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html",
           "sha256": "13aab43fe705e8910c8ee21530e5a787d51aafd6f1378dcdd86cb915081964df",
           "fetched_at": "2026-08-27T09:53:03Z"
+        },
+        {
+          "url": "https://www.town.kanmaki.nara.jp/material/files/group/3/R8toushoyosannogaiyou.pdf",
+          "observed_on": "https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/2354.html",
+          "sha256": "7c63b66d5c86673d168eda5de147cd3660e9d0f609cdfc8fee314132383dfeda",
+          "fetched_at": "2026-08-27T13:41:33Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8toushoyosannogaiyou.pdf「令和8年度 当初予算案の概要 (PDFファイル: 10.4MB)」, sha256:7c63b66d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=118 (label: 月形町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tsukigata.hokkaido.jp/life/6/23/112/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tsukigata.hokkaido.jp/life/6/23/112/",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.town.tsukigata.hokkaido.jp/life/6/23/112/",
           "sha256": "dac98bf63ea5fb3655ca2c3f2fd74f2c5dc481b66e630d470d86c8255025aa3f",
           "fetched_at": "2026-08-27T10:30:18Z"
+        },
+        {
+          "url": "http://www.town.tsukigata.hokkaido.jp/life/6/23/112/",
+          "observed_on": "http://www.town.tsukigata.hokkaido.jp/",
+          "sha256": "dac98bf63ea5fb3655ca2c3f2fd74f2c5dc481b66e630d470d86c8255025aa3f",
+          "fetched_at": "2026-08-27T10:30:18Z"
+        },
+        {
+          "url": "https://www.town.tsukigata.hokkaido.jp/uploaded/attachment/5665.pdf",
+          "observed_on": "https://www.town.tsukigata.hokkaido.jp/page/3872.html",
+          "sha256": "18ab1839820777c0c984f46f61a4bae2776291089828f7345d9c9f144aea926e",
+          "fetched_at": "2026-08-27T13:26:02Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tsukigata.hokkaido.jp/life/6/23/112/ (label: 予算・決算) 入口 https://www.town.tsukigata.hokkaido.jp/life/6/23/112/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（5665.pdf「令和8年度一般会計予算 [PDFファイル／124KB]」, sha256:18ab1839）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tsukigata.hokkaido.jp/life/6/23/112/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tsukigata.hokkaido.jp/life/6/23/112/",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.town.tsukigata.hokkaido.jp/life/6/23/112/",
           "sha256": "dac98bf63ea5fb3655ca2c3f2fd74f2c5dc481b66e630d470d86c8255025aa3f",
           "fetched_at": "2026-08-27T10:30:18Z"
+        },
+        {
+          "url": "http://www.town.tsukigata.hokkaido.jp/life/6/23/112/",
+          "observed_on": "http://www.town.tsukigata.hokkaido.jp/",
+          "sha256": "dac98bf63ea5fb3655ca2c3f2fd74f2c5dc481b66e630d470d86c8255025aa3f",
+          "fetched_at": "2026-08-27T10:30:18Z"
+        },
+        {
+          "url": "https://www.town.tsukigata.hokkaido.jp/uploaded/attachment/5740.pdf",
+          "observed_on": "https://www.town.tsukigata.hokkaido.jp/page/3874.html",
+          "sha256": "60168f1d29616b8ee9867fb6fe4cb292d51f5726c092efa1974719728cae3320",
+          "fetched_at": "2026-08-27T13:26:02Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tsukigata.hokkaido.jp/life/6/23/112/ (label: 予算・決算) 入口 https://www.town.tsukigata.hokkaido.jp/life/6/23/112/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（5740.pdf「令和6年度決算状況 [PDFファイル／238KB]」, sha256:60168f1d）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

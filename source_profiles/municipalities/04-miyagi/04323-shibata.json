@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.town.shibata.miyagi.jp/reiki_int/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.shibata.miyagi.jp:443/index.cfm/82,0,221,html",
           "sha256": "a6e837f998bae556329b297219307034490423c2260daca11c7260d859d58dd7",
           "fetched_at": "2026-08-27T10:34:09Z"
+        },
+        {
+          "url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
+          "observed_on": "http://www.town.shibata.miyagi.jp/",
+          "sha256": "a6e837f998bae556329b297219307034490423c2260daca11c7260d859d58dd7",
+          "fetched_at": "2026-08-27T10:34:09Z"
+        },
+        {
+          "url": "https://www.town.shibata.miyagi.jp:443/index.cfm/82,27247,c,html/27247/20260326-170414.pdf",
+          "observed_on": "https://www.town.shibata.miyagi.jp:443/index.cfm/82,27247,221,html",
+          "sha256": "2819e82a55b17c29afb547623e26470c90af0605c32cf3fdd700bd87d9e7c60b",
+          "fetched_at": "2026-08-27T13:27:58Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html (label: 財政) 入口 https://www.town.shibata.miyagi.jp:443/index.cfm/82,0,221,html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260326-170414.pdf「総括表 [1341KB]」, sha256:2819e82a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.shibata.miyagi.jp:443/index.cfm/82,0,221,html",
           "sha256": "a6e837f998bae556329b297219307034490423c2260daca11c7260d859d58dd7",
           "fetched_at": "2026-08-27T10:34:09Z"
+        },
+        {
+          "url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
+          "observed_on": "http://www.town.shibata.miyagi.jp/",
+          "sha256": "a6e837f998bae556329b297219307034490423c2260daca11c7260d859d58dd7",
+          "fetched_at": "2026-08-27T10:34:09Z"
+        },
+        {
+          "url": "https://www.town.shibata.miyagi.jp:443/index.cfm/82,39156,c,html/39156/20250922-120139.pdf",
+          "observed_on": "https://www.town.shibata.miyagi.jp:443/index.cfm/82,39156,221,html",
+          "sha256": "6dd180530813df72a1d37b5be34815102964ae1c186077be35798b4600e50a8f",
+          "fetched_at": "2026-08-27T13:28:00Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html (label: 財政) 入口 https://www.town.shibata.miyagi.jp:443/index.cfm/82,0,221,html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20250922-120139.pdf「社会保障4経費その他社会保障施策に要する経費（令和6年度決算） [ 157 KB]」, sha256:6dd18053）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

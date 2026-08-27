@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.yaotsu.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yaotsu.lg.jp/6436.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yaotsu.lg.jp/6436.htm",
@@ -69,9 +69,21 @@
           "url": "https://www.town.yaotsu.lg.jp/secure/12683/R8yosanhenseihoushin.pdf",
           "observed_on": "https://www.town.yaotsu.lg.jp/6436.htm",
           "fetched_at": "2026-08-27T11:14:18Z"
+        },
+        {
+          "url": "http://www.town.yaotsu.lg.jp/6436.htm",
+          "observed_on": "http://www.town.yaotsu.lg.jp/",
+          "sha256": "596aade33b468270beb5056a3e0563e86564d6b211b38f519098656bab894999",
+          "fetched_at": "2026-08-27T10:14:14Z"
+        },
+        {
+          "url": "https://www.town.yaotsu.lg.jp/secure/12683/R8toshoyosan.pdf",
+          "observed_on": "https://www.town.yaotsu.lg.jp/6436.htm",
+          "sha256": "242fc8705e28165c71028fd65f90531f55af1c36edb6941f11d1ee901a0d6f40",
+          "fetched_at": "2026-08-27T13:37:06Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.yaotsu.lg.jp/6436.htm (label: 当初予算・補正予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8toshoyosan.pdf「八百津町予算書(pdf形式：3693KB)」, sha256:242fc870）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

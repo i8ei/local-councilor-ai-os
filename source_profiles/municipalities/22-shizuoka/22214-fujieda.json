@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.city.fujieda.shizuoka.jp/static/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
           "sha256": "ed2a2f8410100c13d27e21b1b7af9826eda88aa17bf85c7f880f38668e47b95d",
           "fetched_at": "2026-08-27T10:14:38Z"
+        },
+        {
+          "url": "https://www.city.fujieda.shizuoka.jp/material/files/group/129/222143AZA_2024.xlsx",
+          "observed_on": "https://www.city.fujieda.shizuoka.jp/soshiki/zaiseikeiei/zaisei/oshirase/shushi_1/14320.html",
+          "sha256": "6ace8e72a0a4bac0282e97347807fa5cb3c208e8c7097d6cbee144e530bed152",
+          "fetched_at": "2026-08-27T13:37:37Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html (label: 財政（予算・決算ほか）) 入口 https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（222143AZA_2024.xlsx「令和6年度財政状況資料集 (Excelファイル: 534.7KB)」, sha256:6ace8e72）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html",
           "sha256": "ed2a2f8410100c13d27e21b1b7af9826eda88aa17bf85c7f880f38668e47b95d",
           "fetched_at": "2026-08-27T10:14:38Z"
+        },
+        {
+          "url": "https://www.city.fujieda.shizuoka.jp/material/files/group/129/222143AZA_2024.xlsx",
+          "observed_on": "https://www.city.fujieda.shizuoka.jp/soshiki/zaiseikeiei/zaisei/oshirase/shushi_1/14320.html",
+          "sha256": "6ace8e72a0a4bac0282e97347807fa5cb3c208e8c7097d6cbee144e530bed152",
+          "fetched_at": "2026-08-27T13:37:37Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html (label: 財政（予算・決算ほか）) 入口 https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fujieda.shizuoka.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（222143AZA_2024.xlsx「令和6年度財政状況資料集 (Excelファイル: 534.7KB)」, sha256:6ace8e72）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.nakatombetsu.hokkaido.jp/bunya/5819/ (label: 町の例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/",
           "sha256": "814c4aa1e5e68a6c2965eab77aaa81cef119f8cb956135c7b9db84bbb641f5dd",
           "fetched_at": "2026-08-27T10:31:02Z"
+        },
+        {
+          "url": "https://www.town.nakatombetsu.hokkaido.jp/wp-content/uploads/2ea94462aa7c09452aed35847956c196.pdf",
+          "observed_on": "https://www.town.nakatombetsu.hokkaido.jp/bunya/5419/",
+          "sha256": "ce0d31d14772c96ba7167c9c84779d6562bd6b380bfbb64b4c641f53c65294cd",
+          "fetched_at": "2026-08-27T13:26:21Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/ (label: 財政) 入口 https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2ea94462aa7c09452aed35847956c196.pdf「予算説明資料（令和８年度）」, sha256:ce0d31d1）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/",
           "sha256": "814c4aa1e5e68a6c2965eab77aaa81cef119f8cb956135c7b9db84bbb641f5dd",
           "fetched_at": "2026-08-27T10:31:02Z"
+        },
+        {
+          "url": "https://www.town.nakatombetsu.hokkaido.jp/wp-content/uploads/af643f274cf21c84f4cd96496b337eaf.xlsx",
+          "observed_on": "https://www.town.nakatombetsu.hokkaido.jp/bunya/44230/",
+          "sha256": "da407e0e5c077d7e2bc867878800cc96e0aa82f1eb4425198fec509615ff1985",
+          "fetched_at": "2026-08-27T13:26:21Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/ (label: 財政) 入口 https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nakatombetsu.hokkaido.jp/bunya/6341/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（af643f274cf21c84f4cd96496b337eaf.xlsx「令和６年度財政状況資料集」, sha256:da407e0e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

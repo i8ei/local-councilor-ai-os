@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（27513.pdf「令和8年度・当初予算の概要 [PDFファイル／558KB]」, sha256:4859168e）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kitahiroshima.lg.jp/life/4/18/62/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kitahiroshima.lg.jp/life/4/18/62/",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.town.kitahiroshima.lg.jp/life/4/18/62/",
           "sha256": "fb03fd55a1254df4164caacdb982c71a9388c4689b37bbe6835e3b2726c79c5e",
           "fetched_at": "2026-08-27T09:45:12Z"
+        },
+        {
+          "url": "http://www.town.kitahiroshima.lg.jp/life/4/18/62/",
+          "observed_on": "http://www.town.kitahiroshima.lg.jp/",
+          "sha256": "fb03fd55a1254df4164caacdb982c71a9388c4689b37bbe6835e3b2726c79c5e",
+          "fetched_at": "2026-08-27T09:45:12Z"
+        },
+        {
+          "url": "https://www.town.kitahiroshima.lg.jp/uploaded/attachment/27681.xlsx",
+          "observed_on": "https://www.town.kitahiroshima.lg.jp/soshiki/4/1169.html",
+          "sha256": "d9434236e9c5dd72c24a66a7f716678ac6226166db6c2985517a14219ccfde5e",
+          "fetched_at": "2026-08-27T13:42:36Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kitahiroshima.lg.jp/life/4/18/62/ (label: 予算・決算) 入口 https://www.town.kitahiroshima.lg.jp/life/4/18/62/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kitahiroshima.lg.jp/life/4/18/62/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（27681.xlsx「令和6年度決算 [Excelファイル／525KB]」, sha256:d9434236）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

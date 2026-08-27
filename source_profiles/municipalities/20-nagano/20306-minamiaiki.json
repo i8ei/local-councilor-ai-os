@@ -35,11 +35,11 @@
       "index_url": "https://en3-jg.d1-law.com/minamiaiki/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.minamiaiki.jp/gyousei.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.minamiaiki.jp/gyousei.htm",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.minamiaiki.jp//gyousei.htm",
           "sha256": "b6c61b94321cf498bc16af210944f39b3cc44b4178c4db15a977379ecfc91d85",
           "fetched_at": "2026-08-27T10:10:24Z"
+        },
+        {
+          "url": "http://www.minamiaiki.jp/gyousei.htm",
+          "observed_on": "http://www.minamiaiki.jp/",
+          "sha256": "b6c61b94321cf498bc16af210944f39b3cc44b4178c4db15a977379ecfc91d85",
+          "fetched_at": "2026-08-27T10:10:24Z"
+        },
+        {
+          "url": "https://www.minamiaiki.jp/maiki-cms/datafiles/2023/10/d8d8405fe9999a9c0a052ccfa1094805.pdf",
+          "observed_on": "https://www.minamiaiki.jp/public_info/public_info-9892/",
+          "sha256": "77427b4eb34fe58ffe31e79aaac0c3823facc3a9a797b80ed428feaab6140171",
+          "fetched_at": "2026-08-27T13:36:30Z"
         }
       ],
-      "notes": "Observed finance section at http://www.minamiaiki.jp/gyousei.htm (label: 財政) 入口 https://www.minamiaiki.jp//gyousei.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.minamiaiki.jp//gyousei.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.minamiaiki.jp//gyousei.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（d8d8405fe9999a9c0a052ccfa1094805.pdf「【公表】南相木村財政状況診断表2（長野財務事務所による診断）」, sha256:77427b4e）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -29,11 +29,11 @@
       "notes": "Observed d1_law at https://www.vill.rusutsu.lg.jp/banner_click.php?url=https%3A%2F%2Fen3-jg.d1-law.com%2Frusutsu%2Fd1w_reiki%2Freiki.htm&id=29&type=2 (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
@@ -45,16 +45,22 @@
           "observed_on": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
           "sha256": "ca54c23d975e9238d729ab6d0be3cd6935af03987974a0a94432ba465a0a9ba0",
           "fetched_at": "2026-08-27T10:29:49Z"
+        },
+        {
+          "url": "https://www.vill.rusutsu.lg.jp/hotnews/files/00000100/00000193/r8zyuuminnmuke.pdf",
+          "observed_on": "https://www.vill.rusutsu.lg.jp/hotnews/detail/00000193.html",
+          "sha256": "8cae7ab93bc0c21e48644f0cac69f1afce88d93303ca428b5aa71c2fa194301e",
+          "fetched_at": "2026-08-27T13:25:57Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.rusutsu.lg.jp/hotnews/category/165.html (label: 村の財政) 入口 https://www.vill.rusutsu.lg.jp/hotnews/category/165.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8zyuuminnmuke.pdf「当初予算の概要（PDF形式：865KB）」, sha256:8cae7ab9）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
@@ -66,9 +72,15 @@
           "observed_on": "https://www.vill.rusutsu.lg.jp/hotnews/category/165.html",
           "sha256": "ca54c23d975e9238d729ab6d0be3cd6935af03987974a0a94432ba465a0a9ba0",
           "fetched_at": "2026-08-27T10:29:49Z"
+        },
+        {
+          "url": "https://www.vill.rusutsu.lg.jp/hotnews/files/00000100/00000194/r6kessan.pdf",
+          "observed_on": "https://www.vill.rusutsu.lg.jp/hotnews/detail/00000194.html",
+          "sha256": "7a90e19ffeddb44cd2f3d240444b06bb02a39784ee4b2fc495557a934826dd60",
+          "fetched_at": "2026-08-27T13:25:57Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.rusutsu.lg.jp/hotnews/category/165.html (label: 村の財政) 入口 https://www.vill.rusutsu.lg.jp/hotnews/category/165.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessan.pdf「令和6年度決算状況について（PDF形式：88KB）」, sha256:7a90e19f）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

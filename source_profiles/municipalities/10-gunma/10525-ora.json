@@ -51,11 +51,11 @@
       "base_url": "https://www.town.ora.gunma.jp/chosei/jorei/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ora.gunma.jp/li/060/070/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ora.gunma.jp/li/060/070/index.html",
@@ -67,16 +67,28 @@
           "observed_on": "https://www.town.ora.gunma.jp/li/060/070/index.html",
           "sha256": "6e0432c47f2d0bce9c528160c519f66b05c2cceba4203cd4f8ce003b3ea744ef",
           "fetched_at": "2026-08-27T10:20:13Z"
+        },
+        {
+          "url": "http://www.town.ora.gunma.jp/li/060/070/index.html",
+          "observed_on": "http://www.town.ora.gunma.jp/",
+          "sha256": "6e0432c47f2d0bce9c528160c519f66b05c2cceba4203cd4f8ce003b3ea744ef",
+          "fetched_at": "2026-08-27T10:20:13Z"
+        },
+        {
+          "url": "https://www.town.ora.gunma.jp/s004/R8ippan.pdf",
+          "observed_on": "https://www.town.ora.gunma.jp/s004/060/070/030/2017-0306-yosan.html",
+          "sha256": "81c3a4da079eb21408ddf88bfb76ca46ac29e1d3cdef3f2e128335aa0da0fa2c",
+          "fetched_at": "2026-08-27T13:31:26Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ora.gunma.jp/li/060/070/index.html (label: 町の財政) 入口 https://www.town.ora.gunma.jp/li/060/070/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ora.gunma.jp/li/060/070/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8ippan.pdf「令和8年度一般会計予算書（PDF:6,671KB）」, sha256:81c3a4da）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ora.gunma.jp/li/060/070/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ora.gunma.jp/li/060/070/index.html",
@@ -88,9 +100,21 @@
           "observed_on": "https://www.town.ora.gunma.jp/li/060/070/index.html",
           "sha256": "6e0432c47f2d0bce9c528160c519f66b05c2cceba4203cd4f8ce003b3ea744ef",
           "fetched_at": "2026-08-27T10:20:13Z"
+        },
+        {
+          "url": "http://www.town.ora.gunma.jp/li/060/070/index.html",
+          "observed_on": "http://www.town.ora.gunma.jp/",
+          "sha256": "6e0432c47f2d0bce9c528160c519f66b05c2cceba4203cd4f8ce003b3ea744ef",
+          "fetched_at": "2026-08-27T10:20:13Z"
+        },
+        {
+          "url": "https://www.town.ora.gunma.jp/s004/R06kessan.pdf",
+          "observed_on": "https://www.town.ora.gunma.jp/s004/060/070/010/2017-0306-kessan.html",
+          "sha256": "51a0a54bcb0c3c1e7257b8aac7dd6c700b731e00e516b3de47db2d277a954f64",
+          "fetched_at": "2026-08-27T13:31:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ora.gunma.jp/li/060/070/index.html (label: 町の財政) 入口 https://www.town.ora.gunma.jp/li/060/070/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ora.gunma.jp/li/060/070/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06kessan.pdf「令和6年度決算カード（PDF：105KB）」, sha256:51a0a54b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

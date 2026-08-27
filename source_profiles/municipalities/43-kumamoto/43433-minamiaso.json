@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.vill.minamiaso.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.minamiaso.lg.jp/list00230.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.minamiaso.lg.jp/list00230.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.vill.minamiaso.lg.jp/list00230.html",
           "sha256": "bba95f92e6571fc0010a82ae32c5294aabaabe4ce470a799988049fc4b50dc23",
           "fetched_at": "2026-08-27T09:38:42Z"
+        },
+        {
+          "url": "https://www.vill.minamiaso.lg.jp/kiji0034429/3_4429_10595_up_11g7skgk.pdf",
+          "observed_on": "https://www.vill.minamiaso.lg.jp/kiji0034429/index.html",
+          "sha256": "50e876187f628b95589ec661df76f6a10155572eeaf24a329121dcc0f086e668",
+          "fetched_at": "2026-08-27T13:46:14Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.minamiaso.lg.jp/list00230.html (label: 予算（年度）) 入口 https://www.vill.minamiaso.lg.jp/list00230.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.minamiaso.lg.jp/list00230.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_4429_10595_up_11g7skgk.pdf「当初予算書（PDF：770.7キロバイト）」, sha256:50e87618）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

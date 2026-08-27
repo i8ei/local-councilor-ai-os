@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at https://www.town.takasu.hokkaido.jp/life/4/22/72/ (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.takasu.hokkaido.jp/life/4/22/69/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.takasu.hokkaido.jp/life/4/22/69/",
@@ -69,16 +69,22 @@
           "observed_on": "https://www.town.takasu.hokkaido.jp/life/4/22/69/",
           "sha256": "6fe45409bd9a041705f6fa87b37ae4a4f29519cbf4b7c6c822fd0ec7f57151eb",
           "fetched_at": "2026-08-27T10:30:29Z"
+        },
+        {
+          "url": "https://www.town.takasu.hokkaido.jp/uploaded/attachment/1177.pdf",
+          "observed_on": "https://www.town.takasu.hokkaido.jp/page/1072.html",
+          "sha256": "3e35b23117d857363303ad757127b3b9716dfa72b7fc5c031f52d04cbc888af1",
+          "fetched_at": "2026-08-27T13:26:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.takasu.hokkaido.jp/life/4/22/69/ (label: 財政・財産) 入口 https://www.town.takasu.hokkaido.jp/life/4/22/69/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1177.pdf「財政状況資料集(平成26年度) [PDFファイル／695KB]」, sha256:3e35b231）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.takasu.hokkaido.jp/life/4/22/69/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.takasu.hokkaido.jp/life/4/22/69/",
@@ -90,9 +96,15 @@
           "observed_on": "https://www.town.takasu.hokkaido.jp/life/4/22/69/",
           "sha256": "6fe45409bd9a041705f6fa87b37ae4a4f29519cbf4b7c6c822fd0ec7f57151eb",
           "fetched_at": "2026-08-27T10:30:29Z"
+        },
+        {
+          "url": "https://www.town.takasu.hokkaido.jp/uploaded/attachment/1177.pdf",
+          "observed_on": "https://www.town.takasu.hokkaido.jp/page/1072.html",
+          "sha256": "3e35b23117d857363303ad757127b3b9716dfa72b7fc5c031f52d04cbc888af1",
+          "fetched_at": "2026-08-27T13:26:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.takasu.hokkaido.jp/life/4/22/69/ (label: 財政・財産) 入口 https://www.town.takasu.hokkaido.jp/life/4/22/69/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1177.pdf「財政状況資料集(平成26年度) [PDFファイル／695KB]」, sha256:3e35b231）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

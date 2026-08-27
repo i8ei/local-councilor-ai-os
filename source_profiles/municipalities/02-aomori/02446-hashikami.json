@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.hashikami/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html",
           "sha256": "40bde7b5f37e9f2d5e57914c81de5195f2125869b477bebab3975a5b9eee3b38",
           "fetched_at": "2026-08-27T10:32:43Z"
+        },
+        {
+          "url": "https://www.town.hashikami.lg.jp/index.cfm/9,269,c,html/269/20260316-153359.pdf",
+          "observed_on": "https://www.town.hashikami.lg.jp/index.cfm/9,269,117,347,html",
+          "sha256": "5b123da508e4ab5c454b0ab02c9f7ef232156aaccbd90d2258c733075c779d5d",
+          "fetched_at": "2026-08-27T13:27:22Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html (label: 財政) 入口 https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260316-153359.pdf「令和8年度当初予算主要施策説明書 [ 6137 KB pdfファイル]」, sha256:5b123da5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html",
           "sha256": "40bde7b5f37e9f2d5e57914c81de5195f2125869b477bebab3975a5b9eee3b38",
           "fetched_at": "2026-08-27T10:32:43Z"
+        },
+        {
+          "url": "https://www.town.hashikami.lg.jp/index.cfm/9,718,c,html/718/20250910-094036.pdf",
+          "observed_on": "https://www.town.hashikami.lg.jp/index.cfm/9,718,117,347,html",
+          "sha256": "c2513af12a0fd825c0ba3b09c5db299023ed135709f43d931993d6bbbd85094d",
+          "fetched_at": "2026-08-27T13:27:24Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html (label: 財政) 入口 https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hashikami.lg.jp/index.cfm/9,0,117,347,html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20250910-094036.pdf「令和6年度決算主要施策成果説明書 [ 5732 KB pdfファイル]」, sha256:c2513af1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

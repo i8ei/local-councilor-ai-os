@@ -48,11 +48,11 @@
       "notes": "Observed regulations index at http://www.city.kounosu.saitama.jp/page/13328.html (label: 鴻巣市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kounosu.saitama.jp/site/mayor/list9.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kounosu.saitama.jp/site/mayor/list9.html",
@@ -64,16 +64,22 @@
           "observed_on": "http://www.city.kounosu.saitama.jp/site/mayor/list9.html",
           "sha256": "83afb4cf71bebb17c66156d6736cbdda651a4bd14817be5a3a7318f542955ba0",
           "fetched_at": "2026-08-27T10:20:44Z"
+        },
+        {
+          "url": "http://www.city.kounosu.saitama.jp/uploaded/life/40569_62933_misc.pdf",
+          "observed_on": "http://www.city.kounosu.saitama.jp/site/mayor/22871.html",
+          "sha256": "f68b36f12ad04e6932312a5e086f53abe1f67136adae14e63c9772f580868fd6",
+          "fetched_at": "2026-08-27T13:31:32Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kounosu.saitama.jp/site/mayor/list9.html (label: 施政方針及び予算の大綱) 入口 http://www.city.kounosu.saitama.jp/site/mayor/list9.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（40569_62933_misc.pdf「01_市長政策室 （PDF：1.01MB）」, sha256:f68b36f1）にて構造マーカー（予算額・予算総額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kounosu.saitama.jp/life/6/29/133/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kounosu.saitama.jp/life/6/29/133/",
@@ -85,9 +91,15 @@
           "observed_on": "http://www.city.kounosu.saitama.jp/life/6/29/133/",
           "sha256": "bad481ee6c3c2f22cf729e1dcb4338d7aca2117768f0d63ba88e0d0f2f7fd6ab",
           "fetched_at": "2026-08-27T10:20:46Z"
+        },
+        {
+          "url": "http://www.city.kounosu.saitama.jp/uploaded/attachment/23626.pdf",
+          "observed_on": "http://www.city.kounosu.saitama.jp/page/1147.html",
+          "sha256": "ba8fc7b5c31e1f63a3151285c0bfdffafa2cd79ac0517c5b4e63ac3f55ea28f9",
+          "fetched_at": "2026-08-27T13:31:39Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kounosu.saitama.jp/life/6/29/133/ (label: 財政) 入口 http://www.city.kounosu.saitama.jp/life/6/29/133/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（23626.pdf「令和6年度 鴻巣市一般会計・特別会計歳入歳出決算書・事項別明細書 （PDF：7.85MB）」, sha256:ba8fc7b5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

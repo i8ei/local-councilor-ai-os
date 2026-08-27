@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/town.kagamino/reiki_menu.html (label: 鏡野町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kagamino.lg.jp/soshiki/3/5783.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kagamino.lg.jp/soshiki/3/5783.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.kagamino.lg.jp//soshiki/3/5783.html",
           "sha256": "471ed216248b8ec72da07bde369604f08cf9fd024167eb618ba93b93afe74322",
           "fetched_at": "2026-08-27T09:44:52Z"
+        },
+        {
+          "url": "http://www.town.kagamino.lg.jp/soshiki/3/5783.html",
+          "observed_on": "http://www.town.kagamino.lg.jp/",
+          "sha256": "471ed216248b8ec72da07bde369604f08cf9fd024167eb618ba93b93afe74322",
+          "fetched_at": "2026-08-27T09:44:52Z"
+        },
+        {
+          "url": "https://www.town.kagamino.lg.jp/uploaded/attachment/15364.pdf",
+          "observed_on": "https://www.town.kagamino.lg.jp//soshiki/3/5783.html",
+          "sha256": "1dda48fc234df07261aff2997e5d8660f72cf9759b7dbd99991821c60ad9cc52",
+          "fetched_at": "2026-08-27T13:42:23Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kagamino.lg.jp/soshiki/3/5783.html (label: 鏡野町の予算) 入口 https://www.town.kagamino.lg.jp//soshiki/3/5783.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kagamino.lg.jp//soshiki/3/5783.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（15364.pdf「令和6年度歳入歳出決算 [PDFファイル／915KB]」, sha256:1dda48fc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

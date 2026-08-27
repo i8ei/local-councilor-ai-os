@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/aisai/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html",
@@ -75,16 +75,28 @@
           "observed_on": "https://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html",
           "sha256": "9f0ac5543408d8a7879c0b0c23901993e50bfbf838f2e458d6909a8c808905d8",
           "fetched_at": "2026-08-27T10:16:15Z"
+        },
+        {
+          "url": "http://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.aisai.lg.jp/",
+          "sha256": "9f0ac5543408d8a7879c0b0c23901993e50bfbf838f2e458d6909a8c808905d8",
+          "fetched_at": "2026-08-27T10:16:15Z"
+        },
+        {
+          "url": "https://www.city.aisai.lg.jp/cmsfiles/contents/0000005/5267/232327_aisai_2024.xlsx",
+          "observed_on": "https://www.city.aisai.lg.jp/0000005267.html",
+          "sha256": "5328cd5880ea122ba7e8941c99d126dfed7c18c3a8749a930df02e00f5a167f2",
+          "fetched_at": "2026-08-27T13:38:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html (label: 財政（市政情報）) 入口 https://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（232327_aisai_2024.xlsx「令和6年度財政状況資料集」, sha256:5328cd58）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html",
@@ -96,9 +108,21 @@
           "observed_on": "https://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html",
           "sha256": "9f0ac5543408d8a7879c0b0c23901993e50bfbf838f2e458d6909a8c808905d8",
           "fetched_at": "2026-08-27T10:16:15Z"
+        },
+        {
+          "url": "http://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.aisai.lg.jp/",
+          "sha256": "9f0ac5543408d8a7879c0b0c23901993e50bfbf838f2e458d6909a8c808905d8",
+          "fetched_at": "2026-08-27T10:16:15Z"
+        },
+        {
+          "url": "https://www.city.aisai.lg.jp/cmsfiles/contents/0000005/5267/232327_aisai_2024.xlsx",
+          "observed_on": "https://www.city.aisai.lg.jp/0000005267.html",
+          "sha256": "5328cd5880ea122ba7e8941c99d126dfed7c18c3a8749a930df02e00f5a167f2",
+          "fetched_at": "2026-08-27T13:38:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html (label: 財政（市政情報）) 入口 https://www.city.aisai.lg.jp/category/6-7-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（232327_aisai_2024.xlsx「令和6年度財政状況資料集」, sha256:5328cd58）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -35,11 +35,11 @@
       "index_url": "https://www.town.shimizu.hokkaido.jp/administration/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shimizu.hokkaido.jp/finance/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shimizu.hokkaido.jp/finance/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.town.shimizu.hokkaido.jp/finance/index.html",
           "sha256": "dc71c47cf2c3c84114edf01b8145cd9b80e20fc675c8f39eae0597826fec72d6",
           "fetched_at": "2026-08-27T10:31:31Z"
+        },
+        {
+          "url": "https://www.town.shimizu.hokkaido.jp/finance/01/%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_016365_%E6%B8%85%E6%B0%B4%E7%94%BA_2024%20%282%29.xlsx",
+          "observed_on": "https://www.town.shimizu.hokkaido.jp/finance/01/situationt.html",
+          "sha256": "e9f4186071431e7f9544c73549c8c5581220f1a4a0459dbd29e28361dde9e9bc",
+          "fetched_at": "2026-08-27T13:26:52Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shimizu.hokkaido.jp/finance/index.html (label: 財政情報) 入口 https://www.town.shimizu.hokkaido.jp/finance/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_016365_%E6%B8%85%E6%B0%B4%E7%94%BA_2024%20%282%29.xlsx「財政状況資料」, sha256:e9f41860）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shimizu.hokkaido.jp/finance/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shimizu.hokkaido.jp/finance/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.town.shimizu.hokkaido.jp/finance/index.html",
           "sha256": "dc71c47cf2c3c84114edf01b8145cd9b80e20fc675c8f39eae0597826fec72d6",
           "fetched_at": "2026-08-27T10:31:31Z"
+        },
+        {
+          "url": "https://www.town.shimizu.hokkaido.jp/finance/01/files/cfc727d16669cb5bc8e70890329755ae_2.pdf",
+          "observed_on": "https://www.town.shimizu.hokkaido.jp/finance/01/settlement.html",
+          "sha256": "d595bfbb6ff90884a18c25c4ba2a6dd5bdbe5f7c47970d0cb59bb404cce977dc",
+          "fetched_at": "2026-08-27T13:26:50Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shimizu.hokkaido.jp/finance/index.html (label: 財政情報) 入口 https://www.town.shimizu.hokkaido.jp/finance/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（cfc727d16669cb5bc8e70890329755ae_2.pdf「令和６年度一般会計・特別会計決算額」, sha256:d595bfbb）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

@@ -86,11 +86,11 @@
       "notes": "deepest_doc=P1。budget文書（R8tousyo_gennann.pdf「当初予算書 (PDFファイル: 416.6KB)」, sha256:e374d294）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html",
@@ -102,9 +102,21 @@
           "observed_on": "https://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html",
           "sha256": "65e0686bc6e81ceb1ea9ec931d73548f169dc71ca2b549f774610a62fd725876",
           "fetched_at": "2026-08-27T09:50:12Z"
+        },
+        {
+          "url": "http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html",
+          "observed_on": "http://www.town.oyamazaki.kyoto.jp/",
+          "sha256": "65e0686bc6e81ceb1ea9ec931d73548f169dc71ca2b549f774610a62fd725876",
+          "fetched_at": "2026-08-27T09:50:12Z"
+        },
+        {
+          "url": "https://www.town.oyamazaki.kyoto.jp/material/files/group/23/R4kessancard.pdf",
+          "observed_on": "http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/2360.html",
+          "sha256": "4b40415652ee1747397ad42fe07857e8a9433e453f1862e6db63e9fa6191f742",
+          "fetched_at": "2026-08-27T13:39:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html (label: 財政) 入口 https://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R4kessancard.pdf「令和4年度決算カード (PDFファイル: 212.0KB)」, sha256:4b404156）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

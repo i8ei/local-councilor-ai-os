@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.yuni/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yuni.lg.jp/newstopics/6021",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yuni.lg.jp/newstopics/6021",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.town.yuni.lg.jp/newstopics/6021",
           "sha256": "58c0c2e755f0682f2c10f2a1f5d255860fcc5535b84becaaab9eacba5f0cf3c7",
           "fetched_at": "2026-08-27T10:30:54Z"
+        },
+        {
+          "url": "https://www.town.yuni.lg.jp/wp-content/uploads/2023/01/houjin030309.pdf",
+          "observed_on": "https://www.town.yuni.lg.jp/newstopics/6021",
+          "sha256": "ef33812c0faf7297fe7cc9258aa3da1b8f9ef9f02feaba6a5902464e3b2f2eb4",
+          "fetched_at": "2026-08-27T13:24:19Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yuni.lg.jp/newstopics/6021 (label: 財政状況資料集の公表について) 入口 https://www.town.yuni.lg.jp/newstopics/6021 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（houjin030309.pdf「」, sha256:ef33812c）にて構造マーカー（款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yuni.lg.jp/newstopics/6243",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yuni.lg.jp/newstopics/6243",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.town.yuni.lg.jp/newstopics/6243",
           "sha256": "35d169284a90b5d2340cd48943f8be826805c5cb6d5e7fa713383e466d015739",
           "fetched_at": "2026-08-27T10:30:56Z"
+        },
+        {
+          "url": "https://www.town.yuni.lg.jp/wp-content/uploads/2023/01/houjin030309.pdf",
+          "observed_on": "https://www.town.yuni.lg.jp/newstopics/6243",
+          "sha256": "ef33812c0faf7297fe7cc9258aa3da1b8f9ef9f02feaba6a5902464e3b2f2eb4",
+          "fetched_at": "2026-08-27T13:24:19Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.yuni.lg.jp/newstopics/6243 (label: 令和６年度決算に基づく由仁町の健全化判断比率・資金不足比率) 入口 https://www.town.yuni.lg.jp/newstopics/6243 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（houjin030309.pdf「」, sha256:ef33812c）にて構造マーカー（款・項等）を確認済み。"
     }
   }
 }

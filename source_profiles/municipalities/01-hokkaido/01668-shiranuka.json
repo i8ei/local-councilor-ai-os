@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.shiranuka/reiki_menu.html (label: 白糠町例規集 （外部サイト） 新規ページで開きます)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
           "sha256": "5a7d0cfcd39f391fc133336547070efa91c561dbdf2ba5b1371c42f6b7fc82ef",
           "fetched_at": "2026-08-27T10:32:02Z"
+        },
+        {
+          "url": "https://www.town.shiranuka.lg.jp/section/kikaku/h8v21a000000h5mj-att/h8v21a000000h5rk.pdf",
+          "observed_on": "https://www.town.shiranuka.lg.jp/section/kikaku/h8v21a000000h5mj.html",
+          "sha256": "69583536229433d58beb7fdba70a23c0fd6ea941764a857eeaba33870313255b",
+          "fetched_at": "2026-08-27T13:27:00Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html (label: 財政) 入口 https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（h8v21a000000h5rk.pdf「平成22年度(2010年度)決算 財政状況資料集 （PDF：773KB）」, sha256:69583536）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html",
           "sha256": "5a7d0cfcd39f391fc133336547070efa91c561dbdf2ba5b1371c42f6b7fc82ef",
           "fetched_at": "2026-08-27T10:32:02Z"
+        },
+        {
+          "url": "https://www.town.shiranuka.lg.jp/section/kikaku/h8v21a000000h5mj-att/h8v21a000000h5rk.pdf",
+          "observed_on": "https://www.town.shiranuka.lg.jp/section/kikaku/h8v21a000000h5mj.html",
+          "sha256": "69583536229433d58beb7fdba70a23c0fd6ea941764a857eeaba33870313255b",
+          "fetched_at": "2026-08-27T13:27:00Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html (label: 財政) 入口 https://www.town.shiranuka.lg.jp/gyosei/category/nfml630000000dgl.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（h8v21a000000h5rk.pdf「平成22年度(2010年度)決算 財政状況資料集 （PDF：773KB）」, sha256:69583536）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

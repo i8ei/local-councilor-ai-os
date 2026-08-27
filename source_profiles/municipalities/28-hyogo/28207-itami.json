@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at https://www.city.itami.lg.jp/SOSIKI/SOGOSEISAKU/KOHO/teireikisyakaiken/index.html (label: 記者会見)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html",
@@ -69,9 +69,15 @@
           "observed_on": "https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html",
           "sha256": "227c1349d999a9ee8e4a3af8439611eaa242d945e6db621c768eb780484f3ae2",
           "fetched_at": "2026-08-27T09:51:39Z"
+        },
+        {
+          "url": "https://www.city.itami.lg.jp/material/files/group/66/gyouzaiseipkan.pdf",
+          "observed_on": "https://www.city.itami.lg.jp/shiseijoho/zaisei/2/43665.html",
+          "sha256": "11b54e8cbcfe6970139db65a1f1adb39c0f7ab58d2946cb900f780117ee8cb75",
+          "fetched_at": "2026-08-27T13:40:51Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html (label: 財政・経営) 入口 https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（gyouzaiseipkan.pdf「第4次伊丹市行財政プラン（令和7年度～令和10年度） (PDFファイル: 1.7MB)」, sha256:11b54e8c）にて構造マーカー（歳出・項・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

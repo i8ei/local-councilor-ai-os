@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www.town.tohoku.lg.jp/chousei/t_data/reiki/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html",
           "sha256": "1809db42607895bab989630e9983220eb367328963120c187c6c60eee9bfe863",
           "fetched_at": "2026-08-27T10:32:29Z"
+        },
+        {
+          "url": "http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html",
+          "observed_on": "http://www.town.tohoku.lg.jp/",
+          "sha256": "1809db42607895bab989630e9983220eb367328963120c187c6c60eee9bfe863",
+          "fetched_at": "2026-08-27T10:32:29Z"
+        },
+        {
+          "url": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/file/zaisei-r06.xlsx",
+          "observed_on": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei_list01.html",
+          "sha256": "57fdf2744f4fa90eedd217529d7ef4894ecab6cfae7864f5e7e4d2004ded8303",
+          "fetched_at": "2026-08-27T13:27:12Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html (label: 町の財政 -予算・決算-) 入口 https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaisei-r06.xlsx「令和6年度【excel】」, sha256:57fdf274）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html",
           "sha256": "1809db42607895bab989630e9983220eb367328963120c187c6c60eee9bfe863",
           "fetched_at": "2026-08-27T10:32:29Z"
+        },
+        {
+          "url": "http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html",
+          "observed_on": "http://www.town.tohoku.lg.jp/",
+          "sha256": "1809db42607895bab989630e9983220eb367328963120c187c6c60eee9bfe863",
+          "fetched_at": "2026-08-27T10:32:29Z"
+        },
+        {
+          "url": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/file/zaisei-r06.xlsx",
+          "observed_on": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei_list01.html",
+          "sha256": "57fdf2744f4fa90eedd217529d7ef4894ecab6cfae7864f5e7e4d2004ded8303",
+          "fetched_at": "2026-08-27T13:27:12Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html (label: 町の財政 -予算・決算-) 入口 https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaisei-r06.xlsx「令和6年度【excel】」, sha256:57fdf274）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

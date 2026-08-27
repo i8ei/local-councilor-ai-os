@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at http://www.town.yamatsuri.fukushima.jp/page/dir000040.html (label: 町の例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yamatsuri.fukushima.jp/page/page001213.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yamatsuri.fukushima.jp/page/page001213.html",
@@ -52,16 +52,28 @@
           "observed_on": "https://www.town.yamatsuri.fukushima.jp/page/page001213.html",
           "sha256": "8c4cc3fd83ac1525e05293d1583c30e54f33b61a441b0c5d0bfb46a999b3208f",
           "fetched_at": "2026-08-27T10:38:01Z"
+        },
+        {
+          "url": "http://www.town.yamatsuri.fukushima.jp/page/page001213.html",
+          "observed_on": "http://www.town.yamatsuri.fukushima.jp/",
+          "sha256": "8c4cc3fd83ac1525e05293d1583c30e54f33b61a441b0c5d0bfb46a999b3208f",
+          "fetched_at": "2026-08-27T10:38:01Z"
+        },
+        {
+          "url": "https://www.town.yamatsuri.fukushima.jp/data/doc/1773618203_doc_14_0.pdf",
+          "observed_on": "https://www.town.yamatsuri.fukushima.jp/page/page001213.html",
+          "sha256": "fc9fba22accb7c98a04943eb9a295d9098d26619a1992105f01f5b8cbd032e37",
+          "fetched_at": "2026-08-27T13:28:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yamatsuri.fukushima.jp/page/page001213.html (label: 令和6年度 財政状況資料集) 入口 https://www.town.yamatsuri.fukushima.jp/page/page001213.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yamatsuri.fukushima.jp/page/page001213.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1773618203_doc_14_0.pdf「令和6年度 財政状況資料集」, sha256:fc9fba22）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yamatsuri.fukushima.jp/page/page001213.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yamatsuri.fukushima.jp/page/page001213.html",
@@ -73,9 +85,21 @@
           "observed_on": "https://www.town.yamatsuri.fukushima.jp/page/page001213.html",
           "sha256": "8c4cc3fd83ac1525e05293d1583c30e54f33b61a441b0c5d0bfb46a999b3208f",
           "fetched_at": "2026-08-27T10:38:01Z"
+        },
+        {
+          "url": "http://www.town.yamatsuri.fukushima.jp/page/page001213.html",
+          "observed_on": "http://www.town.yamatsuri.fukushima.jp/",
+          "sha256": "8c4cc3fd83ac1525e05293d1583c30e54f33b61a441b0c5d0bfb46a999b3208f",
+          "fetched_at": "2026-08-27T10:38:01Z"
+        },
+        {
+          "url": "https://www.town.yamatsuri.fukushima.jp/data/doc/1773618203_doc_14_0.pdf",
+          "observed_on": "https://www.town.yamatsuri.fukushima.jp/page/page001213.html",
+          "sha256": "fc9fba22accb7c98a04943eb9a295d9098d26619a1992105f01f5b8cbd032e37",
+          "fetched_at": "2026-08-27T13:28:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yamatsuri.fukushima.jp/page/page001213.html (label: 令和6年度 財政状況資料集) 入口 https://www.town.yamatsuri.fukushima.jp/page/page001213.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yamatsuri.fukushima.jp/page/page001213.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1773618203_doc_14_0.pdf「令和6年度 財政状況資料集」, sha256:fc9fba22）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

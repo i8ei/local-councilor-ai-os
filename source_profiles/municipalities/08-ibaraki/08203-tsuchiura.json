@@ -35,11 +35,11 @@
       "notes": "Observed regulations index at http://www.city.tsuchiura.lg.jp/shisei/page001482.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tsuchiura.lg.jp/shisei/shisei-info/page022703.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsuchiura.lg.jp/shisei/shisei-info/page022703.html",
@@ -56,16 +56,22 @@
           "url": "https://www.city.tsuchiura.lg.jp/data/doc/1770707926_doc_3_0.pdf",
           "observed_on": "https://www.city.tsuchiura.lg.jp/shisei/shisei-info/page022703.html",
           "fetched_at": "2026-08-27T10:17:12Z"
+        },
+        {
+          "url": "https://www.city.tsuchiura.lg.jp/data/doc/1770707926_doc_3_0.pdf",
+          "observed_on": "https://www.city.tsuchiura.lg.jp/shisei/shisei-info/page022703.html",
+          "sha256": "c52af478636c714369cdc56f6d41ab5aab3ae230e94f11f772238d893e1832b6",
+          "fetched_at": "2026-08-27T10:17:15Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.tsuchiura.lg.jp/shisei/shisei-info/page022703.html (label: 物価高騰対応重点支援地方創生臨時交付金活用事業（令和7年度第7回土浦市一般会計補正予算）) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（1770707926_doc_3_0.pdf「物価高騰対応重点支援地方創生臨時交付金活用事業一覧（令和7年度第7回土浦市一般会計補正予算分） [PDF形式／509.65KB]」, sha256:c52af478）にて構造マーカー（歳入・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/",
@@ -77,9 +83,15 @@
           "observed_on": "https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/",
           "sha256": "47828f6c5246d92f221a305fa9bb4e8ae1a502ca4be8fe527d1712a35ba23f20",
           "fetched_at": "2026-08-27T10:17:16Z"
+        },
+        {
+          "url": "https://www.city.tsuchiura.lg.jp/data/doc/1760424029_doc_38_0.pdf",
+          "observed_on": "https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/page022232.html",
+          "sha256": "cf2e6e96992eb4686e9826577c6d7d619aac52c1f2a1726e8d24bac2840fdba0",
+          "fetched_at": "2026-08-27T13:30:05Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/ (label: 決算書) 入口 https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsuchiura.lg.jp/shisei/zaseikeikaku-yosan/kessansho/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1760424029_doc_38_0.pdf「令和6年度土浦市歳入歳出決算書」, sha256:cf2e6e96）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/town.honbetsu/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html",
@@ -66,24 +66,42 @@
           "observed_on": "http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html",
           "sha256": "01014d5e6c92891bb4a347b4b2f050370eee753e813590f613f5be2eda382bdf",
           "fetched_at": "2026-08-27T10:31:58Z"
+        },
+        {
+          "url": "http://www.town.honbetsu.hokkaido.jp/web/administration/files/zaiseijyoukyousiryou_R6.xlsx",
+          "observed_on": "http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html",
+          "sha256": "ebdbf5431dd94d529a8531916dbb02484a3844afd86f706bbbe68d661aafb79e",
+          "fetched_at": "2026-08-27T11:23:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html (label: 財政状況資料集) 入口 http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijyoukyousiryou_R6.xlsx「令和６年度決算（Excel：557KB)」, sha256:ebdbf543）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html",
           "observed_on": "http://www.town.honbetsu.hokkaido.jp/web/administration/index.html",
           "fetched_at": "2026-08-27T06:50:28Z"
+        },
+        {
+          "url": "http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html",
+          "observed_on": "http://www.town.honbetsu.hokkaido.jp/",
+          "sha256": "01014d5e6c92891bb4a347b4b2f050370eee753e813590f613f5be2eda382bdf",
+          "fetched_at": "2026-08-27T10:31:58Z"
+        },
+        {
+          "url": "http://www.town.honbetsu.hokkaido.jp/web/administration/files/zaiseijyoukyousiryou_R6.xlsx",
+          "observed_on": "http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html",
+          "sha256": "ebdbf5431dd94d529a8531916dbb02484a3844afd86f706bbbe68d661aafb79e",
+          "fetched_at": "2026-08-27T11:23:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.honbetsu.hokkaido.jp/web/administration/details/post_64.html (label: 財政状況資料集)"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijyoukyousiryou_R6.xlsx「令和６年度決算（Excel：557KB)」, sha256:ebdbf543）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

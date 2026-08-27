@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/asaka/reiki_menu.html (label: 例規集(条例・規則等))"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.asaka.lg.jp/life/4/33/163/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.asaka.lg.jp/life/4/33/163/",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.city.asaka.lg.jp/life/4/33/163/",
           "sha256": "dba4bfc28d4602988ef49e34f3f7796a2612f1d25d48a725cf0252c93a98c213",
           "fetched_at": "2026-08-27T10:21:27Z"
+        },
+        {
+          "url": "http://www.city.asaka.lg.jp/life/4/33/163/",
+          "observed_on": "http://www.city.asaka.lg.jp/",
+          "sha256": "dba4bfc28d4602988ef49e34f3f7796a2612f1d25d48a725cf0252c93a98c213",
+          "fetched_at": "2026-08-27T10:21:27Z"
+        },
+        {
+          "url": "https://www.city.asaka.lg.jp/uploaded/attachment/112019.pdf",
+          "observed_on": "https://www.city.asaka.lg.jp/soshiki/7/zai-yosangai.html",
+          "sha256": "09a61434914f0a59cefded0fe59f61685eca048e16cd88ae236559a3daf9e2cd",
+          "fetched_at": "2026-08-27T13:31:40Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.asaka.lg.jp/life/4/33/163/ (label: 予算) 入口 https://www.city.asaka.lg.jp/life/4/33/163/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（112019.pdf「令和8年度（2026年度）一般会計予算概要 [PDFファイル／712KB]」, sha256:09a61434）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.asaka.lg.jp/life/4/33/164/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.asaka.lg.jp/life/4/33/164/",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.city.asaka.lg.jp/life/4/33/164/",
           "sha256": "7ad8e70e8c4c9eb447be9876e145be20aaad66bda3d9ce736e6f4b24a4c8601c",
           "fetched_at": "2026-08-27T10:21:30Z"
+        },
+        {
+          "url": "http://www.city.asaka.lg.jp/life/4/33/164/",
+          "observed_on": "http://www.city.asaka.lg.jp/",
+          "sha256": "7ad8e70e8c4c9eb447be9876e145be20aaad66bda3d9ce736e6f4b24a4c8601c",
+          "fetched_at": "2026-08-27T10:21:30Z"
+        },
+        {
+          "url": "https://www.city.asaka.lg.jp/uploaded/attachment/111977.pdf",
+          "observed_on": "https://www.city.asaka.lg.jp/soshiki/7/zai-kessangai.html",
+          "sha256": "0d401be966ad85c0abbe851fffbd8a4386b424aa5cb4c29b1984a3c52fae7895",
+          "fetched_at": "2026-08-27T13:31:41Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.asaka.lg.jp/life/4/33/164/ (label: 決算) 入口 https://www.city.asaka.lg.jp/life/4/33/164/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（111977.pdf「令和6年度一般会計決算概要 [PDFファイル／781KB]」, sha256:0d401be9）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

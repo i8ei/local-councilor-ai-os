@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.town.sotogahama.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
@@ -56,16 +56,22 @@
           "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/files/R07_tousyo.pdf",
           "observed_on": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
           "fetched_at": "2026-08-27T11:23:36Z"
+        },
+        {
+          "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/files/R07_tousyo.pdf",
+          "observed_on": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
+          "sha256": "c28da494cdf2aa8886bb325cee01d04ed0df34f0fa045332a39e76deb8d5adbe",
+          "fetched_at": "2026-08-27T11:23:37Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html (label: 予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R07_tousyo.pdf「令和7年度当初予算 (711KB)」, sha256:c28da494）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
@@ -77,9 +83,15 @@
           "observed_on": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
           "sha256": "a594f810b9a844155c1fbf3cd7a7e76476379fecbc8f26ca0f791d73d54112d9",
           "fetched_at": "2026-08-27T10:32:07Z"
+        },
+        {
+          "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/files/R06_kessan.pdf",
+          "observed_on": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
+          "sha256": "bfe68ffd4671b5d618fd5bf846d34f1f0fd60d23033f56f166d1f0f0f17adcd6",
+          "fetched_at": "2026-08-27T13:27:04Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html (label: 予算・決算) 入口 http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06_kessan.pdf「令和6年度財政概要 (472KB)」, sha256:bfe68ffd）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

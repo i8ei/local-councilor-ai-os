@@ -59,11 +59,11 @@
       "index_url": "https://www.city.kashihara.nara.jp/section/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
@@ -75,9 +75,15 @@
           "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
           "sha256": "65c7b7135d21b7b55ab0d3b4180cc7f856c7fd435ab82c821823343b3487e34a",
           "fetched_at": "2026-08-27T09:52:33Z"
+        },
+        {
+          "url": "https://www.city.kashihara.nara.jp/material/files/group/45/20260227-3.pdf",
+          "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/10556.html",
+          "sha256": "93bca58042c3089c06f5448fbd90b201b674a94a152f53ca77a0549a2c4ddd56",
+          "fetched_at": "2026-08-27T13:41:18Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260227-3.pdf「令和8年度一般会計特別会計予算書・予算説明書（原案） (PDFファイル: 4.7MB)」, sha256:93bca580）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/okaya/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html",
           "sha256": "4b3f58cbe41709eec89cc90f0ea79a53778c4975c0e7082d732a60c1e0cee866",
           "fetched_at": "2026-08-27T10:09:29Z"
+        },
+        {
+          "url": "https://www.city.okaya.lg.jp/material/files/group/7/okaya_H13_yosan_8169.pdf",
+          "observed_on": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/8927.html",
+          "sha256": "7e234187724461bf9fc7255c9ea22eccc3fc22854f81ed96aa096a2428e3b6b5",
+          "fetched_at": "2026-08-27T13:36:16Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（okaya_H13_yosan_8169.pdf「平成13年度 当初予算(PDF:39.6KB)」, sha256:7e234187）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

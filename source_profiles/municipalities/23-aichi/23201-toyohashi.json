@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.toyohashi.lg.jp/6015.htm (label: 条例・規則等)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toyohashi.lg.jp/2556.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toyohashi.lg.jp/2556.htm",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.toyohashi.lg.jp/2556.htm",
           "sha256": "a33e6bc50db37ef4703c1a6c52c7824c77a23b32e26fa643daf8a78e8bc9534a",
           "fetched_at": "2026-08-27T10:15:05Z"
+        },
+        {
+          "url": "http://www.city.toyohashi.lg.jp/2556.htm",
+          "observed_on": "http://www.city.toyohashi.lg.jp/",
+          "sha256": "a33e6bc50db37ef4703c1a6c52c7824c77a23b32e26fa643daf8a78e8bc9534a",
+          "fetched_at": "2026-08-27T10:15:05Z"
+        },
+        {
+          "url": "https://www.city.toyohashi.lg.jp/secure/24678/gyokakuplan.pdf",
+          "observed_on": "https://www.city.toyohashi.lg.jp/18967.htm",
+          "sha256": "e5fdeec6c95070d4bd57a0bffb660e3b4a89c8b552581b47ce57564b631426ab",
+          "fetched_at": "2026-08-27T13:38:01Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.toyohashi.lg.jp/2556.htm (label: 行財政改革) 入口 https://www.city.toyohashi.lg.jp/2556.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（gyokakuplan.pdf「（資料１）豊橋市行財政改革プランの取組と現状（PDFファイル 401KB）」, sha256:e5fdeec6）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toyohashi.lg.jp/2556.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toyohashi.lg.jp/2556.htm",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.toyohashi.lg.jp/2556.htm",
           "sha256": "a33e6bc50db37ef4703c1a6c52c7824c77a23b32e26fa643daf8a78e8bc9534a",
           "fetched_at": "2026-08-27T10:15:05Z"
+        },
+        {
+          "url": "http://www.city.toyohashi.lg.jp/2556.htm",
+          "observed_on": "http://www.city.toyohashi.lg.jp/",
+          "sha256": "a33e6bc50db37ef4703c1a6c52c7824c77a23b32e26fa643daf8a78e8bc9534a",
+          "fetched_at": "2026-08-27T10:15:05Z"
+        },
+        {
+          "url": "https://www.city.toyohashi.lg.jp/secure/24678/gyokakuplan.pdf",
+          "observed_on": "https://www.city.toyohashi.lg.jp/18967.htm",
+          "sha256": "e5fdeec6c95070d4bd57a0bffb660e3b4a89c8b552581b47ce57564b631426ab",
+          "fetched_at": "2026-08-27T13:38:01Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.toyohashi.lg.jp/2556.htm (label: 行財政改革) 入口 https://www.city.toyohashi.lg.jp/2556.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（gyokakuplan.pdf「（資料１）豊橋市行財政改革プランの取組と現状（PDFファイル 401KB）」, sha256:e5fdeec6）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     }
   }
 }

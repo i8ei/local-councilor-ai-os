@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（2026ippanntousho.pdf「令和8年度一般会計当初予算書 (PDFファイル: 1.4MB)」, sha256:705afbce）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html",
@@ -91,9 +91,15 @@
           "observed_on": "https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html",
           "sha256": "59456427e9dc986ec50fea2d9885877b397bb21098212f727b27ae82b2e5af28",
           "fetched_at": "2026-08-27T09:50:24Z"
+        },
+        {
+          "url": "https://www.town.ine.kyoto.jp/material/files/group/2/25-ine-2022.xlsx",
+          "observed_on": "https://www.town.ine.kyoto.jp/chosei/gyozaisei/1/941.html",
+          "sha256": "c6dfcae18be944af43a1f4b4934657a9cf8ee3fb48a9f8b6ee2938bdc21331b7",
+          "fetched_at": "2026-08-27T13:39:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（25-ine-2022.xlsx「令和4年度財政状況資料集 (Excelファイル: 857.5KB)」, sha256:c6dfcae1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（sitasinozaiseiR7.12.pdf「吹田市の財政（令和7年12月1日公表） （PDF 532.6 KB）」, sha256:563ed49a）にて構造マーカー（歳入・歳出・予算現額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
@@ -99,9 +99,21 @@
           "observed_on": "https://www.city.suita.osaka.jp/shisei/1018870/index.html",
           "sha256": "79d2dd00d27de106f6aab47111e61ec1f07be6884a09c77ef5d14a86ef0736b0",
           "fetched_at": "2026-08-27T09:50:31Z"
+        },
+        {
+          "url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
+          "observed_on": "http://www.city.suita.osaka.jp/",
+          "sha256": "79d2dd00d27de106f6aab47111e61ec1f07be6884a09c77ef5d14a86ef0736b0",
+          "fetched_at": "2026-08-27T09:50:31Z"
+        },
+        {
+          "url": "https://www.city.suita.osaka.jp/_res/projects/default_project/_page_/001/022/192/R6kessann_zaiseikennzennkahiritunojyoukyou.pdf",
+          "observed_on": "https://www.city.suita.osaka.jp/shisei/1018870/1022192.html",
+          "sha256": "4eeed46b667447e1ff8aee129b6ec1acdfc1bc26497cbec5163851dde0dac92f",
+          "fetched_at": "2026-08-27T13:40:00Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.suita.osaka.jp/shisei/1018870/index.html (label: 市の財政・会計) 入口 https://www.city.suita.osaka.jp/shisei/1018870/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.suita.osaka.jp/shisei/1018870/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessann_zaiseikennzennkahiritunojyoukyou.pdf「令和6年度 （PDF 550.2 KB）」, sha256:4eeed46b）にて構造マーカー（実質収支・地方債等）を確認済み。"
     }
   }
 }

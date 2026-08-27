@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.yachimata/reiki_menu.html (label: 市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yachimata.lg.jp/life/4/23/106/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yachimata.lg.jp/life/4/23/106/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.yachimata.lg.jp/life/4/23/106/",
           "sha256": "22d065e140f43acb76a825b37f4279eb646a66af28db108db13e488a902f4a31",
           "fetched_at": "2026-08-27T10:24:09Z"
+        },
+        {
+          "url": "http://www.city.yachimata.lg.jp/life/4/23/106/",
+          "observed_on": "http://www.city.yachimata.lg.jp/",
+          "sha256": "22d065e140f43acb76a825b37f4279eb646a66af28db108db13e488a902f4a31",
+          "fetched_at": "2026-08-27T10:24:09Z"
+        },
+        {
+          "url": "https://www.city.yachimata.lg.jp/uploaded/attachment/23290.pdf",
+          "observed_on": "https://www.city.yachimata.lg.jp/soshiki/26/52576.html",
+          "sha256": "2ac35fdb0fc8b5d840c83860275211550194ba559e031e3130797401e2c10aa4",
+          "fetched_at": "2026-08-27T13:34:11Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.yachimata.lg.jp/life/4/23/106/ (label: 予算・決算) 入口 https://www.city.yachimata.lg.jp/life/4/23/106/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（23290.pdf「令和7年度八街市下水道事業会計予算 [PDFファイル／412KB]」, sha256:2ac35fdb）にて構造マーカー（款・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

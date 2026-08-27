@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（R8yosannogaiyou.pdf「令和8年度当初予算の概要（PDF形式 13,514キロバイト）」, sha256:5c6fb244）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html",
@@ -91,9 +91,15 @@
           "observed_on": "https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html",
           "sha256": "cbb2fb19cff0f6e1aed69a6cef5c20b1a8e3e96c9f1ae673cd9bc17ce850530c",
           "fetched_at": "2026-08-27T10:07:04Z"
+        },
+        {
+          "url": "https://www.city.fukui.lg.jp/sisei/zaisei/kessan/p001063_d/fil/R06kessan.pdf",
+          "observed_on": "https://www.city.fukui.lg.jp/sisei/zaisei/kessan/p001063.html",
+          "sha256": "b2b29bcc76da3e059e6c9813471e13e569f10d33c33df71d65d9a777c129dc62",
+          "fetched_at": "2026-08-27T13:35:49Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukui.lg.jp/sisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06kessan.pdf「令和6年度決算（PDF形式：452KB）」, sha256:b2b29bcc）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

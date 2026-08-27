@@ -50,11 +50,11 @@
       "base_url": "http://www3.city.inazawa.aichi.jp/city.inazawa.aichi/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html",
           "sha256": "e838cb96829195ae3f5a79c8b824710c25d0ebe0d6b6b0c73c64acb9dee7cf81",
           "fetched_at": "2026-08-27T10:15:24Z"
+        },
+        {
+          "url": "http://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.inazawa.aichi.jp/",
+          "sha256": "e838cb96829195ae3f5a79c8b824710c25d0ebe0d6b6b0c73c64acb9dee7cf81",
+          "fetched_at": "2026-08-27T10:15:24Z"
+        },
+        {
+          "url": "https://www.city.inazawa.aichi.jp/cmsfiles/contents/0000005/5502/r8_tousyoyosanngaiyounituite.pdf",
+          "observed_on": "https://www.city.inazawa.aichi.jp/0000005502.html",
+          "sha256": "0de729aac2453e10b657a46da5a1df17e9ead8d26d5d590549636ef80ba9aeb4",
+          "fetched_at": "2026-08-27T13:38:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html (label: 行財政) 入口 https://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_tousyoyosanngaiyounituite.pdf「令和8年度一般会計当初予算の概要について (PDF形式、536.47KB)」, sha256:0de729aa）にて構造マーカー（歳入・歳出・節・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html",
           "sha256": "e838cb96829195ae3f5a79c8b824710c25d0ebe0d6b6b0c73c64acb9dee7cf81",
           "fetched_at": "2026-08-27T10:15:24Z"
+        },
+        {
+          "url": "http://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.inazawa.aichi.jp/",
+          "sha256": "e838cb96829195ae3f5a79c8b824710c25d0ebe0d6b6b0c73c64acb9dee7cf81",
+          "fetched_at": "2026-08-27T10:15:24Z"
+        },
+        {
+          "url": "https://www.city.inazawa.aichi.jp/cmsfiles/contents/0000003/3602/r6_kessann_card.pdf",
+          "observed_on": "https://www.city.inazawa.aichi.jp/0000003602.html",
+          "sha256": "b7d61d8fe8ef7c4b07d7948a4da7f21e36dde79b5f0e9e25d9ad335ae9a2b937",
+          "fetched_at": "2026-08-27T13:38:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html (label: 行財政) 入口 https://www.city.inazawa.aichi.jp/category/7-11-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6_kessann_card.pdf「令和6年度決算カード (PDF形式、248.60KB)」, sha256:b7d61d8f）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

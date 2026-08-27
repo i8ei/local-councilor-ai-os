@@ -42,11 +42,11 @@
       "base_url": "https://www.fuji-oyama.jp/oyama/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.fuji-oyama.jp/life/6/24/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.fuji-oyama.jp/life/6/24/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.fuji-oyama.jp/life/6/24/",
           "sha256": "3f232de5752cc6204e4237967d746615008a84660f50dcea59c287a2f60e78c2",
           "fetched_at": "2026-08-27T10:15:00Z"
+        },
+        {
+          "url": "http://www.fuji-oyama.jp/life/6/24/",
+          "observed_on": "http://www.fuji-oyama.jp/",
+          "sha256": "3f232de5752cc6204e4237967d746615008a84660f50dcea59c287a2f60e78c2",
+          "fetched_at": "2026-08-27T10:15:00Z"
+        },
+        {
+          "url": "https://www.fuji-oyama.jp/uploaded/attachment/3772.pdf",
+          "observed_on": "https://www.fuji-oyama.jp/page/1040.html",
+          "sha256": "1f827cd4bd1304626c6997f278ba2a366cc73629e7c4b4ddc3be9922f121a5c5",
+          "fetched_at": "2026-08-27T13:37:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.fuji-oyama.jp/life/6/24/ (label: 町の取り組み・財政) 入口 https://www.fuji-oyama.jp/life/6/24/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3772.pdf「令和8年度 一般会計現年当初予算書 [PDFファイル／2.56MB]」, sha256:1f827cd4）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

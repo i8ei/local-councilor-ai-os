@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.iwami.gr.jp/reiki_int/reiki_menu.html (label: 条例・例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.iwami.gr.jp/item/5173.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.iwami.gr.jp/item/5173.htm",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.iwami.gr.jp/item/5173.htm",
           "sha256": "c3ea0d648a6a6960d15f203d4d943a94a5e989a4a8183eb49b02d0bebf2f698d",
           "fetched_at": "2026-08-27T09:42:42Z"
+        },
+        {
+          "url": "http://www.iwami.gr.jp/item/5173.htm",
+          "observed_on": "http://www.iwami.gr.jp/",
+          "sha256": "c3ea0d648a6a6960d15f203d4d943a94a5e989a4a8183eb49b02d0bebf2f698d",
+          "fetched_at": "2026-08-27T09:42:42Z"
+        },
+        {
+          "url": "https://www.iwami.gr.jp/secure/12649/1.pdf",
+          "observed_on": "https://www.iwami.gr.jp/dd.aspx?itemid=3411",
+          "sha256": "3b30fbb40d5ba20c0af9c7be18d5825431d9858860dca9ba3482d5c9d0fc4dc7",
+          "fetched_at": "2026-08-27T13:41:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.iwami.gr.jp/item/5173.htm (label: 財政) 入口 https://www.iwami.gr.jp/item/5173.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.iwami.gr.jp/item/5173.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1.pdf「一般会計予算構成表（PDF)」, sha256:3b30fbb4）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

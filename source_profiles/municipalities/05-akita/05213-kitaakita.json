@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.city.kitaakita.akita.jp/ex/reiki/reiki.html (label: 北秋田市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
           "sha256": "649893a119b051f39acbc5d02961c9d8a3abef57f41e581928e2a23078a372f9",
           "fetched_at": "2026-08-27T10:34:52Z"
+        },
+        {
+          "url": "https://www.city.kitaakita.akita.jp/uploads/public/archive_0000015910_00/R8_tousyoyosan.pdf",
+          "observed_on": "https://www.city.kitaakita.akita.jp/archive/p15910",
+          "sha256": "c331c7c789b914cb060ca85670376b321351a5e3c7fe2a02f0c89cfab2c622ff",
+          "fetched_at": "2026-08-27T13:28:31Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei (label: 財務部財政課) 入口 https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_tousyoyosan.pdf「予算書（当初）」, sha256:c331c7c7）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei",
           "sha256": "649893a119b051f39acbc5d02961c9d8a3abef57f41e581928e2a23078a372f9",
           "fetched_at": "2026-08-27T10:34:52Z"
+        },
+        {
+          "url": "https://www.city.kitaakita.akita.jp/uploads/public/archive_0000005977_00/%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_052132_%E5%8C%97%E7%A7%8B%E7%94%B0%E5%B8%82_2024.xlsx",
+          "observed_on": "https://www.city.kitaakita.akita.jp/archive/contents-5823",
+          "sha256": "b22fc2041cc080544444017cbe1cb80d15ea9496ae2b70f2cbec00d44451a140",
+          "fetched_at": "2026-08-27T13:28:31Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei (label: 財務部財政課) 入口 https://www.city.kitaakita.akita.jp/genre/shigoto/zaimu_zaisei に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_052132_%E5%8C%97%E7%A7%8B%E7%94%B0%E5%B8%82_2024.xlsx「令和6年度決算 [566KB]」, sha256:b22fc204）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

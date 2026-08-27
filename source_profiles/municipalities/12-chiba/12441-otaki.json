@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/otaki/reiki_menu.html (label: 大多喜町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html",
@@ -67,9 +67,15 @@
           "observed_on": "https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html",
           "sha256": "1b3fed0ecd7977067856df14ba38a7df99ac5cd938b2231fb777dd10ad9affc9",
           "fetched_at": "2026-08-27T10:25:52Z"
+        },
+        {
+          "url": "https://www.town.otaki.chiba.jp/material/files/group/6/202410292.pdf",
+          "observed_on": "https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/3/1441.html",
+          "sha256": "591538f4606652d73de09dffb8fdd45e7b2104581cd7058446c63a4b2876db2a",
+          "fetched_at": "2026-08-27T13:33:28Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html (label: 財政・政策・計画) 入口 https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.otaki.chiba.jp/gyousei/zaisei_seisaku/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（202410292.pdf「令和6年9月時点（収入および支出） (PDFファイル: 214.3KB)」, sha256:591538f4）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

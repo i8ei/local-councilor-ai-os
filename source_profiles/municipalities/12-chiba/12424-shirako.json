@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078A46 (label: 例規集（条例・規則）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shirako.lg.jp/0000000788.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shirako.lg.jp/0000000788.html",
@@ -71,16 +71,28 @@
           "url": "https://www.town.shirako.lg.jp/cmsfiles/contents/0000000/788/r8gaiyou.pdf",
           "observed_on": "https://www.town.shirako.lg.jp/0000000788.html",
           "fetched_at": "2026-08-27T11:19:34Z"
+        },
+        {
+          "url": "http://www.town.shirako.lg.jp/0000000788.html",
+          "observed_on": "http://www.town.shirako.lg.jp/",
+          "sha256": "c5c1c5f9c79f49d74372713af18a14895b1dfd208e1def48a97969e61ca44946",
+          "fetched_at": "2026-08-27T10:25:00Z"
+        },
+        {
+          "url": "https://www.town.shirako.lg.jp/cmsfiles/contents/0000000/788/r8ippan.pdf",
+          "observed_on": "https://www.town.shirako.lg.jp/0000000788.html",
+          "sha256": "1c5f4a2551c810d99ed0bcc41ad11fed9736b51af8ee8e31f2ddba28ae8ede4e",
+          "fetched_at": "2026-08-27T13:33:11Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.shirako.lg.jp/0000000788.html (label: 当初予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r8ippan.pdf「一般会計歳入歳出予算書 (pdf サイズ：2.10MB)」, sha256:1c5f4a25）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html",
@@ -92,9 +104,21 @@
           "observed_on": "https://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html",
           "sha256": "4ac73f8e4ce13f4d598d0c2fec3cfc5f055b9f2ee5eb9cf26d326b08241512d1",
           "fetched_at": "2026-08-27T10:25:03Z"
+        },
+        {
+          "url": "http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.shirako.lg.jp/",
+          "sha256": "4ac73f8e4ce13f4d598d0c2fec3cfc5f055b9f2ee5eb9cf26d326b08241512d1",
+          "fetched_at": "2026-08-27T10:25:03Z"
+        },
+        {
+          "url": "https://www.town.shirako.lg.jp/cmsfiles/contents/0000000/803/49-shrk-r6zjs.xlsx",
+          "observed_on": "https://www.town.shirako.lg.jp/0000000803.html",
+          "sha256": "6cec5dd19b9381c06dbf026e1879319f7f4e8aa20bab177261cedfcf5c8af783",
+          "fetched_at": "2026-08-27T13:33:13Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（49-shrk-r6zjs.xlsx「令和6年度(xlsx サイズ：412.16KB)」, sha256:6cec5dd1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/isioka.city/reiki_menu.html (label: 石岡市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ishioka.lg.jp/shiseijoho/zaisei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ishioka.lg.jp/shiseijoho/zaisei/yosan/",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.city.ishioka.lg.jp/shiseijoho/zaisei/yosan/",
           "sha256": "46e0d0dbb38638d93103c07a6568f589af90cac1e9ea12188d9c993b3d819c00",
           "fetched_at": "2026-08-27T10:17:25Z"
+        },
+        {
+          "url": "https://www.city.ishioka.lg.jp/data/doc/1774518222_doc_32_0.pdf",
+          "observed_on": "https://www.city.ishioka.lg.jp/shiseijoho/zaisei/yosan/page012551.html",
+          "sha256": "871d398abebb284e1f82aff5949a9d5bf6700b0ccb545d10813780342b080f59",
+          "fetched_at": "2026-08-27T13:30:08Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.ishioka.lg.jp/shiseijoho/zaisei/yosan/ (label: 予算) 入口 https://www.city.ishioka.lg.jp/shiseijoho/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ishioka.lg.jp/shiseijoho/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1774518222_doc_32_0.pdf「令和8年度予算書」, sha256:871d398a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ishioka.lg.jp/shiseijoho/zaisei/kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ishioka.lg.jp/shiseijoho/zaisei/kessan/",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.city.ishioka.lg.jp/shiseijoho/zaisei/kessan/",
           "sha256": "64eb4d6d46a80667f2be7dadc6b423ed3091a0f831f39c839b7f3e80857fe329",
           "fetched_at": "2026-08-27T10:17:26Z"
+        },
+        {
+          "url": "https://www.city.ishioka.lg.jp/data/doc/1760920258_doc_32_0.pdf",
+          "observed_on": "https://www.city.ishioka.lg.jp/shiseijoho/zaisei/kessan/page012216.html",
+          "sha256": "d94b8632a66d4f0c13adfb31034e04ccf8e2d5b2e814f4e0c624af4eace45799",
+          "fetched_at": "2026-08-27T13:30:11Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.ishioka.lg.jp/shiseijoho/zaisei/kessan/ (label: 決算) 入口 https://www.city.ishioka.lg.jp/shiseijoho/zaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ishioka.lg.jp/shiseijoho/zaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1760920258_doc_32_0.pdf「石岡市歳入歳出決算書」, sha256:d94b8632）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

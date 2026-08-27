@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（20260303.pdf「令和8年度当初予算案の概要 (PDF, 4.96MB)」, sha256:966a17c1）にて構造マーカー（予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html",
@@ -99,9 +99,21 @@
           "observed_on": "https://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html",
           "sha256": "1ef179b6794e56cf29140eb10f25b84ed0fa6d85776f032fbf181c20e38f7771",
           "fetched_at": "2026-08-27T09:50:14Z"
+        },
+        {
+          "url": "http://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.kizugawa.lg.jp/",
+          "sha256": "1ef179b6794e56cf29140eb10f25b84ed0fa6d85776f032fbf181c20e38f7771",
+          "fetched_at": "2026-08-27T09:50:14Z"
+        },
+        {
+          "url": "https://www.city.kizugawa.lg.jp/cmsfiles/contents/0000000/2/20250924-155849.pdf",
+          "observed_on": "https://www.city.kizugawa.lg.jp/0000000002.html",
+          "sha256": "d85d4df0d9dd00931492d98d04b986850515c4d64e547bd159dd588b146e6d45",
+          "fetched_at": "2026-08-27T13:39:41Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20250924-155849.pdf「令和6年度一般会計歳入歳出決算書 (PDF, 1.47MB)」, sha256:d85d4df0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

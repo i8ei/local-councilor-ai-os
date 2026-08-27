@@ -42,11 +42,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF958B2 (label: 志木市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shiki.lg.jp/life/4/34/171/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shiki.lg.jp/life/4/34/171/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.shiki.lg.jp/life/4/34/171/",
           "sha256": "62b65421b0562c3b39c5cc90b2fb0174cca1a766256c893f3a6414079306b00f",
           "fetched_at": "2026-08-27T10:21:05Z"
+        },
+        {
+          "url": "http://www.city.shiki.lg.jp/life/4/34/171/",
+          "observed_on": "http://www.city.shiki.lg.jp/",
+          "sha256": "62b65421b0562c3b39c5cc90b2fb0174cca1a766256c893f3a6414079306b00f",
+          "fetched_at": "2026-08-27T10:21:05Z"
+        },
+        {
+          "url": "https://www.city.shiki.lg.jp/uploaded/attachment/22051.pdf",
+          "observed_on": "https://www.city.shiki.lg.jp/soshiki/8/39333.html",
+          "sha256": "5be715af9b937f24fe874d2845420fcee6ea18765239cd55a73d5adfb07104e5",
+          "fetched_at": "2026-08-27T13:32:16Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.shiki.lg.jp/life/4/34/171/ (label: 予算・決算) 入口 https://www.city.shiki.lg.jp/life/4/34/171/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（22051.pdf「令和8年度志木市一般会計・特別会計予算書 [PDFファイル／7.66MB]」, sha256:5be715af）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

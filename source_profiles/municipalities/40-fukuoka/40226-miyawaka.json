@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.city.miyawaka.lg.jp/reikisyu/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.miyawaka.lg.jp/list00321.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyawaka.lg.jp/list00321.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.miyawaka.lg.jp/list00321.html",
           "sha256": "5007d53ac02512429ba976fb7845f9156547c5a42c4ae26e1ae43f33237fa38f",
           "fetched_at": "2026-08-27T09:36:07Z"
+        },
+        {
+          "url": "http://www.city.miyawaka.lg.jp/list00321.html",
+          "observed_on": "http://www.city.miyawaka.lg.jp/",
+          "sha256": "5007d53ac02512429ba976fb7845f9156547c5a42c4ae26e1ae43f33237fa38f",
+          "fetched_at": "2026-08-27T09:36:07Z"
+        },
+        {
+          "url": "https://www.city.miyawaka.lg.jp/kiji003446825/3_446825_18895_up_8su0jahd.pdf",
+          "observed_on": "https://www.city.miyawaka.lg.jp/kiji003446825/index.html",
+          "sha256": "faad29feebf3e9c430b243b006a41a83ea6e43a1c3eb22f676ec47b1fb42e4fa",
+          "fetched_at": "2026-08-27T13:44:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.miyawaka.lg.jp/list00321.html (label: 予算・決算) 入口 https://www.city.miyawaka.lg.jp/list00321.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyawaka.lg.jp/list00321.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_446825_18895_up_8su0jahd.pdf「令和8年度暫定予算書」, sha256:faad29fe）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

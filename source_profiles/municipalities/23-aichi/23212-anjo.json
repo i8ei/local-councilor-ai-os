@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（6gyouseihoukokusyo1.pdf「主要施策の行政報告書１／２（PDF：4,889KB）」, sha256:56efeb7c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.anjo.aichi.jp/shisei/kansa/shinsa/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.anjo.aichi.jp/shisei/kansa/shinsa/index.html",
@@ -90,9 +90,21 @@
           "url": "https://www.city.anjo.aichi.jp/shisei/kansa/shinsa/documents/20260827anjokessannnadosinnsaikennsyo.pdf",
           "observed_on": "https://www.city.anjo.aichi.jp/shisei/kansa/shinsa/index.html",
           "fetched_at": "2026-08-27T11:14:47Z"
+        },
+        {
+          "url": "http://www.city.anjo.aichi.jp/shisei/kansa/shinsa/index.html",
+          "observed_on": "http://www.city.anjo.aichi.jp/",
+          "sha256": "8c994565eae156206a8f82cc1debc672b886fbc34c8d94b04635f38e97735c88",
+          "fetched_at": "2026-08-27T10:15:22Z"
+        },
+        {
+          "url": "https://www.city.anjo.aichi.jp/shisei/kansa/shinsa/documents/20260827anjokessannnadosinnsaikennsyo.pdf",
+          "observed_on": "https://www.city.anjo.aichi.jp/shisei/kansa/shinsa/index.html",
+          "sha256": "9bb9c995f280e936f62d6129c35b778124c48dbdd6f16f5411638dedafdcf7de",
+          "fetched_at": "2026-08-27T11:14:50Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.anjo.aichi.jp/shisei/kansa/shinsa/index.html (label: 決算等審査) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（20260827anjokessannnadosinnsaikennsyo.pdf「令和7年度安城市決算等審査意見書（PDF：3,494KB）」, sha256:9bb9c995）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

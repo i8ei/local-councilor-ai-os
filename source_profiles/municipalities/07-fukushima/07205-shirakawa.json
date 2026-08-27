@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shirakawa.fukushima.jp/section.php?code=15",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shirakawa.fukushima.jp/section.php?code=15",
@@ -38,16 +38,22 @@
           "observed_on": "https://www.city.shirakawa.fukushima.jp/section.php?code=15",
           "sha256": "dbd75f6240dfa82ad223fe192b13b928d061a45b887461732a7aba2a39f7a188",
           "fetched_at": "2026-08-27T10:36:44Z"
+        },
+        {
+          "url": "https://www.city.shirakawa.fukushima.jp/data/doc/1655101499_doc_31_0.pdf",
+          "observed_on": "https://www.city.shirakawa.fukushima.jp/page/page007169.html",
+          "sha256": "8cbd6e947761da4f3f9f5ffd43037a702ce3604eaf857589487b390e9dc18138",
+          "fetched_at": "2026-08-27T13:29:44Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.shirakawa.fukushima.jp/section.php?code=15 (label: 財政課) 入口 https://www.city.shirakawa.fukushima.jp/section.php?code=15 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shirakawa.fukushima.jp/section.php?code=15 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1655101499_doc_31_0.pdf「市民の負担とサービスの状況について」, sha256:8cbd6e94）にて構造マーカー（歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shirakawa.fukushima.jp/section.php?code=15",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shirakawa.fukushima.jp/section.php?code=15",
@@ -59,9 +65,15 @@
           "observed_on": "https://www.city.shirakawa.fukushima.jp/section.php?code=15",
           "sha256": "dbd75f6240dfa82ad223fe192b13b928d061a45b887461732a7aba2a39f7a188",
           "fetched_at": "2026-08-27T10:36:44Z"
+        },
+        {
+          "url": "https://www.city.shirakawa.fukushima.jp/data/doc/1774325896_doc_32_0.xlsx",
+          "observed_on": "https://www.city.shirakawa.fukushima.jp/page/page001000.html",
+          "sha256": "46a5d554df3866b25e7dadd600aa2b4328bd4a481c8a3938620cf64a8bfff36e",
+          "fetched_at": "2026-08-27T13:29:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.shirakawa.fukushima.jp/section.php?code=15 (label: 財政課) 入口 https://www.city.shirakawa.fukushima.jp/section.php?code=15 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shirakawa.fukushima.jp/section.php?code=15 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1774325896_doc_32_0.xlsx「令和6年度 財政状況資料集」, sha256:46a5d554）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

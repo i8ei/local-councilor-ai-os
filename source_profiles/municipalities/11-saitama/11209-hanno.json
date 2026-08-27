@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.hanno/reiki_menu.html (label: 例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
           "sha256": "14c341418ae530df884e659576b453dd9871f9053899c9c78936927e09dcbc1c",
           "fetched_at": "2026-08-27T10:20:51Z"
+        },
+        {
+          "url": "https://www.city.hanno.lg.jp/material/files/group/9/r8_yosansyo.pdf",
+          "observed_on": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/yosan/13185.html",
+          "sha256": "b678e89f07f3d82c5658a4643aace0c754f795beb967b27eb11f423b853f3919",
+          "fetched_at": "2026-08-27T13:31:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_yosansyo.pdf「予算書 (PDFファイル: 1.4MB)」, sha256:b678e89f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html",
           "sha256": "14c341418ae530df884e659576b453dd9871f9053899c9c78936927e09dcbc1c",
           "fetched_at": "2026-08-27T10:20:51Z"
+        },
+        {
+          "url": "https://www.city.hanno.lg.jp/material/files/group/9/R6kcard.pdf",
+          "observed_on": "https://www.city.hanno.lg.jp/shiseijoho/zaisei/kessan/10973.html",
+          "sha256": "d78c25a8a66cd25f9445fd4e60225764abca742e0d9b8c49bf04492538effbff",
+          "fetched_at": "2026-08-27T13:31:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hanno.lg.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kcard.pdf「令和6年度決算カード (PDFファイル: 111.0KB)」, sha256:d78c25a8）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

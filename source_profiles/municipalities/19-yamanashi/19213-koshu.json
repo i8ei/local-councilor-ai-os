@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/koshu/reiki_menu.html (label: 甲州市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
           "sha256": "e1990a3a4e5628cccf88f060621f729a0a5907711bb71bc930d591997ebeca4b",
           "fetched_at": "2026-08-27T10:08:50Z"
+        },
+        {
+          "url": "http://www.city.koshu.yamanashi.jp/category/bunya/zaise/",
+          "observed_on": "http://www.city.koshu.yamanashi.jp/",
+          "sha256": "e1990a3a4e5628cccf88f060621f729a0a5907711bb71bc930d591997ebeca4b",
+          "fetched_at": "2026-08-27T10:08:50Z"
+        },
+        {
+          "url": "https://www.city.koshu.yamanashi.jp/docs/2021011200621/file_contents/R8tousyoyosan.pdf",
+          "observed_on": "https://www.city.koshu.yamanashi.jp/docs/2021011200621/",
+          "sha256": "108e376a89df693a65b33c0d0bb00ef10e63a8e9ef2c99e4c4fe87f401e02983",
+          "fetched_at": "2026-08-27T13:36:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.koshu.yamanashi.jp/category/bunya/zaise/ (label: 財政) 入口 https://www.city.koshu.yamanashi.jp/category/bunya/zaise/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.koshu.yamanashi.jp/category/bunya/zaise/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.koshu.yamanashi.jp/category/bunya/zaise/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyoyosan.pdf「令和8年度当初予算[PDF：151KB]」, sha256:108e376a）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

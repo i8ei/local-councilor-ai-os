@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=106&cd_type=1 (label: せたな町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.setana.lg.jp/government/kaikaku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.setana.lg.jp/government/kaikaku/",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.town.setana.lg.jp/government/kaikaku/",
           "sha256": "18936c6314e36bcae60a77478cd02bb805e9645901fac77ae74c7fffcfec3981",
           "fetched_at": "2026-08-27T10:29:43Z"
+        },
+        {
+          "url": "https://www.town.setana.lg.jp/uploads/documents/%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_013714_%E3%81%9B%E3%81%9F%E3%81%AA%E7%94%BA_2022.xlsx",
+          "observed_on": "https://www.town.setana.lg.jp/government/post_1922.html",
+          "sha256": "bee3c95a584a57879b17adf6a033b4eb2c1f699adf6a6ed9eca85697bcf5d56c",
+          "fetched_at": "2026-08-27T13:25:55Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.setana.lg.jp/government/kaikaku/ (label: 行財政改革) 入口 https://www.town.setana.lg.jp/government/kaikaku/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_013714_%E3%81%9B%E3%81%9F%E3%81%AA%E7%94%BA_2022.xlsx「[Excel形式]」, sha256:bee3c95a）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.setana.lg.jp/government/kaikaku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.setana.lg.jp/government/kaikaku/",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.town.setana.lg.jp/government/kaikaku/",
           "sha256": "18936c6314e36bcae60a77478cd02bb805e9645901fac77ae74c7fffcfec3981",
           "fetched_at": "2026-08-27T10:29:43Z"
+        },
+        {
+          "url": "https://www.town.setana.lg.jp/uploads/documents/%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_013714_%E3%81%9B%E3%81%9F%E3%81%AA%E7%94%BA_2022.xlsx",
+          "observed_on": "https://www.town.setana.lg.jp/government/post_1922.html",
+          "sha256": "bee3c95a584a57879b17adf6a033b4eb2c1f699adf6a6ed9eca85697bcf5d56c",
+          "fetched_at": "2026-08-27T13:25:55Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.setana.lg.jp/government/kaikaku/ (label: 行財政改革) 入口 https://www.town.setana.lg.jp/government/kaikaku/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_013714_%E3%81%9B%E3%81%9F%E3%81%AA%E7%94%BA_2022.xlsx「[Excel形式]」, sha256:bee3c95a）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

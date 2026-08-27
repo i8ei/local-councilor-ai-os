@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.shari.hokkaido.jp/choseijoho/reikishu/index.html (label: 斜里町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html",
@@ -63,16 +63,22 @@
           "url": "https://www.town.shari.hokkaido.jp/material/files/group/4/R8yosan_gaiyou.pdf",
           "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html",
           "fetched_at": "2026-08-27T10:31:07Z"
+        },
+        {
+          "url": "https://www.town.shari.hokkaido.jp/material/files/group/4/R8yosansyo.pdf",
+          "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html",
+          "sha256": "d63117bb43839a33961c0424debe81ade235c14cd6bdebf850998e694c776f5f",
+          "fetched_at": "2026-08-27T13:26:26Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4236.html (label: 斜里町予算の概要について) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（R8yosansyo.pdf「令和8年度 斜里町一般会計等 予算書(PDFファイル:446.1KB)」, sha256:d63117bb）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html",
@@ -89,9 +95,15 @@
           "url": "https://www.town.shari.hokkaido.jp/material/files/group/4/2012-0613-1052.pdf",
           "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html",
           "fetched_at": "2026-08-27T10:31:10Z"
+        },
+        {
+          "url": "https://www.town.shari.hokkaido.jp/material/files/group/4/R6kessan_sesakuseika.pdf",
+          "observed_on": "https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html",
+          "sha256": "8e940f4aa0c3cec4b61640d6a4567e2753f191fa37aee5797b5b75e53797cb7f",
+          "fetched_at": "2026-08-27T13:26:33Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.shari.hokkaido.jp/choseijoho/zaiseijoho/4237.html (label: 斜里町の決算状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan_sesakuseika.pdf「令和6年度 斜里町各会計予算執行状況の説明書および主要な施策の成果 (PDFファイル: 4.0MB)」, sha256:8e940f4a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

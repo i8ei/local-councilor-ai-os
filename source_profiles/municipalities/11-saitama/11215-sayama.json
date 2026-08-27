@@ -44,11 +44,11 @@
       "base_url": "https://kre316.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sayama.saitama.jp/shisei/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sayama.saitama.jp/shisei/zaisei/yosan/index.html",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.sayama.saitama.jp/shisei/zaisei/yosan/index.html",
           "sha256": "8583124603e0e91b94a06bd98d09431adcc309f26c1ff75fee7e2f940dbf9b78",
           "fetched_at": "2026-08-27T10:20:46Z"
+        },
+        {
+          "url": "http://www.city.sayama.saitama.jp/shisei/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.sayama.saitama.jp/",
+          "sha256": "8583124603e0e91b94a06bd98d09431adcc309f26c1ff75fee7e2f940dbf9b78",
+          "fetched_at": "2026-08-27T10:20:46Z"
+        },
+        {
+          "url": "https://www.city.sayama.saitama.jp/shisei/zaisei/yosan/3.files/R8yosansho.pdf",
+          "observed_on": "https://www.city.sayama.saitama.jp/shisei/zaisei/yosan/3.html",
+          "sha256": "4e4792883719b813c41434bfd689781b30e827417424b397982fe806b1e05131",
+          "fetched_at": "2026-08-27T13:31:34Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.sayama.saitama.jp/shisei/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.sayama.saitama.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosansho.pdf「予算書（PDF・379KB）」, sha256:4e479288）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/index.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/index.html",
           "sha256": "879c468740ffc9023355cd0ef16430bcdc69fd17de7a45bf5e33e40a413ecf87",
           "fetched_at": "2026-08-27T10:20:50Z"
+        },
+        {
+          "url": "http://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/index.html",
+          "observed_on": "http://www.city.sayama.saitama.jp/",
+          "sha256": "879c468740ffc9023355cd0ef16430bcdc69fd17de7a45bf5e33e40a413ecf87",
+          "fetched_at": "2026-08-27T10:20:50Z"
+        },
+        {
+          "url": "https://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/kessancard.files/R6kessankard.pdf.pdf",
+          "observed_on": "https://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/kessancard.html",
+          "sha256": "9a51f5bdb40cb941d8fa38cfd96b87d9a14634d0255c0da933d63fd45ef92f03",
+          "fetched_at": "2026-08-27T13:31:34Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/index.html (label: 決算) 入口 https://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessankard.pdf.pdf「令和6年度決算カード（PDF・198KB）」, sha256:9a51f5bd）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

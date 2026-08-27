@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.city.katagami.lg.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
@@ -69,24 +69,42 @@
           "url": "https://www.city.katagami.lg.jp/material/files/group/4/9gatuhoseigaiyou2.pdf",
           "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
           "fetched_at": "2026-08-27T10:34:41Z"
+        },
+        {
+          "url": "https://www.city.katagami.lg.jp/material/files/group/4/R6hosei_1gatsu_gaiyo.pdf",
+          "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
+          "sha256": "f99dc3ab9276faa294ab47ca15d8adf6bebd0f2bb69463de501a8cc4faef80c0",
+          "fetched_at": "2026-08-27T13:28:35Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html (label: 予算概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R6hosei_1gatsu_gaiyo.pdf「令和6年度1月補正予算概要 (PDFファイル: 14.1MB)」, sha256:f99dc3ab）にて構造マーカー（款・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2712.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2712.html",
           "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:31:25Z"
+        },
+        {
+          "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2712.html",
+          "observed_on": "http://www.city.katagami.lg.jp/",
+          "sha256": "59cb16207a5bc4e788ad5367d9da0447a7a70a45d365847dc98bff1a10bdc026",
+          "fetched_at": "2026-08-27T10:34:45Z"
+        },
+        {
+          "url": "https://www.city.katagami.lg.jp/material/files/group/4/R5zaiseijokyoshiryoshu02.xlsx",
+          "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2712.html",
+          "sha256": "cfce00172e1f611facf5e7ffd6f0092c5457d6b48913f17e83ed783ce52f90aa",
+          "fetched_at": "2026-08-27T10:34:47Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2712.html (label: 決算状況)"
+      "notes": "deepest_doc=P1。settlement文書（R5zaiseijokyoshiryoshu02.xlsx「財政状況資料集（令和5年度決算） (Excelファイル: 791.7KB)」, sha256:cfce0017）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

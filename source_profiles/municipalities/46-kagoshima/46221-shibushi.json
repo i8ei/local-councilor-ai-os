@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.shibushi.lg.jp/life/5/26/112/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shibushi.lg.jp/life/5/28/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shibushi.lg.jp/life/5/28/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.shibushi.lg.jp/life/5/28/",
           "sha256": "2805c20a06dc752c965ffbc4bc2c5a8b6dec82a123c748ad31cadfb1f15835d0",
           "fetched_at": "2026-08-27T09:40:34Z"
+        },
+        {
+          "url": "http://www.city.shibushi.lg.jp/life/5/28/",
+          "observed_on": "http://www.city.shibushi.lg.jp/",
+          "sha256": "2805c20a06dc752c965ffbc4bc2c5a8b6dec82a123c748ad31cadfb1f15835d0",
+          "fetched_at": "2026-08-27T09:40:34Z"
+        },
+        {
+          "url": "https://www.city.shibushi.lg.jp/uploaded/attachment/16884.pdf",
+          "observed_on": "https://www.city.shibushi.lg.jp/soshiki/4/34099.html",
+          "sha256": "64f0b0ea47568e0ff0edfb468f03cbaadddf8c0a05f9d2bcec05fd3f0bb84987",
+          "fetched_at": "2026-08-27T13:47:39Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shibushi.lg.jp/life/5/28/ (label: 行財政) 入口 https://www.city.shibushi.lg.jp/life/5/28/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shibushi.lg.jp/life/5/28/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（16884.pdf「2026予算と仕事 （PDFファイル／4.23MB）」, sha256:64f0b0ea）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

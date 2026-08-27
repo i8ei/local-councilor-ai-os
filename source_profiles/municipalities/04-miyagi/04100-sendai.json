@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at http://www.city.sendai.jp/shise/reki/index.html (label: 例規・公報・監査・公示送達)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sendai.jp/shise/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sendai.jp/shise/zaise/index.html",
@@ -69,16 +69,28 @@
           "observed_on": "https://www.city.sendai.jp/shise/zaise/index.html",
           "sha256": "a0b604d67435da73560fc4cd4211d51f22ed57dec69f4e1d209458e799b81bbd",
           "fetched_at": "2026-08-27T10:33:44Z"
+        },
+        {
+          "url": "http://www.city.sendai.jp/shise/zaise/index.html",
+          "observed_on": "http://www.city.sendai.jp/",
+          "sha256": "a0b604d67435da73560fc4cd4211d51f22ed57dec69f4e1d209458e799b81bbd",
+          "fetched_at": "2026-08-27T10:33:44Z"
+        },
+        {
+          "url": "https://www.city.sendai.jp/gyozaise/shise/zaise/zaimu/zaise/zaise/documents/sendaishiyakusyo_keieiplan_r4_r8_gaiyou_r4_3.pdf",
+          "observed_on": "https://www.city.sendai.jp/gyozaise/shise/zaise/zaimu/zaise/zaise/index.html",
+          "sha256": "e113b36172c68ce5816fd450b2734853c87502f446063e867b1b60e48363dc76",
+          "fetched_at": "2026-08-27T13:27:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.sendai.jp/shise/zaise/index.html (label: 財政・計画・行財政改革) 入口 https://www.city.sendai.jp/shise/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（sendaishiyakusyo_keieiplan_r4_r8_gaiyou_r4_3.pdf「仙台市役所経営プラン（令和4年度～令和8年度）概要版（PDF：1,854KB）」, sha256:e113b361）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sendai.jp/shise/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sendai.jp/shise/zaise/index.html",
@@ -90,9 +102,21 @@
           "observed_on": "https://www.city.sendai.jp/shise/zaise/index.html",
           "sha256": "a0b604d67435da73560fc4cd4211d51f22ed57dec69f4e1d209458e799b81bbd",
           "fetched_at": "2026-08-27T10:33:44Z"
+        },
+        {
+          "url": "http://www.city.sendai.jp/shise/zaise/index.html",
+          "observed_on": "http://www.city.sendai.jp/",
+          "sha256": "a0b604d67435da73560fc4cd4211d51f22ed57dec69f4e1d209458e799b81bbd",
+          "fetched_at": "2026-08-27T10:33:44Z"
+        },
+        {
+          "url": "https://www.city.sendai.jp/gyozaise/shise/zaise/zaimu/zaise/zaise/documents/sendaishiyakusyo_keieiplan_r4_r8_gaiyou_r4_3.pdf",
+          "observed_on": "https://www.city.sendai.jp/gyozaise/shise/zaise/zaimu/zaise/zaise/index.html",
+          "sha256": "e113b36172c68ce5816fd450b2734853c87502f446063e867b1b60e48363dc76",
+          "fetched_at": "2026-08-27T13:27:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.sendai.jp/shise/zaise/index.html (label: 財政・計画・行財政改革) 入口 https://www.city.sendai.jp/shise/zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（sendaishiyakusyo_keieiplan_r4_r8_gaiyou_r4_3.pdf「仙台市役所経営プラン（令和4年度～令和8年度）概要版（PDF：1,854KB）」, sha256:e113b361）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     }
   }
 }

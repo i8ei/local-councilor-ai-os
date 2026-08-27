@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.sammu/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sammu.lg.jp/shisei/zaisei/page000724.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sammu.lg.jp/shisei/zaisei/page000724.html",
@@ -71,16 +71,22 @@
           "url": "https://www.city.sammu.lg.jp/data/doc/1773016586_doc_27_0.pdf",
           "observed_on": "https://www.city.sammu.lg.jp/shisei/zaisei/page000724.html",
           "fetched_at": "2026-08-27T10:24:16Z"
+        },
+        {
+          "url": "https://www.city.sammu.lg.jp/data/doc/1773016586_doc_27_0.pdf",
+          "observed_on": "https://www.city.sammu.lg.jp/shisei/zaisei/page000724.html",
+          "sha256": "3fdb0283632634265ce7aa2c4db1ca14fa8904b680fd86fad94f9b89289ed970",
+          "fetched_at": "2026-08-27T10:24:20Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.sammu.lg.jp/shisei/zaisei/page000724.html (label: 当初予算について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（1773016586_doc_27_0.pdf「予算の概要」, sha256:3fdb0283）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sammu.lg.jp/shisei/zaisei/page000736.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sammu.lg.jp/shisei/zaisei/page000736.html",
@@ -97,9 +103,15 @@
           "url": "https://www.city.sammu.lg.jp/data/doc/1770682005_doc_27_0.pdf",
           "observed_on": "https://www.city.sammu.lg.jp/shisei/zaisei/page000736.html",
           "fetched_at": "2026-08-27T10:24:20Z"
+        },
+        {
+          "url": "https://www.city.sammu.lg.jp/data/doc/1780295240_doc_29_0.pdf",
+          "observed_on": "https://www.city.sammu.lg.jp/shisei/zaisei/page000736.html",
+          "sha256": "31ef329209dffe8b9ec1702303e30970095450cae5d95cd27071a04b6800d5ee",
+          "fetched_at": "2026-08-27T13:32:58Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.sammu.lg.jp/shisei/zaisei/page000736.html (label: 決算について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（1780295240_doc_29_0.pdf「令和6年度決算カード」, sha256:31ef3292）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

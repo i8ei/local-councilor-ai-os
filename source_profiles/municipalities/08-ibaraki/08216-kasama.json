@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.kasama.lg.jp/page/page007854.html (label: 笠間市 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kasama.lg.jp/page/dir004197.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kasama.lg.jp/page/dir004197.html",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.kasama.lg.jp/page/dir004197.html",
           "sha256": "db9ec9a747710e1f865e8225a2d0ca0a934f3ee6e7f5d92942d67da989044f21",
           "fetched_at": "2026-08-27T10:17:22Z"
+        },
+        {
+          "url": "http://www.city.kasama.lg.jp/page/dir004197.html",
+          "observed_on": "http://www.city.kasama.lg.jp/",
+          "sha256": "db9ec9a747710e1f865e8225a2d0ca0a934f3ee6e7f5d92942d67da989044f21",
+          "fetched_at": "2026-08-27T10:17:22Z"
+        },
+        {
+          "url": "https://www.city.kasama.lg.jp/data/doc/1771381526_doc_20_0.pdf",
+          "observed_on": "https://www.city.kasama.lg.jp/page/page002598.html",
+          "sha256": "4a06e1b8741478aed5629e78d70b3be4ca45f3b6bc0225c7aeed9fd52f1be67e",
+          "fetched_at": "2026-08-27T13:30:09Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kasama.lg.jp/page/dir004197.html (label: 予算) 入口 https://www.city.kasama.lg.jp/page/dir004197.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasama.lg.jp/page/dir004197.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1771381526_doc_20_0.pdf「予算概要」, sha256:4a06e1b8）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kasama.lg.jp/page/dir009331.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kasama.lg.jp/page/dir009331.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.kasama.lg.jp/page/dir009331.html",
           "sha256": "3f5ae698883edd688bcac6467550886ef26c4365c156345af4d66f567599189c",
           "fetched_at": "2026-08-27T10:17:25Z"
+        },
+        {
+          "url": "http://www.city.kasama.lg.jp/page/dir009331.html",
+          "observed_on": "http://www.city.kasama.lg.jp/",
+          "sha256": "3f5ae698883edd688bcac6467550886ef26c4365c156345af4d66f567599189c",
+          "fetched_at": "2026-08-27T10:17:25Z"
+        },
+        {
+          "url": "https://www.city.kasama.lg.jp/data/doc/1757656067_doc_44_0.pdf",
+          "observed_on": "https://www.city.kasama.lg.jp/page/page016689.html",
+          "sha256": "aea1f1d2ccf91a10cd52df0d4b616132a5847d8e74ba316bab2713c9a8b79eab",
+          "fetched_at": "2026-08-27T13:30:13Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kasama.lg.jp/page/dir009331.html (label: 決算) 入口 https://www.city.kasama.lg.jp/page/dir009331.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasama.lg.jp/page/dir009331.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1757656067_doc_44_0.pdf「令和6年度笠間市歳入歳出決算書」, sha256:aea1f1d2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

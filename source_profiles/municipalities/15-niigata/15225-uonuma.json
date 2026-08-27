@@ -50,11 +50,11 @@
       "base_url": "https://www.city.uonuma.lg.jp/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.uonuma.lg.jp/life/6/27/129/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.uonuma.lg.jp/life/6/27/129/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.uonuma.lg.jp/life/6/27/129/",
           "sha256": "efede50f550185d264c11e269d0c91a618973c2a4cacf0ee98b299fa365f3631",
           "fetched_at": "2026-08-27T10:04:28Z"
+        },
+        {
+          "url": "https://www.city.uonuma.lg.jp/uploaded/attachment/28914.pdf",
+          "observed_on": "https://www.city.uonuma.lg.jp/page/1039033.html",
+          "sha256": "c0865a52a0f6d400c4bac8b34d9b374763825ae4d905b8a39a184bed90937b97",
+          "fetched_at": "2026-08-27T13:35:12Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.uonuma.lg.jp/life/6/27/129/ (label: 予算・決算) 入口 https://www.city.uonuma.lg.jp/life/6/27/129/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.uonuma.lg.jp/life/6/27/129/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.uonuma.lg.jp/life/6/27/129/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（28914.pdf「令和８年度 一般会計予算書 [PDFファイル／2.55MB]」, sha256:c0865a52）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.uonuma.lg.jp/life/6/27/129/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.uonuma.lg.jp/life/6/27/129/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.uonuma.lg.jp/life/6/27/129/",
           "sha256": "efede50f550185d264c11e269d0c91a618973c2a4cacf0ee98b299fa365f3631",
           "fetched_at": "2026-08-27T10:04:28Z"
+        },
+        {
+          "url": "https://www.city.uonuma.lg.jp/uploaded/attachment/26692.pdf",
+          "observed_on": "https://www.city.uonuma.lg.jp/page/1034713.html",
+          "sha256": "21bb8ddce2c1dc9f7042e00c435009de1ea7446e76015c07197af70c312d7e64",
+          "fetched_at": "2026-08-27T13:35:16Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.uonuma.lg.jp/life/6/27/129/ (label: 予算・決算) 入口 https://www.city.uonuma.lg.jp/life/6/27/129/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.uonuma.lg.jp/life/6/27/129/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.uonuma.lg.jp/life/6/27/129/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（26692.pdf「令和6年度 一般会計決算書 [PDFファイル／4.22MB]」, sha256:21bb8ddc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kahoku/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kahoku.lg.jp/006/614/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kahoku.lg.jp/006/614/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.city.kahoku.lg.jp/006/614/index.html",
           "sha256": "5ac6930d4c4e3e048dee91660ba405fabf438d4ee73c9442484a20713d1d0706",
           "fetched_at": "2026-08-27T10:06:19Z"
+        },
+        {
+          "url": "https://www.city.kahoku.lg.jp/006/614/615/d010649_d/fil/R05yosannsyo.pdf",
+          "observed_on": "https://www.city.kahoku.lg.jp/006/614/615/d010649.html",
+          "sha256": "784a4d6a7a22e6c0fae29d56177c614c859069bbfd085d52666a8e48c520a073",
+          "fetched_at": "2026-08-27T13:35:55Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kahoku.lg.jp/006/614/index.html (label: 財政（予算・決算）) 入口 https://www.city.kahoku.lg.jp/006/614/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kahoku.lg.jp/006/614/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R05yosannsyo.pdf「令和5年度かほく市予算書(PDF形式 1,156キロバイト)」, sha256:784a4d6a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kahoku.lg.jp/006/614/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kahoku.lg.jp/006/614/index.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.city.kahoku.lg.jp/006/614/index.html",
           "sha256": "5ac6930d4c4e3e048dee91660ba405fabf438d4ee73c9442484a20713d1d0706",
           "fetched_at": "2026-08-27T10:06:19Z"
+        },
+        {
+          "url": "https://www.city.kahoku.lg.jp/006/614/616/d011612_d/fil/R06kessansyo.pdf",
+          "observed_on": "https://www.city.kahoku.lg.jp/006/614/616/d011612.html",
+          "sha256": "4e345caf68dacdeb97ffa6e51b6fa38f499cfcb73bea6ca7d6f90196c166ad60",
+          "fetched_at": "2026-08-27T13:36:00Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kahoku.lg.jp/006/614/index.html (label: 財政（予算・決算）) 入口 https://www.city.kahoku.lg.jp/006/614/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kahoku.lg.jp/006/614/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06kessansyo.pdf「令和06年度かほく市決算書(PDF形式 3,312キロバイト)」, sha256:4e345caf）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

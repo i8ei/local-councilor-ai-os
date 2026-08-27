@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/sosa/reiki_menu.html (label: 匝瑳市例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sosa.lg.jp/page/dir000091.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sosa.lg.jp/page/dir000091.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.city.sosa.lg.jp/page/dir000091.html",
           "sha256": "6597b614e6f6f63988cca194afebca7911a30d560324e146188de32e5881137c",
           "fetched_at": "2026-08-27T10:24:15Z"
+        },
+        {
+          "url": "https://www.city.sosa.lg.jp/data/doc/1777512925_doc_123_0.pdf",
+          "observed_on": "https://www.city.sosa.lg.jp/page/page007115.html",
+          "sha256": "e179427eb592c1f09faf6f72866a4fc2cac8ce88592cd7972239f60e3be1de06",
+          "fetched_at": "2026-08-27T13:32:56Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.sosa.lg.jp/page/dir000091.html (label: 財政) 入口 https://www.city.sosa.lg.jp/page/dir000091.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sosa.lg.jp/page/dir000091.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1777512925_doc_123_0.pdf「財政状況の公表」, sha256:e179427e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://town.nakatane.kagoshima.jp/koho/machinojoho/reki-jore/index.html (label: 例規・条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
           "sha256": "f3c0da810e3b2ed483797567ac68f103d8cdbf7308ac1e8c783f457752310a56",
           "fetched_at": "2026-08-27T09:40:41Z"
+        },
+        {
+          "url": "http://town.nakatane.kagoshima.jp/zaisei/machinojoho/yosan-zaise/yosan-kessan/documents/r8_toushoyosan.pdf",
+          "observed_on": "http://town.nakatane.kagoshima.jp/zaisei/machinojoho/yosan-zaise/yosan-kessan/yosan.html",
+          "sha256": "0a2c3f2b98c37899e6812fdb33c940134678478a3ef76d0d8a18836fc84368d9",
+          "fetched_at": "2026-08-27T13:47:50Z"
         }
       ],
-      "notes": "Observed budget link at http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html (label: 予算・財政) 入口 http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_toushoyosan.pdf「当初予算（PDF：2,889KB）」, sha256:0a2c3f2b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

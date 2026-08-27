@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（22694.pdf「令和8年度 一般会計当初予算書 [PDFファイル／13MB]」, sha256:f4603566）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.umi.lg.jp/life/8/44/188/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.umi.lg.jp/life/8/44/188/",
@@ -91,9 +91,21 @@
           "observed_on": "https://www.town.umi.lg.jp/life/8/44/188/",
           "sha256": "c861d61b78b175aafeace155060ac1f9f8989b275433c3eab1f03467a0d18ac8",
           "fetched_at": "2026-08-27T09:36:22Z"
+        },
+        {
+          "url": "http://www.town.umi.lg.jp/life/8/44/188/",
+          "observed_on": "http://www.town.umi.lg.jp/",
+          "sha256": "c861d61b78b175aafeace155060ac1f9f8989b275433c3eab1f03467a0d18ac8",
+          "fetched_at": "2026-08-27T09:36:22Z"
+        },
+        {
+          "url": "https://www.town.umi.lg.jp/uploaded/attachment/21160.pdf",
+          "observed_on": "https://www.town.umi.lg.jp/soshiki/61/9330.html",
+          "sha256": "3049681a27bb881bbb461a85ae96ef0f726ebb1c2e7f0ba7cd0f54f8b130a42a",
+          "fetched_at": "2026-08-27T13:45:21Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.umi.lg.jp/life/8/44/188/ (label: 決算) 入口 https://www.town.umi.lg.jp/life/8/44/188/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.umi.lg.jp/life/8/44/188/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（21160.pdf「令和6年度 一般会計歳入歳出決算書 [PDFファイル／15.45MB]」, sha256:3049681a）にて構造マーカー（歳入・歳出・予算現額等）を確認済み。"
     }
   }
 }

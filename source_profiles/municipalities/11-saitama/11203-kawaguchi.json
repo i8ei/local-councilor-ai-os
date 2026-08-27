@@ -35,11 +35,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7FF957ED (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20900.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20900.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20900.html",
           "sha256": "383e2653c89ea79106d61acc5c3019ff4b900589d0b6425eff1b65dccb3eddbe",
           "fetched_at": "2026-08-27T10:20:29Z"
+        },
+        {
+          "url": "https://www.city.kawaguchi.lg.jp/material/files/group/9/R8_yosanhenseihosin.pdf",
+          "observed_on": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20900.html",
+          "sha256": "8f08e3a412555a327310e3a2fdf434d731dceb280771a942dedcf7b4f249a9ef",
+          "fetched_at": "2026-08-27T13:31:21Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20900.html (label: 予算) 入口 https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20900.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_yosanhenseihosin.pdf「8年度」, sha256:8f08e3a4）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20898.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20898.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20898.html",
           "sha256": "416a4067361fe40f5ff3d22a74ed53e79cd7cf77f29e4b295bbcccadac517d9f",
           "fetched_at": "2026-08-27T10:20:30Z"
+        },
+        {
+          "url": "https://www.city.kawaguchi.lg.jp/material/files/group/136/01kessanR6.pdf",
+          "observed_on": "https://www.city.kawaguchi.lg.jp/soshiki/01160/010/10/kessan06/49415.html",
+          "sha256": "066256978ccae8f61880568de965218a9d397ba058705d1aa1bd36b953fb36b0",
+          "fetched_at": "2026-08-27T13:31:27Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20898.html (label: 決算) 入口 https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20898.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（01kessanR6.pdf「一般会計 (PDFファイル: 2.1MB)」, sha256:06625697）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

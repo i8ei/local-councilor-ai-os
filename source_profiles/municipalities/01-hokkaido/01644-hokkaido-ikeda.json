@@ -46,11 +46,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
@@ -62,16 +62,22 @@
           "observed_on": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
           "sha256": "c4c83fa11f7a44b9e2b1bdc73dad9313e006289d507a2a200652667c235ac8a3",
           "fetched_at": "2026-08-27T10:31:33Z"
+        },
+        {
+          "url": "https://www.town.hokkaido-ikeda.lg.jp/files/00014700/00014721/%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%EF%BC%88%E5%BD%93%E5%88%9D%EF%BC%89.pdf",
+          "observed_on": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/yosan/2026.html",
+          "sha256": "4f83e43b17f68fd52d8798a2049c2f4faed4149ebdb0a522b6c7d6ff173a3aae",
+          "fetched_at": "2026-08-27T13:27:08Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/ (label: まちの財政) 入口 https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%EF%BC%88%E5%BD%93%E5%88%9D%EF%BC%89.pdf「一般会計予算」, sha256:4f83e43b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
@@ -83,9 +89,15 @@
           "observed_on": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/",
           "sha256": "c4c83fa11f7a44b9e2b1bdc73dad9313e006289d507a2a200652667c235ac8a3",
           "fetched_at": "2026-08-27T10:31:33Z"
+        },
+        {
+          "url": "https://www.town.hokkaido-ikeda.lg.jp/files/00015000/00015063/20260723141538.pdf",
+          "observed_on": "https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/kessan/tihousyouhizei.html",
+          "sha256": "c44f8a915310ba8894ef7d34908b0732035fab58b8205e16dcb6e880777a6565",
+          "fetched_at": "2026-08-27T13:27:08Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/ (label: まちの財政) 入口 https://www.town.hokkaido-ikeda.lg.jp/machi/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20260723141538.pdf「令和6年度決算 地方消費税交付金（社会保障財源化分）の使途状況」, sha256:c44f8a91）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

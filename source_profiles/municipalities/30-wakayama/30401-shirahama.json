@@ -42,11 +42,11 @@
       "base_url": "https://krr324.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shirahama.wakayama.jp/gyousei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shirahama.wakayama.jp/gyousei/zaisei/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.shirahama.wakayama.jp/gyousei/zaisei/index.html",
           "sha256": "bcb123ff6c8a1773af1e40259194a174220f9cc6d9ec34323abdb8fc625e1091",
           "fetched_at": "2026-08-27T09:53:45Z"
+        },
+        {
+          "url": "https://www.town.shirahama.wakayama.jp/material/files/group/7/R08ippan.pdf",
+          "observed_on": "https://www.town.shirahama.wakayama.jp/gyousei/zaisei/1452760032627.html",
+          "sha256": "815456c018e579e8cc99f9ebb832aa1a1b290323774e77f4ad55ddc1c9ea6028",
+          "fetched_at": "2026-08-27T13:41:52Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shirahama.wakayama.jp/gyousei/zaisei/index.html (label: 財政) 入口 https://www.town.shirahama.wakayama.jp/gyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shirahama.wakayama.jp/gyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R08ippan.pdf「令和8年度一般会計予算書 (PDFファイル: 898.0KB)」, sha256:815456c0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

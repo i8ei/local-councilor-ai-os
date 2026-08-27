@@ -35,26 +35,38 @@
       "base_url": "https://www.town.yuza.yamagata.jp/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yuza.yamagata.jp/archive/contents-1154",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yuza.yamagata.jp/archive/contents-1154",
           "observed_on": "https://www.town.yuza.yamagata.jp/genre/service",
           "fetched_at": "2026-08-27T07:50:11Z"
+        },
+        {
+          "url": "https://www.town.yuza.yamagata.jp/archive/contents-1154",
+          "observed_on": "http://www.town.yuza.yamagata.jp/",
+          "sha256": "d26b4a136f56041f1302e7a1dd68b49457ad661ee7974d1843913672deca48d2",
+          "fetched_at": "2026-08-27T10:36:36Z"
+        },
+        {
+          "url": "https://www.town.yuza.yamagata.jp/uploads/public/archive_0000001152_00/R7_toushoyosangaiyo.pdf",
+          "observed_on": "https://www.town.yuza.yamagata.jp/archive/contents-1154",
+          "sha256": "355b16b8d840ffd4a199d878acb77d7fd4d03a43011193d9df4aea5ccf2c4e46",
+          "fetched_at": "2026-08-27T13:29:09Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.yuza.yamagata.jp/archive/contents-1154 (label: 一般会計当初予算の概要について)"
+      "notes": "deepest_doc=P1。budget文書（R7_toushoyosangaiyo.pdf「令和7年度一般会計当初予算の概要について（PDF形式）」, sha256:355b16b8）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yuza.yamagata.jp/archive/p20250501105129",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yuza.yamagata.jp/archive/p20250501105129",
@@ -66,9 +78,15 @@
           "observed_on": "https://www.town.yuza.yamagata.jp/archive/p20250501105129",
           "sha256": "fb1d7382768875893cbefa7cb31b050133b79e8fe4cd1f62817a77a4d86d7d23",
           "fetched_at": "2026-08-27T10:36:38Z"
+        },
+        {
+          "url": "https://www.town.yuza.yamagata.jp/uploads/public/archive_0000001151_00/R6_zaiseijokyosiryosyu0324.xlsx",
+          "observed_on": "https://www.town.yuza.yamagata.jp/archive/contents-1153",
+          "sha256": "80e0739ccb9b1b2b9ede11ce687e7bc10c3f22d9bbaab16fa5d916ea7b4b201a",
+          "fetched_at": "2026-08-27T13:29:12Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.yuza.yamagata.jp/archive/p20250501105129 (label: 令和7年度(2025)遊佐町の主要施策) 入口 https://www.town.yuza.yamagata.jp/archive/p20250501105129 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_zaiseijokyosiryosyu0324.xlsx「令和6年度財政状況資料集（Excel形式）」, sha256:80e0739c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

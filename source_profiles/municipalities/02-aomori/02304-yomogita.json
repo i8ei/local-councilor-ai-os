@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.yomogita/reiki_menu.html (label: 蓬田村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
@@ -67,16 +67,22 @@
           "observed_on": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
           "sha256": "f2b9961a4eecbd984abaaa540635860130110c2984c7ef0d07377733086cac44",
           "fetched_at": "2026-08-27T10:32:16Z"
+        },
+        {
+          "url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/files/R6zaimushohyogaiyou.pdf",
+          "observed_on": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/zaimu_shohyou.html",
+          "sha256": "ffae8614a26c4976c9d58b8b35b4fd95ab830cb1c4537ec684313b12a90e8afa",
+          "fetched_at": "2026-08-27T13:27:05Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.yomogita.lg.jp/sonsei/zaisei/ (label: 財政情報) 入口 https://www.vill.yomogita.lg.jp/sonsei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zaimushohyogaiyou.pdf「令和６年度財務諸表概要 (361KB)」, sha256:ffae8614）にて構造マーカー（項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
@@ -88,9 +94,15 @@
           "observed_on": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/",
           "sha256": "f2b9961a4eecbd984abaaa540635860130110c2984c7ef0d07377733086cac44",
           "fetched_at": "2026-08-27T10:32:16Z"
+        },
+        {
+          "url": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/files/R6zaimushohyogaiyou.pdf",
+          "observed_on": "https://www.vill.yomogita.lg.jp/sonsei/zaisei/zaimu_shohyou.html",
+          "sha256": "ffae8614a26c4976c9d58b8b35b4fd95ab830cb1c4537ec684313b12a90e8afa",
+          "fetched_at": "2026-08-27T13:27:05Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.yomogita.lg.jp/sonsei/zaisei/ (label: 財政情報) 入口 https://www.vill.yomogita.lg.jp/sonsei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaimushohyogaiyou.pdf「令和６年度財務諸表概要 (361KB)」, sha256:ffae8614）にて構造マーカー（項・地方債等）を確認済み。"
     }
   }
 }

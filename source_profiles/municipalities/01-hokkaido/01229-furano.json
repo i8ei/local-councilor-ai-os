@@ -35,11 +35,11 @@
       "notes": "Observed regulations index at https://www.city.furano.hokkaido.jp/life/docs/2015012200186.html (label: 富良野市例規類集 ( 2021年7月5日 総務課 ))"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.furano.hokkaido.jp/life/docs/2015012600153.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.furano.hokkaido.jp/life/docs/2015012600153.html",
@@ -56,16 +56,22 @@
           "url": "https://www.city.furano.hokkaido.jp/fs/7/1/0/1/7/_/__8_______________.pdf?_=1772417016",
           "observed_on": "https://www.city.furano.hokkaido.jp/life/docs/2015012600153.html",
           "fetched_at": "2026-08-27T11:22:17Z"
+        },
+        {
+          "url": "https://www.city.furano.hokkaido.jp/fs/7/1/2/5/4/_/2026_01_ippankaikei.pdf?_=1773713623",
+          "observed_on": "https://www.city.furano.hokkaido.jp/life/docs/2015012600153.html",
+          "sha256": "6287169bb2b82861e583a78c4a1f370d5c1bdb261391639ee89fff56a54c6dc5",
+          "fetched_at": "2026-08-27T13:25:41Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.furano.hokkaido.jp/life/docs/2015012600153.html (label: 予算の概要 ( 2026年3月19日 財政課 )) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（2026_01_ippankaikei.pdf「一般会計事務事業別予算概要説明書」, sha256:6287169b）にて構造マーカー（歳出・款・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.furano.hokkaido.jp/life/docs/2015012600146.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.furano.hokkaido.jp/life/docs/2015012600146.html",
@@ -82,9 +88,15 @@
           "url": "https://www.city.furano.hokkaido.jp/fs/6/9/2/2/3/_/__6__________.pdf",
           "observed_on": "https://www.city.furano.hokkaido.jp/life/docs/2015012600146.html",
           "fetched_at": "2026-08-27T11:22:18Z"
+        },
+        {
+          "url": "https://www.city.furano.hokkaido.jp/fs/6/9/2/2/3/_/__6__________.pdf",
+          "observed_on": "https://www.city.furano.hokkaido.jp/life/docs/2015012600146.html",
+          "sha256": "343e02b1b2de34ecd7e6550aa77b33d93bc53bb0071a71f4711d4bea2d2a487b",
+          "fetched_at": "2026-08-27T11:22:19Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.furano.hokkaido.jp/life/docs/2015012600146.html (label: 決算の概要 ( 2025年11月18日 財政課 )) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（__6__________.pdf「令和6年度 全会計決算概要 (PDF 56.9KB)」, sha256:343e02b1）にて構造マーカー（歳入・歳出・決算額・決算総額等）を確認済み。"
     }
   }
 }

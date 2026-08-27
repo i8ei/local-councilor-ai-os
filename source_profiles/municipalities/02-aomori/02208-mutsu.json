@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.city.mutsu.lg.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2026-0331-1009-29.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2026-0331-1009-29.html",
@@ -69,16 +69,28 @@
           "url": "https://www.city.mutsu.lg.jp/government/gyosei/zaisei/files/R8_tousyogaiyou.pdf",
           "observed_on": "https://www.city.mutsu.lg.jp/government/gyosei/zaisei/2026-0331-1009-29.html",
           "fetched_at": "2026-08-27T11:23:36Z"
+        },
+        {
+          "url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2026-0331-1009-29.html",
+          "observed_on": "http://www.city.mutsu.lg.jp/",
+          "sha256": "313c71d7d2182e050697b1964979ede71143d70da84d805363b518e680a4264e",
+          "fetched_at": "2026-08-27T10:32:05Z"
+        },
+        {
+          "url": "https://www.city.mutsu.lg.jp/government/gyosei/zaisei/files/R8_tousyogaiyou.pdf",
+          "observed_on": "https://www.city.mutsu.lg.jp/government/gyosei/zaisei/2026-0331-1009-29.html",
+          "sha256": "4791215fdeb6faf4642c31a632c98b28382b04b9e2951320196ffc7b2636f812",
+          "fetched_at": "2026-08-27T11:23:36Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2026-0331-1009-29.html (label: 令和８年度予算が成立しました) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8_tousyogaiyou.pdf「令和８年度一般会計当初予算（概要） (976KB)」, sha256:4791215f）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html",
@@ -90,9 +102,21 @@
           "observed_on": "https://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html",
           "sha256": "dd06d7cc309540de0095379c2f03b72f816c35e666cfb7262a086fae3cb74cee",
           "fetched_at": "2026-08-27T10:32:08Z"
+        },
+        {
+          "url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html",
+          "observed_on": "http://www.city.mutsu.lg.jp/",
+          "sha256": "dd06d7cc309540de0095379c2f03b72f816c35e666cfb7262a086fae3cb74cee",
+          "fetched_at": "2026-08-27T10:32:08Z"
+        },
+        {
+          "url": "https://www.city.mutsu.lg.jp/government/gyosei/zaisei/files/R6syuyou01.pdf",
+          "observed_on": "https://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html",
+          "sha256": "4716e9228423be1fd62fb821196a608e9e1cf1a8ff6bc92963df60c6a4a96adf",
+          "fetched_at": "2026-08-27T13:27:03Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html (label: 令和6年度主要施策の実績報告書) 入口 https://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6syuyou01.pdf「表紙・目次～財政の状況について (3730KB)」, sha256:4716e922）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

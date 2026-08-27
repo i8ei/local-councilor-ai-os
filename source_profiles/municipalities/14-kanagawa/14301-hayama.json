@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A802634AF (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hayama.lg.jp/soshiki/zaisei/1718.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hayama.lg.jp/soshiki/zaisei/1718.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.town.hayama.lg.jp/soshiki/zaisei/1718.html",
           "sha256": "80a735f4cc06fe117c82fb005c4c110a2d36df5f7118b4ed3fd9d35709f50a3a",
           "fetched_at": "2026-08-27T10:27:08Z"
+        },
+        {
+          "url": "http://www.town.hayama.lg.jp/soshiki/zaisei/1718.html",
+          "observed_on": "http://www.town.hayama.lg.jp/",
+          "sha256": "80a735f4cc06fe117c82fb005c4c110a2d36df5f7118b4ed3fd9d35709f50a3a",
+          "fetched_at": "2026-08-27T10:27:08Z"
+        },
+        {
+          "url": "https://www.town.hayama.lg.jp/material/files/group/3/mid_term_fiscal_2025-2032.pdf",
+          "observed_on": "https://www.town.hayama.lg.jp/soshiki/zaisei/1101.html",
+          "sha256": "8820b4e4733e39b23d3d9ceabbf5fa0d42e130a6358c114b60528d663a95778c",
+          "fetched_at": "2026-08-27T13:34:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hayama.lg.jp/soshiki/zaisei/1718.html (label: ふるさと納税 Tax payment) 入口 https://www.town.hayama.lg.jp/soshiki/zaisei/1718.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hayama.lg.jp/soshiki/zaisei/1718.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（mid_term_fiscal_2025-2032.pdf「中期財政見通し（2025～2032、令和7～14年度） (PDFファイル: 1.5MB)」, sha256:8820b4e4）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hayama.lg.jp/soshiki/zaisei/1718.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hayama.lg.jp/soshiki/zaisei/1718.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.town.hayama.lg.jp/soshiki/zaisei/1718.html",
           "sha256": "80a735f4cc06fe117c82fb005c4c110a2d36df5f7118b4ed3fd9d35709f50a3a",
           "fetched_at": "2026-08-27T10:27:08Z"
+        },
+        {
+          "url": "http://www.town.hayama.lg.jp/soshiki/zaisei/1718.html",
+          "observed_on": "http://www.town.hayama.lg.jp/",
+          "sha256": "80a735f4cc06fe117c82fb005c4c110a2d36df5f7118b4ed3fd9d35709f50a3a",
+          "fetched_at": "2026-08-27T10:27:08Z"
+        },
+        {
+          "url": "https://www.town.hayama.lg.jp/material/files/group/3/mid_term_fiscal_2025-2032.pdf",
+          "observed_on": "https://www.town.hayama.lg.jp/soshiki/zaisei/1101.html",
+          "sha256": "8820b4e4733e39b23d3d9ceabbf5fa0d42e130a6358c114b60528d663a95778c",
+          "fetched_at": "2026-08-27T13:34:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hayama.lg.jp/soshiki/zaisei/1718.html (label: ふるさと納税 Tax payment) 入口 https://www.town.hayama.lg.jp/soshiki/zaisei/1718.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hayama.lg.jp/soshiki/zaisei/1718.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（mid_term_fiscal_2025-2032.pdf「中期財政見通し（2025～2032、令和7～14年度） (PDFファイル: 1.5MB)」, sha256:8820b4e4）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A85833115 (label: 例規集(条例・規則等) （外部リンク）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html",
           "sha256": "f9ef287d3b68a28b9e3fbb579139af5e63dd41831c676cf729e6ce39ee6063ec",
           "fetched_at": "2026-08-27T10:15:20Z"
+        },
+        {
+          "url": "http://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html",
+          "observed_on": "http://www.city.tokoname.aichi.jp/",
+          "sha256": "f9ef287d3b68a28b9e3fbb579139af5e63dd41831c676cf729e6ce39ee6063ec",
+          "fetched_at": "2026-08-27T10:15:20Z"
+        },
+        {
+          "url": "https://www.city.tokoname.aichi.jp/_res/projects/default_project/_page_/001/001/441/shintaikou.pdf",
+          "observed_on": "https://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/1001435/1001441.html",
+          "sha256": "4ae4695ac180a738a09d290ddf5ab5919123eac4a3ded0c00c65cef0a9b973b5",
+          "fetched_at": "2026-08-27T13:38:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html (label: 行財政改革) 入口 https://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（shintaikou.pdf「常滑市新行財政改革大綱（平成18年～21年） （PDF 57.1KB）」, sha256:4ae4695a）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html",
           "sha256": "f9ef287d3b68a28b9e3fbb579139af5e63dd41831c676cf729e6ce39ee6063ec",
           "fetched_at": "2026-08-27T10:15:20Z"
+        },
+        {
+          "url": "http://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html",
+          "observed_on": "http://www.city.tokoname.aichi.jp/",
+          "sha256": "f9ef287d3b68a28b9e3fbb579139af5e63dd41831c676cf729e6ce39ee6063ec",
+          "fetched_at": "2026-08-27T10:15:20Z"
+        },
+        {
+          "url": "https://www.city.tokoname.aichi.jp/_res/projects/default_project/_page_/001/001/441/syuhou.pdf",
+          "observed_on": "https://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/1001435/1001441.html",
+          "sha256": "df2e0f61c9f44d5802744f98726d51899df1584160256a9bf7b9f559584ed1ea",
+          "fetched_at": "2026-08-27T13:38:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html (label: 行財政改革) 入口 https://www.city.tokoname.aichi.jp/shisei/gyoseikaikaku/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（syuhou.pdf「行財政改革アクションプログラム推進手法（平成20年～23年） （PDF 116.5KB）」, sha256:df2e0f61）にて構造マーカー（項・決算額等）を確認済み。"
     }
   }
 }

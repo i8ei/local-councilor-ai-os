@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at https://www.town.kaminokawa.lg.jp/0039/genre1-0-001.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html",
@@ -52,16 +52,22 @@
           "observed_on": "https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html",
           "sha256": "cee064d1b8e92e5e9b768d61560eb89bcd44a479ed7818c32c75b5ea8d333158",
           "fetched_at": "2026-08-27T10:18:12Z"
+        },
+        {
+          "url": "https://www.town.kaminokawa.lg.jp/manage/contents/upload/69f3eed0e95d0.pdf",
+          "observed_on": "https://www.town.kaminokawa.lg.jp/0174/info-0000000652-0.html",
+          "sha256": "ae2c0c2503cbef81fb1c13e3d06818a010886b55954dc185d3b8245f00d3d962",
+          "fetched_at": "2026-08-27T13:30:53Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html (label: 予算・決算) 入口 https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（69f3eed0e95d0.pdf「財政事情公表（令和7(2025)年度下半期）(pdf 132 KB)」, sha256:ae2c0c25）にて構造マーカー（歳入・歳出・項・予算現額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html",
@@ -73,9 +79,15 @@
           "observed_on": "https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html",
           "sha256": "cee064d1b8e92e5e9b768d61560eb89bcd44a479ed7818c32c75b5ea8d333158",
           "fetched_at": "2026-08-27T10:18:12Z"
+        },
+        {
+          "url": "https://www.town.kaminokawa.lg.jp/manage/contents/upload/69f3eed0e95d0.pdf",
+          "observed_on": "https://www.town.kaminokawa.lg.jp/0174/info-0000000652-0.html",
+          "sha256": "ae2c0c2503cbef81fb1c13e3d06818a010886b55954dc185d3b8245f00d3d962",
+          "fetched_at": "2026-08-27T13:30:53Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html (label: 予算・決算) 入口 https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kaminokawa.lg.jp/0172/genre2-0-001.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（69f3eed0e95d0.pdf「財政事情公表（令和7(2025)年度下半期）(pdf 132 KB)」, sha256:ae2c0c25）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

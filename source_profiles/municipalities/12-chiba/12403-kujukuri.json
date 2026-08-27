@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kujukuri/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html",
           "sha256": "0146c7fd47622140d191b98d90f81114b46104d77d028da657cf7f446f27a829",
           "fetched_at": "2026-08-27T10:25:11Z"
+        },
+        {
+          "url": "https://www.town.kujukuri.chiba.jp/cmsfiles/contents/0000002/2714/R8.9hosei.pdf",
+          "observed_on": "https://www.town.kujukuri.chiba.jp/0000002714.html",
+          "sha256": "c91eb2e0b7387195fe99142bcd380c2201ba49cb8acc13a9d30775ba26c520c2",
+          "fetched_at": "2026-08-27T13:33:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html (label: 行財政) 入口 https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8.9hosei.pdf「令和8年度9月補正予算書 (ファイル名：R8.9hosei.pdf サイズ：2.73MB)」, sha256:c91eb2e0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html",
           "sha256": "0146c7fd47622140d191b98d90f81114b46104d77d028da657cf7f446f27a829",
           "fetched_at": "2026-08-27T10:25:11Z"
+        },
+        {
+          "url": "https://www.town.kujukuri.chiba.jp/cmsfiles/contents/0000003/3292/124036_kujukuri_2024.xlsx",
+          "observed_on": "https://www.town.kujukuri.chiba.jp/0000003292.html",
+          "sha256": "890124d9e82ce8bf30f8cd1b7202e83a5427da383cdb8e9254e6fe1fd5cc40fd",
+          "fetched_at": "2026-08-27T13:33:07Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html (label: 行財政) 入口 https://www.town.kujukuri.chiba.jp/category/5-5-2-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（124036_kujukuri_2024.xlsx「令和6年度財政状況資料集 (ファイル名：124036_kujukuri_2024.xlsx サイズ：553.71KB)」, sha256:890124d9）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

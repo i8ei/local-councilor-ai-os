@@ -53,11 +53,11 @@
       "index_url": "http://www.city-nakatsu.jp/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/",
@@ -69,9 +69,21 @@
           "observed_on": "https://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/",
           "sha256": "257c3916a98bb5369089bb2feb47a31734515a1e581898df29ed08905587cd8a",
           "fetched_at": "2026-08-27T09:39:11Z"
+        },
+        {
+          "url": "http://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/",
+          "observed_on": "http://www.city-nakatsu.jp/",
+          "sha256": "257c3916a98bb5369089bb2feb47a31734515a1e581898df29ed08905587cd8a",
+          "fetched_at": "2026-08-27T09:39:11Z"
+        },
+        {
+          "url": "https://www.city-nakatsu.jp/doc/2026031800080/file_contents/file_2026630214233_1.pdf",
+          "observed_on": "https://www.city-nakatsu.jp/doc/2026031800080/",
+          "sha256": "6bcc06d2c0dbf3109bba333fa77c235b62a493170960e3d316436fbdefdf25a2",
+          "fetched_at": "2026-08-27T13:46:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/ (label: 市の財政状況) 入口 https://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（file_2026630214233_1.pdf「一般会計補正予算書[PDF：471KB]」, sha256:6bcc06d2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

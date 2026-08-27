@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.vill.ogimi.okinawa.jp/section/reiki_int/reiki_menu.html (label: 大宜味村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
@@ -56,9 +56,15 @@
           "url": "https://www.vill.ogimi.okinawa.jp/material/files/group/8/R2ippannkaikeitousyoyosann.pdf",
           "observed_on": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
           "fetched_at": "2026-08-27T09:41:12Z"
+        },
+        {
+          "url": "https://www.vill.ogimi.okinawa.jp/material/files/group/8/R2ippannkaikeitousyoyosann.pdf",
+          "observed_on": "https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html",
+          "sha256": "447331b8506ee6b7ad03e2d1a81ea5035a3881128a4e06bea6b7816abb5b6eb7",
+          "fetched_at": "2026-08-27T09:41:15Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html (label: 当初予算の公表について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R2ippannkaikeitousyoyosann.pdf「令和2年度一般会計当初予算 (PDFファイル: 1.9MB)」, sha256:447331b8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

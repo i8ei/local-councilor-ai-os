@@ -37,11 +37,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.muko.kyoto.jp/life/5/23/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.muko.kyoto.jp/life/5/23/",
@@ -53,9 +53,21 @@
           "observed_on": "https://www.city.muko.kyoto.jp/life/5/23/",
           "sha256": "5237a0956d37dd1484f05de0ebc5ed14e5a7372af6350129dfa2477952d1d9f1",
           "fetched_at": "2026-08-27T09:50:00Z"
+        },
+        {
+          "url": "http://www.city.muko.kyoto.jp/life/5/23/",
+          "observed_on": "http://www.city.muko.kyoto.jp/",
+          "sha256": "5237a0956d37dd1484f05de0ebc5ed14e5a7372af6350129dfa2477952d1d9f1",
+          "fetched_at": "2026-08-27T09:50:00Z"
+        },
+        {
+          "url": "https://www.city.muko.kyoto.jp/uploaded/attachment/20540.pdf",
+          "observed_on": "https://www.city.muko.kyoto.jp/soshiki/5/16615.html",
+          "sha256": "850a0f8a0b428cb3e810531613d4b7334f34cf97f42c0c2950b1c63f10317324",
+          "fetched_at": "2026-08-27T13:39:40Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.muko.kyoto.jp/life/5/23/ (label: 市の財政（予算）) 入口 https://www.city.muko.kyoto.jp/life/5/23/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.muko.kyoto.jp/life/5/23/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20540.pdf「令和8年度当初予算主要事業 （PDFファイル：6.53MB）」, sha256:850a0f8a）にて構造マーカー（予算額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

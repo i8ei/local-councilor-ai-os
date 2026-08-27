@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=39&cd_type=1 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.okushiri.lg.jp/hotnews/category/161.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.okushiri.lg.jp/hotnews/category/161.html",
@@ -45,16 +45,22 @@
           "observed_on": "https://www.town.okushiri.lg.jp/hotnews/category/161.html",
           "sha256": "d761c8edd2439bf260a1add6a2bf20f9f0d47e31775541931e9cb9217dc33c30",
           "fetched_at": "2026-08-27T10:29:41Z"
+        },
+        {
+          "url": "https://www.town.okushiri.lg.jp/hotnews/files/00003000/00003042/R6.xlsx",
+          "observed_on": "https://www.town.okushiri.lg.jp/hotnews/detail/00003042.html",
+          "sha256": "34261ead8d7117f3d7fa54180082b4884532cb709a38835564dc86e058f96d6b",
+          "fetched_at": "2026-08-27T13:25:53Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.okushiri.lg.jp/hotnews/category/161.html (label: 財政・予算・決算) 入口 https://www.town.okushiri.lg.jp/hotnews/category/161.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.okushiri.lg.jp/hotnews/category/161.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6.xlsx「・令和 ６ 年度 奥尻町財政状況資料集 （Excel・581KB)」, sha256:34261ead）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.okushiri.lg.jp/hotnews/category/161.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.okushiri.lg.jp/hotnews/category/161.html",
@@ -66,9 +72,15 @@
           "observed_on": "https://www.town.okushiri.lg.jp/hotnews/category/161.html",
           "sha256": "d761c8edd2439bf260a1add6a2bf20f9f0d47e31775541931e9cb9217dc33c30",
           "fetched_at": "2026-08-27T10:29:41Z"
+        },
+        {
+          "url": "https://www.town.okushiri.lg.jp/hotnews/files/00003000/00003042/R6.xlsx",
+          "observed_on": "https://www.town.okushiri.lg.jp/hotnews/detail/00003042.html",
+          "sha256": "34261ead8d7117f3d7fa54180082b4884532cb709a38835564dc86e058f96d6b",
+          "fetched_at": "2026-08-27T13:25:53Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.okushiri.lg.jp/hotnews/category/161.html (label: 財政・予算・決算) 入口 https://www.town.okushiri.lg.jp/hotnews/category/161.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.okushiri.lg.jp/hotnews/category/161.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6.xlsx「・令和 ６ 年度 奥尻町財政状況資料集 （Excel・581KB)」, sha256:34261ead）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "base_url": "https://www1.g-reiki.net/city.murayama/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
@@ -63,16 +63,28 @@
           "url": "https://www.city.murayama.lg.jp:443/shisei/gikai/gikaijimu0120190906.files/20260600yosansitugi.pdf",
           "observed_on": "https://www.city.murayama.lg.jp:443/shisei/gikai/gikaijimu0120190906.html",
           "fetched_at": "2026-08-27T11:25:02Z"
+        },
+        {
+          "url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
+          "observed_on": "http://www.city.murayama.lg.jp/",
+          "sha256": "f4cfeba0d91afbfb4989b2d723bdd458302a9c62b6fa470fd4649721214f5a83",
+          "fetched_at": "2026-08-27T10:35:44Z"
+        },
+        {
+          "url": "https://www.city.murayama.lg.jp:443/shisei/gikai/gikaijimu0120190906.files/20260300tousyositugi.pdf",
+          "observed_on": "https://www.city.murayama.lg.jp:443/shisei/gikai/gikaijimu0120190906.html",
+          "sha256": "4f12a827296c37d1cc2a8b9428d1c8e145e12388c1f8d8308bf495bff9b17bfb",
+          "fetched_at": "2026-08-27T13:28:42Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html (label: 予算・決算質疑通告) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（20260300tousyositugi.pdf「令和8年3月定例会予算特別委員会（当初予算）（PDF：58KB）」, sha256:4f12a827）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
@@ -89,9 +101,21 @@
           "url": "https://www.city.murayama.lg.jp:443/shisei/gikai/gikaijimu0120190906.files/20250900kessannsitugi.pdf",
           "observed_on": "https://www.city.murayama.lg.jp:443/shisei/gikai/gikaijimu0120190906.html",
           "fetched_at": "2026-08-27T11:25:03Z"
+        },
+        {
+          "url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
+          "observed_on": "http://www.city.murayama.lg.jp/",
+          "sha256": "f4cfeba0d91afbfb4989b2d723bdd458302a9c62b6fa470fd4649721214f5a83",
+          "fetched_at": "2026-08-27T10:35:44Z"
+        },
+        {
+          "url": "https://www.city.murayama.lg.jp:443/shisei/gikai/gikaijimu0120190906.files/20250900kessannsitugi.pdf",
+          "observed_on": "https://www.city.murayama.lg.jp:443/shisei/gikai/gikaijimu0120190906.html",
+          "sha256": "d3c0d5685e8875120e92720c32efa2e7c5c4aeaf8a10737a7e22b2cd5f858561",
+          "fetched_at": "2026-08-27T11:25:04Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html (label: 予算・決算質疑通告) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（20250900kessannsitugi.pdf「令和7年9月定例会決算特別委員会（PDF：68KB）」, sha256:d3c0d568）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

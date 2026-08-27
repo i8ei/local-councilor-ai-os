@@ -86,11 +86,11 @@
       "notes": "deepest_doc=P1。budget文書（zaiseijoukyousiryousyuu2023_kousinban.xlsx「令和5年度財政状況資料集 (Excelファイル: 843.2KB)」, sha256:8b338c56）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
@@ -102,9 +102,15 @@
           "observed_on": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
           "sha256": "ff6a805294b6ef44b96fb609d309de59389b8ddb2107ef910fe44c130f4be9fc",
           "fetched_at": "2026-08-27T09:49:33Z"
+        },
+        {
+          "url": "https://www.city.ritto.lg.jp/material/files/group/4/zaiseijoukyousiryousyuu2023_kousinban.xlsx",
+          "observed_on": "https://www.city.ritto.lg.jp/soshiki/somubu/zaisei/zaisei/joukyou/16304.html",
+          "sha256": "8b338c56cc1d749bac409943dc786368bcb79fd0b646c9d41d7a6752349b37a3",
+          "fetched_at": "2026-08-27T13:39:31Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ritto.lg.jp/shisei/zaisei/index.html (label: ) 入口 https://www.city.ritto.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ritto.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijoukyousiryousyuu2023_kousinban.xlsx「令和5年度財政状況資料集 (Excelファイル: 843.2KB)」, sha256:8b338c56）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

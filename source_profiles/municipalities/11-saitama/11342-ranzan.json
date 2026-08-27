@@ -48,11 +48,11 @@
       "index_url": "https://en3-jg.d1-law.com/ranzan/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ranzan.saitama.jp/category/2-6-4-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ranzan.saitama.jp/category/2-6-4-0-0-0-0-0-0-0.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.ranzan.saitama.jp/category/2-6-4-0-0-0-0-0-0-0.html",
           "sha256": "6f02fc65d95dbe5219faaf2570da112f82c3e622ff86fadf767a57014e8aa254",
           "fetched_at": "2026-08-27T10:22:47Z"
+        },
+        {
+          "url": "http://www.town.ranzan.saitama.jp/category/2-6-4-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.ranzan.saitama.jp/",
+          "sha256": "6f02fc65d95dbe5219faaf2570da112f82c3e622ff86fadf767a57014e8aa254",
+          "fetched_at": "2026-08-27T10:22:47Z"
+        },
+        {
+          "url": "https://www.town.ranzan.saitama.jp/cmsfiles/contents/0000007/7869/R8tousyo.pdf",
+          "observed_on": "https://www.town.ranzan.saitama.jp/0000007869.html",
+          "sha256": "9a21813c0a64ab1074bd4be3cb00ad404baab1bd715787c8711753a6fe19e2e0",
+          "fetched_at": "2026-08-27T13:32:19Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ranzan.saitama.jp/category/2-6-4-0-0-0-0-0-0-0.html (label: 町の予算) 入口 https://www.town.ranzan.saitama.jp/category/2-6-4-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyo.pdf「令和8年度当初予算書(PDF形式、6.60MB)」, sha256:9a21813c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

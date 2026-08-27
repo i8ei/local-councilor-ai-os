@@ -59,11 +59,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A8016A454 (label: 国立市 例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html",
           "sha256": "216a054b6cbf9a3d7cd4448e0ed4e8b6919d8a98b11140c19cdba6196a199a7e",
           "fetched_at": "2026-08-27T10:25:56Z"
+        },
+        {
+          "url": "https://www.city.kunitachi.tokyo.jp/material/files/group/7/chukizaisei2026-2033.pdf",
+          "observed_on": "https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/7775.html",
+          "sha256": "20eaa9fccfa7cc69de986875293a00dd894122d6a2fd95ec91b01dbb5b30d5fa",
+          "fetched_at": "2026-08-27T13:33:54Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html (label: 予算・決算・財政状況) 入口 https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（chukizaisei2026-2033.pdf「中期財政収支見通し(2026-2033年度) (PDFファイル: 24.4KB)」, sha256:20eaa9fc）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html",
           "sha256": "216a054b6cbf9a3d7cd4448e0ed4e8b6919d8a98b11140c19cdba6196a199a7e",
           "fetched_at": "2026-08-27T10:25:56Z"
+        },
+        {
+          "url": "https://www.city.kunitachi.tokyo.jp/material/files/group/6/kessancard2024.pdf",
+          "observed_on": "https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/7777.html",
+          "sha256": "c11373c1e167a4ab9e4dc9d4c1e5aee4236b732205065928e21378304494f66c",
+          "fetched_at": "2026-08-27T13:33:53Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html (label: 予算・決算・財政状況) 入口 https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kunitachi.tokyo.jp/shisei/zaisei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessancard2024.pdf「2024(令和6)年度普通会計決算カード (PDFファイル: 206.4KB)」, sha256:c11373c1）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

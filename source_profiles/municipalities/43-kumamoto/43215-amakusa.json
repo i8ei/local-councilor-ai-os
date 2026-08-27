@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www2.city.amakusa.kumamoto.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.amakusa.kumamoto.jp/list00748.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.amakusa.kumamoto.jp/list00748.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.amakusa.kumamoto.jp/list00748.html",
           "sha256": "ab133677a3d2e2883ffed6e1fd4f903ee56802a0de3287507d38e59af35e67c5",
           "fetched_at": "2026-08-27T09:38:11Z"
+        },
+        {
+          "url": "https://www.city.amakusa.kumamoto.jp/kiji00314086/3_14086_75309_up_scyceax3.pdf",
+          "observed_on": "https://www.city.amakusa.kumamoto.jp/kiji00314086/index.html",
+          "sha256": "86d57f5c91dce74e8b10a96f1e2eb9ff15c12c4df576f19d2040f06ca9855435",
+          "fetched_at": "2026-08-27T13:46:02Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.amakusa.kumamoto.jp/list00748.html (label: 予算・決算) 入口 https://www.city.amakusa.kumamoto.jp/list00748.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.amakusa.kumamoto.jp/list00748.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_14086_75309_up_scyceax3.pdf「令和８年度 一般会計当初予算書（PDF：24.75メガバイト）」, sha256:86d57f5c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

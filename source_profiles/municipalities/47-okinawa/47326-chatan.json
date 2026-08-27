@@ -92,11 +92,11 @@
       "notes": "deepest_doc=P1。budget文書（R8tousyoyosan.pdf「令和8年度北谷町一般会計予算（PDF：1,498KB）」, sha256:b27dfae2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.chatan.jp/choseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.chatan.jp/choseijoho/zaisei/index.html",
@@ -108,9 +108,21 @@
           "observed_on": "https://www.chatan.jp/choseijoho/zaisei/index.html",
           "sha256": "53e957a34932320180cb28253ddb36abd0f85809354ac5b5b7cf44fa482a6907",
           "fetched_at": "2026-08-27T09:41:54Z"
+        },
+        {
+          "url": "http://www.chatan.jp/choseijoho/zaisei/index.html",
+          "observed_on": "http://www.chatan.jp/",
+          "sha256": "53e957a34932320180cb28253ddb36abd0f85809354ac5b5b7cf44fa482a6907",
+          "fetched_at": "2026-08-27T09:41:54Z"
+        },
+        {
+          "url": "https://www.chatan.jp/choseijoho/zaisei/chatan_town_finance/reiwaninennkessansyo.files/sainyuusaisyutukessansyo.pdf",
+          "observed_on": "https://www.chatan.jp/choseijoho/zaisei/chatan_town_finance/reiwaninennkessansyo.html",
+          "sha256": "8fb7968f1e214ab210b292ed1699c92fe4a45b5a195e9be8b57350f1de53174e",
+          "fetched_at": "2026-08-27T13:48:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.chatan.jp/choseijoho/zaisei/index.html (label: 財政) 入口 https://www.chatan.jp/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.chatan.jp/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.chatan.jp/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（sainyuusaisyutukessansyo.pdf「令和2年度北谷町一般会計歳入歳出決算書（PDF：893KB）」, sha256:8fb7968f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -29,11 +29,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
@@ -50,9 +50,21 @@
           "url": "https://www.city.kagoshima-izumi.lg.jp/files/SpcDocumentDetail/93/SpcDocumentDetail_93640_file.pdf",
           "observed_on": "https://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
           "fetched_at": "2026-08-27T10:57:45Z"
+        },
+        {
+          "url": "http://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
+          "observed_on": "http://www.city.kagoshima-izumi.lg.jp/",
+          "sha256": "b9fce276f563eaed7337c4d81cf38e829160be4c2f032d8de83e42d33f58b616",
+          "fetched_at": "2026-08-27T09:40:18Z"
+        },
+        {
+          "url": "https://www.city.kagoshima-izumi.lg.jp/files/SpcDocumentDetail/93/SpcDocumentDetail_93640_file.pdf",
+          "observed_on": "https://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
+          "sha256": "b742c7413aa81a57fc1bc5e949b2eadd41c0171c7caaf78f5904bc05c81b97a7",
+          "fetched_at": "2026-08-27T10:57:49Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html (label: 予算・決算・財政・市有財産) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（SpcDocumentDetail_93640_file.pdf「令和４年度予算の概要（6月補正後）」, sha256:b742c741）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

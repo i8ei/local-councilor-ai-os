@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kai/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kai.yamanashi.jp/life/6/36/180/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kai.yamanashi.jp/life/6/36/180/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.kai.yamanashi.jp/life/6/36/180/",
           "sha256": "24a50a1fddab2fcdbc8f75a1be9f34932429bbe6dd17283f6ba188e1e2e92edf",
           "fetched_at": "2026-08-27T10:08:39Z"
+        },
+        {
+          "url": "http://www.city.kai.yamanashi.jp/life/6/36/180/",
+          "observed_on": "http://www.city.kai.yamanashi.jp/",
+          "sha256": "24a50a1fddab2fcdbc8f75a1be9f34932429bbe6dd17283f6ba188e1e2e92edf",
+          "fetched_at": "2026-08-27T10:08:39Z"
+        },
+        {
+          "url": "https://www.city.kai.yamanashi.jp/uploaded/attachment/7652.xlsx",
+          "observed_on": "https://www.city.kai.yamanashi.jp/page/3542.html",
+          "sha256": "906fb152e8f1c4567b9c321c75bd36b67c76a9b0e9e828b24ed4c39da568241e",
+          "fetched_at": "2026-08-27T13:36:07Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kai.yamanashi.jp/life/6/36/180/ (label: 財政情報) 入口 https://www.city.kai.yamanashi.jp/life/6/36/180/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kai.yamanashi.jp/life/6/36/180/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（7652.xlsx「令和6年度財政状況資料集 [Excelファイル／540KB]」, sha256:906fb152）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

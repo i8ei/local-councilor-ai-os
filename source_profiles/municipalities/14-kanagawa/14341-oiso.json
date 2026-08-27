@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/oiso/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html",
           "sha256": "37493b62f75766fc8571b78b6682005e0f9255360d28c50036ebc4bc7992ebd3",
           "fetched_at": "2026-08-27T10:27:34Z"
+        },
+        {
+          "url": "http://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html",
+          "observed_on": "http://www.town.oiso.kanagawa.jp/",
+          "sha256": "37493b62f75766fc8571b78b6682005e0f9255360d28c50036ebc4bc7992ebd3",
+          "fetched_at": "2026-08-27T10:27:34Z"
+        },
+        {
+          "url": "https://www.town.oiso.kanagawa.jp/material/files/group/9/R6zaiseijoukyou.xlsx",
+          "observed_on": "https://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/zaiseijoukyou/1358728374452.html",
+          "sha256": "488097746cbcd0e7423417af769cd4407aa58f67973396158aeb25f3b974576c",
+          "fetched_at": "2026-08-27T13:34:57Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html (label: 予算・決算・財政状況) 入口 https://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zaiseijoukyou.xlsx「令和６年度財政状況一覧 (Excelファイル: 550.7KB)」, sha256:48809774）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html",
           "sha256": "37493b62f75766fc8571b78b6682005e0f9255360d28c50036ebc4bc7992ebd3",
           "fetched_at": "2026-08-27T10:27:34Z"
+        },
+        {
+          "url": "http://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html",
+          "observed_on": "http://www.town.oiso.kanagawa.jp/",
+          "sha256": "37493b62f75766fc8571b78b6682005e0f9255360d28c50036ebc4bc7992ebd3",
+          "fetched_at": "2026-08-27T10:27:34Z"
+        },
+        {
+          "url": "https://www.town.oiso.kanagawa.jp/material/files/group/9/R6zaiseijoukyou.xlsx",
+          "observed_on": "https://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/zaiseijoukyou/1358728374452.html",
+          "sha256": "488097746cbcd0e7423417af769cd4407aa58f67973396158aeb25f3b974576c",
+          "fetched_at": "2026-08-27T13:34:57Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html (label: 予算・決算・財政状況) 入口 https://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.oiso.kanagawa.jp/gyosei/yosankessanzaisai/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijoukyou.xlsx「令和６年度財政状況一覧 (Excelファイル: 550.7KB)」, sha256:48809774）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

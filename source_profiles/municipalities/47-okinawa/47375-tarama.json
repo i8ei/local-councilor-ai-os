@@ -59,11 +59,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/tarama/reiki_menu.html for 多良間村 extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
@@ -75,9 +75,15 @@
           "observed_on": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
           "sha256": "00e1938157625201650349ab3dec3b824c9297bfca7a79891c8f6337b845f315",
           "fetched_at": "2026-08-27T09:42:05Z"
+        },
+        {
+          "url": "https://www.vill.tarama.okinawa.jp/common/uploads/39_tarama.xlsx",
+          "observed_on": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/%e8%b2%a1%e6%94%bf%e7%8a%b6%e6%b3%81%e8%b3%87%e6%96%99%e9%9b%86%e3%81%ae%e5%85%ac%e8%a1%a8%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+          "sha256": "60ded41ba18a0293317aa3f2f94d08e19467bff8dbaeb5b828f9d460083c0723",
+          "fetched_at": "2026-08-27T13:48:32Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ (label: 財政 多良間村の行政財政計画、財政状況について。) 入口 https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（39_tarama.xlsx「平成30年度 財政状況資料集」, sha256:60ded41b）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

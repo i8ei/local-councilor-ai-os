@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/shiroi/reiki_menu.html (label: 条例・例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shiroi.chiba.jp/shisei/zaisei/z05/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shiroi.chiba.jp/shisei/zaisei/z05/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.shiroi.chiba.jp/shisei/zaisei/z05/index.html",
           "sha256": "df4214667cd65909bc1284d1639f6390c225d1918acfa61f8e27484f948153b0",
           "fetched_at": "2026-08-27T10:24:12Z"
+        },
+        {
+          "url": "https://www.city.shiroi.chiba.jp/material/files/group/22/R8gaiyou.pdf",
+          "observed_on": "https://www.city.shiroi.chiba.jp/shisei/zaisei/z05/16711.html",
+          "sha256": "355379e880f7973670258791d8b96e41d166f6fb5d3749671f0a8ddc8ea4527d",
+          "fetched_at": "2026-08-27T13:33:13Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.shiroi.chiba.jp/shisei/zaisei/z05/index.html (label: 予算) 入口 https://www.city.shiroi.chiba.jp/shisei/zaisei/z05/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shiroi.chiba.jp/shisei/zaisei/z05/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8gaiyou.pdf「令和8年度当初予算の概要(PDFファイル:12.6MB)」, sha256:355379e8）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shiroi.chiba.jp/shisei/zaisei/z02/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shiroi.chiba.jp/shisei/zaisei/z02/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.shiroi.chiba.jp/shisei/zaisei/z02/index.html",
           "sha256": "4cf14279a519a824a25f43ba161afd37421c77e82c267b946869e95e3f8d9344",
           "fetched_at": "2026-08-27T10:24:14Z"
+        },
+        {
+          "url": "https://www.city.shiroi.chiba.jp/material/files/group/22/shiroi-r6kessancard.pdf",
+          "observed_on": "https://www.city.shiroi.chiba.jp/shisei/zaisei/z02/1421887846357.html",
+          "sha256": "75af81aec74882a3a0d8dbb6632ee27869c3c76e73fdd8ef440f193d8df6e0e5",
+          "fetched_at": "2026-08-27T13:33:14Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.shiroi.chiba.jp/shisei/zaisei/z02/index.html (label: 決算) 入口 https://www.city.shiroi.chiba.jp/shisei/zaisei/z02/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shiroi.chiba.jp/shisei/zaisei/z02/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（shiroi-r6kessancard.pdf「決算カード(令和6年度) (PDFファイル: 244.9KB)」, sha256:75af81ae）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

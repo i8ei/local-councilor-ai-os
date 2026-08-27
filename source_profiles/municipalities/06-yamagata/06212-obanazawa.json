@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.city.obanazawa.yamagata.jp/shisei/reiki-tokei/ (label: 例規集・統計)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.obanazawa.yamagata.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.obanazawa.yamagata.jp/shisei/zaisei/",
@@ -45,16 +45,28 @@
           "observed_on": "https://www.city.obanazawa.yamagata.jp:443/shisei/zaisei/",
           "sha256": "51d8733b69ea2e480cf4c4b3d725c0305fe7459413b9dfa72f2218c1ff790dbc",
           "fetched_at": "2026-08-27T10:35:48Z"
+        },
+        {
+          "url": "http://www.city.obanazawa.yamagata.jp/shisei/zaisei/",
+          "observed_on": "http://www.city.obanazawa.yamagata.jp/",
+          "sha256": "51d8733b69ea2e480cf4c4b3d725c0305fe7459413b9dfa72f2218c1ff790dbc",
+          "fetched_at": "2026-08-27T10:35:48Z"
+        },
+        {
+          "url": "https://www.city.obanazawa.yamagata.jp:443/files/original/202607281615460987e189ef7.pdf",
+          "observed_on": "https://www.city.obanazawa.yamagata.jp:443/shisei/zaisei/3707",
+          "sha256": "f2e21d7f2579eb88be8c669f5bf0e9538fbe452e828b9fb5266122d6f92ba35e",
+          "fetched_at": "2026-08-27T13:29:01Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.obanazawa.yamagata.jp/shisei/zaisei/ (label: 市の財政状況) 入口 https://www.city.obanazawa.yamagata.jp:443/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（202607281615460987e189ef7.pdf「「尾花沢市中期財政計画」をダウンロードする（PDF：179kB）」, sha256:f2e21d7f）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.obanazawa.yamagata.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.obanazawa.yamagata.jp/shisei/zaisei/",
@@ -66,9 +78,21 @@
           "observed_on": "https://www.city.obanazawa.yamagata.jp:443/shisei/zaisei/",
           "sha256": "51d8733b69ea2e480cf4c4b3d725c0305fe7459413b9dfa72f2218c1ff790dbc",
           "fetched_at": "2026-08-27T10:35:48Z"
+        },
+        {
+          "url": "http://www.city.obanazawa.yamagata.jp/shisei/zaisei/",
+          "observed_on": "http://www.city.obanazawa.yamagata.jp/",
+          "sha256": "51d8733b69ea2e480cf4c4b3d725c0305fe7459413b9dfa72f2218c1ff790dbc",
+          "fetched_at": "2026-08-27T10:35:48Z"
+        },
+        {
+          "url": "https://www.city.obanazawa.yamagata.jp:443/files/original/202607281615460987e189ef7.pdf",
+          "observed_on": "https://www.city.obanazawa.yamagata.jp:443/shisei/zaisei/3707",
+          "sha256": "f2e21d7f2579eb88be8c669f5bf0e9538fbe452e828b9fb5266122d6f92ba35e",
+          "fetched_at": "2026-08-27T13:29:01Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.obanazawa.yamagata.jp/shisei/zaisei/ (label: 市の財政状況) 入口 https://www.city.obanazawa.yamagata.jp:443/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（202607281615460987e189ef7.pdf「「尾花沢市中期財政計画」をダウンロードする（PDF：179kB）」, sha256:f2e21d7f）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

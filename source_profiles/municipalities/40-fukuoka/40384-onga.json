@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A9160EC70 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.onga.lg.jp/life/5/21/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.onga.lg.jp/life/5/21/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.onga.lg.jp/life/5/21/",
           "sha256": "9f8a3161a0e78352e4c0eff198b8fc3146379a6c707a95dd6c592ca703a4bc94",
           "fetched_at": "2026-08-27T09:36:32Z"
+        },
+        {
+          "url": "http://www.town.onga.lg.jp/life/5/21/",
+          "observed_on": "http://www.town.onga.lg.jp/",
+          "sha256": "9f8a3161a0e78352e4c0eff198b8fc3146379a6c707a95dd6c592ca703a4bc94",
+          "fetched_at": "2026-08-27T09:36:32Z"
+        },
+        {
+          "url": "https://www.town.onga.lg.jp/uploaded/attachment/11657.pdf",
+          "observed_on": "https://www.town.onga.lg.jp/soshiki/25/1143.html",
+          "sha256": "96efa8b4938cc83f54521e71eb9036c5b483581f5b13dbaea7c75c43e45f0c6b",
+          "fetched_at": "2026-08-27T13:45:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.onga.lg.jp/life/5/21/ (label: 行財政) 入口 https://www.town.onga.lg.jp/life/5/21/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.onga.lg.jp/life/5/21/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（11657.pdf「令和8年度当初予算 [PDFファイル／93KB]」, sha256:96efa8b4）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

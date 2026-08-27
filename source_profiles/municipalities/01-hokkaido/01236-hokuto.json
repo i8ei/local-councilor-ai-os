@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.city.hokuto.hokkaido.jp/shisei/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hokuto.hokkaido.jp/docs/12396.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hokuto.hokkaido.jp/docs/12396.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.hokuto.hokkaido.jp/docs/12396.html",
           "sha256": "877b904d02fabe676c9d4f666a6eddd353a2261306425064f77f018f92fb110b",
           "fetched_at": "2026-08-27T10:29:27Z"
+        },
+        {
+          "url": "https://www.city.hokuto.hokkaido.jp/fs/2/3/4/1/7/5/_/02_R07gaiyo.pdf",
+          "observed_on": "https://www.city.hokuto.hokkaido.jp/docs/2065.html",
+          "sha256": "3c42a89a475525a1fc4441863d726e6ba716b7c1f84989bb63f9525631756141",
+          "fetched_at": "2026-08-27T13:26:01Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.hokuto.hokkaido.jp/docs/12396.html (label: 令和8年度北斗市予算 新規・拡充事業) 入口 https://www.city.hokuto.hokkaido.jp/docs/12396.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（02_R07gaiyo.pdf「令和7年度 予算概要 (PDF 1.08MB)」, sha256:3c42a89a）にて構造マーカー（節・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hokuto.hokkaido.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hokuto.hokkaido.jp/shisei/zaisei/",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.hokuto.hokkaido.jp/shisei/zaisei/",
           "sha256": "addf58aeff467c535dd0de952e8a9e8932a5708d5f4a95c518f49d8e60b0300c",
           "fetched_at": "2026-08-27T10:29:28Z"
+        },
+        {
+          "url": "https://www.city.hokuto.hokkaido.jp/fs/2/3/5/6/0/1/_/zaiseijokyo_hokuto2024.xlsx.xlsx",
+          "observed_on": "https://www.city.hokuto.hokkaido.jp/docs/13519.html",
+          "sha256": "5a0c4892eebcb7a65dae8e2c21f35ecd5f2e07167cecaf79c862c0e4f4d45e0b",
+          "fetched_at": "2026-08-27T13:25:58Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.hokuto.hokkaido.jp/shisei/zaisei/ (label: 財政) 入口 https://www.city.hokuto.hokkaido.jp/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hokuto.hokkaido.jp/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijokyo_hokuto2024.xlsx.xlsx「令和6年度決算(XLSX 551KB)」, sha256:5a0c4892）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

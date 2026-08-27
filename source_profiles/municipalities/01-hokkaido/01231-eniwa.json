@@ -59,11 +59,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/eniwa/reiki_menu.html for 恵庭市"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html",
           "sha256": "51e2edcde24bf87f48dd23430ca18edd29fb2dd03448d19576e836c0731ab9c7",
           "fetched_at": "2026-08-27T10:29:37Z"
+        },
+        {
+          "url": "https://www.city.eniwa.hokkaido.jp/material/files/group/7/H27kokuho.pdf",
+          "observed_on": "https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/yosan/3569.html",
+          "sha256": "4ab564f182b790a37b2df7ba8b6eabd6965542b66476bbe90fb343654ea5133c",
+          "fetched_at": "2026-08-27T13:26:01Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html (label: 市の財政) 入口 https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（H27kokuho.pdf「国民健康保険特別会計予算書 (PDFファイル: 7.3MB)」, sha256:4ab564f1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html",
           "sha256": "51e2edcde24bf87f48dd23430ca18edd29fb2dd03448d19576e836c0731ab9c7",
           "fetched_at": "2026-08-27T10:29:37Z"
+        },
+        {
+          "url": "https://www.city.eniwa.hokkaido.jp/material/files/group/7/hyousi.pdf",
+          "observed_on": "https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/kessan/4060.html",
+          "sha256": "e4e2de8f8dcda26707e735faa25b6808e303e8627346368de90887a9b4c18eae",
+          "fetched_at": "2026-08-27T13:26:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html (label: 市の財政) 入口 https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.eniwa.hokkaido.jp/kurashi/shiseijoho/shinozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（hyousi.pdf「平成29年度決算書表紙 (PDFファイル: 23.4KB)」, sha256:e4e2de8f）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

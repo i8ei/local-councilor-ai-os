@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kota/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kota.lg.jp/life/4/30/159/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kota.lg.jp/life/4/30/159/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.kota.lg.jp/life/4/30/159/",
           "sha256": "799d65fe5be65a046f3298a2ef17b4d362edfe13a0b0d8ab98e85cf16d3410af",
           "fetched_at": "2026-08-27T10:17:05Z"
+        },
+        {
+          "url": "http://www.town.kota.lg.jp/life/4/30/159/",
+          "observed_on": "http://www.town.kota.lg.jp/",
+          "sha256": "799d65fe5be65a046f3298a2ef17b4d362edfe13a0b0d8ab98e85cf16d3410af",
+          "fetched_at": "2026-08-27T10:17:05Z"
+        },
+        {
+          "url": "https://www.town.kota.lg.jp/uploaded/attachment/18416.pdf",
+          "observed_on": "https://www.town.kota.lg.jp/soshiki/4/1166.html",
+          "sha256": "0b7adb9578fb29c88c178bfa1ad9fcacb039da2c79647a05344eef01afd33eda",
+          "fetched_at": "2026-08-27T13:38:41Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kota.lg.jp/life/4/30/159/ (label: 予算・決算) 入口 https://www.town.kota.lg.jp/life/4/30/159/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（18416.pdf「R8当初予算書 [PDFファイル／3.59MB]」, sha256:0b7adb95）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

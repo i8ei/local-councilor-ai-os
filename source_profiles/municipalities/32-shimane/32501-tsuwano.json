@@ -93,11 +93,11 @@
       "notes": "deepest_doc=P1。budget文書（R08_ippan_H00.pdf「一般会計（当初予算）（PDF：2MB）」, sha256:f2f3e612）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tsuwano.lg.jp/www/genre/1000000000024/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tsuwano.lg.jp/www/genre/1000000000024/index.html",
@@ -109,9 +109,21 @@
           "observed_on": "https://www.town.tsuwano.lg.jp/www/genre/1000000000024/index.html",
           "sha256": "0ce29aea6cea08f086b83f81206a762bce0c65ae990ff88261c24877a9c3a3d8",
           "fetched_at": "2026-08-27T09:43:50Z"
+        },
+        {
+          "url": "http://www.town.tsuwano.lg.jp/www/genre/1000000000024/index.html",
+          "observed_on": "http://www.town.tsuwano.lg.jp/",
+          "sha256": "0ce29aea6cea08f086b83f81206a762bce0c65ae990ff88261c24877a9c3a3d8",
+          "fetched_at": "2026-08-27T09:43:50Z"
+        },
+        {
+          "url": "https://www.town.tsuwano.lg.jp/www/contents/1357803785887/files/325015_2010.pdf",
+          "observed_on": "https://www.town.tsuwano.lg.jp/www/contents/1357803785887/index.html",
+          "sha256": "226daec0d55b2c16459388c369a8441b9a759991559a4f0c68753c83d77dc082",
+          "fetched_at": "2026-08-27T13:42:10Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tsuwano.lg.jp/www/genre/1000000000024/index.html (label: 決算・財政状況) 入口 https://www.town.tsuwano.lg.jp/www/genre/1000000000024/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tsuwano.lg.jp/www/genre/1000000000024/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（325015_2010.pdf「平成22年度財政状況資料集（PDF：318KB）」, sha256:226daec0）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

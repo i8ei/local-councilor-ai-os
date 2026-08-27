@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/sakado/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sakado.lg.jp/life/3/33/157/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sakado.lg.jp/life/3/33/157/",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.city.sakado.lg.jp/life/3/33/157/",
           "sha256": "c286c53df2ae5f99b99c2cda777d2e341621715be9df6d3f8783bd85dab9d68d",
           "fetched_at": "2026-08-27T10:21:59Z"
+        },
+        {
+          "url": "http://www.city.sakado.lg.jp/life/3/33/157/",
+          "observed_on": "http://www.city.sakado.lg.jp/",
+          "sha256": "c286c53df2ae5f99b99c2cda777d2e341621715be9df6d3f8783bd85dab9d68d",
+          "fetched_at": "2026-08-27T10:21:59Z"
+        },
+        {
+          "url": "https://www.city.sakado.lg.jp/uploaded/attachment/34809.pdf",
+          "observed_on": "https://www.city.sakado.lg.jp/soshiki/4/385.html",
+          "sha256": "b1552ec9b1aa69791fb8960ea33c44c8daf70474b59eb9e1b00f16ce8ba2af59",
+          "fetched_at": "2026-08-27T13:32:02Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.sakado.lg.jp/life/3/33/157/ (label: 予算・決算) 入口 https://www.city.sakado.lg.jp/life/3/33/157/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（34809.pdf「令和8年度坂戸市のわかりやすい予算書 [PDFファイル／9.24MB]」, sha256:b1552ec9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sakado.lg.jp/life/3/33/157/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sakado.lg.jp/life/3/33/157/",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.city.sakado.lg.jp/life/3/33/157/",
           "sha256": "c286c53df2ae5f99b99c2cda777d2e341621715be9df6d3f8783bd85dab9d68d",
           "fetched_at": "2026-08-27T10:21:59Z"
+        },
+        {
+          "url": "http://www.city.sakado.lg.jp/life/3/33/157/",
+          "observed_on": "http://www.city.sakado.lg.jp/",
+          "sha256": "c286c53df2ae5f99b99c2cda777d2e341621715be9df6d3f8783bd85dab9d68d",
+          "fetched_at": "2026-08-27T10:21:59Z"
+        },
+        {
+          "url": "https://www.city.sakado.lg.jp/uploaded/attachment/33049.pdf",
+          "observed_on": "https://www.city.sakado.lg.jp/soshiki/4/215.html",
+          "sha256": "b6e7d52da5977880c1f3b6f133eec6b2ffa6a7edd629c86f957353ed452a83f3",
+          "fetched_at": "2026-08-27T13:32:04Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.sakado.lg.jp/life/3/33/157/ (label: 予算・決算) 入口 https://www.city.sakado.lg.jp/life/3/33/157/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（33049.pdf「令和6年度決算カード [PDFファイル／618KB]」, sha256:b6e7d52d）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

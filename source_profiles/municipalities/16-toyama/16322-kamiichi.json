@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/kamiichi/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kamiichi.toyama.jp/life/3/28/127/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kamiichi.toyama.jp/life/3/28/127/",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.town.kamiichi.toyama.jp/life/3/28/127/",
           "sha256": "6327dd90f0ebb1a88e77029ff240876035d316a2641abcc0aa2453c90585e478",
           "fetched_at": "2026-08-27T10:05:23Z"
+        },
+        {
+          "url": "http://www.town.kamiichi.toyama.jp/life/3/28/127/",
+          "observed_on": "http://www.town.kamiichi.toyama.jp/",
+          "sha256": "6327dd90f0ebb1a88e77029ff240876035d316a2641abcc0aa2453c90585e478",
+          "fetched_at": "2026-08-27T10:05:23Z"
+        },
+        {
+          "url": "https://www.town.kamiichi.toyama.jp/uploaded/attachment/7220.pdf",
+          "observed_on": "https://www.town.kamiichi.toyama.jp/page/1737.html",
+          "sha256": "e6177deedf479ac300709cf245a6b90214ef5fce6a1a56d1e6e9569c2d8c1db6",
+          "fetched_at": "2026-08-27T13:35:26Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kamiichi.toyama.jp/life/3/28/127/ (label: 財政情報) 入口 https://www.town.kamiichi.toyama.jp/life/3/28/127/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kamiichi.toyama.jp/life/3/28/127/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（7220.pdf「令和7年度会計別予算執行状況（令和7年7月31日現在） [PDFファイル／145KB]」, sha256:e6177dee）にて構造マーカー（歳入・歳出・予算現額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kamiichi.toyama.jp/life/3/28/127/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kamiichi.toyama.jp/life/3/28/127/",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.town.kamiichi.toyama.jp/life/3/28/127/",
           "sha256": "6327dd90f0ebb1a88e77029ff240876035d316a2641abcc0aa2453c90585e478",
           "fetched_at": "2026-08-27T10:05:23Z"
+        },
+        {
+          "url": "http://www.town.kamiichi.toyama.jp/life/3/28/127/",
+          "observed_on": "http://www.town.kamiichi.toyama.jp/",
+          "sha256": "6327dd90f0ebb1a88e77029ff240876035d316a2641abcc0aa2453c90585e478",
+          "fetched_at": "2026-08-27T10:05:23Z"
+        },
+        {
+          "url": "https://www.town.kamiichi.toyama.jp/uploaded/attachment/7216.pdf",
+          "observed_on": "https://www.town.kamiichi.toyama.jp/page/1972.html",
+          "sha256": "6d259d1905e96ec5372ff13035dcb7e258c5ed04cba7d1d6f4d02f9b76b5a96c",
+          "fetched_at": "2026-08-27T13:35:31Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kamiichi.toyama.jp/life/3/28/127/ (label: 財政情報) 入口 https://www.town.kamiichi.toyama.jp/life/3/28/127/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kamiichi.toyama.jp/life/3/28/127/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（7216.pdf「令和6年度決算の状況 [PDFファイル／1.41MB]」, sha256:6d259d19）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

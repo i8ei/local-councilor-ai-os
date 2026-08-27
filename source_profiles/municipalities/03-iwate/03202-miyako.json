@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/gyozaisei/3/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/gyozaisei/3/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/gyozaisei/3/index.html",
           "sha256": "2424fec1d0f93251fdf44092fa8de9e4c8247ad6c4d45ad59a3706fb8e773fb3",
           "fetched_at": "2026-08-27T10:32:43Z"
+        },
+        {
+          "url": "https://www.city.miyako.iwate.jp/material/files/group/3/H28yosangaiyou.pdf",
+          "observed_on": "https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/gyozaisei/3/5/4601.html",
+          "sha256": "1bd3acef211259fae4a674e24520c6b76074ffda137984cd84876248360409e8",
+          "fetched_at": "2026-08-27T13:27:20Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/gyozaisei/3/index.html (label: 財政・予算・決算) 入口 https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/gyozaisei/3/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/gyozaisei/3/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（H28yosangaiyou.pdf「平成28年度 当初予算の概要 (PDFファイル: 923.0KB)」, sha256:1bd3acef）にて構造マーカー（歳入・歳出・款・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/kansa_compliance/7084.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/kansa_compliance/7084.html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/kansa_compliance/7084.html",
           "sha256": "5257f23edea93efecbaaf6fcf4238071e0d14f465fcd50e6d5f69ce36d017fb5",
           "fetched_at": "2026-08-27T10:32:45Z"
+        },
+        {
+          "url": "https://www.city.miyako.iwate.jp/material/files/group/41/R6miyakoikensyo.pdf",
+          "observed_on": "https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/kansa_compliance/7084.html",
+          "sha256": "3cffb202e0c8ced509ae7a410bcf30c09f3467819157e59f8b68025fb449bdb1",
+          "fetched_at": "2026-08-27T13:27:15Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/kansa_compliance/7084.html (label: 決算等審査意見書) 入口 https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/kansa_compliance/7084.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyako.iwate.jp/gyosei/gyoseijoho/kansa_compliance/7084.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6miyakoikensyo.pdf「令和6年度 宮古市審査意見書 (PDFファイル: 3.1MB)」, sha256:3cffb202）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

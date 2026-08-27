@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/owariasahi.city/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.owariasahi.lg.jp/life/8/28/140/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.owariasahi.lg.jp/life/8/28/140/",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.owariasahi.lg.jp/life/8/28/140/",
           "sha256": "66cc3bb90a21fddacb9a00fccbceeca71a2a579ccf7a8cb596ab74e0011b57da",
           "fetched_at": "2026-08-27T10:15:52Z"
+        },
+        {
+          "url": "http://www.city.owariasahi.lg.jp/life/8/28/140/",
+          "observed_on": "http://www.city.owariasahi.lg.jp/",
+          "sha256": "66cc3bb90a21fddacb9a00fccbceeca71a2a579ccf7a8cb596ab74e0011b57da",
+          "fetched_at": "2026-08-27T10:15:52Z"
+        },
+        {
+          "url": "https://www.city.owariasahi.lg.jp/uploaded/attachment/37817.pdf",
+          "observed_on": "https://www.city.owariasahi.lg.jp/page/23625.html",
+          "sha256": "92f7e3b5c6d8163a2c1b2ff0ea0c44477ff207b5ade8a87fee2c75ce793269dd",
+          "fetched_at": "2026-08-27T13:38:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.owariasahi.lg.jp/life/8/28/140/ (label: 財政情報) 入口 https://www.city.owariasahi.lg.jp/life/8/28/140/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（37817.pdf「令和8年度一般会計予算書及び予算説明書 [PDFファイル／5.43MB]」, sha256:92f7e3b5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.owariasahi.lg.jp/life/8/28/140/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.owariasahi.lg.jp/life/8/28/140/",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.owariasahi.lg.jp/life/8/28/140/",
           "sha256": "66cc3bb90a21fddacb9a00fccbceeca71a2a579ccf7a8cb596ab74e0011b57da",
           "fetched_at": "2026-08-27T10:15:52Z"
+        },
+        {
+          "url": "http://www.city.owariasahi.lg.jp/life/8/28/140/",
+          "observed_on": "http://www.city.owariasahi.lg.jp/",
+          "sha256": "66cc3bb90a21fddacb9a00fccbceeca71a2a579ccf7a8cb596ab74e0011b57da",
+          "fetched_at": "2026-08-27T10:15:52Z"
+        },
+        {
+          "url": "https://www.city.owariasahi.lg.jp/uploaded/attachment/38452.xlsx",
+          "observed_on": "https://www.city.owariasahi.lg.jp/page/23631.html",
+          "sha256": "d493a3e624cd7d3a68b1da290a6952d3a6fef96753f05d035703f0aa89184b50",
+          "fetched_at": "2026-08-27T13:38:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.owariasahi.lg.jp/life/8/28/140/ (label: 財政情報) 入口 https://www.city.owariasahi.lg.jp/life/8/28/140/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（38452.xlsx「令和6年度決算 [Excelファイル／555KB]」, sha256:d493a3e6）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

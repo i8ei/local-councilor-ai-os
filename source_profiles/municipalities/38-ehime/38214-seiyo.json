@@ -49,19 +49,31 @@
       "notes": "deepest_doc=P1。budget文書（08hosei3yosansho.pdf「【補正3号】予算書（案）（R8.9月定例会） (PDFファイル: 199.7KB)」, sha256:018a7ae0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/403.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/403.html",
           "observed_on": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/index.html",
           "fetched_at": "2026-08-27T07:03:21Z"
+        },
+        {
+          "url": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/403.html",
+          "observed_on": "http://www.city.seiyo.ehime.jp/",
+          "sha256": "be3653ff8ba4bb4e2164e8cb4d6abbc7f74bd50f325de3cb9a9621d2ca58a3f4",
+          "fetched_at": "2026-08-27T09:46:50Z"
+        },
+        {
+          "url": "https://www.city.seiyo.ehime.jp/material/files/group/6/01_R6suidou.xlsx",
+          "observed_on": "https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/403.html",
+          "sha256": "16b2a0a09b9d430d3610124be5128a2eca517b56bb45030d18a7626ecd3f596e",
+          "fetched_at": "2026-08-27T09:46:52Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.seiyo.ehime.jp/kakuka/soumu/zaisei/zaisei/403.html (label: 【報告】公営企業に係る経営比較分析表（令和6年度決算）の公表)"
+      "notes": "deepest_doc=P1。settlement文書（01_R6suidou.xlsx「令和6年度決算経営分析表（上水道） (Excelファイル: 77.0KB)」, sha256:16b2a0a0）にて構造マーカー（項・節等）を確認済み。"
     }
   }
 }

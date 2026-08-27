@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at http://www.city.mihara.hiroshima.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.mihara.hiroshima.jp/life/4/25/126/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.mihara.hiroshima.jp/life/4/25/126/",
@@ -75,9 +75,21 @@
           "observed_on": "https://www.city.mihara.hiroshima.jp/life/4/25/126/",
           "sha256": "61471008a66ee8c5ed8dfbefca9b745253861d995f6af340b1a1eef9afaa5dd8",
           "fetched_at": "2026-08-27T09:44:55Z"
+        },
+        {
+          "url": "http://www.city.mihara.hiroshima.jp/life/4/25/126/",
+          "observed_on": "http://www.city.mihara.hiroshima.jp/",
+          "sha256": "61471008a66ee8c5ed8dfbefca9b745253861d995f6af340b1a1eef9afaa5dd8",
+          "fetched_at": "2026-08-27T09:44:55Z"
+        },
+        {
+          "url": "https://www.city.mihara.hiroshima.jp/uploaded/attachment/161420.pdf",
+          "observed_on": "https://www.city.mihara.hiroshima.jp/soshiki/7/tosyoyosan.html",
+          "sha256": "408124be01fc3a2de7d886232b1a2d3694d21deed1a7d2a5ad231f96806fd227",
+          "fetched_at": "2026-08-27T13:42:31Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.mihara.hiroshima.jp/life/4/25/126/ (label: 予算・決算) 入口 https://www.city.mihara.hiroshima.jp/life/4/25/126/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.mihara.hiroshima.jp/life/4/25/126/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（161420.pdf「予算書（公営企業を除く） [PDFファイル／3.01MB]」, sha256:408124be）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

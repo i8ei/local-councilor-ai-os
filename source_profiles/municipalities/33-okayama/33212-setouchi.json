@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/setouchi/reiki_menu.html (label: 市の条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.setouchi.lg.jp/life/5/21/85/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.setouchi.lg.jp/life/5/21/85/",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.setouchi.lg.jp/life/5/21/85/",
           "sha256": "34a5d4ad0c718e5e109af9e7e6e364cc831a9d834458b33f902ff638c1301ddb",
           "fetched_at": "2026-08-27T09:44:33Z"
+        },
+        {
+          "url": "http://www.city.setouchi.lg.jp/life/5/21/85/",
+          "observed_on": "http://www.city.setouchi.lg.jp/",
+          "sha256": "34a5d4ad0c718e5e109af9e7e6e364cc831a9d834458b33f902ff638c1301ddb",
+          "fetched_at": "2026-08-27T09:44:33Z"
+        },
+        {
+          "url": "https://www.city.setouchi.lg.jp/uploaded/attachment/123942.pdf",
+          "observed_on": "https://www.city.setouchi.lg.jp/soshiki/4/1635.html",
+          "sha256": "d2eedda332b8f2fcc0ef8364d49e9d81851b17973f42de338ed3f7139ac51487",
+          "fetched_at": "2026-08-27T13:42:17Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.setouchi.lg.jp/life/5/21/85/ (label: 財政状況等) 入口 https://www.city.setouchi.lg.jp/life/5/21/85/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.setouchi.lg.jp/life/5/21/85/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（123942.pdf「6月補正予算書（一般1、病院1）[PDFファイル／547KB]」, sha256:d2eedda3）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

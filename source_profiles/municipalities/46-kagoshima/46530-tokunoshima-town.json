@@ -78,11 +78,11 @@
       "notes": "deepest_doc=P1。budget文書（r8wakariyasuiyosannsyo.pdf「令和8年度わかりやすい予算書（PDF：5,931KB）」, sha256:1e4816fc）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.tokunoshima-town.org/chose/yosan/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.tokunoshima-town.org/chose/yosan/kessan/index.html",
@@ -94,9 +94,15 @@
           "observed_on": "http://www.tokunoshima-town.org/chose/yosan/kessan/index.html",
           "sha256": "f9f6d9e8dc3c882898632d067ed94f10aeeac61d6dd083c89e55a76736a82301",
           "fetched_at": "2026-08-27T09:40:52Z"
+        },
+        {
+          "url": "http://www.tokunoshima-town.org/soumuka/chose/yosan/kessan/documents/r6kessan.pdf",
+          "observed_on": "http://www.tokunoshima-town.org/soumuka/chose/yosan/kessan/kesan.html",
+          "sha256": "1c6ad747b9a2886ba580641415b467ffee6da01adb4a3f98b3143193485907ef",
+          "fetched_at": "2026-08-27T13:47:49Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.tokunoshima-town.org/chose/yosan/kessan/index.html (label: 予算・決算) 入口 http://www.tokunoshima-town.org/chose/yosan/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.tokunoshima-town.org/chose/yosan/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessan.pdf「令和6年度決算の状況（PDF：69KB）」, sha256:1c6ad747）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

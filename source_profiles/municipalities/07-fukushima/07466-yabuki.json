@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/yabuki/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yabuki.fukushima.jp/page/dir000021.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yabuki.fukushima.jp/page/dir000021.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.town.yabuki.fukushima.jp/page/dir000021.html",
           "sha256": "99b94d7d1466b493487d507d1d6bd0b27c19aed5995bae8f31f7deb79600f0f2",
           "fetched_at": "2026-08-27T10:38:38Z"
+        },
+        {
+          "url": "http://www.town.yabuki.fukushima.jp/page/dir000021.html",
+          "observed_on": "http://www.town.yabuki.fukushima.jp/",
+          "sha256": "99b94d7d1466b493487d507d1d6bd0b27c19aed5995bae8f31f7deb79600f0f2",
+          "fetched_at": "2026-08-27T10:38:38Z"
+        },
+        {
+          "url": "https://www.town.yabuki.fukushima.jp/data/doc/1774252672_doc_11_0.pdf",
+          "observed_on": "https://www.town.yabuki.fukushima.jp/page/page004398.html",
+          "sha256": "ff147a62e7adba415804708c4b07dcddfcdcb7795b876c62865324068fb93da6",
+          "fetched_at": "2026-08-27T13:29:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yabuki.fukushima.jp/page/dir000021.html (label: 財政) 入口 https://www.town.yabuki.fukushima.jp/page/dir000021.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yabuki.fukushima.jp/page/dir000021.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1774252672_doc_11_0.pdf「令和８年度当初予算書」, sha256:ff147a62）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yabuki.fukushima.jp/page/dir000021.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yabuki.fukushima.jp/page/dir000021.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.town.yabuki.fukushima.jp/page/dir000021.html",
           "sha256": "99b94d7d1466b493487d507d1d6bd0b27c19aed5995bae8f31f7deb79600f0f2",
           "fetched_at": "2026-08-27T10:38:38Z"
+        },
+        {
+          "url": "http://www.town.yabuki.fukushima.jp/page/dir000021.html",
+          "observed_on": "http://www.town.yabuki.fukushima.jp/",
+          "sha256": "99b94d7d1466b493487d507d1d6bd0b27c19aed5995bae8f31f7deb79600f0f2",
+          "fetched_at": "2026-08-27T10:38:38Z"
+        },
+        {
+          "url": "https://www.town.yabuki.fukushima.jp/data/doc/1774252997_doc_11_0.pdf",
+          "observed_on": "https://www.town.yabuki.fukushima.jp/page/page004398.html",
+          "sha256": "7b63b20b8a15e154d7f04eea48a065a16b3df6a68c0dfa952ccc622298e16bde",
+          "fetched_at": "2026-08-27T13:29:47Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yabuki.fukushima.jp/page/dir000021.html (label: 財政) 入口 https://www.town.yabuki.fukushima.jp/page/dir000021.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yabuki.fukushima.jp/page/dir000021.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1774252997_doc_11_0.pdf「令和6年度決算書」, sha256:7b63b20b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -71,11 +71,11 @@
       "notes": "Observed budget link at https://www.town.meiwa.gunma.jp/material/files/group/7/syuushiyosannsyo.doc (label: 収支予算書（様式第3号） (Wordファイル: 21.0KB)) 入口 https://www.town.meiwa.gunma.jp/material/files/group/7/syuushiyosannsyo.doc に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.meiwa.gunma.jp/material/files/group/7/syuushiyosannsyo.doc に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.meiwa.gunma.jp/life/gyoseijoho/12/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.meiwa.gunma.jp/life/gyoseijoho/12/index.html",
@@ -87,9 +87,15 @@
           "observed_on": "https://www.town.meiwa.gunma.jp/life/gyoseijoho/12/index.html",
           "sha256": "a3a4d705bbf2dbcd177fe810a6f7f43262711499ad07a9bfd8f3530023b66423",
           "fetched_at": "2026-08-27T10:20:31Z"
+        },
+        {
+          "url": "https://www.town.meiwa.gunma.jp/material/files/group/1/kenzenka.pdf",
+          "observed_on": "https://www.town.meiwa.gunma.jp/life/gyoseijoho/12/2/4118.html",
+          "sha256": "4e04aae546a67dbdc192308a61b2ff69cec1b11333fc9602cfa3c1c31a9c8203",
+          "fetched_at": "2026-08-27T13:31:17Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.meiwa.gunma.jp/life/gyoseijoho/12/index.html (label: 財政) 入口 https://www.town.meiwa.gunma.jp/life/gyoseijoho/12/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kenzenka.pdf「こちら(PDFファイル:111.6KB)」, sha256:4e04aae5）にて構造マーカー（地方債・基準財政需要額・標準財政規模等）を確認済み。"
     }
   }
 }

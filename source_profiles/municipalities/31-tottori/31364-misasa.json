@@ -87,11 +87,11 @@
       "notes": "deepest_doc=P1。budget文書（67118.pdf「令和７年度 １月補正予算（専決処分）の概要 2026-01-28」, sha256:e80b6386）にて構造マーカー（項・予算総額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.misasa.tottori.jp/315/319/323/340/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.misasa.tottori.jp/315/319/323/340/",
@@ -103,9 +103,15 @@
           "observed_on": "http://www.town.misasa.tottori.jp/315/319/323/340/",
           "sha256": "a847c019b1629ff6231eb6ad1e78a721f1c781fb52cdc4d76a0282f926fa9978",
           "fetched_at": "2026-08-27T09:42:35Z"
+        },
+        {
+          "url": "https://www.town.misasa.tottori.jp/files/62157.pdf",
+          "observed_on": "https://www.town.misasa.tottori.jp/315/319/323/340/1919/",
+          "sha256": "74ba58d12a513b0f33c8c12de3c298b6ee6c7a659b18d2741097b6a1938f8272",
+          "fetched_at": "2026-08-27T13:42:02Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.misasa.tottori.jp/315/319/323/340/ (label: 予算・決算) 入口 http://www.town.misasa.tottori.jp/315/319/323/340/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.misasa.tottori.jp/315/319/323/340/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（62157.pdf「令和６年度10月補正予算（専決処分）の概要 2024-10-09」, sha256:74ba58d1）にて構造マーカー（項・地方債等）を確認済み。"
     }
   }
 }

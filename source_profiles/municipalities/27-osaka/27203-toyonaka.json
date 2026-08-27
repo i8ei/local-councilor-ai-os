@@ -68,11 +68,11 @@
       "notes": "deepest_doc=P1。budget文書（r8yosan.pdf「豊中市各経済予算書（PDF：1,688KB）」, sha256:4cee616d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html",
@@ -84,9 +84,21 @@
           "observed_on": "https://www.city.toyonaka.osaka.jp/joho/zaisei/index.html",
           "sha256": "e2392b4a81cbdfab3a64598c95a07ad9ee3efc3975484e91560989e0589de7f6",
           "fetched_at": "2026-08-27T09:50:29Z"
+        },
+        {
+          "url": "http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html",
+          "observed_on": "http://www.city.toyonaka.osaka.jp/",
+          "sha256": "e2392b4a81cbdfab3a64598c95a07ad9ee3efc3975484e91560989e0589de7f6",
+          "fetched_at": "2026-08-27T09:50:29Z"
+        },
+        {
+          "url": "https://www.city.toyonaka.osaka.jp/joho/zaisei/kessan/zaiseijyoukyou.files/04toyonaka_2024.xlsx",
+          "observed_on": "https://www.city.toyonaka.osaka.jp/joho/zaisei/kessan/zaiseijyoukyou.html",
+          "sha256": "f03663e382e171e885bd491ad3e56f11f5c0a49ecc33056a8a8cd308ed58a103",
+          "fetched_at": "2026-08-27T13:40:05Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.toyonaka.osaka.jp/joho/zaisei/index.html (label: 財政状況（予算・決算）) 入口 https://www.city.toyonaka.osaka.jp/joho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.toyonaka.osaka.jp/joho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（04toyonaka_2024.xlsx「令和6年度財政状況資料集（エクセル：553KB）」, sha256:f03663e3）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

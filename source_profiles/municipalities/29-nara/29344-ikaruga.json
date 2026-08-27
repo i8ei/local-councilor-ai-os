@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.town.ikaruga.nara.jp/reiki_int/reiki_menu.html (label: 町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html",
           "sha256": "a59fe77d6791dcaffc44edd884cd82663d5ca07453136db9974a4a5ba094b02c",
           "fetched_at": "2026-08-27T09:52:56Z"
+        },
+        {
+          "url": "http://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.ikaruga.nara.jp/",
+          "sha256": "a59fe77d6791dcaffc44edd884cd82663d5ca07453136db9974a4a5ba094b02c",
+          "fetched_at": "2026-08-27T09:52:56Z"
+        },
+        {
+          "url": "https://www.town.ikaruga.nara.jp/cmsfiles/contents/0000000/270/R8yosangaiyo.pdf",
+          "observed_on": "https://www.town.ikaruga.nara.jp/0000000270.html",
+          "sha256": "c8a14e750dd6a83811494320b5f2428e4e4ae9e0212eeec8d55acb15f6beb0e2",
+          "fetched_at": "2026-08-27T13:41:27Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html (label: 予算・決算・財政状況) 入口 https://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosangaiyo.pdf「令和8年度予算の概要」, sha256:c8a14e75）にて構造マーカー（歳入・歳出・節・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

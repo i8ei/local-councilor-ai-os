@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A79F434B1 (label: 帯広市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.obihiro.hokkaido.jp/shisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.obihiro.hokkaido.jp/shisei/yosan/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.city.obihiro.hokkaido.jp/shisei/yosan/index.html",
           "sha256": "8876fd6c095f4e2322edfdd329c643be82be4971ba187244a9ae495bd36a829e",
           "fetched_at": "2026-08-27T10:28:44Z"
+        },
+        {
+          "url": "https://www.city.obihiro.hokkaido.jp/_res/projects/default_project/_page_/001/016/262/siryou1.pdf",
+          "observed_on": "https://www.city.obihiro.hokkaido.jp/shisei/yosan/1016262/index.html",
+          "sha256": "2fac9770d77a51145413dfce50b1b526d70dd574af33739b30779f6d8f6b34cd",
+          "fetched_at": "2026-08-27T13:25:38Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.obihiro.hokkaido.jp/shisei/yosan/index.html (label: 財政) 入口 https://www.city.obihiro.hokkaido.jp/shisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（siryou1.pdf「令和5年11月総務委員会提出資料（本編 資料1） （PDF 1002.2 KB）」, sha256:2fac9770）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.obihiro.hokkaido.jp/shisei/yosan/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.obihiro.hokkaido.jp/shisei/yosan/kessan/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.city.obihiro.hokkaido.jp/shisei/yosan/kessan/index.html",
           "sha256": "5188c128af5e9df4aa1f87d9c8f4e57ddb989073a88d00c8978d3f1b4d56a14b",
           "fetched_at": "2026-08-27T10:28:45Z"
+        },
+        {
+          "url": "https://www.city.obihiro.hokkaido.jp/_res/projects/default_project/_page_/001/003/561/r6_01_kessansyo_all.pdf",
+          "observed_on": "https://www.city.obihiro.hokkaido.jp/shisei/yosan/kessan/1003561.html",
+          "sha256": "82ebcbbc8adc00406672c37bbb217982b8cd0b2acd50e02f5ea5392a31f20feb",
+          "fetched_at": "2026-08-27T13:25:34Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.obihiro.hokkaido.jp/shisei/yosan/kessan/index.html (label: 決算) 入口 https://www.city.obihiro.hokkaido.jp/shisei/yosan/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6_01_kessansyo_all.pdf「令和6年度 決算書（全体） （PDF 6.4 MB）」, sha256:82ebcbbc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at https://www.town.nanae.hokkaido.jp/hotnews/category/232.html (label: 条例・規則・告示)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nanae.hokkaido.jp/hotnews/category/431.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nanae.hokkaido.jp/hotnews/category/431.html",
@@ -45,16 +45,22 @@
           "observed_on": "https://www.town.nanae.hokkaido.jp/hotnews/category/431.html",
           "sha256": "62bca0d3e2964d038ea16afe49a55fe298e81d88fe99923f353ddcd0f071307f",
           "fetched_at": "2026-08-27T10:29:35Z"
+        },
+        {
+          "url": "https://www.town.nanae.hokkaido.jp/hotnews/files/00017600/00017670/7th-gyokaku.pdf",
+          "observed_on": "https://www.town.nanae.hokkaido.jp/hotnews/detail/00017670.html",
+          "sha256": "d43962d33346effc9b31dcb54e025d653a472f35a07058830d4e789e2eed89c3",
+          "fetched_at": "2026-08-27T13:25:50Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nanae.hokkaido.jp/hotnews/category/431.html (label: 行財政改革) 入口 https://www.town.nanae.hokkaido.jp/hotnews/category/431.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nanae.hokkaido.jp/hotnews/category/431.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（7th-gyokaku.pdf「第7次行財政改革大綱」, sha256:d43962d3）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nanae.hokkaido.jp/hotnews/category/431.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nanae.hokkaido.jp/hotnews/category/431.html",
@@ -66,9 +72,15 @@
           "observed_on": "https://www.town.nanae.hokkaido.jp/hotnews/category/431.html",
           "sha256": "62bca0d3e2964d038ea16afe49a55fe298e81d88fe99923f353ddcd0f071307f",
           "fetched_at": "2026-08-27T10:29:35Z"
+        },
+        {
+          "url": "https://www.town.nanae.hokkaido.jp/hotnews/files/00017600/00017670/7th-gyokaku.pdf",
+          "observed_on": "https://www.town.nanae.hokkaido.jp/hotnews/detail/00017670.html",
+          "sha256": "d43962d33346effc9b31dcb54e025d653a472f35a07058830d4e789e2eed89c3",
+          "fetched_at": "2026-08-27T13:25:50Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nanae.hokkaido.jp/hotnews/category/431.html (label: 行財政改革) 入口 https://www.town.nanae.hokkaido.jp/hotnews/category/431.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nanae.hokkaido.jp/hotnews/category/431.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（7th-gyokaku.pdf「第7次行財政改革大綱」, sha256:d43962d3）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

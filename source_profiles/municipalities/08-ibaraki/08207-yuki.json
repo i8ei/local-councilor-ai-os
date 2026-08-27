@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.yuki.lg.jp/shisei/jourei-kisoku/ (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/yosansho/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/yosansho/",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/yosansho/",
           "sha256": "ce3a47956a5ac86f941bc553d2a78ff88d1a25d38b6afb4c6f9c388861549db4",
           "fetched_at": "2026-08-27T10:17:21Z"
+        },
+        {
+          "url": "https://www.city.yuki.lg.jp/data/doc/1648016914_doc_18_3.pdf",
+          "observed_on": "https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/yosansho/page007903.html",
+          "sha256": "db4c51f71da38d7ba12487b05592324a5affc4f5798bfb087c9dd0d6a8e85cd7",
+          "fetched_at": "2026-08-27T13:30:08Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/yosansho/ (label: 予算書) 入口 https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/yosansho/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/yosansho/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1648016914_doc_18_3.pdf「令和4年度結城市予算書（一般会計）」, sha256:db4c51f7）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/kessansho/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/kessansho/",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/kessansho/",
           "sha256": "ebe7a2294714e2cd4f4824b06b2d7cfe06da8960181a9957dc76eb3c76283021",
           "fetched_at": "2026-08-27T10:17:22Z"
+        },
+        {
+          "url": "https://www.city.yuki.lg.jp/data/doc/1759368968_doc_82_0.pdf",
+          "observed_on": "https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/kessansho/page009723.html",
+          "sha256": "8fa4ed3bcde0089ffd8c4e027db51a3acc357e5ef95dc5fa3afaaefc81e9e56c",
+          "fetched_at": "2026-08-27T13:30:09Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/kessansho/ (label: 決算書) 入口 https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/kessansho/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yuki.lg.jp/shisei/zaisei-gyouseihyouka/kessansho/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1759368968_doc_82_0.pdf「令和6年度結城市歳入歳出決算書 [PDF形式／3.26MB]」, sha256:8fa4ed3b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

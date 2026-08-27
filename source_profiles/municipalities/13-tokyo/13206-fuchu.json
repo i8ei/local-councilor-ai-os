@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.fuchu.tokyo/reiki_menu.html (label: 例規検索（外部サイト）) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/yosan/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/yosan/index.html",
           "sha256": "95dcbf1ee6d2a517874bd255cd05d6cdd6f4355f0af381b8881361a755aafc84",
           "fetched_at": "2026-08-27T10:26:10Z"
+        },
+        {
+          "url": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/yosan/yosansyo/R8yosansyo.files/fuc26b07fin05finance.pdf",
+          "observed_on": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/yosan/yosansyo/R8yosansyo.html",
+          "sha256": "e532b6387241a99ddbf3c0ab187411219465784dc86e2b3ef72bdf4add44d395",
+          "fetched_at": "2026-08-27T13:33:51Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.fuchu.tokyo.jp/gyosei/zaise/yosan/index.html (label: 予算) 入口 http://www.city.fuchu.tokyo.jp/gyosei/zaise/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.fuchu.tokyo.jp/gyosei/zaise/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（fuc26b07fin05finance.pdf「予算書 （PDF：316KB）」, sha256:e532b638）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/kessan/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/kessan/index.html",
           "sha256": "722a827ff3c4d5923d1b22c5dc94f850df37f756c2b5efcd4625c63d5cd87e3f",
           "fetched_at": "2026-08-27T10:26:11Z"
+        },
+        {
+          "url": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/kessan/kessancard.files/06kessan.pdf",
+          "observed_on": "http://www.city.fuchu.tokyo.jp/gyosei/zaise/kessan/kessancard.html",
+          "sha256": "40d3d53720634c47ed4c0f4933330c62676e95cb5b3c4afee8e373c6a7f8c818",
+          "fetched_at": "2026-08-27T13:33:47Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.fuchu.tokyo.jp/gyosei/zaise/kessan/index.html (label: 決算) 入口 http://www.city.fuchu.tokyo.jp/gyosei/zaise/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.fuchu.tokyo.jp/gyosei/zaise/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（06kessan.pdf「令和6年度決算状況 （PDF：355KB）」, sha256:40d3d537）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

@@ -45,11 +45,11 @@
       "notes": "Observed regulations index at https://www.town.uryu.hokkaido.jp/town/30/ (label: 町政運営 町議会 条例・規則 財政情報 計画・施策 ふるさと納税 ようこそweb町長室へ)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/",
@@ -61,16 +61,22 @@
           "observed_on": "https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/",
           "sha256": "dd092c68080dd07c4b81c77564bbebec96ceb92018e7b3a46b53acd56df9c554",
           "fetched_at": "2026-08-27T10:30:25Z"
+        },
+        {
+          "url": "https://www.town.uryu.hokkaido.jp/fs/2/1/1/0/1/_/__________014362_____2023.xlsx",
+          "observed_on": "https://www.town.uryu.hokkaido.jp/docs/zaiseijoukyoushiryousyuu.html",
+          "sha256": "89c6441ec496def9c0a77e9fe551dee7b54fd7e0d7040c9da557ad9c60a1b1c9",
+          "fetched_at": "2026-08-27T13:26:07Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/ (label: 総務課 企画財政担当) 入口 https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（__________014362_____2023.xlsx「令和6年度財政状況資料集 (XLSX: 555KB)」, sha256:89c6441e）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/",
@@ -82,9 +88,15 @@
           "observed_on": "https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/",
           "sha256": "dd092c68080dd07c4b81c77564bbebec96ceb92018e7b3a46b53acd56df9c554",
           "fetched_at": "2026-08-27T10:30:25Z"
+        },
+        {
+          "url": "https://www.town.uryu.hokkaido.jp/fs/2/1/1/0/1/_/__________014362_____2023.xlsx",
+          "observed_on": "https://www.town.uryu.hokkaido.jp/docs/zaiseijoukyoushiryousyuu.html",
+          "sha256": "89c6441ec496def9c0a77e9fe551dee7b54fd7e0d7040c9da557ad9c60a1b1c9",
+          "fetched_at": "2026-08-27T13:26:07Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/ (label: 総務課 企画財政担当) 入口 https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（__________014362_____2023.xlsx「令和6年度財政状況資料集 (XLSX: 555KB)」, sha256:89c6441e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（r6.xlsx「令和6年度（エクセル：519KB）」, sha256:5473f755）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html",
@@ -91,9 +91,15 @@
           "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html",
           "sha256": "08fb797057274246e9f74d912cad84fb95550cfec2cf8f4731ed94a577a23d08",
           "fetched_at": "2026-08-27T09:40:38Z"
+        },
+        {
+          "url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/zaisejokyo/documents/30nendozaiseijokyosiryosyu.xlsx",
+          "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/zaisejokyo/index.html",
+          "sha256": "c91d85588fdb3eceefc9dafe6b27654f4e3724536238130d21369a6c3928ebd6",
+          "fetched_at": "2026-08-27T13:47:32Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html (label: 決算概要) 入口 http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（30nendozaiseijokyosiryosyu.xlsx「平成30年度（エクセル：535KB）」, sha256:c91d8558）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

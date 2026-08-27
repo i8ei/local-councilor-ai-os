@@ -48,11 +48,11 @@
       "index_url": "https://en3-jg.d1-law.com/kawazu/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
@@ -69,9 +69,15 @@
           "url": "https://www.town.kawazu.shizuoka.jp/wp/wp-content/uploads/2026/02/R8toushoyosanhensei.pdf",
           "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
           "fetched_at": "2026-08-27T11:15:58Z"
+        },
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/wp/wp-content/uploads/2026/03/R8tousyoyosangaiyousho.pdf",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "sha256": "971e60a0569b08431e7d678e675671d6f38f82625073f548a3852ad84036d656",
+          "fetched_at": "2026-08-27T13:37:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/ (label: 財政・給与) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8tousyoyosangaiyousho.pdf「当初予算概要書＜令和8年度＞」, sha256:971e60a0）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

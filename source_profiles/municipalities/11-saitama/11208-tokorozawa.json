@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF957F2 (label: 所沢市 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tokorozawa.saitama.jp/shiseijoho/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tokorozawa.saitama.jp/shiseijoho/zaisei/yosan/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.tokorozawa.saitama.jp/shiseijoho/zaisei/yosan/index.html",
           "sha256": "16ac1e08038ce8829d30d38cc0abf7a6e45137d3b58f4f7150d8a82118010574",
           "fetched_at": "2026-08-27T10:20:41Z"
+        },
+        {
+          "url": "http://www.city.tokorozawa.saitama.jp/shiseijoho/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.tokorozawa.saitama.jp/",
+          "sha256": "16ac1e08038ce8829d30d38cc0abf7a6e45137d3b58f4f7150d8a82118010574",
+          "fetched_at": "2026-08-27T10:20:41Z"
+        },
+        {
+          "url": "https://www.city.tokorozawa.saitama.jp/shiseijoho/zaisei/yosan/R8toushoyosan.files/R8_ippann_yosan.pdf",
+          "observed_on": "https://www.city.tokorozawa.saitama.jp/shiseijoho/zaisei/yosan/R8toushoyosan.html",
+          "sha256": "8a9cbde94d6bd68461fe3b2a23bf9d5e22fb61436ce15c00ba0df153094cfcc2",
+          "fetched_at": "2026-08-27T13:31:30Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tokorozawa.saitama.jp/shiseijoho/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.tokorozawa.saitama.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_ippann_yosan.pdf「令和8年度一般会計予算書（PDF：2,750KB）」, sha256:8a9cbde9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tokorozawa.saitama.jp/shiseijoho/data/sainyusaishutukesansho.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tokorozawa.saitama.jp/shiseijoho/data/sainyusaishutukesansho.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.tokorozawa.saitama.jp/shiseijoho/data/sainyusaishutukesansho.html",
           "sha256": "ff52cb1846c5249e84d46776671d197b39c17cc0c74aa725a368f684bf76319a",
           "fetched_at": "2026-08-27T10:20:44Z"
+        },
+        {
+          "url": "http://www.city.tokorozawa.saitama.jp/shiseijoho/data/sainyusaishutukesansho.html",
+          "observed_on": "http://www.city.tokorozawa.saitama.jp/",
+          "sha256": "ff52cb1846c5249e84d46776671d197b39c17cc0c74aa725a368f684bf76319a",
+          "fetched_at": "2026-08-27T10:20:44Z"
+        },
+        {
+          "url": "https://www.city.tokorozawa.saitama.jp/shiseijoho/data/sainyusaishutukesansho.files/reiwa6nenndokessannsyo.pdf",
+          "observed_on": "https://www.city.tokorozawa.saitama.jp/shiseijoho/data/sainyusaishutukesansho.html",
+          "sha256": "a6efe35818cb69cc077a913537ea055a97731731f361214a443f72b62627677a",
+          "fetched_at": "2026-08-27T13:31:28Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tokorozawa.saitama.jp/shiseijoho/data/sainyusaishutukesansho.html (label: 一般会計並びに各特別会計歳入歳出決算書) 入口 https://www.city.tokorozawa.saitama.jp/shiseijoho/data/sainyusaishutukesansho.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（reiwa6nenndokessannsyo.pdf「令和6年度（PDF：2,983KB）」, sha256:a6efe358）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

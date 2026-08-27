@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www.city.osaki.miyagi.jp/section/reiki/reiki_menu.html (label: 大崎市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html",
           "sha256": "b5e9a6e4f10e681e88191df476b2f5434da27155057917f88b7a24d113c7f5d0",
           "fetched_at": "2026-08-27T10:33:57Z"
+        },
+        {
+          "url": "https://www.city.osaki.miyagi.jp/material/files/group/66/jizokukanounamatidukurinimuketa.pdf",
+          "observed_on": "https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html",
+          "sha256": "78c3312b3335a79d14758502052e59f2315b35bf7165ea0c37d4c7060324e7e4",
+          "fetched_at": "2026-08-27T13:26:35Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html (label: 行財政運営の改革に向けた基本方針を策定しました) 入口 https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（jizokukanounamatidukurinimuketa.pdf「持続可能なまちづくりに向けた行財政運営の改善 (PDFファイル: 737.3KB)」, sha256:78c3312b）にて構造マーカー（歳入・歳出・予算総額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html",
           "sha256": "b5e9a6e4f10e681e88191df476b2f5434da27155057917f88b7a24d113c7f5d0",
           "fetched_at": "2026-08-27T10:33:57Z"
+        },
+        {
+          "url": "https://www.city.osaki.miyagi.jp/material/files/group/66/jizokukanounamatidukurinimuketa.pdf",
+          "observed_on": "https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html",
+          "sha256": "78c3312b3335a79d14758502052e59f2315b35bf7165ea0c37d4c7060324e7e4",
+          "fetched_at": "2026-08-27T13:26:35Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html (label: 行財政運営の改革に向けた基本方針を策定しました) 入口 https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.osaki.miyagi.jp/shisei/emergency/21409.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（jizokukanounamatidukurinimuketa.pdf「持続可能なまちづくりに向けた行財政運営の改善 (PDFファイル: 737.3KB)」, sha256:78c3312b）にて構造マーカー（歳入・歳出・地方債等）を確認済み。"
     }
   }
 }

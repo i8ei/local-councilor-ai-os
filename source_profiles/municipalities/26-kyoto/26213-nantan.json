@@ -70,11 +70,11 @@
       "notes": "deepest_doc=P1。budget文書（1017753_1_501_6.xlsx「財政状況資料集（Ｒ６）」, sha256:11f59d35）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
@@ -86,9 +86,21 @@
           "observed_on": "https://www.city.nantan.kyoto.jp/www/gove/138/index.html",
           "sha256": "39a1e595e5e48eb17c11d22d7130b0c25d32812b28bb3e07c257790838e1e015",
           "fetched_at": "2026-08-27T09:50:08Z"
+        },
+        {
+          "url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
+          "observed_on": "http://www.city.nantan.kyoto.jp/www/",
+          "sha256": "39a1e595e5e48eb17c11d22d7130b0c25d32812b28bb3e07c257790838e1e015",
+          "fetched_at": "2026-08-27T09:50:08Z"
+        },
+        {
+          "url": "https://www.city.nantan.kyoto.jp/www/gove/138/002/000/1008971/1009511_1_501_75.pdf",
+          "observed_on": "https://www.city.nantan.kyoto.jp/www/gove/138/002/000/index_1008971.html",
+          "sha256": "ca1fdbf1921f94b47acbe4b1315fc2f47bc58cd95591148686f68b4b0b630d40",
+          "fetched_at": "2026-08-27T13:39:42Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.nantan.kyoto.jp/www/gove/138/index.html (label: 財政) 入口 https://www.city.nantan.kyoto.jp/www/gove/138/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nantan.kyoto.jp/www/gove/138/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nantan.kyoto.jp/www/gove/138/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1009511_1_501_75.pdf「後期高齢者医療事業特別会計・歳入」, sha256:ca1fdbf1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

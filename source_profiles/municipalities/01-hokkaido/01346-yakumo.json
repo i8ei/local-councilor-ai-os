@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at http://www.town.yakumo.lg.jp/soshiki/seisaku/content0080.html (label: 例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yakumo.lg.jp/life/3/24/99/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yakumo.lg.jp/life/3/24/99/",
@@ -69,16 +69,28 @@
           "observed_on": "https://www.town.yakumo.lg.jp/life/3/24/99/",
           "sha256": "eaf03c9100ad9f3750e57609b78a09dd976182d91b2028845b97620b12359b89",
           "fetched_at": "2026-08-27T10:29:45Z"
+        },
+        {
+          "url": "http://www.town.yakumo.lg.jp/life/3/24/99/",
+          "observed_on": "http://www.town.yakumo.lg.jp/",
+          "sha256": "eaf03c9100ad9f3750e57609b78a09dd976182d91b2028845b97620b12359b89",
+          "fetched_at": "2026-08-27T10:29:45Z"
+        },
+        {
+          "url": "https://www.town.yakumo.lg.jp/uploaded/attachment/22764.pdf",
+          "observed_on": "https://www.town.yakumo.lg.jp/soshiki/zaimu/content0142.html",
+          "sha256": "cdd1fb844b4a37762ea43fce3e82ccccc84b1f63bda84e340011e8d9fdc5860b",
+          "fetched_at": "2026-08-27T13:25:50Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.yakumo.lg.jp/life/3/24/99/ (label: 予算・財政) 入口 https://www.town.yakumo.lg.jp/life/3/24/99/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（22764.pdf「(予算)引上げ分地方消費税交付金(社会保障財源化分)の使途 [PDFファイル／68KB]」, sha256:cdd1fb84）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yakumo.lg.jp/life/3/24/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yakumo.lg.jp/life/3/24/",
@@ -90,9 +102,21 @@
           "observed_on": "https://www.town.yakumo.lg.jp/life/3/24/",
           "sha256": "af3e1a9f5adc715fb06e59338dee263d8676aa59f76b7234e3e491dea0cc4856",
           "fetched_at": "2026-08-27T10:29:48Z"
+        },
+        {
+          "url": "http://www.town.yakumo.lg.jp/life/3/24/",
+          "observed_on": "http://www.town.yakumo.lg.jp/",
+          "sha256": "af3e1a9f5adc715fb06e59338dee263d8676aa59f76b7234e3e491dea0cc4856",
+          "fetched_at": "2026-08-27T10:29:48Z"
+        },
+        {
+          "url": "https://www.town.yakumo.lg.jp/uploaded/attachment/22763.pdf",
+          "observed_on": "https://www.town.yakumo.lg.jp/soshiki/zaimu/content0142.html",
+          "sha256": "255e27ab57ba78a2643856f72a3faf0a751fffea6e4ceddfba1c6d7686c623a5",
+          "fetched_at": "2026-08-27T13:25:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yakumo.lg.jp/life/3/24/ (label: 行政・財政) 入口 https://www.town.yakumo.lg.jp/life/3/24/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（22763.pdf「(決算)引上げ分地方消費税交付金(社会保障財源化分)の使途 [PDFファイル／77KB]」, sha256:255e27ab）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

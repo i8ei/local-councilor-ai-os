@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.town.minami.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.minami.lg.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.minami.lg.jp/chosei/zaisei/",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.minami.lg.jp/chosei/zaisei/",
           "sha256": "3407255b57407617a82fa7def35ff15b9e469eb67ec2ea334d642b975398ad4f",
           "fetched_at": "2026-08-27T09:46:11Z"
+        },
+        {
+          "url": "https://www.town.minami.lg.jp/fs/6/2/3/1/4/2/_/R8%E3%82%8F%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%84%E4%BA%88%E7%AE%97.pdf",
+          "observed_on": "https://www.town.minami.lg.jp/docs/5686543.html",
+          "sha256": "5d558810ae6ddd121c09b5248175706fe70587e5560fbb394763c6f66f5d8909",
+          "fetched_at": "2026-08-27T13:43:04Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.minami.lg.jp/chosei/zaisei/ (label: 財政・行政改革) 入口 https://www.town.minami.lg.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minami.lg.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minami.lg.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8%E3%82%8F%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%84%E4%BA%88%E7%AE%97.pdf「令和8年度 美波町のわかりやすい予算書 (PDF 1.27MB)」, sha256:5d558810）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

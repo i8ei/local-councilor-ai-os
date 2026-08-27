@@ -50,11 +50,11 @@
       "base_url": "https://www1.g-reiki.net/city.amami/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.amami.lg.jp/zaisei/shise/kokoku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.amami.lg.jp/zaisei/shise/kokoku.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.amami.lg.jp/zaisei/shise/kokoku.html",
           "sha256": "cc8e653b5424fc72cb71bfa9040b547812209667a688023d9196ea3e5e87b7e6",
           "fetched_at": "2026-08-27T09:40:27Z"
+        },
+        {
+          "url": "https://www.city.amami.lg.jp/zaisei/shise/documents/3-4.pdf",
+          "observed_on": "https://www.city.amami.lg.jp/zaisei/shise/kokoku.html",
+          "sha256": "4eca304403209d687f880c1dac24edbf7e5b8949855ead6ad15167acaae22b23",
+          "fetched_at": "2026-08-27T13:47:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.amami.lg.jp/zaisei/shise/kokoku.html (label: 奄美市有料広告について) 入口 https://www.city.amami.lg.jp/zaisei/shise/kokoku.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.amami.lg.jp/zaisei/shise/kokoku.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3-4.pdf「奄美市封筒広告掲載取扱要領（PDF：130KB）」, sha256:4eca3044）にて構造マーカー（項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

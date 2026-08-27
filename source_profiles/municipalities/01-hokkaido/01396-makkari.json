@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.makkari/reiki_menu.html (label: 真狩村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
           "sha256": "d988901adae15ce735b4739dddff5fbe916392aeb933a65a96161eed5faf066d",
           "fetched_at": "2026-08-27T10:30:50Z"
+        },
+        {
+          "url": "https://www.vill.makkari.lg.jp/resources/output/contents/file/release/220/1089/R6_zaiseijyoukyou_shiryousyuu.xlsx",
+          "observed_on": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
+          "sha256": "3462a8d018a95b52dee08aa801825eb07947bdb98d9d4cf64c0b3740f3128b53",
+          "fetched_at": "2026-08-27T13:25:56Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.makkari.lg.jp/gyosei/zaisei/ (label: 財政状況の公表) 入口 https://www.vill.makkari.lg.jp/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6_zaiseijyoukyou_shiryousyuu.xlsx「令和6年度財政状況資料集」, sha256:3462a8d0）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
           "sha256": "d988901adae15ce735b4739dddff5fbe916392aeb933a65a96161eed5faf066d",
           "fetched_at": "2026-08-27T10:30:50Z"
+        },
+        {
+          "url": "https://www.vill.makkari.lg.jp/resources/output/contents/file/release/220/1089/R6_zaiseijyoukyou_shiryousyuu.xlsx",
+          "observed_on": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
+          "sha256": "3462a8d018a95b52dee08aa801825eb07947bdb98d9d4cf64c0b3740f3128b53",
+          "fetched_at": "2026-08-27T13:25:56Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.makkari.lg.jp/gyosei/zaisei/ (label: 財政状況の公表) 入口 https://www.vill.makkari.lg.jp/gyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_zaiseijyoukyou_shiryousyuu.xlsx「令和6年度財政状況資料集」, sha256:3462a8d0）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

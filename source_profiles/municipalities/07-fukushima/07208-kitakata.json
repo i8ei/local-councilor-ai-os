@@ -42,11 +42,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F25F2 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kitakata.fukushima.jp/life/4/20/116/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kitakata.fukushima.jp/life/4/20/116/",
@@ -58,16 +58,22 @@
           "observed_on": "http://www.city.kitakata.fukushima.jp/life/4/20/116/",
           "sha256": "219764d7b944bdc49c31c38bae778697a7cb0997828cd2cb6f817ff1130b3b37",
           "fetched_at": "2026-08-27T10:36:49Z"
+        },
+        {
+          "url": "http://www.city.kitakata.fukushima.jp/uploaded/attachment/54834.pdf",
+          "observed_on": "http://www.city.kitakata.fukushima.jp/soshiki/zaisei/58393.html",
+          "sha256": "61cc835325330b2d7e99d8fcd471b9413ae0a4153447f0eca8a899404e0f2119",
+          "fetched_at": "2026-08-27T13:29:24Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kitakata.fukushima.jp/life/4/20/116/ (label: 予算・決算) 入口 http://www.city.kitakata.fukushima.jp/life/4/20/116/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（54834.pdf「令和8年度一般会計予算書並びに予算説明書 [PDFファイル／4.83MB]」, sha256:61cc8353）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kitakata.fukushima.jp/life/4/20/116/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kitakata.fukushima.jp/life/4/20/116/",
@@ -79,9 +85,15 @@
           "observed_on": "http://www.city.kitakata.fukushima.jp/life/4/20/116/",
           "sha256": "219764d7b944bdc49c31c38bae778697a7cb0997828cd2cb6f817ff1130b3b37",
           "fetched_at": "2026-08-27T10:36:49Z"
+        },
+        {
+          "url": "http://www.city.kitakata.fukushima.jp/uploaded/attachment/56154.pdf",
+          "observed_on": "http://www.city.kitakata.fukushima.jp/soshiki/zaisei/62708.html",
+          "sha256": "307cc32ebd9d5c619d10bf6d7e3263ee7abfe979c0a86efef35b7e66bf91c9a6",
+          "fetched_at": "2026-08-27T13:29:19Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kitakata.fukushima.jp/life/4/20/116/ (label: 予算・決算) 入口 http://www.city.kitakata.fukushima.jp/life/4/20/116/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（56154.pdf「補正予算の概要（３月追加） [PDFファイル／289KB]」, sha256:307cc32e）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

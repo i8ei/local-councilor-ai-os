@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.matsusaka.mie.jp/life/13/65/256/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.matsusaka.mie.jp/site/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.matsusaka.mie.jp/site/zaisei/",
@@ -60,9 +60,21 @@
           "observed_on": "https://www.city.matsusaka.mie.jp/site/zaisei/",
           "sha256": "9f88189df8ef10bcab945edfa9c64625dfe1d2656f492560faf4c1d91573e6e5",
           "fetched_at": "2026-08-27T09:48:37Z"
+        },
+        {
+          "url": "http://www.city.matsusaka.mie.jp/site/zaisei/",
+          "observed_on": "http://www.city.matsusaka.mie.jp/",
+          "sha256": "9f88189df8ef10bcab945edfa9c64625dfe1d2656f492560faf4c1d91573e6e5",
+          "fetched_at": "2026-08-27T09:48:37Z"
+        },
+        {
+          "url": "https://www.city.matsusaka.mie.jp/uploaded/attachment/99317.pdf",
+          "observed_on": "https://www.city.matsusaka.mie.jp/site/zaisei/r08-yosan.html",
+          "sha256": "c64a3c1edebce20183b94b9524e67b89ae9dcc395b54e669ea24683265f3b02e",
+          "fetched_at": "2026-08-27T13:38:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.matsusaka.mie.jp/site/zaisei/ (label: 財政) 入口 https://www.city.matsusaka.mie.jp/site/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.matsusaka.mie.jp/site/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（99317.pdf「令和８年度当初予算編成方針 [PDFファイル／816KB]」, sha256:c64a3c1e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

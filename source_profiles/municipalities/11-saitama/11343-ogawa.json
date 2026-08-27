@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.ogawa.saitama.jp/gyosei/gyoseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ogawa.saitama.jp/gyosei/gyoseijoho/gyozaisei/1/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ogawa.saitama.jp/gyosei/gyoseijoho/gyozaisei/1/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.ogawa.saitama.jp/gyosei/gyoseijoho/gyozaisei/1/index.html",
           "sha256": "31073ef5c8285202bddc4fc8c500a547c43c0fb7c1b28a546017daae3f7d91d7",
           "fetched_at": "2026-08-27T10:21:49Z"
+        },
+        {
+          "url": "https://www.town.ogawa.saitama.jp/material/files/group/3/R7kamiki.pdf",
+          "observed_on": "https://www.town.ogawa.saitama.jp/gyosei/gyoseijoho/gyozaisei/6422.html",
+          "sha256": "a3c72a050483410f836e4fcf5b238bbdcd7b7de08a44590bd766fb91c7762eae",
+          "fetched_at": "2026-08-27T13:32:20Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.ogawa.saitama.jp/gyosei/gyoseijoho/gyozaisei/1/index.html (label: 財政・予算・決算) 入口 https://www.town.ogawa.saitama.jp/gyosei/gyoseijoho/gyozaisei/1/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ogawa.saitama.jp/gyosei/gyoseijoho/gyozaisei/1/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7kamiki.pdf「令和7年度 上半期財政状況 (PDFファイル: 557.7KB)」, sha256:a3c72a05）にて構造マーカー（歳入・歳出・項・予算現額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

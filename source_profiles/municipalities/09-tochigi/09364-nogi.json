@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.town.nogi.lg.jp/cyousei/reikisyu/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html",
@@ -63,16 +63,22 @@
           "url": "https://www.town.nogi.lg.jp/data/doc/1773896990_doc_53_0.pdf",
           "observed_on": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html",
           "fetched_at": "2026-08-27T10:18:15Z"
+        },
+        {
+          "url": "https://www.town.nogi.lg.jp/data/doc/1773896990_doc_53_0.pdf",
+          "observed_on": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html",
+          "sha256": "822b55159dbc5d9a7902e3e5d6d65faf2f960c9cf85c5bd1a870a8b093c6ae3a",
+          "fetched_at": "2026-08-27T10:18:19Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.nogi.lg.jp/cyousei/zaisei/page001351.html (label: 当初予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（1773896990_doc_53_0.pdf「令和8年度当初予算書 [PDF形式／11.45MB]」, sha256:822b5515）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html",
@@ -89,9 +95,15 @@
           "url": "https://www.town.nogi.lg.jp/data/doc/1760660929_doc_53_0.pdf",
           "observed_on": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html",
           "fetched_at": "2026-08-27T10:18:20Z"
+        },
+        {
+          "url": "https://www.town.nogi.lg.jp/data/doc/1760660929_doc_53_0.pdf",
+          "observed_on": "https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html",
+          "sha256": "ae0e595b82014fc4e389ff43cb9e72181fa5bd6ca14461e5c9f749ce709bb650",
+          "fetched_at": "2026-08-27T10:18:23Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.nogi.lg.jp/cyousei/zaisei/page001828.html (label: 決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（1760660929_doc_53_0.pdf「令和6年度歳入歳出決算書 [PDF形式／15.4MB]」, sha256:ae0e595b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

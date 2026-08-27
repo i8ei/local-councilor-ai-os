@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/ohi/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ohi.fukui.jp/1002/1209/58/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ohi.fukui.jp/1002/1209/58/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.ohi.fukui.jp/1002/1209/58/index.html",
           "sha256": "14b961353b705a1df5f1241005981779b0e6cba7215318cb8afe0e662b757eec",
           "fetched_at": "2026-08-27T10:08:03Z"
+        },
+        {
+          "url": "https://www.town.ohi.fukui.jp/1002/1209/58/p25495_d/fil/gaiyou.pdf",
+          "observed_on": "https://www.town.ohi.fukui.jp/1002/1209/58/p25495.html",
+          "sha256": "e79c950658f39cdd9e3ada7477bd5469171dfd799d456b6130932ef4b13501dd",
+          "fetched_at": "2026-08-27T13:36:00Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.ohi.fukui.jp/1002/1209/58/index.html (label: 予算・決算) 入口 https://www.town.ohi.fukui.jp/1002/1209/58/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ohi.fukui.jp/1002/1209/58/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（gaiyou.pdf「令和8年度当初予算の概要（PDF形式 595キロバイト）」, sha256:e79c9506）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ohi.fukui.jp/1002/1209/58/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ohi.fukui.jp/1002/1209/58/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.ohi.fukui.jp/1002/1209/58/index.html",
           "sha256": "14b961353b705a1df5f1241005981779b0e6cba7215318cb8afe0e662b757eec",
           "fetched_at": "2026-08-27T10:08:03Z"
+        },
+        {
+          "url": "https://www.town.ohi.fukui.jp/1002/1209/58/p25512_d/fil/zaiseizyoukyoushiryou.xlsx",
+          "observed_on": "https://www.town.ohi.fukui.jp/1002/1209/58/p25512.html",
+          "sha256": "7fd607e61194f2949c316ac5335ead68d912fd0eaf45c97013069cc88ba99e26",
+          "fetched_at": "2026-08-27T13:36:00Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.ohi.fukui.jp/1002/1209/58/index.html (label: 予算・決算) 入口 https://www.town.ohi.fukui.jp/1002/1209/58/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ohi.fukui.jp/1002/1209/58/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseizyoukyoushiryou.xlsx「令和6年度財政状況資料集（エクセル形式 577キロバイト）」, sha256:7fd607e6）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

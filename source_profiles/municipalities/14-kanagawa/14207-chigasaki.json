@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.city.chigasaki.kanagawa.jp/jyorei/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
           "sha256": "9dd8feb48d7678fc0c09a6ca5f2f5e77aefaced1633b2b8eeb6e7b166175b557",
           "fetched_at": "2026-08-27T10:26:57Z"
+        },
+        {
+          "url": "http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
+          "observed_on": "http://www.city.chigasaki.kanagawa.jp/",
+          "sha256": "9dd8feb48d7678fc0c09a6ca5f2f5e77aefaced1633b2b8eeb6e7b166175b557",
+          "fetched_at": "2026-08-27T10:26:57Z"
+        },
+        {
+          "url": "https://www.city.chigasaki.kanagawa.jp/_res/projects/default_project/_page_/001/066/725/R8yosannsyo.pdf",
+          "observed_on": "https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/1065192/1066725.html",
+          "sha256": "4f6cf496ac6aae1626368eef4caa7ece81ede3ae41071f418a3a481e1dd6a28d",
+          "fetched_at": "2026-08-27T13:34:38Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html (label: 予算・決算) 入口 https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosannsyo.pdf「令和8年度予算書及び予算説明書 （PDF 27.1MB）」, sha256:4f6cf496）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

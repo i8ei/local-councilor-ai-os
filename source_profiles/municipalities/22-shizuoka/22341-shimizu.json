@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（300356969.pdf「一般会計当初予算書」, sha256:039234b0）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shimizu.shizuoka.jp/category00000059.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shimizu.shizuoka.jp/category00000059.html",
@@ -91,9 +91,21 @@
           "observed_on": "https://www.town.shimizu.shizuoka.jp/category00000059.html",
           "sha256": "48c11c35f2968ca37d556a437264fc88accc0241c4bbb420bb4cca53fe82a80b",
           "fetched_at": "2026-08-27T10:14:58Z"
+        },
+        {
+          "url": "http://www.town.shimizu.shizuoka.jp/category00000059.html",
+          "observed_on": "http://www.town.shimizu.shizuoka.jp/",
+          "sha256": "48c11c35f2968ca37d556a437264fc88accc0241c4bbb420bb4cca53fe82a80b",
+          "fetched_at": "2026-08-27T10:14:58Z"
+        },
+        {
+          "url": "https://www.town.shimizu.shizuoka.jp/content/300350018.pdf",
+          "observed_on": "https://www.town.shimizu.shizuoka.jp/kikaku/kikaku00022.html",
+          "sha256": "7649e0fa55ef1a8c465460701391bacf5ee0c6ba759fad4d5e0f847f6f50e05c",
+          "fetched_at": "2026-08-27T13:37:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shimizu.shizuoka.jp/category00000059.html (label: 財政・会計) 入口 https://www.town.shimizu.shizuoka.jp/category00000059.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（300350018.pdf「平成25年度」, sha256:7649e0fa）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

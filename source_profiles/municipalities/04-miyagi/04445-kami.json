@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.town.kami.miyagi.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html",
           "sha256": "b6c5a1c0a674640c90ca63a3e96e6ee5e9e7255a6fd5f46a333590880e2c3753",
           "fetched_at": "2026-08-27T10:34:21Z"
+        },
+        {
+          "url": "https://www.town.kami.miyagi.jp/material/files/group/6/R6tousyo.pdf",
+          "observed_on": "https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/4151.html",
+          "sha256": "5f27f2a46d8be2adda8d20810f6c0e55f2dc7b4fcb1f2b56661e1575d33c3074",
+          "fetched_at": "2026-08-27T13:28:10Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6tousyo.pdf「令和6年度一般会計および特別会計予算書並びに予算に関する説明書 (PDFファイル: 5.4MB)」, sha256:5f27f2a4）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html",
           "sha256": "b6c5a1c0a674640c90ca63a3e96e6ee5e9e7255a6fd5f46a333590880e2c3753",
           "fetched_at": "2026-08-27T10:34:21Z"
+        },
+        {
+          "url": "https://www.town.kami.miyagi.jp/material/files/group/1/R6kessan.pdf",
+          "observed_on": "https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/zaisei_yosan_kessan/3706.html",
+          "sha256": "30cc580d8e2d7d659439bdbe7f0ddebc16a5707d8f29b4a9e7b756dc6ecf0f4a",
+          "fetched_at": "2026-08-27T13:28:15Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kami.miyagi.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan.pdf「令和6年度一般会計特別会計歳入歳出決算書 (PDFファイル: 11.2MB)」, sha256:30cc580d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at https://vill.umaji.lg.jp/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://vill.umaji.lg.jp/about/administrative/1786/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://vill.umaji.lg.jp/about/administrative/1786/",
@@ -45,9 +45,15 @@
           "observed_on": "https://vill.umaji.lg.jp/about/administrative/1786/",
           "sha256": "a28eb8797ae6a67ca521d409dadf0a532056ddb0154fb13e937e0f3620c402ec",
           "fetched_at": "2026-08-27T09:47:26Z"
+        },
+        {
+          "url": "https://vill.umaji.lg.jp/wp/wp-content/uploads/2023/09/2972129250ad03c53bf429f21105df80.xlsx",
+          "observed_on": "https://vill.umaji.lg.jp/about/administrative/1786/",
+          "sha256": "c6948d5dbde3e38ea5133a6412b1991960548e380ec732ddc0f49705c50b3f80",
+          "fetched_at": "2026-08-27T13:44:06Z"
         }
       ],
-      "notes": "Observed finance section at https://vill.umaji.lg.jp/about/administrative/1786/ (label: 馬路村財政状況) 入口 https://vill.umaji.lg.jp/about/administrative/1786/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://vill.umaji.lg.jp/about/administrative/1786/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://vill.umaji.lg.jp/about/administrative/1786/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2972129250ad03c53bf429f21105df80.xlsx「令和５年度 財政状況資料集（ダウンロードサイズ：800 KB）」, sha256:c6948d5d）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

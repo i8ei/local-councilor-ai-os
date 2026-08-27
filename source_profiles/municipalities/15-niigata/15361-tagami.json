@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tagami.niigata.jp/chousei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tagami.niigata.jp/chousei/zaisei/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.town.tagami.niigata.jp:443/chousei/zaisei/",
           "sha256": "ca5d3a85126654ac29b2daca28966c4173e36c653a3ac136553aed297b8032bf",
           "fetched_at": "2026-08-27T10:04:35Z"
+        },
+        {
+          "url": "http://www.town.tagami.niigata.jp/chousei/zaisei/",
+          "observed_on": "http://www.town.tagami.niigata.jp/",
+          "sha256": "ca5d3a85126654ac29b2daca28966c4173e36c653a3ac136553aed297b8032bf",
+          "fetched_at": "2026-08-27T10:04:35Z"
+        },
+        {
+          "url": "https://www.town.tagami.niigata.jp:443/fs/7/3/5/8/0/_/R8%E5%B9%B4%E5%BA%A6%E4%BA%88%E7%AE%97%E6%9B%B8.pdf",
+          "observed_on": "https://www.town.tagami.niigata.jp:443/docs/8565.html",
+          "sha256": "6c799d600196af7f5d7566eea58d5624ec4263a8c9ba591c0308971a0b608cbd",
+          "fetched_at": "2026-08-27T13:35:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tagami.niigata.jp/chousei/zaisei/ (label: 財政) 入口 https://www.town.tagami.niigata.jp:443/chousei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tagami.niigata.jp:443/chousei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tagami.niigata.jp:443/chousei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8%E5%B9%B4%E5%BA%A6%E4%BA%88%E7%AE%97%E6%9B%B8.pdf「令和8年度 (PDF 2.06MB)」, sha256:6c799d60）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

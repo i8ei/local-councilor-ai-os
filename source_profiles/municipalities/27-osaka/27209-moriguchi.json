@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（10moriguchi_2024.xlsx「令和6年度財政状況資料集 (Excelファイル: 403.5KB)」, sha256:27126378）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.moriguchi.osaka.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.moriguchi.osaka.jp/gyoseijoho/gyozaisei/index.html",
@@ -93,9 +93,15 @@
           "observed_on": "https://www.city.moriguchi.osaka.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "166f8ccd783ff68812ee62cad66b3373ccae02d65962d5cf65dc24527bf72622",
           "fetched_at": "2026-08-27T09:50:32Z"
+        },
+        {
+          "url": "https://www.city.moriguchi.osaka.jp/material/files/group/72/10moriguchi_2024.xlsx",
+          "observed_on": "https://www.city.moriguchi.osaka.jp/gyoseijoho/gyozaisei/14641.html",
+          "sha256": "27126378bfb02cedc8b2e6e9c3b3a32acbfdb3d3d063517f01378c407404c625",
+          "fetched_at": "2026-08-27T13:40:04Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.moriguchi.osaka.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.moriguchi.osaka.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.moriguchi.osaka.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（10moriguchi_2024.xlsx「令和6年度財政状況資料集 (Excelファイル: 403.5KB)」, sha256:27126378）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

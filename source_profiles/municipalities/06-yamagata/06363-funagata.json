@@ -48,11 +48,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/funagata/reiki_menu.html for 舟形町"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.funagata.yamagata.jp/li/sugata/100/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.funagata.yamagata.jp/li/sugata/100/index.html",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html",
           "sha256": "49531277f1f48ac7ee197ea68e42c48863446101956fb4a938fb681c1265bf37",
           "fetched_at": "2026-08-27T10:37:21Z"
+        },
+        {
+          "url": "http://www.town.funagata.yamagata.jp/li/sugata/100/index.html",
+          "observed_on": "http://www.town.funagata.yamagata.jp/",
+          "sha256": "49531277f1f48ac7ee197ea68e42c48863446101956fb4a938fb681c1265bf37",
+          "fetched_at": "2026-08-27T10:37:21Z"
+        },
+        {
+          "url": "https://www.town.funagata.yamagata.jp:443/s003/sugata/100/220/R6zaiseizyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.town.funagata.yamagata.jp:443/s003/sugata/100/220/20200119011000.html",
+          "sha256": "22b5fcc181c6b8111f6328a3c18e989b696642c5e3df67e2f9f79a4ab7346389",
+          "fetched_at": "2026-08-27T13:29:00Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.funagata.yamagata.jp/li/sugata/100/index.html (label: 財政) 入口 https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zaiseizyoukyousiryousyuu.xlsx「令和6年度 財政状況資料集（EXCEL：580KB）」, sha256:22b5fcc1）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.funagata.yamagata.jp/li/sugata/100/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.funagata.yamagata.jp/li/sugata/100/index.html",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html",
           "sha256": "49531277f1f48ac7ee197ea68e42c48863446101956fb4a938fb681c1265bf37",
           "fetched_at": "2026-08-27T10:37:21Z"
+        },
+        {
+          "url": "http://www.town.funagata.yamagata.jp/li/sugata/100/index.html",
+          "observed_on": "http://www.town.funagata.yamagata.jp/",
+          "sha256": "49531277f1f48ac7ee197ea68e42c48863446101956fb4a938fb681c1265bf37",
+          "fetched_at": "2026-08-27T10:37:21Z"
+        },
+        {
+          "url": "https://www.town.funagata.yamagata.jp:443/s003/sugata/100/220/R6zaiseizyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.town.funagata.yamagata.jp:443/s003/sugata/100/220/20200119011000.html",
+          "sha256": "22b5fcc181c6b8111f6328a3c18e989b696642c5e3df67e2f9f79a4ab7346389",
+          "fetched_at": "2026-08-27T13:29:00Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.funagata.yamagata.jp/li/sugata/100/index.html (label: 財政) 入口 https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseizyoukyousiryousyuu.xlsx「令和6年度 財政状況資料集（EXCEL：580KB）」, sha256:22b5fcc1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

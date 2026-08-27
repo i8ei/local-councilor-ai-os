@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（2026nendo-yosan-hensei-houshin-nitsuite-kouhyou-you-251002.pdf「令和8年度予算編成方針について (165.7 KB)」, sha256:21f3faab）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/",
           "sha256": "1366ae5fe0f9044177680d7a93c4ec926aeec7f665796a37c27bddcc9ca1a8b4",
           "fetched_at": "2026-08-27T09:45:13Z"
+        },
+        {
+          "url": "http://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/",
+          "observed_on": "http://www.akitakata.jp/",
+          "sha256": "1366ae5fe0f9044177680d7a93c4ec926aeec7f665796a37c27bddcc9ca1a8b4",
+          "fetched_at": "2026-08-27T09:45:13Z"
+        },
+        {
+          "url": "https://www.akitakata.jp/akitakata-media/filer_public/c1/de/c1de8482-a990-485c-9192-8e044edabd9f/01_rei-wa-6nendo-kessan-futsuu-kaikei-zaisei-joukyou.pdf",
+          "observed_on": "https://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/z164/",
+          "sha256": "0f7770c33c8e6d2ecf3f571370f2681d47fb6f9196e329e377bc19ffefdc99ea",
+          "fetched_at": "2026-08-27T13:42:39Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/ (label: 決算) 入口 https://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（01_rei-wa-6nendo-kessan-futsuu-kaikei-zaisei-joukyou.pdf「資料：令和6年度 安芸高田市決算概要 (593.5 KB)」, sha256:0f7770c3）にて構造マーカー（歳入・歳出・節・決算額等）を確認済み。"
     }
   }
 }

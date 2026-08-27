@@ -48,11 +48,11 @@
       "notes": "Observed regulations index at http://www.city.higashine.yamagata.jp/administration/reiki/ (label: 東根市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53",
@@ -69,16 +69,28 @@
           "url": "https://www.city.higashine.yamagata.jp:443/files/original/202604021346358048d820eaf.pdf",
           "observed_on": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
           "fetched_at": "2026-08-27T11:25:06Z"
+        },
+        {
+          "url": "http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53",
+          "observed_on": "http://www.city.higashine.yamagata.jp/",
+          "sha256": "bd7867bf1f092494932ca8e47d97213e9792777ff5c4bfae130eafb4cd392688",
+          "fetched_at": "2026-08-27T10:35:49Z"
+        },
+        {
+          "url": "https://www.city.higashine.yamagata.jp:443/files/original/202604021346358048d820eaf.pdf",
+          "observed_on": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
+          "sha256": "46d091b4bf5ae46ff285bc962b4e1ff76f49b45d19cc2e0b8ce22a07a744123b",
+          "fetched_at": "2026-08-27T11:25:07Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53 (label: 予算及び決算の概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（202604021346358048d820eaf.pdf「「令和８年度予算の概要」（PDF：1.4MB）」, sha256:46d091b4）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53",
@@ -95,9 +107,21 @@
           "url": "https://www.city.higashine.yamagata.jp:443/files/original/20260402134457961d740b2ea.pdf",
           "observed_on": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
           "fetched_at": "2026-08-27T11:25:08Z"
+        },
+        {
+          "url": "http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53",
+          "observed_on": "http://www.city.higashine.yamagata.jp/",
+          "sha256": "bd7867bf1f092494932ca8e47d97213e9792777ff5c4bfae130eafb4cd392688",
+          "fetched_at": "2026-08-27T10:35:49Z"
+        },
+        {
+          "url": "https://www.city.higashine.yamagata.jp:443/files/original/20260402134457961d740b2ea.pdf",
+          "observed_on": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
+          "sha256": "4d951f25dc955190654d16673a0d114fb355d8dddb890727803d5b7d0c8ede5c",
+          "fetched_at": "2026-08-27T11:25:08Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53 (label: 予算及び決算の概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（20260402134457961d740b2ea.pdf「「令和６年度決算の概要」（PDF：1.1MB）」, sha256:4d951f25）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/top/search (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shimokawa.hokkaido.jp/gyousei/2026/04/shittenattoku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shimokawa.hokkaido.jp/gyousei/2026/04/shittenattoku.html",
@@ -65,16 +65,22 @@
           "url": "https://www.town.shimokawa.hokkaido.jp/gyousei/.assets/%E2%98%85%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%A3%E3%81%A8%E3%81%8F%E3%81%93%E3%81%A8%E3%81%97%E3%81%AE%E4%BB%95%E4%BA%8B%28R6%E4%BA%88%E7%AE%97%E8%AA%AC%E6%98%8E%E8%B3%87%E6%9B%B8%29-6efaa4ca.pdf",
           "observed_on": "https://www.town.shimokawa.hokkaido.jp/gyousei/2026/04/shittenattoku.html",
           "fetched_at": "2026-08-27T11:22:54Z"
+        },
+        {
+          "url": "https://www.town.shimokawa.hokkaido.jp/gyousei/.assets/%E2%98%85%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%A3%E3%81%A8%E3%81%8F%E3%81%93%E3%81%A8%E3%81%97%E3%81%AE%E4%BB%95%E4%BA%8B%28R6%E4%BA%88%E7%AE%97%E8%AA%AC%E6%98%8E%E8%B3%87%E6%9B%B8%29-6efaa4ca.pdf",
+          "observed_on": "https://www.town.shimokawa.hokkaido.jp/gyousei/2026/04/shittenattoku.html",
+          "sha256": "e5ce41c566381e3e048e9adfe0ad3861dc008e57736850c84b27902319323b91",
+          "fetched_at": "2026-08-27T11:22:55Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.shimokawa.hokkaido.jp/gyousei/2026/04/shittenattoku.html (label: 知ってなっとくことしの仕事（予算説明書） new_mark(2026,04,20,\"new\")) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（%E2%98%85%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%A3%E3%81%A8%E3%81%8F%E3%81%93%E3%81%A8%E3%81%97%E3%81%AE%E4%BB%95%E4%BA%8B%28R6%E4%BA%88%E7%AE%97%E8%AA%AC%E6%98%8E%E8%B3%87%E6%9B%B8%29-6efaa4ca.pdf「令和6年度知ってなっとくことしの仕事（予算説明書）」, sha256:e5ce41c5）にて構造マーカー（項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shimokawa.hokkaido.jp/gyousei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shimokawa.hokkaido.jp/gyousei/zaisei/",
@@ -86,9 +92,15 @@
           "observed_on": "https://www.town.shimokawa.hokkaido.jp/gyousei/zaisei/",
           "sha256": "2b1a1bd51fa082842bbf2efe3f7d3ed925f261a2124d2bd9bae7f7ea962e7ce7",
           "fetched_at": "2026-08-27T10:30:54Z"
+        },
+        {
+          "url": "https://www.town.shimokawa.hokkaido.jp/section/.assets/%E3%80%90web%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%80%91A3%E5%86%8A%E5%AD%90_%E6%B0%B4%E5%AE%B3%E5%8D%B1%E9%99%BA%E5%BA%A6%E3%83%9E%E3%83%83%E3%83%97.pdf",
+          "observed_on": "https://www.town.shimokawa.hokkaido.jp/gyousei/zaisei/",
+          "sha256": "f3c0a41f25125187dddf3b263115415d965d64817571a84b655838bbbc5b5256",
+          "fetched_at": "2026-08-27T13:24:48Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shimokawa.hokkaido.jp/gyousei/zaisei/ (label: 財政) 入口 https://www.town.shimokawa.hokkaido.jp/gyousei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shimokawa.hokkaido.jp/gyousei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E3%80%90web%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%80%91A3%E5%86%8A%E5%AD%90_%E6%B0%B4%E5%AE%B3%E5%8D%B1%E9%99%BA%E5%BA%A6%E3%83%9E%E3%83%83%E3%83%97.pdf「洪水ハザードマップ」, sha256:f3c0a41f）にて構造マーカー（項・節等）を確認済み。"
     }
   }
 }

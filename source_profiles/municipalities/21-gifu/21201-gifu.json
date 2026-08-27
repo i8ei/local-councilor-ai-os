@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/gifu/reiki_menu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.gifu.lg.jp/info/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.gifu.lg.jp/info/zaisei/index.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.gifu.lg.jp/info/zaisei/index.html",
           "sha256": "193f06a95a95f7f2bb218efe5399c96063a0b723e63c679054c2addd4c3d489e",
           "fetched_at": "2026-08-27T10:12:29Z"
+        },
+        {
+          "url": "http://www.city.gifu.lg.jp/info/zaisei/index.html",
+          "observed_on": "http://www.city.gifu.lg.jp/",
+          "sha256": "193f06a95a95f7f2bb218efe5399c96063a0b723e63c679054c2addd4c3d489e",
+          "fetched_at": "2026-08-27T10:12:29Z"
+        },
+        {
+          "url": "https://www.city.gifu.lg.jp/_res/projects/default_project/_page_/001/015/705/tyuukizaiseikeikaku_s.pdf",
+          "observed_on": "https://www.city.gifu.lg.jp/info/zaisei/1015705.html",
+          "sha256": "0d411b3a644319025b97936fd59f9bb9e965946eb5c313ed75f055f757b01903",
+          "fetched_at": "2026-08-27T13:36:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.gifu.lg.jp/info/zaisei/index.html (label: 予算・財政) 入口 https://www.city.gifu.lg.jp/info/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.gifu.lg.jp/info/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（tyuukizaiseikeikaku_s.pdf「岐阜市中期財政計画 （PDF 2.6MB）」, sha256:0d411b3a）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

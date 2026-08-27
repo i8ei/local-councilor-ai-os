@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/jorei/ (label: 条例・規則等)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/",
           "sha256": "e2bca5b86009e89624baf45f279106e1b2bce699321c53c3f1504bcfe7c68df8",
           "fetched_at": "2026-08-27T10:14:33Z"
+        },
+        {
+          "url": "http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/",
+          "observed_on": "http://www.city.kakegawa.shizuoka.jp/",
+          "sha256": "e2bca5b86009e89624baf45f279106e1b2bce699321c53c3f1504bcfe7c68df8",
+          "fetched_at": "2026-08-27T10:14:33Z"
+        },
+        {
+          "url": "https://www.city.kakegawa.shizuoka.jp/fs/7/1/8/7/4/_/hikakubunseki_01.pdf",
+          "observed_on": "https://www.city.kakegawa.shizuoka.jp/gyosei/docs/8417.html",
+          "sha256": "67a3221d2695a4b06d20b78bbf69278db0266f6331b33861ed63d94a67b9939b",
+          "fetched_at": "2026-08-27T13:37:25Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/ (label: 財政) 入口 https://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（hikakubunseki_01.pdf「財政状況等一覧表(平成21年度決算)(PDF 78.7KB)」, sha256:67a3221d）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html",
           "sha256": "1d0f8d3009611c9448662d33f05c3a1e1ca7dd58b4867dc6e87700b0f064d2ed",
           "fetched_at": "2026-08-27T10:14:40Z"
+        },
+        {
+          "url": "http://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html",
+          "observed_on": "http://www.city.kakegawa.shizuoka.jp/",
+          "sha256": "1d0f8d3009611c9448662d33f05c3a1e1ca7dd58b4867dc6e87700b0f064d2ed",
+          "fetched_at": "2026-08-27T10:14:40Z"
+        },
+        {
+          "url": "https://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003/resource/2617/__2______________.pdf",
+          "observed_on": "https://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html",
+          "sha256": "d6d635c92ffe9b4de5e09a01dfe790568a83fa22463c897080dccff91d9f28bc",
+          "fetched_at": "2026-08-27T13:37:26Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html (label: 令和２年度決算書) 入口 https://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（__2______________.pdf「ダウンロード」, sha256:d6d635c9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

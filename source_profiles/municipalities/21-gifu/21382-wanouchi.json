@@ -48,11 +48,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/wanouchi/reiki_menu.html for 輪之内町"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://town.wanouchi.gifu.jp/portal/town/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://town.wanouchi.gifu.jp/portal/town/finance/",
@@ -64,9 +64,15 @@
           "observed_on": "https://town.wanouchi.gifu.jp/portal/town/finance/",
           "sha256": "022ff620e0973c5a2758173e775fa47577f9e89a0e985f517587143f085560bb",
           "fetched_at": "2026-08-27T10:14:00Z"
+        },
+        {
+          "url": "https://town.wanouchi.gifu.jp/wp-content/uploads/R8yosansyo.pdf",
+          "observed_on": "https://town.wanouchi.gifu.jp/portal/town/finance/post0045689/",
+          "sha256": "b51e006f63f76e3aac47727bc1a26ec85c53d00c6c76aae5148e92b254cb75cd",
+          "fetched_at": "2026-08-27T13:37:15Z"
         }
       ],
-      "notes": "Observed finance section at https://town.wanouchi.gifu.jp/portal/town/finance/ (label: 財政) 入口 https://town.wanouchi.gifu.jp/portal/town/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://town.wanouchi.gifu.jp/portal/town/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://town.wanouchi.gifu.jp/portal/town/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosansyo.pdf「令和8年度予算書（全会計）」, sha256:b51e006f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

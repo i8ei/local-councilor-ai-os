@@ -84,11 +84,11 @@
       "notes": "deepest_doc=P1。budget文書（11478.pdf「令和8年度5月補正予算書 [PDFファイル／319KB]」, sha256:36e65f84）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.uchinada.lg.jp/site/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.uchinada.lg.jp/site/zaisei/",
@@ -100,9 +100,21 @@
           "observed_on": "https://www.town.uchinada.lg.jp/site/zaisei/",
           "sha256": "c54e0745b6d40a522f72ff341cf88b35b091e206061fbbeb438d1a69009aee86",
           "fetched_at": "2026-08-27T10:06:25Z"
+        },
+        {
+          "url": "http://www.town.uchinada.lg.jp/site/zaisei/",
+          "observed_on": "http://www.town.uchinada.lg.jp/",
+          "sha256": "c54e0745b6d40a522f72ff341cf88b35b091e206061fbbeb438d1a69009aee86",
+          "fetched_at": "2026-08-27T10:06:25Z"
+        },
+        {
+          "url": "https://www.town.uchinada.lg.jp/uploaded/attachment/8863.pdf",
+          "observed_on": "https://www.town.uchinada.lg.jp/site/zaisei/17995.html",
+          "sha256": "422d52090958a6c95b85056e22a4f6ea32d3c5d293f608cdd50f486e6708cf23",
+          "fetched_at": "2026-08-27T13:35:48Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.uchinada.lg.jp/site/zaisei/ (label: 予算・決算) 入口 https://www.town.uchinada.lg.jp/site/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.uchinada.lg.jp/site/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（8863.pdf「令和5年度決算の概要 [PDFファイル／927KB]」, sha256:422d5209）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

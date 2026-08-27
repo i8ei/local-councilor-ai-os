@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.hokuryu.hokkaido.jp/chosei/reiki/ (label: 北竜町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
@@ -63,16 +63,22 @@
           "url": "https://www.town.hokuryu.hokkaido.jp/wp-content/uploads/2026/06/r7-chihoshohizeikofukin-yosan.pdf",
           "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
           "fetched_at": "2026-08-27T11:22:45Z"
+        },
+        {
+          "url": "https://www.town.hokuryu.hokkaido.jp/wp-content/uploads/2026/06/r6-zaiseijokyoshiryoshu.pdf",
+          "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
+          "sha256": "de1b90836af3e7e12eed39cb2596e2735c366cffe1882a58a25151836fd83b34",
+          "fetched_at": "2026-08-27T13:26:07Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/ (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r6-zaiseijokyoshiryoshu.pdf「PDF 令和6年度 財政状況資料集」, sha256:de1b9083）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
@@ -89,9 +95,15 @@
           "url": "https://www.town.hokuryu.hokkaido.jp/wp-content/uploads/2026/06/r6-chihoshohizeikofukin-kessan.pdf",
           "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
           "fetched_at": "2026-08-27T11:22:47Z"
+        },
+        {
+          "url": "https://www.town.hokuryu.hokkaido.jp/wp-content/uploads/2026/06/r6-zaiseijokyoshiryoshu.pdf",
+          "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
+          "sha256": "de1b90836af3e7e12eed39cb2596e2735c366cffe1882a58a25151836fd83b34",
+          "fetched_at": "2026-08-27T13:26:07Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/ (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r6-zaiseijokyoshiryoshu.pdf「PDF 令和6年度 財政状況資料集」, sha256:de1b9083）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

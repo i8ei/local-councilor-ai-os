@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（r08tousyosann.pdf「令和8年度垂水市一般会計予算書（PDF：1,613KB）（別ウィンドウで開きます）」, sha256:518fb477）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tarumizu.lg.jp/hisho/shise/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tarumizu.lg.jp/hisho/shise/yosan/index.html",
@@ -85,9 +85,15 @@
           "observed_on": "http://www.city.tarumizu.lg.jp/hisho/shise/yosan/index.html",
           "sha256": "793ab2d4e24abea74651fd8863f21d32a7dd4e5103be8eadd047a3a2d2c80e41",
           "fetched_at": "2026-08-27T09:40:18Z"
+        },
+        {
+          "url": "http://www.city.tarumizu.lg.jp/zaimu/shise/yosan/kessan/documents/r6seikasetsumei.pdf",
+          "observed_on": "http://www.city.tarumizu.lg.jp/zaimu/shise/yosan/kessan/r01kessan.html",
+          "sha256": "bf4bda42d48746d095aa4c0c9c6d14c0869248bf13e766f6be2c55c10b2a2fb9",
+          "fetched_at": "2026-08-27T13:47:24Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tarumizu.lg.jp/hisho/shise/yosan/index.html (label: 予算・財政) 入口 http://www.city.tarumizu.lg.jp/hisho/shise/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.tarumizu.lg.jp/hisho/shise/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6seikasetsumei.pdf「令和6年度（PDF：403KB）」, sha256:bf4bda42）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

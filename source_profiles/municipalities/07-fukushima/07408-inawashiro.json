@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.town.inawashiro.fukushima.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
@@ -66,16 +66,22 @@
           "observed_on": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
           "sha256": "78618e58255f20488e26e85f65f639cc0d615399efc0d6d3fe61fdd035f8a4ea",
           "fetched_at": "2026-08-27T10:37:29Z"
+        },
+        {
+          "url": "http://www.town.inawashiro.fukushima.jp/uploaded/attachment/6969.pdf",
+          "observed_on": "http://www.town.inawashiro.fukushima.jp/soshiki/2/1792.html",
+          "sha256": "f2ff4bb7a35af4b977802e713e571c24420527d4d7090367b0f7cfbb121465fd",
+          "fetched_at": "2026-08-27T13:29:49Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.inawashiro.fukushima.jp/life/5/22/ (label: 財政・例規) 入口 http://www.town.inawashiro.fukushima.jp/life/5/22/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（6969.pdf「令和8年度一般会計当初予算 [PDFファイル／15.34MB]」, sha256:f2ff4bb7）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
@@ -87,9 +93,15 @@
           "observed_on": "http://www.town.inawashiro.fukushima.jp/life/5/22/",
           "sha256": "78618e58255f20488e26e85f65f639cc0d615399efc0d6d3fe61fdd035f8a4ea",
           "fetched_at": "2026-08-27T10:37:29Z"
+        },
+        {
+          "url": "http://www.town.inawashiro.fukushima.jp/uploaded/attachment/7690.xlsx",
+          "observed_on": "http://www.town.inawashiro.fukushima.jp/soshiki/2/1799.html",
+          "sha256": "a6b3b092454c3cc0930bfbaef4f623070474e01d7fa95648623026c92433a984",
+          "fetched_at": "2026-08-27T13:29:52Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.inawashiro.fukushima.jp/life/5/22/ (label: 財政・例規) 入口 http://www.town.inawashiro.fukushima.jp/life/5/22/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（7690.xlsx「令和6年度財政状況資料集 [Excelファイル／847KB]」, sha256:a6b3b092）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

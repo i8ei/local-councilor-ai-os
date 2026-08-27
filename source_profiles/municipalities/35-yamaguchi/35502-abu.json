@@ -42,19 +42,31 @@
       "notes": "Observed g_reiki at http://townabu2.sakura.ne.jp/wp/wp-content/themes/abucho_work/reiki_menu.html (label: 阿武町例規集（条例）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://townabu2.sakura.ne.jp/guide/zaiseinituite/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://townabu2.sakura.ne.jp/guide/zaiseinituite/",
           "observed_on": "https://www.town.abu.lg.jp/guide//?id=shomei",
           "fetched_at": "2026-08-27T06:37:39Z"
+        },
+        {
+          "url": "https://townabu2.sakura.ne.jp/guide/zaiseinituite/",
+          "observed_on": "http://www.town.abu.lg.jp/",
+          "sha256": "2412d069541ba1be89b8ba74c75e7b11c2132dde6fca73e3b02a9449ff51b7a9",
+          "fetched_at": "2026-08-27T09:45:53Z"
+        },
+        {
+          "url": "https://www.town.abu.lg.jp/wp/wp-content/uploads/2025/04/1421d0032a5b6944ecaa5297e3274869.pdf",
+          "observed_on": "https://www.town.abu.lg.jp/guide/zaiseinituite/",
+          "sha256": "b36962795742bb8b95aaf29fa9364cd721d4d19655b8d79d1501858071e5da91",
+          "fetched_at": "2026-08-27T13:42:51Z"
         }
       ],
-      "notes": "Observed finance section at https://townabu2.sakura.ne.jp/guide/zaiseinituite/ (label: 財政について)"
+      "notes": "deepest_doc=P1。budget文書（1421d0032a5b6944ecaa5297e3274869.pdf「Ｒ８ 阿武町当初予算の概要（Ｒ８．４．１）」, sha256:b3696279）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85567B61 (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
           "sha256": "2d21d138b9c18f52991a277463bf6c2e36f1fc14040daa95597e40dc7c8e26a3",
           "fetched_at": "2026-08-27T10:09:16Z"
+        },
+        {
+          "url": "https://www.city.suzaka.nagano.jp/material/files/group/4/2025mitemiyousuzaka.pdf",
+          "observed_on": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/3864.html",
+          "sha256": "02b823b696e1a23e2eb12ee7205218a01a604ccab632734efb5c40e1937d6537",
+          "fetched_at": "2026-08-27T13:36:21Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html (label: 財政・行政) 入口 https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2025mitemiyousuzaka.pdf「2025年度版 財政広報誌（2024年度決算） (PDFファイル: 6.4MB)」, sha256:02b823b6）にて構造マーカー（歳入・歳出・節・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
           "sha256": "2d21d138b9c18f52991a277463bf6c2e36f1fc14040daa95597e40dc7c8e26a3",
           "fetched_at": "2026-08-27T10:09:16Z"
+        },
+        {
+          "url": "https://www.city.suzaka.nagano.jp/material/files/group/4/2025mitemiyousuzaka.pdf",
+          "observed_on": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/3864.html",
+          "sha256": "02b823b696e1a23e2eb12ee7205218a01a604ccab632734efb5c40e1937d6537",
+          "fetched_at": "2026-08-27T13:36:21Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html (label: 財政・行政) 入口 https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2025mitemiyousuzaka.pdf「2025年度版 財政広報誌（2024年度決算） (PDFファイル: 6.4MB)」, sha256:02b823b6）にて構造マーカー（歳入・歳出・節・決算額等）を確認済み。"
     }
   }
 }

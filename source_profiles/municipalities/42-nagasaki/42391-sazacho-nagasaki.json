@@ -48,11 +48,11 @@
       "notes": "Observed regulations index at https://www.sazacho-nagasaki.jp/reikisyu/ (label: 条例・規則（例規集）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.sazacho-nagasaki.jp/list00134.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.sazacho-nagasaki.jp/list00134.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.sazacho-nagasaki.jp/list00134.html",
           "sha256": "ab889d903a8f7bb8bad8680436c4923e6a214d16f53aa858216da103c68d57f2",
           "fetched_at": "2026-08-27T09:37:51Z"
+        },
+        {
+          "url": "https://www.sazacho-nagasaki.jp/kiji003535/3_535_1491_up_3x1yj647.pdf",
+          "observed_on": "https://www.sazacho-nagasaki.jp/kiji003535/index.html",
+          "sha256": "7fe199d6159e75e3e9eb04de6cd4d5975f8519ecda8ae31ac7d9137cf29aa7d2",
+          "fetched_at": "2026-08-27T13:45:49Z"
         }
       ],
-      "notes": "Observed budget link at https://www.sazacho-nagasaki.jp/list00134.html (label: 予算) 入口 https://www.sazacho-nagasaki.jp/list00134.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.sazacho-nagasaki.jp/list00134.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_535_1491_up_3x1yj647.pdf「令和2年度 施設の概要と予算説明書（PDF：1.53メガバイト）」, sha256:7fe199d6）にて構造マーカー（歳入・歳出・節・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

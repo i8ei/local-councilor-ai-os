@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kasuga.fukuoka/reiki_menu.html (label: 春日市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/index.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/index.html",
           "sha256": "2223aff7fdc415dee2111d703392b4ae099ddc58b7d12a55039396fa5c968400",
           "fetched_at": "2026-08-27T09:35:49Z"
+        },
+        {
+          "url": "https://www.city.kasuga.fukuoka.jp/_res/projects/default_project/_page_/001/004/507/r8toushoyosann.pdf",
+          "observed_on": "https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/1004507.html",
+          "sha256": "dcc1db052e0c7ecbaffde2c2878156665fb2b4cf9f787fa3e0e509ab799d78ca",
+          "fetched_at": "2026-08-27T13:44:51Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/index.html (label: 予算) 入口 https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8toushoyosann.pdf「令和8年度春日市予算書 （PDF 2.1MB）」, sha256:dcc1db05）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

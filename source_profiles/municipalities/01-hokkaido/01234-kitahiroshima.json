@@ -35,11 +35,11 @@
       "base_url": "http://www1.g-reiki.net/kitahiroshima/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html",
           "sha256": "3e0777fc3e6bf3dbbb89dc93192209cdd0bcf595d148b082c4e736820dee556e",
           "fetched_at": "2026-08-27T10:29:22Z"
+        },
+        {
+          "url": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/files/00006500/00006510/r7zaisei.pdf",
+          "observed_on": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/detail/00006510.html",
+          "sha256": "94ea43262235402d12dc3c67d3b1715e9272d337a0d92c52f0c4708496e52d43",
+          "fetched_at": "2026-08-27T13:25:44Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html (label: 予算・決算・財政) 入口 https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r7zaisei.pdf「北広島市の財政状況（令和6年度版）」, sha256:94ea4326）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html",
           "sha256": "3e0777fc3e6bf3dbbb89dc93192209cdd0bcf595d148b082c4e736820dee556e",
           "fetched_at": "2026-08-27T10:29:22Z"
+        },
+        {
+          "url": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/files/00006500/00006510/r7tokubetukaikei.pdf",
+          "observed_on": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/detail/00006510.html",
+          "sha256": "c776fa776dfd4f26d0372f1110af38c81e442535d12f5b354ef9bacbf4efbde6",
+          "fetched_at": "2026-08-27T13:25:44Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html (label: 予算・決算・財政) 入口 https://www.city.kitahiroshima.hokkaido.jp/hotnews/category/41.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r7tokubetukaikei.pdf「北広島市の特別会計の概要（令和6年度決算版）」, sha256:c776fa77）にて構造マーカー（歳入・歳出・決算額等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kushiro/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kushiro.lg.jp/shisei/zaisei/1007149/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kushiro.lg.jp/shisei/zaisei/1007149/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.city.kushiro.lg.jp/shisei/zaisei/1007149/index.html",
           "sha256": "42a4385597ac5907a73e292d9076677e25d624ac3d6eeaf38832a68761b8dc89",
           "fetched_at": "2026-08-27T10:29:16Z"
+        },
+        {
+          "url": "https://www.city.kushiro.lg.jp/_res/projects/default_project/_page_/001/018/509/r8yosansho.pdf",
+          "observed_on": "https://www.city.kushiro.lg.jp/shisei/zaisei/1007149/1018509.html",
+          "sha256": "d0cbd9761bede4514b6e2b63858e0e8bdf6c9b173872e025e40d0e369a5dd980",
+          "fetched_at": "2026-08-27T13:22:26Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kushiro.lg.jp/shisei/zaisei/1007149/index.html (label: 予算) 入口 https://www.city.kushiro.lg.jp/shisei/zaisei/1007149/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8yosansho.pdf「2026（令和8）年度各会計予算書 （PDF 1.9 MB）」, sha256:d0cbd976）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kushiro.lg.jp/shisei/zaisei/1007143/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kushiro.lg.jp/shisei/zaisei/1007143/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.city.kushiro.lg.jp/shisei/zaisei/1007143/index.html",
           "sha256": "886a3eeed5f0b4f523b91b0f541412abf30c2d08f70f4dbc18f73d5307ee6649",
           "fetched_at": "2026-08-27T10:29:17Z"
+        },
+        {
+          "url": "https://www.city.kushiro.lg.jp/_res/projects/default_project/_page_/001/007/144/6.pdf",
+          "observed_on": "https://www.city.kushiro.lg.jp/shisei/zaisei/1007143/1007144.html",
+          "sha256": "141d7faf0305e0fbfe73530fa105842191e6daba1a1a2c5ff6ba2003b24e9b81",
+          "fetched_at": "2026-08-27T13:21:39Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kushiro.lg.jp/shisei/zaisei/1007143/index.html (label: 決算) 入口 https://www.city.kushiro.lg.jp/shisei/zaisei/1007143/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6.pdf「令和6年度決算カード （PDF 490.5 KB）」, sha256:141d7faf）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

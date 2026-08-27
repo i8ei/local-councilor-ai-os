@@ -48,11 +48,11 @@
       "notes": "Observed joureikun at https://lg.joureikun.jp/marugame_city/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.marugame.lg.jp/life/6/28/140/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.marugame.lg.jp/life/6/28/140/",
@@ -64,9 +64,15 @@
           "observed_on": "http://www.city.marugame.lg.jp/life/6/28/140/",
           "sha256": "f52c9f581a2e3b81c06bca34cb2e1122c99da096a8276fa7b9382273788249cc",
           "fetched_at": "2026-08-27T09:46:18Z"
+        },
+        {
+          "url": "http://www.city.marugame.lg.jp/uploaded/attachment/24214.pdf",
+          "observed_on": "http://www.city.marugame.lg.jp/page/1137.html",
+          "sha256": "dacdadb4257172c9236f6720664cc0e5861efce7bbc3309ac50fbc55b27376da",
+          "fetched_at": "2026-08-27T13:43:09Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.marugame.lg.jp/life/6/28/140/ (label: 予算・財政) 入口 http://www.city.marugame.lg.jp/life/6/28/140/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.marugame.lg.jp/life/6/28/140/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（24214.pdf「令和8年度 [PDFファイル／436KB]」, sha256:dacdadb4）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

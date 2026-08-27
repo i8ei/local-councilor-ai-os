@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（r08tousyogaiyou.pdf「当初予算概要（PDF：618KB）」, sha256:f1409a1d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html",
@@ -91,9 +91,15 @@
           "observed_on": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html",
           "sha256": "cebd8c75c52b1f2781c7177cef6e1e5bf773f059feb67003cb30765da5de25ae",
           "fetched_at": "2026-08-27T09:40:26Z"
+        },
+        {
+          "url": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/documents/kessannagare.pdf",
+          "observed_on": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/kessan.html",
+          "sha256": "4336824b26043afd764d7a562012ee7e460a6d3604ce69d683349e789f827dbd",
+          "fetched_at": "2026-08-27T13:47:33Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html (label: 予算・財政) 入口 http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessannagare.pdf「決算の流れ（PDF：118KB）」, sha256:4336824b）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

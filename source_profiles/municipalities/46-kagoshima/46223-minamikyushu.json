@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（zaiseijijyou7shimoki20260501.pdf「令和7年度下半期（令和7年度下半期の財政状況・令和8年度当初予算の概要） (PDFファイル: 554.5KB)」, sha256:5548a84d）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -78,9 +78,15 @@
           "observed_on": "https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "b98a274d404967f8e6f5f1639e37ac218316e26b8acc80850d2c251ae6cd80ae",
           "fetched_at": "2026-08-27T09:40:43Z"
+        },
+        {
+          "url": "https://www.city.minamikyushu.lg.jp/material/files/group/4/zaiseijijyou20251101.pdf",
+          "observed_on": "https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/1/11247.html",
+          "sha256": "df0937b5d1659ea268c99970bcc98df4573710c93a09397b60919366af18ea4f",
+          "fetched_at": "2026-08-27T13:47:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijijyou20251101.pdf「令和7年度上半期（令和6年度決算の概要・令和7年度上半期の財政状況） (PDFファイル: 3.2MB)」, sha256:df0937b5）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

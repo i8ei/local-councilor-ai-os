@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（28581.pdf「一般会計当初予算 [PDFファイル／1.52MB]」, sha256:e86fef12）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.dazaifu.lg.jp/life/5/32/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.dazaifu.lg.jp/life/5/32/",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.city.dazaifu.lg.jp/life/5/32/",
           "sha256": "a1ebc9fd7a9a9f146103f9cfba332503a3919ad23eb251c5b8a526637638b681",
           "fetched_at": "2026-08-27T09:35:59Z"
+        },
+        {
+          "url": "http://www.city.dazaifu.lg.jp/life/5/32/",
+          "observed_on": "http://www.city.dazaifu.lg.jp/",
+          "sha256": "a1ebc9fd7a9a9f146103f9cfba332503a3919ad23eb251c5b8a526637638b681",
+          "fetched_at": "2026-08-27T09:35:59Z"
+        },
+        {
+          "url": "https://www.city.dazaifu.lg.jp/uploaded/attachment/26576.pdf",
+          "observed_on": "https://www.city.dazaifu.lg.jp/soshiki/2/2371.html",
+          "sha256": "8037c0c2990e199f23c3d9d9a3649aa6891d612051b02585bb42cad1385e344f",
+          "fetched_at": "2026-08-27T13:44:53Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.dazaifu.lg.jp/life/5/32/ (label: 予算・決算・行政評価) 入口 https://www.city.dazaifu.lg.jp/life/5/32/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.dazaifu.lg.jp/life/5/32/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（26576.pdf「令和6年度決算概要 [PDFファイル／770KB]」, sha256:8037c0c2）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

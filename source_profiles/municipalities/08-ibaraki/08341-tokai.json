@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tokai/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/yosan_shikkojokyo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/yosan_shikkojokyo/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/yosan_shikkojokyo/index.html",
           "sha256": "68acc3560976054104c0e7c0c67eafb3bf2db312bd195791bdd92957877d945d",
           "fetched_at": "2026-08-27T10:17:50Z"
+        },
+        {
+          "url": "https://www.vill.tokai.ibaraki.jp/material/files/group/2/r2_0101gaiyou.pdf",
+          "observed_on": "https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/yosan_shikkojokyo/5238.html",
+          "sha256": "4f3a42ac5ebf7cd20d0f45110d7139c5ab1b44a921d976e8f9b3bc836102c415",
+          "fetched_at": "2026-08-27T13:30:37Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/yosan_shikkojokyo/index.html (label: 予算・執行状況) 入口 https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/yosan_shikkojokyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/yosan_shikkojokyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r2_0101gaiyou.pdf「令和2年度一般会計補正予算（第1号）概要 (PDFファイル: 150.8KB)」, sha256:4f3a42ac）にて構造マーカー（歳入・歳出・款・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/kessan/index.html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/kessan/index.html",
           "sha256": "aa95de0e7dd9dc114a944aa5574fbea178dc37eea381b08075a4191743bec231",
           "fetched_at": "2026-08-27T10:17:52Z"
+        },
+        {
+          "url": "https://www.vill.tokai.ibaraki.jp/material/files/group/2/544e1668655c3.pdf",
+          "observed_on": "https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/kessan/2352.html",
+          "sha256": "353288d329edc6303e3c4b8540ce7d4237773677f6011ed84308b51cdf788aa9",
+          "fetched_at": "2026-08-27T13:30:38Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/kessan/index.html (label: 決算) 入口 https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tokai.ibaraki.jp/sonseijoho/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（544e1668655c3.pdf「平成25年度 一般会計決算の状況 (PDFファイル: 159.1KB)」, sha256:353288d3）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

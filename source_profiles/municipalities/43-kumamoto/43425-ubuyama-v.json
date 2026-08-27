@@ -50,11 +50,11 @@
       "notes": "Observed regulations index at https://public1.legalcrud.com/ubuyama_vill/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html",
           "sha256": "5cd8f23ecc8029b543fb7a9fb10c3f4bfa8bcde85b1b0a275125068b9fd4ca30",
           "fetched_at": "2026-08-27T09:38:40Z"
+        },
+        {
+          "url": "http://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html",
+          "observed_on": "http://www.ubuyama-v.jp/",
+          "sha256": "5cd8f23ecc8029b543fb7a9fb10c3f4bfa8bcde85b1b0a275125068b9fd4ca30",
+          "fetched_at": "2026-08-27T09:38:40Z"
+        },
+        {
+          "url": "https://www.ubuyama-v.jp/material/files/group/2/zaisei2015.pdf",
+          "observed_on": "https://www.ubuyama-v.jp/sonseijoho/muranozaisei/zaiseijokyo/550.html",
+          "sha256": "0f0f348fcc35a0d8b4ed62f0f57112f4877b276ffaa32071e6e94535b4e94fa6",
+          "fetched_at": "2026-08-27T13:46:12Z"
         }
       ],
-      "notes": "Observed finance section at http://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html (label: 村の財政) 入口 https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaisei2015.pdf「平成27年 財政状況資料集 (PDFファイル: 1.4MB)」, sha256:0f0f348f）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

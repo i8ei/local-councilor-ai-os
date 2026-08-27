@@ -68,11 +68,11 @@
       "notes": "deepest_doc=P1。budget文書（125.pdf「令和4年度 市町村財政比較分析表 [PDFファイル／813KB]」, sha256:69319f11）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.minamidaito.okinawa.jp/page/351.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.minamidaito.okinawa.jp/page/351.html",
@@ -89,9 +89,21 @@
           "url": "https://www.vill.minamidaito.okinawa.jp/uploaded/attachment/124.pdf",
           "observed_on": "https://www.vill.minamidaito.okinawa.jp/page/351.html",
           "fetched_at": "2026-08-27T10:58:37Z"
+        },
+        {
+          "url": "http://www.vill.minamidaito.okinawa.jp/page/351.html",
+          "observed_on": "http://www.vill.minamidaito.okinawa.jp/",
+          "sha256": "d978063b9729626d9e4c5f8168ccd571360dc83b1739113e74c15ca80d0d31f5",
+          "fetched_at": "2026-08-27T09:42:10Z"
+        },
+        {
+          "url": "https://www.vill.minamidaito.okinawa.jp/uploaded/attachment/124.pdf",
+          "observed_on": "https://www.vill.minamidaito.okinawa.jp/page/351.html",
+          "sha256": "8e519d82f8dccabbae10a18cf721af29e0bce7dc6cd331e0b4352973bbd0b3e1",
+          "fetched_at": "2026-08-27T10:58:38Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.minamidaito.okinawa.jp/page/351.html (label: 決算に基づく健全化判断比率等の算定結果の公表) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（124.pdf「決算に基づく健全化判断比率等の算定結果（令和3年度） [PDFファイル／65KB]」, sha256:8e519d82）にて構造マーカー（項・地方債等）を確認済み。"
     }
   }
 }

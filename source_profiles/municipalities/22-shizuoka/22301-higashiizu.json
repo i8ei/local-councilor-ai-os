@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（hoseiyosan_20260331.pdf「令和8年度 一般会計 補正予算書（第1号） (PDFファイル: 86.2KB)」, sha256:9e5a8dc6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/1520.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/1520.html",
@@ -90,9 +90,15 @@
           "url": "https://www.town.higashiizu.lg.jp/material/files/group/11/som_zaisei_h28kessancard.pdf",
           "observed_on": "https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/1520.html",
           "fetched_at": "2026-08-27T10:14:44Z"
+        },
+        {
+          "url": "https://www.town.higashiizu.lg.jp/material/files/group/11/som_zaisei_h28kessancard.pdf",
+          "observed_on": "https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/1520.html",
+          "sha256": "b34b7addb113fc8004936db20341ef65ba89cad3a7547df3213762e3ffee008a",
+          "fetched_at": "2026-08-27T10:14:47Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/1520.html (label: 平成28年度～令和2年度決算カード) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（som_zaisei_h28kessancard.pdf「平成28年度決算カード (PDFファイル: 136.4KB)」, sha256:b34b7add）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

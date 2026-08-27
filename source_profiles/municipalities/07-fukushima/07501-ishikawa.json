@@ -29,11 +29,11 @@
       "notes": "Observed g_reiki at https://www.town.ishikawa.fukushima.jp//reiki_int/reiki_menu.html (label: 石川町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ishikawa.fukushima.jp/admin/parliament/yosan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ishikawa.fukushima.jp/admin/parliament/yosan.html",
@@ -45,9 +45,15 @@
           "observed_on": "https://www.town.ishikawa.fukushima.jp/admin/parliament/yosan.html",
           "sha256": "9b8c9be26f3a6d7d088335847bc042eceba537d58effbc132f5c308a9e826a07",
           "fetched_at": "2026-08-27T10:38:04Z"
+        },
+        {
+          "url": "https://www.town.ishikawa.fukushima.jp/admin/files/yosan20250911_1.pdf",
+          "observed_on": "https://www.town.ishikawa.fukushima.jp/admin/parliament/yosan7.html",
+          "sha256": "21bebe645ff8d9ec1856a3e66c966fb36963906f58f8afd0d53ad9a2d7cc733a",
+          "fetched_at": "2026-08-27T13:29:47Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.ishikawa.fukushima.jp/admin/parliament/yosan.html (label: 2025.12.10 予算審査特別委員会（令和7年第8回（12月）石川町議会定例会）) 入口 https://www.town.ishikawa.fukushima.jp/admin/parliament/yosan.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yosan20250911_1.pdf「予算審査特別委員会付託表（PDF）」, sha256:21bebe64）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

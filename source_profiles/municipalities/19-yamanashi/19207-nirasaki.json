@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（01_R8housin.pdf「令和8年度当初予算編成方針 (PDFファイル: 382.5KB)」, sha256:c791dffc）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nirasaki.lg.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nirasaki.lg.jp/shiseijoho/zaisei/index.html",
@@ -91,9 +91,15 @@
           "observed_on": "https://www.city.nirasaki.lg.jp/shiseijoho/zaisei/index.html",
           "sha256": "10a4d70147f0322cd8d05f4c2148f364313b541b7deae9fd0125518b9b569be1",
           "fetched_at": "2026-08-27T10:07:42Z"
+        },
+        {
+          "url": "https://www.city.nirasaki.lg.jp/material/files/group/1/R6kessan.pdf",
+          "observed_on": "https://www.city.nirasaki.lg.jp/shiseijoho/zaisei/1/3712.html",
+          "sha256": "04b7b41fc4e619a13ce0c033d1f6ec0894fa403e1ec580d2e44ecd895877ce25",
+          "fetched_at": "2026-08-27T13:36:22Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.nirasaki.lg.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.nirasaki.lg.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nirasaki.lg.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nirasaki.lg.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan.pdf「令和6年度(PDFファイル:12.7MB)」, sha256:04b7b41f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

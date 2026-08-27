@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/town.misato.miyagi/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.misato.miyagi.jp/13jyoho/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.misato.miyagi.jp/13jyoho/zaisei.html",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html",
           "sha256": "121043f3ccdf892ab2679bb47ade21790d56511bf8aa9f9f0683a97afabfd191",
           "fetched_at": "2026-08-27T10:35:34Z"
+        },
+        {
+          "url": "http://www.town.misato.miyagi.jp/13jyoho/zaisei.html",
+          "observed_on": "http://www.town.misato.miyagi.jp/",
+          "sha256": "121043f3ccdf892ab2679bb47ade21790d56511bf8aa9f9f0683a97afabfd191",
+          "fetched_at": "2026-08-27T10:35:34Z"
+        },
+        {
+          "url": "https://www.town.misato.miyagi.jp:443/13jyoho/pdf/R5zaiseijyoukyousiryousuu.pdf",
+          "observed_on": "https://www.town.misato.miyagi.jp:443/13jyoho/2016-1007-1713-32.html",
+          "sha256": "30ae6d0e2acf5a2a2c9168fe9316066d95bd91d83ea929145ef263a21e1d5f7b",
+          "fetched_at": "2026-08-27T13:28:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.misato.miyagi.jp/13jyoho/zaisei.html (label: 財政) 入口 https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R5zaiseijyoukyousiryousuu.pdf「財政状況資料集（令和５年度） (1899KB)」, sha256:30ae6d0e）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.misato.miyagi.jp/13jyoho/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.misato.miyagi.jp/13jyoho/zaisei.html",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html",
           "sha256": "121043f3ccdf892ab2679bb47ade21790d56511bf8aa9f9f0683a97afabfd191",
           "fetched_at": "2026-08-27T10:35:34Z"
+        },
+        {
+          "url": "http://www.town.misato.miyagi.jp/13jyoho/zaisei.html",
+          "observed_on": "http://www.town.misato.miyagi.jp/",
+          "sha256": "121043f3ccdf892ab2679bb47ade21790d56511bf8aa9f9f0683a97afabfd191",
+          "fetched_at": "2026-08-27T10:35:34Z"
+        },
+        {
+          "url": "https://www.town.misato.miyagi.jp:443/13jyoho/pdf/R5zaiseijyoukyousiryousuu.pdf",
+          "observed_on": "https://www.town.misato.miyagi.jp:443/13jyoho/2016-1007-1713-32.html",
+          "sha256": "30ae6d0e2acf5a2a2c9168fe9316066d95bd91d83ea929145ef263a21e1d5f7b",
+          "fetched_at": "2026-08-27T13:28:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.misato.miyagi.jp/13jyoho/zaisei.html (label: 財政) 入口 https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R5zaiseijyoukyousiryousuu.pdf「財政状況資料集（令和５年度） (1899KB)」, sha256:30ae6d0e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

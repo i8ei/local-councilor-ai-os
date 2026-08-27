@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.yaita.tochigi.jp/life/4/23/118/ (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yaita.tochigi.jp/life/4/24/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yaita.tochigi.jp/life/4/24/",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.yaita.tochigi.jp/life/4/24/",
           "sha256": "d2c7af2318fa1afd081eb31a5a5e45c1d75a3deca15fb9079ae02c0a16387780",
           "fetched_at": "2026-08-27T10:18:13Z"
+        },
+        {
+          "url": "http://www.city.yaita.tochigi.jp/life/4/24/",
+          "observed_on": "http://www.city.yaita.tochigi.jp/",
+          "sha256": "d2c7af2318fa1afd081eb31a5a5e45c1d75a3deca15fb9079ae02c0a16387780",
+          "fetched_at": "2026-08-27T10:18:13Z"
+        },
+        {
+          "url": "https://www.city.yaita.tochigi.jp/uploaded/attachment/23498.pdf",
+          "observed_on": "https://www.city.yaita.tochigi.jp/soshiki/zaisei/tousyoyosan.html",
+          "sha256": "2a52ce54c775d2d05274759b1a9924749ab15e0868a835330efe2b4063f1838a",
+          "fetched_at": "2026-08-27T13:30:54Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.yaita.tochigi.jp/life/4/24/ (label: 予算・財政) 入口 https://www.city.yaita.tochigi.jp/life/4/24/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（23498.pdf「令和8年度当初予算の概要について [PDFファイル／836KB]」, sha256:2a52ce54）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yaita.tochigi.jp/soshiki/zaisei/tyousyaannaizu-zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yaita.tochigi.jp/soshiki/zaisei/tyousyaannaizu-zaisei.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.yaita.tochigi.jp/soshiki/zaisei/tyousyaannaizu-zaisei.html",
           "sha256": "84c2874b8487fd43e32ccc653a075a73828c6ff59b96223d8902d2f5cdbf17f2",
           "fetched_at": "2026-08-27T10:18:16Z"
+        },
+        {
+          "url": "http://www.city.yaita.tochigi.jp/soshiki/zaisei/tyousyaannaizu-zaisei.html",
+          "observed_on": "http://www.city.yaita.tochigi.jp/",
+          "sha256": "84c2874b8487fd43e32ccc653a075a73828c6ff59b96223d8902d2f5cdbf17f2",
+          "fetched_at": "2026-08-27T10:18:16Z"
+        },
+        {
+          "url": "https://www.city.yaita.tochigi.jp/uploaded/attachment/24133.pdf",
+          "observed_on": "https://www.city.yaita.tochigi.jp/soshiki/zaisei/zaiseijyokyokouhyo.html",
+          "sha256": "bd9b5ce5c864bc27804dede2f319b3dbb6d03d2ca5fc1c0696948e4a84cbef1a",
+          "fetched_at": "2026-08-27T13:30:56Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.yaita.tochigi.jp/soshiki/zaisei/tyousyaannaizu-zaisei.html (label: 庁舎案内図) 入口 https://www.city.yaita.tochigi.jp/soshiki/zaisei/tyousyaannaizu-zaisei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（24133.pdf「矢板市財政状況（令和8年3月31日現在） [PDFファイル／784KB]」, sha256:bd9b5ce5）にて構造マーカー（歳入・歳出・収入済額・支出済額等）を確認済み。"
     }
   }
 }

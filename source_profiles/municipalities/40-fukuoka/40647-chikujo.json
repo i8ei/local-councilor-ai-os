@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（01_R8tousyo.pdf「一般会計当初予算（PDF）」, sha256:fcf98fa5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.chikujo.fukuoka.jp/li/020/020/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.chikujo.fukuoka.jp/li/020/020/index.html",
@@ -91,9 +91,21 @@
           "observed_on": "https://www.town.chikujo.fukuoka.jp/li/020/020/index.html",
           "sha256": "ec3103d603d9c229d4a49f3b6ba6c5eb66ccc88e1ffd701f0e5fac2ecaca5675",
           "fetched_at": "2026-08-27T09:37:28Z"
+        },
+        {
+          "url": "http://www.town.chikujo.fukuoka.jp/li/020/020/index.html",
+          "observed_on": "http://www.town.chikujo.fukuoka.jp/",
+          "sha256": "ec3103d603d9c229d4a49f3b6ba6c5eb66ccc88e1ffd701f0e5fac2ecaca5675",
+          "fetched_at": "2026-08-27T09:37:28Z"
+        },
+        {
+          "url": "https://www.town.chikujo.fukuoka.jp/s009/020/020/020/zaiseijyoukyosiryosyu_H22.pdf",
+          "observed_on": "https://www.town.chikujo.fukuoka.jp/s009/020/020/020/20151015155825.html",
+          "sha256": "04ed210395b4bb37eb1e7aad6b25f8c51742ed73a2aa95b701a7e93dd8634cfe",
+          "fetched_at": "2026-08-27T13:45:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.chikujo.fukuoka.jp/li/020/020/index.html (label: 築上町の財政 開く 閉じる) 入口 https://www.town.chikujo.fukuoka.jp/li/020/020/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.chikujo.fukuoka.jp/li/020/020/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijyoukyosiryosyu_H22.pdf「平成22年度（PDF：640KB）」, sha256:04ed2103）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

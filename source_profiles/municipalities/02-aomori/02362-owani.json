@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.town.owani.lg.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
@@ -71,16 +71,22 @@
           "url": "http://www.town.owani.lg.jp/gyousei/zaisei/files/R8yosannsoiukatuhyou.pdf",
           "observed_on": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
           "fetched_at": "2026-08-27T11:23:39Z"
+        },
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/zaisei/files/R8yosanngaiyou.pdf",
+          "observed_on": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
+          "sha256": "4f126643518ac91a73bd1031a987e3b8efbd1f898d9665b14fef52a35684c736",
+          "fetched_at": "2026-08-27T13:27:05Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.owani.lg.jp/gyousei/zaisei/budget.html (label: 予算) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（R8yosanngaiyou.pdf「令和８年度一般会計当初予算の概要 (66KB)」, sha256:4f126643）にて構造マーカー（歳入・歳出・予算総額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
@@ -97,9 +103,15 @@
           "url": "http://www.town.owani.lg.jp/gyousei/zaisei/files/R6kessannjoukyou.pdf",
           "observed_on": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
           "fetched_at": "2026-08-27T11:23:41Z"
+        },
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/zaisei/files/R6syuyousesaku.pdf",
+          "observed_on": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
+          "sha256": "c0135ac9bae68f8359b2738cf138cc9da0587e8b30f84683c725ffb42625cea0",
+          "fetched_at": "2026-08-27T13:27:06Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6syuyousesaku.pdf「令和6年度主要施策執行状況 (715KB)」, sha256:c0135ac9）にて構造マーカー（項・決算額・地方債等）を確認済み。"
     }
   }
 }

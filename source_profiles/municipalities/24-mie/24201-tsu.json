@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/tsu/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html",
           "sha256": "fb75e9466bf5d1f9b859bf45f525aaf2507839a805204940f7a24291607f0685",
           "fetched_at": "2026-08-27T09:48:49Z"
+        },
+        {
+          "url": "http://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html",
+          "observed_on": "http://www.info.city.tsu.mie.jp/",
+          "sha256": "fb75e9466bf5d1f9b859bf45f525aaf2507839a805204940f7a24291607f0685",
+          "fetched_at": "2026-08-27T09:48:49Z"
+        },
+        {
+          "url": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/005/575/r8_toushoyosansho.pdf",
+          "observed_on": "https://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/1005575.html",
+          "sha256": "02c6c56d834acf0e209f04442a92e0fb0cef14d60959ef8f3be2d710347df258",
+          "fetched_at": "2026-08-27T13:39:04Z"
         }
       ],
-      "notes": "Observed budget link at http://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html (label: 予算) 入口 https://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_toushoyosansho.pdf「令和8年度一般会計・特別会計 （PDF 6.5MB）」, sha256:02c6c56d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

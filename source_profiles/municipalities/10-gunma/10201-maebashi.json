@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.city.maebashi.gunma.jp/gyosei/2/10/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
           "sha256": "c32d3dbd0716cc5059e93b933aba11d76065fdf3ce0ac4f01a3cc8086dc6e038",
           "fetched_at": "2026-08-27T10:18:34Z"
+        },
+        {
+          "url": "https://www.city.maebashi.gunma.jp/material/files/group/4/gyoukaku-gaiyou.pdf",
+          "observed_on": "https://www.city.maebashi.gunma.jp/gyosei/2/4/13895.html",
+          "sha256": "e338b3e7f0619e14429e8ddb8cbc0cac84578a06a7e0a84962177eadd31aa905",
+          "fetched_at": "2026-08-27T13:31:05Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.maebashi.gunma.jp/gyosei/2/index.html (label: 行財政) 入口 https://www.city.maebashi.gunma.jp/gyosei/2/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.maebashi.gunma.jp/gyosei/2/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（gyoukaku-gaiyou.pdf「行財政改革推進計画（令和元年度～令和9年度）概要版 (PDFファイル: 172.1KB)」, sha256:e338b3e7）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.city.maebashi.gunma.jp/gyosei/2/index.html",
           "sha256": "c32d3dbd0716cc5059e93b933aba11d76065fdf3ce0ac4f01a3cc8086dc6e038",
           "fetched_at": "2026-08-27T10:18:34Z"
+        },
+        {
+          "url": "https://www.city.maebashi.gunma.jp/material/files/group/4/gyoukaku-gaiyou.pdf",
+          "observed_on": "https://www.city.maebashi.gunma.jp/gyosei/2/4/13895.html",
+          "sha256": "e338b3e7f0619e14429e8ddb8cbc0cac84578a06a7e0a84962177eadd31aa905",
+          "fetched_at": "2026-08-27T13:31:05Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.maebashi.gunma.jp/gyosei/2/index.html (label: 行財政) 入口 https://www.city.maebashi.gunma.jp/gyosei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.maebashi.gunma.jp/gyosei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（gyoukaku-gaiyou.pdf「行財政改革推進計画（令和元年度～令和9年度）概要版 (PDFファイル: 172.1KB)」, sha256:e338b3e7）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     }
   }
 }

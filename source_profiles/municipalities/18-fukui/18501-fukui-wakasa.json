@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/fukui-wakasa/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html",
@@ -72,9 +72,15 @@
           "url": "https://www.town.fukui-wakasa.lg.jp/material/files/group/3/20250415.pdf",
           "observed_on": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html",
           "fetched_at": "2026-08-27T10:07:56Z"
+        },
+        {
+          "url": "https://www.town.fukui-wakasa.lg.jp/material/files/group/3/20230407.pdf",
+          "observed_on": "https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html",
+          "sha256": "49c36952ef4741fb88816cadb53b045cf74a4b58385973d8c87c4237f47eca3b",
+          "fetched_at": "2026-08-27T13:36:04Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.fukui-wakasa.lg.jp/gyoseijoho/gyozaisei/1483.html (label: 予算) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（20230407.pdf「令和5年度当初予算 (PDFファイル: 1.9MB)」, sha256:49c36952）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

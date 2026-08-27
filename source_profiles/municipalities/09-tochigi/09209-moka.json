@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/moka/reiki_honbun/e110RG00000912.html (label: 真岡市議会政務活動費の交付に関する条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
           "sha256": "9ba66ab4143761f56dcdcc4df92dbc52ff66a16ee5f1ff967a4e7c9feeca9a10",
           "fetched_at": "2026-08-27T10:18:08Z"
+        },
+        {
+          "url": "https://www.city.moka.lg.jp/material/files/group/48/R6_zaiseijoukyousiryou.xlsx",
+          "observed_on": "https://www.city.moka.lg.jp/shisei/gyozaisei/zaisei_yosan_kessan/18347.html",
+          "sha256": "d8294b8c4d978fe731e5332017a313543e36342cbb6e3e5805b348e1a674da21",
+          "fetched_at": "2026-08-27T13:30:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.moka.lg.jp/shisei/gyozaisei/index.html (label: 行財政) 入口 https://www.city.moka.lg.jp/shisei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.moka.lg.jp/shisei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6_zaiseijoukyousiryou.xlsx「令和6年度財政状況資料集 (Excelファイル: 547.7KB)」, sha256:d8294b8c）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.moka.lg.jp/shisei/gyozaisei/index.html",
           "sha256": "9ba66ab4143761f56dcdcc4df92dbc52ff66a16ee5f1ff967a4e7c9feeca9a10",
           "fetched_at": "2026-08-27T10:18:08Z"
+        },
+        {
+          "url": "https://www.city.moka.lg.jp/material/files/group/48/R6_zaiseijoukyousiryou.xlsx",
+          "observed_on": "https://www.city.moka.lg.jp/shisei/gyozaisei/zaisei_yosan_kessan/18347.html",
+          "sha256": "d8294b8c4d978fe731e5332017a313543e36342cbb6e3e5805b348e1a674da21",
+          "fetched_at": "2026-08-27T13:30:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.moka.lg.jp/shisei/gyozaisei/index.html (label: 行財政) 入口 https://www.city.moka.lg.jp/shisei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.moka.lg.jp/shisei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_zaiseijoukyousiryou.xlsx「令和6年度財政状況資料集 (Excelファイル: 547.7KB)」, sha256:d8294b8c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

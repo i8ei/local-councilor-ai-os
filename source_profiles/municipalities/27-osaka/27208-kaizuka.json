@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city.kaizuka/reiki_menu.html (label: 貝塚市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html",
           "sha256": "8d5bf1ee93e2e1ae46a68a00c1a983aa20610f43f88e6ff792c58a73f333698b",
           "fetched_at": "2026-08-27T09:50:38Z"
+        },
+        {
+          "url": "https://www.city.kaizuka.lg.jp/material/files/group/84/zaiseijijyouR808.pdf",
+          "observed_on": "https://www.city.kaizuka.lg.jp/kakuka/sogoseisaku/zaisei/menu/zaisei_jyokyo/zaiseizizyou.html",
+          "sha256": "509335917bdec88b1d0ff6f7f980672a0bfe987e4fee76f6b5d93d2691bf7e38",
+          "fetched_at": "2026-08-27T13:40:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html (label: 行財政について) 入口 https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijijyouR808.pdf「令和8年8月公表分 (PDFファイル: 325.2KB)」, sha256:50933591）にて構造マーカー（歳入・歳出・予算現額・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

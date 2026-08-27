@@ -48,11 +48,11 @@
       "base_url": "https://www1.g-reiki.net/city.miyama/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.miyama.lg.jp/li/shisei/060/030/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyama.lg.jp/li/shisei/060/030/index.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.miyama.lg.jp/li/shisei/060/030/index.html",
           "sha256": "8ea3382ec0bda3402fd7df6ef69a7752652786909cb8ef30b9a649a813b17193",
           "fetched_at": "2026-08-27T09:36:11Z"
+        },
+        {
+          "url": "http://www.city.miyama.lg.jp/li/shisei/060/030/index.html",
+          "observed_on": "http://www.city.miyama.lg.jp/",
+          "sha256": "8ea3382ec0bda3402fd7df6ef69a7752652786909cb8ef30b9a649a813b17193",
+          "fetched_at": "2026-08-27T09:36:11Z"
+        },
+        {
+          "url": "https://www.city.miyama.lg.jp/s008/shisei/070/010/reiwa8/202606hosei.pdf",
+          "observed_on": "https://www.city.miyama.lg.jp/s008/shisei/070/010/reiwa8/20221208084817.html",
+          "sha256": "c1d2eef8606cddfc77e2ff5d91b1a3411f99e3b77ed942a99e82b92760cc02d7",
+          "fetched_at": "2026-08-27T13:44:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.miyama.lg.jp/li/shisei/060/030/index.html (label: 予算) 入口 https://www.city.miyama.lg.jp/li/shisei/060/030/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyama.lg.jp/li/shisei/060/030/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（202606hosei.pdf「令和8年度6月補正予算の概要」, sha256:c1d2eef8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

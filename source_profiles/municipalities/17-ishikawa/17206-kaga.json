@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kaga/reiki_menu.html (label: 加賀市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html",
           "sha256": "1d1fd5b7474422bd74c47791dec32cec8246228bd9840d7912258ecf9932ac20",
           "fetched_at": "2026-08-27T10:06:12Z"
+        },
+        {
+          "url": "https://www.city.kaga.ishikawa.jp/material/files/group/34/3587.pdf",
+          "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/2/3757.html",
+          "sha256": "c77948700eff95d28ae26c93f56e7906d2dbeb147a1acbe6a8a37b8149ddbf68",
+          "fetched_at": "2026-08-27T13:35:52Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3587.pdf「会計別予算総括表 (PDFファイル: 35.4KB)」, sha256:c7794870）にて構造マーカー（当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html",
           "sha256": "08994a7b8ff710f75ba649c34fde91fbb407a4aaa53793866278bcb7f04c56de",
           "fetched_at": "2026-08-27T10:06:13Z"
+        },
+        {
+          "url": "https://www.city.kaga.ishikawa.jp/material/files/group/34/13508.pdf",
+          "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/3655.html",
+          "sha256": "ebd5cc351ecaa5b58b6f4b90a0538cc8e7b0ceda8c87e1a120e3630cd3e5e305",
+          "fetched_at": "2026-08-27T13:35:41Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（13508.pdf「一般会計決算の概要 (PDFファイル: 57.3KB)」, sha256:ebd5cc35）にて構造マーカー（歳入・歳出・実質収支等）を確認済み。"
     }
   }
 }

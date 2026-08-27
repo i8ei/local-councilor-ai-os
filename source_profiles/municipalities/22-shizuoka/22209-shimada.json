@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at https://www.city.shimada.shizuoka.jp/gyosei/shisei/reki/ (label: 例規・条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/",
@@ -69,16 +69,22 @@
           "observed_on": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/",
           "sha256": "65c9773ef0d16ce8fd55b72cc876a5fed76fee6d89645156e13b98d849f9ca20",
           "fetched_at": "2026-08-27T10:14:24Z"
+        },
+        {
+          "url": "https://www.city.shimada.shizuoka.jp/fs/9/7/3/6/6/3/_/zaiseijijouR80331.pdf.pdf",
+          "observed_on": "https://www.city.shimada.shizuoka.jp/gyosei-docs/yosankessan.html",
+          "sha256": "a73aeb4a943912c25114cac8d141b7d94d7d72eeedb6e06a2a4e01ba43c6003e",
+          "fetched_at": "2026-08-27T13:37:23Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/ (label: 予算・財政) 入口 https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijijouR80331.pdf.pdf「6月公表分(令和7年分予算の3月31日現在の執行状況)(PDF 94.2KB)」, sha256:a73aeb4a）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/",
@@ -90,9 +96,15 @@
           "observed_on": "https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/",
           "sha256": "871b3b20a415d7466d43abea541753feab9603821241bee163e147674ef7e9e0",
           "fetched_at": "2026-08-27T10:14:25Z"
+        },
+        {
+          "url": "https://www.city.shimada.shizuoka.jp/fs/9/1/0/4/5/3/_/ippannkaikeikessann.pdf",
+          "observed_on": "https://www.city.shimada.shizuoka.jp/gyosei-docs/829289293.html",
+          "sha256": "9bfbfb8032a8a5b025eb8b15de73a8e1fb714375b62d6d1ecf299eb072a5564c",
+          "fetched_at": "2026-08-27T13:37:22Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/ (label: 予算・決算) 入口 https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shimada.shizuoka.jp/gyosei/shisei/yosan/yosan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（ippannkaikeikessann.pdf「令和5年度一般会計決算書(PDF 6.62MB)」, sha256:9bfbfb80）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

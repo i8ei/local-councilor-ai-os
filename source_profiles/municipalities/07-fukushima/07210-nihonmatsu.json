@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at https://www.city.nihonmatsu.lg.jp/shisei/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/yosan/",
@@ -45,16 +45,22 @@
           "observed_on": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/yosan/",
           "sha256": "82f734bd37299ea7ff0bd46aeeccdbeba119550b0c90cfd6dfd1493e72417818",
           "fetched_at": "2026-08-27T10:36:50Z"
+        },
+        {
+          "url": "https://www.city.nihonmatsu.lg.jp/data/doc/1774253207_doc_20_0.xlsx",
+          "observed_on": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/page001747.html",
+          "sha256": "973fc88dc013e0b99702f9715c5cf8f4c93b0bdfadc64ef44c1d969d6701ae53",
+          "fetched_at": "2026-08-27T13:29:24Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.nihonmatsu.lg.jp/shisei/zaisei/yosan/ (label: 予算) 入口 https://www.city.nihonmatsu.lg.jp/shisei/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nihonmatsu.lg.jp/shisei/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1774253207_doc_20_0.xlsx「令和6年度財政状況資料集 [EXCEL形式／553.38KB]」, sha256:973fc88d）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/kessan/",
@@ -66,9 +72,15 @@
           "observed_on": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/kessan/",
           "sha256": "c7805c86f61c117ae86a66a9286eaf522ecf01323b6cfc49f88222fcbc1496bc",
           "fetched_at": "2026-08-27T10:36:51Z"
+        },
+        {
+          "url": "https://www.city.nihonmatsu.lg.jp/data/doc/1774253207_doc_20_0.xlsx",
+          "observed_on": "https://www.city.nihonmatsu.lg.jp/shisei/zaisei/page001747.html",
+          "sha256": "973fc88dc013e0b99702f9715c5cf8f4c93b0bdfadc64ef44c1d969d6701ae53",
+          "fetched_at": "2026-08-27T13:29:24Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.nihonmatsu.lg.jp/shisei/zaisei/kessan/ (label: 決算) 入口 https://www.city.nihonmatsu.lg.jp/shisei/zaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nihonmatsu.lg.jp/shisei/zaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1774253207_doc_20_0.xlsx「令和6年度財政状況資料集 [EXCEL形式／553.38KB]」, sha256:973fc88d）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

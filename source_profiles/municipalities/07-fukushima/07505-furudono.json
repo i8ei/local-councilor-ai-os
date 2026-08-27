@@ -56,11 +56,11 @@
       "notes": "Observed budget link at http://www.town.furudono.fukushima.jp/chouseijyouhou/yosanjyoukyou (label: 予算編成状況について) 入口 https://www.town.furudono.fukushima.jp:443/chouseijyouhou/yosanjyoukyou に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki",
@@ -72,9 +72,21 @@
           "observed_on": "https://www.town.furudono.fukushima.jp:443/chouseijyouhou/zaiseihikakubunseki",
           "sha256": "26bc7ecf6aa3a4503533c9352e35089b8d1d6d17ea3d65f695a84650299b237b",
           "fetched_at": "2026-08-27T10:38:08Z"
+        },
+        {
+          "url": "http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki",
+          "observed_on": "http://www.town.furudono.fukushima.jp/",
+          "sha256": "26bc7ecf6aa3a4503533c9352e35089b8d1d6d17ea3d65f695a84650299b237b",
+          "fetched_at": "2026-08-27T10:38:08Z"
+        },
+        {
+          "url": "https://www.town.furudono.fukushima.jp:443/file/11645/20170428162316.pdf",
+          "observed_on": "https://www.town.furudono.fukushima.jp:443/chouseijyouhou/zaiseihikakubunseki",
+          "sha256": "5a80e7fc408e2f2f2cf58573344e35b5e14768b9e16a215eab70de683a81c08b",
+          "fetched_at": "2026-08-27T13:29:47Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki (label: 財政比較分析表について) 入口 https://www.town.furudono.fukushima.jp:443/chouseijyouhou/zaiseihikakubunseki に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20170428162316.pdf「財政比較分析表」, sha256:5a80e7fc）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/ama/reiki_menu.html (label: あま市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ama.aichi.jp/shisei/zaisei/yosann/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ama.aichi.jp/shisei/zaisei/yosann/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.ama.aichi.jp/shisei/zaisei/yosann/index.html",
           "sha256": "c33a18471b360144efc9680ba915cf43186def1ce1919386e46fdecb3b916e85",
           "fetched_at": "2026-08-27T10:16:33Z"
+        },
+        {
+          "url": "http://www.city.ama.aichi.jp/shisei/zaisei/yosann/index.html",
+          "observed_on": "http://www.city.ama.aichi.jp/",
+          "sha256": "c33a18471b360144efc9680ba915cf43186def1ce1919386e46fdecb3b916e85",
+          "fetched_at": "2026-08-27T10:16:33Z"
+        },
+        {
+          "url": "https://www.city.ama.aichi.jp/_res/projects/default_project/_page_/001/010/570/R8-6-3.pdf",
+          "observed_on": "https://www.city.ama.aichi.jp/shisei/zaisei/yosann/1010570.html",
+          "sha256": "083f2e2fc5312d3b7f3430560ffe7ca668dd55decc01638e2c886d0bd6fd1dad",
+          "fetched_at": "2026-08-27T13:38:25Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.ama.aichi.jp/shisei/zaisei/yosann/index.html (label: 予算) 入口 https://www.city.ama.aichi.jp/shisei/zaisei/yosann/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8-6-3.pdf「補正予算のあらまし （PDF 422.8KB）」, sha256:083f2e2f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ama.aichi.jp/shisei/zaisei/kessann/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ama.aichi.jp/shisei/zaisei/kessann/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.ama.aichi.jp/shisei/zaisei/kessann/index.html",
           "sha256": "7184965c5bb86e0804f0d8a6121ce92890172a03a67015ef13bce9f56006319b",
           "fetched_at": "2026-08-27T10:16:36Z"
+        },
+        {
+          "url": "http://www.city.ama.aichi.jp/shisei/zaisei/kessann/index.html",
+          "observed_on": "http://www.city.ama.aichi.jp/",
+          "sha256": "7184965c5bb86e0804f0d8a6121ce92890172a03a67015ef13bce9f56006319b",
+          "fetched_at": "2026-08-27T10:16:36Z"
+        },
+        {
+          "url": "https://www.city.ama.aichi.jp/_res/projects/default_project/_page_/001/009/348/R6.pdf",
+          "observed_on": "https://www.city.ama.aichi.jp/shisei/zaisei/kessann/1009348/index.html",
+          "sha256": "c20235c87d821b16a177a086e5580a89fdfe02fc7f126c2485165222dada9a69",
+          "fetched_at": "2026-08-27T13:38:24Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ama.aichi.jp/shisei/zaisei/kessann/index.html (label: 決算) 入口 https://www.city.ama.aichi.jp/shisei/zaisei/kessann/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6.pdf「令和6年度一般会計・特別会計決算書 （PDF 3.9MB）」, sha256:c20235c8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

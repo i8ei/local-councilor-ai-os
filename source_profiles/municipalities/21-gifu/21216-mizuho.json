@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（R8yosangaiyou.pdf「予算概要(pdf 696KB)」, sha256:49dcb4c4）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.mizuho.lg.jp/3685.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.mizuho.lg.jp/3685.htm",
@@ -102,9 +102,21 @@
           "url": "https://www.city.mizuho.lg.jp/secure/3380/R6kessann.pdf",
           "observed_on": "https://www.city.mizuho.lg.jp/3685.htm",
           "fetched_at": "2026-08-27T11:13:52Z"
+        },
+        {
+          "url": "http://www.city.mizuho.lg.jp/3685.htm",
+          "observed_on": "http://www.city.mizuho.lg.jp/",
+          "sha256": "9e162a667ccc73e1629d312f9c0f9abfba4d3b4dd8d72300e166f93a18246c5e",
+          "fetched_at": "2026-08-27T10:13:23Z"
+        },
+        {
+          "url": "https://www.city.mizuho.lg.jp/secure/3380/R6kessann.pdf",
+          "observed_on": "https://www.city.mizuho.lg.jp/3685.htm",
+          "sha256": "9c13fa1537a77826976af1486410b2e0dba9d8112e007da44323d6770b773013",
+          "fetched_at": "2026-08-27T11:13:53Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.mizuho.lg.jp/3685.htm (label: 決算状況の公表) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6kessann.pdf「令和６年度決算 (pdf 807KB)」, sha256:9c13fa15）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

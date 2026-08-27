@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
           "sha256": "65f6163e8b18955a97fd407af65645294064330b1e815897ae264217e6323652",
           "fetched_at": "2026-08-27T10:28:50Z"
+        },
+        {
+          "url": "https://www.city.ashibetsu.hokkaido.jp/fs/3/2/8/8/0/4/_/__8_____________-2.pdf",
+          "observed_on": "https://www.city.ashibetsu.hokkaido.jp/docs/4992.html",
+          "sha256": "f788733f9f12f0e72be07b6f7fea2a31c0ab980babd4b4f869571189c9571afb",
+          "fetched_at": "2026-08-27T13:25:40Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ (label: 市の財政) 入口 https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（__8_____________-2.pdf「一般会計予算書 (PDF 2.2MB)」, sha256:f788733f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/",
           "sha256": "65f6163e8b18955a97fd407af65645294064330b1e815897ae264217e6323652",
           "fetched_at": "2026-08-27T10:28:50Z"
+        },
+        {
+          "url": "https://www.city.ashibetsu.hokkaido.jp/fs/3/1/3/1/3/4/_/7____________R6_.pdf",
+          "observed_on": "https://www.city.ashibetsu.hokkaido.jp/docs/4993.html",
+          "sha256": "679f6dbe7b60e56a7896a524bf2b7143ed746eb867286a716a09055094f6b142",
+          "fetched_at": "2026-08-27T13:25:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ (label: 市の財政) 入口 https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ashibetsu.hokkaido.jp/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（7____________R6_.pdf「各会計歳入歳出決算書 (PDF 250KB)」, sha256:679f6dbe）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

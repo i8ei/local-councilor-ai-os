@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.city.itako.lg.jp/shisei/page003664.html (label: 潮来市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/",
           "sha256": "d5eded89240c4c306966154a2ebf4a4bd13bc8091dcc7778beb85dfee6ae17bf",
           "fetched_at": "2026-08-27T10:17:24Z"
+        },
+        {
+          "url": "https://www.city.itako.lg.jp/data/doc/1774404548_doc_200_0.pdf",
+          "observed_on": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/page008823.html",
+          "sha256": "d31e2cff437e55d0ad12026c52711913d47835cd2d1d0a0ef046590ce743f55f",
+          "fetched_at": "2026-08-27T13:30:12Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/ (label: 予算) 入口 https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1774404548_doc_200_0.pdf「潮来市予算書R8(一般会計) [PDF形式／1.89MB]」, sha256:d31e2cff）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/",
           "sha256": "9b280606ef5c4a9154a1ee0bea9876b3f7945c60df62ca3b63d56f5be98215ae",
           "fetched_at": "2026-08-27T10:17:26Z"
+        },
+        {
+          "url": "https://www.city.itako.lg.jp/data/doc/1759128492_doc_200_0.pdf",
+          "observed_on": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/page008523.html",
+          "sha256": "9cfc0b0bd8de19b9bb1ce81d5a1498e5933e0da96448788790c558b980ddc581",
+          "fetched_at": "2026-08-27T13:30:18Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/ (label: 決算) 入口 https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1759128492_doc_200_0.pdf「令和6年度潮来市歳入歳出決算書 [PDF形式／3.1MB]」, sha256:9cfc0b0b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

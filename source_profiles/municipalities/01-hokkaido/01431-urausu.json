@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/ (label: 町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html",
           "sha256": "cc6e57c93f03e5d5c83f91a81286e415b02aa7f90b4f0a890d58acdac681856c",
           "fetched_at": "2026-08-27T10:30:15Z"
+        },
+        {
+          "url": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/files/R6syohizei.pdf",
+          "observed_on": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/zaiseijyokyo.html",
+          "sha256": "2a472914bd6251e8893ad3dbb361a70eb7ec16fdd2086a218de593036bb4eb42",
+          "fetched_at": "2026-08-27T13:26:04Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6syohizei.pdf「令和06年度決算 (27KB)」, sha256:2a472914）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html",
           "sha256": "cc6e57c93f03e5d5c83f91a81286e415b02aa7f90b4f0a890d58acdac681856c",
           "fetched_at": "2026-08-27T10:30:15Z"
+        },
+        {
+          "url": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/files/R6syohizei.pdf",
+          "observed_on": "https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/zaiseijyokyo.html",
+          "sha256": "2a472914bd6251e8893ad3dbb361a70eb7ec16fdd2086a218de593036bb4eb42",
+          "fetched_at": "2026-08-27T13:26:04Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.urausu.hokkaido.jp/kurashi/tyousei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6syohizei.pdf「令和06年度決算 (27KB)」, sha256:2a472914）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

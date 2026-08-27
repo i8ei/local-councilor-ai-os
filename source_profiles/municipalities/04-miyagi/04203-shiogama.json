@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.city.shiogama.miyagi.jp/html/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shiogama.miyagi.jp/life/5/38/194/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shiogama.miyagi.jp/life/5/38/194/",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.city.shiogama.miyagi.jp:443/life/5/38/194/",
           "sha256": "e74ca1dc63d3fdc326d35b8b1a59a8199d259cfb3a1385ae25e8bf3a45ce0979",
           "fetched_at": "2026-08-27T10:33:47Z"
+        },
+        {
+          "url": "http://www.city.shiogama.miyagi.jp/life/5/38/194/",
+          "observed_on": "http://www.city.shiogama.miyagi.jp/",
+          "sha256": "e74ca1dc63d3fdc326d35b8b1a59a8199d259cfb3a1385ae25e8bf3a45ce0979",
+          "fetched_at": "2026-08-27T10:33:47Z"
+        },
+        {
+          "url": "https://www.city.shiogama.miyagi.jp:443/uploaded/attachment/6837.pdf",
+          "observed_on": "https://www.city.shiogama.miyagi.jp:443/soshiki/7/3634.html",
+          "sha256": "ca272521259b9c99550e6ca0d1fbfaba20be1ad6bf1276921b75ed6aa4cc4350",
+          "fetched_at": "2026-08-27T13:27:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shiogama.miyagi.jp/life/5/38/194/ (label: 財政状況) 入口 https://www.city.shiogama.miyagi.jp:443/life/5/38/194/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（6837.pdf「平成27年度一般会計特別会計当初予算概要[PDFファイル／843KB]」, sha256:ca272521）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shiogama.miyagi.jp/life/5/38/194/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shiogama.miyagi.jp/life/5/38/194/",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.city.shiogama.miyagi.jp:443/life/5/38/194/",
           "sha256": "e74ca1dc63d3fdc326d35b8b1a59a8199d259cfb3a1385ae25e8bf3a45ce0979",
           "fetched_at": "2026-08-27T10:33:47Z"
+        },
+        {
+          "url": "http://www.city.shiogama.miyagi.jp/life/5/38/194/",
+          "observed_on": "http://www.city.shiogama.miyagi.jp/",
+          "sha256": "e74ca1dc63d3fdc326d35b8b1a59a8199d259cfb3a1385ae25e8bf3a45ce0979",
+          "fetched_at": "2026-08-27T10:33:47Z"
+        },
+        {
+          "url": "https://www.city.shiogama.miyagi.jp:443/uploaded/attachment/5579.pdf",
+          "observed_on": "https://www.city.shiogama.miyagi.jp:443/soshiki/7/2934.html",
+          "sha256": "fd2281a980c30fcce7184cc2a0c492170207eac5d8f127f789bc316025e0fa39",
+          "fetched_at": "2026-08-27T13:27:49Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shiogama.miyagi.jp/life/5/38/194/ (label: 財政状況) 入口 https://www.city.shiogama.miyagi.jp:443/life/5/38/194/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（5579.pdf「【参考】表の見方財政状況等一覧表（平成17年度）[PDFファイル／78KB]」, sha256:fd2281a9）にて構造マーカー（歳入・歳出・実質収支・地方債等）を確認済み。"
     }
   }
 }

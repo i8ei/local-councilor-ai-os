@@ -48,11 +48,11 @@
       "base_url": "http://www1.g-reiki.net/shikokuchuo/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shikokuchuo.ehime.jp/life/6/27/112/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shikokuchuo.ehime.jp/life/6/27/112/",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.city.shikokuchuo.ehime.jp/life/6/27/112/",
           "sha256": "1e0f6f42f999421320aab2896a2d5fa495e2026909fd38aee536dccd8c6696c9",
           "fetched_at": "2026-08-27T09:46:49Z"
+        },
+        {
+          "url": "https://www.city.shikokuchuo.ehime.jp/uploaded/attachment/33233.pdf",
+          "observed_on": "https://www.city.shikokuchuo.ehime.jp/soshiki/8/56266.html",
+          "sha256": "7d17ecbc075849b6b290aa64f072aef0a16ceef34d3c6f9deca88d3869c0225e",
+          "fetched_at": "2026-08-27T13:43:32Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.shikokuchuo.ehime.jp/life/6/27/112/ (label: 財政) 入口 https://www.city.shikokuchuo.ehime.jp/life/6/27/112/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shikokuchuo.ehime.jp/life/6/27/112/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（33233.pdf「令和8年度6月補正予算概要 [PDFファイル／2.73MB]」, sha256:7d17ecbc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

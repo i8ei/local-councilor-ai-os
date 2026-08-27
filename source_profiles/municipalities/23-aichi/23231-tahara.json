@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city.tahara/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tahara.aichi.jp/seisaku/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tahara.aichi.jp/seisaku/zaisei/index.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.tahara.aichi.jp/seisaku/zaisei/index.html",
           "sha256": "201d03c8e956eec3c17fc23c6fa5b097aa36f2f4c16892e5b7317b77f60da6e0",
           "fetched_at": "2026-08-27T10:16:21Z"
+        },
+        {
+          "url": "http://www.city.tahara.aichi.jp/seisaku/zaisei/index.html",
+          "observed_on": "http://www.city.tahara.aichi.jp/",
+          "sha256": "201d03c8e956eec3c17fc23c6fa5b097aa36f2f4c16892e5b7317b77f60da6e0",
+          "fetched_at": "2026-08-27T10:16:21Z"
+        },
+        {
+          "url": "https://www.city.tahara.aichi.jp/_res/projects/default_project/_page_/001/001/529/r8tousho.pdf",
+          "observed_on": "https://www.city.tahara.aichi.jp/seisaku/zaisei/1001529.html",
+          "sha256": "baf4dd395934ec29208ca5406a219382426ca35f2771dbf3110b4695997b196d",
+          "fetched_at": "2026-08-27T13:38:13Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tahara.aichi.jp/seisaku/zaisei/index.html (label: 財政) 入口 https://www.city.tahara.aichi.jp/seisaku/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8tousho.pdf「予算書および予算説明書 （PDF 1.8MB）」, sha256:baf4dd39）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

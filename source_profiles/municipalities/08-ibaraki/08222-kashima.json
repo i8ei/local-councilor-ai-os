@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at http://www.city.kashima.ibaraki.jp/13reiki/reiki_menu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kashima.ibaraki.jp/life/14/51/174/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kashima.ibaraki.jp/life/14/51/174/",
@@ -75,16 +75,28 @@
           "observed_on": "https://www.city.kashima.ibaraki.jp/life/14/51/174/",
           "sha256": "2620f06fdbfbf9794e0269443e8df44eaf5a279125c9457107023623c23072bf",
           "fetched_at": "2026-08-27T10:17:35Z"
+        },
+        {
+          "url": "http://www.city.kashima.ibaraki.jp/life/14/51/174/",
+          "observed_on": "http://www.city.kashima.ibaraki.jp/",
+          "sha256": "2620f06fdbfbf9794e0269443e8df44eaf5a279125c9457107023623c23072bf",
+          "fetched_at": "2026-08-27T10:17:35Z"
+        },
+        {
+          "url": "https://www.city.kashima.ibaraki.jp/uploaded/attachment/64821.pdf",
+          "observed_on": "https://www.city.kashima.ibaraki.jp/site/zaisei/7914.html",
+          "sha256": "f1abfd93a5989c31e5da586c26b318c4d37b1fa0b8806f406fa89631a31c5f5e",
+          "fetched_at": "2026-08-27T13:30:36Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kashima.ibaraki.jp/life/14/51/174/ (label: 予算・決算) 入口 https://www.city.kashima.ibaraki.jp/life/14/51/174/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（64821.pdf「令和6年度決算の状況 [PDFファイル／773KB]」, sha256:f1abfd93）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kashima.ibaraki.jp/life/14/51/174/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kashima.ibaraki.jp/life/14/51/174/",
@@ -96,9 +108,21 @@
           "observed_on": "https://www.city.kashima.ibaraki.jp/life/14/51/174/",
           "sha256": "2620f06fdbfbf9794e0269443e8df44eaf5a279125c9457107023623c23072bf",
           "fetched_at": "2026-08-27T10:17:35Z"
+        },
+        {
+          "url": "http://www.city.kashima.ibaraki.jp/life/14/51/174/",
+          "observed_on": "http://www.city.kashima.ibaraki.jp/",
+          "sha256": "2620f06fdbfbf9794e0269443e8df44eaf5a279125c9457107023623c23072bf",
+          "fetched_at": "2026-08-27T10:17:35Z"
+        },
+        {
+          "url": "https://www.city.kashima.ibaraki.jp/uploaded/attachment/64791.pdf",
+          "observed_on": "https://www.city.kashima.ibaraki.jp/site/zaisei/7914.html",
+          "sha256": "243c3cb5798b47b3a9ed4c0361201c252301f96a076bd344e32dca79db11a37d",
+          "fetched_at": "2026-08-27T13:30:31Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kashima.ibaraki.jp/life/14/51/174/ (label: 予算・決算) 入口 https://www.city.kashima.ibaraki.jp/life/14/51/174/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（64791.pdf「令和6年度鹿嶋市決算書 [PDFファイル／7.51MB]」, sha256:243c3cb5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

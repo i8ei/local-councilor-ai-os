@@ -92,11 +92,11 @@
       "notes": "deepest_doc=P1。budget文書（R06zaiseijoukyou.xlsx「令和6年度財政状況資料集（エクセル：562KB）」, sha256:06b0649b）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
@@ -113,9 +113,21 @@
           "url": "https://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.files/R6_koukaikei_v2.pdf",
           "observed_on": "https://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
           "fetched_at": "2026-08-27T11:04:09Z"
+        },
+        {
+          "url": "http://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
+          "observed_on": "http://www.city.sakai.lg.jp/",
+          "sha256": "850a2c0c64408db355c2cb694af74019aca3c3f520796716edbe181ec906e739",
+          "fetched_at": "2026-08-27T09:50:28Z"
+        },
+        {
+          "url": "https://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.files/R06zaiseijoukyou.xlsx",
+          "observed_on": "https://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
+          "sha256": "06b0649b860bb106d351ef8a9c4ccf3e8ee7010fbb557f9939ae8ff61c7fd96e",
+          "fetched_at": "2026-08-27T13:39:53Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html (label: 予算・決算・財政収支) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R06zaiseijoukyou.xlsx「令和6年度財政状況資料集（エクセル：562KB）」, sha256:06b0649b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

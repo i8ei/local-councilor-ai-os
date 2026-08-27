@@ -48,11 +48,11 @@
       "notes": "Observed joureikun at https://public.joureikun.jp/nagasu_town/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nagasu.lg.jp/gyosei/zaisei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nagasu.lg.jp/gyosei/zaisei/yosan/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.nagasu.lg.jp/gyosei/zaisei/yosan/",
           "sha256": "d601c9896282309b2134b6d3cb6041bffe878dea4ef611cc52f9eab50e75124b",
           "fetched_at": "2026-08-27T09:38:28Z"
+        },
+        {
+          "url": "http://www.town.nagasu.lg.jp/gyosei/zaisei/yosan/",
+          "observed_on": "http://www.town.nagasu.lg.jp/",
+          "sha256": "d601c9896282309b2134b6d3cb6041bffe878dea4ef611cc52f9eab50e75124b",
+          "fetched_at": "2026-08-27T09:38:28Z"
+        },
+        {
+          "url": "https://www.town.nagasu.lg.jp/nagasutown/switch/2023/kiji0031311/3_1311_4282_up_40sjlvna.pdf",
+          "observed_on": "https://www.town.nagasu.lg.jp/soshiki/soumu/zaimu/kiji0031311/",
+          "sha256": "c12fc627618cd8eb0b9fe605436ec50dfdd682417105e7127ed8041fb29b0316",
+          "fetched_at": "2026-08-27T13:46:06Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.nagasu.lg.jp/gyosei/zaisei/yosan/ (label: 予算) 入口 https://www.town.nagasu.lg.jp/gyosei/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nagasu.lg.jp/gyosei/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nagasu.lg.jp/gyosei/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_1311_4282_up_40sjlvna.pdf「令和元年度 一般会計予算（PDF：102.3キロバイト）」, sha256:c12fc627）にて構造マーカー（歳入・歳出・予算現額・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

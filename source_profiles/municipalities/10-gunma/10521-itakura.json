@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.itakura.gunma/reiki_menu.html (label: 板倉町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.itakura.gunma.jp/d000050/d000170/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.itakura.gunma.jp/d000050/d000170/index.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.town.itakura.gunma.jp/d000050/d000170/index.html",
           "sha256": "47d2dbfb5a4e50f97e326f0329dad28736c32e1d2df3a53db2ad9bf81002c5b3",
           "fetched_at": "2026-08-27T10:20:32Z"
+        },
+        {
+          "url": "http://www.town.itakura.gunma.jp/d000050/d000170/index.html",
+          "observed_on": "http://www.town.itakura.gunma.jp/",
+          "sha256": "47d2dbfb5a4e50f97e326f0329dad28736c32e1d2df3a53db2ad9bf81002c5b3",
+          "fetched_at": "2026-08-27T10:20:32Z"
+        },
+        {
+          "url": "https://www.town.itakura.gunma.jp/cont/s005000/d005040/R8ippankaikei.pdf",
+          "observed_on": "https://www.town.itakura.gunma.jp/cont/s005000/d005010/20121210104235.html",
+          "sha256": "9d6bbfa1a29cd1b59ba0fec1e7641630c6fc741bfebe25f12f9bce2e6ad09228",
+          "fetched_at": "2026-08-27T13:31:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.itakura.gunma.jp/d000050/d000170/index.html (label: 財政) 入口 https://www.town.itakura.gunma.jp/d000050/d000170/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.itakura.gunma.jp/d000050/d000170/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8ippankaikei.pdf「令和8年度一般会計予算書」, sha256:9d6bbfa1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

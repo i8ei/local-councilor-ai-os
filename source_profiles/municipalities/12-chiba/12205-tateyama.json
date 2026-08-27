@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（300391100.pdf「館山市予算書・館山市歳入歳出予算事項別明細書（PDF形式）」, sha256:42f871e2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tateyama.chiba.jp/shisei/cate00340.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tateyama.chiba.jp/shisei/cate00340.html",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.city.tateyama.chiba.jp/shisei/cate00340.html",
           "sha256": "0e0d014b75b2c4d0ea2f9cc519dbd40855000426a661e6391b31a4687976bbdd",
           "fetched_at": "2026-08-27T10:23:36Z"
+        },
+        {
+          "url": "http://www.city.tateyama.chiba.jp/shisei/cate00340.html",
+          "observed_on": "http://www.city.tateyama.chiba.jp/",
+          "sha256": "0e0d014b75b2c4d0ea2f9cc519dbd40855000426a661e6391b31a4687976bbdd",
+          "fetched_at": "2026-08-27T10:23:36Z"
+        },
+        {
+          "url": "https://www.city.tateyama.chiba.jp/files/300398795.xlsx",
+          "observed_on": "https://www.city.tateyama.chiba.jp/gyouzai/page100017.html",
+          "sha256": "09a5900c5b5da6547dd039d8252edfa7150a368a8ce8fc59a8219d0c03dd1c51",
+          "fetched_at": "2026-08-27T13:33:15Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tateyama.chiba.jp/shisei/cate00340.html (label: 予算・財政の公表) 入口 https://www.city.tateyama.chiba.jp/shisei/cate00340.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tateyama.chiba.jp/shisei/cate00340.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（300398795.xlsx「令和6年度財政状況資料集 [Excel形式：406KB]」, sha256:09a5900c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

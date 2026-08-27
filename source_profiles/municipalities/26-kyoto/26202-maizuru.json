@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www.city.maizuru.kyoto.jp/html/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html",
           "sha256": "be339662886c8aa25939b0f6fbb13fbe86e6d1b157ec740bb1458d727280edde",
           "fetched_at": "2026-08-27T09:49:55Z"
+        },
+        {
+          "url": "http://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.maizuru.kyoto.jp/",
+          "sha256": "be339662886c8aa25939b0f6fbb13fbe86e6d1b157ec740bb1458d727280edde",
+          "fetched_at": "2026-08-27T09:49:55Z"
+        },
+        {
+          "url": "https://www.city.maizuru.kyoto.jp/shisei/cmsfiles/contents/0000014/14776/yosansyo.pdf",
+          "observed_on": "https://www.city.maizuru.kyoto.jp/shisei/0000014776.html",
+          "sha256": "52dae240e28bd131cf611e683143d31d5861cc6dbda21c0e61984b0c5d4b7a77",
+          "fetched_at": "2026-08-27T13:39:42Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html (label: 予算・決算・財政) 入口 https://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yosansyo.pdf「令和8年度予算書」, sha256:52dae240）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

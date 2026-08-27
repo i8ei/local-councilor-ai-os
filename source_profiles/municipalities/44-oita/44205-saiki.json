@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www.city.saiki.oita.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
@@ -63,9 +63,15 @@
           "url": "https://www.city.saiki.oita.jp/kiji0031997/3_1997_up_p0qhnxny.pdf",
           "observed_on": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
           "fetched_at": "2026-08-27T10:57:16Z"
+        },
+        {
+          "url": "https://www.city.saiki.oita.jp/kiji0031997/3_1997_up_2qy7wjnb.pdf",
+          "observed_on": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
+          "sha256": "300f2e8ff6603aae52c3c40b323b4367ef8675d597e3effacfb1166a1a985cfe",
+          "fetched_at": "2026-08-27T13:46:53Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.saiki.oita.jp/kiji0031997/index.html (label: 予算) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（3_1997_up_2qy7wjnb.pdf「一般会計予算書・予算説明書（PDF：908.7キロバイト）」, sha256:300f2e8f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

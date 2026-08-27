@@ -44,11 +44,11 @@
       "base_url": "https://krb500.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
@@ -60,9 +60,15 @@
           "observed_on": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
           "sha256": "c63d67b986e5bae0cc32b6110c1cdb12fa5662ea88f4aa8d3988b9cce32ba33e",
           "fetched_at": "2026-08-27T09:51:57Z"
+        },
+        {
+          "url": "https://www.city.sanda.lg.jp/material/files/group/10/R4rinjikouhukin.pdf",
+          "observed_on": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/zaisei_yosan_kessan/19561.html",
+          "sha256": "bef20a63718be1601f17089ec46cdaf3f73223050973b3f0d1acfca16a81fc88",
+          "fetched_at": "2026-08-27T13:41:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R4rinjikouhukin.pdf「令和4年度実施状況及び効果検証 (PDFファイル: 200.0KB)」, sha256:bef20a63）にて構造マーカー（項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -48,11 +48,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/town.takanezawa/reiki_menu.html for 高根沢町"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html",
           "sha256": "d0a76f89573a18502ec6f2a2e6283ebf10c11f0092e362664365e28749685ea4",
           "fetched_at": "2026-08-27T10:18:50Z"
+        },
+        {
+          "url": "http://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html",
+          "observed_on": "http://www.town.takanezawa.tochigi.jp/",
+          "sha256": "d0a76f89573a18502ec6f2a2e6283ebf10c11f0092e362664365e28749685ea4",
+          "fetched_at": "2026-08-27T10:18:50Z"
+        },
+        {
+          "url": "https://www.town.takanezawa.tochigi.jp/gyosei/zaisei/yosan/documents/R8ippantosho.pdf",
+          "observed_on": "https://www.town.takanezawa.tochigi.jp/gyosei/zaisei/yosan/2026_town_takanezawa_yosan.html",
+          "sha256": "a92438723c4b711ede654de676ddc3c5684c3b80e4f63d327cb3fc0032c27f47",
+          "fetched_at": "2026-08-27T13:31:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html (label: 財政) 入口 https://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8ippantosho.pdf「一般会計予算書 （PDF：2077KB）」, sha256:a9243872）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html",
           "sha256": "d0a76f89573a18502ec6f2a2e6283ebf10c11f0092e362664365e28749685ea4",
           "fetched_at": "2026-08-27T10:18:50Z"
+        },
+        {
+          "url": "http://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html",
+          "observed_on": "http://www.town.takanezawa.tochigi.jp/",
+          "sha256": "d0a76f89573a18502ec6f2a2e6283ebf10c11f0092e362664365e28749685ea4",
+          "fetched_at": "2026-08-27T10:18:50Z"
+        },
+        {
+          "url": "https://www.town.takanezawa.tochigi.jp/gyosei/zaisei/kessan/documents/R7ippankaikeikessan.pdf",
+          "observed_on": "https://www.town.takanezawa.tochigi.jp/gyosei/zaisei/kessan/R7kessan.html",
+          "sha256": "e39f925741137683f887acccd30971852e7e033c09bca6038dad9ce641504ff9",
+          "fetched_at": "2026-08-27T13:31:04Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html (label: 財政) 入口 https://www.town.takanezawa.tochigi.jp/gyosei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R7ippankaikeikessan.pdf「一般会計 （PDF：2014KB）」, sha256:e39f9257）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

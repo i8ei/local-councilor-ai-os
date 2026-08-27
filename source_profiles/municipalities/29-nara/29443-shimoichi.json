@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（R7_ippann_tosyo.pdf「一般会計 当初予算書」, sha256:39d416c4）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shimoichi.lg.jp/category/5-9-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shimoichi.lg.jp/category/5-9-0-0-0-0-0-0-0-0.html",
@@ -78,9 +78,15 @@
           "observed_on": "https://www.town.shimoichi.lg.jp/category/5-9-0-0-0-0-0-0-0-0.html",
           "sha256": "413fa7b2fecc8f6aba7dbb047a3d4277dedeee7f617fbf500a9a5441f45c2785",
           "fetched_at": "2026-08-27T09:53:19Z"
+        },
+        {
+          "url": "https://www.town.shimoichi.lg.jp/cmsfiles/contents/0000001/1202/zai06-31shimoichi.xlsx",
+          "observed_on": "https://www.town.shimoichi.lg.jp/0000001202.html",
+          "sha256": "e4a2d5160a6a2253f0bbdc260b472d7a53b960ef833c555db88cfd4648004d1d",
+          "fetched_at": "2026-08-27T13:41:38Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shimoichi.lg.jp/category/5-9-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.town.shimoichi.lg.jp/category/5-9-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shimoichi.lg.jp/category/5-9-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zai06-31shimoichi.xlsx「令和6年度財政状況資料集」, sha256:e4a2d516）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

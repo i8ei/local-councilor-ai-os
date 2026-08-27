@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.town.toyoura.hokkaido.jp/contents/reiki/reiki_menu.html (label: 豊浦町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
           "sha256": "cf66ae1b349a0ea106d2a2ee63de94b02669f12db99b584b4d81cab935299cb8",
           "fetched_at": "2026-08-27T10:31:22Z"
+        },
+        {
+          "url": "https://www.town.toyoura.hokkaido.jp/hotnews/files/00006800/00006884/20260717151338.pdf",
+          "observed_on": "https://www.town.toyoura.hokkaido.jp/hotnews/detail/00006884.html",
+          "sha256": "966ae1092dc2a42355f6f19138420ab6b4fc787ba4a55959a38f82bceacae12f",
+          "fetched_at": "2026-08-27T13:26:38Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html (label: 財政・予算・決算) 入口 https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260717151338.pdf「(PDF 66.3KB)」, sha256:966ae109）にて構造マーカー（款・項・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html",
           "sha256": "cf66ae1b349a0ea106d2a2ee63de94b02669f12db99b584b4d81cab935299cb8",
           "fetched_at": "2026-08-27T10:31:22Z"
+        },
+        {
+          "url": "https://www.town.toyoura.hokkaido.jp/hotnews/files/00006000/00006041/20260317102859.xlsx",
+          "observed_on": "https://www.town.toyoura.hokkaido.jp/hotnews/detail/00006041.html",
+          "sha256": "5868c1b0f52b5f5425c3cbb12458a2a39089b138007242491748bc1f0732ff60",
+          "fetched_at": "2026-08-27T13:26:39Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html (label: 財政・予算・決算) 入口 https://www.town.toyoura.hokkaido.jp/hotnews/category/135.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20260317102859.xlsx「（Excel 557KB）」, sha256:5868c1b0）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

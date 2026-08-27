@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www.town-takachiho.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town-takachiho.jp/top/gyosei/1209.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town-takachiho.jp/top/gyosei/1209.html",
@@ -75,9 +75,15 @@
           "observed_on": "https://www.town-takachiho.jp/top/gyosei/1209.html",
           "sha256": "773b254bda52dc3a80164248ac16ab60a5d017161d5ef2127cd5273c36007651",
           "fetched_at": "2026-08-27T09:40:10Z"
+        },
+        {
+          "url": "https://www.town-takachiho.jp/material/files/group/3/zaiseizyoukyoureiwa1.xlsx",
+          "observed_on": "https://www.town-takachiho.jp/top/soshiki/zaisei/3/zaisei/1211.html",
+          "sha256": "273656a303b5ba15c678282bbedb9606d2fadd1997d1a67a6669444a0fec51ae",
+          "fetched_at": "2026-08-27T13:47:36Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town-takachiho.jp/top/gyosei/1209.html (label: 財政) 入口 https://www.town-takachiho.jp/top/gyosei/1209.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town-takachiho.jp/top/gyosei/1209.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town-takachiho.jp/top/gyosei/1209.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseizyoukyoureiwa1.xlsx「令和元年度財政状況資料集 (Excelファイル: 875.4KB)」, sha256:273656a3）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

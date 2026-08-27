@@ -60,11 +60,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85A253BF (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html",
@@ -76,9 +76,15 @@
           "observed_on": "https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html",
           "sha256": "44ee3dc273b5955b77e1215e37ab7c72e94f74c2c0b33427351329adcd9ec257",
           "fetched_at": "2026-08-27T09:49:44Z"
+        },
+        {
+          "url": "https://www.town.taga.lg.jp/material/files/group/3/13245423.pdf",
+          "observed_on": "https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/1292.html",
+          "sha256": "f30133af0bf3bdcc973e8f13ae7727a686a21969b4c882e2fbdc2902bc0bb72c",
+          "fetched_at": "2026-08-27T13:39:34Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html (label: 財政・予算・決算) 入口 https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（13245423.pdf「平成27年度予算の概要1 (PDFファイル: 1.1MB)」, sha256:f30133af）にて構造マーカー（歳入・歳出・節・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

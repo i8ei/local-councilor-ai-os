@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8556A5EF (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "2aeb0a76b232cef5d026d360878f4b21bdcbbeaf3b7f0dcac0a9991ce01f0b67",
           "fetched_at": "2026-08-27T10:10:06Z"
+        },
+        {
+          "url": "https://www.town.minowa.lg.jp/material/files/group/4/R05zaisei01.pdf",
+          "observed_on": "https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/zaisei-yosan-kessan/4477.html",
+          "sha256": "2d0512a592b050a9e5260f6be04ae13217b443d3d6e02d8cd1b21ff7acba491f",
+          "fetched_at": "2026-08-27T13:36:34Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R05zaisei01.pdf「令和5年度 財政事情の公表（令和6年3月31日現在） (PDFファイル: 52.8KB)」, sha256:2d0512a5）にて構造マーカー（歳入・歳出・予算現額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

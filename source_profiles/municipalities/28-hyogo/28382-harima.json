@@ -80,11 +80,11 @@
       "notes": "deepest_doc=P1。budget文書（yosangaiyo2026.pdf「予算概要（PDF：13,717KB）」, sha256:28b0ae2b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.harima.lg.jp/chosejoho/yosan/kessangaiyo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.harima.lg.jp/chosejoho/yosan/kessangaiyo/index.html",
@@ -96,9 +96,15 @@
           "observed_on": "http://www.town.harima.lg.jp/chosejoho/yosan/kessangaiyo/index.html",
           "sha256": "c2ebe99d1f350214f5f77e65ca3f5b543f3a0a201f1575c7ce42ff43cec86a90",
           "fetched_at": "2026-08-27T09:52:22Z"
+        },
+        {
+          "url": "http://www.town.harima.lg.jp/somu/chosejoho/yosan/kessangaiyo/documents/506kextusanngaiyou.pdf",
+          "observed_on": "http://www.town.harima.lg.jp/somu/chosejoho/yosan/kessangaiyo/kessangaiyo.html",
+          "sha256": "8c1d9ef53a73540920a2889b92d2c7bdf4d7a5720cf87e7fa18691c16fcc8b1e",
+          "fetched_at": "2026-08-27T13:41:13Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.harima.lg.jp/chosejoho/yosan/kessangaiyo/index.html (label: 決算) 入口 http://www.town.harima.lg.jp/chosejoho/yosan/kessangaiyo/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.harima.lg.jp/chosejoho/yosan/kessangaiyo/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（506kextusanngaiyou.pdf「令和6年度決算概要（PDF：2,924KB）」, sha256:8c1d9ef5）にて構造マーカー（歳入・歳出・款等）を確認済み。"
     }
   }
 }

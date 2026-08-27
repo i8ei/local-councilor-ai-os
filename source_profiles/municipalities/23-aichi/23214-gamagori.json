@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（114870.xlsx「令和６年度 [Excelファイル／557KB]」, sha256:e73f3475）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.gamagori.lg.jp/life/3/68/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.gamagori.lg.jp/life/3/68/",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.city.gamagori.lg.jp/life/3/68/",
           "sha256": "bdbf5c655e136dab2a244868a8539760439842a733ce162411ad3555ec3b8c2d",
           "fetched_at": "2026-08-27T10:15:25Z"
+        },
+        {
+          "url": "http://www.city.gamagori.lg.jp/life/3/68/",
+          "observed_on": "http://www.city.gamagori.lg.jp/",
+          "sha256": "bdbf5c655e136dab2a244868a8539760439842a733ce162411ad3555ec3b8c2d",
+          "fetched_at": "2026-08-27T10:15:25Z"
+        },
+        {
+          "url": "https://www.city.gamagori.lg.jp/uploaded/attachment/111797.pdf",
+          "observed_on": "https://www.city.gamagori.lg.jp/unit/zaimu/kessan-r6.html",
+          "sha256": "ed840abe5324b8afa3951781e8f883d32822bcc3ea308f82933a172703e541aa",
+          "fetched_at": "2026-08-27T13:38:06Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.gamagori.lg.jp/life/3/68/ (label: 財政・財産) 入口 https://www.city.gamagori.lg.jp/life/3/68/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（111797.pdf「令和6年度蒲郡市決算説明書 [PDFファイル／3.83MB]」, sha256:ed840abe）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.city.otsuki.yamanashi.jp/reiki/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html",
           "sha256": "6b1e22c52877270276be34b30ad9e945138fd252e62fcc38631763974705c495",
           "fetched_at": "2026-08-27T10:07:47Z"
+        },
+        {
+          "url": "http://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html",
+          "observed_on": "http://www.city.otsuki.yamanashi.jp/",
+          "sha256": "6b1e22c52877270276be34b30ad9e945138fd252e62fcc38631763974705c495",
+          "fetched_at": "2026-08-27T10:07:47Z"
+        },
+        {
+          "url": "https://www.city.otsuki.yamanashi.jp/shisei/jyohokokai/images/R08_yosangaiyou.pdf",
+          "observed_on": "https://www.city.otsuki.yamanashi.jp/shisei/jyohokokai/yosan.html",
+          "sha256": "a2dd179b68d6a3417e5991cd5946e1e02294a1e4d108b6c6bf17ab6f4eacad77",
+          "fetched_at": "2026-08-27T13:36:04Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html (label: 企画財政課) 入口 https://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R08_yosangaiyou.pdf「令和８年度当初予算概要 (1650KB)」, sha256:a2dd179b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html",
           "sha256": "6b1e22c52877270276be34b30ad9e945138fd252e62fcc38631763974705c495",
           "fetched_at": "2026-08-27T10:07:47Z"
+        },
+        {
+          "url": "http://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html",
+          "observed_on": "http://www.city.otsuki.yamanashi.jp/",
+          "sha256": "6b1e22c52877270276be34b30ad9e945138fd252e62fcc38631763974705c495",
+          "fetched_at": "2026-08-27T10:07:47Z"
+        },
+        {
+          "url": "https://www.city.otsuki.yamanashi.jp/shisei/jyohokokai/files/R6_kessangaiyo.pdf",
+          "observed_on": "https://www.city.otsuki.yamanashi.jp/shisei/jyohokokai/kessan.html",
+          "sha256": "09e2f50ec59202b207004dd273445a1abe0f85c449a7abcb190e6b1dc2e216b6",
+          "fetched_at": "2026-08-27T13:36:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html (label: 企画財政課) 入口 https://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.otsuki.yamanashi.jp/gyoumu/03kikakuzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_kessangaiyo.pdf「決算概要 (393KB)」, sha256:09e2f50e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

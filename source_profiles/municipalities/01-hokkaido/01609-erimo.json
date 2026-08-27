@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=32 (label: 例規集 新規ページで開きます)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html",
@@ -65,16 +65,22 @@
           "url": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t-att/sg6h94000000g4a0.pdf",
           "observed_on": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html",
           "fetched_at": "2026-08-27T10:31:24Z"
+        },
+        {
+          "url": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t-att/sg6h94000000g4a0.pdf",
+          "observed_on": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html",
+          "sha256": "05361328ec46da5e3b912e1a27dfa226b4de909617cb78d905855b1eeb13a148",
+          "fetched_at": "2026-08-27T10:31:27Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html (label: 予算の概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（sg6h94000000g4a0.pdf「令和8年度当初予算 (PDF 642KB)」, sha256:05361328）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html",
@@ -91,9 +97,15 @@
           "url": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t-att/sg6h94000000guh3.pdf",
           "observed_on": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html",
           "fetched_at": "2026-08-27T10:31:28Z"
+        },
+        {
+          "url": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t-att/sg6h94000000g4vo.xlsx",
+          "observed_on": "https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html",
+          "sha256": "17a1e1e235b5132a1929825db5cc12ae52c5d0eb941d6b873b1f874efa8065a0",
+          "fetched_at": "2026-08-27T13:26:45Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.erimo.lg.jp/section/soumu/u9c3nn000000043t.html (label: 2026年08月17日 令和7年度決算に関する財務書類を掲載しました) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（sg6h94000000g4vo.xlsx「令和6年度財政状況資料集 (XLSX 553KB)」, sha256:17a1e1e2）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

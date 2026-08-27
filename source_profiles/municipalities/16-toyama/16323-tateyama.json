@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tateyama/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html",
           "sha256": "36d340891ff0d44f204767dbbbef847c63230db612f40743afe2e0a848e8111a",
           "fetched_at": "2026-08-27T10:05:43Z"
+        },
+        {
+          "url": "https://www.town.tateyama.toyama.jp/material/files/group/2/R4zaiseizyoukyoukansei.xlsx",
+          "observed_on": "https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/6394.html",
+          "sha256": "cf7d37841d5bf2ba382391cfd7368a618c55ddffa0b04c2e3e4c5f6dd690cb98",
+          "fetched_at": "2026-08-27T13:35:28Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html (label: 予算・決算の状況) 入口 https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R4zaiseizyoukyoukansei.xlsx「令和4年度 (Excelファイル: 770.1KB)」, sha256:cf7d3784）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html",
           "sha256": "36d340891ff0d44f204767dbbbef847c63230db612f40743afe2e0a848e8111a",
           "fetched_at": "2026-08-27T10:05:43Z"
+        },
+        {
+          "url": "https://www.town.tateyama.toyama.jp/material/files/group/2/R4zaiseizyoukyoukansei.xlsx",
+          "observed_on": "https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/6394.html",
+          "sha256": "cf7d37841d5bf2ba382391cfd7368a618c55ddffa0b04c2e3e4c5f6dd690cb98",
+          "fetched_at": "2026-08-27T13:35:28Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html (label: 予算・決算の状況) 入口 https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tateyama.toyama.jp/choseijoho/yosann_kessannnozyoukyou/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R4zaiseizyoukyoukansei.xlsx「令和4年度 (Excelファイル: 770.1KB)」, sha256:cf7d3784）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

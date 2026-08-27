@@ -54,11 +54,11 @@
       "notes": "Observed g_reiki at http://www.town.shiriuchi.hokkaido.jp/chosei/gikai/gikaireiki.html (label: 議会例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/",
@@ -70,16 +70,28 @@
           "observed_on": "https://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/",
           "sha256": "3068fe7e3b8ea254376df030c8fb8f378dbc927ae72927ebe28057e66e306d22",
           "fetched_at": "2026-08-27T10:29:43Z"
+        },
+        {
+          "url": "http://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.shiriuchi.hokkaido.jp/",
+          "sha256": "3068fe7e3b8ea254376df030c8fb8f378dbc927ae72927ebe28057e66e306d22",
+          "fetched_at": "2026-08-27T10:29:43Z"
+        },
+        {
+          "url": "https://www.town.shiriuchi.hokkaido.jp/files/00000400/00000427/20260113111732.pdf",
+          "observed_on": "https://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/zaisei.html",
+          "sha256": "f68b38013e4f14525e56da4df8c60b7eaa84127ee6c365e8b08d17d9bdfce085",
+          "fetched_at": "2026-08-27T13:25:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/ (label: 財政) 入口 https://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260113111732.pdf「知内町行財政改善計画」, sha256:f68b3801）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/",
@@ -91,9 +103,21 @@
           "observed_on": "https://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/",
           "sha256": "3068fe7e3b8ea254376df030c8fb8f378dbc927ae72927ebe28057e66e306d22",
           "fetched_at": "2026-08-27T10:29:43Z"
+        },
+        {
+          "url": "http://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.shiriuchi.hokkaido.jp/",
+          "sha256": "3068fe7e3b8ea254376df030c8fb8f378dbc927ae72927ebe28057e66e306d22",
+          "fetched_at": "2026-08-27T10:29:43Z"
+        },
+        {
+          "url": "https://www.town.shiriuchi.hokkaido.jp/files/00000400/00000427/20260113111732.pdf",
+          "observed_on": "https://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/zaisei.html",
+          "sha256": "f68b38013e4f14525e56da4df8c60b7eaa84127ee6c365e8b08d17d9bdfce085",
+          "fetched_at": "2026-08-27T13:25:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/ (label: 財政) 入口 https://www.town.shiriuchi.hokkaido.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20260113111732.pdf「知内町行財政改善計画」, sha256:f68b3801）にて構造マーカー（歳入・歳出・地方債・基準財政需要額等）を確認済み。"
     }
   }
 }

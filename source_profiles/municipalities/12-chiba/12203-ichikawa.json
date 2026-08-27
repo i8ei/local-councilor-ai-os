@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（43500.pdf「2月補正予算書（一般会計 第1号） [PDFファイル／84KB]」, sha256:ddec1494）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ichikawa.lg.jp/life/8/41/190/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ichikawa.lg.jp/life/8/41/190/",
@@ -91,9 +91,21 @@
           "observed_on": "https://www.city.ichikawa.lg.jp/life/8/41/190/",
           "sha256": "cb62e599ad4d585fe27dbc732ead1b1d6ab3202def6331403a56dce4f9f88579",
           "fetched_at": "2026-08-27T10:22:44Z"
+        },
+        {
+          "url": "http://www.city.ichikawa.lg.jp/life/8/41/190/",
+          "observed_on": "http://www.city.ichikawa.lg.jp/",
+          "sha256": "cb62e599ad4d585fe27dbc732ead1b1d6ab3202def6331403a56dce4f9f88579",
+          "fetched_at": "2026-08-27T10:22:44Z"
+        },
+        {
+          "url": "https://www.city.ichikawa.lg.jp/uploaded/attachment/25311.pdf",
+          "observed_on": "https://www.city.ichikawa.lg.jp/page/6923.html",
+          "sha256": "89772854fe920e46b70742fb8b53a6b34313b74371090ebf6358c804f982265c",
+          "fetched_at": "2026-08-27T13:32:28Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ichikawa.lg.jp/life/8/41/190/ (label: 予算・決算) 入口 https://www.city.ichikawa.lg.jp/life/8/41/190/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（25311.pdf「各会計決算の概要 [PDFファイル／502KB]」, sha256:89772854）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

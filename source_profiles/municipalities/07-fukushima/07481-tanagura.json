@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at https://www.town.tanagura.fukushima.jp/search.php?keyword=%E4%BE%8B%E8%A6%8F%E9%9B%86 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinoyosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinoyosan/",
@@ -52,16 +52,22 @@
           "observed_on": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinoyosan/",
           "sha256": "2116c9921e255a0a213eec7729af8f48b80ff395384e1ceb7d5187fe1c1441aa",
           "fetched_at": "2026-08-27T10:37:51Z"
+        },
+        {
+          "url": "https://www.town.tanagura.fukushima.jp/data/doc/1774309170_doc_24_0.xlsx",
+          "observed_on": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinozaiseijokyo/page003135.html",
+          "sha256": "8dc9299477a074fa3e924c9f3907c7949949d6f48756619640b53a797a2427c2",
+          "fetched_at": "2026-08-27T13:30:00Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinoyosan/ (label: 町の予算) 入口 https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinoyosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinoyosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1774309170_doc_24_0.xlsx「令和6年度財政状況資料集 [EXCEL形式／561.81KB]」, sha256:8dc92994）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/",
@@ -73,9 +79,15 @@
           "observed_on": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/",
           "sha256": "10d5c110c7b9a8ecb6430c77ab99cfec358f1e350efdb488a4c9d641337106f0",
           "fetched_at": "2026-08-27T10:37:53Z"
+        },
+        {
+          "url": "https://www.town.tanagura.fukushima.jp/data/doc/1759363520_doc_24_0.pdf",
+          "observed_on": "https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/page003041.html",
+          "sha256": "1b9a15ad429536ac3fc795e06db799e79e0cf8cf20a638e7a70af1a4cb4fcf64",
+          "fetched_at": "2026-08-27T13:29:47Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/ (label: 町の決算) 入口 https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tanagura.fukushima.jp/chosei/zaisei/machinokessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1759363520_doc_24_0.pdf「令和6年度決算の引上げ分に係る地方消費税収の使途について [PDF形式／64.16KB]」, sha256:1b9a15ad）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

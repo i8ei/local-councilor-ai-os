@@ -65,11 +65,11 @@
       "notes": "Observed budget link at https://www.town.minamifurano.hokkaido.jp/wp-content/uploads/2019/12/9981a412a589db060c4fc5ce04e4e2a6.pdf (label: 「子どもの貧困」解消など教育予算確保・拡充と就学保障、義務教育費国庫負担制度堅持・負担率1/2への復元、教職員の超勤・多忙化解消・「30人以下学級」の実現に向けた意見書) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.minamifurano.hokkaido.jp/kurashi-info/%e8%b2%a1%e6%94%bf/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.minamifurano.hokkaido.jp/kurashi-info/%e8%b2%a1%e6%94%bf/",
@@ -81,9 +81,15 @@
           "observed_on": "https://www.town.minamifurano.hokkaido.jp/kurashi-info/%e8%b2%a1%e6%94%bf/",
           "sha256": "08f2f8c1f93ae7351749e05fcf0e58c8ddbc8f9c023e9496c30d19699d824331",
           "fetched_at": "2026-08-27T10:30:47Z"
+        },
+        {
+          "url": "https://www.town.minamifurano.hokkaido.jp/wp-content/uploads/2015/02/bdd0acc2e908483af3608c16c90c94fc.xlsx",
+          "observed_on": "https://www.town.minamifurano.hokkaido.jp/?p=4195",
+          "sha256": "7ade267f158e488d971308f19a6c34bc20db2eb1ba3b5f339d3b63e8ee7cdf0b",
+          "fetched_at": "2026-08-27T13:26:16Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.minamifurano.hokkaido.jp/kurashi-info/%e8%b2%a1%e6%94%bf/ (label: 財政) 入口 https://www.town.minamifurano.hokkaido.jp/kurashi-info/%e8%b2%a1%e6%94%bf/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minamifurano.hokkaido.jp/kurashi-info/%e8%b2%a1%e6%94%bf/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（bdd0acc2e908483af3608c16c90c94fc.xlsx「令和５年度財政状況資料集」, sha256:7ade267f）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

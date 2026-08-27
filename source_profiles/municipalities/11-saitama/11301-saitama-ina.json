@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/town.ina/reiki_menu.html (label: 伊奈町例規集 （別ウインドウで開く）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.saitama-ina.lg.jp/category/2-6-2-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.saitama-ina.lg.jp/category/2-6-2-0-0-0-0-0-0-0.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.town.saitama-ina.lg.jp/category/2-6-2-0-0-0-0-0-0-0.html",
           "sha256": "6d94f53d4870d1aaf54eb26672799290aa4512a410a30443f9d7558cdaa77e2b",
           "fetched_at": "2026-08-27T10:21:51Z"
+        },
+        {
+          "url": "https://www.town.saitama-ina.lg.jp/cmsfiles/contents/0000009/9527/hixyousitou.pdf",
+          "observed_on": "https://www.town.saitama-ina.lg.jp/0000009527.html",
+          "sha256": "a069de86b484738b88fee3651582eaab4a5519819a083b7d127ebeb150dbb345",
+          "fetched_at": "2026-08-27T13:32:04Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.saitama-ina.lg.jp/category/2-6-2-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.town.saitama-ina.lg.jp/category/2-6-2-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（hixyousitou.pdf「表紙等(PDF形式、307.37KB)」, sha256:a069de86）にて構造マーカー（予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.saitama-ina.lg.jp/category/2-6-3-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.saitama-ina.lg.jp/category/2-6-3-0-0-0-0-0-0-0.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.town.saitama-ina.lg.jp/category/2-6-3-0-0-0-0-0-0-0.html",
           "sha256": "c67b34659b07b0a3cf4fc9794754d601dc2e54bdf6d40c8a25c7133b87b5cca0",
           "fetched_at": "2026-08-27T10:21:52Z"
+        },
+        {
+          "url": "https://www.town.saitama-ina.lg.jp/cmsfiles/contents/0000009/9430/r6ippan.pdf",
+          "observed_on": "https://www.town.saitama-ina.lg.jp/0000009430.html",
+          "sha256": "9c0ab5116b33d644d36f58cd3883a5f5d3ff3e8c6b855196d09f51dc4f7fb08a",
+          "fetched_at": "2026-08-27T13:32:07Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.saitama-ina.lg.jp/category/2-6-3-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.town.saitama-ina.lg.jp/category/2-6-3-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6ippan.pdf「一般会計決算書、財産に関する調書 (PDF形式、2.27MB)」, sha256:9c0ab511）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

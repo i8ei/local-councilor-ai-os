@@ -68,11 +68,11 @@
       "notes": "deepest_doc=P1。budget文書（zaiseihikaku26.pdf「平成26年度(3) （PDF 275.0KB）」, sha256:98c6abbe）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tokai.aichi.jp/shisei/1003714/1003715/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tokai.aichi.jp/shisei/1003714/1003715/index.html",
@@ -84,9 +84,21 @@
           "observed_on": "https://www.city.tokai.aichi.jp/shisei/1003714/1003715/index.html",
           "sha256": "3ba791f604253b995ae6fbed486a4b06190a1ca0377c3bb90683c68952443446",
           "fetched_at": "2026-08-27T10:15:48Z"
+        },
+        {
+          "url": "http://www.city.tokai.aichi.jp/shisei/1003714/1003715/index.html",
+          "observed_on": "http://www.city.tokai.aichi.jp/",
+          "sha256": "3ba791f604253b995ae6fbed486a4b06190a1ca0377c3bb90683c68952443446",
+          "fetched_at": "2026-08-27T10:15:48Z"
+        },
+        {
+          "url": "https://www.city.tokai.aichi.jp/_res/projects/default_project/_page_/001/003/731/r6kessancard.pdf",
+          "observed_on": "https://www.city.tokai.aichi.jp/shisei/1003714/1003715/1003724/1003731.html",
+          "sha256": "1f2d9b852cd46cb54e024898f223077c64c4315fa8c3842326ae73a411827026",
+          "fetched_at": "2026-08-27T13:38:09Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tokai.aichi.jp/shisei/1003714/1003715/index.html (label: 予算・決算) 入口 https://www.city.tokai.aichi.jp/shisei/1003714/1003715/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessancard.pdf「令和6年度 （PDF 87.8KB）」, sha256:1f2d9b85）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

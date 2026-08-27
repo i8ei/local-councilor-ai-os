@@ -50,11 +50,11 @@
       "index_url": "https://www.town.shintotsukawa.lg.jp/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
           "sha256": "4d11a8fc4a70aef0fffca90bba262b7fda1b6f5ed0bb2d815add3c4df9192fe4",
           "fetched_at": "2026-08-27T10:30:18Z"
+        },
+        {
+          "url": "https://www.town.shintotsukawa.lg.jp/hotnews/files/00000500/00000599/08yosansho.pdf",
+          "observed_on": "https://www.town.shintotsukawa.lg.jp/hotnews/detail/00000599.html",
+          "sha256": "ad9ec1b8dfc0f1949c6965fdd842eba76eef80501520c7b1bfc2bff27f8e4724",
+          "fetched_at": "2026-08-27T13:26:08Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html (label: 財政) 入口 https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（08yosansho.pdf「予算書」, sha256:ad9ec1b8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
           "sha256": "4d11a8fc4a70aef0fffca90bba262b7fda1b6f5ed0bb2d815add3c4df9192fe4",
           "fetched_at": "2026-08-27T10:30:18Z"
+        },
+        {
+          "url": "https://www.town.shintotsukawa.lg.jp/hotnews/files/00001400/00001408/r06kessansyo.pdf",
+          "observed_on": "https://www.town.shintotsukawa.lg.jp/hotnews/detail/00001408.html",
+          "sha256": "a3f9e660feb88f06e8c46499f64b70ef4fcb1ef3d40b85effdb6bec0fa55f9f5",
+          "fetched_at": "2026-08-27T13:26:15Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html (label: 財政) 入口 https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r06kessansyo.pdf「令和6年度決算書(PDF/3339KB)」, sha256:a3f9e660）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

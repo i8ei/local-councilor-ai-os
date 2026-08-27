@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.minamiechizen/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
           "sha256": "c0f955d331fb8130f9869d531e26a54036c2775f51b33731f7fab8d96a8de82b",
           "fetched_at": "2026-08-27T10:07:32Z"
+        },
+        {
+          "url": "https://www.town.minamiechizen.lg.jp/tyousei/702/p001230_d/fil/H27zaiseikyoukyousiryousy.xlsx",
+          "observed_on": "https://www.town.minamiechizen.lg.jp/tyousei/702/p001230.html",
+          "sha256": "7c0514c574e3c572725eefec5e47948c5221d528ef7d6bcc9535d802d24090be",
+          "fetched_at": "2026-08-27T13:35:56Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.minamiechizen.lg.jp/tyousei/702/index.html (label: 財政) 入口 https://www.town.minamiechizen.lg.jp/tyousei/702/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minamiechizen.lg.jp/tyousei/702/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（H27zaiseikyoukyousiryousy.xlsx「H27財政状況資料集（2007以降エクセル形式 585キロバイト）」, sha256:7c0514c5）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.minamiechizen.lg.jp/tyousei/702/index.html",
           "sha256": "c0f955d331fb8130f9869d531e26a54036c2775f51b33731f7fab8d96a8de82b",
           "fetched_at": "2026-08-27T10:07:32Z"
+        },
+        {
+          "url": "https://www.town.minamiechizen.lg.jp/tyousei/702/p001230_d/fil/H27zaiseikyoukyousiryousy.xlsx",
+          "observed_on": "https://www.town.minamiechizen.lg.jp/tyousei/702/p001230.html",
+          "sha256": "7c0514c574e3c572725eefec5e47948c5221d528ef7d6bcc9535d802d24090be",
+          "fetched_at": "2026-08-27T13:35:56Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.minamiechizen.lg.jp/tyousei/702/index.html (label: 財政) 入口 https://www.town.minamiechizen.lg.jp/tyousei/702/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minamiechizen.lg.jp/tyousei/702/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H27zaiseikyoukyousiryousy.xlsx「H27財政状況資料集（2007以降エクセル形式 585キロバイト）」, sha256:7c0514c5）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

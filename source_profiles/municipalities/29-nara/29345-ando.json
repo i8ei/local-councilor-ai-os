@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at http://www.town.ando.nara.jp/category/4-2-0-0-0-0-0-0-0-0.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html",
@@ -69,9 +69,21 @@
           "observed_on": "https://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html",
           "sha256": "23fd78a85afdaecb72b2c67cbc8e1877bc55f869eedbf724ed955c6fd702c93a",
           "fetched_at": "2026-08-27T09:52:53Z"
+        },
+        {
+          "url": "http://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.ando.nara.jp/",
+          "sha256": "23fd78a85afdaecb72b2c67cbc8e1877bc55f869eedbf724ed955c6fd702c93a",
+          "fetched_at": "2026-08-27T09:52:53Z"
+        },
+        {
+          "url": "https://www.town.ando.nara.jp/cmsfiles/contents/0000003/3955/R8yosan.pdf",
+          "observed_on": "https://www.town.ando.nara.jp/0000003955.html",
+          "sha256": "f6c3e5bec1bf5fdd89fd514681792b506b173dd7d85814e7b077a832ac242909",
+          "fetched_at": "2026-08-27T13:41:33Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html (label: 予算・決算・財政状況) 入口 https://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosan.pdf「(R8一般会計・特別会計予算書 PDF形式、3.97MB)」, sha256:f6c3e5be）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

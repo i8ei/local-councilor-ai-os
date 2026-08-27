@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www.town.kimobetsu.hokkaido.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84",
           "sha256": "292526f1ccfc1ddae25ef4bbd5460e71879237c6eabce9b595af80fe50c9c4bb",
           "fetched_at": "2026-08-27T10:29:56Z"
+        },
+        {
+          "url": "https://www.town.kimobetsu.hokkaido.jp/common/img/content/content_20220518_151051.xlsx",
+          "observed_on": "https://www.town.kimobetsu.hokkaido.jp/town/detail.php?content=281",
+          "sha256": "45bb68231875881025130a2ae3dd534c888f374b85603785a8d805aa050b676d",
+          "fetched_at": "2026-08-27T13:25:59Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84 (label: 町の財政) 入口 https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（content_20220518_151051.xlsx「平成29年度財政状況等一覧表(Excel/690KB)」, sha256:45bb6823）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84",
           "sha256": "292526f1ccfc1ddae25ef4bbd5460e71879237c6eabce9b595af80fe50c9c4bb",
           "fetched_at": "2026-08-27T10:29:56Z"
+        },
+        {
+          "url": "https://www.town.kimobetsu.hokkaido.jp/common/img/content/content_20220518_151051.xlsx",
+          "observed_on": "https://www.town.kimobetsu.hokkaido.jp/town/detail.php?content=281",
+          "sha256": "45bb68231875881025130a2ae3dd534c888f374b85603785a8d805aa050b676d",
+          "fetched_at": "2026-08-27T13:25:59Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84 (label: 町の財政) 入口 https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kimobetsu.hokkaido.jp/town/category/?category=84 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（content_20220518_151051.xlsx「平成29年度財政状況等一覧表(Excel/690KB)」, sha256:45bb6823）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

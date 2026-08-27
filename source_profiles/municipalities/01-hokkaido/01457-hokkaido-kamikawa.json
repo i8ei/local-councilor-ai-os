@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at http://www.town.hokkaido-kamikawa.lg.jp/reiki/reiki_taikei/taikei_default.html (label: 例規集 （新規ウィンドウで開きます）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx.html?cp=h8nafq0000000ago&cs=c06_05s3",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx.html?cp=h8nafq0000000ago&cs=c06_05s3",
@@ -74,16 +74,22 @@
           "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx-att/chs81200000006qv.pdf",
           "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx.html?cp=h8nafq0000000ago&cs=c06_05s3",
           "fetched_at": "2026-08-27T11:22:48Z"
+        },
+        {
+          "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx-att/chs81200000006qv.pdf",
+          "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx.html?cp=h8nafq0000000ago&cs=c06_05s3",
+          "sha256": "1989039b311edb01ee0fba20faf94e20eb90553fd577a40032e3fc7da4edf359",
+          "fetched_at": "2026-08-27T11:22:48Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx.html?cp=h8nafq0000000ago&cs=c06_05s3 (label: 予算説明書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（chs81200000006qv.pdf「平成22年度予算説明書 （PDF:909KB）」, sha256:1989039b）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl.html?cp=h8nafq0000000ago&cs=c06_05s3",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl.html?cp=h8nafq0000000ago&cs=c06_05s3",
@@ -100,9 +106,15 @@
           "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl-att/o3i3l80000000hcb.pdf",
           "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl.html?cp=h8nafq0000000ago&cs=c06_05s3",
           "fetched_at": "2026-08-27T11:22:50Z"
+        },
+        {
+          "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl-att/o3i3l80000000hcb.pdf",
+          "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl.html?cp=h8nafq0000000ago&cs=c06_05s3",
+          "sha256": "0d5cd19ab02befe6f3f0943c67fb763716ef073bcb37f5aa2f4d9c3c5f7ee880",
+          "fetched_at": "2026-08-27T11:22:50Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl.html?cp=h8nafq0000000ago&cs=c06_05s3 (label: 決算状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（o3i3l80000000hcb.pdf「令和6年度（2024年度）決算状況 （PDF:664KB）」, sha256:0d5cd19a）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

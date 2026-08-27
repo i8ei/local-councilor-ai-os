@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/saitama-miyoshi/reiki_menu.html (label: 町例規集 （外部サイト）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html",
           "sha256": "876a18b43011f7cadac422c427e1d0c35d8f86b5ec4a76013b49a7eee1d46980",
           "fetched_at": "2026-08-27T10:21:59Z"
+        },
+        {
+          "url": "http://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html",
+          "observed_on": "http://www.town.saitama-miyoshi.lg.jp/",
+          "sha256": "876a18b43011f7cadac422c427e1d0c35d8f86b5ec4a76013b49a7eee1d46980",
+          "fetched_at": "2026-08-27T10:21:59Z"
+        },
+        {
+          "url": "https://www.town.saitama-miyoshi.lg.jp/town/chosa/documents/R8yosansyo.pdf",
+          "observed_on": "https://www.town.saitama-miyoshi.lg.jp/town/chosa/yosansyo.html",
+          "sha256": "ea9dae9c0ff4eedcbed78d20bb1ca39986fa1ea0d7e6ad9b5495c2ee13405611",
+          "fetched_at": "2026-08-27T13:32:15Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html (label: 調査・統計・財政) 入口 https://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosansyo.pdf「一般会計予算書 （14255KB）」, sha256:ea9dae9c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -48,11 +48,11 @@
       "index_url": "https://en3-jg.d1-law.com/ogose/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
           "sha256": "ed023a3c61af9afdb9674096d0036ebd60aa9a80fd53036a8797170bda34e256",
           "fetched_at": "2026-08-27T10:22:11Z"
+        },
+        {
+          "url": "https://www.town.ogose.saitama.jp/material/files/group/3/R8tousyoyosannippann.pdf",
+          "observed_on": "https://www.town.ogose.saitama.jp/chousei/unei/zaisei/1453290412121.html",
+          "sha256": "a91e45b13ba8e8dbea5055c146a88582d0dca28b0f405f224c54b81ea4226713",
+          "fetched_at": "2026-08-27T13:32:11Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ogose.saitama.jp/chousei/unei/index.html (label: 町政運営・財政) 入口 https://www.town.ogose.saitama.jp/chousei/unei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ogose.saitama.jp/chousei/unei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyoyosannippann.pdf「令和8年度当初予算【一般会計】 (PDFファイル: 9.7MB)」, sha256:a91e45b1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
           "sha256": "ed023a3c61af9afdb9674096d0036ebd60aa9a80fd53036a8797170bda34e256",
           "fetched_at": "2026-08-27T10:22:11Z"
+        },
+        {
+          "url": "https://www.town.ogose.saitama.jp/material/files/group/3/R06ippannkaikeikessan.pdf",
+          "observed_on": "https://www.town.ogose.saitama.jp/chousei/unei/zaisei/1453290412158.html",
+          "sha256": "5170af663a284de183bd5410fb80dcc090a52492d433601820057a9578c927b2",
+          "fetched_at": "2026-08-27T13:32:12Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ogose.saitama.jp/chousei/unei/index.html (label: 町政運営・財政) 入口 https://www.town.ogose.saitama.jp/chousei/unei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ogose.saitama.jp/chousei/unei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06ippannkaikeikessan.pdf「・一般会計歳入歳出決算書 (PDFファイル: 3.4MB)」, sha256:5170af66）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

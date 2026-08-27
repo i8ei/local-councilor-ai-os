@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/42.html (label: 条例等例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html",
           "sha256": "35265de7449c4a12576fd5604ae431b6c33ab972965397fdf803892a74c5600b",
           "fetched_at": "2026-08-27T10:29:27Z"
+        },
+        {
+          "url": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/files/00000400/00000485/20250929144751.xlsx",
+          "observed_on": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/detail/00000485.html",
+          "sha256": "1c5db251b54d749b671bfb0d429fecb208318fb0c76e266175f63bebd895adcb",
+          "fetched_at": "2026-08-27T13:25:53Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html (label: 財政) 入口 https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20250929144751.xlsx「・財政状況資料集（Excel形式）」, sha256:1c5db251）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html",
           "sha256": "35265de7449c4a12576fd5604ae431b6c33ab972965397fdf803892a74c5600b",
           "fetched_at": "2026-08-27T10:29:27Z"
+        },
+        {
+          "url": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/files/00000400/00000485/20250929144751.xlsx",
+          "observed_on": "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/detail/00000485.html",
+          "sha256": "1c5db251b54d749b671bfb0d429fecb208318fb0c76e266175f63bebd895adcb",
+          "fetched_at": "2026-08-27T13:25:53Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html (label: 財政) 入口 https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.shinshinotsu.hokkaido.jp/hotnews/category/44.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20250929144751.xlsx「・財政状況資料集（Excel形式）」, sha256:1c5db251）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

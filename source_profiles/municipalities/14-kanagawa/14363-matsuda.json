@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.matsuda.kanagawa/reiki_menu.html (label: 松田町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://town.matsuda.kanagawa.jp/soshiki/1/zaiseijyoukyou.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://town.matsuda.kanagawa.jp/soshiki/1/zaiseijyoukyou.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://town.matsuda.kanagawa.jp/soshiki/1/zaiseijyoukyou.html",
           "sha256": "2d855c4960c42a75eee069abe057bcd4494583e5624468b3100be93f5f7327bc",
           "fetched_at": "2026-08-27T10:28:29Z"
+        },
+        {
+          "url": "http://town.matsuda.kanagawa.jp/soshiki/1/zaiseijyoukyou.html",
+          "observed_on": "http://town.matsuda.kanagawa.jp/",
+          "sha256": "2d855c4960c42a75eee069abe057bcd4494583e5624468b3100be93f5f7327bc",
+          "fetched_at": "2026-08-27T10:28:29Z"
+        },
+        {
+          "url": "https://town.matsuda.kanagawa.jp/uploaded/attachment/18495.pdf",
+          "observed_on": "https://town.matsuda.kanagawa.jp/soshiki/1/yosan.html",
+          "sha256": "67ab6ecc52e545d1c0da12c1f27058587b9456ffb5829ba20654a3c3296124c3",
+          "fetched_at": "2026-08-27T13:34:43Z"
         }
       ],
-      "notes": "Observed finance section at http://town.matsuda.kanagawa.jp/soshiki/1/zaiseijyoukyou.html (label: 財政状況) 入口 https://town.matsuda.kanagawa.jp/soshiki/1/zaiseijyoukyou.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（18495.pdf「当初予算案の概要 [PDFファイル／756KB]」, sha256:67ab6ecc）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

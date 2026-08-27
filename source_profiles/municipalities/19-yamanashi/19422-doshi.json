@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/doshi/reiki_menu.html (label: 道志村 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
@@ -67,9 +67,15 @@
           "observed_on": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
           "sha256": "5c0f063e1009d9f44ab1424aa2d0a46af55a2a255953653d554d94038174309c",
           "fetched_at": "2026-08-27T10:09:06Z"
+        },
+        {
+          "url": "http://www.vill.doshi.lg.jp/upload/file/soumu/%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_194221_%E9%81%93%E5%BF%97%E6%9D%91_2010.pdf",
+          "observed_on": "http://www.vill.doshi.lg.jp/info/info.php?if_id=365&ca_id=23",
+          "sha256": "df4b544a78b4885fe400d550324e2a19eba420fd0d193ebb5c13709b9ae40915",
+          "fetched_at": "2026-08-27T13:36:12Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 (label: 給与・財政・行革) 入口 http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_194221_%E9%81%93%E5%BF%97%E6%9D%91_2010.pdf「【H22年度】」, sha256:df4b544a）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

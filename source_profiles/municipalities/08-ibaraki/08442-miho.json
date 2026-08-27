@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.vill.miho.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/",
           "sha256": "12d74ada38f3463e48b0f76aa77b6d5865f6a561bcf28c6551b4b27d47a3d81e",
           "fetched_at": "2026-08-27T10:17:57Z"
+        },
+        {
+          "url": "https://www.vill.miho.lg.jp/data/doc/1774862449_doc_1_0.pdf",
+          "observed_on": "https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/yosan-2026/page015482.html",
+          "sha256": "826e1e6c75a2d3458aeceb6b6c1767337874f01209fb5831c0142588a468ca32",
+          "fetched_at": "2026-08-27T13:30:36Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/ (label: 予算) 入口 https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.miho.lg.jp/gyousei/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1774862449_doc_1_0.pdf「当初予算概要（令和8年度） [PDF形式／859.4KB]」, sha256:826e1e6c）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/",
           "sha256": "1e746f5237c1456ee4831b09d9e755c79807571df5b8af5b023fb2409869b602",
           "fetched_at": "2026-08-27T10:17:59Z"
+        },
+        {
+          "url": "https://www.vill.miho.lg.jp/data/doc/1758507945_doc_1_0.pdf",
+          "observed_on": "https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/page014633.html",
+          "sha256": "4db97b6f019ea6f39694f7d18f68b02603b7fea5da541dd6d137e959dfd1fb43",
+          "fetched_at": "2026-08-27T13:30:39Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/ (label: 決算) 入口 https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.miho.lg.jp/gyousei/zaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1758507945_doc_1_0.pdf「令和6度美浦村歳入歳出決算書 [PDF形式／2.72MB]」, sha256:4db97b6f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

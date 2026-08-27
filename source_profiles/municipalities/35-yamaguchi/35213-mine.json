@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www2.city.mine.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www2.city.mine.lg.jp/gyosei/joho/3788.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www2.city.mine.lg.jp/gyosei/joho/3788.html",
@@ -75,9 +75,15 @@
           "observed_on": "https://www2.city.mine.lg.jp/gyosei/joho/3788.html",
           "sha256": "36a78920410347257bdb66639732a3c914e1fec1d168ad22a69f5b4def483ef3",
           "fetched_at": "2026-08-27T09:45:30Z"
+        },
+        {
+          "url": "https://www2.city.mine.lg.jp/material/files/group/3/senketsuhoukoku.pdf",
+          "observed_on": "https://www2.city.mine.lg.jp/gyosei/joho/3788.html",
+          "sha256": "0039ed1939ca6b8c174e432e904b7421283bc5b693392d8e901a1a5ecea4d33c",
+          "fetched_at": "2026-08-27T13:42:44Z"
         }
       ],
-      "notes": "Observed budget link at https://www2.city.mine.lg.jp/gyosei/joho/3788.html (label: 平成30年度一般会計補正予算に係る専決処分の不承認とその後の措置等について) 入口 https://www2.city.mine.lg.jp/gyosei/joho/3788.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www2.city.mine.lg.jp/gyosei/joho/3788.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（senketsuhoukoku.pdf「専決処分調査報告書 (PDFファイル: 459.1KB)」, sha256:0039ed19）にて構造マーカー（歳出・款・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.town.mizuho.tokyo.jp/tyosei/023/003/index.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mizuho.tokyo.jp/tyosei/003/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mizuho.tokyo.jp/tyosei/003/index.html",
@@ -45,9 +45,21 @@
           "observed_on": "https://www.town.mizuho.tokyo.jp/tyosei/003/index.html",
           "sha256": "86818853f48cce48e155056e211c9c69ad097b8360c5cce20eb9fe612b454689",
           "fetched_at": "2026-08-27T10:26:22Z"
+        },
+        {
+          "url": "http://www.town.mizuho.tokyo.jp/tyosei/003/index.html",
+          "observed_on": "http://www.town.mizuho.tokyo.jp/",
+          "sha256": "86818853f48cce48e155056e211c9c69ad097b8360c5cce20eb9fe612b454689",
+          "fetched_at": "2026-08-27T10:26:22Z"
+        },
+        {
+          "url": "https://www.town.mizuho.tokyo.jp/tyosei/003/007/p011593_d/fil/reiwa7_yosan.pdf",
+          "observed_on": "https://www.town.mizuho.tokyo.jp/tyosei/003/007/p011593.html",
+          "sha256": "d60d5928f92b0e3d15d72efbfa137e737c78542c6a5c74470519578115b9ee01",
+          "fetched_at": "2026-08-27T13:34:09Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.mizuho.tokyo.jp/tyosei/003/index.html (label: 町の予算・財政) 入口 https://www.town.mizuho.tokyo.jp/tyosei/003/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（reiwa7_yosan.pdf「令和7年度 予算の執行状況（令和8年3月31日現在）」, sha256:d60d5928）にて構造マーカー（歳入・歳出・予算現額・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

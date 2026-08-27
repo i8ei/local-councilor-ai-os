@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（3_9691_12373_up_v5erhpyo.pdf「R8年度当初予算書（PDF：2.29メガバイト）」, sha256:75fd78ce）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.munakata.lg.jp/list00346.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.munakata.lg.jp/list00346.html",
@@ -99,9 +99,21 @@
           "observed_on": "https://www.city.munakata.lg.jp/list00346.html",
           "sha256": "84d1d4f7d1e0ba90966f394bc9d5630ddb7a9e1474153028fff60185702b4dd5",
           "fetched_at": "2026-08-27T09:36:03Z"
+        },
+        {
+          "url": "http://www.city.munakata.lg.jp/list00346.html",
+          "observed_on": "http://www.city.munakata.lg.jp/",
+          "sha256": "84d1d4f7d1e0ba90966f394bc9d5630ddb7a9e1474153028fff60185702b4dd5",
+          "fetched_at": "2026-08-27T09:36:03Z"
+        },
+        {
+          "url": "https://www.city.munakata.lg.jp/kiji0031081/3_1081_16952_up_6prslwjr.pdf",
+          "observed_on": "https://www.city.munakata.lg.jp/kiji0031081/index.html",
+          "sha256": "ae360a7fdda8ad155a115046126b4fdfcc737c40a6c1d3bff797fbb0db356a98",
+          "fetched_at": "2026-08-27T13:44:52Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.munakata.lg.jp/list00346.html (label: 決算) 入口 https://www.city.munakata.lg.jp/list00346.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.munakata.lg.jp/list00346.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_1081_16952_up_6prslwjr.pdf「令和7年度決算書（PDF：2メガバイト）」, sha256:ae360a7f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

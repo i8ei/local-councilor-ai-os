@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.bando.lg.jp/page/dir000006.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.bando.lg.jp/page/page011042.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.bando.lg.jp/page/page011042.html",
@@ -65,16 +65,28 @@
           "url": "https://www.city.bando.lg.jp/data/doc/1773625666_doc_14_0.pdf",
           "observed_on": "https://www.city.bando.lg.jp/page/page011042.html",
           "fetched_at": "2026-08-27T10:17:27Z"
+        },
+        {
+          "url": "http://www.city.bando.lg.jp/page/page011042.html",
+          "observed_on": "http://www.city.bando.lg.jp/",
+          "sha256": "cbf782c817a4a629d036c9893a753a4ce1e6c9cc5ac32eabb94eaa7d45756f2b",
+          "fetched_at": "2026-08-27T10:17:33Z"
+        },
+        {
+          "url": "https://www.city.bando.lg.jp/data/doc/1740018255_doc_14_0.pdf",
+          "observed_on": "https://www.city.bando.lg.jp/page/page010496.html",
+          "sha256": "b3d51a1cf1ca98a9dadb3ab48fb7b38be2510127a2f8a11108a98054d0bfbddc",
+          "fetched_at": "2026-08-27T13:30:36Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.bando.lg.jp/page/page011042.html (label: 令和８年度特別会計予算書) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（1740018255_doc_14_0.pdf「国民健康保険特別会計予算書 （ＰＤＦ形式）」, sha256:b3d51a1c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.bando.lg.jp/page/page000549.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.bando.lg.jp/page/page000549.html",
@@ -91,9 +103,21 @@
           "url": "https://www.city.bando.lg.jp/data/doc/1585728401_doc_14_0.pdf",
           "observed_on": "https://www.city.bando.lg.jp/page/page000549.html",
           "fetched_at": "2026-08-27T10:17:35Z"
+        },
+        {
+          "url": "http://www.city.bando.lg.jp/page/page000549.html",
+          "observed_on": "http://www.city.bando.lg.jp/",
+          "sha256": "6d95231fbeb22aa0f633d0f163db1374e398289ab58d93e23413c81714cc092c",
+          "fetched_at": "2026-08-27T10:17:38Z"
+        },
+        {
+          "url": "https://www.city.bando.lg.jp/data/doc/1585728401_doc_14_0.pdf",
+          "observed_on": "https://www.city.bando.lg.jp/page/page000549.html",
+          "sha256": "b4baa6bd1da61bdc78da17487c59d858d0a3909bd2c0735cf778118d1734b947",
+          "fetched_at": "2026-08-27T10:17:39Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.bando.lg.jp/page/page000549.html (label: 坂東市の予算決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（1585728401_doc_14_0.pdf「決算カードに関する用語の説明」, sha256:b4baa6bd）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

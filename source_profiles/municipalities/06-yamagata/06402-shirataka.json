@@ -48,11 +48,11 @@
       "base_url": "https://www.town.shirataka.lg.jp:443/sreiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shirataka.lg.jp/1048.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shirataka.lg.jp/1048.htm",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.shirataka.lg.jp:443/1048.htm",
           "sha256": "6b98880ad12030584cb3043e16da4f18fc74a34a44502a36a587e81ee5f7533f",
           "fetched_at": "2026-08-27T10:36:30Z"
+        },
+        {
+          "url": "http://www.town.shirataka.lg.jp/1048.htm",
+          "observed_on": "http://www.town.shirataka.lg.jp/",
+          "sha256": "6b98880ad12030584cb3043e16da4f18fc74a34a44502a36a587e81ee5f7533f",
+          "fetched_at": "2026-08-27T10:36:30Z"
+        },
+        {
+          "url": "https://www.town.shirataka.lg.jp:443/secure/7290/R8toshoyosansho.pdf",
+          "observed_on": "https://www.town.shirataka.lg.jp:443/1406.htm",
+          "sha256": "9387809b4c20722a94d8a4163612f08f743715624237934d145a0b57b23ea80b",
+          "fetched_at": "2026-08-27T13:29:14Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shirataka.lg.jp/1048.htm (label: 町の財政) 入口 https://www.town.shirataka.lg.jp:443/1048.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8toshoyosansho.pdf「令和８年度当初予算書」, sha256:9387809b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shirataka.lg.jp/1048.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shirataka.lg.jp/1048.htm",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.shirataka.lg.jp:443/1048.htm",
           "sha256": "6b98880ad12030584cb3043e16da4f18fc74a34a44502a36a587e81ee5f7533f",
           "fetched_at": "2026-08-27T10:36:30Z"
+        },
+        {
+          "url": "http://www.town.shirataka.lg.jp/1048.htm",
+          "observed_on": "http://www.town.shirataka.lg.jp/",
+          "sha256": "6b98880ad12030584cb3043e16da4f18fc74a34a44502a36a587e81ee5f7533f",
+          "fetched_at": "2026-08-27T10:36:30Z"
+        },
+        {
+          "url": "https://www.town.shirataka.lg.jp:443/secure/6906/R7kenzenka.pdf",
+          "observed_on": "https://www.town.shirataka.lg.jp:443/1406.htm",
+          "sha256": "9fceed1aa68c95cf4c3381f0d4362e336bb0e62b27bd9fb0fa9ca59a7256a2bb",
+          "fetched_at": "2026-08-27T13:29:14Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shirataka.lg.jp/1048.htm (label: 町の財政) 入口 https://www.town.shirataka.lg.jp:443/1048.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R7kenzenka.pdf「令和７年度決算に基づく、健全化判断比率及び資金不足」, sha256:9fceed1a）にて構造マーカー（歳入・項・実質収支・地方債等）を確認済み。"
     }
   }
 }

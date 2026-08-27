@@ -46,11 +46,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tsubame.niigata.jp/soshiki/kikaku_zaisei/1/20/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsubame.niigata.jp/soshiki/kikaku_zaisei/1/20/index.html",
@@ -62,16 +62,22 @@
           "observed_on": "https://www.city.tsubame.niigata.jp/soshiki/kikaku_zaisei/1/20/index.html",
           "sha256": "6489f83472c49212cc02e3ced6f626ff2a682f2157f2dc67403f15fac99ca97d",
           "fetched_at": "2026-08-27T10:04:24Z"
+        },
+        {
+          "url": "https://www.city.tsubame.niigata.jp/material/files/group/5/1hosei.pdf",
+          "observed_on": "https://www.city.tsubame.niigata.jp/soshiki/kikaku_zaisei/1/9/21632.html",
+          "sha256": "77ff9c81a7b24aab7b4d71eba7fee12c6b400b07adeaa479b34df7882b6d6353",
+          "fetched_at": "2026-08-27T13:35:11Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.tsubame.niigata.jp/soshiki/kikaku_zaisei/1/20/index.html (label: 予算・計画) 入口 https://www.city.tsubame.niigata.jp/soshiki/kikaku_zaisei/1/20/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsubame.niigata.jp/soshiki/kikaku_zaisei/1/20/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsubame.niigata.jp/soshiki/kikaku_zaisei/1/20/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsubame.niigata.jp/soshiki/kikaku_zaisei/1/20/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1hosei.pdf「第1号補正予算書 (PDFファイル: 613.2KB)」, sha256:77ff9c81）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tsubame.niigata.jp/keikaku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsubame.niigata.jp/keikaku/index.html",
@@ -83,9 +89,15 @@
           "observed_on": "https://www.city.tsubame.niigata.jp/keikaku/index.html",
           "sha256": "630faf446e6818a48d22eaf5df5546447bf6865c9bb00c362db7a48e1231115b",
           "fetched_at": "2026-08-27T10:04:26Z"
+        },
+        {
+          "url": "https://www.city.tsubame.niigata.jp/material/files/group/5/20251101_zaiseijijo.pdf",
+          "observed_on": "https://www.city.tsubame.niigata.jp/keikaku/yosan/13925.html",
+          "sha256": "db91cd84d57ba6fdda52e3baf2a7a17c62280663d79dd76088afa35951b96665",
+          "fetched_at": "2026-08-27T13:35:11Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.tsubame.niigata.jp/keikaku/index.html (label: 計画・行財政情報) 入口 https://www.city.tsubame.niigata.jp/keikaku/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsubame.niigata.jp/keikaku/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsubame.niigata.jp/keikaku/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsubame.niigata.jp/keikaku/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20251101_zaiseijijo.pdf「財政事情の公表(PDFファイル:304.1KB)」, sha256:db91cd84）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

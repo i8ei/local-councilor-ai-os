@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html",
@@ -38,16 +38,22 @@
           "observed_on": "https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html",
           "sha256": "90cafb33284cd6b4dbf8d6dcf7f8bbe87671a4c1f6a8c0b1cae0a9f5c7015014",
           "fetched_at": "2026-08-27T10:37:36Z"
+        },
+        {
+          "url": "https://www.town.aizumisato.fukushima.jp/material/files/group/3/01_R8ippan.pdf",
+          "observed_on": "https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/5504.html",
+          "sha256": "e4aee44981ea5c8ed9d41abc4741ce894d9392ecdbf8a1e4e42d5df3130be7f8",
+          "fetched_at": "2026-08-27T13:29:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html (label: 行財政) 入口 https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（01_R8ippan.pdf「一般会計当初予算書 (PDFファイル: 921.0KB)」, sha256:e4aee449）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html",
@@ -59,9 +65,15 @@
           "observed_on": "https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html",
           "sha256": "90cafb33284cd6b4dbf8d6dcf7f8bbe87671a4c1f6a8c0b1cae0a9f5c7015014",
           "fetched_at": "2026-08-27T10:37:36Z"
+        },
+        {
+          "url": "https://www.town.aizumisato.fukushima.jp/material/files/group/3/R6kessanaramasi.pdf",
+          "observed_on": "https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/6/3625.html",
+          "sha256": "f60a003bbd17be53e8c7ef6d04b3f26148c730e02f21114a8bc82baf462775cb",
+          "fetched_at": "2026-08-27T13:30:00Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html (label: 行財政) 入口 https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aizumisato.fukushima.jp/gyosei/gyoseijoho/6/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessanaramasi.pdf「令和6年度決算のあらまし (PDFファイル: 179.3KB)」, sha256:f60a003b）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

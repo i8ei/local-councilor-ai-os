@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/wako/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html",
           "sha256": "edf9315a4efc4821b31506a4c60973d68aadffd009ca209fc8b8ac5ceaa8112b",
           "fetched_at": "2026-08-27T10:21:28Z"
+        },
+        {
+          "url": "http://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html",
+          "observed_on": "http://www.city.wako.lg.jp/",
+          "sha256": "edf9315a4efc4821b31506a4c60973d68aadffd009ca209fc8b8ac5ceaa8112b",
+          "fetched_at": "2026-08-27T10:21:28Z"
+        },
+        {
+          "url": "https://www.city.wako.lg.jp/_res/projects/default_project/_page_/001/013/205/r8_tyuki.pdf",
+          "observed_on": "https://www.city.wako.lg.jp/shisei/zaisei/1006866/1013205/index.html",
+          "sha256": "1edab936980c6937892cae0f11e32981e380be4784b3ad86e86652656bc0fd33",
+          "fetched_at": "2026-08-27T13:31:47Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html (label: 予算) 入口 https://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_tyuki.pdf「和光市中期財政計画（令和9年度～令和13年度） （PDF 904.7KB）」, sha256:1edab936）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html",
           "sha256": "4b7f3d27c93db6708e5b5b76d1a1372293adbd7db58a7c7572b67c9df605179d",
           "fetched_at": "2026-08-27T10:21:31Z"
+        },
+        {
+          "url": "http://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html",
+          "observed_on": "http://www.city.wako.lg.jp/",
+          "sha256": "4b7f3d27c93db6708e5b5b76d1a1372293adbd7db58a7c7572b67c9df605179d",
+          "fetched_at": "2026-08-27T10:21:31Z"
+        },
+        {
+          "url": "https://www.city.wako.lg.jp/_res/projects/default_project/_page_/001/013/963/r7kessansyo.pdf",
+          "observed_on": "https://www.city.wako.lg.jp/shisei/zaisei/1006910/1013963.html",
+          "sha256": "04e6097dd0fbec560ad794815078a8dc1297d130ca1393ec0ab7d0732ddcf14f",
+          "fetched_at": "2026-08-27T13:31:50Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html (label: 決算) 入口 https://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r7kessansyo.pdf「令和7年度埼玉県和光市歳入歳出決算書及び歳入歳出決算事項別明細書 （PDF 7.4MB）」, sha256:04e6097d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

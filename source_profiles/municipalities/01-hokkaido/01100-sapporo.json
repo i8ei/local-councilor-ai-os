@@ -50,11 +50,11 @@
       "notes": "Observed regulations index at https://www.city.sapporo.jp/shisei/jorei/index.html (label: 条例・規則・告示・統計)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
           "sha256": "0b1388772d5e7ca8535d87b395b64e18bdc060bff9381e80d4cf190e62ba6b46",
           "fetched_at": "2026-08-27T10:28:42Z"
+        },
+        {
+          "url": "https://www.city.sapporo.jp/zaisei/kohyo/yosan-kessan/r7/documents/r7_yosan_gaiyou.pdf",
+          "observed_on": "https://www.city.sapporo.jp/zaisei/kohyo/yosan-kessan/r7/reiwa7nendo_yosan.html",
+          "sha256": "3f2b11634ebc15477aef98cbe05ad81f371c0220c3914cbdeb7ee737522735d6",
+          "fetched_at": "2026-08-27T13:22:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html (label: 入札・契約) 入口 https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r7_yosan_gaiyou.pdf「令和7年度予算の概要（PDF：6,669KB）」, sha256:3f2b1163）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
           "sha256": "0b1388772d5e7ca8535d87b395b64e18bdc060bff9381e80d4cf190e62ba6b46",
           "fetched_at": "2026-08-27T10:28:42Z"
+        },
+        {
+          "url": "https://www.city.sapporo.jp/zaisei/kohyo/pamph/aramashi/documents/namarawakaru_r6.pdf",
+          "observed_on": "https://www.city.sapporo.jp/zaisei/kohyo/pamph/aramashi/index.html",
+          "sha256": "a9a3b48e3e47ac97512bf493545c8d26f30e63fbfdb156137db4e1e0533a0c38",
+          "fetched_at": "2026-08-27T13:22:47Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html (label: 入札・契約) 入口 https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（namarawakaru_r6.pdf「令和6年度決算版「なまらわかる！財政のあらまし」（PDF：4,686KB）」, sha256:a9a3b48e）にて構造マーカー（歳入・歳出・実質収支・基準財政需要額等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.moriya/reiki_menu.html (label: 守谷市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
           "sha256": "be8f2eb26ea8877b4ada74fa4954e49d45cf0f12ca2c6c0ceef3736cf6f660bd",
           "fetched_at": "2026-08-27T10:17:46Z"
+        },
+        {
+          "url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
+          "observed_on": "http://www.city.moriya.ibaraki.jp/",
+          "sha256": "be8f2eb26ea8877b4ada74fa4954e49d45cf0f12ca2c6c0ceef3736cf6f660bd",
+          "fetched_at": "2026-08-27T10:17:46Z"
+        },
+        {
+          "url": "https://www.city.moriya.ibaraki.jp/_res/projects/default_project/_page_/001/011/671/2026_yosannsho.pdf",
+          "observed_on": "https://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/1011664/1011671.html",
+          "sha256": "be3c240dfc5e348a7a33db2064c10ba9b4dc3a72d3b8c079542e0a74e6a5dab1",
+          "fetched_at": "2026-08-27T13:30:30Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html (label: 予算・決算) 入口 https://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2026_yosannsho.pdf「令和8年度予算書 （PDF 7.0MB）」, sha256:be3c240d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
           "sha256": "be8f2eb26ea8877b4ada74fa4954e49d45cf0f12ca2c6c0ceef3736cf6f660bd",
           "fetched_at": "2026-08-27T10:17:46Z"
+        },
+        {
+          "url": "http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html",
+          "observed_on": "http://www.city.moriya.ibaraki.jp/",
+          "sha256": "be8f2eb26ea8877b4ada74fa4954e49d45cf0f12ca2c6c0ceef3736cf6f660bd",
+          "fetched_at": "2026-08-27T10:17:46Z"
+        },
+        {
+          "url": "https://www.city.moriya.ibaraki.jp/_res/projects/default_project/_page_/001/011/429/2_0ippannkaikeihyoushir6.pdf",
+          "observed_on": "https://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/1004774/1011429.html",
+          "sha256": "aeb3f5f99f19b3b18f3fefa8b8cb58cfeb3228244e3e0cdfc5f338e7cca53d58",
+          "fetched_at": "2026-08-27T13:30:25Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html (label: 予算・決算) 入口 https://www.city.moriya.ibaraki.jp/shisei/zaisei/1004745/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2_0ippannkaikeihyoushir6.pdf「表紙（一般会計歳入歳出決算書） （PDF 87.2KB）」, sha256:aeb3f5f9）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

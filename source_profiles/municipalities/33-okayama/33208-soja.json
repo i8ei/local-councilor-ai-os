@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/soja/reiki_menu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.soja.okayama.jp/life/6/35/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.soja.okayama.jp/life/6/35/",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.soja.okayama.jp/life/6/35/",
           "sha256": "484146159dbc32c7808c4c2e533cd81a4c649fb3a82b38cb69ff072958afb31d",
           "fetched_at": "2026-08-27T09:44:16Z"
+        },
+        {
+          "url": "http://www.city.soja.okayama.jp/life/6/35/",
+          "observed_on": "http://www.city.soja.okayama.jp/",
+          "sha256": "484146159dbc32c7808c4c2e533cd81a4c649fb3a82b38cb69ff072958afb31d",
+          "fetched_at": "2026-08-27T09:44:16Z"
+        },
+        {
+          "url": "https://www.city.soja.okayama.jp/uploaded/attachment/20014.pdf",
+          "observed_on": "https://www.city.soja.okayama.jp/soshiki/33/13377.html",
+          "sha256": "c03cbb933103bd99c17d84f02a1c7a2164ff47476f3b4d447da59417ef9c96f4",
+          "fetched_at": "2026-08-27T13:42:17Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.soja.okayama.jp/life/6/35/ (label: 財政・行政改革・統計) 入口 https://www.city.soja.okayama.jp/life/6/35/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.soja.okayama.jp/life/6/35/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20014.pdf「下水道事業会計当初予算 [PDFファイル／1024KB]」, sha256:c03cbb93）にて構造マーカー（款・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

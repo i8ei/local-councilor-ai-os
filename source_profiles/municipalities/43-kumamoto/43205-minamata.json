@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A918D772F (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.minamata.lg.jp/list00415.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.minamata.lg.jp/list00415.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.minamata.lg.jp/list00415.html",
           "sha256": "f066b5c585534c009c3c96574f507bf80786a67a239f05a73ea61860655d783b",
           "fetched_at": "2026-08-27T09:37:55Z"
+        },
+        {
+          "url": "https://www.city.minamata.lg.jp/kiji0034158/3_4158_22041_up_r4d2mt0s.pdf",
+          "observed_on": "https://www.city.minamata.lg.jp/kiji0034158/index.html",
+          "sha256": "3163b797309d1d801480f99ea50e9110294db608294c725de10b82d52b626688",
+          "fetched_at": "2026-08-27T13:45:53Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.minamata.lg.jp/list00415.html (label: 予算) 入口 https://www.city.minamata.lg.jp/list00415.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamata.lg.jp/list00415.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_4158_22041_up_r4d2mt0s.pdf「令和7年度一般会計当初予算書（PDF：2.2メガバイト）」, sha256:3163b797）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

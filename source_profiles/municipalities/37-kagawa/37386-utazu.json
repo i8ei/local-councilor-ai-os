@@ -59,11 +59,11 @@
       "notes": "Observed regulations index at https://www.town.utazu.lg.jp/adv/ba.php?id=10&ef1=5 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.utazu.lg.jp/life/4/12/54/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.utazu.lg.jp/life/4/12/54/",
@@ -75,9 +75,15 @@
           "observed_on": "https://www.town.utazu.lg.jp/life/4/12/54/",
           "sha256": "e0c6c39f6c203b1516dd70d0dc96c33ac619e2e3f30e9d298c256334dc942517",
           "fetched_at": "2026-08-27T09:46:26Z"
+        },
+        {
+          "url": "https://www.town.utazu.lg.jp/uploaded/attachment/3771.xlsx",
+          "observed_on": "https://www.town.utazu.lg.jp/page/1233.html",
+          "sha256": "bc76a7a136586dc1fd6755927516aca5e5a76342e69fcf82f14fdf7c3947cb5e",
+          "fetched_at": "2026-08-27T13:43:15Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.utazu.lg.jp/life/4/12/54/ (label: 予算・財政) 入口 https://www.town.utazu.lg.jp/life/4/12/54/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.utazu.lg.jp/life/4/12/54/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3771.xlsx「財政状況資料集（令和6年度） [Excelファイル／562KB]」, sha256:bc76a7a1）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

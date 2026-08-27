@@ -91,11 +91,11 @@
       "notes": "deepest_doc=P1。budget文書（R8tousyoyosangaiyou.pdf「令和8年度 一般会計等当初予算概要 (PDF形式、976.94KB)」, sha256:ab929f51）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kamikawa.hyogo.jp/0000000176.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kamikawa.hyogo.jp/0000000176.html",
@@ -112,9 +112,15 @@
           "url": "https://www.town.kamikawa.hyogo.jp/cmsfiles/contents/0000000/176/1_06kessanngaiyou.pdf",
           "observed_on": "https://www.town.kamikawa.hyogo.jp/0000000176.html",
           "fetched_at": "2026-08-27T11:06:04Z"
+        },
+        {
+          "url": "https://www.town.kamikawa.hyogo.jp/cmsfiles/contents/0000000/176/1_06kessanngaiyou.pdf",
+          "observed_on": "https://www.town.kamikawa.hyogo.jp/0000000176.html",
+          "sha256": "29caaa5535c1dec74f696fad09399e43013e37ed46a7e5e757f40530a01fb9b3",
+          "fetched_at": "2026-08-27T11:06:04Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.kamikawa.hyogo.jp/0000000176.html (label: 神河町の決算・財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（1_06kessanngaiyou.pdf「(1)令和6年度神河町決算の概要 (ファイル名：1_06kessangaiyou.pdf サイズ：509.44KB)」, sha256:29caaa55）にて構造マーカー（歳入・歳出・実質収支・地方債等）を確認済み。"
     }
   }
 }

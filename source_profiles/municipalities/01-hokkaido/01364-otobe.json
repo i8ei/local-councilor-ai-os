@@ -37,11 +37,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.otobe.lg.jp/section/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.otobe.lg.jp/section/zaisei/index.html",
@@ -53,16 +53,28 @@
           "observed_on": "https://www.town.otobe.lg.jp/section/zaisei/index.html",
           "sha256": "a0d5598f3d0a6c4af3cf1a077be2b670410aa5055f6efda6c79986b5118a76a7",
           "fetched_at": "2026-08-27T10:29:44Z"
+        },
+        {
+          "url": "http://www.town.otobe.lg.jp/section/zaisei/index.html",
+          "observed_on": "http://www.town.otobe.lg.jp/",
+          "sha256": "a0d5598f3d0a6c4af3cf1a077be2b670410aa5055f6efda6c79986b5118a76a7",
+          "fetched_at": "2026-08-27T10:29:44Z"
+        },
+        {
+          "url": "https://www.town.otobe.lg.jp/section/zaisei/e0taal0000000c5z-att/e0taal0000002oo0.pdf",
+          "observed_on": "https://www.town.otobe.lg.jp/section/zaisei/e0taal0000000c5z.html",
+          "sha256": "f412307c5b6f2a93cfc1e40461b243a25330292a80f2e51cd37ad81b25d4587c",
+          "fetched_at": "2026-08-27T13:25:54Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.otobe.lg.jp/section/zaisei/index.html (label: 財政課) 入口 https://www.town.otobe.lg.jp/section/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（e0taal0000002oo0.pdf「平成22年度財政状況資料集 (PDF:822KB)」, sha256:f412307c）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.otobe.lg.jp/section/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.otobe.lg.jp/section/zaisei/index.html",
@@ -74,9 +86,21 @@
           "observed_on": "https://www.town.otobe.lg.jp/section/zaisei/index.html",
           "sha256": "a0d5598f3d0a6c4af3cf1a077be2b670410aa5055f6efda6c79986b5118a76a7",
           "fetched_at": "2026-08-27T10:29:44Z"
+        },
+        {
+          "url": "http://www.town.otobe.lg.jp/section/zaisei/index.html",
+          "observed_on": "http://www.town.otobe.lg.jp/",
+          "sha256": "a0d5598f3d0a6c4af3cf1a077be2b670410aa5055f6efda6c79986b5118a76a7",
+          "fetched_at": "2026-08-27T10:29:44Z"
+        },
+        {
+          "url": "https://www.town.otobe.lg.jp/section/zaisei/e0taal0000000c5z-att/e0taal0000002oo0.pdf",
+          "observed_on": "https://www.town.otobe.lg.jp/section/zaisei/e0taal0000000c5z.html",
+          "sha256": "f412307c5b6f2a93cfc1e40461b243a25330292a80f2e51cd37ad81b25d4587c",
+          "fetched_at": "2026-08-27T13:25:54Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.otobe.lg.jp/section/zaisei/index.html (label: 財政課) 入口 https://www.town.otobe.lg.jp/section/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（e0taal0000002oo0.pdf「平成22年度財政状況資料集 (PDF:822KB)」, sha256:f412307c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at https://www.town.yoichi.hokkaido.jp/reikishu/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
@@ -67,16 +67,22 @@
           "observed_on": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
           "sha256": "dd6eb79e995bbc9a0d5b14686b3de1139cac59fb7613997d55dd0d3bb703c130",
           "fetched_at": "2026-08-27T10:30:08Z"
+        },
+        {
+          "url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/files/R6sindanhyou_yoichi.pdf",
+          "observed_on": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/zaiseizyoukyou.html",
+          "sha256": "801301239cd67768c8b3c87204f6f94d857d5ba2db158eeae7bf4813f7803de7",
+          "fetched_at": "2026-08-27T13:26:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html (label: 財政・会計) 入口 http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6sindanhyou_yoichi.pdf「財務状況把握ヒアリングの結果について (441KB)」, sha256:80130123）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
@@ -88,9 +94,15 @@
           "observed_on": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html",
           "sha256": "dd6eb79e995bbc9a0d5b14686b3de1139cac59fb7613997d55dd0d3bb703c130",
           "fetched_at": "2026-08-27T10:30:08Z"
+        },
+        {
+          "url": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/files/R6sindanhyou_yoichi.pdf",
+          "observed_on": "http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/zaiseizyoukyou.html",
+          "sha256": "801301239cd67768c8b3c87204f6f94d857d5ba2db158eeae7bf4813f7803de7",
+          "fetched_at": "2026-08-27T13:26:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html (label: 財政・会計) 入口 http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.yoichi.hokkaido.jp/chousei/jouhou/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6sindanhyou_yoichi.pdf「財務状況把握ヒアリングの結果について (441KB)」, sha256:80130123）にて構造マーカー（歳入・歳出・項・地方債等）を確認済み。"
     }
   }
 }

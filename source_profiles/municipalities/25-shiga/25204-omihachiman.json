@@ -50,11 +50,11 @@
       "base_url": "https://www1.g-reiki.net/city.omihachiman/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
           "sha256": "c2083eba73c0047b6653908fe195261040a8fd2a981051d59ae646482846c627",
           "fetched_at": "2026-08-27T09:49:15Z"
+        },
+        {
+          "url": "https://www.city.omihachiman.lg.jp/material/files/group/111/R8_yosan_gaiyo.pdf",
+          "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/yosan/41184.html",
+          "sha256": "08c8617abfd3730089ec5f8d0c36135fb0afcd5e367ca8f4c8b5a91bcf3341c0",
+          "fetched_at": "2026-08-27T13:39:26Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html (label: 行財政) 入口 https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_yosan_gaiyo.pdf「令和8年度 当初予算の概要(案) (PDFファイル: 6.2MB)」, sha256:08c8617a）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

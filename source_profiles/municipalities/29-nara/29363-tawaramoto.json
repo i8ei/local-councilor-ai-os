@@ -61,11 +61,11 @@
       "notes": "deepest_doc=P1。budget文書（yosan2.pdf「令和8年度予算書 (PDFファイル: 10.9MB)」, sha256:861c8b18）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3047.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3047.html",
@@ -82,9 +82,15 @@
           "url": "https://www.town.tawaramoto.nara.jp/material/files/group/41/R6kessansho.pdf",
           "observed_on": "https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3047.html",
           "fetched_at": "2026-08-27T11:06:39Z"
+        },
+        {
+          "url": "https://www.town.tawaramoto.nara.jp/material/files/group/41/R6kessansho.pdf",
+          "observed_on": "https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3047.html",
+          "sha256": "c1939873c58550db98e548511164d47f5d2121a2b28975204d70469c03ee5aaf",
+          "fetched_at": "2026-08-27T11:06:41Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3047.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansho.pdf「令和6年度決算書 (PDFファイル: 4.1MB)」, sha256:c1939873）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

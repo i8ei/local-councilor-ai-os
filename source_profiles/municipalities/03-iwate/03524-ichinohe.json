@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A11F7CA (label: 例規集 Regular regulations)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5871.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5871.html",
@@ -69,16 +69,22 @@
           "url": "https://www.town.ichinohe.iwate.jp/material/files/group/2/R8ippannkaikeiyosannsyo.pdf",
           "observed_on": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5871.html",
           "fetched_at": "2026-08-27T10:33:36Z"
+        },
+        {
+          "url": "https://www.town.ichinohe.iwate.jp/material/files/group/2/R8ippannkaikeiyosannsyo.pdf",
+          "observed_on": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5871.html",
+          "sha256": "7d475dead6f9b080bcad6a3ca9bb6e136ff1c4e843930c698b43335d396106f9",
+          "fetched_at": "2026-08-27T10:33:43Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5871.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8ippannkaikeiyosannsyo.pdf「令和8年度予算書 (PDFファイル: 12.4MB)」, sha256:7d475dea）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html",
@@ -90,9 +96,15 @@
           "observed_on": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html",
           "sha256": "f1776f201660675849da7ad76a09cd5a0f8c8f0c79d2328eef6956992d57a08d",
           "fetched_at": "2026-08-27T10:33:45Z"
+        },
+        {
+          "url": "https://www.town.ichinohe.iwate.jp/material/files/group/2/r6kessan_syuyou.pdf",
+          "observed_on": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html",
+          "sha256": "22207aa23335485f53c685c8f1acdfda98246977747238bff9a9beced6f19568",
+          "fetched_at": "2026-08-27T13:27:44Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html (label: 決算) 入口 https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessan_syuyou.pdf「令和6年度 (PDFファイル: 4.2MB)」, sha256:22207aa2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

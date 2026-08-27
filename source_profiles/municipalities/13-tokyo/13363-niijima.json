@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（H30zaiseijyoukyousiryousyuu.xlsx「平成30年度財政状況資料集 (542KB)」, sha256:d2ae2ca8）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.niijima.com/gyousei/zaiseishokuin/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.niijima.com/gyousei/zaiseishokuin/index.html",
@@ -85,9 +85,15 @@
           "observed_on": "http://www.niijima.com/gyousei/zaiseishokuin/index.html",
           "sha256": "ee7563617066946747c1575f75996668bdd9bdb0744fb3fd1ae2da0007b4785f",
           "fetched_at": "2026-08-27T10:26:33Z"
+        },
+        {
+          "url": "http://www.niijima.com/gyousei/zaiseishokuin/files/H30zaiseijyoukyousiryousyuu.xlsx",
+          "observed_on": "http://www.niijima.com/gyousei/zaiseishokuin/zaiseijoukyou.html",
+          "sha256": "d2ae2ca857fc9a77655f15e4a51d62854dbc7966c7e9390a97303dfe08f2609e",
+          "fetched_at": "2026-08-27T13:34:12Z"
         }
       ],
-      "notes": "Observed finance section at http://www.niijima.com/gyousei/zaiseishokuin/index.html (label: 財政・職員の状況) 入口 http://www.niijima.com/gyousei/zaiseishokuin/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.niijima.com/gyousei/zaiseishokuin/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H30zaiseijyoukyousiryousyuu.xlsx「平成30年度財政状況資料集 (542KB)」, sha256:d2ae2ca8）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/zushi/reiki_menu.html (label: 逗子市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.zushi.kanagawa.jp/shisei/1009210/index.html",
           "sha256": "0dd12e1b691ca05527584349efdf0125b56e855f37baadcec5bad6199d6a4a38",
           "fetched_at": "2026-08-27T10:27:32Z"
+        },
+        {
+          "url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/index.html",
+          "observed_on": "http://www.city.zushi.kanagawa.jp/",
+          "sha256": "0dd12e1b691ca05527584349efdf0125b56e855f37baadcec5bad6199d6a4a38",
+          "fetched_at": "2026-08-27T10:27:32Z"
+        },
+        {
+          "url": "https://www.city.zushi.kanagawa.jp/_res/projects/default_project/_page_/001/006/690/r6_zaiseijyoukyou.xlsx",
+          "observed_on": "https://www.city.zushi.kanagawa.jp/shisei/1009210/1006685/1006690.html",
+          "sha256": "2db97412665d36f6d8286e7306c0404f04d49fbde68c2188370e039b35cad226",
+          "fetched_at": "2026-08-27T13:34:24Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.zushi.kanagawa.jp/shisei/1009210/index.html (label: 予算・財政) 入口 https://www.city.zushi.kanagawa.jp/shisei/1009210/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6_zaiseijyoukyou.xlsx「令和6年度決算 （Excel 560.7 KB）」, sha256:2db97412）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/index.html",
           "sha256": "d6afee9ad5cb68dc38f5fdfe433cde7a89eeae51f80f1770f13b1947930c42c9",
           "fetched_at": "2026-08-27T10:27:35Z"
+        },
+        {
+          "url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/index.html",
+          "observed_on": "http://www.city.zushi.kanagawa.jp/",
+          "sha256": "d6afee9ad5cb68dc38f5fdfe433cde7a89eeae51f80f1770f13b1947930c42c9",
+          "fetched_at": "2026-08-27T10:27:35Z"
+        },
+        {
+          "url": "https://www.city.zushi.kanagawa.jp/_res/projects/default_project/_page_/001/006/723/r6_kessancard.pdf",
+          "observed_on": "https://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/1006723.html",
+          "sha256": "8a6ee21287d2e5446e0ad155e93cfa7a9587a1b80d94274007f099505b913520",
+          "fetched_at": "2026-08-27T13:34:22Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/index.html (label: 決算) 入口 https://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6_kessancard.pdf「令和6年度決算 （PDF 210.5 KB）」, sha256:8a6ee212）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

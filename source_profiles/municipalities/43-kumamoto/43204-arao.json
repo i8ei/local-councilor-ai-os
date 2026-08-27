@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.arao.lg.jp/shisei/jorei-kisoku/ (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.arao.lg.jp/shisei/shisaku/gyosei-kaikaku/13014.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.arao.lg.jp/shisei/shisaku/gyosei-kaikaku/13014.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.arao.lg.jp/shisei/shisaku/gyosei-kaikaku/13014.html",
           "sha256": "e15f77c325d0b53f2a336699a4c2a4ace08e0927ca2ace015b37569b38af87ad",
           "fetched_at": "2026-08-27T09:38:02Z"
+        },
+        {
+          "url": "http://www.city.arao.lg.jp/shisei/shisaku/gyosei-kaikaku/13014.html",
+          "observed_on": "http://www.city.arao.lg.jp/",
+          "sha256": "e15f77c325d0b53f2a336699a4c2a4ace08e0927ca2ace015b37569b38af87ad",
+          "fetched_at": "2026-08-27T09:38:02Z"
+        },
+        {
+          "url": "https://www.city.arao.lg.jp/fs/2/7/6/9/8/8/_/__________________________.pdf",
+          "observed_on": "https://www.city.arao.lg.jp/shisei/shisaku/gyosei-kaikaku/13014.html",
+          "sha256": "b8b8cf76a4981971ddad379288fb8f2c6161da4cdab2aa08bf76be9e001ab9b5",
+          "fetched_at": "2026-08-27T13:45:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.arao.lg.jp/shisei/shisaku/gyosei-kaikaku/13014.html (label: 「まちづくりと財政健全化」についての意見募集) 入口 https://www.city.arao.lg.jp/shisei/shisaku/gyosei-kaikaku/13014.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.arao.lg.jp/shisei/shisaku/gyosei-kaikaku/13014.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（__________________________.pdf「説明資料(まちづくりと財政健全化について_全ページ) (PDF 5.4MB)」, sha256:b8b8cf76）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

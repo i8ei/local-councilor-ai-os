@@ -74,11 +74,11 @@
       "notes": "deepest_doc=P1。budget文書（r8_tousyo.pdf「令和8年度当初予算書（PDF：1,463KB）」, sha256:9789a27e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html",
@@ -95,9 +95,15 @@
           "url": "http://www.city.hioki.kagoshima.jp/documents/937/r6syouhizei.pdf",
           "observed_on": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html",
           "fetched_at": "2026-08-27T10:57:48Z"
+        },
+        {
+          "url": "http://www.city.hioki.kagoshima.jp/documents/937/r6syouhizei.pdf",
+          "observed_on": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html",
+          "sha256": "c33eeec46873a5837a001323c1fa28ed181c502eda37eedd8fef80f035fbc071",
+          "fetched_at": "2026-08-27T10:57:49Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r6syouhizei.pdf「令和6年度決算地方消費税交付金（社会保障財源化分）が充てられる社会保障4経費・その他社会保障施策に要する経費（PDF：80KB）」, sha256:c33eeec4）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

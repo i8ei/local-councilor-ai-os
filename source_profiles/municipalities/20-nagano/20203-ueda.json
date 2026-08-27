@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.ueda.nagano.jp/adv/ba.php?id=371 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ueda.nagano.jp/life/5/42/190/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ueda.nagano.jp/life/5/42/190/",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.ueda.nagano.jp/life/5/42/190/",
           "sha256": "39de2b445bcbd0d6f40ec3a785ad28a6865eb64ec90efd2cc12da39fe8632194",
           "fetched_at": "2026-08-27T10:09:08Z"
+        },
+        {
+          "url": "http://www.city.ueda.nagano.jp/life/5/42/190/",
+          "observed_on": "http://www.city.ueda.nagano.jp/",
+          "sha256": "39de2b445bcbd0d6f40ec3a785ad28a6865eb64ec90efd2cc12da39fe8632194",
+          "fetched_at": "2026-08-27T10:09:08Z"
+        },
+        {
+          "url": "https://www.city.ueda.nagano.jp/uploaded/attachment/85000.pdf",
+          "observed_on": "https://www.city.ueda.nagano.jp/soshiki/zaisei/1256.html",
+          "sha256": "5959d37676d98e96ea2ea51b3e98ccfe2d36c23be3fe327c03468de3d7e7a0f1",
+          "fetched_at": "2026-08-27T13:36:13Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.ueda.nagano.jp/life/5/42/190/ (label: 予算) 入口 https://www.city.ueda.nagano.jp/life/5/42/190/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ueda.nagano.jp/life/5/42/190/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（85000.pdf「令和8年度9月補正(2)予算書 [PDFファイル／1.07MB]」, sha256:5959d376）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ueda.nagano.jp/life/5/42/191/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ueda.nagano.jp/life/5/42/191/",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.ueda.nagano.jp/life/5/42/191/",
           "sha256": "ef7289bd5da82944f7113c96e0d17099b6eda4aacbb87c37b9e62b0c3591d024",
           "fetched_at": "2026-08-27T10:09:11Z"
+        },
+        {
+          "url": "http://www.city.ueda.nagano.jp/life/5/42/191/",
+          "observed_on": "http://www.city.ueda.nagano.jp/",
+          "sha256": "ef7289bd5da82944f7113c96e0d17099b6eda4aacbb87c37b9e62b0c3591d024",
+          "fetched_at": "2026-08-27T10:09:11Z"
+        },
+        {
+          "url": "https://www.city.ueda.nagano.jp/uploaded/attachment/80464.pdf",
+          "observed_on": "https://www.city.ueda.nagano.jp/soshiki/zaisei/1152.html",
+          "sha256": "06344c1a066a53fd2d6c74e1dcb30313a1d1f7b1f86dcaf53c70991e4a5b7f0e",
+          "fetched_at": "2026-08-27T13:36:15Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ueda.nagano.jp/life/5/42/191/ (label: 決算) 入口 https://www.city.ueda.nagano.jp/life/5/42/191/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ueda.nagano.jp/life/5/42/191/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（80464.pdf「令和6年度決算書 [PDFファイル／4.09MB]」, sha256:06344c1a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

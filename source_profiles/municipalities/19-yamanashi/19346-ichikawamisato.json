@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.town.ichikawamisato.yamanashi.jp/reiki_int/reiki_menu.html (label: 市川三郷町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html",
           "sha256": "2306d6898b09d45a2a496f377a843112518f8b0fccb36713d25317c3f9c90361",
           "fetched_at": "2026-08-27T10:08:32Z"
+        },
+        {
+          "url": "http://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html",
+          "observed_on": "http://www.town.ichikawamisato.yamanashi.jp/",
+          "sha256": "2306d6898b09d45a2a496f377a843112518f8b0fccb36713d25317c3f9c90361",
+          "fetched_at": "2026-08-27T10:08:32Z"
+        },
+        {
+          "url": "https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/files/R8_06_yosansyo_tuika.pdf",
+          "observed_on": "https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/yosan.html",
+          "sha256": "48f6ce6ddf87ffc33eacc3f4b931f6069babe61593f5c1519d4b717e56134ad6",
+          "fetched_at": "2026-08-27T13:36:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html (label: 財政課からのお知らせ) 入口 https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_06_yosansyo_tuika.pdf「令和8年度 6月補正予算議案及び予算説明書（追加） (547KB)」, sha256:48f6ce6d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html",
           "sha256": "2306d6898b09d45a2a496f377a843112518f8b0fccb36713d25317c3f9c90361",
           "fetched_at": "2026-08-27T10:08:32Z"
+        },
+        {
+          "url": "http://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html",
+          "observed_on": "http://www.town.ichikawamisato.yamanashi.jp/",
+          "sha256": "2306d6898b09d45a2a496f377a843112518f8b0fccb36713d25317c3f9c90361",
+          "fetched_at": "2026-08-27T10:08:32Z"
+        },
+        {
+          "url": "https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/files/r6_14_ichikawamisato.xlsx",
+          "observed_on": "https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/zaiseijoukyousiryoushuu.html",
+          "sha256": "fabc1348ba206f8927dbf016ea2a8e968b328f71f7c5553918e0e9490dfde8a3",
+          "fetched_at": "2026-08-27T13:36:12Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html (label: 財政課からのお知らせ) 入口 https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ichikawamisato.yamanashi.jp/40administration/10section/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6_14_ichikawamisato.xlsx「財政状況資料集【令和６年度版】 (551KB)」, sha256:fabc1348）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

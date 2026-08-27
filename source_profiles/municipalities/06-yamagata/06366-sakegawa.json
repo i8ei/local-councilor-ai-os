@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.sakegawa.yamagata.jp/government/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.sakegawa.yamagata.jp/government/zaisei/",
@@ -38,16 +38,28 @@
           "observed_on": "https://www.vill.sakegawa.yamagata.jp:443/government/zaisei/",
           "sha256": "5047ce50857e87aa45a021db9101800b97d1940763d1530670f159f5771f8dc6",
           "fetched_at": "2026-08-27T10:36:16Z"
+        },
+        {
+          "url": "http://www.vill.sakegawa.yamagata.jp/government/zaisei/",
+          "observed_on": "http://www.vill.sakegawa.yamagata.jp/",
+          "sha256": "5047ce50857e87aa45a021db9101800b97d1940763d1530670f159f5771f8dc6",
+          "fetched_at": "2026-08-27T10:36:16Z"
+        },
+        {
+          "url": "https://www.vill.sakegawa.yamagata.jp:443/files/original/202608181302157785fef2be8.xlsx",
+          "observed_on": "https://www.vill.sakegawa.yamagata.jp:443/government/zaisei/1735",
+          "sha256": "50059f3129da983c5da4b702ea8c40d98ffaccd8dd8bdcf094dd11f2eb8df506",
+          "fetched_at": "2026-08-27T13:29:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.sakegawa.yamagata.jp/government/zaisei/ (label: 財政情報) 入口 https://www.vill.sakegawa.yamagata.jp:443/government/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（202608181302157785fef2be8.xlsx「「令和６年度鮭川村財政状況資料集」をダウンロードする（XLSX：573kB）」, sha256:50059f31）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.sakegawa.yamagata.jp/government/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.sakegawa.yamagata.jp/government/zaisei/",
@@ -59,9 +71,21 @@
           "observed_on": "https://www.vill.sakegawa.yamagata.jp:443/government/zaisei/",
           "sha256": "5047ce50857e87aa45a021db9101800b97d1940763d1530670f159f5771f8dc6",
           "fetched_at": "2026-08-27T10:36:16Z"
+        },
+        {
+          "url": "http://www.vill.sakegawa.yamagata.jp/government/zaisei/",
+          "observed_on": "http://www.vill.sakegawa.yamagata.jp/",
+          "sha256": "5047ce50857e87aa45a021db9101800b97d1940763d1530670f159f5771f8dc6",
+          "fetched_at": "2026-08-27T10:36:16Z"
+        },
+        {
+          "url": "https://www.vill.sakegawa.yamagata.jp:443/files/original/202608181302157785fef2be8.xlsx",
+          "observed_on": "https://www.vill.sakegawa.yamagata.jp:443/government/zaisei/1735",
+          "sha256": "50059f3129da983c5da4b702ea8c40d98ffaccd8dd8bdcf094dd11f2eb8df506",
+          "fetched_at": "2026-08-27T13:29:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.sakegawa.yamagata.jp/government/zaisei/ (label: 財政情報) 入口 https://www.vill.sakegawa.yamagata.jp:443/government/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（202608181302157785fef2be8.xlsx「「令和６年度鮭川村財政状況資料集」をダウンロードする（XLSX：573kB）」, sha256:50059f31）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

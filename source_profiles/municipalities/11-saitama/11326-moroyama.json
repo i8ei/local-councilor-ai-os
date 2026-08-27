@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.moroyama.saitama.jp/gyoseisite/choseijoho/machinogaiyo/8294.html (label: 毛呂山町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.moroyama.saitama.jp/gyoseisite/choseijoho/gyozaisei/4/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.moroyama.saitama.jp/gyoseisite/choseijoho/gyozaisei/4/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.moroyama.saitama.jp/gyoseisite/choseijoho/gyozaisei/4/index.html",
           "sha256": "25ca7899409c40b9fff6e71a834557fa5252796bac223f6cc057ba2bbfdffb97",
           "fetched_at": "2026-08-27T10:21:36Z"
+        },
+        {
+          "url": "https://www.town.moroyama.saitama.jp/material/files/group/5/R8yosan_shikkouhoushin.pdf",
+          "observed_on": "https://www.town.moroyama.saitama.jp/gyoseisite/choseijoho/gyozaisei/4/12714.html",
+          "sha256": "37957f538cdaf6ba20182308d8d57080f9891e0725b6e162a655d74a11d01279",
+          "fetched_at": "2026-08-27T13:32:12Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.moroyama.saitama.jp/gyoseisite/choseijoho/gyozaisei/4/index.html (label: 財政・予算・決算) 入口 https://www.town.moroyama.saitama.jp/gyoseisite/choseijoho/gyozaisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.moroyama.saitama.jp/gyoseisite/choseijoho/gyozaisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosan_shikkouhoushin.pdf「令和8年度毛呂山町予算執行方針 (PDFファイル: 141.3KB)」, sha256:37957f53）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

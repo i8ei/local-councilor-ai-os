@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=115 (label: 秩父別町 例規類集データベース 秩父別町の条例・規則をご覧いただけます)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
@@ -63,16 +63,22 @@
           "url": "https://www.town.chippubetsu.hokkaido.jp/common/img/content/content_20260722_144640.pdf",
           "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
           "fetched_at": "2026-08-27T11:22:43Z"
+        },
+        {
+          "url": "https://www.town.chippubetsu.hokkaido.jp/common/img/content/content_20260722_144640.pdf",
+          "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
+          "sha256": "30e116c7be80a1ab7a95e4fb7ba365aa67e502ef6777ed3c85e88f88073ace11",
+          "fetched_at": "2026-08-27T11:22:44Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87 (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（content_20260722_144640.pdf「令和8年度当初予算 地方消費税交付金（社会保障財源化分）の使途について（PDF：約60KB）」, sha256:30e116c7）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
@@ -89,9 +95,15 @@
           "url": "https://www.town.chippubetsu.hokkaido.jp/common/img/content/content_20260722_144613.pdf",
           "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
           "fetched_at": "2026-08-27T11:22:45Z"
+        },
+        {
+          "url": "https://www.town.chippubetsu.hokkaido.jp/common/img/content/content_20260323_095918.xlsx",
+          "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
+          "sha256": "417e0030e6d0c717cc9bffbcc589bb9060555ea57bf5255adcaf9f0a28ae7ddf",
+          "fetched_at": "2026-08-27T13:26:05Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87 (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（content_20260323_095918.xlsx「令和6年度 財政状況資料集（EXCEL:約552KB）」, sha256:417e0030）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

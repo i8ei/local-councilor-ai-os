@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（r06zaiseijyoukyousiryousyu_03.xlsx「令和6年度 財政状況資料集（XLSXファイル：578KB）」, sha256:f0e268f5）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nishitokyo.lg.jp/siseizyoho/zaisei/kessansyo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nishitokyo.lg.jp/siseizyoho/zaisei/kessansyo/index.html",
@@ -78,9 +78,21 @@
           "observed_on": "https://www.city.nishitokyo.lg.jp/siseizyoho/zaisei/kessansyo/index.html",
           "sha256": "75187b6e582a5ad2ef2abf77a268d6d4b6c1615eb14d476b30bce06fd0f1078f",
           "fetched_at": "2026-08-27T10:26:27Z"
+        },
+        {
+          "url": "http://www.city.nishitokyo.lg.jp/siseizyoho/zaisei/kessansyo/index.html",
+          "observed_on": "http://www.city.nishitokyo.lg.jp/",
+          "sha256": "75187b6e582a5ad2ef2abf77a268d6d4b6c1615eb14d476b30bce06fd0f1078f",
+          "fetched_at": "2026-08-27T10:26:27Z"
+        },
+        {
+          "url": "https://www.city.nishitokyo.lg.jp/siseizyoho/zaisei/zaiseijokyoshiryosyu.files/r06zaiseijyoukyousiryousyu_03.xlsx",
+          "observed_on": "https://www.city.nishitokyo.lg.jp/siseizyoho/zaisei/zaiseijokyoshiryosyu.html",
+          "sha256": "f0e268f538d49176b9ab1a14c9ca3bd67fad8e47f3edb69a0d49c862b2ca6664",
+          "fetched_at": "2026-08-27T13:34:00Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.nishitokyo.lg.jp/siseizyoho/zaisei/kessansyo/index.html (label: 決算) 入口 https://www.city.nishitokyo.lg.jp/siseizyoho/zaisei/kessansyo/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r06zaiseijyoukyousiryousyu_03.xlsx「令和6年度 財政状況資料集（XLSXファイル：578KB）」, sha256:f0e268f5）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

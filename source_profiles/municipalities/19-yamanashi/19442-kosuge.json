@@ -50,11 +50,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/vill.kosuge/reiki_menu.html for 小菅村"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
@@ -66,16 +66,28 @@
           "observed_on": "http://www.vill.kosuge.yamanashi.jp/living/soumu/",
           "sha256": "4996de6439a39d28b6023d9163bfc65e7ecee0f6cbe758b176029d0b9ba12495",
           "fetched_at": "2026-08-27T10:09:23Z"
+        },
+        {
+          "url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
+          "observed_on": "http://www.vill.kosuge.yamanashi.jp/",
+          "sha256": "4996de6439a39d28b6023d9163bfc65e7ecee0f6cbe758b176029d0b9ba12495",
+          "fetched_at": "2026-08-27T10:09:23Z"
+        },
+        {
+          "url": "http://www.vill.kosuge.yamanashi.jp/data/files/%E5%B0%8F%E8%8F%85%E6%9D%91_2024.xlsx",
+          "observed_on": "http://www.vill.kosuge.yamanashi.jp/living/soumu/20260413144958.html",
+          "sha256": "173275719915f117a47f937f8126081722f6278ba841db55fa9a1d1a62389262",
+          "fetched_at": "2026-08-27T13:36:14Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.kosuge.yamanashi.jp/living/soumu (label: 村の取り組みに関すること 総務課 人事行政運営、財政、税政、選挙、防災、ふるさと納税、出納事務全般、消防団、CATV、公共交通（村営バス）、統計 など 総務課のページへ) 入口 http://www.vill.kosuge.yamanashi.jp/living/soumu/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.kosuge.yamanashi.jp/living/soumu/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E5%B0%8F%E8%8F%85%E6%9D%91_2024.xlsx「令和6年度財政状況資料集（Excel・575KB）」, sha256:17327571）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
@@ -87,9 +99,21 @@
           "observed_on": "http://www.vill.kosuge.yamanashi.jp/living/soumu/",
           "sha256": "4996de6439a39d28b6023d9163bfc65e7ecee0f6cbe758b176029d0b9ba12495",
           "fetched_at": "2026-08-27T10:09:23Z"
+        },
+        {
+          "url": "http://www.vill.kosuge.yamanashi.jp/living/soumu",
+          "observed_on": "http://www.vill.kosuge.yamanashi.jp/",
+          "sha256": "4996de6439a39d28b6023d9163bfc65e7ecee0f6cbe758b176029d0b9ba12495",
+          "fetched_at": "2026-08-27T10:09:23Z"
+        },
+        {
+          "url": "http://www.vill.kosuge.yamanashi.jp/data/files/%E5%B0%8F%E8%8F%85%E6%9D%91_2024.xlsx",
+          "observed_on": "http://www.vill.kosuge.yamanashi.jp/living/soumu/20260413144958.html",
+          "sha256": "173275719915f117a47f937f8126081722f6278ba841db55fa9a1d1a62389262",
+          "fetched_at": "2026-08-27T13:36:14Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.kosuge.yamanashi.jp/living/soumu (label: 村の取り組みに関すること 総務課 人事行政運営、財政、税政、選挙、防災、ふるさと納税、出納事務全般、消防団、CATV、公共交通（村営バス）、統計 など 総務課のページへ) 入口 http://www.vill.kosuge.yamanashi.jp/living/soumu/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.kosuge.yamanashi.jp/living/soumu/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E5%B0%8F%E8%8F%85%E6%9D%91_2024.xlsx「令和6年度財政状況資料集（Excel・575KB）」, sha256:17327571）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -35,11 +35,11 @@
       "notes": "Observed regulations index at http://www.city.kiyosu.aichi.jp/shisei_joho/reikishu/reikishu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kiyosu.aichi.jp/shisei_joho/zaisei_jokyo/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kiyosu.aichi.jp/shisei_joho/zaisei_jokyo/yosan/index.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.kiyosu.aichi.jp/shisei_joho/zaisei_jokyo/yosan/index.html",
           "sha256": "4f0af281977e79291a122c430c62486381890ced6c78247b3bb962bb00244569",
           "fetched_at": "2026-08-27T10:15:41Z"
+        },
+        {
+          "url": "http://www.city.kiyosu.aichi.jp/shisei_joho/zaisei_jokyo/yosan/index.html",
+          "observed_on": "http://www.city.kiyosu.aichi.jp/",
+          "sha256": "4f0af281977e79291a122c430c62486381890ced6c78247b3bb962bb00244569",
+          "fetched_at": "2026-08-27T10:15:41Z"
+        },
+        {
+          "url": "https://www.city.kiyosu.aichi.jp/shisei_joho/zaisei_jokyo/siryoshu/R6zaiseisiryousyuu.files/06siryousyuu.xlsx",
+          "observed_on": "https://www.city.kiyosu.aichi.jp/shisei_joho/zaisei_jokyo/siryoshu/R6zaiseisiryousyuu.html",
+          "sha256": "f56b97560296f809c5dd6ee8bbbecafe8f667a0a29e3dd8000f12e08c67c3027",
+          "fetched_at": "2026-08-27T13:38:27Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kiyosu.aichi.jp/shisei_joho/zaisei_jokyo/yosan/index.html (label: 予算) 入口 https://www.city.kiyosu.aichi.jp/shisei_joho/zaisei_jokyo/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（06siryousyuu.xlsx「令和6年度財政状況資料集 （Excel：521KB）」, sha256:f56b9756）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

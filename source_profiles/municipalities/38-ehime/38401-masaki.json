@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.masaki.ehime.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.masaki.ehime.jp/life/3/22/136/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.masaki.ehime.jp/life/3/22/136/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.masaki.ehime.jp/life/3/22/136/",
           "sha256": "83a59d1cc843b44cb12132dfcf01148746795ada74de1cbf9da8b0cbcc890339",
           "fetched_at": "2026-08-27T09:47:06Z"
+        },
+        {
+          "url": "http://www.town.masaki.ehime.jp/life/3/22/136/",
+          "observed_on": "http://www.town.masaki.ehime.jp/",
+          "sha256": "83a59d1cc843b44cb12132dfcf01148746795ada74de1cbf9da8b0cbcc890339",
+          "fetched_at": "2026-08-27T09:47:06Z"
+        },
+        {
+          "url": "https://www.town.masaki.ehime.jp/uploaded/life/34934_108873_misc.pdf",
+          "observed_on": "https://www.town.masaki.ehime.jp/soshiki/3/34934.html",
+          "sha256": "923304c11427144f50b676ec0b066ccf8c72246eab6ac85a216ab5bb3d781632",
+          "fetched_at": "2026-08-27T13:43:44Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.masaki.ehime.jp/life/3/22/136/ (label: 予算) 入口 https://www.town.masaki.ehime.jp/life/3/22/136/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.masaki.ehime.jp/life/3/22/136/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（34934_108873_misc.pdf「令和8年度 松前町予算書 [PDFファイル／12.8MB]」, sha256:923304c1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.sango/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.sango.nara.jp/life/5/37/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.sango.nara.jp/life/5/37/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.sango.nara.jp/life/5/37/",
           "sha256": "6f6699e5879173da8d0f3394b5142df7310bdc1809de3ea54a07c4475c0ebb25",
           "fetched_at": "2026-08-27T09:53:04Z"
+        },
+        {
+          "url": "http://www.town.sango.nara.jp/life/5/37/",
+          "observed_on": "http://www.town.sango.nara.jp/",
+          "sha256": "6f6699e5879173da8d0f3394b5142df7310bdc1809de3ea54a07c4475c0ebb25",
+          "fetched_at": "2026-08-27T09:53:04Z"
+        },
+        {
+          "url": "https://www.town.sango.nara.jp/uploaded/attachment/10645.pdf",
+          "observed_on": "https://www.town.sango.nara.jp/soshiki/3/10905.html",
+          "sha256": "e1b9a2e6976452a8e67dca0f7c832da2679b32f8c468ed3c8c7141307e9e25e2",
+          "fetched_at": "2026-08-27T13:41:27Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.sango.nara.jp/life/5/37/ (label: 予算・決算・財政状況) 入口 https://www.town.sango.nara.jp/life/5/37/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.sango.nara.jp/life/5/37/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（10645.pdf「令和8年度一般会計予算書 [PDFファイル／4.43MB]」, sha256:e1b9a2e6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

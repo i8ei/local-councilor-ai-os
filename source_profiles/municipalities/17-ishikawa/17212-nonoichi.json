@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.nonoichi.lg.jp/life/4/35/176/ (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nonoichi.lg.jp/life/4/35/169/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nonoichi.lg.jp/life/4/35/169/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.nonoichi.lg.jp/life/4/35/169/",
           "sha256": "ea13202d95b005a180f51d19903084ac1f50d50174c8c4ab4fbcb86109270bf0",
           "fetched_at": "2026-08-27T10:06:06Z"
+        },
+        {
+          "url": "http://www.city.nonoichi.lg.jp/life/4/35/169/",
+          "observed_on": "http://www.city.nonoichi.lg.jp/",
+          "sha256": "ea13202d95b005a180f51d19903084ac1f50d50174c8c4ab4fbcb86109270bf0",
+          "fetched_at": "2026-08-27T10:06:06Z"
+        },
+        {
+          "url": "https://www.city.nonoichi.lg.jp/uploaded/attachment/22071.pdf",
+          "observed_on": "https://www.city.nonoichi.lg.jp/soshiki/4/29735.html",
+          "sha256": "5b191992a44db6b2e8375c03e0411ef55bb79fd1783bf2a869d913d354eee61d",
+          "fetched_at": "2026-08-27T13:36:28Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.nonoichi.lg.jp/life/4/35/169/ (label: 予算・決算) 入口 https://www.city.nonoichi.lg.jp/life/4/35/169/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nonoichi.lg.jp/life/4/35/169/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（22071.pdf「令和3年度 一般会計予算書 [PDFファイル／30.15MB]」, sha256:5b191992）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

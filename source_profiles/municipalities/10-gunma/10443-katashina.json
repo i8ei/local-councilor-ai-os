@@ -48,11 +48,11 @@
       "index_url": "http://www.vill.katashina.gunma.jp/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
@@ -69,16 +69,22 @@
           "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/files/R8yosan.pdf",
           "observed_on": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
           "fetched_at": "2026-08-27T10:19:44Z"
+        },
+        {
+          "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/files/R8yosan.pdf",
+          "observed_on": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
+          "sha256": "82fdfe895a9f74ec60be1a4aafe29f504374fa1f86782ca2171353a45d5a5e1b",
+          "fetched_at": "2026-08-27T10:19:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html (label: 片品村の財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8yosan.pdf「令和８年度当初予算」, sha256:82fdfe89）にて構造マーカー（歳入・歳出・款・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
@@ -95,9 +101,15 @@
           "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/files/R6_kessan.pdf",
           "observed_on": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
           "fetched_at": "2026-08-27T10:19:47Z"
+        },
+        {
+          "url": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/files/siryosyuuR5-full.xlsx",
+          "observed_on": "http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html",
+          "sha256": "86cf2dbe113af53e4b94ac83c14097c88c96fc10ee2b6c9944e4e0b363c1e11c",
+          "fetched_at": "2026-08-27T13:31:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.katashina.gunma.jp/gaiyou/kakuka/soumu/kata-zaisei/index.html (label: 片品村の財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（siryosyuuR5-full.xlsx「令和５年度財政状況資料集」, sha256:86cf2dbe）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tamamura/reiki_menu.html (label: 玉村町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/",
           "sha256": "3910a1df205798c40b2d85aa0ebfcb4638e755e7855cffc75d2c885f0a6e9bb2",
           "fetched_at": "2026-08-27T10:20:31Z"
+        },
+        {
+          "url": "http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/",
+          "observed_on": "http://www.town.tamamura.lg.jp/",
+          "sha256": "3910a1df205798c40b2d85aa0ebfcb4638e755e7855cffc75d2c885f0a6e9bb2",
+          "fetched_at": "2026-08-27T10:20:31Z"
+        },
+        {
+          "url": "https://www.town.tamamura.lg.jp/docs/2019103100058/file_contents/104647_2024.xlsx",
+          "observed_on": "https://www.town.tamamura.lg.jp/docs/2019103100058/",
+          "sha256": "f895bae2e2db8089c5aa1175b46fa98b062068e76eefae743ac0420eb5fb0cfa",
+          "fetched_at": "2026-08-27T13:31:12Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/ (label: 財政) 入口 https://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（104647_2024.xlsx「令和６年度[XLSX：577KB]」, sha256:f895bae2）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tamamura.lg.jp/docs/2026032700013/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tamamura.lg.jp/docs/2026032700013/",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.town.tamamura.lg.jp/docs/2026032700013/",
           "sha256": "e99178d7e7b6b8595a0609609e8023d5e52516b773e3c9f6a9205e0af6343ca2",
           "fetched_at": "2026-08-27T10:20:34Z"
+        },
+        {
+          "url": "http://www.town.tamamura.lg.jp/docs/2026032700013/",
+          "observed_on": "http://www.town.tamamura.lg.jp/",
+          "sha256": "e99178d7e7b6b8595a0609609e8023d5e52516b773e3c9f6a9205e0af6343ca2",
+          "fetched_at": "2026-08-27T10:20:34Z"
+        },
+        {
+          "url": "https://www.town.tamamura.lg.jp/docs/2026032700013/file_contents/R06ippann_tyuuki.pdf",
+          "observed_on": "https://www.town.tamamura.lg.jp/docs/2026032700013/",
+          "sha256": "56cb99c503476522705238b3c388501de1ef500e9c7841749bc4b43957a8633b",
+          "fetched_at": "2026-08-27T13:31:13Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tamamura.lg.jp/docs/2026032700013/ (label: 令和6年度決算 新地方公会計制度による財務書類・固定資産台帳) 入口 https://www.town.tamamura.lg.jp/docs/2026032700013/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tamamura.lg.jp/docs/2026032700013/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06ippann_tyuuki.pdf「注記（一般会計等）[PDF：114KB]」, sha256:56cb99c5）にて構造マーカー（歳入・歳出・項・地方債等）を確認済み。"
     }
   }
 }

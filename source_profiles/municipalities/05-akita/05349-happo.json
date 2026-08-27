@@ -57,11 +57,11 @@
       "notes": "Observed budget link at https://www.town.happo.lg.jp/archive/p20260306083951 (label: 2026年08月07日 令和８年度の予算書)"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.happo.lg.jp/archive/p20231227152447",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.happo.lg.jp/archive/p20231227152447",
@@ -73,9 +73,15 @@
           "observed_on": "https://www.town.happo.lg.jp/archive/p20231227152447",
           "sha256": "dee083a1e5ecf28b26688973ac78389e5eecafb79c4f695c8aed826733e6b68a",
           "fetched_at": "2026-08-27T10:34:52Z"
+        },
+        {
+          "url": "https://www.town.happo.lg.jp/uploads/public/archive_0000000695_00/003_h19kessancard.pdf",
+          "observed_on": "https://www.town.happo.lg.jp/archive/contents-628",
+          "sha256": "412343f4230d135091bdfdd96585c4127390b2d36c5e3ca9e666c5f4754033dd",
+          "fetched_at": "2026-08-27T13:28:50Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.happo.lg.jp/archive/p20231227152447 (label: 財政報告書) 入口 https://www.town.happo.lg.jp/archive/p20231227152447 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（003_h19kessancard.pdf「平成19年度（20KB）」, sha256:412343f4）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

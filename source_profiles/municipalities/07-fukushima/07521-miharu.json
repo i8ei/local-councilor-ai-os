@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.miharu.fukushima/reiki_menu.html (label: 三春町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.miharu.fukushima.jp/life/4/22/88/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miharu.fukushima.jp/life/4/22/88/",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.miharu.fukushima.jp:443/life/4/22/88/",
           "sha256": "d0253fd52a5b50a1c3ba70e88e9a73786f6fc20c8ec79139746d4145aa695db6",
           "fetched_at": "2026-08-27T10:38:15Z"
+        },
+        {
+          "url": "http://www.town.miharu.fukushima.jp/life/4/22/88/",
+          "observed_on": "http://www.town.miharu.fukushima.jp/",
+          "sha256": "d0253fd52a5b50a1c3ba70e88e9a73786f6fc20c8ec79139746d4145aa695db6",
+          "fetched_at": "2026-08-27T10:38:15Z"
+        },
+        {
+          "url": "https://www.town.miharu.fukushima.jp:443/soshiki/3/uploads/%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97%E6%9B%B8%EF%BC%8F%E4%BB%A4%E5%92%8C%EF%BC%98%E5%B9%B4%EF%BC%97%E6%9C%88%E7%AC%AC%EF%BC%91%E5%9B%9E.pdf",
+          "observed_on": "https://www.town.miharu.fukushima.jp:443/soshiki/3/8hosei_3_1_1.html",
+          "sha256": "f41cfbb0420ea72dbc72069c09d67f0f2cce65f9b0810144bbc85c905756c59d",
+          "fetched_at": "2026-08-27T13:29:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.miharu.fukushima.jp/life/4/22/88/ (label: 財政資料) 入口 https://www.town.miharu.fukushima.jp:443/life/4/22/88/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97%E6%9B%B8%EF%BC%8F%E4%BB%A4%E5%92%8C%EF%BC%98%E5%B9%B4%EF%BC%97%E6%9C%88%E7%AC%AC%EF%BC%91%E5%9B%9E.pdf「令和８年度一般会計補正予算（第3号） (78.2KB)」, sha256:f41cfbb0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.miharu.fukushima.jp/life/4/22/88/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miharu.fukushima.jp/life/4/22/88/",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.miharu.fukushima.jp:443/life/4/22/88/",
           "sha256": "d0253fd52a5b50a1c3ba70e88e9a73786f6fc20c8ec79139746d4145aa695db6",
           "fetched_at": "2026-08-27T10:38:15Z"
+        },
+        {
+          "url": "http://www.town.miharu.fukushima.jp/life/4/22/88/",
+          "observed_on": "http://www.town.miharu.fukushima.jp/",
+          "sha256": "d0253fd52a5b50a1c3ba70e88e9a73786f6fc20c8ec79139746d4145aa695db6",
+          "fetched_at": "2026-08-27T10:38:15Z"
+        },
+        {
+          "url": "https://www.town.miharu.fukushima.jp:443/soshiki/3/uploads/02-1_%E4%BB%A4%E5%92%8C5%E5%B9%B4%E5%BA%A6%E6%B0%B4%E9%81%93%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97%E6%9B%B8.pdf",
+          "observed_on": "https://www.town.miharu.fukushima.jp:443/soshiki/3/kessan_1_1_1_1_1.html",
+          "sha256": "390e97e4bd77dff340e26b85d3ec54b7668d5c3b7758dc78738a25bfdf03c639",
+          "fetched_at": "2026-08-27T13:30:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.miharu.fukushima.jp/life/4/22/88/ (label: 財政資料) 入口 https://www.town.miharu.fukushima.jp:443/life/4/22/88/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（02-1_%E4%BB%A4%E5%92%8C5%E5%B9%B4%E5%BA%A6%E6%B0%B4%E9%81%93%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97%E6%9B%B8.pdf「02-1_」, sha256:390e97e4）にて構造マーカー（款・項・決算額・不用額等）を確認済み。"
     }
   }
 }

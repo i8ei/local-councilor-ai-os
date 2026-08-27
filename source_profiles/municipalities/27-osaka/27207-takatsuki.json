@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.takatsuki.osaka.jp/life/9/93/499/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.takatsuki.osaka.jp/life/9/86/468/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.takatsuki.osaka.jp/life/9/86/468/",
@@ -60,9 +60,21 @@
           "observed_on": "https://www.city.takatsuki.osaka.jp/life/9/86/468/",
           "sha256": "55c57665d77573022d3b33eccd9026fe6cc68cc87f892bb57eff20178ed8f845",
           "fetched_at": "2026-08-27T09:50:35Z"
+        },
+        {
+          "url": "http://www.city.takatsuki.osaka.jp/life/9/86/468/",
+          "observed_on": "http://www.city.takatsuki.osaka.jp/",
+          "sha256": "55c57665d77573022d3b33eccd9026fe6cc68cc87f892bb57eff20178ed8f845",
+          "fetched_at": "2026-08-27T09:50:35Z"
+        },
+        {
+          "url": "https://www.city.takatsuki.osaka.jp/uploaded/attachment/62174.pdf",
+          "observed_on": "https://www.city.takatsuki.osaka.jp/soshiki/7/67908.html",
+          "sha256": "bb6f68ae08e54dc9707524d83905eeffb3211279ace68fd63f83da42104fa627",
+          "fetched_at": "2026-08-27T13:40:00Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.takatsuki.osaka.jp/life/9/86/468/ (label: 予算・決算) 入口 https://www.city.takatsuki.osaka.jp/life/9/86/468/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.takatsuki.osaka.jp/life/9/86/468/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（62174.pdf「令和8年度当初予算書（一般会計） （PDF：730KB）」, sha256:bb6f68ae）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -80,11 +80,11 @@
       "notes": "deepest_doc=P1。budget文書（R8tousyoyosan%281%29.pdf「当初予算書（令和８年度）」, sha256:aa73147c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/4253.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/4253.html",
@@ -101,9 +101,15 @@
           "url": "https://www.city.niimi.okayama.jp/media_images_01/files/R6_ippan_kessansho.pdf",
           "observed_on": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/4253.html",
           "fetched_at": "2026-08-27T11:00:25Z"
+        },
+        {
+          "url": "https://www.city.niimi.okayama.jp/media_images_01/files/R6_ippan_kessansho.pdf",
+          "observed_on": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/4253.html",
+          "sha256": "bcb2534db6b37aca771f8c0009b7498edd91dcb87123b4410d41f17a8b3b7483",
+          "fetched_at": "2026-08-27T11:00:32Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/4253.html (label: 一般会計決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6_ippan_kessansho.pdf「令和６年度 一般会計決算書.PDF（1.64MBytes.）」, sha256:bcb2534d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

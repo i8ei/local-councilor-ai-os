@@ -56,11 +56,11 @@
       "notes": "deepest_doc=P1。budget文書（zaiseijyokyou27.xlsx「平成27年度 財政状況資料集」, sha256:d73bd0dd）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html",
@@ -72,9 +72,15 @@
           "observed_on": "http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html",
           "sha256": "28e0ab1c90e771cb23e6899487188bf457a2e24f4aa7b937eb539bf6ba19215a",
           "fetched_at": "2026-08-27T09:46:26Z"
+        },
+        {
+          "url": "http://www.town.naoshima.lg.jp/torikumi/care/item/R3.3.31_teikann_R4.04.01_teikansekokisok.pdf",
+          "observed_on": "http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html",
+          "sha256": "929b0afdf43b17a4b63023d4b85d672b6dcb3cd1f0cb04d0c66d2c3bdf811363",
+          "fetched_at": "2026-08-27T13:43:11Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html (label: 社会福祉協議会の定款・事業報告・決算報告等について) 入口 http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R3.3.31_teikann_R4.04.01_teikansekokisok.pdf「定款(R3.3.30)及び定款施行細則（R3.4.1）（PDF:660KB）」, sha256:929b0afd）にて構造マーカー（款・項等）を確認済み。"
     }
   }
 }

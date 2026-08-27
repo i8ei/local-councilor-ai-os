@@ -37,11 +37,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.bungotakada.oita.jp/life/4/36/115/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.bungotakada.oita.jp/life/4/36/115/",
@@ -53,9 +53,21 @@
           "observed_on": "https://www.city.bungotakada.oita.jp/life/4/36/115/",
           "sha256": "76185a6087402fb0c0896eec614617e490564c380ae418064e0982e7a23de226",
           "fetched_at": "2026-08-27T09:39:18Z"
+        },
+        {
+          "url": "http://www.city.bungotakada.oita.jp/life/4/36/115/",
+          "observed_on": "http://www.city.bungotakada.oita.jp/",
+          "sha256": "76185a6087402fb0c0896eec614617e490564c380ae418064e0982e7a23de226",
+          "fetched_at": "2026-08-27T09:39:18Z"
+        },
+        {
+          "url": "https://www.city.bungotakada.oita.jp/uploaded/attachment/13570.pdf",
+          "observed_on": "https://www.city.bungotakada.oita.jp/soshiki/3/41097.html",
+          "sha256": "6a2c81e54f9908122520aedfc3848af1c33870a88acd0908e600c543c84443e0",
+          "fetched_at": "2026-08-27T13:46:54Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.bungotakada.oita.jp/life/4/36/115/ (label: 予算) 入口 https://www.city.bungotakada.oita.jp/life/4/36/115/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.bungotakada.oita.jp/life/4/36/115/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（13570.pdf「補正予算書 [PDFファイル／583KB]」, sha256:6a2c81e5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/suzu/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.suzu.lg.jp/life/3/26/133/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.suzu.lg.jp/life/3/26/133/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.suzu.lg.jp/life/3/26/133/",
           "sha256": "5b630c28484e43159fd322154360c4334eaeee85931e9cbdce5e2f8663f3fb96",
           "fetched_at": "2026-08-27T10:06:12Z"
+        },
+        {
+          "url": "https://www.city.suzu.lg.jp/uploaded/attachment/10844.pdf",
+          "observed_on": "https://www.city.suzu.lg.jp/soshiki/2/25580.html",
+          "sha256": "4783d5739509562d50fb2a5e88e1e834db7082d63674e70163007698bbdda3f4",
+          "fetched_at": "2026-08-27T13:35:36Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.suzu.lg.jp/life/3/26/133/ (label: 予算・決算) 入口 https://www.city.suzu.lg.jp/life/3/26/133/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.suzu.lg.jp/life/3/26/133/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（10844.pdf「令和8年度当初予算書 [PDFファイル／973KB]」, sha256:4783d573）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.suzu.lg.jp/life/3/26/133/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.suzu.lg.jp/life/3/26/133/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.suzu.lg.jp/life/3/26/133/",
           "sha256": "5b630c28484e43159fd322154360c4334eaeee85931e9cbdce5e2f8663f3fb96",
           "fetched_at": "2026-08-27T10:06:12Z"
+        },
+        {
+          "url": "https://www.city.suzu.lg.jp/uploaded/attachment/9326.pdf",
+          "observed_on": "https://www.city.suzu.lg.jp/soshiki/2/23081.html",
+          "sha256": "a9505b2d602998c5345ff1185a81cb3f873fe1399c3c046ad53835aa664e402f",
+          "fetched_at": "2026-08-27T13:35:38Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.suzu.lg.jp/life/3/26/133/ (label: 予算・決算) 入口 https://www.city.suzu.lg.jp/life/3/26/133/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.suzu.lg.jp/life/3/26/133/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（9326.pdf「令和6年度 普通会計決算状況 [PDFファイル／84KB]」, sha256:a9505b2d）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

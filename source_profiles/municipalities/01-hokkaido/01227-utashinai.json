@@ -42,11 +42,11 @@
       "index_url": "https://www.city.utashinai.hokkaido.jp/contents/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html",
           "sha256": "eed468c0f733f7d454ac91c38698bfd0d0c6514138582cb12e63623715ae5848",
           "fetched_at": "2026-08-27T10:29:14Z"
+        },
+        {
+          "url": "https://www.city.utashinai.hokkaido.jp/hotnews/files/00003600/00003624/20251202163841.pdf",
+          "observed_on": "https://www.city.utashinai.hokkaido.jp/hotnews/detail/00003624.html",
+          "sha256": "64e288371abbfb9e19d9f58ba6d264c09bd5fcdfab903417d1209ae5ac17d3bf",
+          "fetched_at": "2026-08-27T13:25:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html (label: 財政) 入口 https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20251202163841.pdf「令和７年度上半期（PDF：376KB）」, sha256:64e28837）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html",
           "sha256": "eed468c0f733f7d454ac91c38698bfd0d0c6514138582cb12e63623715ae5848",
           "fetched_at": "2026-08-27T10:29:14Z"
+        },
+        {
+          "url": "https://www.city.utashinai.hokkaido.jp/hotnews/files/00003600/00003624/20251202163841.pdf",
+          "observed_on": "https://www.city.utashinai.hokkaido.jp/hotnews/detail/00003624.html",
+          "sha256": "64e288371abbfb9e19d9f58ba6d264c09bd5fcdfab903417d1209ae5ac17d3bf",
+          "fetched_at": "2026-08-27T13:25:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html (label: 財政) 入口 https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.utashinai.hokkaido.jp/hotnews/category/150.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20251202163841.pdf「令和７年度上半期（PDF：376KB）」, sha256:64e28837）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

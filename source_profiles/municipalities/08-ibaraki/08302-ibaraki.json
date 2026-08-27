@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www.town.ibaraki.lg.jp/reiki_int/?idSubTop=1 (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html",
           "sha256": "913167f50dc2325113c345927a856519a351206a23d9ef7fa60a4d4b1662e69a",
           "fetched_at": "2026-08-27T10:17:55Z"
+        },
+        {
+          "url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html",
+          "observed_on": "http://www.town.ibaraki.lg.jp/",
+          "sha256": "913167f50dc2325113c345927a856519a351206a23d9ef7fa60a4d4b1662e69a",
+          "fetched_at": "2026-08-27T10:17:55Z"
+        },
+        {
+          "url": "https://www.town.ibaraki.lg.jp/manage/contents/upload/69b76bfbbe542.pdf",
+          "observed_on": "https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/003880.html",
+          "sha256": "13bad3cbff1db50bd93001b6e6d371b6377dfbf51f9b52bc5a935f231f5f898e",
+          "fetched_at": "2026-08-27T13:30:33Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html (label: 予算書) 入口 https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（69b76bfbbe542.pdf「当初予算の概要(pdf 741 KB)」, sha256:13bad3cb）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html",
           "sha256": "a22f88fe766535ab880b9eab281d76d6562ff4473322ee403b58ad9530d076fb",
           "fetched_at": "2026-08-27T10:17:58Z"
+        },
+        {
+          "url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html",
+          "observed_on": "http://www.town.ibaraki.lg.jp/",
+          "sha256": "a22f88fe766535ab880b9eab281d76d6562ff4473322ee403b58ad9530d076fb",
+          "fetched_at": "2026-08-27T10:17:58Z"
+        },
+        {
+          "url": "https://www.town.ibaraki.lg.jp/manage/contents/upload/67e50c5934ad0.xlsx",
+          "observed_on": "https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/001984.html",
+          "sha256": "6d027d923b3dc7983386a764f03f1fff617c378c32236485d0409d05871e5998",
+          "fetched_at": "2026-08-27T13:30:35Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html (label: 決算・財政状況) 入口 https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（67e50c5934ad0.xlsx「令和5年度 (EXCEL：564 KB)」, sha256:6d027d92）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

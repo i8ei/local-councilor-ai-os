@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.abashiri/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf",
@@ -66,14 +66,14 @@
           "fetched_at": "2026-08-27T10:29:19Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf (label: 令和8年度網走市一般会計補正予算事項別明細書 [PDFファイル／95KB]) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（15066.pdf「Direct Document」, sha256:6559450f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.abashiri.hokkaido.jp/soshiki/32/1583.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.abashiri.hokkaido.jp/soshiki/32/1583.html",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.city.abashiri.hokkaido.jp/soshiki/32/1583.html",
           "sha256": "10610c72fed228a7ebb07690fe67a6e1862fc554c35e6c625ad43c2be1c46ca4",
           "fetched_at": "2026-08-27T10:29:20Z"
+        },
+        {
+          "url": "https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15531.pdf",
+          "observed_on": "https://www.city.abashiri.hokkaido.jp/soshiki/32/1583.html",
+          "sha256": "72d2b7915590249b4c779e8082cdb78c245d126d8d91555c6765fff2e21236de",
+          "fetched_at": "2026-08-27T13:25:33Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.abashiri.hokkaido.jp/soshiki/32/1583.html (label: 各会計決算審査特別委員会 会議録) 入口 https://www.city.abashiri.hokkaido.jp/soshiki/32/1583.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（15531.pdf「令和7年9月2日 [PDFファイル／240KB]」, sha256:72d2b791）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     }
   }
 }

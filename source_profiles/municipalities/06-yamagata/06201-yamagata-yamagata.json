@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013833/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013833/index.html",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013833/index.html",
           "sha256": "75d9de4737be776a7a6b3baa259cc0b30089b2e536270b725b76272ba92f6c38",
           "fetched_at": "2026-08-27T10:35:31Z"
+        },
+        {
+          "url": "http://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013833/index.html",
+          "observed_on": "http://www.city.yamagata-yamagata.lg.jp/",
+          "sha256": "75d9de4737be776a7a6b3baa259cc0b30089b2e536270b725b76272ba92f6c38",
+          "fetched_at": "2026-08-27T10:35:31Z"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/_res/projects/default_project/_page_/001/017/952/reiwa8tousyotokutyou.pdf",
+          "observed_on": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013833/1017952.html",
+          "sha256": "f8cc7b5291905b95e9c8b4597554f548dbb65866be75e422465679d740434d26",
+          "fetched_at": "2026-08-27T13:28:39Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013833/index.html (label: 予算の概要) 入口 https://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013833/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（reiwa8tousyotokutyou.pdf「令和8年度当初予算案の特長 （PDF 526.0 KB）」, sha256:f8cc7b52）にて構造マーカー（節・予算額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013834/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013834/index.html",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013834/index.html",
           "sha256": "8b5a62ca151a0d4ea0c4cab9ece5dfcb0e4491833ecc7fb310f814fdefcf76d4",
           "fetched_at": "2026-08-27T10:35:34Z"
+        },
+        {
+          "url": "http://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013834/index.html",
+          "observed_on": "http://www.city.yamagata-yamagata.lg.jp/",
+          "sha256": "8b5a62ca151a0d4ea0c4cab9ece5dfcb0e4491833ecc7fb310f814fdefcf76d4",
+          "fetched_at": "2026-08-27T10:35:34Z"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/_res/projects/default_project/_page_/001/014/517/r6kessancard.pdf",
+          "observed_on": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013834/1014517.html",
+          "sha256": "3bf2cdf59940cbb1ba8bcbef62699b14b34a216b768b3fbc45a3e73826fdb1ca",
+          "fetched_at": "2026-08-27T13:28:40Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013834/index.html (label: 決算の概要) 入口 https://www.city.yamagata-yamagata.lg.jp/shiseijoho/zaisei/1013834/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessancard.pdf「令和6年度決算カード （PDF 268.0 KB）」, sha256:3bf2cdf5）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

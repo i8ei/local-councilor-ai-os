@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（3_208_26570_up_21ur33pq.pdf「令和7年度（PDF：1.2メガバイト）」, sha256:268e7d12）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://webtown.nagayo.jp/list00277.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://webtown.nagayo.jp/list00277.html",
@@ -99,9 +99,21 @@
           "observed_on": "https://webtown.nagayo.jp/list00277.html",
           "sha256": "fce55fe50f2b9067e864efc697e3b9a1f5400b3a179ae52cd2be88769f3f429b",
           "fetched_at": "2026-08-27T09:37:46Z"
+        },
+        {
+          "url": "http://webtown.nagayo.jp/list00277.html",
+          "observed_on": "http://webtown.nagayo.jp/",
+          "sha256": "fce55fe50f2b9067e864efc697e3b9a1f5400b3a179ae52cd2be88769f3f429b",
+          "fetched_at": "2026-08-27T09:37:46Z"
+        },
+        {
+          "url": "https://webtown.nagayo.jp/kiji003204/3_204_30428_up_1k7dech6.pdf",
+          "observed_on": "https://webtown.nagayo.jp/kiji003204/index.html",
+          "sha256": "320ed6f6975a5132992a35f2719c32bd9ef56d32a96aa0dee34398f3fbee44d4",
+          "fetched_at": "2026-08-27T13:45:46Z"
         }
       ],
-      "notes": "Observed settlement link at http://webtown.nagayo.jp/list00277.html (label: 決算) 入口 https://webtown.nagayo.jp/list00277.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://webtown.nagayo.jp/list00277.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_204_30428_up_1k7dech6.pdf「令和6年度（PDF：1.56メガバイト）」, sha256:320ed6f6）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

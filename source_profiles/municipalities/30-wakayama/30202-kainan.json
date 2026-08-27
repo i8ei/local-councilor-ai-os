@@ -86,11 +86,11 @@
       "notes": "deepest_doc=P1。budget文書（zaiseijoukyousiryoushu_302023_kainan_2024.xlsx「財政状況資料集（令和6年度） (Excelファイル: 555.2KB)」, sha256:deb2eaec）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kainan.lg.jp/shiseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kainan.lg.jp/shiseijoho/gyozaisei/index.html",
@@ -102,9 +102,15 @@
           "observed_on": "https://www.city.kainan.lg.jp/shiseijoho/gyozaisei/index.html",
           "sha256": "d1a3e41fd4f7210eb865cdb0910eac8d8cc52d27ca7161153fa08bb2e0fad9cc",
           "fetched_at": "2026-08-27T09:53:24Z"
+        },
+        {
+          "url": "https://www.city.kainan.lg.jp/material/files/group/5/zaiseijoukyousiryoushu_302023_kainan_2024.xlsx",
+          "observed_on": "https://www.city.kainan.lg.jp/shiseijoho/gyozaisei/zaiseijokyo_siryoushu.html",
+          "sha256": "deb2eaec4cea9d4dcddbb67df1e74f47e1df4c5d5674b7842341b9b9b42d7a09",
+          "fetched_at": "2026-08-27T13:41:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kainan.lg.jp/shiseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.kainan.lg.jp/shiseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kainan.lg.jp/shiseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kainan.lg.jp/shiseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijoukyousiryoushu_302023_kainan_2024.xlsx「財政状況資料集（令和6年度） (Excelファイル: 555.2KB)」, sha256:deb2eaec）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

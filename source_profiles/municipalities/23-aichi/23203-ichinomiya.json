@@ -55,11 +55,11 @@
       "notes": "deepest_doc=P1。budget文書（R06zaisei-shiryoushuu.xlsx「令和6年度財政状況資料集 （Excel 559.1KB）」, sha256:277d640d）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ichinomiya.aichi.jp/kaikei/kaikei/1044384/1000243/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ichinomiya.aichi.jp/kaikei/kaikei/1044384/1000243/index.html",
@@ -71,9 +71,21 @@
           "observed_on": "https://www.city.ichinomiya.aichi.jp/kaikei/kaikei/1044384/1000243/index.html",
           "sha256": "eab6d081bd09c13f092cb0c82a4198177f268d10387eb5489b38444c5d846ae9",
           "fetched_at": "2026-08-27T10:15:09Z"
+        },
+        {
+          "url": "http://www.city.ichinomiya.aichi.jp/kaikei/kaikei/1044384/1000243/index.html",
+          "observed_on": "http://www.city.ichinomiya.aichi.jp/",
+          "sha256": "eab6d081bd09c13f092cb0c82a4198177f268d10387eb5489b38444c5d846ae9",
+          "fetched_at": "2026-08-27T10:15:09Z"
+        },
+        {
+          "url": "https://www.city.ichinomiya.aichi.jp/_res/projects/default_project/_page_/001/003/820/R06kessancard2.pdf",
+          "observed_on": "https://www.city.ichinomiya.aichi.jp/zaimu/zaisei/1044383/1046063/1003820.html",
+          "sha256": "47c3eada72eaa31582a556db7bfb95c2168375ce1f7fd64058de2e5ad4c6cca4",
+          "fetched_at": "2026-08-27T13:37:53Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ichinomiya.aichi.jp/kaikei/kaikei/1044384/1000243/index.html (label: 決算状況) 入口 https://www.city.ichinomiya.aichi.jp/kaikei/kaikei/1044384/1000243/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06kessancard2.pdf「令和6年度「決算カード」 （PDF 70.3KB）」, sha256:47c3eada）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

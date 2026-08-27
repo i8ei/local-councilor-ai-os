@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.yurihama.jp/reiki/reiki_menu.html (label: 湯梨浜町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.yurihama.jp/life/4/18/98/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.yurihama.jp/life/4/18/98/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.yurihama.jp/life/4/18/98/",
           "sha256": "feb1e2bede66bbb9f06e6cbae95df6a86abc70881aa9a11e7aa5ae47cb40e15e",
           "fetched_at": "2026-08-27T09:42:51Z"
+        },
+        {
+          "url": "http://www.yurihama.jp/life/4/18/98/",
+          "observed_on": "http://www.yurihama.jp/",
+          "sha256": "feb1e2bede66bbb9f06e6cbae95df6a86abc70881aa9a11e7aa5ae47cb40e15e",
+          "fetched_at": "2026-08-27T09:42:51Z"
+        },
+        {
+          "url": "https://www.yurihama.jp/uploaded/attachment/15372.pdf",
+          "observed_on": "https://www.yurihama.jp/soshiki/2/27124.html",
+          "sha256": "76611322a1d91ec4825095a780159c89789e1d8187fd24ef37595aec3e651d0f",
+          "fetched_at": "2026-08-27T13:41:59Z"
         }
       ],
-      "notes": "Observed budget link at http://www.yurihama.jp/life/4/18/98/ (label: 予算) 入口 https://www.yurihama.jp/life/4/18/98/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.yurihama.jp/life/4/18/98/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（15372.pdf「一般会計予算書 （PDFファイル：1.71MB）」, sha256:76611322）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

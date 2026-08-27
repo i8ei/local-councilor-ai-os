@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kibichuo.lg.jp/life/4/4/53/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kibichuo.lg.jp/life/4/4/53/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.town.kibichuo.lg.jp/life/4/4/53/",
           "sha256": "2ea5b064f37833926666161a39e733defb737fe58f456540eec3008526276ecb",
           "fetched_at": "2026-08-27T09:44:42Z"
+        },
+        {
+          "url": "http://www.town.kibichuo.lg.jp/life/4/4/53/",
+          "observed_on": "http://www.town.kibichuo.lg.jp/",
+          "sha256": "2ea5b064f37833926666161a39e733defb737fe58f456540eec3008526276ecb",
+          "fetched_at": "2026-08-27T09:44:42Z"
+        },
+        {
+          "url": "https://www.town.kibichuo.lg.jp/uploaded/attachment/83.pdf",
+          "observed_on": "https://www.town.kibichuo.lg.jp/soshiki/2/5661.html",
+          "sha256": "1efedd5fba766b2980a85f0541df569734d7c5e528a390f0b648156e2b9e91d9",
+          "fetched_at": "2026-08-27T13:42:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kibichuo.lg.jp/life/4/4/53/ (label: 財政) 入口 https://www.town.kibichuo.lg.jp/life/4/4/53/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kibichuo.lg.jp/life/4/4/53/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（83.pdf「平成19年度吉備中央町財政状況資料集[PDFファイル／38KB]」, sha256:1efedd5f）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

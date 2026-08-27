@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
           "sha256": "aca6a0dead9bcca4c11a4780c608f2b79b424d64fac7a551983c231f9322299f",
           "fetched_at": "2026-08-27T10:33:11Z"
+        },
+        {
+          "url": "https://www.town.otsuchi.iwate.jp/fs/1/9/8/1/4/6/_/__________034614_____2016.xlsx",
+          "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/docs/zaiseijoukyousiryousyu.html",
+          "sha256": "82c41fcd71ebfa4c5a6fe3fcff6e7b4ad0608642e54ab6321b2fb7f681dcc796",
+          "fetched_at": "2026-08-27T13:27:38Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ (label: 財政情報) 入口 https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（__________034614_____2016.xlsx「平成27年度財政状況資料集.xlsx (XLSX 606KB)」, sha256:82c41fcd）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
           "sha256": "aca6a0dead9bcca4c11a4780c608f2b79b424d64fac7a551983c231f9322299f",
           "fetched_at": "2026-08-27T10:33:11Z"
+        },
+        {
+          "url": "https://www.town.otsuchi.iwate.jp/fs/1/9/8/1/4/6/_/__________034614_____2016.xlsx",
+          "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/docs/zaiseijoukyousiryousyu.html",
+          "sha256": "82c41fcd71ebfa4c5a6fe3fcff6e7b4ad0608642e54ab6321b2fb7f681dcc796",
+          "fetched_at": "2026-08-27T13:27:38Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ (label: 財政情報) 入口 https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（__________034614_____2016.xlsx「平成27年度財政状況資料集.xlsx (XLSX 606KB)」, sha256:82c41fcd）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

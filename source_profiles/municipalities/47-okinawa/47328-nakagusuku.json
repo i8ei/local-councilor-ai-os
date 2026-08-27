@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（qmepjdmz8yvt.pdf「令和元年度」, sha256:922cb22d）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.nakagusuku.okinawa.jp/sonsei/zaisei/zaimushohyo/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.nakagusuku.okinawa.jp/sonsei/zaisei/zaimushohyo/",
@@ -78,9 +78,15 @@
           "observed_on": "https://www.vill.nakagusuku.okinawa.jp/sonsei/zaisei/zaimushohyo/",
           "sha256": "6c04e7e482c43da09ea0de0520d3eed50c50135c2cffe9d12ea36ce08bf934bd",
           "fetched_at": "2026-08-27T09:41:51Z"
+        },
+        {
+          "url": "https://www.vill.nakagusuku.okinawa.jp/userfiles/files/sonsei/zaisei/zaimushohyo/r6/5ben646943p4.pdf",
+          "observed_on": "https://www.vill.nakagusuku.okinawa.jp/sonsei/zaisei/zaimushohyo/",
+          "sha256": "cd4401d022bcdddb7728cb71be7875f46c107ea8f357db0a6c176efd1bf27de7",
+          "fetched_at": "2026-08-27T13:48:14Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.nakagusuku.okinawa.jp/sonsei/zaisei/zaimushohyo/ (label: 決算に基づく財務諸表について) 入口 https://www.vill.nakagusuku.okinawa.jp/sonsei/zaisei/zaimushohyo/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.nakagusuku.okinawa.jp/sonsei/zaisei/zaimushohyo/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（5ben646943p4.pdf「公表資料」, sha256:cd4401d0）にて構造マーカー（項・地方債等）を確認済み。"
     }
   }
 }

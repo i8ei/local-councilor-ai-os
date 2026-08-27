@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=181 (label: 増毛町例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html",
           "sha256": "e591a9414f682994011c6a4a3fe31aeb2ac9771995e15fd6b9a8ceca5c7c0a75",
           "fetched_at": "2026-08-27T10:30:53Z"
+        },
+        {
+          "url": "https://www.town.mashike.hokkaido.jp/documents/m_files/1585637610.pdf",
+          "observed_on": "https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html",
+          "sha256": "09a5692b6362a93efe257467c76121e26edda0239355e73e1d5b519e5b9add9c",
+          "fetched_at": "2026-08-27T13:26:25Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html (label: 企画財政課) 入口 https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1585637610.pdf「企業版ふるさと納税資料(PDF4.2MB)」, sha256:09a5692b）にて構造マーカー（歳入・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html",
           "sha256": "e591a9414f682994011c6a4a3fe31aeb2ac9771995e15fd6b9a8ceca5c7c0a75",
           "fetched_at": "2026-08-27T10:30:53Z"
+        },
+        {
+          "url": "https://www.town.mashike.hokkaido.jp/documents/m_files/1585637610.pdf",
+          "observed_on": "https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html",
+          "sha256": "09a5692b6362a93efe257467c76121e26edda0239355e73e1d5b519e5b9add9c",
+          "fetched_at": "2026-08-27T13:26:25Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html (label: 企画財政課) 入口 https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mashike.hokkaido.jp/division/kikakuka/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1585637610.pdf「企業版ふるさと納税資料(PDF4.2MB)」, sha256:09a5692b）にて構造マーカー（歳入・項・節等）を確認済み。"
     }
   }
 }

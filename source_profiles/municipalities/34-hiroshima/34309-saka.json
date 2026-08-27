@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at https://www.town.saka.lg.jp/category/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e4%be%8b%e8%a6%8f%e9%9b%86/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.saka.lg.jp/category/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e8%b2%a1%e6%94%bf/%e4%ba%88%e7%ae%97/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.saka.lg.jp/category/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e8%b2%a1%e6%94%bf/%e4%ba%88%e7%ae%97/",
@@ -52,9 +52,15 @@
           "observed_on": "https://www.town.saka.lg.jp/category/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e8%b2%a1%e6%94%bf/%e4%ba%88%e7%ae%97/",
           "sha256": "18d6a701861cdf0f4cb349a8f1d4d7f68e1c372bb3aa3a180c0867327269d412",
           "fetched_at": "2026-08-27T09:45:00Z"
+        },
+        {
+          "url": "https://www.town.saka.lg.jp/wp-content/uploads/2025/03/R07_yosansetsumeishiryou2440.pdf",
+          "observed_on": "https://www.town.saka.lg.jp/2025/03/07/%e4%bb%a4%e5%92%8c7%e5%b9%b4%e5%ba%a6%e5%bd%93%e5%88%9d%e4%ba%88%e7%ae%97/",
+          "sha256": "2ff3e59b16ef581c3895d962467dd9c9b38944b3a7e47d49bf7825eefeaeae9f",
+          "fetched_at": "2026-08-27T13:43:23Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.saka.lg.jp/category/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e8%b2%a1%e6%94%bf/%e4%ba%88%e7%ae%97/ (label: 予算) 入口 https://www.town.saka.lg.jp/category/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e8%b2%a1%e6%94%bf/%e4%ba%88%e7%ae%97/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.saka.lg.jp/category/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e8%b2%a1%e6%94%bf/%e4%ba%88%e7%ae%97/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R07_yosansetsumeishiryou2440.pdf「R令和7年度予算説明資料（PDF文書：2,440KB）」, sha256:2ff3e59b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "blocked",

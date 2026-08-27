@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.town.sakuho.nagano.jp/choseijoho/sakuhomachinitsuite/reikishujorei_kisoku (label: 例規集(条例・規則))"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/",
           "sha256": "af14f420d5b4101aacf5ed7f38d2ec5a7e1cd8da9ae1b37950dde7874c7c226c",
           "fetched_at": "2026-08-27T10:09:49Z"
+        },
+        {
+          "url": "http://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei",
+          "observed_on": "http://www.town.sakuho.nagano.jp/",
+          "sha256": "af14f420d5b4101aacf5ed7f38d2ec5a7e1cd8da9ae1b37950dde7874c7c226c",
+          "fetched_at": "2026-08-27T10:09:49Z"
+        },
+        {
+          "url": "https://www.town.sakuho.nagano.jp/assets/2025/03/25/%E4%BB%A4%E5%92%8C7%E5%B9%B4%E5%BA%A6%E6%AD%B3%E5%85%A5%E6%AD%B3%E5%87%BA%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97.pdf",
+          "observed_on": "https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/sogoseisaku_7398.html",
+          "sha256": "dbeda5a08d9bc6072a8ed46167d9b13d0bf730db671caddeeea0995a6c007780",
+          "fetched_at": "2026-08-27T13:36:28Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei (label: 財政) 入口 https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E4%BB%A4%E5%92%8C7%E5%B9%B4%E5%BA%A6%E6%AD%B3%E5%85%A5%E6%AD%B3%E5%87%BA%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97.pdf「令和7年度歳入歳出当初予算.pdf」, sha256:dbeda5a0）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

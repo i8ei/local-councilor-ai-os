@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www.city.kosai.shizuoka.jp/section/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kosai.shizuoka.jp/shiseijoho/zaiseijokyo/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kosai.shizuoka.jp/shiseijoho/zaiseijokyo/yosan/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.city.kosai.shizuoka.jp/shiseijoho/zaiseijokyo/yosan/index.html",
           "sha256": "eb99bb10edb1e433ec2e52dd5b3e881186d6ae1059639e2001f09c5a0518306a",
           "fetched_at": "2026-08-27T10:14:42Z"
+        },
+        {
+          "url": "https://www.city.kosai.shizuoka.jp/material/files/group/4/web_R8yosansyo.pdf",
+          "observed_on": "https://www.city.kosai.shizuoka.jp/shiseijoho/zaiseijokyo/yosan/4837.html",
+          "sha256": "f7f5e8c6c57311885e7fda7efd48b97ae1c0820869959e234fc0ef0cf8fb419f",
+          "fetched_at": "2026-08-27T13:37:38Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kosai.shizuoka.jp/shiseijoho/zaiseijokyo/yosan/index.html (label: 予算) 入口 https://www.city.kosai.shizuoka.jp/shiseijoho/zaiseijokyo/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kosai.shizuoka.jp/shiseijoho/zaiseijokyo/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kosai.shizuoka.jp/shiseijoho/zaiseijokyo/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（web_R8yosansyo.pdf「令和8年度 わかりやすい予算書 (PDFファイル: 2.8MB)」, sha256:f7f5e8c6）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

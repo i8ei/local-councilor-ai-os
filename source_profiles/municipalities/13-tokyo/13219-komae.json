@@ -42,11 +42,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8CDA186958 (label: 例規類集(条例・規則等))"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.komae.tokyo.jp/index.cfm/46,0,361,2169,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.komae.tokyo.jp/index.cfm/46,0,361,2169,html",
@@ -58,9 +58,15 @@
           "observed_on": "http://www.city.komae.tokyo.jp/index.cfm/46,0,361,2169,html",
           "sha256": "e6db29922a5349a40f693871cf323523b286f7164dc84c70ef7770e141cc1dcd",
           "fetched_at": "2026-08-27T10:26:00Z"
+        },
+        {
+          "url": "http://www.city.komae.tokyo.jp/index.cfm/46,142125,c,html/142125/20260326-170920.pdf",
+          "observed_on": "http://www.city.komae.tokyo.jp/index.cfm/46,142125,361,2169,html",
+          "sha256": "9e20c6ce13daf223c4bbb57b2a4febe40ca2f56d311766c79c98ffb56e8c4c68",
+          "fetched_at": "2026-08-27T13:33:55Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.komae.tokyo.jp/index.cfm/46,0,361,2169,html (label: 予算の概要) 入口 http://www.city.komae.tokyo.jp/index.cfm/46,0,361,2169,html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260326-170920.pdf「令和８年度狛江市一般会計予算書.pdf [ 3083 KB pdfファイル]」, sha256:9e20c6ce）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

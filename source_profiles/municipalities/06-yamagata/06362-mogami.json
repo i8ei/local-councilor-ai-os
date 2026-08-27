@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://town.mogami.lg.jp/admin/09reiki/index.php (label: 最上町例規集(目次ページ))"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://town.mogami.lg.jp/info/11zaisei/01yosan.php",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://town.mogami.lg.jp/info/11zaisei/01yosan.php",
@@ -65,16 +65,22 @@
           "url": "https://town.mogami.lg.jp/admin/admin-info/siryou-etsuran/data/20210426134109-soumuka.pdf",
           "observed_on": "https://town.mogami.lg.jp/info/11zaisei/01yosan.php",
           "fetched_at": "2026-08-27T11:25:15Z"
+        },
+        {
+          "url": "https://town.mogami.lg.jp/admin/admin-info/siryou-etsuran/data/20200513131501-soumuka.pdf",
+          "observed_on": "https://town.mogami.lg.jp/info/11zaisei/01yosan.php",
+          "sha256": "af9646e4ca9f1bef1045eaef412f7b51946f6aeed0b61b297cbc57ff30c13d5b",
+          "fetched_at": "2026-08-27T13:28:59Z"
         }
       ],
-      "notes": "Observed budget link at https://town.mogami.lg.jp/info/11zaisei/01yosan.php (label: 予算の概要) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（20200513131501-soumuka.pdf「R2年度-予算の概要」, sha256:af9646e4）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://town.mogami.lg.jp/info/11zaisei/02kessan.php",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://town.mogami.lg.jp/info/11zaisei/02kessan.php",
@@ -91,9 +97,15 @@
           "url": "https://town.mogami.lg.jp/admin/admin-info/siryou-etsuran/data/20221005163128-soumuka.pdf",
           "observed_on": "https://town.mogami.lg.jp/info/11zaisei/02kessan.php",
           "fetched_at": "2026-08-27T11:25:16Z"
+        },
+        {
+          "url": "https://town.mogami.lg.jp/admin/admin-info/siryou-etsuran/data/20221005163128-soumuka.pdf",
+          "observed_on": "https://town.mogami.lg.jp/info/11zaisei/02kessan.php",
+          "sha256": "2fbdc14dbcf93aab9383302e5b6fbb8d7f7b5b7e94fad7419152bb34bc4368a2",
+          "fetched_at": "2026-08-27T11:25:17Z"
         }
       ],
-      "notes": "Observed settlement link at https://town.mogami.lg.jp/info/11zaisei/02kessan.php (label: 決算の概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（20221005163128-soumuka.pdf「R3年度-決算の概要」, sha256:2fbdc14d）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

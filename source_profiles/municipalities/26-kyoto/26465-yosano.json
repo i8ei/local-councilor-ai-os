@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（r8_yosanogaiyo.pdf「令和８年度予算概要資料.pdf（PDF形式：11MB）」, sha256:dd2cc84c）にて構造マーカー（歳出・款・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yosano.lg.jp/administration/financial-management/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yosano.lg.jp/administration/financial-management/",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.town.yosano.lg.jp/administration/financial-management/",
           "sha256": "64f3864c7ad6af2b8e52e59b8a3203b64fd5c0041b0947a93834d7b93621a8a4",
           "fetched_at": "2026-08-27T09:50:30Z"
+        },
+        {
+          "url": "https://www.town.yosano.lg.jp/assets/26-yosano-2024.xlsx",
+          "observed_on": "https://www.town.yosano.lg.jp/administration/financial-management/financial-situation/entry_21/",
+          "sha256": "e32cbbc4f7c55e5e45c6ca9a3773d70e2690e92a4c59b72d0754861a2b8e0446",
+          "fetched_at": "2026-08-27T13:39:51Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yosano.lg.jp/administration/financial-management/ (label: 財政) 入口 https://www.town.yosano.lg.jp/administration/financial-management/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yosano.lg.jp/administration/financial-management/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yosano.lg.jp/administration/financial-management/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（26-yosano-2024.xlsx「令和6年度財政状況資料集（Excel形式：416KB）」, sha256:e32cbbc4）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

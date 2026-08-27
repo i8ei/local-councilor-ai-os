@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.vill-nakajima.jp/page/dir001903.html (label: 例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill-nakajima.jp/page/dir001934.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill-nakajima.jp/page/dir001934.html",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.vill-nakajima.jp/page/dir001934.html",
           "sha256": "6c1778e49ed232579171cb7c906306aaac7a1e60a085191a65e11c077dc8f765",
           "fetched_at": "2026-08-27T10:37:48Z"
+        },
+        {
+          "url": "http://www.vill-nakajima.jp/page/dir001934.html",
+          "observed_on": "http://www.vill-nakajima.jp/",
+          "sha256": "6c1778e49ed232579171cb7c906306aaac7a1e60a085191a65e11c077dc8f765",
+          "fetched_at": "2026-08-27T10:37:48Z"
+        },
+        {
+          "url": "https://www.vill-nakajima.jp/data/doc/1773300146_doc_28_0.pdf",
+          "observed_on": "https://www.vill-nakajima.jp/page/page001555.html",
+          "sha256": "60b665daaee12446550c02202c784905793075b26dc04deba67f8debd5c6f652",
+          "fetched_at": "2026-08-27T13:29:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill-nakajima.jp/page/dir001934.html (label: 財政) 入口 https://www.vill-nakajima.jp/page/dir001934.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill-nakajima.jp/page/dir001934.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1773300146_doc_28_0.pdf「令和８年度当初予算の公表」, sha256:60b665da）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill-nakajima.jp/page/dir001934.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill-nakajima.jp/page/dir001934.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.vill-nakajima.jp/page/dir001934.html",
           "sha256": "6c1778e49ed232579171cb7c906306aaac7a1e60a085191a65e11c077dc8f765",
           "fetched_at": "2026-08-27T10:37:48Z"
+        },
+        {
+          "url": "http://www.vill-nakajima.jp/page/dir001934.html",
+          "observed_on": "http://www.vill-nakajima.jp/",
+          "sha256": "6c1778e49ed232579171cb7c906306aaac7a1e60a085191a65e11c077dc8f765",
+          "fetched_at": "2026-08-27T10:37:48Z"
+        },
+        {
+          "url": "https://www.vill-nakajima.jp/data/doc/1786675218_doc_28_0.pdf",
+          "observed_on": "https://www.vill-nakajima.jp/page/page001555.html",
+          "sha256": "8b9d05a0a2b041d0026e8e8072c5557db0d826093f370dba1f5461bff6e88766",
+          "fetched_at": "2026-08-27T13:29:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill-nakajima.jp/page/dir001934.html (label: 財政) 入口 https://www.vill-nakajima.jp/page/dir001934.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill-nakajima.jp/page/dir001934.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1786675218_doc_28_0.pdf「令和８年度地方消費税交付金（社会保障財源化分）が充てられた社会保障施策に要する経費について（当初分）」, sha256:8b9d05a0）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

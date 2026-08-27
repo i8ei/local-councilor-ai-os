@@ -37,11 +37,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.iida.lg.jp/life/5/19/99/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iida.lg.jp/life/5/19/99/",
@@ -53,16 +53,28 @@
           "observed_on": "https://www.city.iida.lg.jp/life/5/19/99/",
           "sha256": "39f33c5aadf2c0e3f95735cb5a237ae09305dc8b37ef6dbcaa5dbd1f7189e341",
           "fetched_at": "2026-08-27T10:09:16Z"
+        },
+        {
+          "url": "http://www.city.iida.lg.jp/life/5/19/99/",
+          "observed_on": "http://www.city.iida.lg.jp/",
+          "sha256": "39f33c5aadf2c0e3f95735cb5a237ae09305dc8b37ef6dbcaa5dbd1f7189e341",
+          "fetched_at": "2026-08-27T10:09:16Z"
+        },
+        {
+          "url": "https://www.city.iida.lg.jp/uploaded/attachment/79517.pdf",
+          "observed_on": "https://www.city.iida.lg.jp/soshiki/2/yosan.html",
+          "sha256": "89d7b1e227fcf77cfaa2f5b79654ac26401893db64bf8fb867a7d2a2b4ee735e",
+          "fetched_at": "2026-08-27T13:36:18Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.iida.lg.jp/life/5/19/99/ (label: 予算・決算) 入口 https://www.city.iida.lg.jp/life/5/19/99/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iida.lg.jp/life/5/19/99/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（79517.pdf「令和8年度当初予算書（案） （PDFファイル／3.71MB）」, sha256:89d7b1e2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.iida.lg.jp/life/5/19/99/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iida.lg.jp/life/5/19/99/",
@@ -74,9 +86,21 @@
           "observed_on": "https://www.city.iida.lg.jp/life/5/19/99/",
           "sha256": "39f33c5aadf2c0e3f95735cb5a237ae09305dc8b37ef6dbcaa5dbd1f7189e341",
           "fetched_at": "2026-08-27T10:09:16Z"
+        },
+        {
+          "url": "http://www.city.iida.lg.jp/life/5/19/99/",
+          "observed_on": "http://www.city.iida.lg.jp/",
+          "sha256": "39f33c5aadf2c0e3f95735cb5a237ae09305dc8b37ef6dbcaa5dbd1f7189e341",
+          "fetched_at": "2026-08-27T10:09:16Z"
+        },
+        {
+          "url": "https://www.city.iida.lg.jp/uploaded/attachment/77357.pdf",
+          "observed_on": "https://www.city.iida.lg.jp/soshiki/2/kessan.html",
+          "sha256": "45813de20cbdff835e0cdee1d7fb998dd015c6258c3aba891422b36079952233",
+          "fetched_at": "2026-08-27T13:36:19Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.iida.lg.jp/life/5/19/99/ (label: 予算・決算) 入口 https://www.city.iida.lg.jp/life/5/19/99/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iida.lg.jp/life/5/19/99/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（77357.pdf「令和6年度決算の概要 （PDFファイル／2.25MB）」, sha256:45813de2）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

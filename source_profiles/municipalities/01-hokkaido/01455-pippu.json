@@ -35,11 +35,11 @@
       "index_url": "https://en3-jg.d1-law.com/pippu/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html",
           "sha256": "8faf122b0613cc2b7c01cc53d5623223f0a73de8e83bac614430643b86b892ac",
           "fetched_at": "2026-08-27T10:30:49Z"
+        },
+        {
+          "url": "https://www.town.pippu.hokkaido.jp/cms/section/soumu/p1rhin0000000f12-att/i9kb6d000000h6d3.xlsx",
+          "observed_on": "https://www.town.pippu.hokkaido.jp/cms/section/soumu/p1rhin0000000f12.html",
+          "sha256": "c2453c86de3b0a33acd3c832a07dfabdc369b8c003d8519860314c860b1a94b6",
+          "fetched_at": "2026-08-27T13:26:33Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html (label: 行政ガイド／行財政情報) 入口 https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（i9kb6d000000h6d3.xlsx「平成27年度 財政状況資料集 （XLSX：548KB）」, sha256:c2453c86）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html",
           "sha256": "8faf122b0613cc2b7c01cc53d5623223f0a73de8e83bac614430643b86b892ac",
           "fetched_at": "2026-08-27T10:30:49Z"
+        },
+        {
+          "url": "https://www.town.pippu.hokkaido.jp/cms/section/soumu/p1rhin0000000f12-att/i9kb6d000000h6d3.xlsx",
+          "observed_on": "https://www.town.pippu.hokkaido.jp/cms/section/soumu/p1rhin0000000f12.html",
+          "sha256": "c2453c86de3b0a33acd3c832a07dfabdc369b8c003d8519860314c860b1a94b6",
+          "fetched_at": "2026-08-27T13:26:33Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html (label: 行政ガイド／行財政情報) 入口 https://www.town.pippu.hokkaido.jp/cms/life/p1rhin0000002iwo.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（i9kb6d000000h6d3.xlsx「平成27年度 財政状況資料集 （XLSX：548KB）」, sha256:c2453c86）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

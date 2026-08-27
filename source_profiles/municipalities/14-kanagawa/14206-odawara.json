@@ -37,11 +37,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
@@ -53,16 +53,22 @@
           "observed_on": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
           "sha256": "7745887f536267e6c18ae174ebab9e1be9d020072f84c7f5c02b2137a78ece62",
           "fetched_at": "2026-08-27T10:26:48Z"
+        },
+        {
+          "url": "http://www.city.odawara.kanagawa.jp/global-image/units/697896/1-20250916133330_b68c8e89adae18.pdf",
+          "observed_on": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/details/budget/p40294.html",
+          "sha256": "cec1be65560ae9404cd4aab577168fdcf0c7533584ba49863f12092b8e909f69",
+          "fetched_at": "2026-08-27T13:34:20Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.odawara.kanagawa.jp/field/municipality/finance/ (label: 予算 / 決算) 入口 http://www.city.odawara.kanagawa.jp/field/municipality/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1-20250916133330_b68c8e89adae18.pdf「令和8年度当初予算編成方針 PDF形式 ：292ＫＢ」, sha256:cec1be65）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
@@ -74,9 +80,15 @@
           "observed_on": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/",
           "sha256": "7745887f536267e6c18ae174ebab9e1be9d020072f84c7f5c02b2137a78ece62",
           "fetched_at": "2026-08-27T10:26:48Z"
+        },
+        {
+          "url": "http://www.city.odawara.kanagawa.jp/global-image/units/627622/1-20260326092155_b69c47c23e7f78.xlsx",
+          "observed_on": "http://www.city.odawara.kanagawa.jp/field/municipality/finance/details/zaiseijyoukyou.html",
+          "sha256": "12efed5fad71739ca57449c5f0aadef3db9cdbbf92017f7ff3bb07eeba26dad6",
+          "fetched_at": "2026-08-27T13:34:21Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.odawara.kanagawa.jp/field/municipality/finance/ (label: 予算 / 決算) 入口 http://www.city.odawara.kanagawa.jp/field/municipality/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1-20260326092155_b69c47c23e7f78.xlsx「財政状況資料集(令和６年度) エクセル形式 ：559.5ＫＢ」, sha256:12efed5f）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

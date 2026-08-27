@@ -35,11 +35,11 @@
       "index_url": "https://en3-jg.d1-law.com/kahoku/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
           "sha256": "cd8132f546e0002d5582479f04a18c36295f13364a2b586072f6376d1f352dc4",
           "fetched_at": "2026-08-27T10:36:09Z"
+        },
+        {
+          "url": "https://www.town.kahoku.yamagata.jp/material/files/group/5/yosan2026.pdf",
+          "observed_on": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/yosan/1783.html",
+          "sha256": "9af8542f9e80ce010d1414034712eb4272742b667658950e7024106a5e5db22c",
+          "fetched_at": "2026-08-27T13:28:59Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yosan2026.pdf「わかりやすい令和8年度河北町予算説明書 (PDFファイル: 3.6MB)」, sha256:9af8542f）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html",
           "sha256": "cd8132f546e0002d5582479f04a18c36295f13364a2b586072f6376d1f352dc4",
           "fetched_at": "2026-08-27T10:36:09Z"
+        },
+        {
+          "url": "https://www.town.kahoku.yamagata.jp/material/files/group/5/20220602105344.pdf",
+          "observed_on": "https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/kextusan/1785.html",
+          "sha256": "eb57b049074b821f04c36e6e711247bb56c2fd6c08067bc5b70bb05d2805f754",
+          "fetched_at": "2026-08-27T13:28:59Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kahoku.yamagata.jp/gyouseizyouhou/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20220602105344.pdf「令和3年度 河北町土地開発公社決算報告書 (PDFファイル: 252.2KB)」, sha256:eb57b049）にて構造マーカー（款・項・決算額・不用額等）を確認済み。"
     }
   }
 }

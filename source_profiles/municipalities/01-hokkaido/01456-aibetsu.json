@@ -50,11 +50,11 @@
       "index_url": "https://www.town.aibetsu.hokkaido.jp/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aibetsu.hokkaido.jp/08/03",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aibetsu.hokkaido.jp/08/03",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.aibetsu.hokkaido.jp/08/03",
           "sha256": "14dfc3feb1b56df81e970fe1425e7891d9d7ba6ace9193de0727e1df9377bf10",
           "fetched_at": "2026-08-27T10:30:37Z"
+        },
+        {
+          "url": "https://www.town.aibetsu.hokkaido.jp/sites/default/files/user-data/soumu/pdf/%E8%B2%A1%E6%94%BF%E6%83%85%E5%A0%B1/%E4%BA%88%E7%AE%97/R8%E5%90%84%E4%BC%9A%E8%A8%88%E4%BA%88%E7%AE%97%E7%B7%8F%E6%8B%AC%E8%A1%A8.pdf",
+          "observed_on": "https://www.town.aibetsu.hokkaido.jp/08/03/611",
+          "sha256": "3ca3b5b17d83f108b3bd24a54c31791f8c36614b0d422cdd08c3ddf30d4993b4",
+          "fetched_at": "2026-08-27T13:26:12Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.aibetsu.hokkaido.jp/08/03 (label: 財政情報) 入口 https://www.town.aibetsu.hokkaido.jp/08/03 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8%E5%90%84%E4%BC%9A%E8%A8%88%E4%BA%88%E7%AE%97%E7%B7%8F%E6%8B%AC%E8%A1%A8.pdf「各会計予算総括表」, sha256:3ca3b5b1）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aibetsu.hokkaido.jp/08/03",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aibetsu.hokkaido.jp/08/03",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.aibetsu.hokkaido.jp/08/03",
           "sha256": "14dfc3feb1b56df81e970fe1425e7891d9d7ba6ace9193de0727e1df9377bf10",
           "fetched_at": "2026-08-27T10:30:37Z"
+        },
+        {
+          "url": "https://www.town.aibetsu.hokkaido.jp/sites/default/files/user-data/soumu/pdf/%E8%B2%A1%E6%94%BF%E6%83%85%E5%A0%B1/%E6%B1%BA%E7%AE%97/%E3%81%BE%E3%81%A1%E3%81%AE%E6%B1%BA%E7%AE%97%E3%80%90%E3%80%8C%E5%BA%83%E5%A0%B1%E3%81%82%E3%81%84%E3%81%B9%E3%81%A4%E3%80%8D2025%E5%B9%B411%E6%9C%88%E5%8F%B7%E3%80%91.pdf",
+          "observed_on": "https://www.town.aibetsu.hokkaido.jp/08/03/643",
+          "sha256": "5dce71f27d3c86fa04fe612c95516821b37232bd3406cb4a0b6cae5a3db6090d",
+          "fetched_at": "2026-08-27T13:26:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.aibetsu.hokkaido.jp/08/03 (label: 財政情報) 入口 https://www.town.aibetsu.hokkaido.jp/08/03 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E3%81%BE%E3%81%A1%E3%81%AE%E6%B1%BA%E7%AE%97%E3%80%90%E3%80%8C%E5%BA%83%E5%A0%B1%E3%81%82%E3%81%84%E3%81%B9%E3%81%A4%E3%80%8D2025%E5%B9%B411%E6%9C%88%E5%8F%B7%E3%80%91.pdf「まちの決算【「広報あいべつ」2025年11月号】」, sha256:5dce71f2）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

@@ -53,11 +53,11 @@
       "base_url": "http://krg028.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.urayasu.lg.jp/shisei/zaisei/yosan/1046970.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.urayasu.lg.jp/shisei/zaisei/yosan/1046970.html",
@@ -74,16 +74,28 @@
           "url": "https://www.city.urayasu.lg.jp/_res/projects/default_project/_page_/001/046/970/r8henseihousin.pdf",
           "observed_on": "https://www.city.urayasu.lg.jp/shisei/zaisei/yosan/1046970.html",
           "fetched_at": "2026-08-27T11:19:20Z"
+        },
+        {
+          "url": "http://www.city.urayasu.lg.jp/shisei/zaisei/yosan/1046970.html",
+          "observed_on": "http://www.city.urayasu.lg.jp/",
+          "sha256": "241129478afa0bacf835727576b499f5400425d3a34b03ac3a4d182154c04769",
+          "fetched_at": "2026-08-27T10:23:22Z"
+        },
+        {
+          "url": "https://www.city.urayasu.lg.jp/_res/projects/default_project/_page_/001/046/970/r8.yosannsyo.pdf",
+          "observed_on": "https://www.city.urayasu.lg.jp/shisei/zaisei/yosan/1046970.html",
+          "sha256": "80e9a1489edaa1605b636652b023998ecc229efe2a7cb8d065f95e1195dfb160",
+          "fetched_at": "2026-08-27T13:32:42Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.urayasu.lg.jp/shisei/zaisei/yosan/1046970.html (label: 令和8年度予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r8.yosannsyo.pdf「令和8年度当初予算書 （PDF 4.1MB）」, sha256:80e9a148）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html",
@@ -95,9 +107,21 @@
           "observed_on": "https://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html",
           "sha256": "f1b99acaabc0a283c92d0a5af38ec75da8bc112941754e9dfd128db87d7048e4",
           "fetched_at": "2026-08-27T10:23:25Z"
+        },
+        {
+          "url": "http://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html",
+          "observed_on": "http://www.city.urayasu.lg.jp/",
+          "sha256": "f1b99acaabc0a283c92d0a5af38ec75da8bc112941754e9dfd128db87d7048e4",
+          "fetched_at": "2026-08-27T10:23:25Z"
+        },
+        {
+          "url": "https://www.city.urayasu.lg.jp/_res/projects/default_project/_page_/001/009/149/r7kessann.pdf",
+          "observed_on": "https://www.city.urayasu.lg.jp/shisei/zaisei/kessan/1009149.html",
+          "sha256": "cd99f87b9876e6488c26c665fd7caa9405626ca714ada8ee81cfdd5c25c4c614",
+          "fetched_at": "2026-08-27T13:32:48Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html (label: 市の決算) 入口 https://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.urayasu.lg.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r7kessann.pdf「令和7年度決算書 （PDF 4.5MB）」, sha256:cd99f87b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

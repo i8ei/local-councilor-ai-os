@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/jyorei/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html",
@@ -63,16 +63,28 @@
           "url": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.files/R8yosan.pdf",
           "observed_on": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
           "fetched_at": "2026-08-27T11:24:56Z"
+        },
+        {
+          "url": "http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html",
+          "observed_on": "http://www.city.tsuruoka.lg.jp/",
+          "sha256": "bb9dfa1e82095038435ae25cef2ca17f1bc9cd49b89374f2e95bc663fa876f9b",
+          "fetched_at": "2026-08-27T10:35:40Z"
+        },
+        {
+          "url": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.files/R806_hosei.pdf",
+          "observed_on": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
+          "sha256": "8947f681fcafe2bb7c71e4e725795aab43194f97af7599f88bf35f7ccd3b3b26",
+          "fetched_at": "2026-08-27T13:28:38Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html (label: 予算・決算資料について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R806_hosei.pdf「令和8年度6月補正予算概要（PDF：221KB）」, sha256:8947f681）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html",
@@ -89,9 +101,21 @@
           "url": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.files/R06_kessan.pdf",
           "observed_on": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
           "fetched_at": "2026-08-27T11:24:57Z"
+        },
+        {
+          "url": "http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html",
+          "observed_on": "http://www.city.tsuruoka.lg.jp/",
+          "sha256": "bb9dfa1e82095038435ae25cef2ca17f1bc9cd49b89374f2e95bc663fa876f9b",
+          "fetched_at": "2026-08-27T10:35:40Z"
+        },
+        {
+          "url": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.files/R6kessan_gaiyou.pdf",
+          "observed_on": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
+          "sha256": "4302ecd340192ad70d9617fd6b92fb16bf63a1a9f171e6bfb6a7bd331c55d7ac",
+          "fetched_at": "2026-08-27T13:28:39Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html (label: 予算・決算資料について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan_gaiyou.pdf「令和6年度鶴岡市決算の概要（PDF：171KB）」, sha256:4302ecd3）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

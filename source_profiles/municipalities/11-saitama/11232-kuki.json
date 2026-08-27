@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.kuki.lg.jp/shisei/jorei/index.html (label: 条例等の例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kuki.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kuki.lg.jp/shisei/zaisei/index.html",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.kuki.lg.jp/shisei/zaisei/index.html",
           "sha256": "bd16f4e322c1a6f7f96b37dd3608e33a7aecfb8e674e486b1d213847a50c0173",
           "fetched_at": "2026-08-27T10:21:09Z"
+        },
+        {
+          "url": "http://www.city.kuki.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.kuki.lg.jp/",
+          "sha256": "bd16f4e322c1a6f7f96b37dd3608e33a7aecfb8e674e486b1d213847a50c0173",
+          "fetched_at": "2026-08-27T10:21:09Z"
+        },
+        {
+          "url": "https://www.city.kuki.lg.jp/_res/projects/default_project/_page_/001/012/058/0809ippann1.pdf",
+          "observed_on": "https://www.city.kuki.lg.jp/shisei/zaisei/zaisei_yosan/1012058.html",
+          "sha256": "a40825b966b34371cd0911092bc157a697b3e67478b491c5563645dcc7f32d7c",
+          "fetched_at": "2026-08-27T13:31:55Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kuki.lg.jp/shisei/zaisei/index.html (label: 財政・予算・決算) 入口 https://www.city.kuki.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（0809ippann1.pdf「令和8年度一般会計補正予算（第5号）（案）予算書データ （PDF 1.2MB）」, sha256:a40825b9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kuki.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kuki.lg.jp/shisei/zaisei/index.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.kuki.lg.jp/shisei/zaisei/index.html",
           "sha256": "bd16f4e322c1a6f7f96b37dd3608e33a7aecfb8e674e486b1d213847a50c0173",
           "fetched_at": "2026-08-27T10:21:09Z"
+        },
+        {
+          "url": "http://www.city.kuki.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.kuki.lg.jp/",
+          "sha256": "bd16f4e322c1a6f7f96b37dd3608e33a7aecfb8e674e486b1d213847a50c0173",
+          "fetched_at": "2026-08-27T10:21:09Z"
+        },
+        {
+          "url": "https://www.city.kuki.lg.jp/_res/projects/default_project/_page_/001/011/471/1-1.ippan.6.pdf",
+          "observed_on": "https://www.city.kuki.lg.jp/shisei/zaisei/zaisei_kessan/1011471.html",
+          "sha256": "e98f25078dff3ce0b897776a27198153103ec808667c729453c5beddb78ba272",
+          "fetched_at": "2026-08-27T13:31:55Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kuki.lg.jp/shisei/zaisei/index.html (label: 財政・予算・決算) 入口 https://www.city.kuki.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1-1.ippan.6.pdf「一般会計 歳入歳出決算書 （PDF 119.3KB）」, sha256:e98f2507）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

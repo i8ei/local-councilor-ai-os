@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.city.maniwa.lg.jp/reiki/reiki_menu.html (label: 真庭市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.maniwa.lg.jp/life/6/35/99/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.maniwa.lg.jp/life/6/35/99/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.maniwa.lg.jp/life/6/35/99/",
           "sha256": "2dcf641ae6477cc1a6d66f9ceef27c6a48c0adaef6a722b824a10f6584e4304d",
           "fetched_at": "2026-08-27T09:44:09Z"
+        },
+        {
+          "url": "http://www.city.maniwa.lg.jp/life/6/35/99/",
+          "observed_on": "http://www.city.maniwa.lg.jp/",
+          "sha256": "2dcf641ae6477cc1a6d66f9ceef27c6a48c0adaef6a722b824a10f6584e4304d",
+          "fetched_at": "2026-08-27T09:44:09Z"
+        },
+        {
+          "url": "https://www.city.maniwa.lg.jp/uploaded/attachment/38347.pdf",
+          "observed_on": "https://www.city.maniwa.lg.jp/soshiki/7/112786.html",
+          "sha256": "155287f22c0b40569243a7f5d8573fd011fcddd7952669984fdadc25655665a3",
+          "fetched_at": "2026-08-27T13:42:36Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.maniwa.lg.jp/life/6/35/99/ (label: 財政（予算・決算）) 入口 https://www.city.maniwa.lg.jp/life/6/35/99/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.maniwa.lg.jp/life/6/35/99/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（38347.pdf「02_令和8年度一般会計・特別会計予算書 [PDFファイル／5.07MB]」, sha256:155287f2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

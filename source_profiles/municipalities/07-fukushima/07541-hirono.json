@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html",
           "sha256": "b4ecbfa9e6ad7348cc046e0a0b755a7f26b0ab59827f1b5bda77571d55badb6d",
           "fetched_at": "2026-08-27T10:38:11Z"
+        },
+        {
+          "url": "http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html",
+          "observed_on": "http://www.town.hirono.fukushima.jp/",
+          "sha256": "b4ecbfa9e6ad7348cc046e0a0b755a7f26b0ab59827f1b5bda77571d55badb6d",
+          "fetched_at": "2026-08-27T10:38:11Z"
+        },
+        {
+          "url": "https://www.town.hirono.fukushima.jp:443/_res/projects/default_project/_page_/001/002/602/r6.zaisei.pdf",
+          "observed_on": "https://www.town.hirono.fukushima.jp:443/chousei/zaisei/1001661/1002602.html",
+          "sha256": "c4b368407aa5e60c800e0d9c4ae616da4c9ae40367f7bdd8b77bdfa773a2ec12",
+          "fetched_at": "2026-08-27T13:30:15Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html (label: 行政・財政) 入口 https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6.zaisei.pdf「令和6年度財政状況資料集 （PDF 742.6KB）」, sha256:c4b36840）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html",
           "sha256": "b4ecbfa9e6ad7348cc046e0a0b755a7f26b0ab59827f1b5bda77571d55badb6d",
           "fetched_at": "2026-08-27T10:38:11Z"
+        },
+        {
+          "url": "http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html",
+          "observed_on": "http://www.town.hirono.fukushima.jp/",
+          "sha256": "b4ecbfa9e6ad7348cc046e0a0b755a7f26b0ab59827f1b5bda77571d55badb6d",
+          "fetched_at": "2026-08-27T10:38:11Z"
+        },
+        {
+          "url": "https://www.town.hirono.fukushima.jp:443/_res/projects/default_project/_page_/001/005/160/r6kessan.pdf",
+          "observed_on": "https://www.town.hirono.fukushima.jp:443/chousei/zaisei/1001663/1005160.html",
+          "sha256": "3b9526e1b35a752544eb330b23d026541524d35160a254d8aca916796a8158d6",
+          "fetched_at": "2026-08-27T13:30:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html (label: 行政・財政) 入口 https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessan.pdf「令和6年度決算に基づく健全化判断比率及び資金不足比率の状況 （PDF 113.9KB）」, sha256:3b9526e1）にて構造マーカー（地方債・基準財政需要額・標準財政規模等）を確認済み。"
     }
   }
 }

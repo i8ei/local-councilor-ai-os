@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.takikawa.lg.jp/life/6/29/138/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.takikawa.lg.jp/life/6/29/138/",
@@ -38,16 +38,22 @@
           "observed_on": "https://www.city.takikawa.lg.jp/life/6/29/138/",
           "sha256": "59696e0f87c34a63bbef1329e6d4083c95ba5d3349f1a505a68ac3d63e370fdf",
           "fetched_at": "2026-08-27T10:29:08Z"
+        },
+        {
+          "url": "https://www.city.takikawa.lg.jp/uploaded/attachment/18534.pdf",
+          "observed_on": "https://www.city.takikawa.lg.jp/page/1469.html",
+          "sha256": "2b1ccbd9de45478d0ea6867aac81cc35f6efaeb54b1fd0377fc6e17a4e26e1fd",
+          "fetched_at": "2026-08-27T13:25:39Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.takikawa.lg.jp/life/6/29/138/ (label: 予算・決算) 入口 https://www.city.takikawa.lg.jp/life/6/29/138/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（18534.pdf「令和8年度予算案の概要 [PDFファイル／1.07MB]」, sha256:2b1ccbd9）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.takikawa.lg.jp/life/6/29/138/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.takikawa.lg.jp/life/6/29/138/",
@@ -59,9 +65,15 @@
           "observed_on": "https://www.city.takikawa.lg.jp/life/6/29/138/",
           "sha256": "59696e0f87c34a63bbef1329e6d4083c95ba5d3349f1a505a68ac3d63e370fdf",
           "fetched_at": "2026-08-27T10:29:08Z"
+        },
+        {
+          "url": "https://www.city.takikawa.lg.jp/uploaded/attachment/17473.pdf",
+          "observed_on": "https://www.city.takikawa.lg.jp/page/1470.html",
+          "sha256": "12416ad1c60cbc11e924e7181c7f5f94b081c26d521122c73c9432cb42a57570",
+          "fetched_at": "2026-08-27T13:25:40Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.takikawa.lg.jp/life/6/29/138/ (label: 予算・決算) 入口 https://www.city.takikawa.lg.jp/life/6/29/138/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（17473.pdf「令和6年度決算大綱説明 [PDFファイル／185KB]」, sha256:12416ad1）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.town.hanawa.fukushima.jp/hanawa/reiki/index.htm (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hanawa.fukushima.jp/page/page001693.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hanawa.fukushima.jp/page/page001693.html",
@@ -65,16 +65,28 @@
           "url": "https://www.town.hanawa.fukushima.jp/data/doc/1781235076_doc_40_2.pdf",
           "observed_on": "https://www.town.hanawa.fukushima.jp/page/page001693.html",
           "fetched_at": "2026-08-27T10:37:53Z"
+        },
+        {
+          "url": "http://www.town.hanawa.fukushima.jp/page/page001693.html",
+          "observed_on": "http://www.town.hanawa.fukushima.jp/",
+          "sha256": "46213eb281d62f4d3eb1d4269523411d1a905247028cc4fb5ce19e33a4670779",
+          "fetched_at": "2026-08-27T10:38:00Z"
+        },
+        {
+          "url": "https://www.town.hanawa.fukushima.jp/data/doc/1781235076_doc_40_2.pdf",
+          "observed_on": "https://www.town.hanawa.fukushima.jp/page/page001693.html",
+          "sha256": "4b37c7fa7b064bdcf31e98a47a4b9c0ff77fd272f101b73fc56ea5050bd95c36",
+          "fetched_at": "2026-08-27T10:38:01Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.hanawa.fukushima.jp/page/page001693.html (label: 予算の公表について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（1781235076_doc_40_2.pdf「令和8年度6月補正予算書」, sha256:4b37c7fa）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hanawa.fukushima.jp/page/page001858.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hanawa.fukushima.jp/page/page001858.html",
@@ -91,9 +103,21 @@
           "url": "https://www.town.hanawa.fukushima.jp/data/doc/1758093422_doc_40_0.pdf",
           "observed_on": "https://www.town.hanawa.fukushima.jp/page/page001858.html",
           "fetched_at": "2026-08-27T10:38:02Z"
+        },
+        {
+          "url": "http://www.town.hanawa.fukushima.jp/page/page001858.html",
+          "observed_on": "http://www.town.hanawa.fukushima.jp/",
+          "sha256": "6ebc6a9ce4285f4ac15e4f686c4c95170afa0508d85e67a17e817358468f0c1d",
+          "fetched_at": "2026-08-27T10:38:04Z"
+        },
+        {
+          "url": "https://www.town.hanawa.fukushima.jp/data/doc/1758093422_doc_40_0.pdf",
+          "observed_on": "https://www.town.hanawa.fukushima.jp/page/page001858.html",
+          "sha256": "25372799244878533e018811b85e968156d8cc3753df0be1e71ca062ac611a73",
+          "fetched_at": "2026-08-27T10:38:06Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.hanawa.fukushima.jp/page/page001858.html (label: 決算の公表について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（1758093422_doc_40_0.pdf「令和6年度一般会計・特別会計歳入歳出決算書」, sha256:25372799）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

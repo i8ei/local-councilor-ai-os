@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/shunan/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shunan.lg.jp/life/8/38/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shunan.lg.jp/life/8/38/",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.shunan.lg.jp/life/8/38/",
           "sha256": "29a56c03097ed3785f89339440a5cb0bc6b5bd83a12bacb4d2ae2d08b40d7aef",
           "fetched_at": "2026-08-27T09:45:53Z"
+        },
+        {
+          "url": "http://www.city.shunan.lg.jp/life/8/38/",
+          "observed_on": "http://www.city.shunan.lg.jp/",
+          "sha256": "29a56c03097ed3785f89339440a5cb0bc6b5bd83a12bacb4d2ae2d08b40d7aef",
+          "fetched_at": "2026-08-27T09:45:53Z"
+        },
+        {
+          "url": "https://www.city.shunan.lg.jp/uploaded/attachment/117324.pdf",
+          "observed_on": "https://www.city.shunan.lg.jp/soshiki/11/2575.html",
+          "sha256": "09bc02be226918bfbdeccc7e3ef55cbbd5770ebfa70f0fc01308f1e57b76fd64",
+          "fetched_at": "2026-08-27T13:42:55Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shunan.lg.jp/life/8/38/ (label: 行財政) 入口 https://www.city.shunan.lg.jp/life/8/38/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shunan.lg.jp/life/8/38/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（117324.pdf「一般会計・特別会計予算書 [PDFファイル／13.88MB]」, sha256:09bc02be）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

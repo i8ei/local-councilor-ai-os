@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A6DF8F4 (label: 那須烏山市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/",
           "sha256": "394b4b49b363ead2668b9a76a91e810366d1e8a672d1a2a149f25fde2afe8b78",
           "fetched_at": "2026-08-27T10:18:11Z"
+        },
+        {
+          "url": "https://www.city.nasukarasuyama.lg.jp/data/doc/1770692250_doc_60_0.pdf",
+          "observed_on": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/page006526.html",
+          "sha256": "92e1643d53b3353227070273184b3aa6421cf254dadde436626781de547ecde9",
+          "fetched_at": "2026-08-27T13:30:53Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/ (label: 予算) 入口 https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nasukarasuyama.lg.jp/city-administration/finance/budget/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1770692250_doc_60_0.pdf「令和8年度当初予算概要 [PDF形式／3.14MB]」, sha256:92e1643d）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/settlement/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/settlement/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/settlement/",
           "sha256": "6791584797ce23ff4a0a7b55fa0898bd299332edfd66d91ce6089b942c9c2164",
           "fetched_at": "2026-08-27T10:18:12Z"
+        },
+        {
+          "url": "https://www.city.nasukarasuyama.lg.jp/data/doc/1774230562_doc_60_0.xlsx",
+          "observed_on": "https://www.city.nasukarasuyama.lg.jp/city-administration/finance/page000571.html",
+          "sha256": "d31477a6476f31e0786043393fa5a61492f625d2ace4f8b812f7b5719932a994",
+          "fetched_at": "2026-08-27T13:30:54Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.nasukarasuyama.lg.jp/city-administration/finance/settlement/ (label: 決算) 入口 https://www.city.nasukarasuyama.lg.jp/city-administration/finance/settlement/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nasukarasuyama.lg.jp/city-administration/finance/settlement/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1774230562_doc_60_0.xlsx「令和6年度財政状況資料集」, sha256:d31477a6）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

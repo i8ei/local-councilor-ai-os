@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078984 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.oamishirasato.lg.jp/category/63-7-1-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.oamishirasato.lg.jp/category/63-7-1-0-0-0-0-0-0-0.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.oamishirasato.lg.jp/category/63-7-1-0-0-0-0-0-0-0.html",
           "sha256": "dcd31509750883b7b6198b476e75b63f68cdbb5a0e0c9e424ea84624f1673517",
           "fetched_at": "2026-08-27T10:24:00Z"
+        },
+        {
+          "url": "https://www.city.oamishirasato.lg.jp/cmsfiles/contents/0000014/14825/R08_YOSANSYO.pdf",
+          "observed_on": "https://www.city.oamishirasato.lg.jp/0000014825.html",
+          "sha256": "4b4f223e4d1d5111073a7d88ab5261f22234ace60db2a47a488efa2331111729",
+          "fetched_at": "2026-08-27T13:33:06Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.oamishirasato.lg.jp/category/63-7-1-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.oamishirasato.lg.jp/category/63-7-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R08_YOSANSYO.pdf「令和8年度当初予算書 (サイズ：6.00MB)」, sha256:4b4f223e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.oamishirasato.lg.jp/category/63-7-2-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.oamishirasato.lg.jp/category/63-7-2-0-0-0-0-0-0-0.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.oamishirasato.lg.jp/category/63-7-2-0-0-0-0-0-0-0.html",
           "sha256": "821a4ee9792df23c9c0bfdadcf0c27fa2884f52ba33c7dfb897a9c7e20d14084",
           "fetched_at": "2026-08-27T10:24:02Z"
+        },
+        {
+          "url": "https://www.city.oamishirasato.lg.jp/cmsfiles/contents/0000014/14831/R06kessan.pdf",
+          "observed_on": "https://www.city.oamishirasato.lg.jp/0000014831.html",
+          "sha256": "3aca5ed72a1d290ab37491f478ff895541546606e18e4dc8ff05e235fea0a236",
+          "fetched_at": "2026-08-27T13:33:08Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.oamishirasato.lg.jp/category/63-7-2-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.city.oamishirasato.lg.jp/category/63-7-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06kessan.pdf「令和06年度決算書 (3.46MB)」, sha256:3aca5ed7）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

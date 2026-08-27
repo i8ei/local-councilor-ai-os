@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.town.tokushima-tsurugi.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tokushima-tsurugi.lg.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tokushima-tsurugi.lg.jp/chosei/zaisei/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.town.tokushima-tsurugi.lg.jp/chosei/zaisei/",
           "sha256": "cdba530a6416efa276be4e6f9baf383b0f66b0f8ec4c4a355f6fe032f609867d",
           "fetched_at": "2026-08-27T09:46:27Z"
+        },
+        {
+          "url": "http://www.town.tokushima-tsurugi.lg.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.tokushima-tsurugi.lg.jp/",
+          "sha256": "cdba530a6416efa276be4e6f9baf383b0f66b0f8ec4c4a355f6fe032f609867d",
+          "fetched_at": "2026-08-27T09:46:27Z"
+        },
+        {
+          "url": "https://www.town.tokushima-tsurugi.lg.jp/fs/5/4/5/6/7/4/_/%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_364681_%E3%81%A4%E3%82%8B%E3%81%8E%E7%94%BA_2021.pdf",
+          "observed_on": "https://www.town.tokushima-tsurugi.lg.jp/docs/564480.html",
+          "sha256": "341b93652df281af13a0e7a31e2b97819a4b2be89efab958f912936ee0708bae",
+          "fetched_at": "2026-08-27T13:43:07Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tokushima-tsurugi.lg.jp/chosei/zaisei/ (label: 財政・行政改革) 入口 https://www.town.tokushima-tsurugi.lg.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tokushima-tsurugi.lg.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_364681_%E3%81%A4%E3%82%8B%E3%81%8E%E7%94%BA_2021.pdf「令和3年度 (PDF 1.61MB)」, sha256:341b9365）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

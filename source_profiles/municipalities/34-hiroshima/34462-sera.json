@@ -48,11 +48,11 @@
       "index_url": "https://en3-jg.d1-law.com/sera/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.sera.hiroshima.jp/life/4/7/38",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.sera.hiroshima.jp/life/4/7/38",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.sera.hiroshima.jp/life/4/7/38/",
           "sha256": "623e5aaadefe8b85d520f8a46a0c45a027139afab99cade871e9a1938e1159f0",
           "fetched_at": "2026-08-27T09:45:40Z"
+        },
+        {
+          "url": "http://www.town.sera.hiroshima.jp/life/4/7/38",
+          "observed_on": "http://www.town.sera.hiroshima.jp/",
+          "sha256": "623e5aaadefe8b85d520f8a46a0c45a027139afab99cade871e9a1938e1159f0",
+          "fetched_at": "2026-08-27T09:45:40Z"
+        },
+        {
+          "url": "https://www.town.sera.hiroshima.jp/uploaded/attachment/12047.xlsx",
+          "observed_on": "https://www.town.sera.hiroshima.jp/soshiki/13/5772.html",
+          "sha256": "ea846892dbfd86f5c11e68805355264893c8236cff055fdb3532f4d2e4222518",
+          "fetched_at": "2026-08-27T13:42:36Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.sera.hiroshima.jp/life/4/7/38 (label: 財政情報) 入口 https://www.town.sera.hiroshima.jp/life/4/7/38/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.sera.hiroshima.jp/life/4/7/38/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（12047.xlsx「令和6年度 [Excelファイル／562KB]」, sha256:ea846892）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

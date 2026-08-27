@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.hasami.lg.jp/list00228.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hasami.lg.jp/list00236.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hasami.lg.jp/list00236.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.hasami.lg.jp/list00236.html",
           "sha256": "f8ab849e3fbec98eb3316d081067ad8e897a12b3889b5141e3d2415e5456c42b",
           "fetched_at": "2026-08-27T09:37:39Z"
+        },
+        {
+          "url": "https://www.town.hasami.lg.jp/kiji0031869/3_1869_2924_up_vkjnwgny.pdf",
+          "observed_on": "https://www.town.hasami.lg.jp/kiji0031869/index.html",
+          "sha256": "cb8913fb6a278c25d84edd22e6b9ab62b9d0288935c66cc114261eed57c17090",
+          "fetched_at": "2026-08-27T13:45:48Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.hasami.lg.jp/list00236.html (label: 予算・決算) 入口 https://www.town.hasami.lg.jp/list00236.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hasami.lg.jp/list00236.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_1869_2924_up_vkjnwgny.pdf「令和 8年度 一般会計当初予算書（PDF：3.65メガバイト）」, sha256:cb8913fb）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

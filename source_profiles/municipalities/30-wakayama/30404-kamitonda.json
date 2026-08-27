@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.kamitonda.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html",
           "sha256": "34ec1c74d4c38d56a949a82697867265e660195811559ec709be6bf5454eed74",
           "fetched_at": "2026-08-27T09:53:55Z"
+        },
+        {
+          "url": "https://www.town.kamitonda.lg.jp/material/files/group/11/R8_ippann_tousyo.pdf",
+          "observed_on": "https://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/2624.html",
+          "sha256": "26e2bd00437dc518eb6bb10761e97d71ebd5e552925c6957a33c5722739eb1e8",
+          "fetched_at": "2026-08-27T13:41:56Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html (label: 財政状況) 入口 http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kamitonda.lg.jp/chosei/gyosei/zaiseijoukyou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_ippann_tousyo.pdf「令和8年度一般会計当初予算書(PDFファイル:1.3MB)」, sha256:26e2bd00）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

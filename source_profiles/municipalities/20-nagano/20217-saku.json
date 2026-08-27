@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/saku/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.saku.nagano.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.saku.nagano.jp/shisei/zaisei/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.saku.nagano.jp/shisei/zaisei/index.html",
           "sha256": "7a201aca4d0377d34b72e178a26e45d36b3b3990acf5db2483750c43b7008882",
           "fetched_at": "2026-08-27T10:09:53Z"
+        },
+        {
+          "url": "http://www.city.saku.nagano.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.saku.nagano.jp/",
+          "sha256": "7a201aca4d0377d34b72e178a26e45d36b3b3990acf5db2483750c43b7008882",
+          "fetched_at": "2026-08-27T10:09:53Z"
+        },
+        {
+          "url": "https://www.city.saku.nagano.jp/shisei/zaisei/shiryoshu.files/16sakushi2021.xlsx",
+          "observed_on": "https://www.city.saku.nagano.jp/shisei/zaisei/shiryoshu.html",
+          "sha256": "d4410d756ae41a6a780b02077ee5f9cd2dec158150f18e4a857b3f207e8b321d",
+          "fetched_at": "2026-08-27T13:36:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.saku.nagano.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.saku.nagano.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.saku.nagano.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（16sakushi2021.xlsx「令和3年度 佐久市財政状況資料集（Excel：876KB）」, sha256:d4410d75）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.saku.nagano.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.saku.nagano.jp/shisei/zaisei/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.saku.nagano.jp/shisei/zaisei/index.html",
           "sha256": "7a201aca4d0377d34b72e178a26e45d36b3b3990acf5db2483750c43b7008882",
           "fetched_at": "2026-08-27T10:09:53Z"
+        },
+        {
+          "url": "http://www.city.saku.nagano.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.saku.nagano.jp/",
+          "sha256": "7a201aca4d0377d34b72e178a26e45d36b3b3990acf5db2483750c43b7008882",
+          "fetched_at": "2026-08-27T10:09:53Z"
+        },
+        {
+          "url": "https://www.city.saku.nagano.jp/shisei/zaisei/shiryoshu.files/16sakushi2021.xlsx",
+          "observed_on": "https://www.city.saku.nagano.jp/shisei/zaisei/shiryoshu.html",
+          "sha256": "d4410d756ae41a6a780b02077ee5f9cd2dec158150f18e4a857b3f207e8b321d",
+          "fetched_at": "2026-08-27T13:36:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.saku.nagano.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.saku.nagano.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.saku.nagano.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（16sakushi2021.xlsx「令和3年度 佐久市財政状況資料集（Excel：876KB）」, sha256:d4410d75）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

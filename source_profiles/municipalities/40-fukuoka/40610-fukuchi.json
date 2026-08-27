@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/fukuchi/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html",
@@ -67,9 +67,21 @@
           "observed_on": "https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html",
           "sha256": "cc5374ce5ddb9adaf5903d78718a4086f091e450f3f0d1062cce5bdca5e0cec6",
           "fetched_at": "2026-08-27T09:37:28Z"
+        },
+        {
+          "url": "http://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html",
+          "observed_on": "http://www.town.fukuchi.lg.jp/",
+          "sha256": "cc5374ce5ddb9adaf5903d78718a4086f091e450f3f0d1062cce5bdca5e0cec6",
+          "fetched_at": "2026-08-27T09:37:28Z"
+        },
+        {
+          "url": "https://www.town.fukuchi.lg.jp/material/files/group/4/R8yosan.pdf",
+          "observed_on": "https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/zaisei/1544.html",
+          "sha256": "37457bf026d43b0db03958482ee8e887625dd994cb8e2b142fea99fcf4fcd522",
+          "fetched_at": "2026-08-27T13:45:35Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosan.pdf「令和8年度当初予算 (PDFファイル: 780.0KB)」, sha256:37457bf0）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

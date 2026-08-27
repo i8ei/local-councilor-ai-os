@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at https://www.town.tobe.ehime.jp/gyoseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tobe.ehime.jp/gyoseijoho/zaisei_kansa/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tobe.ehime.jp/gyoseijoho/zaisei_kansa/index.html",
@@ -45,9 +45,15 @@
           "observed_on": "https://www.town.tobe.ehime.jp/gyoseijoho/zaisei_kansa/index.html",
           "sha256": "3da7d564a049df02f077f899603346d98c02895e4ce35246d7bb70ff570d6070",
           "fetched_at": "2026-08-27T09:46:54Z"
+        },
+        {
+          "url": "https://www.town.tobe.ehime.jp/material/files/group/4/r8_8ippan.pdf",
+          "observed_on": "https://www.town.tobe.ehime.jp/gyoseijoho/zaisei_kansa/5/2553.html",
+          "sha256": "501fc8d30bcb27f8aadeb9d538e40015a4afa89640d6f7bf6ded7a7820c4aa06",
+          "fetched_at": "2026-08-27T13:43:42Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.tobe.ehime.jp/gyoseijoho/zaisei_kansa/index.html (label: 財政・監査) 入口 https://www.town.tobe.ehime.jp/gyoseijoho/zaisei_kansa/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tobe.ehime.jp/gyoseijoho/zaisei_kansa/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tobe.ehime.jp/gyoseijoho/zaisei_kansa/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_8ippan.pdf「令和8年度一般会計補正予算書（第3号）(PDFファイル:1.1MB)」, sha256:501fc8d3）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

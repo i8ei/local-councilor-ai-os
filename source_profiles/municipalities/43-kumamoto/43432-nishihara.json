@@ -48,11 +48,11 @@
       "base_url": "https://www.vill.nishihara.kumamoto.jp/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.nishihara.kumamoto.jp/list00127.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.nishihara.kumamoto.jp/list00127.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.vill.nishihara.kumamoto.jp/list00127.html",
           "sha256": "79e89805a6e316e111398311df35fdac58714f247dec3e3a53e1b1f99c940cf2",
           "fetched_at": "2026-08-27T09:38:35Z"
+        },
+        {
+          "url": "https://www.vill.nishihara.kumamoto.jp/kiji003366/3_366_2904_up_st8cy84v.pdf",
+          "observed_on": "https://www.vill.nishihara.kumamoto.jp/kiji003366/index.html",
+          "sha256": "98dc649805b4a8bb8f088cc15aa2b18a1a0baa96bf4d054d75aecd0dd1fd6c4a",
+          "fetched_at": "2026-08-27T13:46:15Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.nishihara.kumamoto.jp/list00127.html (label: 行政・財政) 入口 https://www.vill.nishihara.kumamoto.jp/list00127.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.nishihara.kumamoto.jp/list00127.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_366_2904_up_st8cy84v.pdf「当初予算書（PDF：2.07メガバイト）」, sha256:98dc6498）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

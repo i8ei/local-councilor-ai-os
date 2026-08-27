@@ -35,11 +35,11 @@
       "base_url": "http://www2.city.yoshinogawa.lg.jp/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yoshinogawa.lg.jp/category/bunya/gyosei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yoshinogawa.lg.jp/category/bunya/gyosei/yosan/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.yoshinogawa.lg.jp/category/bunya/gyosei/yosan/",
           "sha256": "322c3731141a43024bb046bd5c6ca71b231798c577de98f0071ccf4e985d9744",
           "fetched_at": "2026-08-27T09:45:53Z"
+        },
+        {
+          "url": "http://www.city.yoshinogawa.lg.jp/category/bunya/gyosei/yosan/",
+          "observed_on": "http://www.city.yoshinogawa.lg.jp/",
+          "sha256": "322c3731141a43024bb046bd5c6ca71b231798c577de98f0071ccf4e985d9744",
+          "fetched_at": "2026-08-27T09:45:53Z"
+        },
+        {
+          "url": "https://www.city.yoshinogawa.lg.jp/docs/2026060300094/file_contents/r08hosei06.pdf",
+          "observed_on": "https://www.city.yoshinogawa.lg.jp/docs/2026060300094/",
+          "sha256": "d0e46fea6d2c65f6b5364fe026b8979cf3f66432397b155243f6e809dc819064",
+          "fetched_at": "2026-08-27T13:42:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.yoshinogawa.lg.jp/category/bunya/gyosei/yosan/ (label: 予算・決算) 入口 https://www.city.yoshinogawa.lg.jp/category/bunya/gyosei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yoshinogawa.lg.jp/category/bunya/gyosei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yoshinogawa.lg.jp/category/bunya/gyosei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r08hosei06.pdf「令和８年度吉野川市６月補正予算（案）の概要[PDF：516KB]」, sha256:d0e46fea）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

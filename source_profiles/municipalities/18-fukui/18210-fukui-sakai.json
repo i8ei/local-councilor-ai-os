@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at https://www.city.fukui-sakai.lg.jp/shisei/jyorei/index.html (label: 条例・規則等)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukui-sakai.lg.jp/shisei/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukui-sakai.lg.jp/shisei/zaisei/yosan/index.html",
@@ -45,9 +45,15 @@
           "observed_on": "https://www.city.fukui-sakai.lg.jp/shisei/zaisei/yosan/index.html",
           "sha256": "a6daac073714c7a187642d48b5bd5c8bd76ea3834a9fa5a8dc913384291f7657",
           "fetched_at": "2026-08-27T10:06:44Z"
+        },
+        {
+          "url": "https://www.city.fukui-sakai.lg.jp/zaisei/shisei/zaisei/yosan/documents/r8_tousyo-gaiyou-an.pdf",
+          "observed_on": "https://www.city.fukui-sakai.lg.jp/zaisei/shisei/zaisei/yosan/yosan.html",
+          "sha256": "9c594a5fbfc331ff44952b625a365aa59257c6d3d28bedb6e0f8500f291cfbae",
+          "fetched_at": "2026-08-27T13:36:08Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.fukui-sakai.lg.jp/shisei/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.fukui-sakai.lg.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukui-sakai.lg.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_tousyo-gaiyou-an.pdf「令和8年度当初予算の概要（PDF：4,668KB）」, sha256:9c594a5f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

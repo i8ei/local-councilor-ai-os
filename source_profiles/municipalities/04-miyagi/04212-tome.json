@@ -35,11 +35,11 @@
       "base_url": "http://www.city.tome.miyagi.jp/reiki_int/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.city.tome.miyagi.jp:443/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
           "sha256": "2fe70c94a8997243b30323d45227ba50b64a26cb2a23fe88cb30fef03daec6cb",
           "fetched_at": "2026-08-27T10:33:49Z"
+        },
+        {
+          "url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
+          "observed_on": "http://www.city.tome.miyagi.jp/",
+          "sha256": "2fe70c94a8997243b30323d45227ba50b64a26cb2a23fe88cb30fef03daec6cb",
+          "fetched_at": "2026-08-27T10:33:49Z"
+        },
+        {
+          "url": "https://www.city.tome.miyagi.jp:443/zaisei/shisejoho/machizukuri/sinotorikumi-top/documents/r8sangyoshinkou.pdf",
+          "observed_on": "https://www.city.tome.miyagi.jp:443/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
+          "sha256": "f2e551fbc6dc2410b89550a26547466b9f7f0c606964b719ee95433ed5280773",
+          "fetched_at": "2026-08-27T13:27:52Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html (label: 補助金等情報) 入口 https://www.city.tome.miyagi.jp:443/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8sangyoshinkou.pdf「産業経済部が所管する補助金等【R8年4月1日更新】（PDF：847KB）」, sha256:f2e551fb）にて構造マーカー（款・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.city.tome.miyagi.jp:443/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
           "sha256": "2fe70c94a8997243b30323d45227ba50b64a26cb2a23fe88cb30fef03daec6cb",
           "fetched_at": "2026-08-27T10:33:49Z"
+        },
+        {
+          "url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
+          "observed_on": "http://www.city.tome.miyagi.jp/",
+          "sha256": "2fe70c94a8997243b30323d45227ba50b64a26cb2a23fe88cb30fef03daec6cb",
+          "fetched_at": "2026-08-27T10:33:49Z"
+        },
+        {
+          "url": "https://www.city.tome.miyagi.jp:443/zaisei/shisejoho/machizukuri/sinotorikumi-top/documents/r8sangyoshinkou.pdf",
+          "observed_on": "https://www.city.tome.miyagi.jp:443/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
+          "sha256": "f2e551fbc6dc2410b89550a26547466b9f7f0c606964b719ee95433ed5280773",
+          "fetched_at": "2026-08-27T13:27:52Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html (label: 補助金等情報) 入口 https://www.city.tome.miyagi.jp:443/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r8sangyoshinkou.pdf「産業経済部が所管する補助金等【R8年4月1日更新】（PDF：847KB）」, sha256:f2e551fb）にて構造マーカー（款・項等）を確認済み。"
     }
   }
 }

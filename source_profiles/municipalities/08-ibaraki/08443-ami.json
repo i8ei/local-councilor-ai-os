@@ -54,11 +54,11 @@
       "notes": "Observed regulations index at http://www.town.ami.lg.jp/category/2-8-0-0-0-0-0-0-0-0.html (label: 例規集（条例・規則）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ami.lg.jp/category/2-7-5-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ami.lg.jp/category/2-7-5-0-0-0-0-0-0-0.html",
@@ -70,16 +70,28 @@
           "observed_on": "https://www.town.ami.lg.jp/category/2-7-5-0-0-0-0-0-0-0.html",
           "sha256": "d4058f4ca44809a0e1216257f98d125f9cc702314ffd0e6ab934a5c9508687a4",
           "fetched_at": "2026-08-27T10:17:55Z"
+        },
+        {
+          "url": "http://www.town.ami.lg.jp/category/2-7-5-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.ami.lg.jp/",
+          "sha256": "d4058f4ca44809a0e1216257f98d125f9cc702314ffd0e6ab934a5c9508687a4",
+          "fetched_at": "2026-08-27T10:17:55Z"
+        },
+        {
+          "url": "https://www.town.ami.lg.jp/cmsfiles/contents/0000016/16159/R8kokuminnkenkouhokenntokubetukaikeiyosansyo.pdf",
+          "observed_on": "https://www.town.ami.lg.jp/0000016159.html",
+          "sha256": "cc53787cc243d8d0e70bc77a26728b7778a162b6d0fcbe1254515bf2ba135323",
+          "fetched_at": "2026-08-27T13:30:38Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ami.lg.jp/category/2-7-5-0-0-0-0-0-0-0.html (label: 予算書) 入口 https://www.town.ami.lg.jp/category/2-7-5-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8kokuminnkenkouhokenntokubetukaikeiyosansyo.pdf「令和8年度国民健康保険特別会計予算書 (PDF形式、387.13KB)」, sha256:cc53787c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ami.lg.jp/category/2-7-10-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ami.lg.jp/category/2-7-10-0-0-0-0-0-0-0.html",
@@ -91,9 +103,21 @@
           "observed_on": "https://www.town.ami.lg.jp/category/2-7-10-0-0-0-0-0-0-0.html",
           "sha256": "a363ab2f8716a06abc5ebcd480876f9cc0d7a39edb1d1be0c4cbe66b7ccd5255",
           "fetched_at": "2026-08-27T10:17:58Z"
+        },
+        {
+          "url": "http://www.town.ami.lg.jp/category/2-7-10-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.ami.lg.jp/",
+          "sha256": "a363ab2f8716a06abc5ebcd480876f9cc0d7a39edb1d1be0c4cbe66b7ccd5255",
+          "fetched_at": "2026-08-27T10:17:58Z"
+        },
+        {
+          "url": "https://www.town.ami.lg.jp/cmsfiles/contents/0000015/15407/R6kessansyo.pdf",
+          "observed_on": "https://www.town.ami.lg.jp/0000015407.html",
+          "sha256": "8e1257634d240d4d6ccdf5e7860a4a6c7cfc2268f475c70e54ffc2fa46861edf",
+          "fetched_at": "2026-08-27T13:30:46Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.ami.lg.jp/category/2-7-10-0-0-0-0-0-0-0.html (label: 決算書) 入口 https://www.town.ami.lg.jp/category/2-7-10-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansyo.pdf「6年度決算書 (PDF形式、2.88MB)」, sha256:8e125763）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

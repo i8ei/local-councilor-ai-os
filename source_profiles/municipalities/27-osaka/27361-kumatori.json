@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.kumatori.lg.jp/8695.html (label: 例規集・リンク集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html",
           "sha256": "06c302dcd9673923fd265655252589e8d28933f5c1f4b1b0f39130004f0eba09",
           "fetched_at": "2026-08-27T09:51:21Z"
+        },
+        {
+          "url": "https://www.town.kumatori.lg.jp/material/files/group/4/08henseihousin.pdf",
+          "observed_on": "https://www.town.kumatori.lg.jp/soshiki/kikaku_keiei/zaisei/gyomu/gyozaisei/yosan_kessan/yosan/2313.html",
+          "sha256": "eb49711969ce94b11a7c668361a8ea8530a20a3c27da7e2c03ed4adc4635e924",
+          "fetched_at": "2026-08-27T13:40:37Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html (label: 予算・決算) 入口 https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（08henseihousin.pdf「令和8年度当初予算編成方針 (PDFファイル: 2.3MB)」, sha256:eb497119）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

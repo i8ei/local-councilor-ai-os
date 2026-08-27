@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.town.mutsuzawa.chiba.jp/reiki/reiki_menu.html (label: 例規集 （条例・規則）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html",
           "sha256": "c8a1214c6052b0a3dcc5bc02a210740181180bfc3c642933b3ec6524031a9c1c",
           "fetched_at": "2026-08-27T10:24:53Z"
+        },
+        {
+          "url": "https://www.town.mutsuzawa.chiba.jp/wp-content/uploads/2020/03/6f2c7835ddac39172b1475e105ffdc82.pdf",
+          "observed_on": "https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/%e4%ba%88%e7%ae%97%e6%9b%b8.html",
+          "sha256": "1ab9ba5d9620eb7df6211fba59d2e5c9383817deee608602cdbe5c19779251aa",
+          "fetched_at": "2026-08-27T13:33:24Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html (label: ) 入口 https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mutsuzawa.chiba.jp/chousei/soshiki/zaisei/furusatonouze.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（6f2c7835ddac39172b1475e105ffdc82.pdf「令和８年度予算書（一般会計）」, sha256:1ab9ba5d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

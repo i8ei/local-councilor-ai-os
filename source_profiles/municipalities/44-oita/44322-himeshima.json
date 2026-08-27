@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.himeshima.jp/kurashi/shuugyou-shoureikin/ (label: 就業奨励金)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.himeshima.jp/about/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.himeshima.jp/about/zaisei/",
@@ -45,9 +45,21 @@
           "observed_on": "https://www.himeshima.jp/about/zaisei/",
           "sha256": "957f272f58601bec5ae7057944dd266a5762c1c1caa12a9b3d9c5c2a2cc09c1d",
           "fetched_at": "2026-08-27T09:39:29Z"
+        },
+        {
+          "url": "http://www.himeshima.jp/about/zaisei/",
+          "observed_on": "http://www.himeshima.jp/",
+          "sha256": "957f272f58601bec5ae7057944dd266a5762c1c1caa12a9b3d9c5c2a2cc09c1d",
+          "fetched_at": "2026-08-27T09:39:29Z"
+        },
+        {
+          "url": "https://www.himeshima.jp/wp-content/uploads/r1d_zaiseijokyo_siryousyu.xlsx",
+          "observed_on": "https://www.himeshima.jp/about/zaisei/",
+          "sha256": "bfa089d4dc081f11bd4bf6ba5e1b2f8424ecb229203d874a0900656ba61b2f05",
+          "fetched_at": "2026-08-27T13:47:04Z"
         }
       ],
-      "notes": "Observed finance section at http://www.himeshima.jp/about/zaisei/ (label: 財政状況資料集) 入口 https://www.himeshima.jp/about/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.himeshima.jp/about/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r1d_zaiseijokyo_siryousyu.xlsx「令和元年度財政状況資料集」, sha256:bfa089d4）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.atsuma.lg.jp/adv/ba.php?id=14 (label: 厚真町例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.atsuma.lg.jp/life/5/32/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.atsuma.lg.jp/life/5/32/",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.town.atsuma.lg.jp/life/5/32/",
           "sha256": "737721dc22277d51e147bea00fe7aaf4031a6603c593d0543526f2495dea9d6a",
           "fetched_at": "2026-08-27T10:31:22Z"
+        },
+        {
+          "url": "https://www.town.atsuma.lg.jp/uploaded/attachment/4642.pdf",
+          "observed_on": "https://www.town.atsuma.lg.jp/page/1165.html",
+          "sha256": "43c99efc19d3b90f52064029e78fd538da3d95c3ede65cd14101a272b6363a4b",
+          "fetched_at": "2026-08-27T13:26:44Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.atsuma.lg.jp/life/5/32/ (label: 財政・計画・統計) 入口 https://www.town.atsuma.lg.jp/life/5/32/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（4642.pdf「令和8年度 一般会計予算書 [PDFファイル／3.84MB]」, sha256:43c99efc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.atsuma.lg.jp/life/5/32/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.atsuma.lg.jp/life/5/32/",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.town.atsuma.lg.jp/life/5/32/",
           "sha256": "737721dc22277d51e147bea00fe7aaf4031a6603c593d0543526f2495dea9d6a",
           "fetched_at": "2026-08-27T10:31:22Z"
+        },
+        {
+          "url": "https://www.town.atsuma.lg.jp/uploaded/attachment/4460.xlsx",
+          "observed_on": "https://www.town.atsuma.lg.jp/page/1287.html",
+          "sha256": "8d9e3c0673a97162da759d8ed36206c1051491aa33925c45926879e9dd068f84",
+          "fetched_at": "2026-08-27T13:26:44Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.atsuma.lg.jp/life/5/32/ (label: 財政・計画・統計) 入口 https://www.town.atsuma.lg.jp/life/5/32/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（4460.xlsx「令和6年度財政状況資料集」, sha256:8d9e3c06）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

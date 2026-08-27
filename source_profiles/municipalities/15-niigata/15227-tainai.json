@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tainai/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tainai.niigata.jp/gyose/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tainai.niigata.jp/gyose/zaise/index.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.tainai.niigata.jp:443/gyose/zaise/index.html",
           "sha256": "dc445dae36223004c73ad30c11358ed93ed9c7e02fb1df24868b0494c3ac2949",
           "fetched_at": "2026-08-27T10:04:46Z"
+        },
+        {
+          "url": "http://www.city.tainai.niigata.jp/gyose/zaise/index.html",
+          "observed_on": "http://www.city.tainai.niigata.jp/",
+          "sha256": "dc445dae36223004c73ad30c11358ed93ed9c7e02fb1df24868b0494c3ac2949",
+          "fetched_at": "2026-08-27T10:04:46Z"
+        },
+        {
+          "url": "https://www.city.tainai.niigata.jp:443/gyose/zaise/documents/documents/r8yosanhenseihousin.pdf",
+          "observed_on": "https://www.city.tainai.niigata.jp:443/gyose/zaise/documents/tousyoyosanhenseihoushin.html",
+          "sha256": "9103dab32483199d581cd73032c77901a14926e4a7a8dacc37e8f760b39ae7af",
+          "fetched_at": "2026-08-27T13:35:13Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tainai.niigata.jp/gyose/zaise/index.html (label: 財政) 入口 https://www.city.tainai.niigata.jp:443/gyose/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tainai.niigata.jp:443/gyose/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tainai.niigata.jp:443/gyose/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8yosanhenseihousin.pdf「令和8年度当初予算編成方針（PDF：214KB）」, sha256:9103dab3）にて構造マーカー（歳入・歳出・節・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

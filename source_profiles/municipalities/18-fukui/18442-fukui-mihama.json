@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/mihama/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
           "sha256": "5b6d1acd2cc141aa80f92f871fc9d148352c66f3adcf68dc5ba5fa6709de1260",
           "fetched_at": "2026-08-27T10:07:42Z"
+        },
+        {
+          "url": "https://www.town.fukui-mihama.lg.jp/uploaded/life/16243_36615_misc.pdf",
+          "observed_on": "https://www.town.fukui-mihama.lg.jp/soshiki/2/16243.html",
+          "sha256": "9d2c3313c8dc892f57df76c63af3ae94fcc64aa4f53313aedc065911e662478b",
+          "fetched_at": "2026-08-27T13:35:58Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.fukui-mihama.lg.jp/life/6/36/158/ (label: 予算・決算) 入口 https://www.town.fukui-mihama.lg.jp/life/6/36/158/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fukui-mihama.lg.jp/life/6/36/158/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（16243_36615_misc.pdf「令和8年度当初予算説明書（一般会計） [PDFファイル／484KB]」, sha256:9d2c3313）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
           "sha256": "5b6d1acd2cc141aa80f92f871fc9d148352c66f3adcf68dc5ba5fa6709de1260",
           "fetched_at": "2026-08-27T10:07:42Z"
+        },
+        {
+          "url": "https://www.town.fukui-mihama.lg.jp/uploaded/attachment/6867.pdf",
+          "observed_on": "https://www.town.fukui-mihama.lg.jp/soshiki/2/13046.html",
+          "sha256": "a032ca5a002cb6e679554f314a3efa8bcbbe4c019524389a5fdffddf30c239ba",
+          "fetched_at": "2026-08-27T13:35:57Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.fukui-mihama.lg.jp/life/6/36/158/ (label: 予算・決算) 入口 https://www.town.fukui-mihama.lg.jp/life/6/36/158/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fukui-mihama.lg.jp/life/6/36/158/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6867.pdf「令和5年度一般会計決算の概要 [PDFファイル／232KB]」, sha256:a032ca5a）にて構造マーカー（歳入・歳出・款・実質収支等）を確認済み。"
     }
   }
 }

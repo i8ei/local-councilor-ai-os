@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（machinokakeibo.pdf「令和６年度まちの家計簿－わかりやすい予算書－（PDF／3MB）」, sha256:b638805a）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html",
@@ -78,9 +78,15 @@
           "observed_on": "https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html",
           "sha256": "7f98ef28411e9abcb3d154896265d071db289517888857f0fa838e68f18fabd5",
           "fetched_at": "2026-08-27T09:49:00Z"
+        },
+        {
+          "url": "https://www2.town.asahi.mie.jp/www/contents/1698195386921/files/R6zaiseijokyosiryo.xlsx",
+          "observed_on": "https://www2.town.asahi.mie.jp/www/contents/1698195386921/index.html",
+          "sha256": "c4b373bc4584a7d3968a1b485b3d990e90864cf365858f5456b6e7774165a983",
+          "fetched_at": "2026-08-27T13:39:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html (label: 財政) 入口 https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijokyosiryo.xlsx「令和6年度（Excel：552KB）」, sha256:c4b373bc）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

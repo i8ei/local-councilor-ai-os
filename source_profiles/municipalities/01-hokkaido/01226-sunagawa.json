@@ -50,11 +50,11 @@
       "index_url": "http://www.city.sunagawa.hokkaido.jp/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html",
           "sha256": "bfe8d2cef6c1f55306708ed19f317716bde43d2934c9cf532158975e22d516ac",
           "fetched_at": "2026-08-27T10:29:12Z"
+        },
+        {
+          "url": "http://www.city.sunagawa.hokkaido.jp/shisei/zaisei/files/R8yosan.pdf",
+          "observed_on": "http://www.city.sunagawa.hokkaido.jp/shisei/zaisei/yosan_kessan.html",
+          "sha256": "094d29b443b82b315255205d2963557433880ebe111e650934d863278e53ae81",
+          "fetched_at": "2026-08-27T13:25:41Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html (label: 財政係) 入口 http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosan.pdf「予算の概要（総括） (109KB)」, sha256:094d29b4）にて構造マーカー（歳入・歳出・款・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html",
           "sha256": "bfe8d2cef6c1f55306708ed19f317716bde43d2934c9cf532158975e22d516ac",
           "fetched_at": "2026-08-27T10:29:12Z"
+        },
+        {
+          "url": "http://www.city.sunagawa.hokkaido.jp/shisei/zaisei/files/r6zaiseizyoukyou.xlsx",
+          "observed_on": "http://www.city.sunagawa.hokkaido.jp/shisei/zaisei/zaiseijoukyou.html",
+          "sha256": "bf55df347d56c6d331bbfe1381daa0be8de7f3e693c76dcc87567ecb6aeb4e45",
+          "fetched_at": "2026-08-27T13:25:41Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html (label: 財政係) 入口 http://www.city.sunagawa.hokkaido.jp/soshiki_shigoto/soumu_seisakuchouseika/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6zaiseizyoukyou.xlsx「令和６年度 財政状況資料集 (554KB)」, sha256:bf55df34）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/owase/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html",
           "sha256": "ef1113640c9e2832cae5d6b4f73a145e8e009a787448e79f6dfe247f12f535f8",
           "fetched_at": "2026-08-27T09:48:44Z"
+        },
+        {
+          "url": "http://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.owase.lg.jp/",
+          "sha256": "ef1113640c9e2832cae5d6b4f73a145e8e009a787448e79f6dfe247f12f535f8",
+          "fetched_at": "2026-08-27T09:48:44Z"
+        },
+        {
+          "url": "https://www.city.owase.lg.jp/cmsfiles/contents/0000004/4355/R8_tousyo.pdf",
+          "observed_on": "https://www.city.owase.lg.jp/0000004355.html",
+          "sha256": "04e6c3f2b8ebd1fa2caf47f78531517413fd75a607a23d774b7cb46ac4bcd3c9",
+          "fetched_at": "2026-08-27T13:39:01Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html (label: 予算・決算) 入口 https://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_tousyo.pdf「令和８年度尾鷲市一般会計・特別会計当初予算 (PDF形式、1.85MB)」, sha256:04e6c3f2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -48,11 +48,11 @@
       "notes": "Observed joureikun at https://public.joureikun.jp/shikama_town/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
@@ -69,16 +69,22 @@
           "url": "https://www.town.shikama.miyagi.jp/material/files/group/15/yosanR70310.pdf",
           "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
           "fetched_at": "2026-08-27T10:34:15Z"
+        },
+        {
+          "url": "https://www.town.shikama.miyagi.jp/material/files/group/15/yosanR70310.pdf",
+          "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
+          "sha256": "b8a39a4e626462005487da13d1f645732be4568498fed19e457b49cd92089d0e",
+          "fetched_at": "2026-08-27T10:34:18Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html (label: 予算・決算特別委員会会議録) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（yosanR70310.pdf「予算審査全員特別委員会（令和7年3月10日）(PDFファイル:522KB)」, sha256:b8a39a4e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
@@ -95,9 +101,15 @@
           "url": "https://www.town.shikama.miyagi.jp/material/files/group/15/kextusanR6-1.pdf",
           "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
           "fetched_at": "2026-08-27T10:34:19Z"
+        },
+        {
+          "url": "https://www.town.shikama.miyagi.jp/material/files/group/15/kextusanR6-1.pdf",
+          "observed_on": "https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html",
+          "sha256": "72c3b158c446bf3b178026796e535891ceeefc12e6fb6518ea0c2384dc993c5a",
+          "fetched_at": "2026-08-27T10:34:20Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.shikama.miyagi.jp/chosei/gikai/2236.html (label: 予算・決算特別委員会会議録) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（kextusanR6-1.pdf「決算認定審査全員特別委員会（令和6年9月11日）(PDFファイル:555.4KB)」, sha256:72c3b158）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

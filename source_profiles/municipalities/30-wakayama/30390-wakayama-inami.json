@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www.town.wakayama-inami.lg.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.wakayama-inami.lg.jp/category/3-3-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.wakayama-inami.lg.jp/category/3-3-0-0-0-0-0-0-0-0.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.town.wakayama-inami.lg.jp/category/3-3-0-0-0-0-0-0-0-0.html",
           "sha256": "6ee422d0f3721deb7831163bf8dab8fa99cdec1cc0a7de46119cf275f64225c9",
           "fetched_at": "2026-08-27T09:53:51Z"
+        },
+        {
+          "url": "http://www.town.wakayama-inami.lg.jp/category/3-3-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.wakayama-inami.lg.jp/",
+          "sha256": "6ee422d0f3721deb7831163bf8dab8fa99cdec1cc0a7de46119cf275f64225c9",
+          "fetched_at": "2026-08-27T09:53:51Z"
+        },
+        {
+          "url": "https://www.town.wakayama-inami.lg.jp/cmsfiles/contents/0000000/356/zaiseisiryousyu2024.xlsx",
+          "observed_on": "https://www.town.wakayama-inami.lg.jp/0000000356.html",
+          "sha256": "0aa4417eb04480721199a64bd8078bce4f403f5834390e6bcc4fb0622bfad0e5",
+          "fetched_at": "2026-08-27T13:41:50Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.wakayama-inami.lg.jp/category/3-3-0-0-0-0-0-0-0-0.html (label: 予算・財政) 入口 https://www.town.wakayama-inami.lg.jp/category/3-3-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.wakayama-inami.lg.jp/category/3-3-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseisiryousyu2024.xlsx「令和6年度印南町財政状況資料集 (ファイル名：zaiseishiryosyu2024.pdf サイズ：397.57KB)」, sha256:0aa4417e）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

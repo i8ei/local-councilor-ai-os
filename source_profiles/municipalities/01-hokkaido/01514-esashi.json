@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.esashi.jp/town/regulations/ (label: 条例・規則・個人情報)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.esashi.jp/town/financial/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.esashi.jp/town/financial/",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.esashi.jp/town/financial/",
           "sha256": "0d7396249ece8d15d598488286194eb8809be246859381cd4f3d5987c29dd114",
           "fetched_at": "2026-08-27T10:31:03Z"
+        },
+        {
+          "url": "https://www.esashi.jp/files/00000100/00000102/yosangaiyouR08.pdf",
+          "observed_on": "https://www.esashi.jp/town/financial/yosan_kessan.html",
+          "sha256": "831429f6c085ce1f0ebc3c847037376179e8a31e563948082fb3084c42b8d0b6",
+          "fetched_at": "2026-08-27T13:26:22Z"
         }
       ],
-      "notes": "Observed finance section at https://www.esashi.jp/town/financial/ (label: 財政) 入口 https://www.esashi.jp/town/financial/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yosangaiyouR08.pdf「当初予算の概要［令和8年度］」, sha256:831429f6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.esashi.jp/town/financial/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.esashi.jp/town/financial/",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.esashi.jp/town/financial/",
           "sha256": "0d7396249ece8d15d598488286194eb8809be246859381cd4f3d5987c29dd114",
           "fetched_at": "2026-08-27T10:31:03Z"
+        },
+        {
+          "url": "https://www.esashi.jp/files/00000100/00000102/kessangaiyouR06.pdf",
+          "observed_on": "https://www.esashi.jp/town/financial/yosan_kessan.html",
+          "sha256": "71c5bd209d3596ee2ff6c408d2c9c00d9c874e4bf7a5a6a885d80892b6662c33",
+          "fetched_at": "2026-08-27T13:26:23Z"
         }
       ],
-      "notes": "Observed finance section at https://www.esashi.jp/town/financial/ (label: 財政) 入口 https://www.esashi.jp/town/financial/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessangaiyouR06.pdf「決算の概要［令和6年度］」, sha256:71c5bd20）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.city.kato.lg.jp/section/reiki/reiki_menu.html (label: 加東市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kato.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kato.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.kato.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
           "sha256": "60fae515df8ff46a13a01165cc85f3e0ca48e72f0b477a00ec63e65c715db9df",
           "fetched_at": "2026-08-27T09:52:18Z"
+        },
+        {
+          "url": "http://www.city.kato.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
+          "observed_on": "http://www.city.kato.lg.jp/",
+          "sha256": "60fae515df8ff46a13a01165cc85f3e0ca48e72f0b477a00ec63e65c715db9df",
+          "fetched_at": "2026-08-27T09:52:18Z"
+        },
+        {
+          "url": "https://www.city.kato.lg.jp/material/files/group/12/H27-30gyouzaiseikaikakutorikumikkekka.pdf",
+          "observed_on": "https://www.city.kato.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/12771.html",
+          "sha256": "4512e9a172b15b3873951edd3f26f24ce5b69770f3200bd78974bffea0f5ca2e",
+          "fetched_at": "2026-08-27T13:41:10Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kato.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html (label: 行財政・行政評価) 入口 https://www.city.kato.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kato.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kato.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（H27-30gyouzaiseikaikakutorikumikkekka.pdf「加東市行財政改革推進計画の取組結果《最終報告》 (PDFファイル: 584.0KB)」, sha256:4512e9a1）にて構造マーカー（項・節・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

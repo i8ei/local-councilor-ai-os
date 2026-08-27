@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（3_641_12665_up_rvkrnqp7.pdf「公表（PDF：94.3キロバイト）」, sha256:3da19971）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yamaga.kumamoto.jp/list00136.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yamaga.kumamoto.jp/list00136.html",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.city.yamaga.kumamoto.jp/list00136.html",
           "sha256": "161a9556e5b3ab944bb4e79a26c10094d29aeed3b2d3ba810faed288637a5b60",
           "fetched_at": "2026-08-27T09:38:29Z"
+        },
+        {
+          "url": "http://www.city.yamaga.kumamoto.jp/list00136.html",
+          "observed_on": "http://www.city.yamaga.kumamoto.jp/",
+          "sha256": "161a9556e5b3ab944bb4e79a26c10094d29aeed3b2d3ba810faed288637a5b60",
+          "fetched_at": "2026-08-27T09:38:29Z"
+        },
+        {
+          "url": "https://www.city.yamaga.kumamoto.jp/kiji003927/3_927_1_632948a2002.pdf",
+          "observed_on": "https://www.city.yamaga.kumamoto.jp/kiji003927/index.html",
+          "sha256": "3f2cb4cf6c39fbdfc2d4afa615996ad4806ff0716e2b38072d0ce16aa3079bbc",
+          "fetched_at": "2026-08-27T13:45:55Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.yamaga.kumamoto.jp/list00136.html (label: 行政・財政) 入口 https://www.city.yamaga.kumamoto.jp/list00136.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yamaga.kumamoto.jp/list00136.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_927_1_632948a2002.pdf「用語説明（総務省作成）（PDF：209.9キロバイト）」, sha256:3f2cb4cf）にて構造マーカー（歳入・歳出・決算総額・実質収支等）を確認済み。"
     }
   }
 }

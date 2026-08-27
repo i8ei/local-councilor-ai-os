@@ -63,19 +63,31 @@
       "notes": "deepest_doc=P1。budget文書（11406.pdf「令和8年度宇陀市一般会計補正予算書（第1号） （PDFファイル：103KB）」, sha256:a629c45a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.uda.nara.jp/life/5/28/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.uda.nara.jp/life/5/28/",
           "observed_on": "http://www.city.uda.nara.jp/life/5/",
           "fetched_at": "2026-08-27T07:02:39Z"
+        },
+        {
+          "url": "http://www.city.uda.nara.jp/life/5/28/",
+          "observed_on": "http://www.city.uda.nara.jp/",
+          "sha256": "cbd0077f78a9bf3d727ed60875a9efa26fef0aae6f7b7de50d94a6b79eb007d1",
+          "fetched_at": "2026-08-27T09:52:43Z"
+        },
+        {
+          "url": "https://www.city.uda.lg.jp/uploaded/attachment/11005.xlsx",
+          "observed_on": "https://www.city.uda.lg.jp/soshiki/8/3594.html",
+          "sha256": "b92f49a3bc694f9e9b5aeb23ebe243b9d52e9618071136aaa795e0900a76ea8b",
+          "fetched_at": "2026-08-27T13:41:25Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.uda.nara.jp/life/5/28/ (label: 財政・予算・決算)"
+      "notes": "deepest_doc=P1。settlement文書（11005.xlsx「令和6年度財政状況資料集 （Excelファイル：565KB）」, sha256:b92f49a3）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

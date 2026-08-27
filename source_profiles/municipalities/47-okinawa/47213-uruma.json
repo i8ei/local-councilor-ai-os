@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（r8suidouyosan.pdf「令和8年度の予算（PDF：2,370KB）」, sha256:cf16729a）にて構造マーカー（款・項・節・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.uruma.lg.jp/shiseijouhou/yosanzaisei/yosankessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.uruma.lg.jp/shiseijouhou/yosanzaisei/yosankessan/index.html",
@@ -93,9 +93,15 @@
           "observed_on": "https://www.city.uruma.lg.jp/shiseijouhou/yosanzaisei/yosankessan/index.html",
           "sha256": "d1b1fc69d3625828387944dadb40a1e6d786274677f15dae940b9e8db1aae9a6",
           "fetched_at": "2026-08-27T09:41:11Z"
+        },
+        {
+          "url": "https://www.city.uruma.lg.jp/documents/2624/suidoukessan.pdf",
+          "observed_on": "https://www.city.uruma.lg.jp/6001001000/contents/1504.html",
+          "sha256": "ae9eb5416b20d563dac628d24caa2cea6e6becaeb0c3f4983d1de3d954674615",
+          "fetched_at": "2026-08-27T13:48:08Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.uruma.lg.jp/shiseijouhou/yosanzaisei/yosankessan/index.html (label: 予算・決算) 入口 https://www.city.uruma.lg.jp/shiseijouhou/yosanzaisei/yosankessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.uruma.lg.jp/shiseijouhou/yosanzaisei/yosankessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（suidoukessan.pdf「令和6年度の決算（PDF：2,508KB）」, sha256:ae9eb541）にて構造マーカー（款・項・決算額・不用額等）を確認済み。"
     }
   }
 }

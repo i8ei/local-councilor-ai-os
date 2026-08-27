@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.makubetsu.lg.jp/chosei/keizizyou/ (label: 電子掲示場・例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.makubetsu.lg.jp/chosei/choseiunei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.makubetsu.lg.jp/chosei/choseiunei/yosan/",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.makubetsu.lg.jp/chosei/choseiunei/yosan/",
           "sha256": "8787d9209eea4cbd93790efcd5629b179cb55b9898b0fa6b50f99331d4fd94e6",
           "fetched_at": "2026-08-27T10:31:36Z"
+        },
+        {
+          "url": "https://www.town.makubetsu.lg.jp/assets/images/makubetsu/%E4%BB%A4%E5%92%8C%EF%BC%98%E5%B9%B4%E5%BA%A6%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E4%BA%88%E7%AE%97.pdf",
+          "observed_on": "https://www.town.makubetsu.lg.jp/chosei/choseiunei/yosan/3902.html",
+          "sha256": "246b28a607e1a5d1192ac8450c28209c30eb15c2db0d7435865ac2bb0941bda8",
+          "fetched_at": "2026-08-27T13:26:58Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.makubetsu.lg.jp/chosei/choseiunei/yosan/ (label: 予算・決算) 入口 https://www.town.makubetsu.lg.jp/chosei/choseiunei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.makubetsu.lg.jp/chosei/choseiunei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E4%BB%A4%E5%92%8C%EF%BC%98%E5%B9%B4%E5%BA%A6%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E4%BA%88%E7%AE%97.pdf「令和8年度一般会計当初予算 予算書」, sha256:246b28a6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

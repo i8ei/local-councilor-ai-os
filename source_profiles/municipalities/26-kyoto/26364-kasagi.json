@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（20-kasagi-2024_2026033017435176.xlsx「令和6年度財政状況資料集 (ファイル名：20-kasagi-2024_2026033017435176.xlsx サイズ：422.64KB)」, sha256:4a622a90）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kasagi.lg.jp/soshiki_view.php?so_cd1=1&so_cd2=0&so_cd3=0&so_cd4=0&so_cd5=0&bn_cd=16",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kasagi.lg.jp/soshiki_view.php?so_cd1=1&so_cd2=0&so_cd3=0&so_cd4=0&so_cd5=0&bn_cd=16",
@@ -78,9 +78,15 @@
           "observed_on": "http://www.town.kasagi.lg.jp/soshiki_view.php?so_cd1=1&so_cd2=0&so_cd3=0&so_cd4=0&so_cd5=0&bn_cd=16",
           "sha256": "f42271a91ba0d63a71f1c952f2809cd1fea04fa979c22fa26699209c59dae596",
           "fetched_at": "2026-08-27T09:50:17Z"
+        },
+        {
+          "url": "http://www.town.kasagi.lg.jp/cmsfiles/contents/0000001/1679/20-kasagi-2024_2026033017435176.xlsx",
+          "observed_on": "http://www.town.kasagi.lg.jp/contents_detail.php?co=kak&frmId=1679",
+          "sha256": "4a622a90c14ac134895aef1e411b3a4c2b71e727d9002fdbb875ba606f76d940",
+          "fetched_at": "2026-08-27T13:39:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kasagi.lg.jp/soshiki_view.php?so_cd1=1&so_cd2=0&so_cd3=0&so_cd4=0&so_cd5=0&bn_cd=16 (label: 財政) 入口 http://www.town.kasagi.lg.jp/soshiki_view.php?so_cd1=1&so_cd2=0&so_cd3=0&so_cd4=0&so_cd5=0&bn_cd=16 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kasagi.lg.jp/soshiki_view.php?so_cd1=1&so_cd2=0&so_cd3=0&so_cd4=0&so_cd5=0&bn_cd=16 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20-kasagi-2024_2026033017435176.xlsx「令和6年度財政状況資料集 (ファイル名：20-kasagi-2024_2026033017435176.xlsx サイズ：422.64KB)」, sha256:4a622a90）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

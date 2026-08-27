@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at http://www.town.takaharu.lg.jp/reikisyu/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.takaharu.lg.jp/life/4/16/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.takaharu.lg.jp/life/4/16/",
@@ -67,9 +67,21 @@
           "observed_on": "https://www.town.takaharu.lg.jp/life/4/16/",
           "sha256": "ca9f280845b8f0ab9b7ce8a7efa79784b6ef0b23f7878677ee9c944a6f659bae",
           "fetched_at": "2026-08-27T09:40:05Z"
+        },
+        {
+          "url": "http://www.town.takaharu.lg.jp/life/4/16/",
+          "observed_on": "http://www.town.takaharu.lg.jp/",
+          "sha256": "ca9f280845b8f0ab9b7ce8a7efa79784b6ef0b23f7878677ee9c944a6f659bae",
+          "fetched_at": "2026-08-27T09:40:05Z"
+        },
+        {
+          "url": "https://www.town.takaharu.lg.jp/uploaded/attachment/1183.pdf",
+          "observed_on": "https://www.town.takaharu.lg.jp/soshiki/7/1158.html",
+          "sha256": "27f759082afe853cd5bb475941d0c3b233b0fbd56da7aecb5fcebdc2153e1e41",
+          "fetched_at": "2026-08-27T13:47:13Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.takaharu.lg.jp/life/4/16/ (label: 財政) 入口 https://www.town.takaharu.lg.jp/life/4/16/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.takaharu.lg.jp/life/4/16/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1183.pdf「平成22年度[PDFファイル／534KB]」, sha256:27f75908）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

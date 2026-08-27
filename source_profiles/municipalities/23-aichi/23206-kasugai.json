@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.kasugai.lg.jp/shisei/1033220/index.html (label: 例規(条例・規則等)・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kasugai.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kasugai.lg.jp/shisei/zaisei/index.html",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.city.kasugai.lg.jp/shisei/zaisei/index.html",
           "sha256": "a24ee007f1bbb017310744a450991fdb3e4d1c2fd20f8c2392b6e2d9068d3282",
           "fetched_at": "2026-08-27T10:15:12Z"
+        },
+        {
+          "url": "http://www.city.kasugai.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.kasugai.lg.jp/",
+          "sha256": "a24ee007f1bbb017310744a450991fdb3e4d1c2fd20f8c2392b6e2d9068d3282",
+          "fetched_at": "2026-08-27T10:15:12Z"
+        },
+        {
+          "url": "https://www.city.kasugai.lg.jp/_res/projects/default_project/_page_/001/006/150/zaiseijyoukyoukouhyou31.3_2.pdf",
+          "observed_on": "https://www.city.kasugai.lg.jp/shisei/zaisei/1006150.html",
+          "sha256": "bc2d85dd8e662a75494172e5996f9b1aa9783b485023e70933a968cc68d3dc92",
+          "fetched_at": "2026-08-27T13:37:59Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kasugai.lg.jp/shisei/zaisei/index.html (label: 予算・財政) 入口 https://www.city.kasugai.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijyoukyoukouhyou31.3_2.pdf「平成30年度下半期(～3月末)分 （PDF 278.1KB）」, sha256:bc2d85dd）にて構造マーカー（歳入・歳出・項・予算現額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kasugai.lg.jp/shisei/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kasugai.lg.jp/shisei/zaisei/kessan/index.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.city.kasugai.lg.jp/shisei/zaisei/kessan/index.html",
           "sha256": "b8ba882f3c31276161ab35f8af002f9fffc7c91c8d5d93f57fd5cc1a6331fc39",
           "fetched_at": "2026-08-27T10:15:15Z"
+        },
+        {
+          "url": "http://www.city.kasugai.lg.jp/shisei/zaisei/kessan/index.html",
+          "observed_on": "http://www.city.kasugai.lg.jp/",
+          "sha256": "b8ba882f3c31276161ab35f8af002f9fffc7c91c8d5d93f57fd5cc1a6331fc39",
+          "fetched_at": "2026-08-27T10:15:15Z"
+        },
+        {
+          "url": "https://www.city.kasugai.lg.jp/_res/projects/default_project/_page_/001/037/847/R6kessankado.pdf",
+          "observed_on": "https://www.city.kasugai.lg.jp/shisei/zaisei/kessan/1037847.html",
+          "sha256": "59b616431f6fb6239bc06bbc7dd1bc3faaff6620338579c6a63a860e7dab6c33",
+          "fetched_at": "2026-08-27T13:37:56Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kasugai.lg.jp/shisei/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.kasugai.lg.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessankado.pdf「普通会計決算状況(決算カード) （PDF 265.8KB）」, sha256:59b61643）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

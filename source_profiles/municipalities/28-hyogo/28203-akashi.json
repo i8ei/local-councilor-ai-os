@@ -68,11 +68,11 @@
       "notes": "deepest_doc=P1。budget文書（kenzenkasuishinkeikaku_total.pdf「明石市財政健全化推進計画（平成26年度～平成35年度）【本編】（PDF：1,652KB）」, sha256:b0d269c0）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.akashi.lg.jp/shise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.akashi.lg.jp/shise/index.html",
@@ -84,9 +84,21 @@
           "observed_on": "https://www.city.akashi.lg.jp/shise/index.html",
           "sha256": "2189782f9097bce4cae2e2b96449d32e683fd9f3f4ab81d4ddc6400d1813890f",
           "fetched_at": "2026-08-27T09:51:36Z"
+        },
+        {
+          "url": "http://www.city.akashi.lg.jp/shise/index.html",
+          "observed_on": "http://www.city.akashi.lg.jp/",
+          "sha256": "2189782f9097bce4cae2e2b96449d32e683fd9f3f4ab81d4ddc6400d1813890f",
+          "fetched_at": "2026-08-27T09:51:36Z"
+        },
+        {
+          "url": "https://www.city.akashi.lg.jp/documents/16919/kenzenkasuishinkeikaku_total.pdf",
+          "observed_on": "https://www.city.akashi.lg.jp/zaimu/kenzenka_shitsu/shise/gyose/kekaku/kenzenka/index.html",
+          "sha256": "b0d269c05edc8708e02f1b5237fd186be40e00e0c53c44d20d7e29f16ee7ab71",
+          "fetched_at": "2026-08-27T13:40:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.akashi.lg.jp/shise/index.html (label: 財政・予算) 入口 https://www.city.akashi.lg.jp/shise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.akashi.lg.jp/shise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kenzenkasuishinkeikaku_total.pdf「明石市財政健全化推進計画（平成26年度～平成35年度）【本編】（PDF：1,652KB）」, sha256:b0d269c0）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

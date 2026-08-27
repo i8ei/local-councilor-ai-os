@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（R05ipan10.pdf「一般会計（補正第10号） (PDFファイル: 482.7KB)」, sha256:edb499d6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
@@ -91,9 +91,15 @@
           "observed_on": "https://www.town.aridagawa.lg.jp/top/chosei/2/index.html",
           "sha256": "276cb899f00ca69c3da10ba4c2470a6203568e9b7f96d0c0cdb1c8dc09a8f532",
           "fetched_at": "2026-08-27T09:53:39Z"
+        },
+        {
+          "url": "https://www.town.aridagawa.lg.jp/material/files/group/10/zaiseijyoukyou2021_1.xlsx",
+          "observed_on": "https://www.town.aridagawa.lg.jp/top/chosei/2/8919.html",
+          "sha256": "2f6372a176a4a3becea28a8558184563e0c23edb9bf80b1f013541031079393f",
+          "fetched_at": "2026-08-27T13:41:48Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.aridagawa.lg.jp/top/chosei/2/index.html (label: 財政状況) 入口 https://www.town.aridagawa.lg.jp/top/chosei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aridagawa.lg.jp/top/chosei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aridagawa.lg.jp/top/chosei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijyoukyou2021_1.xlsx「令和3年度 (Excelファイル: 768.2KB)」, sha256:2f6372a1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

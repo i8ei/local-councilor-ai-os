@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（3_829_3_R2_yosan_hensei_houshin.pdf「令和２年度（PDF：175.6キロバイト）」, sha256:108c5786）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://reihoku-kumamoto.jp/list00225.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://reihoku-kumamoto.jp/list00225.html",
@@ -91,9 +91,15 @@
           "observed_on": "https://reihoku-kumamoto.jp/list00225.html",
           "sha256": "95c680461030e2a344c07c4b7f4a5b1052352b0c126a95664800d4b209e558ca",
           "fetched_at": "2026-08-27T09:39:44Z"
+        },
+        {
+          "url": "https://reihoku-kumamoto.jp/kiji003721/3_721_1_R3_ippan_tokubetsu_kessan.pdf",
+          "observed_on": "https://reihoku-kumamoto.jp/kiji003721/index.html",
+          "sha256": "222e409e4df4a90c35545ae683e91c810940f99d5da038e5dc93204dacaee67b",
+          "fetched_at": "2026-08-27T13:46:52Z"
         }
       ],
-      "notes": "Observed settlement link at https://reihoku-kumamoto.jp/list00225.html (label: 予算・決算) 入口 https://reihoku-kumamoto.jp/list00225.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://reihoku-kumamoto.jp/list00225.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_721_1_R3_ippan_tokubetsu_kessan.pdf「令和３年度 一般会計・特別会計（PDF：27.59メガバイト）」, sha256:222e409e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

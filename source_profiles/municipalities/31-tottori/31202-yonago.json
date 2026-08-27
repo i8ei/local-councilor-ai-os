@@ -48,11 +48,11 @@
       "index_url": "https://reiki.city.yonago.lg.jp/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yonago.lg.jp/item/62475.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yonago.lg.jp/item/62475.htm",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.yonago.lg.jp/item/62475.htm",
           "sha256": "fd672786708af0b4e1b228b013d2167dd0049c47d93d3131697c06437d6654c8",
           "fetched_at": "2026-08-27T09:42:40Z"
+        },
+        {
+          "url": "http://www.city.yonago.lg.jp/item/62475.htm",
+          "observed_on": "http://www.city.yonago.lg.jp/",
+          "sha256": "fd672786708af0b4e1b228b013d2167dd0049c47d93d3131697c06437d6654c8",
+          "fetched_at": "2026-08-27T09:42:40Z"
+        },
+        {
+          "url": "https://www.city.yonago.lg.jp/secure/62475/R8.9ippan.pdf",
+          "observed_on": "https://www.city.yonago.lg.jp/item/62475.htm",
+          "sha256": "e1a2dbcd3f601edae71d52ae2ef1c9f5f760186caefd3adcf631ee337ec2afea",
+          "fetched_at": "2026-08-27T13:41:56Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.yonago.lg.jp/item/62475.htm (label: 令和8年度9月補正予算 市長査定状況) 入口 https://www.city.yonago.lg.jp/item/62475.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yonago.lg.jp/item/62475.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8.9ippan.pdf「資料（一般会計）」, sha256:e1a2dbcd）にて構造マーカー（歳出・款・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

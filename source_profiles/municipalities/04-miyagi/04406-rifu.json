@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www.town.rifu.miyagi.jp/section/reiki/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
           "sha256": "8c58923639c6ef2e65572592e1fa6c8f108d92a270a04e8e7e2ab95047cd31b1",
           "fetched_at": "2026-08-27T10:34:14Z"
+        },
+        {
+          "url": "https://www.town.rifu.miyagi.jp/material/files/group/41/r8yosansyo.pdf",
+          "observed_on": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/1307.html",
+          "sha256": "02d30eaa38cde4015829db0ed47319652731a6a30c469177cac59044be067a9e",
+          "fetched_at": "2026-08-27T13:28:03Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html (label: 予算・財政) 入口 https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8yosansyo.pdf「令和8年度利府町各種会計予算書 (PDFファイル: 1.5MB)」, sha256:02d30eaa）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html",
           "sha256": "8c58923639c6ef2e65572592e1fa6c8f108d92a270a04e8e7e2ab95047cd31b1",
           "fetched_at": "2026-08-27T10:34:14Z"
+        },
+        {
+          "url": "https://www.town.rifu.miyagi.jp/material/files/group/41/matomesilyakaihosiyo.pdf",
+          "observed_on": "https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/1501.html",
+          "sha256": "dcd90120490ae4b958555aabc04ffc125127d0f3174dee9e09fce9dab7e77702",
+          "fetched_at": "2026-08-27T13:28:04Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html (label: 予算・財政) 入口 https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.rifu.miyagi.jp/gyosei/chosei/yosan_zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（matomesilyakaihosiyo.pdf「令和6年度決算報告 (PDFファイル: 165.7KB)」, sha256:dcd90120）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

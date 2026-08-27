@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/naha/reiki_menu.html (label: 那覇市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html",
           "sha256": "cf912ebf5b5acf457c702203abe7b2735a4e93255e6932ff74f5d81834a93d20",
           "fetched_at": "2026-08-27T09:41:07Z"
+        },
+        {
+          "url": "https://www.city.naha.okinawa.jp/_res/projects/default_project/_page_/001/007/815/r8nahashinoyosannnohanashi.pdf",
+          "observed_on": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/1007815/index.html",
+          "sha256": "1f5750db89c84135ea8c0780aa80cd3ee081c3c3cdd45cac3ee057fe62ea2209",
+          "fetched_at": "2026-08-27T13:47:59Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html (label: 予算) 入口 https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8nahashinoyosannnohanashi.pdf「令和8年度なはしのよさんのはなし （PDF 4.6 MB）」, sha256:1f5750db）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

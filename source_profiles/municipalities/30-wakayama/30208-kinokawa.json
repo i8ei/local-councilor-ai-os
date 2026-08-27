@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kinokawa/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kinokawa.lg.jp/008/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kinokawa.lg.jp/008/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.kinokawa.lg.jp/008/index.html",
           "sha256": "a8c65ed618454dfca0019e8904eb4a6f6bb0572056d0ae45899e33e41df04c87",
           "fetched_at": "2026-08-27T09:53:33Z"
+        },
+        {
+          "url": "http://www.city.kinokawa.lg.jp/008/index.html",
+          "observed_on": "http://www.city.kinokawa.lg.jp/",
+          "sha256": "a8c65ed618454dfca0019e8904eb4a6f6bb0572056d0ae45899e33e41df04c87",
+          "fetched_at": "2026-08-27T09:53:33Z"
+        },
+        {
+          "url": "https://www.city.kinokawa.lg.jp/008/files/R8tousyoyosansyo.pdf",
+          "observed_on": "https://www.city.kinokawa.lg.jp/008/R8yosansyo.html",
+          "sha256": "420ac45a82a407b33ef31879dbaeb0f4d46264151cda33bbc7ecd3e25c529042",
+          "fetched_at": "2026-08-27T13:41:44Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kinokawa.lg.jp/008/index.html (label: 財政) 入口 https://www.city.kinokawa.lg.jp/008/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kinokawa.lg.jp/008/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kinokawa.lg.jp/008/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyoyosansyo.pdf「予算書 (778KB)」, sha256:420ac45a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

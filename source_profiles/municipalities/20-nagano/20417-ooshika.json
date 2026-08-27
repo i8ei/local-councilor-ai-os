@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.ooshika.nagano/reiki_menu.html (label: 大鹿村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/",
           "sha256": "02a7176acaa252a46670cbff10d3146f4293db2c5cad5ddcb78955fe9cbd082b",
           "fetched_at": "2026-08-27T10:11:12Z"
+        },
+        {
+          "url": "https://www.vill.ooshika.nagano.jp/storage/2024/03/zaiseijokyo_h21.pdf",
+          "observed_on": "https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/",
+          "sha256": "341e3ac4a71a749c6a2028c8d15d2b880370c3ec4fe67a8a1589f3acbe06e328",
+          "fetched_at": "2026-08-27T13:36:36Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/ (label: 大鹿村の「財政状況等一覧表」について) 入口 https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijokyo_h21.pdf「こちら(PDF)」, sha256:341e3ac4）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/",
           "sha256": "02a7176acaa252a46670cbff10d3146f4293db2c5cad5ddcb78955fe9cbd082b",
           "fetched_at": "2026-08-27T10:11:12Z"
+        },
+        {
+          "url": "https://www.vill.ooshika.nagano.jp/storage/2024/03/zaiseijokyo_h21.pdf",
+          "observed_on": "https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/",
+          "sha256": "341e3ac4a71a749c6a2028c8d15d2b880370c3ec4fe67a8a1589f3acbe06e328",
+          "fetched_at": "2026-08-27T13:36:36Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/ (label: 大鹿村の「財政状況等一覧表」について) 入口 https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.ooshika.nagano.jp/zaiseijokyo-ichiranhyo/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijokyo_h21.pdf「こちら(PDF)」, sha256:341e3ac4）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

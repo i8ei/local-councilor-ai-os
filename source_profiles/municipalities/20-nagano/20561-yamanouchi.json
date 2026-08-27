@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.yamanouchi.nagano/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
           "sha256": "e4bf3a79683dd1c0def45b1bfddb39d5915895ac80002bf7c75ef52a0460fecc",
           "fetched_at": "2026-08-27T10:11:54Z"
+        },
+        {
+          "url": "https://www.town.yamanouchi.nagano.jp/material/files/group/5/R8_tousyo_tihousyouhizei.pdf",
+          "observed_on": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/1374.html",
+          "sha256": "cbc5c9268ccdd7396e37af0312d92b94bce1bf197b8bada663c0bf1cefdcad9c",
+          "fetched_at": "2026-08-27T13:36:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_tousyo_tihousyouhizei.pdf「引き上げ分の地方消費税交付金の使途（令和8年度当初予算分）」, sha256:cbc5c926）にて構造マーカー（歳入・歳出・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
           "sha256": "e4bf3a79683dd1c0def45b1bfddb39d5915895ac80002bf7c75ef52a0460fecc",
           "fetched_at": "2026-08-27T10:11:54Z"
+        },
+        {
+          "url": "https://www.town.yamanouchi.nagano.jp/material/files/group/5/R6_kessann.pdf",
+          "observed_on": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/1374.html",
+          "sha256": "04040203c86ed18cfb72502252ffd0d6e540e92ce8c52ad8839297e49256abf1",
+          "fetched_at": "2026-08-27T13:36:42Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_kessann.pdf「決算の状況」, sha256:04040203）にて構造マーカー（歳入・歳出・款・予算現額等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/fukagawa/reiki_menu.html (label: 深川市の条例や規則 （別サイト） （新規ウィンドウで開きます）) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html",
           "sha256": "aaa8f837cd050d43a3e9733c136e5481a5145708495cdac491b5ccfa613350a4",
           "fetched_at": "2026-08-27T10:29:54Z"
+        },
+        {
+          "url": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/uo2pli0000013mhl-att/gm9h2g000000bpau.pdf",
+          "observed_on": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/uo2pli0000013mhl.html",
+          "sha256": "41b3a31ea5304ae232444a603255f3013dcb347b6cf6ac698e8d65f967ccdb57",
+          "fetched_at": "2026-08-27T13:25:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html (label: 税務財政課) 入口 https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（gm9h2g000000bpau.pdf「令和8年度 深川市予算の概要 （PDF:2.40MB）」, sha256:41b3a31e）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html",
           "sha256": "aaa8f837cd050d43a3e9733c136e5481a5145708495cdac491b5ccfa613350a4",
           "fetched_at": "2026-08-27T10:29:54Z"
+        },
+        {
+          "url": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/uo2pli0000013pfc-att/aajrae0000002g54.xlsx",
+          "observed_on": "https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/uo2pli0000013pfc.html",
+          "sha256": "21f3ac8861418953bb23dd9c6f688faa6f5e0a87d35407b7e9cc951d2bdf3c25",
+          "fetched_at": "2026-08-27T13:25:44Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html (label: 税務財政課) 入口 https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukagawa.lg.jp/cms/section/zeimuzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（aajrae0000002g54.xlsx「令和6年度深川市財政状況資料集 （XLSX:576KB）」, sha256:21f3ac88）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

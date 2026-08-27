@@ -48,11 +48,11 @@
       "index_url": "https://en3-jg.d1-law.com/sasebo/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sasebo.lg.jp/zaimu/zaisei/20160614.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sasebo.lg.jp/zaimu/zaisei/20160614.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.sasebo.lg.jp/zaimu/zaisei/20160614.html",
           "sha256": "d053e6feee5dc88a35b59abc6c30e73f412f7580eb10c6aa1d3c8d1cfa6383dd",
           "fetched_at": "2026-08-27T09:37:36Z"
+        },
+        {
+          "url": "http://www.city.sasebo.lg.jp/zaimu/zaisei/20160614.html",
+          "observed_on": "http://www.city.sasebo.lg.jp/",
+          "sha256": "d053e6feee5dc88a35b59abc6c30e73f412f7580eb10c6aa1d3c8d1cfa6383dd",
+          "fetched_at": "2026-08-27T09:37:36Z"
+        },
+        {
+          "url": "https://www.city.sasebo.lg.jp/documents/3642/r6_ippannkaikei.pdf",
+          "observed_on": "https://www.city.sasebo.lg.jp/zaimu/zaisei/zaimushohyo.html",
+          "sha256": "ff455b3750c0ed995e8e3897506dccc21c849c05a070a4aa8fcb43b4961454ae",
+          "fetched_at": "2026-08-27T13:45:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.sasebo.lg.jp/zaimu/zaisei/20160614.html (label: 宝くじ等の交付金の活用) 入口 https://www.city.sasebo.lg.jp/zaimu/zaisei/20160614.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sasebo.lg.jp/zaimu/zaisei/20160614.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6_ippannkaikei.pdf「令和6年度佐世保市財務書類4表及び注記・附属明細書＜一般会計等＞（PDF：3,515KB）」, sha256:ff455b37）にて構造マーカー（歳入・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

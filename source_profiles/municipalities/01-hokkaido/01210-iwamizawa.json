@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at https://www.city.iwamizawa.hokkaido.jp/shiseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
@@ -69,16 +69,22 @@
           "observed_on": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
           "sha256": "1af0f9b802cf3a01f1a96753ee92aba328579c17dfe819a8dddf253dca7e52a0",
           "fetched_at": "2026-08-27T10:28:46Z"
+        },
+        {
+          "url": "https://www.city.iwamizawa.hokkaido.jp/material/files/group/8/R8yosannnogaiyou.pdf",
+          "observed_on": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/6239.html",
+          "sha256": "c979e4769f275744a988bb4aaeb4d7c8933fc12be96aad6c47bdd3248624cb49",
+          "fetched_at": "2026-08-27T13:25:42Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosannnogaiyou.pdf「令和8年度 予算の概要 (PDFファイル: 7.0MB)」, sha256:c979e476）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
@@ -90,9 +96,15 @@
           "observed_on": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html",
           "sha256": "1af0f9b802cf3a01f1a96753ee92aba328579c17dfe819a8dddf253dca7e52a0",
           "fetched_at": "2026-08-27T10:28:46Z"
+        },
+        {
+          "url": "https://www.city.iwamizawa.hokkaido.jp/material/files/group/8/content_20170721_181113.pdf",
+          "observed_on": "https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/6237.html",
+          "sha256": "4536de61ccdbf93f57186a480b2f2a7decb1d4bd848d8a828a021781b37d58b5",
+          "fetched_at": "2026-08-27T13:25:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iwamizawa.hokkaido.jp/shiseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（content_20170721_181113.pdf「平成25年度 普通会計としての決算状況（決算カード） (PDFファイル: 369.0KB)」, sha256:4536de61）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

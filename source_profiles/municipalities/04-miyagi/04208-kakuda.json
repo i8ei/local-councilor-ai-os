@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/kakuda/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kakuda.lg.jp/life/3/27/133/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kakuda.lg.jp/life/3/27/133/",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.kakuda.lg.jp:443/life/3/27/133/",
           "sha256": "e054747dd774dc763b884ea38663dbe0a60f29e3dde7a1db286ba080c36736d3",
           "fetched_at": "2026-08-27T10:34:28Z"
+        },
+        {
+          "url": "http://www.city.kakuda.lg.jp/life/3/27/133/",
+          "observed_on": "http://www.city.kakuda.lg.jp/",
+          "sha256": "e054747dd774dc763b884ea38663dbe0a60f29e3dde7a1db286ba080c36736d3",
+          "fetched_at": "2026-08-27T10:34:28Z"
+        },
+        {
+          "url": "https://www.city.kakuda.lg.jp:443/uploaded/attachment/5227.pdf",
+          "observed_on": "https://www.city.kakuda.lg.jp:443/soshiki/5/693.html",
+          "sha256": "26581b81d238bc378ae4f6faddcf93a611d75a5e647991ba1a435eeb50265616",
+          "fetched_at": "2026-08-27T13:27:50Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kakuda.lg.jp/life/3/27/133/ (label: 予算・決算) 入口 https://www.city.kakuda.lg.jp:443/life/3/27/133/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（5227.pdf「令和4年度当初予算の概要 [PDFファイル／1.89MB]」, sha256:26581b81）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kakuda.lg.jp/life/3/27/133/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kakuda.lg.jp/life/3/27/133/",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.kakuda.lg.jp:443/life/3/27/133/",
           "sha256": "e054747dd774dc763b884ea38663dbe0a60f29e3dde7a1db286ba080c36736d3",
           "fetched_at": "2026-08-27T10:34:28Z"
+        },
+        {
+          "url": "http://www.city.kakuda.lg.jp/life/3/27/133/",
+          "observed_on": "http://www.city.kakuda.lg.jp/",
+          "sha256": "e054747dd774dc763b884ea38663dbe0a60f29e3dde7a1db286ba080c36736d3",
+          "fetched_at": "2026-08-27T10:34:28Z"
+        },
+        {
+          "url": "https://www.city.kakuda.lg.jp:443/uploaded/attachment/9324.pdf",
+          "observed_on": "https://www.city.kakuda.lg.jp:443/soshiki/5/685.html",
+          "sha256": "44c678f6cc41a1d5f948625534df8bfc0cea703848d090c7f3788a35748bb8ed",
+          "fetched_at": "2026-08-27T13:27:51Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kakuda.lg.jp/life/3/27/133/ (label: 予算・決算) 入口 https://www.city.kakuda.lg.jp:443/life/3/27/133/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（9324.pdf「令和6年度 決算の概要 [PDFファイル／951KB]」, sha256:44c678f6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

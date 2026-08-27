@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/ayase/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html",
           "sha256": "b7d1525159a11b5ff0f20c7c4cb969457941a30a06ec045b6035823e4834f0fc",
           "fetched_at": "2026-08-27T10:28:19Z"
+        },
+        {
+          "url": "https://www.city.ayase.kanagawa.jp/material/files/group/6/2026yosansyo.pdf",
+          "observed_on": "https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/yosan/24218.html",
+          "sha256": "12f5aaf351d14f202f98515e8bd7e2c2d62f175b9de8d0760491f7e0c3decc43",
+          "fetched_at": "2026-08-27T13:34:48Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2026yosansyo.pdf「令和8年度予算書 (PDFファイル: 3.2MB)」, sha256:12f5aaf3）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html",
           "sha256": "b7d1525159a11b5ff0f20c7c4cb969457941a30a06ec045b6035823e4834f0fc",
           "fetched_at": "2026-08-27T10:28:19Z"
+        },
+        {
+          "url": "https://www.city.ayase.kanagawa.jp/material/files/group/38/R6kessannsyo.pdf",
+          "observed_on": "https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/kessan/22796.html",
+          "sha256": "176e02ed84b460b6ac63ee0b60fc6a1c813c8b89db6b61c846821cd8e0d1c7ce",
+          "fetched_at": "2026-08-27T13:34:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ayase.kanagawa.jp/gyoseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessannsyo.pdf「令和6年度決算書及び附属書類 (PDFファイル: 2.5MB)」, sha256:176e02ed）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

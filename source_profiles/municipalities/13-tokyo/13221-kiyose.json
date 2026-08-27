@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（r8_wakayosa.pdf「令和8年度わかりやすい予算書 （PDF 2.4 MB）」, sha256:cc6acea9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html",
           "sha256": "0c6cfc4b384e2f8d236669f6a54d46c951d0ff985ea42a1d1fb16b69f146bcd0",
           "fetched_at": "2026-08-27T10:26:23Z"
+        },
+        {
+          "url": "http://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html",
+          "observed_on": "http://www.city.kiyose.lg.jp/",
+          "sha256": "0c6cfc4b384e2f8d236669f6a54d46c951d0ff985ea42a1d1fb16b69f146bcd0",
+          "fetched_at": "2026-08-27T10:26:23Z"
+        },
+        {
+          "url": "https://www.city.kiyose.lg.jp/_res/projects/default_project/_page_/001/015/558/r6kessannsyo.pdf",
+          "observed_on": "https://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/1015558.html",
+          "sha256": "156ea24bdccb118fa9c5cfb9894b15a5181c3b7ead325d7ccaae94cb50cf6efa",
+          "fetched_at": "2026-08-27T13:34:02Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessannsyo.pdf「令和6年度 一般会計決算書 （PDF 5.6 MB）」, sha256:156ea24b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

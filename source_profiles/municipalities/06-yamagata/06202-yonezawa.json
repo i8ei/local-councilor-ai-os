@@ -51,11 +51,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/yonezawa/reiki_menu.html for 米沢市"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html",
@@ -67,16 +67,22 @@
           "observed_on": "https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html",
           "sha256": "5e7dcaeebe7cf61575efb21d0adb1e89de82da763f9d2eb6efa66a529064c77e",
           "fetched_at": "2026-08-27T10:36:28Z"
+        },
+        {
+          "url": "https://www.city.yonezawa.yamagata.jp/material/files/group/3/R8_ippanyosansyo.pdf",
+          "observed_on": "https://www.city.yonezawa.yamagata.jp/category/shisei/4/1/4853.html",
+          "sha256": "791e1369878ef2e8ebdee8092fadb1e9165493db7bf5f7cbecb0db11b1dbe0fc",
+          "fetched_at": "2026-08-27T13:28:59Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html (label: 行財政) 入口 https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_ippanyosansyo.pdf「令和8年度一般会計予算書 (PDFファイル: 2.3MB)」, sha256:791e1369）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html",
@@ -88,9 +94,15 @@
           "observed_on": "https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html",
           "sha256": "5e7dcaeebe7cf61575efb21d0adb1e89de82da763f9d2eb6efa66a529064c77e",
           "fetched_at": "2026-08-27T10:36:28Z"
+        },
+        {
+          "url": "https://www.city.yonezawa.yamagata.jp/material/files/group/3/R6zaiseijoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.yonezawa.yamagata.jp/category/shisei/4/2/4849.html",
+          "sha256": "bc38e3d1a698b52a2dc14b7b43e3bb024a1a704abdf9762e453d095ca076ddde",
+          "fetched_at": "2026-08-27T13:30:09Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html (label: 行財政) 入口 https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yonezawa.yamagata.jp/category/shisei/4/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijoukyousiryousyuu.xlsx「財政状況資料集 令和6年度決算 (Excelファイル: 564.2KB)」, sha256:bc38e3d1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

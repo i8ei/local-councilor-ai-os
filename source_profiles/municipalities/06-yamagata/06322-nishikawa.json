@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.nishikawa.yamagata/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
@@ -64,16 +64,22 @@
           "observed_on": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
           "sha256": "7fa45ce50ace2e3d6047f4711641c985e9951710c685c94e66a560983640b8b3",
           "fetched_at": "2026-08-27T10:37:03Z"
+        },
+        {
+          "url": "http://www.town.nishikawa.yamagata.jp/uploaded/attachment/3542.pdf",
+          "observed_on": "http://www.town.nishikawa.yamagata.jp/soshiki/kikaku/9525.html",
+          "sha256": "a9fd42f61d8372f23960aa7cbd3eba837dbe10ddea674553903175b85a54bfb9",
+          "fetched_at": "2026-08-27T13:28:56Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nishikawa.yamagata.jp/life/5/19/70/ (label: 財政) 入口 http://www.town.nishikawa.yamagata.jp/life/5/19/70/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3542.pdf「令和8年度 一般会計当初予算 [PDFファイル／1.09MB]」, sha256:a9fd42f6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
@@ -85,9 +91,15 @@
           "observed_on": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
           "sha256": "7fa45ce50ace2e3d6047f4711641c985e9951710c685c94e66a560983640b8b3",
           "fetched_at": "2026-08-27T10:37:03Z"
+        },
+        {
+          "url": "http://www.town.nishikawa.yamagata.jp/uploaded/attachment/3570.pdf",
+          "observed_on": "http://www.town.nishikawa.yamagata.jp/soshiki/kikaku/9570.html",
+          "sha256": "8c7bced504d8af526433401810da54a6995eccc15882797b98875e7e24770f91",
+          "fetched_at": "2026-08-27T13:28:56Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nishikawa.yamagata.jp/life/5/19/70/ (label: 財政) 入口 http://www.town.nishikawa.yamagata.jp/life/5/19/70/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3570.pdf「令和5年度西川町財政状況資料集 [PDFファイル／291KB]」, sha256:8c7bced5）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A8556F539 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.iizuna.nagano.jp/chosei/zaisei/",
           "sha256": "a52461008bd33a41ba58b59e828bd3d93b8e5a9128222998e978d434a2ffe752",
           "fetched_at": "2026-08-27T10:12:14Z"
+        },
+        {
+          "url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.iizuna.nagano.jp/",
+          "sha256": "a52461008bd33a41ba58b59e828bd3d93b8e5a9128222998e978d434a2ffe752",
+          "fetched_at": "2026-08-27T10:12:14Z"
+        },
+        {
+          "url": "https://www.town.iizuna.nagano.jp/fs/7/4/3/3/6/_/__6_2024___________.pdf",
+          "observed_on": "https://www.town.iizuna.nagano.jp/docs/653.html",
+          "sha256": "5f839ea2ffdeabdb5a8118c166b454106095d08e2da28a97f1d6d8ae150679b3",
+          "fetched_at": "2026-08-27T13:36:44Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.iizuna.nagano.jp/chosei/zaisei/ (label: 財政・行政改革) 入口 https://www.town.iizuna.nagano.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.iizuna.nagano.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.iizuna.nagano.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（__6_2024___________.pdf「令和6(2024)年度 予算のあらまし (PDF 874KB)」, sha256:5f839ea2）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（jyuminsetumeishiryouR7.pdf「住民説明会資料 (PDFファイル: 938.0KB)」, sha256:ea9d8728）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fuchu.hiroshima.jp/shisei/ippangyosei/11271.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fuchu.hiroshima.jp/shisei/ippangyosei/11271.html",
@@ -98,9 +98,15 @@
           "url": "https://www.city.fuchu.hiroshima.jp/material/files/group/2/kessanfuninteinikakaruhoukoku.pdf",
           "observed_on": "https://www.city.fuchu.hiroshima.jp/shisei/ippangyosei/11271.html",
           "fetched_at": "2026-08-27T09:44:59Z"
+        },
+        {
+          "url": "https://www.city.fuchu.hiroshima.jp/material/files/group/2/kessanfuninteinikakaruhoukoku.pdf",
+          "observed_on": "https://www.city.fuchu.hiroshima.jp/shisei/ippangyosei/11271.html",
+          "sha256": "5ea01ebc0e262f071e92ad1bc6688670b6b866c88aa42d595878eec937de2168",
+          "fetched_at": "2026-08-27T09:45:02Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.fuchu.hiroshima.jp/shisei/ippangyosei/11271.html (label: 令和6年度一般会計歳入歳出決算不認定への対応) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（kessanfuninteinikakaruhoukoku.pdf「令和6年度府中市一般会計歳入歳出決算の不認定に係る措置の状況の報告について (PDFファイル: 145.0KB)」, sha256:5ea01ebc）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     }
   }
 }

@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.mobara.chiba/reiki_menu.html (label: 例規集 別ウィンドウで開く)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
           "sha256": "2e67f9d8c5a2529b324bf14375ec8ef47f8e8aacbbcb9717b9dea98fec7d4cbb",
           "fetched_at": "2026-08-27T10:23:03Z"
+        },
+        {
+          "url": "https://www.city.mobara.chiba.jp/cmsfiles/contents/0000009/9365/R8toushonogaiyou.pdf",
+          "observed_on": "https://www.city.mobara.chiba.jp/0000009365.html",
+          "sha256": "ef772e9eeb1a2f56de1c0e3ec9b34aa68f521a9de60dba5c42799cfea54de7a8",
+          "fetched_at": "2026-08-27T13:32:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8toushonogaiyou.pdf「当初予算の概要」, sha256:ef772e9e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
           "sha256": "2e67f9d8c5a2529b324bf14375ec8ef47f8e8aacbbcb9717b9dea98fec7d4cbb",
           "fetched_at": "2026-08-27T10:23:03Z"
+        },
+        {
+          "url": "https://www.city.mobara.chiba.jp/cmsfiles/contents/0000009/9160/09-mbr-r6kessan.pdf",
+          "observed_on": "https://www.city.mobara.chiba.jp/0000009160.html",
+          "sha256": "3735b801891d88c5344d59387a4f6445acc1ef4990bf93c8685d2c966e715bc7",
+          "fetched_at": "2026-08-27T13:32:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（09-mbr-r6kessan.pdf「令和6年度決算カード （PDF形式、661.00KB）」, sha256:3735b801）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "notes": "Observed joureikun at https://public.joureikun.jp/tomioka_town/reiki/ (label: 例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.tomioka-town.jp/life/4/21/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.tomioka-town.jp/life/4/21/",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.tomioka-town.jp:443/life/4/21/",
           "sha256": "e961bf33117d6c49194a945bcbe73f85e06d3b210bc6cbabb42e40c4c40d890c",
           "fetched_at": "2026-08-27T10:38:15Z"
+        },
+        {
+          "url": "http://www.tomioka-town.jp/life/4/21/",
+          "observed_on": "http://www.tomioka-town.jp/",
+          "sha256": "e961bf33117d6c49194a945bcbe73f85e06d3b210bc6cbabb42e40c4c40d890c",
+          "fetched_at": "2026-08-27T10:38:15Z"
+        },
+        {
+          "url": "https://www.tomioka-town.jp:443/uploaded/attachment/1955.xlsx",
+          "observed_on": "https://www.tomioka-town.jp:443/soshiki/somu/1667.html",
+          "sha256": "3c62a07279fa7359d00f0273097713c7f66a8c3c15ce9a37e9a4339842fec522",
+          "fetched_at": "2026-08-27T13:30:26Z"
         }
       ],
-      "notes": "Observed finance section at http://www.tomioka-town.jp/life/4/21/ (label: 財政・例規) 入口 https://www.tomioka-town.jp:443/life/4/21/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1955.xlsx「令和3年度財政状況資料集＿富岡町 [Excelファイル／824KB]」, sha256:3c62a072）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.tomioka-town.jp/life/4/21/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.tomioka-town.jp/life/4/21/",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.tomioka-town.jp:443/life/4/21/",
           "sha256": "e961bf33117d6c49194a945bcbe73f85e06d3b210bc6cbabb42e40c4c40d890c",
           "fetched_at": "2026-08-27T10:38:15Z"
+        },
+        {
+          "url": "http://www.tomioka-town.jp/life/4/21/",
+          "observed_on": "http://www.tomioka-town.jp/",
+          "sha256": "e961bf33117d6c49194a945bcbe73f85e06d3b210bc6cbabb42e40c4c40d890c",
+          "fetched_at": "2026-08-27T10:38:15Z"
+        },
+        {
+          "url": "https://www.tomioka-town.jp:443/uploaded/attachment/1955.xlsx",
+          "observed_on": "https://www.tomioka-town.jp:443/soshiki/somu/1667.html",
+          "sha256": "3c62a07279fa7359d00f0273097713c7f66a8c3c15ce9a37e9a4339842fec522",
+          "fetched_at": "2026-08-27T13:30:26Z"
         }
       ],
-      "notes": "Observed finance section at http://www.tomioka-town.jp/life/4/21/ (label: 財政・例規) 入口 https://www.tomioka-town.jp:443/life/4/21/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1955.xlsx「令和3年度財政状況資料集＿富岡町 [Excelファイル／824KB]」, sha256:3c62a072）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

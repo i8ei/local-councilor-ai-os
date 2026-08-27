@@ -50,11 +50,11 @@
       "index_url": "https://www.city.kanuma.tochigi.jp/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html",
           "sha256": "fa3bd873d0fa50b3b34d5c121c3a7d222a1657b51c714b5aaeee6138030f67e5",
           "fetched_at": "2026-08-27T10:18:11Z"
+        },
+        {
+          "url": "http://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html",
+          "observed_on": "http://www.city.kanuma.tochigi.jp/",
+          "sha256": "fa3bd873d0fa50b3b34d5c121c3a7d222a1657b51c714b5aaeee6138030f67e5",
+          "fetched_at": "2026-08-27T10:18:11Z"
+        },
+        {
+          "url": "https://www.city.kanuma.tochigi.jp/manage/contents/upload/69c08be4f27e6.pdf",
+          "observed_on": "https://www.city.kanuma.tochigi.jp/0360/info-0000001107-0.html",
+          "sha256": "ebdb41545403fcdd4667a854bcc96c9e72f77167c5c138fb1b67574cf7f10fb1",
+          "fetched_at": "2026-08-27T13:30:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html (label: 行財政・会計) 入口 https://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（69c08be4f27e6.pdf「当初予算総括表(pdf 26 KB)」, sha256:ebdb4154）にて構造マーカー（予算額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html",
           "sha256": "fa3bd873d0fa50b3b34d5c121c3a7d222a1657b51c714b5aaeee6138030f67e5",
           "fetched_at": "2026-08-27T10:18:11Z"
+        },
+        {
+          "url": "http://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html",
+          "observed_on": "http://www.city.kanuma.tochigi.jp/",
+          "sha256": "fa3bd873d0fa50b3b34d5c121c3a7d222a1657b51c714b5aaeee6138030f67e5",
+          "fetched_at": "2026-08-27T10:18:11Z"
+        },
+        {
+          "url": "https://www.city.kanuma.tochigi.jp/manage/contents/upload/68f886dc1cd86.pdf",
+          "observed_on": "https://www.city.kanuma.tochigi.jp/0360/info-0000001108-0.html",
+          "sha256": "9eceb40a3ca0a75849c92ed86a200da908f1aafa921272148d3e17d619908f47",
+          "fetched_at": "2026-08-27T13:30:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html (label: 行財政・会計) 入口 https://www.city.kanuma.tochigi.jp/0059/genre1-0-001.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（68f886dc1cd86.pdf「令和6年度決算カード(pdf 596 KB)」, sha256:9eceb40a）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

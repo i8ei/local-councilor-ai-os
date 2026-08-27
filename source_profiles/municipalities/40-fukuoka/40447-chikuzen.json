@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（6167.pdf「財政状況資料集（平成22年度）（PDF：1.4MB）」, sha256:15106821）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.chikuzen.fukuoka.jp/li/050/090/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.chikuzen.fukuoka.jp/li/050/090/index.html",
@@ -91,9 +91,21 @@
           "observed_on": "https://www.town.chikuzen.fukuoka.jp/li/050/090/index.html",
           "sha256": "ad4ad1d508f9299d2326298ab6237073f2f9bb087efe85eced92b230cfc72dc3",
           "fetched_at": "2026-08-27T09:36:35Z"
+        },
+        {
+          "url": "http://www.town.chikuzen.fukuoka.jp/li/050/090/index.html",
+          "observed_on": "http://www.town.chikuzen.fukuoka.jp/",
+          "sha256": "ad4ad1d508f9299d2326298ab6237073f2f9bb087efe85eced92b230cfc72dc3",
+          "fetched_at": "2026-08-27T09:36:35Z"
+        },
+        {
+          "url": "https://www.town.chikuzen.fukuoka.jp/S024/010/010/090/6167.pdf",
+          "observed_on": "https://www.town.chikuzen.fukuoka.jp/S024/010/010/090/20180131171540.html",
+          "sha256": "1510682122f69f2fb0a35059561dc0f81560b9e18074be6e8a5ca077dca8d2fb",
+          "fetched_at": "2026-08-27T13:45:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.chikuzen.fukuoka.jp/li/050/090/index.html (label: 町の財政) 入口 https://www.town.chikuzen.fukuoka.jp/li/050/090/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.chikuzen.fukuoka.jp/li/050/090/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6167.pdf「財政状況資料集（平成22年度）（PDF：1.4MB）」, sha256:15106821）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

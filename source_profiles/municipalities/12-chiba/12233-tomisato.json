@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.tomisato/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html",
           "sha256": "3c297e1ea32d2c80c841b5a09118e4df0e54216f144440d5bc0dd3d1197f9dab",
           "fetched_at": "2026-08-27T10:24:17Z"
+        },
+        {
+          "url": "http://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.tomisato.lg.jp/",
+          "sha256": "3c297e1ea32d2c80c841b5a09118e4df0e54216f144440d5bc0dd3d1197f9dab",
+          "fetched_at": "2026-08-27T10:24:17Z"
+        },
+        {
+          "url": "https://www.city.tomisato.lg.jp/cmsfiles/contents/0000017/17117/R8gaiyou(zaiseishiryou).pdf",
+          "observed_on": "https://www.city.tomisato.lg.jp/0000017117.html",
+          "sha256": "8c99fd6f63e9ee700abde540fd93ab6b342c893ff95451c2280bb18ca3f43059",
+          "fetched_at": "2026-08-27T13:32:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8gaiyou(zaiseishiryou).pdf「財政資料編 (PDF形式、4.18MB)」, sha256:8c99fd6f）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

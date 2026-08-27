@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/rokunohe/reiki_menu.html (label: 六戸例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/",
           "sha256": "cfd21e36edc9cab3dda4e246696ec508de902fa9bfd507497ed9eb424bc32198",
           "fetched_at": "2026-08-27T10:32:36Z"
+        },
+        {
+          "url": "https://www.town.rokunohe.aomori.jp/docs/2026030400038/file_contents/R8yosan.pdf",
+          "observed_on": "https://www.town.rokunohe.aomori.jp/docs/2026030400038/",
+          "sha256": "5bf2b7f4dbfff67bd412d261050a4d7584393f457ffef122f3bd0cd5d59c17d9",
+          "fetched_at": "2026-08-27T13:27:11Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/ (label: 予算・財政) 入口 https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosan.pdf「令和8年度予算概要[PDF：717KB]」, sha256:5bf2b7f4）にて構造マーカー（項・予算額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/",
           "sha256": "cfd21e36edc9cab3dda4e246696ec508de902fa9bfd507497ed9eb424bc32198",
           "fetched_at": "2026-08-27T10:32:36Z"
+        },
+        {
+          "url": "https://www.town.rokunohe.aomori.jp/docs/2023092900003/file_contents/R6.pdf",
+          "observed_on": "https://www.town.rokunohe.aomori.jp/docs/2023092900003/",
+          "sha256": "5702c195bad9b0508e0ce714c9403157dd3349422d5aa867e3d029d1ee212d6a",
+          "fetched_at": "2026-08-27T13:27:12Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/ (label: 予算・財政) 入口 https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.rokunohe.aomori.jp/category/bunya/chousei/yosan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6.pdf「決算のあらまし（令和６年度）[PDF：660KB]」, sha256:5702c195）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

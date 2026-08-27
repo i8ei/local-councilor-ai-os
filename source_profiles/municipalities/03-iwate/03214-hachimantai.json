@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A118113 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hachimantai.lg.jp/life/6/27/142/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hachimantai.lg.jp/life/6/27/142/",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.city.hachimantai.lg.jp/life/6/27/142/",
           "sha256": "3d079d36be89c03b76cdb44e6e4024b53592b42be2d1a852ee5a6111434ab1c5",
           "fetched_at": "2026-08-27T10:32:55Z"
+        },
+        {
+          "url": "https://www.city.hachimantai.lg.jp/uploaded/attachment/26549.pdf",
+          "observed_on": "https://www.city.hachimantai.lg.jp/soshiki/kizai/30168.html",
+          "sha256": "fca24656cc8c90d666198b86969c5e8029c08062f9bf8fdf633a66eaf2fd61ee",
+          "fetched_at": "2026-08-27T13:27:25Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.hachimantai.lg.jp/life/6/27/142/ (label: 予算) 入口 https://www.city.hachimantai.lg.jp/life/6/27/142/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（26549.pdf「令和8年度予算（社会保障施策に要する経費） [PDFファイル／63KB]」, sha256:fca24656）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hachimantai.lg.jp/life/6/27/143/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hachimantai.lg.jp/life/6/27/143/",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.city.hachimantai.lg.jp/life/6/27/143/",
           "sha256": "cc9dd2a306d099d4ef2b8d99f2216da236a63a6b098e00475b19df42ed27e5a1",
           "fetched_at": "2026-08-27T10:32:56Z"
+        },
+        {
+          "url": "https://www.city.hachimantai.lg.jp/uploaded/attachment/25157.pdf",
+          "observed_on": "https://www.city.hachimantai.lg.jp/soshiki/kaikeika/28654.html",
+          "sha256": "906438b53eb37a2f12594b59cd2ac38a123153636822e3df32520688db48d536",
+          "fetched_at": "2026-08-27T13:27:33Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.hachimantai.lg.jp/life/6/27/143/ (label: 決算) 入口 https://www.city.hachimantai.lg.jp/life/6/27/143/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（25157.pdf「令和6年度八幡平市歳入歳出決算書 [PDFファイル／2.15MB]」, sha256:906438b5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

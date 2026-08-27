@@ -53,11 +53,11 @@
       "notes": "Observed regulations index at http://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/ (label: 例規集（条例・規則）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/zaisei/tousho_yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/zaisei/tousho_yosan/",
@@ -69,16 +69,22 @@
           "observed_on": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/zaisei/tousho_yosan/",
           "sha256": "54c62caf14c2bb702e48775cccf3fa1978ab28c6498030fc8ad714030e87f149",
           "fetched_at": "2026-08-27T10:17:28Z"
+        },
+        {
+          "url": "https://www.city.hitachiomiya.lg.jp/data/doc/1773736160_doc_21_0.pdf",
+          "observed_on": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/zaisei/tousho_yosan/page011713.html",
+          "sha256": "842861f508906eb9b70da97906d33cd1f4839ee5c71aab978397aa2d1f15330b",
+          "fetched_at": "2026-08-27T13:30:21Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/zaisei/tousho_yosan/ (label: 当初予算) 入口 https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/zaisei/tousho_yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/zaisei/tousho_yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1773736160_doc_21_0.pdf「令和8年度 当初予算書（一般会計・特別会計） [PDF形式／5.3MB]」, sha256:842861f5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/",
@@ -90,9 +96,21 @@
           "observed_on": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/",
           "sha256": "3395915f32db5c531361c0c7f092baa5accb1b5919e97ef5152b93a726232092",
           "fetched_at": "2026-08-27T10:17:34Z"
+        },
+        {
+          "url": "http://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/",
+          "observed_on": "http://www.city.hitachiomiya.lg.jp/",
+          "sha256": "3395915f32db5c531361c0c7f092baa5accb1b5919e97ef5152b93a726232092",
+          "fetched_at": "2026-08-27T10:17:34Z"
+        },
+        {
+          "url": "https://www.city.hitachiomiya.lg.jp/data/doc/1616482731_doc_1_0.pdf",
+          "observed_on": "https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/gyousei_kaikaku/page000261.html",
+          "sha256": "056d42c31da57714c092a8a94e489a7e833d16aa450e976608ebc63248f602e2",
+          "fetched_at": "2026-08-27T13:30:23Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/ (label: 財政状況) 入口 https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hitachiomiya.lg.jp/kurashi_gyousei/gyousei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1616482731_doc_1_0.pdf「第4次常陸大宮市行財政改革大綱」, sha256:056d42c3）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

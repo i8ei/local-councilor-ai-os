@@ -49,11 +49,11 @@
       "notes": "deepest_doc=P1。budget文書（2733875c1c9aad60772e5360f3b2cf41.pdf「・令和8年度一般会計当初予算書（PDF:0.9MB）」, sha256:923b25db）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kiho.lg.jp/government/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kiho.lg.jp/government/finance/",
@@ -65,9 +65,15 @@
           "observed_on": "https://www.town.kiho.lg.jp/government/finance/",
           "sha256": "b15db8e83c9a650d4e128f2eb40a95e04d4c3af2890805e5701d9bfa86617d3d",
           "fetched_at": "2026-08-27T09:49:09Z"
+        },
+        {
+          "url": "https://www.town.kiho.lg.jp/wp-content/uploads/2026/03/91f1d105f8c7f6d7e08f81ac6b07db9e.xlsx",
+          "observed_on": "https://www.town.kiho.lg.jp/government/finance/state_of_finance/",
+          "sha256": "2cd071b1785ec0406051ddb11273a7632c1273e2c988d9c5614911cd9a40e0a1",
+          "fetched_at": "2026-08-27T13:39:15Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kiho.lg.jp/government/finance/ (label: 財政) 入口 https://www.town.kiho.lg.jp/government/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kiho.lg.jp/government/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（91f1d105f8c7f6d7e08f81ac6b07db9e.xlsx「・令和5年度財政状況資料集（Excel:0.8MB）」, sha256:2cd071b1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

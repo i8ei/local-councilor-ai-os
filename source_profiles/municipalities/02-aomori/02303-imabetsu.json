@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www.town.imabetsu.lg.jp/gyousei/reiki/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
@@ -63,9 +63,15 @@
           "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/files/R8tosyoyosansito.pdf",
           "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
           "fetched_at": "2026-08-27T11:23:37Z"
+        },
+        {
+          "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/files/R8tosyoyosansito.pdf",
+          "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
+          "sha256": "5dcbef7f5ca6eb2217431306798e4555f1ee3b69d1f196d5263e7248c803edc5",
+          "fetched_at": "2026-08-27T11:23:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html (label: 今別町財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8tosyoyosansito.pdf「令和8年度当初予算 (66KB)」, sha256:5dcbef7f）にて構造マーカー（歳入・歳出・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

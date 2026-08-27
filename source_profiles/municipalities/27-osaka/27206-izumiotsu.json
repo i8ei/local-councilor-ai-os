@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www.city.izumiotsu.lg.jp/section/reiki/reiki_menu.html (label: 泉大津市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html",
           "sha256": "8611b5b288b129d04bd5e666463c0e59bdcb0e4767f619abab03d4af3202c636",
           "fetched_at": "2026-08-27T09:50:36Z"
+        },
+        {
+          "url": "https://www.city.izumiotsu.lg.jp/material/files/group/7/yosannsyo1.pdf",
+          "observed_on": "https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/yosansho/15312.html",
+          "sha256": "42f2272361908847078e86ba734dc5e826a862090ed51ac895f0875fa2b2bcae",
+          "fetched_at": "2026-08-27T13:40:05Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html (label: 予算書・決算書) 入口 https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yosannsyo1.pdf「令和8年度予算書（表紙・目次・総括表） (PDFファイル: 73.1KB)」, sha256:42f22723）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

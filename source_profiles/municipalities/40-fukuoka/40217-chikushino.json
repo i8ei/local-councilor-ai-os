@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A9160C246 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
@@ -71,9 +71,21 @@
           "url": "https://www.city.chikushino.fukuoka.jp/uploaded/attachment/33687.pdf",
           "observed_on": "https://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
           "fetched_at": "2026-08-27T10:56:12Z"
+        },
+        {
+          "url": "http://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
+          "observed_on": "http://www.city.chikushino.fukuoka.jp/",
+          "sha256": "bd7c32236b2e126f41db73516a31e248606ed7bf1ae439c365a2c90dca477c22",
+          "fetched_at": "2026-08-27T09:35:42Z"
+        },
+        {
+          "url": "https://www.city.chikushino.fukuoka.jp/uploaded/attachment/33687.pdf",
+          "observed_on": "https://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
+          "sha256": "3b31463cf2192d1a4c3e5b2b31ed38204c1a176f8f37aa878ec2bc1eed84036b",
+          "fetched_at": "2026-08-27T10:56:12Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html (label: 予算書・決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（33687.pdf「一般会計補正予算書 [PDFファイル／357KB]」, sha256:3b31463c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

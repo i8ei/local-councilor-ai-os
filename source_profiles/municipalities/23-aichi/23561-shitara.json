@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（1948.pdf「平成31年度当初予算編成方針[126KB pdfファイル]」, sha256:fc4df35d）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shitara.lg.jp/life/4/36/181/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shitara.lg.jp/life/4/36/181/",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.town.shitara.lg.jp/life/4/36/181/",
           "sha256": "e42f3b41f562c56aa9179d372e97346131b10c4a97eac7c2591a901e34028a4e",
           "fetched_at": "2026-08-27T10:16:59Z"
+        },
+        {
+          "url": "http://www.town.shitara.lg.jp/life/4/36/181/",
+          "observed_on": "http://www.town.shitara.lg.jp/",
+          "sha256": "e42f3b41f562c56aa9179d372e97346131b10c4a97eac7c2591a901e34028a4e",
+          "fetched_at": "2026-08-27T10:16:59Z"
+        },
+        {
+          "url": "https://www.town.shitara.lg.jp/uploaded/attachment/2689.pdf",
+          "observed_on": "https://www.town.shitara.lg.jp/soshiki/6/1278.html",
+          "sha256": "47ea018156cf15c8d80f212e192cf5e47cdd144733e12b67af68944f8c84378e",
+          "fetched_at": "2026-08-27T13:38:53Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.shitara.lg.jp/life/4/36/181/ (label: 予算・決算) 入口 https://www.town.shitara.lg.jp/life/4/36/181/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2689.pdf「令和3年度 決算カード [PDFファイル／105KB]」, sha256:47ea0181）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

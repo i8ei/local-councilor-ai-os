@@ -59,11 +59,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7A4F9DD2 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.naraha.lg.jp/admin/cat327/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.naraha.lg.jp/admin/cat327/",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.town.naraha.lg.jp/admin/cat327/",
           "sha256": "f3b4777160cb48bbf7ece556970730b7b2567032fa2441e4f606eed6131d2df0",
           "fetched_at": "2026-08-27T10:38:08Z"
+        },
+        {
+          "url": "https://www.town.naraha.lg.jp/Files/2026/%E4%BB%A4%E5%92%8C%EF%BC%96%E5%B9%B4%E5%BA%A6%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86.xlsx",
+          "observed_on": "https://www.town.naraha.lg.jp/admin/cat327/009774.html",
+          "sha256": "92a329b864be3b62dc1a8337ff92b7e451fa7531ceac0e6a9dbd08d6c959d55c",
+          "fetched_at": "2026-08-27T13:30:00Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.naraha.lg.jp/admin/cat327/ (label: 予算・決算) 入口 https://www.town.naraha.lg.jp/admin/cat327/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E4%BB%A4%E5%92%8C%EF%BC%96%E5%B9%B4%E5%BA%A6%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86.xlsx「令和６年度財政状況資料集」, sha256:92a329b8）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.naraha.lg.jp/admin/cat327/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.naraha.lg.jp/admin/cat327/",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.town.naraha.lg.jp/admin/cat327/",
           "sha256": "f3b4777160cb48bbf7ece556970730b7b2567032fa2441e4f606eed6131d2df0",
           "fetched_at": "2026-08-27T10:38:08Z"
+        },
+        {
+          "url": "https://www.town.naraha.lg.jp/Files/2026/%E4%BB%A4%E5%92%8C%EF%BC%96%E5%B9%B4%E5%BA%A6%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86.xlsx",
+          "observed_on": "https://www.town.naraha.lg.jp/admin/cat327/009774.html",
+          "sha256": "92a329b864be3b62dc1a8337ff92b7e451fa7531ceac0e6a9dbd08d6c959d55c",
+          "fetched_at": "2026-08-27T13:30:00Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.naraha.lg.jp/admin/cat327/ (label: 予算・決算) 入口 https://www.town.naraha.lg.jp/admin/cat327/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E4%BB%A4%E5%92%8C%EF%BC%96%E5%B9%B4%E5%BA%A6%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86.xlsx「令和６年度財政状況資料集」, sha256:92a329b8）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

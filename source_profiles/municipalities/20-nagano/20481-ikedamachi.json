@@ -59,11 +59,11 @@
       "index_url": "https://en3-jg.d1-law.com/ikeda-town/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html",
@@ -75,16 +75,28 @@
           "observed_on": "https://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html",
           "sha256": "1d788ecdaca536a67068fe1f3a6ac613d4f7b035cc1803e3534d67ec01523123",
           "fetched_at": "2026-08-27T10:12:47Z"
+        },
+        {
+          "url": "http://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.ikedamachi.net/",
+          "sha256": "1d788ecdaca536a67068fe1f3a6ac613d4f7b035cc1803e3534d67ec01523123",
+          "fetched_at": "2026-08-27T10:12:47Z"
+        },
+        {
+          "url": "https://www.ikedamachi.net/cmsfiles/contents/0000004/4113/R8_ippan.pdf",
+          "observed_on": "https://www.ikedamachi.net/0000004113.html",
+          "sha256": "440518e0343ba03b35e3163f5fdf0036b2d17d0609a3452e79daaf8abaefef91",
+          "fetched_at": "2026-08-27T13:36:42Z"
         }
       ],
-      "notes": "Observed finance section at http://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_ippan.pdf「一般会計 (PDF形式：2.65MB)」, sha256:440518e0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html",
@@ -96,9 +108,21 @@
           "observed_on": "https://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html",
           "sha256": "1d788ecdaca536a67068fe1f3a6ac613d4f7b035cc1803e3534d67ec01523123",
           "fetched_at": "2026-08-27T10:12:47Z"
+        },
+        {
+          "url": "http://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.ikedamachi.net/",
+          "sha256": "1d788ecdaca536a67068fe1f3a6ac613d4f7b035cc1803e3534d67ec01523123",
+          "fetched_at": "2026-08-27T10:12:47Z"
+        },
+        {
+          "url": "https://www.ikedamachi.net/cmsfiles/contents/0000002/2228/64ikedamati2023.xlsx",
+          "observed_on": "https://www.ikedamachi.net/0000002228.html",
+          "sha256": "28d9e5c467d582cd6e1261ef73db7b7edebe90a8578b37f710e1e365711f6140",
+          "fetched_at": "2026-08-27T13:36:41Z"
         }
       ],
-      "notes": "Observed finance section at http://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.ikedamachi.net/category/2-7-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（64ikedamati2023.xlsx「(ファイル名：64ikedamachi2023.xlsx サイズ：374.16KB)」, sha256:28d9e5c4）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

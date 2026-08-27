@@ -42,19 +42,31 @@
       "base_url": "https://www.city.imabari.ehime.jp/reikishu/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.imabari.ehime.jp/zaisei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.imabari.ehime.jp/zaisei/yosan/",
           "observed_on": "http://www.city.imabari.ehime.jp/top.html",
           "fetched_at": "2026-08-27T06:58:13Z"
+        },
+        {
+          "url": "https://www.city.imabari.ehime.jp/zaisei/yosan/",
+          "observed_on": "http://www.city.imabari.ehime.jp/",
+          "sha256": "952515cd4209fefc11b15a3efd37670cfa6491b2d68773802ef8946df2eb9693",
+          "fetched_at": "2026-08-27T09:46:32Z"
+        },
+        {
+          "url": "https://www.city.imabari.ehime.jp/zaisei/yosan/R8/R8_tosho_tokubetu.pdf",
+          "observed_on": "https://www.city.imabari.ehime.jp/zaisei/yosan/",
+          "sha256": "650c198490ebf0d79c31c6c1469819b7d81cca9be0e042e4e1f30c12f293f3bd",
+          "fetched_at": "2026-08-27T13:43:25Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.imabari.ehime.jp/zaisei/yosan/ (label: 令和8年度 9月補正予算を掲載しました。)"
+      "notes": "deepest_doc=P1。budget文書（R8_tosho_tokubetu.pdf「令和8年度 当初予算（特別会計） （PDF 21.1MB）」, sha256:650c1984）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（3_7869_25912_up_p7mbd412.pdf「一般会計当初予算（令和8年3月17日議決）（PDF：9.64メガバイト）」, sha256:38439d6c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mashiki.lg.jp/list00535.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mashiki.lg.jp/list00535.html",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.town.mashiki.lg.jp/list00535.html",
           "sha256": "06faad12f07fcc1ee545ec5115695be36101c0233a11a68b731382986150a4b0",
           "fetched_at": "2026-08-27T09:38:45Z"
+        },
+        {
+          "url": "http://www.town.mashiki.lg.jp/list00535.html",
+          "observed_on": "http://www.town.mashiki.lg.jp/",
+          "sha256": "06faad12f07fcc1ee545ec5115695be36101c0233a11a68b731382986150a4b0",
+          "fetched_at": "2026-08-27T09:38:45Z"
+        },
+        {
+          "url": "https://www.town.mashiki.lg.jp/kiji003321/3_321_25860_up_hdlc67r3.xlsx",
+          "observed_on": "https://www.town.mashiki.lg.jp/kiji003321/index.html",
+          "sha256": "72ced6ea94a4adbda371ae93f20ed516a82b1736ac3802a288f6e127337ccabd",
+          "fetched_at": "2026-08-27T13:46:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.mashiki.lg.jp/list00535.html (label: まちの行財政) 入口 https://www.town.mashiki.lg.jp/list00535.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mashiki.lg.jp/list00535.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_321_25860_up_hdlc67r3.xlsx「令和06年度（エクセル：554.5キロバイト）」, sha256:72ced6ea）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

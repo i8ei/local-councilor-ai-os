@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.city.kudamatsu.lg.jp/kudahp/reiki/reiki_int/reiki_menu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html",
           "sha256": "132ce508e5e806ecb8114ca3743194adf44f448d3d6b3fe99568a376322d24ea",
           "fetched_at": "2026-08-27T09:45:28Z"
+        },
+        {
+          "url": "http://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html",
+          "observed_on": "http://www.city.kudamatsu.lg.jp/",
+          "sha256": "132ce508e5e806ecb8114ca3743194adf44f448d3d6b3fe99568a376322d24ea",
+          "fetched_at": "2026-08-27T09:45:28Z"
+        },
+        {
+          "url": "https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/documents/r8yosansyo.pdf",
+          "observed_on": "https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/yosansho.html",
+          "sha256": "bd9cb56e9ab007f8d738914b87b48c5f95f2456f43d2f1a50fae37cbc3a927d9",
+          "fetched_at": "2026-08-27T13:42:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html (label: 財政情報) 入口 https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8yosansyo.pdf「令和8年度一般会計・特別会計予算書（PDF：5,675KB）」, sha256:bd9cb56e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

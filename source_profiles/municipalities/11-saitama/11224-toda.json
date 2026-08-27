@@ -48,11 +48,11 @@
       "base_url": "http://www1.g-reiki.net/toda/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toda.saitama.jp/life/7/62/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toda.saitama.jp/life/7/62/",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.city.toda.saitama.jp/life/7/62/",
           "sha256": "dc4fd2aa5b295def042d8d4564103519c00ea936e64b85a436da14f50fa33033",
           "fetched_at": "2026-08-27T10:20:58Z"
+        },
+        {
+          "url": "http://www.city.toda.saitama.jp/life/7/62/",
+          "observed_on": "http://www.city.toda.saitama.jp/",
+          "sha256": "dc4fd2aa5b295def042d8d4564103519c00ea936e64b85a436da14f50fa33033",
+          "fetched_at": "2026-08-27T10:20:58Z"
+        },
+        {
+          "url": "https://www.city.toda.saitama.jp/uploaded/attachment/78137.pdf",
+          "observed_on": "https://www.city.toda.saitama.jp/soshiki/171/2026tousho.html",
+          "sha256": "bcce4b495e6a8cfe95eb39513c722c6ec895439372cd25f7a803b63a82715ff0",
+          "fetched_at": "2026-08-27T13:31:42Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.toda.saitama.jp/life/7/62/ (label: 予算・財政) 入口 https://www.city.toda.saitama.jp/life/7/62/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.toda.saitama.jp/life/7/62/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（78137.pdf「一般会計予算書 [PDFファイル／9.32MB]」, sha256:bcce4b49）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toda.saitama.jp/life/7/62/261/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toda.saitama.jp/life/7/62/261/",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.city.toda.saitama.jp/life/7/62/261/",
           "sha256": "722a0e88f2ae3b7c06623436cf9d1e70df40aef4c81919eddec182fce5a9120c",
           "fetched_at": "2026-08-27T10:21:01Z"
+        },
+        {
+          "url": "http://www.city.toda.saitama.jp/life/7/62/261/",
+          "observed_on": "http://www.city.toda.saitama.jp/",
+          "sha256": "722a0e88f2ae3b7c06623436cf9d1e70df40aef4c81919eddec182fce5a9120c",
+          "fetched_at": "2026-08-27T10:21:01Z"
+        },
+        {
+          "url": "https://www.city.toda.saitama.jp/uploaded/attachment/81438.pdf",
+          "observed_on": "https://www.city.toda.saitama.jp/soshiki/171/zaisei-hutuukaikei.html",
+          "sha256": "932aafafc6d5a82bba0c3c3f8888ae3799cea4f60d6d5936564cdd872fd2b2f9",
+          "fetched_at": "2026-08-27T13:31:43Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.toda.saitama.jp/life/7/62/261/ (label: 決算) 入口 https://www.city.toda.saitama.jp/life/7/62/261/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.toda.saitama.jp/life/7/62/261/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（81438.pdf「2025年度（令和07年度）決算カード [PDFファイル／135KB]」, sha256:932aafaf）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

@@ -63,11 +63,11 @@
       "notes": "Observed finance section at https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html (label: 財政情報) 入口 https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html",
           "sha256": "8bd15b55ac3332783f70372935da6b435d86cf65090cd2b42490cd5ef6bc256c",
           "fetched_at": "2026-08-27T10:17:56Z"
+        },
+        {
+          "url": "https://www.town.ibaraki-sakai.lg.jp/data/doc/1776212417_doc_20_0.pdf",
+          "observed_on": "https://www.town.ibaraki-sakai.lg.jp/page/page000667.html",
+          "sha256": "9bee44eec9b1eea9e6eb1742143c2e70ea8c5a589c32b9dbd827d7a65630b18a",
+          "fetched_at": "2026-08-27T13:30:40Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html (label: 財政情報) 入口 https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ibaraki-sakai.lg.jp/page/dir000075.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1776212417_doc_20_0.pdf「令和6年度」, sha256:9bee44ee）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

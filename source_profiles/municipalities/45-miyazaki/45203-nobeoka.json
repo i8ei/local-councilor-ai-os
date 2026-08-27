@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.nobeoka.miyazaki.jp/life/3/21/94/ (label: 条例・規則・告示)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nobeoka.miyazaki.jp/life/3/22/96/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nobeoka.miyazaki.jp/life/3/22/96/",
@@ -60,9 +60,21 @@
           "observed_on": "https://www.city.nobeoka.miyazaki.jp/life/3/22/96/",
           "sha256": "63e393abba0ee3ff3420bbc3259f52b5664449c71db3214c02ae1580fa63bf12",
           "fetched_at": "2026-08-27T09:39:43Z"
+        },
+        {
+          "url": "http://www.city.nobeoka.miyazaki.jp/life/3/22/96/",
+          "observed_on": "http://www.city.nobeoka.miyazaki.jp/",
+          "sha256": "63e393abba0ee3ff3420bbc3259f52b5664449c71db3214c02ae1580fa63bf12",
+          "fetched_at": "2026-08-27T09:39:43Z"
+        },
+        {
+          "url": "https://www.city.nobeoka.miyazaki.jp/uploaded/attachment/27134.pdf",
+          "observed_on": "https://www.city.nobeoka.miyazaki.jp/soshiki/18/49292.html",
+          "sha256": "b139db10856b6d1e7ff3d692cb5325eb659c7e8c773e00393be9b6b5a63f0b55",
+          "fetched_at": "2026-08-27T13:47:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.nobeoka.miyazaki.jp/life/3/22/96/ (label: 財政事情) 入口 https://www.city.nobeoka.miyazaki.jp/life/3/22/96/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nobeoka.miyazaki.jp/life/3/22/96/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（27134.pdf「令和8年度当初予算 地方消費税交付金（社会保障財源分）充当一覧 [PDFファイル／117KB]」, sha256:b139db10）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

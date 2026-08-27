@@ -68,11 +68,11 @@
       "notes": "deepest_doc=P1。budget文書（r81yosansho.pdf「一般会計補正予算書（第1号） （PDF 389.7KB）」, sha256:a43c418c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hino.lg.jp/shisei/gyozaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hino.lg.jp/shisei/gyozaisei/yosan/index.html",
@@ -84,9 +84,21 @@
           "observed_on": "https://www.city.hino.lg.jp/shisei/gyozaisei/yosan/index.html",
           "sha256": "e1dd42629c173d26d74786909caf875f041998d0c43069988ee09ccc1c4dc471",
           "fetched_at": "2026-08-27T10:26:17Z"
+        },
+        {
+          "url": "http://www.city.hino.lg.jp/shisei/gyozaisei/yosan/index.html",
+          "observed_on": "http://www.city.hino.lg.jp/",
+          "sha256": "e1dd42629c173d26d74786909caf875f041998d0c43069988ee09ccc1c4dc471",
+          "fetched_at": "2026-08-27T10:26:17Z"
+        },
+        {
+          "url": "https://www.city.hino.lg.jp/_res/projects/default_project/_page_/001/029/797/01kessansyo6.pdf",
+          "observed_on": "https://www.city.hino.lg.jp/shisei/gyozaisei/yosan/kessan/1029797.html",
+          "sha256": "b368f54614994b9d3569c93727459fde930da0275651a799dac191f82068bbc6",
+          "fetched_at": "2026-08-27T13:33:54Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.hino.lg.jp/shisei/gyozaisei/yosan/index.html (label: 予算・決算) 入口 https://www.city.hino.lg.jp/shisei/gyozaisei/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（01kessansyo6.pdf「歳入歳出決算書 （PDF 111.9KB）」, sha256:b368f546）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

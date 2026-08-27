@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（R8tyoussyo_ippann_gaiyou.pdf「当初予算概要(PDF形式、293.49KB)」, sha256:94cb9967）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
@@ -99,9 +99,21 @@
           "observed_on": "https://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
           "sha256": "234e584432d8f39d0918f76b8e6cd1c079cec7a24016645cba3bd32bf86cbc02",
           "fetched_at": "2026-08-27T10:22:44Z"
+        },
+        {
+          "url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.matsubushi.lg.jp/",
+          "sha256": "234e584432d8f39d0918f76b8e6cd1c079cec7a24016645cba3bd32bf86cbc02",
+          "fetched_at": "2026-08-27T10:22:44Z"
+        },
+        {
+          "url": "https://www.town.matsubushi.lg.jp/cmsfiles/contents/0000002/2454/R6kokuhokessan.pdf",
+          "observed_on": "https://www.town.matsubushi.lg.jp/0000002454.html",
+          "sha256": "c647783f436ebba70ab1bda3a47df4f54ffe7075a9985915d79458ec42673c69",
+          "fetched_at": "2026-08-27T13:32:26Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html (label: 町の財政) 入口 https://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kokuhokessan.pdf「国民健康保険特別会計(PDF形式、752.63KB)」, sha256:c647783f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

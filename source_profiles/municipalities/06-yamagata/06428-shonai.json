@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at http://www.town.shonai.lg.jp/gyousei/shounai/index.html (label: 役場・例規・条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shonai.lg.jp/gyousei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shonai.lg.jp/gyousei/zaisei/index.html",
@@ -52,16 +52,28 @@
           "observed_on": "https://www.town.shonai.lg.jp:443/gyousei/zaisei/index.html",
           "sha256": "4ebd77e912c8899d1a133d6795a43e4e5c75b18c13effa4ede04075d735f64bd",
           "fetched_at": "2026-08-27T10:36:36Z"
+        },
+        {
+          "url": "http://www.town.shonai.lg.jp/gyousei/zaisei/index.html",
+          "observed_on": "http://www.town.shonai.lg.jp/",
+          "sha256": "4ebd77e912c8899d1a133d6795a43e4e5c75b18c13effa4ede04075d735f64bd",
+          "fetched_at": "2026-08-27T10:36:36Z"
+        },
+        {
+          "url": "https://www.town.shonai.lg.jp:443/gyousei/zaisei/zaiseizyoukyou/yosan_kessan.files/R06_tosyoyosan_0730taitorusyuusei.pdf",
+          "observed_on": "https://www.town.shonai.lg.jp:443/gyousei/zaisei/zaiseizyoukyou/yosan_kessan.html",
+          "sha256": "585c5fb8f61b5ae9f5b2ca8d17c699f5595d50845da5b0c05a45eb79d5b52264",
+          "fetched_at": "2026-08-27T13:29:21Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shonai.lg.jp/gyousei/zaisei/index.html (label: 財政・給与の公表) 入口 https://www.town.shonai.lg.jp:443/gyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R06_tosyoyosan_0730taitorusyuusei.pdf「令和6年度庄内町予算書（PDF：9,628KB）」, sha256:585c5fb8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shonai.lg.jp/gyousei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shonai.lg.jp/gyousei/zaisei/index.html",
@@ -73,9 +85,21 @@
           "observed_on": "https://www.town.shonai.lg.jp:443/gyousei/zaisei/index.html",
           "sha256": "4ebd77e912c8899d1a133d6795a43e4e5c75b18c13effa4ede04075d735f64bd",
           "fetched_at": "2026-08-27T10:36:36Z"
+        },
+        {
+          "url": "http://www.town.shonai.lg.jp/gyousei/zaisei/index.html",
+          "observed_on": "http://www.town.shonai.lg.jp/",
+          "sha256": "4ebd77e912c8899d1a133d6795a43e4e5c75b18c13effa4ede04075d735f64bd",
+          "fetched_at": "2026-08-27T10:36:36Z"
+        },
+        {
+          "url": "https://www.town.shonai.lg.jp:443/gyousei/zaisei/zaiseizyoukyou/zaiseizyoukyoshiryo.files/zaiseijokyo064289_shonaimati_2010.pdf",
+          "observed_on": "https://www.town.shonai.lg.jp:443/gyousei/zaisei/zaiseizyoukyou/zaiseizyoukyoshiryo.html",
+          "sha256": "f80afcaf6b874db101d115d3c644d7c25a55619fb836d2ab4293615788f3f10e",
+          "fetched_at": "2026-08-27T13:29:22Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shonai.lg.jp/gyousei/zaisei/index.html (label: 財政・給与の公表) 入口 https://www.town.shonai.lg.jp:443/gyousei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijokyo064289_shonaimati_2010.pdf「財政状況資料集（平成22年度）（PDF：282KB）」, sha256:f80afcaf）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

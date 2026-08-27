@@ -48,11 +48,11 @@
       "base_url": "https://www.city.sumida.lg.jp/wkg/reiki_int/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
           "sha256": "5f61bce2e2301468a7527f02be28da16daa0b2b109c3ec8d58a2a2c9d5f0e231",
           "fetched_at": "2026-08-27T10:25:32Z"
+        },
+        {
+          "url": "http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
+          "observed_on": "http://www.city.sumida.lg.jp/",
+          "sha256": "5f61bce2e2301468a7527f02be28da16daa0b2b109c3ec8d58a2a2c9d5f0e231",
+          "fetched_at": "2026-08-27T10:25:32Z"
+        },
+        {
+          "url": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/presssiryou/080202.files/080202.pdf",
+          "observed_on": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/presssiryou/080202.html",
+          "sha256": "d230592f677da3441446fbe5db5bac0bb6f07c53fcde17222edd6da7fdf105f2",
+          "fetched_at": "2026-08-27T13:25:22Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html (label: 行政改革・財政・予算・会計) 入口 https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（080202.pdf「令和8年度予算案発表資料（PDF：9,465KB）」, sha256:d230592f）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

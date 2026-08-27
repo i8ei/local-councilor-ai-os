@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.kawanishi.yamagata.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/",
           "sha256": "34306594be85bbdd39014fd05327306972769a74610683bdb034b447a3b72e38",
           "fetched_at": "2026-08-27T10:36:29Z"
+        },
+        {
+          "url": "http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei",
+          "observed_on": "http://www.town.kawanishi.yamagata.jp/",
+          "sha256": "34306594be85bbdd39014fd05327306972769a74610683bdb034b447a3b72e38",
+          "fetched_at": "2026-08-27T10:36:29Z"
+        },
+        {
+          "url": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/r8tousyo.pdf",
+          "observed_on": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/yosansyo.html",
+          "sha256": "7d24094cf5bb67586066c3660a812b816896d5ee07c571ecd67af89347089b57",
+          "fetched_at": "2026-08-27T13:29:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei (label: 財政情報) 入口 https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8tousyo.pdf「一般会計予算書 (1180KB)」, sha256:7d24094c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/",
           "sha256": "34306594be85bbdd39014fd05327306972769a74610683bdb034b447a3b72e38",
           "fetched_at": "2026-08-27T10:36:29Z"
+        },
+        {
+          "url": "http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei",
+          "observed_on": "http://www.town.kawanishi.yamagata.jp/",
+          "sha256": "34306594be85bbdd39014fd05327306972769a74610683bdb034b447a3b72e38",
+          "fetched_at": "2026-08-27T10:36:29Z"
+        },
+        {
+          "url": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/1.r6hyousi.mokuji.soukatuhyou.pdf",
+          "observed_on": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/kessan.html",
+          "sha256": "833dd2a04c09fed656604e23fd7fd807f7513642648b42d6f9c03ebf89bf954b",
+          "fetched_at": "2026-08-27T13:29:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei (label: 財政情報) 入口 https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1.r6hyousi.mokuji.soukatuhyou.pdf「目次・各会計歳入歳出決算書総括表.pdf (98KB)」, sha256:833dd2a0）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     }
   }
 }

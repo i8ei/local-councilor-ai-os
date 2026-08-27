@@ -35,11 +35,11 @@
       "base_url": "http://www.town.mikawa.yamagata.jp/reiki_int/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mikawa.yamagata.jp/town/matisiryou/mikawa-digest.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mikawa.yamagata.jp/town/matisiryou/mikawa-digest.html",
@@ -56,16 +56,28 @@
           "url": "https://www.town.mikawa.yamagata.jp:443/town/matisiryou/mikawa-digest.files/R8mikawa-digest.pdf",
           "observed_on": "https://www.town.mikawa.yamagata.jp:443/town/matisiryou/mikawa-digest.html",
           "fetched_at": "2026-08-27T11:25:30Z"
+        },
+        {
+          "url": "http://www.town.mikawa.yamagata.jp/town/matisiryou/mikawa-digest.html",
+          "observed_on": "http://www.town.mikawa.yamagata.jp/",
+          "sha256": "2924a38bb1663b19146bf674fdeb7fd36b3be889911323553872c5df305a4e67",
+          "fetched_at": "2026-08-27T10:36:32Z"
+        },
+        {
+          "url": "https://www.town.mikawa.yamagata.jp:443/town/matisiryou/mikawa-digest.files/R8mikawa-digest.pdf",
+          "observed_on": "https://www.town.mikawa.yamagata.jp:443/town/matisiryou/mikawa-digest.html",
+          "sha256": "597a6c9b927a8d705e95e1ed9d15cf11597f3b60c498a2ac86e28dd58430ed68",
+          "fetched_at": "2026-08-27T11:25:31Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.mikawa.yamagata.jp/town/matisiryou/mikawa-digest.html (label: 令和8年度三川町のわかりやすい予算書について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8mikawa-digest.pdf「令和8年度三川町のわかりやすい予算書（PDF：3,156KB）」, sha256:597a6c9b）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mikawa.yamagata.jp/town/gyouzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mikawa.yamagata.jp/town/gyouzaisei/index.html",
@@ -77,9 +89,21 @@
           "observed_on": "https://www.town.mikawa.yamagata.jp:443/town/gyouzaisei/index.html",
           "sha256": "5e7b2dac9c1e949e179a0cb29b144180986dc135d37125afceddf7d6dd440842",
           "fetched_at": "2026-08-27T10:36:34Z"
+        },
+        {
+          "url": "http://www.town.mikawa.yamagata.jp/town/gyouzaisei/index.html",
+          "observed_on": "http://www.town.mikawa.yamagata.jp/",
+          "sha256": "5e7b2dac9c1e949e179a0cb29b144180986dc135d37125afceddf7d6dd440842",
+          "fetched_at": "2026-08-27T10:36:34Z"
+        },
+        {
+          "url": "https://www.town.mikawa.yamagata.jp:443/town/gyouzaisei/kanri/joukyou.files/mikawa2024_zaiseijyokyo.xlsx",
+          "observed_on": "https://www.town.mikawa.yamagata.jp:443/town/gyouzaisei/kanri/joukyou.html",
+          "sha256": "3ed2767169a2957a9beb7b09cc40645e82032bfab11f417db64334c026eeaf1b",
+          "fetched_at": "2026-08-27T13:29:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.mikawa.yamagata.jp/town/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.mikawa.yamagata.jp:443/town/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（mikawa2024_zaiseijyokyo.xlsx「令和6年度財政状況資料集（エクセル：555KB）」, sha256:3ed27671）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

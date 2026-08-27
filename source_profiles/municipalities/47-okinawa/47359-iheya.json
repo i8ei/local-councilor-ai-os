@@ -92,11 +92,11 @@
       "notes": "deepest_doc=P1。budget文書（516.pdf「令和6年度予算編成方針」, sha256:83e5f7c8）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.iheya.okinawa.jp/soshiki/3/2628.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.iheya.okinawa.jp/soshiki/3/2628.html",
@@ -108,9 +108,21 @@
           "observed_on": "https://www.vill.iheya.okinawa.jp/soshiki/3/2628.html",
           "sha256": "3ef97225f13b3cd7c4c6fab29367b35e146bfc25e7041e13474335a00812f8b1",
           "fetched_at": "2026-08-27T09:42:13Z"
+        },
+        {
+          "url": "http://www.vill.iheya.okinawa.jp/soshiki/3/2628.html",
+          "observed_on": "http://www.vill.iheya.okinawa.jp/",
+          "sha256": "3ef97225f13b3cd7c4c6fab29367b35e146bfc25e7041e13474335a00812f8b1",
+          "fetched_at": "2026-08-27T09:42:13Z"
+        },
+        {
+          "url": "https://www.vill.iheya.okinawa.jp/uploaded/attachment/566.xlsx",
+          "observed_on": "https://www.vill.iheya.okinawa.jp/soshiki/3/1533.html",
+          "sha256": "8a0e5178d9eddf736b929fd0fc964cb4cc66841f2d113ef27a3ebc76f6c8b807",
+          "fetched_at": "2026-08-27T23:02:49Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.iheya.okinawa.jp/soshiki/3/2628.html (label: 令和5年 主要施策の実績・効果等について) 入口 https://www.vill.iheya.okinawa.jp/soshiki/3/2628.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.iheya.okinawa.jp/soshiki/3/2628.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（566.xlsx「令和3年度財政状況資料集_伊平屋村 [Excelファイル／836KB]」, sha256:8a0e5178）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

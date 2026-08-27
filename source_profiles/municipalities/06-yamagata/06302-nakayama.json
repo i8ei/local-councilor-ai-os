@@ -50,11 +50,11 @@
       "base_url": "https://www.town.nakayama.yamagata.jp/section/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "c8c2fdfd6ce70e37b0d9a6a2a008ac7a0e6c29035239e919b1fd1c2a7b5b0eb6",
           "fetched_at": "2026-08-27T10:35:54Z"
+        },
+        {
+          "url": "https://www.town.nakayama.yamagata.jp/material/files/group/5/r8syouhizeikouhukin.pdf",
+          "observed_on": "https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/897.html",
+          "sha256": "d19714299d960d0440538c0da4f4eca16a40cb3d90272f5c09cdd91aa69d168d",
+          "fetched_at": "2026-08-27T13:28:51Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8syouhizeikouhukin.pdf「令和8年度当初予算 (PDFファイル: 99.1KB)」, sha256:d1971429）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "c8c2fdfd6ce70e37b0d9a6a2a008ac7a0e6c29035239e919b1fd1c2a7b5b0eb6",
           "fetched_at": "2026-08-27T10:35:54Z"
+        },
+        {
+          "url": "https://www.town.nakayama.yamagata.jp/material/files/group/5/R6zaiseijokyo.xlsx",
+          "observed_on": "https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/897.html",
+          "sha256": "70d267be87ef209bd53e940dd7b2779c059fa5421156041200702770ba315e25",
+          "fetched_at": "2026-08-27T13:28:52Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nakayama.yamagata.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijokyo.xlsx「令和6年度 中山町財政状況資料集 (Excelファイル: 554.1KB)」, sha256:70d267be）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

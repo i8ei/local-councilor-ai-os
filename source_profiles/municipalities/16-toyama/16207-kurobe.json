@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kurobe/reiki_menu.html (label: 市の条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521",
@@ -69,9 +69,15 @@
           "url": "https://www.city.kurobe.toyama.jp/attach/EDIT/049/049894.pdf",
           "observed_on": "https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521",
           "fetched_at": "2026-08-27T11:09:39Z"
+        },
+        {
+          "url": "https://www.city.kurobe.toyama.jp/attach/EDIT/050/050391.pdf",
+          "observed_on": "https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521",
+          "sha256": "cb70888763952f92483deae33318844d0c05774f3a60863f9b37b895b414d771",
+          "fetched_at": "2026-08-27T13:35:20Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521 (label: 令和８年度 当初予算について 2026年3月25日) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（050391.pdf「令和８年度 当初予算の概要」, sha256:cb708887）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

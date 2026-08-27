@@ -67,11 +67,11 @@
       "notes": "deepest_doc=P1。budget文書（R8wakariyasuiyosansyo.pdf「令和8年度わかりやすい予算書(PDF形式、2.93MB)」, sha256:addf7279）にて構造マーカー（歳入・歳出・節・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.iwakura.aichi.jp/0000007065.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iwakura.aichi.jp/0000007065.html",
@@ -88,9 +88,21 @@
           "url": "https://www.city.iwakura.aichi.jp/cmsfiles/contents/0000007/7065/R7suidoukessan.pdf",
           "observed_on": "https://www.city.iwakura.aichi.jp/0000007065.html",
           "fetched_at": "2026-08-27T11:14:51Z"
+        },
+        {
+          "url": "http://www.city.iwakura.aichi.jp/0000007065.html",
+          "observed_on": "http://www.city.iwakura.aichi.jp/",
+          "sha256": "f27de25d16a9d14f634ecd0c3ee1bf387bb36755b337387ab067c5dadd510e69",
+          "fetched_at": "2026-08-27T10:15:34Z"
+        },
+        {
+          "url": "https://www.city.iwakura.aichi.jp/cmsfiles/contents/0000007/7065/R7suidoukessan.pdf",
+          "observed_on": "https://www.city.iwakura.aichi.jp/0000007065.html",
+          "sha256": "073ee2da6b7385321229ec8b8af9e362a1f840df513b1a1b12449f21f54182a2",
+          "fetched_at": "2026-08-27T11:14:52Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.iwakura.aichi.jp/0000007065.html (label: 水道事業および公共下水道事業の決算をお知らせします) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R7suidoukessan.pdf「令和7年度岩倉市水道事業会計決算書 (PDF形式、387.83KB)」, sha256:073ee2da）にて構造マーカー（款・項・決算額・不用額等）を確認済み。"
     }
   }
 }

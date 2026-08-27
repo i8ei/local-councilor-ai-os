@@ -60,11 +60,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.tachiarai.fukuoka/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tachiarai.fukuoka.jp/list00319.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tachiarai.fukuoka.jp/list00319.html",
@@ -76,9 +76,21 @@
           "observed_on": "https://www.town.tachiarai.fukuoka.jp/list00319.html",
           "sha256": "78d6904d3f8a480a3257c114813ac43a7e604bd8976cbfd35d5bd7cc72995c83",
           "fetched_at": "2026-08-27T09:37:10Z"
+        },
+        {
+          "url": "http://www.town.tachiarai.fukuoka.jp/list00319.html",
+          "observed_on": "http://www.town.tachiarai.fukuoka.jp/",
+          "sha256": "78d6904d3f8a480a3257c114813ac43a7e604bd8976cbfd35d5bd7cc72995c83",
+          "fetched_at": "2026-08-27T09:37:10Z"
+        },
+        {
+          "url": "https://www.town.tachiarai.fukuoka.jp/kiji0032078/3_2078_3244_up_vnerwvnr.pdf",
+          "observed_on": "https://www.town.tachiarai.fukuoka.jp/kiji0032078/index.html",
+          "sha256": "7461e80e8c2003b3028903ef98d2669e2d2d035f4d4338abfecb067eb01aa983",
+          "fetched_at": "2026-08-27T13:45:25Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tachiarai.fukuoka.jp/list00319.html (label: 予算) 入口 https://www.town.tachiarai.fukuoka.jp/list00319.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tachiarai.fukuoka.jp/list00319.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_2078_3244_up_vnerwvnr.pdf「令和8年度国民健康保険特別会計予算書・予算に関する説明書（PDF：233.9キロバイト）」, sha256:7461e80e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

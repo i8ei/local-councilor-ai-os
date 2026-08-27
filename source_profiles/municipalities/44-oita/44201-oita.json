@@ -44,11 +44,11 @@
       "notes": "ぎょうせい HAS-Shohin (JSF POSTセッション必須・静的URLなし)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
@@ -60,9 +60,21 @@
           "observed_on": "https://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
           "sha256": "87375ae7af7ed2836a52111acaa53ab2dc13e3f06c4a859fac236be241f298a0",
           "fetched_at": "2026-08-27T09:39:18Z"
+        },
+        {
+          "url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
+          "observed_on": "http://www.city.oita.oita.jp/",
+          "sha256": "87375ae7af7ed2836a52111acaa53ab2dc13e3f06c4a859fac236be241f298a0",
+          "fetched_at": "2026-08-27T09:39:18Z"
+        },
+        {
+          "url": "https://www.city.oita.oita.jp/o032/shisejoho/kekakuzaise/documents/zaiseijyoukyou260601.pdf",
+          "observed_on": "https://www.city.oita.oita.jp/o032/shisejoho/kekakuzaise/r80601zaiseijyoukyou.html",
+          "sha256": "a58a306f6d17ef49994b38c3bfe31d168dd2238a85db5be69d6c11844532494d",
+          "fetched_at": "2026-08-27T13:46:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html (label: 財政状況) 入口 https://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijyoukyou260601.pdf「令和8年6月1日公表（PDF：137KB）」, sha256:a58a306f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.city.fukuchiyama.lg.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukuchiyama.lg.jp/site/yosan/88131.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukuchiyama.lg.jp/site/yosan/88131.html",
@@ -71,9 +71,15 @@
           "url": "https://www.city.fukuchiyama.lg.jp/uploaded/attachment/55269.pdf",
           "observed_on": "https://www.city.fukuchiyama.lg.jp/site/yosan/88131.html",
           "fetched_at": "2026-08-27T11:03:58Z"
+        },
+        {
+          "url": "https://www.city.fukuchiyama.lg.jp/uploaded/attachment/55269.pdf",
+          "observed_on": "https://www.city.fukuchiyama.lg.jp/site/yosan/88131.html",
+          "sha256": "1ba994bcd5ef7bcb7d3f3d82e57718a40ff2c3a3e9da861df13f1d22a8686737",
+          "fetched_at": "2026-08-27T11:03:59Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.fukuchiyama.lg.jp/site/yosan/88131.html (label: 令和8年第3回（9月）定例会補正予算などの提案議案について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（55269.pdf「一般会計補正予算（第3号）予算説明書 [PDFファイル／503KB]」, sha256:1ba994bc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

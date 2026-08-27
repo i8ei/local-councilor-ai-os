@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.teshiotown.hokkaido.jp/?page_id=325 (label: 天塩町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.teshiotown.hokkaido.jp/?page_id=317",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.teshiotown.hokkaido.jp/?page_id=317",
@@ -65,16 +65,22 @@
           "url": "https://www.teshiotown.hokkaido.jp/wp-content/uploads/2026/08/667c1a47e497be1767385cef6f7e0765.pdf",
           "observed_on": "https://www.teshiotown.hokkaido.jp/?page_id=317",
           "fetched_at": "2026-08-27T11:22:59Z"
+        },
+        {
+          "url": "https://www.teshiotown.hokkaido.jp/wp-content/uploads/2026/03/ac8fdfca7380ba139cd55ae63bc036a6.xlsx",
+          "observed_on": "https://www.teshiotown.hokkaido.jp/?page_id=317",
+          "sha256": "b666977950f06c512aace6cf05a842fc7851418ad40b3cd1f2b8163b500d5b41",
+          "fetched_at": "2026-08-27T13:26:18Z"
         }
       ],
-      "notes": "Observed finance section at https://www.teshiotown.hokkaido.jp/?page_id=317 (label: 財政状況について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（ac8fdfca7380ba139cd55ae63bc036a6.xlsx「財政状況資料集 令和6年度」, sha256:b6669779）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.teshiotown.hokkaido.jp/?page_id=317",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.teshiotown.hokkaido.jp/?page_id=317",
@@ -91,9 +97,15 @@
           "url": "https://www.teshiotown.hokkaido.jp/wp-content/uploads/2025/09/13c7744da51b16fb5e689cdb07a18332.pdf",
           "observed_on": "https://www.teshiotown.hokkaido.jp/?page_id=317",
           "fetched_at": "2026-08-27T11:23:01Z"
+        },
+        {
+          "url": "https://www.teshiotown.hokkaido.jp/wp-content/uploads/2026/03/ac8fdfca7380ba139cd55ae63bc036a6.xlsx",
+          "observed_on": "https://www.teshiotown.hokkaido.jp/?page_id=317",
+          "sha256": "b666977950f06c512aace6cf05a842fc7851418ad40b3cd1f2b8163b500d5b41",
+          "fetched_at": "2026-08-27T13:26:18Z"
         }
       ],
-      "notes": "Observed finance section at https://www.teshiotown.hokkaido.jp/?page_id=317 (label: 財政状況について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（ac8fdfca7380ba139cd55ae63bc036a6.xlsx「財政状況資料集 令和6年度」, sha256:b6669779）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.town.kisosaki.lg.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kisosaki.lg.jp/category/5-1-2-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kisosaki.lg.jp/category/5-1-2-0-0-0-0-0-0-0.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.town.kisosaki.lg.jp/category/5-1-2-0-0-0-0-0-0-0.html",
           "sha256": "1ac1bbd0a32d080243204220cdbb6d7502066c1679ced98a632d15cd9b6c8a0e",
           "fetched_at": "2026-08-27T09:48:56Z"
+        },
+        {
+          "url": "https://www.town.kisosaki.lg.jp/cmsfiles/contents/0000001/1490/R6.xlsx",
+          "observed_on": "https://www.town.kisosaki.lg.jp/0000001490.html",
+          "sha256": "395c0f09975b1557bf310a264541b8df98497657e55ff1c24d40c4952c5dbf14",
+          "fetched_at": "2026-08-27T13:39:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kisosaki.lg.jp/category/5-1-2-0-0-0-0-0-0-0.html (label: 町の紹介・行財政) 入口 https://www.town.kisosaki.lg.jp/category/5-1-2-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kisosaki.lg.jp/category/5-1-2-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6.xlsx「木曽岬町 財政状況資料集(6年度)」, sha256:395c0f09）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

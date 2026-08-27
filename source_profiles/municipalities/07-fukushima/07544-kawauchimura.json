@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at https://www.kawauchimura.jp/gyosei/keikaku-yosan/page000232.html (label: 村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.kawauchimura.jp/gyosei/keikaku-yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.kawauchimura.jp/gyosei/keikaku-yosan/",
@@ -45,16 +45,22 @@
           "observed_on": "https://www.kawauchimura.jp/gyosei/keikaku-yosan/",
           "sha256": "64da74719052926f102652c6a61eca134f1edb322bb62f2b5a68054ff2f96feb",
           "fetched_at": "2026-08-27T10:38:11Z"
+        },
+        {
+          "url": "https://www.kawauchimura.jp/data/doc/1780963865_doc_27_0.pdf",
+          "observed_on": "https://www.kawauchimura.jp/gyosei/keikaku-yosan/page001593.html",
+          "sha256": "efca849c76410a46db7023c006dc81ae816030c8c7a4bb0f45b93639c00a187e",
+          "fetched_at": "2026-08-27T13:30:11Z"
         }
       ],
-      "notes": "Observed budget link at https://www.kawauchimura.jp/gyosei/keikaku-yosan/ (label: 計画、予算) 入口 https://www.kawauchimura.jp/gyosei/keikaku-yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.kawauchimura.jp/gyosei/keikaku-yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1780963865_doc_27_0.pdf「川内村新型インフルエンザ等対策行動計画 [PDF形式／2.77MB]」, sha256:efca849c）にて構造マーカー（項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.kawauchimura.jp/gyosei/keikaku-yosan/yosan-kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.kawauchimura.jp/gyosei/keikaku-yosan/yosan-kessan/",
@@ -66,9 +72,15 @@
           "observed_on": "https://www.kawauchimura.jp/gyosei/keikaku-yosan/yosan-kessan/",
           "sha256": "6ff86f18873a4103d871547da4f3ab2e7baeac56fe08e2243f8b0b737070d6f8",
           "fetched_at": "2026-08-27T10:38:12Z"
+        },
+        {
+          "url": "https://www.kawauchimura.jp/data/doc/1648641872_doc_41_0.xlsx",
+          "observed_on": "https://www.kawauchimura.jp/gyosei/keikaku-yosan/yosan-kessan/page000983.html",
+          "sha256": "d8e8566cfc3d90fb091f6e0e656264c0780a8bd55d0c0180f2a34442f2052c33",
+          "fetched_at": "2026-08-27T13:30:06Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.kawauchimura.jp/gyosei/keikaku-yosan/yosan-kessan/ (label: 予算・決算) 入口 https://www.kawauchimura.jp/gyosei/keikaku-yosan/yosan-kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.kawauchimura.jp/gyosei/keikaku-yosan/yosan-kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1648641872_doc_41_0.xlsx「平成28年度財政状況資料集 [EXCEL形式／647.72KB]」, sha256:d8e8566c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

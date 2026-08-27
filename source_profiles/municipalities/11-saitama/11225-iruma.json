@@ -50,11 +50,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/iruma/reiki_menu.html for 入間市"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
           "sha256": "526518357230862d74dd5be752a6e2f706109475ba3458de3226ec216a196697",
           "fetched_at": "2026-08-27T10:21:15Z"
+        },
+        {
+          "url": "https://www.city.iruma.saitama.jp/material/files/group/7/cyuukizaiseikeikakukannseibann.pdf",
+          "observed_on": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/zaisei/5793.html",
+          "sha256": "1aac57c6d7384b381246d7a2908846c1a2e04c1238d3fe5ecefe8a0be8b7be3d",
+          "fetched_at": "2026-08-27T13:31:47Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（cyuukizaiseikeikakukannseibann.pdf「中期財政計画（平成29年度～33年度） (PDFファイル: 411.9KB)」, sha256:1aac57c6）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html",
           "sha256": "526518357230862d74dd5be752a6e2f706109475ba3458de3226ec216a196697",
           "fetched_at": "2026-08-27T10:21:15Z"
+        },
+        {
+          "url": "https://www.city.iruma.saitama.jp/material/files/group/7/H27_kessan_card.pdf",
+          "observed_on": "https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/kessan/5768.html",
+          "sha256": "8534390fc1ea781d9394d52946ae4baf6bbc7727ff195f945e41ea338ce4760d",
+          "fetched_at": "2026-08-27T13:31:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iruma.saitama.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H27_kessan_card.pdf「平成27年度 決算カード (PDFファイル: 121.1KB)」, sha256:8534390f）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

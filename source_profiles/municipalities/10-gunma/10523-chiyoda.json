@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.town.chiyoda.gunma.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html",
           "sha256": "7af27e2065bbfd9926d7bec2245daaa4f74d806a10b802c0206d8171cb36b8b2",
           "fetched_at": "2026-08-27T10:20:06Z"
+        },
+        {
+          "url": "http://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html",
+          "observed_on": "http://www.town.chiyoda.gunma.jp/",
+          "sha256": "7af27e2065bbfd9926d7bec2245daaa4f74d806a10b802c0206d8171cb36b8b2",
+          "fetched_at": "2026-08-27T10:20:06Z"
+        },
+        {
+          "url": "https://www.town.chiyoda.gunma.jp/files/958adcb1b04fe7d7a8a9ef2c71998bcd_2.pdf",
+          "observed_on": "https://www.town.chiyoda.gunma.jp/soumu/zaisei/zaisei002.html",
+          "sha256": "1b247061a0ce41db046ded7e32490d5d26d8f75b6d71124f8391720fcd37c9bc",
+          "fetched_at": "2026-08-27T13:31:19Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html (label: 08月12日 令和８年度第３次公有財産売却に係る公募型プロポーザルについて) 入口 https://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（958adcb1b04fe7d7a8a9ef2c71998bcd_2.pdf「令和8年度予算」, sha256:1b247061）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html",
           "sha256": "7af27e2065bbfd9926d7bec2245daaa4f74d806a10b802c0206d8171cb36b8b2",
           "fetched_at": "2026-08-27T10:20:06Z"
+        },
+        {
+          "url": "http://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html",
+          "observed_on": "http://www.town.chiyoda.gunma.jp/",
+          "sha256": "7af27e2065bbfd9926d7bec2245daaa4f74d806a10b802c0206d8171cb36b8b2",
+          "fetched_at": "2026-08-27T10:20:06Z"
+        },
+        {
+          "url": "https://www.town.chiyoda.gunma.jp/files/aa3bb68a85f1f24cbbbae05055701554.xlsx",
+          "observed_on": "https://www.town.chiyoda.gunma.jp/soumu/zaisei/zaisei008.html",
+          "sha256": "785aefdcb69e9646223995abac66980cc66fdfe7884d85dde8e1de9c70cba49b",
+          "fetched_at": "2026-08-27T13:31:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html (label: 08月12日 令和８年度第３次公有財産売却に係る公募型プロポーザルについて) 入口 https://www.town.chiyoda.gunma.jp/soumu/zaisei/post-825.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（aa3bb68a85f1f24cbbbae05055701554.xlsx「令和５年度財政状況資料集」, sha256:785aefdc）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -35,11 +35,11 @@
       "index_url": "https://en3-jg.d1-law.com/yanaizu/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.town.yanaizu.fukushima.jp:443/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
           "sha256": "c3e7b70f7551851905730d59d42df42b90df6cbc7c3b75c16048030cd89afa59",
           "fetched_at": "2026-08-27T10:38:16Z"
+        },
+        {
+          "url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
+          "observed_on": "http://www.town.yanaizu.fukushima.jp/",
+          "sha256": "c3e7b70f7551851905730d59d42df42b90df6cbc7c3b75c16048030cd89afa59",
+          "fetched_at": "2026-08-27T10:38:16Z"
+        },
+        {
+          "url": "https://www.town.yanaizu.fukushima.jp:443/docs/2015021600090/file_contents/074233_2024.xlsx",
+          "observed_on": "https://www.town.yanaizu.fukushima.jp:443/docs/2015021600090/",
+          "sha256": "d05df4d1857a358169828461715016473909349aa1820a8573da4aefa63ef003",
+          "fetched_at": "2026-08-27T13:29:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/ (label: 財政状況) 入口 https://www.town.yanaizu.fukushima.jp:443/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（074233_2024.xlsx「財政状況資料集（令和6年度）[XLSX：528KB]」, sha256:d05df4d1）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.town.yanaizu.fukushima.jp:443/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
           "sha256": "c3e7b70f7551851905730d59d42df42b90df6cbc7c3b75c16048030cd89afa59",
           "fetched_at": "2026-08-27T10:38:16Z"
+        },
+        {
+          "url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
+          "observed_on": "http://www.town.yanaizu.fukushima.jp/",
+          "sha256": "c3e7b70f7551851905730d59d42df42b90df6cbc7c3b75c16048030cd89afa59",
+          "fetched_at": "2026-08-27T10:38:16Z"
+        },
+        {
+          "url": "https://www.town.yanaizu.fukushima.jp:443/docs/2015021600090/file_contents/074233_2024.xlsx",
+          "observed_on": "https://www.town.yanaizu.fukushima.jp:443/docs/2015021600090/",
+          "sha256": "d05df4d1857a358169828461715016473909349aa1820a8573da4aefa63ef003",
+          "fetched_at": "2026-08-27T13:29:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/ (label: 財政状況) 入口 https://www.town.yanaizu.fukushima.jp:443/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（074233_2024.xlsx「財政状況資料集（令和6年度）[XLSX：528KB]」, sha256:d05df4d1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

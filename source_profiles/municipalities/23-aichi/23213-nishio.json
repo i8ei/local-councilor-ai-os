@@ -50,11 +50,11 @@
       "notes": "Observed regulations index at http://www.city.nishio.aichi.jp/shisei/1010633.html (label: 西尾市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nishio.aichi.jp/shisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nishio.aichi.jp/shisei/yosan/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.nishio.aichi.jp/shisei/yosan/index.html",
           "sha256": "8e0dcc9250c21bac69d922db661822c42dd771f19ac406cfe42e4b57e7c1ac08",
           "fetched_at": "2026-08-27T10:15:23Z"
+        },
+        {
+          "url": "http://www.city.nishio.aichi.jp/shisei/yosan/index.html",
+          "observed_on": "http://www.city.nishio.aichi.jp/",
+          "sha256": "8e0dcc9250c21bac69d922db661822c42dd771f19ac406cfe42e4b57e7c1ac08",
+          "fetched_at": "2026-08-27T10:15:23Z"
+        },
+        {
+          "url": "https://www.city.nishio.aichi.jp/_res/projects/default_project/_page_/001/003/218/r8yosansho.pdf",
+          "observed_on": "https://www.city.nishio.aichi.jp/shisei/yosan/1001510/1003218.html",
+          "sha256": "ceb6932a200ddb462f8a66d7f683e9c4f0988904cb09fc6ed10ffaf9489c5529",
+          "fetched_at": "2026-08-27T13:38:08Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.nishio.aichi.jp/shisei/yosan/index.html (label: 予算・財政) 入口 https://www.city.nishio.aichi.jp/shisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8yosansho.pdf「令和8年度予算書及び予算説明書 （PDF 9.9MB）」, sha256:ceb6932a）にて構造マーカー（歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nishio.aichi.jp/shisei/yosan/1001510/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nishio.aichi.jp/shisei/yosan/1001510/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.nishio.aichi.jp/shisei/yosan/1001510/index.html",
           "sha256": "ae4c696d3ae5544aca270b9e47b125708e6e4fd4c764056084e2f6d5b8ffa153",
           "fetched_at": "2026-08-27T10:15:26Z"
+        },
+        {
+          "url": "http://www.city.nishio.aichi.jp/shisei/yosan/1001510/index.html",
+          "observed_on": "http://www.city.nishio.aichi.jp/",
+          "sha256": "ae4c696d3ae5544aca270b9e47b125708e6e4fd4c764056084e2f6d5b8ffa153",
+          "fetched_at": "2026-08-27T10:15:26Z"
+        },
+        {
+          "url": "https://www.city.nishio.aichi.jp/_res/projects/default_project/_page_/001/003/221/kessanka-do06.pdf",
+          "observed_on": "https://www.city.nishio.aichi.jp/shisei/yosan/1001510/1003221.html",
+          "sha256": "b1ca1f54b278b7c0c99d512750682179de177a9cfc6de5af6450a55a862c5d87",
+          "fetched_at": "2026-08-27T13:38:02Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.nishio.aichi.jp/shisei/yosan/1001510/index.html (label: 予算・決算) 入口 https://www.city.nishio.aichi.jp/shisei/yosan/1001510/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessanka-do06.pdf「令和6年度決算状況 （PDF 130.9KB）」, sha256:b1ca1f54）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

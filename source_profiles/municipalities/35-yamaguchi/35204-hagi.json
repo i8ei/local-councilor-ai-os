@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（28557.pdf「令和７年度 萩市財政の健全性に関する比率の公表 [PDFファイル／568KB]」, sha256:f2af6201）にて構造マーカー（歳入・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hagi.lg.jp/soshiki/3/1381.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hagi.lg.jp/soshiki/3/1381.html",
@@ -102,9 +102,21 @@
           "url": "https://www.city.hagi.lg.jp/uploaded/attachment/30943.pdf",
           "observed_on": "https://www.city.hagi.lg.jp/soshiki/3/1381.html",
           "fetched_at": "2026-08-27T11:00:38Z"
+        },
+        {
+          "url": "http://www.city.hagi.lg.jp/soshiki/3/1381.html",
+          "observed_on": "http://www.city.hagi.lg.jp/",
+          "sha256": "326bf8d81a91cf00ed0e17da3c4a0064ecf868de50248ec41cb2dd2df63f5fb8",
+          "fetched_at": "2026-08-27T09:45:28Z"
+        },
+        {
+          "url": "https://www.city.hagi.lg.jp/uploaded/attachment/30943.pdf",
+          "observed_on": "https://www.city.hagi.lg.jp/soshiki/3/1381.html",
+          "sha256": "c3f940e1459c5aedcb5d59acbf7f621f4d2ef2cc888986bd3ba58cf9cbc0b34e",
+          "fetched_at": "2026-08-27T11:00:39Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.hagi.lg.jp/soshiki/3/1381.html (label: 決算の状況) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（30943.pdf「令和7年度 決算カード [PDFファイル／298KB]」, sha256:c3f940e1）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

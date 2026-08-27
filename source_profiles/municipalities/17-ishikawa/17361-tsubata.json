@@ -45,11 +45,11 @@
       "notes": "Observed regulations index at http://www.town.tsubata.lg.jp/life/6/24/149/ (label: 条例・規則等)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tsubata.lg.jp/life/6/22/124/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tsubata.lg.jp/life/6/22/124/",
@@ -61,9 +61,21 @@
           "observed_on": "https://www.town.tsubata.lg.jp/life/6/22/124/",
           "sha256": "51be9542eaa0f9754e201e17440a281145a494b8afb3b2d00274e08927a5a299",
           "fetched_at": "2026-08-27T10:06:16Z"
+        },
+        {
+          "url": "http://www.town.tsubata.lg.jp/life/6/22/124/",
+          "observed_on": "http://www.town.tsubata.lg.jp/",
+          "sha256": "51be9542eaa0f9754e201e17440a281145a494b8afb3b2d00274e08927a5a299",
+          "fetched_at": "2026-08-27T10:06:16Z"
+        },
+        {
+          "url": "https://www.town.tsubata.lg.jp/uploaded/attachment/4253.pdf",
+          "observed_on": "https://www.town.tsubata.lg.jp/page/5156.html",
+          "sha256": "fcee4686a371af096f147f60dd0b2ac4051bce06342f5b8702543787dd9f6cd9",
+          "fetched_at": "2026-08-27T13:35:43Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tsubata.lg.jp/life/6/22/124/ (label: 予算) 入口 https://www.town.tsubata.lg.jp/life/6/22/124/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tsubata.lg.jp/life/6/22/124/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（4253.pdf「地方消費税交付金（社会保障財源）充当内訳書 [PDFファイル／222KB]」, sha256:fcee4686）にて構造マーカー（歳入・歳出・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

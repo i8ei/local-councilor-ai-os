@@ -63,11 +63,11 @@
       "notes": "deepest_doc=P1。budget文書（3_21273_126085_up_5yz1188d.pdf「第1表 会計別予算比較集計表（PDF：53.4キロバイト）」, sha256:99f1172d）にて構造マーカー（予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.omuta.lg.jp/list00266.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.omuta.lg.jp/list00266.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.city.omuta.lg.jp/list00266.html",
           "sha256": "e6948aa617e827a0e0b3717faaf4a534579d295fef12abba332794dc7ed33b52",
           "fetched_at": "2026-08-27T09:35:30Z"
+        },
+        {
+          "url": "https://www.city.omuta.lg.jp/kiji0034047/3_4047_121603_up_3kncmree.pdf",
+          "observed_on": "https://www.city.omuta.lg.jp/kiji0034047/index.html",
+          "sha256": "407d7f6d22cdbd7361c28eeca01dd7f7d56089cd95951793b460cbd293c15951",
+          "fetched_at": "2026-08-27T13:44:38Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.omuta.lg.jp/list00266.html (label: 決算) 入口 https://www.city.omuta.lg.jp/list00266.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.omuta.lg.jp/list00266.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_4047_121603_up_3kncmree.pdf「令和6年度決算カード（PDF：249.1キロバイト）」, sha256:407d7f6d）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

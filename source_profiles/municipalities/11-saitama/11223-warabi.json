@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.warabi.saitama.jp/shisei/vision/reiki/1002871.html (label: 蕨市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.warabi.saitama.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.warabi.saitama.jp/shisei/zaisei/index.html",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.city.warabi.saitama.jp/shisei/zaisei/index.html",
           "sha256": "9233ca2c4d4332e6a745239c94bacc2afb80bd5114c7f9da3f966c73431e8787",
           "fetched_at": "2026-08-27T10:20:56Z"
+        },
+        {
+          "url": "http://www.city.warabi.saitama.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.warabi.saitama.jp/",
+          "sha256": "9233ca2c4d4332e6a745239c94bacc2afb80bd5114c7f9da3f966c73431e8787",
+          "fetched_at": "2026-08-27T10:20:56Z"
+        },
+        {
+          "url": "https://www.city.warabi.saitama.jp/_res/projects/default_project/_page_/001/012/672/r8gaiyou.pdf",
+          "observed_on": "https://www.city.warabi.saitama.jp/shisei/zaisei/kouhyo/1012672.html",
+          "sha256": "bd8f1fa43e4fff737fe86af10d566778113bd77560dd4620c898ca6659708a2c",
+          "fetched_at": "2026-08-27T13:31:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.warabi.saitama.jp/shisei/zaisei/index.html (label: 財政・行政改革・都市経営) 入口 https://www.city.warabi.saitama.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8gaiyou.pdf「当初予算（案）概要 （PDF 2.1MB）」, sha256:bd8f1fa4）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.warabi.saitama.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.warabi.saitama.jp/shisei/zaisei/index.html",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.city.warabi.saitama.jp/shisei/zaisei/index.html",
           "sha256": "9233ca2c4d4332e6a745239c94bacc2afb80bd5114c7f9da3f966c73431e8787",
           "fetched_at": "2026-08-27T10:20:56Z"
+        },
+        {
+          "url": "http://www.city.warabi.saitama.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.warabi.saitama.jp/",
+          "sha256": "9233ca2c4d4332e6a745239c94bacc2afb80bd5114c7f9da3f966c73431e8787",
+          "fetched_at": "2026-08-27T10:20:56Z"
+        },
+        {
+          "url": "https://www.city.warabi.saitama.jp/_res/projects/default_project/_page_/001/012/015/r6sizeikessanntoukei.pdf",
+          "observed_on": "https://www.city.warabi.saitama.jp/shisei/zaisei/toukei/1012015.html",
+          "sha256": "dc82d8b97a415f1910c448745d87dc7f6b15637351171e05d7344e9357fde5ff",
+          "fetched_at": "2026-08-27T13:31:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.warabi.saitama.jp/shisei/zaisei/index.html (label: 財政・行政改革・都市経営) 入口 https://www.city.warabi.saitama.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6sizeikessanntoukei.pdf「令和6年度市税決算統計 （PDF 962.9KB）」, sha256:dc82d8b9）にて構造マーカー（歳入・歳出・決算額・予算現額等）を確認済み。"
     }
   }
 }

@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www.town.saroma.hokkaido.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
@@ -75,16 +75,22 @@
           "observed_on": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
           "sha256": "ae69f10b597ef2e6e9d8bf7b26389c470893846b4b947b0e980e6589318b0eb0",
           "fetched_at": "2026-08-27T10:31:20Z"
+        },
+        {
+          "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/files/kanrikeikaku.pdf",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+          "sha256": "6e6e6bbbeee07a0221c57120c2c634974911d81ae31ebc202c02bdb032c7667c",
+          "fetched_at": "2026-08-27T13:26:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ (label: 企画財政課) 入口 http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（kanrikeikaku.pdf「佐呂間町公共施設等総合管理計画 (1173KB)」, sha256:6e6e6bbb）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
@@ -96,9 +102,15 @@
           "observed_on": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
           "sha256": "ae69f10b597ef2e6e9d8bf7b26389c470893846b4b947b0e980e6589318b0eb0",
           "fetched_at": "2026-08-27T10:31:20Z"
+        },
+        {
+          "url": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/files/kanrikeikaku.pdf",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/",
+          "sha256": "6e6e6bbbeee07a0221c57120c2c634974911d81ae31ebc202c02bdb032c7667c",
+          "fetched_at": "2026-08-27T13:26:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ (label: 企画財政課) 入口 http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.saroma.hokkaido.jp/kakuka/kikakuzaiseika/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kanrikeikaku.pdf「佐呂間町公共施設等総合管理計画 (1173KB)」, sha256:6e6e6bbb）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

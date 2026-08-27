@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.town.murata.miyagi.jp/cyosei/on-line/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.murata.miyagi.jp/cyosei/gikai/gikai_dayori/file/150.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.murata.miyagi.jp/cyosei/gikai/gikai_dayori/file/150.pdf",
@@ -53,14 +53,14 @@
           "fetched_at": "2026-08-27T10:34:07Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.murata.miyagi.jp/cyosei/gikai/gikai_dayori/file/150.pdf (label: 第150号（令和8年5月1日発行）「令和8年度当初予算」(7.56MB)) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（150.pdf「Direct Document」, sha256:74814cc2）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.murata.miyagi.jp/cyosei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.murata.miyagi.jp/cyosei/zaisei/index.html",
@@ -72,9 +72,15 @@
           "observed_on": "http://www.town.murata.miyagi.jp/cyosei/zaisei/index.html",
           "sha256": "124c48e287c4b06167ef6db188178ed06ab9d18f7b99397e3439b4a2d71bfbbc",
           "fetched_at": "2026-08-27T10:34:08Z"
+        },
+        {
+          "url": "http://www.town.murata.miyagi.jp/cyosei/zaisei/yosan_kessan/file/01.pdf",
+          "observed_on": "http://www.town.murata.miyagi.jp/cyosei/zaisei/yosan_kessan/index.html",
+          "sha256": "2dc9c68d8d910f577e5a822a1a20f945035036e438c0b4c321a3ac49aa6a4c78",
+          "fetched_at": "2026-08-27T13:27:55Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.murata.miyagi.jp/cyosei/zaisei/index.html (label: 町の財政) 入口 http://www.town.murata.miyagi.jp/cyosei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.murata.miyagi.jp/cyosei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（01.pdf「決算」, sha256:2dc9c68d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

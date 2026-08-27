@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tobishima/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.tobishima.aichi.jp/sonsei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tobishima.aichi.jp/sonsei/zaisei/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.vill.tobishima.aichi.jp/sonsei/zaisei/index.html",
           "sha256": "425470fe6fcd32c6682b54515a021c3c816666bc1da800b261c8c5c38df40e59",
           "fetched_at": "2026-08-27T10:16:54Z"
+        },
+        {
+          "url": "http://www.vill.tobishima.aichi.jp/sonsei/zaisei/index.html",
+          "observed_on": "http://www.vill.tobishima.aichi.jp/",
+          "sha256": "425470fe6fcd32c6682b54515a021c3c816666bc1da800b261c8c5c38df40e59",
+          "fetched_at": "2026-08-27T10:16:54Z"
+        },
+        {
+          "url": "https://www.vill.tobishima.aichi.jp/_res/projects/default_project/_page_/001/002/288/r6_koho_bessatu_toushoyosan.pdf",
+          "observed_on": "https://www.vill.tobishima.aichi.jp/sonsei/zaisei/1002288.html",
+          "sha256": "3c3f1fa0e601078cef3dc6afa629f2cdb64ad7d04bcf4184868e3f76e0c6023c",
+          "fetched_at": "2026-08-27T13:38:31Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.tobishima.aichi.jp/sonsei/zaisei/index.html (label: 予算・財政) 入口 https://www.vill.tobishima.aichi.jp/sonsei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tobishima.aichi.jp/sonsei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6_koho_bessatu_toushoyosan.pdf「当初予算（1～2ページ） （PDF 980.6 KB）」, sha256:3c3f1fa0）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.tobishima.aichi.jp/sonsei/zaisei/1002294/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tobishima.aichi.jp/sonsei/zaisei/1002294/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.vill.tobishima.aichi.jp/sonsei/zaisei/1002294/index.html",
           "sha256": "93dbc63a68f5b0c2b3fc9d05006bd97ced0dce1b830726d8d932dc89734a097b",
           "fetched_at": "2026-08-27T10:16:57Z"
+        },
+        {
+          "url": "http://www.vill.tobishima.aichi.jp/sonsei/zaisei/1002294/index.html",
+          "observed_on": "http://www.vill.tobishima.aichi.jp/",
+          "sha256": "93dbc63a68f5b0c2b3fc9d05006bd97ced0dce1b830726d8d932dc89734a097b",
+          "fetched_at": "2026-08-27T10:16:57Z"
+        },
+        {
+          "url": "https://www.vill.tobishima.aichi.jp/_res/projects/default_project/_page_/001/002/976/kessan_ippan_tokubetsu_r6.pdf",
+          "observed_on": "https://www.vill.tobishima.aichi.jp/sonsei/zaisei/1002294/1002976.html",
+          "sha256": "9377eb0d5a9b0c0cea61890df2aa2fdabcbbd142738af334ce5f30e4c2632cbc",
+          "fetched_at": "2026-08-27T13:39:18Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.tobishima.aichi.jp/sonsei/zaisei/1002294/index.html (label: 決算) 入口 https://www.vill.tobishima.aichi.jp/sonsei/zaisei/1002294/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tobishima.aichi.jp/sonsei/zaisei/1002294/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessan_ippan_tokubetsu_r6.pdf「一般会計・特別会計決算書 （PDF 17.0 MB）」, sha256:9377eb0d）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

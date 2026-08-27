@@ -50,11 +50,11 @@
       "base_url": "http://reiki.city.toride.ibaraki.jp/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toride.ibaraki.jp/zaisei/shise/yosan/yosan/r8-hosei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toride.ibaraki.jp/zaisei/shise/yosan/yosan/r8-hosei.html",
@@ -71,16 +71,22 @@
           "url": "http://www.city.toride.ibaraki.jp/zaisei/shise/yosan/yosan/documents/r8-hosei-ichiran.pdf",
           "observed_on": "http://www.city.toride.ibaraki.jp/zaisei/shise/yosan/yosan/r8-hosei.html",
           "fetched_at": "2026-08-27T11:16:51Z"
+        },
+        {
+          "url": "http://www.city.toride.ibaraki.jp/zaisei/shise/yosan/yosan/documents/r8-hosei-gaiyou-giketsu-1.pdf",
+          "observed_on": "http://www.city.toride.ibaraki.jp/zaisei/shise/yosan/yosan/r8-hosei.html",
+          "sha256": "b3b5d1614990e0750a70ccd3296ae03cdcd3b27bdf93dffe2dff3018892b7f0a",
+          "fetched_at": "2026-08-27T13:30:09Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.toride.ibaraki.jp/zaisei/shise/yosan/yosan/r8-hosei.html (label: 令和8年度補正予算（令和8年9月補正予算（案））を掲...) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（r8-hosei-gaiyou-giketsu-1.pdf「令和8年6月補正予算の概要（PDF：206KB）（別ウィンドウで開きます）」, sha256:b3b5d161）にて構造マーカー（歳入・歳出・項・予算総額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toride.ibaraki.jp/kaikei/shise/yosan/kessan/sainyusaisyutukessansyo/r7-kessansyo.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toride.ibaraki.jp/kaikei/shise/yosan/kessan/sainyusaisyutukessansyo/r7-kessansyo.html",
@@ -97,9 +103,15 @@
           "url": "http://www.city.toride.ibaraki.jp/kaikei/shise/yosan/kessan/sainyusaisyutukessansyo/documents/r7ippan1-6.pdf",
           "observed_on": "http://www.city.toride.ibaraki.jp/kaikei/shise/yosan/kessan/sainyusaisyutukessansyo/r7-kessansyo.html",
           "fetched_at": "2026-08-27T11:16:53Z"
+        },
+        {
+          "url": "http://www.city.toride.ibaraki.jp/kaikei/shise/yosan/kessan/sainyusaisyutukessansyo/documents/r7ippan7-18.pdf",
+          "observed_on": "http://www.city.toride.ibaraki.jp/kaikei/shise/yosan/kessan/sainyusaisyutukessansyo/r7-kessansyo.html",
+          "sha256": "9a2313c905dfe11517fc0996f393fe8288d40a6b4a341a9c0140a83e971ff2b8",
+          "fetched_at": "2026-08-27T13:30:09Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.toride.ibaraki.jp/kaikei/shise/yosan/kessan/sainyusaisyutukessansyo/r7-kessansyo.html (label: 令和7年度歳入歳出決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r7ippan7-18.pdf「一般会計歳入歳出決算書7頁から18頁（PDF：195KB）（別ウィンドウで開きます）」, sha256:9a2313c9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

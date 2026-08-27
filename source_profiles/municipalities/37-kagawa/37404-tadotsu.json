@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.tadotsu/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html",
           "sha256": "bf4465c383ee24a1583efe75490ee10a9e828e85ce08977578dbed4091485499",
           "fetched_at": "2026-08-27T09:46:48Z"
+        },
+        {
+          "url": "https://www.town.tadotsu.kagawa.jp/material/files/group/3/KenzenkaR6.pdf",
+          "observed_on": "https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/3910.html",
+          "sha256": "dc31823ba5247fbfcfc9dd6e175e00491eb3d96f43bc8210b33aa59b7b44023b",
+          "fetched_at": "2026-08-27T13:43:18Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html (label: 予算・決算) 入口 https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tadotsu.kagawa.jp/choseijoho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（KenzenkaR6.pdf「KenzenkaR6 (PDFファイル: 379.3KB)」, sha256:dc31823b）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

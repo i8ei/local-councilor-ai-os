@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.town.yura.wakayama.jp/other-contents/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
@@ -51,9 +51,15 @@
           "observed_on": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
           "sha256": "8ddab9d2c4a21e823704f8e290ea545497b72d5213f793c10e0204e2ba1ec700",
           "fetched_at": "2026-08-27T09:53:47Z"
+        },
+        {
+          "url": "http://www.town.yura.wakayama.jp/docs/2026031200019/files/ippantousyo.pdf",
+          "observed_on": "http://www.town.yura.wakayama.jp/docs/2026031200019/",
+          "sha256": "9627e0dcfbc91f3163a6438df31d5610a19240752fd699fca90387565a1b23d8",
+          "fetched_at": "2026-08-27T13:41:55Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yura.wakayama.jp/bunya/zaisei/ (label: 行財政) 入口 http://www.town.yura.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.yura.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.yura.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（ippantousyo.pdf「当初予算.pdf(5MB)」, sha256:9627e0dc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

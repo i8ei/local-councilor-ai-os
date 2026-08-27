@@ -48,11 +48,11 @@
       "notes": "Observed regulations index at https://www.town.kanan.osaka.jp/gyoseijoho/seisaku_keikaku/4343.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kanan.osaka.jp/gyoseijoho/gyozaisei/1/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kanan.osaka.jp/gyoseijoho/gyozaisei/1/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.kanan.osaka.jp/gyoseijoho/gyozaisei/1/index.html",
           "sha256": "13a70ff483b9c90b7fa491f919707f9031e38db2fc1db12ef963bb69acda94cf",
           "fetched_at": "2026-08-27T09:51:26Z"
+        },
+        {
+          "url": "https://www.town.kanan.osaka.jp/material/files/group/6/42kanan_2024.xlsx",
+          "observed_on": "https://www.town.kanan.osaka.jp/gyoseijoho/gyozaisei/4326.html",
+          "sha256": "4b2439684ced7df42024c34c7a14ea704e90f4fafcb205be0024280296675596",
+          "fetched_at": "2026-08-27T13:40:35Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kanan.osaka.jp/gyoseijoho/gyozaisei/1/index.html (label: 予算書) 入口 https://www.town.kanan.osaka.jp/gyoseijoho/gyozaisei/1/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanan.osaka.jp/gyoseijoho/gyozaisei/1/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanan.osaka.jp/gyoseijoho/gyozaisei/1/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（42kanan_2024.xlsx「令和6年度財政状況資料集 (Excelファイル: 529.2KB)」, sha256:4b243968）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

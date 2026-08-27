@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（R6zaiseizyoukyousiryousyuu.xlsx「令和6年度財政状況資料集 (Excelファイル: 540.0KB)」, sha256:59362acf）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html",
@@ -91,9 +91,15 @@
           "observed_on": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html",
           "sha256": "7de5aafb8685b221419544873d387fc06407f5bb047523aa33f5419e65caed63",
           "fetched_at": "2026-08-27T10:23:17Z"
+        },
+        {
+          "url": "https://www.city.narashino.lg.jp/material/files/group/17/R6zaiseizyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.narashino.lg.jp/joho/zaiseikaikei/20535.html",
+          "sha256": "59362acf183dc2499c62d8662a12b3a576a415f7930b03badbde92d968d5fe8d",
+          "fetched_at": "2026-08-27T13:32:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html (label: 財政・会計) 入口 https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.narashino.lg.jp/joho/zaiseikaikei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseizyoukyousiryousyuu.xlsx「令和6年度財政状況資料集 (Excelファイル: 540.0KB)」, sha256:59362acf）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

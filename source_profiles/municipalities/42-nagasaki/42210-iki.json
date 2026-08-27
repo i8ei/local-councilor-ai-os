@@ -48,11 +48,11 @@
       "base_url": "https://www.city.iki.nagasaki.jp/section/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.iki.nagasaki.jp/shisei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.iki.nagasaki.jp/shisei/gyozaisei/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.city.iki.nagasaki.jp/shisei/gyozaisei/index.html",
           "sha256": "1acffaf19c87c9360b4a8e9f6ae7ef0e3a6e14a88638f1f29aed73754b0eecde",
           "fetched_at": "2026-08-27T09:37:33Z"
+        },
+        {
+          "url": "https://www.city.iki.nagasaki.jp/material/files/group/4/reiwarokunendozaiseijyoukyousiryousyu.xlsx",
+          "observed_on": "https://www.city.iki.nagasaki.jp/shisei/gyozaisei/13832.html",
+          "sha256": "73c6021301068ba1f4017cbcbe5a947cf4c3ccb6d426919af5c409a2461d0eba",
+          "fetched_at": "2026-08-27T13:45:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.iki.nagasaki.jp/shisei/gyozaisei/index.html (label: 行財政) 入口 https://www.city.iki.nagasaki.jp/shisei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iki.nagasaki.jp/shisei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iki.nagasaki.jp/shisei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（reiwarokunendozaiseijyoukyousiryousyu.xlsx「令和6年度財政状況資料集 (Excelファイル: 561.7KB)」, sha256:73c60213）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

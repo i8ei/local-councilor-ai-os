@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.town.hakone.kanagawa.jp/www/contents/1100000000150/index.html (label: 町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html",
           "sha256": "666ac04ad40c7a91812678d24f997204aab93c29ee8dfd788f8c70c24774d30d",
           "fetched_at": "2026-08-27T10:27:44Z"
+        },
+        {
+          "url": "http://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html",
+          "observed_on": "http://www.town.hakone.kanagawa.jp/",
+          "sha256": "666ac04ad40c7a91812678d24f997204aab93c29ee8dfd788f8c70c24774d30d",
+          "fetched_at": "2026-08-27T10:27:44Z"
+        },
+        {
+          "url": "https://www.town.hakone.kanagawa.jp/www/contents/1100000001777/simple/000005593.pdf",
+          "observed_on": "https://www.town.hakone.kanagawa.jp/www/contents/1100000001777/index.html",
+          "sha256": "0c0750fa59ee77c4d4e71fb50cff0bb5f77488860d31e33cf99c5b70fe1416d8",
+          "fetched_at": "2026-08-27T13:34:45Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html (label: 予算・決算) 入口 https://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（000005593.pdf「予算付属説明資料ダウンロード ［PDF：667KB］」, sha256:0c0750fa）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html",
           "sha256": "666ac04ad40c7a91812678d24f997204aab93c29ee8dfd788f8c70c24774d30d",
           "fetched_at": "2026-08-27T10:27:44Z"
+        },
+        {
+          "url": "http://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html",
+          "observed_on": "http://www.town.hakone.kanagawa.jp/",
+          "sha256": "666ac04ad40c7a91812678d24f997204aab93c29ee8dfd788f8c70c24774d30d",
+          "fetched_at": "2026-08-27T10:27:44Z"
+        },
+        {
+          "url": "https://www.town.hakone.kanagawa.jp/www/contents/1100000000077/simple/zaiseizyoukyousiryousyuu_143821_hakone_2024.xlsx",
+          "observed_on": "https://www.town.hakone.kanagawa.jp/www/contents/1100000000077/index.html",
+          "sha256": "f90ad770d2c307b1570181a4257634bb1c61219be3956ba6bd1011468fc730ef",
+          "fetched_at": "2026-08-27T13:34:47Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html (label: 予算・決算) 入口 https://www.town.hakone.kanagawa.jp/www/genre/1000600000047/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseizyoukyousiryousyuu_143821_hakone_2024.xlsx「令和6年度財政状況資料集（Excel／548KB）」, sha256:f90ad770）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -37,11 +37,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/",
@@ -53,9 +53,21 @@
           "observed_on": "https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/",
           "sha256": "540c5ad02e9f0eef1f4dc7fc3c853db61e26cfbecfc4d82f28d24d677a85aa17",
           "fetched_at": "2026-08-27T09:37:13Z"
+        },
+        {
+          "url": "http://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/",
+          "observed_on": "http://www.town.yoshitomi.lg.jp/",
+          "sha256": "540c5ad02e9f0eef1f4dc7fc3c853db61e26cfbecfc4d82f28d24d677a85aa17",
+          "fetched_at": "2026-08-27T09:37:13Z"
+        },
+        {
+          "url": "https://www.town.yoshitomi.lg.jp/user/filer_public/93/01/930114d1-e20c-4f1d-a8d5-8e407ed7519b/ling-he-7nian-du-xia-ban-qi.pdf",
+          "observed_on": "https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/p105/s627/",
+          "sha256": "be04f49e43b7531df21bc062562188d8b95b1bfc25ee9bc71ebd66e40540a36f",
+          "fetched_at": "2026-08-27T13:45:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/ (label: 行財政) 入口 https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（ling-he-7nian-du-xia-ban-qi.pdf「令和７年度下半期.pdf」, sha256:be04f49e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

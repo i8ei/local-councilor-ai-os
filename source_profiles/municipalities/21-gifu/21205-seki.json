@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/seki-shi/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.seki.lg.jp/category/3-9-11-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.seki.lg.jp/category/3-9-11-0-0-0-0-0-0-0.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.city.seki.lg.jp/category/3-9-11-0-0-0-0-0-0-0.html",
           "sha256": "a1535f6366411f9a5682f0a72392bf54f421f23c3fbe6e5c44035e75232c627b",
           "fetched_at": "2026-08-27T10:14:03Z"
+        },
+        {
+          "url": "https://www.city.seki.lg.jp/cmsfiles/contents/0000022/22524/R8yosansho.pdf",
+          "observed_on": "https://www.city.seki.lg.jp/0000022524.html",
+          "sha256": "1293203fbac037f5ee3735a64bc95f5be1102e60885ca3aaa22f05dec4644325",
+          "fetched_at": "2026-08-27T13:37:10Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.seki.lg.jp/category/3-9-11-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.seki.lg.jp/category/3-9-11-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosansho.pdf「令和8年度関市予算書 (PDF形式、10.15MB)」, sha256:1293203f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

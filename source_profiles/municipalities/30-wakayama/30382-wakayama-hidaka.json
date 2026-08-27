@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.town.wakayama-hidaka.lg.jp/other-contents/reiki_int/reiki_menu.html (label: 町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
@@ -51,9 +51,15 @@
           "observed_on": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
           "sha256": "7159b1051e621d59605bf74e78780c2419c3cc4589c2b861c46acb6720840bf0",
           "fetched_at": "2026-08-27T09:53:42Z"
+        },
+        {
+          "url": "http://www.town.wakayama-hidaka.lg.jp/docs/2026030900026/files/R8ippan.pdf",
+          "observed_on": "http://www.town.wakayama-hidaka.lg.jp/docs/2026030900026/",
+          "sha256": "97cd8971eba070eb6e487875fd66dbd2ab9b1821cc45db76fdf1e8464664e12f",
+          "fetched_at": "2026-08-27T13:41:48Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ (label: 行財政) 入口 http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8ippan.pdf「令和８年度日高町一般会計予算(420KB)」, sha256:97cd8971）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://bousai.town.bihoro.hokkaido.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.bihoro.hokkaido.jp/life/4/18/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.bihoro.hokkaido.jp/life/4/18/",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.town.bihoro.hokkaido.jp/life/4/18/",
           "sha256": "e9a65b29e912fabea1087d3a148ee0aee95847836aedeff34cc2ff174d2926d2",
           "fetched_at": "2026-08-27T10:31:19Z"
+        },
+        {
+          "url": "http://www.town.bihoro.hokkaido.jp/life/4/18/",
+          "observed_on": "http://www.town.bihoro.hokkaido.jp/",
+          "sha256": "e9a65b29e912fabea1087d3a148ee0aee95847836aedeff34cc2ff174d2926d2",
+          "fetched_at": "2026-08-27T10:31:19Z"
+        },
+        {
+          "url": "https://www.town.bihoro.hokkaido.jp/uploaded/attachment/11555.pdf",
+          "observed_on": "https://www.town.bihoro.hokkaido.jp/page/1465.html",
+          "sha256": "148e7041593856e2ef39de9ca8de28a8ee6267aa391b2fff325e7079cca75c78",
+          "fetched_at": "2026-08-27T13:26:36Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.bihoro.hokkaido.jp/life/4/18/ (label: 行財政) 入口 https://www.town.bihoro.hokkaido.jp/life/4/18/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（11555.pdf「令和8年グラフで見る財政状況 [PDFファイル／4.87MB]」, sha256:148e7041）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.bihoro.hokkaido.jp/life/4/18/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.bihoro.hokkaido.jp/life/4/18/",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.town.bihoro.hokkaido.jp/life/4/18/",
           "sha256": "e9a65b29e912fabea1087d3a148ee0aee95847836aedeff34cc2ff174d2926d2",
           "fetched_at": "2026-08-27T10:31:19Z"
+        },
+        {
+          "url": "http://www.town.bihoro.hokkaido.jp/life/4/18/",
+          "observed_on": "http://www.town.bihoro.hokkaido.jp/",
+          "sha256": "e9a65b29e912fabea1087d3a148ee0aee95847836aedeff34cc2ff174d2926d2",
+          "fetched_at": "2026-08-27T10:31:19Z"
+        },
+        {
+          "url": "https://www.town.bihoro.hokkaido.jp/uploaded/attachment/11555.pdf",
+          "observed_on": "https://www.town.bihoro.hokkaido.jp/page/1465.html",
+          "sha256": "148e7041593856e2ef39de9ca8de28a8ee6267aa391b2fff325e7079cca75c78",
+          "fetched_at": "2026-08-27T13:26:36Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.bihoro.hokkaido.jp/life/4/18/ (label: 行財政) 入口 https://www.town.bihoro.hokkaido.jp/life/4/18/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（11555.pdf「令和8年グラフで見る財政状況 [PDFファイル／4.87MB]」, sha256:148e7041）にて構造マーカー（歳入・歳出・決算額・基準財政需要額等）を確認済み。"
     }
   }
 }

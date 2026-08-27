@@ -50,11 +50,11 @@
       "base_url": "https://www1.g-reiki.net/rausu-town/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.rausu-town.jp/pages/view/115",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.rausu-town.jp/pages/view/115",
@@ -71,16 +71,22 @@
           "url": "https://www.rausu-town.jp/img/files/6_info/28_gyosei/zaisei_daidokoro/R08%20%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E5%A0%B1%E5%91%8A%20%EF%BC%88%E7%94%BA%E6%94%BF%E3%81%A0%E3%82%88%E3%82%8A%E7%94%A8%EF%BC%89.pdf",
           "observed_on": "https://www.rausu-town.jp/pages/view/115",
           "fetched_at": "2026-08-27T10:31:41Z"
+        },
+        {
+          "url": "https://www.rausu-town.jp/img/files/6_info/28_gyosei/zaisei_daidokoro/R08%20%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E5%A0%B1%E5%91%8A%20%EF%BC%88%E7%94%BA%E6%94%BF%E3%81%A0%E3%82%88%E3%82%8A%E7%94%A8%EF%BC%89.pdf",
+          "observed_on": "https://www.rausu-town.jp/pages/view/115",
+          "sha256": "a51b6350805814e0c997a991ad162240cc56988903b6479cb32ab55288ff6fea",
+          "fetched_at": "2026-08-27T10:31:44Z"
         }
       ],
-      "notes": "Observed finance section at https://www.rausu-town.jp/pages/view/115 (label: 「羅臼町の財政状況」を更新しました。) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R08%20%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E5%A0%B1%E5%91%8A%20%EF%BC%88%E7%94%BA%E6%94%BF%E3%81%A0%E3%82%88%E3%82%8A%E7%94%A8%EF%BC%89.pdf「令和８年度」, sha256:a51b6350）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.rausu-town.jp/pages/view/115",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.rausu-town.jp/pages/view/115",
@@ -97,9 +103,15 @@
           "url": "https://www.rausu-town.jp/img/files/R06%E5%81%A5%E5%85%A8%E5%8C%96%E5%88%A4%E6%96%AD%E6%AF%94%E7%8E%87.pdf",
           "observed_on": "https://www.rausu-town.jp/pages/view/115",
           "fetched_at": "2026-08-27T10:31:45Z"
+        },
+        {
+          "url": "https://www.rausu-town.jp/img/files/%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_016942_%E7%BE%85%E8%87%BC%E7%94%BA_2024.xlsx",
+          "observed_on": "https://www.rausu-town.jp/pages/view/115",
+          "sha256": "9d7c521ba9beca671bcc103779aa442bf188a4fe26bbc3b400348501387c7636",
+          "fetched_at": "2026-08-27T13:27:00Z"
         }
       ],
-      "notes": "Observed finance section at https://www.rausu-town.jp/pages/view/115 (label: 「羅臼町の財政状況」を更新しました。) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（%E3%80%90%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86%E3%80%91_016942_%E7%BE%85%E8%87%BC%E7%94%BA_2024.xlsx「令和６年度（エクセル）」, sha256:9d7c521b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

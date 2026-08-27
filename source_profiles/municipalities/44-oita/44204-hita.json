@@ -50,11 +50,11 @@
       "base_url": "https://www1.g-reiki.net/hita/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hita.oita.jp/life/6/29/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hita.oita.jp/life/6/29/",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.hita.oita.jp/life/6/29/",
           "sha256": "5801e5f194e0547f156746bb4e0ff43d47b131c5cd224057261fad303022ae97",
           "fetched_at": "2026-08-27T09:39:11Z"
+        },
+        {
+          "url": "http://www.city.hita.oita.jp/life/6/29/",
+          "observed_on": "http://www.city.hita.oita.jp/",
+          "sha256": "5801e5f194e0547f156746bb4e0ff43d47b131c5cd224057261fad303022ae97",
+          "fetched_at": "2026-08-27T09:39:11Z"
+        },
+        {
+          "url": "https://www.city.hita.oita.jp/uploaded/attachment/8628.pdf",
+          "observed_on": "https://www.city.hita.oita.jp/soshiki/4/2125.html",
+          "sha256": "90492cdccad1f26217b75d8f817bc22a8254a0b09715348541294cb88526ae54",
+          "fetched_at": "2026-08-27T13:46:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hita.oita.jp/life/6/29/ (label: 行政・財政) 入口 https://www.city.hita.oita.jp/life/6/29/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hita.oita.jp/life/6/29/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8628.pdf「令和8年度一般会計・特別会計予算書 [PDFファイル／581KB]」, sha256:90492cdc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

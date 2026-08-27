@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/top/search/t:0.42313800%201501574809 (label: 幌加内町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan",
           "sha256": "b470d1e4859640bc55b60120e2cac129f412780253d6caca106b92197a6d5150",
           "fetched_at": "2026-08-27T10:30:59Z"
+        },
+        {
+          "url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan",
+          "observed_on": "https://www.town.horokanai.hokkaido.jp/",
+          "sha256": "b470d1e4859640bc55b60120e2cac129f412780253d6caca106b92197a6d5150",
+          "fetched_at": "2026-08-27T10:30:59Z"
+        },
+        {
+          "url": "https://www.town.horokanai.hokkaido.jp/gikai/wp-content/uploads/sites/2/2026/03/eba0f169902fbc3341164e1e5d8f65ef.pdf",
+          "observed_on": "https://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan",
+          "sha256": "b7af9f46377e5b7f7f6cf53e5ecb8fd387981b62e4cdf93833018a2e9cba670b",
+          "fetched_at": "2026-08-27T13:26:14Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan (label: 予算審査特別委員会) 入口 https://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/yosan に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（eba0f169902fbc3341164e1e5d8f65ef.pdf「」, sha256:b7af9f46）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan",
           "sha256": "2409c3cc278a41f3f94b63a95ade373822a782760b78cc902e98a6d96ae350b3",
           "fetched_at": "2026-08-27T10:31:02Z"
+        },
+        {
+          "url": "http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan",
+          "observed_on": "https://www.town.horokanai.hokkaido.jp/",
+          "sha256": "2409c3cc278a41f3f94b63a95ade373822a782760b78cc902e98a6d96ae350b3",
+          "fetched_at": "2026-08-27T10:31:02Z"
+        },
+        {
+          "url": "https://www.town.horokanai.hokkaido.jp/gikai/wp-content/uploads/sites/2/2025/08/17035c72ac4d84cc293f29a66f6b1ce1.pdf",
+          "observed_on": "https://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan",
+          "sha256": "3355e18ffacdbe21cbb7dd8cf7453e0ccdb4c9b03b925c8441083502d18cc24e",
+          "fetched_at": "2026-08-27T13:26:16Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan (label: 決算審査特別委員会) 入口 https://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.horokanai.hokkaido.jp/gikai/giroku/genre_giroku/kessan に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（17035c72ac4d84cc293f29a66f6b1ce1.pdf「」, sha256:3355e18f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "index_url": "https://www.town.numata.hokkaido.jp/reiki/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.numata.hokkaido.jp/section/soumu/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.numata.hokkaido.jp/section/soumu/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "http://www.town.numata.hokkaido.jp/section/soumu/index.html",
           "sha256": "f74a3643364528c13e4978b6d792381e1483095fc5692d7c58857f436d4302d4",
           "fetched_at": "2026-08-27T10:30:33Z"
+        },
+        {
+          "url": "http://www.town.numata.hokkaido.jp/section/soumu/ujj7s300000006ct-att/juegn80000000t2n.xlsx",
+          "observed_on": "http://www.town.numata.hokkaido.jp/section/soumu/ujj7s300000006ct.html",
+          "sha256": "71aabd7b27163237f43f03faee9a129705a75ceadfd406a591ca4cbc94b07ee8",
+          "fetched_at": "2026-08-27T13:28:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.numata.hokkaido.jp/section/soumu/index.html (label: 総務財政課) 入口 http://www.town.numata.hokkaido.jp/section/soumu/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（juegn80000000t2n.xlsx「令和6年度財政状況資料 (XLSX 529KB)」, sha256:71aabd7b）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.numata.hokkaido.jp/section/soumu/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.numata.hokkaido.jp/section/soumu/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "http://www.town.numata.hokkaido.jp/section/soumu/index.html",
           "sha256": "f74a3643364528c13e4978b6d792381e1483095fc5692d7c58857f436d4302d4",
           "fetched_at": "2026-08-27T10:30:33Z"
+        },
+        {
+          "url": "http://www.town.numata.hokkaido.jp/section/soumu/ujj7s300000006ct-att/juegn80000000t2n.xlsx",
+          "observed_on": "http://www.town.numata.hokkaido.jp/section/soumu/ujj7s300000006ct.html",
+          "sha256": "71aabd7b27163237f43f03faee9a129705a75ceadfd406a591ca4cbc94b07ee8",
+          "fetched_at": "2026-08-27T13:28:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.numata.hokkaido.jp/section/soumu/index.html (label: 総務財政課) 入口 http://www.town.numata.hokkaido.jp/section/soumu/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（juegn80000000t2n.xlsx「令和6年度財政状況資料 (XLSX 529KB)」, sha256:71aabd7b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

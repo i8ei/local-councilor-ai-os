@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（R8yosangaiyou.pdf「予算の概要 (PDFファイル: 484.4KB)」, sha256:734d4c50）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
@@ -78,9 +78,15 @@
           "observed_on": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
           "sha256": "fd9cd7693a6d705252ebdc7286df7d8fd9c2ab476090563306f7f7a324157036",
           "fetched_at": "2026-08-27T09:51:19Z"
+        },
+        {
+          "url": "https://www.town.tajiri.osaka.jp/material/files/group/16/kessannka-do37.pdf",
+          "observed_on": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/kessan/2130.html",
+          "sha256": "ea1568f23e1c7bd4313b7f158d40ef52445f249e9e0560f83ab6ce863795c892",
+          "fetched_at": "2026-08-27T13:40:42Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessannka-do37.pdf「令和7年度 決算状況 (PDFファイル: 170.6KB)」, sha256:ea1568f2）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

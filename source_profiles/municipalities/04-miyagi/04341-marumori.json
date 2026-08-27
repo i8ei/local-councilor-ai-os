@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.town.marumori.miyagi.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.marumori.miyagi.jp/town/category/?category=54",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.marumori.miyagi.jp/town/category/?category=54",
@@ -66,16 +66,22 @@
           "observed_on": "http://www.town.marumori.miyagi.jp/town/category/?category=54",
           "sha256": "9e0156cf2c6c3913587342b90e2adf6c03d58d66e5f328e60bc7108734251fc6",
           "fetched_at": "2026-08-27T10:34:05Z"
+        },
+        {
+          "url": "http://www.town.marumori.miyagi.jp/common/img/content/content_20260330_202121.pdf",
+          "observed_on": "http://www.town.marumori.miyagi.jp/town/detail.php?content=1721",
+          "sha256": "80d22215ed115674a4c399f4ca4b329532ac57718745a3e574d8b6438f34c28a",
+          "fetched_at": "2026-08-27T13:28:00Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.marumori.miyagi.jp/town/category/?category=54 (label: 町の財政) 入口 http://www.town.marumori.miyagi.jp/town/category/?category=54 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.marumori.miyagi.jp/town/category/?category=54 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（content_20260330_202121.pdf「一般会計(PDF/1606KB)」, sha256:80d22215）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.marumori.miyagi.jp/town/category/?category=54",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.marumori.miyagi.jp/town/category/?category=54",
@@ -87,9 +93,15 @@
           "observed_on": "http://www.town.marumori.miyagi.jp/town/category/?category=54",
           "sha256": "9e0156cf2c6c3913587342b90e2adf6c03d58d66e5f328e60bc7108734251fc6",
           "fetched_at": "2026-08-27T10:34:05Z"
+        },
+        {
+          "url": "http://www.town.marumori.miyagi.jp/common/img/content/content_20260323_163557.pdf",
+          "observed_on": "http://www.town.marumori.miyagi.jp/town/detail.php?content=51",
+          "sha256": "2a2699f5d49e4cb8639d5da7306ada331ae3fcbd55d64a3f05f77af96f2e079a",
+          "fetched_at": "2026-08-27T13:27:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.marumori.miyagi.jp/town/category/?category=54 (label: 町の財政) 入口 http://www.town.marumori.miyagi.jp/town/category/?category=54 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.marumori.miyagi.jp/town/category/?category=54 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（content_20260323_163557.pdf「令和６年度財政状況資料集(PDF/1875KB)」, sha256:2a2699f5）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

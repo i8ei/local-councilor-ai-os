@@ -59,11 +59,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80549A69 (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.noto.lg.jp/chosei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.noto.lg.jp/chosei/gyozaisei/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.town.noto.lg.jp/chosei/gyozaisei/index.html",
           "sha256": "8c6398b1949eae0a42e05697515f65d3937396416a3a18c7d1d5fe14a33e4aca",
           "fetched_at": "2026-08-27T10:06:23Z"
+        },
+        {
+          "url": "https://www.town.noto.lg.jp/material/files/group/11/0000022991.pdf",
+          "observed_on": "https://www.town.noto.lg.jp/chosei/gyozaisei/4/2800.html",
+          "sha256": "57a897be9dbe736811d5425a5d4b8e201f4d534856fd4b2ff445657a14374cf5",
+          "fetched_at": "2026-08-27T13:35:54Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.noto.lg.jp/chosei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（0000022991.pdf「財政状況資料集（平成30年度決算） (PDFファイル: 1.2MB)」, sha256:57a897be）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.noto.lg.jp/chosei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.noto.lg.jp/chosei/gyozaisei/index.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.town.noto.lg.jp/chosei/gyozaisei/index.html",
           "sha256": "8c6398b1949eae0a42e05697515f65d3937396416a3a18c7d1d5fe14a33e4aca",
           "fetched_at": "2026-08-27T10:06:23Z"
+        },
+        {
+          "url": "https://www.town.noto.lg.jp/material/files/group/11/0000022991.pdf",
+          "observed_on": "https://www.town.noto.lg.jp/chosei/gyozaisei/4/2800.html",
+          "sha256": "57a897be9dbe736811d5425a5d4b8e201f4d534856fd4b2ff445657a14374cf5",
+          "fetched_at": "2026-08-27T13:35:54Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.noto.lg.jp/chosei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.noto.lg.jp/chosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（0000022991.pdf「財政状況資料集（平成30年度決算） (PDFファイル: 1.2MB)」, sha256:57a897be）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

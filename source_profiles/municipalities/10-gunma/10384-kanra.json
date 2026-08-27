@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kanra/reiki_menu.html (label: 甘楽町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
           "sha256": "1687c13a020450d74146253eda758cb023f48bbbc9f5b67c87642b2a8c703182",
           "fetched_at": "2026-08-27T10:20:04Z"
+        },
+        {
+          "url": "https://www.town.kanra.lg.jp/jyougesuidou/gyoumu/sozai/other/2026suidojigyoyosan.pdf",
+          "observed_on": "https://www.town.kanra.lg.jp/jyougesuidou/gyoumu/news/20260413160250.html",
+          "sha256": "7a2c112a00eb653ba4622612cd26568cffa53d72648114d8f769554a6d12db72",
+          "fetched_at": "2026-08-27T13:31:12Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kanra.lg.jp/gyosei/zaisei/index.html (label: 財政状況) 入口 https://www.town.kanra.lg.jp/gyosei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2026suidojigyoyosan.pdf「令和８年度水道事業会計予算書（408 KB）」, sha256:7a2c112a）にて構造マーカー（款・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
           "sha256": "1687c13a020450d74146253eda758cb023f48bbbc9f5b67c87642b2a8c703182",
           "fetched_at": "2026-08-27T10:20:04Z"
+        },
+        {
+          "url": "https://www.town.kanra.lg.jp/kikaku/zaisei/sozai/other/zaiseizyoukyou_2024.xlsx",
+          "observed_on": "https://www.town.kanra.lg.jp/kikaku/zaisei/finance/20260326100613.html",
+          "sha256": "284f480bbd9a980f185a64e202a14c04dadf8fedca047a2856e9734f3ae7e02f",
+          "fetched_at": "2026-08-27T13:31:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kanra.lg.jp/gyosei/zaisei/index.html (label: 財政状況) 入口 https://www.town.kanra.lg.jp/gyosei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseizyoukyou_2024.xlsx「令和６年度財政状況資料集（554 KB）」, sha256:284f480b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

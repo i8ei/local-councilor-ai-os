@@ -78,11 +78,11 @@
       "notes": "deepest_doc=P1。budget文書（R6ippannkaikei.pdf「一般会計 当初予算 (PDFファイル: 15.6MB)」, sha256:981d0cf3）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html",
@@ -94,9 +94,15 @@
           "observed_on": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html",
           "sha256": "ea4ebfa6e5eb098ee270767ffab0b385a2c7f6549a98a131078f29c584abc1ec",
           "fetched_at": "2026-08-27T09:36:27Z"
+        },
+        {
+          "url": "https://www.town.hisayama.fukuoka.jp/material/files/group/3/shiryo.pdf",
+          "observed_on": "https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/kessan_jokyo/1988.html",
+          "sha256": "c88977386aeb9ef9431fdc11409739556a01f0f0c851dc6fbbe9858daf7a8c18",
+          "fetched_at": "2026-08-27T13:45:25Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html (label: 決算) 入口 https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hisayama.fukuoka.jp/gyosei/gyosei_joho/gyozaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（shiryo.pdf「平成18年度決算 付属資料 (PDFファイル: 39.1KB)」, sha256:c8897738）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

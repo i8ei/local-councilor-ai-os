@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/kagamiishi/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kagamiishi.fukushima.jp/kurashi/chousei/zaisei/013205.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kagamiishi.fukushima.jp/kurashi/chousei/zaisei/013205.html",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.town.kagamiishi.fukushima.jp:443/kurashi/chousei/zaisei/013205.html",
           "sha256": "668cf950a7f6de815237daa74d1916942c46f8b6855ad57fa306d928d4590b31",
           "fetched_at": "2026-08-27T10:37:29Z"
+        },
+        {
+          "url": "http://www.town.kagamiishi.fukushima.jp/kurashi/chousei/zaisei/013205.html",
+          "observed_on": "http://www.town.kagamiishi.fukushima.jp/",
+          "sha256": "668cf950a7f6de815237daa74d1916942c46f8b6855ad57fa306d928d4590b31",
+          "fetched_at": "2026-08-27T10:37:29Z"
+        },
+        {
+          "url": "https://www.town.kagamiishi.fukushima.jp:443/files/2018/11/30/so_H28zaiseijyokyo.xlsx",
+          "observed_on": "https://www.town.kagamiishi.fukushima.jp:443/kurashi/chousei/zaisei/013561.html",
+          "sha256": "75a6a512893a4d9c42d5627f0ad4dedc5b7c88b76be040196f850945863daef5",
+          "fetched_at": "2026-08-27T13:29:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kagamiishi.fukushima.jp/kurashi/chousei/zaisei/013205.html (label: ) 入口 https://www.town.kagamiishi.fukushima.jp:443/kurashi/chousei/zaisei/013205.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（so_H28zaiseijyokyo.xlsx「財政状況資料集(平成28年度決算) ※(11)債務償還可能年数は総務省で算出式を精査中であるため、平成29年度財政状況資料集より公表します。xlsx」, sha256:75a6a512）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kagamiishi.fukushima.jp/kurashi/chousei/zaisei/013205.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kagamiishi.fukushima.jp/kurashi/chousei/zaisei/013205.html",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.town.kagamiishi.fukushima.jp:443/kurashi/chousei/zaisei/013205.html",
           "sha256": "668cf950a7f6de815237daa74d1916942c46f8b6855ad57fa306d928d4590b31",
           "fetched_at": "2026-08-27T10:37:29Z"
+        },
+        {
+          "url": "http://www.town.kagamiishi.fukushima.jp/kurashi/chousei/zaisei/013205.html",
+          "observed_on": "http://www.town.kagamiishi.fukushima.jp/",
+          "sha256": "668cf950a7f6de815237daa74d1916942c46f8b6855ad57fa306d928d4590b31",
+          "fetched_at": "2026-08-27T10:37:29Z"
+        },
+        {
+          "url": "https://www.town.kagamiishi.fukushima.jp:443/files/2018/11/30/so_H28zaiseijyokyo.xlsx",
+          "observed_on": "https://www.town.kagamiishi.fukushima.jp:443/kurashi/chousei/zaisei/013561.html",
+          "sha256": "75a6a512893a4d9c42d5627f0ad4dedc5b7c88b76be040196f850945863daef5",
+          "fetched_at": "2026-08-27T13:29:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kagamiishi.fukushima.jp/kurashi/chousei/zaisei/013205.html (label: ) 入口 https://www.town.kagamiishi.fukushima.jp:443/kurashi/chousei/zaisei/013205.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（so_H28zaiseijyokyo.xlsx「財政状況資料集(平成28年度決算) ※(11)債務償還可能年数は総務省で算出式を精査中であるため、平成29年度財政状況資料集より公表します。xlsx」, sha256:75a6a512）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

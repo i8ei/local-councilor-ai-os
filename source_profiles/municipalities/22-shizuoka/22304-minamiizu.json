@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8573EED2 (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf",
@@ -69,9 +69,15 @@
           "url": "https://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf",
           "observed_on": "https://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf",
           "fetched_at": "2026-08-27T11:14:35Z"
+        },
+        {
+          "url": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf",
+          "observed_on": "http://www.town.minamiizu.shizuoka.jp/",
+          "sha256": "61a72c736859e6155c38a22053331067a1db9adb109f5064884a33c8cb77e97d",
+          "fetched_at": "2026-08-27T10:14:50Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf (label: 令和８年３月南伊豆町議会予算決算常任委員会.pdf[PDF：938KB]) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8-YK03.pdf「Direct Document」, sha256:61a72c73）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（20220601.pdf「予算執行状況(令和4年3月31日現在)」, sha256:b074ffbd）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toyoake.lg.jp/2935.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toyoake.lg.jp/2935.htm",
@@ -91,9 +91,21 @@
           "observed_on": "https://www.city.toyoake.lg.jp/2935.htm",
           "sha256": "97911e97b641791ae55d02cb84690092aee86b380f30be485b321584336001b8",
           "fetched_at": "2026-08-27T10:16:21Z"
+        },
+        {
+          "url": "http://www.city.toyoake.lg.jp/2935.htm",
+          "observed_on": "http://www.city.toyoake.lg.jp/",
+          "sha256": "97911e97b641791ae55d02cb84690092aee86b380f30be485b321584336001b8",
+          "fetched_at": "2026-08-27T10:16:21Z"
+        },
+        {
+          "url": "https://www.city.toyoake.lg.jp/secure/29016/zaiseijoukyouR5.xlsx",
+          "observed_on": "https://www.city.toyoake.lg.jp/2935.htm",
+          "sha256": "fcb92096e7203632d2af3c9967e49eb150e6082759354164496e7b5b9b2eba30",
+          "fetched_at": "2026-08-27T13:38:10Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.toyoake.lg.jp/2935.htm (label: 決算) 入口 https://www.city.toyoake.lg.jp/2935.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijoukyouR5.xlsx「令和5年度(xlsx 569KB)」, sha256:fcb92096）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

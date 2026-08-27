@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/nanyo/reiki_menu.html (label: 例規検索)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nanyo.yamagata.jp/yokuarufaq/faq00104",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nanyo.yamagata.jp/yokuarufaq/faq00104",
@@ -64,16 +64,22 @@
           "observed_on": "http://www.city.nanyo.yamagata.jp/yokuarufaq/faq00104",
           "sha256": "6cac95e075fdf219b489fa43c2b8e443ca7cf49956d76d7358de8e3eb4b0926e",
           "fetched_at": "2026-08-27T10:37:54Z"
+        },
+        {
+          "url": "http://www.city.nanyo.yamagata.jp/up/files/giyousei/yosanketusan/yosan/%E3%80%90%E7%B5%90%E5%90%88%E7%89%88%E3%80%91%E4%BB%A4%E5%92%8C%EF%BC%97%E5%B9%B4%E5%BA%A6%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E6%9B%B8.pdf",
+          "observed_on": "http://www.city.nanyo.yamagata.jp/yosan/1259.html",
+          "sha256": "e32542c51d9084f996bf12eacc5b02e928829305d83052b2b99c21639e5b2d32",
+          "fetched_at": "2026-08-27T13:28:49Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.nanyo.yamagata.jp/yokuarufaq/faq00104 (label: 市の予算はどのようにして決まるのですか?) 入口 http://www.city.nanyo.yamagata.jp/yokuarufaq/faq00104 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（%E3%80%90%E7%B5%90%E5%90%88%E7%89%88%E3%80%91%E4%BB%A4%E5%92%8C%EF%BC%97%E5%B9%B4%E5%BA%A6%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E6%9B%B8.pdf「令和７年度南陽市一般会計及び特別会計予算書」, sha256:e32542c5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nanyo.yamagata.jp/yosanketusan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nanyo.yamagata.jp/yosanketusan/",
@@ -85,9 +91,15 @@
           "observed_on": "http://www.city.nanyo.yamagata.jp/yosanketusan/",
           "sha256": "af68de9a4fd8da04d01401fff153bea9a1ac54416c608fe8a5fa475bb2c73578",
           "fetched_at": "2026-08-27T10:37:56Z"
+        },
+        {
+          "url": "http://www.city.nanyo.yamagata.jp/up/files/giyousei/yosanketusan/kessan/%E4%BB%A4%E5%92%8C%EF%BC%96%E5%B9%B4%E5%BA%A6%20%E5%8D%97%E9%99%BD%E5%B8%82%E6%AD%B3%E5%85%A5%E6%AD%B3%E5%87%BA%E6%B1%BA%E7%AE%97%E6%9B%B8.pdf",
+          "observed_on": "http://www.city.nanyo.yamagata.jp/kessan/1260",
+          "sha256": "7cb94d39e6e3379e1bd080a458ec7de02d383d8e54d6f0906a006356c2409764",
+          "fetched_at": "2026-08-27T13:28:55Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.nanyo.yamagata.jp/yosanketusan/ (label: 予算・決算) 入口 http://www.city.nanyo.yamagata.jp/yosanketusan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.nanyo.yamagata.jp/yosanketusan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E4%BB%A4%E5%92%8C%EF%BC%96%E5%B9%B4%E5%BA%A6%20%E5%8D%97%E9%99%BD%E5%B8%82%E6%AD%B3%E5%85%A5%E6%AD%B3%E5%87%BA%E6%B1%BA%E7%AE%97%E6%9B%B8.pdf「令和６年度歳入歳出決算書」, sha256:7cb94d39）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

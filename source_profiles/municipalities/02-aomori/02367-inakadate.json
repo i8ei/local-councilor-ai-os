@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.vill.inakadate.lg.jp/_common/themes/inakadate/reiki_int/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
@@ -51,16 +51,22 @@
           "observed_on": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
           "sha256": "687d4be223b1880b50b03f61ae93eb846cc57326ea08d893d1a664c33d697d12",
           "fetched_at": "2026-08-27T10:32:16Z"
+        },
+        {
+          "url": "http://www.vill.inakadate.lg.jp/docs/2016041300052/files/20inakadatemura-6zaiseishiryou1.xlsx",
+          "observed_on": "http://www.vill.inakadate.lg.jp/docs/2016041300052/",
+          "sha256": "85566010f43586fd38cc2e0f0bbba0bd21120788becebd832caa838b252f7e2d",
+          "fetched_at": "2026-08-27T13:27:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.inakadate.lg.jp/bunya/zaisei/ (label: 財政・組織) 入口 http://www.vill.inakadate.lg.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.inakadate.lg.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20inakadatemura-6zaiseishiryou1.xlsx「財政状況資料集（令和6年度）(555KB)」, sha256:85566010）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
@@ -72,9 +78,15 @@
           "observed_on": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
           "sha256": "687d4be223b1880b50b03f61ae93eb846cc57326ea08d893d1a664c33d697d12",
           "fetched_at": "2026-08-27T10:32:16Z"
+        },
+        {
+          "url": "http://www.vill.inakadate.lg.jp/docs/2016041300052/files/20inakadatemura-6zaiseishiryou1.xlsx",
+          "observed_on": "http://www.vill.inakadate.lg.jp/docs/2016041300052/",
+          "sha256": "85566010f43586fd38cc2e0f0bbba0bd21120788becebd832caa838b252f7e2d",
+          "fetched_at": "2026-08-27T13:27:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.inakadate.lg.jp/bunya/zaisei/ (label: 財政・組織) 入口 http://www.vill.inakadate.lg.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.inakadate.lg.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20inakadatemura-6zaiseishiryou1.xlsx「財政状況資料集（令和6年度）(555KB)」, sha256:85566010）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

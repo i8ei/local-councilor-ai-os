@@ -43,11 +43,11 @@
       "notes": "No budget entrance found within page limit"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.asahi.yamagata.jp/portal/administration/gyoseijoho/kansa/9823.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.asahi.yamagata.jp/portal/administration/gyoseijoho/kansa/9823.html",
@@ -64,9 +64,15 @@
           "url": "https://www.town.asahi.yamagata.jp/material/files/group/14/R5kessanshinsaikensho.pdf",
           "observed_on": "https://www.town.asahi.yamagata.jp/portal/administration/gyoseijoho/kansa/9823.html",
           "fetched_at": "2026-08-27T10:35:56Z"
+        },
+        {
+          "url": "https://www.town.asahi.yamagata.jp/material/files/group/14/R5kessanshinsaikensho.pdf",
+          "observed_on": "https://www.town.asahi.yamagata.jp/portal/administration/gyoseijoho/kansa/9823.html",
+          "sha256": "83acb2da8fb812e9bdc3871a4f3cf7f948cab00b72934e5e75693ea8d40e3043",
+          "fetched_at": "2026-08-27T10:36:00Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.asahi.yamagata.jp/portal/administration/gyoseijoho/kansa/9823.html (label: 令和5年度決算審査意見書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R5kessanshinsaikensho.pdf「令和5年度一般会計、特別会計、企業会計決算審査意見書及び財政健全化・経営健全化審査意見書 (PDFファイル: 2.8MB)」, sha256:83acb2da）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

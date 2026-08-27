@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（7015.pdf「令和8年度一般会計予算書（当初） [PDFファイル／1.23MB]」, sha256:804f34fc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.matsuno.ehime.jp/site/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.matsuno.ehime.jp/site/zaisei/",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.town.matsuno.ehime.jp/site/zaisei/",
           "sha256": "d27efdbc4577487f7097d421b266936981536ac4eee6b47e626ee3a77030082c",
           "fetched_at": "2026-08-27T09:47:17Z"
+        },
+        {
+          "url": "http://www.town.matsuno.ehime.jp/site/zaisei/",
+          "observed_on": "http://www.town.matsuno.ehime.jp/",
+          "sha256": "d27efdbc4577487f7097d421b266936981536ac4eee6b47e626ee3a77030082c",
+          "fetched_at": "2026-08-27T09:47:17Z"
+        },
+        {
+          "url": "https://www.town.matsuno.ehime.jp/uploaded/attachment/1982.pdf",
+          "observed_on": "https://www.town.matsuno.ehime.jp/soshiki/1/2599.html",
+          "sha256": "9ef0bdd87958addd9d5acd7855dbcc9e95fe4553b7c96f08f7b560e7e4b7c054",
+          "fetched_at": "2026-08-27T13:43:35Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.matsuno.ehime.jp/site/zaisei/ (label: 財政情報) 入口 https://www.town.matsuno.ehime.jp/site/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.matsuno.ehime.jp/site/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1982.pdf「平成27年度決算状況カード [PDFファイル／256KB]」, sha256:9ef0bdd8）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

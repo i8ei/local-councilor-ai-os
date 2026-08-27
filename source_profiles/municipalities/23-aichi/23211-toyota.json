@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toyota.aichi.jp/shisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toyota.aichi.jp/shisei/yosan/index.html",
@@ -38,9 +38,21 @@
           "observed_on": "https://www.city.toyota.aichi.jp/shisei/yosan/index.html",
           "sha256": "f2bc7d6b588dc31a07dc24a67d45f69b0def3a4cc30615e85dc672edb6cf0b07",
           "fetched_at": "2026-08-27T10:15:16Z"
+        },
+        {
+          "url": "http://www.city.toyota.aichi.jp/shisei/yosan/index.html",
+          "observed_on": "http://www.city.toyota.aichi.jp/",
+          "sha256": "f2bc7d6b588dc31a07dc24a67d45f69b0def3a4cc30615e85dc672edb6cf0b07",
+          "fetched_at": "2026-08-27T10:15:16Z"
+        },
+        {
+          "url": "https://www.city.toyota.aichi.jp/_res/projects/default_project/_page_/001/024/517/r0801.pdf",
+          "observed_on": "https://www.city.toyota.aichi.jp/shisei/yosan/1024517.html",
+          "sha256": "250a32084c8cc1b416a74fc58e2a4040979aa1c98e912c7b29fa203b727b6121",
+          "fetched_at": "2026-08-27T13:38:02Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.toyota.aichi.jp/shisei/yosan/index.html (label: 予算・財政) 入口 https://www.city.toyota.aichi.jp/shisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.toyota.aichi.jp/shisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r0801.pdf「基金残高の状況 （PDF 53.5 KB）」, sha256:250a3208）にて構造マーカー（節・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

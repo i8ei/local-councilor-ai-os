@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/inagi/reiki_menu.html (label: 条例・規則等)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
@@ -71,16 +71,28 @@
           "url": "https://www.city.inagi.tokyo.jp/_res/projects/default_project/_page_/001/009/113/r8ipannkaikei.pdf",
           "observed_on": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
           "fetched_at": "2026-08-27T11:19:57Z"
+        },
+        {
+          "url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
+          "observed_on": "http://www.city.inagi.tokyo.jp/",
+          "sha256": "5c641007963f99cd002116c1bfc9345cb37b0d459e97b71ae367c21d1f765f9b",
+          "fetched_at": "2026-08-27T10:26:26Z"
+        },
+        {
+          "url": "https://www.city.inagi.tokyo.jp/_res/projects/default_project/_page_/001/009/113/r8ipannkaikei.pdf",
+          "observed_on": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
+          "sha256": "6e9fef855001893f751249d53911c8eaae5ae7c8ee447b9dbca19818ba9675e1",
+          "fetched_at": "2026-08-27T11:19:57Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html (label: 予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r8ipannkaikei.pdf「令和8年度一般会計予算書 （PDF 3.1 MB）」, sha256:6e9fef85）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
@@ -97,9 +109,21 @@
           "url": "https://www.city.inagi.tokyo.jp/_res/projects/default_project/_page_/001/009/154/r6_kessan_ippannkaikei.pdf",
           "observed_on": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
           "fetched_at": "2026-08-27T11:19:59Z"
+        },
+        {
+          "url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
+          "observed_on": "http://www.city.inagi.tokyo.jp/",
+          "sha256": "35e9a4c14466ee32225d236fb26ff2dfd15188b4f64b7071961248c3957d8f9f",
+          "fetched_at": "2026-08-27T10:26:29Z"
+        },
+        {
+          "url": "https://www.city.inagi.tokyo.jp/_res/projects/default_project/_page_/001/009/154/r6_kessan_ippannkaikei.pdf",
+          "observed_on": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
+          "sha256": "5b1195c1de27f425fb743838c709a2e1b7844ddd53b245701d1c9b7b2b36fd22",
+          "fetched_at": "2026-08-27T11:20:00Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html (label: 決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r6_kessan_ippannkaikei.pdf「令和6年度一般会計決算書 （PDF 3.2 MB）」, sha256:5b1195c1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/shiraoka/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shiraoka.lg.jp/shiseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shiraoka.lg.jp/shiseijoho/gyozaisei/index.html",
@@ -75,9 +75,15 @@
           "observed_on": "https://www.city.shiraoka.lg.jp/shiseijoho/gyozaisei/index.html",
           "sha256": "e7b179804d50609d65402e6fccc3a03077a941dd3ddc0eb85807688747e324df",
           "fetched_at": "2026-08-27T10:21:45Z"
+        },
+        {
+          "url": "https://www.city.shiraoka.lg.jp/material/files/group/6/260309_R8tousyoyosannsyo.pdf",
+          "observed_on": "https://www.city.shiraoka.lg.jp/shiseijoho/gyozaisei/2/7509.html",
+          "sha256": "29cc8badb35921fd8117de8aaf854148d1c4c00e3873da69776f7254d9dbdc60",
+          "fetched_at": "2026-08-27T13:32:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.shiraoka.lg.jp/shiseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.shiraoka.lg.jp/shiseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shiraoka.lg.jp/shiseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（260309_R8tousyoyosannsyo.pdf「一般会計・特別会計予算書(PDFファイル:14.4MB)」, sha256:29cc8bad）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

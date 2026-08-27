@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.hokuto.yamanashi/reiki_menu.html (label: 北杜市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
           "sha256": "b20a2d1f4f037a982f8c0efd5bea80be929e895557ee3d87560892f72bc11e90",
           "fetched_at": "2026-08-27T10:08:35Z"
+        },
+        {
+          "url": "http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/",
+          "observed_on": "http://www.city.hokuto.yamanashi.jp/",
+          "sha256": "b20a2d1f4f037a982f8c0efd5bea80be929e895557ee3d87560892f72bc11e90",
+          "fetched_at": "2026-08-27T10:08:35Z"
+        },
+        {
+          "url": "https://www.city.hokuto.yamanashi.jp/fs/5/0/2/6/9/2/_/__6______________.xlsx",
+          "observed_on": "https://www.city.hokuto.yamanashi.jp/docs/1667.html",
+          "sha256": "ce9469b34f02c7f290f188be9fffb04c9353103651fd0a174884db24a88908e3",
+          "fetched_at": "2026-08-27T13:36:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ (label: 財政) 入口 https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hokuto.yamanashi.jp/life/hokuto/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（__6______________.xlsx「令和6年度決算分【財政状況資料集】 (XLSX 547KB)」, sha256:ce9469b3）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

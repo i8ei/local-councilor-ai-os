@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（3_8652_shiryou1_bcgcki78.pdf「令和７年度下半期の財政状況 （PDF：157.9キロバイト）」, sha256:c1b3b76d）にて構造マーカー（歳入・歳出・項・予算現額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ukiha.fukuoka.jp/list00129.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ukiha.fukuoka.jp/list00129.html",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.city.ukiha.fukuoka.jp/list00129.html",
           "sha256": "9328aec4f75f2ef2957889a9b1d6ab3e50e62bca383376c9aed6ac99373e4ae4",
           "fetched_at": "2026-08-27T09:36:09Z"
+        },
+        {
+          "url": "http://www.city.ukiha.fukuoka.jp/list00129.html",
+          "observed_on": "http://www.city.ukiha.fukuoka.jp/",
+          "sha256": "9328aec4f75f2ef2957889a9b1d6ab3e50e62bca383376c9aed6ac99373e4ae4",
+          "fetched_at": "2026-08-27T09:36:09Z"
+        },
+        {
+          "url": "https://www.city.ukiha.fukuoka.jp/kiji0031882/3_1882_shiryou1_qxe3e4t4.pdf",
+          "observed_on": "https://www.city.ukiha.fukuoka.jp/list00295.html",
+          "sha256": "fc04227de2c65f5c81274465c534640540e3099545d766592918e992f454385d",
+          "fetched_at": "2026-08-27T13:45:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ukiha.fukuoka.jp/list00129.html (label: 行政・財政) 入口 https://www.city.ukiha.fukuoka.jp/list00129.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ukiha.fukuoka.jp/list00129.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_1882_shiryou1_qxe3e4t4.pdf「令和２年度公営企業会計決算書 （PDF：3.54メガバイト）」, sha256:fc04227d）にて構造マーカー（款・項・決算額・不用額等）を確認済み。"
     }
   }
 }

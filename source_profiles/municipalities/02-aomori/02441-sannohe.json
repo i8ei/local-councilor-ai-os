@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.town.sannohe.aomori.jp/section/reiki_int/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
@@ -69,16 +69,22 @@
           "url": "https://www.town.sannohe.aomori.jp/material/files/group/3/R8gaiyou_yosan.pdf",
           "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
           "fetched_at": "2026-08-27T10:32:39Z"
+        },
+        {
+          "url": "https://www.town.sannohe.aomori.jp/material/files/group/3/R7yosan_ippan.pdf",
+          "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
+          "sha256": "a444c9bac5659da5a3f1955e481b80bb1d84861d20d00dc1dead8628e9118652",
+          "fetched_at": "2026-08-27T13:27:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R7yosan_ippan.pdf「令和7年度一般会計予算書 (PDFファイル: 105.4KB)」, sha256:a444c9ba）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
@@ -95,9 +101,15 @@
           "url": "https://www.town.sannohe.aomori.jp/material/files/group/3/r6kessan.pdf",
           "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
           "fetched_at": "2026-08-27T10:32:42Z"
+        },
+        {
+          "url": "https://www.town.sannohe.aomori.jp/material/files/group/3/H29kessan_ippan.pdf",
+          "observed_on": "https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html",
+          "sha256": "8c7973dcee0830996c0e297c2f9821efd2b78bc398d6c275d9245616f829aa96",
+          "fetched_at": "2026-08-27T13:27:27Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.sannohe.aomori.jp/choseijoho/3_1/724.html (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（H29kessan_ippan.pdf「平成29年度一般会計決算書 (PDFファイル: 112.7KB)」, sha256:8c7973dc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

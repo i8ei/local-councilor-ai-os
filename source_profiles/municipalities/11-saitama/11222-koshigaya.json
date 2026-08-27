@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/koshigaya/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html",
           "sha256": "f77893780c9734e6f1b906cf5708945037e36cd0e5bacf98b28cb59e1cf41bfa",
           "fetched_at": "2026-08-27T10:21:18Z"
+        },
+        {
+          "url": "http://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.koshigaya.saitama.jp/",
+          "sha256": "f77893780c9734e6f1b906cf5708945037e36cd0e5bacf98b28cb59e1cf41bfa",
+          "fetched_at": "2026-08-27T10:21:18Z"
+        },
+        {
+          "url": "https://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/yosankessan/yosan/r08/files/koshigayasinoyosan2026.pdf",
+          "observed_on": "https://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/yosankessan/yosan/r08/wakariyasui.html",
+          "sha256": "bbc98b87cec22313c9ee52b78059e7edfbc04cc044a05214ee8ac7f8b2b78f07",
+          "fetched_at": "2026-08-27T13:31:47Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html (label: 財政（予算・決算）) 入口 https://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（koshigayasinoyosan2026.pdf「こしがやしのよさん2026（PDF：2,256KB）」, sha256:bbc98b87）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html",
           "sha256": "f77893780c9734e6f1b906cf5708945037e36cd0e5bacf98b28cb59e1cf41bfa",
           "fetched_at": "2026-08-27T10:21:18Z"
+        },
+        {
+          "url": "http://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.koshigaya.saitama.jp/",
+          "sha256": "f77893780c9734e6f1b906cf5708945037e36cd0e5bacf98b28cb59e1cf41bfa",
+          "fetched_at": "2026-08-27T10:21:18Z"
+        },
+        {
+          "url": "https://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/yosankessan/kessan/files/r6kessancard.pdf",
+          "observed_on": "https://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/yosankessan/kessan/kessancard.html",
+          "sha256": "3205fbc467fd8e7de5dff9fd07941bbad9a405546731d3771d796ef450fc20a0",
+          "fetched_at": "2026-08-27T13:31:48Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html (label: 財政（予算・決算）) 入口 https://www.city.koshigaya.saitama.jp/kurashi_shisei/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessancard.pdf「令和6年度普通会計決算状況調（PDF：110KB）」, sha256:3205fbc4）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

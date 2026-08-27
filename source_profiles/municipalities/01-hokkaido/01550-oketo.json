@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=40 (label: 例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.oketo.hokkaido.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oketo.hokkaido.jp/chosei/zaisei/",
@@ -60,16 +60,28 @@
           "observed_on": "https://www.town.oketo.hokkaido.jp/chosei/zaisei/",
           "sha256": "fff1af5c231e4c599b4b851b7d0f9f0671fca044dff4518f09e691efa6f2eced",
           "fetched_at": "2026-08-27T10:31:14Z"
+        },
+        {
+          "url": "http://www.town.oketo.hokkaido.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.oketo.hokkaido.jp/",
+          "sha256": "fff1af5c231e4c599b4b851b7d0f9f0671fca044dff4518f09e691efa6f2eced",
+          "fetched_at": "2026-08-27T10:31:14Z"
+        },
+        {
+          "url": "https://www.town.oketo.hokkaido.jp/file/contents/2318/18686/ippann.pdf",
+          "observed_on": "https://www.town.oketo.hokkaido.jp/chosei/zaisei/R7/",
+          "sha256": "5b1d60909d130a0ef31ce34e6a9142bad443db00f126c7d184a29508cf7356e9",
+          "fetched_at": "2026-08-27T13:26:32Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.oketo.hokkaido.jp/chosei/zaisei/ (label: 財政状況) 入口 https://www.town.oketo.hokkaido.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（ippann.pdf「一般会計」, sha256:5b1d6090）にて構造マーカー（歳入・歳出・款・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.oketo.hokkaido.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oketo.hokkaido.jp/chosei/zaisei/",
@@ -81,9 +93,21 @@
           "observed_on": "https://www.town.oketo.hokkaido.jp/chosei/zaisei/",
           "sha256": "fff1af5c231e4c599b4b851b7d0f9f0671fca044dff4518f09e691efa6f2eced",
           "fetched_at": "2026-08-27T10:31:14Z"
+        },
+        {
+          "url": "http://www.town.oketo.hokkaido.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.oketo.hokkaido.jp/",
+          "sha256": "fff1af5c231e4c599b4b851b7d0f9f0671fca044dff4518f09e691efa6f2eced",
+          "fetched_at": "2026-08-27T10:31:14Z"
+        },
+        {
+          "url": "https://www.town.oketo.hokkaido.jp/file/contents/521/1122/2017zaiseisiryousyu.xlsx",
+          "observed_on": "https://www.town.oketo.hokkaido.jp/chosei/zaisei/zaishiryou/",
+          "sha256": "d5f4f723f0dab294edbd24bde6042cabb066dce14cabb07f97443abb4bbd9ff6",
+          "fetched_at": "2026-08-27T13:26:35Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.oketo.hokkaido.jp/chosei/zaisei/ (label: 財政状況) 入口 https://www.town.oketo.hokkaido.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2017zaiseisiryousyu.xlsx「平成29（2017）年度財政状況資料集」, sha256:d5f4f723）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

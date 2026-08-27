@@ -44,11 +44,11 @@
       "base_url": "https://krm306.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.onomichi.hiroshima.jp/life/3/21/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.onomichi.hiroshima.jp/life/3/21/",
@@ -60,9 +60,21 @@
           "observed_on": "https://www.city.onomichi.hiroshima.jp/life/3/21/",
           "sha256": "de6f0d8344fb394781c213274f6fdbfdaaad3a0a4061f3a604aff286b6259106",
           "fetched_at": "2026-08-27T09:44:53Z"
+        },
+        {
+          "url": "http://www.city.onomichi.hiroshima.jp/life/3/21/",
+          "observed_on": "http://www.city.onomichi.hiroshima.jp/",
+          "sha256": "de6f0d8344fb394781c213274f6fdbfdaaad3a0a4061f3a604aff286b6259106",
+          "fetched_at": "2026-08-27T09:44:53Z"
+        },
+        {
+          "url": "https://www.city.onomichi.hiroshima.jp/uploaded/life/47262_127063_misc.pdf",
+          "observed_on": "https://www.city.onomichi.hiroshima.jp/soshiki/3/47262.html",
+          "sha256": "44372bbc85fa0387c5a7ffd60a6ede61f30a57802125077671d4513ea5de5115",
+          "fetched_at": "2026-08-27T13:43:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.onomichi.hiroshima.jp/life/3/21/ (label: 行財政) 入口 https://www.city.onomichi.hiroshima.jp/life/3/21/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.onomichi.hiroshima.jp/life/3/21/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（47262_127063_misc.pdf「令和4年度尾道市当初予算の概要 [PDFファイル／13.05MB]」, sha256:44372bbc）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

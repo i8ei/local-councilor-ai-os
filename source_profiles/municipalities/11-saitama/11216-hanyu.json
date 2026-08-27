@@ -35,11 +35,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A7FF95855 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/yosan/",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/yosan/",
           "sha256": "7c4b54c53c26bd3355794fd59d8a4d0fa9be44285a390da6c4d9b7ff494fcea9",
           "fetched_at": "2026-08-27T10:20:47Z"
+        },
+        {
+          "url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/yosan/",
+          "observed_on": "http://www.city.hanyu.lg.jp/",
+          "sha256": "7c4b54c53c26bd3355794fd59d8a4d0fa9be44285a390da6c4d9b7ff494fcea9",
+          "fetched_at": "2026-08-27T10:20:47Z"
+        },
+        {
+          "url": "https://www.city.hanyu.lg.jp/docs/2025022500022/file_contents/file_20262124171136_1.pdf",
+          "observed_on": "https://www.city.hanyu.lg.jp/docs/2025022500022/",
+          "sha256": "dd7fcad06fe193f40f7d4466985bce3ed9b1015e3ca717e831191822757c1e31",
+          "fetched_at": "2026-08-27T13:31:36Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/yosan/ (label: 予算) 入口 https://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（file_20262124171136_1.pdf「令和８年度羽生市一般会計・特別会計予算書[PDF：1.21MB]」, sha256:dd7fcad0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/kessan/",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/kessan/",
           "sha256": "342ebf80ae63887fecd0bba7f81f399f150fe04f0460da0c0bf0bfc85dd3397a",
           "fetched_at": "2026-08-27T10:20:50Z"
+        },
+        {
+          "url": "http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/kessan/",
+          "observed_on": "http://www.city.hanyu.lg.jp/",
+          "sha256": "342ebf80ae63887fecd0bba7f81f399f150fe04f0460da0c0bf0bfc85dd3397a",
+          "fetched_at": "2026-08-27T10:20:50Z"
+        },
+        {
+          "url": "https://www.city.hanyu.lg.jp/docs/2025090800086/file_contents/file_20259114115413_1.pdf",
+          "observed_on": "https://www.city.hanyu.lg.jp/docs/2025090800086/",
+          "sha256": "d1cb1d8d99d8a97345f333308dcf23c5f4d7b358b78f33507db7eb88e333a6ae",
+          "fetched_at": "2026-08-27T13:31:59Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/kessan/ (label: 決算) 入口 https://www.city.hanyu.lg.jp/categories/bunya/shisei/zaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（file_20259114115413_1.pdf「令和６年度 羽生市歳入歳出決算書[PDF：4.6MB]」, sha256:d1cb1d8d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

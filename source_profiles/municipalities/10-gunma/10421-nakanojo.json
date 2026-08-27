@@ -51,11 +51,11 @@
       "index_url": "https://en3-jg.d1-law.com/nakanojo/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nakanojo.gunma.jp/life/4/28/118/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nakanojo.gunma.jp/life/4/28/118/",
@@ -67,16 +67,28 @@
           "observed_on": "https://www.town.nakanojo.gunma.jp/life/4/28/118/",
           "sha256": "f8f94495d353216c083368595f6be4f4cdf2b856ca9152f61de7b9a1ad2be846",
           "fetched_at": "2026-08-27T10:19:48Z"
+        },
+        {
+          "url": "http://www.town.nakanojo.gunma.jp/life/4/28/118/",
+          "observed_on": "http://www.town.nakanojo.gunma.jp/",
+          "sha256": "f8f94495d353216c083368595f6be4f4cdf2b856ca9152f61de7b9a1ad2be846",
+          "fetched_at": "2026-08-27T10:19:48Z"
+        },
+        {
+          "url": "https://www.town.nakanojo.gunma.jp/uploaded/attachment/6358.pdf",
+          "observed_on": "https://www.town.nakanojo.gunma.jp/soshiki/2/1286.html",
+          "sha256": "274eab07fdfb9440d35c099896d2877561e54f0dce8d5856046f4d5159e3b0a0",
+          "fetched_at": "2026-08-27T13:31:10Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nakanojo.gunma.jp/life/4/28/118/ (label: 行財政情報公開) 入口 https://www.town.nakanojo.gunma.jp/life/4/28/118/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（6358.pdf「令和8年度 [PDFファイル／948KB]」, sha256:274eab07）にて構造マーカー（歳出・款・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nakanojo.gunma.jp/life/4/28/118/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nakanojo.gunma.jp/life/4/28/118/",
@@ -88,9 +100,21 @@
           "observed_on": "https://www.town.nakanojo.gunma.jp/life/4/28/118/",
           "sha256": "f8f94495d353216c083368595f6be4f4cdf2b856ca9152f61de7b9a1ad2be846",
           "fetched_at": "2026-08-27T10:19:48Z"
+        },
+        {
+          "url": "http://www.town.nakanojo.gunma.jp/life/4/28/118/",
+          "observed_on": "http://www.town.nakanojo.gunma.jp/",
+          "sha256": "f8f94495d353216c083368595f6be4f4cdf2b856ca9152f61de7b9a1ad2be846",
+          "fetched_at": "2026-08-27T10:19:48Z"
+        },
+        {
+          "url": "https://www.town.nakanojo.gunma.jp/uploaded/attachment/6358.pdf",
+          "observed_on": "https://www.town.nakanojo.gunma.jp/soshiki/2/1286.html",
+          "sha256": "274eab07fdfb9440d35c099896d2877561e54f0dce8d5856046f4d5159e3b0a0",
+          "fetched_at": "2026-08-27T13:31:10Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nakanojo.gunma.jp/life/4/28/118/ (label: 行財政情報公開) 入口 https://www.town.nakanojo.gunma.jp/life/4/28/118/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6358.pdf「令和8年度 [PDFファイル／948KB]」, sha256:274eab07）にて構造マーカー（歳出・款・項・節等）を確認済み。"
     }
   }
 }

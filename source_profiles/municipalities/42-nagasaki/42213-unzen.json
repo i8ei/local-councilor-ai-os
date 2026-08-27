@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/unzen/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.unzen.nagasaki.jp/list00140.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.unzen.nagasaki.jp/list00140.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.unzen.nagasaki.jp/list00140.html",
           "sha256": "7ca445fde9758af2b280ec082466a160739af064340e0eae62a499f56397b3ea",
           "fetched_at": "2026-08-27T09:37:54Z"
+        },
+        {
+          "url": "http://www.city.unzen.nagasaki.jp/list00140.html",
+          "observed_on": "http://www.city.unzen.nagasaki.jp/",
+          "sha256": "7ca445fde9758af2b280ec082466a160739af064340e0eae62a499f56397b3ea",
+          "fetched_at": "2026-08-27T09:37:54Z"
+        },
+        {
+          "url": "https://www.city.unzen.nagasaki.jp/kiji0038039/3_8039_19128_up_r86h7ozc.pdf",
+          "observed_on": "https://www.city.unzen.nagasaki.jp/kiji0038039/index.html",
+          "sha256": "a7099b0256c882b0cc83fc3458f8ff49c1f69bb0dfb9f0991bd12858e5dd3b25",
+          "fetched_at": "2026-08-27T13:45:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.unzen.nagasaki.jp/list00140.html (label: 行政・財政) 入口 https://www.city.unzen.nagasaki.jp/list00140.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.unzen.nagasaki.jp/list00140.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_8039_19128_up_r86h7ozc.pdf「財政収支改善プラン（PDF：762.3キロバイト）」, sha256:a7099b02）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

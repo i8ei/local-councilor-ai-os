@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001909/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html",
           "sha256": "c85407c653b468c3d97a398923109a25e51e21b9a5d9f72e86326a22044dad11",
           "fetched_at": "2026-08-27T10:29:22Z"
+        },
+        {
+          "url": "https://www.city.ishikari.hokkaido.jp/_res/projects/default_project/_page_/001/003/800/50703192yosannnogaiyo.pdf",
+          "observed_on": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/1001991/1003800.html",
+          "sha256": "0cc6ef286fd613074a9d439ba663bbd8b4e63c8972949b3f0c45b373484cee22",
+          "fetched_at": "2026-08-27T13:25:48Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html (label: 財政情報) 入口 https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（50703192yosannnogaiyo.pdf「令和7年度予算の概要 （PDF 2.6 MB）」, sha256:0cc6ef28）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html",
           "sha256": "c85407c653b468c3d97a398923109a25e51e21b9a5d9f72e86326a22044dad11",
           "fetched_at": "2026-08-27T10:29:22Z"
+        },
+        {
+          "url": "https://www.city.ishikari.hokkaido.jp/_res/projects/default_project/_page_/001/003/800/100704.pdf",
+          "observed_on": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/1001991/1003800.html",
+          "sha256": "6566b998a9f07012c26bf024701ecf7df6f6238d4f021c67f5d101e9cbe82afb",
+          "fetched_at": "2026-08-27T13:25:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html (label: 財政情報) 入口 https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001916/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（100704.pdf「令和6年度決算カード （PDF 459.2 KB）」, sha256:6566b998）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

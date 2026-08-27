@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www.town.takko.lg.jp/reiki/reiki_menu.html (label: 田子町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.takko.lg.jp/index.cfm/13,0,75,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.takko.lg.jp/index.cfm/13,0,75,html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.town.takko.lg.jp/index.cfm/13,0,75,html",
           "sha256": "7c625dfa0a05a3a17f13ccb9cd4c7acaf72761afbe33f6c6fa722bf44def0104",
           "fetched_at": "2026-08-27T10:32:45Z"
+        },
+        {
+          "url": "https://www.town.takko.lg.jp/_resources/content/3171/20260324-162700.xlsx",
+          "observed_on": "https://www.town.takko.lg.jp/index.cfm/13,3171,75,html",
+          "sha256": "821274f2cbd1fc572733bfd3f98b3635bab8acdde543641152d139d1843f8ddb",
+          "fetched_at": "2026-08-27T22:55:22Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.takko.lg.jp/index.cfm/13,0,75,html (label: 財政状況) 入口 https://www.town.takko.lg.jp/index.cfm/13,0,75,html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.takko.lg.jp/index.cfm/13,0,75,html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260324-162700.xlsx「令和６年度 財政状況資料集 [ 555 KB xlsxファイル]」, sha256:821274f2）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.takko.lg.jp/index.cfm/13,0,75,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.takko.lg.jp/index.cfm/13,0,75,html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.town.takko.lg.jp/index.cfm/13,0,75,html",
           "sha256": "7c625dfa0a05a3a17f13ccb9cd4c7acaf72761afbe33f6c6fa722bf44def0104",
           "fetched_at": "2026-08-27T10:32:45Z"
+        },
+        {
+          "url": "https://www.town.takko.lg.jp/_resources/content/3171/20260324-162700.xlsx",
+          "observed_on": "https://www.town.takko.lg.jp/index.cfm/13,3171,75,html",
+          "sha256": "821274f2cbd1fc572733bfd3f98b3635bab8acdde543641152d139d1843f8ddb",
+          "fetched_at": "2026-08-27T22:55:22Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.takko.lg.jp/index.cfm/13,0,75,html (label: 財政状況) 入口 https://www.town.takko.lg.jp/index.cfm/13,0,75,html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.takko.lg.jp/index.cfm/13,0,75,html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20260324-162700.xlsx「令和６年度 財政状況資料集 [ 555 KB xlsxファイル]」, sha256:821274f2）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

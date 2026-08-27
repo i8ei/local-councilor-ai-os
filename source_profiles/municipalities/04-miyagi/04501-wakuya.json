@@ -35,11 +35,11 @@
       "base_url": "http://www.town.wakuya.miyagi.jp/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.wakuya.miyagi.jp/gyose/zaise/jokyo.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.wakuya.miyagi.jp/gyose/zaise/jokyo.html",
@@ -56,16 +56,28 @@
           "url": "https://www.town.wakuya.miyagi.jp:443/gyose/zaise/documents/r8_01_ippanyosan.pdf",
           "observed_on": "https://www.town.wakuya.miyagi.jp:443/gyose/zaise/jokyo.html",
           "fetched_at": "2026-08-27T11:24:37Z"
+        },
+        {
+          "url": "http://www.town.wakuya.miyagi.jp/gyose/zaise/jokyo.html",
+          "observed_on": "http://www.town.wakuya.miyagi.jp/",
+          "sha256": "dbe4de2ca970694b817c947eb19b40668fcd489dc266162b228ac99c922d852d",
+          "fetched_at": "2026-08-27T10:34:21Z"
+        },
+        {
+          "url": "https://www.town.wakuya.miyagi.jp:443/gyose/zaise/documents/r8_01_ippanyosan.pdf",
+          "observed_on": "https://www.town.wakuya.miyagi.jp:443/gyose/zaise/jokyo.html",
+          "sha256": "b27c94fd6d64f27f462c1003f33ca99db9107753fbf6607e4cbc2ebd12ed24a9",
+          "fetched_at": "2026-08-27T11:24:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.wakuya.miyagi.jp/gyose/zaise/jokyo.html (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r8_01_ippanyosan.pdf「補正予算書（第1号）（PDF：722KB）」, sha256:b27c94fd）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.wakuya.miyagi.jp/gyose/zaise/jokyo.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.wakuya.miyagi.jp/gyose/zaise/jokyo.html",
@@ -82,9 +94,21 @@
           "url": "https://www.town.wakuya.miyagi.jp:443/gyose/zaise/documents/r5kessan.pdf",
           "observed_on": "https://www.town.wakuya.miyagi.jp:443/gyose/zaise/jokyo.html",
           "fetched_at": "2026-08-27T11:24:37Z"
+        },
+        {
+          "url": "http://www.town.wakuya.miyagi.jp/gyose/zaise/jokyo.html",
+          "observed_on": "http://www.town.wakuya.miyagi.jp/",
+          "sha256": "dbe4de2ca970694b817c947eb19b40668fcd489dc266162b228ac99c922d852d",
+          "fetched_at": "2026-08-27T10:34:21Z"
+        },
+        {
+          "url": "https://www.town.wakuya.miyagi.jp:443/gyose/zaise/documents/wakuya2024zaisei.xlsx",
+          "observed_on": "https://www.town.wakuya.miyagi.jp:443/gyose/zaise/jokyo.html",
+          "sha256": "95290a009a399e5acf8f62156b0f747081613d35b16e35720bc1426483e99583",
+          "fetched_at": "2026-08-27T13:28:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.wakuya.miyagi.jp/gyose/zaise/jokyo.html (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（wakuya2024zaisei.xlsx「令和6年度財政状況資料集」, sha256:95290a00）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

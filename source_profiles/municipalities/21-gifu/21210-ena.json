@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/ena/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ena.lg.jp/shiseijoho/zaisei/5710.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ena.lg.jp/shiseijoho/zaisei/5710.html",
@@ -71,16 +71,22 @@
           "url": "https://www.city.ena.lg.jp/material/files/group/3/156_R8-yosanshiryou.pdf",
           "observed_on": "https://www.city.ena.lg.jp/shiseijoho/zaisei/5710.html",
           "fetched_at": "2026-08-27T10:14:32Z"
+        },
+        {
+          "url": "https://www.city.ena.lg.jp/material/files/group/3/154_R8-yosansyo.pdf",
+          "observed_on": "https://www.city.ena.lg.jp/shiseijoho/zaisei/5710.html",
+          "sha256": "0807f723d2b720b5bd7ab3629beb461e91cf1931264baabe790e0aa97f1533e9",
+          "fetched_at": "2026-08-27T13:36:45Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.ena.lg.jp/shiseijoho/zaisei/5710.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（154_R8-yosansyo.pdf「一般会計予算書及び説明書(PDFファイル:1.7MB)」, sha256:0807f723）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ena.lg.jp/shiseijoho/zaisei/3560.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ena.lg.jp/shiseijoho/zaisei/3560.html",
@@ -97,9 +103,15 @@
           "url": "https://www.city.ena.lg.jp/material/files/group/3/R06kessangaiyou.pdf",
           "observed_on": "https://www.city.ena.lg.jp/shiseijoho/zaisei/3560.html",
           "fetched_at": "2026-08-27T10:14:37Z"
+        },
+        {
+          "url": "https://www.city.ena.lg.jp/material/files/group/3/H27_212105.pdf",
+          "observed_on": "https://www.city.ena.lg.jp/shiseijoho/zaisei/3560.html",
+          "sha256": "ecbb8277d29a9c27c3f2e6ac8b2a351fda91318e4f38bbf356c316f0eb739317",
+          "fetched_at": "2026-08-27T13:36:46Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.ena.lg.jp/shiseijoho/zaisei/3560.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（H27_212105.pdf「決算カード (PDFファイル: 207.4KB)」, sha256:ecbb8277）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

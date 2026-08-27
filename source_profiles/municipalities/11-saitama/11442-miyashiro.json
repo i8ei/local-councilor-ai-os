@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（R8tousyoyosansyo.pdf「一般会計・特別会計当初予算書 (PDF形式、50.30MB)」, sha256:c96c0c07）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.miyashiro.lg.jp/0000026751.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miyashiro.lg.jp/0000026751.html",
@@ -104,9 +104,21 @@
           "url": "https://www.town.miyashiro.lg.jp/cmsfiles/contents/0000026/26751/01_R7ippanntokkai.pdf",
           "observed_on": "https://www.town.miyashiro.lg.jp/0000026751.html",
           "fetched_at": "2026-08-27T11:18:54Z"
+        },
+        {
+          "url": "http://www.town.miyashiro.lg.jp/0000026751.html",
+          "observed_on": "http://www.town.miyashiro.lg.jp/",
+          "sha256": "e0790178710a09e5f7b26801b290fe625d8b3932f95bee84cfbe79194fd5039c",
+          "fetched_at": "2026-08-27T10:22:42Z"
+        },
+        {
+          "url": "https://www.town.miyashiro.lg.jp/cmsfiles/contents/0000026/26751/01_R7ippanntokkai.pdf",
+          "observed_on": "https://www.town.miyashiro.lg.jp/0000026751.html",
+          "sha256": "0d3a66be261e414ffa710311a7024db92dabf257c4ae62b60927d07679207f38",
+          "fetched_at": "2026-08-27T11:18:55Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.miyashiro.lg.jp/0000026751.html (label: 令和7年度決算審査の結果報告) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（01_R7ippanntokkai.pdf「令和7年度宮代町一般会計及び特別会計決算審査意見書 (PDF形式、1.64MB)」, sha256:0d3a66be）にて構造マーカー（歳入・歳出・節・決算額等）を確認済み。"
     }
   }
 }

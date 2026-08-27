@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.city.miura.kanagawa.jp/shiseijoho/jorei_kisoku/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
           "sha256": "89b8c14014c21a07ff4d81ab3be0c95f9f8d10cca5450dbd4078ee1502e91454",
           "fetched_at": "2026-08-27T10:26:51Z"
+        },
+        {
+          "url": "https://www.city.miura.kanagawa.jp/material/files/group/6/r6zaiseijoukyoushiryousyu.xlsx",
+          "observed_on": "https://www.city.miura.kanagawa.jp/soshiki/zaiseika/2/1711.html",
+          "sha256": "7e6f47c2037089d9f7f982a50333963d0254e30634155129adf06e4e7f361468",
+          "fetched_at": "2026-08-27T13:34:27Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html (label: 財政・公売) 入口 https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6zaiseijoukyoushiryousyu.xlsx「令和6年度決算版 (Excelファイル: 566.4KB)」, sha256:7e6f47c2）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html",
           "sha256": "89b8c14014c21a07ff4d81ab3be0c95f9f8d10cca5450dbd4078ee1502e91454",
           "fetched_at": "2026-08-27T10:26:51Z"
+        },
+        {
+          "url": "https://www.city.miura.kanagawa.jp/material/files/group/6/r6zaiseijoukyoushiryousyu.xlsx",
+          "observed_on": "https://www.city.miura.kanagawa.jp/soshiki/zaiseika/2/1711.html",
+          "sha256": "7e6f47c2037089d9f7f982a50333963d0254e30634155129adf06e4e7f361468",
+          "fetched_at": "2026-08-27T13:34:27Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html (label: 財政・公売) 入口 https://www.city.miura.kanagawa.jp/shiseijoho/zaisei_kobai/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6zaiseijoukyoushiryousyu.xlsx「令和6年度決算版 (Excelファイル: 566.4KB)」, sha256:7e6f47c2）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

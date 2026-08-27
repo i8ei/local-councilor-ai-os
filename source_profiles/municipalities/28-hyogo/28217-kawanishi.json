@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www2.city.kawanishi.hyogo.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kawanishi.hyogo.jp/shiseijoho/1008858/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kawanishi.hyogo.jp/shiseijoho/1008858/index.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.kawanishi.hyogo.jp/shiseijoho/1008858/index.html",
           "sha256": "81e84fbf4d2d4ad7c2d6643b86ee7c588d938d1732e690238f113865a247212f",
           "fetched_at": "2026-08-27T09:52:06Z"
+        },
+        {
+          "url": "http://www.city.kawanishi.hyogo.jp/shiseijoho/1008858/index.html",
+          "observed_on": "http://www.city.kawanishi.hyogo.jp/",
+          "sha256": "81e84fbf4d2d4ad7c2d6643b86ee7c588d938d1732e690238f113865a247212f",
+          "fetched_at": "2026-08-27T09:52:06Z"
+        },
+        {
+          "url": "https://www.city.kawanishi.hyogo.jp/_res/projects/default_project/_page_/001/010/144/260605.pdf",
+          "observed_on": "https://www.city.kawanishi.hyogo.jp/shiseijoho/1008858/zaisei/1010144.html",
+          "sha256": "4e5c412cd90c03ec67102084f10285766d2e2a41f60da5884e22ac9f8e6b1113",
+          "fetched_at": "2026-08-27T13:41:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kawanishi.hyogo.jp/shiseijoho/1008858/index.html (label: 財政・行財政改革) 入口 https://www.city.kawanishi.hyogo.jp/shiseijoho/1008858/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kawanishi.hyogo.jp/shiseijoho/1008858/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（260605.pdf「令和8年度川西市病院事業会計予算書 （PDF 858.0KB）」, sha256:4e5c412c）にて構造マーカー（款・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

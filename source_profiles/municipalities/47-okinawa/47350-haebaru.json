@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB45CD (label: ・例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.haebaru.lg.jp/life/5/29/154/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.haebaru.lg.jp/life/5/29/154/",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.haebaru.lg.jp/life/5/29/154/",
           "sha256": "054e7f61e886782277193bcf2b7ab2edb6600194285bd4a5a5dfbdd1888f9967",
           "fetched_at": "2026-08-27T09:41:20Z"
+        },
+        {
+          "url": "https://www.town.haebaru.lg.jp/uploaded/attachment/14168.pdf",
+          "observed_on": "https://www.town.haebaru.lg.jp/soshiki/5/16561.html",
+          "sha256": "11e0bd17687236071181d7320ffef5e849c26b69008d2b5360c77f473ecf50f2",
+          "fetched_at": "2026-08-27T13:48:22Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.haebaru.lg.jp/life/5/29/154/ (label: 予算) 入口 https://www.town.haebaru.lg.jp/life/5/29/154/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.haebaru.lg.jp/life/5/29/154/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（14168.pdf「令和8年度 国民健康保険特別会計 当初予算書 [PDFファイル／329KB]」, sha256:11e0bd17）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

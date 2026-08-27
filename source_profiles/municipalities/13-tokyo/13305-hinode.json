@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/town.hinode/reiki_menu.html (label: 日の出町例規集へ （別ウインドウで開く）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html",
           "sha256": "ee514c443690cfe70caddd25fd044e3ed3e2cd4a27073dccedb5e80afa77a087",
           "fetched_at": "2026-08-27T10:26:58Z"
+        },
+        {
+          "url": "http://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.hinode.tokyo.jp/",
+          "sha256": "ee514c443690cfe70caddd25fd044e3ed3e2cd4a27073dccedb5e80afa77a087",
+          "fetched_at": "2026-08-27T10:26:58Z"
+        },
+        {
+          "url": "https://www.town.hinode.tokyo.jp/cmsfiles/contents/0000001/1754/R8_yosansyo.pdf",
+          "observed_on": "https://www.town.hinode.tokyo.jp/0000001754.html",
+          "sha256": "79e0eded42bbaff4f433cf8130ce0f6ba630970715ccdd0c0ed8b7b956c9bb44",
+          "fetched_at": "2026-08-27T13:34:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_yosansyo.pdf「令和8年度日の出町一般会計予算書」, sha256:79e0eded）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html",
           "sha256": "ee514c443690cfe70caddd25fd044e3ed3e2cd4a27073dccedb5e80afa77a087",
           "fetched_at": "2026-08-27T10:26:58Z"
+        },
+        {
+          "url": "http://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.hinode.tokyo.jp/",
+          "sha256": "ee514c443690cfe70caddd25fd044e3ed3e2cd4a27073dccedb5e80afa77a087",
+          "fetched_at": "2026-08-27T10:26:58Z"
+        },
+        {
+          "url": "https://www.town.hinode.tokyo.jp/cmsfiles/contents/0000000/75/28_hinode_2024.xlsx",
+          "observed_on": "https://www.town.hinode.tokyo.jp/0000000075.html",
+          "sha256": "c0b6e9b7bde220c45ed94d61f26471f18a53c3ee141ae81dad7676a2efbb7bcd",
+          "fetched_at": "2026-08-27T13:34:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.town.hinode.tokyo.jp/category/11-7-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（28_hinode_2024.xlsx「令和6年度財政状況資料集」, sha256:c0b6e9b7）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.mihama.wakayama.jp/other-contents/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mihama.wakayama.jp/bunya/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mihama.wakayama.jp/bunya/zaisei/",
@@ -64,9 +64,15 @@
           "observed_on": "http://www.town.mihama.wakayama.jp/bunya/zaisei/",
           "sha256": "a9400c70d0f08277122841f416cb71ddf54bb54db0e7e0b30108c31c78dbb65b",
           "fetched_at": "2026-08-27T09:53:42Z"
+        },
+        {
+          "url": "http://www.town.mihama.wakayama.jp/docs/2026022000017/files/ippan3.pdf",
+          "observed_on": "http://www.town.mihama.wakayama.jp/docs/2026022000017/",
+          "sha256": "85a63b2d08d4d727f39a7cb9e63c0d6ee116268e34f09180d93462d5d7d03bc2",
+          "fetched_at": "2026-08-27T13:41:47Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.mihama.wakayama.jp/bunya/zaisei/ (label: 行財政) 入口 http://www.town.mihama.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.mihama.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.mihama.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（ippan3.pdf「令和８年度 一般会計補正予算書（第３号）.pdf(306KB)」, sha256:85a63b2d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

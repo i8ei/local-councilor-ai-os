@@ -86,11 +86,11 @@
       "notes": "deepest_doc=P1。budget文書（r6zaiseijoukyoushiryou.xlsx「令和6年度財政状況資料集 (Excelファイル: 575.4KB)」, sha256:019718b6）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html",
@@ -102,9 +102,15 @@
           "observed_on": "https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html",
           "sha256": "949e4b669205402c926dbc9b6742a68d0c243da9b90be7b3e7576553a0311ee4",
           "fetched_at": "2026-08-27T09:48:57Z"
+        },
+        {
+          "url": "https://www.town.meiwa.mie.jp/material/files/group/46/r6_kessansho.pdf",
+          "observed_on": "https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/3970.html",
+          "sha256": "8e8568208cdc62f3e125b5a597b24041063f655bc28a38b0e0028efdfb5503f8",
+          "fetched_at": "2026-08-27T13:39:12Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6_kessansho.pdf「令和6年度決算書・事項別明細書(一般会計・特別会計) (PDFファイル: 2.2MB)」, sha256:8e856820）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

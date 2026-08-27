@@ -78,11 +78,11 @@
       "notes": "deepest_doc=P1。budget文書（r3nenkeieihoushin.pdf「令和3年度経営方針 （PDF 432.3 KB）」, sha256:3ca823ce）にて構造マーカー（歳入・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html",
@@ -94,9 +94,21 @@
           "observed_on": "https://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html",
           "sha256": "3007b910fd8f90b941d4075fb07862ffd2fc4fccd2d4bb7b3fa25ad3abc599bb",
           "fetched_at": "2026-08-27T10:25:52Z"
+        },
+        {
+          "url": "http://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html",
+          "observed_on": "http://www.city.tachikawa.lg.jp/",
+          "sha256": "3007b910fd8f90b941d4075fb07862ffd2fc4fccd2d4bb7b3fa25ad3abc599bb",
+          "fetched_at": "2026-08-27T10:25:52Z"
+        },
+        {
+          "url": "https://www.city.tachikawa.lg.jp/_res/projects/default_project/_page_/001/007/116/r6kessan.pdf",
+          "observed_on": "https://www.city.tachikawa.lg.jp/shisei/yosan/1007100/1007116.html",
+          "sha256": "a8a23ea445718fba2d2b267e601da38d17458d43c52a72ae80d08009d36411bd",
+          "fetched_at": "2026-08-27T13:33:37Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html (label: 予算・決算) 入口 https://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessan.pdf「令和6年度立川市歳入歳出決算書等 （PDF 2.1 MB）」, sha256:a8a23ea4）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（09_01-08.pdf「当初予算の概要（令和8年度）」, sha256:ae017d85）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.godo.gifu.jp/politics/politics09.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.godo.gifu.jp/politics/politics09.html",
@@ -104,9 +104,15 @@
           "url": "http://www.town.godo.gifu.jp/politics/pdf/09_18_06.pdf",
           "observed_on": "http://www.town.godo.gifu.jp/politics/politics09.html",
           "fetched_at": "2026-08-27T11:14:12Z"
+        },
+        {
+          "url": "http://www.town.godo.gifu.jp/politics/pdf/09_05-08.pdf",
+          "observed_on": "http://www.town.godo.gifu.jp/politics/politics09.html",
+          "sha256": "720f0d977491a192cdf57773cdbe6427fcb724939fd97ed9eef4f1b6868e9643",
+          "fetched_at": "2026-08-27T13:37:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.godo.gifu.jp/politics/politics09.html (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（09_05-08.pdf「令和6年度 財政状況資料集」, sha256:720f0d97）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

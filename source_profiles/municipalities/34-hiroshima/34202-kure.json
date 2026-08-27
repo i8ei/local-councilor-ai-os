@@ -59,11 +59,11 @@
       "index_url": "https://www.city.kure.lg.jp/~reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kure.lg.jp/life/4/35/137/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kure.lg.jp/life/4/35/137/",
@@ -75,9 +75,21 @@
           "observed_on": "https://www.city.kure.lg.jp/life/4/35/137/",
           "sha256": "5e2056479ba7fdcb64f2c780b1d47cc83db6b12ddd1cd639fe6bac9f55ce6224",
           "fetched_at": "2026-08-27T09:44:47Z"
+        },
+        {
+          "url": "http://www.city.kure.lg.jp/life/4/35/137/",
+          "observed_on": "http://www.city.kure.lg.jp/",
+          "sha256": "5e2056479ba7fdcb64f2c780b1d47cc83db6b12ddd1cd639fe6bac9f55ce6224",
+          "fetched_at": "2026-08-27T09:44:47Z"
+        },
+        {
+          "url": "https://www.city.kure.lg.jp/uploaded/attachment/109285.pdf",
+          "observed_on": "https://www.city.kure.lg.jp/soshiki/89/soshiki89tousho08.html",
+          "sha256": "f3ee98125a968bee3b3320dd4e4674ccceb2cd754549901c5f1a8122e876aea5",
+          "fetched_at": "2026-08-27T13:42:40Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kure.lg.jp/life/4/35/137/ (label: 予算・決算) 入口 https://www.city.kure.lg.jp/life/4/35/137/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kure.lg.jp/life/4/35/137/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（109285.pdf「令和８年度予算書・予算に関する説明書」, sha256:f3ee9812）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

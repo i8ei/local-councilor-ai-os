@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.town.shichinohe.lg.jp/gyosei/toukei/reiki/index.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html",
           "sha256": "4ed3a4ef8bb9865c58f84550f4d1fcde6112defd0ce0c41bf67466e454cafb4e",
           "fetched_at": "2026-08-27T10:32:22Z"
+        },
+        {
+          "url": "http://www.town.shichinohe.lg.jp/gyosei/8d4dbfacfed5975728c8818ea9a8ad44.pdf",
+          "observed_on": "http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/yosan.html",
+          "sha256": "7f20d8b1bded12f28710895e83a1b7a5d3f2252005d6038dc4b977341a7fb880",
+          "fetched_at": "2026-08-27T13:27:12Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html (label: 予算・決算) 入口 http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8d4dbfacfed5975728c8818ea9a8ad44.pdf「R8年度当初予算.pdf」, sha256:7f20d8b1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html",
@@ -79,9 +85,15 @@
           "observed_on": "http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html",
           "sha256": "4ed3a4ef8bb9865c58f84550f4d1fcde6112defd0ce0c41bf67466e454cafb4e",
           "fetched_at": "2026-08-27T10:32:22Z"
+        },
+        {
+          "url": "http://www.town.shichinohe.lg.jp/gyosei/%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E6%AD%B3%E5%85%A5%E6%AD%B3%E5%87%BA%E6%B1%BA%E7%AE%97%E6%9B%B8_1.pdf",
+          "observed_on": "http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/sdgs-1.html",
+          "sha256": "ea850f550a2f78255583b2452a853db92cd02786807ef967c0c5f87e94276187",
+          "fetched_at": "2026-08-27T13:27:10Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html (label: 予算・決算) 入口 http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.shichinohe.lg.jp/gyosei/zaisei/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E6%AD%B3%E5%85%A5%E6%AD%B3%E5%87%BA%E6%B1%BA%E7%AE%97%E6%9B%B8_1.pdf「一般会計歳入歳出決算書.pdf」, sha256:ea850f55）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

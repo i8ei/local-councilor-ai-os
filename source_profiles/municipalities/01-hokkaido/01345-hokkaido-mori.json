@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.town.hokkaido-mori.lg.jp/gyoseijoho/jorei-kisoku-yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "8691a8299c044374c04046dac69d52fffd7767b8287719f5de590eba16845b97",
           "fetched_at": "2026-08-27T10:29:39Z"
+        },
+        {
+          "url": "https://www.town.hokkaido-mori.lg.jp/material/files/group/2/R8yosan.pdf",
+          "observed_on": "https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/2/1293.html",
+          "sha256": "5feac44fb61086d1d23533253ecbc4fdf7fa046bbb004f3315aa0130fac91fbf",
+          "fetched_at": "2026-08-27T13:25:53Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosan.pdf「令和8年度予算(PDFファイル:867.8KB)」, sha256:5feac44f）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "8691a8299c044374c04046dac69d52fffd7767b8287719f5de590eba16845b97",
           "fetched_at": "2026-08-27T10:29:39Z"
+        },
+        {
+          "url": "https://www.town.hokkaido-mori.lg.jp/material/files/group/2/013455_morimachi_2024_1.xlsx",
+          "observed_on": "https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/2/1300.html",
+          "sha256": "e9ca5e54145281678d1023e28dda98fab4307476991e5d591486c15b253d0d9e",
+          "fetched_at": "2026-08-27T13:25:54Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hokkaido-mori.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（013455_morimachi_2024_1.xlsx「令和6年度財政状況資料集(Excelファイル:559.2KB)」, sha256:e9ca5e54）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.city.aizuwakamatsu.fukushima.jp/j/reiki_int/reiki_menu.html (label: 会津若松市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.aizuwakamatsu.fukushima.jp/category/bunya/zaisei-zeisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aizuwakamatsu.fukushima.jp/category/bunya/zaisei-zeisei/",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.city.aizuwakamatsu.fukushima.jp:443/category/bunya/zaisei-zeisei/",
           "sha256": "641d4d8b7697258bc0e05f7874b36768be66857aaee0df73492307331db46888",
           "fetched_at": "2026-08-27T10:36:47Z"
+        },
+        {
+          "url": "http://www.city.aizuwakamatsu.fukushima.jp/category/bunya/zaisei-zeisei/",
+          "observed_on": "http://www.city.aizuwakamatsu.fukushima.jp/",
+          "sha256": "641d4d8b7697258bc0e05f7874b36768be66857aaee0df73492307331db46888",
+          "fetched_at": "2026-08-27T10:36:47Z"
+        },
+        {
+          "url": "https://www.city.aizuwakamatsu.fukushima.jp:443/docs/2025031000025/file_contents/R7_3gatsuhosei.pdf",
+          "observed_on": "https://www.city.aizuwakamatsu.fukushima.jp:443/docs/2025031000025/",
+          "sha256": "0f8a118815eb1632a2d6d71c6726799b037cd8c0b13b0c05ec7f5202c780deb0",
+          "fetched_at": "2026-08-27T13:29:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.aizuwakamatsu.fukushima.jp/category/bunya/zaisei-zeisei/ (label: 財政) 入口 https://www.city.aizuwakamatsu.fukushima.jp:443/category/bunya/zaisei-zeisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7_3gatsuhosei.pdf「令和７年度３月補正予算概要[PDF：488KB]」, sha256:0f8a1188）にて構造マーカー（歳入・歳出・項・予算現額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.aizuwakamatsu.fukushima.jp/category/bunya/zaisei-zeisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aizuwakamatsu.fukushima.jp/category/bunya/zaisei-zeisei/",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.city.aizuwakamatsu.fukushima.jp:443/category/bunya/zaisei-zeisei/",
           "sha256": "641d4d8b7697258bc0e05f7874b36768be66857aaee0df73492307331db46888",
           "fetched_at": "2026-08-27T10:36:47Z"
+        },
+        {
+          "url": "http://www.city.aizuwakamatsu.fukushima.jp/category/bunya/zaisei-zeisei/",
+          "observed_on": "http://www.city.aizuwakamatsu.fukushima.jp/",
+          "sha256": "641d4d8b7697258bc0e05f7874b36768be66857aaee0df73492307331db46888",
+          "fetched_at": "2026-08-27T10:36:47Z"
+        },
+        {
+          "url": "https://www.city.aizuwakamatsu.fukushima.jp:443/docs/2012113000011/file_contents/_072028__2024.xlsx",
+          "observed_on": "https://www.city.aizuwakamatsu.fukushima.jp:443/docs/2012113000011/",
+          "sha256": "f0688d7216e9885b1f73b185a12e1163e36c2a9eefdecb00c441b6772b594f18",
+          "fetched_at": "2026-08-27T13:29:13Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.aizuwakamatsu.fukushima.jp/category/bunya/zaisei-zeisei/ (label: 財政) 入口 https://www.city.aizuwakamatsu.fukushima.jp:443/category/bunya/zaisei-zeisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（_072028__2024.xlsx「令和6年度財政状況資料集[XLSX：552KB]」, sha256:f0688d72）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

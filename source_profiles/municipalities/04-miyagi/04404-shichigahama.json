@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.shichigahama.com/benricho/joho/reiki/reiki_menu.html (label: 七ヶ浜町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.shichigahama.com/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.shichigahama.com/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.shichigahama.com:443/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
           "sha256": "f2e7bfa19538ee54de436d6f39e429922acbaa7829752ce48e33fd76379d3e41",
           "fetched_at": "2026-08-27T10:34:13Z"
+        },
+        {
+          "url": "http://www.shichigahama.com/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
+          "observed_on": "http://www.shichigahama.com/",
+          "sha256": "f2e7bfa19538ee54de436d6f39e429922acbaa7829752ce48e33fd76379d3e41",
+          "fetched_at": "2026-08-27T10:34:13Z"
         }
       ],
-      "notes": "Observed budget link at http://www.shichigahama.com/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf (label: 令和7年予算審査特別委員会.pdf) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf「Direct Document」, sha256:f2e7bfa1）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

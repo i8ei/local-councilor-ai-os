@@ -50,11 +50,11 @@
       "index_url": "https://www.city.fukuroi.shizuoka.jp/section/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
           "sha256": "69d74e7761e52d714956b6482ce86ad8c3687a621349ece4f694e2c7c3cc1c16",
           "fetched_at": "2026-08-27T10:14:32Z"
+        },
+        {
+          "url": "https://www.city.fukuroi.shizuoka.jp/material/files/group/17/jikoubetumeisaisainyuu_R8.pdf",
+          "observed_on": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/1425446979593.html",
+          "sha256": "7a7582c49175308f171604708d8215462c856d32a17a6c7be0b118040982202b",
+          "fetched_at": "2026-08-27T13:37:33Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（jikoubetumeisaisainyuu_R8.pdf「【予算書】一般会計歳入歳出事項別明細書(1) (PDFファイル: 4.8MB)」, sha256:7a7582c4）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
           "sha256": "69d74e7761e52d714956b6482ce86ad8c3687a621349ece4f694e2c7c3cc1c16",
           "fetched_at": "2026-08-27T10:14:32Z"
+        },
+        {
+          "url": "https://www.city.fukuroi.shizuoka.jp/material/files/group/17/R5kessannka-do.pdf",
+          "observed_on": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/1425446978794.html",
+          "sha256": "ac89b11b18fb764c8f3dbabe261b3f1f1411c2aa5437fbc2feee5a1ed641ee82",
+          "fetched_at": "2026-08-27T13:37:35Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R5kessannka-do.pdf「令和5年度決算カード (PDFファイル: 204.0KB)」, sha256:ac89b11b）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

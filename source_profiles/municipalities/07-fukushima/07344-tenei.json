@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.vill.tenei.fukushima.jp/life/4/16/88/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html",
@@ -63,16 +63,28 @@
           "url": "https://www.vill.tenei.fukushima.jp:443/uploaded/attachment/1189.pdf",
           "observed_on": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
           "fetched_at": "2026-08-27T11:25:44Z"
+        },
+        {
+          "url": "http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html",
+          "observed_on": "http://www.vill.tenei.fukushima.jp/",
+          "sha256": "b13b57c13b7fcdb434b06b3a906478775c13dc4adbfdb974e9b05a4302bfb24f",
+          "fetched_at": "2026-08-27T10:37:01Z"
+        },
+        {
+          "url": "https://www.vill.tenei.fukushima.jp:443/uploaded/attachment/1189.pdf",
+          "observed_on": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
+          "sha256": "dd23ad02a972ddad9aa76c6a8a569f78662de9fd8628dabde88617981f3a2415",
+          "fetched_at": "2026-08-27T11:25:44Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（1189.pdf「平成30年度資料（当初予算） [PDFファイル／39KB]」, sha256:dd23ad02）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html",
@@ -89,9 +101,21 @@
           "url": "https://www.vill.tenei.fukushima.jp:443/uploaded/attachment/681.pdf",
           "observed_on": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
           "fetched_at": "2026-08-27T11:25:44Z"
+        },
+        {
+          "url": "http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html",
+          "observed_on": "http://www.vill.tenei.fukushima.jp/",
+          "sha256": "b13b57c13b7fcdb434b06b3a906478775c13dc4adbfdb974e9b05a4302bfb24f",
+          "fetched_at": "2026-08-27T10:37:01Z"
+        },
+        {
+          "url": "https://www.vill.tenei.fukushima.jp:443/uploaded/attachment/681.pdf",
+          "observed_on": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
+          "sha256": "778897a322d93ecc2c549be1c02e004ba7a3d96bd149821052c1968f8c3b9d5e",
+          "fetched_at": "2026-08-27T11:25:47Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（681.pdf「平成28年度資料（決算） [PDFファイル／42KB]」, sha256:778897a3）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

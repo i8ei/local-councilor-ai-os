@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.aichi-higashiura.lg.jp/gyosei/reiki_yoko/index.html (label: 条例・規則等)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html",
           "sha256": "f41a859d4360e0675b5301a72303c1ae0659d16d76d2cc84f400919e6ddbde14",
           "fetched_at": "2026-08-27T10:16:30Z"
+        },
+        {
+          "url": "https://www.town.aichi-higashiura.lg.jp/material/files/group/91/R8yosan.pdf",
+          "observed_on": "https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/1472600668540.html",
+          "sha256": "955ddf235e153eb74786fdc74e70c3a0d67eec1f9e9b34f4d04e1b13bb545e56",
+          "fetched_at": "2026-08-27T13:38:33Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html (label: まちの家計簿（予算、決算の概要）) 入口 https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosan.pdf「令和8年度東浦町の予算 (PDFファイル: 907.5KB)」, sha256:955ddf23）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

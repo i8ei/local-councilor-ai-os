@@ -59,11 +59,11 @@
       "base_url": "http://www.town.ooki.lg.jp/reiki_int/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ooki.lg.jp/gyosei/7/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ooki.lg.jp/gyosei/7/index.html",
@@ -75,9 +75,21 @@
           "observed_on": "https://www.town.ooki.lg.jp/gyosei/7/index.html",
           "sha256": "545055748994decbd570075d87d8841ee4b4c35a65bd2be26aab212f8e860c2c",
           "fetched_at": "2026-08-27T09:36:36Z"
+        },
+        {
+          "url": "http://www.town.ooki.lg.jp/gyosei/7/index.html",
+          "observed_on": "http://www.town.ooki.lg.jp/",
+          "sha256": "545055748994decbd570075d87d8841ee4b4c35a65bd2be26aab212f8e860c2c",
+          "fetched_at": "2026-08-27T09:36:36Z"
+        },
+        {
+          "url": "https://www.town.ooki.lg.jp/material/files/group/4/65966398.pdf",
+          "observed_on": "http://www.town.ooki.lg.jp/gyosei/7/21/1422344851560.html",
+          "sha256": "a80a969dc205fdbca2cb0f20398894ec8dc97e8b9626267eddc20a2d3049a16e",
+          "fetched_at": "2026-08-27T13:45:31Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ooki.lg.jp/gyosei/7/index.html (label: 財政) 入口 https://www.town.ooki.lg.jp/gyosei/7/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ooki.lg.jp/gyosei/7/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ooki.lg.jp/gyosei/7/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（65966398.pdf「財政状況等の一覧表（大木町） (PDFファイル: 171.6KB)」, sha256:a80a969d）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

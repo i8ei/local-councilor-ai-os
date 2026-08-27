@@ -48,11 +48,11 @@
       "notes": "Observed regulations index at https://www.city.okegawa.lg.jp/soshiki/soumubu/soumu/shiyakusho/jourei/2049.html (label: 桶川市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
           "sha256": "80efb22683be6e8aacc9236a6a2ea5852604cbdd2f7686cdd724ef367a25bbcc",
           "fetched_at": "2026-08-27T10:21:04Z"
+        },
+        {
+          "url": "https://www.city.okegawa.lg.jp/material/files/group/5/H31tousyoyosan.pdf",
+          "observed_on": "https://www.city.okegawa.lg.jp/shisei/zaisei/yosan/6277.html",
+          "sha256": "bd269c99ffe25851e394add70e298cd423e614c84ca5dc4f4636e67b7b4a306f",
+          "fetched_at": "2026-08-27T13:31:50Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.okegawa.lg.jp/shisei/zaisei/index.html (label: 行財政) 入口 https://www.city.okegawa.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okegawa.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（H31tousyoyosan.pdf「当初予算書 (PDFファイル: 791.5KB)」, sha256:bd269c99）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.city.okegawa.lg.jp/shisei/zaisei/index.html",
           "sha256": "80efb22683be6e8aacc9236a6a2ea5852604cbdd2f7686cdd724ef367a25bbcc",
           "fetched_at": "2026-08-27T10:21:04Z"
+        },
+        {
+          "url": "https://www.city.okegawa.lg.jp/material/files/group/5/R6gaiyou.pdf",
+          "observed_on": "https://www.city.okegawa.lg.jp/shisei/zaisei/kessan/3619.html",
+          "sha256": "5035970802564bf11d1d0d765be6d542742f39be8617bfe879eb6da0324a624a",
+          "fetched_at": "2026-08-27T13:31:59Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.okegawa.lg.jp/shisei/zaisei/index.html (label: 行財政) 入口 https://www.city.okegawa.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okegawa.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6gaiyou.pdf「令和6年度決算の概要 (PDFファイル: 13.9MB)」, sha256:50359708）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

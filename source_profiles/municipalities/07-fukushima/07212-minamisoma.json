@@ -50,11 +50,11 @@
       "base_url": "https://www1.g-reiki.net/city.minamisoma/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/index.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/index.html",
           "sha256": "a603b3ab45150d581f5f017fee26af6c5fb0d38f2492dd09f2952aae3aee2da6",
           "fetched_at": "2026-08-27T10:36:53Z"
+        },
+        {
+          "url": "https://www.city.minamisoma.lg.jp/material/files/group/4/zaiseikeikaku_r6.pdf",
+          "observed_on": "https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/8556.html",
+          "sha256": "1167988c6d5d35b7bbe6ec9953aed3822bf235ceb8c94499a6c840a5415ba89e",
+          "fetched_at": "2026-08-27T13:29:22Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/index.html (label: 地域活動・行財政) 入口 https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamisoma.lg.jp/portal/admin/keikaku_torikumi/9/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseikeikaku_r6.pdf「南相馬市中長期財政計画（令和6年度～12年度） (PDFファイル: 728.4KB)」, sha256:1167988c）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

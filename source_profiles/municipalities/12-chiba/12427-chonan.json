@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（37123f757c895153b52b1b8cbf934cc3.pdf「令和８年度一般会計及び各特別会計予算書」, sha256:4fa55f6b）にて構造マーカー（歳入・款・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.chonan.chiba.jp/chousei/zaisei/kessansyo/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.chonan.chiba.jp/chousei/zaisei/kessansyo/",
@@ -91,9 +91,15 @@
           "observed_on": "https://www.town.chonan.chiba.jp/chousei/zaisei/kessansyo/",
           "sha256": "2fdecddce0ca5c415aa21588f980197f60277f20c9e1df28639a8f19bba40c72",
           "fetched_at": "2026-08-27T10:25:37Z"
+        },
+        {
+          "url": "https://www.town.chonan.chiba.jp/wp-content/uploads/2025/10/8778a0c44673110ae4f067cfb1c244d3.pdf",
+          "observed_on": "https://www.town.chonan.chiba.jp/chousei/zaisei/kessansyo/48169/",
+          "sha256": "9775443864b5d91a52d17fa765331d3243ad87e1a87b7e38f8c09e77ea297b74",
+          "fetched_at": "2026-08-27T13:33:52Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.chonan.chiba.jp/chousei/zaisei/kessansyo/ (label: 決算書) 入口 https://www.town.chonan.chiba.jp/chousei/zaisei/kessansyo/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（8778a0c44673110ae4f067cfb1c244d3.pdf「令和6年度 長南町決算書」, sha256:97754438）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

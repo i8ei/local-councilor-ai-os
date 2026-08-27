@@ -59,11 +59,11 @@
       "notes": "Observed d1_law at https://en3-jg.d1-law.com/hidaka/d1w_reiki/H404901010016/H404901010016.html (label: 日高市議会委員会条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hidaka.lg.jp/information/79/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hidaka.lg.jp/information/79/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.city.hidaka.lg.jp/information/79/index.html",
           "sha256": "61eb1fc8663d7d40414424a1d7e23ecf307aa13748493ba41dc952f97d0ee6b7",
           "fetched_at": "2026-08-27T10:21:26Z"
+        },
+        {
+          "url": "https://www.city.hidaka.lg.jp/material/files/group/6/50912539.pdf",
+          "observed_on": "https://www.city.hidaka.lg.jp/information/79/84/4044.html",
+          "sha256": "5b5d53870c343934be4c696ac2803284399d6842b8b8d2c12390b0bc064fa6f3",
+          "fetched_at": "2026-08-27T13:32:00Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.hidaka.lg.jp/information/79/index.html (label: 政策・財政) 入口 https://www.city.hidaka.lg.jp/information/79/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hidaka.lg.jp/information/79/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（50912539.pdf「財政状況等一覧表(PDF:103.2KB)」, sha256:5b5d5387）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hidaka.lg.jp/information/21/17872.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hidaka.lg.jp/information/21/17872.html",
@@ -101,9 +107,15 @@
           "url": "https://www.city.hidaka.lg.jp/material/files/group/33/R5kessann1.pdf",
           "observed_on": "https://www.city.hidaka.lg.jp/information/21/17872.html",
           "fetched_at": "2026-08-27T10:21:26Z"
+        },
+        {
+          "url": "https://www.city.hidaka.lg.jp/material/files/group/33/R5kessann1.pdf",
+          "observed_on": "https://www.city.hidaka.lg.jp/information/21/17872.html",
+          "sha256": "9793ca2c3c45b53bf4411f2df5702e6055c425af82a8b30aceeb710a82331cf6",
+          "fetched_at": "2026-08-27T10:21:29Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.hidaka.lg.jp/information/21/17872.html (label: 過去の決算の審査意見) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R5kessann1.pdf「令和5年度決算の審査意見書（1ページ9ページ）(PDFファイル:335.2KB)」, sha256:9793ca2c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

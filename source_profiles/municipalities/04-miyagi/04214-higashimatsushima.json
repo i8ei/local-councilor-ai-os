@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.higashimatsushima.miyagi.jp/shisei/yosan-zaisei-kaikaku/index.html (label: 予算・財政・行財政改革) 入口 https://www.city.higashimatsushima.miyagi.jp:443/shisei/yosan-zaisei-kaikaku/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.higashimatsushima.miyagi.jp/shisei/yosan-zaisei-kaikaku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashimatsushima.miyagi.jp/shisei/yosan-zaisei-kaikaku/index.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.higashimatsushima.miyagi.jp:443/shisei/yosan-zaisei-kaikaku/index.html",
           "sha256": "56f4d03501303a924ecadf43851797820f13ac0e34086dcf14e7410c15830576",
           "fetched_at": "2026-08-27T10:33:51Z"
+        },
+        {
+          "url": "http://www.city.higashimatsushima.miyagi.jp/shisei/yosan-zaisei-kaikaku/index.html",
+          "observed_on": "http://www.city.higashimatsushima.miyagi.jp/",
+          "sha256": "56f4d03501303a924ecadf43851797820f13ac0e34086dcf14e7410c15830576",
+          "fetched_at": "2026-08-27T10:33:51Z"
+        },
+        {
+          "url": "https://www.city.higashimatsushima.miyagi.jp:443/shisei/yosan-zaisei-kaikaku/shinozaisei/zaimu_haaku.files/zaimushindan_r5.pdf",
+          "observed_on": "https://www.city.higashimatsushima.miyagi.jp:443/shisei/yosan-zaisei-kaikaku/shinozaisei/zaimu_haaku.html",
+          "sha256": "2ebb343b67b7e38b88a630acee5c243a16e28a5ad0d426655cb5a0bfaec83e79",
+          "fetched_at": "2026-08-27T13:27:54Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.higashimatsushima.miyagi.jp/shisei/yosan-zaisei-kaikaku/index.html (label: 予算・財政・行財政改革) 入口 https://www.city.higashimatsushima.miyagi.jp:443/shisei/yosan-zaisei-kaikaku/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaimushindan_r5.pdf「令和5年度（対象年度：令和4年度）（PDF：867KB）」, sha256:2ebb343b）にて構造マーカー（歳入・歳出・項・地方債等）を確認済み。"
     }
   }
 }

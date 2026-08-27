@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（r7-yosan-tosho_1-38.pdf「p1-38（表紙・歳入）（PDF：6,794KB）」, sha256:b7a5e1f1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html",
@@ -91,9 +91,15 @@
           "observed_on": "http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html",
           "sha256": "8c6e60b9d1f8128a8258ebe02c7fdcfd2d878b046cd9c8abe2141518964bc5b0",
           "fetched_at": "2026-08-27T09:40:47Z"
+        },
+        {
+          "url": "http://www.town.setouchi.lg.jp/zaisei/cho/chosei/yosan/documents/h27zaiseibalance.pdf",
+          "observed_on": "http://www.town.setouchi.lg.jp/zaisei/cho/chosei/yosan/zaisei.html",
+          "sha256": "a3e49e139e69cd6cbc76e851be83f83f89b41a45aae79d377323cc802f1d4b02",
+          "fetched_at": "2026-08-27T13:48:30Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html (label: 予算・財政) 入口 http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（h27zaiseibalance.pdf「平成27年度バランスシートほか財務4表（PDF：424KB）」, sha256:a3e49e13）にて構造マーカー（歳入・項・節・地方債等）を確認済み。"
     }
   }
 }

@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/satte/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "bbba7ec22e3abc08259726106937e5bb05d46260bf5cd1c0da92f982270833d0",
           "fetched_at": "2026-08-27T10:21:31Z"
+        },
+        {
+          "url": "https://www.city.satte.lg.jp/material/files/group/6/zaiseizyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/2/3482.html",
+          "sha256": "937fde564d9f401162c63e001224aaed4f9860521943c0448bc8d96b69d445b3",
+          "fetched_at": "2026-08-27T13:32:03Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseizyoukyousiryousyuu.xlsx「令和6年度財政状況資料集 (Excelファイル: 562.6KB)」, sha256:937fde56）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "bbba7ec22e3abc08259726106937e5bb05d46260bf5cd1c0da92f982270833d0",
           "fetched_at": "2026-08-27T10:21:31Z"
+        },
+        {
+          "url": "https://www.city.satte.lg.jp/material/files/group/6/zaiseizyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/2/3482.html",
+          "sha256": "937fde564d9f401162c63e001224aaed4f9860521943c0448bc8d96b69d445b3",
+          "fetched_at": "2026-08-27T13:32:03Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.satte.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseizyoukyousiryousyuu.xlsx「令和6年度財政状況資料集 (Excelファイル: 562.6KB)」, sha256:937fde56）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

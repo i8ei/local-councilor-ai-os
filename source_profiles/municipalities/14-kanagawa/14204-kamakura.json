@@ -29,11 +29,11 @@
       "notes": "Observed g_reiki at http://www.city.kamakura.kanagawa.jp/soumu/kokuji/documents/reiki.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kamakura.kanagawa.jp/shisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kamakura.kanagawa.jp/shisei/yosan/index.html",
@@ -45,9 +45,21 @@
           "observed_on": "https://www.city.kamakura.kanagawa.jp/shisei/yosan/index.html",
           "sha256": "7978388b25ac238b3a56e01bb6e17085796f5f6f092e99c0200317f455848583",
           "fetched_at": "2026-08-27T10:26:51Z"
+        },
+        {
+          "url": "http://www.city.kamakura.kanagawa.jp/shisei/yosan/index.html",
+          "observed_on": "http://www.city.kamakura.kanagawa.jp/",
+          "sha256": "7978388b25ac238b3a56e01bb6e17085796f5f6f092e99c0200317f455848583",
+          "fetched_at": "2026-08-27T10:26:51Z"
+        },
+        {
+          "url": "https://www.city.kamakura.kanagawa.jp/zaisei/documents/zaiseijoukyou2024.xlsx",
+          "observed_on": "https://www.city.kamakura.kanagawa.jp/zaisei/z-joukyoushiryou-top.html",
+          "sha256": "3bc1acb560d62b9a347d23bea1473e5f8ff61af8cb24e72d51126ca9a02c1e97",
+          "fetched_at": "2026-08-27T13:34:18Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kamakura.kanagawa.jp/shisei/yosan/index.html (label: 予算・財政) 入口 https://www.city.kamakura.kanagawa.jp/shisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijoukyou2024.xlsx「令和6年度 財政状況資料集（エクセル：553KB）」, sha256:3bc1acb5）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.sasaguri.fukuoka.jp/chosei/jorei/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.sasaguri.fukuoka.jp/chosei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.sasaguri.fukuoka.jp/chosei/zaisei/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.sasaguri.fukuoka.jp/chosei/zaisei/index.html",
           "sha256": "ff610808a41f7dab8317148cdfa71959f6da1368f5459a644761c09317d50437",
           "fetched_at": "2026-08-27T09:36:17Z"
+        },
+        {
+          "url": "https://www.town.sasaguri.fukuoka.jp/material/files/group/6/r8_ippan.pdf",
+          "observed_on": "https://www.town.sasaguri.fukuoka.jp/soshiki/zaisei/zaisei/yosan/6485.html",
+          "sha256": "f298a7450067e1f472d36d556e35b0b87ab8c542bc248f4b2fcd512013aa6c92",
+          "fetched_at": "2026-08-27T13:45:05Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.sasaguri.fukuoka.jp/chosei/zaisei/index.html (label: 町の財政) 入口 https://www.town.sasaguri.fukuoka.jp/chosei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.sasaguri.fukuoka.jp/chosei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.sasaguri.fukuoka.jp/chosei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_ippan.pdf「一般会計当初予算 (PDFファイル: 779.6KB)」, sha256:f298a745）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

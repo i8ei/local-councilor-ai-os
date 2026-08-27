@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/koori/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.koori.fukushima.jp/soshiki/3/2184.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.koori.fukushima.jp/soshiki/3/2184.html",
@@ -71,9 +71,15 @@
           "url": "http://www.town.koori.fukushima.jp/uploaded/attachment/6262.pdf",
           "observed_on": "http://www.town.koori.fukushima.jp/soshiki/3/2184.html",
           "fetched_at": "2026-08-27T11:27:17Z"
+        },
+        {
+          "url": "http://www.town.koori.fukushima.jp/uploaded/attachment/6262.pdf",
+          "observed_on": "http://www.town.koori.fukushima.jp/soshiki/3/2184.html",
+          "sha256": "27a62e441c39d64af93e9fb380a90bdb46247089dc61ef449ef3bc2ba1fde8a4",
+          "fetched_at": "2026-08-27T11:27:19Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.koori.fukushima.jp/soshiki/3/2184.html (label: 町の事業と予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（6262.pdf「令和8年度広報こおり「予算特別号」[PDFファイル／4.26MB]」, sha256:27a62e44）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "not_found",

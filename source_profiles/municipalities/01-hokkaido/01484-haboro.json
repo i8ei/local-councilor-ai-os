@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?choson_no=153 (label: 町の条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.haboro.lg.jp/gyousei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.haboro.lg.jp/gyousei/zaisei/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "http://www.town.haboro.lg.jp/gyousei/zaisei/index.html",
           "sha256": "cf65da61fe9269c26972e2575a532a459336df0694946b1d4c587c0a4d87a4fc",
           "fetched_at": "2026-08-27T10:30:58Z"
+        },
+        {
+          "url": "http://www.town.haboro.lg.jp/gyousei/zaisei/files/R08yosangaiyou.pdf",
+          "observed_on": "http://www.town.haboro.lg.jp/gyousei/zaisei/yosangaiyou.html",
+          "sha256": "c4d39174744699686c076acb4a2063488e2f33611fb95f993fa1d87c2be87cf0",
+          "fetched_at": "2026-08-27T13:26:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.haboro.lg.jp/gyousei/zaisei/index.html (label: 財政) 入口 http://www.town.haboro.lg.jp/gyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R08yosangaiyou.pdf「令和8年度予算概要 (881KB)」, sha256:c4d39174）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.haboro.lg.jp/gyousei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.haboro.lg.jp/gyousei/zaisei/index.html",
@@ -79,9 +85,15 @@
           "observed_on": "http://www.town.haboro.lg.jp/gyousei/zaisei/index.html",
           "sha256": "cf65da61fe9269c26972e2575a532a459336df0694946b1d4c587c0a4d87a4fc",
           "fetched_at": "2026-08-27T10:30:58Z"
+        },
+        {
+          "url": "http://www.town.haboro.lg.jp/gyousei/zaisei/files/zaiseisiryou_014842_haboro_2024.xlsx",
+          "observed_on": "http://www.town.haboro.lg.jp/gyousei/zaisei/zaiseisiryousyu.html",
+          "sha256": "5b4f928e22d6f1d395dab7be2cbf3f2578eea91451aee23982e70541aaf6ece8",
+          "fetched_at": "2026-08-27T13:26:22Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.haboro.lg.jp/gyousei/zaisei/index.html (label: 財政) 入口 http://www.town.haboro.lg.jp/gyousei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseisiryou_014842_haboro_2024.xlsx「令和6年度 (548KB)」, sha256:5b4f928e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

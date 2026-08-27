@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.town.yubetsu.lg.jp/administration/town/category/?category=15 (label: 例規・各種計画)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
           "sha256": "554a3b6622e0b68bf98b8adbc9226872d6f2ddd07c34ce55d76c3692d3b01e80",
           "fetched_at": "2026-08-27T10:31:13Z"
+        },
+        {
+          "url": "https://www.town.yubetsu.lg.jp/common/img/content/content_20260312_170521.xlsx",
+          "observed_on": "https://www.town.yubetsu.lg.jp/administration/town/detail.html?content=24",
+          "sha256": "99ee0e9991f1e79cbcc838ae9f04a3c1e92baf15072fc610b234ea31dbe1c87e",
+          "fetched_at": "2026-08-27T13:26:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yubetsu.lg.jp/administration/town/category/?category=16 (label: 財政・公営企業) 入口 https://www.town.yubetsu.lg.jp/administration/town/category/?category=16 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yubetsu.lg.jp/administration/town/category/?category=16 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（content_20260312_170521.xlsx「.cls-1{fill:#3f72af;stroke-width:0px;} 令和6年度 Excel(559KB)」, sha256:99ee0e99）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=16",
           "sha256": "554a3b6622e0b68bf98b8adbc9226872d6f2ddd07c34ce55d76c3692d3b01e80",
           "fetched_at": "2026-08-27T10:31:13Z"
+        },
+        {
+          "url": "https://www.town.yubetsu.lg.jp/common/img/content/content_20260312_170521.xlsx",
+          "observed_on": "https://www.town.yubetsu.lg.jp/administration/town/detail.html?content=24",
+          "sha256": "99ee0e9991f1e79cbcc838ae9f04a3c1e92baf15072fc610b234ea31dbe1c87e",
+          "fetched_at": "2026-08-27T13:26:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yubetsu.lg.jp/administration/town/category/?category=16 (label: 財政・公営企業) 入口 https://www.town.yubetsu.lg.jp/administration/town/category/?category=16 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yubetsu.lg.jp/administration/town/category/?category=16 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（content_20260312_170521.xlsx「.cls-1{fill:#3f72af;stroke-width:0px;} 令和6年度 Excel(559KB)」, sha256:99ee0e99）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

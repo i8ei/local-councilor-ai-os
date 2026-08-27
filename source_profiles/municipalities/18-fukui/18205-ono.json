@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（0016_20260713.pdf「7月補正予算の概要（PDF：829KB）」, sha256:d765fbc3）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html",
@@ -85,9 +85,15 @@
           "observed_on": "http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html",
           "sha256": "aed3aa4575f7b33c7edfda323b8301455ccbb52793cb4e3b2baaaad633838a6a",
           "fetched_at": "2026-08-27T10:06:36Z"
+        },
+        {
+          "url": "http://www.city.ono.fukui.jp/shisei/zaisei/kessan/kessanjoukyou.files/0005_20250827.pdf",
+          "observed_on": "http://www.city.ono.fukui.jp/shisei/zaisei/kessan/kessanjoukyou.html",
+          "sha256": "efc79f2207dedaafb4a6cc51f4fcbbe63ff40438a7f95f8dce573123dd05d674",
+          "fetched_at": "2026-08-27T13:35:59Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html (label: 決算) 入口 http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.ono.fukui.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（0005_20250827.pdf「令和6年度主要な施策の成果報告書（PDF：2,227KB）」, sha256:efc79f22）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

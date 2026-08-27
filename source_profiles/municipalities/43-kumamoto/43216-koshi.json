@@ -42,11 +42,11 @@
       "base_url": "https://krr308.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.koshi.lg.jp/list00420.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.koshi.lg.jp/list00420.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.koshi.lg.jp/list00420.html",
           "sha256": "fabe2514b4884d365e4f07ea71b1823041001a5839c15bc5006f6bbcdcce2b42",
           "fetched_at": "2026-08-27T09:38:13Z"
+        },
+        {
+          "url": "http://www.city.koshi.lg.jp/list00420.html",
+          "observed_on": "http://www.city.koshi.lg.jp/",
+          "sha256": "fabe2514b4884d365e4f07ea71b1823041001a5839c15bc5006f6bbcdcce2b42",
+          "fetched_at": "2026-08-27T09:38:13Z"
+        },
+        {
+          "url": "https://www.city.koshi.lg.jp/kiji00325555/3_25555_up_m4i3kgi8.pdf",
+          "observed_on": "https://www.city.koshi.lg.jp/kiji00325555/index.html",
+          "sha256": "ce772225811d81c7b4f1f341c7b3e5cc97afc9d644e0289ec983d485d83fbbc7",
+          "fetched_at": "2026-08-27T13:46:01Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.koshi.lg.jp/list00420.html (label: 予算) 入口 https://www.city.koshi.lg.jp/list00420.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.koshi.lg.jp/list00420.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_25555_up_m4i3kgi8.pdf「令和8年度一般会計補正予算概要説明資料（第2号）（PDF：304.3キロバイト）」, sha256:ce772225）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（35857.pdf「予算の概要」, sha256:e5475762）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
           "sha256": "9da9ee7e314538b646b6da25494ed5cdd56eb921bce8ac660c3d3a1155e7c2d2",
           "fetched_at": "2026-08-27T10:07:14Z"
+        },
+        {
+          "url": "https://www.city.katsuyama.fukui.jp/uploaded/attachment/4296.pdf",
+          "observed_on": "https://www.city.katsuyama.fukui.jp/soshiki/3/588.html",
+          "sha256": "71aca8f6bb06b2dda5ed9cb833e3f422416c9231bb0c6c9655a95e40379c67d9",
+          "fetched_at": "2026-08-27T13:35:52Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.katsuyama.fukui.jp/life/4/34/160/ (label: 予算・決算) 入口 https://www.city.katsuyama.fukui.jp/life/4/34/160/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.katsuyama.fukui.jp/life/4/34/160/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（4296.pdf「平成16年度」, sha256:71aca8f6）にて構造マーカー（歳入・歳出・実質収支・地方債等）を確認済み。"
     }
   }
 }

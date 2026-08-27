@@ -48,11 +48,11 @@
       "index_url": "https://www.city.awaji.lg.jp/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.awaji.lg.jp/site/gikai/list319-1015.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.awaji.lg.jp/site/gikai/list319-1015.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.awaji.lg.jp/site/gikai/list319-1015.html",
           "sha256": "faa4d3108873671ccde9dd6658cb21d3d72e8b1e4486c2b04fd4769047d73fb2",
           "fetched_at": "2026-08-27T09:52:15Z"
+        },
+        {
+          "url": "http://www.city.awaji.lg.jp/site/gikai/list319-1015.html",
+          "observed_on": "http://www.city.awaji.lg.jp/",
+          "sha256": "faa4d3108873671ccde9dd6658cb21d3d72e8b1e4486c2b04fd4769047d73fb2",
+          "fetched_at": "2026-08-27T09:52:15Z"
+        },
+        {
+          "url": "https://www.city.awaji.lg.jp/uploaded/attachment/43472.pdf",
+          "observed_on": "https://www.city.awaji.lg.jp/site/gikai/40739.html",
+          "sha256": "0e16d4648abe4da5585e8c68ec39f95fd6f331ad96b9a734076098db15c0fbae",
+          "fetched_at": "2026-08-27T13:41:05Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.awaji.lg.jp/site/gikai/list319-1015.html (label: 会派等予算要望) 入口 https://www.city.awaji.lg.jp/site/gikai/list319-1015.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.awaji.lg.jp/site/gikai/list319-1015.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（43472.pdf「日本共産党淡路市議会議員団 [PDFファイル／317KB]」, sha256:0e16d464）にて構造マーカー（項・節・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

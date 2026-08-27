@@ -48,11 +48,11 @@
       "base_url": "http://www.town.shimonita.lg.jp/html/reiki_int/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
           "sha256": "7e6c7c361c0a8751c010195fb95ea9de311f2591089257621f12a7f9f3e8818c",
           "fetched_at": "2026-08-27T10:19:13Z"
+        },
+        {
+          "url": "https://www.town.shimonita.lg.jp/soumu/m03/m11/m01/01_R08_ippan.pdf",
+          "observed_on": "https://www.town.shimonita.lg.jp/soumu/m03/m11/m01/20211025151503.html",
+          "sha256": "305623afa5c792e180ef55ffb81ecd9b7dc321d547b6a41ab347f447d8f1ca86",
+          "fetched_at": "2026-08-27T13:31:12Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.shimonita.lg.jp/m06/m04/index.html (label: 予算・決算・財政状況) 入口 http://www.town.shimonita.lg.jp/m06/m04/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（01_R08_ippan.pdf「一般会計予算書」, sha256:305623af）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
           "sha256": "7e6c7c361c0a8751c010195fb95ea9de311f2591089257621f12a7f9f3e8818c",
           "fetched_at": "2026-08-27T10:19:13Z"
+        },
+        {
+          "url": "https://www.town.shimonita.lg.jp/soumu/m03/m11/m02/hutuukaikei_R06.pdf",
+          "observed_on": "https://www.town.shimonita.lg.jp/soumu/m03/m11/m02/20230606170312.html",
+          "sha256": "3676d73ea0328bb550c1c6ee23e1616a946eae21844baacb9274574ec71aba49",
+          "fetched_at": "2026-08-27T13:31:10Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.shimonita.lg.jp/m06/m04/index.html (label: 予算・決算・財政状況) 入口 http://www.town.shimonita.lg.jp/m06/m04/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（hutuukaikei_R06.pdf「令和６年度【普通会計】決算の概要」, sha256:3676d73e）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

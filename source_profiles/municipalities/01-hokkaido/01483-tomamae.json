@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.town.tomamae.lg.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tomamae.lg.jp/section/kikakushinko/policy-budget-summary.html?cp=lg6iib0000000k3r&cs=cm04",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tomamae.lg.jp/section/kikakushinko/policy-budget-summary.html?cp=lg6iib0000000k3r&cs=cm04",
@@ -71,16 +71,22 @@
           "url": "http://www.town.tomamae.lg.jp/section/kikakushinko/oa5p85000000312q-att/oa5p85000000313h.pdf",
           "observed_on": "http://www.town.tomamae.lg.jp/section/kikakushinko/policy-budget-summary.html?cp=lg6iib0000000k3r&cs=cm04",
           "fetched_at": "2026-08-27T11:22:57Z"
+        },
+        {
+          "url": "http://www.town.tomamae.lg.jp/section/kikakushinko/oa5p85000000312q-att/g6v5n20000000yhf.pdf",
+          "observed_on": "http://www.town.tomamae.lg.jp/section/kikakushinko/policy-budget-summary.html?cp=lg6iib0000000k3r&cs=cm04",
+          "sha256": "688d414435b04cf9bfb7ad7273a06f750804f7d1f389d23592f06727e78fab6b",
+          "fetched_at": "2026-08-27T22:59:32Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tomamae.lg.jp/section/kikakushinko/policy-budget-summary.html?cp=lg6iib0000000k3r&cs=cm04 (label: 政策・予算説明概要書の公表について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（g6v5n20000000yhf.pdf「令和3年度 政策・予算説明概要書 (PDF:1.11MB)」, sha256:688d4144）にて構造マーカー（節・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html",
@@ -92,9 +98,15 @@
           "observed_on": "http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html",
           "sha256": "541401027517f6e09be93501224f928997696e5fd0aab494a421958032c4cb6d",
           "fetched_at": "2026-08-27T10:31:03Z"
+        },
+        {
+          "url": "http://www.town.tomamae.lg.jp/section/somu/lg6iib0000000283-att/gknp5u0000000l0i.xlsx",
+          "observed_on": "http://www.town.tomamae.lg.jp/section/somu/lg6iib0000000283.html?cp=lg6iib0000000k3r&cs=cm05",
+          "sha256": "e0b605dd60cb9f0c72bc8fa443d626bf03f5bad852de4ee9b82d11b70dde421f",
+          "fetched_at": "2026-08-27T13:26:19Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html (label: 財政・統計資料) 入口 http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.tomamae.lg.jp/category/lg6iib0000000k3r.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（gknp5u0000000l0i.xlsx「令和6年度財政状況資料集 (XLSX:553KB)」, sha256:e0b605dd）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -59,11 +59,11 @@
       "base_url": "https://www.vill.itsuki.lg.jp/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.itsuki.lg.jp/list00582.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.itsuki.lg.jp/list00582.html",
@@ -75,9 +75,15 @@
           "observed_on": "https://www.vill.itsuki.lg.jp/list00582.html",
           "sha256": "e852fd6adcca769f2c5329d027d2abdaf368b03eccb2a975a4b1bd697c397b41",
           "fetched_at": "2026-08-27T09:38:56Z"
+        },
+        {
+          "url": "https://www.vill.itsuki.lg.jp/kiji0032197/3_2197_up_hplw8d8x.xlsx",
+          "observed_on": "https://www.vill.itsuki.lg.jp/kiji0032197/index.html",
+          "sha256": "6f9a1ba11aa7d748e494a11f774736a47b6181c508e0ab5342f95e972d78f80e",
+          "fetched_at": "2026-08-27T13:46:41Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.itsuki.lg.jp/list00582.html (label: 予算) 入口 https://www.vill.itsuki.lg.jp/list00582.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.itsuki.lg.jp/list00582.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_2197_up_hplw8d8x.xlsx「五木村財政状況資料（エクセル：419.4キロバイト）」, sha256:6f9a1ba1）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

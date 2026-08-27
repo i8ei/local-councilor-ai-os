@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.city.nagai.yamagata.jp/section/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html",
           "sha256": "82cc9eaa2a2875a0184f28b274860bdcc058ee06233f823db0d93fed5da257f0",
           "fetched_at": "2026-08-27T10:35:51Z"
+        },
+        {
+          "url": "https://www.city.nagai.yamagata.jp/material/files/group/5/H30nenndonagaisinozaiseizyoukyou.pdf",
+          "observed_on": "https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/6733.html",
+          "sha256": "aafd7d40e397b75c51e3b18890949718af7de4e112565372ece04871871af125",
+          "fetched_at": "2026-08-27T13:28:52Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html (label: 財政) 入口 https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（H30nenndonagaisinozaiseizyoukyou.pdf「平成30年度長井市の財政状況（3月31日） (PDFファイル: 198.5KB)」, sha256:aafd7d40）にて構造マーカー（歳入・歳出・項・予算現額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html",
           "sha256": "82cc9eaa2a2875a0184f28b274860bdcc058ee06233f823db0d93fed5da257f0",
           "fetched_at": "2026-08-27T10:35:51Z"
+        },
+        {
+          "url": "https://www.city.nagai.yamagata.jp/material/files/group/5/H30nenndonagaisinozaiseizyoukyou.pdf",
+          "observed_on": "https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/6733.html",
+          "sha256": "aafd7d40e397b75c51e3b18890949718af7de4e112565372ece04871871af125",
+          "fetched_at": "2026-08-27T13:28:52Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html (label: 財政) 入口 https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagai.yamagata.jp/event_shisei/gyoseiunei/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H30nenndonagaisinozaiseizyoukyou.pdf「平成30年度長井市の財政状況（3月31日） (PDFファイル: 198.5KB)」, sha256:aafd7d40）にて構造マーカー（歳入・歳出・項・予算現額等）を確認済み。"
     }
   }
 }

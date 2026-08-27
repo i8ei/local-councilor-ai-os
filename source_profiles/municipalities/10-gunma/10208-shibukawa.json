@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/shibukawa/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
@@ -66,16 +66,22 @@
           "observed_on": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
           "sha256": "8841b1649c57c2c2c9872b8b50b0134fe972dcc94108b27089149a38c8f866e1",
           "fetched_at": "2026-08-27T10:19:10Z"
+        },
+        {
+          "url": "http://www.city.shibukawa.lg.jp/manage/contents/upload/698d665f12ed3.pdf",
+          "observed_on": "http://www.city.shibukawa.lg.jp/shisei/000276/000277/p015288.html",
+          "sha256": "81a42775c23c14475b869b319bd730c92e0ce06929b5c0dcc35a36720858c5c0",
+          "fetched_at": "2026-08-27T13:31:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shibukawa.lg.jp/shisei/000276/index.html (label: 財政・会計) 入口 http://www.city.shibukawa.lg.jp/shisei/000276/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（698d665f12ed3.pdf「令和8年度当初予算概要(pdf 83 KB)」, sha256:81a42775）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
@@ -87,9 +93,15 @@
           "observed_on": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
           "sha256": "8841b1649c57c2c2c9872b8b50b0134fe972dcc94108b27089149a38c8f866e1",
           "fetched_at": "2026-08-27T10:19:10Z"
+        },
+        {
+          "url": "http://www.city.shibukawa.lg.jp/manage/contents/upload/68f1d13bb0a8d.pdf",
+          "observed_on": "http://www.city.shibukawa.lg.jp/shisei/000276/000278/p005824.html",
+          "sha256": "9702d1ab9b56853abfc4315b458d4d0f3384e337bcf5f9a3b0dd09be58083c11",
+          "fetched_at": "2026-08-27T13:31:24Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shibukawa.lg.jp/shisei/000276/index.html (label: 財政・会計) 入口 http://www.city.shibukawa.lg.jp/shisei/000276/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（68f1d13bb0a8d.pdf「令和6年度(pdf 246 KB)」, sha256:9702d1ab）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

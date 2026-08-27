@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/",
           "sha256": "4e0d0426942f1a7dac8ec1f6a28827f38b62c4dbd91ad93b1aeb67eaf2e712f5",
           "fetched_at": "2026-08-27T10:32:52Z"
+        },
+        {
+          "url": "https://www.city.kamaishi.iwate.jp/docs/2025031900073/file_contents/R070319.pdf",
+          "observed_on": "https://www.city.kamaishi.iwate.jp/docs/2025031900073/",
+          "sha256": "d801ae2f40174d148fdf965e7fd4220e98d244ac8c55e08158137693a66753c1",
+          "fetched_at": "2026-08-27T13:27:25Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/ (label: 財政状況) 入口 https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R070319.pdf「令和7年度釜石市予算書（当初 一般会計・特別会計）[PDF：4.9MB]」, sha256:d801ae2f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/",
           "sha256": "4e0d0426942f1a7dac8ec1f6a28827f38b62c4dbd91ad93b1aeb67eaf2e712f5",
           "fetched_at": "2026-08-27T10:32:52Z"
+        },
+        {
+          "url": "https://www.city.kamaishi.iwate.jp/docs/2025071900019/file_contents/R080501.pdf",
+          "observed_on": "https://www.city.kamaishi.iwate.jp/docs/2025071900019/",
+          "sha256": "ed7dbb4205e8897c30e7537e0757dfd5dfb8b607525627e10e65ce9a38820781",
+          "fetched_at": "2026-08-27T13:27:26Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/ (label: 財政状況) 入口 https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kamaishi.iwate.jp/category/bunya/johokokai/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R080501.pdf「釜石市財政状況【令和8年5月公表】[PDF：804KB]」, sha256:ed7dbb42）にて構造マーカー（歳入・歳出・款・予算現額等）を確認済み。"
     }
   }
 }

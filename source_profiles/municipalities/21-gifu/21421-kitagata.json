@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "6250d60d6c078143dddc8dec328d81272aa71f9d273c3cb9870b206492d6b67b",
           "fetched_at": "2026-08-27T10:13:52Z"
+        },
+        {
+          "url": "https://www.town.kitagata.gifu.jp/material/files/group/3/zaiseizyoukyoushiryousyuR05-e.xlsx",
+          "observed_on": "https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/4/2295.html",
+          "sha256": "f1859c4ae6b83aeea2aeaf033a84eaac592e0c864be973b764fdf507ebec5c7c",
+          "fetched_at": "2026-08-27T13:37:03Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseizyoukyoushiryousyuR05-e.xlsx「財政状況資料集（令和5年度） (Excelファイル: 766.8KB)」, sha256:f1859c4a）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

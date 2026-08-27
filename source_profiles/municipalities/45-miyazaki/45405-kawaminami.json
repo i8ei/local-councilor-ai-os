@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（8158.xlsx「川南町財政状況資料集（令和6年度決算） [Excelファイル／556KB]」, sha256:7d1c5945）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kawaminami.miyazaki.jp/soshiki/14/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kawaminami.miyazaki.jp/soshiki/14/",
@@ -97,9 +97,21 @@
           "observed_on": "https://www.town.kawaminami.miyazaki.jp/soshiki/14/",
           "sha256": "0ec04ad4e607478398b80b24f842eee19b823996323cda6e078e332303e3132e",
           "fetched_at": "2026-08-27T09:40:38Z"
+        },
+        {
+          "url": "http://www.town.kawaminami.miyazaki.jp/soshiki/14/",
+          "observed_on": "http://www.town.kawaminami.miyazaki.jp/",
+          "sha256": "0ec04ad4e607478398b80b24f842eee19b823996323cda6e078e332303e3132e",
+          "fetched_at": "2026-08-27T09:40:38Z"
+        },
+        {
+          "url": "https://www.town.kawaminami.miyazaki.jp/uploaded/attachment/8158.xlsx",
+          "observed_on": "https://www.town.kawaminami.miyazaki.jp/soshiki/14/1164.html",
+          "sha256": "7d1c594544d55d5716b2467941c12ea96bee47e67a208bdf67687ec05a51e65b",
+          "fetched_at": "2026-08-27T13:47:17Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kawaminami.miyazaki.jp/soshiki/14/ (label: 財政情報) 入口 https://www.town.kawaminami.miyazaki.jp/soshiki/14/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kawaminami.miyazaki.jp/soshiki/14/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（8158.xlsx「川南町財政状況資料集（令和6年度決算） [Excelファイル／556KB]」, sha256:7d1c5945）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

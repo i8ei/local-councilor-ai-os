@@ -48,11 +48,11 @@
       "base_url": "http://www1.g-reiki.net/isa/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.isa.kagoshima.jp/politics/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.isa.kagoshima.jp/politics/zaisei/",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.city.isa.kagoshima.jp/politics/zaisei/",
           "sha256": "ae29a9ae40bc40a32c68480b3b99be6b7c4d49324b72723f32ff0fe369dbe226",
           "fetched_at": "2026-08-27T09:40:31Z"
+        },
+        {
+          "url": "http://www.city.isa.kagoshima.jp/old-file/upload/705a2a7c99b39f426d478924c2549d8259870ce8.pdf",
+          "observed_on": "https://www.city.isa.kagoshima.jp/blog/info-gyousei/info-zaisei/14193/",
+          "sha256": "047c17e9f9304b84482ccc4d299e575e3bef3a8c4ba1492fdd824364fbd1cc70",
+          "fetched_at": "2026-08-27T13:47:48Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.isa.kagoshima.jp/politics/zaisei/ (label: 財政) 入口 https://www.city.isa.kagoshima.jp/politics/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.isa.kagoshima.jp/politics/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（705a2a7c99b39f426d478924c2549d8259870ce8.pdf「平成30年度当初予算書（一般）」, sha256:047c17e9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

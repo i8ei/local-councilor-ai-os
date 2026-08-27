@@ -50,11 +50,11 @@
       "index_url": "https://en3-jg.d1-law.com/zama/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.zama.kanagawa.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.zama.kanagawa.jp/shisei/zaisei/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.zama.kanagawa.jp/shisei/zaisei/index.html",
           "sha256": "79d2f4ed3e38eae8ce1e8256415b4b5023eb0b4ba64efba131b6e2a7fca2e95b",
           "fetched_at": "2026-08-27T10:27:17Z"
+        },
+        {
+          "url": "http://www.city.zama.kanagawa.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.zama.kanagawa.jp/",
+          "sha256": "79d2f4ed3e38eae8ce1e8256415b4b5023eb0b4ba64efba131b6e2a7fca2e95b",
+          "fetched_at": "2026-08-27T10:27:17Z"
+        },
+        {
+          "url": "https://www.city.zama.kanagawa.jp/_res/projects/default_project/_page_/001/004/291/r4yosan_ippan.pdf",
+          "observed_on": "https://www.city.zama.kanagawa.jp/shisei/zaisei/yosan/1004291.html",
+          "sha256": "0b2b4e1f1a64af26f16f1814a1e52e0ba68f86e915da551b25f2a5d23a7eb9bc",
+          "fetched_at": "2026-08-27T13:34:57Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.zama.kanagawa.jp/shisei/zaisei/index.html (label: 予算・決算・財政) 入口 https://www.city.zama.kanagawa.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r4yosan_ippan.pdf「当初予算書及び予算説明書（一般会計） （PDF 5.0 MB）」, sha256:0b2b4e1f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.zama.kanagawa.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.zama.kanagawa.jp/shisei/zaisei/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.zama.kanagawa.jp/shisei/zaisei/index.html",
           "sha256": "79d2f4ed3e38eae8ce1e8256415b4b5023eb0b4ba64efba131b6e2a7fca2e95b",
           "fetched_at": "2026-08-27T10:27:17Z"
+        },
+        {
+          "url": "http://www.city.zama.kanagawa.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.zama.kanagawa.jp/",
+          "sha256": "79d2f4ed3e38eae8ce1e8256415b4b5023eb0b4ba64efba131b6e2a7fca2e95b",
+          "fetched_at": "2026-08-27T10:27:17Z"
+        },
+        {
+          "url": "https://www.city.zama.kanagawa.jp/_res/projects/default_project/_page_/001/012/565/R6kessansho.pdf",
+          "observed_on": "https://www.city.zama.kanagawa.jp/shisei/zaisei/kessan/1012565.html",
+          "sha256": "d8f8d83097208d5401590eee6026884bdd8c7e557317227a588426e2940f53c5",
+          "fetched_at": "2026-08-27T13:34:40Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.zama.kanagawa.jp/shisei/zaisei/index.html (label: 予算・決算・財政) 入口 https://www.city.zama.kanagawa.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansho.pdf「令和6年度決算書および附属資料 （PDF 3.6 MB）」, sha256:d8f8d830）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

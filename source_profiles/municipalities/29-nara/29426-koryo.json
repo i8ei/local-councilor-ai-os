@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.town.koryo.nara.jp/category/20-11-0-0-0-0-0-0-0-0.html (label: 広陵町例規集 広陵町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html",
@@ -60,9 +60,15 @@
           "observed_on": "https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html",
           "sha256": "a30cf84b764cf58802ac07cb3840120dafc0d974ec90128650d87720865d1663",
           "fetched_at": "2026-08-27T09:53:05Z"
+        },
+        {
+          "url": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7357/R6mitoosi.pdf",
+          "observed_on": "https://www.town.koryo.nara.jp/0000007357.html",
+          "sha256": "8e53bb855e55e9de1235cf7fb8bc6ee7261ca7e9ed11f4139839cf022a07e754",
+          "fetched_at": "2026-08-27T13:41:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6mitoosi.pdf「令和6年度試算分（令和7年度から令和11年度まで） (PDF形式、1.20MB)」, sha256:8e53bb85）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

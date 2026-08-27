@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000455.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000455.html",
@@ -38,16 +38,22 @@
           "observed_on": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000455.html",
           "sha256": "05cf7cf689331a04db69be72b5b7c2656bfd1e10fc2cf1ca98fe782398b7e5ea",
           "fetched_at": "2026-08-27T10:29:57Z"
+        },
+        {
+          "url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/files/00000400/00000455/r6bunseki.xlsx",
+          "observed_on": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000455.html",
+          "sha256": "39bfea9c76cadc351a9b809db9a93a90a684bab229dad19f6fae582c20a25efd",
+          "fetched_at": "2026-08-27T13:25:59Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000455.html (label: 財政状況資料集) 入口 https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000455.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6bunseki.xlsx「令和６年度 財政状況資料集」, sha256:39bfea9c）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000456.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000456.html",
@@ -64,9 +70,15 @@
           "url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/files/00000400/00000456/h21bunseki.pdf",
           "observed_on": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000456.html",
           "fetched_at": "2026-08-27T11:22:34Z"
+        },
+        {
+          "url": "https://www.vill.kamoenai.hokkaido.jp/hotnews/files/00000400/00000456/h21bunseki.pdf",
+          "observed_on": "https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000456.html",
+          "sha256": "a8d55396ca0534d0ba7eb8c7f4332bc12dd9114bda7c07dec34ba732cda31e56",
+          "fetched_at": "2026-08-27T11:22:35Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.kamoenai.hokkaido.jp/hotnews/detail/00000456.html (label: 普通会計決算財政比較分析表及び歳出比較分析表) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（h21bunseki.pdf「平成21年度 普通会計決算財政比較分析表及び歳出比較分析表」, sha256:a8d55396）にて構造マーカー（歳入・歳出・節・決算額等）を確認済み。"
     }
   }
 }

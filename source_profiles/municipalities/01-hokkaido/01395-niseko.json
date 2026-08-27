@@ -48,11 +48,11 @@
       "notes": "Observed regulations index at https://www.town.niseko.lg.jp/chosei/reiki/ (label: ニセコ町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.niseko.lg.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.niseko.lg.jp/chosei/zaisei/",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.town.niseko.lg.jp/chosei/zaisei/",
           "sha256": "3c30b1f64e2eb8f6a62d9fb2726ec27a0b8f59f4d2519cc675baa87670a2dd33",
           "fetched_at": "2026-08-27T10:29:47Z"
+        },
+        {
+          "url": "https://www.town.niseko.lg.jp/resources/output/contents/file/release/892/61139/R8ippannkaikeiyosann.pdf",
+          "observed_on": "https://www.town.niseko.lg.jp/chosei/zaisei/niseko_yosan/",
+          "sha256": "f35847b54ab392ff74eaba0f5e7dd3ffcb277196eeacfcdfb49b103832f19618",
+          "fetched_at": "2026-08-27T13:27:03Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.niseko.lg.jp/chosei/zaisei/ (label: 財政・契約) 入口 https://www.town.niseko.lg.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8ippannkaikeiyosann.pdf「ニセコ町一般会計予算書【令和8年度当初】」, sha256:f35847b5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.niseko.lg.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.niseko.lg.jp/chosei/zaisei/",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.town.niseko.lg.jp/chosei/zaisei/",
           "sha256": "3c30b1f64e2eb8f6a62d9fb2726ec27a0b8f59f4d2519cc675baa87670a2dd33",
           "fetched_at": "2026-08-27T10:29:47Z"
+        },
+        {
+          "url": "https://www.town.niseko.lg.jp/resources/output/contents/file/release/893/8917/R6kessannsyo.pdf",
+          "observed_on": "https://www.town.niseko.lg.jp/chosei/zaisei/niseko_kessan/",
+          "sha256": "cf1461d340beaae15dfb557e084bc6ac2c221ae079ce0e18c2a3867fe820c9e4",
+          "fetched_at": "2026-08-27T13:27:34Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.niseko.lg.jp/chosei/zaisei/ (label: 財政・契約) 入口 https://www.town.niseko.lg.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessannsyo.pdf「令和6年度各会計決算書」, sha256:cf1461d3）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -42,34 +42,58 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/saitama/reiki.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.saitama.jp/006/007/011/001/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.saitama.jp/006/007/011/001/index.html",
           "observed_on": "http://www.city.saitama.jp/",
           "fetched_at": "2026-08-27T06:45:17Z"
+        },
+        {
+          "url": "http://www.city.saitama.jp/006/007/011/001/index.html",
+          "observed_on": "http://www.city.saitama.jp/",
+          "sha256": "baf54581dfe4720c03f57f7a8ef80df2c3dc83ea557370fdcb5455851980c5a7",
+          "fetched_at": "2026-08-27T10:20:25Z"
+        },
+        {
+          "url": "https://www.city.saitama.lg.jp/006/007/011/001/021/p129189_d/fil/reiwa8nendotousyoyosan.pdf",
+          "observed_on": "https://www.city.saitama.lg.jp/006/007/011/001/021/p129189.html",
+          "sha256": "8509236e27fced49c6e318cf993b08d7ed635545a8d864a6c6a0d8eacc079d43",
+          "fetched_at": "2026-08-27T13:31:28Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.saitama.jp/006/007/011/001/index.html (label: 予算)"
+      "notes": "deepest_doc=P1。budget文書（reiwa8nendotousyoyosan.pdf「議案第18～31号 令和8年度さいたま市一般会計特別会計予算及び予算説明書（PDF形式 1,682キロバイト）」, sha256:8509236e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.saitama.jp/006/007/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.saitama.jp/006/007/index.html",
           "observed_on": "http://www.city.saitama.jp/",
           "fetched_at": "2026-08-27T06:45:17Z"
+        },
+        {
+          "url": "http://www.city.saitama.jp/006/007/index.html",
+          "observed_on": "http://www.city.saitama.jp/",
+          "sha256": "7f9fe6928e54c4615634b95006657043dc2952f602814a1df75d5ad0d1739622",
+          "fetched_at": "2026-08-27T10:20:27Z"
+        },
+        {
+          "url": "https://www.city.saitama.lg.jp/006/007/009/p059562_d/fil/r6_zaisei_siryosyu.xlsx",
+          "observed_on": "https://www.city.saitama.lg.jp/006/007/009/p059562.html",
+          "sha256": "3bb2edfa92ade11567ac226c5b8c918ffafd16da8ec3fb7f44369f23fb897236",
+          "fetched_at": "2026-08-27T13:31:30Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.saitama.jp/006/007/index.html (label: 政策・財政)"
+      "notes": "deepest_doc=P1。settlement文書（r6_zaisei_siryosyu.xlsx「令和6年度財政状況資料集（エクセル形式 573キロバイト）」, sha256:3bb2edfa）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

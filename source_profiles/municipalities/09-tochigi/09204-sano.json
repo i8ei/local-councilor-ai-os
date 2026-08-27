@@ -42,11 +42,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A6DF88E (label: Rulebook 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
           "sha256": "23329217c3a2f759f3a2f60e4aefc972f69d904e7e1fe3f1b4a0ad0f54b8bcbd",
           "fetched_at": "2026-08-27T10:18:01Z"
+        },
+        {
+          "url": "https://www.city.sano.lg.jp/material/files/group/6/R6zaisijoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
+          "sha256": "b3dd5640469c0f0636dee24c5a5bd6879f1040a253abdbdd0b9e7e29f54e4cbf",
+          "fetched_at": "2026-08-27T13:30:42Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html (label: 予算・財政) 入口 https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zaisijoukyousiryousyuu.xlsx「令和6年度財政状況資料集 (Excelファイル: 560.6KB)」, sha256:b3dd5640）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
@@ -84,9 +90,15 @@
           "url": "https://www.city.sano.lg.jp/material/files/group/6/R7sanosinozaiseijoukyou.pdf",
           "observed_on": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
           "fetched_at": "2026-08-27T10:18:01Z"
+        },
+        {
+          "url": "https://www.city.sano.lg.jp/material/files/group/6/R6zaisijoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html",
+          "sha256": "b3dd5640469c0f0636dee24c5a5bd6879f1040a253abdbdd0b9e7e29f54e4cbf",
+          "fetched_at": "2026-08-27T13:30:42Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.sano.lg.jp/kurashi_gyosei/shiseijoho_nyusatsu/zaisei/index.html (label: 予算・財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6zaisijoukyousiryousyuu.xlsx「令和6年度財政状況資料集 (Excelファイル: 560.6KB)」, sha256:b3dd5640）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

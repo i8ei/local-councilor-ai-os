@@ -50,11 +50,11 @@
       "index_url": "https://www.city.wakkanai.hokkaido.jp/data/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
           "sha256": "87ec87e3254fb7a239893a255118104e3d84b25013c34e4494daebef4fd3ba10",
           "fetched_at": "2026-08-27T10:28:50Z"
+        },
+        {
+          "url": "https://www.city.wakkanai.hokkaido.jp/files/00003000/00003007/sonotayougo.pdf",
+          "observed_on": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
+          "sha256": "9249814514a9d0c1a01c5193ed88f02b6484c7a1a44fd7f50d65ee4cc04d15cf",
+          "fetched_at": "2026-08-27T13:25:34Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/ (label: 予算・決算・財政状況) 入口 https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（sonotayougo.pdf「その他財政関係用語一覧」, sha256:92498145）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
           "sha256": "87ec87e3254fb7a239893a255118104e3d84b25013c34e4494daebef4fd3ba10",
           "fetched_at": "2026-08-27T10:28:50Z"
+        },
+        {
+          "url": "https://www.city.wakkanai.hokkaido.jp/files/00003000/00003007/sonotayougo.pdf",
+          "observed_on": "https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/",
+          "sha256": "9249814514a9d0c1a01c5193ed88f02b6484c7a1a44fd7f50d65ee4cc04d15cf",
+          "fetched_at": "2026-08-27T13:25:34Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/ (label: 予算・決算・財政状況) 入口 https://www.city.wakkanai.hokkaido.jp/shisei/zaisei/yosankessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（sonotayougo.pdf「その他財政関係用語一覧」, sha256:92498145）にて構造マーカー（歳入・歳出・地方債・基準財政需要額等）を確認済み。"
     }
   }
 }

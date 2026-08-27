@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（3_374_up_jpg0l5j0.xlsx「令和6年度実績（エクセル：553.9キロバイト）」, sha256:47da4233）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.gyokuto.kumamoto.jp/list00132.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.gyokuto.kumamoto.jp/list00132.html",
@@ -91,9 +91,21 @@
           "observed_on": "https://www.town.gyokuto.kumamoto.jp/list00132.html",
           "sha256": "292065887d816b79d9297725f2fcd1479ae7405f8ba25ff90708939d28b72a33",
           "fetched_at": "2026-08-27T09:38:27Z"
+        },
+        {
+          "url": "http://www.town.gyokuto.kumamoto.jp/list00132.html",
+          "observed_on": "http://www.town.gyokuto.kumamoto.jp/",
+          "sha256": "292065887d816b79d9297725f2fcd1479ae7405f8ba25ff90708939d28b72a33",
+          "fetched_at": "2026-08-27T09:38:27Z"
+        },
+        {
+          "url": "https://www.town.gyokuto.kumamoto.jp/kiji003374/3_374_up_jpg0l5j0.xlsx",
+          "observed_on": "https://www.town.gyokuto.kumamoto.jp/kiji003374/index.html",
+          "sha256": "47da4233155eb37fd8119d6d004fb56eaed0045a3c132ebd9033ce33fe46b037",
+          "fetched_at": "2026-08-27T13:46:04Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.gyokuto.kumamoto.jp/list00132.html (label: 行政・財政) 入口 https://www.town.gyokuto.kumamoto.jp/list00132.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.gyokuto.kumamoto.jp/list00132.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_374_up_jpg0l5j0.xlsx「令和6年度実績（エクセル：553.9キロバイト）」, sha256:47da4233）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

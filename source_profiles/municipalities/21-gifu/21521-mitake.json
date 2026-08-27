@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.town.mitake.lg.jp/portal/town/laws/ (label: 条例・規則検索)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mitake.lg.jp/news/news0090984/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mitake.lg.jp/news/news0090984/",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.town.mitake.lg.jp/news/news0090984/",
           "sha256": "7899ef97e8c021162e650964b64f56917e91577764a8a4c096ad9a01b0aeb9ea",
           "fetched_at": "2026-08-27T10:14:09Z"
+        },
+        {
+          "url": "https://www.town.mitake.lg.jp/wp-content/uploads/toshoR8.pdf",
+          "observed_on": "https://www.town.mitake.lg.jp/portal/town/finance/post0009547/",
+          "sha256": "c7a8a146b6c7119c1f369d1d495ba34b4cd4d4da93d45aab96c89abc74331dc3",
+          "fetched_at": "2026-08-27T13:37:36Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.mitake.lg.jp/news/news0090984/ (label: 2025年7月02日 【令和７年度】太陽光発電設備・蓄電池補助制度の予算枠の追加について（県補助分）) 入口 https://www.town.mitake.lg.jp/news/news0090984/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mitake.lg.jp/news/news0090984/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mitake.lg.jp/news/news0090984/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（toshoR8.pdf「令和8年度 御嵩町当初予算書（PDF/13MB）」, sha256:c7a8a146）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mitake.lg.jp/portal/town/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mitake.lg.jp/portal/town/finance/",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.town.mitake.lg.jp/portal/town/finance/",
           "sha256": "e198129dd7b8b01ebb5232815135e492a86eaf7010b8fc70da07b1309b5bc52e",
           "fetched_at": "2026-08-27T10:14:11Z"
+        },
+        {
+          "url": "https://www.town.mitake.lg.jp/wp-content/uploads/R6zaisei.xlsx",
+          "observed_on": "https://www.town.mitake.lg.jp/portal/town/finance/post0010479/",
+          "sha256": "e9381c353557918812a0d40e7ffa65d6ed029aaee20040db750eafdaad466fa5",
+          "fetched_at": "2026-08-27T13:37:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mitake.lg.jp/portal/town/finance/ (label: 財政) 入口 https://www.town.mitake.lg.jp/portal/town/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mitake.lg.jp/portal/town/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mitake.lg.jp/portal/town/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaisei.xlsx「令和6年度（xlsx/557KB）」, sha256:e9381c35）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

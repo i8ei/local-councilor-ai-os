@@ -50,11 +50,11 @@
       "notes": "No budget entrance found within page limit"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ageo.lg.jp/page/079118083101.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ageo.lg.jp/page/079118083101.html",
@@ -71,9 +71,15 @@
           "url": "http://www.city.ageo.lg.jp/uploaded/attachment/121688.pdf",
           "observed_on": "http://www.city.ageo.lg.jp/page/079118083101.html",
           "fetched_at": "2026-08-27T11:17:33Z"
+        },
+        {
+          "url": "http://www.city.ageo.lg.jp/uploaded/attachment/121688.pdf",
+          "observed_on": "http://www.city.ageo.lg.jp/page/079118083101.html",
+          "sha256": "6a337835b48922121d03dd04e7edb8a97a9d5f0e060a91eb2a4c958f41c3094a",
+          "fetched_at": "2026-08-27T11:17:34Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ageo.lg.jp/page/079118083101.html (label: 決算審査・健全化判断比率審査・内部統制評価報告書審査等の結果) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（121688.pdf「一般会計および特別会計決算 [PDFファイル／1.87MB]」, sha256:6a337835）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

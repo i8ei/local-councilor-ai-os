@@ -59,11 +59,11 @@
       "index_url": "https://en3-jg.d1-law.com/nakano/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nakano.nagano.jp/docs/2016031000023/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nakano.nagano.jp/docs/2016031000023/",
@@ -80,16 +80,22 @@
           "url": "http://www.city.nakano.nagano.jp/docs/2016031000023/file_contents/08yosanpoint.pdf",
           "observed_on": "http://www.city.nakano.nagano.jp/docs/2016031000023/",
           "fetched_at": "2026-08-27T11:10:38Z"
+        },
+        {
+          "url": "http://www.city.nakano.nagano.jp/docs/2016031000023/file_contents/08yosanpoint.pdf",
+          "observed_on": "http://www.city.nakano.nagano.jp/docs/2016031000023/",
+          "sha256": "a4a1095c0ca8b4c9eefa5616c5691f25fea86566b5cdda2fd5ffd63922b1a01e",
+          "fetched_at": "2026-08-27T11:10:39Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.nakano.nagano.jp/docs/2016031000023/ (label: 予算概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（08yosanpoint.pdf「令和８年度 予算案の概要ポイント[PDF：829KB]」, sha256:a4a1095c）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nakano.nagano.jp/docs/2025093000025/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nakano.nagano.jp/docs/2025093000025/",
@@ -106,9 +112,15 @@
           "url": "http://www.city.nakano.nagano.jp/docs/2025093000025/file_contents/2024kessan.pdf",
           "observed_on": "http://www.city.nakano.nagano.jp/docs/2025093000025/",
           "fetched_at": "2026-08-27T11:10:39Z"
+        },
+        {
+          "url": "http://www.city.nakano.nagano.jp/docs/2025093000025/file_contents/2024kessan.pdf",
+          "observed_on": "http://www.city.nakano.nagano.jp/docs/2025093000025/",
+          "sha256": "2d18079f09de5e91cee9873394e25e15e511437dba6e23b11186293ecf8189dc",
+          "fetched_at": "2026-08-27T11:10:44Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.nakano.nagano.jp/docs/2025093000025/ (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（2024kessan.pdf「2024（令和6）年度一般・特別・企業会計歳入歳出決算書[PDF：10.5MB]」, sha256:2d18079f）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

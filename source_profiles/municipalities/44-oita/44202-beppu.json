@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.beppu/reiki_menu.html (label: 別府市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.beppu.oita.jp/sisei/zaisei/sinoyosan_tosho.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.beppu.oita.jp/sisei/zaisei/sinoyosan_tosho.html",
@@ -71,9 +71,21 @@
           "url": "https://www.city.beppu.oita.jp/doc/sisei/zaisei/yosan/toushoyosan/r08/henseihousin.pdf",
           "observed_on": "https://www.city.beppu.oita.jp/sisei/zaisei/sinoyosan_tosho.html",
           "fetched_at": "2026-08-27T10:57:14Z"
+        },
+        {
+          "url": "http://www.city.beppu.oita.jp/sisei/zaisei/sinoyosan_tosho.html",
+          "observed_on": "http://www.city.beppu.oita.jp/",
+          "sha256": "ff8b9c819474ebf0494d3e64c4d5cc70de4a5d9e9566ec7632ea84f74315fc4b",
+          "fetched_at": "2026-08-27T09:39:12Z"
+        },
+        {
+          "url": "https://www.city.beppu.oita.jp/doc/sisei/zaisei/yosan/toushoyosan/r02/gaiyou.pdf",
+          "observed_on": "https://www.city.beppu.oita.jp/sisei/zaisei/sinoyosan_tosho.html",
+          "sha256": "f55625e9d9d1674f9453fc0141647ae9740c481568f556288263a10bf08a3c53",
+          "fetched_at": "2026-08-27T13:46:47Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.beppu.oita.jp/sisei/zaisei/sinoyosan_tosho.html (label: 市の予算（当初予算）) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（gaiyou.pdf「令和2年度当初予算の概要」, sha256:f55625e9）にて構造マーカー（項・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

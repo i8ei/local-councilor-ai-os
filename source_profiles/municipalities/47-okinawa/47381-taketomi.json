@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（473812_taketomi_2023_zaisei.xlsx「令和５年度竹富町財政状況資料集(Excel)」, sha256:3d8437a0）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.taketomi.lg.jp/soshiki/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.taketomi.lg.jp/soshiki/zaisei/",
@@ -93,9 +93,15 @@
           "observed_on": "https://www.town.taketomi.lg.jp/soshiki/zaisei/",
           "sha256": "9ee3bf6b0079b183dc3db90bd2091b936bfcf0531c5b3e3c19d30c3fe2b92438",
           "fetched_at": "2026-08-27T09:41:49Z"
+        },
+        {
+          "url": "https://www.town.taketomi.lg.jp/userfiles/files/473812_taketomi_2023_zaisei.xlsx",
+          "observed_on": "https://www.town.taketomi.lg.jp/soshiki/zaisei/1634875803/",
+          "sha256": "3d8437a009b534f63871a52e843ec2579ae5e9f624b880eb6e62e53b36f60df3",
+          "fetched_at": "2026-08-27T13:48:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.taketomi.lg.jp/soshiki/zaisei/ (label: 財政課) 入口 https://www.town.taketomi.lg.jp/soshiki/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taketomi.lg.jp/soshiki/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（473812_taketomi_2023_zaisei.xlsx「令和５年度竹富町財政状況資料集(Excel)」, sha256:3d8437a0）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -35,11 +35,11 @@
       "index_url": "http://www.city.kanonji.kagawa.jp/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kanonji.kagawa.jp/life/14/93/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kanonji.kagawa.jp/life/14/93/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.kanonji.kagawa.jp/life/14/93/",
           "sha256": "54eaf8be4db7458d708011eff26761f79f53b1ff4bfa0eceae4d490d151ada2c",
           "fetched_at": "2026-08-27T09:46:28Z"
+        },
+        {
+          "url": "http://www.city.kanonji.kagawa.jp/life/14/93/",
+          "observed_on": "http://www.city.kanonji.kagawa.jp/",
+          "sha256": "54eaf8be4db7458d708011eff26761f79f53b1ff4bfa0eceae4d490d151ada2c",
+          "fetched_at": "2026-08-27T09:46:28Z"
+        },
+        {
+          "url": "https://www.city.kanonji.kagawa.jp/uploaded/attachment/41846.pdf",
+          "observed_on": "https://www.city.kanonji.kagawa.jp/soshiki/5/1200.html",
+          "sha256": "a9643efcec1c35c401f7509be06ebafc3dd6cb336421def0c44bf42225c3ab17",
+          "fetched_at": "2026-08-27T13:43:10Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kanonji.kagawa.jp/life/14/93/ (label: 行財政) 入口 https://www.city.kanonji.kagawa.jp/life/14/93/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kanonji.kagawa.jp/life/14/93/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（41846.pdf「令和8年度予算の概要 [PDFファイル／638KB]」, sha256:a9643efc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

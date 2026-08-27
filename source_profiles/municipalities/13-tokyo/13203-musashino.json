@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8016A3ED (label: 例規類集・要綱集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html",
           "sha256": "f8e93f78e09344ab9defb5a31c693b243f6ba8504f5f276cd568c601b8481820",
           "fetched_at": "2026-08-27T10:25:48Z"
+        },
+        {
+          "url": "http://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "http://www.city.musashino.lg.jp/",
+          "sha256": "f8e93f78e09344ab9defb5a31c693b243f6ba8504f5f276cd568c601b8481820",
+          "fetched_at": "2026-08-27T10:25:48Z"
+        },
+        {
+          "url": "https://www.city.musashino.lg.jp/_res/projects/default_project/_page_/001/010/229/R7shimohannkizaisei.pdf",
+          "observed_on": "https://www.city.musashino.lg.jp/shiseijoho/zaisei/zaiseijokyo/1010229.html",
+          "sha256": "7ed649d2776b7bf4b7ae35ea92bcd7fc06b82f632705b8a4dcdfe9b2060e5f29",
+          "fetched_at": "2026-08-27T13:33:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7shimohannkizaisei.pdf「令和7年度財政状況のあらまし （PDF 310.1KB）」, sha256:7ed649d2）にて構造マーカー（歳入・歳出・款・予算現額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html",
           "sha256": "f8e93f78e09344ab9defb5a31c693b243f6ba8504f5f276cd568c601b8481820",
           "fetched_at": "2026-08-27T10:25:48Z"
+        },
+        {
+          "url": "http://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "http://www.city.musashino.lg.jp/",
+          "sha256": "f8e93f78e09344ab9defb5a31c693b243f6ba8504f5f276cd568c601b8481820",
+          "fetched_at": "2026-08-27T10:25:48Z"
+        },
+        {
+          "url": "https://www.city.musashino.lg.jp/_res/projects/default_project/_page_/001/010/231/R6card.pdf",
+          "observed_on": "https://www.city.musashino.lg.jp/shiseijoho/zaisei/zaiseijokyo/1010231.html",
+          "sha256": "ae0f76ef303d97965d84ab7d1b4c9a043f14e253368cd5cc7cfe1f4644a22f10",
+          "fetched_at": "2026-08-27T13:33:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.musashino.lg.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6card.pdf「令和6年度決算カード （PDF 367.5KB）」, sha256:ae0f76ef）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

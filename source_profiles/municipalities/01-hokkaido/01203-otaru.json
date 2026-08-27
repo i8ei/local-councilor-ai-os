@@ -48,11 +48,11 @@
       "base_url": "http://www1.g-reiki.net/city.otaru/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/",
           "sha256": "894c750c19f537467d8402896cd1c1ee0e60bbc98e57388d1cf0bf1d9f6b0dbc",
           "fetched_at": "2026-08-27T10:28:44Z"
+        },
+        {
+          "url": "https://www.city.otaru.lg.jp/docs/2025102700021/file_contents/R08yosan_syo.pdf",
+          "observed_on": "https://www.city.otaru.lg.jp/docs/2025102700021/",
+          "sha256": "f85c87f21bed87103c6fe093db1d411c31734f48f259a7d256d1e89ba61ffbde",
+          "fetched_at": "2026-08-27T13:22:51Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/ (label: 財政) 入口 https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R08yosan_syo.pdf「令和8年度小樽市予算書[PDF：1.17MB]」, sha256:f85c87f2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/",
           "sha256": "894c750c19f537467d8402896cd1c1ee0e60bbc98e57388d1cf0bf1d9f6b0dbc",
           "fetched_at": "2026-08-27T10:28:44Z"
+        },
+        {
+          "url": "https://www.city.otaru.lg.jp/docs/2025082200023/file_contents/01_kessan_syoR6.pdf",
+          "observed_on": "https://www.city.otaru.lg.jp/docs/2025082200023/",
+          "sha256": "58d07ff8f9146cfe1fc4e163abb85b52fa1a34a59bba148df169fc007434fe59",
+          "fetched_at": "2026-08-27T13:22:55Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/ (label: 財政) 入口 https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.otaru.lg.jp/categories/bunya/sisei_tomei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（01_kessan_syoR6.pdf「決算書、事項別明細書、実質収支の調書[PDF：2.63MB]」, sha256:58d07ff8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

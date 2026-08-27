@@ -80,11 +80,11 @@
       "notes": "deepest_doc=P1。budget文書（3154c91444e0673c4798b99dab1b1ac0b510bccc.pdf「平成２９年度一般会計当初予算 地方消費税交付金（社会保障財源化分）の使途状況.pdf」, sha256:b6c35e5c）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kadena.okinawa.jp/departments/kak10.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kadena.okinawa.jp/departments/kak10.html",
@@ -101,9 +101,15 @@
           "url": "https://www.town.kadena.okinawa.jp/departments/c3354c8f8513436add8d549c3e268285265c820c.pdf",
           "observed_on": "https://www.town.kadena.okinawa.jp/departments/kak10.html",
           "fetched_at": "2026-08-27T10:58:35Z"
+        },
+        {
+          "url": "https://www.town.kadena.okinawa.jp/departments/ff4b8f4af0193789f2db63ea6d76cde52dd40522.pdf",
+          "observed_on": "https://www.town.kadena.okinawa.jp/departments/kak10.html",
+          "sha256": "f7740e48f317238cf76869c1216d593953d9ea10cc5359f19cc431368db266e1",
+          "fetched_at": "2026-08-27T13:48:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kadena.okinawa.jp/departments/kak10.html (label: 企画財政課) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（ff4b8f4af0193789f2db63ea6d76cde52dd40522.pdf「【財政状況資料集】_473251_嘉手納町_2017.pdf」, sha256:f7740e48）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

@@ -59,11 +59,11 @@
       "notes": "Observed budget link at https://www.city.tama.lg.jp/cgi-bin/enquetes/2d4e3c511fe54012884b9ac2979d231c (label: 多摩市の予算についてのご意見、ご感想) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tama.lg.jp/shisei/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tama.lg.jp/shisei/zaisei/kessan/index.html",
@@ -75,9 +75,21 @@
           "observed_on": "https://www.city.tama.lg.jp/shisei/zaisei/kessan/index.html",
           "sha256": "7f269a0cfef3f5698d7f7377b0371b30bfc15e0a421ba39af80ba505b180bc46",
           "fetched_at": "2026-08-27T10:26:17Z"
+        },
+        {
+          "url": "http://www.city.tama.lg.jp/shisei/zaisei/kessan/index.html",
+          "observed_on": "http://www.city.tama.lg.jp/",
+          "sha256": "7f269a0cfef3f5698d7f7377b0371b30bfc15e0a421ba39af80ba505b180bc46",
+          "fetched_at": "2026-08-27T10:26:17Z"
+        },
+        {
+          "url": "https://www.city.tama.lg.jp/_res/projects/default_project/_page_/001/004/929/R6kessann.pdf",
+          "observed_on": "https://www.city.tama.lg.jp/shisei/zaisei/kessan/1004929.html",
+          "sha256": "b85f78b54c97935a5a131d3039c5542c312b1e0cc974e3af03eeb5b27f4699c5",
+          "fetched_at": "2026-08-27T13:33:57Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tama.lg.jp/shisei/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.tama.lg.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessann.pdf「令和6年度 各会計歳入歳出決算書 （PDF 3.3 MB）」, sha256:b85f78b5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "base_url": "https://www.city.yamagata.gifu.jp/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yamagata.gifu.jp/life/4/31/150/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yamagata.gifu.jp/life/4/31/150/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.yamagata.gifu.jp/life/4/31/150/",
           "sha256": "edee9dec71fef0ecf6ef3df9e3826b11d0fc1efbef156cc08c3565098126e740",
           "fetched_at": "2026-08-27T10:13:14Z"
+        },
+        {
+          "url": "http://www.city.yamagata.gifu.jp/life/4/31/150/",
+          "observed_on": "http://www.city.yamagata.gifu.jp/",
+          "sha256": "edee9dec71fef0ecf6ef3df9e3826b11d0fc1efbef156cc08c3565098126e740",
+          "fetched_at": "2026-08-27T10:13:14Z"
+        },
+        {
+          "url": "https://www.city.yamagata.gifu.jp/uploaded/attachment/20013.pdf",
+          "observed_on": "https://www.city.yamagata.gifu.jp/soshiki/kikaku/51845.html",
+          "sha256": "0c2c6b3d4ac3989902947a875669c4ff8f401548025088c7efcabde21094f729",
+          "fetched_at": "2026-08-27T13:36:53Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.yamagata.gifu.jp/life/4/31/150/ (label: 予算・決算) 入口 https://www.city.yamagata.gifu.jp/life/4/31/150/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yamagata.gifu.jp/life/4/31/150/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20013.pdf「令和8年度当初予算の概要 [PDFファイル／1018KB]」, sha256:0c2c6b3d）にて構造マーカー（歳入・歳出・款・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

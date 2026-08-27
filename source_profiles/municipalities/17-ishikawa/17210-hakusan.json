@@ -59,11 +59,11 @@
       "base_url": "https://www1.g-reiki.net/hakusan/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
@@ -75,16 +75,28 @@
           "observed_on": "https://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
           "sha256": "8ccff645cae8bba619b5ab5d0e373463920f3ad3503d9524d3dac6ce5bca7bac",
           "fetched_at": "2026-08-27T10:05:54Z"
+        },
+        {
+          "url": "http://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.hakusan.lg.jp/",
+          "sha256": "8ccff645cae8bba619b5ab5d0e373463920f3ad3503d9524d3dac6ce5bca7bac",
+          "fetched_at": "2026-08-27T10:05:54Z"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/_res/projects/default_project/_page_/001/003/565/172103_hakusan_2024.xlsx",
+          "observed_on": "https://www.city.hakusan.lg.jp/shisei/zaisei/1003565.html",
+          "sha256": "36ac7e3ca1ca53f81a0862e49f7e0b9bdff84580f1bdd9cafdb46d0bde6ac6c3",
+          "fetched_at": "2026-08-27T13:35:40Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hakusan.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.hakusan.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hakusan.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（172103_hakusan_2024.xlsx「令和6年度財政状況資料集 （Excel 561.4KB）」, sha256:36ac7e3c）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
@@ -96,9 +108,21 @@
           "observed_on": "https://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
           "sha256": "8ccff645cae8bba619b5ab5d0e373463920f3ad3503d9524d3dac6ce5bca7bac",
           "fetched_at": "2026-08-27T10:05:54Z"
+        },
+        {
+          "url": "http://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.hakusan.lg.jp/",
+          "sha256": "8ccff645cae8bba619b5ab5d0e373463920f3ad3503d9524d3dac6ce5bca7bac",
+          "fetched_at": "2026-08-27T10:05:54Z"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/_res/projects/default_project/_page_/001/003/565/172103_hakusan_2024.xlsx",
+          "observed_on": "https://www.city.hakusan.lg.jp/shisei/zaisei/1003565.html",
+          "sha256": "36ac7e3ca1ca53f81a0862e49f7e0b9bdff84580f1bdd9cafdb46d0bde6ac6c3",
+          "fetched_at": "2026-08-27T13:35:40Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hakusan.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.hakusan.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hakusan.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（172103_hakusan_2024.xlsx「令和6年度財政状況資料集 （Excel 561.4KB）」, sha256:36ac7e3c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

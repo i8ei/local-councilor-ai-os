@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.city.awa.lg.jp/jyorei/reiki_menu.html (label: 条例・例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
           "sha256": "58830d22154836867509d54a8b8aadd57260fb911902badf047868cb047d562e",
           "fetched_at": "2026-08-27T09:46:02Z"
+        },
+        {
+          "url": "http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
+          "observed_on": "http://www.city.awa.lg.jp/",
+          "sha256": "58830d22154836867509d54a8b8aadd57260fb911902badf047868cb047d562e",
+          "fetched_at": "2026-08-27T09:46:02Z"
+        },
+        {
+          "url": "https://www.city.awa.lg.jp/docs/2012032100038/file_contents/R8ippan.pdf",
+          "observed_on": "https://www.city.awa.lg.jp/docs/2012032100038/",
+          "sha256": "12d6f448eddf507e119d763c4c147fbe2edf17d306c145776b2b22a6c149c8f2",
+          "fetched_at": "2026-08-27T13:43:01Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ (label: 財政状況) 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8ippan.pdf「R8一般会計予算書[PDF：3.64MB]」, sha256:12d6f448）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/top/search/t:0.83945700%201615871923 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html",
@@ -65,16 +65,22 @@
           "url": "https://town.kamisunagawa.hokkaido.jp/material/files/group/2/H29_syuyouzigyo.pdf",
           "observed_on": "https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html",
           "fetched_at": "2026-08-27T10:30:05Z"
+        },
+        {
+          "url": "https://town.kamisunagawa.hokkaido.jp/material/files/group/2/H29_syuyouzigyo.pdf",
+          "observed_on": "https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html",
+          "sha256": "a2b575cf6c05c219162f87bb03e10854ea7d8dc25e189d89189c7ae727f2a108",
+          "fetched_at": "2026-08-27T10:30:08Z"
         }
       ],
-      "notes": "Observed budget link at https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html (label: 上砂川町の予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（H29_syuyouzigyo.pdf「予算の概要」, sha256:a2b575cf）にて構造マーカー（歳入・歳出・節・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html",
@@ -91,9 +97,15 @@
           "url": "https://town.kamisunagawa.hokkaido.jp/material/files/group/2/H29_kessann.pdf",
           "observed_on": "https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html",
           "fetched_at": "2026-08-27T10:30:08Z"
+        },
+        {
+          "url": "https://town.kamisunagawa.hokkaido.jp/material/files/group/2/H29_kessann.pdf",
+          "observed_on": "https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html",
+          "sha256": "03129212aa6bdfb5002bfe128a48a6979932942e5dd8902b3be3c2d3791c8fc8",
+          "fetched_at": "2026-08-27T10:30:10Z"
         }
       ],
-      "notes": "Observed settlement link at https://town.kamisunagawa.hokkaido.jp/chosei/zaisei/752.html (label: 上砂川町の予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（H29_kessann.pdf「決算の概要」, sha256:03129212）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

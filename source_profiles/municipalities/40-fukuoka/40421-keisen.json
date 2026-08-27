@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/keisen/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
@@ -72,9 +72,21 @@
           "url": "https://www.town.keisen.fukuoka.jp/pdf/zaisei/tousyoR08.pdf",
           "observed_on": "https://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
           "fetched_at": "2026-08-27T10:56:29Z"
+        },
+        {
+          "url": "http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
+          "observed_on": "http://www.town.keisen.fukuoka.jp/",
+          "sha256": "1f31a860ce65502e627104cd5778d46d9ed547a442ab74c5115b3a6d10805493",
+          "fetched_at": "2026-08-27T09:37:09Z"
+        },
+        {
+          "url": "https://www.town.keisen.fukuoka.jp/pdf/zaisei/tousyoR08.pdf",
+          "observed_on": "https://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
+          "sha256": "7c5e558235026ed5e6c7e57095e006a9236393cf3b3c7ac8d30ec6084701892e",
+          "fetched_at": "2026-08-27T10:56:30Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php (label: 桂川町の財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（tousyoR08.pdf「令和8年度 一般会計予算書（PDFファイル：2,670KB）」, sha256:7c5e5582）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

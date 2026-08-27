@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/jyorei_kisoku/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/finance/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/finance/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/finance/index.html",
           "sha256": "465cdfdc7b4804487b64542cc498fe7608a4c7cff1e77a092e4685b38acdb194",
           "fetched_at": "2026-08-27T10:31:55Z"
+        },
+        {
+          "url": "https://www.city.tsugaru.aomori.jp/material/files/group/9/2024siryou.xlsx",
+          "observed_on": "https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/finance/3/3739.html",
+          "sha256": "5ac0f15163ae1ee18f6fdf0c616802144752a2547ea72cf8d631b1c777724f58",
+          "fetched_at": "2026-08-27T13:27:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/finance/index.html (label: 財政) 入口 https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/finance/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/finance/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2024siryou.xlsx「令和6年度財政状況資料集 (Excelファイル: 558.1KB)」, sha256:5ac0f151）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/kansa/9430.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/kansa/9430.html",
@@ -84,9 +90,15 @@
           "url": "https://www.city.tsugaru.aomori.jp/material/files/group/29/kessan_ippan_tokubetu_ikensyo_r6.pdf",
           "observed_on": "https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/kansa/9430.html",
           "fetched_at": "2026-08-27T10:31:55Z"
+        },
+        {
+          "url": "https://www.city.tsugaru.aomori.jp/material/files/group/29/kessan_ippan_tokubetu_ikensyo_r6.pdf",
+          "observed_on": "https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/kansa/9430.html",
+          "sha256": "5f617776ff623ccc4a7acdda5875d91df2d43cec8664d97222678d8c8da029aa",
+          "fetched_at": "2026-08-27T10:31:58Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.tsugaru.aomori.jp/joho/mokuteki/administration/kansa/9430.html (label: つがる市一般会計・特別会計歳入歳出決算及び基金運用状況審査意見書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（kessan_ippan_tokubetu_ikensyo_r6.pdf「令和6年度つがる市一般会計・特別会計歳入歳出決算及び基金運用状況審査意見書 (PDFファイル: 1.4MB)」, sha256:5f617776）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

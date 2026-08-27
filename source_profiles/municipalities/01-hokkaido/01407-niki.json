@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
           "sha256": "e73ede062e5942d88b851cd69cae872d35c844d7464fdc12b7e83a3d24cd8ada",
           "fetched_at": "2026-08-27T10:30:05Z"
+        },
+        {
+          "url": "http://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
+          "observed_on": "http://www.town.niki.hokkaido.jp/",
+          "sha256": "e73ede062e5942d88b851cd69cae872d35c844d7464fdc12b7e83a3d24cd8ada",
+          "fetched_at": "2026-08-27T10:30:05Z"
+        },
+        {
+          "url": "https://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je-att/btsphm0000004qco.xlsx",
+          "observed_on": "https://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
+          "sha256": "a8c8b48879688bab689b8637aca9efa2ebc48df227bc05506aa6a28d4b69db96",
+          "fetched_at": "2026-08-27T13:25:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html (label: 財政状況資料集) 入口 https://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（btsphm0000004qco.xlsx「令和6年度財政状況資料集（(11)まで） (XLSX:530KB)」, sha256:a8c8b488）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
           "sha256": "e73ede062e5942d88b851cd69cae872d35c844d7464fdc12b7e83a3d24cd8ada",
           "fetched_at": "2026-08-27T10:30:05Z"
+        },
+        {
+          "url": "http://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
+          "observed_on": "http://www.town.niki.hokkaido.jp/",
+          "sha256": "e73ede062e5942d88b851cd69cae872d35c844d7464fdc12b7e83a3d24cd8ada",
+          "fetched_at": "2026-08-27T10:30:05Z"
+        },
+        {
+          "url": "https://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je-att/btsphm0000004qco.xlsx",
+          "observed_on": "https://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html",
+          "sha256": "a8c8b48879688bab689b8637aca9efa2ebc48df227bc05506aa6a28d4b69db96",
+          "fetched_at": "2026-08-27T13:25:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html (label: 財政状況資料集) 入口 https://www.town.niki.hokkaido.jp/section/zaiseika/irv97600000002je.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（btsphm0000004qco.xlsx「令和6年度財政状況資料集（(11)まで） (XLSX:530KB)」, sha256:a8c8b488）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

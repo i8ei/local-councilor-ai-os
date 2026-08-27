@@ -44,11 +44,11 @@
       "base_url": "http://kra014.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/",
@@ -60,16 +60,22 @@
           "observed_on": "https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/",
           "sha256": "1b92283e2b8db8b31c2c6d5a9b4d58a358b92a16d2986d189c67afc2165bcea0",
           "fetched_at": "2026-08-27T10:28:47Z"
+        },
+        {
+          "url": "https://www.city.tomakomai.hokkaido.jp/files/00004100/00004109/20260310161626.pdf",
+          "observed_on": "https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/zaiseikenzenka/yosannitsuite.html",
+          "sha256": "6461ea03cfe741a3d70780b4ae8cd6cc3784b1d06b48074ef9af15b242e2592f",
+          "fetched_at": "2026-08-27T13:25:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/ (label: 財政) 入口 https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260310161626.pdf「一般会計予算書」, sha256:6461ea03）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/",
@@ -81,9 +87,15 @@
           "observed_on": "https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/",
           "sha256": "1b92283e2b8db8b31c2c6d5a9b4d58a358b92a16d2986d189c67afc2165bcea0",
           "fetched_at": "2026-08-27T10:28:47Z"
+        },
+        {
+          "url": "https://www.city.tomakomai.hokkaido.jp/files/00048000/00048005/20251209192024.pdf",
+          "observed_on": "https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/zaiseikenzenka/kessannituite.html",
+          "sha256": "3efd8375b275f15308da1de4b71c1efab480935d31352e75e7b4a5c7e511dcd6",
+          "fetched_at": "2026-08-27T13:25:38Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/ (label: 財政) 入口 https://www.city.tomakomai.hokkaido.jp/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20251209192024.pdf「一般・特別会計決算書」, sha256:3efd8375）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

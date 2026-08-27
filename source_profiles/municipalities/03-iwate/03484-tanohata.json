@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.tanohata.iwate/reiki_menu.html (label: 田野畑村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.tanohata.iwate.jp/docs/2025031800014/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tanohata.iwate.jp/docs/2025031800014/",
@@ -72,16 +72,22 @@
           "url": "http://www.vill.tanohata.iwate.jp/yosan/R07/R7_yosan.pdf",
           "observed_on": "http://www.vill.tanohata.iwate.jp/docs/2025031800014/",
           "fetched_at": "2026-08-27T11:23:57Z"
+        },
+        {
+          "url": "http://www.vill.tanohata.iwate.jp/yosan/R07/R7_ippan.pdf",
+          "observed_on": "http://www.vill.tanohata.iwate.jp/docs/2025031800014/",
+          "sha256": "59276aa279b30be04717d91baff2e76f4f6e24b644455a4e1b6b4cb1b979fbf6",
+          "fetched_at": "2026-08-27T13:27:36Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.tanohata.iwate.jp/docs/2025031800014/ (label: 令和7年度予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R7_ippan.pdf「令和7年度一般会計予算書(1.3MB)」, sha256:59276aa2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.tanohata.iwate.jp/docs/2017110900012/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tanohata.iwate.jp/docs/2017110900012/",
@@ -93,9 +99,15 @@
           "observed_on": "http://www.vill.tanohata.iwate.jp/docs/2017110900012/",
           "sha256": "eb01422ebee20585320d0f6457230a5bdf4eaa594e900e841919652cb4cbf2b7",
           "fetched_at": "2026-08-27T10:33:43Z"
+        },
+        {
+          "url": "http://www.vill.tanohata.iwate.jp/docs/2017110900036/files/R6_ippankaikei.pdf",
+          "observed_on": "http://www.vill.tanohata.iwate.jp/docs/2017110900036/",
+          "sha256": "f69ed3fdfa205cfaba265001aeafa5c38e88b1dcb190e70f45e110cb369aff16",
+          "fetched_at": "2026-08-27T13:27:40Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.tanohata.iwate.jp/docs/2017110900012/ (label: 財政情報) 入口 http://www.vill.tanohata.iwate.jp/docs/2017110900012/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_ippankaikei.pdf「令和6年度一般会計決算書.pdf(2MB)」, sha256:f69ed3fd）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

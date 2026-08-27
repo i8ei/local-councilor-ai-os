@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kuroishi/reiki_honbun/c005RG00000058.html (label: 黒石市議会基本条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.city.kuroishi.aomori.jp:443/shisei/keikaku/gyouzaisei-kaikaku.html",
           "sha256": "a25c7c30bccdd579f5172bff9faa0ea231603c99ac30ebde1b790a53b9e9dfb4",
           "fetched_at": "2026-08-27T10:31:58Z"
+        },
+        {
+          "url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
+          "observed_on": "http://www.city.kuroishi.aomori.jp/",
+          "sha256": "a25c7c30bccdd579f5172bff9faa0ea231603c99ac30ebde1b790a53b9e9dfb4",
+          "fetched_at": "2026-08-27T10:31:58Z"
+        },
+        {
+          "url": "https://www.city.kuroishi.aomori.jp:443/shisei/keikaku/files/gyouseitaikou7.pdf",
+          "observed_on": "https://www.city.kuroishi.aomori.jp:443/shisei/keikaku/gyouzaisei-kaikaku.html",
+          "sha256": "f600aea3d24f919fc8475ef95d18f3e2002b3f0dd955d518667c14f6be514081",
+          "fetched_at": "2026-08-27T13:27:00Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html (label: 行財政改革) 入口 https://www.city.kuroishi.aomori.jp:443/shisei/keikaku/gyouzaisei-kaikaku.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（gyouseitaikou7.pdf「第七次黒石市行政改革大綱（計画期間：令和2年度～令和６年度） (210キロバイト)」, sha256:f600aea3）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.city.kuroishi.aomori.jp:443/shisei/keikaku/gyouzaisei-kaikaku.html",
           "sha256": "a25c7c30bccdd579f5172bff9faa0ea231603c99ac30ebde1b790a53b9e9dfb4",
           "fetched_at": "2026-08-27T10:31:58Z"
+        },
+        {
+          "url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
+          "observed_on": "http://www.city.kuroishi.aomori.jp/",
+          "sha256": "a25c7c30bccdd579f5172bff9faa0ea231603c99ac30ebde1b790a53b9e9dfb4",
+          "fetched_at": "2026-08-27T10:31:58Z"
+        },
+        {
+          "url": "https://www.city.kuroishi.aomori.jp:443/shisei/keikaku/files/gyouseitaikou7.pdf",
+          "observed_on": "https://www.city.kuroishi.aomori.jp:443/shisei/keikaku/gyouzaisei-kaikaku.html",
+          "sha256": "f600aea3d24f919fc8475ef95d18f3e2002b3f0dd955d518667c14f6be514081",
+          "fetched_at": "2026-08-27T13:27:00Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html (label: 行財政改革) 入口 https://www.city.kuroishi.aomori.jp:443/shisei/keikaku/gyouzaisei-kaikaku.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（gyouseitaikou7.pdf「第七次黒石市行政改革大綱（計画期間：令和2年度～令和６年度） (210キロバイト)」, sha256:f600aea3）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

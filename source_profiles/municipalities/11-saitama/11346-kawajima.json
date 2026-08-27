@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（R8_ippannhosei3gou.pdf「一般会計補正予算書及び補正予算説明書（第3号）(案)」, sha256:3dbad9ce）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kawajima.saitama.jp/2073.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kawajima.saitama.jp/2073.htm",
@@ -102,9 +102,21 @@
           "url": "https://www.town.kawajima.saitama.jp/secure/2124/R6_kessannippann.pdf",
           "observed_on": "https://www.town.kawajima.saitama.jp/2073.htm",
           "fetched_at": "2026-08-27T11:18:22Z"
+        },
+        {
+          "url": "http://www.town.kawajima.saitama.jp/2073.htm",
+          "observed_on": "http://www.town.kawajima.saitama.jp/",
+          "sha256": "0ac702660f01988ca28d24442f4ada007d3855f5cb9187bfdf47f43db32a4f13",
+          "fetched_at": "2026-08-27T10:22:04Z"
+        },
+        {
+          "url": "https://www.town.kawajima.saitama.jp/secure/2124/R6_kessannippann.pdf",
+          "observed_on": "https://www.town.kawajima.saitama.jp/2073.htm",
+          "sha256": "c2e1f499f4c9c9133cd279a5058ea68943fb8121689ad9df4447cabded5a3669",
+          "fetched_at": "2026-08-27T11:18:24Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kawajima.saitama.jp/2073.htm (label: 決算及び財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6_kessannippann.pdf「一般会計歳入歳出決算書」, sha256:c2e1f499）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

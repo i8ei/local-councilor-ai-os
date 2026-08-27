@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/townhamanaka/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
           "sha256": "28e95b5f1e6ecf05f33942165e933221fe86e8c7f8f3955d83ba9d92ba02c59d",
           "fetched_at": "2026-08-27T10:32:01Z"
+        },
+        {
+          "url": "http://www.townhamanaka.jp/profile/files/zaiseijokyo_2024.xlsx",
+          "observed_on": "http://www.townhamanaka.jp/profile/2017-0308-zaisei.html",
+          "sha256": "6993b61e15a92daa17f04662390a32f153345309bf27d7aedf7f039e033ae1ae",
+          "fetched_at": "2026-08-27T13:26:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html (label: 企画財政課) 入口 http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijokyo_2024.xlsx「エクセル (562KB)」, sha256:6993b61e）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
           "sha256": "28e95b5f1e6ecf05f33942165e933221fe86e8c7f8f3955d83ba9d92ba02c59d",
           "fetched_at": "2026-08-27T10:32:01Z"
+        },
+        {
+          "url": "http://www.townhamanaka.jp/profile/files/zaiseijokyo_2024.xlsx",
+          "observed_on": "http://www.townhamanaka.jp/profile/2017-0308-zaisei.html",
+          "sha256": "6993b61e15a92daa17f04662390a32f153345309bf27d7aedf7f039e033ae1ae",
+          "fetched_at": "2026-08-27T13:26:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html (label: 企画財政課) 入口 http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijokyo_2024.xlsx「エクセル (562KB)」, sha256:6993b61e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

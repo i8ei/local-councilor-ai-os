@@ -37,11 +37,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html",
@@ -53,16 +53,22 @@
           "observed_on": "https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html",
           "sha256": "a4929bedaabafbeea4277d176137851858b3e9f740f544416bcd3fd46da87ccc",
           "fetched_at": "2026-08-27T10:31:33Z"
+        },
+        {
+          "url": "https://www.town.taiki.hokkaido.jp/material/files/group/2/R6taikou.pdf",
+          "observed_on": "https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/2/1165.html",
+          "sha256": "880e678145b60105d9083ab743d67e18969be5fc05a16e46da4523a1c773b76a",
+          "fetched_at": "2026-08-27T13:26:52Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6taikou.pdf「令和6年度 予算大綱 (PDFファイル: 166.6KB)」, sha256:880e6781）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html",
@@ -74,9 +80,15 @@
           "observed_on": "https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html",
           "sha256": "a4929bedaabafbeea4277d176137851858b3e9f740f544416bcd3fd46da87ccc",
           "fetched_at": "2026-08-27T10:31:33Z"
+        },
+        {
+          "url": "https://www.town.taiki.hokkaido.jp/material/files/group/2/R3shiryousyu.xlsx",
+          "observed_on": "https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/2/1166.html",
+          "sha256": "507a90ddcf3eb0368b6dc4406c5dc99179049280e83d6efcdd5157e7ec183c49",
+          "fetched_at": "2026-08-27T13:26:54Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taiki.hokkaido.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R3shiryousyu.xlsx「令和3年度 財政状況資料集 (Excelファイル: 758.3KB)」, sha256:507a90dd）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

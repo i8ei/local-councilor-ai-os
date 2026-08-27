@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB4634 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/",
           "sha256": "edfa5d69267742265787b550dd6b2a61b8d08176cca945e3667f5d9563a85aa2",
           "fetched_at": "2026-08-27T09:41:46Z"
+        },
+        {
+          "url": "https://www.town.yaese.lg.jp/docs/2014030300014/file_contents/R07_tousho2.pdf",
+          "observed_on": "https://www.town.yaese.lg.jp/docs/2014030300014/",
+          "sha256": "b248606a4715112238b97f44c4b4c89e79f0c5c6e24796df332f993cf7690478",
+          "fetched_at": "2026-08-27T13:48:30Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ (label: 企画財政課) 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yaese.lg.jp/soshiki/yaesecho/kikakuzaiseika/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R07_tousho2.pdf「令和7年度一般会計当初予算書[PDF：1.25MB]」, sha256:b248606a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

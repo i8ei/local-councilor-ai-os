@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at http://www.town.iide.yamagata.jp/reiki_int/reiki_taikei/taikei_default.html (label: » 飯豊町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.iide.yamagata.jp/iidemachiwoshiru/machinozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.iide.yamagata.jp/iidemachiwoshiru/machinozaisei/index.html",
@@ -67,9 +67,21 @@
           "observed_on": "https://www.town.iide.yamagata.jp:443/iidemachiwoshiru/machinozaisei/index.html",
           "sha256": "8b202edc2e18ed014f6ffd68603fa690d5c16211b190067c5b4b1322ebf95efd",
           "fetched_at": "2026-08-27T10:36:36Z"
+        },
+        {
+          "url": "http://www.town.iide.yamagata.jp/iidemachiwoshiru/machinozaisei/index.html",
+          "observed_on": "http://www.town.iide.yamagata.jp/",
+          "sha256": "8b202edc2e18ed014f6ffd68603fa690d5c16211b190067c5b4b1322ebf95efd",
+          "fetched_at": "2026-08-27T10:36:36Z"
+        },
+        {
+          "url": "https://www.town.iide.yamagata.jp:443/013/wakariyasuiyosansyo_2025.pdf",
+          "observed_on": "https://www.town.iide.yamagata.jp:443/013/R07yosan_shiseihoushin.html",
+          "sha256": "088f9a72d61944b2d53563a5143e895625d9c98756594770525ec025c843667b",
+          "fetched_at": "2026-08-27T13:29:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.iide.yamagata.jp/iidemachiwoshiru/machinozaisei/index.html (label: 町の財政) 入口 https://www.town.iide.yamagata.jp:443/iidemachiwoshiru/machinozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（wakariyasuiyosansyo_2025.pdf「令和7年度わかりやすい予算書 (3663KB)」, sha256:088f9a72）にて構造マーカー（歳入・歳出・節・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

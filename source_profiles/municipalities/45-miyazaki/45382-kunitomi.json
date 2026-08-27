@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.town.kunitomi.miyazaki.jp/reiki_int/reiki_menu.html (label: 国富町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
@@ -66,9 +66,15 @@
           "observed_on": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
           "sha256": "d69b0293bef5d15fb3b927bd06a6a4b5e5eba2e4bc0bfda63055dfe89f461015",
           "fetched_at": "2026-08-27T09:39:59Z"
+        },
+        {
+          "url": "http://www.town.kunitomi.miyazaki.jp/main/administration/2f4bcce0c9b9aaf1fb8e05dc3c745da0.pdf",
+          "observed_on": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001690.html",
+          "sha256": "5d3f9b7450fe431e67ca006c801e9f3ff5e213ed94bf7d9e43facf218467b813",
+          "fetched_at": "2026-08-27T13:47:12Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html (label: 予算や決算で使用される用語の解説について) 入口 http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2f4bcce0c9b9aaf1fb8e05dc3c745da0.pdf「財政状況の公表（令和８年５月）.pdf」, sha256:5d3f9b74）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

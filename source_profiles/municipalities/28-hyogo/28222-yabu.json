@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（R7ippankaikeiYosan.pdf「令和7年度一般会計予算書 (PDFファイル: 775.2KB)」, sha256:7ec9b53b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yabu.hyogo.jp/gyosei/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yabu.hyogo.jp/gyosei/zaisei_yosan_kessan/index.html",
@@ -93,9 +93,15 @@
           "observed_on": "https://www.city.yabu.hyogo.jp/gyosei/zaisei_yosan_kessan/index.html",
           "sha256": "2e98a8bee14f86be45885dceb0fc7e4211b85d8c37da3dbfe64919a4313341dd",
           "fetched_at": "2026-08-27T09:52:05Z"
+        },
+        {
+          "url": "https://www.city.yabu.hyogo.jp/material/files/group/6/kessan_gaiyou_17.pdf",
+          "observed_on": "https://www.city.yabu.hyogo.jp/gyosei/zaisei_yosan_kessan/kessan/3490.html",
+          "sha256": "4aff9f82b0e41e93eec533349fd1c16de7a60488782beb8c21b9581e0732eee2",
+          "fetched_at": "2026-08-27T13:41:09Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.yabu.hyogo.jp/gyosei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.city.yabu.hyogo.jp/gyosei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yabu.hyogo.jp/gyosei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessan_gaiyou_17.pdf「平成17年度決算概要 (PDFファイル: 156.1KB)」, sha256:4aff9f82）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

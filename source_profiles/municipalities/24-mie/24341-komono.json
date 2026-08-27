@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（4923.pdf「予算書（一般会計） [PDFファイル／1.09MB]」, sha256:843c4486）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www2.town.komono.mie.jp/life/6/24/97/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www2.town.komono.mie.jp/life/6/24/97/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www2.town.komono.mie.jp/life/6/24/97/",
           "sha256": "3820e392717b0cae93e0569fcea0c87f6ec97f587c5242f7b01125eee68e9de7",
           "fetched_at": "2026-08-27T09:48:58Z"
+        },
+        {
+          "url": "http://www2.town.komono.mie.jp/life/6/24/97/",
+          "observed_on": "http://www2.town.komono.mie.jp/",
+          "sha256": "3820e392717b0cae93e0569fcea0c87f6ec97f587c5242f7b01125eee68e9de7",
+          "fetched_at": "2026-08-27T09:48:58Z"
+        },
+        {
+          "url": "https://www2.town.komono.mie.jp/uploaded/attachment/1607.xlsx",
+          "observed_on": "https://www2.town.komono.mie.jp/soshiki/3/1236.html",
+          "sha256": "776a511adc7d1da2caf9d59e4030186d3c6610e2b3b1d3bb110f24dc2e336b1f",
+          "fetched_at": "2026-08-27T13:39:04Z"
         }
       ],
-      "notes": "Observed settlement link at http://www2.town.komono.mie.jp/life/6/24/97/ (label: 予算・決算) 入口 https://www2.town.komono.mie.jp/life/6/24/97/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www2.town.komono.mie.jp/life/6/24/97/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1607.xlsx「菰野町の財政状況資料集（令和5年度） [Excelファイル／554KB]」, sha256:776a511a）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

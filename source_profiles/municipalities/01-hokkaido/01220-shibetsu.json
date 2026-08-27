@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/756.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/756.html",
@@ -56,16 +56,22 @@
           "url": "https://www.city.shibetsu.lg.jp/material/files/group/36/R8yosann-tuukoku0309.pdf",
           "observed_on": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/756.html",
           "fetched_at": "2026-08-27T10:28:54Z"
+        },
+        {
+          "url": "https://www.city.shibetsu.lg.jp/material/files/group/36/R8yosann-tuukoku0309.pdf",
+          "observed_on": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/756.html",
+          "sha256": "15c427c7ddcca44211f882d53b1d933d9a86e1e41d8d9198f7e662b4f287d01e",
+          "fetched_at": "2026-08-27T10:28:58Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/756.html (label: 予算審査) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8yosann-tuukoku0309.pdf「予算審査通告一覧 (PDFファイル: 871.9KB)」, sha256:15c427c7）にて構造マーカー（項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/1378.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/1378.html",
@@ -82,9 +88,15 @@
           "url": "https://www.city.shibetsu.lg.jp/material/files/group/36/R6kessanntuukokuitiran.pdf",
           "observed_on": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/1378.html",
           "fetched_at": "2026-08-27T10:28:58Z"
+        },
+        {
+          "url": "https://www.city.shibetsu.lg.jp/material/files/group/36/R6kessanntuukokuitiran.pdf",
+          "observed_on": "https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/1378.html",
+          "sha256": "bbb56244f1a72428c684d596366317b2406e73a2dc301caad8fc18f620e795cc",
+          "fetched_at": "2026-08-27T10:29:00Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.shibetsu.lg.jp/soshikikarasagasu/gikaijimukyoku/1378.html (label: 決算審査) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6kessanntuukokuitiran.pdf「決算審査通告一覧 (PDFファイル: 210.4KB)」, sha256:bbb56244）にて構造マーカー（歳入・項・決算額・不用額等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/tomi/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tomi.nagano.jp/category/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tomi.nagano.jp/category/zaisei/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.tomi.nagano.jp/category/zaisei/index.html",
           "sha256": "58dced0d6409b9454e4b654a8865000c14fa70c2c9b21b4a1bf50de2c01d5269",
           "fetched_at": "2026-08-27T10:09:54Z"
+        },
+        {
+          "url": "http://www.city.tomi.nagano.jp/category/zaisei/index.html",
+          "observed_on": "http://www.city.tomi.nagano.jp/",
+          "sha256": "58dced0d6409b9454e4b654a8865000c14fa70c2c9b21b4a1bf50de2c01d5269",
+          "fetched_at": "2026-08-27T10:09:54Z"
+        },
+        {
+          "url": "https://www.city.tomi.nagano.jp/file/183472.xlsx",
+          "observed_on": "https://www.city.tomi.nagano.jp/category/siryou/154599.html",
+          "sha256": "62c1df4a624def9c31f8cceb2f5bcf0432ccdc1aebfc0276eb69a1a0ac47e81e",
+          "fetched_at": "2026-08-27T13:36:24Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tomi.nagano.jp/category/zaisei/index.html (label: 財政) 入口 https://www.city.tomi.nagano.jp/category/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tomi.nagano.jp/category/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tomi.nagano.jp/category/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（183472.xlsx「令和6年度財政状況資料集」, sha256:62c1df4a）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

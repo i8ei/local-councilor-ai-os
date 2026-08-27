@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（r8nenndotousyoyosannnogaiyou.pdf「令和８年度糸島市当初予算の概要（PDF：460KB）」, sha256:02a0c5ec）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.itoshima.lg.jp/li/shisei/050/080/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.itoshima.lg.jp/li/shisei/050/080/index.html",
@@ -93,9 +93,21 @@
           "observed_on": "https://www.city.itoshima.lg.jp/li/shisei/050/080/",
           "sha256": "78190171ac7f3b6e0239de4027e3e2bd64e48cb04e5b221890b88950c4e3209a",
           "fetched_at": "2026-08-27T09:36:17Z"
+        },
+        {
+          "url": "http://www.city.itoshima.lg.jp/li/shisei/050/080/index.html",
+          "observed_on": "http://www.city.itoshima.lg.jp/",
+          "sha256": "78190171ac7f3b6e0239de4027e3e2bd64e48cb04e5b221890b88950c4e3209a",
+          "fetched_at": "2026-08-27T09:36:17Z"
+        },
+        {
+          "url": "https://www.city.itoshima.lg.jp/s002/010/010/020/050/R06zaiseijoukyousiryousyu.xlsx",
+          "observed_on": "https://www.city.itoshima.lg.jp/s002/010/010/020/050/20200423140031.html",
+          "sha256": "eef1285af9109ac5fe650f2aa48501cf2db76bce4c41df8daff857f027684f8a",
+          "fetched_at": "2026-08-27T13:45:04Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.itoshima.lg.jp/li/shisei/050/080/index.html (label: 決算) 入口 https://www.city.itoshima.lg.jp/li/shisei/050/080/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.itoshima.lg.jp/li/shisei/050/080/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06zaiseijoukyousiryousyu.xlsx「財政状況資料集（令和６年度決算）（EXCEL：551KB）」, sha256:eef1285a）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

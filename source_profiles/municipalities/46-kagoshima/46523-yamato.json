@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（07h30sainyuuyosanngurahu.pdf「・平成30年度歳入予算グラフ（PDF：38KB）」, sha256:920e902d）にて構造マーカー（歳入・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.yamato.lg.jp/hpkanri/sonse/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.yamato.lg.jp/hpkanri/sonse/zaise/index.html",
@@ -78,9 +78,15 @@
           "observed_on": "http://www.vill.yamato.lg.jp/hpkanri/sonse/zaise/index.html",
           "sha256": "20a2d5e5b8f21e62a2e1cb69235a5f0c3aab460ab36f33876f8681ee957d7595",
           "fetched_at": "2026-08-27T09:40:46Z"
+        },
+        {
+          "url": "http://www.vill.yamato.lg.jp/somu/sonse/zaise/zaiseijyokyosiryo/documents/h23zaiseisiryousyuu.xlsx",
+          "observed_on": "http://www.vill.yamato.lg.jp/somu/sonse/zaise/zaiseijyokyosiryo/index.html",
+          "sha256": "c197ef3a776e94d8a06116f1cd376be37b937d084f0fc326de37cbe1a77944b3",
+          "fetched_at": "2026-08-27T13:47:47Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.yamato.lg.jp/hpkanri/sonse/zaise/index.html (label: 財政) 入口 http://www.vill.yamato.lg.jp/hpkanri/sonse/zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.yamato.lg.jp/hpkanri/sonse/zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（h23zaiseisiryousyuu.xlsx「平成23年度 財政状況資料集（エクセル：305KB）」, sha256:c197ef3a）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

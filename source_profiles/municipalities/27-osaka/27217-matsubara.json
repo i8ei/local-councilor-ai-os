@@ -69,11 +69,11 @@
       "notes": "deepest_doc=P1。budget文書（_______.pdf「当初予算の概要 (PDF 3.35MB)」, sha256:50d22e7b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/",
           "sha256": "00981900c21272ef7dd458b2d19839b0783d6860e8c3260092015c40caa7645a",
           "fetched_at": "2026-08-27T09:50:58Z"
+        },
+        {
+          "url": "https://www.city.matsubara.lg.jp/fs/2/9/8/8/3/8/_/R6___________.pdf",
+          "observed_on": "https://www.city.matsubara.lg.jp/docs/page4827.html",
+          "sha256": "9d3acb65f79f6c2166995abde9c5f7326cb0de8ef7b62a3833c7cf41995d7d85",
+          "fetched_at": "2026-08-27T13:40:15Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/ (label: 市の財政) 入口 https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6___________.pdf「令和6年度 決算カード (PDF 203KB)」, sha256:9d3acb65）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

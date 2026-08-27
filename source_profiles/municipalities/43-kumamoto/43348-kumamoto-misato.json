@@ -45,11 +45,11 @@
       "notes": "Observed regulations index at https://www.town.kumamoto-misato.lg.jp/gyosei/jore/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html",
@@ -61,9 +61,15 @@
           "observed_on": "https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html",
           "sha256": "d7e7c25720b2a6578e4581921673a7ab151fb0655bb61aa824d23c1971641ec6",
           "fetched_at": "2026-08-27T09:38:14Z"
+        },
+        {
+          "url": "https://www.town.kumamoto-misato.lg.jp/material/files/group/2/67_1.pdf",
+          "observed_on": "https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/1762.html",
+          "sha256": "21876c75d862ae6541056270d1321080d3a849cd95ff59709b4894d7705f0227",
+          "fetched_at": "2026-08-27T13:46:00Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html (label: 行財政) 入口 https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（67_1.pdf「財務状況把握結果概要(美里町) (PDFファイル: 720.0KB)」, sha256:21876c75）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

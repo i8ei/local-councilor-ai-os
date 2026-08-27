@@ -35,19 +35,31 @@
       "index_url": "https://en3-jg.d1-law.com/kudoyama/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kudoyama.wakayama.jp/soumu/joho/zaisei-jokyo.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kudoyama.wakayama.jp/soumu/joho/zaisei-jokyo.html",
           "observed_on": "http://www.town.kudoyama.wakayama.jp/",
           "fetched_at": "2026-08-27T07:21:16Z"
+        },
+        {
+          "url": "http://www.town.kudoyama.wakayama.jp/soumu/joho/zaisei-jokyo.html",
+          "observed_on": "http://www.town.kudoyama.wakayama.jp/",
+          "sha256": "277677960d2c419787bdfd33282e2f5364ea2273f92862021e9e1495d9fb8997",
+          "fetched_at": "2026-08-27T09:53:42Z"
+        },
+        {
+          "url": "https://www.town.kudoyama.lg.jp/soumu/joho/files/R7zaiseijyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.town.kudoyama.lg.jp/soumu/joho/zaisei-jokyo.html",
+          "sha256": "51a9bbd251b61c002d61160b7e22e1d31f5c0d1292f06fa8454ebba696c9ffcd",
+          "fetched_at": "2026-08-27T13:41:45Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kudoyama.wakayama.jp/soumu/joho/zaisei-jokyo.html (label: 町の予算・財政状況)"
+      "notes": "deepest_doc=P1。budget文書（R7zaiseijyoukyousiryousyuu.xlsx「財政状況資料集 (755KB)」, sha256:51a9bbd2）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

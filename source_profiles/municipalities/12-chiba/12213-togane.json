@@ -35,11 +35,11 @@
       "index_url": "https://www.city.togane.chiba.jp/reiki/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.togane.chiba.jp/soshiki/2-2-0-0-0_3.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.togane.chiba.jp/soshiki/2-2-0-0-0_3.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.city.togane.chiba.jp/soshiki/2-2-0-0-0_3.html",
           "sha256": "96602baf6c0d4e5f56494c02d32007c16188eccf8631118729456b8eab06c1a6",
           "fetched_at": "2026-08-27T10:23:00Z"
+        },
+        {
+          "url": "https://www.city.togane.chiba.jp/cmsfiles/contents/0000001/1693/08-yosansyo.pdf",
+          "observed_on": "https://www.city.togane.chiba.jp/0000001693.html",
+          "sha256": "a01756d13dd2059d41896b83c4391c0c41e61598b322c6e00b2b6a9e47628b3c",
+          "fetched_at": "2026-08-27T13:32:35Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.togane.chiba.jp/soshiki/2-2-0-0-0_3.html (label: 財政) 入口 https://www.city.togane.chiba.jp/soshiki/2-2-0-0-0_3.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（08-yosansyo.pdf「令和8年度 (ファイル名：08-yosansyo.pdf サイズ：932.27KB)」, sha256:a01756d1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

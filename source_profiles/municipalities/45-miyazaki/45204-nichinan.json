@@ -50,11 +50,11 @@
       "notes": "Observed regulations index at https://www.city.nichinan.lg.jp/gyoseijoho/4697.html (label: 日南市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
           "sha256": "e7c21f898418ed0b8cc919d6f5a39644e1216db87b6e76069f4aa538155dbb7f",
           "fetched_at": "2026-08-27T09:39:43Z"
+        },
+        {
+          "url": "https://www.city.nichinan.lg.jp/material/files/group/23/reiwa6nendo_zaiseijoukyou.xlsx",
+          "observed_on": "https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/6/4551.html",
+          "sha256": "f4e9f27b31bfd5773fe7701a3d7559fb4ec64f5bd1e54f37976cde25faa6a124",
+          "fetched_at": "2026-08-27T13:47:10Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html (label: 行財政・行政評価) 入口 https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（reiwa6nendo_zaiseijoukyou.xlsx「令和6年度財政状況資料集 (Excelファイル: 558.3KB)」, sha256:f4e9f27b）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

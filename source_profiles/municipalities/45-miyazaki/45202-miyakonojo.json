@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.miyakonojo.miyazaki.jp/life/5/57/312/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyakonojo.miyazaki.jp/life/5/57/312/",
@@ -38,9 +38,21 @@
           "observed_on": "https://www.city.miyakonojo.miyazaki.jp/life/5/57/312/",
           "sha256": "224e9646a4fe09d4fe5d0908e6ce648f0f9d7395e041e2e18cd69a8a4d86c348",
           "fetched_at": "2026-08-27T09:39:39Z"
+        },
+        {
+          "url": "http://www.city.miyakonojo.miyazaki.jp/life/5/57/312/",
+          "observed_on": "http://www.city.miyakonojo.miyazaki.jp/",
+          "sha256": "224e9646a4fe09d4fe5d0908e6ce648f0f9d7395e041e2e18cd69a8a4d86c348",
+          "fetched_at": "2026-08-27T09:39:39Z"
+        },
+        {
+          "url": "https://www.city.miyakonojo.miyazaki.jp/uploaded/attachment/44097.pdf",
+          "observed_on": "https://www.city.miyakonojo.miyazaki.jp/soshiki/19/83061.html",
+          "sha256": "b63ea475eb7b2f82b8ba6b88633b83785647e3686869219a43d58d7af4aebaa3",
+          "fetched_at": "2026-08-27T13:47:04Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.miyakonojo.miyazaki.jp/life/5/57/312/ (label: 当初予算) 入口 https://www.city.miyakonojo.miyazaki.jp/life/5/57/312/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyakonojo.miyazaki.jp/life/5/57/312/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（44097.pdf「No.1_令和8年度当初予算のポイント［PDFファイル／8.73MB］」, sha256:b63ea475）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

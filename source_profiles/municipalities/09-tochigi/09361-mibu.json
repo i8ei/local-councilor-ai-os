@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www.town.mibu.tochigi.jp/reiki_int/reiki_menu.html (label: 壬生町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/",
           "sha256": "21275d479f3faa4d984a4ef395088b952a1fb2820eeebc36aa7eb57f1e3544a6",
           "fetched_at": "2026-08-27T10:18:27Z"
+        },
+        {
+          "url": "http://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/",
+          "observed_on": "http://www.town.mibu.tochigi.jp/",
+          "sha256": "21275d479f3faa4d984a4ef395088b952a1fb2820eeebc36aa7eb57f1e3544a6",
+          "fetched_at": "2026-08-27T10:18:27Z"
+        },
+        {
+          "url": "https://www.town.mibu.tochigi.jp/docs/2026031300016/file_contents/R8tousyo.pdf",
+          "observed_on": "https://www.town.mibu.tochigi.jp/docs/2026031300016/",
+          "sha256": "278eeeba5d0ac4edb5bb894df8125b2a0dd7788223c28a9a6e701bfc8e426634",
+          "fetched_at": "2026-08-27T13:30:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/ (label: 予算・財政状況) 入口 https://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyo.pdf「当初予算書（一般会計・特別会計・公営企業会計）[PDF：5.35MB]」, sha256:278eeeba）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/",
           "sha256": "21275d479f3faa4d984a4ef395088b952a1fb2820eeebc36aa7eb57f1e3544a6",
           "fetched_at": "2026-08-27T10:18:27Z"
+        },
+        {
+          "url": "http://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/",
+          "observed_on": "http://www.town.mibu.tochigi.jp/",
+          "sha256": "21275d479f3faa4d984a4ef395088b952a1fb2820eeebc36aa7eb57f1e3544a6",
+          "fetched_at": "2026-08-27T10:18:27Z"
+        },
+        {
+          "url": "https://www.town.mibu.tochigi.jp/docs/2021031200021/file_contents/zaiseiR6.xlsx",
+          "observed_on": "https://www.town.mibu.tochigi.jp/docs/2021031200021/",
+          "sha256": "ab19f74e6a703dc5b677616a235d780b9b111e828e04b594b570bc01a6a693ca",
+          "fetched_at": "2026-08-27T13:30:58Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/ (label: 予算・財政状況) 入口 https://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mibu.tochigi.jp/category/bunya/gyoseimachizukuri/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseiR6.xlsx「財政状況資料集R6[XLSX：549KB]」, sha256:ab19f74e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

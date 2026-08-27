@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（1639.pdf「R7当初予算に係る地方消費税率引上げ分における使途について [PDFファイル／221KB]」, sha256:74ae71da）にて構造マーカー（項・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.e-hokuei.net/life/6/28/118/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.e-hokuei.net/life/6/28/118/",
@@ -99,9 +99,21 @@
           "observed_on": "https://www.e-hokuei.net/life/6/28/118/",
           "sha256": "f004d4f36b47d037e92dd7af3d2d7c015ff5dcaddbcfe7a41b022006dfcf484d",
           "fetched_at": "2026-08-27T09:42:53Z"
+        },
+        {
+          "url": "http://www.e-hokuei.net/life/6/28/118/",
+          "observed_on": "http://www.e-hokuei.net/",
+          "sha256": "f004d4f36b47d037e92dd7af3d2d7c015ff5dcaddbcfe7a41b022006dfcf484d",
+          "fetched_at": "2026-08-27T09:42:53Z"
+        },
+        {
+          "url": "https://www.e-hokuei.net/uploaded/attachment/6207.pdf",
+          "observed_on": "https://www.e-hokuei.net/soshiki/3/4800.html",
+          "sha256": "7efa9dab4da9634f456a87a4181ce340234c72ed6f1d450c8d3926f1c5c6814d",
+          "fetched_at": "2026-08-27T13:42:02Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.e-hokuei.net/life/6/28/118/ (label: 決算・財政状況) 入口 https://www.e-hokuei.net/life/6/28/118/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.e-hokuei.net/life/6/28/118/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6207.pdf「上半期（令和7年9月末時点）の状況 [PDFファイル／219KB]」, sha256:7efa9dab）にて構造マーカー（歳入・歳出・予算現額・収入済額等）を確認済み。"
     }
   }
 }

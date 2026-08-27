@@ -35,11 +35,11 @@
       "index_url": "https://www.town.yamanobe.yamagata.jp:443/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yamanobe.yamagata.jp/life/5/35/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yamanobe.yamagata.jp/life/5/35/",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.town.yamanobe.yamagata.jp:443/life/5/35/",
           "sha256": "72c80072bd03660cdc94d5e61a2219e8629dc7d16c0431a3470e2f8e114c1300",
           "fetched_at": "2026-08-27T10:35:54Z"
+        },
+        {
+          "url": "http://www.town.yamanobe.yamagata.jp/life/5/35/",
+          "observed_on": "http://www.town.yamanobe.yamagata.jp/",
+          "sha256": "72c80072bd03660cdc94d5e61a2219e8629dc7d16c0431a3470e2f8e114c1300",
+          "fetched_at": "2026-08-27T10:35:54Z"
+        },
+        {
+          "url": "https://www.town.yamanobe.yamagata.jp:443/uploaded/attachment/3416.pdf",
+          "observed_on": "https://www.town.yamanobe.yamagata.jp:443/soshiki/4/zaiseijoukyou2.html",
+          "sha256": "fb14ce95b4a1708f4f93acde4aea451da0a06d355bd08425aea29b07733651f8",
+          "fetched_at": "2026-08-27T13:28:53Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yamanobe.yamagata.jp/life/5/35/ (label: 行財政・統計) 入口 https://www.town.yamanobe.yamagata.jp:443/life/5/35/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3416.pdf「平成29年度当初予算 引上げ分の地方消費税交付金充当事業一覧表 [PDFファイル／96KB]」, sha256:fb14ce95）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yamanobe.yamagata.jp/life/5/35/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yamanobe.yamagata.jp/life/5/35/",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.town.yamanobe.yamagata.jp:443/life/5/35/",
           "sha256": "72c80072bd03660cdc94d5e61a2219e8629dc7d16c0431a3470e2f8e114c1300",
           "fetched_at": "2026-08-27T10:35:54Z"
+        },
+        {
+          "url": "http://www.town.yamanobe.yamagata.jp/life/5/35/",
+          "observed_on": "http://www.town.yamanobe.yamagata.jp/",
+          "sha256": "72c80072bd03660cdc94d5e61a2219e8629dc7d16c0431a3470e2f8e114c1300",
+          "fetched_at": "2026-08-27T10:35:54Z"
+        },
+        {
+          "url": "https://www.town.yamanobe.yamagata.jp:443/uploaded/attachment/3693.xlsx",
+          "observed_on": "https://www.town.yamanobe.yamagata.jp:443/soshiki/4/zaiseijoukyou2.html",
+          "sha256": "a511d98a525606d602a9b03c54a5f7801326f51608299d6b2770c0b14c914122",
+          "fetched_at": "2026-08-27T13:28:54Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yamanobe.yamagata.jp/life/5/35/ (label: 行財政・統計) 入口 https://www.town.yamanobe.yamagata.jp:443/life/5/35/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3693.xlsx「平成28年度財政状況資料集 [Excelファイル／593KB]」, sha256:a511d98a）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

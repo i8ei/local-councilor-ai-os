@@ -35,19 +35,31 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7A11A820 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kuzumaki.iwate.jp/docs/2026052900011/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kuzumaki.iwate.jp/docs/2026052900011/",
           "observed_on": "https://www.town.kuzumaki.iwate.jp/category/bunya/shigoto/",
           "fetched_at": "2026-08-27T07:11:27Z"
+        },
+        {
+          "url": "https://www.town.kuzumaki.iwate.jp/docs/2026052900011/",
+          "observed_on": "https://www.town.kuzumaki.iwate.jp/",
+          "sha256": "b4f8850134f1985332c67bcbb52d7fec2d9e1c66218b3b7ce11df38c122acc96",
+          "fetched_at": "2026-08-27T10:33:00Z"
+        },
+        {
+          "url": "https://www.town.kuzumaki.lg.jp/docs/2026052900011/file_contents/R08-kuzumaki-yosansyo.pdf",
+          "observed_on": "https://www.town.kuzumaki.lg.jp/docs/2026052900011/",
+          "sha256": "30e1583b974a17c26beec336b23b142364cb631f52eceaa969cf51fa8adc2de2",
+          "fetched_at": "2026-08-27T13:27:27Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kuzumaki.iwate.jp/docs/2026052900011/ (label: まちの行財政2026－令和８年度予算説明書)"
+      "notes": "deepest_doc=P1。budget文書（R08-kuzumaki-yosansyo.pdf「」, sha256:30e1583b）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

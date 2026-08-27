@@ -35,11 +35,11 @@
       "index_url": "https://www.vill.sarufutsu.hokkaido.jp/contents/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
           "sha256": "193081b09bb0fa0aad4a002ac56278d19f680f6db67c92615105e6501fced3de",
           "fetched_at": "2026-08-27T10:31:01Z"
+        },
+        {
+          "url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/files/00005000/00005009/20260825084903.pdf",
+          "observed_on": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
+          "sha256": "579a18d37e7a85865e1c0229fb23d3122d3965057fbe78923c6b92c674fba9aa",
+          "fetched_at": "2026-08-27T13:24:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html (label: 令和８年度財政事情説明書) 入口 https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260825084903.pdf「令和8年 第1期 財政事情説明書」, sha256:579a18d3）にて構造マーカー（歳入・歳出・款・予算現額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
           "sha256": "193081b09bb0fa0aad4a002ac56278d19f680f6db67c92615105e6501fced3de",
           "fetched_at": "2026-08-27T10:31:01Z"
+        },
+        {
+          "url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/files/00005000/00005009/20260825084903.pdf",
+          "observed_on": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
+          "sha256": "579a18d37e7a85865e1c0229fb23d3122d3965057fbe78923c6b92c674fba9aa",
+          "fetched_at": "2026-08-27T13:24:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html (label: 令和８年度財政事情説明書) 入口 https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20260825084903.pdf「令和8年 第1期 財政事情説明書」, sha256:579a18d3）にて構造マーカー（歳入・歳出・款・予算現額等）を確認済み。"
     }
   }
 }

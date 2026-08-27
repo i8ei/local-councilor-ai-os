@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www2.city.moriyama.lg.jp/reiki_int/reiki_menu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html",
@@ -75,9 +75,21 @@
           "observed_on": "https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html",
           "sha256": "c79c0c1a4a0f18896cc251cabac4b081b7753a302b7a32addeccb190c81c7aaa",
           "fetched_at": "2026-08-27T09:49:27Z"
+        },
+        {
+          "url": "http://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html",
+          "observed_on": "http://www.city.moriyama.lg.jp/",
+          "sha256": "c79c0c1a4a0f18896cc251cabac4b081b7753a302b7a32addeccb190c81c7aaa",
+          "fetched_at": "2026-08-27T09:49:27Z"
+        },
+        {
+          "url": "https://www.city.moriyama.lg.jp/_res/projects/default_project/_page_/001/014/776/r8_gaiyo1.pdf",
+          "observed_on": "https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/1014776.html",
+          "sha256": "9f5cc5952f4f655535b8444f12d9e4dfe3f40b8ed761fb5794ae3ef45e45a818",
+          "fetched_at": "2026-08-27T13:39:21Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html (label: 予算) 入口 https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_gaiyo1.pdf「当初予算の概要1 （PDF 1.9MB）」, sha256:9f5cc595）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

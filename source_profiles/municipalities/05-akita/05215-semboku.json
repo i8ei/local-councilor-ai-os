@@ -35,11 +35,11 @@
       "index_url": "https://www.city.semboku.akita.jp/reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.semboku.akita.jp/government/information/yosantop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.semboku.akita.jp/government/information/yosantop.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.city.semboku.akita.jp/government/information/yosantop.html",
           "sha256": "90e6c48115f446275dcd09b17884539ac756219cd9fe6bf2c73acbb6d4277dbb",
           "fetched_at": "2026-08-27T10:34:39Z"
+        },
+        {
+          "url": "https://www.city.semboku.akita.jp/government/assembly/documents/20260218_2.pdf",
+          "observed_on": "https://www.city.semboku.akita.jp/government/information/yosansyo.html",
+          "sha256": "dfe0046e149b9abf6e5410429c07d0462fdc8d012db7a8e032c573c500fc311c",
+          "fetched_at": "2026-08-27T13:28:31Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.semboku.akita.jp/government/information/yosantop.html (label: 予算) 入口 https://www.city.semboku.akita.jp/government/information/yosantop.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260218_2.pdf「令和8年度一般会計・特別会計予算書（PDF：10.1MB）」, sha256:dfe0046e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.semboku.akita.jp/government/information/kessanjyokyo.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.semboku.akita.jp/government/information/kessanjyokyo.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.city.semboku.akita.jp/government/information/kessanjyokyo.html",
           "sha256": "8c83954bfcbf1a8e6d9867c02863b35c61ad9fdbf05fd7551625c4c6b9d7d78c",
           "fetched_at": "2026-08-27T10:34:41Z"
+        },
+        {
+          "url": "https://www.city.semboku.akita.jp/government/information/documents/R6_kessanjokyo.pdf",
+          "observed_on": "https://www.city.semboku.akita.jp/government/information/kessanjyokyo.html",
+          "sha256": "4f8b93f11edda0df0fc8d28126050bb69ee9cfb81fbc03ba186dbde1fb74cb4e",
+          "fetched_at": "2026-08-27T13:27:01Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.semboku.akita.jp/government/information/kessanjyokyo.html (label: 決算) 入口 https://www.city.semboku.akita.jp/government/information/kessanjyokyo.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_kessanjokyo.pdf「令和6年度（PDF：216KB）」, sha256:4f8b93f1）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

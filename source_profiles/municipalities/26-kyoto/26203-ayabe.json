@@ -92,11 +92,11 @@
       "notes": "deepest_doc=P1。budget文書（r8_ippankaikeiyosansho.pdf「一般会計予算書 (PDF形式、874.35KB)」, sha256:80768efa）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html",
@@ -108,9 +108,21 @@
           "observed_on": "https://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html",
           "sha256": "7f8c1928f8adc7bfdeec24ae3524a82db1e1dae930fc823d5191d099bdbf28b2",
           "fetched_at": "2026-08-27T09:50:29Z"
+        },
+        {
+          "url": "http://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.ayabe.lg.jp/",
+          "sha256": "7f8c1928f8adc7bfdeec24ae3524a82db1e1dae930fc823d5191d099bdbf28b2",
+          "fetched_at": "2026-08-27T09:50:29Z"
+        },
+        {
+          "url": "https://www.city.ayabe.lg.jp/cmsfiles/contents/0000001/1076/r6card.pdf",
+          "observed_on": "https://www.city.ayabe.lg.jp/0000001076.html",
+          "sha256": "d1ebde62819b6dd5e97c55b1aac7b28baee38c353ba2975d53b4107d1839a79b",
+          "fetched_at": "2026-08-27T13:39:34Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6card.pdf「令和6年度決算カード (PDF形式、96.25KB)」, sha256:d1ebde62）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "index_url": "https://en3-jg.d1-law.com/sakaki/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.sakaki.nagano.jp/life/6/26/108/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.sakaki.nagano.jp/life/6/26/108/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.sakaki.nagano.jp/life/6/26/108/",
           "sha256": "75bd97325761c27a48e91329a27caf8d459d0f0b1ac1448963929f95ee579208",
           "fetched_at": "2026-08-27T10:13:06Z"
+        },
+        {
+          "url": "http://www.town.sakaki.nagano.jp/life/6/26/108/",
+          "observed_on": "http://www.town.sakaki.nagano.jp/",
+          "sha256": "75bd97325761c27a48e91329a27caf8d459d0f0b1ac1448963929f95ee579208",
+          "fetched_at": "2026-08-27T10:13:06Z"
+        },
+        {
+          "url": "https://www.town.sakaki.nagano.jp/uploaded/attachment/8201.pdf",
+          "observed_on": "https://www.town.sakaki.nagano.jp/page/1256.html",
+          "sha256": "f3cc0f816bac173cdd9ca96ffb05c2f19a7dcdd056eabce9f5fde6d2a928c25f",
+          "fetched_at": "2026-08-27T13:36:40Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.sakaki.nagano.jp/life/6/26/108/ (label: 予算・決算) 入口 https://www.town.sakaki.nagano.jp/life/6/26/108/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.sakaki.nagano.jp/life/6/26/108/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8201.pdf「令和8年度当初予算資料 [PDFファイル／595KB]」, sha256:f3cc0f81）にて構造マーカー（歳入・歳出・節・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

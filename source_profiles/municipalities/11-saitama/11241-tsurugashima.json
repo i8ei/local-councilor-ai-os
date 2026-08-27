@@ -50,11 +50,11 @@
       "notes": "Observed regulations index at https://www.city.tsurugashima.lg.jp/gyousei/gaiyou/page004162.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/",
@@ -66,16 +66,22 @@
           "observed_on": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/",
           "sha256": "53f01cd31ca6a79588986450eb81b0d13aa8eeeb4f134b453a8ba72d9a15f470",
           "fetched_at": "2026-08-27T10:21:22Z"
+        },
+        {
+          "url": "https://www.city.tsurugashima.lg.jp/data/doc/1781747732_doc_684_0.pdf",
+          "observed_on": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/page012337.html",
+          "sha256": "da07c9b961e2403fa33887a5461965a0403129fd33987ae00b7f3dae5849b00b",
+          "fetched_at": "2026-08-27T13:32:01Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/ (label: 予算) 入口 https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsurugashima.lg.jp/gyousei/zaiei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1781747732_doc_684_0.pdf「【令和８年６月議会】鶴ヶ島市一般会計補正予算（第１号） [PDF形式／992.16KB]」, sha256:da07c9b9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/",
@@ -87,9 +93,15 @@
           "observed_on": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/",
           "sha256": "020e01225dfccc32376386d5e1e0052bb1c0fa4617ba000b858659613beefa91",
           "fetched_at": "2026-08-27T10:21:24Z"
+        },
+        {
+          "url": "https://www.city.tsurugashima.lg.jp/data/doc/1726540642_doc_792_0.pdf",
+          "observed_on": "https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/page010935.html",
+          "sha256": "00271ba745a1d7d3137815b5090233258a6d72137d317b786c203349e2031c33",
+          "fetched_at": "2026-08-27T13:34:08Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/ (label: 決算) 入口 https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tsurugashima.lg.jp/gyousei/zaiei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1726540642_doc_792_0.pdf「01令和５年度鶴ヶ島市一般会計決算書 [PDF形式／981.12KB]」, sha256:00271ba7）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

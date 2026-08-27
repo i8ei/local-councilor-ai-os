@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A9160EC6D (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ashiya.lg.jp/life/4/19/81/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ashiya.lg.jp/life/4/19/81/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.ashiya.lg.jp/life/4/19/81/",
           "sha256": "0460642aa170fbd55cd62359c61e8dc38c7d085b59017cd0ceeb0440526e2e5d",
           "fetched_at": "2026-08-27T09:36:28Z"
+        },
+        {
+          "url": "http://www.town.ashiya.lg.jp/life/4/19/81/",
+          "observed_on": "http://www.town.ashiya.lg.jp/",
+          "sha256": "0460642aa170fbd55cd62359c61e8dc38c7d085b59017cd0ceeb0440526e2e5d",
+          "fetched_at": "2026-08-27T09:36:28Z"
+        },
+        {
+          "url": "https://www.town.ashiya.lg.jp/uploaded/attachment/20763.pdf",
+          "observed_on": "https://www.town.ashiya.lg.jp/soshiki/4/39452.html",
+          "sha256": "a6a2cc6880e37ccb18df24913723bb8ea32d62d812d4f788a32cd575ea568a47",
+          "fetched_at": "2026-08-27T13:45:31Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ashiya.lg.jp/life/4/19/81/ (label: 予算・決算) 入口 https://www.town.ashiya.lg.jp/life/4/19/81/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ashiya.lg.jp/life/4/19/81/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20763.pdf「令和8年度 一般会計当初予算 [PDFファイル／14.5MB]」, sha256:a6a2cc68）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

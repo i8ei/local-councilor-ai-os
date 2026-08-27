@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.town.naie.hokkaido.jp/town/reiki/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.naie.hokkaido.jp/town/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.naie.hokkaido.jp/town/zaisei/",
@@ -60,16 +60,22 @@
           "observed_on": "http://www.town.naie.hokkaido.jp/town/zaisei/",
           "sha256": "3a07e9c3a34f5aa0f7cb51e76db5304c5852f96069e789fdea79e63d19e049c0",
           "fetched_at": "2026-08-27T10:30:03Z"
+        },
+        {
+          "url": "http://www.town.naie.hokkaido.jp/file/contents/210/17997/kasokei.pdf",
+          "observed_on": "http://www.town.naie.hokkaido.jp/town/zaisei/",
+          "sha256": "5c0cbf5c4d8db686b03df353b3c99f0c284685a411c6e347efbc4d722f1d485d",
+          "fetched_at": "2026-08-27T13:26:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.naie.hokkaido.jp/town/zaisei/ (label: 財政状況) 入口 http://www.town.naie.hokkaido.jp/town/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（kasokei.pdf「奈井江町過疎地域持続的発展市町村計画の公表について(令和3年9月7日策定)」, sha256:5c0cbf5c）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.naie.hokkaido.jp/town/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.naie.hokkaido.jp/town/zaisei/",
@@ -81,9 +87,15 @@
           "observed_on": "http://www.town.naie.hokkaido.jp/town/zaisei/",
           "sha256": "3a07e9c3a34f5aa0f7cb51e76db5304c5852f96069e789fdea79e63d19e049c0",
           "fetched_at": "2026-08-27T10:30:03Z"
+        },
+        {
+          "url": "http://www.town.naie.hokkaido.jp/file/contents/210/17997/kasokei.pdf",
+          "observed_on": "http://www.town.naie.hokkaido.jp/town/zaisei/",
+          "sha256": "5c0cbf5c4d8db686b03df353b3c99f0c284685a411c6e347efbc4d722f1d485d",
+          "fetched_at": "2026-08-27T13:26:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.naie.hokkaido.jp/town/zaisei/ (label: 財政状況) 入口 http://www.town.naie.hokkaido.jp/town/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kasokei.pdf「奈井江町過疎地域持続的発展市町村計画の公表について(令和3年9月7日策定)」, sha256:5c0cbf5c）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

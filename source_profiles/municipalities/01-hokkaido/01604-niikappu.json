@@ -51,11 +51,11 @@
       "base_url": "https://www.niikappu.jp/reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.niikappu.jp/gyose/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.niikappu.jp/gyose/zaise/index.html",
@@ -67,16 +67,22 @@
           "observed_on": "https://www.niikappu.jp/gyose/zaise/index.html",
           "sha256": "1f125ffbb36e545204993215c7d29ffa2c3e3ba4a97bb545d07b099df5b8693c",
           "fetched_at": "2026-08-27T10:31:27Z"
+        },
+        {
+          "url": "https://www.niikappu.jp/gyose/zaise/documents/h30kaikeibetuyosan.pdf",
+          "observed_on": "https://www.niikappu.jp/gyose/zaise/yosan.html",
+          "sha256": "7f466486fd812916f426cfaf1b1af42c154c06e6c670b51713fc49bc76542bf4",
+          "fetched_at": "2026-08-27T13:26:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.niikappu.jp/gyose/zaise/index.html (label: 財政) 入口 https://www.niikappu.jp/gyose/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.niikappu.jp/gyose/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（h30kaikeibetuyosan.pdf「平成30年度会計別予算額 (44KB)」, sha256:7f466486）にて構造マーカー（予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.niikappu.jp/gyose/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.niikappu.jp/gyose/zaise/index.html",
@@ -88,9 +94,15 @@
           "observed_on": "https://www.niikappu.jp/gyose/zaise/index.html",
           "sha256": "1f125ffbb36e545204993215c7d29ffa2c3e3ba4a97bb545d07b099df5b8693c",
           "fetched_at": "2026-08-27T10:31:27Z"
+        },
+        {
+          "url": "https://www.niikappu.jp/gyose/zaise/documents/h28kessan.pdf",
+          "observed_on": "https://www.niikappu.jp/gyose/zaise/yosan.html",
+          "sha256": "180c8f8add7b54c573bd98081bd30d55771367c45f20f9a0cb6afd50eedd2bf2",
+          "fetched_at": "2026-08-27T13:26:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.niikappu.jp/gyose/zaise/index.html (label: 財政) 入口 https://www.niikappu.jp/gyose/zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.niikappu.jp/gyose/zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（h28kessan.pdf「平成28年度歳入歳出決算状況 (65KB)」, sha256:180c8f8a）にて構造マーカー（歳入・歳出・支出済額・実質収支等）を確認済み。"
     }
   }
 }

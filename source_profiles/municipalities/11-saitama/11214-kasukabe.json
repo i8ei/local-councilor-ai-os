@@ -42,11 +42,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95853 (label: 例規集) extraction probe read one document at the first regulation document discovered from D1-Law index but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",
           "sha256": "c8c90d92c7defb65bbe08d38e9a91bcc4002eed47d03222f4cba30bb6f4e5e86",
           "fetched_at": "2026-08-27T10:20:42Z"
+        },
+        {
+          "url": "https://www.city.kasukabe.lg.jp/material/files/group/9/R8toushoyosannnogaiyou0226.pdf",
+          "observed_on": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/8211.html",
+          "sha256": "1240370b490df1fd5d73dfeea6474447c4e650a80f04b8dacac624a015d535c8",
+          "fetched_at": "2026-08-27T13:31:33Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html (label: 予算・決算・財政状況) 入口 https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8toushoyosannnogaiyou0226.pdf「令和8年度当初予算の概要 (PDFファイル: 12.2MB)」, sha256:1240370b）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",
@@ -79,9 +85,15 @@
           "observed_on": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",
           "sha256": "c8c90d92c7defb65bbe08d38e9a91bcc4002eed47d03222f4cba30bb6f4e5e86",
           "fetched_at": "2026-08-27T10:20:42Z"
+        },
+        {
+          "url": "https://www.city.kasukabe.lg.jp/material/files/group/9/R6gaiyou.pdf",
+          "observed_on": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/10953.html",
+          "sha256": "1d39919c2e0cce95f71397b4537fd052403db0353e7e76c64d44ddc2eac63a68",
+          "fetched_at": "2026-08-27T13:31:34Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html (label: 予算・決算・財政状況) 入口 https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6gaiyou.pdf「令和6年度決算の概要 (PDFファイル: 238.4KB)」, sha256:1d39919c）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

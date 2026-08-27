@@ -62,11 +62,11 @@
       "notes": "Observed budget link at http://www.vill.shosanbetsu.lg.jp/topics/kikakushinko/jyutenshien080401.html (label: 令和７年度補正予算 重点支援地方交付金の活用状況について) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.shosanbetsu.lg.jp/gyosei/gyoseijoho/zaiseijokyo.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.shosanbetsu.lg.jp/gyosei/gyoseijoho/zaiseijokyo.html",
@@ -83,9 +83,21 @@
           "url": "https://www.vill.shosanbetsu.lg.jp/files/00000000/00000063/r6kextusan.pdf",
           "observed_on": "https://www.vill.shosanbetsu.lg.jp/gyosei/gyoseijoho/zaiseijokyo.html",
           "fetched_at": "2026-08-27T10:31:07Z"
+        },
+        {
+          "url": "http://www.vill.shosanbetsu.lg.jp/gyosei/gyoseijoho/zaiseijokyo.html",
+          "observed_on": "http://www.vill.shosanbetsu.lg.jp/",
+          "sha256": "f21abb3012b395cf87cb8a6ece4273d669b984a1354723fb7166dda37f2a47a4",
+          "fetched_at": "2026-08-27T10:31:10Z"
+        },
+        {
+          "url": "https://www.vill.shosanbetsu.lg.jp/files/00000000/00000063/r6kextusan.pdf",
+          "observed_on": "https://www.vill.shosanbetsu.lg.jp/gyosei/gyoseijoho/zaiseijokyo.html",
+          "sha256": "0e6d8238f2efb0b530767d08e368e93a4d5872cee9b2cc9ff9901fe63bfd1057",
+          "fetched_at": "2026-08-27T10:31:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.shosanbetsu.lg.jp/gyosei/gyoseijoho/zaiseijokyo.html (label: 財政状況報告) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（r6kextusan.pdf「予算執行状況（令和６年度決算）」, sha256:0e6d8238）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

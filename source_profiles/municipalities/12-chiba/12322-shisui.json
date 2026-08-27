@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/shisui/reiki_menu.html (label: 町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
@@ -66,16 +66,22 @@
           "observed_on": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
           "sha256": "9aaea7f709e44f8a304b67377f4611e86c939aa4de54830b7d5761bf0f8cddc3",
           "fetched_at": "2026-08-27T10:24:39Z"
+        },
+        {
+          "url": "http://www.town.shisui.chiba.jp/docs/2026031600017/file_contents/hosei2.pdf",
+          "observed_on": "http://www.town.shisui.chiba.jp/docs/2026031600017/",
+          "sha256": "35d331cc03b21a483cf97720ca4620e694c246e2780bbfadb208fefbe2f43037",
+          "fetched_at": "2026-08-27T13:33:01Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/ (label: 企画財政課) 入口 http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（hosei2.pdf「補正予算書（第2号）[PDF：241KB]」, sha256:35d331cc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
@@ -87,9 +93,15 @@
           "observed_on": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
           "sha256": "9aaea7f709e44f8a304b67377f4611e86c939aa4de54830b7d5761bf0f8cddc3",
           "fetched_at": "2026-08-27T10:24:39Z"
+        },
+        {
+          "url": "http://www.town.shisui.chiba.jp/docs/2014021808437/file_contents/kessann_r06.pdf",
+          "observed_on": "http://www.town.shisui.chiba.jp/docs/2014021808437/",
+          "sha256": "bbbde1c360ae753b9116ec7c88b2414dc848c96d38ae01cc5597365cf8e5d94c",
+          "fetched_at": "2026-08-27T13:33:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/ (label: 企画財政課) 入口 http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessann_r06.pdf「令和6年度決算カード[PDF：850KB]」, sha256:bbbde1c3）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

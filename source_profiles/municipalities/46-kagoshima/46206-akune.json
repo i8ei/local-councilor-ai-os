@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.city.akune.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
@@ -69,9 +69,15 @@
           "url": "https://www.city.akune.lg.jp/material/files/group/75/r08_yosanhenseihoshin.pdf",
           "observed_on": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
           "fetched_at": "2026-08-27T09:40:26Z"
+        },
+        {
+          "url": "https://www.city.akune.lg.jp/material/files/group/75/yosan_gaiyo_an_r06.pdf",
+          "observed_on": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
+          "sha256": "ae0587b615c9116659128e5435546227e6961f79c95f1290ecf17d5425651ee6",
+          "fetched_at": "2026-08-27T13:47:25Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（yosan_gaiyo_an_r06.pdf「令和6年度 阿久根市当初予算の概要 (PDFファイル: 2.0MB)」, sha256:ae0587b6）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

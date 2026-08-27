@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at http://www.city.numazu.shizuoka.jp/d1w_reiki/index.htm (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.numazu.shizuoka.jp/shisei/pr/interview/index.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.numazu.shizuoka.jp/shisei/pr/interview/index.htm",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.numazu.shizuoka.jp/shisei/pr/interview/index.htm",
           "sha256": "8c37ee40eca7c0c933844c0ac58a19d71b385d45366a9e7711e381b85ef5d422",
           "fetched_at": "2026-08-27T10:14:18Z"
+        },
+        {
+          "url": "http://www.city.numazu.shizuoka.jp/shisei/pr/interview/index.htm",
+          "observed_on": "http://www.city.numazu.shizuoka.jp/",
+          "sha256": "8c37ee40eca7c0c933844c0ac58a19d71b385d45366a9e7711e381b85ef5d422",
+          "fetched_at": "2026-08-27T10:14:18Z"
+        },
+        {
+          "url": "https://www.city.numazu.shizuoka.jp/shisei/gyozaisei/finance/shiryo/zaiseizyokyotoha.pdf",
+          "observed_on": "https://www.city.numazu.shizuoka.jp/shisei/gyozaisei/finance/index.htm",
+          "sha256": "87ba4860ddc13b67198700fa8e4ed97b969bea60e817bead2325e6492938cebe",
+          "fetched_at": "2026-08-27T13:37:13Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.numazu.shizuoka.jp/shisei/pr/interview/index.htm (label: 令和8年度当初予算(案)等に関する市長定例記者会見) 入口 https://www.city.numazu.shizuoka.jp/shisei/pr/interview/index.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseizyokyotoha.pdf「財政状況資料集とは（PDF：92KB）」, sha256:87ba4860）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.numazu.shizuoka.jp/shisei/gyozaisei.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.numazu.shizuoka.jp/shisei/gyozaisei.htm",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.numazu.shizuoka.jp/shisei/gyozaisei.htm",
           "sha256": "59df10b4d55bf5ad53f35867acba3bc56fb0835277af2cdc71cc297a6ce97af7",
           "fetched_at": "2026-08-27T10:14:21Z"
+        },
+        {
+          "url": "http://www.city.numazu.shizuoka.jp/shisei/gyozaisei.htm",
+          "observed_on": "http://www.city.numazu.shizuoka.jp/",
+          "sha256": "59df10b4d55bf5ad53f35867acba3bc56fb0835277af2cdc71cc297a6ce97af7",
+          "fetched_at": "2026-08-27T10:14:21Z"
+        },
+        {
+          "url": "https://www.city.numazu.shizuoka.jp/shisei/gyozaisei/finance/pdf/kessantoha.pdf",
+          "observed_on": "https://www.city.numazu.shizuoka.jp/shisei/gyozaisei/finance/index.htm",
+          "sha256": "d082f16035a6d02523bb0fc241d53465042176b684e504862a089c50e0cf8f0c",
+          "fetched_at": "2026-08-27T13:37:12Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.numazu.shizuoka.jp/shisei/gyozaisei.htm (label: 行財政) 入口 https://www.city.numazu.shizuoka.jp/shisei/gyozaisei.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessantoha.pdf「決算カードとは（PDF：8KB）」, sha256:d082f160）にて構造マーカー（歳入・歳出・決算カード等）を確認済み。"
     }
   }
 }

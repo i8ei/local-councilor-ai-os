@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.town.anpachi.lg.jp/category/3-5-0-0-0-0-0-0-0-0.html (label: 条例規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.anpachi.lg.jp/0000000675.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.anpachi.lg.jp/0000000675.html",
@@ -65,16 +65,22 @@
           "url": "https://www.town.anpachi.lg.jp/cmsfiles/contents/0000000/675/R6ippann.pdf",
           "observed_on": "https://www.town.anpachi.lg.jp/0000000675.html",
           "fetched_at": "2026-08-27T11:14:13Z"
+        },
+        {
+          "url": "https://www.town.anpachi.lg.jp/cmsfiles/contents/0000000/675/R6ippann.pdf",
+          "observed_on": "https://www.town.anpachi.lg.jp/0000000675.html",
+          "sha256": "c6810be8eec792f33184d21f1c8af62157291339e825a0974a794bbca4b68321",
+          "fetched_at": "2026-08-27T11:14:14Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.anpachi.lg.jp/0000000675.html (label: 予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R6ippann.pdf「令和6年度一般会計予算書 (PDF形式、1.33MB)」, sha256:c6810be8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.anpachi.lg.jp/0000001397.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.anpachi.lg.jp/0000001397.html",
@@ -91,9 +97,15 @@
           "url": "https://www.town.anpachi.lg.jp/cmsfiles/contents/0000001/1397/R6kessannsyo.pdf",
           "observed_on": "https://www.town.anpachi.lg.jp/0000001397.html",
           "fetched_at": "2026-08-27T11:14:14Z"
+        },
+        {
+          "url": "https://www.town.anpachi.lg.jp/cmsfiles/contents/0000001/1397/R6kessannsyo.pdf",
+          "observed_on": "https://www.town.anpachi.lg.jp/0000001397.html",
+          "sha256": "1b324985733b611544de5df495db2a2aaef84eceffa956f8b6291636951c0950",
+          "fetched_at": "2026-08-27T11:14:15Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.anpachi.lg.jp/0000001397.html (label: 決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6kessannsyo.pdf「令和6年度決算書 (PDF形式、880.97KB)」, sha256:1b324985）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

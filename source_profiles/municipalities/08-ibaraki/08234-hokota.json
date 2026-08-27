@@ -48,11 +48,11 @@
       "base_url": "https://www.city.hokota.lg.jp/reiki_int/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hokota.lg.jp/page/dir000195.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hokota.lg.jp/page/dir000195.html",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.city.hokota.lg.jp/page/dir000195.html",
           "sha256": "37b8102943f0381f77c849ab5f4f98ba2128567ec1f6c425b6cafb1bbe92c789",
           "fetched_at": "2026-08-27T10:17:45Z"
+        },
+        {
+          "url": "http://www.city.hokota.lg.jp/page/dir000195.html",
+          "observed_on": "http://www.city.hokota.lg.jp/",
+          "sha256": "37b8102943f0381f77c849ab5f4f98ba2128567ec1f6c425b6cafb1bbe92c789",
+          "fetched_at": "2026-08-27T10:17:45Z"
+        },
+        {
+          "url": "https://www.city.hokota.lg.jp/data/doc/1761782079_doc_22_0.xlsx",
+          "observed_on": "https://www.city.hokota.lg.jp/page/page000141.html",
+          "sha256": "612f8a0749e56a1c4444261181ed5cb3e58eacf0d624506a2be40e7ba0838730",
+          "fetched_at": "2026-08-27T13:30:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hokota.lg.jp/page/dir000195.html (label: 財政) 入口 https://www.city.hokota.lg.jp/page/dir000195.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hokota.lg.jp/page/dir000195.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1761782079_doc_22_0.xlsx「鉾田市令和5年度財政状況資料集（Excel）」, sha256:612f8a07）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hokota.lg.jp/page/dir000195.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hokota.lg.jp/page/dir000195.html",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.city.hokota.lg.jp/page/dir000195.html",
           "sha256": "37b8102943f0381f77c849ab5f4f98ba2128567ec1f6c425b6cafb1bbe92c789",
           "fetched_at": "2026-08-27T10:17:45Z"
+        },
+        {
+          "url": "http://www.city.hokota.lg.jp/page/dir000195.html",
+          "observed_on": "http://www.city.hokota.lg.jp/",
+          "sha256": "37b8102943f0381f77c849ab5f4f98ba2128567ec1f6c425b6cafb1bbe92c789",
+          "fetched_at": "2026-08-27T10:17:45Z"
+        },
+        {
+          "url": "https://www.city.hokota.lg.jp/data/doc/1761782079_doc_22_0.xlsx",
+          "observed_on": "https://www.city.hokota.lg.jp/page/page000141.html",
+          "sha256": "612f8a0749e56a1c4444261181ed5cb3e58eacf0d624506a2be40e7ba0838730",
+          "fetched_at": "2026-08-27T13:30:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hokota.lg.jp/page/dir000195.html (label: 財政) 入口 https://www.city.hokota.lg.jp/page/dir000195.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hokota.lg.jp/page/dir000195.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1761782079_doc_22_0.xlsx「鉾田市令和5年度財政状況資料集（Excel）」, sha256:612f8a07）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

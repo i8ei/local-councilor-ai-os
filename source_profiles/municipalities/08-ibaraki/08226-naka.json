@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/naka/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
@@ -71,16 +71,22 @@
           "url": "https://www.city.naka.lg.jp/data/doc/1772083394_doc_269_0.pdf",
           "observed_on": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
           "fetched_at": "2026-08-27T10:17:41Z"
+        },
+        {
+          "url": "https://www.city.naka.lg.jp/data/doc/1772083006_doc_269_0.pdf",
+          "observed_on": "https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html",
+          "sha256": "65be1b1b5ab5139189eb949b33a1b96985dee6f5440e9f54a27b4cd150104707",
+          "fetched_at": "2026-08-27T13:30:19Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.naka.lg.jp/gyousei/zaisei/page009313.html (label: 那珂市予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（1772083006_doc_269_0.pdf「令和8年度那珂市予算書 [PDF形式／4.78MB]」, sha256:65be1b1b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
@@ -97,9 +103,15 @@
           "url": "https://www.city.naka.lg.jp/data/doc/1758076838_doc_49_0.pdf",
           "observed_on": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
           "fetched_at": "2026-08-27T10:17:45Z"
+        },
+        {
+          "url": "https://www.city.naka.lg.jp/data/doc/1758076838_doc_49_0.pdf",
+          "observed_on": "https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html",
+          "sha256": "6e82f8bacc8100e06031bb2d5c025c12a0048438ad7d1e2f92f248aecd808eba",
+          "fetched_at": "2026-08-27T10:17:48Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.naka.lg.jp/gyousei/zaisei/page010617.html (label: 那珂市決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（1758076838_doc_49_0.pdf「令和６年度那珂市歳入歳出決算書 [PDF形式／3.56MB]」, sha256:6e82f8ba）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

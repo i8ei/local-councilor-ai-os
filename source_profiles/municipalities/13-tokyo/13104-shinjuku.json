@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.shinjuku.lg.jp/kusei/index09.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
@@ -60,16 +60,22 @@
           "observed_on": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
           "sha256": "096ea2c5d672547f50693638a7d2eab5ac8fa7e39f3cb4c7d771ee68bdf0a044",
           "fetched_at": "2026-08-27T10:25:22Z"
+        },
+        {
+          "url": "http://www.city.shinjuku.lg.jp/content/000451451.pdf",
+          "observed_on": "http://www.city.shinjuku.lg.jp/kusei/file06_02_0101.html",
+          "sha256": "1557856863f543260cb5baa2d0e968dc9cccf091dd88ec2abbb33816c098e1bb",
+          "fetched_at": "2026-08-27T13:25:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shinjuku.lg.jp/kusei/index06.html (label: 財政・会計・公有財産) 入口 http://www.city.shinjuku.lg.jp/kusei/index06.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（000451451.pdf「令和8年度予算の概要 [PDF形式：10.4MB] （新規ウィンドウ表示）」, sha256:15578568）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
@@ -81,9 +87,15 @@
           "observed_on": "http://www.city.shinjuku.lg.jp/kusei/index06.html",
           "sha256": "096ea2c5d672547f50693638a7d2eab5ac8fa7e39f3cb4c7d771ee68bdf0a044",
           "fetched_at": "2026-08-27T10:25:22Z"
+        },
+        {
+          "url": "http://www.city.shinjuku.lg.jp/content/000410959.pdf",
+          "observed_on": "http://www.city.shinjuku.lg.jp/kusei/index06_02_03.html",
+          "sha256": "580fbb29119c83f57b6515c36d649d43d3fa2ca6fd36020ef76a90fbe02aea9d",
+          "fetched_at": "2026-08-27T13:25:15Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shinjuku.lg.jp/kusei/index06.html (label: 財政・会計・公有財産) 入口 http://www.city.shinjuku.lg.jp/kusei/index06.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（000410959.pdf「令和6年度決算 [PDF形式：2.5MB] （新規ウィンドウ表示）」, sha256:580fbb29）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

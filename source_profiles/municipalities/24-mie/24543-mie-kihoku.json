@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（30zaimusyorui.pdf「統一的な基準による財務書類 (PDFファイル: 2.1MB)」, sha256:d085d828）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/",
@@ -78,9 +78,15 @@
           "observed_on": "https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/",
           "sha256": "6b06fcffca948893b3be8d17fcdfbc49085363dda6f52642c6cf59b0dd2d9a3f",
           "fetched_at": "2026-08-27T09:49:07Z"
+        },
+        {
+          "url": "https://www.town.mie-kihoku.lg.jp/wp-content/uploads/2024/03/c355c6f22cc0947a2f28489e8a512b75-4.pdf",
+          "observed_on": "https://www.town.mie-kihoku.lg.jp/2026/03/19/758/",
+          "sha256": "c37bfc48bde440b32be12d6355fa1d8e5d92badf001369f7ee325faf28283bd2",
+          "fetched_at": "2026-08-27T13:39:18Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/ (label: 紀北町の財政) 入口 https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（c355c6f22cc0947a2f28489e8a512b75-4.pdf「決算の概要」, sha256:c37bfc48）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

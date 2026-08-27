@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/otofuke/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/",
           "sha256": "8a9ebb7df3acecd813bcb8bcb0e1f2c64a78ef0371d638428782d832dbcda81d",
           "fetched_at": "2026-08-27T10:31:39Z"
+        },
+        {
+          "url": "https://www.town.otofuke.hokkaido.jp/files/00003100/00003156/r8yosanhenseikatei.pdf",
+          "observed_on": "https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/zaisei/yosan_henseikatei.html",
+          "sha256": "dfcb3ac7d05dbc1e5b2cd2e9fd3e0ef9fc3ca57b42fe6174878a5be55e45f223",
+          "fetched_at": "2026-08-27T13:26:50Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/ (label: 町の財政・計画) 入口 https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.otofuke.hokkaido.jp/machi/zaisei_keikaku/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8yosanhenseikatei.pdf「令和8年度当初予算における主要事業の予算編成過程」, sha256:dfcb3ac7）にて構造マーカー（予算額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

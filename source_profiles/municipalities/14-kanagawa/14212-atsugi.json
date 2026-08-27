@@ -53,11 +53,11 @@
       "base_url": "https://krg214.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/index.html",
@@ -69,16 +69,22 @@
           "observed_on": "https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/index.html",
           "sha256": "591a3cb8ea7edd3bd2ffd785725a439a2879dbbee31cc6a770e85a160680f72a",
           "fetched_at": "2026-08-27T10:26:53Z"
+        },
+        {
+          "url": "https://www.city.atsugi.kanagawa.jp/material/files/group/11/R08budget-summary_atsugicity.pdf",
+          "observed_on": "https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/4/8/51023.html",
+          "sha256": "3eb2a149bf33c073ba256964afa0fd7536e7824d8b66fb8cd805315dc7d6809a",
+          "fetched_at": "2026-08-27T23:00:46Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/index.html (label: 財政・予算) 入口 https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R08budget-summary_atsugicity.pdf「予算の概要 (PDFファイル: 4.3MB)」, sha256:3eb2a149）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/1/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/1/index.html",
@@ -90,9 +96,15 @@
           "observed_on": "https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/1/index.html",
           "sha256": "8e6fdeb54c15d7d9caff57871c856afe8f7d40301d70457d2c31025ec817c562",
           "fetched_at": "2026-08-27T10:26:54Z"
+        },
+        {
+          "url": "https://www.city.atsugi.kanagawa.jp/material/files/group/11/zaiseijoukyousiryoushuuR6.pdf",
+          "observed_on": "https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/1/1/14936.html",
+          "sha256": "da1dec4c2c0a9bdc43cbe3a66326cf158684f8c79de324d2a66c940d7df4f8bf",
+          "fetched_at": "2026-08-27T13:34:35Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/1/index.html (label: 決算) 入口 https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/1/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.atsugi.kanagawa.jp/shiseijoho/zaisei_yosan/1/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijoukyousiryoushuuR6.pdf「令和6年度財政状況資料集 (PDFファイル: 1.9MB)」, sha256:da1dec4c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

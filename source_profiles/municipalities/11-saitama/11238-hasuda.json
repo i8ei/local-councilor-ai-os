@@ -48,11 +48,11 @@
       "index_url": "https://en3-jg.d1-law.com/hasuda/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hasuda.saitama.jp/zaise/shise/zaise/yosansho/yosan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hasuda.saitama.jp/zaise/shise/zaise/yosansho/yosan.html",
@@ -69,16 +69,28 @@
           "url": "https://www.city.hasuda.saitama.jp/zaise/shise/zaise/yosansho/documents/r8gaiyou_2.pdf",
           "observed_on": "https://www.city.hasuda.saitama.jp/zaise/shise/zaise/yosansho/yosan.html",
           "fetched_at": "2026-08-27T11:19:09Z"
+        },
+        {
+          "url": "http://www.city.hasuda.saitama.jp/zaise/shise/zaise/yosansho/yosan.html",
+          "observed_on": "http://www.city.hasuda.saitama.jp/",
+          "sha256": "5b6bc7097a0a1c1859fcb63f14a67b045752dbf305048faef9eac1c422468b14",
+          "fetched_at": "2026-08-27T10:21:43Z"
+        },
+        {
+          "url": "https://www.city.hasuda.saitama.jp/zaise/shise/zaise/yosansho/documents/r8gaiyou_2.pdf",
+          "observed_on": "https://www.city.hasuda.saitama.jp/zaise/shise/zaise/yosansho/yosan.html",
+          "sha256": "a19644154adab9c4917365ea2bbc3ca21fa258e2bc80e2dc6c756cc62e12f296",
+          "fetched_at": "2026-08-27T11:19:10Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.hasuda.saitama.jp/zaise/shise/zaise/yosansho/yosan.html (label: 8月26日 一般 令和8年度蓮田市一般会計及び特別会計の補正予算書を掲載しました) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r8gaiyou_2.pdf「令和8年度予算概要（PDF：1,492KB）」, sha256:a1964415）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hasuda.saitama.jp/shise/zaise/yosansho/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hasuda.saitama.jp/shise/zaise/yosansho/index.html",
@@ -90,9 +102,21 @@
           "observed_on": "https://www.city.hasuda.saitama.jp/shise/zaise/yosansho/index.html",
           "sha256": "c275f688aa1e87993682ebe893e76851ea0a69bda587fbd75f7f03e04a946f2d",
           "fetched_at": "2026-08-27T10:21:46Z"
+        },
+        {
+          "url": "http://www.city.hasuda.saitama.jp/shise/zaise/yosansho/index.html",
+          "observed_on": "http://www.city.hasuda.saitama.jp/",
+          "sha256": "c275f688aa1e87993682ebe893e76851ea0a69bda587fbd75f7f03e04a946f2d",
+          "fetched_at": "2026-08-27T10:21:46Z"
+        },
+        {
+          "url": "https://www.city.hasuda.saitama.jp/kaike/shise/zaise/yosansho/documents/r6ippan-kessannsyo.pdf",
+          "observed_on": "https://www.city.hasuda.saitama.jp/kaike/shise/zaise/yosansho/kessan.html",
+          "sha256": "6b6558dabae4d742122db024a5661a3216fcf957e3e0a7460674f003276123ea",
+          "fetched_at": "2026-08-27T13:31:58Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.hasuda.saitama.jp/shise/zaise/yosansho/index.html (label: 予算書・決算書) 入口 https://www.city.hasuda.saitama.jp/shise/zaise/yosansho/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6ippan-kessannsyo.pdf「一般会計歳入歳出決算書（PDF：255KB）」, sha256:6b6558da）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

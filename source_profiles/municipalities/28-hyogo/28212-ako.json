@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（r8hitoriatari.pdf「市民1人当たりの予算額（PDF：60KB）」, sha256:27eb394a）にて構造マーカー（予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ako.lg.jp/shise/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ako.lg.jp/shise/yosan/index.html",
@@ -99,9 +99,21 @@
           "observed_on": "https://www.city.ako.lg.jp/shise/yosan/index.html",
           "sha256": "c93ecb24a3c55353f62ee1d411470dd910703319ccdd0b00d07bf807ac1aa2e7",
           "fetched_at": "2026-08-27T09:51:55Z"
+        },
+        {
+          "url": "http://www.city.ako.lg.jp/shise/yosan/index.html",
+          "observed_on": "http://www.city.ako.lg.jp/",
+          "sha256": "c93ecb24a3c55353f62ee1d411470dd910703319ccdd0b00d07bf807ac1aa2e7",
+          "fetched_at": "2026-08-27T09:51:55Z"
+        },
+        {
+          "url": "https://www.city.ako.lg.jp/soumu/zaisei/documents/6kakukaikei_kessan.pdf",
+          "observed_on": "https://www.city.ako.lg.jp/soumu/zaisei/2024kessan.html",
+          "sha256": "069e04a3d37c1d7918f872e3dea90cf0cdc059c08c329b9fc3c1ef0ffc238dce",
+          "fetched_at": "2026-08-27T13:40:58Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ako.lg.jp/shise/yosan/index.html (label: 予算・財政) 入口 https://www.city.ako.lg.jp/shise/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ako.lg.jp/shise/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6kakukaikei_kessan.pdf「各会計別決算状況（PDF：26KB）」, sha256:069e04a3）にて構造マーカー（歳入・歳出・決算額等）を確認済み。"
     }
   }
 }

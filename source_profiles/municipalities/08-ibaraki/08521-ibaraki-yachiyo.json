@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.town.ibaraki-yachiyo.lg.jp/page/dir002847.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ibaraki-yachiyo.lg.jp/page/page012018.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ibaraki-yachiyo.lg.jp/page/page012018.html",
@@ -63,16 +63,28 @@
           "url": "https://www.town.ibaraki-yachiyo.lg.jp/data/doc/1772412155_doc_140_0.pdf",
           "observed_on": "https://www.town.ibaraki-yachiyo.lg.jp/page/page012018.html",
           "fetched_at": "2026-08-27T10:17:58Z"
+        },
+        {
+          "url": "http://www.town.ibaraki-yachiyo.lg.jp/page/page012018.html",
+          "observed_on": "http://www.town.ibaraki-yachiyo.lg.jp/",
+          "sha256": "ab91362c636205e656458ffcf48f52bc859499655eebb8051458b85d21cf2efa",
+          "fetched_at": "2026-08-27T10:18:01Z"
+        },
+        {
+          "url": "https://www.town.ibaraki-yachiyo.lg.jp/data/doc/1772412155_doc_140_0.pdf",
+          "observed_on": "https://www.town.ibaraki-yachiyo.lg.jp/page/page012018.html",
+          "sha256": "4ec8cab623b32c38cbacc7b29659217c80c240904bf2c896c071e276ce67c6ef",
+          "fetched_at": "2026-08-27T10:18:03Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ibaraki-yachiyo.lg.jp/page/page012018.html (label: 令和8年度の予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（1772412155_doc_140_0.pdf「令和8年度当初予算のポイント」, sha256:4ec8cab6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ibaraki-yachiyo.lg.jp/page/page001144.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ibaraki-yachiyo.lg.jp/page/page001144.html",
@@ -89,9 +101,21 @@
           "url": "https://www.town.ibaraki-yachiyo.lg.jp/data/doc/1762749327_doc_140_0.pdf",
           "observed_on": "https://www.town.ibaraki-yachiyo.lg.jp/page/page001144.html",
           "fetched_at": "2026-08-27T10:18:03Z"
+        },
+        {
+          "url": "http://www.town.ibaraki-yachiyo.lg.jp/page/page001144.html",
+          "observed_on": "http://www.town.ibaraki-yachiyo.lg.jp/",
+          "sha256": "ca24656ab90cd560179b88fe96ed80149f8efb768b0d2ea6b9c326224a44555f",
+          "fetched_at": "2026-08-27T10:18:05Z"
+        },
+        {
+          "url": "https://www.town.ibaraki-yachiyo.lg.jp/data/doc/1762749327_doc_140_0.pdf",
+          "observed_on": "https://www.town.ibaraki-yachiyo.lg.jp/page/page001144.html",
+          "sha256": "91bffde5d092d641f9619e1bbec8311ad12f2da2e27ab2394df1670867025039",
+          "fetched_at": "2026-08-27T10:18:07Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.ibaraki-yachiyo.lg.jp/page/page001144.html (label: 町の決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（1762749327_doc_140_0.pdf「令和6年度決算書」, sha256:91bffde5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

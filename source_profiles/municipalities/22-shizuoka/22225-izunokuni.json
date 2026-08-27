@@ -50,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.izunokuni/reiki_menu.html (label: 例規集（外部サイトへリンク）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html",
@@ -66,16 +66,28 @@
           "observed_on": "https://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html",
           "sha256": "d6e9d1312a00b7ee678a47e2a81aeeaca0fcb94650c4566ac49b3879b5656626",
           "fetched_at": "2026-08-27T10:14:54Z"
+        },
+        {
+          "url": "http://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.izunokuni.shizuoka.jp/",
+          "sha256": "d6e9d1312a00b7ee678a47e2a81aeeaca0fcb94650c4566ac49b3879b5656626",
+          "fetched_at": "2026-08-27T10:14:54Z"
+        },
+        {
+          "url": "https://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/documents/222259aza_2024_rev.xlsx",
+          "observed_on": "https://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/ichiranhyo.html",
+          "sha256": "8a54dfc8a1629cfa2d0738f5a41ae87a90e6ec9bc2299bd7f2989f2c4267632e",
+          "fetched_at": "2026-08-27T13:37:41Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（222259aza_2024_rev.xlsx「伊豆の国市財政状況一覧表（令和6年度）（エクセル：577KB）」, sha256:8a54dfc8）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html",
@@ -87,9 +99,21 @@
           "observed_on": "https://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html",
           "sha256": "d6e9d1312a00b7ee678a47e2a81aeeaca0fcb94650c4566ac49b3879b5656626",
           "fetched_at": "2026-08-27T10:14:54Z"
+        },
+        {
+          "url": "http://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.izunokuni.shizuoka.jp/",
+          "sha256": "d6e9d1312a00b7ee678a47e2a81aeeaca0fcb94650c4566ac49b3879b5656626",
+          "fetched_at": "2026-08-27T10:14:54Z"
+        },
+        {
+          "url": "https://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/documents/222259aza_2024_rev.xlsx",
+          "observed_on": "https://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/ichiranhyo.html",
+          "sha256": "8a54dfc8a1629cfa2d0738f5a41ae87a90e6ec9bc2299bd7f2989f2c4267632e",
+          "fetched_at": "2026-08-27T13:37:41Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.izunokuni.shizuoka.jp/zaimu/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（222259aza_2024_rev.xlsx「伊豆の国市財政状況一覧表（令和6年度）（エクセル：577KB）」, sha256:8a54dfc8）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

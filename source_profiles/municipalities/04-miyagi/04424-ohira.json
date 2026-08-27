@@ -59,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/village.ohira/reiki_menu.html (label: 大衡村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.village.ohira.miyagi.jp/6/6/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.village.ohira.miyagi.jp/6/6/index.html",
@@ -75,16 +75,22 @@
           "observed_on": "https://www.village.ohira.miyagi.jp/6/6/index.html",
           "sha256": "5f5646504b9257603e677dcd6388dc3d3eab6ea8824ec48f45075deaeb78216b",
           "fetched_at": "2026-08-27T10:34:29Z"
+        },
+        {
+          "url": "https://www.village.ohira.miyagi.jp/material/files/group/4/R06_zaiseizyoukyou_siryou.pdf",
+          "observed_on": "https://www.village.ohira.miyagi.jp/6/6/1/922.html",
+          "sha256": "c9256f28d53eb2fa365b79897c247a0fc29ca42973c19bcef571d4ec96f73e14",
+          "fetched_at": "2026-08-27T13:28:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.village.ohira.miyagi.jp/6/6/index.html (label: 財政) 入口 https://www.village.ohira.miyagi.jp/6/6/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R06_zaiseizyoukyou_siryou.pdf「令和6年度 (PDFファイル: 2.3MB)」, sha256:c9256f28）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.village.ohira.miyagi.jp/6/6/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.village.ohira.miyagi.jp/6/6/index.html",
@@ -96,9 +102,15 @@
           "observed_on": "https://www.village.ohira.miyagi.jp/6/6/index.html",
           "sha256": "5f5646504b9257603e677dcd6388dc3d3eab6ea8824ec48f45075deaeb78216b",
           "fetched_at": "2026-08-27T10:34:29Z"
+        },
+        {
+          "url": "https://www.village.ohira.miyagi.jp/material/files/group/4/R06_zaiseizyoukyou_siryou.pdf",
+          "observed_on": "https://www.village.ohira.miyagi.jp/6/6/1/922.html",
+          "sha256": "c9256f28d53eb2fa365b79897c247a0fc29ca42973c19bcef571d4ec96f73e14",
+          "fetched_at": "2026-08-27T13:28:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.village.ohira.miyagi.jp/6/6/index.html (label: 財政) 入口 https://www.village.ohira.miyagi.jp/6/6/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06_zaiseizyoukyou_siryou.pdf「令和6年度 (PDFファイル: 2.3MB)」, sha256:c9256f28）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

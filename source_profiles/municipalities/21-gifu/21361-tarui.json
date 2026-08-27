@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.tarui.lg.jp/reiki_int/reiki_menu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tarui.lg.jp/life/6/25/106/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tarui.lg.jp/life/6/25/106/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.tarui.lg.jp/life/6/25/106/",
           "sha256": "d94dd4ff418dc39643b3bcb87350342d760c011e2198cc2efc6cec81b1243f70",
           "fetched_at": "2026-08-27T10:13:44Z"
+        },
+        {
+          "url": "http://www.town.tarui.lg.jp/life/6/25/106/",
+          "observed_on": "http://www.town.tarui.lg.jp/",
+          "sha256": "d94dd4ff418dc39643b3bcb87350342d760c011e2198cc2efc6cec81b1243f70",
+          "fetched_at": "2026-08-27T10:13:44Z"
+        },
+        {
+          "url": "https://www.town.tarui.lg.jp/uploaded/attachment/13700.pdf",
+          "observed_on": "https://www.town.tarui.lg.jp/page/17495.html",
+          "sha256": "c072b5d1f171fdd809bc6ee4ad0f4bdb2461454293affe36b424bc26634b0c88",
+          "fetched_at": "2026-08-27T13:36:59Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tarui.lg.jp/life/6/25/106/ (label: 予算・決算) 入口 https://www.town.tarui.lg.jp/life/6/25/106/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tarui.lg.jp/life/6/25/106/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（13700.pdf「一般会計（専決） [PDFファイル／536KB]」, sha256:c072b5d1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

@@ -48,11 +48,11 @@
       "notes": "Observed regulations index at http://www.city.yoshikawa.saitama.jp/index.cfm/1,78747,2,html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,943,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,943,html",
@@ -64,16 +64,28 @@
           "observed_on": "https://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,943,html",
           "sha256": "71c85aa8a1d6ed71c80734b8ffd4f59a12d9b79489499d745a592259e36ab6df",
           "fetched_at": "2026-08-27T10:21:36Z"
+        },
+        {
+          "url": "http://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,943,html",
+          "observed_on": "http://www.city.yoshikawa.saitama.jp/",
+          "sha256": "71c85aa8a1d6ed71c80734b8ffd4f59a12d9b79489499d745a592259e36ab6df",
+          "fetched_at": "2026-08-27T10:21:36Z"
+        },
+        {
+          "url": "https://www.city.yoshikawa.saitama.jp/index.cfm/27,118156,c,html/118156/20260605-143021.pdf",
+          "observed_on": "https://www.city.yoshikawa.saitama.jp/index.cfm/27,118156,182,943,html",
+          "sha256": "e687bbf86eb47062abc0c01b0769a73aa3346a9861f680f92c9eb83a8867560f",
+          "fetched_at": "2026-08-27T13:32:04Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,943,html (label: 一般会計予算) 入口 https://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,943,html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260605-143021.pdf「令和8年度：一般会計補正予算（第1号）.pdf [ 223 KB pdfファイル]」, sha256:e687bbf8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,944,html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,944,html",
@@ -85,9 +97,21 @@
           "observed_on": "https://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,944,html",
           "sha256": "7a68092be33433fc066c271a1b445b65ed251cfa67a806252dd67c0d2ea51abc",
           "fetched_at": "2026-08-27T10:21:39Z"
+        },
+        {
+          "url": "http://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,944,html",
+          "observed_on": "http://www.city.yoshikawa.saitama.jp/",
+          "sha256": "7a68092be33433fc066c271a1b445b65ed251cfa67a806252dd67c0d2ea51abc",
+          "fetched_at": "2026-08-27T10:21:39Z"
+        },
+        {
+          "url": "https://www.city.yoshikawa.saitama.jp/index.cfm/27,114287,c,html/114287/20250917-153345.pdf",
+          "observed_on": "https://www.city.yoshikawa.saitama.jp/index.cfm/27,114287,182,944,html",
+          "sha256": "782b078e21e30c854be0dcc71e36a57579ad99284ba600d4ff001eeb3337aecc",
+          "fetched_at": "2026-08-27T13:32:06Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,944,html (label: 一般会計決算) 入口 https://www.city.yoshikawa.saitama.jp/index.cfm/27,0,182,944,html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20250917-153345.pdf「一般会計・特別会計の歳入歳出決算書.pdf [ 2082 KB pdfファイル]」, sha256:782b078e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.town.bandai.fukushima.jp/data/reiki_int/reiki_menu.html (label: 例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html",
           "sha256": "846f36df17841ab7fad705f019744dea42e9e6e97c2f38008c165512bd9aec42",
           "fetched_at": "2026-08-27T10:37:31Z"
+        },
+        {
+          "url": "https://www.town.bandai.fukushima.jp/uploaded/attachment/8073.xlsx",
+          "observed_on": "https://www.town.bandai.fukushima.jp/site/machizukuri/zaiseizyoukyou.html",
+          "sha256": "d6121c96c2082c0a3b38142d5d21c5f3f076115f1bb756d61500e5843bcf3e44",
+          "fetched_at": "2026-08-27T13:29:38Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html (label: 財政状況) 入口 https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8073.xlsx「財政状況等一覧表（令和６年度） [Excelファイル／570KB]」, sha256:d6121c96）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html",
@@ -85,9 +91,15 @@
           "observed_on": "https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html",
           "sha256": "846f36df17841ab7fad705f019744dea42e9e6e97c2f38008c165512bd9aec42",
           "fetched_at": "2026-08-27T10:37:31Z"
+        },
+        {
+          "url": "https://www.town.bandai.fukushima.jp/uploaded/attachment/8073.xlsx",
+          "observed_on": "https://www.town.bandai.fukushima.jp/site/machizukuri/zaiseizyoukyou.html",
+          "sha256": "d6121c96c2082c0a3b38142d5d21c5f3f076115f1bb756d61500e5843bcf3e44",
+          "fetched_at": "2026-08-27T13:29:38Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html (label: 財政状況) 入口 https://www.town.bandai.fukushima.jp/site/machizukuri/list68.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（8073.xlsx「財政状況等一覧表（令和６年度） [Excelファイル／570KB]」, sha256:d6121c96）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

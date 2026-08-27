@@ -86,11 +86,11 @@
       "notes": "deepest_doc=P1。budget文書（R08-1_hoseiyosansho.pdf「令和8年度 補正予算書（1号） (PDFファイル: 853.6KB)」, sha256:54ac9dd2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.takehara.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.takehara.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
@@ -102,9 +102,15 @@
           "observed_on": "https://www.city.takehara.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
           "sha256": "2dd7938a4ac8b4ba0c8cc871ad5fd15553c6e2a70451078a4b1481214b1923e3",
           "fetched_at": "2026-08-27T09:44:45Z"
+        },
+        {
+          "url": "https://www.city.takehara.lg.jp/material/files/group/4/R6zaiseijokyoshiryoshu.xlsx",
+          "observed_on": "https://www.city.takehara.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/4534.html",
+          "sha256": "f94c2d639413b31ec3b10aa2c05be6266fcbe73bf61917daac1b7c2c5c27893f",
+          "fetched_at": "2026-08-27T13:42:31Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.takehara.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.city.takehara.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.takehara.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.takehara.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijokyoshiryoshu.xlsx「令和6年度財政状況資料集 (Excelファイル: 522.2KB)」, sha256:f94c2d63）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

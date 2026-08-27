@@ -204,9 +204,9 @@ def _probe_doc(client: HttpClient, doc_url: str) -> tuple[str, FetchResult | Non
         tool = shutil.which("pdftotext")
         if not tool:
             return "", res
-        cmd = [tool, "-layout", "-l", "30", str(res.cache_path), "-"]
+        cmd = [tool, "-layout", "-l", "15", str(res.cache_path), "-"]
         try:
-            proc = subprocess.run(cmd, capture_output=True, check=False, timeout=30)
+            proc = subprocess.run(cmd, capture_output=True, check=False, timeout=15)
             return proc.stdout.decode("utf-8", errors="replace"), res
         except Exception:
             return "", res
@@ -214,8 +214,11 @@ def _probe_doc(client: HttpClient, doc_url: str) -> tuple[str, FetchResult | Non
     if path_low.endswith(".xlsx"):
         try:
             wb = read_workbook(res.cache_path)
-            t = " ".join(c.value for ws in wb for c in ws.cells)
-            return t, res
+            values = []
+            for ws in wb:
+                for c in ws.cells[:500]:
+                    values.append(c.value)
+            return " ".join(values), res
         except Exception:
             return "", res
 
@@ -352,15 +355,13 @@ def _extract_and_verify_doc(
 
 
 def verify_municipality_kind(
-    path: Path,
     profile: dict[str, Any],
     kind: str,
     client: HttpClient,
     now: str,
-    dry_run: bool = False,
 ) -> tuple[str, bool, dict[str, Any] | None]:
-    """Verify one source kind (budget or settlement) for a municipality."""
-    muni_name = str(profile.get("municipality") or path.stem)
+    """Verify one source kind (budget or settlement) for a municipality in-memory."""
+    muni_name = str(profile.get("municipality") or "unknown")
     src = profile.setdefault("sources", {}).setdefault(kind, {})
 
     if src.get("status") == "ready":
@@ -389,13 +390,6 @@ def verify_municipality_kind(
                 "observed_on": profile.get("official_home_url"),
                 "fetched_at": now,
             })
-        if not dry_run:
-            errors = validate_profile(profile)
-            if not errors:
-                path.write_text(
-                    json.dumps(profile, ensure_ascii=False, indent=2) + "\n",
-                    encoding="utf-8",
-                )
         return f"{muni_name} {kind} -> BLOCKED (robots: {exc})", False, None
     except Exception as exc:
         return f"{muni_name} {kind} -> error: {type(exc).__name__}: {str(exc)[:50]}", False, None
@@ -455,15 +449,6 @@ def verify_municipality_kind(
     )
     src["notes"] = note_text
 
-    if not dry_run:
-        errors = validate_profile(profile)
-        if errors:
-            return f"{muni_name} {kind} -> SCHEMA ERROR: {errors}", False, None
-        path.write_text(
-            json.dumps(profile, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-        )
-
     return (
         f"{muni_name} {kind} -> READY (doc: {file_name}, markers: {markers[:3]})!",
         True,
@@ -471,8 +456,10 @@ def verify_municipality_kind(
     )
 
 
-def process_task(task: tuple[int, int, Path, str, str, bool]) -> tuple[str, bool]:
-    idx, total, path, kind, now, dry_run = task
+def process_municipality_task(
+    task: tuple[int, int, Path, list[str], str, bool]
+) -> list[tuple[str, bool]]:
+    idx, total, path, kinds, now, dry_run = task
     profile = json.loads(path.read_text(encoding="utf-8"))
     client = HttpClient(
         CACHE_DIR,
@@ -481,10 +468,22 @@ def process_task(task: tuple[int, int, Path, str, str, bool]) -> tuple[str, bool
         max_retries=1,
         min_interval_seconds=0.2,
     )
-    msg, is_promoted, _ = verify_municipality_kind(
-        path, profile, kind, client, now, dry_run=dry_run
-    )
-    return f"[{idx:4d}/{total:4d}] {msg}", is_promoted
+    results = []
+    modified = False
+    for kind in kinds:
+        msg, is_promoted, _ = verify_municipality_kind(profile, kind, client, now)
+        if is_promoted or "BLOCKED" in msg:
+            modified = True
+        results.append((f"[{idx:4d}/{total:4d}] {msg}", is_promoted))
+
+    if modified and not dry_run:
+        errors = validate_profile(profile)
+        if not errors:
+            path.write_text(
+                json.dumps(profile, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+    return results
 
 
 def main() -> int:
@@ -500,7 +499,7 @@ def main() -> int:
     parser.add_argument(
         "--kind", choices=["budget", "settlement", "both"], default="both", help="Kind to verify"
     )
-    parser.add_argument("--limit", type=int, help="Limit number of tasks to process")
+    parser.add_argument("--limit", type=int, help="Limit number of municipalities to process")
     parser.add_argument(
         "--dry-run", action="store_true", help="Do not write changes to source profile files"
     )
@@ -514,7 +513,7 @@ def main() -> int:
 
     kinds_to_run = ["budget", "settlement"] if args.kind == "both" else [args.kind]
 
-    tasks_raw: list[tuple[Path, str]] = []
+    tasks_raw: list[tuple[Path, list[str]]] = []
     profile_paths = sorted(MUNI_DIR.glob("*/*.json"))
     if args.prefecture_code:
         prefix = f"{args.prefecture_code}-"
@@ -523,24 +522,28 @@ def main() -> int:
     for p in profile_paths:
         data = json.loads(p.read_text(encoding="utf-8"))
         src = data.get("sources", {})
+        muni_kinds: list[str] = []
         for k in kinds_to_run:
             entry = src.get(k, {})
             if entry.get("status") in {"needs_review", "not_evaluated"}:
                 if entry.get("index_url") or entry.get("base_url"):
-                    tasks_raw.append((p, k))
+                    muni_kinds.append(k)
+        if muni_kinds:
+            tasks_raw.append((p, muni_kinds))
 
     if args.limit:
         tasks_raw = tasks_raw[: args.limit]
 
     total = len(tasks_raw)
     tasks = [
-        (i, total, p, k, now, args.dry_run)
-        for i, (p, k) in enumerate(tasks_raw, 1)
+        (i, total, p, kinds, now, args.dry_run)
+        for i, (p, kinds) in enumerate(tasks_raw, 1)
     ]
 
+    total_kinds_count = sum(len(k) for _, k in tasks_raw)
     print(
-        f"Starting Budget & Settlement Level 2 verification for {total} unpromoted entries "
-        f"with {args.workers} workers (dry_run={args.dry_run})...",
+        f"Starting Budget & Settlement Level 2 verification for {total} municipalities "
+        f"({total_kinds_count} entries) with {args.workers} workers (dry_run={args.dry_run})...",
         flush=True,
     )
 
@@ -548,18 +551,18 @@ def main() -> int:
     unpromoted_count = 0
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = [pool.submit(process_task, t) for t in tasks]
+        futures = [pool.submit(process_municipality_task, t) for t in tasks]
         for f in concurrent.futures.as_completed(futures):
-            msg, is_promoted = f.result()
-            if is_promoted:
-                promoted_count += 1
-                print(f"*** {msg} ***", flush=True)
-            else:
-                unpromoted_count += 1
-                print(msg, flush=True)
+            for msg, is_promoted in f.result():
+                if is_promoted:
+                    promoted_count += 1
+                    print(f"*** {msg} ***", flush=True)
+                else:
+                    unpromoted_count += 1
+                    print(msg, flush=True)
 
     print("\n=== Budget & Settlement Verification Summary ===", flush=True)
-    print(f"  Total processed        : {total}", flush=True)
+    print(f"  Total entries processed: {total_kinds_count}", flush=True)
     print(f"  Newly promoted to READY: {promoted_count}", flush=True)
     print(f"  Unpromoted / Skipped   : {unpromoted_count}", flush=True)
 

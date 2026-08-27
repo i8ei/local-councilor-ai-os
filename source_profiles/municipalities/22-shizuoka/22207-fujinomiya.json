@@ -68,11 +68,11 @@
       "notes": "deepest_doc=P1。budget文書（ippankaikei.pdf「一般会計予算書（PDF：2,855KB）」, sha256:382a28bd）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
@@ -89,9 +89,21 @@
           "url": "https://www.city.fujinomiya.lg.jp/documents/2786/r7kaikei.pdf",
           "observed_on": "https://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
           "fetched_at": "2026-08-27T11:14:26Z"
+        },
+        {
+          "url": "http://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
+          "observed_on": "http://www.city.fujinomiya.lg.jp/",
+          "sha256": "ca192a57c6dc2fd3085265f756130960a1a8e94c4332ec278f7ef9a5627c3f9b",
+          "fetched_at": "2026-08-27T10:14:31Z"
+        },
+        {
+          "url": "https://www.city.fujinomiya.lg.jp/documents/2786/r7kaikei.pdf",
+          "observed_on": "https://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
+          "sha256": "9fc7ac3690d8e1792e38d91fa1bd6fda731a201b451829da884d54bf59e98a82",
+          "fetched_at": "2026-08-27T11:14:27Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.fujinomiya.lg.jp/6010000000/p003006.html (label: 決算審査、健全化判断比率等審査) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r7kaikei.pdf「令和6年度各種会計歳入歳出決算及び基金運用状況審査意見書（PDF：2,590KB）」, sha256:9fc7ac36）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

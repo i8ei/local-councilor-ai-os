@@ -36,11 +36,11 @@
       "index_url": "https://en3-jg.d1-law.com/rumoi/d1w_reiki/reiki.html"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.e-rumoi.jp/shisei/cat_00008.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.e-rumoi.jp/shisei/cat_00008.html",
@@ -52,16 +52,22 @@
           "observed_on": "https://www.e-rumoi.jp/shisei/cat_00008.html",
           "sha256": "60e3ddf316e37091c0c041aeb5a8e83e7d9f92254081c117fdd6cb32d3383c21",
           "fetched_at": "2026-08-27T10:29:03Z"
+        },
+        {
+          "url": "https://www.e-rumoi.jp/content/000081118.pdf",
+          "observed_on": "https://www.e-rumoi.jp/zaimu/zai_00007.html",
+          "sha256": "4d250d928c1952bdc74341d7adf890725b06a3126c3175abe07ec4eb0f99a1c3",
+          "fetched_at": "2026-08-27T13:25:37Z"
         }
       ],
-      "notes": "Observed budget link at https://www.e-rumoi.jp/shisei/cat_00008.html (label: 予算・財政) 入口 https://www.e-rumoi.jp/shisei/cat_00008.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（000081118.pdf「令和8年6月1日公表分 （PDFファイル : 606KB）」, sha256:4d250d92）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.e-rumoi.jp/zaimu/zai_00005.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.e-rumoi.jp/zaimu/zai_00005.html",
@@ -73,9 +79,15 @@
           "observed_on": "https://www.e-rumoi.jp/zaimu/zai_00005.html",
           "sha256": "59c5000093b6647b4d7530a4471302b3bc0430db3c41d32b3277fc7fcc4ae9bf",
           "fetched_at": "2026-08-27T10:29:04Z"
+        },
+        {
+          "url": "https://www.e-rumoi.jp/content/000078631.pdf",
+          "observed_on": "https://www.e-rumoi.jp/zaimu/zai_00005.html",
+          "sha256": "bdaf55b59f1aaf2bcada626150abcf4176dae5854f5a53c4dac2c35fe0b14cee",
+          "fetched_at": "2026-08-27T13:25:35Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.e-rumoi.jp/zaimu/zai_00005.html (label: 決算) 入口 https://www.e-rumoi.jp/zaimu/zai_00005.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（000078631.pdf「R6年度 （PDFファイル : 4.4MB）」, sha256:bdaf55b5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

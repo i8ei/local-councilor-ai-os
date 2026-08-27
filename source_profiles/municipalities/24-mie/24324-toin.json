@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www.town.toin.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.toin.lg.jp/gyosei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.toin.lg.jp/gyosei/gyozaisei/index.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.town.toin.lg.jp/gyosei/gyozaisei/index.html",
           "sha256": "cae320486ff7bae187eaab6087978f6de48e053ee6d4a8f81c39188520639368",
           "fetched_at": "2026-08-27T09:48:54Z"
+        },
+        {
+          "url": "https://www.town.toin.lg.jp/material/files/group/1/19.pdf",
+          "observed_on": "https://www.town.toin.lg.jp/gyosei/gyozaisei/2/3201.html",
+          "sha256": "aafe06b4c02d8be3e8ddb3430675736e5af88ee2cbd57588f2aa2b4ed4a8d9cd",
+          "fetched_at": "2026-08-27T13:39:07Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.toin.lg.jp/gyosei/gyozaisei/index.html (label: 行財政) 入口 https://www.town.toin.lg.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.toin.lg.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.toin.lg.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（19.pdf「第19回 (PDFファイル: 379.4KB)」, sha256:aafe06b4）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     },
     "settlement": {
       "status": "ready",

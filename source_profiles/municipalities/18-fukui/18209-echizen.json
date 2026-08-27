@@ -62,11 +62,11 @@
       "notes": "deepest_doc=P1。budget文書（27houshin.pdf「（PDF形式：90キロバイト）」, sha256:63bfa5f6）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T22:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html",
@@ -78,9 +78,15 @@
           "observed_on": "https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html",
           "sha256": "1a7f9ebe640282517c8b6b5d845ab059c9a1a2eeda505c1bcded330b50b21f32",
           "fetched_at": "2026-08-27T10:06:41Z"
+        },
+        {
+          "url": "https://www.city.echizen.lg.jp/office/030/060/kessan_d/fil/182095-echizenshi-2024.xlsx",
+          "observed_on": "https://www.city.echizen.lg.jp/office/030/060/kessan.html",
+          "sha256": "8765b381f8679778c3236496c4e1c97ef57dd7342a070bb2ad61cc72e2ce77a0",
+          "fetched_at": "2026-08-27T13:35:55Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（182095-echizenshi-2024.xlsx「R6_財政状況資料集（エクセル形式 558キロバイト）」, sha256:8765b381）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }
