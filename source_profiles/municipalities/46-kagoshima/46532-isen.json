@@ -48,11 +48,11 @@
       "notes": "Observed regulations index at http://www.town.isen.kagoshima.jp/mirai/chosejoho/reki-jore/index.html (label: 例規・条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
@@ -64,16 +64,22 @@
           "observed_on": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
           "sha256": "27fb2650dddb063e8361325c7b052e98f513a549aec8c5659773c3d9fdc96b68",
           "fetched_at": "2026-08-27T09:40:52Z"
+        },
+        {
+          "url": "http://www.town.isen.kagoshima.jp/documents/338/news1511335454_0.pdf",
+          "observed_on": "http://www.town.isen.kagoshima.jp/soumu/chosejoho/yosan-zaise/zaise/zaisejijo-h29.html",
+          "sha256": "90cedb9a49ebbca75edf3db09a22a835805a8c11e741f83a031494ec1e7a147a",
+          "fetched_at": "2026-08-27T13:47:50Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html (label: 予算・財政) 入口 http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（news1511335454_0.pdf「財政事情（平成29年度上半期）（PDF：580KB）」, sha256:90cedb9a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
@@ -85,9 +91,15 @@
           "observed_on": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
           "sha256": "27fb2650dddb063e8361325c7b052e98f513a549aec8c5659773c3d9fdc96b68",
           "fetched_at": "2026-08-27T09:40:52Z"
+        },
+        {
+          "url": "http://www.town.isen.kagoshima.jp/documents/338/news1511335454_0.pdf",
+          "observed_on": "http://www.town.isen.kagoshima.jp/soumu/chosejoho/yosan-zaise/zaise/zaisejijo-h29.html",
+          "sha256": "90cedb9a49ebbca75edf3db09a22a835805a8c11e741f83a031494ec1e7a147a",
+          "fetched_at": "2026-08-27T13:47:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html (label: 予算・財政) 入口 http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（news1511335454_0.pdf「財政事情（平成29年度上半期）（PDF：580KB）」, sha256:90cedb9a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

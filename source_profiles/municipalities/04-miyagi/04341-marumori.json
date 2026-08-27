@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.marumori.miyagi.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.marumori.miyagi.jp/detail.php?content=953",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.marumori.miyagi.jp/detail.php?content=953",
+          "observed_on": "http://www.town.marumori.miyagi.jp/town/detail.php?content=451",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.marumori.miyagi.jp/detail.php?content=953",
+          "observed_on": "http://www.town.marumori.miyagi.jp/detail.php?content=953",
+          "sha256": "723d14338b5f50146598b29262cd4bc669584862212a59fd9fdfc9da187b4d11",
+          "fetched_at": "2026-08-27T13:26:40Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

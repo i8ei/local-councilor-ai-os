@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.izunokuni.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html",
-      "verified_at": "2026-08-27T10:14:48Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.izunokuni.shizuoka.jp/gikai/shisei/gikai/gikaidayori.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html",
+          "url": "https://www.city.izunokuni.shizuoka.jp/gikai/shisei/gikai/gikaidayori.html",
           "observed_on": "http://www.city.izunokuni.shizuoka.jp/gikai/shisei/gikai/index.html",
-          "fetched_at": "2026-08-27T07:48:20Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html",
-          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
-          "fetched_at": "2026-08-27T10:14:48Z"
+          "url": "https://www.city.izunokuni.shizuoka.jp/gikai/shisei/gikai/gikaidayori.html",
+          "observed_on": "https://www.city.izunokuni.shizuoka.jp/gikai/shisei/gikai/gikaidayori.html",
+          "sha256": "aef08f8f6cd34a4210f1fb328dec183ba1b34a258c29e3eff1fc333ff6bccbe4",
+          "fetched_at": "2026-08-27T13:49:50Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/izunokuni/pg/index.html (label: 市議会議事録は「伊豆の国市議会会議録」ページをご覧ください。（外部サイトへリンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

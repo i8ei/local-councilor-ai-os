@@ -72,11 +72,11 @@
       "notes": "Observed finance section at https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html",
@@ -88,9 +88,15 @@
           "observed_on": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "43eeb633266ca62cb798f4c52db9d1a633d89ad626441f3bef0b133132ef1fe7",
           "fetched_at": "2026-08-27T09:41:57Z"
+        },
+        {
+          "url": "https://www.vill.tokashiki.okinawa.jp/material/files/group/1/zaiseijokyo.pdf",
+          "observed_on": "https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/1/2152.html",
+          "sha256": "f68d7b133e7e2d301a3980f5a6124ad78f5cdde32271479cbb0d27aa4ad1f500",
+          "fetched_at": "2026-08-27T13:48:25Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tokashiki.okinawa.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijokyo.pdf「令和5年度財政状況資料集 (PDFファイル: 1.2MB)」, sha256:f68d7b13）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

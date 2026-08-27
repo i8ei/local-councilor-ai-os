@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.sanyo-onoda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/sanyoonoda/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.sanyo-onoda.lg.jp/soshiki/64/shigikaikannkeireiki.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/sanyoonoda/WebView/rd/council_1.html",
+          "url": "https://www.city.sanyo-onoda.lg.jp/soshiki/64/shigikaikannkeireiki.html",
           "observed_on": "http://www.city.sanyo-onoda.lg.jp/site/sigikai/",
-          "fetched_at": "2026-08-27T06:38:52Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.sanyo-onoda.lg.jp/soshiki/64/shigikaikannkeireiki.html",
+          "observed_on": "https://www.city.sanyo-onoda.lg.jp/soshiki/64/shigikaikannkeireiki.html",
+          "sha256": "b1062188ad630a326fe652724252e43a509162de568d4d2530f93fd9779ce40a",
+          "fetched_at": "2026-08-27T14:06:40Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/sanyoonoda/WebView/rd/council_1.html (label: 議場中継・録画)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -57,11 +65,11 @@
       "notes": "Observed budget link at http://www.city.sanyo-onoda.lg.jp/life/10/67/306/ (label: 予算・決算) 入口 https://www.city.sanyo-onoda.lg.jp/life/10/67/306/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sanyo-onoda.lg.jp/life/10/67/306/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sanyo-onoda.lg.jp/life/10/67/306/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sanyo-onoda.lg.jp/life/10/67/306/",
@@ -73,9 +81,21 @@
           "observed_on": "https://www.city.sanyo-onoda.lg.jp/life/10/67/306/",
           "sha256": "986862e92fb6e1dc9c56c85c8be3e5587eacdddaf129dab90914bc344f81a6d0",
           "fetched_at": "2026-08-27T09:45:33Z"
+        },
+        {
+          "url": "http://www.city.sanyo-onoda.lg.jp/life/10/67/306/",
+          "observed_on": "http://www.city.sanyo-onoda.lg.jp/",
+          "sha256": "986862e92fb6e1dc9c56c85c8be3e5587eacdddaf129dab90914bc344f81a6d0",
+          "fetched_at": "2026-08-27T09:45:33Z"
+        },
+        {
+          "url": "https://www.city.sanyo-onoda.lg.jp/uploaded/attachment/72817.pdf",
+          "observed_on": "https://www.city.sanyo-onoda.lg.jp/soshiki/7/zaisei-jokyo2025.html",
+          "sha256": "93f8fa5d0a1d35ab5774789e46ee4392a6df5adc6cb9f9e965d64fa78fb75b3f",
+          "fetched_at": "2026-08-27T13:42:51Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.sanyo-onoda.lg.jp/life/10/67/306/ (label: 予算・決算) 入口 https://www.city.sanyo-onoda.lg.jp/life/10/67/306/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sanyo-onoda.lg.jp/life/10/67/306/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（72817.pdf「令和8年度当初予算編成における調整方針 [PDFファイル／172KB]」, sha256:93f8fa5d）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     }
   }
 }

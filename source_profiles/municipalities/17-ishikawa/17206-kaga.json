@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.kaga.ishikawa.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kaga.ishikawa.jp/gikai/kaigi/7035.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.kaga.ishikawa.jp/gikai/kaigi/7035.html",
+          "observed_on": "http://www.city.kaga.ishikawa.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.kaga.ishikawa.jp/gikai/kaigi/7035.html",
+          "observed_on": "https://www.city.kaga.ishikawa.jp/gikai/kaigi/7035.html",
+          "sha256": "e3c12875d6d21c7bf82579fa969c62c59d91628aaee628edd5184b251e3ca412",
+          "fetched_at": "2026-08-27T13:45:20Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

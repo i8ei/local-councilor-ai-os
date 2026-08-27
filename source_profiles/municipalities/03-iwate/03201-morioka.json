@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.morioka.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.morioka.iwate.jp/shisei/shigikai/shigikaidayori/1055515/1056302.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.morioka.iwate.jp/shisei/shigikai/shigikaidayori/1055515/1056302.html",
+          "observed_on": "https://www.city.morioka.iwate.jp/shisei/shigikai/shigikaidayori/1055515/1057947.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.morioka.iwate.jp/shisei/shigikai/shigikaidayori/1055515/1056302.html",
+          "observed_on": "https://www.city.morioka.iwate.jp/shisei/shigikai/shigikaidayori/1055515/1056302.html",
+          "sha256": "ab3e5f193f9e5df37f768920e493337a6e77e91f69c3c0aef6d22881dcaf10c4",
+          "fetched_at": "2026-08-27T13:25:59Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

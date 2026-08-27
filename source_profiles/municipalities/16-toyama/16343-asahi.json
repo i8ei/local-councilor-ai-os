@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/asahi.toyama/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html",
           "sha256": "e89ee17d025a794b63b5ba49985ec6d1381209d7a8d2f639f5c746693127f213",
           "fetched_at": "2026-08-27T10:06:08Z"
+        },
+        {
+          "url": "https://www.town.asahi.toyama.jp/material/files/group/2/111.pdf",
+          "observed_on": "https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/1793.html",
+          "sha256": "0243732bedc9ae6b412f61be6b186fd6afbe3d0926661a92cd11a16910c6b681",
+          "fetched_at": "2026-08-27T13:35:32Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html (label: 予算) 入口 https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.asahi.toyama.jp/chosei/gyosei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（111.pdf「平成31年度予算（PDF：350.6KB） (PDFファイル: 350.7KB)」, sha256:0243732b）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

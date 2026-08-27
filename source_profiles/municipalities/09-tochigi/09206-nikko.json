@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.nikko.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/nikko/pg/index.html",
-      "verified_at": "2026-08-27T10:18:02Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.nikko.lg.jp/gikai/gikaikatsudo/2/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/nikko/pg/index.html",
+          "url": "https://www.city.nikko.lg.jp/gikai/gikaikatsudo/2/index.html",
           "observed_on": "https://www.city.nikko.lg.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:18:48Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/nikko/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/nikko/pg/index.html",
-          "sha256": "a2db850e06a2ec9735543b4ed91bfff88a265110bcbac535a698f0af08f06ca3",
-          "fetched_at": "2026-08-27T10:18:03Z"
+          "url": "https://www.city.nikko.lg.jp/gikai/gikaikatsudo/2/index.html",
+          "observed_on": "https://www.city.nikko.lg.jp/gikai/gikaikatsudo/2/index.html",
+          "sha256": "ad19c7e1a51ff72f13f09ad102653d49827cae0df1db27070d80ceb820008d01",
+          "fetched_at": "2026-08-27T13:31:01Z"
+        },
+        {
+          "url": "https://www.city.nikko.lg.jp/gikai/gikaikatsudo/2/10069.html",
+          "observed_on": "https://www.city.nikko.lg.jp/gikai/gikaikatsudo/2/index.html",
+          "sha256": "981a32c5947f4b369b38c0e65f3b046659f6f754de3bd782d5b0cadc901ba903",
+          "fetched_at": "2026-08-27T13:38:26Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/nikko/pg/index.html (label: 日光市議会「会議録」) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

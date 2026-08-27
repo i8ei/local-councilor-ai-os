@@ -6,19 +6,37 @@
   "official_home_url": "https://www.town.taga.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.taga.lg.jp/choseijoho/tagachogikai/1/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.taga.lg.jp/choseijoho/tagachogikai/1/index.html",
           "observed_on": "https://www.town.taga.lg.jp/choseijoho/index.html",
           "fetched_at": "2026-08-27T06:13:33Z"
+        },
+        {
+          "url": "https://www.town.taga.lg.jp/choseijoho/tagachogikai/1/index.html",
+          "observed_on": "https://www.town.taga.lg.jp/choseijoho/tagachogikai/1/index.html",
+          "sha256": "fa3510947fb875b0069567f16a6503f66bae05315efe0e1208fd2dffe32eb6be",
+          "fetched_at": "2026-08-27T09:49:42Z"
+        },
+        {
+          "url": "https://www.town.taga.lg.jp/choseijoho/tagachogikai/1/2184.html",
+          "observed_on": "https://www.town.taga.lg.jp/choseijoho/tagachogikai/1/index.html",
+          "sha256": "c49ca3e937d1fb7ce60ea095cfce44cd77f00f24c93c5ddcb8b6cb987e54ae22",
+          "fetched_at": "2026-08-27T14:00:46Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.taga.lg.jp/choseijoho/tagachogikai/1/index.html (label: 会議録)"
+      "notes": "Observed council minutes index at https://www.town.taga.lg.jp/choseijoho/tagachogikai/1/index.html (label: 会議録)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +81,11 @@
       "notes": "Observed budget link at https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html (label: 財政・予算・決算) 入口 https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html",
@@ -79,9 +97,15 @@
           "observed_on": "https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html",
           "sha256": "44ee3dc273b5955b77e1215e37ab7c72e94f74c2c0b33427351329adcd9ec257",
           "fetched_at": "2026-08-27T09:49:44Z"
+        },
+        {
+          "url": "https://www.town.taga.lg.jp/material/files/group/3/H26gaiyou.pdf",
+          "observed_on": "https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/1292.html",
+          "sha256": "79c7631feb081170a022f0918acb9998d8120dad410e4a28dbaba6ac32914efd",
+          "fetched_at": "2026-08-27T13:39:35Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html (label: 財政・予算・決算) 入口 https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taga.lg.jp/choseijoho/gyozaisei/4/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H26gaiyou.pdf「平成26年度決算の概要 (PDFファイル: 1.3MB)」, sha256:79c7631f）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

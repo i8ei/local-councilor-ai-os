@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.yabuki.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.yabuki.fukushima.jp/page/page002490.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.yabuki.fukushima.jp/page/page011672.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.yabuki.fukushima.jp/page/page002490.html",
-          "observed_on": "http://www.town.yabuki.fukushima.jp/page/dir000056.html",
-          "fetched_at": "2026-08-27T08:06:25Z"
+          "url": "https://www.town.yabuki.fukushima.jp/page/page011672.html",
+          "observed_on": "https://www.town.yabuki.fukushima.jp/page/dir000841.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.yabuki.fukushima.jp/page/page011672.html",
+          "observed_on": "https://www.town.yabuki.fukushima.jp/page/page011672.html",
+          "sha256": "abe8e62e91aeef1e578a490b0ba5ebcb328fa5e2b12802ca45e2c37453155ef0",
+          "fetched_at": "2026-08-27T13:28:28Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.yabuki.fukushima.jp/page/page002490.html (label: 矢吹町議会本会議録画配信システム)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

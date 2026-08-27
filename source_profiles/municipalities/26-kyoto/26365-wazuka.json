@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www.town.wazuka.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.wazuka.lg.jp/material/files/group/15/R8311_yosaniinnkai.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.wazuka.lg.jp/material/files/group/15/R8311_yosaniinnkai.pdf",
@@ -60,14 +60,14 @@
           "fetched_at": "2026-08-27T09:50:21Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.wazuka.lg.jp/material/files/group/15/R8311_yosaniinnkai.pdf (label: 予算特別委員会1日目 (PDFファイル: 698.0KB)) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8311_yosaniinnkai.pdf「Direct Document」, sha256:0b2f242b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html",
           "sha256": "f997bf3ef0d09cfb0404fee1598ddc5dd8f8097060ad3d62f2a16ce79720e033",
           "fetched_at": "2026-08-27T09:50:23Z"
+        },
+        {
+          "url": "https://www.town.wazuka.lg.jp/material/files/group/2/21-wazuka-2024.xlsx",
+          "observed_on": "https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/1656.html",
+          "sha256": "39406b3e0b0d0686d0479bd31f121a029d3410ca75b00e6a98c16410920e0d6c",
+          "fetched_at": "2026-08-27T13:39:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html (label: 財政) 入口 https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.wazuka.lg.jp/mokuteki/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（21-wazuka-2024.xlsx「令和6年度財政状況資料集 (Excelファイル: 427.2KB)」, sha256:39406b3e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

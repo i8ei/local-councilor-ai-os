@@ -56,11 +56,11 @@
       "notes": "Observed budget link at https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html (label: 予算・決算・財政状況) 入口 https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html",
           "sha256": "5ec5946442caa2dec657f8e795ef81ba52d18ce71adcefd71b437d6b22009c12",
           "fetched_at": "2026-08-27T10:25:24Z"
+        },
+        {
+          "url": "https://www.vill.chosei.chiba.jp/cmsfiles/contents/0000002/2642/R6ippan.pdf",
+          "observed_on": "https://www.vill.chosei.chiba.jp/0000002642.html",
+          "sha256": "3d8812d5e4864eb61baa4c75d041ff7c681f6b7387e2646ff18d813ff57e40c9",
+          "fetched_at": "2026-08-27T13:33:13Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html (label: 予算・決算・財政状況) 入口 https://www.vill.chosei.chiba.jp/soshiki/2-0-0-0-0_5.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6ippan.pdf「令和6年度一般会計 (PDF形式、1.48MB)」, sha256:3d8812d5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

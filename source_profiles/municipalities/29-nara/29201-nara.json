@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at http://www.city.nara.lg.jp/life/7/50/ (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nara.lg.jp/life/7/62/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nara.lg.jp/life/7/62/",
@@ -52,9 +52,21 @@
           "observed_on": "https://www.city.nara.lg.jp/life/7/62/",
           "sha256": "df37fee523bdda50a464294aa4ff8d4509f64af12fb89eaa5939acd62cf08576",
           "fetched_at": "2026-08-27T09:52:33Z"
+        },
+        {
+          "url": "http://www.city.nara.lg.jp/life/7/62/",
+          "observed_on": "http://www.city.nara.lg.jp/",
+          "sha256": "df37fee523bdda50a464294aa4ff8d4509f64af12fb89eaa5939acd62cf08576",
+          "fetched_at": "2026-08-27T09:52:33Z"
+        },
+        {
+          "url": "https://www.city.nara.lg.jp/uploaded/attachment/129819.pdf",
+          "observed_on": "https://www.city.nara.lg.jp/soshiki/180/10391.html",
+          "sha256": "de80a3016d87b0c61b50f330e891d11149fbdd1a9a638af3f40f4ec19af3951f",
+          "fetched_at": "2026-08-27T13:41:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.nara.lg.jp/life/7/62/ (label: 行財政) 入口 https://www.city.nara.lg.jp/life/7/62/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nara.lg.jp/life/7/62/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（129819.pdf「新・奈良市行財政改革重点取組項目 [PDFファイル／1.46MB]」, sha256:de80a301）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

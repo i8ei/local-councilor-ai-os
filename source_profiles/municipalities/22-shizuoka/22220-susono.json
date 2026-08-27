@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.susono.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.susono.shizuoka.jp/shisei/2/1/3420.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.susono.shizuoka.jp/shisei/2/1/3420.html",
+          "observed_on": "http://www.city.susono.shizuoka.jp/shisei/2/1/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.susono.shizuoka.jp/shisei/2/1/3420.html",
+          "observed_on": "https://www.city.susono.shizuoka.jp/shisei/2/1/3420.html",
+          "sha256": "a78ae08977a5b3ac509b8dac7bdcc18b98a0630fda3ffc3a6c3d85de9123b101",
+          "fetched_at": "2026-08-27T13:49:58Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

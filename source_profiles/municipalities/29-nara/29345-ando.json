@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.ando.nara.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.ando.nara.jp/category/10-6-2-0-0-0-0-0-0-0.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.ando.nara.jp/category/10-6-2-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.ando.nara.jp/category/10-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.ando.nara.jp/category/10-6-2-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.ando.nara.jp/category/10-6-2-0-0-0-0-0-0-0.html",
+          "sha256": "621eeb1f678d5e3a5ae80b8e75a419f4a0195a41b5984115ded70433cfce54d1",
+          "fetched_at": "2026-08-27T14:03:57Z"
+        },
+        {
+          "url": "https://www.town.ando.nara.jp/0000003930.html",
+          "observed_on": "https://www.town.ando.nara.jp/category/10-6-2-0-0-0-0-0-0-0.html",
+          "sha256": "e81f4c504571aaa32413f52fc6386ac2760d73e2c36f6ae465a6dd5b1dd97daa",
+          "fetched_at": "2026-08-27T14:03:58Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +74,11 @@
       "notes": "Observed budget link at http://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html (label: 予算・決算・財政状況) 入口 https://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html",
@@ -66,9 +90,21 @@
           "observed_on": "https://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html",
           "sha256": "23fd78a85afdaecb72b2c67cbc8e1877bc55f869eedbf724ed955c6fd702c93a",
           "fetched_at": "2026-08-27T09:52:53Z"
+        },
+        {
+          "url": "http://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.ando.nara.jp/",
+          "sha256": "23fd78a85afdaecb72b2c67cbc8e1877bc55f869eedbf724ed955c6fd702c93a",
+          "fetched_at": "2026-08-27T09:52:53Z"
+        },
+        {
+          "url": "https://www.town.ando.nara.jp/cmsfiles/contents/0000000/41/SAI01_293458_2007_1045[1].pdf",
+          "observed_on": "https://www.town.ando.nara.jp/0000000041.html",
+          "sha256": "5accd9c6c15c1c6f166ba13fbffb0c94ceaf84de1b81ba81583ce69d10ba3932",
+          "fetched_at": "2026-08-27T13:41:34Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html (label: 予算・決算・財政状況) 入口 https://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ando.nara.jp/category/4-15-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（SAI01_293458_2007_1045[1].pdf「(ファイル名:SAI01_293458_2007_1045[1].pdf サイズ:26.67 KB)」, sha256:5accd9c6）にて構造マーカー（歳入・歳出・実質収支等）を確認済み。"
     }
   }
 }

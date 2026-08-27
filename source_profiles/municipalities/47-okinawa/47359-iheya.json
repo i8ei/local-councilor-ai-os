@@ -6,19 +6,36 @@
   "official_home_url": "http://www.vill.iheya.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.vill.iheya.okinawa.jp/site/sanngyou/2653.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.vill.iheya.okinawa.jp/site/gikai-subsaite/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www.vill.iheya.okinawa.jp/site/sanngyou/2653.html",
-          "observed_on": "http://www.vill.iheya.okinawa.jp/site/sanngyou/",
-          "fetched_at": "2026-08-27T06:59:34Z"
+          "url": "https://www.vill.iheya.okinawa.jp/site/gikai-subsaite/",
+          "observed_on": "http://www.vill.iheya.okinawa.jp/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.vill.iheya.okinawa.jp/site/gikai-subsaite/",
+          "observed_on": "https://www.vill.iheya.okinawa.jp/site/gikai-subsaite/",
+          "sha256": "89d933fcf1b735995fce350b60cb0775816449b9071a378a55852480b027ad2b",
+          "fetched_at": "2026-08-27T14:12:57Z"
+        },
+        {
+          "url": "https://www.vill.iheya.okinawa.jp/site/gikai-subsaite/3649.html",
+          "observed_on": "https://www.vill.iheya.okinawa.jp/site/gikai-subsaite/",
+          "sha256": "e5f8e2a345429f3b88375f1a54c550d821ab6c18e9221c6e477ef45c468040de",
+          "fetched_at": "2026-08-27T14:12:58Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.vill.iheya.okinawa.jp/site/sanngyou/2653.html (label: 第5回伊平屋村産業経済活性化協議会の議事録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -42,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/iheya/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.iheya.okinawa.jp/life/5/25/107/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.iheya.okinawa.jp/life/5/25/107/",
@@ -58,9 +75,21 @@
           "observed_on": "https://www.vill.iheya.okinawa.jp/life/5/25/107/",
           "sha256": "370bc4dc6171dbcaeb1ea830989b1c5c037af1edcbd1d128d2611e0173938339",
           "fetched_at": "2026-08-27T09:42:10Z"
+        },
+        {
+          "url": "http://www.vill.iheya.okinawa.jp/life/5/25/107/",
+          "observed_on": "http://www.vill.iheya.okinawa.jp/",
+          "sha256": "370bc4dc6171dbcaeb1ea830989b1c5c037af1edcbd1d128d2611e0173938339",
+          "fetched_at": "2026-08-27T09:42:10Z"
+        },
+        {
+          "url": "https://www.vill.iheya.okinawa.jp/uploaded/attachment/516.pdf",
+          "observed_on": "https://www.vill.iheya.okinawa.jp/soshiki/3/1328.html",
+          "sha256": "83e5f7c8300986091d9a283f8ee4b983a3b7d0048740c160fce2badee9a1863e",
+          "fetched_at": "2026-08-27T13:48:27Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.iheya.okinawa.jp/life/5/25/107/ (label: 予算) 入口 https://www.vill.iheya.okinawa.jp/life/5/25/107/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.iheya.okinawa.jp/life/5/25/107/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（516.pdf「令和6年度予算編成方針」, sha256:83e5f7c8）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

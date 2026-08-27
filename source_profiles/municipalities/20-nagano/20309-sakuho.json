@@ -63,11 +63,11 @@
       "notes": "Observed finance section at http://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei (label: 財政) 入口 https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/",
           "sha256": "af14f420d5b4101aacf5ed7f38d2ec5a7e1cd8da9ae1b37950dde7874c7c226c",
           "fetched_at": "2026-08-27T10:09:49Z"
+        },
+        {
+          "url": "http://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei",
+          "observed_on": "http://www.town.sakuho.nagano.jp/",
+          "sha256": "af14f420d5b4101aacf5ed7f38d2ec5a7e1cd8da9ae1b37950dde7874c7c226c",
+          "fetched_at": "2026-08-27T10:09:49Z"
+        },
+        {
+          "url": "https://www.town.sakuho.nagano.jp/assets/2024/09/26/%E4%BB%A4%E5%92%8C5%E5%B9%B4%E5%BA%A6%E6%B1%BA%E7%AE%97_HP%E7%94%A8.pdf",
+          "observed_on": "https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/sogoseisaku_7399.html",
+          "sha256": "70675c5b2689a684ec484d47c0a1ade601db7c877f0e34fde6ea5a2fc899853b",
+          "fetched_at": "2026-08-27T13:36:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei (label: 財政) 入口 https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.sakuho.nagano.jp/choseijoho/gyoseijoho/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E4%BB%A4%E5%92%8C5%E5%B9%B4%E5%BA%A6%E6%B1%BA%E7%AE%97_HP%E7%94%A8.pdf「令和5年度 歳入歳出決算.pdf」, sha256:70675c5b）にて構造マーカー（歳入・歳出・節・実質収支等）を確認済み。"
     }
   }
 }

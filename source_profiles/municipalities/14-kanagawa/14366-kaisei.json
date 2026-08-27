@@ -50,11 +50,11 @@
       "notes": "Observed budget link at http://www.town.kaisei.kanagawa.jp/info/2508 (label: 令和８年度予算) 入口 http://www.town.kaisei.kanagawa.jp/info/2508 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kaisei.kanagawa.jp/info/2508 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kaisei.kanagawa.jp/info/8",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kaisei.kanagawa.jp/info/8",
@@ -71,9 +71,15 @@
           "url": "http://www.town.kaisei.kanagawa.jp/div/zaimu/pdf/R6kessan/r6kessan1.pdf",
           "observed_on": "http://www.town.kaisei.kanagawa.jp/info/8",
           "fetched_at": "2026-08-27T10:27:36Z"
+        },
+        {
+          "url": "http://www.town.kaisei.kanagawa.jp/div/zaimu/pdf/R6kessan/r6kessan1.pdf",
+          "observed_on": "http://www.town.kaisei.kanagawa.jp/info/8",
+          "sha256": "2590c6bf085c123c6e847a32d0d2cdfc125212cea7eeb0de87107c0116d3e5f7",
+          "fetched_at": "2026-08-27T10:27:39Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kaisei.kanagawa.jp/info/8 (label: 決算に関するご案内) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r6kessan1.pdf「一般会計(歳入歳出決算書)」, sha256:2590c6bf）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

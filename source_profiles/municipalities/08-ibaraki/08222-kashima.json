@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.kashima.ibaraki.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/kashima/pg/index.html",
-      "verified_at": "2026-08-27T10:17:32Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kashima.ibaraki.jp/site/19gikai",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/kashima/pg/index.html",
+          "url": "https://www.city.kashima.ibaraki.jp/site/19gikai",
           "observed_on": "http://www.city.kashima.ibaraki.jp/site/19gikai/",
-          "fetched_at": "2026-08-27T06:05:02Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/kashima/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/kashima/pg/index.html",
-          "sha256": "e775be2d76b84be31ee0f1d0af5547cea66b9ce83a0d5df9d2a87b98f54b316c",
-          "fetched_at": "2026-08-27T10:17:33Z"
+          "url": "https://www.city.kashima.ibaraki.jp/site/19gikai",
+          "observed_on": "https://www.city.kashima.ibaraki.jp/site/19gikai",
+          "sha256": "fea414b85e62d97868cc63465706afb9e901e1e978a9bd8b12f1fa6e6908f9d2",
+          "fetched_at": "2026-08-27T13:38:38Z"
+        },
+        {
+          "url": "https://www.city.kashima.ibaraki.jp/site/19gikai/90056.html",
+          "observed_on": "https://www.city.kashima.ibaraki.jp/site/19gikai",
+          "sha256": "86cab68c7a556f13baea06fd7018e31dc03984764a82b5a0924555f4b977b241",
+          "fetched_at": "2026-08-27T13:38:39Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kashima/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

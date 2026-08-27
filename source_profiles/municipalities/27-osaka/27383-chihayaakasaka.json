@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.chihayaakasaka.osaka.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.chihayaakasaka.osaka.jp/kakuka/gikai/2_1/458.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.chihayaakasaka.osaka.jp/kakuka/gikai/2_1/458.html",
+          "observed_on": "https://www.vill.chihayaakasaka.osaka.jp/kakuka/gikai/2_1/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.vill.chihayaakasaka.osaka.jp/kakuka/gikai/2_1/458.html",
+          "observed_on": "https://www.vill.chihayaakasaka.osaka.jp/kakuka/gikai/2_1/458.html",
+          "sha256": "5579fc4533a0e16ad042f3eb491791d4f1dfde58070f8eeba84d076baf62e8d4",
+          "fetched_at": "2026-08-27T14:02:49Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

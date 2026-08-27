@@ -69,11 +69,11 @@
       "notes": "Observed finance section at https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05 (label: 財政) 入口 https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05",
           "sha256": "bdd3f7e259cb067064ada6771d601209d0f0509c9230a15d7925df040f44616d",
           "fetched_at": "2026-08-27T09:40:07Z"
+        },
+        {
+          "url": "https://www.vill.nishimera.lg.jp/village/wp-content/uploads/2025/09/78f2f23a12fbecc9819014e9cb4beb9c-2.xlsx",
+          "observed_on": "https://www.vill.nishimera.lg.jp/village/c-00-admininfo/10001710",
+          "sha256": "fa83bc8fe4f45300817ed711d90f2b0ae5f1d364eb66c9839987cbb82b7a7f3f",
+          "fetched_at": "2026-08-27T13:47:16Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05 (label: 財政) 入口 https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.nishimera.lg.jp/village/category/c-00-admininfo/c-05 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（78f2f23a12fbecc9819014e9cb4beb9c-2.xlsx「西米良村財政状況資料集（令和６年度）」, sha256:fa83bc8f）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

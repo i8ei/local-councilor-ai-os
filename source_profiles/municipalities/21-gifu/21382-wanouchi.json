@@ -69,11 +69,11 @@
       "notes": "Observed finance section at https://town.wanouchi.gifu.jp/portal/town/finance/ (label: 財政) 入口 https://town.wanouchi.gifu.jp/portal/town/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://town.wanouchi.gifu.jp/portal/town/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://town.wanouchi.gifu.jp/portal/town/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://town.wanouchi.gifu.jp/portal/town/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://town.wanouchi.gifu.jp/portal/town/finance/",
@@ -85,9 +85,15 @@
           "observed_on": "https://town.wanouchi.gifu.jp/portal/town/finance/",
           "sha256": "022ff620e0973c5a2758173e775fa47577f9e89a0e985f517587143f085560bb",
           "fetched_at": "2026-08-27T10:14:00Z"
+        },
+        {
+          "url": "https://town.wanouchi.gifu.jp/wp-content/uploads/R6-zaiseizyoukyou-shiryou.xlsx",
+          "observed_on": "https://town.wanouchi.gifu.jp/portal/town/finance/post0046727/",
+          "sha256": "bcec3c8bdd3d39f3bb2190aceedb2576125619ae777af3ee99386263a5a2595f",
+          "fetched_at": "2026-08-27T13:37:17Z"
         }
       ],
-      "notes": "Observed finance section at https://town.wanouchi.gifu.jp/portal/town/finance/ (label: 財政) 入口 https://town.wanouchi.gifu.jp/portal/town/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://town.wanouchi.gifu.jp/portal/town/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://town.wanouchi.gifu.jp/portal/town/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6-zaiseizyoukyou-shiryou.xlsx「財政状況資料集(令和6年度)」, sha256:bcec3c8b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

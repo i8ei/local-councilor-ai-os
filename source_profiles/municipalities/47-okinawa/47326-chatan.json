@@ -6,25 +6,36 @@
   "official_home_url": "http://www.chatan.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/chatan/pg/index.html",
-      "verified_at": "2026-08-27T09:41:43Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.chatan.jp/chogikai/gikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/chatan/pg/index.html",
+          "url": "https://www.chatan.jp/chogikai/gikaidayori/index.html",
           "observed_on": "http://www.chatan.jp/chogikai/index.html",
-          "fetched_at": "2026-08-27T06:55:05Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/chatan/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/chatan/pg/index.html",
-          "sha256": "05788e3de8088a1268db21bac969a0a9168e3f2764c130cfda60c71e667e6ca6",
-          "fetched_at": "2026-08-27T09:41:47Z"
+          "url": "https://www.chatan.jp/chogikai/gikaidayori/index.html",
+          "observed_on": "https://www.chatan.jp/chogikai/gikaidayori/index.html",
+          "sha256": "2dad56f5b0c5ad950fc47aa1cf4cd79004bb08c695be559b7feb686e53c186fd",
+          "fetched_at": "2026-08-27T14:12:35Z"
+        },
+        {
+          "url": "https://www.chatan.jp/chogikai/gikaidayori/gikaidayori2.html",
+          "observed_on": "https://www.chatan.jp/chogikai/gikaidayori/index.html",
+          "sha256": "19dccdb7a1d21cd53fc6f8e9aceae458c6f33405f042afd417c3379649cfe651",
+          "fetched_at": "2026-08-27T14:12:36Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chatan/pg/index.html (label: 会議録検索（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -48,11 +59,11 @@
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/chatan/reiki_menu.html for 北谷町"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.chatan.jp/choseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.chatan.jp/choseijoho/zaisei/index.html",
@@ -64,9 +75,21 @@
           "observed_on": "https://www.chatan.jp/choseijoho/zaisei/index.html",
           "sha256": "53e957a34932320180cb28253ddb36abd0f85809354ac5b5b7cf44fa482a6907",
           "fetched_at": "2026-08-27T09:41:54Z"
+        },
+        {
+          "url": "http://www.chatan.jp/choseijoho/zaisei/index.html",
+          "observed_on": "http://www.chatan.jp/",
+          "sha256": "53e957a34932320180cb28253ddb36abd0f85809354ac5b5b7cf44fa482a6907",
+          "fetched_at": "2026-08-27T09:41:54Z"
+        },
+        {
+          "url": "https://www.chatan.jp/choseijoho/zaisei/chatan_town_finance/ippankaikeiyosan.files/R8tousyoyosan.pdf",
+          "observed_on": "https://www.chatan.jp/choseijoho/zaisei/chatan_town_finance/ippankaikeiyosan.html",
+          "sha256": "b27dfae26d6942492c545a5e46e2d913530ce44468cfcf3cff4f43bdbee4bd3d",
+          "fetched_at": "2026-08-27T13:48:17Z"
         }
       ],
-      "notes": "Observed finance section at http://www.chatan.jp/choseijoho/zaisei/index.html (label: 財政) 入口 https://www.chatan.jp/choseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.chatan.jp/choseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.chatan.jp/choseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyoyosan.pdf「令和8年度北谷町一般会計予算（PDF：1,498KB）」, sha256:b27dfae2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.nantan.kyoto.jp/www/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://smart.discussvision.net/smart/tenant/nantan/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.nantan.kyoto.jp/www/gove/144/001/000/index_9392.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://smart.discussvision.net/smart/tenant/nantan/WebView/rd/council.html",
+          "url": "https://www.city.nantan.kyoto.jp/www/gove/144/001/000/index_9392.html",
           "observed_on": "http://www.city.nantan.kyoto.jp/www/gove/144/001/000/index_9392.html",
-          "fetched_at": "2026-08-27T06:20:47Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.nantan.kyoto.jp/www/gove/144/001/000/index_9392.html",
+          "observed_on": "https://www.city.nantan.kyoto.jp/www/gove/144/001/000/index_9392.html",
+          "sha256": "7a4cb4a3e6f78c2e788a94d1796af17bdadc2dadf1e8f649887fc4024106c1d5",
+          "fetched_at": "2026-08-27T14:01:13Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/nantan/WebView/rd/council.html (label: 映像配信)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",
@@ -29,11 +37,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
@@ -45,9 +53,21 @@
           "observed_on": "https://www.city.nantan.kyoto.jp/www/gove/138/index.html",
           "sha256": "39a1e595e5e48eb17c11d22d7130b0c25d32812b28bb3e07c257790838e1e015",
           "fetched_at": "2026-08-27T09:50:08Z"
+        },
+        {
+          "url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
+          "observed_on": "http://www.city.nantan.kyoto.jp/www/",
+          "sha256": "39a1e595e5e48eb17c11d22d7130b0c25d32812b28bb3e07c257790838e1e015",
+          "fetched_at": "2026-08-27T09:50:08Z"
+        },
+        {
+          "url": "https://www.city.nantan.kyoto.jp/www/gove/138/003/000/1017719/1017753_1_501_6.xlsx",
+          "observed_on": "https://www.city.nantan.kyoto.jp/www/gove/138/003/000/index_1017719.html",
+          "sha256": "11f59d35334aaffeb8eb4d549e517718956c1b37391a1aaf0cd930b1d7de34c6",
+          "fetched_at": "2026-08-27T13:39:44Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.nantan.kyoto.jp/www/gove/138/index.html (label: 財政) 入口 https://www.city.nantan.kyoto.jp/www/gove/138/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nantan.kyoto.jp/www/gove/138/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nantan.kyoto.jp/www/gove/138/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1017753_1_501_6.xlsx「財政状況資料集（Ｒ６）」, sha256:11f59d35）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

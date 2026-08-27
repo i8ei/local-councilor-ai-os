@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city-nakatsu.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city-nakatsu.jp/categories/gikai/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city-nakatsu.jp/categories/gikai/",
+          "observed_on": "http://www.city-nakatsu.jp/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city-nakatsu.jp/categories/gikai/",
+          "observed_on": "https://www.city-nakatsu.jp/categories/gikai/",
+          "sha256": "bf1cd2dda4f0fae6772046075a5d3d0436ee58c2598028ba1c64f960d8cb9f58",
+          "fetched_at": "2026-08-27T14:10:28Z"
+        },
+        {
+          "url": "https://www.city-nakatsu.jp/gikai/2026050100017/",
+          "observed_on": "https://www.city-nakatsu.jp/categories/gikai/",
+          "sha256": "707c2aaeb5e072e173690c417114fac1d079927509f1fb928b4b9ca707fd100e",
+          "fetched_at": "2026-08-27T14:10:28Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +74,11 @@
       "notes": "Observed finance section at http://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/ (label: 市の財政状況) 入口 https://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/",
@@ -66,9 +90,21 @@
           "observed_on": "https://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/",
           "sha256": "257c3916a98bb5369089bb2feb47a31734515a1e581898df29ed08905587cd8a",
           "fetched_at": "2026-08-27T09:39:11Z"
+        },
+        {
+          "url": "http://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/",
+          "observed_on": "http://www.city-nakatsu.jp/",
+          "sha256": "257c3916a98bb5369089bb2feb47a31734515a1e581898df29ed08905587cd8a",
+          "fetched_at": "2026-08-27T09:39:11Z"
+        },
+        {
+          "url": "https://www.city-nakatsu.jp/doc/2026050100031/file_contents/file_202651592218_1.pdf",
+          "observed_on": "https://www.city-nakatsu.jp/doc/2026050100031/",
+          "sha256": "a564789facec3fd4f8c4495a6466f1a062fd86c475ebdce52c1df51a923f7d3e",
+          "fetched_at": "2026-08-27T13:46:52Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/ (label: 市の財政状況) 入口 https://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city-nakatsu.jp/categories/bunya/gyoseikeikaku/zaiseikanren/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（file_202651592218_1.pdf「一般会計（令和8年5月1日）[PDF：154KB]」, sha256:a564789f）にて構造マーカー（歳入・歳出・収入済額等）を確認済み。"
     }
   }
 }

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.uji.kyoto.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/uji/pg/index.html",
-      "verified_at": "2026-08-27T09:49:48Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.uji.kyoto.jp/site/gikaijimukyoku/103906.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/uji/pg/index.html",
+          "url": "https://www.city.uji.kyoto.jp/site/gikaijimukyoku/103906.html",
           "observed_on": "http://www.city.uji.kyoto.jp/site/gikaijimukyoku/",
-          "fetched_at": "2026-08-27T06:15:23Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/uji/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/uji/pg/index.html",
-          "sha256": "7432c44e2b18fd3c94d80112dde4c49dca102ff18e72e1129369942c3a00733d",
-          "fetched_at": "2026-08-27T09:49:50Z"
+          "url": "https://www.city.uji.kyoto.jp/site/gikaijimukyoku/103906.html",
+          "observed_on": "https://www.city.uji.kyoto.jp/site/gikaijimukyoku/103906.html",
+          "sha256": "46c20795e02c68f763c264260490f70a2fb3af8eeb584e48010de84e42336d90",
+          "fetched_at": "2026-08-27T14:01:06Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/uji/pg/index.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

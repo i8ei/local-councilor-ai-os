@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.higashiosaka.lg.jp/category/20-14-0-0-0-0-0-0-0-0.html (label: 法令・条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html",
@@ -58,16 +58,28 @@
           "observed_on": "https://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html",
           "sha256": "da18aae46fa11e0feb34aa1099d8e0cbe421a43ed8747f38c7a3760a7515de28",
           "fetched_at": "2026-08-27T09:51:05Z"
+        },
+        {
+          "url": "http://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.higashiosaka.lg.jp/",
+          "sha256": "da18aae46fa11e0feb34aa1099d8e0cbe421a43ed8747f38c7a3760a7515de28",
+          "fetched_at": "2026-08-27T09:51:05Z"
+        },
+        {
+          "url": "https://www.city.higashiosaka.lg.jp/cmsfiles/contents/0000000/529/R8yosan_H6_I_1.pdf",
+          "observed_on": "https://www.city.higashiosaka.lg.jp/0000000529.html",
+          "sha256": "05ee88bc5e2a2eaef81e3b05d06d7146cd5451fa2ab6dea722d2635c2601e8ed",
+          "fetched_at": "2026-08-27T13:40:19Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html (label: 市の財政・市有財産) 入口 https://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosan_H6_I_1.pdf「一般会計予算書 (PDF形式、186.18KB) 別ウィンドウで開きます」, sha256:05ee88bc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html",
@@ -79,9 +91,21 @@
           "observed_on": "https://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html",
           "sha256": "da18aae46fa11e0feb34aa1099d8e0cbe421a43ed8747f38c7a3760a7515de28",
           "fetched_at": "2026-08-27T09:51:05Z"
+        },
+        {
+          "url": "http://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.higashiosaka.lg.jp/",
+          "sha256": "da18aae46fa11e0feb34aa1099d8e0cbe421a43ed8747f38c7a3760a7515de28",
+          "fetched_at": "2026-08-27T09:51:05Z"
+        },
+        {
+          "url": "https://www.city.higashiosaka.lg.jp/cmsfiles/contents/0000000/532/R6_kessancard.pdf",
+          "observed_on": "https://www.city.higashiosaka.lg.jp/0000000532.html",
+          "sha256": "03bdf4fbf6e23c3070c86408943d1b75b3900fe6fd1adb779d21645e4d8e6058",
+          "fetched_at": "2026-08-27T13:40:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html (label: 市の財政・市有財産) 入口 https://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.higashiosaka.lg.jp/category/20-2-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_kessancard.pdf「令和6年度決算カード(PDF形式、150.92KB) 別ウィンドウで開きます」, sha256:03bdf4fb）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

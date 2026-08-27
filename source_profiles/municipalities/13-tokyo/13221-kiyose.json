@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/kiyose/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html",
           "sha256": "b5256b9a068da2d6284fe31417cd2e864be977509c55d77c9a9e038598f65228",
           "fetched_at": "2026-08-27T10:26:20Z"
+        },
+        {
+          "url": "http://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.kiyose.lg.jp/",
+          "sha256": "b5256b9a068da2d6284fe31417cd2e864be977509c55d77c9a9e038598f65228",
+          "fetched_at": "2026-08-27T10:26:20Z"
+        },
+        {
+          "url": "https://www.city.kiyose.lg.jp/_res/projects/default_project/_page_/001/016/466/r8_wakayosa.pdf",
+          "observed_on": "https://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/1015943/1016466.html",
+          "sha256": "cc6acea909001dd786150af204d6bceba60ad290f022eac8419adb4beed662a5",
+          "fetched_at": "2026-08-27T13:34:19Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_wakayosa.pdf「令和8年度わかりやすい予算書 （PDF 2.4 MB）」, sha256:cc6acea9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

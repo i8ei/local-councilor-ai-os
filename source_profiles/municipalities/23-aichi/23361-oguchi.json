@@ -6,25 +6,27 @@
   "official_home_url": "https://www.town.oguchi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
-      "verified_at": "2026-08-27T10:16:13Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.oguchi.lg.jp/2736.htm",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
+          "url": "https://www.town.oguchi.lg.jp/2736.htm",
           "observed_on": "https://www.town.oguchi.lg.jp/2675.htm",
-          "fetched_at": "2026-08-27T08:11:27Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:16:14Z"
+          "url": "https://www.town.oguchi.lg.jp/2736.htm",
+          "observed_on": "https://www.town.oguchi.lg.jp/2736.htm",
+          "sha256": "55dfb414d21f6611126847e680b664fb334665cd15f7e233955cb260062cc43d",
+          "fetched_at": "2026-08-27T13:50:52Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

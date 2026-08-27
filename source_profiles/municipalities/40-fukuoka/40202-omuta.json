@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at https://www.city.omuta.lg.jp/list01054.html (label: 例規類集（条例・規則）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.omuta.lg.jp/list00259.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.omuta.lg.jp/list00259.html",
@@ -52,9 +52,15 @@
           "observed_on": "https://www.city.omuta.lg.jp/list00259.html",
           "sha256": "039d64962a74dff9d1d16d3827a722cfe34986aaa3c38a60bccdf6da18fcef92",
           "fetched_at": "2026-08-27T09:35:29Z"
+        },
+        {
+          "url": "https://www.city.omuta.lg.jp/kiji00321273/3_21273_126085_up_5yz1188d.pdf",
+          "observed_on": "https://www.city.omuta.lg.jp/kiji00321273/index.html",
+          "sha256": "99f1172d4983d7d140bf5c8e707ebbd49a23c072ecf5cec0620cf619265a2bd9",
+          "fetched_at": "2026-08-27T13:44:48Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.omuta.lg.jp/list00259.html (label: 予算) 入口 https://www.city.omuta.lg.jp/list00259.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.omuta.lg.jp/list00259.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_21273_126085_up_5yz1188d.pdf「第1表 会計別予算比較集計表（PDF：53.4キロバイト）」, sha256:99f1172d）にて構造マーカー（予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

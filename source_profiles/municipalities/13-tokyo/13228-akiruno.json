@@ -56,11 +56,11 @@
       "notes": "Observed budget link at https://www.city.akiruno.tokyo.jp/category/2-7-2-0-0-0-0-0-0-0.html (label: 予算の概要) 入口 https://www.city.akiruno.tokyo.jp/category/2-7-2-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.akiruno.tokyo.jp/category/2-7-3-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.akiruno.tokyo.jp/category/2-7-3-0-0-0-0-0-0-0.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.city.akiruno.tokyo.jp/category/2-7-3-0-0-0-0-0-0-0.html",
           "sha256": "a4528d5bf6c7f5167bcf3a9ec4714c42501f575823ee40ae50ff33ee24481647",
           "fetched_at": "2026-08-27T10:26:23Z"
+        },
+        {
+          "url": "https://www.city.akiruno.tokyo.jp/cmsfiles/contents/0000004/4005/R06kessansho.pdf",
+          "observed_on": "https://www.city.akiruno.tokyo.jp/0000004005.html",
+          "sha256": "b127d0061a0dc28f18f8888a78d6a17e77d61c201fbca1bfb05b5f570e412113",
+          "fetched_at": "2026-08-27T13:33:59Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.akiruno.tokyo.jp/category/2-7-3-0-0-0-0-0-0-0.html (label: 決算の概要) 入口 https://www.city.akiruno.tokyo.jp/category/2-7-3-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06kessansho.pdf「令和6年度あきる野市各会計歳入歳出決算書（一般会計・特別会計） （PDF形式、3.65MB）」, sha256:b127d006）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

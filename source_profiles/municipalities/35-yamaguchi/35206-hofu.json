@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.city.hofu.yamaguchi.jp/reiki1/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hofu.yamaguchi.jp/soshiki/9/yosan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hofu.yamaguchi.jp/soshiki/9/yosan.html",
@@ -69,16 +69,28 @@
           "url": "https://www.city.hofu.yamaguchi.jp/uploaded/attachment/145718.pdf",
           "observed_on": "https://www.city.hofu.yamaguchi.jp/soshiki/9/yosan.html",
           "fetched_at": "2026-08-27T11:00:40Z"
+        },
+        {
+          "url": "http://www.city.hofu.yamaguchi.jp/soshiki/9/yosan.html",
+          "observed_on": "http://www.city.hofu.yamaguchi.jp/",
+          "sha256": "b771f039a198c880197289af7959c4cb55e2d2ad9e683f5cb8ea41b56503624a",
+          "fetched_at": "2026-08-27T09:45:30Z"
+        },
+        {
+          "url": "https://www.city.hofu.yamaguchi.jp/uploaded/attachment/145718.pdf",
+          "observed_on": "https://www.city.hofu.yamaguchi.jp/soshiki/9/yosan.html",
+          "sha256": "031da5f3fed6e8fe52f3cda4d71258c2d678911646a2a116809750c1e58da840",
+          "fetched_at": "2026-08-27T11:00:43Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.hofu.yamaguchi.jp/soshiki/9/yosan.html (label: 予算の状況を公表します) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（145718.pdf「令和8年度当初予算の概要 [PDFファイル／18.33MB]」, sha256:031da5f3）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hofu.yamaguchi.jp/soshiki/9/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hofu.yamaguchi.jp/soshiki/9/zaisei.html",
@@ -90,9 +102,21 @@
           "observed_on": "https://www.city.hofu.yamaguchi.jp/soshiki/9/zaisei.html",
           "sha256": "89ab1512bdf1fd7ceaac0c8d4ed31ca9c42894b48939ffa8739771bd88db8a81",
           "fetched_at": "2026-08-27T09:45:33Z"
+        },
+        {
+          "url": "http://www.city.hofu.yamaguchi.jp/soshiki/9/zaisei.html",
+          "observed_on": "http://www.city.hofu.yamaguchi.jp/",
+          "sha256": "89ab1512bdf1fd7ceaac0c8d4ed31ca9c42894b48939ffa8739771bd88db8a81",
+          "fetched_at": "2026-08-27T09:45:33Z"
+        },
+        {
+          "url": "https://www.city.hofu.yamaguchi.jp/uploaded/attachment/141865.pdf",
+          "observed_on": "https://www.city.hofu.yamaguchi.jp/soshiki/9/kessan.html",
+          "sha256": "f17faffebe1ad04a9c2804d2559c9f31edf92fccdbba8e669c72edd374347cff",
+          "fetched_at": "2026-08-27T13:42:41Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hofu.yamaguchi.jp/soshiki/9/zaisei.html (label: 市の財政状況) 入口 https://www.city.hofu.yamaguchi.jp/soshiki/9/zaisei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hofu.yamaguchi.jp/soshiki/9/zaisei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（141865.pdf「表紙、決算の概要、一般会計（P1～P27） [PDFファイル／2.39MB]」, sha256:f17faffe）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

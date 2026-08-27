@@ -57,11 +57,11 @@
       "notes": "Observed budget link at http://www.town.asagiri.lg.jp/list00253.html (label: 予算) 入口 https://www.town.asagiri.lg.jp/list00253.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.asagiri.lg.jp/list00253.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.asagiri.lg.jp/list00254.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.asagiri.lg.jp/list00254.html",
@@ -73,9 +73,21 @@
           "observed_on": "https://www.town.asagiri.lg.jp/list00254.html",
           "sha256": "68f6502d459641d66951a498196cb67ed4e8f5fd1e2cdc5e986d3b9fd9d03de6",
           "fetched_at": "2026-08-27T09:39:02Z"
+        },
+        {
+          "url": "http://www.town.asagiri.lg.jp/list00254.html",
+          "observed_on": "http://www.town.asagiri.lg.jp/",
+          "sha256": "68f6502d459641d66951a498196cb67ed4e8f5fd1e2cdc5e986d3b9fd9d03de6",
+          "fetched_at": "2026-08-27T09:39:02Z"
+        },
+        {
+          "url": "https://www.town.asagiri.lg.jp/kiji0035112/3_5112_2425_up_kghw1epl.xlsx",
+          "observed_on": "https://www.town.asagiri.lg.jp/kiji0035112/index.html",
+          "sha256": "7234b0a7af1d672c7ccd8e03a170bab8a9ae5389e34863913a660593afba6093",
+          "fetched_at": "2026-08-27T13:46:45Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.asagiri.lg.jp/list00254.html (label: 決算) 入口 https://www.town.asagiri.lg.jp/list00254.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.asagiri.lg.jp/list00254.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_5112_2425_up_kghw1epl.xlsx「財政状況資料集（令和６年度）（エクセル：565.1キロバイト）」, sha256:7234b0a7）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

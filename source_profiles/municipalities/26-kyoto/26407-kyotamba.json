@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.kyotamba.kyoto.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/gikaijimukyoku/gyomuannai/1/1232.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/gikaijimukyoku/gyomuannai/1/1232.html",
+          "observed_on": "https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/gikaijimukyoku/gyomuannai/1/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/gikaijimukyoku/gyomuannai/1/1232.html",
+          "observed_on": "https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/gikaijimukyoku/gyomuannai/1/1232.html",
+          "sha256": "1c6b5bdd1b12a810deca321c350316fa6e72cfb5ca29b61db8af136a693235fd",
+          "fetched_at": "2026-08-27T14:01:28Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/town.kyotamba/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/zaiseika/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/zaiseika/index.html",
@@ -51,9 +66,15 @@
           "observed_on": "https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/zaiseika/index.html",
           "sha256": "3d00afde5b94e24b951489a89624488b08321c00e90f3b24be05948358139ac5",
           "fetched_at": "2026-08-27T09:50:24Z"
+        },
+        {
+          "url": "https://www.town.kyotamba.kyoto.jp/material/files/group/2/h28zaiseijyoukyoushiryousyuu.xlsx",
+          "observed_on": "https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/zaiseika/5/1286.html",
+          "sha256": "7f805d4f04920306ba5ec5dc93137d9e40b08646449fa4294fbfd7d7f3dc08b3",
+          "fetched_at": "2026-08-27T13:39:56Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/zaiseika/index.html (label: 財政課) 入口 https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/zaiseika/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/zaiseika/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kyotamba.kyoto.jp/kakukakarasagasu/zaiseika/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（h28zaiseijyoukyoushiryousyuu.xlsx「平成28年度財政状況資料集 (Excelファイル: 437.0KB)」, sha256:7f805d4f）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

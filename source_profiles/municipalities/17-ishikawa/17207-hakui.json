@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.hakui.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.hakui.lg.jp/shiseijouhou/kaigikoukaijyouhou/15494.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.hakui.lg.jp/shiseijouhou/gikai/3/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.hakui.lg.jp/shiseijouhou/kaigikoukaijyouhou/15494.html",
+          "url": "https://www.city.hakui.lg.jp/shiseijouhou/gikai/3/index.html",
           "observed_on": "http://www.city.hakui.lg.jp/shiseijouhou/index.html",
-          "fetched_at": "2026-08-27T06:13:01Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.hakui.lg.jp/shiseijouhou/gikai/3/index.html",
+          "observed_on": "https://www.city.hakui.lg.jp/shiseijouhou/gikai/3/index.html",
+          "sha256": "2ee62a1a64793039364b6ef87f929f7bd58ef870991705c17cf6b65b50efd199",
+          "fetched_at": "2026-08-27T13:45:12Z"
+        },
+        {
+          "url": "https://www.city.hakui.lg.jp/soshiki/gikai/gikaijimukyoku/2/3/12/16924.html",
+          "observed_on": "https://www.city.hakui.lg.jp/shiseijouhou/gikai/3/index.html",
+          "sha256": "07ecf5029d099a1f9d3d6e3f701bf62db826ad275bd702a88b92b3cbb35b74a5",
+          "fetched_at": "2026-08-27T13:45:12Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.hakui.lg.jp/shiseijouhou/kaigikoukaijyouhou/15494.html (label: 第1回羽咋市復興アドバイザリーボード会議の議事録等を公開します) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

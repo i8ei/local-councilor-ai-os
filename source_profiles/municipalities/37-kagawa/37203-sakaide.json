@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.sakaide.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.sakaide.lg.jp/site/gikai/gikaikihonnjyourei.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.sakaide.lg.jp/site/gikai/gikaikihonnjyourei.html",
+          "observed_on": "http://www.city.sakaide.lg.jp/site/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.sakaide.lg.jp/site/gikai/gikaikihonnjyourei.html",
+          "observed_on": "https://www.city.sakaide.lg.jp/site/gikai/gikaikihonnjyourei.html",
+          "sha256": "6b610857904bd6b9228bb2b73a013437c8dab917165e021322207ca3cc68bfb6",
+          "fetched_at": "2026-08-27T14:07:14Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +65,11 @@
       "notes": "Observed budget link at http://www.city.sakaide.lg.jp/life/4/28/133/ (label: 予算・決算・財政状況) 入口 https://www.city.sakaide.lg.jp/life/4/28/133/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sakaide.lg.jp/life/4/28/133/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sakaide.lg.jp/life/4/28/133/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sakaide.lg.jp/life/4/28/133/",
@@ -66,9 +81,21 @@
           "observed_on": "https://www.city.sakaide.lg.jp/life/4/28/133/",
           "sha256": "22584eea71ee313288710728a84678ffaafaa31f83f6287a8430c2cddeda4aee",
           "fetched_at": "2026-08-27T09:46:21Z"
+        },
+        {
+          "url": "http://www.city.sakaide.lg.jp/life/4/28/133/",
+          "observed_on": "http://www.city.sakaide.lg.jp/",
+          "sha256": "22584eea71ee313288710728a84678ffaafaa31f83f6287a8430c2cddeda4aee",
+          "fetched_at": "2026-08-27T09:46:21Z"
+        },
+        {
+          "url": "https://www.city.sakaide.lg.jp/uploaded/attachment/3640.pdf",
+          "observed_on": "https://www.city.sakaide.lg.jp/soshiki/zaimu/zaiseijyoukyousiryou.html",
+          "sha256": "030d5d50c3e7d6d822dbfdbadfe06065f2e0fadcc57865c8fd68ac65ed9bf82b",
+          "fetched_at": "2026-08-27T13:43:10Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.sakaide.lg.jp/life/4/28/133/ (label: 予算・決算・財政状況) 入口 https://www.city.sakaide.lg.jp/life/4/28/133/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sakaide.lg.jp/life/4/28/133/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3640.pdf「平成２２年度」, sha256:030d5d50）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

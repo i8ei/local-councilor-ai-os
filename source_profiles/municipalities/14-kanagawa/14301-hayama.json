@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.hayama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "https://hayama-gikai.gijiroku.com/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.hayama.lg.jp/gikai/5/11130.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://hayama-gikai.gijiroku.com/",
+          "url": "https://www.town.hayama.lg.jp/gikai/5/11130.html",
           "observed_on": "http://www.town.hayama.lg.jp/gikai/",
-          "fetched_at": "2026-08-27T08:05:34Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.hayama.lg.jp/gikai/5/11130.html",
+          "observed_on": "https://www.town.hayama.lg.jp/gikai/5/11130.html",
+          "sha256": "ddcd193c54ffc688e7e3d96c454b0a310a4585c5afc7e5cbbb447692fdc3ecef",
+          "fetched_at": "2026-08-27T13:44:29Z"
         }
       ],
-      "notes": "Observed voices at https://hayama-gikai.gijiroku.com/ (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

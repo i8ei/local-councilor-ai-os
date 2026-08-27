@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.nagahama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.nagahama.lg.jp/0000017132.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.nagahama.lg.jp/0000017132.html",
+          "observed_on": "https://www.city.nagahama.lg.jp/category/5-10-13-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.nagahama.lg.jp/0000017132.html",
+          "observed_on": "https://www.city.nagahama.lg.jp/0000017132.html",
+          "sha256": "0c6bf0ad5f7afce0d0f8dba2a2d916c1e75306b837b455762176cf84560f207d",
+          "fetched_at": "2026-08-27T14:00:39Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.nagahama/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nagahama.lg.jp/category/5-10-1-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nagahama.lg.jp/category/5-10-1-0-0-0-0-0-0-0.html",
@@ -51,16 +66,22 @@
           "observed_on": "https://www.city.nagahama.lg.jp/category/5-10-1-0-0-0-0-0-0-0.html",
           "sha256": "a67e39f2d57372981a7e5195473266d120587835ecfd4f536fe09e37cdd30ec5",
           "fetched_at": "2026-08-27T09:49:20Z"
+        },
+        {
+          "url": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000015/15298/01R7yosangaiyou.pdf",
+          "observed_on": "https://www.city.nagahama.lg.jp/0000015298.html",
+          "sha256": "1599b918cdb9ba76cd9570f2c8cc508fd623d8a03a63064377523a097cead5b2",
+          "fetched_at": "2026-08-27T13:39:17Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.nagahama.lg.jp/category/5-10-1-0-0-0-0-0-0-0.html (label: 予算・決算等) 入口 https://www.city.nagahama.lg.jp/category/5-10-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagahama.lg.jp/category/5-10-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（01R7yosangaiyou.pdf「令和7年度当初予算(案)の概要 (PDF形式、2.01MB)」, sha256:1599b918）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html",
@@ -72,9 +93,21 @@
           "observed_on": "https://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html",
           "sha256": "32094f337c9d85eab92e3bf8524511f3c5e613a757ab8c56f9db30627875d5b7",
           "fetched_at": "2026-08-27T09:49:26Z"
+        },
+        {
+          "url": "http://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.nagahama.lg.jp/",
+          "sha256": "32094f337c9d85eab92e3bf8524511f3c5e613a757ab8c56f9db30627875d5b7",
+          "fetched_at": "2026-08-27T09:49:26Z"
+        },
+        {
+          "url": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000009/9843/R6kessancard.pdf",
+          "observed_on": "https://www.city.nagahama.lg.jp/0000009843.html",
+          "sha256": "bdd07d41b53617a7caaefd660d2783a28de19fd43a90913057e439094db4cab6",
+          "fetched_at": "2026-08-27T13:39:19Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html (label: 主要な施策・プロジェクト) 入口 https://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessancard.pdf「決算カード（令和6年度）(PDF形式、85.89KB)」, sha256:bdd07d41）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

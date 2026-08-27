@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.shinjuku.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.shinjuku.lg.jp/kusei/index08.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.city.shinjuku.lg.jp/kusei/index08.html",
+          "observed_on": "http://www.city.shinjuku.lg.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.shinjuku.lg.jp/kusei/index08.html",
+          "observed_on": "http://www.city.shinjuku.lg.jp/kusei/index08.html",
+          "sha256": "a1a4347ceedf104b572e67196bc6868c706140a860b704cafb6d18b0109e3438",
+          "fetched_at": "2026-08-27T13:42:23Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

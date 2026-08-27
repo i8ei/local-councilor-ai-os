@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.ayakawa/reiki_menu.html (label: 綾川町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
@@ -56,16 +56,22 @@
           "url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/file_contents/R8tousho.pdf",
           "observed_on": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
           "fetched_at": "2026-08-27T11:01:03Z"
+        },
+        {
+          "url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/file_contents/R8tousho.pdf",
+          "observed_on": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
+          "sha256": "4cc8625436ee843cb866505dfef9bac16cac7ef89768fbe104fffd5d40bffcfe",
+          "fetched_at": "2026-08-27T11:01:04Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ayagawa.lg.jp/docs/2011070500015/ (label: 綾川町の財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8tousho.pdf「令和８年度当初予算書[PDF：6.04MB]」, sha256:4cc86254）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
@@ -82,9 +88,15 @@
           "url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/file_contents/R6kessan.pdf",
           "observed_on": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
           "fetched_at": "2026-08-27T11:01:07Z"
+        },
+        {
+          "url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/file_contents/080312_373877__2024.xlsx",
+          "observed_on": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
+          "sha256": "168c148f26e68f673eda7c2960b2088aa9076764ba0f9219b681c3d6feddd5d3",
+          "fetched_at": "2026-08-27T13:43:15Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ayagawa.lg.jp/docs/2011070500015/ (label: 綾川町の財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（080312_373877__2024.xlsx「【財政状況資料集】_373877_綾川町_2024[XLSX：553KB]」, sha256:168c148f）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

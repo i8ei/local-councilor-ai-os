@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.kozaki.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.kozaki.chiba.jp/profile/gikai/2026-0303-1701-31.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.kozaki.chiba.jp/profile/gikai/bocho.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.kozaki.chiba.jp/profile/gikai/2026-0303-1701-31.html",
+          "url": "https://www.town.kozaki.chiba.jp/profile/gikai/bocho.html",
           "observed_on": "http://www.town.kozaki.chiba.jp/profile/gikai/index.html",
-          "fetched_at": "2026-08-27T07:24:11Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.kozaki.chiba.jp/profile/gikai/bocho.html",
+          "observed_on": "https://www.town.kozaki.chiba.jp/profile/gikai/bocho.html",
+          "sha256": "5b424eb2bbbdbe28f87bbc25e8ff2d46da4194aa7644414677c094a48b9a7f62",
+          "fetched_at": "2026-08-27T13:42:25Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.kozaki.chiba.jp/profile/gikai/2026-0303-1701-31.html (label: 神崎町議会本会議録画配信 (001))"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.date.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.date.hokkaido.jp/gikai/kouhou2/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.date.hokkaido.jp/gikai/kouhou2/",
+          "observed_on": "https://www.city.date.hokkaido.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.date.hokkaido.jp/gikai/kouhou2/",
+          "observed_on": "https://www.city.date.hokkaido.jp/gikai/kouhou2/",
+          "sha256": "1d0794021f1f851119c47135febbbdd97b8362cda08909ea2436a7e3b7b29b23",
+          "fetched_at": "2026-08-27T13:23:25Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

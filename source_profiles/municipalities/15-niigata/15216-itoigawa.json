@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://krr105.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.itoigawa.lg.jp/life/6/31/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.itoigawa.lg.jp/life/6/31/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.itoigawa.lg.jp:443/life/6/31/",
           "sha256": "18cddb8077533750c449d209b29fe7de4b27d40c6692960b6093211c0162eced",
           "fetched_at": "2026-08-27T10:04:28Z"
+        },
+        {
+          "url": "http://www.city.itoigawa.lg.jp/life/6/31/",
+          "observed_on": "http://www.city.itoigawa.lg.jp/",
+          "sha256": "18cddb8077533750c449d209b29fe7de4b27d40c6692960b6093211c0162eced",
+          "fetched_at": "2026-08-27T10:04:28Z"
+        },
+        {
+          "url": "https://www.city.itoigawa.lg.jp:443/uploaded/attachment/16973.pdf",
+          "observed_on": "https://www.city.itoigawa.lg.jp:443/page/21996.html",
+          "sha256": "f1352eee9c0e9e0725d7d67bdc35d7c0b5e35259be22ad7cfc2b77179bfad53a",
+          "fetched_at": "2026-08-27T13:35:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.itoigawa.lg.jp/life/6/31/ (label: 財政) 入口 https://www.city.itoigawa.lg.jp:443/life/6/31/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.itoigawa.lg.jp:443/life/6/31/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.itoigawa.lg.jp:443/life/6/31/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（16973.pdf「予算書 [PDFファイル／352KB]」, sha256:f1352eee）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.niimi.okayama.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/3136.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/3136.html",
+          "observed_on": "https://www.city.niimi.okayama.jp/gyosei/category_top/index/gyosei_category1_9.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/3136.html",
+          "observed_on": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/3136.html",
+          "sha256": "e033d3fe080ffa8b2d956cac5d8521a51e534f90e300319164506e328e72a70a",
+          "fetched_at": "2026-08-27T14:05:50Z"
+        },
+        {
+          "url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/22052.html",
+          "observed_on": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/3136.html",
+          "sha256": "04508d3dc88ee8716150e9a2f42b94dfa9e4e51db5264fbabe5fd697a64c4e4f",
+          "fetched_at": "2026-08-27T14:05:50Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +53,11 @@
       "notes": "Observed regulations index at https://www.city.niimi.okayama.jp/gyosei/category_top/index/gyosei_category1_6.html (label: 新見市例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/1966.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/1966.html",
@@ -45,9 +69,15 @@
           "observed_on": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/1966.html",
           "sha256": "40cb1fa6cdb48236b1dd6eb8b93d221b2d171ddb86024f4ad19a9f33f5c89626",
           "fetched_at": "2026-08-27T09:43:51Z"
+        },
+        {
+          "url": "https://www.city.niimi.okayama.jp/media_images_01/files/R8tousyoyosan%281%29.pdf",
+          "observed_on": "https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/21468.html",
+          "sha256": "aa73147c4830e593f5018335d63c2bde062efc4be5b35f9394ad4c6efc7946ab",
+          "fetched_at": "2026-08-27T13:42:28Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/1966.html (label: 一般会計予算) 入口 https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/1966.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.niimi.okayama.jp/gyosei/gyosei_detail/index/1966.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyoyosan%281%29.pdf「当初予算書（令和８年度）」, sha256:aa73147c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

@@ -42,11 +42,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrJbF01/init?jctcd=8A917E0E40&houcd=H422901010034&no=9&totalCount=22&fromJsp=SrMj (label: 五島市議会議員政治倫理条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.goto.nagasaki.jp/li/shisei/070/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.goto.nagasaki.jp/li/shisei/070/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.goto.nagasaki.jp:443/li/shisei/070/index.html",
           "sha256": "efef47cbcac51583a771dfc4ecada561415706ed2ae260fb8bf0a032195a62b6",
           "fetched_at": "2026-08-27T09:37:33Z"
+        },
+        {
+          "url": "http://www.city.goto.nagasaki.jp/li/shisei/070/index.html",
+          "observed_on": "http://www.city.goto.nagasaki.jp/",
+          "sha256": "efef47cbcac51583a771dfc4ecada561415706ed2ae260fb8bf0a032195a62b6",
+          "fetched_at": "2026-08-27T09:37:33Z"
+        },
+        {
+          "url": "https://www.city.goto.nagasaki.jp:443/s010/010/010/010/020/R6zaiseishiryousyu.xlsx",
+          "observed_on": "https://www.city.goto.nagasaki.jp:443/s010/010/010/010/020/20190314123513.html",
+          "sha256": "a8f1ec10b5ba025d30e703ad1c447f88d0e02b6e0dc34a990d7496b55d0471f6",
+          "fetched_at": "2026-08-27T13:45:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.goto.nagasaki.jp/li/shisei/070/index.html (label: 市の財政) 入口 https://www.city.goto.nagasaki.jp:443/li/shisei/070/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.goto.nagasaki.jp:443/li/shisei/070/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zaiseishiryousyu.xlsx「令和6年度 財政状況資料集（Excel:571KB）」, sha256:a8f1ec10）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

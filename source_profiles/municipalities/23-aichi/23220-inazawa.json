@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.inazawa.aichi.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.inazawa.aichi.jp/0000004816.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.inazawa.aichi.jp/0000004816.html",
+          "observed_on": "https://www.city.inazawa.aichi.jp/category/9-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.inazawa.aichi.jp/0000004816.html",
+          "observed_on": "https://www.city.inazawa.aichi.jp/0000004816.html",
+          "sha256": "bd905e353f46cea88c3e97a11dbf1b210bf5338d5b49625c892c13049021fe75",
+          "fetched_at": "2026-08-27T13:50:21Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

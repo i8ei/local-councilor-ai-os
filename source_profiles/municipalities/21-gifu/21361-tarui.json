@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.town.tarui.lg.jp/life/6/25/106/ (label: 予算・決算) 入口 https://www.town.tarui.lg.jp/life/6/25/106/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tarui.lg.jp/life/6/25/106/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tarui.lg.jp/life/6/25/106/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tarui.lg.jp/life/6/25/106/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.town.tarui.lg.jp/life/6/25/106/",
           "sha256": "d94dd4ff418dc39643b3bcb87350342d760c011e2198cc2efc6cec81b1243f70",
           "fetched_at": "2026-08-27T10:13:44Z"
+        },
+        {
+          "url": "http://www.town.tarui.lg.jp/life/6/25/106/",
+          "observed_on": "http://www.town.tarui.lg.jp/",
+          "sha256": "d94dd4ff418dc39643b3bcb87350342d760c011e2198cc2efc6cec81b1243f70",
+          "fetched_at": "2026-08-27T10:13:44Z"
+        },
+        {
+          "url": "https://www.town.tarui.lg.jp/uploaded/attachment/12525.pdf",
+          "observed_on": "https://www.town.tarui.lg.jp/page/11509.html",
+          "sha256": "6d3d5e1b2c26dd5caad1447737dbd78a41ce0b5176856b36181cd2ef74cc9d36",
+          "fetched_at": "2026-08-27T13:37:00Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tarui.lg.jp/life/6/25/106/ (label: 予算・決算) 入口 https://www.town.tarui.lg.jp/life/6/25/106/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tarui.lg.jp/life/6/25/106/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（12525.pdf「R６決算書 [PDFファイル／1.98MB]」, sha256:6d3d5e1b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -6,12 +6,27 @@
   "official_home_url": "https://www.nakijin.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.nakijin.jp/pagtop/gyosei/songikai/1195.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.nakijin.jp/pagtop/gyosei/songikai/1195.html",
+          "observed_on": "https://www.nakijin.jp/pagtop/gyosei/songikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.nakijin.jp/pagtop/gyosei/songikai/1195.html",
+          "observed_on": "https://www.nakijin.jp/pagtop/gyosei/songikai/1195.html",
+          "sha256": "f108562a1ba0cfcf19acb02296ff6d17e0f9ef775231b4bcea6894822b9ed24f",
+          "fetched_at": "2026-08-27T14:12:37Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

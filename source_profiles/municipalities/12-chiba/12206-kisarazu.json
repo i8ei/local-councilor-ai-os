@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.kisarazu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kisarazu.lg.jp/gyoseijoho/shigikai/1/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.kisarazu.lg.jp/gyoseijoho/shigikai/1/index.html",
+          "observed_on": "https://www.city.kisarazu.lg.jp/gyoseijoho/shigikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.kisarazu.lg.jp/gyoseijoho/shigikai/1/index.html",
+          "observed_on": "https://www.city.kisarazu.lg.jp/gyoseijoho/shigikai/1/index.html",
+          "sha256": "f2502ad0c41bf4344eb3a902c1d333e9c8c7c3f8468363a8d6d525129fcaea2a",
+          "fetched_at": "2026-08-27T13:41:42Z"
+        },
+        {
+          "url": "https://www.city.kisarazu.lg.jp/gyoseijoho/shigikai/1/14949.html",
+          "observed_on": "https://www.city.kisarazu.lg.jp/gyoseijoho/shigikai/1/index.html",
+          "sha256": "5bb0b2863da2bfa0020a7ee6070e676fab91a4e32c5c33875fbf5c201a5930f2",
+          "fetched_at": "2026-08-27T13:41:43Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +80,11 @@
       "notes": "Observed finance section at https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -72,9 +96,15 @@
           "observed_on": "https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "69e30e470f0add369806d4c93ca9bbf535d365773c8e311af2472953ac4cefa8",
           "fetched_at": "2026-08-27T10:22:54Z"
+        },
+        {
+          "url": "https://www.city.kisarazu.lg.jp/material/files/group/12/202509242.pdf",
+          "observed_on": "https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/7232.html",
+          "sha256": "40f3c91777c59ee02bfda50dca4efc71d54cb3bb32e2bd479f6093cf263bcd2d",
+          "fetched_at": "2026-08-27T13:32:32Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.kisarazu.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（202509242.pdf「(2)一般会計歳入歳出決算書 (PDFファイル: 421.3KB)」, sha256:40f3c917）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html (label: 予算・決算) 入口 https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
           "sha256": "9dd8feb48d7678fc0c09a6ca5f2f5e77aefaced1633b2b8eeb6e7b166175b557",
           "fetched_at": "2026-08-27T10:26:57Z"
+        },
+        {
+          "url": "http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
+          "observed_on": "http://www.city.chigasaki.kanagawa.jp/",
+          "sha256": "9dd8feb48d7678fc0c09a6ca5f2f5e77aefaced1633b2b8eeb6e7b166175b557",
+          "fetched_at": "2026-08-27T10:26:57Z"
+        },
+        {
+          "url": "https://www.city.chigasaki.kanagawa.jp/_res/projects/default_project/_page_/001/065/501/R6kessan.pdf",
+          "observed_on": "https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/1055745/1065501.html",
+          "sha256": "d349425c3737fc18f123ad8ccfbc4f85fd0845c59c42305a75bfce0ddde8b250",
+          "fetched_at": "2026-08-27T13:34:44Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html (label: 予算・決算) 入口 https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan.pdf「令和6年度決算状況 （PDF 2.2MB）」, sha256:d349425c）にて構造マーカー（歳入・歳出・節・決算額等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A91CB43E1 (label: 東村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "5dcf8784e2f46adf31d3febd8ad31d24549fdf5e71783473fdecfe854ca4d481",
           "fetched_at": "2026-08-27T09:41:06Z"
+        },
+        {
+          "url": "https://www.vill.higashi.okinawa.jp/material/files/group/1/R1zaiseijoukyou.pdf",
+          "observed_on": "https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/672.html",
+          "sha256": "ef5c3a6c9a9a6ee57bc4fd82e43e7458d0aa8c67f42f13e5929524a4e0fcf0ff",
+          "fetched_at": "2026-08-27T13:48:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.higashi.okinawa.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R1zaiseijoukyou.pdf「令和元年度財政状況資料 (PDFファイル: 2.3MB)」, sha256:ef5c3a6c）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

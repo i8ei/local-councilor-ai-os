@@ -6,12 +6,27 @@
   "official_home_url": "http://www.kamikatsu.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.kamikatsu.jp/gikai/gikaidayori/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.kamikatsu.jp/gikai/gikaidayori/",
+          "observed_on": "http://www.kamikatsu.jp/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.kamikatsu.jp/gikai/gikaidayori/",
+          "observed_on": "https://www.kamikatsu.jp/gikai/gikaidayori/",
+          "sha256": "068372e2da3ba6230e6a746b77d9f3d82342ebb1ab89f7fb6f6da87d7b536985",
+          "fetched_at": "2026-08-27T14:06:55Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

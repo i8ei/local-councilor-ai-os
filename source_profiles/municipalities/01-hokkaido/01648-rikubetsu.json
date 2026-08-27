@@ -6,12 +6,27 @@
   "official_home_url": "https://www.rikubetsu.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.rikubetsu.jp/gikai/kaigiroku/R08/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.rikubetsu.jp/gikai/kaigiroku/R08/",
+          "observed_on": "https://www.rikubetsu.jp/gikai/kaigiroku/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.rikubetsu.jp/gikai/kaigiroku/R08/",
+          "observed_on": "https://www.rikubetsu.jp/gikai/kaigiroku/R08/",
+          "sha256": "6a4d66dbc24c29a149dd5356cd1aec0e2aa91d3517bd5ef83fb9d09d0b72d099",
+          "fetched_at": "2026-08-27T13:25:41Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

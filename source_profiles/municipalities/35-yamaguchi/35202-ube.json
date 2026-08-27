@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.ube.yamaguchi.jp/shisei/1009210.html (label: 宇部市条例規程類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ube.yamaguchi.jp/shisei/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ube.yamaguchi.jp/shisei/zaisei/yosan/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.ube.yamaguchi.jp/shisei/zaisei/yosan/index.html",
           "sha256": "60e92623720b09e7d98e59972c4398fe081447f650dca2db393787df66e3141b",
           "fetched_at": "2026-08-27T09:45:09Z"
+        },
+        {
+          "url": "http://www.city.ube.yamaguchi.jp/shisei/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.ube.yamaguchi.jp/",
+          "sha256": "60e92623720b09e7d98e59972c4398fe081447f650dca2db393787df66e3141b",
+          "fetched_at": "2026-08-27T09:45:09Z"
+        },
+        {
+          "url": "https://www.city.ube.yamaguchi.jp/_res/projects/default_project/_page_/001/028/599/gaiyou_r8.pdf",
+          "observed_on": "https://www.city.ube.yamaguchi.jp/shisei/zaisei/yosan/1028599.html",
+          "sha256": "4ce9918fe3de7fd69577dc2ffaaeb8265c153f1fdf53861268b18218850cdd44",
+          "fetched_at": "2026-08-27T13:42:38Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.ube.yamaguchi.jp/shisei/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.ube.yamaguchi.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ube.yamaguchi.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（gaiyou_r8.pdf「令和8年度当初予算の概要 （PDF 1.2MB）」, sha256:4ce9918f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

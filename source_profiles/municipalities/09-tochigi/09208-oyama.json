@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.oyama.tochigi.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/oyama/pg/index.html",
-      "verified_at": "2026-08-27T10:18:03Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.oyama.tochigi.jp/gikai/dayori/page010104.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/oyama/pg/index.html",
-          "observed_on": "http://www.city.oyama.tochigi.jp/gikai/",
-          "fetched_at": "2026-08-27T06:20:59Z"
+          "url": "https://www.city.oyama.tochigi.jp/gikai/dayori/page010104.html",
+          "observed_on": "https://www.city.oyama.tochigi.jp/gikai/dayori/",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/oyama/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/oyama/pg/index.html",
-          "sha256": "1f0f247a2e24d51f31b954de20189841a012bc26d51d78187ec08c7ca3edf23c",
-          "fetched_at": "2026-08-27T10:18:04Z"
+          "url": "https://www.city.oyama.tochigi.jp/gikai/dayori/page010104.html",
+          "observed_on": "https://www.city.oyama.tochigi.jp/gikai/dayori/page010104.html",
+          "sha256": "a70ad8a8628c06961506fe03a616ecfa189b65ad7b58d9dfb44d6f53f62caa5e",
+          "fetched_at": "2026-08-27T13:38:28Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/oyama/pg/index.html (label: 会議録検索 システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

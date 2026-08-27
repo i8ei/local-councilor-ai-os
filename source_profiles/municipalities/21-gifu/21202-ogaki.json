@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.ogaki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ogaki.lg.jp/gikai/0000058809.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.ogaki.lg.jp/gikai/0000058809.html",
+          "observed_on": "https://www.city.ogaki.lg.jp/gikai/category/10-3-0-0-0.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.ogaki.lg.jp/gikai/0000058809.html",
+          "observed_on": "https://www.city.ogaki.lg.jp/gikai/0000058809.html",
+          "sha256": "a9f7a6f28ce4d71eca47ed04e80a8e10b05ea0b66964bd859858d178a560a2be",
+          "fetched_at": "2026-08-27T13:58:03Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

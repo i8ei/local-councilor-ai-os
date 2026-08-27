@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.iwanai.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.iwanai.hokkaido.jp/wp-content/uploads/2025/05/kaigiroku7.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.iwanai.hokkaido.jp/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e5%b2%a9%e5%86%85%e7%94%ba%e8%ad%b0%e4%bc%9a/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.iwanai.hokkaido.jp/wp-content/uploads/2025/05/kaigiroku7.pdf",
+          "url": "https://www.town.iwanai.hokkaido.jp/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e5%b2%a9%e5%86%85%e7%94%ba%e8%ad%b0%e4%bc%9a/",
           "observed_on": "https://www.town.iwanai.hokkaido.jp/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e7%94%ba%e5%8f%b2/%e5%b2%a9%e5%86%85%e7%94%ba%e5%8f%b2%e7%b7%a8%e3%81%95%e3%82%93%e5%af%a9%e8%ad%b0%e4%bc%9a%e9%96%8b%e5%82%ac%e7%b5%90%e6%9e%9c/",
-          "fetched_at": "2026-08-27T06:16:20Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.iwanai.hokkaido.jp/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e5%b2%a9%e5%86%85%e7%94%ba%e8%ad%b0%e4%bc%9a/",
+          "observed_on": "https://www.town.iwanai.hokkaido.jp/%e7%94%ba%e6%94%bf%e6%83%85%e5%a0%b1/%e5%b2%a9%e5%86%85%e7%94%ba%e8%ad%b0%e4%bc%9a/",
+          "sha256": "33034fe2a79353432f4df83432c7a1b9b6848a566b23e7306c3c3e792a26a57f",
+          "fetched_at": "2026-08-27T13:24:17Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.iwanai.hokkaido.jp/wp-content/uploads/2025/05/kaigiroku7.pdf (label: 会議録(60kb))"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

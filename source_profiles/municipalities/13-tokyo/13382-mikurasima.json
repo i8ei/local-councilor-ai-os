@@ -44,19 +44,31 @@
       "notes": "Observed finance section at http://www.mikurasima.jp/section/gyosei/zaisei.html (label: 行財政データ)"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.mikurasima.jp/section/gyosei/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.mikurasima.jp/section/gyosei/zaisei.html",
           "observed_on": "http://www.mikurasima.jp/",
           "fetched_at": "2026-08-27T07:55:22Z"
+        },
+        {
+          "url": "http://www.mikurasima.jp/section/gyosei/zaisei.html",
+          "observed_on": "http://www.mikurasima.jp/",
+          "sha256": "8540f0741df6acc908bacb1ccf08271403d77278d3068909ede91ef1661918e3",
+          "fetched_at": "2026-08-27T10:26:34Z"
+        },
+        {
+          "url": "https://www.vill.mikurasima.tokyo.jp/data/zaisei/shohizei_kessan_2024.pdf",
+          "observed_on": "https://www.vill.mikurasima.tokyo.jp/section/gyosei/datazaisei.html",
+          "sha256": "aca4197d86140ff9f038b72aeefca8b90aeffe2b6dec5a6f327f5110d5e977e9",
+          "fetched_at": "2026-08-27T13:34:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.mikurasima.jp/section/gyosei/zaisei.html (label: 行財政データ)"
+      "notes": "deepest_doc=P1。settlement文書（shohizei_kessan_2024.pdf「令和６年度決算」, sha256:aca4197d）にて構造マーカー（歳入・款・項等）を確認済み。"
     }
   }
 }

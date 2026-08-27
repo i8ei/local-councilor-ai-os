@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.beppu.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.beppu.oita.jp/gakusyuu/kyouikusougou/detail1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.beppu.oita.jp/gikai/07iinkai/kako/gijiroku.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.beppu.oita.jp/gakusyuu/kyouikusougou/detail1.html",
-          "observed_on": "http://www.city.beppu.oita.jp/",
-          "fetched_at": "2026-08-27T06:16:30Z"
+          "url": "https://www.city.beppu.oita.jp/gikai/07iinkai/kako/gijiroku.html",
+          "observed_on": "https://www.city.beppu.oita.jp/gikai/07iinkai/index.html#01",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.beppu.oita.jp/gikai/07iinkai/kako/gijiroku.html",
+          "observed_on": "https://www.city.beppu.oita.jp/gikai/07iinkai/kako/gijiroku.html",
+          "sha256": "699929354df8a802cd5c76323e2303cc0e8a0e6d10d2ebba889ab1a7306c6102",
+          "fetched_at": "2026-08-27T14:10:39Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.beppu.oita.jp/gakusyuu/kyouikusougou/detail1.html (label: 別府市総合教育会議議事録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -68,11 +76,11 @@
       "notes": "Observed budget link at http://www.city.beppu.oita.jp/sisei/zaisei/sinoyosan_tosho.html (label: 市の予算（当初予算）) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.beppu.oita.jp/sangyou/keirin/kessan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.beppu.oita.jp/sangyou/keirin/kessan.html",
@@ -89,9 +97,21 @@
           "url": "https://www.city.beppu.oita.jp/doc/sangyou/keirin/kessan/r06.pdf",
           "observed_on": "https://www.city.beppu.oita.jp/sangyou/keirin/kessan.html",
           "fetched_at": "2026-08-27T10:57:14Z"
+        },
+        {
+          "url": "http://www.city.beppu.oita.jp/sangyou/keirin/kessan.html",
+          "observed_on": "http://www.city.beppu.oita.jp/",
+          "sha256": "d98845b260bb890f91ca37d3e3545562de453d42ef781fce8bf307c9f95f95bc",
+          "fetched_at": "2026-08-27T09:39:15Z"
+        },
+        {
+          "url": "https://www.city.beppu.oita.jp/doc/sisei/zaisei/kessan/gaiyou_r06.pdf",
+          "observed_on": "https://www.city.beppu.oita.jp/sisei/zaisei/detail15.html",
+          "sha256": "8d9a825b1458779c430ff9dc9946983dc866a4f91c7824fc63af14235ee3114c",
+          "fetched_at": "2026-08-27T13:46:56Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.beppu.oita.jp/sangyou/keirin/kessan.html (label: 公営事業局の決算) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（gaiyou_r06.pdf「令和6年度決算の概要」, sha256:8d9a825b）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

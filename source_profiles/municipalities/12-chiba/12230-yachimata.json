@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.yachimata.lg.jp/life/4/23/106/ (label: 予算・決算) 入口 https://www.city.yachimata.lg.jp/life/4/23/106/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yachimata.lg.jp/life/4/23/106/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yachimata.lg.jp/life/4/23/106/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.yachimata.lg.jp/life/4/23/106/",
           "sha256": "22d065e140f43acb76a825b37f4279eb646a66af28db108db13e488a902f4a31",
           "fetched_at": "2026-08-27T10:24:09Z"
+        },
+        {
+          "url": "http://www.city.yachimata.lg.jp/life/4/23/106/",
+          "observed_on": "http://www.city.yachimata.lg.jp/",
+          "sha256": "22d065e140f43acb76a825b37f4279eb646a66af28db108db13e488a902f4a31",
+          "fetched_at": "2026-08-27T10:24:09Z"
+        },
+        {
+          "url": "https://www.city.yachimata.lg.jp/uploaded/attachment/10324.pdf",
+          "observed_on": "https://www.city.yachimata.lg.jp/soshiki/6/6009.html",
+          "sha256": "ef7ddda92c4af1340943e462c9e2b73690ee687cab738f5a4d12657a4b78da69",
+          "fetched_at": "2026-08-27T13:35:46Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.yachimata.lg.jp/life/4/23/106/ (label: 予算・決算) 入口 https://www.city.yachimata.lg.jp/life/4/23/106/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（10324.pdf「主要施策の成果の説明書 [PDFファイル／26.99MB]」, sha256:ef7ddda9）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

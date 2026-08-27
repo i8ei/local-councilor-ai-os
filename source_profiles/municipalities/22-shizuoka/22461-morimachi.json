@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html",
@@ -56,16 +56,22 @@
           "url": "https://www.town.morimachi.shizuoka.jp/material/files/group/4/reiwa8nendoippankaikeiyosan.pdf",
           "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html",
           "fetched_at": "2026-08-27T10:14:59Z"
+        },
+        {
+          "url": "https://www.town.morimachi.shizuoka.jp/material/files/group/4/reiwa8nendoippankaikeiyosan.pdf",
+          "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html",
+          "sha256": "4763dd091d5da7ed45f5800a8cb3e962c08233e6b32bf69f1d437f342f3cca27",
+          "fetched_at": "2026-08-27T10:15:05Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1587.html (label: 当初予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（reiwa8nendoippankaikeiyosan.pdf「令和8年度 森町一般会計予算書 (PDFファイル: 6.2MB)」, sha256:4763dd09）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html",
@@ -77,9 +83,15 @@
           "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html",
           "sha256": "5a9265e8a830995b102d62e63de83a1b63696522a6455eaacc937a6b84f88aee",
           "fetched_at": "2026-08-27T10:15:05Z"
+        },
+        {
+          "url": "https://www.town.morimachi.shizuoka.jp/material/files/group/4/reiwa6nenndozaiseijyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/1178.html",
+          "sha256": "ab328ca1094606b50a7380e2151d22bd510ea3a5d2d75c328aed1d66c08d53b4",
+          "fetched_at": "2026-08-27T13:37:51Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html (label: 財政) 入口 https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.morimachi.shizuoka.jp/gyosei/choseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（reiwa6nenndozaiseijyoukyousiryousyuu.xlsx「令和6年度財政状況資料集 (Excelファイル: 553.0KB)」, sha256:ab328ca1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

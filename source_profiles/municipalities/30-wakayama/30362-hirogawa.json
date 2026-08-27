@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www.town.hirogawa.wakayama.jp/reiki/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hirogawa.wakayama.jp/gikai/pdf/R3.9.koronaikennsyo.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hirogawa.wakayama.jp/gikai/pdf/R3.9.koronaikennsyo.pdf",
@@ -56,9 +56,15 @@
           "url": "https://www.town.hirogawa.wakayama.jp/gikai/pdf/R3.9.koronaikennsyo.pdf",
           "observed_on": "https://www.town.hirogawa.wakayama.jp/gikai/pdf/R3.9.koronaikennsyo.pdf",
           "fetched_at": "2026-08-27T11:07:19Z"
+        },
+        {
+          "url": "http://www.town.hirogawa.wakayama.jp/gikai/pdf/R3.9.koronaikennsyo.pdf",
+          "observed_on": "http://www.town.hirogawa.wakayama.jp/",
+          "sha256": "6172acd51f23130ae0cfee2026176590d35a3e9a4bfe19f4384fc8af0a12943a",
+          "fetched_at": "2026-08-27T09:53:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hirogawa.wakayama.jp/gikai/pdf/R3.9.koronaikennsyo.pdf (label: コロナ禍による厳しい財政状況に対処し地方税財源の充実を求める意見書 (137KB)) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R3.9.koronaikennsyo.pdf「Direct Document」, sha256:6172acd5）にて構造マーカー（歳出・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

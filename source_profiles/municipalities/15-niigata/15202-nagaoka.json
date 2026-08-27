@@ -50,11 +50,11 @@
       "notes": "Observed finance section at http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/ (label: 財政) 入口 https://www.city.nagaoka.niigata.jp:443/shisei/cate03/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagaoka.niigata.jp:443/shisei/cate03/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagaoka.niigata.jp:443/shisei/cate03/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.nagaoka.niigata.jp:443/shisei/cate03/zaisei/",
           "sha256": "f8eea005b839679f5592dc6fdb885d30210bb42dcfdff19a1d2e0eb50ef2c11e",
           "fetched_at": "2026-08-27T10:04:21Z"
+        },
+        {
+          "url": "http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/",
+          "observed_on": "http://www.city.nagaoka.niigata.jp/",
+          "sha256": "f8eea005b839679f5592dc6fdb885d30210bb42dcfdff19a1d2e0eb50ef2c11e",
+          "fetched_at": "2026-08-27T10:04:21Z"
+        },
+        {
+          "url": "https://www.city.nagaoka.niigata.jp:443/shisei/cate03/zaisei/file/zaisei-shiryou_r06.xlsx",
+          "observed_on": "https://www.city.nagaoka.niigata.jp:443/shisei/cate03/zaisei/z-shiryou.html",
+          "sha256": "276e97f2622dd065effd32d3789147f4994dda10ed5fa316a8d5f3a2d59bef79",
+          "fetched_at": "2026-08-27T13:34:53Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.nagaoka.niigata.jp/shisei/cate03/zaisei/ (label: 財政) 入口 https://www.city.nagaoka.niigata.jp:443/shisei/cate03/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagaoka.niigata.jp:443/shisei/cate03/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagaoka.niigata.jp:443/shisei/cate03/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaisei-shiryou_r06.xlsx「（EXCEL 565KB）」, sha256:276e97f2）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

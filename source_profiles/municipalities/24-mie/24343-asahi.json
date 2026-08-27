@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www2.town.asahi.mie.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html",
           "sha256": "7f98ef28411e9abcb3d154896265d071db289517888857f0fa838e68f18fabd5",
           "fetched_at": "2026-08-27T09:49:00Z"
+        },
+        {
+          "url": "https://www2.town.asahi.mie.jp/www/contents/1715064798750/simple/machinokakeibo.pdf",
+          "observed_on": "https://www2.town.asahi.mie.jp/www/contents/1715064798750/index.html",
+          "sha256": "b638805a207badbf91d8af55a0ccc76cde56c23a6ae374bc5ee6e17591513cd5",
+          "fetched_at": "2026-08-27T13:39:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html (label: 財政) 入口 https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www2.town.asahi.mie.jp/www/genre/1670498790849/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（machinokakeibo.pdf「令和６年度まちの家計簿－わかりやすい予算書－（PDF／3MB）」, sha256:b638805a）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

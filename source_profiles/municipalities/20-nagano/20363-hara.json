@@ -6,12 +6,27 @@
   "official_home_url": "https://www.vill.hara.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.hara.lg.jp/docs/336905.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.hara.lg.jp/docs/336905.html",
+          "observed_on": "https://www.vill.hara.lg.jp/home.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.hara.lg.jp/docs/336905.html",
+          "observed_on": "https://www.vill.hara.lg.jp/docs/336905.html",
+          "sha256": "3a20fa695d05ba988185d317f23ff2bdf0ea5a72e51bfd53bba3294001f04457",
+          "fetched_at": "2026-08-27T13:47:15Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

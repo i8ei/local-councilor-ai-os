@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.town.kasuya.fukuoka.jp/li/070/060/010/010/index.html (label: 予算) 入口 https://www.town.kasuya.fukuoka.jp/li/070/060/010/010/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kasuya.fukuoka.jp/li/070/060/010/010/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html",
           "sha256": "483a757ed9f5636c19aad473acfe2929069ed2de9cbb7d9c983cbf8765c0dc6d",
           "fetched_at": "2026-08-27T09:36:29Z"
+        },
+        {
+          "url": "http://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html",
+          "observed_on": "http://www.town.kasuya.fukuoka.jp/",
+          "sha256": "483a757ed9f5636c19aad473acfe2929069ed2de9cbb7d9c983cbf8765c0dc6d",
+          "fetched_at": "2026-08-27T09:36:29Z"
+        },
+        {
+          "url": "https://www.town.kasuya.fukuoka.jp/s042/010/010/010/010/010/R06suido.pdf",
+          "observed_on": "https://www.town.kasuya.fukuoka.jp/s042/010/010/010/010/010/20191224173858.html",
+          "sha256": "aebbf1cc01a006994917b0ea574581fb3bc55b34f5bcd6279cdc19c8f963b073",
+          "fetched_at": "2026-08-27T13:45:19Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html (label: 決算) 入口 https://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06suido.pdf「令和6年度 水道事業決算書（PDF：1.33MB）」, sha256:aebbf1cc）にて構造マーカー（款・項・節・決算額等）を確認済み。"
     }
   }
 }

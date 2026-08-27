@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.uozu.toyama.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.uozu.toyama.jp/guide/svGuideDtl.aspx?servno=9965&cdkb=ctg&cd=1103&topkb=C",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.uozu.toyama.jp/guide/svGuideDtl.aspx?servno=9965&cdkb=ctg&cd=1103&topkb=C",
+          "observed_on": "https://www.city.uozu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=11&topkb=C",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.uozu.toyama.jp/guide/svGuideDtl.aspx?servno=9965&cdkb=ctg&cd=1103&topkb=C",
+          "observed_on": "https://www.city.uozu.toyama.jp/guide/svGuideDtl.aspx?servno=9965&cdkb=ctg&cd=1103&topkb=C",
+          "sha256": "e87e156a652b4c65f848383e68de225acdea6034b6a493e004a443d7b787ceca",
+          "fetched_at": "2026-08-27T13:44:50Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

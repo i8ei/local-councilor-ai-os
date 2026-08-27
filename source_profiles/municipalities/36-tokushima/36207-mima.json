@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.city.mima.lg.jp/gyosei/docs/2686229.html (label: 「新たな財政構造改革プラン」第１回策定委員会を開催しました) 入口 https://www.city.mima.lg.jp/gyosei/docs/2686229.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.mima.lg.jp/gyosei/docs/2686229.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.mima.lg.jp/gyosei/docs/2686229.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.mima.lg.jp/gyosei/docs/2686229.html",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.mima.lg.jp/gyosei/docs/2686229.html",
           "sha256": "6e3f346233a1eeff6d2e8653bf348f3749bdd926d421c70411de5c111b06bf13",
           "fetched_at": "2026-08-27T09:46:06Z"
+        },
+        {
+          "url": "http://www.city.mima.lg.jp/gyosei/docs/2686229.html",
+          "observed_on": "http://www.city.mima.lg.jp/",
+          "sha256": "6e3f346233a1eeff6d2e8653bf348f3749bdd926d421c70411de5c111b06bf13",
+          "fetched_at": "2026-08-27T09:46:06Z"
+        },
+        {
+          "url": "https://www.city.mima.lg.jp/fs/3/5/6/7/7/3/_/05___4________________R8.8.25_____.pdf",
+          "observed_on": "https://www.city.mima.lg.jp/gyosei/docs/2686229.html",
+          "sha256": "f0ec1aaae7f1ca36ce2c2e10833f4189a8e025878534ed5b099d389a81588242",
+          "fetched_at": "2026-08-27T13:43:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.mima.lg.jp/gyosei/docs/2686229.html (label: 「新たな財政構造改革プラン」第１回策定委員会を開催しました) 入口 https://www.city.mima.lg.jp/gyosei/docs/2686229.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.mima.lg.jp/gyosei/docs/2686229.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（05___4________________R8.8.25_____.pdf「05_資料4_なぜ財政構造改革が必要なのか(R8.8.25一部修正) (PDF 1.17MB)」, sha256:f0ec1aaa）にて構造マーカー（歳入・歳出・項・財政状況資料集等）を確認済み。"
     }
   }
 }

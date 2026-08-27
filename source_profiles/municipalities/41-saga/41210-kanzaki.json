@@ -6,30 +6,27 @@
   "official_home_url": "http://www.city.kanzaki.saga.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
-      "verified_at": "2026-08-20T22:48:29Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.kanzaki.saga.jp/main/455.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
-          "observed_on": "http://www.city.kanzaki.saga.jp/"
+          "url": "http://www.city.kanzaki.saga.jp/main/455.html",
+          "observed_on": "http://www.city.kanzaki.saga.jp/",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
-          "sha256": "c9e918a24ddf8475ed980b852e96d8e19cec96141bc3f22d07fa532912e66ccb",
-          "fetched_at": "2026-08-20T22:20:26Z"
-        },
-        {
-          "url": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.kanzaki.saga.dbsr.jp/index.php/",
-          "sha256": "349cb7cbe12eeb278ba218e42820fe4a8aefa9446c687fde01ebe63a5ea13af1",
-          "fetched_at": "2026-08-20T22:41:37Z"
+          "url": "http://www.city.kanzaki.saga.jp/main/455.html",
+          "observed_on": "http://www.city.kanzaki.saga.jp/main/455.html",
+          "sha256": "fb32945afab0a5fffb71353b3bf6ab85f5cea847911eff55be636eaf0a68a1e5",
+          "fetched_at": "2026-08-27T13:22:42Z"
         }
       ],
-      "notes": "dbsr index live-verified; minutes bodies are robots-restricted (robots.txt allows only the bare /index.php index and disallows meeting detail/document paths), so automated body ingestion is blocked and requires the councilor/user to obtain municipality permission"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

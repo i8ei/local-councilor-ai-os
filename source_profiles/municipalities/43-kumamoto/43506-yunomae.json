@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.town.yunomae.lg.jp/list00402.html (label: 予算) 入口 https://www.town.yunomae.lg.jp/list00402.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yunomae.lg.jp/list00402.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yunomae.lg.jp/list00403.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yunomae.lg.jp/list00403.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.town.yunomae.lg.jp/list00403.html",
           "sha256": "f8205cedd59ff38fbf7437171f2cf68c36368563d286ce99492bc597e2f14f7c",
           "fetched_at": "2026-08-27T09:39:09Z"
+        },
+        {
+          "url": "http://www.town.yunomae.lg.jp/list00403.html",
+          "observed_on": "http://www.town.yunomae.lg.jp/",
+          "sha256": "f8205cedd59ff38fbf7437171f2cf68c36368563d286ce99492bc597e2f14f7c",
+          "fetched_at": "2026-08-27T09:39:09Z"
+        },
+        {
+          "url": "https://www.town.yunomae.lg.jp/kiji0035026/3_5026_shiryou1_yqytigm0.xlsx",
+          "observed_on": "https://www.town.yunomae.lg.jp/list00401.html",
+          "sha256": "a3beb419e427f1c2c66584d4fae03099f537f0c78d0cf152a46c7a56707a32d5",
+          "fetched_at": "2026-08-27T13:46:35Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.yunomae.lg.jp/list00403.html (label: 決算) 入口 https://www.town.yunomae.lg.jp/list00403.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yunomae.lg.jp/list00403.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_5026_shiryou1_yqytigm0.xlsx「令和6年度財政状況資料集 （エクセル：557.2キロバイト）」, sha256:a3beb419）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

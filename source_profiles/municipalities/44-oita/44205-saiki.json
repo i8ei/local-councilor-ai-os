@@ -68,11 +68,11 @@
       "notes": "Observed budget link at https://www.city.saiki.oita.jp/kiji0031997/index.html (label: 予算) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
@@ -89,9 +89,15 @@
           "url": "https://www.city.saiki.oita.jp/kiji0031990/3_1990_up_xmj2gr0x.pdf",
           "observed_on": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
           "fetched_at": "2026-08-27T10:57:17Z"
+        },
+        {
+          "url": "https://www.city.saiki.oita.jp/kiji0031990/3_1990_up_d4175szm.pdf",
+          "observed_on": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
+          "sha256": "f050fa0b67ce58587eb607dd7d63f623a73d340bbf6a66599f7a1bb4c9aa0e48",
+          "fetched_at": "2026-08-27T13:46:54Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.saiki.oita.jp/kiji0031990/index.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（3_1990_up_d4175szm.pdf「令和6年度決算カード（PDF：94.7キロバイト）」, sha256:f050fa0b）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

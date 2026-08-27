@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.kunneppu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.kunneppu.hokkaido.jp/fs/1/7/4/0/_/machisuigijiroku1.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.kunneppu.hokkaido.jp/gikai/kaigiroku/10989.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.kunneppu.hokkaido.jp/fs/1/7/4/0/_/machisuigijiroku1.pdf",
-          "observed_on": "https://www.town.kunneppu.hokkaido.jp/life/kikaku/machisuikaigi.html",
-          "fetched_at": "2026-08-27T06:40:16Z"
+          "url": "https://www.town.kunneppu.hokkaido.jp/gikai/kaigiroku/10989.html",
+          "observed_on": "https://www.town.kunneppu.hokkaido.jp/gikai/kaigiroku/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.kunneppu.hokkaido.jp/gikai/kaigiroku/10989.html",
+          "observed_on": "https://www.town.kunneppu.hokkaido.jp/gikai/kaigiroku/10989.html",
+          "sha256": "5939163e01d37d399f7ec26a342ec7216da04a269cfc938639cd5ef2b8366881",
+          "fetched_at": "2026-08-27T13:24:59Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.kunneppu.hokkaido.jp/fs/1/7/4/0/_/machisuigijiroku1.pdf (label: 第1回まちづくり推進会議（要旨） (443KB))"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

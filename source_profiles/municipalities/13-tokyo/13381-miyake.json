@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.miyake.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.miyake.tokyo.jp/kakuka/gikai/meibo.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.miyake.tokyo.jp/kakuka/gikai/meibo.html",
+          "observed_on": "http://www.vill.miyake.tokyo.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.miyake.tokyo.jp/kakuka/gikai/meibo.html",
+          "observed_on": "https://www.vill.miyake.tokyo.jp/kakuka/gikai/meibo.html",
+          "sha256": "241a50e0d821f24e7dbe23fa4a612ff66f056f18d75042ab6fda1ff52cb4392d",
+          "fetched_at": "2026-08-27T13:43:25Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

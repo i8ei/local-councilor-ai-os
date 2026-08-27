@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.komaki.aichi.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.komaki.aichi.jp/shigikai/kaigiroku/11619.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.komaki.aichi.jp/shigikai/kaigiroku/11619.html",
+          "observed_on": "http://www.city.komaki.aichi.jp/shigikai/kaigiroku/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.komaki.aichi.jp/shigikai/kaigiroku/11619.html",
+          "observed_on": "https://www.city.komaki.aichi.jp/shigikai/kaigiroku/11619.html",
+          "sha256": "fe69482f33ae1f0546507d715db4cc98f9f8ae0c5e772d322f2b9162c11a09ad",
+          "fetched_at": "2026-08-27T13:50:26Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

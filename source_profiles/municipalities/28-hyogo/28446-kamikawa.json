@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.kamikawa.hyogo.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kamikawa.hyogo.jp/category/13-2-0-0-0-0-0-0-0-0.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kamikawa.hyogo.jp/category/13-2-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.kamikawa.hyogo.jp/category/13-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.kamikawa.hyogo.jp/category/13-2-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.kamikawa.hyogo.jp/category/13-2-0-0-0-0-0-0-0-0.html",
+          "sha256": "ecf3a06e7963a045d221cd7cbc89e42637e651082b271e286dab73fbe8264794",
+          "fetched_at": "2026-08-27T14:03:16Z"
+        },
+        {
+          "url": "https://www.town.kamikawa.hyogo.jp/0000004027.html",
+          "observed_on": "https://www.town.kamikawa.hyogo.jp/category/13-2-0-0-0-0-0-0-0-0.html",
+          "sha256": "539a9ea67ec9cac25f10d4d58d655f6e815373c7d68ae525d5036789f1954903",
+          "fetched_at": "2026-08-27T14:03:25Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +59,11 @@
       "notes": "Observed g_reiki at https://www.town.kamikawa.hyogo.jp/html/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kamikawa.hyogo.jp/0000000162.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kamikawa.hyogo.jp/0000000162.html",
@@ -56,9 +80,15 @@
           "url": "https://www.town.kamikawa.hyogo.jp/cmsfiles/contents/0000000/162/R8tousyoyosangaiyou.pdf",
           "observed_on": "https://www.town.kamikawa.hyogo.jp/0000000162.html",
           "fetched_at": "2026-08-27T11:06:03Z"
+        },
+        {
+          "url": "https://www.town.kamikawa.hyogo.jp/cmsfiles/contents/0000000/162/R8tousyoyosangaiyou.pdf",
+          "observed_on": "https://www.town.kamikawa.hyogo.jp/0000000162.html",
+          "sha256": "ab929f519f1d8387008c1dc5012eccca163cc78fbda0cd90b6dbf37dda1d06a2",
+          "fetched_at": "2026-08-27T11:06:04Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kamikawa.hyogo.jp/0000000162.html (label: 神河町の予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8tousyoyosangaiyou.pdf「令和8年度 一般会計等当初予算概要 (PDF形式、976.94KB)」, sha256:ab929f51）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

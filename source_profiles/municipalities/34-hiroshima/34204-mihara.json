@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.mihara.hiroshima.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/mihara/pg/index.html",
-      "verified_at": "2026-08-27T09:44:51Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.mihara.hiroshima.jp/site/gikai",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/mihara/pg/index.html",
+          "url": "https://www.city.mihara.hiroshima.jp/site/gikai",
           "observed_on": "http://www.city.mihara.hiroshima.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:26:24Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/mihara/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/mihara/pg/index.html",
-          "sha256": "06ad3f7f8fd47c886297a2b6b3d2ee710b53ca3dc76f8dd63cad643a5a3ba5df",
-          "fetched_at": "2026-08-27T09:44:53Z"
+          "url": "https://www.city.mihara.hiroshima.jp/site/gikai",
+          "observed_on": "https://www.city.mihara.hiroshima.jp/site/gikai",
+          "sha256": "25267b4258b6b2ce22a31815bcce8acac44155d33c748c98e49ad86b2ae2ccb1",
+          "fetched_at": "2026-08-27T14:06:13Z"
+        },
+        {
+          "url": "https://www.city.mihara.hiroshima.jp/site/gikai/200650.html",
+          "observed_on": "https://www.city.mihara.hiroshima.jp/site/gikai",
+          "sha256": "6131f44915278b30d96f22acd3246a40e73a66ed4f5d583594879305c14a51ad",
+          "fetched_at": "2026-08-27T14:06:13Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/mihara/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +80,11 @@
       "notes": "Observed budget link at http://www.city.mihara.hiroshima.jp/life/4/25/126/ (label: 予算・決算) 入口 https://www.city.mihara.hiroshima.jp/life/4/25/126/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.mihara.hiroshima.jp/life/4/25/126/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.mihara.hiroshima.jp/life/4/25/126/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.mihara.hiroshima.jp/life/4/25/126/",
@@ -85,9 +96,21 @@
           "observed_on": "https://www.city.mihara.hiroshima.jp/life/4/25/126/",
           "sha256": "61471008a66ee8c5ed8dfbefca9b745253861d995f6af340b1a1eef9afaa5dd8",
           "fetched_at": "2026-08-27T09:44:55Z"
+        },
+        {
+          "url": "http://www.city.mihara.hiroshima.jp/life/4/25/126/",
+          "observed_on": "http://www.city.mihara.hiroshima.jp/",
+          "sha256": "61471008a66ee8c5ed8dfbefca9b745253861d995f6af340b1a1eef9afaa5dd8",
+          "fetched_at": "2026-08-27T09:44:55Z"
+        },
+        {
+          "url": "https://www.city.mihara.hiroshima.jp/uploaded/attachment/162112.xlsx",
+          "observed_on": "https://www.city.mihara.hiroshima.jp/soshiki/7/zaiseijyokyo.html",
+          "sha256": "5f71a5cbead6479f2f459486ecfcd256ff6b5b0cab32b700e536a14c040ec258",
+          "fetched_at": "2026-08-27T13:42:32Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.mihara.hiroshima.jp/life/4/25/126/ (label: 予算・決算) 入口 https://www.city.mihara.hiroshima.jp/life/4/25/126/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.mihara.hiroshima.jp/life/4/25/126/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（162112.xlsx「令和6年度決算 [Excelファイル／552KB]」, sha256:5f71a5cb）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

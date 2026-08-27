@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.toyoura.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.toyoura.hokkaido.jp/hotnews/detail/00006831.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.toyoura.hokkaido.jp/hotnews/detail/00006831.html",
+          "observed_on": "https://www.town.toyoura.hokkaido.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.toyoura.hokkaido.jp/hotnews/detail/00006831.html",
+          "observed_on": "https://www.town.toyoura.hokkaido.jp/hotnews/detail/00006831.html",
+          "sha256": "5625c78f099237f71c86525afbf931a1eb65b4b431a75c5c569006d8f1cbf2e7",
+          "fetched_at": "2026-08-27T13:25:13Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

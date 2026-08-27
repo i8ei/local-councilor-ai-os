@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.saitama-ina.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.saitama-ina.lg.jp/category/2-4-3-0-0-0-0-0-0-0.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.saitama-ina.lg.jp/category/2-4-3-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.saitama-ina.lg.jp/category/2-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.saitama-ina.lg.jp/category/2-4-3-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.saitama-ina.lg.jp/category/2-4-3-0-0-0-0-0-0-0.html",
+          "sha256": "5484c6c969fde48a4b7b556401dec95d3681402b0c129ca3d18d996a0f6dcf75",
+          "fetched_at": "2026-08-27T13:40:31Z"
+        },
+        {
+          "url": "https://www.town.saitama-ina.lg.jp/0000002639.html",
+          "observed_on": "https://www.town.saitama-ina.lg.jp/category/2-4-3-0-0-0-0-0-0-0.html",
+          "sha256": "63c92f6f2841e5dd83ba2c84607df80ee05e178384bfbb37114a94400c0b68ea",
+          "fetched_at": "2026-08-27T13:40:31Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

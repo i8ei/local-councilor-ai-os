@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.kokonoe.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kokonoe.oita.jp/categories/chousei/chougikai/gikaidayori/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kokonoe.oita.jp/categories/chousei/chougikai/gikaidayori/",
+          "observed_on": "https://www.town.kokonoe.oita.jp/categories/chousei/chougikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.kokonoe.oita.jp/categories/chousei/chougikai/gikaidayori/",
+          "observed_on": "https://www.town.kokonoe.oita.jp/categories/chousei/chougikai/gikaidayori/",
+          "sha256": "b3b3b0a13edeffbcff96f3b705e5af7a1719e92957bbc99c5d7e5595a21a5b76",
+          "fetched_at": "2026-08-27T14:10:53Z"
+        },
+        {
+          "url": "https://www.town.kokonoe.oita.jp/docs/2026052100015/",
+          "observed_on": "https://www.town.kokonoe.oita.jp/categories/chousei/chougikai/gikaidayori/",
+          "sha256": "8bc320be05530802894426dddc01ad62f30db409de2a96d808bb9c5b349226e1",
+          "fetched_at": "2026-08-27T14:10:53Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kokonoe/reiki_menu.html (label: 九重町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kokonoe.oita.jp/docs/2021071300019/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kokonoe.oita.jp/docs/2021071300019/",
@@ -51,16 +75,28 @@
           "observed_on": "https://www.town.kokonoe.oita.jp/docs/2021071300019/",
           "sha256": "d25ab5bd140f3de1aeb7ea6e52a532a328ea18ae6c81fb68d451d9cb869b4176",
           "fetched_at": "2026-08-27T09:39:40Z"
+        },
+        {
+          "url": "http://www.town.kokonoe.oita.jp/docs/2021071300019/",
+          "observed_on": "http://www.town.kokonoe.oita.jp/",
+          "sha256": "d25ab5bd140f3de1aeb7ea6e52a532a328ea18ae6c81fb68d451d9cb869b4176",
+          "fetched_at": "2026-08-27T09:39:40Z"
+        },
+        {
+          "url": "https://www.town.kokonoe.oita.jp/docs/2021071300019/file_contents/r3shouhizeisitoyosan.pdf",
+          "observed_on": "https://www.town.kokonoe.oita.jp/docs/2021071300019/",
+          "sha256": "cad07fb7a716fff3d9943be9eb93bf257785ee560541cc9aecfc6b5e1c9d475c",
+          "fetched_at": "2026-08-27T13:46:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kokonoe.oita.jp/docs/2021071300019/ (label: 地方消費税交付金（社会保障財源化分）の予算額について) 入口 https://www.town.kokonoe.oita.jp/docs/2021071300019/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kokonoe.oita.jp/docs/2021071300019/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kokonoe.oita.jp/docs/2021071300019/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r3shouhizeisitoyosan.pdf「令和３年度[PDF：79KB]」, sha256:cad07fb7）にて構造マーカー（款・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kokonoe.oita.jp/docs/2017020300056/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kokonoe.oita.jp/docs/2017020300056/",
@@ -72,9 +108,21 @@
           "observed_on": "https://www.town.kokonoe.oita.jp/docs/2017020300056/",
           "sha256": "0322362e0d1da4d688bab65510a7011b84319cb20c3737a342a4e32dc1d996db",
           "fetched_at": "2026-08-27T09:39:43Z"
+        },
+        {
+          "url": "http://www.town.kokonoe.oita.jp/docs/2017020300056/",
+          "observed_on": "http://www.town.kokonoe.oita.jp/",
+          "sha256": "0322362e0d1da4d688bab65510a7011b84319cb20c3737a342a4e32dc1d996db",
+          "fetched_at": "2026-08-27T09:39:43Z"
+        },
+        {
+          "url": "https://www.town.kokonoe.oita.jp/docs/2017020300056/file_contents/h29shouhizeikessan.pdf",
+          "observed_on": "https://www.town.kokonoe.oita.jp/docs/2017020300056/",
+          "sha256": "576b457f49cd421dd983ea796ca091322066d37c6a54f36cb5637da470005d2e",
+          "fetched_at": "2026-08-27T13:46:58Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kokonoe.oita.jp/docs/2017020300056/ (label: 地方消費税交付金（社会保障財源化分）の決算額について) 入口 https://www.town.kokonoe.oita.jp/docs/2017020300056/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kokonoe.oita.jp/docs/2017020300056/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kokonoe.oita.jp/docs/2017020300056/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（h29shouhizeikessan.pdf「平成29年度[PDF：80KB]」, sha256:576b457f）にて構造マーカー（款・決算額・地方債等）を確認済み。"
     }
   }
 }

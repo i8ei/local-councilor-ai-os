@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.kudamatsu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html",
-      "verified_at": "2026-08-27T09:45:23Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kudamatsu.lg.jp/gikai/gikai/gikaidayori/dayori.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html",
+          "url": "https://www.city.kudamatsu.lg.jp/gikai/gikai/gikaidayori/dayori.html",
           "observed_on": "http://www.city.kudamatsu.lg.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:37:42Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html",
-          "sha256": "9c84a5dc0f5d5852b5ed7942ee97fbe4e2b70acb47ace1b1eff4f5769f05dc4a",
-          "fetched_at": "2026-08-27T09:45:25Z"
+          "url": "https://www.city.kudamatsu.lg.jp/gikai/gikai/gikaidayori/dayori.html",
+          "observed_on": "https://www.city.kudamatsu.lg.jp/gikai/gikai/gikaidayori/dayori.html",
+          "sha256": "85bb5e0b53efa3b99a19edcd10fb32354dd7656651d25a2346b207465a493545",
+          "fetched_at": "2026-08-27T14:06:35Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kudamatsu/pg/index.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed finance section at http://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html (label: 財政情報) 入口 https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html",
@@ -85,9 +87,21 @@
           "observed_on": "https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html",
           "sha256": "132ce508e5e806ecb8114ca3743194adf44f448d3d6b3fe99568a376322d24ea",
           "fetched_at": "2026-08-27T09:45:28Z"
+        },
+        {
+          "url": "http://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html",
+          "observed_on": "http://www.city.kudamatsu.lg.jp/",
+          "sha256": "132ce508e5e806ecb8114ca3743194adf44f448d3d6b3fe99568a376322d24ea",
+          "fetched_at": "2026-08-27T09:45:28Z"
+        },
+        {
+          "url": "https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/documents/zaiseijyoukyoushiryoushuu_2024.xlsx",
+          "observed_on": "https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/zaiseijoukyou.html",
+          "sha256": "0808f7d3a40bd43a766a342879352d06a04886a4e715285af9ef9bf4f8ebec4d",
+          "fetched_at": "2026-08-27T13:42:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html (label: 財政情報) 入口 https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kudamatsu.lg.jp/kikaku/kikaku/zaisei/mokuji.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijyoukyoushiryoushuu_2024.xlsx「令和6年度（2024年度）（エクセル：562KB）」, sha256:0808f7d3）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

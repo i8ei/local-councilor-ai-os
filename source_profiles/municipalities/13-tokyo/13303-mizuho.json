@@ -50,11 +50,11 @@
       "notes": "Observed budget link at http://www.town.mizuho.tokyo.jp/tyosei/003/index.html (label: 町の予算・財政) 入口 https://www.town.mizuho.tokyo.jp/tyosei/003/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mizuho.tokyo.jp/tyosei/003/002/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mizuho.tokyo.jp/tyosei/003/002/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.town.mizuho.tokyo.jp/tyosei/003/002/index.html",
           "sha256": "e87abf5a60d6bf0e798da701e171b721482610d169718717dc996666ec45a790",
           "fetched_at": "2026-08-27T10:26:25Z"
+        },
+        {
+          "url": "http://www.town.mizuho.tokyo.jp/tyosei/003/002/index.html",
+          "observed_on": "http://www.town.mizuho.tokyo.jp/",
+          "sha256": "e87abf5a60d6bf0e798da701e171b721482610d169718717dc996666ec45a790",
+          "fetched_at": "2026-08-27T10:26:25Z"
+        },
+        {
+          "url": "https://www.town.mizuho.tokyo.jp/tyosei/002/012/p001152_d/fil/6kessansyo.pdf",
+          "observed_on": "https://www.town.mizuho.tokyo.jp/tyosei/002/012/p001152.html",
+          "sha256": "d8f144c44cb99a2e091a5da57df09e23157918ca3ce017a44d31969b06d8bb37",
+          "fetched_at": "2026-08-27T13:34:13Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.mizuho.tokyo.jp/tyosei/003/002/index.html (label: 決算) 入口 https://www.town.mizuho.tokyo.jp/tyosei/003/002/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6kessansyo.pdf「令和6年度 決算書」, sha256:d8f144c4）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

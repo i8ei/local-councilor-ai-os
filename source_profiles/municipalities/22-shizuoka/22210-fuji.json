@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html (label: ふるさと納税) 入口 http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html",
@@ -79,9 +79,15 @@
           "observed_on": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html",
           "sha256": "924373e80b4852c200c3bdf7fce4cba6d2ae354a7ee36680113bb9a7c4cd5ca4",
           "fetched_at": "2026-08-27T10:14:28Z"
+        },
+        {
+          "url": "http://www.city.fuji.shizuoka.jp/documents/15276/00r6all.pdf",
+          "observed_on": "http://www.city.fuji.shizuoka.jp/1070000000/p007735.html",
+          "sha256": "c728635ad2a4b06e4729e4c082f38d855e1fe6fcdf5f52fdf971b3b94feefc83",
+          "fetched_at": "2026-08-27T13:38:05Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html (label: 決算) 入口 http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（00r6all.pdf「令和6年度決算書（全体）（PDF：48,561KB）」, sha256:c728635a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

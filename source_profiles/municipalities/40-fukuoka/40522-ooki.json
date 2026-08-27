@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.ooki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/ooki/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.ooki.lg.jp/soshiki/gikai/gikai/1/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/ooki/WebView/rd/council.html",
-          "observed_on": "http://www.town.ooki.lg.jp/",
-          "fetched_at": "2026-08-27T04:24:42Z"
+          "url": "http://www.town.ooki.lg.jp/soshiki/gikai/gikai/1/index.html",
+          "observed_on": "http://www.town.ooki.lg.jp/soshiki/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "http://www.town.ooki.lg.jp/soshiki/gikai/gikai/1/index.html",
+          "observed_on": "http://www.town.ooki.lg.jp/soshiki/gikai/gikai/1/index.html",
+          "sha256": "a4ae7345c3461f901ba52a0ded157811a13d2a8e6d12bfbd7fa469fd67502f12",
+          "fetched_at": "2026-08-27T14:08:57Z"
+        },
+        {
+          "url": "https://www.town.ooki.lg.jp/soshiki/gikai/gikai/1/2026/9342.html",
+          "observed_on": "http://www.town.ooki.lg.jp/soshiki/gikai/gikai/1/index.html",
+          "sha256": "2f0ff1d28104817800bc7aeb3843d03efab34df3a23d2dff76cba45a80a8a4f9",
+          "fetched_at": "2026-08-27T14:09:00Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/ooki/WebView/rd/council.html (label: 大木町議会インターネット配信)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -57,11 +74,11 @@
       "notes": "Observed finance section at http://www.town.ooki.lg.jp/gyosei/7/index.html (label: 財政) 入口 https://www.town.ooki.lg.jp/gyosei/7/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ooki.lg.jp/gyosei/7/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ooki.lg.jp/gyosei/7/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ooki.lg.jp/gyosei/7/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ooki.lg.jp/gyosei/7/index.html",
@@ -73,9 +90,21 @@
           "observed_on": "https://www.town.ooki.lg.jp/gyosei/7/index.html",
           "sha256": "545055748994decbd570075d87d8841ee4b4c35a65bd2be26aab212f8e860c2c",
           "fetched_at": "2026-08-27T09:36:36Z"
+        },
+        {
+          "url": "http://www.town.ooki.lg.jp/gyosei/7/index.html",
+          "observed_on": "http://www.town.ooki.lg.jp/",
+          "sha256": "545055748994decbd570075d87d8841ee4b4c35a65bd2be26aab212f8e860c2c",
+          "fetched_at": "2026-08-27T09:36:36Z"
+        },
+        {
+          "url": "https://www.town.ooki.lg.jp/material/files/group/4/67914907.pdf",
+          "observed_on": "http://www.town.ooki.lg.jp/gyosei/7/20/1424322974943.html",
+          "sha256": "eabdf2fa53f41b77964c473f1757fa86a618db8d272eed804ef916ce8c4fe14d",
+          "fetched_at": "2026-08-27T13:45:35Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ooki.lg.jp/gyosei/7/index.html (label: 財政) 入口 https://www.town.ooki.lg.jp/gyosei/7/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ooki.lg.jp/gyosei/7/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ooki.lg.jp/gyosei/7/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（67914907.pdf「平成20年度町の財政状況 (PDFファイル: 171.4KB)」, sha256:eabdf2fa）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

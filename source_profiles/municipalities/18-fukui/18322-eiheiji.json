@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/eiheiji/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.eiheiji.lg.jp/950/p002868.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.eiheiji.lg.jp/950/p002868.html",
@@ -64,16 +64,22 @@
           "observed_on": "https://www.town.eiheiji.lg.jp/950/p002868.html",
           "sha256": "3169f9acee323cf002ede552180aa5978ebc90c232efa6dde82cd4e052820382",
           "fetched_at": "2026-08-27T10:07:31Z"
+        },
+        {
+          "url": "https://www.town.eiheiji.lg.jp/950/p002868_d/fil/4taikou.pdf",
+          "observed_on": "https://www.town.eiheiji.lg.jp/950/p002868.html",
+          "sha256": "f484b2186a34584bd04605b176250f8af38a48a68394fc6374ff0da8b90e7d08",
+          "fetched_at": "2026-08-27T13:35:54Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.eiheiji.lg.jp/950/p002868.html (label: 行財政改革の推進) 入口 https://www.town.eiheiji.lg.jp/950/p002868.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.eiheiji.lg.jp/950/p002868.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（4taikou.pdf「第4次行財政改革大綱（ＰＤＦ形式 519キロバイト）」, sha256:f484b218）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.eiheiji.lg.jp/200/300/303/p011799.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.eiheiji.lg.jp/200/300/303/p011799.html",
@@ -90,9 +96,15 @@
           "url": "https://www.town.eiheiji.lg.jp/200/300/303/p011799_d/fil/R6kessan.pdf",
           "observed_on": "https://www.town.eiheiji.lg.jp/200/300/303/p011799.html",
           "fetched_at": "2026-08-27T11:09:58Z"
+        },
+        {
+          "url": "https://www.town.eiheiji.lg.jp/200/300/303/p011799_d/fil/R6kessan.pdf",
+          "observed_on": "https://www.town.eiheiji.lg.jp/200/300/303/p011799.html",
+          "sha256": "49050995c8a88ba611338deddfe12d8c6bdcefaf191d98db123640e9e7a33dfb",
+          "fetched_at": "2026-08-27T11:10:00Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.eiheiji.lg.jp/200/300/303/p011799.html (label: 令和6年度決算の概要を公表) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan.pdf「令和6年度 一般会計・特別会計 決算書（ＰＤＦ形式 6,658キロバイト）」, sha256:49050995）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

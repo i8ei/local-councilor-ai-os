@@ -6,25 +6,27 @@
   "official_home_url": "http://www.town.ichikawamisato.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html",
-      "verified_at": "2026-08-27T10:08:29Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.ichikawamisato.yamanashi.jp/40administration/01assembly/2026-0424-1347-14.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html",
-          "observed_on": "http://www.town.ichikawamisato.yamanashi.jp/",
-          "fetched_at": "2026-08-27T06:41:07Z"
+          "url": "https://www.town.ichikawamisato.yamanashi.jp/40administration/01assembly/2026-0424-1347-14.html",
+          "observed_on": "https://www.town.ichikawamisato.yamanashi.jp/40administration/01assembly/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html",
-          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
-          "fetched_at": "2026-08-27T10:08:29Z"
+          "url": "https://www.town.ichikawamisato.yamanashi.jp/40administration/01assembly/2026-0424-1347-14.html",
+          "observed_on": "https://www.town.ichikawamisato.yamanashi.jp/40administration/01assembly/2026-0424-1347-14.html",
+          "sha256": "5316045eefa2d09c80b1e4c628a1795d1378942eba8a4bbfcef0716e08669836",
+          "fetched_at": "2026-08-27T13:45:58Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ichikawamisato/pg/index.html (label: 議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

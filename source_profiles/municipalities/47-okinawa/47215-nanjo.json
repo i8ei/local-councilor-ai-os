@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.nanjo.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.nanjo.okinawa.jp/shisei/gikai/nittei/1708327600/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.nanjo.okinawa.jp/shisei/gikai/nittei/1708327600/",
+          "observed_on": "https://www.city.nanjo.okinawa.jp/shisei/gikai/nittei/1767919938/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.nanjo.okinawa.jp/shisei/gikai/nittei/1708327600/",
+          "observed_on": "https://www.city.nanjo.okinawa.jp/shisei/gikai/nittei/1708327600/",
+          "sha256": "ce01352657bd60bc81f1c4560d545850c0f353fadd3df30b2121292a45e8379f",
+          "fetched_at": "2026-08-27T14:12:00Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +65,11 @@
       "notes": "Observed finance section at https://www.city.nanjo.okinawa.jp/shisei/zaisei/ (label: 財政) 入口 https://www.city.nanjo.okinawa.jp/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nanjo.okinawa.jp/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nanjo.okinawa.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nanjo.okinawa.jp/shisei/zaisei/",
@@ -66,9 +81,15 @@
           "observed_on": "https://www.city.nanjo.okinawa.jp/shisei/zaisei/",
           "sha256": "9438cfd0f69a6f25a8380c70c439ac6749f7ba9d2c20072961b522c7c470a252",
           "fetched_at": "2026-08-27T09:41:02Z"
+        },
+        {
+          "url": "https://www.city.nanjo.okinawa.jp/userfiles/files/R6zaiseijyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.nanjo.okinawa.jp/shisei/zaisei/1634532050/",
+          "sha256": "3acd5ff0fe35ebfedcf3d90ece095ed8021170acfd9f0f28d4e1e7d7c2f45a05",
+          "fetched_at": "2026-08-27T13:48:11Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.nanjo.okinawa.jp/shisei/zaisei/ (label: 財政) 入口 https://www.city.nanjo.okinawa.jp/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nanjo.okinawa.jp/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijyoukyousiryousyuu.xlsx「R6年度 財政状況資料集」, sha256:3acd5ff0）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

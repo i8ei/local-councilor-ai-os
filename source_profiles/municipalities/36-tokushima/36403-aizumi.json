@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.aizumi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.aizumi.lg.jp/gikai/minutes/r8.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.aizumi.lg.jp/gikai/minutes/r8.html",
+          "observed_on": "https://www.town.aizumi.lg.jp/gikai/docs/2026080300036/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.aizumi.lg.jp/gikai/minutes/r8.html",
+          "observed_on": "https://www.town.aizumi.lg.jp/gikai/minutes/r8.html",
+          "sha256": "6eead6f18f9659003ae776d98c090ac0390375f78dcffd1bde8ba35b8b7d1254",
+          "fetched_at": "2026-08-27T14:06:57Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed budget link at https://www.town.aizumi.lg.jp/category/zokusei/estimate/ (label: 町の財政 (予算・決算、バランスシート、財政指標等)) 入口 https://www.town.aizumi.lg.jp/category/zokusei/estimate/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aizumi.lg.jp/category/zokusei/estimate/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aizumi.lg.jp/category/zokusei/estimate/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aizumi.lg.jp/category/zokusei/estimate/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aizumi.lg.jp/category/zokusei/estimate/",
@@ -72,9 +87,15 @@
           "observed_on": "https://www.town.aizumi.lg.jp/category/zokusei/estimate/",
           "sha256": "a32dd61f430edadcd54622225d9c44ddd7e83280e0b820c8fc56c73e732bef6c",
           "fetched_at": "2026-08-27T09:46:14Z"
+        },
+        {
+          "url": "https://www.town.aizumi.lg.jp/docs/2026041700011/file_contents/R06_tokubetsu.pdf",
+          "observed_on": "https://www.town.aizumi.lg.jp/docs/2026041700011/",
+          "sha256": "8383092c418ba9bd3c301cfc97c56fcce2c8821cc7dc914b6ef50edcd94082cd",
+          "fetched_at": "2026-08-27T13:43:06Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.aizumi.lg.jp/category/zokusei/estimate/ (label: 町の財政 (予算・決算、バランスシート、財政指標等)) 入口 https://www.town.aizumi.lg.jp/category/zokusei/estimate/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aizumi.lg.jp/category/zokusei/estimate/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aizumi.lg.jp/category/zokusei/estimate/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06_tokubetsu.pdf「藍住町特別会計(令和６年度)[PDF：223KB]」, sha256:8383092c）にて構造マーカー（歳入・歳出・実質収支等）を確認済み。"
     }
   }
 }

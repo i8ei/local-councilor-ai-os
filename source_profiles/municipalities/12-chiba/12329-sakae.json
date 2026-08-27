@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.sakae.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.kensakusystem.jp/sakae/sophia.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.sakae.chiba.jp/gikai/kaigiroku/soumu/page007822.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.kensakusystem.jp/sakae/sophia.html",
-          "observed_on": "http://www.town.sakae.chiba.jp/gikai/",
-          "fetched_at": "2026-08-27T07:25:24Z"
+          "url": "https://www.town.sakae.chiba.jp/gikai/kaigiroku/soumu/page007822.html",
+          "observed_on": "https://www.town.sakae.chiba.jp/gikai/kaigiroku/soumu/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.sakae.chiba.jp/gikai/kaigiroku/soumu/page007822.html",
+          "observed_on": "https://www.town.sakae.chiba.jp/gikai/kaigiroku/soumu/page007822.html",
+          "sha256": "69cae3b18289125881ede785b293b164f5d03873536f00d86158cc2f0b9e3033",
+          "fetched_at": "2026-08-27T13:42:17Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.kensakusystem.jp/sakae/sophia.html (label: 本会議会議録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

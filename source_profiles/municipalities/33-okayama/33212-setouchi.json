@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.setouchi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html",
-      "verified_at": "2026-08-27T09:44:26Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.setouchi.lg.jp/site/setouchishigikai/162051.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html",
+          "url": "https://www.city.setouchi.lg.jp/site/setouchishigikai/162051.html",
           "observed_on": "http://www.city.setouchi.lg.jp/site/setouchishigikai/",
-          "fetched_at": "2026-08-27T06:17:46Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html",
-          "sha256": "97792a62ca47d9934201c843588a8e7002f3f18459a291e3a62c65237d73b4c8",
-          "fetched_at": "2026-08-27T09:44:27Z"
+          "url": "https://www.city.setouchi.lg.jp/site/setouchishigikai/162051.html",
+          "observed_on": "https://www.city.setouchi.lg.jp/site/setouchishigikai/162051.html",
+          "sha256": "6a2a8e99965fe249d791d6c78627e384b7ce56423a39886238907b700cc7ddb0",
+          "fetched_at": "2026-08-27T14:05:58Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/setouchi/pg/index.html (label: 会議録の検索はこちら（外部リンクです・別ウインドウで開きます）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed finance section at http://www.city.setouchi.lg.jp/life/5/21/85/ (label: 財政状況等) 入口 https://www.city.setouchi.lg.jp/life/5/21/85/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.setouchi.lg.jp/life/5/21/85/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.setouchi.lg.jp/life/5/21/85/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.setouchi.lg.jp/life/5/21/85/",
@@ -85,9 +87,21 @@
           "observed_on": "https://www.city.setouchi.lg.jp/life/5/21/85/",
           "sha256": "34a5d4ad0c718e5e109af9e7e6e364cc831a9d834458b33f902ff638c1301ddb",
           "fetched_at": "2026-08-27T09:44:33Z"
+        },
+        {
+          "url": "http://www.city.setouchi.lg.jp/life/5/21/85/",
+          "observed_on": "http://www.city.setouchi.lg.jp/",
+          "sha256": "34a5d4ad0c718e5e109af9e7e6e364cc831a9d834458b33f902ff638c1301ddb",
+          "fetched_at": "2026-08-27T09:44:33Z"
+        },
+        {
+          "url": "https://www.city.setouchi.lg.jp/uploaded/attachment/126576.xlsx",
+          "observed_on": "https://www.city.setouchi.lg.jp/soshiki/4/3139.html",
+          "sha256": "8d9626bd6f22c6c4cf4decc10163fc9f6192f43f6ea738a05bb35190a1f2b35a",
+          "fetched_at": "2026-08-27T13:42:18Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.setouchi.lg.jp/life/5/21/85/ (label: 財政状況等) 入口 https://www.city.setouchi.lg.jp/life/5/21/85/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.setouchi.lg.jp/life/5/21/85/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（126576.xlsx「令和6年度 [Excelファイル／556KB]」, sha256:8d9626bd）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

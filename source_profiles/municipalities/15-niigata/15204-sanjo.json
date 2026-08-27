@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.sanjo.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/9384.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/gikainittei_bochonogoannai/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/9384.html",
+          "url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/gikainittei_bochonogoannai/index.html",
           "observed_on": "https://www.city.sanjo.niigata.jp/shisei/shigikai/index.html",
-          "fetched_at": "2026-08-27T05:57:37Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/gikainittei_bochonogoannai/index.html",
+          "observed_on": "https://www.city.sanjo.niigata.jp/shisei/shigikai/gikainittei_bochonogoannai/index.html",
+          "sha256": "910dcfe532cb674e637b858a5ef4d02c25baccd6f088d8b2ef51c5f9961ed4d3",
+          "fetched_at": "2026-08-27T13:44:18Z"
+        },
+        {
+          "url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/gikainittei_bochonogoannai/2/11834.html",
+          "observed_on": "https://www.city.sanjo.niigata.jp/shisei/shigikai/gikainittei_bochonogoannai/index.html",
+          "sha256": "fcb7ca515f1b8326789dcf598dfd45402e17956ed775a0a66928406f645c7a7b",
+          "fetched_at": "2026-08-27T13:44:18Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.sanjo.niigata.jp/shisei/shigikai/9384.html (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.unzen.nagasaki.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/unzen/pg/index.html",
-      "verified_at": "2026-08-27T09:37:45Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.unzen.nagasaki.jp/kiji0034339/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/unzen/pg/index.html",
+          "url": "https://www.city.unzen.nagasaki.jp/kiji0034339/index.html",
           "observed_on": "http://www.city.unzen.nagasaki.jp/list00138.html",
-          "fetched_at": "2026-08-27T05:25:40Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/unzen/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/unzen/pg/index.html",
-          "sha256": "4d1565c602c6bb196f478752edad4b3bdfe2f016150cdacbb0e03aad2c2f70fc",
-          "fetched_at": "2026-08-27T09:37:45Z"
+          "url": "https://www.city.unzen.nagasaki.jp/kiji0034339/index.html",
+          "observed_on": "https://www.city.unzen.nagasaki.jp/kiji0034339/index.html",
+          "sha256": "f3d39c874f219daf8fd8e74aff428e54f58e8cd1d7b0604b6900c4e96200ae12",
+          "fetched_at": "2026-08-27T14:09:39Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/unzen/pg/index.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed finance section at http://www.city.unzen.nagasaki.jp/list00140.html (label: 行政・財政) 入口 https://www.city.unzen.nagasaki.jp/list00140.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.unzen.nagasaki.jp/list00140.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.unzen.nagasaki.jp/list00140.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.unzen.nagasaki.jp/list00140.html",
@@ -85,9 +87,21 @@
           "observed_on": "https://www.city.unzen.nagasaki.jp/list00140.html",
           "sha256": "7ca445fde9758af2b280ec082466a160739af064340e0eae62a499f56397b3ea",
           "fetched_at": "2026-08-27T09:37:54Z"
+        },
+        {
+          "url": "http://www.city.unzen.nagasaki.jp/list00140.html",
+          "observed_on": "http://www.city.unzen.nagasaki.jp/",
+          "sha256": "7ca445fde9758af2b280ec082466a160739af064340e0eae62a499f56397b3ea",
+          "fetched_at": "2026-08-27T09:37:54Z"
+        },
+        {
+          "url": "https://www.city.unzen.nagasaki.jp/kiji0038039/3_8039_19128_up_r86h7ozc.pdf",
+          "observed_on": "https://www.city.unzen.nagasaki.jp/kiji0038039/index.html",
+          "sha256": "a7099b0256c882b0cc83fc3458f8ff49c1f69bb0dfb9f0991bd12858e5dd3b25",
+          "fetched_at": "2026-08-27T13:45:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.unzen.nagasaki.jp/list00140.html (label: 行政・財政) 入口 https://www.city.unzen.nagasaki.jp/list00140.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.unzen.nagasaki.jp/list00140.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_8039_19128_up_r86h7ozc.pdf「財政収支改善プラン（PDF：762.3キロバイト）」, sha256:a7099b02）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

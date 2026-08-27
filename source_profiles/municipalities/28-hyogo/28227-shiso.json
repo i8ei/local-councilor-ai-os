@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.shiso/reiki_menu.html (label: 宍粟市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shiso.lg.jp/shiseijoho/gyozaisei/yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shiso.lg.jp/shiseijoho/gyozaisei/yosan_kessan/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.city.shiso.lg.jp/shiseijoho/gyozaisei/yosan_kessan/index.html",
           "sha256": "00c2ba400773e18bb71c7c48df82b1186b2de193982b7337c45930dc4f27f5be",
           "fetched_at": "2026-08-27T09:52:21Z"
+        },
+        {
+          "url": "https://www.city.shiso.lg.jp/material/files/group/29/R6zaiseijoukyousiryousyu.xlsx",
+          "observed_on": "https://www.city.shiso.lg.jp/shiseijoho/gyozaisei/yosan_kessan/1386830992387.html",
+          "sha256": "8b337a01dfeafd12ae5ec69a23b10e8a3ba263464fe0e260b726b272dc896095",
+          "fetched_at": "2026-08-27T13:41:07Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.shiso.lg.jp/shiseijoho/gyozaisei/yosan_kessan/index.html (label: 予算・決算) 入口 https://www.city.shiso.lg.jp/shiseijoho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shiso.lg.jp/shiseijoho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shiso.lg.jp/shiseijoho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zaiseijoukyousiryousyu.xlsx「財政状況資料集 (Excelファイル: 549.9KB)」, sha256:8b337a01）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

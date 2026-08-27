@@ -48,11 +48,11 @@
       "base_url": "https://www1.g-reiki.net/city.ichikikushikino/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html",
           "sha256": "cebd8c75c52b1f2781c7177cef6e1e5bf773f059feb67003cb30765da5de25ae",
           "fetched_at": "2026-08-27T09:40:26Z"
+        },
+        {
+          "url": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/documents/r08tousyogaiyou.pdf",
+          "observed_on": "http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/yosan.html",
+          "sha256": "f1409a1d68014ec31af32d2e032dc7926ca05b79f9f4c03c0a4eb2d28d926879",
+          "fetched_at": "2026-08-27T13:47:36Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html (label: 予算・財政) 入口 http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.ichikikushikino.lg.jp/zaisei1/shise/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r08tousyogaiyou.pdf「当初予算概要（PDF：618KB）」, sha256:f1409a1d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

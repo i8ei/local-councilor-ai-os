@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.munakata.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "http://www.city.munakata.fukuoka.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T09:35:47Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.munakata.lg.jp/kiji0032064/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.munakata.fukuoka.dbsr.jp/index.php/",
+          "url": "https://www.city.munakata.lg.jp/kiji0032064/index.html",
           "observed_on": "http://www.city.munakata.lg.jp/list00151.html",
-          "fetched_at": "2026-08-27T04:13:59Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://www.city.munakata.fukuoka.dbsr.jp/index.php/",
-          "observed_on": "http://www.city.munakata.fukuoka.dbsr.jp/index.php/",
-          "sha256": "422f69c2c0c1a66c5c97c5e17803d5a06aa5363834ea3f41c352289cde68cd39",
-          "fetched_at": "2026-08-27T09:35:53Z"
+          "url": "https://www.city.munakata.lg.jp/kiji0032064/index.html",
+          "observed_on": "https://www.city.munakata.lg.jp/kiji0032064/index.html",
+          "sha256": "2749cd1dba4cf3439b93fbd548966359e04bf00e3b8fed17891051f0d35f6271",
+          "fetched_at": "2026-08-27T14:08:36Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.munakata.fukuoka.dbsr.jp/index.php/ (label: 会議録の検索と閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -48,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.munakata/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.munakata.lg.jp/list00345.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.munakata.lg.jp/list00345.html",
@@ -64,9 +66,21 @@
           "observed_on": "https://www.city.munakata.lg.jp/list00345.html",
           "sha256": "cdca3cec205a7d2c52bf5583ca1746f33508127018940be940b0bd2687925006",
           "fetched_at": "2026-08-27T09:36:00Z"
+        },
+        {
+          "url": "http://www.city.munakata.lg.jp/list00345.html",
+          "observed_on": "http://www.city.munakata.lg.jp/",
+          "sha256": "cdca3cec205a7d2c52bf5583ca1746f33508127018940be940b0bd2687925006",
+          "fetched_at": "2026-08-27T09:36:00Z"
+        },
+        {
+          "url": "https://www.city.munakata.lg.jp/kiji0039691/3_9691_12373_up_v5erhpyo.pdf",
+          "observed_on": "https://www.city.munakata.lg.jp/kiji0039691/index.html",
+          "sha256": "75fd78ce9ce382cb51f455ed6fdf7a2811049aaa7cdc3a2c1abc4770c3c3220b",
+          "fetched_at": "2026-08-27T13:44:54Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.munakata.lg.jp/list00345.html (label: 予算) 入口 https://www.city.munakata.lg.jp/list00345.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.munakata.lg.jp/list00345.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_9691_12373_up_v5erhpyo.pdf「R8年度当初予算書（PDF：2.29メガバイト）」, sha256:75fd78ce）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

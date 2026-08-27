@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.tokoname.aichi.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/tokoname/SpTop.html",
-      "verified_at": "2026-08-27T10:15:15Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.tokoname.aichi.jp/shisei/shigikai/1001594/1001598.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tokoname/SpTop.html",
-          "observed_on": "http://www.city.tokoname.aichi.jp/1000059.html",
-          "fetched_at": "2026-08-27T08:01:23Z"
+          "url": "https://www.city.tokoname.aichi.jp/shisei/shigikai/1001594/1001598.html",
+          "observed_on": "http://www.city.tokoname.aichi.jp/shisei/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tokoname/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/tokoname/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:15:15Z"
+          "url": "https://www.city.tokoname.aichi.jp/shisei/shigikai/1001594/1001598.html",
+          "observed_on": "https://www.city.tokoname.aichi.jp/shisei/shigikai/1001594/1001598.html",
+          "sha256": "748014a6cbd9892704bb38331465fde244388d3e13d4ffab618290868c8900cc",
+          "fetched_at": "2026-08-27T13:50:27Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tokoname/SpTop.html (label: 議会会議録検索 （外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

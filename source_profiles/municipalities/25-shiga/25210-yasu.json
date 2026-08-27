@@ -56,11 +56,11 @@
       "notes": "Observed finance section at https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "9380c4774fd373b2ea3ec987b1fa5374886e0b3974a7745d13a705316f2e7856",
           "fetched_at": "2026-08-27T09:49:33Z"
+        },
+        {
+          "url": "https://www.city.yasu.lg.jp/material/files/group/5/R1zaiseijyoukyou.xlsx",
+          "observed_on": "https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/zaisei-yosan-kessan/5433.html",
+          "sha256": "ee42ffaa120131a8815baaf5bca08691d29a5c19addd6e7118a900f0881549c6",
+          "fetched_at": "2026-08-27T13:39:24Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yasu.lg.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R1zaiseijyoukyou.xlsx「令和元年度財政状況資料集 (Excelファイル: 565.2KB)」, sha256:ee42ffaa）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/toyoake/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toyoake.lg.jp/2934.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toyoake.lg.jp/2934.htm",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.toyoake.lg.jp/2934.htm",
           "sha256": "19f7f1c1c7ad02bc02b629f8753792e8604863d65c5d8a4c29928d43eb08c296",
           "fetched_at": "2026-08-27T10:16:19Z"
+        },
+        {
+          "url": "http://www.city.toyoake.lg.jp/2934.htm",
+          "observed_on": "http://www.city.toyoake.lg.jp/",
+          "sha256": "19f7f1c1c7ad02bc02b629f8753792e8604863d65c5d8a4c29928d43eb08c296",
+          "fetched_at": "2026-08-27T10:16:19Z"
+        },
+        {
+          "url": "https://www.city.toyoake.lg.jp/secure/11903/20220601.pdf",
+          "observed_on": "https://www.city.toyoake.lg.jp/9468.htm",
+          "sha256": "b074ffbdc2a73f3aeb88611932a8a51bbe77bb44667294f8a3986518a78bc048",
+          "fetched_at": "2026-08-27T13:38:17Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.toyoake.lg.jp/2934.htm (label: 予算) 入口 https://www.city.toyoake.lg.jp/2934.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20220601.pdf「予算執行状況(令和4年3月31日現在)」, sha256:b074ffbd）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

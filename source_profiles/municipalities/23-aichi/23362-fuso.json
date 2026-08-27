@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.town.fuso.lg.jp/chousei/1002205/index.html (label: 予算・財政) 入口 https://www.town.fuso.lg.jp/chousei/1002205/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.fuso.lg.jp/chousei/1002205/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.fuso.lg.jp/chousei/1002205/index.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.town.fuso.lg.jp/chousei/1002205/index.html",
           "sha256": "65e2e66da4117506f7f59abc823f804b4cf9cc21ad2f1dffb2b3e2c7d57b4aa4",
           "fetched_at": "2026-08-27T10:16:39Z"
+        },
+        {
+          "url": "http://www.town.fuso.lg.jp/chousei/1002205/index.html",
+          "observed_on": "http://www.town.fuso.lg.jp/",
+          "sha256": "65e2e66da4117506f7f59abc823f804b4cf9cc21ad2f1dffb2b3e2c7d57b4aa4",
+          "fetched_at": "2026-08-27T10:16:39Z"
+        },
+        {
+          "url": "https://www.town.fuso.lg.jp/_res/projects/default_project/_page_/001/003/186/reiwa6nenndoippannkaikeikessannsyo.pdf",
+          "observed_on": "https://www.town.fuso.lg.jp/chousei/1002205/1002563/1003186.html",
+          "sha256": "e70087f4b4ee7b1df062aff07cc984c314c674f5491bd5f5110cd911f24a665d",
+          "fetched_at": "2026-08-27T13:39:04Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.fuso.lg.jp/chousei/1002205/index.html (label: 予算・財政) 入口 https://www.town.fuso.lg.jp/chousei/1002205/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（reiwa6nenndoippannkaikeikessannsyo.pdf「令和6年度扶桑町一般会計・特別会計歳入歳出決算書及び附属資料 （PDF 3.9MB）」, sha256:e70087f4）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

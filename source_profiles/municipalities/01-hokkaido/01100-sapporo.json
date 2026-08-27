@@ -6,19 +6,27 @@
   "official_home_url": "https://www.city.sapporo.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "http://sapporo.gijiroku.com/voices/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.sapporo.jp/gikai/html/kaigiroku-sokuho.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://sapporo.gijiroku.com/voices/",
-          "observed_on": "https://www.city.sapporo.jp/",
-          "fetched_at": "2026-08-27T05:57:00Z"
+          "url": "https://www.city.sapporo.jp/gikai/html/kaigiroku-sokuho.html",
+          "observed_on": "https://www.city.sapporo.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.sapporo.jp/gikai/html/kaigiroku-sokuho.html",
+          "observed_on": "https://www.city.sapporo.jp/gikai/html/kaigiroku-sokuho.html",
+          "sha256": "7e7c59651bdff0fda8d423aac985a07c76e45be0e346c3665748435e20797b82",
+          "fetched_at": "2026-08-27T13:21:32Z"
         }
       ],
-      "notes": "Observed voices at http://sapporo.gijiroku.com/voices/ (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

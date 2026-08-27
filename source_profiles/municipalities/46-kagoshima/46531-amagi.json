@@ -63,11 +63,11 @@
       "notes": "Observed budget link at https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/ (label: 予算) 入口 https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.amagi.lg.jp/chosei/gyozaisei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.amagi.lg.jp/chosei/gyozaisei/kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.amagi.lg.jp/chosei/gyozaisei/kessan/",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.town.amagi.lg.jp/chosei/gyozaisei/kessan/",
           "sha256": "bf0227bbb722f9c87b7a71934c413e1997aa357afeb15d92ec350236a054ac5d",
           "fetched_at": "2026-08-27T09:40:55Z"
+        },
+        {
+          "url": "https://www.town.amagi.lg.jp/fs/3/0/0/1/0/_/R6_____.pdf",
+          "observed_on": "https://www.town.amagi.lg.jp/docs/5635.html",
+          "sha256": "0949fbede888c0c95b37137d33b9b82ada9642b274ec60ee0e4448bf23bcbb37",
+          "fetched_at": "2026-08-27T13:48:10Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.amagi.lg.jp/chosei/gyozaisei/kessan/ (label: 決算) 入口 https://www.town.amagi.lg.jp/chosei/gyozaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.amagi.lg.jp/chosei/gyozaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.amagi.lg.jp/chosei/gyozaisei/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_____.pdf「R6年度決算書 (PDF 11MB)」, sha256:0949fbed）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

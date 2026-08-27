@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.oita.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.oita.oita.jp/o186/shigikai/honkaigi/gian/r8t1gian.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.oita.oita.jp/o186/shigikai/honkaigi/gian/r8t1gian.html",
+          "observed_on": "https://www.city.oita.oita.jp/o186/shigikai/honkaigi/gian/yotei9gatugikai.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.oita.oita.jp/o186/shigikai/honkaigi/gian/r8t1gian.html",
+          "observed_on": "https://www.city.oita.oita.jp/o186/shigikai/honkaigi/gian/r8t1gian.html",
+          "sha256": "8d82c6e96906e969d5a52a780e4aad0ba650ff08721b184682f4c7e3de6f0df2",
+          "fetched_at": "2026-08-27T14:10:33Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +65,11 @@
       "notes": "Observed finance section at http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html (label: 財政状況) 入口 https://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
@@ -66,9 +81,21 @@
           "observed_on": "https://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
           "sha256": "87375ae7af7ed2836a52111acaa53ab2dc13e3f06c4a859fac236be241f298a0",
           "fetched_at": "2026-08-27T09:39:18Z"
+        },
+        {
+          "url": "http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html",
+          "observed_on": "http://www.city.oita.oita.jp/",
+          "sha256": "87375ae7af7ed2836a52111acaa53ab2dc13e3f06c4a859fac236be241f298a0",
+          "fetched_at": "2026-08-27T09:39:18Z"
+        },
+        {
+          "url": "https://www.city.oita.oita.jp/o032/shisejoho/kekakuzaise/documents/zaiseijyoukyou260601.pdf",
+          "observed_on": "https://www.city.oita.oita.jp/o032/shisejoho/kekakuzaise/r80601zaiseijyoukyou.html",
+          "sha256": "a58a306f6d17ef49994b38c3bfe31d168dd2238a85db5be69d6c11844532494d",
+          "fetched_at": "2026-08-27T13:46:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html (label: 財政状況) 入口 https://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.oita.oita.jp/shisejoho/kekakuzaise/shinozaise/zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijyoukyou260601.pdf「令和8年6月1日公表（PDF：137KB）」, sha256:a58a306f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

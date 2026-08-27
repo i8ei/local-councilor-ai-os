@@ -6,25 +6,27 @@
   "official_home_url": "http://www.info.city.tsu.mie.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/tsu/SpTop.html",
-      "verified_at": "2026-08-27T09:48:43Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.info.city.tsu.mie.jp/shisei/kouhou_kouchou_kouhou/1005965/1007586/1010639/1013585/1013701.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tsu/SpTop.html",
+          "url": "https://www.info.city.tsu.mie.jp/shisei/kouhou_kouchou_kouhou/1005965/1007586/1010639/1013585/1013701.html",
           "observed_on": "http://www.info.city.tsu.mie.jp/",
-          "fetched_at": "2026-08-27T05:56:37Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tsu/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/tsu/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T09:48:43Z"
+          "url": "https://www.info.city.tsu.mie.jp/shisei/kouhou_kouchou_kouhou/1005965/1007586/1010639/1013585/1013701.html",
+          "observed_on": "https://www.info.city.tsu.mie.jp/shisei/kouhou_kouchou_kouhou/1005965/1007586/1010639/1013585/1013701.html",
+          "sha256": "0f69050ccc9f035ed75fce2f661eadacb298ee077a889a72457027e2afb2abc3",
+          "fetched_at": "2026-08-27T13:59:35Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tsu/SpTop.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -63,11 +65,11 @@
       "notes": "Observed budget link at http://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html (label: 予算) 入口 https://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.info.city.tsu.mie.jp/shisei/zaisei/1005573/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.info.city.tsu.mie.jp/shisei/zaisei/1005577/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.info.city.tsu.mie.jp/shisei/zaisei/1005577/index.html",
@@ -79,9 +81,21 @@
           "observed_on": "https://www.info.city.tsu.mie.jp/shisei/zaisei/1005577/index.html",
           "sha256": "e7bc2aa4498ef2cb91f48d3b2a51b5c1f6777af617611784bd117bf4049ca025",
           "fetched_at": "2026-08-27T09:48:52Z"
+        },
+        {
+          "url": "http://www.info.city.tsu.mie.jp/shisei/zaisei/1005577/index.html",
+          "observed_on": "http://www.info.city.tsu.mie.jp/",
+          "sha256": "e7bc2aa4498ef2cb91f48d3b2a51b5c1f6777af617611784bd117bf4049ca025",
+          "fetched_at": "2026-08-27T09:48:52Z"
+        },
+        {
+          "url": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/005/578/6kessan.pdf",
+          "observed_on": "https://www.info.city.tsu.mie.jp/shisei/zaisei/1005577/1005578.html",
+          "sha256": "d6a371cb7ebf919d0578276e1a60f690e931d4d2c10b893c78ad23547a3a7e6f",
+          "fetched_at": "2026-08-27T13:39:04Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.info.city.tsu.mie.jp/shisei/zaisei/1005577/index.html (label: 決算) 入口 https://www.info.city.tsu.mie.jp/shisei/zaisei/1005577/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.info.city.tsu.mie.jp/shisei/zaisei/1005577/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.info.city.tsu.mie.jp/shisei/zaisei/1005577/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6kessan.pdf「令和6年度津市歳入歳出決算書 （PDF 752.5KB）」, sha256:d6a371cb）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

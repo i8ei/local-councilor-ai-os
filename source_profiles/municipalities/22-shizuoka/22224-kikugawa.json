@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.kikugawa.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.kikugawa.shizuoka.jp/gikaijimu/kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "http://www.city.kikugawa.shizuoka.jp/gikaijimu/seigann.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.kikugawa.shizuoka.jp/gikaijimu/kaigiroku.html",
+          "url": "http://www.city.kikugawa.shizuoka.jp/gikaijimu/seigann.html",
           "observed_on": "http://www.city.kikugawa.shizuoka.jp/gikai/index_costom.html",
-          "fetched_at": "2026-08-27T07:49:17Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.kikugawa.shizuoka.jp/gikaijimu/seigann.html",
+          "observed_on": "http://www.city.kikugawa.shizuoka.jp/gikaijimu/seigann.html",
+          "sha256": "5e4c6e20dcfd71815a6090c3a6affae44f9673165d197e4a8e3f0bbbc6fe4119",
+          "fetched_at": "2026-08-27T13:49:50Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.kikugawa.shizuoka.jp/gikaijimu/kaigiroku.html (label: 会議録) extraction probe read one document at http://www.city.kikugawa.shizuoka.jp/gikaijimu/kaigiroku.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

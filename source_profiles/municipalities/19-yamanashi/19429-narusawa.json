@@ -6,19 +6,37 @@
   "official_home_url": "http://www.vill.narusawa.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.vill.narusawa.yamanashi.jp/gyosei/narusawamuragikai/2563.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.narusawa.yamanashi.jp/gyosei/narusawamuragikai/2563.html",
           "observed_on": "https://www.vill.narusawa.yamanashi.jp/gyosei/narusawamuragikai/index.html",
           "fetched_at": "2026-08-27T06:52:50Z"
+        },
+        {
+          "url": "https://www.vill.narusawa.yamanashi.jp/gyosei/narusawamuragikai/2563.html",
+          "observed_on": "https://www.vill.narusawa.yamanashi.jp/gyosei/narusawamuragikai/2563.html",
+          "sha256": "9bd8d969929ecc3e14cdab0b05bcd89bb651d1c1a4403af1fe9c54156dfd2580",
+          "fetched_at": "2026-08-27T10:09:18Z"
+        },
+        {
+          "url": "https://www.vill.narusawa.yamanashi.jp/gyosei/soshikikarasagasu/gikaijimukyoku/kaigiroku/R05/index.html",
+          "observed_on": "https://www.vill.narusawa.yamanashi.jp/gyosei/narusawamuragikai/2563.html",
+          "sha256": "c13be4057edf965190af431c2b6d0da0f33452b2e711537bd91dcf61e73eb876",
+          "fetched_at": "2026-08-27T13:46:04Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.vill.narusawa.yamanashi.jp/gyosei/narusawamuragikai/2563.html (label: 会議録)"
+      "notes": "Observed council minutes index at https://www.vill.narusawa.yamanashi.jp/gyosei/narusawamuragikai/2563.html (label: 会議録)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "ready",

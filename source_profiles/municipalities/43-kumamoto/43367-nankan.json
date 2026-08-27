@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.town.nankan.lg.jp/tyosei/zaisei/ (label: 町の財政) 入口 https://www.town.nankan.lg.jp/tyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nankan.lg.jp/tyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nankan.lg.jp/tyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nankan.lg.jp/tyosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nankan.lg.jp/tyosei/zaisei/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.town.nankan.lg.jp/tyosei/zaisei/",
           "sha256": "f0bd6d5a4aa4a1345c9119ee9f8914885d6ca8cfa5753a73737e84608ce93fe3",
           "fetched_at": "2026-08-27T09:38:26Z"
+        },
+        {
+          "url": "http://www.town.nankan.lg.jp/tyosei/zaisei/",
+          "observed_on": "http://www.town.nankan.lg.jp/",
+          "sha256": "f0bd6d5a4aa4a1345c9119ee9f8914885d6ca8cfa5753a73737e84608ce93fe3",
+          "fetched_at": "2026-08-27T09:38:26Z"
+        },
+        {
+          "url": "https://www.town.nankan.lg.jp/fs/9/9/7/7/_/__________433675_____2024.xlsx",
+          "observed_on": "https://www.town.nankan.lg.jp/tyosei/zaisei/zaisei/4808.html",
+          "sha256": "1c5a9f5be7b77d49ec30c3306cf792b28022593b1554035b5dcca225327746a4",
+          "fetched_at": "2026-08-27T13:46:07Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nankan.lg.jp/tyosei/zaisei/ (label: 町の財政) 入口 https://www.town.nankan.lg.jp/tyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nankan.lg.jp/tyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nankan.lg.jp/tyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（__________433675_____2024.xlsx「【財政状況資料集】_433675_南関町_2024 (XLSX 568KB)」, sha256:1c5a9f5b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

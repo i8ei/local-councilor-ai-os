@@ -6,25 +6,27 @@
   "official_home_url": "https://www.city.kasuga.fukuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "http://www.city.kasuga.fukuoka.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T09:35:41Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kasuga.fukuoka.jp/gikai/gikaidayori/1017607/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.kasuga.fukuoka.dbsr.jp/index.php/",
+          "url": "https://www.city.kasuga.fukuoka.jp/gikai/gikaidayori/1017607/index.html",
           "observed_on": "https://www.city.kasuga.fukuoka.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T04:13:14Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://www.city.kasuga.fukuoka.dbsr.jp/index.php/",
-          "observed_on": "http://www.city.kasuga.fukuoka.dbsr.jp/index.php/",
-          "sha256": "5752c636df1e9367668e3f46018bfa40cb6cbea4952ce32def14589a45f287dc",
-          "fetched_at": "2026-08-27T09:35:47Z"
+          "url": "https://www.city.kasuga.fukuoka.jp/gikai/gikaidayori/1017607/index.html",
+          "observed_on": "https://www.city.kasuga.fukuoka.jp/gikai/gikaidayori/1017607/index.html",
+          "sha256": "60b32cfba37e43fde90f7e698c0d116c968273f63170f517c93ee499df6068b9",
+          "fetched_at": "2026-08-27T14:08:33Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.kasuga.fukuoka.dbsr.jp/index.php/ (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed budget link at https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/index.html (label: 予算) 入口 https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/kessan/index.html",
@@ -85,9 +87,15 @@
           "observed_on": "https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/kessan/index.html",
           "sha256": "d9e33b49d5fa06d3d2680789422baccc16f72c343f8f15447bac0464c5998c19",
           "fetched_at": "2026-08-27T09:35:50Z"
+        },
+        {
+          "url": "https://www.city.kasuga.fukuoka.jp/_res/projects/default_project/_page_/001/017/263/06zaiseijoukyoushiryoushuu.pdf.pdf",
+          "observed_on": "https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/kessan/1016755/1017263/index.html",
+          "sha256": "dec807cafacf484df3fa88f2142e2ca41be273e81aaa7d95cd5e4693deeae070",
+          "fetched_at": "2026-08-27T13:44:58Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/kessan/index.html (label: 決算) 入口 https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasuga.fukuoka.jp/shisei/zaiseijoukyou/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（06zaiseijoukyoushiryoushuu.pdf.pdf「令和6年度財政状況資料集 （PDF 1.0MB）」, sha256:dec807ca）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

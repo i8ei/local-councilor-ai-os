@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.town.setouchi.lg.jp/cho/chosei/reiki/index.html (label: 例規・条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html",
           "sha256": "8c6e60b9d1f8128a8258ebe02c7fdcfd2d878b046cd9c8abe2141518964bc5b0",
           "fetched_at": "2026-08-27T09:40:47Z"
+        },
+        {
+          "url": "http://www.town.setouchi.lg.jp/zaisei/cho/chosei/yosan/documents/r7-yosan-tosho_1-38.pdf",
+          "observed_on": "http://www.town.setouchi.lg.jp/zaisei/cho/chosei/yosan/yosan-tosho.html",
+          "sha256": "b7a5e1f1896785c8e4a8ac1049ea5535d2b5b3545b531b46340e4d48b7451210",
+          "fetched_at": "2026-08-27T13:48:33Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html (label: 予算・財政) 入口 http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.setouchi.lg.jp/cho/chosei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r7-yosan-tosho_1-38.pdf「p1-38（表紙・歳入）（PDF：6,794KB）」, sha256:b7a5e1f1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

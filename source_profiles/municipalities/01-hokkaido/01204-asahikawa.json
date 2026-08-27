@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.asahikawa.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.asahikawa.hokkaido.jp/council/6500/6540/6542/d083295.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/council/6500/6540/6542/d083295.html",
+          "observed_on": "https://www.city.asahikawa.hokkaido.jp/council/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/council/6500/6540/6542/d083295.html",
+          "observed_on": "https://www.city.asahikawa.hokkaido.jp/council/6500/6540/6542/d083295.html",
+          "sha256": "5373f25c55981d7c8def744925b21b28f8998beace686c00569b10326b7b97ce",
+          "fetched_at": "2026-08-27T13:23:21Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.chuo.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/chuo/pg/index.html",
-      "verified_at": "2026-08-27T10:08:14Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/gikai_kouhou/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/chuo/pg/index.html",
-          "observed_on": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/2854.html",
-          "fetched_at": "2026-08-27T06:50:03Z"
+          "url": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/gikai_kouhou/index.html",
+          "observed_on": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/chuo/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/chuo/pg/index.html",
-          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
-          "fetched_at": "2026-08-27T10:08:16Z"
+          "url": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/gikai_kouhou/index.html",
+          "observed_on": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/gikai_kouhou/index.html",
+          "sha256": "b81d64d9a5b3fd9d3ee22cb56e0649b35e008cab14bbd5550789cd235d457f35",
+          "fetched_at": "2026-08-27T13:46:50Z"
+        },
+        {
+          "url": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/gikai_kouhou/14034.html",
+          "observed_on": "https://www.city.chuo.yamanashi.jp/introduction/shigikai/gikai_kouhou/index.html",
+          "sha256": "4479d9e95562088f4176ce95f71d154478e246d998e08c7acc0786a229482891",
+          "fetched_at": "2026-08-27T13:46:52Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chuo/pg/index.html (label: 中央市議会会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

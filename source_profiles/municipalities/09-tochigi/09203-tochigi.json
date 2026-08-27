@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.tochigi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html",
-      "verified_at": "2026-08-27T10:17:59Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.tochigi.lg.jp/site/gikai/87250.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html",
+          "url": "https://www.city.tochigi.lg.jp/site/gikai/87250.html",
           "observed_on": "http://www.city.tochigi.lg.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:17:55Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html",
-          "sha256": "a63bfa9ef8eff9104c52c09680efafa6ddc7081c4052817a4aa4209bc4fdaffb",
-          "fetched_at": "2026-08-27T10:18:01Z"
+          "url": "https://www.city.tochigi.lg.jp/site/gikai/87250.html",
+          "observed_on": "https://www.city.tochigi.lg.jp/site/gikai/87250.html",
+          "sha256": "54739617ad6e5f83200f73e4a589bb802b7e52fbba2db41016f61ab2e4f7f918",
+          "fetched_at": "2026-08-27T13:30:55Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/tochigi/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

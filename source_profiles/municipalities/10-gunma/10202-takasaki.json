@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.takasaki.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "https://takasaki.gijiroku.com/voices/help_broadcasting.asp",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.takasaki.gunma.jp/site/gikai/1651.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://takasaki.gijiroku.com/voices/help_broadcasting.asp",
+          "url": "https://www.city.takasaki.gunma.jp/site/gikai/1651.html",
           "observed_on": "http://www.city.takasaki.gunma.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:25:50Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/gikai/1651.html",
+          "observed_on": "https://www.city.takasaki.gunma.jp/site/gikai/1651.html",
+          "sha256": "579dbaa75daee1806512f418a5e0901498e2575e4c4aa6f09a62a7f4a4061afe",
+          "fetched_at": "2026-08-27T13:31:53Z"
         }
       ],
-      "notes": "Observed voices at https://takasaki.gijiroku.com/voices/help_broadcasting.asp (label: 議会中継・会議録検索システム（外部サイトへ移動します）)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

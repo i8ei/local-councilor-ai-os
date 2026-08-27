@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.inagi.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
-      "verified_at": "2026-08-27T11:19:56Z",
-      "verified_by": "verify --live",
+      "index_url": "https://www.city.inagi.tokyo.jp/gikai/shigikai_tayori/1009549.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
-          "observed_on": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/index.html",
-          "fetched_at": "2026-08-27T07:49:15Z"
+          "url": "https://www.city.inagi.tokyo.jp/gikai/shigikai_tayori/1009549.html",
+          "observed_on": "http://www.city.inagi.tokyo.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
-          "observed_on": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
-          "sha256": "4beb9678e4d354a8909f84e84c9582ae9efb508e2ecd96011aa413ef410c98b3",
-          "fetched_at": "2026-08-27T10:26:23Z"
+          "url": "https://www.city.inagi.tokyo.jp/gikai/shigikai_tayori/1009549.html",
+          "observed_on": "https://www.city.inagi.tokyo.jp/gikai/shigikai_tayori/1009549.html",
+          "sha256": "b087f5e6bf86ecb8b8e475a52ec67a0f4826f89669c53296ab0ea7f36deb0a40",
+          "fetched_at": "2026-08-27T13:43:05Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html (label: 多摩地域福祉有償運送運営協議会 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at https://www.city.yanagawa.fukuoka.jp/shisei/reiki/ (label: 例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yanagawa.fukuoka.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yanagawa.fukuoka.jp/shisei/zaisei/",
@@ -52,9 +52,15 @@
           "observed_on": "https://www.city.yanagawa.fukuoka.jp/shisei/zaisei/",
           "sha256": "ac4db8ca6e9c2d12aefa512b3727f116466f888454b7e9c808b3ac895ec8be32",
           "fetched_at": "2026-08-27T09:35:27Z"
+        },
+        {
+          "url": "https://www.city.yanagawa.fukuoka.jp/fs/3/8/0/5/6/_/file20260219154903.pdf",
+          "observed_on": "https://www.city.yanagawa.fukuoka.jp/shisei/zaisei/yosan.html",
+          "sha256": "e3585c7e3af65064ebb6d9ec2b119b5de06f0dfb202c063113d13c007ad6112d",
+          "fetched_at": "2026-08-27T13:44:45Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.yanagawa.fukuoka.jp/shisei/zaisei/ (label: 財政・予算) 入口 https://www.city.yanagawa.fukuoka.jp/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yanagawa.fukuoka.jp/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yanagawa.fukuoka.jp/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（file20260219154903.pdf「令和8年度当初予算書 (PDF 3.27MB)」, sha256:e3585c7e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

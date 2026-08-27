@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.ishikari.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001908/1001980/1006289.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001908/1001980/1006289.html",
+          "observed_on": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001908/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001908/1001980/1006289.html",
+          "observed_on": "https://www.city.ishikari.hokkaido.jp/shisei/shiseiunei/1001908/1001980/1006289.html",
+          "sha256": "f8371b8c1e8ac56123494f19453e03616b9c6926eee1c2935861f9d57694389d",
+          "fetched_at": "2026-08-27T13:32:50Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

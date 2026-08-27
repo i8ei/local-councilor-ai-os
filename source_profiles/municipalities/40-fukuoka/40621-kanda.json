@@ -6,25 +6,36 @@
   "official_home_url": "http://www.town.kanda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
-      "verified_at": "2026-08-27T09:36:53Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kanda.lg.jp/site/gikai/list17-57.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
+          "url": "https://www.town.kanda.lg.jp/site/gikai/list17-57.html",
           "observed_on": "http://www.town.kanda.lg.jp/site/gikai/",
-          "fetched_at": "2026-08-27T04:27:38Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
-          "sha256": "c8151f761255ad2d242302187a8b6d309cce8ba68f1d8f6109e5a1bd886280cd",
-          "fetched_at": "2026-08-27T09:36:53Z"
+          "url": "https://www.town.kanda.lg.jp/site/gikai/list17-57.html",
+          "observed_on": "https://www.town.kanda.lg.jp/site/gikai/list17-57.html",
+          "sha256": "aba4aa0fdca37b86d6ea907a9682e92976ccdecba13d64dca030e579b804cd4d",
+          "fetched_at": "2026-08-27T14:09:19Z"
+        },
+        {
+          "url": "https://www.town.kanda.lg.jp/site/gikai/9904.html",
+          "observed_on": "https://www.town.kanda.lg.jp/site/gikai/list17-57.html",
+          "sha256": "97cafc4c87c0c4e4d82da9490e9714628f7264b5979f248ed90fc8fd63b6dc13",
+          "fetched_at": "2026-08-27T14:09:19Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kanda/pg/index.html (label: 議会録検索＜外部リンク＞) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -63,11 +74,11 @@
       "notes": "Observed budget link at http://www.town.kanda.lg.jp/life/6/27/97/ (label: 予算) 入口 https://www.town.kanda.lg.jp/life/6/27/97/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanda.lg.jp/life/6/27/97/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kanda.lg.jp/life/6/27/98/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kanda.lg.jp/life/6/27/98/",
@@ -79,9 +90,21 @@
           "observed_on": "https://www.town.kanda.lg.jp/life/6/27/98/",
           "sha256": "1a7b46e90f130bedddf5d18bbb8db385dab9219f69a03cbb8f0561b04e8f1363",
           "fetched_at": "2026-08-27T09:37:02Z"
+        },
+        {
+          "url": "http://www.town.kanda.lg.jp/life/6/27/98/",
+          "observed_on": "http://www.town.kanda.lg.jp/",
+          "sha256": "1a7b46e90f130bedddf5d18bbb8db385dab9219f69a03cbb8f0561b04e8f1363",
+          "fetched_at": "2026-08-27T09:37:02Z"
+        },
+        {
+          "url": "https://www.town.kanda.lg.jp/uploaded/attachment/9253.pdf",
+          "observed_on": "https://www.town.kanda.lg.jp/page/1120.html",
+          "sha256": "7ed0f181d732081faa23d2e94680685975b3b151d4fb4fcd1231ae0c59dc47dc",
+          "fetched_at": "2026-08-27T13:45:34Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kanda.lg.jp/life/6/27/98/ (label: 決算) 入口 https://www.town.kanda.lg.jp/life/6/27/98/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanda.lg.jp/life/6/27/98/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（9253.pdf「実質収支の推移 [PDFファイル／112KB]」, sha256:7ed0f181）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

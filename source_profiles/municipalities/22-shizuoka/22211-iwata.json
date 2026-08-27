@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.iwata.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/iwata/pg/index.html",
-      "verified_at": "2026-08-27T10:14:22Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.iwata.shizuoka.jp/shigikai/gikai_tayori/1003000.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/iwata/pg/index.html",
+          "url": "https://www.city.iwata.shizuoka.jp/shigikai/gikai_tayori/1003000.html",
           "observed_on": "http://www.city.iwata.shizuoka.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T07:43:35Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/iwata/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/iwata/pg/index.html",
-          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
-          "fetched_at": "2026-08-27T10:14:22Z"
+          "url": "https://www.city.iwata.shizuoka.jp/shigikai/gikai_tayori/1003000.html",
+          "observed_on": "https://www.city.iwata.shizuoka.jp/shigikai/gikai_tayori/1003000.html",
+          "sha256": "777764aed70a5bbe3934142bef05bc6797bf78f7b9645532bafff91f93a71bbe",
+          "fetched_at": "2026-08-27T13:49:39Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/iwata/pg/index.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

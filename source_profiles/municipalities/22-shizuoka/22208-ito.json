@@ -43,11 +43,11 @@
       "notes": "Observed finance section at https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html",
@@ -59,9 +59,15 @@
           "observed_on": "https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html",
           "sha256": "0f7951522d59fa9cabc9720cb6203001514f4579e4a096f82c3969562156b36e",
           "fetched_at": "2026-08-27T10:14:21Z"
+        },
+        {
+          "url": "https://www.city.ito.shizuoka.jp/material/files/group/7/R6kessannkado.pdf",
+          "observed_on": "https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/kessan/13997.html",
+          "sha256": "972df927262fca5d98b635cbb293d7f1fffbbc20fdd7341cb01a5ef70b8466bd",
+          "fetched_at": "2026-08-27T13:37:31Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ito.shizuoka.jp/gyosei/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessannkado.pdf「令和6年度決算カード (PDFファイル: 275.3KB)」, sha256:972df927）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.ena.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/ena/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ena.lg.jp/gikai/gikaidayori/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/ena/WebView/rd/council_1.html",
+          "url": "https://www.city.ena.lg.jp/gikai/gikaidayori/index.html",
           "observed_on": "https://www.city.ena.lg.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T07:29:12Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.ena.lg.jp/gikai/gikaidayori/index.html",
+          "observed_on": "https://www.city.ena.lg.jp/gikai/gikaidayori/index.html",
+          "sha256": "0aed55e235e6211ffaf101398e1d5180cf52eb8ab0a958c737e47faff0e86eae",
+          "fetched_at": "2026-08-27T13:48:44Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/ena/WebView/rd/council_1.html (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

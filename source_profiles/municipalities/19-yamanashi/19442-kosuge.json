@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.kosuge.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.vill.kosuge.yamanashi.jp/living/gikai/dayori.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.vill.kosuge.yamanashi.jp/living/gikai/dayori.html",
+          "observed_on": "http://www.vill.kosuge.yamanashi.jp/living/gikai",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.vill.kosuge.yamanashi.jp/living/gikai/dayori.html",
+          "observed_on": "http://www.vill.kosuge.yamanashi.jp/living/gikai/dayori.html",
+          "sha256": "3cf81fa95eb6de913ad0207cc66290e595561c070fdc7fa403c8769dadd90ee4",
+          "fetched_at": "2026-08-27T13:46:11Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

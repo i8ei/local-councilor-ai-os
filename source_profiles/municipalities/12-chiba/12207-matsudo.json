@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.matsudo.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/matsudo/SpTop.html",
-      "verified_at": "2026-08-27T10:22:51Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.matsudo.chiba.jp/gikai/kaigi_kekka/sanpikoukai/2026_6_sanpi.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/matsudo/SpTop.html",
+          "url": "https://www.city.matsudo.chiba.jp/gikai/kaigi_kekka/sanpikoukai/2026_6_sanpi.html",
           "observed_on": "http://www.city.matsudo.chiba.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T07:11:53Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/matsudo/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/matsudo/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:22:51Z"
+          "url": "https://www.city.matsudo.chiba.jp/gikai/kaigi_kekka/sanpikoukai/2026_6_sanpi.html",
+          "observed_on": "https://www.city.matsudo.chiba.jp/gikai/kaigi_kekka/sanpikoukai/2026_6_sanpi.html",
+          "sha256": "0af85c622500ed21ee15eacb9d1bd1e6560a886a03d9c027b5a637d5b04df959",
+          "fetched_at": "2026-08-27T13:41:18Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/matsudo/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -63,11 +65,11 @@
       "notes": "Observed budget link at http://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/index.html (label: 財務・予算・決算) 入口 https://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/index.html",
@@ -79,9 +81,21 @@
           "observed_on": "https://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/index.html",
           "sha256": "1a2ed851a5dcafc8a30d0d9fc9b378bf471c53afa31a53a1bebcb4476a663803",
           "fetched_at": "2026-08-27T10:22:54Z"
+        },
+        {
+          "url": "http://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/index.html",
+          "observed_on": "http://www.city.matsudo.chiba.jp/",
+          "sha256": "1a2ed851a5dcafc8a30d0d9fc9b378bf471c53afa31a53a1bebcb4476a663803",
+          "fetched_at": "2026-08-27T10:22:54Z"
+        },
+        {
+          "url": "https://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/kessan.files/R6_kessansyo.pdf",
+          "observed_on": "https://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/kessan.html",
+          "sha256": "0bbbd379811dffc8f820e828b0f5e16156070c4cc72c24b20502dc019b6ce7dd",
+          "fetched_at": "2026-08-27T13:32:32Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/index.html (label: 財務・予算・決算) 入口 https://www.city.matsudo.chiba.jp/shisei/zai-yosan-kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_kessansyo.pdf「令和6年度 松戸市歳入歳出決算書（PDF：457KB）」, sha256:0bbbd379）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

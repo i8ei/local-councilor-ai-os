@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.minamiechizen.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.minamiechizen.lg.jp/tyougikai/kaigiroku/r8/p011462.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.minamiechizen.lg.jp/tyougikai/kaigiroku/r8/p011462.html",
+          "observed_on": "https://www.town.minamiechizen.lg.jp/tyougikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.minamiechizen.lg.jp/tyougikai/kaigiroku/r8/p011462.html",
+          "observed_on": "https://www.town.minamiechizen.lg.jp/tyougikai/kaigiroku/r8/p011462.html",
+          "sha256": "b546edf825d6e15c4d44386d2bacccd995a737d85901e1fca081e4ff6ea30caa",
+          "fetched_at": "2026-08-27T13:45:33Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

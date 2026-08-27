@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill-tenryu.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill-tenryu.jp/information/gikai-dayori-r05/#",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill-tenryu.jp/information/gikai-dayori-r05/#",
+          "observed_on": "http://www.vill-tenryu.jp/chosei/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill-tenryu.jp/information/gikai-dayori-r05/#",
+          "observed_on": "https://www.vill-tenryu.jp/information/gikai-dayori-r05/#",
+          "sha256": "fab0613fcad414ee08eed34d5b663e2097a06c6bc2e3dde438da9c56eb3456c2",
+          "fetched_at": "2026-08-27T13:47:42Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

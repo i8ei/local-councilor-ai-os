@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.mitoyo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.mitoyo.kagawa.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T09:46:21Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.mitoyo.lg.jp/gikai/dayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.mitoyo.kagawa.dbsr.jp/index.php/",
+          "url": "http://www.city.mitoyo.lg.jp/gikai/dayori/index.html",
           "observed_on": "http://www.city.mitoyo.lg.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:54:14Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://www.city.mitoyo.kagawa.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.mitoyo.kagawa.dbsr.jp/index.php/",
-          "sha256": "f0ecfdc9bb3953d855b122a6b0f3251f4e8f808f868a2619663f045fdd1ffde4",
-          "fetched_at": "2026-08-27T09:46:23Z"
+          "url": "http://www.city.mitoyo.lg.jp/gikai/dayori/index.html",
+          "observed_on": "http://www.city.mitoyo.lg.jp/gikai/dayori/index.html",
+          "sha256": "f4489c5768b742672cb33eefac9b795f1545840948dc6f5ce0b12ac9c0bd262a",
+          "fetched_at": "2026-08-27T14:07:23Z"
+        },
+        {
+          "url": "https://www.city.mitoyo.lg.jp/gikai/dayori/7291.html",
+          "observed_on": "http://www.city.mitoyo.lg.jp/gikai/dayori/index.html",
+          "sha256": "a9d9b37f991372ced334dbdb56e1cf3bbbe0b35270b4b163550baa9df8984530",
+          "fetched_at": "2026-08-27T14:07:23Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.mitoyo.kagawa.dbsr.jp/index.php/ (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

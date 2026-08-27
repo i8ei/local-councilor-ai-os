@@ -6,19 +6,37 @@
   "official_home_url": "http://www.town.shiriuchi.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.shiriuchi.hokkaido.jp/chosei/gikai/kaigiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shiriuchi.hokkaido.jp/chosei/gikai/kaigiroku/",
           "observed_on": "http://www.town.shiriuchi.hokkaido.jp/chosei/",
           "fetched_at": "2026-08-27T06:07:29Z"
+        },
+        {
+          "url": "http://www.town.shiriuchi.hokkaido.jp/chosei/gikai/kaigiroku/",
+          "observed_on": "http://www.town.shiriuchi.hokkaido.jp/chosei/gikai/kaigiroku/",
+          "sha256": "cfba3f127fd011aae2c83cec2020bcac23cf051bcf7380b11f16683a849f4dfd",
+          "fetched_at": "2026-08-27T10:29:40Z"
+        },
+        {
+          "url": "https://www.town.shiriuchi.hokkaido.jp/chosei/gikai/kaigiroku/h24/",
+          "observed_on": "http://www.town.shiriuchi.hokkaido.jp/chosei/gikai/kaigiroku/",
+          "sha256": "611e2d1b5ceec50add9a0f514daeb40242cc28e769f7e0d9e8bd1ee9fbfbc2a9",
+          "fetched_at": "2026-08-27T13:32:45Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.shiriuchi.hokkaido.jp/chosei/gikai/kaigiroku/ (label: 議会会議録)"
+      "notes": "Observed council minutes index at http://www.town.shiriuchi.hokkaido.jp/chosei/gikai/kaigiroku/ (label: 議会会議録)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "needs_review",

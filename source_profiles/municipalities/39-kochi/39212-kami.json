@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.kami.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/kami/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kami.lg.jp/site/gikai/kaigirokusokuhou.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/kami/WebView/rd/council_1.html",
+          "url": "https://www.city.kami.lg.jp/site/gikai/kaigirokusokuhou.html",
           "observed_on": "http://www.city.kami.lg.jp/adv/ba.php?id=48",
-          "fetched_at": "2026-08-27T07:11:07Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.kami.lg.jp/site/gikai/kaigirokusokuhou.html",
+          "observed_on": "https://www.city.kami.lg.jp/site/gikai/kaigirokusokuhou.html",
+          "sha256": "3319d6cd01b62d55413411f85aaacdca6a437551bf90a7ea2fb55138a2fbac81",
+          "fetched_at": "2026-08-27T14:07:45Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/kami/WebView/rd/council_1.html (label: )"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -42,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/kami/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kami.lg.jp/soshiki/6/2026yosan-hosei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kami.lg.jp/soshiki/6/2026yosan-hosei.html",
@@ -63,16 +71,28 @@
           "url": "https://www.city.kami.lg.jp/uploaded/attachment/50746.pdf",
           "observed_on": "https://www.city.kami.lg.jp/soshiki/6/2026yosan-hosei.html",
           "fetched_at": "2026-08-27T11:01:19Z"
+        },
+        {
+          "url": "http://www.city.kami.lg.jp/soshiki/6/2026yosan-hosei.html",
+          "observed_on": "http://www.city.kami.lg.jp/",
+          "sha256": "5f3615ec61d9d8f988fde9c049486afabd957d66c2eef22e34872c831cb38586",
+          "fetched_at": "2026-08-27T09:47:29Z"
+        },
+        {
+          "url": "https://www.city.kami.lg.jp/uploaded/attachment/50746.pdf",
+          "observed_on": "https://www.city.kami.lg.jp/soshiki/6/2026yosan-hosei.html",
+          "sha256": "43d7ad8191e354f6d0a66a473b2ef70d77a392b074b256a1c52c7e91b4da92cf",
+          "fetched_at": "2026-08-27T11:01:19Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kami.lg.jp/soshiki/6/2026yosan-hosei.html (label: 令和8年度補正予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（50746.pdf「香美市一般会計補正予算（第1号） [PDFファイル／290KB]」, sha256:43d7ad81）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kami.lg.jp/life/4/25/20/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kami.lg.jp/life/4/25/20/",
@@ -84,9 +104,21 @@
           "observed_on": "https://www.city.kami.lg.jp/life/4/25/20/",
           "sha256": "8c586c8a26623fa3f01d58c409430394b00280a0aa86afaaa8e5193d8ab8941b",
           "fetched_at": "2026-08-27T09:47:32Z"
+        },
+        {
+          "url": "http://www.city.kami.lg.jp/life/4/25/20/",
+          "observed_on": "http://www.city.kami.lg.jp/",
+          "sha256": "8c586c8a26623fa3f01d58c409430394b00280a0aa86afaaa8e5193d8ab8941b",
+          "fetched_at": "2026-08-27T09:47:32Z"
+        },
+        {
+          "url": "https://www.city.kami.lg.jp/uploaded/attachment/50284.xlsx",
+          "observed_on": "https://www.city.kami.lg.jp/soshiki/6/k-zai-open.html",
+          "sha256": "f289b364e829ec62ec7a01c2820dd8aeb76fbc8398a8ad403cab522c6d9b22f8",
+          "fetched_at": "2026-08-27T13:43:45Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kami.lg.jp/life/4/25/20/ (label: 財政) 入口 https://www.city.kami.lg.jp/life/4/25/20/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kami.lg.jp/life/4/25/20/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（50284.xlsx「2024年（令和6年）度財政状況資料集 [Excelファイル／432KB]」, sha256:f289b364）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

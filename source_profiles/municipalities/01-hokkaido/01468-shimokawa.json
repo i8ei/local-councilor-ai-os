@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.shimokawa.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.shimokawa.hokkaido.jp/section/2025/11/7-12.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.shimokawa.hokkaido.jp/section/2021/08/post-133-1.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.shimokawa.hokkaido.jp/section/2025/11/7-12.html",
+          "url": "https://www.town.shimokawa.hokkaido.jp/section/2021/08/post-133-1.html",
           "observed_on": "https://www.town.shimokawa.hokkaido.jp/section/gikai/",
-          "fetched_at": "2026-08-27T06:29:06Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.shimokawa.hokkaido.jp/section/2021/08/post-133-1.html",
+          "observed_on": "https://www.town.shimokawa.hokkaido.jp/section/2021/08/post-133-1.html",
+          "sha256": "721033d70b7b5a2e6ea96515396fc8d04161d9910a12c57da73a850fb1e70a42",
+          "fetched_at": "2026-08-27T13:24:39Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.shimokawa.hokkaido.jp/section/2025/11/7-12.html (label: 令和７年 定例会議・臨時会議会議録 new_mark(2025,11,10,\"new\")) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

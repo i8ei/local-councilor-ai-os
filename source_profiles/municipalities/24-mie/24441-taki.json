@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.taki.mie.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/teireikai/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/kaigiroku/index.html",
+          "url": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/teireikai/index.html",
           "observed_on": "https://www.town.taki.mie.jp/life/chosei_joho/3909.html",
-          "fetched_at": "2026-08-27T06:04:54Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/teireikai/index.html",
+          "observed_on": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/teireikai/index.html",
+          "sha256": "aadb46ced76e315714421c6ae92bc8e8031b9be89ddd207bea641fee629caf7a",
+          "fetched_at": "2026-08-27T14:00:10Z"
+        },
+        {
+          "url": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/teireikai/4684.html",
+          "observed_on": "https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/teireikai/index.html",
+          "sha256": "a42dcaf14e7af4f2c5c9748498d1589336f9adc5e9c4e48c278d90f31b2f731d",
+          "fetched_at": "2026-08-27T14:00:10Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.taki.mie.jp/life/soshiki/gikai_jimukyoku/kaigiroku/index.html (label: 一般質問会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

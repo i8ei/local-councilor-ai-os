@@ -6,25 +6,27 @@
   "official_home_url": "https://www.city.moka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/moka/pg/index.html",
-      "verified_at": "2026-08-27T10:18:05Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.moka.lg.jp/kakuka/gizi/gyomu/gikai/7/12737.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/moka/pg/index.html",
+          "url": "https://www.city.moka.lg.jp/kakuka/gizi/gyomu/gikai/7/12737.html",
           "observed_on": "https://www.city.moka.lg.jp/kakuka/gizi/gyomu/gikai/index.html",
-          "fetched_at": "2026-08-27T06:19:26Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/moka/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/moka/pg/index.html",
-          "sha256": "c68550b6003cdf8e9b77637320ef64397eb9dab73b7fd6b9bc3f3b5c34df2a1e",
-          "fetched_at": "2026-08-27T10:18:06Z"
+          "url": "https://www.city.moka.lg.jp/kakuka/gizi/gyomu/gikai/7/12737.html",
+          "observed_on": "https://www.city.moka.lg.jp/kakuka/gizi/gyomu/gikai/7/12737.html",
+          "sha256": "29a4e505e59c2538a5455e13ece10a1e9d894172b4e559b841b60551b1ad017a",
+          "fetched_at": "2026-08-27T13:31:18Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/moka/pg/index.html (label: 議会議事録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

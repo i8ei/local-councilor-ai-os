@@ -56,11 +56,11 @@
       "notes": "Observed budget link at http://www.city.minoh.lg.jp/shisei/kakukaannai/index.html (label: 当初予算と事業の紹介) 入口 https://www.city.minoh.lg.jp/shisei/kakukaannai/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minoh.lg.jp/shisei/kakukaannai/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html",
@@ -72,9 +72,21 @@
           "observed_on": "https://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html",
           "sha256": "876155d5514f7d460f8b5fd7b54ef610835762fd1dad9b6178d24e8067d5c14d",
           "fetched_at": "2026-08-27T09:51:12Z"
+        },
+        {
+          "url": "http://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html",
+          "observed_on": "http://www.city.minoh.lg.jp/",
+          "sha256": "876155d5514f7d460f8b5fd7b54ef610835762fd1dad9b6178d24e8067d5c14d",
+          "fetched_at": "2026-08-27T09:51:12Z"
+        },
+        {
+          "url": "https://www.city.minoh.lg.jp/zaisei/hyouka/documents/h20-kessancard.pdf",
+          "observed_on": "https://www.city.minoh.lg.jp/zaisei/hyouka/gyokaku_iinkai.html",
+          "sha256": "f384733f5758d7f4d3619693a62ae1c374df85349290f96609c21991cdd02e15",
+          "fetched_at": "2026-08-27T13:40:21Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html (label: 2026年8月27日 行政評価の実施状況) 入口 https://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minoh.lg.jp/zaisei/shisei/hyouka/hyoukachousho/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（h20-kessancard.pdf「【資料1-2】平成20年度決算状況（決算カード）（PDF：34KB）」, sha256:f384733f）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

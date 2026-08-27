@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.city.nagakute.lg.jp/gyosei/jorei_reiki/index.html (label: 条例・例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nagakute.lg.jp/gyosei/gyozaisei/7/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nagakute.lg.jp/gyosei/gyozaisei/7/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.city.nagakute.lg.jp/gyosei/gyozaisei/7/index.html",
           "sha256": "60229375361642f96f9f9b4f68f76be6251fe87be2f0fc962c4fb18708050069",
           "fetched_at": "2026-08-27T10:15:57Z"
+        },
+        {
+          "url": "https://www.city.nagakute.lg.jp/material/files/group/6/r8yosangaiyou.pdf",
+          "observed_on": "https://www.city.nagakute.lg.jp/gyosei/gyozaisei/7/3/25459.html",
+          "sha256": "3ea07d80c63bc33beddd70d16c4183c4f219748f63b129172bbbe41f992a1a01",
+          "fetched_at": "2026-08-27T13:38:51Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.nagakute.lg.jp/gyosei/gyozaisei/7/index.html (label: 財政・予算・決算) 入口 https://www.city.nagakute.lg.jp/gyosei/gyozaisei/7/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagakute.lg.jp/gyosei/gyozaisei/7/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8yosangaiyou.pdf「当初予算の概要 (PDFファイル: 7.9MB)」, sha256:3ea07d80）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

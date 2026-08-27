@@ -55,11 +55,11 @@
       "notes": "Observed budget link at http://www.town.nagano-takamori.lg.jp/docs/13302.html (label: 令和8年度予算編成に向けて提言を行いました) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nagano-takamori.lg.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nagano-takamori.lg.jp/chosei/zaisei/",
@@ -71,9 +71,21 @@
           "observed_on": "https://www.town.nagano-takamori.lg.jp/chosei/zaisei/",
           "sha256": "253a544cfda723f0ce991f7048da22bac83a2f4921cf9482efcae4df47ba094b",
           "fetched_at": "2026-08-27T10:11:15Z"
+        },
+        {
+          "url": "http://www.town.nagano-takamori.lg.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.nagano-takamori.lg.jp/",
+          "sha256": "253a544cfda723f0ce991f7048da22bac83a2f4921cf9482efcae4df47ba094b",
+          "fetched_at": "2026-08-27T10:11:15Z"
+        },
+        {
+          "url": "https://www.town.nagano-takamori.lg.jp/fs/6/9/5/5/4/_/R6%E6%B1%BA%E7%AE%97%E3%82%AB%E3%83%BC%E3%83%89.pdf",
+          "observed_on": "https://www.town.nagano-takamori.lg.jp/docs/13380.html",
+          "sha256": "0a64fbe1c9e913738a42676601911772b7b7ef68b378d2ce9a4cfdb6f0f42bfa",
+          "fetched_at": "2026-08-27T13:36:35Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nagano-takamori.lg.jp/chosei/zaisei/ (label: 行財政) 入口 https://www.town.nagano-takamori.lg.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nagano-takamori.lg.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nagano-takamori.lg.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6%E6%B1%BA%E7%AE%97%E3%82%AB%E3%83%BC%E3%83%89.pdf「R6決算カード (PDF 303KB)」, sha256:0a64fbe1）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

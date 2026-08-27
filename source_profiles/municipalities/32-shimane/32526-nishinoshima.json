@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.nishinoshima.shimane.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.nishinoshima.shimane.jp/gikai/434",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.nishinoshima.shimane.jp/gikai/434",
+          "observed_on": "http://www.town.nishinoshima.shimane.jp/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.nishinoshima.shimane.jp/gikai/434",
+          "observed_on": "https://www.town.nishinoshima.shimane.jp/gikai/434",
+          "sha256": "414da92a6aea5b2c9c74d6cea4d659719be7d9009327b295a28ae9cd3bd001e3",
+          "fetched_at": "2026-08-27T14:05:47Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed finance section at http://www.town.nishinoshima.shimane.jp/profile/79 (label: 財政) 入口 https://www.town.nishinoshima.shimane.jp/profile/79 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nishinoshima.shimane.jp/profile/79 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nishinoshima.shimane.jp/profile/79",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nishinoshima.shimane.jp/profile/79",
@@ -72,9 +87,21 @@
           "observed_on": "https://www.town.nishinoshima.shimane.jp/profile/79",
           "sha256": "45173de017fbe0af2b5661c4b4958d0e85628f7bc98e5600b711a7491c29f8fd",
           "fetched_at": "2026-08-27T09:44:03Z"
+        },
+        {
+          "url": "http://www.town.nishinoshima.shimane.jp/profile/79",
+          "observed_on": "http://www.town.nishinoshima.shimane.jp/",
+          "sha256": "45173de017fbe0af2b5661c4b4958d0e85628f7bc98e5600b711a7491c29f8fd",
+          "fetched_at": "2026-08-27T09:44:03Z"
+        },
+        {
+          "url": "https://www.town.nishinoshima.shimane.jp/files/original/20250930133822427c1699c2d.xlsx",
+          "observed_on": "https://www.town.nishinoshima.shimane.jp/profile/79",
+          "sha256": "d38d4270610e9addc56fa51119663131b2b689379f4cd52377760a8a77cf6e50",
+          "fetched_at": "2026-08-27T13:42:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nishinoshima.shimane.jp/profile/79 (label: 財政) 入口 https://www.town.nishinoshima.shimane.jp/profile/79 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nishinoshima.shimane.jp/profile/79 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20250930133822427c1699c2d.xlsx「「令和5年度財政状況資料集」をダウンロードする（XLSX：868kB）」, sha256:d38d4270）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

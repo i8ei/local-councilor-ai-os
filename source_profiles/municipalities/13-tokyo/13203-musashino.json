@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.musashino.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.musashino.lg.jp/shigikai/kaigi_kekka/1001445.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.musashino.lg.jp/shigikai/kaigi_kekka/1001445.html",
+          "observed_on": "http://www.city.musashino.lg.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.musashino.lg.jp/shigikai/kaigi_kekka/1001445.html",
+          "observed_on": "https://www.city.musashino.lg.jp/shigikai/kaigi_kekka/1001445.html",
+          "sha256": "3c3e6697f0dfe490babf4e3e0c309c196c7dc3608b1b5e00cde8be15b169ab04",
+          "fetched_at": "2026-08-27T13:42:41Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

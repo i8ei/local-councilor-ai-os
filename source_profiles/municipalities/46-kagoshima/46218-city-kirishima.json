@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city-kirishima/reiki_menu.html (label: 条例・例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html",
           "sha256": "7ae3888c89404776ce55962a3fbcba1e8c1d967cd1c4d8cb234c3c34da00ff01",
           "fetched_at": "2026-08-27T09:40:37Z"
+        },
+        {
+          "url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/zaisejokyo/documents/r6.xlsx",
+          "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/zaisejokyo/index.html",
+          "sha256": "5473f755860035bfe18f10f3c6893f947e1fb0a8185218e3a6f178569236e529",
+          "fetched_at": "2026-08-27T13:47:34Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html (label: 予算・財政) 入口 http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6.xlsx「令和6年度（エクセル：519KB）」, sha256:5473f755）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

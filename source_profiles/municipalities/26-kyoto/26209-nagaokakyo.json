@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.nagaokakyo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.nagaokakyo.lg.jp/0000015829.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.nagaokakyo.lg.jp/0000015829.html",
+          "observed_on": "https://www.city.nagaokakyo.lg.jp/category/12-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.nagaokakyo.lg.jp/0000015829.html",
+          "observed_on": "https://www.city.nagaokakyo.lg.jp/0000015829.html",
+          "sha256": "8474f614dce51b4a4d7ea369d85ea1f0dcd0f082a050e8ffcb52b1105f908e9d",
+          "fetched_at": "2026-08-27T14:01:14Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

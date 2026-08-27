@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at https://krq308.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 平戸市例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html",
@@ -45,9 +45,15 @@
           "observed_on": "http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html",
           "sha256": "618cffb2ea499d3e759ba1016de443c2264f348fc6ec6c3397f4cf6a0c93ade1",
           "fetched_at": "2026-08-27T09:37:26Z"
+        },
+        {
+          "url": "http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/tousyo/files/0803yosansiyo.pdf",
+          "observed_on": "http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/tousyo/2025-1205-2105-92.html",
+          "sha256": "032bf71f867a77b4d18499b153508a49eeb125fa569223e09f23c5acf9596d84",
+          "fetched_at": "2026-08-27T13:45:47Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html (label: 予算について) 入口 http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（0803yosansiyo.pdf「03 R8当初予算書 (1960KB)」, sha256:032bf71f）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

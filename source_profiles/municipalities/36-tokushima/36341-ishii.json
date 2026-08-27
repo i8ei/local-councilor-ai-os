@@ -56,11 +56,11 @@
       "notes": "No budget entrance found within page limit"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ishii.lg.jp/docs/2026033100010/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ishii.lg.jp/docs/2026033100010/",
@@ -72,9 +72,21 @@
           "observed_on": "https://www.town.ishii.lg.jp/docs/2026033100010/",
           "sha256": "8aaf17c9d4361d56ca940074d0f6c38d0c350c68e33a447e57b1ed8e2e056066",
           "fetched_at": "2026-08-27T09:46:11Z"
+        },
+        {
+          "url": "http://www.town.ishii.lg.jp/docs/2026033100010/",
+          "observed_on": "http://www.town.ishii.lg.jp/",
+          "sha256": "8aaf17c9d4361d56ca940074d0f6c38d0c350c68e33a447e57b1ed8e2e056066",
+          "fetched_at": "2026-08-27T09:46:11Z"
+        },
+        {
+          "url": "https://www.town.ishii.lg.jp/docs/2026032300015/file_contents/6.xlsx",
+          "observed_on": "https://www.town.ishii.lg.jp/docs/2026032300015/",
+          "sha256": "f5e31e2b7c378cb993e18a65e9c09e5bfcc390d226e28c56c81c5d2d9feb82ef",
+          "fetched_at": "2026-08-27T13:43:08Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.ishii.lg.jp/docs/2026033100010/ (label: 統一的な基準による財務書類 令和６年度決算分) 入口 https://www.town.ishii.lg.jp/docs/2026033100010/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ishii.lg.jp/docs/2026033100010/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6.xlsx「令和６年度 財政状況資料集[XLSX：547KB]」, sha256:f5e31e2b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

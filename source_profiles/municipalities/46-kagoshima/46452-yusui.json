@@ -56,11 +56,11 @@
       "notes": "Observed finance section at http://www.town.yusui.kagoshima.jp/life/1/4/29/ (label: 財政) 入口 https://www.town.yusui.kagoshima.jp/life/1/4/29/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yusui.kagoshima.jp/life/1/4/29/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yusui.kagoshima.jp/life/1/4/29/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yusui.kagoshima.jp/life/1/4/29/",
@@ -72,9 +72,21 @@
           "observed_on": "https://www.town.yusui.kagoshima.jp/life/1/4/29/",
           "sha256": "15c00e9cccaffc8513412ec7c3cfc684a8b08357faed16f19a0ec1ba9244eb95",
           "fetched_at": "2026-08-27T09:40:48Z"
+        },
+        {
+          "url": "http://www.town.yusui.kagoshima.jp/life/1/4/29/",
+          "observed_on": "http://www.town.yusui.kagoshima.jp/",
+          "sha256": "15c00e9cccaffc8513412ec7c3cfc684a8b08357faed16f19a0ec1ba9244eb95",
+          "fetched_at": "2026-08-27T09:40:48Z"
+        },
+        {
+          "url": "https://www.town.yusui.kagoshima.jp/uploaded/attachment/4172.pdf",
+          "observed_on": "https://www.town.yusui.kagoshima.jp/soshiki/28/364.html",
+          "sha256": "32d28397da4b5062435453ac3ae46af9299000bb79a0035b54a64ceeb2df3fff",
+          "fetched_at": "2026-08-27T13:47:42Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yusui.kagoshima.jp/life/1/4/29/ (label: 財政) 入口 https://www.town.yusui.kagoshima.jp/life/1/4/29/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yusui.kagoshima.jp/life/1/4/29/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（4172.pdf「令和５年度財政状況資料集 [PDFファイル／419KB]」, sha256:32d28397）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

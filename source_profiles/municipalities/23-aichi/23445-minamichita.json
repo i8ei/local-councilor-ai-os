@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/minamichita/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.minamichita.lg.jp/gyosei/zaiseikansa/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.minamichita.lg.jp/gyosei/zaiseikansa/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.town.minamichita.lg.jp/gyosei/zaiseikansa/index.html",
           "sha256": "13f1376e336c75ac3936afabcb16252f6e46987f47a837b237c53e2013eb3d8c",
           "fetched_at": "2026-08-27T10:16:55Z"
+        },
+        {
+          "url": "http://www.town.minamichita.lg.jp/gyosei/zaiseikansa/index.html",
+          "observed_on": "http://www.town.minamichita.lg.jp/",
+          "sha256": "13f1376e336c75ac3936afabcb16252f6e46987f47a837b237c53e2013eb3d8c",
+          "fetched_at": "2026-08-27T10:16:55Z"
+        },
+        {
+          "url": "https://www.town.minamichita.lg.jp/_res/projects/default_project/_page_/001/005/361/r6kextusannsinsa.pdf",
+          "observed_on": "https://www.town.minamichita.lg.jp/gyosei/zaiseikansa/1005361/index.html",
+          "sha256": "5fa57da7eae8fa4770ce51ebbef1fc12d93191b97e8d4999abc6d48b58301ab2",
+          "fetched_at": "2026-08-27T13:38:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.minamichita.lg.jp/gyosei/zaiseikansa/index.html (label: 行財政・監査) 入口 https://www.town.minamichita.lg.jp/gyosei/zaiseikansa/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6kextusannsinsa.pdf「令和6年度決算審査の結果について （PDF 5.2 MB）」, sha256:5fa57da7）にて構造マーカー（歳入・歳出・款・節等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

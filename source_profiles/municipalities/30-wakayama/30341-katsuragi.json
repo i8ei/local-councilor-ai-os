@@ -63,11 +63,11 @@
       "notes": "Observed finance section at http://www.town.katsuragi.wakayama.jp/050/060/index.html (label: 財政) 入口 https://www.town.katsuragi.wakayama.jp/050/060/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.katsuragi.wakayama.jp/050/060/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.katsuragi.wakayama.jp/050/060/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.katsuragi.wakayama.jp/050/060/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.katsuragi.wakayama.jp/050/060/index.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.town.katsuragi.wakayama.jp/050/060/index.html",
           "sha256": "354a21bce81caf5fcf78b9697ef3817e121e0382f149d5b95877e2a6b3588a72",
           "fetched_at": "2026-08-27T09:53:39Z"
+        },
+        {
+          "url": "http://www.town.katsuragi.wakayama.jp/050/060/index.html",
+          "observed_on": "http://www.town.katsuragi.wakayama.jp/",
+          "sha256": "354a21bce81caf5fcf78b9697ef3817e121e0382f149d5b95877e2a6b3588a72",
+          "fetched_at": "2026-08-27T09:53:39Z"
+        },
+        {
+          "url": "https://www.town.katsuragi.wakayama.jp/050/060/files/R6kessansho.pdf",
+          "observed_on": "https://www.town.katsuragi.wakayama.jp/050/060/20190116172356.html",
+          "sha256": "695e3a21a70d53e70aabdb6a981b1ea5966f97ddb35a83908e50a91220341546",
+          "fetched_at": "2026-08-27T13:41:49Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.katsuragi.wakayama.jp/050/060/index.html (label: 財政) 入口 https://www.town.katsuragi.wakayama.jp/050/060/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.katsuragi.wakayama.jp/050/060/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.katsuragi.wakayama.jp/050/060/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansho.pdf「令和6年度かつらぎ町歳入歳出決算書 (2616KB)」, sha256:695e3a21）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

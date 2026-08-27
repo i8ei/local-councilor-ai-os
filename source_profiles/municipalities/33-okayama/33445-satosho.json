@@ -63,11 +63,11 @@
       "notes": "Observed finance section at http://www.town.satosho.okayama.jp/life/4/20/67/ (label: 財政情報) 入口 https://www.town.satosho.okayama.jp/life/4/20/67/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.satosho.okayama.jp/life/4/20/67/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.satosho.okayama.jp/life/4/20/67/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.satosho.okayama.jp/life/4/20/67/",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.town.satosho.okayama.jp/life/4/20/67/",
           "sha256": "aa3131f163181920bf7c6619720e5a85ec78d0b0309c1c902c2b9d534f2aaeca",
           "fetched_at": "2026-08-27T09:44:33Z"
+        },
+        {
+          "url": "http://www.town.satosho.okayama.jp/life/4/20/67/",
+          "observed_on": "http://www.town.satosho.okayama.jp/",
+          "sha256": "aa3131f163181920bf7c6619720e5a85ec78d0b0309c1c902c2b9d534f2aaeca",
+          "fetched_at": "2026-08-27T09:44:33Z"
+        },
+        {
+          "url": "https://www.town.satosho.okayama.jp/uploaded/attachment/10673.xlsx",
+          "observed_on": "https://www.town.satosho.okayama.jp/soshiki/2/1053.html",
+          "sha256": "f6155aedcb84a54fdfbf4bcb2c3da30bf3bbc5fbf28e5c3ff37f703cc2668ef4",
+          "fetched_at": "2026-08-27T13:42:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.satosho.okayama.jp/life/4/20/67/ (label: 財政情報) 入口 https://www.town.satosho.okayama.jp/life/4/20/67/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.satosho.okayama.jp/life/4/20/67/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（10673.xlsx「令和６年度財政状況資料集 [Excelファイル／562KB]」, sha256:f6155aed）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

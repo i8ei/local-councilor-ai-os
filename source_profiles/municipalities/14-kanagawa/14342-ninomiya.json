@@ -29,11 +29,11 @@
       "notes": "Observed g_reiki at http://www.town.ninomiya.kanagawa.jp/reiki/reiki.html (label: 町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ninomiya.kanagawa.jp/0000000359.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ninomiya.kanagawa.jp/0000000359.html",
@@ -50,16 +50,22 @@
           "url": "https://www.town.ninomiya.kanagawa.jp/cmsfiles/contents/0000000/359/r8nenndoippankaikeiyosan.pdf",
           "observed_on": "https://www.town.ninomiya.kanagawa.jp/0000000359.html",
           "fetched_at": "2026-08-27T11:20:31Z"
+        },
+        {
+          "url": "https://www.town.ninomiya.kanagawa.jp/cmsfiles/contents/0000000/359/r8nenndoippankaikeiyosan.pdf",
+          "observed_on": "https://www.town.ninomiya.kanagawa.jp/0000000359.html",
+          "sha256": "60061097b43979fcbaf717a47c7836aaf88bcdd516bd6f523e13bcbc15b6d4a1",
+          "fetched_at": "2026-08-27T11:20:33Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.ninomiya.kanagawa.jp/0000000359.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r8nenndoippankaikeiyosan.pdf「令和8年度一般会計当初予算書(PDF形式、3.61MB)」, sha256:60061097）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ninomiya.kanagawa.jp/0000000361.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ninomiya.kanagawa.jp/0000000361.html",
@@ -76,9 +82,15 @@
           "url": "https://www.town.ninomiya.kanagawa.jp/cmsfiles/contents/0000000/361/r6keltusannsetumei.pdf",
           "observed_on": "https://www.town.ninomiya.kanagawa.jp/0000000361.html",
           "fetched_at": "2026-08-27T11:20:34Z"
+        },
+        {
+          "url": "https://www.town.ninomiya.kanagawa.jp/cmsfiles/contents/0000000/361/r6keltusannsetumei.pdf",
+          "observed_on": "https://www.town.ninomiya.kanagawa.jp/0000000361.html",
+          "sha256": "9315cc747e757dd1ae443efc748e7e36a130e4a2e091ace7b9d5460a3e33cc6c",
+          "fetched_at": "2026-08-27T11:20:36Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.ninomiya.kanagawa.jp/0000000361.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r6keltusannsetumei.pdf「令和6年度決算の概要 (PDF形式、10.94MB)」, sha256:9315cc74）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.wakasa.tottori.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.wakasa.tottori.jp/gyoseijoho/gikai/1469.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.wakasa.tottori.jp/gyoseijoho/gikai/632.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.wakasa.tottori.jp/gyoseijoho/gikai/1469.html",
+          "url": "https://www.town.wakasa.tottori.jp/gyoseijoho/gikai/632.html",
           "observed_on": "https://www.town.wakasa.tottori.jp/gyoseijoho/gikai/index.html",
-          "fetched_at": "2026-08-27T05:58:23Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.wakasa.tottori.jp/gyoseijoho/gikai/632.html",
+          "observed_on": "https://www.town.wakasa.tottori.jp/gyoseijoho/gikai/632.html",
+          "sha256": "766b1796fe7a4089045f6381156a986f99fdeade63ef5594a21da609cb710111",
+          "fetched_at": "2026-08-27T14:05:05Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.wakasa.tottori.jp/gyoseijoho/gikai/1469.html (label: 若桜町議会の会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

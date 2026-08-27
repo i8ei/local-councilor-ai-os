@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.town.tabuse.lg.jp/life/5/20/ (label: 財政) 入口 https://www.town.tabuse.lg.jp/life/5/20/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tabuse.lg.jp/life/5/20/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tabuse.lg.jp/life/5/20/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tabuse.lg.jp/life/5/20/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.town.tabuse.lg.jp/life/5/20/",
           "sha256": "0141bf2ff31c43b34c5039bacc5bdf3bd5cc097d4697e25ca86bb631f79c4499",
           "fetched_at": "2026-08-27T09:45:50Z"
+        },
+        {
+          "url": "http://www.town.tabuse.lg.jp/life/5/20/",
+          "observed_on": "http://www.town.tabuse.lg.jp/",
+          "sha256": "0141bf2ff31c43b34c5039bacc5bdf3bd5cc097d4697e25ca86bb631f79c4499",
+          "fetched_at": "2026-08-27T09:45:50Z"
+        },
+        {
+          "url": "https://www.town.tabuse.lg.jp/uploaded/attachment/8624.pdf",
+          "observed_on": "https://www.town.tabuse.lg.jp/soshiki/3/1369.html",
+          "sha256": "76f801c9fc2d514919cfca09bedbb8584ab53d3d753809e1b45c62da413090ee",
+          "fetched_at": "2026-08-27T13:42:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tabuse.lg.jp/life/5/20/ (label: 財政) 入口 https://www.town.tabuse.lg.jp/life/5/20/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tabuse.lg.jp/life/5/20/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（8624.pdf「主要財政指標の推移 [PDFファイル／312KB]」, sha256:76f801c9）にて構造マーカー（歳入・基準財政需要額等）を確認済み。"
     }
   }
 }

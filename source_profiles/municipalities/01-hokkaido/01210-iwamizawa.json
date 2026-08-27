@@ -6,19 +6,36 @@
   "official_home_url": "https://www.city.iwamizawa.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "https://iwamizawa-gikai.gijiroku.com/index.asp",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.iwamizawa.hokkaido.jp/soshiki/gikai_jimukyoku/iwamizawashigikai/5/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://iwamizawa-gikai.gijiroku.com/index.asp",
+          "url": "https://www.city.iwamizawa.hokkaido.jp/soshiki/gikai_jimukyoku/iwamizawashigikai/5/index.html",
           "observed_on": "https://www.city.iwamizawa.hokkaido.jp/soshiki/gikai_jimukyoku/iwamizawashigikai/index.html",
-          "fetched_at": "2026-08-27T05:58:06Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.iwamizawa.hokkaido.jp/soshiki/gikai_jimukyoku/iwamizawashigikai/5/index.html",
+          "observed_on": "https://www.city.iwamizawa.hokkaido.jp/soshiki/gikai_jimukyoku/iwamizawashigikai/5/index.html",
+          "sha256": "6d10638d18a24fc3634862a268c97041fcb705e392c35f4505f75841ab89c9c7",
+          "fetched_at": "2026-08-27T13:23:27Z"
+        },
+        {
+          "url": "https://www.city.iwamizawa.hokkaido.jp/soshiki/gikai_jimukyoku/iwamizawashigikai/5/10311.html",
+          "observed_on": "https://www.city.iwamizawa.hokkaido.jp/soshiki/gikai_jimukyoku/iwamizawashigikai/5/index.html",
+          "sha256": "501152c3995b6433facc831c1e1feb579fae0adde77daa2c3473fcbc7e1b9d66",
+          "fetched_at": "2026-08-27T13:32:47Z"
         }
       ],
-      "notes": "Observed voices at https://iwamizawa-gikai.gijiroku.com/index.asp (label: 会議録検索システム（外部ページへ）)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

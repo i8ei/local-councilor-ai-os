@@ -6,25 +6,27 @@
   "official_home_url": "https://www.city.ofunato.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/ofunato/SpTop.html",
-      "verified_at": "2026-08-27T10:32:46Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ofunato.iwate.jp/archive/contents-32542",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/ofunato/SpTop.html",
+          "url": "https://www.city.ofunato.iwate.jp/archive/contents-32542",
           "observed_on": "https://www.city.ofunato.iwate.jp/genre/category/administration/shiseiunei/council",
-          "fetched_at": "2026-08-27T07:07:43Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/ofunato/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/ofunato/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:32:46Z"
+          "url": "https://www.city.ofunato.iwate.jp/archive/contents-32542",
+          "observed_on": "https://www.city.ofunato.iwate.jp/archive/contents-32542",
+          "sha256": "bcff5ffde4d7ed92aeff6a7204384ec46b4066290ce84babb64cd2ce6c1b6b3b",
+          "fetched_at": "2026-08-27T13:26:16Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ofunato/SpTop.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.zentsuji.kagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/zentsuji/pg/index.html",
-      "verified_at": "2026-08-27T09:46:19Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.zentsuji.kagawa.jp/site/sigikai/r86teireikai.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/zentsuji/pg/index.html",
+          "url": "https://www.city.zentsuji.kagawa.jp/site/sigikai/r86teireikai.html",
           "observed_on": "http://www.city.zentsuji.kagawa.jp/adv/ba.php?id=24",
-          "fetched_at": "2026-08-27T06:52:54Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/zentsuji/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/zentsuji/pg/index.html",
-          "sha256": "932ed570ba2b5ac023ce20354da1f7ad605fa25744be495f291800c9ccde4659",
-          "fetched_at": "2026-08-27T09:46:21Z"
+          "url": "https://www.city.zentsuji.kagawa.jp/site/sigikai/r86teireikai.html",
+          "observed_on": "https://www.city.zentsuji.kagawa.jp/site/sigikai/r86teireikai.html",
+          "sha256": "a8a44eb048c82eb62df9251cb2b82283df9a554f593ea22932a7b03e09714886",
+          "fetched_at": "2026-08-27T14:07:15Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/zentsuji/pg/index.html (label: 会議録の閲覧・検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

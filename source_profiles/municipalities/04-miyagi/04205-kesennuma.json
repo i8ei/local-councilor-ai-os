@@ -6,19 +6,36 @@
   "official_home_url": "http://www.kesennuma.miyagi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.kesennuma.miyagi.dbsr.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.kesennuma.miyagi.jp/li/shisei/160/090/00/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.kesennuma.miyagi.dbsr.jp/",
+          "url": "https://www.kesennuma.miyagi.jp/li/shisei/160/090/00/index.html",
           "observed_on": "http://www.kesennuma.miyagi.jp/li/shisei/160/index.html",
-          "fetched_at": "2026-08-27T07:19:14Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.kesennuma.miyagi.jp/li/shisei/160/090/00/index.html",
+          "observed_on": "https://www.kesennuma.miyagi.jp/li/shisei/160/090/00/index.html",
+          "sha256": "d848ef92e03368c7bfb2e2c002019af725579681e527962a287e441fab4eb2ab",
+          "fetched_at": "2026-08-27T13:27:12Z"
+        },
+        {
+          "url": "https://www.kesennuma.miyagi.jp/sec/s155/010/010/010/030/1320801415807.html",
+          "observed_on": "https://www.kesennuma.miyagi.jp/li/shisei/160/090/00/index.html",
+          "sha256": "61258edc80a8df5fc713f0643688298fe985a58a475c51a0aec02075f880e6e3",
+          "fetched_at": "2026-08-27T13:35:31Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.kesennuma.miyagi.dbsr.jp/ (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.yoshida.shizuoka.jp/yakuba/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yoshida.shizuoka.jp/item/14045.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoshida.shizuoka.jp/item/14045.htm",
@@ -69,9 +69,21 @@
           "url": "https://www.town.yoshida.shizuoka.jp/secure/14045/R8kaigo1gouyosan.pdf",
           "observed_on": "https://www.town.yoshida.shizuoka.jp/item/14045.htm",
           "fetched_at": "2026-08-27T11:14:40Z"
+        },
+        {
+          "url": "http://www.town.yoshida.shizuoka.jp/item/14045.htm",
+          "observed_on": "http://www.town.yoshida.shizuoka.jp/",
+          "sha256": "999b87644da3706070f9ff1c15f3eee64dab64fa19459ab3cf1c412e50a0e7d4",
+          "fetched_at": "2026-08-27T10:15:06Z"
+        },
+        {
+          "url": "https://www.town.yoshida.shizuoka.jp/secure/13738/R8gaiyou.pdf",
+          "observed_on": "https://www.town.yoshida.shizuoka.jp/9702.htm",
+          "sha256": "2b6addb53355202275a5a5d8b92f13919ef95b899440e456791c28225b67e1df",
+          "fetched_at": "2026-08-27T13:37:48Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.yoshida.shizuoka.jp/item/14045.htm (label: 令和8年度吉田町介護事業特別会計補正予算（第1号）) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（R8gaiyou.pdf「令和8年度当初予算概要.pdf」, sha256:2b6addb5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.fujisawa.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.fujisawa.kanagawa.jp/shise/index.html#cate_anchor_900",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.fujisawa.kanagawa.jp/shise/index.html#cate_anchor_900",
+          "observed_on": "http://www.city.fujisawa.kanagawa.jp/shise/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.fujisawa.kanagawa.jp/shise/index.html#cate_anchor_900",
+          "observed_on": "https://www.city.fujisawa.kanagawa.jp/shise/index.html#cate_anchor_900",
+          "sha256": "025960ea6b1d85142b2b94e24d45658a283a112b88243c5a5311a30ef8d4af89",
+          "fetched_at": "2026-08-27T13:43:20Z"
+        },
+        {
+          "url": "https://www.city.fujisawa.kanagawa.jp/kaigo-j/uneikyougikai/20221027.html",
+          "observed_on": "https://www.city.fujisawa.kanagawa.jp/shise/index.html#cate_anchor_900",
+          "sha256": "f4b677dcbdc7ea2973de613c807fcd5b72b3d7c7e0fe1ffdf11fc2ed504cecfb",
+          "fetched_at": "2026-08-27T13:43:38Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

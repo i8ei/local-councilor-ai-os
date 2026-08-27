@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/5/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/3/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/3/index.html",
@@ -52,9 +52,15 @@
           "observed_on": "https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/3/index.html",
           "sha256": "efb8cd0dfe6dc79ef2a0ad792ffbfed982ec2fbf3b03026bdb6e2850381eb887",
           "fetched_at": "2026-08-27T10:04:38Z"
+        },
+        {
+          "url": "https://www.town.yuzawa.lg.jp/material/files/group/3/yosan-R8.pdf",
+          "observed_on": "https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/3/2952.html",
+          "sha256": "db7ef4d8e3fc44868038128a538b7a91dab33f5b91bec1ff42848c57b08060df",
+          "fetched_at": "2026-08-27T13:35:23Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/3/index.html (label: 財政) 入口 https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/3/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/3/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/3/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yuzawa.lg.jp/kurashinojoho/machinitsuiteshiritai/3/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yosan-R8.pdf「全ページ一括ダウンロード (PDFファイル: 5.3MB)」, sha256:db7ef4d8）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

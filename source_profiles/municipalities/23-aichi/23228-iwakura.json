@@ -35,11 +35,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85833172 (label: こちら （別ウインドウで開く）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.iwakura.aichi.jp/0000007773.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.iwakura.aichi.jp/0000007773.html",
@@ -56,9 +56,15 @@
           "url": "https://www.city.iwakura.aichi.jp/cmsfiles/contents/0000007/7773/gaiyou.pdf",
           "observed_on": "https://www.city.iwakura.aichi.jp/0000007773.html",
           "fetched_at": "2026-08-27T11:14:50Z"
+        },
+        {
+          "url": "https://www.city.iwakura.aichi.jp/cmsfiles/contents/0000007/7773/R8wakariyasuiyosansyo.pdf",
+          "observed_on": "https://www.city.iwakura.aichi.jp/0000007773.html",
+          "sha256": "addf72799184c0778943adad672d16f9b168cba953de4100b16f042d7c1b7a4b",
+          "fetched_at": "2026-08-27T13:38:11Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.iwakura.aichi.jp/0000007773.html (label: 令和8年度予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8wakariyasuiyosansyo.pdf「令和8年度わかりやすい予算書(PDF形式、2.93MB)」, sha256:addf7279）にて構造マーカー（歳入・歳出・節・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

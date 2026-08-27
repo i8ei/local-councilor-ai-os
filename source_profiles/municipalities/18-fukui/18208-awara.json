@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.awara.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.awara.lg.jp/gikai/kaigiroku/p015415.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.awara.lg.jp/gikai/kaigiroku/p015415.html",
+          "observed_on": "https://www.city.awara.lg.jp/gikai/kaigiroku/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.awara.lg.jp/gikai/kaigiroku/p015415.html",
+          "observed_on": "https://www.city.awara.lg.jp/gikai/kaigiroku/p015415.html",
+          "sha256": "8a3e175b06db0da7cf1be8a7a33d22c501c65cd2f1041340f29d4c4f1636c253",
+          "fetched_at": "2026-08-27T13:45:29Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

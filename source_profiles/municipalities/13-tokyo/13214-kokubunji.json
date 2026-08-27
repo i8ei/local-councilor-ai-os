@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.kokubunji.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kokubunji.tokyo.jp/shigikai/tayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.kokubunji.tokyo.jp/shigikai/tayori/index.html",
+          "observed_on": "http://www.city.kokubunji.tokyo.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.kokubunji.tokyo.jp/shigikai/tayori/index.html",
+          "observed_on": "https://www.city.kokubunji.tokyo.jp/shigikai/tayori/index.html",
+          "sha256": "7296e09e392ccfc16237e5b12119cb1d76d64761e699dbbc7b3da49552654959",
+          "fetched_at": "2026-08-27T13:43:06Z"
+        },
+        {
+          "url": "https://www.city.kokubunji.tokyo.jp/shigikai/tayori/1038150.html",
+          "observed_on": "https://www.city.kokubunji.tokyo.jp/shigikai/tayori/index.html",
+          "sha256": "4e2d44eda6e43ceb5e3a2fbe5a2e8943196b5bf8234df979d41dcb39bd137c22",
+          "fetched_at": "2026-08-27T13:43:06Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

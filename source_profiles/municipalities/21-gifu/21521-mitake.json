@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.mitake.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.mitake.lg.jp/portal/town/parliament/post0003625/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.mitake.lg.jp/news/news0100754/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.mitake.lg.jp/portal/town/parliament/post0003625/",
-          "observed_on": "https://www.town.mitake.lg.jp/portal/town/parliament/",
-          "fetched_at": "2026-08-27T07:40:30Z"
+          "url": "https://www.town.mitake.lg.jp/news/news0100754/",
+          "observed_on": "https://www.town.mitake.lg.jp/portal/town/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.mitake.lg.jp/news/news0100754/",
+          "observed_on": "https://www.town.mitake.lg.jp/news/news0100754/",
+          "sha256": "b0580c07238b191abf41213ceb18632dd100ce0420638b22b50cb950105ff6a6",
+          "fetched_at": "2026-08-27T13:49:22Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.mitake.lg.jp/portal/town/parliament/post0003625/ (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

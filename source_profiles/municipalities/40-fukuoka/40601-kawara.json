@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.kawara.fukuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kawara.fukuoka.jp/110/010/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kawara.fukuoka.jp/110/010/index.html",
+          "observed_on": "https://www.town.kawara.fukuoka.jp/s036/gikai/090/20260817102600.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.kawara.fukuoka.jp/110/010/index.html",
+          "observed_on": "https://www.town.kawara.fukuoka.jp/110/010/index.html",
+          "sha256": "510d5b037afe621cc9d5c837c93257b16be86888e50504a05ab72e2e442583f9",
+          "fetched_at": "2026-08-27T14:09:05Z"
+        },
+        {
+          "url": "https://www.town.kawara.fukuoka.jp/s036/gikai/020/kawaragikaidayori2026/20260130154754.html",
+          "observed_on": "https://www.town.kawara.fukuoka.jp/110/010/index.html",
+          "sha256": "a423c8fdfbad078d947e9c7d9ac243ebf709fa5affd32944711f171f475f190d",
+          "fetched_at": "2026-08-27T14:09:05Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +80,11 @@
       "notes": "Observed budget link at http://www.town.kawara.fukuoka.jp/050/040/010/index.html (label: 予算) 入口 https://www.town.kawara.fukuoka.jp/050/040/010/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kawara.fukuoka.jp/050/040/010/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kawara.fukuoka.jp/050/040/010/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kawara.fukuoka.jp/050/040/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kawara.fukuoka.jp/050/040/index.html",
@@ -72,9 +96,21 @@
           "observed_on": "https://www.town.kawara.fukuoka.jp/050/040/index.html",
           "sha256": "b233edec0f24a777561e5bbd0814f08ff9b406e6dec395ba336174f331ed7200",
           "fetched_at": "2026-08-27T09:37:23Z"
+        },
+        {
+          "url": "http://www.town.kawara.fukuoka.jp/050/040/index.html",
+          "observed_on": "http://www.town.kawara.fukuoka.jp/",
+          "sha256": "b233edec0f24a777561e5bbd0814f08ff9b406e6dec395ba336174f331ed7200",
+          "fetched_at": "2026-08-27T09:37:23Z"
+        },
+        {
+          "url": "https://www.town.kawara.fukuoka.jp/s007/admin-info/010/030/R06kessannogaiyou.pdf",
+          "observed_on": "https://www.town.kawara.fukuoka.jp/s007/admin-info/010/030/20171026225738.html",
+          "sha256": "34419c1fea307c62f2d098f9e24cc434168e5cfe11bc7fa56ae47cddf0638e4a",
+          "fetched_at": "2026-08-27T13:45:33Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kawara.fukuoka.jp/050/040/index.html (label: 町の財政) 入口 https://www.town.kawara.fukuoka.jp/050/040/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kawara.fukuoka.jp/050/040/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kawara.fukuoka.jp/050/040/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06kessannogaiyou.pdf「令和06年度決算の概要（PDF：211KB）」, sha256:34419c1f）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

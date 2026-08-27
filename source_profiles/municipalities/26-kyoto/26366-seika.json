@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.seika.kyoto.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.seika.kyoto.jp/gikai/kouhou/8669.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.seika.kyoto.jp/gikai/kouhou/3/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.town.seika.kyoto.jp/gikai/kouhou/8669.html",
+          "url": "https://www.town.seika.kyoto.jp/gikai/kouhou/3/index.html",
           "observed_on": "https://www.town.seika.kyoto.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:23:44Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.seika.kyoto.jp/gikai/kouhou/3/index.html",
+          "observed_on": "https://www.town.seika.kyoto.jp/gikai/kouhou/3/index.html",
+          "sha256": "12e49ed728d15b50b19f7e56a79e9a1f7eff6b9b04a0b65406f6ec2d1333f11c",
+          "fetched_at": "2026-08-27T14:01:34Z"
+        },
+        {
+          "url": "https://www.town.seika.kyoto.jp/gikai/kouhou/3/31195.html",
+          "observed_on": "https://www.town.seika.kyoto.jp/gikai/kouhou/3/index.html",
+          "sha256": "beeafc3257a2ec2dfee4dc58a8489c65ed5786e3577f152595a233e023005a10",
+          "fetched_at": "2026-08-27T14:01:34Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.seika.kyoto.jp/gikai/kouhou/8669.html (label: 会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -57,11 +74,11 @@
       "notes": "Observed budget link at https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html (label: 予算) 入口 https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/5/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/2/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/2/index.html",
@@ -73,9 +90,15 @@
           "observed_on": "https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/2/index.html",
           "sha256": "2267d9dda14f46d07842b543d6bb0d0714dd66d31749d41408c1cf6efb71f015",
           "fetched_at": "2026-08-27T09:50:19Z"
+        },
+        {
+          "url": "https://www.town.seika.kyoto.jp/material/files/group/2/Zsetumei.pdf",
+          "observed_on": "https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/2/12375.html",
+          "sha256": "5f6925f63fd8e1d4c1a065d3cd4a7e71f4c75b2ce365ff2a886d387eb96868b2",
+          "fetched_at": "2026-08-27T13:40:02Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/2/index.html (label: 決算) 入口 https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.seika.kyoto.jp/chosei/gyosei_joho/2/2/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（Zsetumei.pdf「各記載項目の説明 (PDFファイル: 491.9KB)」, sha256:5f6925f6）にて構造マーカー（款・項・節・決算額等）を確認済み。"
     }
   }
 }

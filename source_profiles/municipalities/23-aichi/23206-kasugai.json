@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.kasugai.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/kasugai/SpTop.html",
-      "verified_at": "2026-08-27T10:15:06Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kasugai.lg.jp/shisei/shigikai/1020123.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/kasugai/SpTop.html",
+          "url": "https://www.city.kasugai.lg.jp/shisei/shigikai/1020123.html",
           "observed_on": "http://www.city.kasugai.lg.jp/shisei/index.html",
-          "fetched_at": "2026-08-27T07:58:30Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/kasugai/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/kasugai/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:15:06Z"
+          "url": "https://www.city.kasugai.lg.jp/shisei/shigikai/1020123.html",
+          "observed_on": "https://www.city.kasugai.lg.jp/shisei/shigikai/1020123.html",
+          "sha256": "f67d20d34fcde35a78e0b37f3de3b72156920d3dd5746d7fa0c24592a060176f",
+          "fetched_at": "2026-08-27T13:50:09Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kasugai/SpTop.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

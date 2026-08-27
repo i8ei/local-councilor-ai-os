@@ -56,11 +56,11 @@
       "notes": "Observed finance section at http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ (label: 行財政) 入口 http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
@@ -72,9 +72,15 @@
           "observed_on": "http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/",
           "sha256": "7159b1051e621d59605bf74e78780c2419c3cc4589c2b861c46acb6720840bf0",
           "fetched_at": "2026-08-27T09:53:42Z"
+        },
+        {
+          "url": "http://www.town.wakayama-hidaka.lg.jp/docs/2014090800110/files/R6zaiseijoukyoushiryoushuu.xlsx",
+          "observed_on": "http://www.town.wakayama-hidaka.lg.jp/docs/2014090800110/",
+          "sha256": "49ec65347249da9101def5f89176aa20c1ed8bdd310d9fc9c6a736f1085ce150",
+          "fetched_at": "2026-08-27T13:41:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ (label: 行財政) 入口 http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.wakayama-hidaka.lg.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijoukyoushiryoushuu.xlsx「令和６年度 財政状況資料集(551KB)」, sha256:49ec6534）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

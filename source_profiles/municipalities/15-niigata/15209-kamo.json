@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.city.kamo.niigata.jp/shisei/zaisei/ (label: 財政) 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kamo.niigata.jp/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kamo.niigata.jp/shisei/zaisei/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.kamo.niigata.jp:443/shisei/zaisei/",
           "sha256": "0f73777b02afbf223c5bfc92fb7e1baa50dd462fc76986562bb552c5d4e89491",
           "fetched_at": "2026-08-27T10:04:23Z"
+        },
+        {
+          "url": "http://www.city.kamo.niigata.jp/shisei/zaisei/",
+          "observed_on": "http://www.city.kamo.niigata.jp/",
+          "sha256": "0f73777b02afbf223c5bfc92fb7e1baa50dd462fc76986562bb552c5d4e89491",
+          "fetched_at": "2026-08-27T10:04:23Z"
+        },
+        {
+          "url": "https://www.city.kamo.niigata.jp:443/fs/2/0/6/9/3/2/_/R6%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86.xlsx",
+          "observed_on": "https://www.city.kamo.niigata.jp:443/docs/30301.html",
+          "sha256": "4a1aad7ef0897001e57759b4dcf5086523f18bff5d66ab20b67e68e60d54dc22",
+          "fetched_at": "2026-08-27T13:34:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kamo.niigata.jp/shisei/zaisei/ (label: 財政) 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6%E8%B2%A1%E6%94%BF%E7%8A%B6%E6%B3%81%E8%B3%87%E6%96%99%E9%9B%86.xlsx「R6財政状況資料集 (556KB)」, sha256:4a1aad7e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

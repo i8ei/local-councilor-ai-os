@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at http://www2.town.komono.mie.jp/life/6/27/107/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www2.town.komono.mie.jp/life/6/24/97/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www2.town.komono.mie.jp/life/6/24/97/",
@@ -52,9 +52,21 @@
           "observed_on": "https://www2.town.komono.mie.jp/life/6/24/97/",
           "sha256": "3820e392717b0cae93e0569fcea0c87f6ec97f587c5242f7b01125eee68e9de7",
           "fetched_at": "2026-08-27T09:48:58Z"
+        },
+        {
+          "url": "http://www2.town.komono.mie.jp/life/6/24/97/",
+          "observed_on": "http://www2.town.komono.mie.jp/",
+          "sha256": "3820e392717b0cae93e0569fcea0c87f6ec97f587c5242f7b01125eee68e9de7",
+          "fetched_at": "2026-08-27T09:48:58Z"
+        },
+        {
+          "url": "https://www2.town.komono.mie.jp/uploaded/attachment/4923.pdf",
+          "observed_on": "https://www2.town.komono.mie.jp/soshiki/3/2108.html",
+          "sha256": "843c44869bba59bc3fad7a7628f3bf481c9820eb57953f6f4dd4e67d5a1262d6",
+          "fetched_at": "2026-08-27T13:39:05Z"
         }
       ],
-      "notes": "Observed budget link at http://www2.town.komono.mie.jp/life/6/24/97/ (label: 予算・決算) 入口 https://www2.town.komono.mie.jp/life/6/24/97/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www2.town.komono.mie.jp/life/6/24/97/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（4923.pdf「予算書（一般会計） [PDFファイル／1.09MB]」, sha256:843c4486）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

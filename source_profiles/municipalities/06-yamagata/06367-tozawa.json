@@ -6,19 +6,27 @@
   "official_home_url": "http://www.vill.tozawa.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/tozawa/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.tozawa.yamagata.jp/gikai/koho/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/tozawa/WebView/rd/council_1.html",
+          "url": "https://www.vill.tozawa.yamagata.jp/gikai/koho/",
           "observed_on": "http://www.vill.tozawa.yamagata.jp/gyoseijoho/",
-          "fetched_at": "2026-08-27T07:47:25Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.tozawa.yamagata.jp/gikai/koho/",
+          "observed_on": "https://www.vill.tozawa.yamagata.jp/gikai/koho/",
+          "sha256": "a2b9fcb8008809ad13e0288b9d04c32980ee3a8050c1a02ae81cf9a08961ac2d",
+          "fetched_at": "2026-08-27T13:27:52Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/tozawa/WebView/rd/council_1.html (label:  議会中継)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.town.mihama.wakayama.jp/bunya/zaisei/ (label: 行財政) 入口 http://www.town.mihama.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.mihama.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.mihama.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mihama.wakayama.jp/bunya/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mihama.wakayama.jp/bunya/zaisei/",
@@ -85,9 +85,15 @@
           "observed_on": "http://www.town.mihama.wakayama.jp/bunya/zaisei/",
           "sha256": "a9400c70d0f08277122841f416cb71ddf54bb54db0e7e0b30108c31c78dbb65b",
           "fetched_at": "2026-08-27T09:53:42Z"
+        },
+        {
+          "url": "http://www.town.mihama.wakayama.jp/docs/2017050900011/files/303810_mihama_2024.xlsx",
+          "observed_on": "http://www.town.mihama.wakayama.jp/docs/2017050900011/",
+          "sha256": "8c86e713ccb540d6bea5daf598abb74fa4d0b68f1f13855ed24684f69a111378",
+          "fetched_at": "2026-08-27T13:41:48Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.mihama.wakayama.jp/bunya/zaisei/ (label: 行財政) 入口 http://www.town.mihama.wakayama.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.mihama.wakayama.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.mihama.wakayama.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（303810_mihama_2024.xlsx「財政状況資料集(令和６年度決算)(558KB)」, sha256:8c86e713）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

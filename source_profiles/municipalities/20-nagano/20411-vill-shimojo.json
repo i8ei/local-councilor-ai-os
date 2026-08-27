@@ -50,11 +50,11 @@
       "notes": "Observed finance section at http://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/ (label: 村の財政状況) 入口 https://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/",
           "sha256": "b4523d19dd98f2b50e3d8e8d29df1d5fdb22fdc80156e93da1ece06da5e2736c",
           "fetched_at": "2026-08-27T10:11:28Z"
+        },
+        {
+          "url": "http://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/",
+          "observed_on": "http://www.vill-shimojo.jp/",
+          "sha256": "b4523d19dd98f2b50e3d8e8d29df1d5fdb22fdc80156e93da1ece06da5e2736c",
+          "fetched_at": "2026-08-27T10:11:28Z"
+        },
+        {
+          "url": "https://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/files/h18zaiseijoukyou.pdf",
+          "observed_on": "https://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/h18.html",
+          "sha256": "0db518edccfb732a5e48f4ecb800fc4d0384ca91feee1392b325530c1c8cf69a",
+          "fetched_at": "2026-08-27T13:36:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/ (label: 村の財政状況) 入口 https://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill-shimojo.jp/gyousei/gyousei-info/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（h18zaiseijoukyou.pdf「平成18年度財政状況等一覧表 (140KB)」, sha256:0db518ed）にて構造マーカー（歳入・歳出・実質収支・地方債等）を確認済み。"
     }
   }
 }

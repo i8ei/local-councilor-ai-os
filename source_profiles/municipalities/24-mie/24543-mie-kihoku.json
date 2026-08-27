@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/",
           "sha256": "6b06fcffca948893b3be8d17fcdfbc49085363dda6f52642c6cf59b0dd2d9a3f",
           "fetched_at": "2026-08-27T09:49:07Z"
+        },
+        {
+          "url": "https://www.town.mie-kihoku.lg.jp/assets25/pdf/30zaimusyorui.pdf",
+          "observed_on": "https://www.town.mie-kihoku.lg.jp/2026/04/09/764/",
+          "sha256": "d085d828fabf73d9bd7d836840a5eec49b1bee6fed9130224e012f04a34aeee2",
+          "fetched_at": "2026-08-27T13:39:24Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/ (label: 紀北町の財政) 入口 https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mie-kihoku.lg.jp/category/chosei-joho/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（30zaimusyorui.pdf「統一的な基準による財務書類 (PDFファイル: 2.1MB)」, sha256:d085d828）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

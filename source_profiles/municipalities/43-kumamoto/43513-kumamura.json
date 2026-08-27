@@ -63,11 +63,11 @@
       "notes": "Observed budget link at https://www.kumamura.com/list00235.html (label: 予算・決算) 入口 https://www.kumamura.com/list00235.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.kumamura.com/list00235.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.kumamura.com/list00235.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.kumamura.com/list00235.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.kumamura.com/list00235.html",
           "sha256": "434de47912c78d7ad1881e6fddf37c192980667ffa42fab59173a6594d738034",
           "fetched_at": "2026-08-27T09:39:27Z"
+        },
+        {
+          "url": "https://www.kumamura.com/kiji0031880/3_1880_up_4pn0q4qu.pdf",
+          "observed_on": "https://www.kumamura.com/kiji0031880/index.html",
+          "sha256": "0b3edc66fdae894c04f5c01d7a5fe164d3be22309dfb9c096b664194ddf347a0",
+          "fetched_at": "2026-08-27T13:46:46Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.kumamura.com/list00235.html (label: 予算・決算) 入口 https://www.kumamura.com/list00235.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.kumamura.com/list00235.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_1880_up_4pn0q4qu.pdf「令和６年度地方消費税交付金の使途について（PDF：67キロバイト）」, sha256:0b3edc66）にて構造マーカー（歳入・歳出・地方債等）を確認済み。"
     }
   }
 }

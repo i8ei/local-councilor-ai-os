@@ -6,19 +6,37 @@
   "official_home_url": "https://www.town.tsubetsu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html",
           "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/index.html",
           "fetched_at": "2026-08-27T06:38:23Z"
+        },
+        {
+          "url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html",
+          "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html",
+          "sha256": "2aa4f8b5803b9e44b6a1563899652e0151dc9f49a11ccdc814077d0acc24453a",
+          "fetched_at": "2026-08-27T10:31:06Z"
+        },
+        {
+          "url": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/4140.html",
+          "observed_on": "https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html",
+          "sha256": "cb34db383943a7465325ae567b818ac9f16d9725df88bfbe5f056eca707a3812",
+          "fetched_at": "2026-08-27T13:33:58Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html (label: 会議録)"
+      "notes": "Observed council minutes index at https://www.town.tsubetsu.hokkaido.jp/choseijoho/tsubetsugikai/2/index.html (label: 会議録)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "ready",

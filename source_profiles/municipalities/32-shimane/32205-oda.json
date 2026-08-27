@@ -6,12 +6,36 @@
   "official_home_url": "https://www.city.oda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.oda.lg.jp/76/741/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.oda.lg.jp/76/741/",
+          "observed_on": "https://www.city.oda.lg.jp/76/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.oda.lg.jp/76/741/",
+          "observed_on": "https://www.city.oda.lg.jp/76/741/",
+          "sha256": "48ad876b818ae738a226291682834e79a72b606c368e0d7cfc04473d75a388b9",
+          "fetched_at": "2026-08-27T14:05:24Z"
+        },
+        {
+          "url": "https://www.city.oda.lg.jp/76/741/gikai08/11118",
+          "observed_on": "https://www.city.oda.lg.jp/76/741/",
+          "sha256": "63cf2fa6ba3155ef8508616d5b8003c1fb50b7e19c93730bf08f5248e7015a97",
+          "fetched_at": "2026-08-27T14:05:27Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +74,11 @@
       "notes": "Observed finance section at https://www.city.oda.lg.jp/topics/9208 (label: 大田市水道事業経営戦略(投資・財政計画)を改定しました。) 入口 https://www.city.oda.lg.jp/topics/9208 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.oda.lg.jp/topics/9208 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.oda.lg.jp/topics/9208",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.oda.lg.jp/topics/9208",
@@ -66,9 +90,15 @@
           "observed_on": "https://www.city.oda.lg.jp/topics/9208",
           "sha256": "449a5a94c3bf1b879cb85e00b70db073a50930e67bb8a4a0af13d8e785b5cf98",
           "fetched_at": "2026-08-27T09:42:55Z"
+        },
+        {
+          "url": "https://www.city.oda.lg.jp/files/original/20241213114317082f3af6076.pdf",
+          "observed_on": "https://www.city.oda.lg.jp/topics/9208",
+          "sha256": "be4c2c9739517ec741df28732dc358b61fcf8420f76fb0164a9ffb31b61ad662",
+          "fetched_at": "2026-08-27T13:42:05Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.oda.lg.jp/topics/9208 (label: 大田市水道事業経営戦略(投資・財政計画)を改定しました。) 入口 https://www.city.oda.lg.jp/topics/9208 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.oda.lg.jp/topics/9208 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20241213114317082f3af6076.pdf「大田市水道事業経営戦略(投資・財政計画)令和6年12月改定」, sha256:be4c2c97）にて構造マーカー（項・節等）を確認済み。"
     }
   }
 }

@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.miyako.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/miyako/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.town.miyako.lg.jp%2Fgenre%2F0010%2F0051%2F0002.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.miyako.lg.jp/genre/0010/0051/0002-7.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/miyako/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.town.miyako.lg.jp%2Fgenre%2F0010%2F0051%2F0002.html",
+          "url": "https://www.town.miyako.lg.jp/genre/0010/0051/0002-7.html",
           "observed_on": "http://www.town.miyako.lg.jp/genre/0010/0051/0000.html",
-          "fetched_at": "2026-08-27T06:04:46Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.miyako.lg.jp/genre/0010/0051/0002-7.html",
+          "observed_on": "https://www.town.miyako.lg.jp/genre/0010/0051/0002-7.html",
+          "sha256": "6b44100efedb7385b4ef91d756a3ab558907dfcad1734ff51e091babfc326424",
+          "fetched_at": "2026-08-27T14:09:10Z"
+        },
+        {
+          "url": "https://www.town.miyako.lg.jp/gyougikai/gikaikouhou/gikaidayori_new.html",
+          "observed_on": "https://www.town.miyako.lg.jp/genre/0010/0051/0002-7.html",
+          "sha256": "21ac29a4b2608734bc7fa42dff7f61c265b4fe5356a32cf69e71f66144d3e458",
+          "fetched_at": "2026-08-27T14:09:10Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/miyako/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.town.miyako.lg.jp%2Fgenre%2F0010%2F0051%2F0002.html (label: 映像配信（外部リンク）)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -42,11 +59,11 @@
       "base_url": "https://www1.g-reiki.net/town.miyako/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.miyako.lg.jp/genre/0010/0051/0010.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miyako.lg.jp/genre/0010/0051/0010.html",
@@ -58,16 +75,28 @@
           "observed_on": "https://www.town.miyako.lg.jp/genre/0010/0051/0010.html",
           "sha256": "602ad2b1eec9669938c9a79147d546171a62b6db5858318770294e1d82338fe3",
           "fetched_at": "2026-08-27T09:37:09Z"
+        },
+        {
+          "url": "http://www.town.miyako.lg.jp/genre/0010/0051/0010.html",
+          "observed_on": "http://www.town.miyako.lg.jp/",
+          "sha256": "602ad2b1eec9669938c9a79147d546171a62b6db5858318770294e1d82338fe3",
+          "fetched_at": "2026-08-27T09:37:09Z"
+        },
+        {
+          "url": "https://www.town.miyako.lg.jp/gyouseikeiei/seisaku/gyouzaisei/documents/gyouzai01.pdf",
+          "observed_on": "https://www.town.miyako.lg.jp/gyouseikeiei/seisaku/gyouzaisei/gyouzai.html",
+          "sha256": "d94219767132a2ac0e3357011e2d11685edca9d798637f680af009cc3fd6036a",
+          "fetched_at": "2026-08-27T13:45:33Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.miyako.lg.jp/genre/0010/0051/0010.html (label: 行財政改革) 入口 https://www.town.miyako.lg.jp/genre/0010/0051/0010.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.miyako.lg.jp/genre/0010/0051/0010.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.miyako.lg.jp/genre/0010/0051/0010.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（gyouzai01.pdf「みやこ町行財政集中改革プラン （433kbyte）」, sha256:d9421976）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.miyako.lg.jp/genre/0010/0051/0010.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miyako.lg.jp/genre/0010/0051/0010.html",
@@ -79,9 +108,21 @@
           "observed_on": "https://www.town.miyako.lg.jp/genre/0010/0051/0010.html",
           "sha256": "602ad2b1eec9669938c9a79147d546171a62b6db5858318770294e1d82338fe3",
           "fetched_at": "2026-08-27T09:37:09Z"
+        },
+        {
+          "url": "http://www.town.miyako.lg.jp/genre/0010/0051/0010.html",
+          "observed_on": "http://www.town.miyako.lg.jp/",
+          "sha256": "602ad2b1eec9669938c9a79147d546171a62b6db5858318770294e1d82338fe3",
+          "fetched_at": "2026-08-27T09:37:09Z"
+        },
+        {
+          "url": "https://www.town.miyako.lg.jp/gyouseikeiei/seisaku/gyouzaisei/documents/gyouzai01.pdf",
+          "observed_on": "https://www.town.miyako.lg.jp/gyouseikeiei/seisaku/gyouzaisei/gyouzai.html",
+          "sha256": "d94219767132a2ac0e3357011e2d11685edca9d798637f680af009cc3fd6036a",
+          "fetched_at": "2026-08-27T13:45:33Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.miyako.lg.jp/genre/0010/0051/0010.html (label: 行財政改革) 入口 https://www.town.miyako.lg.jp/genre/0010/0051/0010.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.miyako.lg.jp/genre/0010/0051/0010.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.miyako.lg.jp/genre/0010/0051/0010.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（gyouzai01.pdf「みやこ町行財政集中改革プラン （433kbyte）」, sha256:d9421976）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

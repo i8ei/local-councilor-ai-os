@@ -6,19 +6,37 @@
   "official_home_url": "http://www.town.shodoshima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/gikai/kaigiroku/index.html",
           "observed_on": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/index.html",
           "fetched_at": "2026-08-27T06:54:45Z"
+        },
+        {
+          "url": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/gikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/gikai/kaigiroku/index.html",
+          "sha256": "ebf141b61271ec0e30f1cc99721ab463275fc6f396daa6018daf949f56925682",
+          "fetched_at": "2026-08-27T09:46:23Z"
+        },
+        {
+          "url": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/gikai/kaigiroku/9368.html",
+          "observed_on": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/gikai/kaigiroku/index.html",
+          "sha256": "861e05039f6cb2907f8467fb8db61a92ec4e2b31613f1f2da69800c690b08920",
+          "fetched_at": "2026-08-27T14:07:09Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.shodoshima.lg.jp/gyousei/choseijoho/gikai/kaigiroku/index.html (label: 会議録)"
+      "notes": "Observed council minutes index at https://www.town.shodoshima.lg.jp/gyousei/choseijoho/gikai/kaigiroku/index.html (label: 会議録)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "not_found",
@@ -29,11 +47,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3153.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3153.html",
@@ -50,16 +68,22 @@
           "url": "https://www.town.shodoshima.lg.jp/material/files/group/1/r8yosan-1.pdf",
           "observed_on": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3153.html",
           "fetched_at": "2026-08-27T09:46:23Z"
+        },
+        {
+          "url": "https://www.town.shodoshima.lg.jp/material/files/group/1/r8yosan-1.pdf",
+          "observed_on": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3153.html",
+          "sha256": "91e0812663f33bd095769053762000bd214d91f228d21fde1d7ddf287af96257",
+          "fetched_at": "2026-08-27T09:46:27Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3153.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r8yosan-1.pdf「令和8年度予算の概要について (PDFファイル: 609.9KB)」, sha256:91e08126）にて構造マーカー（歳入・歳出・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3154.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3154.html",
@@ -76,9 +100,15 @@
           "url": "https://www.town.shodoshima.lg.jp/material/files/group/1/kessanr6.pdf",
           "observed_on": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3154.html",
           "fetched_at": "2026-08-27T09:46:27Z"
+        },
+        {
+          "url": "https://www.town.shodoshima.lg.jp/material/files/group/1/r6kessannjyoukyou.pdf",
+          "observed_on": "https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3154.html",
+          "sha256": "27efdc053c3f42263f94a85382a8bd56c979c93084633756d86a55beb4f18afb",
+          "fetched_at": "2026-08-27T13:43:10Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.shodoshima.lg.jp/gyousei/choseijoho/zaisei/3154.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r6kessannjyoukyou.pdf「令和6年度小豆島町の決算カード (PDFファイル: 163.7KB)」, sha256:27efdc05）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

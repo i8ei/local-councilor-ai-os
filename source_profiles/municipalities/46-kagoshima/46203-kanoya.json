@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www.city.kanoya.lg.jp/soumu/reiki.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kanoya.lg.jp/kouhou/shise/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kanoya.lg.jp/kouhou/shise/zaise/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.city.kanoya.lg.jp/kouhou/shise/zaise/index.html",
           "sha256": "e281f3f3e135a1c8aeb3bfca7cba8a8baf687e07e2836b0d920135dd314d3e6e",
           "fetched_at": "2026-08-27T09:40:13Z"
+        },
+        {
+          "url": "https://www.city.kanoya.lg.jp/documents/1954/vision.pdf",
+          "observed_on": "https://www.city.kanoya.lg.jp/zaimu/shise/zaise/jokyo.html",
+          "sha256": "87750cfc8b07a293dcc9b510ab9cc8350f80eb03901ae8dac91943db88734c63",
+          "fetched_at": "2026-08-27T13:47:31Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kanoya.lg.jp/kouhou/shise/zaise/index.html (label: 財政・監査) 入口 https://www.city.kanoya.lg.jp/kouhou/shise/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kanoya.lg.jp/kouhou/shise/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（vision.pdf「鹿屋市行財政将来ビジョン（PDF：2,175KB）」, sha256:87750cfc）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

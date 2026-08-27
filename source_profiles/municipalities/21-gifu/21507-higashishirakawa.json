@@ -63,11 +63,11 @@
       "notes": "Observed finance section at https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/ (label: 行財政) 入口 https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/",
           "sha256": "dde3a90e2bc83deab17051e7c3e37798570a58f0eda697f2839947575c797c6c",
           "fetched_at": "2026-08-27T10:14:25Z"
+        },
+        {
+          "url": "https://www.vill.higashishirakawa.gifu.jp/files/upload/69cb2924-ea74-4895-99d6-1390ac100235.xlsx",
+          "observed_on": "https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/zaisei/",
+          "sha256": "abb84824f502173e80ba566e11bf10c42b4eb46e664131e22f7805d303de1031",
+          "fetched_at": "2026-08-27T13:37:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/ (label: 行財政) 入口 https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.higashishirakawa.gifu.jp/sonsei/gyouzai/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（69cb2924-ea74-4895-99d6-1390ac100235.xlsx「令和6年度(2024年度) 財政状況資料集(Excel版:554KB)」, sha256:abb84824）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

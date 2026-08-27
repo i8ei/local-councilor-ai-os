@@ -6,12 +6,27 @@
   "official_home_url": "https://www.kazamaura.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.kazamaura.jp/cms/administration/%e8%ad%b0%e4%bc%9a%e6%83%85%e5%a0%b1/%e8%ad%b0%e4%bc%9a%e5%ba%83%e5%a0%b1/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.kazamaura.jp/cms/administration/%e8%ad%b0%e4%bc%9a%e6%83%85%e5%a0%b1/%e8%ad%b0%e4%bc%9a%e5%ba%83%e5%a0%b1/",
+          "observed_on": "https://www.kazamaura.jp/administration/%e8%ad%b0%e4%bc%9a%e6%83%85%e5%a0%b1/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.kazamaura.jp/cms/administration/%e8%ad%b0%e4%bc%9a%e6%83%85%e5%a0%b1/%e8%ad%b0%e4%bc%9a%e5%ba%83%e5%a0%b1/",
+          "observed_on": "https://www.kazamaura.jp/cms/administration/%e8%ad%b0%e4%bc%9a%e6%83%85%e5%a0%b1/%e8%ad%b0%e4%bc%9a%e5%ba%83%e5%a0%b1/",
+          "sha256": "a4ee4a44c29eb72fa78d6f680eb0d02a6329d23f9d52adbad57c069154712f49",
+          "fetched_at": "2026-08-27T13:26:09Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

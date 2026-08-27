@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.aisai.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.aisai.lg.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.aisai.lg.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.aisai.lg.jp/category/6-2-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.aisai.lg.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.aisai.lg.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+          "sha256": "e8beb2a749572dfac82456fb028129497522690211b387e2883a51c5601d590d",
+          "fetched_at": "2026-08-27T13:50:43Z"
+        },
+        {
+          "url": "https://www.city.aisai.lg.jp/0000018541.html",
+          "observed_on": "https://www.city.aisai.lg.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+          "sha256": "d59d3153e2f6ba4f34102a682cb06f714badca27527a04ad9cf04fc963c4f083",
+          "fetched_at": "2026-08-27T13:50:43Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

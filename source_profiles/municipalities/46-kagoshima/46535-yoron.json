@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www.yoron.jp/reiki/reiki.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.yoron.jp/list00129.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.yoron.jp/list00129.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.yoron.jp/list00129.html",
           "sha256": "a69ba278202a097c86551df836d442985f1000690bb799f8e850d8a2745fb292",
           "fetched_at": "2026-08-27T09:41:07Z"
+        },
+        {
+          "url": "http://www.yoron.jp/list00129.html",
+          "observed_on": "http://www.yoron.jp/",
+          "sha256": "a69ba278202a097c86551df836d442985f1000690bb799f8e850d8a2745fb292",
+          "fetched_at": "2026-08-27T09:41:07Z"
+        },
+        {
+          "url": "https://www.yoron.jp/kiji00358/3_58_4_6_64_6_up_Q2TNLJ6B80179_20200312140306-1.xlsx",
+          "observed_on": "https://www.yoron.jp/kiji00358/index.html",
+          "sha256": "952b0a906f8f01190f11ca186af1be71c7e208a03662ab601349ab6f3ce9cf3c",
+          "fetched_at": "2026-08-27T13:48:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.yoron.jp/list00129.html (label: 行政・財政) 入口 https://www.yoron.jp/list00129.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.yoron.jp/list00129.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_58_4_6_64_6_up_Q2TNLJ6B80179_20200312140306-1.xlsx「平成30年度財政状況資料集（Excel：532.3KB）」, sha256:952b0a90）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

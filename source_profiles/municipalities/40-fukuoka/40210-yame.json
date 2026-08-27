@@ -69,11 +69,11 @@
       "notes": "Observed budget link at https://www.city.yame.fukuoka.jp/shisei/8/yosan/index.html (label: 予算) 入口 https://www.city.yame.fukuoka.jp/shisei/8/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yame.fukuoka.jp/shisei/8/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yame.fukuoka.jp/shisei/8/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yame.fukuoka.jp/shisei/8/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yame.fukuoka.jp/shisei/8/kessan/index.html",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.city.yame.fukuoka.jp/shisei/8/kessan/index.html",
           "sha256": "80bae9e0e004c67c365921667f89c28869c3dbbffff6ce9d8f1111588d600bd2",
           "fetched_at": "2026-08-27T09:35:35Z"
+        },
+        {
+          "url": "https://www.city.yame.fukuoka.jp/material/files/group/21/R6kouhou.pdf",
+          "observed_on": "https://www.city.yame.fukuoka.jp/shisei/8/kessan/13241.html",
+          "sha256": "fccf92f5dcf192fa31c70ece170c5ee74514742e1e86405c6b2a80920c5b9efc",
+          "fetched_at": "2026-08-27T13:44:43Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.yame.fukuoka.jp/shisei/8/kessan/index.html (label: 決算) 入口 https://www.city.yame.fukuoka.jp/shisei/8/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yame.fukuoka.jp/shisei/8/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yame.fukuoka.jp/shisei/8/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kouhou.pdf「令和6年度決算状況 (PDFファイル: 689.0KB)」, sha256:fccf92f5）にて構造マーカー（歳入・歳出・決算額・標準財政規模等）を確認済み。"
     }
   }
 }

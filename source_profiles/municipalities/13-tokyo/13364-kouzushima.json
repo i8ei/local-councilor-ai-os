@@ -6,19 +6,28 @@
   "official_home_url": "http://vill.kouzushima.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.vill.kouzushima.tokyo.jp/2026-0723/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.kouzushima.tokyo.jp/2026-0723/",
           "observed_on": "http://vill.kouzushima.tokyo.jp/",
           "fetched_at": "2026-08-27T07:54:56Z"
+        },
+        {
+          "url": "https://www.vill.kouzushima.tokyo.jp/2026-0723/",
+          "observed_on": "https://www.vill.kouzushima.tokyo.jp/2026-0723/",
+          "sha256": "86eabc5a63c5156d6478fc4437ad60459496a83fd9592b4ad195706d35e90a06",
+          "fetched_at": "2026-08-27T10:26:28Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.vill.kouzushima.tokyo.jp/2026-0723/ (label: 神津島村議会定例会会議録(令和8年第2回))"
+      "notes": "Observed council minutes index at https://www.vill.kouzushima.tokyo.jp/2026-0723/ (label: 神津島村議会定例会会議録(令和8年第2回))",
+      "config": {
+        "pdf": true
+      }
     },
     "regulations": {
       "status": "needs_review",

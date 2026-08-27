@@ -6,12 +6,36 @@
   "official_home_url": "https://www.town.kimobetsu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=47",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=47",
+          "observed_on": "https://www.town.kimobetsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=47",
+          "observed_on": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=47",
+          "sha256": "eaf07d1be5d9c8b5bd2c6ac08a51a2bc582aeab99782c820f72f4b80c9eed77b",
+          "fetched_at": "2026-08-27T13:23:53Z"
+        },
+        {
+          "url": "https://www.town.kimobetsu.hokkaido.jp/town/detail.php?content=613",
+          "observed_on": "https://www.town.kimobetsu.hokkaido.jp/town/category/?category=47",
+          "sha256": "0c9e040bb00216d10ba266a127412e915c5cbcda124c947d427702a069175ca2",
+          "fetched_at": "2026-08-27T13:23:54Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

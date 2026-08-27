@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.ama.aichi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.ama.aichi.jp/shisei/shingi/1003267/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.ama.aichi.jp/gikai/dayori/1011714.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.ama.aichi.jp/shisei/shingi/1003267/index.html",
-          "observed_on": "http://www.city.ama.aichi.jp/shisei/index.html",
-          "fetched_at": "2026-08-27T08:10:40Z"
+          "url": "https://www.city.ama.aichi.jp/gikai/dayori/1011714.html",
+          "observed_on": "https://www.city.ama.aichi.jp/gikai/dayori/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.ama.aichi.jp/gikai/dayori/1011714.html",
+          "observed_on": "https://www.city.ama.aichi.jp/gikai/dayori/1011714.html",
+          "sha256": "1e60ff786e3ed7f9cc8071ae27d6f10fb62342fd37dd34cdd96ca55f794060ff",
+          "fetched_at": "2026-08-27T13:50:54Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.ama.aichi.jp/shisei/shingi/1003267/index.html (label: 会議録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.moriyama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.moriyama.lg.jp/shiseijouhou/shigikai/1005797/1003145/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.moriyama.lg.jp/shiseijouhou/shigikai/1005797/1003145/index.html",
+          "observed_on": "https://www.city.moriyama.lg.jp/shiseijouhou/shigikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.moriyama.lg.jp/shiseijouhou/shigikai/1005797/1003145/index.html",
+          "observed_on": "https://www.city.moriyama.lg.jp/shiseijouhou/shigikai/1005797/1003145/index.html",
+          "sha256": "053917e931f9f79a741f5fa489039154e14f21abe96a073c67e9409baef295b0",
+          "fetched_at": "2026-08-27T14:00:39Z"
+        },
+        {
+          "url": "https://www.city.moriyama.lg.jp/shiseijouhou/shigikai/1005797/1003145/1014972/1015458.html",
+          "observed_on": "https://www.city.moriyama.lg.jp/shiseijouhou/shigikai/1005797/1003145/index.html",
+          "sha256": "1e1e62384d1b2a5afece9d39927f2081a1dfb4062f81fa6b6e1f08ab7f0b19c0",
+          "fetched_at": "2026-08-27T14:00:39Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +80,11 @@
       "notes": "Observed budget link at http://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html (label: 予算) 入口 https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003673/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003674/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003674/index.html",
@@ -72,9 +96,21 @@
           "observed_on": "https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003674/index.html",
           "sha256": "d5249d9b7bcc558f0005294200f91f3d72e64b756f3d7d2b978c4e4e037d09b3",
           "fetched_at": "2026-08-27T09:49:30Z"
+        },
+        {
+          "url": "http://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003674/index.html",
+          "observed_on": "http://www.city.moriyama.lg.jp/",
+          "sha256": "d5249d9b7bcc558f0005294200f91f3d72e64b756f3d7d2b978c4e4e037d09b3",
+          "fetched_at": "2026-08-27T09:49:30Z"
+        },
+        {
+          "url": "https://www.city.moriyama.lg.jp/_res/projects/default_project/_page_/001/014/779/zaiseijoukyou.pdf",
+          "observed_on": "https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003674/1014779.html",
+          "sha256": "037bd015e07515c79b1df27b0af5e44e6849b2b2c9b8102a23b7623f5b7cd2af",
+          "fetched_at": "2026-08-27T13:39:22Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003674/index.html (label: 決算) 入口 https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003674/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.moriyama.lg.jp/shiseijouhou/zaisei/1003674/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijoukyou.pdf「財政状況資料集（令和6年度） （PDF 1.9MB）」, sha256:037bd015）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

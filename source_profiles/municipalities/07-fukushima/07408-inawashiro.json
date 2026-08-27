@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.inawashiro.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.inawashiro.fukushima.jp/site/gikai/4384.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.inawashiro.fukushima.jp/site/gikai/4384.html",
+          "observed_on": "http://www.town.inawashiro.fukushima.jp/life/5/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.inawashiro.fukushima.jp/site/gikai/4384.html",
+          "observed_on": "http://www.town.inawashiro.fukushima.jp/site/gikai/4384.html",
+          "sha256": "ee1497b83931929a50fef7a37b9b6e33a5ba35d214847e6e97bf34a0a5ce45c8",
+          "fetched_at": "2026-08-27T13:28:20Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

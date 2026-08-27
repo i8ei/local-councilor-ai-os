@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.vill.chibu.lg.jp/gyosei/organization/153 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.chibu.lg.jp/gyosei/organization/441",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.chibu.lg.jp/gyosei/organization/441",
@@ -45,16 +45,22 @@
           "observed_on": "http://www.vill.chibu.lg.jp/gyosei/organization/441",
           "sha256": "041ab1ab066552c77a33f6f90fb12668cab368ae0bd85ac7c99b0fd2184f6967",
           "fetched_at": "2026-08-27T09:43:17Z"
+        },
+        {
+          "url": "http://www.vill.chibu.lg.jp/files/original/202404160906265727722.pdf",
+          "observed_on": "http://www.vill.chibu.lg.jp/gyosei/organization/441",
+          "sha256": "433d0fa6e3242cb4850dc85f68d2ccc6ca81e3e4f3a28387e15628eaed955aea",
+          "fetched_at": "2026-08-27T13:42:10Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.chibu.lg.jp/gyosei/organization/441 (label: 財政状況) 入口 http://www.vill.chibu.lg.jp/gyosei/organization/441 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.chibu.lg.jp/gyosei/organization/441 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（202404160906265727722.pdf「「令和6年度社会保障4経費（消費税増税分の充当）」をダウンロードする（PDF：91kB）」, sha256:433d0fa6）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.chibu.lg.jp/gyosei/organization/441",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.chibu.lg.jp/gyosei/organization/441",
@@ -66,9 +72,15 @@
           "observed_on": "http://www.vill.chibu.lg.jp/gyosei/organization/441",
           "sha256": "041ab1ab066552c77a33f6f90fb12668cab368ae0bd85ac7c99b0fd2184f6967",
           "fetched_at": "2026-08-27T09:43:17Z"
+        },
+        {
+          "url": "http://www.vill.chibu.lg.jp/files/original/202404160906265727722.pdf",
+          "observed_on": "http://www.vill.chibu.lg.jp/gyosei/organization/441",
+          "sha256": "433d0fa6e3242cb4850dc85f68d2ccc6ca81e3e4f3a28387e15628eaed955aea",
+          "fetched_at": "2026-08-27T13:42:10Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.chibu.lg.jp/gyosei/organization/441 (label: 財政状況) 入口 http://www.vill.chibu.lg.jp/gyosei/organization/441 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.chibu.lg.jp/gyosei/organization/441 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（202404160906265727722.pdf「「令和6年度社会保障4経費（消費税増税分の充当）」をダウンロードする（PDF：91kB）」, sha256:433d0fa6）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

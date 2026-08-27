@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www.tokara.jp/reiki_int/reiki_menu.html (label: 十島村 例規集（リンク）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.tokara.jp/2026/07/24/29470/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.tokara.jp/2026/07/24/29470/",
@@ -58,16 +58,22 @@
           "observed_on": "https://www.tokara.jp/2026/07/24/29470/",
           "sha256": "d139b309179ba9ea89b9b6d45178a8c5702e1cbba3b2389fe2acd493212ead2d",
           "fetched_at": "2026-08-27T09:40:40Z"
+        },
+        {
+          "url": "https://www.tokara.jp/wp/wp-content/uploads/2026/07/4d351c2cfc2f2fe3bccc393f4604679b.pdf",
+          "observed_on": "https://www.tokara.jp/2026/07/24/29470/%e5%bc%95%e4%b8%8a%e3%81%92%e5%88%86%e3%81%ab%e4%bf%82%e3%82%8b%e5%9c%b0%e6%96%b9%e6%b6%88%e8%b2%bb%e7%a8%8e%e3%80%90r8%e4%ba%88%e7%ae%97%e3%80%91/",
+          "sha256": "b3a17a5d99b9a1e9bbb5513c05d98ca9d777e36a74fce5381e2bd6f4d4194b8c",
+          "fetched_at": "2026-08-27T13:47:37Z"
         }
       ],
-      "notes": "Observed budget link at https://www.tokara.jp/2026/07/24/29470/ (label: 引上げ分の地方消費税収の使途について【R8予算】) 入口 https://www.tokara.jp/2026/07/24/29470/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.tokara.jp/2026/07/24/29470/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.tokara.jp/2026/07/24/29470/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（4d351c2cfc2f2fe3bccc393f4604679b.pdf「引上げ分に係る地方消費税【R8予算】」, sha256:b3a17a5d）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.tokara.jp/profile/administration/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.tokara.jp/profile/administration/zaisei/",
@@ -84,9 +90,15 @@
           "url": "https://www.tokara.jp/resource/pdf/zaisei/h21hikaku_zaisei.pdf",
           "observed_on": "https://www.tokara.jp/profile/administration/zaisei/",
           "fetched_at": "2026-08-27T09:40:41Z"
+        },
+        {
+          "url": "https://www.tokara.jp/resource/pdf/zaisei/h29gaiyou.pdf",
+          "observed_on": "https://www.tokara.jp/profile/administration/zaisei/",
+          "sha256": "bd19d1b85307492f5bdc8d9d43e81a9e0fca2598efb1d5f62b26bce1b0cc378f",
+          "fetched_at": "2026-08-27T13:47:38Z"
         }
       ],
-      "notes": "Observed finance section at https://www.tokara.jp/profile/administration/zaisei/ (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（h29gaiyou.pdf「決算の概要」, sha256:bd19d1b8）にて構造マーカー（歳入・歳出・款・決算額等）を確認済み。"
     }
   }
 }

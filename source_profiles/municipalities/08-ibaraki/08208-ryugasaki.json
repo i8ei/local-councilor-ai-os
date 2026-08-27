@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.ryugasaki.ibaraki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/kakusyukeikaku/toplevelplan/process_to_formulate.files/gijiroku-1.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "http://www.city.ryugasaki.ibaraki.jp/shigikai/kaigiroku/bunkyoukaigiroku.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/kakusyukeikaku/toplevelplan/process_to_formulate.files/gijiroku-1.pdf",
-          "observed_on": "http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/kakusyukeikaku/toplevelplan/process_to_formulate.html",
-          "fetched_at": "2026-08-27T06:00:26Z"
+          "url": "http://www.city.ryugasaki.ibaraki.jp/shigikai/kaigiroku/bunkyoukaigiroku.html",
+          "observed_on": "http://www.city.ryugasaki.ibaraki.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.ryugasaki.ibaraki.jp/shigikai/kaigiroku/bunkyoukaigiroku.html",
+          "observed_on": "http://www.city.ryugasaki.ibaraki.jp/shigikai/kaigiroku/bunkyoukaigiroku.html",
+          "sha256": "69f2c1ccb9b4b5278a5e211e267ea6958822b0c667a9b534d4269c7995f0be11",
+          "fetched_at": "2026-08-27T13:37:17Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.ryugasaki.ibaraki.jp/shisei/zaisei/kakusyukeikaku/toplevelplan/process_to_formulate.files/gijiroku-1.pdf (label: 議事録(PDF:476KB))"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

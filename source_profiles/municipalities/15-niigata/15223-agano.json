@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.agano.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.agano.niigata.jp/shisei_machizukuri/gikai/gikainogaiyo/3267.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.agano.niigata.jp/shisei_machizukuri/gikai/gikainogaiyo/3267.html",
+          "observed_on": "http://www.city.agano.niigata.jp/site/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.agano.niigata.jp/shisei_machizukuri/gikai/gikainogaiyo/3267.html",
+          "observed_on": "https://www.city.agano.niigata.jp/shisei_machizukuri/gikai/gikainogaiyo/3267.html",
+          "sha256": "3862d0bb699759d150617599f96a59a2229ebfc7cdf7b3e1dd8d3b818b188054",
+          "fetched_at": "2026-08-27T13:44:34Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

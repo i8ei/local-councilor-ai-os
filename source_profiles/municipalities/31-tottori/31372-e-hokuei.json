@@ -6,19 +6,27 @@
   "official_home_url": "http://www.e-hokuei.net/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.kensakusystem.jp/hokuei/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.e-hokuei.net/site/gikai/2179.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.kensakusystem.jp/hokuei/",
+          "url": "https://www.e-hokuei.net/site/gikai/2179.html",
           "observed_on": "http://www.e-hokuei.net/site/gikai/",
-          "fetched_at": "2026-08-27T05:59:50Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.e-hokuei.net/site/gikai/2179.html",
+          "observed_on": "https://www.e-hokuei.net/site/gikai/2179.html",
+          "sha256": "cd9abf6985bbe7d1a1089877584592e70799bb0c84785388077ecdd1ff47ff17",
+          "fetched_at": "2026-08-27T14:05:09Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.kensakusystem.jp/hokuei/ (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -42,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.e-hokuei.net/chosei/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.e-hokuei.net/life/6/28/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.e-hokuei.net/life/6/28/",
@@ -58,9 +66,21 @@
           "observed_on": "https://www.e-hokuei.net/life/6/28/",
           "sha256": "2faa4b78d73e2b48305efaf95503ae814327546b48aef91eb9a936e3b570e8de",
           "fetched_at": "2026-08-27T09:42:50Z"
+        },
+        {
+          "url": "http://www.e-hokuei.net/life/6/28/",
+          "observed_on": "http://www.e-hokuei.net/",
+          "sha256": "2faa4b78d73e2b48305efaf95503ae814327546b48aef91eb9a936e3b570e8de",
+          "fetched_at": "2026-08-27T09:42:50Z"
+        },
+        {
+          "url": "https://www.e-hokuei.net/uploaded/attachment/1639.pdf",
+          "observed_on": "https://www.e-hokuei.net/soshiki/3/1176.html",
+          "sha256": "74ae71da1a3b59641331ea00035c8d97347bf110a88d16ad85f3ecae4bbca836",
+          "fetched_at": "2026-08-27T13:42:02Z"
         }
       ],
-      "notes": "Observed budget link at http://www.e-hokuei.net/life/6/28/ (label: 予算・財政) 入口 https://www.e-hokuei.net/life/6/28/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.e-hokuei.net/life/6/28/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（1639.pdf「R7当初予算に係る地方消費税率引上げ分における使途について [PDFファイル／221KB]」, sha256:74ae71da）にて構造マーカー（項・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

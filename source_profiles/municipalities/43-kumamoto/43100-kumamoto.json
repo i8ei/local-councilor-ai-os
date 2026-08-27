@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at http://www.city.kumamoto.jp/kiji0033879/index.html (label: 例規・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kumamoto.jp/list04012.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kumamoto.jp/list04012.html",
@@ -52,9 +52,21 @@
           "observed_on": "https://www.city.kumamoto.jp/list04012.html",
           "sha256": "2cb12c2c5bc9e23b729248841d0e329d53037ef92c9173474a9745ea142be4b3",
           "fetched_at": "2026-08-27T09:37:53Z"
+        },
+        {
+          "url": "http://www.city.kumamoto.jp/list04012.html",
+          "observed_on": "http://www.city.kumamoto.jp/",
+          "sha256": "2cb12c2c5bc9e23b729248841d0e329d53037ef92c9173474a9745ea142be4b3",
+          "fetched_at": "2026-08-27T09:37:53Z"
+        },
+        {
+          "url": "https://www.city.kumamoto.jp/kiji00369192/3_69192_489478_up_i2m0hbqd.pdf",
+          "observed_on": "https://www.city.kumamoto.jp/kiji00369192/index.html",
+          "sha256": "e5c6523e26377fd1fe1ed27232a279da64e7327fb14167e01c7f0f962acab9c6",
+          "fetched_at": "2026-08-27T13:45:53Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kumamoto.jp/list04012.html (label: 財政・行政改革・公共施設マネジメント) 入口 https://www.city.kumamoto.jp/list04012.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kumamoto.jp/list04012.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_69192_489478_up_i2m0hbqd.pdf「令和8年度当初予算書（PDF：5.27メガバイト）」, sha256:e5c6523e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

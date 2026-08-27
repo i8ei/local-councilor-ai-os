@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.himeji.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.himeji.lg.jp/shisei/category/5-15-11-0-0-0-0-0-0-0.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.himeji.lg.jp/shisei/category/5-15-11-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.himeji.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.himeji.lg.jp/shisei/category/5-15-11-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.himeji.lg.jp/shisei/category/5-15-11-0-0-0-0-0-0-0.html",
+          "sha256": "9899d9d9661209452dfa36643326ef3957221dadeadc4ccd5d9ea02a43fcec26",
+          "fetched_at": "2026-08-27T14:02:42Z"
+        },
+        {
+          "url": "https://www.city.himeji.lg.jp/shisei/0000005791.html",
+          "observed_on": "https://www.city.himeji.lg.jp/shisei/category/5-15-11-0-0-0-0-0-0-0.html",
+          "sha256": "80181b27e235468fff8b96700dd869a2112589a0b52ef01b418e850521da8266",
+          "fetched_at": "2026-08-27T14:02:42Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +74,11 @@
       "notes": "Observed budget link at http://www.city.himeji.lg.jp/shisei/category/5-5-7-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.himeji.lg.jp/shisei/category/5-5-7-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.himeji.lg.jp/shisei/category/5-5-7-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html",
@@ -66,9 +90,21 @@
           "observed_on": "https://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html",
           "sha256": "2bd544f283397f8cc97dd7d27429b77209bec335645a90760ff433a6709d74c9",
           "fetched_at": "2026-08-27T09:51:36Z"
+        },
+        {
+          "url": "http://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.himeji.lg.jp/",
+          "sha256": "2bd544f283397f8cc97dd7d27429b77209bec335645a90760ff433a6709d74c9",
+          "fetched_at": "2026-08-27T09:51:36Z"
+        },
+        {
+          "url": "https://www.city.himeji.lg.jp/shisei/cmsfiles/contents/0000031/31944/01_R6_01kessangaiyou.pdf",
+          "observed_on": "https://www.city.himeji.lg.jp/shisei/0000031944.html",
+          "sha256": "394c9bd87ad2794545398dd35a82b6dfb7a7f3ca693437b94c04476fe771967f",
+          "fetched_at": "2026-08-27T13:41:01Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.himeji.lg.jp/shisei/category/5-5-1-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（01_R6_01kessangaiyou.pdf「令和6年度 姫路市決算概要（記者発表資料） (pdf、992.59KB)」, sha256:394c9bd8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

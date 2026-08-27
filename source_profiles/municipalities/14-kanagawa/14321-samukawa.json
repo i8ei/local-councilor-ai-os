@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.samukawa.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "dbsr",
-      "index_url": "http://www.town.samukawa.kanagawa.dbsr.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.samukawa.kanagawa.jp/soshiki/gikai/gikaijimu/somu/info/oshirase/18271.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.samukawa.kanagawa.dbsr.jp/",
+          "url": "https://www.town.samukawa.kanagawa.jp/soshiki/gikai/gikaijimu/somu/info/oshirase/18271.html",
           "observed_on": "https://www.town.samukawa.kanagawa.jp/choseijoho/chogikai/index.html",
-          "fetched_at": "2026-08-27T08:06:42Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.samukawa.kanagawa.jp/soshiki/gikai/gikaijimu/somu/info/oshirase/18271.html",
+          "observed_on": "https://www.town.samukawa.kanagawa.jp/soshiki/gikai/gikaijimu/somu/info/oshirase/18271.html",
+          "sha256": "d26c2f1de2667d1770a170e2885e9d15c79a5a3a7f3332cc9f62e31ca7b6c6aa",
+          "fetched_at": "2026-08-27T13:43:59Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.town.samukawa.kanagawa.dbsr.jp/ (label: 会議録検索システム)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

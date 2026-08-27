@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.kumagaya.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kumagaya.lg.jp/shigikai/gikaidayori/20260801.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.kumagaya.lg.jp/shigikai/gikaidayori/20260801.html",
+          "observed_on": "http://www.city.kumagaya.lg.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.kumagaya.lg.jp/shigikai/gikaidayori/20260801.html",
+          "observed_on": "https://www.city.kumagaya.lg.jp/shigikai/gikaidayori/20260801.html",
+          "sha256": "82c95c956d310614321f5c572827dd8ac2473113675732c52c27d9f27d871e32",
+          "fetched_at": "2026-08-27T13:39:47Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

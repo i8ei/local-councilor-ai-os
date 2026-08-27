@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.konan.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/konan/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.konan.lg.jp/gikai/minasan/1001416/1019191.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/konan/WebView/rd/council_1.html",
-          "observed_on": "http://www.city.konan.lg.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T08:03:29Z"
+          "url": "https://www.city.konan.lg.jp/gikai/minasan/1001416/1019191.html",
+          "observed_on": "https://www.city.konan.lg.jp/gikai/minasan/1001416/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.konan.lg.jp/gikai/minasan/1001416/1019191.html",
+          "observed_on": "https://www.city.konan.lg.jp/gikai/minasan/1001416/1019191.html",
+          "sha256": "73c7cb8c6658029ac0ee38e4f3edf4647e20c814c95e7ebe2ea681c0d135b4bb",
+          "fetched_at": "2026-08-27T13:50:22Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/konan/WebView/rd/council_1.html (label: 議会映像中継（生中継、過去一年の一般質問）はこちらからご覧になれます)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

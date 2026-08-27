@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.yakumo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.yakumo.lg.jp/uploaded/attachment/23968.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "http://www.town.yakumo.lg.jp/site/gikai/list22-76.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www.town.yakumo.lg.jp/uploaded/attachment/23968.pdf",
-          "observed_on": "http://www.town.yakumo.lg.jp/soshiki/seisaku/kumatiiki-r8.html",
-          "fetched_at": "2026-08-27T06:09:51Z"
+          "url": "http://www.town.yakumo.lg.jp/site/gikai/list22-76.html",
+          "observed_on": "http://www.town.yakumo.lg.jp/site/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.yakumo.lg.jp/site/gikai/list22-76.html",
+          "observed_on": "http://www.town.yakumo.lg.jp/site/gikai/list22-76.html",
+          "sha256": "44764456d50486df9e47faf122018ea2dea037b269574c04eb1059c326d1daf3",
+          "fetched_at": "2026-08-27T13:23:58Z"
+        },
+        {
+          "url": "https://www.town.yakumo.lg.jp/site/gikai/r8003gikai0.html",
+          "observed_on": "http://www.town.yakumo.lg.jp/site/gikai/list22-76.html",
+          "sha256": "cc79e7fa50b58454f6d9ba9511dfa43910643f378f543ea9f4e11aff184f9096",
+          "fetched_at": "2026-08-27T13:23:58Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.yakumo.lg.jp/uploaded/attachment/23968.pdf (label: 会議録 [PDFファイル／177KB])"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

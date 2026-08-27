@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.town.higashiizu.lg.jp/gyoseijyoho/jorei-kisoku-yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/yosansyo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/yosansyo/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/yosansyo/index.html",
           "sha256": "f36fae7e59a611d8c3c959124559c3b270673120968b4b84e6bab94340cded77",
           "fetched_at": "2026-08-27T10:14:44Z"
+        },
+        {
+          "url": "https://www.town.higashiizu.lg.jp/material/files/group/11/hoseiyosan_20260331.pdf",
+          "observed_on": "https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/yosansyo/2426.html",
+          "sha256": "9e5a8dc65d470cc8a6c68f9b889aeb0962f913eef714575a7bdb7f80ab610967",
+          "fetched_at": "2026-08-27T13:37:51Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/yosansyo/index.html (label: 予算書) 入口 https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/yosansyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.higashiizu.lg.jp/gyoseijyoho/zaiseijokyo/yosansyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（hoseiyosan_20260331.pdf「令和8年度 一般会計 補正予算書（第1号） (PDFファイル: 86.2KB)」, sha256:9e5a8dc6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

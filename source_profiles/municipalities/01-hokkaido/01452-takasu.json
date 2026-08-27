@@ -6,12 +6,36 @@
   "official_home_url": "https://www.town.takasu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.takasu.hokkaido.jp/site/gikai",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.takasu.hokkaido.jp/site/gikai",
+          "observed_on": "https://www.town.takasu.hokkaido.jp/site/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.takasu.hokkaido.jp/site/gikai",
+          "observed_on": "https://www.town.takasu.hokkaido.jp/site/gikai",
+          "sha256": "38c94e2f2dcbcc34c1452b26802fac81316047773735e4aac4ad2f8fa2c9186e",
+          "fetched_at": "2026-08-27T13:24:13Z"
+        },
+        {
+          "url": "https://www.town.takasu.hokkaido.jp/site/gikai/7906.html",
+          "observed_on": "https://www.town.takasu.hokkaido.jp/site/gikai",
+          "sha256": "0d14bf80aa0d170107c9e62042af7b8bf6df2df8e1d14368bca2293ea2da510a",
+          "fetched_at": "2026-08-27T13:24:13Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

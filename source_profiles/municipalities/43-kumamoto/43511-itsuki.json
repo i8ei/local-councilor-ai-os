@@ -6,19 +6,36 @@
   "official_home_url": "http://www.vill.itsuki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.vill.itsuki.lg.jp/kiji0032263/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.vill.itsuki.lg.jp/list00595.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.vill.itsuki.lg.jp/kiji0032263/index.html",
+          "url": "https://www.vill.itsuki.lg.jp/list00595.html",
           "observed_on": "https://www.vill.itsuki.lg.jp/default.html",
-          "fetched_at": "2026-08-27T05:48:56Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.vill.itsuki.lg.jp/list00595.html",
+          "observed_on": "https://www.vill.itsuki.lg.jp/list00595.html",
+          "sha256": "1e563153bf76bcf7d7051687f5d5b86fac71fed52be1e3d6b47997966a28f85c",
+          "fetched_at": "2026-08-27T14:10:24Z"
+        },
+        {
+          "url": "https://www.vill.itsuki.lg.jp/kiji0032086/index.html",
+          "observed_on": "https://www.vill.itsuki.lg.jp/list00595.html",
+          "sha256": "fd974341fa25f762ee0aa3311bf1c0ce89d626b7bde43fabd69612d41ffa2965",
+          "fetched_at": "2026-08-27T14:10:24Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.vill.itsuki.lg.jp/kiji0032263/index.html (label: 令和8年第2回定例会会議録の公開)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -57,11 +74,11 @@
       "notes": "Observed budget link at https://www.vill.itsuki.lg.jp/list00582.html (label: 予算) 入口 https://www.vill.itsuki.lg.jp/list00582.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.itsuki.lg.jp/list00582.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.itsuki.lg.jp/list00583.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.itsuki.lg.jp/list00583.html",
@@ -73,9 +90,15 @@
           "observed_on": "https://www.vill.itsuki.lg.jp/list00583.html",
           "sha256": "51a1f7f45006f21f05b1b8709fa4a0b0fd623ce2851390433a297f7d265089c9",
           "fetched_at": "2026-08-27T09:38:57Z"
+        },
+        {
+          "url": "https://www.vill.itsuki.lg.jp/kiji0032197/3_2197_up_hplw8d8x.xlsx",
+          "observed_on": "https://www.vill.itsuki.lg.jp/kiji0032197/index.html",
+          "sha256": "6f9a1ba11aa7d748e494a11f774736a47b6181c508e0ab5342f95e972d78f80e",
+          "fetched_at": "2026-08-27T13:46:41Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.vill.itsuki.lg.jp/list00583.html (label: 決算) 入口 https://www.vill.itsuki.lg.jp/list00583.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.itsuki.lg.jp/list00583.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_2197_up_hplw8d8x.xlsx「五木村財政状況資料（エクセル：419.4キロバイト）」, sha256:6f9a1ba1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at http://www.city.nagoya.jp/shisei/jourei/index.html (label: 条例・規則・公報)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nagoya.jp/shisei/zaisei/1002655/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nagoya.jp/shisei/zaisei/1002655/index.html",
@@ -52,9 +52,21 @@
           "observed_on": "https://www.city.nagoya.jp/shisei/zaisei/1002655/index.html",
           "sha256": "51c77dc03620255ad831d13d9f74c778d7f1ae248a1831751c592969eb0a91f8",
           "fetched_at": "2026-08-27T10:15:04Z"
+        },
+        {
+          "url": "http://www.city.nagoya.jp/shisei/zaisei/1002655/index.html",
+          "observed_on": "http://www.city.nagoya.jp/",
+          "sha256": "51c77dc03620255ad831d13d9f74c778d7f1ae248a1831751c592969eb0a91f8",
+          "fetched_at": "2026-08-27T10:15:04Z"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/_res/projects/default_project/_page_/001/050/556/r8.6sennketsu-gaiyou.pdf",
+          "observed_on": "https://www.city.nagoya.jp/shisei/zaisei/1002655/1042582/1050556.html",
+          "sha256": "93e6e94e4c3b031f2a48fa1012249f3c85e2a9961e98dbe9b97e13b00ffb5d97",
+          "fetched_at": "2026-08-27T13:37:56Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.nagoya.jp/shisei/zaisei/1002655/index.html (label: 予算) 入口 https://www.city.nagoya.jp/shisei/zaisei/1002655/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8.6sennketsu-gaiyou.pdf「令和8年度補正予算資料（令和8年6月4日付専決処分） （PDF 53.9 KB）」, sha256:93e6e94e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

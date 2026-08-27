@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.moriya.ibaraki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "http://moriya.gijiroku.com/g07_Video_Search.asp",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.moriya.ibaraki.jp/gikai/koho/1005979/1011955.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://moriya.gijiroku.com/g07_Video_Search.asp",
+          "url": "https://www.city.moriya.ibaraki.jp/gikai/koho/1005979/1011955.html",
           "observed_on": "http://www.city.moriya.ibaraki.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:05:08Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.moriya.ibaraki.jp/gikai/koho/1005979/1011955.html",
+          "observed_on": "https://www.city.moriya.ibaraki.jp/gikai/koho/1005979/1011955.html",
+          "sha256": "3a7c6d289f7570cb2a1a30dc4efe71610e276ff2c3b8832408a0d0b222ec23e1",
+          "fetched_at": "2026-08-27T13:29:39Z"
         }
       ],
-      "notes": "Observed voices at http://moriya.gijiroku.com/g07_Video_Search.asp (label: 本会議録画配信)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

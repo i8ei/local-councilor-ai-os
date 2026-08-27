@@ -6,12 +6,27 @@
   "official_home_url": "http://www1.town.chizu.tottori.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www1.town.chizu.tottori.jp/chizu/gikaijimukyoku/gijiroku/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www1.town.chizu.tottori.jp/chizu/gikaijimukyoku/gijiroku/",
+          "observed_on": "https://www1.town.chizu.tottori.jp/chizu/gikaijimukyoku/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www1.town.chizu.tottori.jp/chizu/gikaijimukyoku/gijiroku/",
+          "observed_on": "https://www1.town.chizu.tottori.jp/chizu/gikaijimukyoku/gijiroku/",
+          "sha256": "0195944c7eb82d0a99f51fab37074bacf3c9425a0449c78a95f12f0e7f606a81",
+          "fetched_at": "2026-08-27T14:05:07Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

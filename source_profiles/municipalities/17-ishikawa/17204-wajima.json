@@ -56,11 +56,11 @@
       "notes": "Observed finance section at http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ (label: 財政状況) 入口 https://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
@@ -72,9 +72,21 @@
           "observed_on": "https://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
           "sha256": "b6dc330e8994ebcb07bcc84d8c6a4dcbf0efbe93e70f65a93a76a45b0be765b1",
           "fetched_at": "2026-08-27T10:05:32Z"
+        },
+        {
+          "url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
+          "observed_on": "http://www.city.wajima.ishikawa.jp/",
+          "sha256": "b6dc330e8994ebcb07bcc84d8c6a4dcbf0efbe93e70f65a93a76a45b0be765b1",
+          "fetched_at": "2026-08-27T10:05:32Z"
+        },
+        {
+          "url": "https://www.city.wajima.ishikawa.jp/docs/2019120900013/file_contents/R6.pdf",
+          "observed_on": "https://www.city.wajima.ishikawa.jp/docs/2019120900013/",
+          "sha256": "acbb8a6562f8f4d1bceee402eb4075ba3863433c7af1fb4b709e206527fcc16b",
+          "fetched_at": "2026-08-27T13:35:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ (label: 財政状況) 入口 https://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6.pdf「決算カード[PDF：497KB]」, sha256:acbb8a65）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

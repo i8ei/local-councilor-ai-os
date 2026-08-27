@@ -63,11 +63,11 @@
       "notes": "Observed finance section at http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html (label: 行財政計画) 入口 https://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html",
           "sha256": "adfae2d92a272c806c984420e90dfa09cbc62a4936c6ba2e348801d991f79ac9",
           "fetched_at": "2026-08-27T10:10:10Z"
+        },
+        {
+          "url": "http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html",
+          "observed_on": "http://www.town.shimosuwa.lg.jp/",
+          "sha256": "adfae2d92a272c806c984420e90dfa09cbc62a4936c6ba2e348801d991f79ac9",
+          "fetched_at": "2026-08-27T10:10:10Z"
+        },
+        {
+          "url": "https://www.town.shimosuwa.lg.jp/www/contents/1774918624220/files/gyouzaiseikeieipian.pdf",
+          "observed_on": "https://www.town.shimosuwa.lg.jp/www/contents/1774918624220/index.html",
+          "sha256": "b1288e144e60a31bdeaa77261dea39ff8536e64169f08a5949f9243bdecb7fd3",
+          "fetched_at": "2026-08-27T13:36:32Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html (label: 行財政計画) 入口 https://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（gyouzaiseikeieipian.pdf「第3次下諏訪町行財政経営プラン」, sha256:b1288e14）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

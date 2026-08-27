@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.yao.osaka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "https://yao.gijiroku.com/voices/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.yao.osaka.jp/shisei/yaoshigikai/1009415/1009417/1009421/1025101.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://yao.gijiroku.com/voices/",
+          "url": "https://www.city.yao.osaka.jp/shisei/yaoshigikai/1009415/1009417/1009421/1025101.html",
           "observed_on": "http://www.city.yao.osaka.jp/shisei/yaoshigikai/index.html",
-          "fetched_at": "2026-08-27T06:30:19Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.yao.osaka.jp/shisei/yaoshigikai/1009415/1009417/1009421/1025101.html",
+          "observed_on": "https://www.city.yao.osaka.jp/shisei/yaoshigikai/1009415/1009417/1009421/1025101.html",
+          "sha256": "65b59da7cf80124b2963add7a02ec59b2a7bb8970c008721883cac66cc4a9bf7",
+          "fetched_at": "2026-08-27T14:01:52Z"
         }
       ],
-      "notes": "Observed voices at https://yao.gijiroku.com/voices/ (label: 市議会 会議録検索)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -42,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85C0D651 (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yao.osaka.jp/shisei/seisaku_keikaku_zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yao.osaka.jp/shisei/seisaku_keikaku_zaisei/index.html",
@@ -58,9 +66,21 @@
           "observed_on": "https://www.city.yao.osaka.jp/shisei/seisaku_keikaku_zaisei/index.html",
           "sha256": "1243ea91384b0867b562745e1b4c7aafc349d082359336588d9d24d05eedf7b2",
           "fetched_at": "2026-08-27T09:50:38Z"
+        },
+        {
+          "url": "http://www.city.yao.osaka.jp/shisei/seisaku_keikaku_zaisei/index.html",
+          "observed_on": "http://www.city.yao.osaka.jp/",
+          "sha256": "1243ea91384b0867b562745e1b4c7aafc349d082359336588d9d24d05eedf7b2",
+          "fetched_at": "2026-08-27T09:50:38Z"
+        },
+        {
+          "url": "https://www.city.yao.osaka.jp/_res/projects/default_project/_page_/001/018/863/yosansikkoujyoukyou080331.pdf",
+          "observed_on": "https://www.city.yao.osaka.jp/shisei/seisaku_keikaku_zaisei/1009738/1018863.html",
+          "sha256": "40c7a9df8c52b6f1f06d65543681473b023a798c57d137e2c195dc2e46bb2295",
+          "fetched_at": "2026-08-27T13:40:07Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.yao.osaka.jp/shisei/seisaku_keikaku_zaisei/index.html (label: 政策・計画・財政) 入口 https://www.city.yao.osaka.jp/shisei/seisaku_keikaku_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yao.osaka.jp/shisei/seisaku_keikaku_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yosansikkoujyoukyou080331.pdf「八尾市 令和7年度 予算の執行状況 令和8年3月31日時点 （PDF 567.9KB）」, sha256:40c7a9df）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

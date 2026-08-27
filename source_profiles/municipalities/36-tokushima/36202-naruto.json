@@ -36,19 +36,31 @@
       "notes": "Observed g_reiki at http://www.city.naruto.tokushima.jp/contents/reiki_int/reiki_menu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.naruto.tokushima.jp/category/bunya/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.naruto.tokushima.jp/category/bunya/zaisei/",
           "observed_on": "http://www.city.naruto.tokushima.jp/",
           "fetched_at": "2026-08-27T06:37:55Z"
+        },
+        {
+          "url": "http://www.city.naruto.tokushima.jp/category/bunya/zaisei/",
+          "observed_on": "http://www.city.naruto.tokushima.jp/",
+          "sha256": "0e639f04b284d6cfcb25059c82945ef11b46f1bc9bf2844f19b5b426ee83bd0c",
+          "fetched_at": "2026-08-27T09:45:48Z"
+        },
+        {
+          "url": "https://www.city.naruto.lg.jp/docs/2025071700039/file_contents/2025121800078__files_00604932_r7_hoseiyosan_ippan.pdf",
+          "observed_on": "https://www.city.naruto.lg.jp/docs/2025071700039/",
+          "sha256": "6a19bd2a05b0b33e3ae3e3f2384987b80e978e069699071de1239382f4905534",
+          "fetched_at": "2026-08-27T13:42:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.naruto.tokushima.jp/category/bunya/zaisei/ (label: 市の財政)"
+      "notes": "deepest_doc=P1。budget文書（2025121800078__files_00604932_r7_hoseiyosan_ippan.pdf「令和7年度鳴門市一般・特別会計予算及び説明書（当初）[PDF：14MB]」, sha256:6a19bd2a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

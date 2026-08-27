@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.aki.kochi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.aki.kochi.jp/gijiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.aki.kochi.jp/gijiroku/giji_dtl.php?hdnFlg=9&hdnID=1866",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.aki.kochi.jp/gijiroku/",
-          "observed_on": "http://www.city.aki.kochi.jp/life/list.php?hdnCat=1000",
-          "fetched_at": "2026-08-27T07:06:48Z"
+          "url": "https://www.city.aki.kochi.jp/gijiroku/giji_dtl.php?hdnFlg=9&hdnID=1866",
+          "observed_on": "https://www.city.aki.kochi.jp/gijiroku/giji_kaisai.php?hdnID=113",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.aki.kochi.jp/gijiroku/giji_dtl.php?hdnFlg=9&hdnID=1866",
+          "observed_on": "https://www.city.aki.kochi.jp/gijiroku/giji_dtl.php?hdnFlg=9&hdnID=1866",
+          "sha256": "e02662e19aa799c0c54bf71f7d3fd855e3d1ab0362cd29a9785878ea9d5a40ce",
+          "fetched_at": "2026-08-27T14:07:47Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.aki.kochi.jp/gijiroku/ (label: 議会会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

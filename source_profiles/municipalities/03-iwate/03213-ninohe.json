@@ -6,19 +6,36 @@
   "official_home_url": "https://www.city.ninohe.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.ninohe.lg.jp/info/20",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.ninohe.lg.jp/info/19",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.ninohe.lg.jp/info/20",
+          "url": "https://www.city.ninohe.lg.jp/info/19",
           "observed_on": "https://www.city.ninohe.lg.jp/menu/21",
-          "fetched_at": "2026-08-27T07:09:56Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.ninohe.lg.jp/info/19",
+          "observed_on": "https://www.city.ninohe.lg.jp/info/19",
+          "sha256": "f795b8e8c1e36202eaba7bd49d8f563e6c7caedf805873ffb021ea4eff4869e1",
+          "fetched_at": "2026-08-27T13:26:17Z"
+        },
+        {
+          "url": "https://www.city.ninohe.lg.jp/Info/4570",
+          "observed_on": "https://www.city.ninohe.lg.jp/info/19",
+          "sha256": "62b23888e93ed7b2ec1371fdf1ac1da758c00cc5245a1e22d5c83741efb6ed7a",
+          "fetched_at": "2026-08-27T13:26:18Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.ninohe.lg.jp/info/20 (label: 会議録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

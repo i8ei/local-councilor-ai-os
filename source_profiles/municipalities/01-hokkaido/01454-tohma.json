@@ -6,12 +6,27 @@
   "official_home_url": "http://town.tohma.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.tohma.hokkaido.jp/parliament/02",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.tohma.hokkaido.jp/parliament/02",
+          "observed_on": "https://www.town.tohma.hokkaido.jp/parliament",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.tohma.hokkaido.jp/parliament/02",
+          "observed_on": "https://www.town.tohma.hokkaido.jp/parliament/02",
+          "sha256": "94a92095bdabff38de2161e359df00998099c486fdab2aabd2ddee587ff1d2c8",
+          "fetched_at": "2026-08-27T13:24:32Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

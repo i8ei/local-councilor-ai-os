@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.iga.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.iga.lg.jp/category/6-15-6-0-0-0-0-0-0-0.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.iga.lg.jp/category/6-15-6-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.iga.lg.jp/category/6-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.iga.lg.jp/category/6-15-6-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.iga.lg.jp/category/6-15-6-0-0-0-0-0-0-0.html",
+          "sha256": "d2b083cfc2def0056c282b515130881742d03ec59ee69bc9b37df26cb59930ba",
+          "fetched_at": "2026-08-27T13:59:55Z"
+        },
+        {
+          "url": "https://www.city.iga.lg.jp/0000013681.html",
+          "observed_on": "https://www.city.iga.lg.jp/category/6-15-6-0-0-0-0-0-0-0.html",
+          "sha256": "80edb41490c2695352d9f731253cfd399052d829b7b6411e0790e5c828ee12d8",
+          "fetched_at": "2026-08-27T13:59:55Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +53,11 @@
       "notes": "Observed regulations index at http://www.city.iga.lg.jp/category/6-1-0-0-0-0-0-0-0-0.html (label: 条例・規則など)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.iga.lg.jp/0000014391.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iga.lg.jp/0000014391.html",
@@ -50,16 +74,28 @@
           "url": "https://www.city.iga.lg.jp/cmsfiles/contents/0000014/14391/9hennseihoushin.pdf",
           "observed_on": "https://www.city.iga.lg.jp/0000014391.html",
           "fetched_at": "2026-08-27T11:03:44Z"
+        },
+        {
+          "url": "http://www.city.iga.lg.jp/0000014391.html",
+          "observed_on": "http://www.city.iga.lg.jp/",
+          "sha256": "9f83c60c9862985858fa40c17b6e4657d8ac520d364fd09e1dedcf3f6c2dd966",
+          "fetched_at": "2026-08-27T09:48:49Z"
+        },
+        {
+          "url": "https://www.city.iga.lg.jp/cmsfiles/contents/0000014/14391/9hennseihoushin.pdf",
+          "observed_on": "https://www.city.iga.lg.jp/0000014391.html",
+          "sha256": "cbfcbd82959630dd304f36c27df5ad744405497842438e6ea852b210760d3eeb",
+          "fetched_at": "2026-08-27T11:03:45Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.iga.lg.jp/0000014391.html (label: 令和9年度予算編成方針) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（9hennseihoushin.pdf「令和9年度予算編成方針 (PDF形式、705.13KB)」, sha256:cbfcbd82）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.iga.lg.jp/category/6-11-2-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iga.lg.jp/category/6-11-2-0-0-0-0-0-0-0.html",
@@ -71,9 +107,21 @@
           "observed_on": "https://www.city.iga.lg.jp/category/6-11-2-0-0-0-0-0-0-0.html",
           "sha256": "e38501f1c3ac65a58cc710a877629e44ea3a710e7f4a56a50738f13cf931ed45",
           "fetched_at": "2026-08-27T09:48:52Z"
+        },
+        {
+          "url": "http://www.city.iga.lg.jp/category/6-11-2-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.iga.lg.jp/",
+          "sha256": "e38501f1c3ac65a58cc710a877629e44ea3a710e7f4a56a50738f13cf931ed45",
+          "fetched_at": "2026-08-27T09:48:52Z"
+        },
+        {
+          "url": "https://www.city.iga.lg.jp/cmsfiles/contents/0000013/13569/R6kessansyo.pdf",
+          "observed_on": "https://www.city.iga.lg.jp/0000013569.html",
+          "sha256": "4ae530aa46ca367c28d9ecbbb27e93c3687bd2c54cfd494750d5a8d739032eb2",
+          "fetched_at": "2026-08-27T13:39:01Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.iga.lg.jp/category/6-11-2-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.city.iga.lg.jp/category/6-11-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iga.lg.jp/category/6-11-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansyo.pdf「令和6年度伊賀市病院事業会計決算書 (PDF形式、2.28MB)」, sha256:4ae530aa）にて構造マーカー（款・項・節・決算額等）を確認済み。"
     }
   }
 }

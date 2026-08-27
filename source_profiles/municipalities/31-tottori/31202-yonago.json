@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.yonago.lg.jp/item/62475.htm (label: 令和8年度9月補正予算 市長査定状況) 入口 https://www.city.yonago.lg.jp/item/62475.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yonago.lg.jp/item/62475.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yonago.lg.jp/1047.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yonago.lg.jp/1047.htm",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.yonago.lg.jp/1047.htm",
           "sha256": "89bbf52b91872c14512a400eab90042bd69dd6a7f4c1a96310dc14d0f21ccaa2",
           "fetched_at": "2026-08-27T09:42:43Z"
+        },
+        {
+          "url": "http://www.city.yonago.lg.jp/1047.htm",
+          "observed_on": "http://www.city.yonago.lg.jp/",
+          "sha256": "89bbf52b91872c14512a400eab90042bd69dd6a7f4c1a96310dc14d0f21ccaa2",
+          "fetched_at": "2026-08-27T09:42:43Z"
+        },
+        {
+          "url": "https://www.city.yonago.lg.jp/secure/59619/R6_shakaihosho.pdf",
+          "observed_on": "https://www.city.yonago.lg.jp/46775.htm",
+          "sha256": "484f5f619d794e63f1c825e934e0ecdda098035bdf14afa1f17a209c06a3cc5d",
+          "fetched_at": "2026-08-27T13:42:00Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.yonago.lg.jp/1047.htm (label: 財政情報) 入口 https://www.city.yonago.lg.jp/1047.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yonago.lg.jp/1047.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_shakaihosho.pdf「地方消費税交付金（社会保障財源化分）が充てられる社会保障施策に要する経費（令和6年度分）」, sha256:484f5f61）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

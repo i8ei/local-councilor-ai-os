@@ -6,12 +6,27 @@
   "official_home_url": "https://www.vill.achi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.achi.lg.jp/soshiki/24/gikaidayori126.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.achi.lg.jp/soshiki/24/gikaidayori126.html",
+          "observed_on": "https://www.vill.achi.lg.jp/life/3/3/44/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.achi.lg.jp/soshiki/24/gikaidayori126.html",
+          "observed_on": "https://www.vill.achi.lg.jp/soshiki/24/gikaidayori126.html",
+          "sha256": "cbc0900826cd10ab775aa2b594c6ef561fb7ac1d60bb2c3aec0924e928941ed8",
+          "fetched_at": "2026-08-27T13:47:40Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

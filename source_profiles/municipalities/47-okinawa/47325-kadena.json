@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/kadena/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kadena.okinawa.jp/departments/kak10.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kadena.okinawa.jp/departments/kak10.html",
@@ -69,9 +69,15 @@
           "url": "https://www.town.kadena.okinawa.jp/departments/26a12aa504558d16bf66ce32e5bed5d3a5e3470b.pdf",
           "observed_on": "https://www.town.kadena.okinawa.jp/departments/kak10.html",
           "fetched_at": "2026-08-27T10:58:16Z"
+        },
+        {
+          "url": "https://www.town.kadena.okinawa.jp/departments/3154c91444e0673c4798b99dab1b1ac0b510bccc.pdf",
+          "observed_on": "https://www.town.kadena.okinawa.jp/departments/kak10.html",
+          "sha256": "b6c35e5c51be272168e1ecbd6bfe95c358458b2ac7a17db251cccfc59db17c24",
+          "fetched_at": "2026-08-27T13:48:24Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kadena.okinawa.jp/departments/kak10.html (label: 企画財政課) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（3154c91444e0673c4798b99dab1b1ac0b510bccc.pdf「平成２９年度一般会計当初予算 地方消費税交付金（社会保障財源化分）の使途状況.pdf」, sha256:b6c35e5c）にて構造マーカー（歳入・歳出・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

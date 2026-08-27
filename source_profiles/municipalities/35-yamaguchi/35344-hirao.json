@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.town.hirao.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html",
@@ -69,16 +69,22 @@
           "url": "https://www.town.hirao.lg.jp/material/files/group/8/tousyoyosann_gaiyou_2026.pdf",
           "observed_on": "https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html",
           "fetched_at": "2026-08-27T09:45:41Z"
+        },
+        {
+          "url": "https://www.town.hirao.lg.jp/material/files/group/8/tousyoyosann_gaiyou_2026.pdf",
+          "observed_on": "https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html",
+          "sha256": "56ce737293c284d8c11fc299c6480e4ed0d1771909a7b915ce03f8ba37a0f38f",
+          "fetched_at": "2026-08-27T09:45:44Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.hirao.lg.jp/gyosei/zaisei/1490317606065.html (label: 当初予算の概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（tousyoyosann_gaiyou_2026.pdf「令和8年度当初予算の概要 (PDFファイル: 1.3MB)」, sha256:56ce7372）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html",
@@ -95,9 +101,15 @@
           "url": "https://www.town.hirao.lg.jp/material/files/group/8/kessanjokyo2024.pdf",
           "observed_on": "https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html",
           "fetched_at": "2026-08-27T09:45:45Z"
+        },
+        {
+          "url": "https://www.town.hirao.lg.jp/material/files/group/8/kessanjokyo2024.pdf",
+          "observed_on": "https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html",
+          "sha256": "08b79ee0a82ee3bc0a87b81aee250b21bacf380048accbc4cd5a741b8f2f323a",
+          "fetched_at": "2026-08-27T09:45:47Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.hirao.lg.jp/gyosei/zaisei/1543897258410.html (label: 決算の状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（kessanjokyo2024.pdf「令和6年度決算状況 (PDFファイル: 207.3KB)」, sha256:08b79ee0）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

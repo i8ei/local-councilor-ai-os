@@ -48,19 +48,31 @@
       "notes": "Observed regulations index at https://public2.legalcrud.com/kunigami_vill/reiki/ (label: 国頭村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.kunigami.okinawa.jp/kunigami-village/wp-content/themes/kunigamison/images/pdf/zaisei/siryoushuu/R06_zaiseijoukyou.xlsx",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.kunigami.okinawa.jp/kunigami-village/wp-content/themes/kunigamison/images/pdf/zaisei/siryoushuu/R06_zaiseijoukyou.xlsx",
           "observed_on": "https://www.vill.kunigami.okinawa.jp/gyousei/",
           "fetched_at": "2026-08-27T06:51:59Z"
+        },
+        {
+          "url": "http://www.vill.kunigami.okinawa.jp/kunigami-village/wp-content/themes/kunigamison/images/pdf/zaisei/siryoushuu/R06_zaiseijoukyou.xlsx",
+          "observed_on": "http://www.vill.kunigami.okinawa.jp/",
+          "sha256": "dce496ef519794b8d66a39e905beab3b52b8d08804716942dfb8c3fdc8fced9a",
+          "fetched_at": "2026-08-27T09:41:10Z"
+        },
+        {
+          "url": "https://www.vill.kunigami.okinawa.jp/kunigami-village/wp-content/themes/kunigamison/images/pdf/zaisei/siryoushuu/R06_zaiseijoukyou.xlsx",
+          "observed_on": "https://www.vill.kunigami.okinawa.jp/kunigami-village/wp-content/themes/kunigamison/images/pdf/zaisei/siryoushuu/R06_zaiseijoukyou.xlsx",
+          "sha256": "dce496ef519794b8d66a39e905beab3b52b8d08804716942dfb8c3fdc8fced9a",
+          "fetched_at": "2026-08-27T13:48:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.kunigami.okinawa.jp/kunigami-village/wp-content/themes/kunigamison/images/pdf/zaisei/siryoushuu/R06_zaiseijoukyou.xlsx (label: 令和６年度 財政状況資料集)"
+      "notes": "deepest_doc=P1。budget文書（R06_zaiseijoukyou.xlsx「Direct Document」, sha256:dce496ef）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

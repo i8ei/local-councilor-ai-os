@@ -6,19 +6,27 @@
   "official_home_url": "http://www.higashikushira.com/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.higashikushira.com/docs/2018012400051/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.higashikushira.com/docs/2018011100075/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.higashikushira.com/docs/2018012400051/",
+          "url": "https://www.higashikushira.com/docs/2018011100075/",
           "observed_on": "http://www.higashikushira.com/categories/bunya/chouseijouhou/",
-          "fetched_at": "2026-08-27T06:45:40Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.higashikushira.com/docs/2018011100075/",
+          "observed_on": "https://www.higashikushira.com/docs/2018011100075/",
+          "sha256": "8ff99fb85da6e2d783b5777e5b361eabff61968db8288aa2afe9d81159ea2bb9",
+          "fetched_at": "2026-08-27T14:11:38Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.higashikushira.com/docs/2018012400051/ (label: 議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +71,11 @@
       "notes": "Observed budget link at http://www.higashikushira.com/docs/2020052200010/ (label: 東串良町一般会計予算及び特別会計予算について) 入口 https://www.higashikushira.com/docs/2020052200010/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.higashikushira.com/docs/2020052200010/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.higashikushira.com/categories/bunya/chouseijouhou/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.higashikushira.com/categories/bunya/chouseijouhou/zaisei/",
@@ -79,9 +87,21 @@
           "observed_on": "https://www.higashikushira.com/categories/bunya/chouseijouhou/zaisei/",
           "sha256": "086353ef8b985b99125911389b10bda96fd1000f5472aa4bb8cc3e73c9db4592",
           "fetched_at": "2026-08-27T09:40:48Z"
+        },
+        {
+          "url": "http://www.higashikushira.com/categories/bunya/chouseijouhou/zaisei/",
+          "observed_on": "http://www.higashikushira.com/",
+          "sha256": "086353ef8b985b99125911389b10bda96fd1000f5472aa4bb8cc3e73c9db4592",
+          "fetched_at": "2026-08-27T09:40:48Z"
+        },
+        {
+          "url": "https://www.higashikushira.com/docs/2018012400037/file_contents/file_202671759134_1.xlsx",
+          "observed_on": "https://www.higashikushira.com/docs/2018012400037/",
+          "sha256": "dbca92f18541942641f2bb33b873b99ff038562ffff7138ae2bf8877583714d7",
+          "fetched_at": "2026-08-27T13:47:42Z"
         }
       ],
-      "notes": "Observed finance section at http://www.higashikushira.com/categories/bunya/chouseijouhou/zaisei/ (label: 財政) 入口 https://www.higashikushira.com/categories/bunya/chouseijouhou/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.higashikushira.com/categories/bunya/chouseijouhou/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.higashikushira.com/categories/bunya/chouseijouhou/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（file_202671759134_1.xlsx「[XLSX：553KB]」, sha256:dbca92f1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

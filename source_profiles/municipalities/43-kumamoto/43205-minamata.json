@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.minamata.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.minamata.lg.jp/gikai/list00628.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.minamata.lg.jp/gikai/kiji0034575/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.minamata.lg.jp/gikai/list00628.html",
+          "url": "https://www.city.minamata.lg.jp/gikai/kiji0034575/index.html",
           "observed_on": "https://www.city.minamata.lg.jp/gikai/default.html",
-          "fetched_at": "2026-08-27T05:32:32Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.minamata.lg.jp/gikai/kiji0034575/index.html",
+          "observed_on": "https://www.city.minamata.lg.jp/gikai/kiji0034575/index.html",
+          "sha256": "f2381d276f7c74f2439be9aea2a3b385647aa208542fc88342253a96d2e186a6",
+          "fetched_at": "2026-08-27T14:09:49Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.minamata.lg.jp/gikai/list00628.html (label: 議会会議録検索)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +71,11 @@
       "notes": "Observed budget link at https://www.city.minamata.lg.jp/list00415.html (label: 予算) 入口 https://www.city.minamata.lg.jp/list00415.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamata.lg.jp/list00415.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.minamata.lg.jp/list00335.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.minamata.lg.jp/list00335.html",
@@ -79,9 +87,15 @@
           "observed_on": "https://www.city.minamata.lg.jp/list00335.html",
           "sha256": "f8024b921ac441fca090c1771a3740e3a5096881a23abd178486494fe526627d",
           "fetched_at": "2026-08-27T09:37:57Z"
+        },
+        {
+          "url": "https://www.city.minamata.lg.jp/kiji0033021/3_3021_up_n5a8w10i.pdf",
+          "observed_on": "https://www.city.minamata.lg.jp/kiji0033021/index.html",
+          "sha256": "3e8714e76fe1157aad5e52d7d7df1675f610d2c97b86ae9f80f0464aa24b373d",
+          "fetched_at": "2026-08-27T13:45:55Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.minamata.lg.jp/list00335.html (label: 行政・財政) 入口 https://www.city.minamata.lg.jp/list00335.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamata.lg.jp/list00335.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_3021_up_n5a8w10i.pdf「水俣市中期財政計画（令和4年度策定）（PDF：1.19メガバイト）」, sha256:3e8714e7）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

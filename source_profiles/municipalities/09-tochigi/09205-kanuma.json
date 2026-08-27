@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.kanuma.tochigi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.kanuma.tochigi.jp/0685/info-0000009670-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.kanuma.tochigi.jp/0055/genre1-0-001.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.kanuma.tochigi.jp/0685/info-0000009670-0.html",
+          "url": "https://www.city.kanuma.tochigi.jp/0055/genre1-0-001.html",
           "observed_on": "http://www.city.kanuma.tochigi.jp/0000/genre-04-0.html",
-          "fetched_at": "2026-08-27T06:19:48Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.kanuma.tochigi.jp/0055/genre1-0-001.html",
+          "observed_on": "https://www.city.kanuma.tochigi.jp/0055/genre1-0-001.html",
+          "sha256": "fd148614ff3ec66ad718935d2369595733f85dd7095457b7effa4b2983e172c4",
+          "fetched_at": "2026-08-27T13:30:55Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.kanuma.tochigi.jp/0685/info-0000009670-0.html (label: 学校再編計画策定に向けた地域住民向け意見交換会の実施及び議事録の公開について)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

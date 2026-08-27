@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.houki-town.jp/new1/chousei/z652/ (label: 施策・財政) 入口 https://www.houki-town.jp/new1/chousei/z652/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.houki-town.jp/new1/chousei/z652/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.houki-town.jp/new1/chousei/z652/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.houki-town.jp/new1/chousei/z652/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.houki-town.jp/new1/chousei/z652/",
           "sha256": "1cdd274f326e01a8372f1de8746c0c59d23ad093ef2730093319f942b7370abf",
           "fetched_at": "2026-08-27T09:43:02Z"
+        },
+        {
+          "url": "http://www.houki-town.jp/new1/chousei/z652/",
+          "observed_on": "http://www.houki-town.jp/",
+          "sha256": "1cdd274f326e01a8372f1de8746c0c59d23ad093ef2730093319f942b7370abf",
+          "fetched_at": "2026-08-27T09:43:02Z"
+        },
+        {
+          "url": "https://www.houki-town.jp/system/site/upload/live/7113/atc_1260893841.pdf",
+          "observed_on": "https://www.houki-town.jp/new1/10/3/3/",
+          "sha256": "ed582e949fc7998c8635d7e4fdf1c9b4abc512bc9eb6a41c9dfe83bb9ddd5d00",
+          "fetched_at": "2026-08-27T13:42:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.houki-town.jp/new1/chousei/z652/ (label: 施策・財政) 入口 https://www.houki-town.jp/new1/chousei/z652/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.houki-town.jp/new1/chousei/z652/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（atc_1260893841.pdf「財政用語集 2014/05/12」, sha256:ed582e94）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

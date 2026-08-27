@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.fuchu.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.fuchu.tokyo.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T10:26:06Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.fuchu.tokyo.jp/gikai/dayori/dayorisaishin.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.fuchu.tokyo.dbsr.jp/index.php/",
+          "url": "http://www.city.fuchu.tokyo.jp/gikai/dayori/dayorisaishin.html",
           "observed_on": "http://www.city.fuchu.tokyo.jp/",
-          "fetched_at": "2026-08-27T07:42:41Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://www.city.fuchu.tokyo.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.fuchu.tokyo.dbsr.jp/index.php/",
-          "sha256": "f223c9311c673a68840c725f164a9827ab2d556a10025be8623758c097b65aca",
-          "fetched_at": "2026-08-27T10:26:08Z"
+          "url": "http://www.city.fuchu.tokyo.jp/gikai/dayori/dayorisaishin.html",
+          "observed_on": "http://www.city.fuchu.tokyo.jp/gikai/dayori/dayorisaishin.html",
+          "sha256": "38033884362ad553797d104dad5772aaee548cb9d6c6b5513cee34cbd3a056cc",
+          "fetched_at": "2026-08-27T13:42:41Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.fuchu.tokyo.dbsr.jp/index.php/ (label: 市議会会議録検索（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

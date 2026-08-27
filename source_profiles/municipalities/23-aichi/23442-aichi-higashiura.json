@@ -63,11 +63,11 @@
       "notes": "Observed budget link at https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html (label: まちの家計簿（予算、決算の概要）) 入口 https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html",
           "sha256": "f41a859d4360e0675b5301a72303c1ae0659d16d76d2cc84f400919e6ddbde14",
           "fetched_at": "2026-08-27T10:16:30Z"
+        },
+        {
+          "url": "https://www.town.aichi-higashiura.lg.jp/material/files/group/91/R6kextusan.pdf",
+          "observed_on": "https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/1472600668540.html",
+          "sha256": "972658460c9a62a8b072fd33b730fdf949def05f27a366fb93ecea5d80b12069",
+          "fetched_at": "2026-08-27T13:38:41Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html (label: まちの家計簿（予算、決算の概要）) 入口 https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aichi-higashiura.lg.jp/gyosei/zaisei/machikakeibo/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kextusan.pdf「令和6年度決算・令和7年度上半期 (PDFファイル: 2.6MB)」, sha256:97265846）にて構造マーカー（歳入・歳出・決算額・予算現額等）を確認済み。"
     }
   }
 }

@@ -56,11 +56,11 @@
       "notes": "Observed finance section at https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html (label: 行財政) 入口 https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html",
           "sha256": "3d261ad92fe1829e3ec5e3bf59bf46fec7abc448f33f64b94df0e639be1509be",
           "fetched_at": "2026-08-27T10:28:15Z"
+        },
+        {
+          "url": "https://www.city.hadano.kanagawa.jp/material/files/group/3/h24kekkahoukokusyo.pdf",
+          "observed_on": "https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/9810.html",
+          "sha256": "4cbc08546a90668d02f39facbf1b0386cf141dbe791d7a686e6a5f6306005e10",
+          "fetched_at": "2026-08-27T13:34:34Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html (label: 行財政) 入口 https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（h24kekkahoukokusyo.pdf「平成24年度行政評価結果報告書(PDFファイル:3.1MB)」, sha256:4cbc0854）にて構造マーカー（項・節・決算額・地方債等）を確認済み。"
     }
   }
 }

@@ -50,11 +50,11 @@
       "notes": "Observed budget link at http://www.city.shibata.lg.jp/machidukuri/zaisei/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.shibata.lg.jp:443/machidukuri/zaisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shibata.lg.jp:443/machidukuri/zaisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shibata.lg.jp:443/machidukuri/zaisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shibata.lg.jp/machidukuri/zaisei/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shibata.lg.jp/machidukuri/zaisei/zaisei/kessan/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.shibata.lg.jp:443/machidukuri/zaisei/zaisei/kessan/index.html",
           "sha256": "c286b1fc7e0a1af79188e06444fc818e13a88f7e82033b604eb789f6f7f3a3c7",
           "fetched_at": "2026-08-27T10:04:23Z"
+        },
+        {
+          "url": "http://www.city.shibata.lg.jp/machidukuri/zaisei/zaisei/kessan/index.html",
+          "observed_on": "http://www.city.shibata.lg.jp/",
+          "sha256": "c286b1fc7e0a1af79188e06444fc818e13a88f7e82033b604eb789f6f7f3a3c7",
+          "fetched_at": "2026-08-27T10:04:23Z"
+        },
+        {
+          "url": "https://www.city.shibata.lg.jp:443/_res/projects/default_project/_page_/001/029/797/r6.ippan1.pdf",
+          "observed_on": "https://www.city.shibata.lg.jp:443/machidukuri/zaisei/zaisei/kessan/1029797.html",
+          "sha256": "fb7080f356d3d34d4f7f146fe60f3d113ab7a9364a3bb5ec5b07b349668bd0f0",
+          "fetched_at": "2026-08-27T13:35:23Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.shibata.lg.jp/machidukuri/zaisei/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.shibata.lg.jp:443/machidukuri/zaisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shibata.lg.jp:443/machidukuri/zaisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shibata.lg.jp:443/machidukuri/zaisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6.ippan1.pdf「令和6年度新発田市一般会計決算書（表紙～歳入） （PDF 15.9 MB）」, sha256:fb7080f3）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

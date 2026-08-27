@@ -6,19 +6,27 @@
   "official_home_url": "https://www.city.ome.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/ome/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ome.tokyo.jp/site/gikai/50386.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/ome/WebView/rd/council.html",
+          "url": "https://www.city.ome.tokyo.jp/site/gikai/50386.html",
           "observed_on": "https://www.city.ome.tokyo.jp/site/gikai/",
-          "fetched_at": "2026-08-27T07:43:44Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.ome.tokyo.jp/site/gikai/50386.html",
+          "observed_on": "https://www.city.ome.tokyo.jp/site/gikai/50386.html",
+          "sha256": "270c6bc5ca8872bfd51351b21f6f8032a7e506ebb196ce581f9ac8a8f44a8349",
+          "fetched_at": "2026-08-27T13:42:39Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/ome/WebView/rd/council.html (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

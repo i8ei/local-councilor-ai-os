@@ -6,25 +6,27 @@
   "official_home_url": "https://www.city.takahashi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html ",
-      "verified_at": "2026-08-27T09:43:53Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.takahashi.lg.jp/site/gikai/gikaihoukokukaikekka15.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html ",
-          "observed_on": "https://www.city.takahashi.lg.jp/site/gikai/teireikai8-9-1.html",
-          "fetched_at": "2026-08-27T06:16:00Z"
+          "url": "https://www.city.takahashi.lg.jp/site/gikai/gikaihoukokukaikekka15.html",
+          "observed_on": "https://www.city.takahashi.lg.jp/site/gikai/list22-388.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html",
-          "sha256": "c5e1c8eea403723dc9a8a75175c7f85adaa6c6c57bfed13af62e27d6c3b41a32",
-          "fetched_at": "2026-08-27T09:43:54Z"
+          "url": "https://www.city.takahashi.lg.jp/site/gikai/gikaihoukokukaikekka15.html",
+          "observed_on": "https://www.city.takahashi.lg.jp/site/gikai/gikaihoukokukaikekka15.html",
+          "sha256": "09220dedd2a4088d1491886811a6584a5897421661e2c3acbe901862c02845c6",
+          "fetched_at": "2026-08-27T14:05:53Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/takahashi/pg/index.html  (label: 会議録閲覧・検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -48,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.city.takahashi.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html",
@@ -69,16 +71,22 @@
           "url": "https://www.city.takahashi.lg.jp/uploaded/life/69390_238899_misc.pdf",
           "observed_on": "https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html",
           "fetched_at": "2026-08-27T11:00:23Z"
+        },
+        {
+          "url": "https://www.city.takahashi.lg.jp/uploaded/life/69390_238899_misc.pdf",
+          "observed_on": "https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html",
+          "sha256": "8a66c4af9a3dc72b95d23e3adc905d1d3b3e1947db3bc0d64245a4b4f4778f8d",
+          "fetched_at": "2026-08-27T11:00:25Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html (label: 令和8年度予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（69390_238899_misc.pdf「一般会計当初予算書 [PDFファイル／5.63MB]」, sha256:8a66c4af）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html",
@@ -90,9 +98,15 @@
           "observed_on": "https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html",
           "sha256": "4ea2f3c518b482dfb21468398c2d21c3ec30806d4384d7128c834978254cab15",
           "fetched_at": "2026-08-27T09:43:54Z"
+        },
+        {
+          "url": "https://www.city.takahashi.lg.jp/uploaded/life/69390_238903_misc.pdf",
+          "observed_on": "https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html",
+          "sha256": "22e94f4d13e51046216d42a5bcaf156b3a52150f577a1c47618fc82ce0191c0b",
+          "fetched_at": "2026-08-27T13:42:15Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html (label: 令和8年度予算書) 入口 https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.takahashi.lg.jp/site/zaisei/yosann8.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（69390_238903_misc.pdf「【資料3】主要施策 [PDFファイル／5.61MB]」, sha256:22e94f4d）にて構造マーカー（歳入・歳出・節等）を確認済み。"
     }
   }
 }

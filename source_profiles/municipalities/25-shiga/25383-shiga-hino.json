@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.shiga-hino/reiki_taikei/taikei_default.html (label: 例規集 別ウィンドウで開く)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.shiga-hino.lg.jp/category/32-6-1-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shiga-hino.lg.jp/category/32-6-1-0-0-0-0-0-0-0.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.town.shiga-hino.lg.jp/category/32-6-1-0-0-0-0-0-0-0.html",
           "sha256": "f612f58b37a6b43f0b33162c274150680cbbc17e885dbd8b8bb08d826e266f8e",
           "fetched_at": "2026-08-27T09:49:40Z"
+        },
+        {
+          "url": "https://www.town.shiga-hino.lg.jp/cmsfiles/contents/0000008/8534/R8gaiyou.pdf",
+          "observed_on": "https://www.town.shiga-hino.lg.jp/0000008534.html",
+          "sha256": "e6444f2f01a49a754d043d04c5af8ce6502ef11341dcce51b17d688af1257eef",
+          "fetched_at": "2026-08-27T13:39:28Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.shiga-hino.lg.jp/category/32-6-1-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.town.shiga-hino.lg.jp/category/32-6-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shiga-hino.lg.jp/category/32-6-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8gaiyou.pdf「令和8年度当初予算の概要.pdfサイズ：1.23MB」, sha256:e6444f2f）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

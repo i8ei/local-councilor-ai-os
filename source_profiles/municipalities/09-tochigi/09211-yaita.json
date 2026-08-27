@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.yaita.tochigi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.yaita.tochigi.jp/site/gikai/giziroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.yaita.tochigi.jp/site/gikai/gikaidayori233.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.yaita.tochigi.jp/site/gikai/giziroku.html",
+          "url": "https://www.city.yaita.tochigi.jp/site/gikai/gikaidayori233.html",
           "observed_on": "http://www.city.yaita.tochigi.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:19:41Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.yaita.tochigi.jp/site/gikai/gikaidayori233.html",
+          "observed_on": "https://www.city.yaita.tochigi.jp/site/gikai/gikaidayori233.html",
+          "sha256": "8e1c80fa755f6af593689f90b84c0728e0a12606ed234a065b3c97966eba3aa7",
+          "fetched_at": "2026-08-27T13:38:50Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.yaita.tochigi.jp/site/gikai/giziroku.html (label: 議会議事録) extraction probe read one document at http://ssp.kaigiroku.net/tenant/yaita/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

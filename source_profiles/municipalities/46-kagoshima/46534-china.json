@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.china.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.china.lg.jp/chosei/gikai/2152.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.china.lg.jp/chosei/gikai/2152.html",
+          "observed_on": "http://www.town.china.lg.jp/chosei/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.china.lg.jp/chosei/gikai/2152.html",
+          "observed_on": "https://www.town.china.lg.jp/chosei/gikai/2152.html",
+          "sha256": "7dca98a58fc612be28de6324f627bf9fef45deacaffd58234b578f89202c6b8c",
+          "fetched_at": "2026-08-27T14:11:51Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.hakusan.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.hakusan.lg.jp/shigikai/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.hakusan.lg.jp/shigikai/jyoho/gikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www.city.hakusan.lg.jp/shigikai/index.html",
-          "observed_on": "http://www.city.hakusan.lg.jp/",
-          "fetched_at": "2026-08-27T06:13:20Z"
+          "url": "https://www.city.hakusan.lg.jp/shigikai/jyoho/gikaidayori/index.html",
+          "observed_on": "http://www.city.hakusan.lg.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/shigikai/jyoho/gikaidayori/index.html",
+          "observed_on": "https://www.city.hakusan.lg.jp/shigikai/jyoho/gikaidayori/index.html",
+          "sha256": "1c27ce17e7e184b94f7de42ad207997a872cb2b2f13699f2573112df6250f4df",
+          "fetched_at": "2026-08-27T13:45:14Z"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/shigikai/jyoho/gikaidayori/1018185.html",
+          "observed_on": "https://www.city.hakusan.lg.jp/shigikai/jyoho/gikaidayori/index.html",
+          "sha256": "b0964b386c5d78ee1268891193a40f59b514bd8725bbf4efe648ac534fad705e",
+          "fetched_at": "2026-08-27T13:45:14Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.hakusan.lg.jp/shigikai/index.html (label: 会議録検索や議会録画検索、議員の紹介など 市議会に関する情報はこちら) extraction probe read one document at http://ssp.kaigiroku.net/tenant/hakusan/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

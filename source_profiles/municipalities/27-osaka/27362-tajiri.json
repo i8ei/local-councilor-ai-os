@@ -35,11 +35,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A85C0FFB4 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html",
           "sha256": "fd9cd7693a6d705252ebdc7286df7d8fd9c2ab476090563306f7f7a324157036",
           "fetched_at": "2026-08-27T09:51:19Z"
+        },
+        {
+          "url": "https://www.town.tajiri.osaka.jp/material/files/group/16/R8yosangaiyou.pdf",
+          "observed_on": "https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/yosan/5610.html",
+          "sha256": "734d4c50ffd71567191eff96f3b4e4d1b12fade8377536a9ba57314355e956d6",
+          "fetched_at": "2026-08-27T13:40:50Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tajiri.osaka.jp/gyoseijoho/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosangaiyou.pdf「予算の概要 (PDFファイル: 484.4KB)」, sha256:734d4c50）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

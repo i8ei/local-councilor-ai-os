@@ -69,11 +69,11 @@
       "notes": "Observed finance section at https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html",
           "sha256": "6715dbd2d2d878e8b45f87fa90406bb57ead8ecb9ae9a2b462b06eb352aa1892",
           "fetched_at": "2026-08-27T09:36:02Z"
+        },
+        {
+          "url": "https://www.city.fukutsu.lg.jp/material/files/group/13/kessannsho_2_2.pdf",
+          "observed_on": "https://www.city.fukutsu.lg.jp/shisei/zaisei/3/8971.html",
+          "sha256": "2716cc85ecc7252147f578740197091166fabc5d482a1ed63ed175751f8dee3f",
+          "fetched_at": "2026-08-27T13:45:17Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukutsu.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessannsho_2_2.pdf「令和2年度決算書 (PDFファイル: 4.8MB)」, sha256:2716cc85）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.kameoka.kyoto.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/kameoka/pg/index.html",
-      "verified_at": "2026-08-27T09:50:01Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kameoka.kyoto.jp/site/gikai/91322.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kameoka/pg/index.html",
+          "url": "https://www.city.kameoka.kyoto.jp/site/gikai/91322.html",
           "observed_on": "http://www.city.kameoka.kyoto.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:16:24Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kameoka/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/kameoka/pg/index.html",
-          "sha256": "5f6b63f2c1317e22fb9e9a39452ba73a7ed0df61c33be908633dd42008928754",
-          "fetched_at": "2026-08-27T09:50:03Z"
+          "url": "https://www.city.kameoka.kyoto.jp/site/gikai/91322.html",
+          "observed_on": "https://www.city.kameoka.kyoto.jp/site/gikai/91322.html",
+          "sha256": "3c77e58afc0edb2c719c8cf94e01f86445e97d36ed3d15e39b12d374fc45a34d",
+          "fetched_at": "2026-08-27T14:01:09Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kameoka/pg/index.html (label: 会議録の検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

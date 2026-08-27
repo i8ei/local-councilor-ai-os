@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.odawara.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.odawara.kanagawa.jp/citycounc/acommittee/acommittee-data/p40170.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.odawara.kanagawa.jp/citycounc/acommittee/acommittee-data/p40170.html",
+          "observed_on": "https://www.city.odawara.kanagawa.jp/msec/17/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.odawara.kanagawa.jp/citycounc/acommittee/acommittee-data/p40170.html",
+          "observed_on": "https://www.city.odawara.kanagawa.jp/citycounc/acommittee/acommittee-data/p40170.html",
+          "sha256": "b2eb6d064dca9d99e702a33fce73d24e9440a484eb64b28c23725c9dbdc696e6",
+          "fetched_at": "2026-08-27T13:43:37Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

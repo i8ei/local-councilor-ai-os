@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.kasamatsu.gifu.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.kasamatsu.gifu.jp/docs/2026052900028/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.kasamatsu.gifu.jp/docs/2026052900028/",
+          "observed_on": "http://www.town.kasamatsu.gifu.jp/category/bunya/chouno_jouhou/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.kasamatsu.gifu.jp/docs/2026052900028/",
+          "observed_on": "http://www.town.kasamatsu.gifu.jp/docs/2026052900028/",
+          "sha256": "a26a85dcead6b3edd1540d71ff85fbad410b716beb1e0d4c8850fbcad0822a3e",
+          "fetched_at": "2026-08-27T13:48:52Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

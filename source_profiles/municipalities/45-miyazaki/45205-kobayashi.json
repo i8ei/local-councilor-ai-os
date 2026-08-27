@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at https://www.city.kobayashi.lg.jp/gyoseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
           "sha256": "a8e9eb70053efb85be99c8aff80f34e2eaf1e4ee7331d56e94dbf25c5962039f",
           "fetched_at": "2026-08-27T09:39:46Z"
+        },
+        {
+          "url": "https://www.city.kobayashi.lg.jp/material/files/group/4/R06zaiseijoukyou.xlsx",
+          "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/2992.html",
+          "sha256": "be0b41034bbb4f471adc409ed3dc570a10f92e680b76f57e37a20977ad399ed0",
+          "fetched_at": "2026-08-27T13:47:09Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R06zaiseijoukyou.xlsx「小林市財政状況資料集(令和6年度) (Excelファイル: 527.3KB)」, sha256:be0b4103）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

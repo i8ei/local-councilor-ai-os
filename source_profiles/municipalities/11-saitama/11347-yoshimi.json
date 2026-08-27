@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.yoshimi.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/yoshimi/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.yoshimi.saitama.jp/room_gikai/2994.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/yoshimi/WebView/rd/council.html",
+          "url": "https://www.town.yoshimi.saitama.jp/room_gikai/2994.html",
           "observed_on": "https://www.town.yoshimi.saitama.jp/room_gikai/index.html",
-          "fetched_at": "2026-08-27T07:05:46Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.yoshimi.saitama.jp/room_gikai/2994.html",
+          "observed_on": "https://www.town.yoshimi.saitama.jp/room_gikai/2994.html",
+          "sha256": "422cd0cbc1d7739854d9bbba47d862db02a49cb13238f326890c0b963c5e31df",
+          "fetched_at": "2026-08-27T13:40:46Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/yoshimi/WebView/rd/council.html (label: 議会中継)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

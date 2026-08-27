@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.matsubushi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.matsubushi.lg.jp/0000003031.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.matsubushi.lg.jp/0000003031.html",
+          "observed_on": "https://www.town.matsubushi.lg.jp/category/6-14-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.matsubushi.lg.jp/0000003031.html",
+          "observed_on": "https://www.town.matsubushi.lg.jp/0000003031.html",
+          "sha256": "def56ee33b161c62b2b8aba7d73656cc7a73a9db982f85071256e815d7ef74c6",
+          "fetched_at": "2026-08-27T13:41:10Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/matsubushi/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
@@ -51,9 +66,21 @@
           "observed_on": "https://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
           "sha256": "234e584432d8f39d0918f76b8e6cd1c079cec7a24016645cba3bd32bf86cbc02",
           "fetched_at": "2026-08-27T10:22:44Z"
+        },
+        {
+          "url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.matsubushi.lg.jp/",
+          "sha256": "234e584432d8f39d0918f76b8e6cd1c079cec7a24016645cba3bd32bf86cbc02",
+          "fetched_at": "2026-08-27T10:22:44Z"
+        },
+        {
+          "url": "https://www.town.matsubushi.lg.jp/cmsfiles/contents/0000002/2447/R8tyoussyo_ippann_gaiyou.pdf",
+          "observed_on": "https://www.town.matsubushi.lg.jp/0000002447.html",
+          "sha256": "94cb99679221bef45468daf35e04d19f26ed71c7433399a0afcc82830b63bb83",
+          "fetched_at": "2026-08-27T13:32:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html (label: 町の財政) 入口 https://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tyoussyo_ippann_gaiyou.pdf「当初予算概要(PDF形式、293.49KB)」, sha256:94cb9967）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

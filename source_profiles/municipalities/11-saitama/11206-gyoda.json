@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.gyoda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://smart.discussvision.net/smart/tenant/gyoda/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.gyoda.lg.jp/soshiki/gikai_jimukyoku/gikai/gikai_koho/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://smart.discussvision.net/smart/tenant/gyoda/WebView/rd/council_1.html",
-          "observed_on": "https://www.city.gyoda.lg.jp/soshiki/gikai_jimukyoku/gikai/7380.html",
-          "fetched_at": "2026-08-27T06:49:04Z"
+          "url": "https://www.city.gyoda.lg.jp/soshiki/gikai_jimukyoku/gikai/gikai_koho/index.html",
+          "observed_on": "https://www.city.gyoda.lg.jp/soshiki/gikai_jimukyoku/gikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.gyoda.lg.jp/soshiki/gikai_jimukyoku/gikai/gikai_koho/index.html",
+          "observed_on": "https://www.city.gyoda.lg.jp/soshiki/gikai_jimukyoku/gikai/gikai_koho/index.html",
+          "sha256": "6f0b635d031e897004a17eccccab3b8215b02763e5af2c08f59d67c9de0a6986",
+          "fetched_at": "2026-08-27T13:39:51Z"
+        },
+        {
+          "url": "https://www.city.gyoda.lg.jp/soshiki/gikai_jimukyoku/gikai/gikai_koho/12402.html",
+          "observed_on": "https://www.city.gyoda.lg.jp/soshiki/gikai_jimukyoku/gikai/gikai_koho/index.html",
+          "sha256": "6ba20b409643122a03195638a9c048e6f01774b1425ca00cc3945267bd14e11e",
+          "fetched_at": "2026-08-27T13:39:51Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/gyoda/WebView/rd/council_1.html (label: 令和8年6月定例会の録画映像を公開しています。（外部サイトへリンク）)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

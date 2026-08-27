@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.aichi-mihama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.aichi-mihama.lg.jp/gyoseijoho/gikai/1609.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.aichi-mihama.lg.jp/gyoseijoho/gikai/1609.html",
+          "observed_on": "https://www.town.aichi-mihama.lg.jp/gyoseijoho/gikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.aichi-mihama.lg.jp/gyoseijoho/gikai/1609.html",
+          "observed_on": "https://www.town.aichi-mihama.lg.jp/gyoseijoho/gikai/1609.html",
+          "sha256": "a2a0ecb08c9d16c29bf4df2b4aaaf97368116e15c67cabd12995180d20170f93",
+          "fetched_at": "2026-08-27T13:51:00Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.town.aichi-mihama.lg.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aichi-mihama.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aichi-mihama.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -51,9 +66,15 @@
           "observed_on": "https://www.town.aichi-mihama.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "0e98ee278d6040600cc36195df86e2a7891afa4614b8d6bc0e622d054cf955a2",
           "fetched_at": "2026-08-27T10:16:44Z"
+        },
+        {
+          "url": "https://www.town.aichi-mihama.lg.jp/material/files/group/13/R6kessan.xlsx",
+          "observed_on": "https://www.town.aichi-mihama.lg.jp/gyoseijoho/gyozaisei/zaisei-yosan-kessan/1564.html",
+          "sha256": "3cc9a6fd8e4a9b3fa86314de20deb2a12623f0f681613936a90f5bf730f32159",
+          "fetched_at": "2026-08-27T13:38:34Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.aichi-mihama.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.aichi-mihama.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aichi-mihama.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6kessan.xlsx「令和6年度決算 (Excelファイル: 552.1KB)」, sha256:3cc9a6fd）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.karumai.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.karumai.iwate.jp/article/gyosei/gikai/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.karumai.iwate.jp/article/gyosei/gikai/",
+          "observed_on": "http://www.town.karumai.iwate.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.karumai.iwate.jp/article/gyosei/gikai/",
+          "observed_on": "https://www.town.karumai.iwate.jp/article/gyosei/gikai/",
+          "sha256": "e2b1b8ba91b03a6586aa56575b5b929fb069751b1ce0d9800cc00d555980e6e1",
+          "fetched_at": "2026-08-27T13:26:13Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

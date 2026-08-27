@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.shoo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.shoo.lg.jp/site/gikai/1144.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.shoo.lg.jp/site/gikai/1144.html",
+          "observed_on": "https://www.town.shoo.lg.jp/site/gikai/list2-3.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.shoo.lg.jp/site/gikai/1144.html",
+          "observed_on": "https://www.town.shoo.lg.jp/site/gikai/1144.html",
+          "sha256": "3f50eaaf1b27951f4f66225cd50fac9c339d7f60bfc0e88244685b7fe67edcb5",
+          "fetched_at": "2026-08-27T14:07:46Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed finance section at http://www.town.shoo.lg.jp/life/6/18/ (label: 計画・施策・財政) 入口 https://www.town.shoo.lg.jp/life/6/18/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shoo.lg.jp/life/6/18/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shoo.lg.jp/life/6/18/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shoo.lg.jp/life/6/18/",
@@ -72,9 +87,21 @@
           "observed_on": "https://www.town.shoo.lg.jp/life/6/18/",
           "sha256": "19ce1e370a239c701a181e04d56f77db7895954b8fdc601eb392abab7ad87f84",
           "fetched_at": "2026-08-27T09:44:48Z"
+        },
+        {
+          "url": "http://www.town.shoo.lg.jp/life/6/18/",
+          "observed_on": "http://www.town.shoo.lg.jp/",
+          "sha256": "19ce1e370a239c701a181e04d56f77db7895954b8fdc601eb392abab7ad87f84",
+          "fetched_at": "2026-08-27T09:44:48Z"
+        },
+        {
+          "url": "https://www.town.shoo.lg.jp/uploaded/attachment/1072.pdf",
+          "observed_on": "https://www.town.shoo.lg.jp/soshiki/1/1022.html",
+          "sha256": "ee7d493d6422e2e9ca2e53cee70eb1a95f14dc05b0e8657acf35e15e456d574e",
+          "fetched_at": "2026-08-27T13:42:23Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shoo.lg.jp/life/6/18/ (label: 計画・施策・財政) 入口 https://www.town.shoo.lg.jp/life/6/18/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shoo.lg.jp/life/6/18/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1072.pdf「平成27年度決算 [PDFファイル／64KB]」, sha256:ee7d493d）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

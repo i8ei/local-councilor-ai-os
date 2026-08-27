@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.nagasaki.lg.jp/life/7/52/ (label: 財政（予算・決算）) 入口 https://www.city.nagasaki.lg.jp/life/7/52/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagasaki.lg.jp/life/7/52/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nagasaki.lg.jp/life/7/52/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nagasaki.lg.jp/life/7/52/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.nagasaki.lg.jp/life/7/52/",
           "sha256": "0b663d501553bc18863e25f50343b3ab8ab53abdcad334c818742660e92454e5",
           "fetched_at": "2026-08-27T09:37:34Z"
+        },
+        {
+          "url": "http://www.city.nagasaki.lg.jp/life/7/52/",
+          "observed_on": "http://www.city.nagasaki.lg.jp/",
+          "sha256": "0b663d501553bc18863e25f50343b3ab8ab53abdcad334c818742660e92454e5",
+          "fetched_at": "2026-08-27T09:37:34Z"
+        },
+        {
+          "url": "https://www.city.nagasaki.lg.jp/uploaded/attachment/58179.xlsx",
+          "observed_on": "https://www.city.nagasaki.lg.jp/page/79063.html",
+          "sha256": "5c772835618697a5245b0912f57e337e512b45baf46c5a3189cafc19dcb9ccfa",
+          "fetched_at": "2026-08-27T13:45:38Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.nagasaki.lg.jp/life/7/52/ (label: 財政（予算・決算）) 入口 https://www.city.nagasaki.lg.jp/life/7/52/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nagasaki.lg.jp/life/7/52/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（58179.xlsx「令和6年度財政状況資料集 （Excelファイル／563KB）」, sha256:5c772835）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

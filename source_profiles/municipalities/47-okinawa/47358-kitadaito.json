@@ -43,11 +43,11 @@
       "notes": "Observed finance section at https://vill.kitadaito.okinawa.jp/docs/2022030900011/ (label: 2026.08.21 財政状況資料集) 入口 https://vill.kitadaito.okinawa.jp/docs/2022030900011/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://vill.kitadaito.okinawa.jp/docs/2022030900011/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://vill.kitadaito.okinawa.jp/docs/2022030900011/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://vill.kitadaito.okinawa.jp/docs/2022030900011/",
@@ -59,9 +59,15 @@
           "observed_on": "https://vill.kitadaito.okinawa.jp/docs/2022030900011/",
           "sha256": "d2171a59bddc088286b715482d76aca3296c2eef51e7f194cdc2526e557b42a5",
           "fetched_at": "2026-08-27T09:41:31Z"
+        },
+        {
+          "url": "https://vill.kitadaito.okinawa.jp/docs/2022030900011/file_contents/zaisei473588-2017.xlsx",
+          "observed_on": "https://vill.kitadaito.okinawa.jp/docs/2022030900011/",
+          "sha256": "465f3a62c14cb90b818770a8d28b6fc9560d0d21458335cff2faedcefa3c57f5",
+          "fetched_at": "2026-08-27T13:48:24Z"
         }
       ],
-      "notes": "Observed finance section at https://vill.kitadaito.okinawa.jp/docs/2022030900011/ (label: 2026.08.21 財政状況資料集) 入口 https://vill.kitadaito.okinawa.jp/docs/2022030900011/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://vill.kitadaito.okinawa.jp/docs/2022030900011/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaisei473588-2017.xlsx「平成２９年度①[XLSX：545KB]」, sha256:465f3a62）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

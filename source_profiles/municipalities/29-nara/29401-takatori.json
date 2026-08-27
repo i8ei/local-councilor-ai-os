@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.takatori.nara.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.takatori.nara.jp/soshiki_view.php?so_cd1=2&so_cd2=2&so_cd3=0&so_cd4=0&so_cd5=0&bn_cd=12",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.takatori.nara.jp/category_list.php?frmCd=1-1-5-0-0",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www.town.takatori.nara.jp/soshiki_view.php?so_cd1=2&so_cd2=2&so_cd3=0&so_cd4=0&so_cd5=0&bn_cd=12",
-          "observed_on": "http://www.town.takatori.nara.jp/contents_detail.php?co=new&frmId=2667",
-          "fetched_at": "2026-08-27T07:06:44Z"
+          "url": "https://www.town.takatori.nara.jp/category_list.php?frmCd=1-1-5-0-0",
+          "observed_on": "http://www.town.takatori.nara.jp/category_list.php?frmCd=1-0-0-0-0",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.takatori.nara.jp/category_list.php?frmCd=1-1-5-0-0",
+          "observed_on": "https://www.town.takatori.nara.jp/category_list.php?frmCd=1-1-5-0-0",
+          "sha256": "f790343d7a7d9f91f314932678827d0b0e6fac541a4428035f917af5b0c81d3e",
+          "fetched_at": "2026-08-27T14:04:09Z"
+        },
+        {
+          "url": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2539&frmCd=1-1-5-5-0",
+          "observed_on": "https://www.town.takatori.nara.jp/category_list.php?frmCd=1-1-5-0-0",
+          "sha256": "4b517964ee911648f19a744652d97f7106cf91266cb45735afac09da2b5e03f8",
+          "fetched_at": "2026-08-27T14:04:10Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.takatori.nara.jp/soshiki_view.php?so_cd1=2&so_cd2=2&so_cd3=0&so_cd4=0&so_cd5=0&bn_cd=12 (label: 議事録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

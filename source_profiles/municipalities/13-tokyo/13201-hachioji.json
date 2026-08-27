@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.hachioji.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/sigikaidayori/p030112.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/sigikaidayori/p030112.html",
+          "observed_on": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/sigikaidayori/p030112.html",
+          "observed_on": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/sigikaidayori/p030112.html",
+          "sha256": "46eec3918647e6e0f4baaf93c03dac3f1a9dd2369a940eff31e2c66bb87b6ca8",
+          "fetched_at": "2026-08-27T13:42:42Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

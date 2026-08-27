@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.suita.osaka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/suita/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.suita.osaka.jp/shigikai/1041514/1041515.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/suita/WebView/rd/council_1.html",
-          "observed_on": "http://www.city.suita.osaka.jp/",
-          "fetched_at": "2026-08-27T06:27:12Z"
+          "url": "https://www.city.suita.osaka.jp/shigikai/1041514/1041515.html",
+          "observed_on": "http://www.city.suita.osaka.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.suita.osaka.jp/shigikai/1041514/1041515.html",
+          "observed_on": "https://www.city.suita.osaka.jp/shigikai/1041514/1041515.html",
+          "sha256": "59162525e96beb869b71b7e5abc7ed4206c7f03fc00d94345e04973de75d4603",
+          "fetched_at": "2026-08-27T14:01:39Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/suita/WebView/rd/council_1.html (label: 市議会9月定例会の日程・中継はこちら)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -42,11 +50,11 @@
       "notes": "Observed regulations index at http://www.city.suita.osaka.jp/shisei/1020093/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
@@ -58,9 +66,21 @@
           "observed_on": "https://www.city.suita.osaka.jp/shisei/1018870/index.html",
           "sha256": "79d2dd00d27de106f6aab47111e61ec1f07be6884a09c77ef5d14a86ef0736b0",
           "fetched_at": "2026-08-27T09:50:31Z"
+        },
+        {
+          "url": "http://www.city.suita.osaka.jp/shisei/1018870/index.html",
+          "observed_on": "http://www.city.suita.osaka.jp/",
+          "sha256": "79d2dd00d27de106f6aab47111e61ec1f07be6884a09c77ef5d14a86ef0736b0",
+          "fetched_at": "2026-08-27T09:50:31Z"
+        },
+        {
+          "url": "https://www.city.suita.osaka.jp/_res/projects/default_project/_page_/001/020/212/sitasinozaiseiR7.12.pdf",
+          "observed_on": "https://www.city.suita.osaka.jp/shisei/1018870/1020212.html",
+          "sha256": "563ed49a941d54e959109a076fbf49131d2b09591a52e90c320ad1c7f2b6288c",
+          "fetched_at": "2026-08-27T13:40:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.suita.osaka.jp/shisei/1018870/index.html (label: 市の財政・会計) 入口 https://www.city.suita.osaka.jp/shisei/1018870/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.suita.osaka.jp/shisei/1018870/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（sitasinozaiseiR7.12.pdf「吹田市の財政（令和7年12月1日公表） （PDF 532.6 KB）」, sha256:563ed49a）にて構造マーカー（歳入・歳出・予算現額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

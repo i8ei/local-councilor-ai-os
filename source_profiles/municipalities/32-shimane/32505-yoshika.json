@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.yoshika.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.yoshika.lg.jp/about/gikaisenkyo/gikai/gijiroku.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.yoshika.lg.jp/about/gikaisenkyo/gikai/gijiroku.html",
+          "observed_on": "https://www.town.yoshika.lg.jp/about/gikaisenkyo/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.yoshika.lg.jp/about/gikaisenkyo/gikai/gijiroku.html",
+          "observed_on": "https://www.town.yoshika.lg.jp/about/gikaisenkyo/gikai/gijiroku.html",
+          "sha256": "edf8c2f71a6b23199f0807f7ecfadffed22b66fb2636ab2c767bd63fe880caa5",
+          "fetched_at": "2026-08-27T14:05:35Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

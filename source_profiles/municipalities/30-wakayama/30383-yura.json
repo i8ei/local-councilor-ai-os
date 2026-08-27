@@ -56,11 +56,11 @@
       "notes": "Observed finance section at http://www.town.yura.wakayama.jp/bunya/zaisei/ (label: 行財政) 入口 http://www.town.yura.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.yura.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.yura.wakayama.jp/bunya/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
@@ -72,9 +72,15 @@
           "observed_on": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
           "sha256": "8ddab9d2c4a21e823704f8e290ea545497b72d5213f793c10e0204e2ba1ec700",
           "fetched_at": "2026-08-27T09:53:47Z"
+        },
+        {
+          "url": "http://www.town.yura.wakayama.jp/docs/2017052400014/files/H27zaiseijyoukyoushiryousyu.xlsx",
+          "observed_on": "http://www.town.yura.wakayama.jp/docs/2017052400014/",
+          "sha256": "6cad44e4ee5b93f0deee179231a82df8746db41f93096e4ee41020f405b59900",
+          "fetched_at": "2026-08-27T13:41:59Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yura.wakayama.jp/bunya/zaisei/ (label: 行財政) 入口 http://www.town.yura.wakayama.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.yura.wakayama.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.yura.wakayama.jp/bunya/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H27zaiseijyoukyoushiryousyu.xlsx「平成27年度(689KB)」, sha256:6cad44e4）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

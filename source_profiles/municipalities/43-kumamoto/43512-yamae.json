@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.yamae.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.yamae.lg.jp/kiji0031444/index.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.yamae.lg.jp/kiji0031444/index.html",
+          "observed_on": "https://www.vill.yamae.lg.jp/list00213.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.vill.yamae.lg.jp/kiji0031444/index.html",
+          "observed_on": "https://www.vill.yamae.lg.jp/kiji0031444/index.html",
+          "sha256": "ac9535ab4b564f0d615d418731107f2daef70fe69f46b48fe64d7f066e37035d",
+          "fetched_at": "2026-08-27T14:10:28Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.vill.yamae.lg.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.yamae.lg.jp/list00224.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.yamae.lg.jp/list00224.html",
@@ -51,9 +66,21 @@
           "observed_on": "https://www.vill.yamae.lg.jp/list00224.html",
           "sha256": "bb31c7b2f4274b8cbdebbb5bc3bbae0d0bfebb0e897a6a7ffa55ba9b3ebaa56c",
           "fetched_at": "2026-08-27T09:39:04Z"
+        },
+        {
+          "url": "http://www.vill.yamae.lg.jp/list00224.html",
+          "observed_on": "http://www.vill.yamae.lg.jp/",
+          "sha256": "bb31c7b2f4274b8cbdebbb5bc3bbae0d0bfebb0e897a6a7ffa55ba9b3ebaa56c",
+          "fetched_at": "2026-08-27T09:39:04Z"
+        },
+        {
+          "url": "https://www.vill.yamae.lg.jp/kiji003421/3_421_43_hikaku(H16).pdf",
+          "observed_on": "https://www.vill.yamae.lg.jp/kiji003421/index.html",
+          "sha256": "f98c00fd0d977c36608863b08f2ce823f4691c559747d64259e3fcba4a3bb259",
+          "fetched_at": "2026-08-27T13:46:40Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.yamae.lg.jp/list00224.html (label: 予算・決算) 入口 https://www.vill.yamae.lg.jp/list00224.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.yamae.lg.jp/list00224.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_421_43_hikaku(H16).pdf「平成16年度財政比較分析表 （PDF：17.1キロバイト）」, sha256:f98c00fd）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

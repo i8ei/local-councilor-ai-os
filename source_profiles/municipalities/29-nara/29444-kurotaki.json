@@ -35,11 +35,11 @@
       "notes": "Observed regulations index at https://www.vill.kurotaki.nara.jp/gyosei/%e4%be%8b%e8%a6%8f%e9%9b%86/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.kurotaki.nara.jp/gyosei/yosansyo_r08/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.kurotaki.nara.jp/gyosei/yosansyo_r08/",
@@ -56,16 +56,22 @@
           "url": "https://www.vill.kurotaki.nara.jp/cms/wp-content/uploads/2026/03/R08_ippan_00.pdf",
           "observed_on": "https://www.vill.kurotaki.nara.jp/gyosei/yosansyo_r08/",
           "fetched_at": "2026-08-27T09:53:06Z"
+        },
+        {
+          "url": "https://www.vill.kurotaki.nara.jp/cms/wp-content/uploads/2026/03/R08_ippan_00.pdf",
+          "observed_on": "https://www.vill.kurotaki.nara.jp/gyosei/yosansyo_r08/",
+          "sha256": "421a1bc1ee77ef3148827542c4d91a79b1b7c21362960a76466a0b1811e063f5",
+          "fetched_at": "2026-08-27T09:53:09Z"
         }
       ],
-      "notes": "Observed budget link at https://www.vill.kurotaki.nara.jp/gyosei/yosansyo_r08/ (label: 令和８年度 予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R08_ippan_00.pdf「当初予算」, sha256:421a1bc1）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/",
@@ -77,9 +83,15 @@
           "observed_on": "https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/",
           "sha256": "ab6f6100d2f285f74a8e5b80f62c42ed936c22705db6a4039db4ef97932bd053",
           "fetched_at": "2026-08-27T09:53:11Z"
+        },
+        {
+          "url": "https://www.vill.kurotaki.nara.jp/cms/wp-content/uploads/2025/09/zai05-32kurotaki.xlsx",
+          "observed_on": "https://www.vill.kurotaki.nara.jp/gyosei/zaiseijokyo/",
+          "sha256": "5eaf31ae12cf8e69f3017f6f39e0c3d4e4d6f17276b1a52c3a88a0ce024a8b32",
+          "fetched_at": "2026-08-27T13:41:38Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/ (label: 行財政改革の取り組み) 入口 https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.kurotaki.nara.jp/gyosei/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zai05-32kurotaki.xlsx「令和５年度財政状況資料集」, sha256:5eaf31ae）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

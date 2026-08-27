@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.iida.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/iida/SpTop.html",
-      "verified_at": "2026-08-27T10:09:08Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.iida.lg.jp/site/assembly/gikaikousei.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/iida/SpTop.html",
+          "url": "https://www.city.iida.lg.jp/site/assembly/gikaikousei.html",
           "observed_on": "http://www.city.iida.lg.jp/site/assembly/teireikai0809.html",
-          "fetched_at": "2026-08-27T06:57:46Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/iida/SpTop.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/iida/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:09:09Z"
+          "url": "https://www.city.iida.lg.jp/site/assembly/gikaikousei.html",
+          "observed_on": "https://www.city.iida.lg.jp/site/assembly/gikaikousei.html",
+          "sha256": "6973bdb62af8ac3f6ae4dc410ad50e9f583911434e675bfdb2855a784fa915fd",
+          "fetched_at": "2026-08-27T13:46:36Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/iida/SpTop.html (label: 会議録検索システム （外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

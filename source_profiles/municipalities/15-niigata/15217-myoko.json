@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.city.myoko.niigata.jp/city-info/finance/ (label: 財政) 入口 https://www.city.myoko.niigata.jp:443/city-info/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.myoko.niigata.jp:443/city-info/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.myoko.niigata.jp:443/city-info/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.myoko.niigata.jp/city-info/audit/audit05/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.myoko.niigata.jp/city-info/audit/audit05/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.myoko.niigata.jp:443/city-info/audit/audit05/",
           "sha256": "df5ba7028992efdede0c110d219395131680b25e8ba861ef031d09eb3423fead",
           "fetched_at": "2026-08-27T10:04:29Z"
+        },
+        {
+          "url": "http://www.city.myoko.niigata.jp/city-info/audit/audit05/",
+          "observed_on": "http://www.city.myoko.niigata.jp/",
+          "sha256": "df5ba7028992efdede0c110d219395131680b25e8ba861ef031d09eb3423fead",
+          "fetched_at": "2026-08-27T10:04:29Z"
+        },
+        {
+          "url": "https://www.city.myoko.niigata.jp:443/fs/2/7/8/4/1/6/_/%E3%80%90%E5%A0%B1%E5%91%8A%E7%89%88%E3%80%91R6%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E3%81%BB%E3%81%8B%E6%B1%BA%E7%AE%97%E5%AF%A9%E6%9F%BB%E6%84%8F%E8%A6%8B%E6%9B%B8%EF%BC%88%E4%BF%AE%E6%AD%A3%E7%89%88%EF%BC%89.pdf",
+          "observed_on": "https://www.city.myoko.niigata.jp:443/docs/74914.html",
+          "sha256": "6b3b7a3155711f110deb4a457915fe7eb40e01d467752f710f115f19ba93ff54",
+          "fetched_at": "2026-08-27T13:35:08Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.myoko.niigata.jp/city-info/audit/audit05/ (label: 決算審査結果) 入口 https://www.city.myoko.niigata.jp:443/city-info/audit/audit05/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.myoko.niigata.jp:443/city-info/audit/audit05/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.myoko.niigata.jp:443/city-info/audit/audit05/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E3%80%90%E5%A0%B1%E5%91%8A%E7%89%88%E3%80%91R6%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E3%81%BB%E3%81%8B%E6%B1%BA%E7%AE%97%E5%AF%A9%E6%9F%BB%E6%84%8F%E8%A6%8B%E6%9B%B8%EF%BC%88%E4%BF%AE%E6%AD%A3%E7%89%88%EF%BC%89.pdf「令和6年度 一般会計・特別会計等決算審査意見書 (PDF 1.08MB)」, sha256:6b3b7a31）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

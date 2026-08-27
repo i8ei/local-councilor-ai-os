@@ -6,19 +6,36 @@
   "official_home_url": "http://www2.city.mine.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www2.city.mine.lg.jp/gyosei/shigikai/11159.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www2.city.mine.lg.jp/gyosei/shigikai/11156.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www2.city.mine.lg.jp/gyosei/shigikai/11159.html",
+          "url": "https://www2.city.mine.lg.jp/gyosei/shigikai/11156.html",
           "observed_on": "https://www2.city.mine.lg.jp/gyosei/index.html",
-          "fetched_at": "2026-08-27T06:35:27Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www2.city.mine.lg.jp/gyosei/shigikai/11156.html",
+          "observed_on": "https://www2.city.mine.lg.jp/gyosei/shigikai/11156.html",
+          "sha256": "eaa62373bd1253f22984d88b917c77d4b564b5851df5d123adc6199dc26ee832",
+          "fetched_at": "2026-08-27T14:06:32Z"
+        },
+        {
+          "url": "https://www2.city.mine.lg.jp/soshiki/gikai/shigikai/teireikai_rinjikai/kekka/giketukekka_2/12838.html",
+          "observed_on": "https://www2.city.mine.lg.jp/gyosei/shigikai/11156.html",
+          "sha256": "a2a20435d3df155f368d935fd4ba259a54e52f255b80ae2d12a7737d99616fc5",
+          "fetched_at": "2026-08-27T14:06:33Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www2.city.mine.lg.jp/gyosei/shigikai/11159.html (label: 会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +80,11 @@
       "notes": "Observed budget link at https://www2.city.mine.lg.jp/gyosei/joho/3788.html (label: 平成30年度一般会計補正予算に係る専決処分の不承認とその後の措置等について) 入口 https://www2.city.mine.lg.jp/gyosei/joho/3788.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www2.city.mine.lg.jp/gyosei/joho/3788.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www2.city.mine.lg.jp/gyosei/joho/3751.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www2.city.mine.lg.jp/gyosei/joho/3751.html",
@@ -79,9 +96,15 @@
           "observed_on": "https://www2.city.mine.lg.jp/gyosei/joho/3751.html",
           "sha256": "8bdcad4055ef858ec33d65a7e4a3734d91bc3d7dfbd7c6a71cc68f41d2498a6e",
           "fetched_at": "2026-08-27T09:45:31Z"
+        },
+        {
+          "url": "https://www2.city.mine.lg.jp/material/files/group/3/shouhizeihoukoku.pdf",
+          "observed_on": "https://www2.city.mine.lg.jp/gyosei/joho/3751.html",
+          "sha256": "a85f65eeb50ec15038fce396b2a93b86d6189e88b2cc11203bc76a87c1ba3902",
+          "fetched_at": "2026-08-27T13:42:44Z"
         }
       ],
-      "notes": "Observed settlement link at https://www2.city.mine.lg.jp/gyosei/joho/3751.html (label: 平成29年度美祢市一般会計決算及び平成29年度美祢市農業集落排水事業特別会計決算不認定に係る措置の報告について) 入口 https://www2.city.mine.lg.jp/gyosei/joho/3751.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www2.city.mine.lg.jp/gyosei/joho/3751.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（shouhizeihoukoku.pdf「消費税申告納付事務の遺漏に係る調査報告書 (PDFファイル: 563.1KB)」, sha256:a85f65ee）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

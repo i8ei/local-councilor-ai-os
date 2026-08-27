@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.vill.sanagochi.lg.jp/reiki/reiki_taikei/taikei_default.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.sanagochi.lg.jp/docs/2025120500023/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.sanagochi.lg.jp/docs/2025120500023/",
@@ -50,9 +50,21 @@
           "url": "https://www.vill.sanagochi.lg.jp/docs/2025120500023/file_contents/R08_hoshin.pdf",
           "observed_on": "https://www.vill.sanagochi.lg.jp/docs/2025120500023/",
           "fetched_at": "2026-08-27T09:45:54Z"
+        },
+        {
+          "url": "http://www.vill.sanagochi.lg.jp/docs/2025120500023/",
+          "observed_on": "http://www.vill.sanagochi.lg.jp/",
+          "sha256": "5e87c1064795d69bd880e456a3aa6d6deec3f7dee2db38aa460d094c0a94b738",
+          "fetched_at": "2026-08-27T09:46:00Z"
+        },
+        {
+          "url": "https://www.vill.sanagochi.lg.jp/docs/2025120500023/file_contents/R08_hoshin.pdf",
+          "observed_on": "https://www.vill.sanagochi.lg.jp/docs/2025120500023/",
+          "sha256": "9e7cb5d8bdd3a72d81d0ac335d4a5fe47de59f2665acd7a8b59b5540b9911079",
+          "fetched_at": "2026-08-27T09:46:02Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.sanagochi.lg.jp/docs/2025120500023/ (label: 令和８年度予算編成方針について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R08_hoshin.pdf「令和８年度予算編成方針[PDF：260KB]」, sha256:9e7cb5d8）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

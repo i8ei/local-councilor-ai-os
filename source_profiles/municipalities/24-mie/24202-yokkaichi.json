@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.yokkaichi.lg.jp/www/index.html",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.yokkaichi.lg.jp/www/contents/1001000002959/index.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.yokkaichi.lg.jp/www/contents/1001000002959/index.html",
+          "observed_on": "https://www.city.yokkaichi.lg.jp/cgi-bin/jump.cgi?http://www.city.yokkaichi.mie.jp/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.yokkaichi.lg.jp/www/contents/1001000002959/index.html",
+          "observed_on": "https://www.city.yokkaichi.lg.jp/www/contents/1001000002959/index.html",
+          "sha256": "f70a1de9687dda5e41af40fc9488f3c1657ef423df82f0c2f206d49883bf660e",
+          "fetched_at": "2026-08-27T13:59:34Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

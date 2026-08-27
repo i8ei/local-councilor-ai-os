@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.joso.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.joso.lg.jp/kurashi_gyousei/shisei/gikai/shigikai_tayori/r8/255.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.joso.lg.jp/kurashi_gyousei/shisei/gikai/shigikai_tayori/r8/255.html",
+          "observed_on": "http://www.city.joso.lg.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.joso.lg.jp/kurashi_gyousei/shisei/gikai/shigikai_tayori/r8/255.html",
+          "observed_on": "https://www.city.joso.lg.jp/kurashi_gyousei/shisei/gikai/shigikai_tayori/r8/255.html",
+          "sha256": "9af4e99cea5a8c9012968b6b6c910db92c308035a89365569ebb51b63ca22620",
+          "fetched_at": "2026-08-27T13:29:00Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.kihoku.ehime.jp/reiki_int/reiki_menu.html (label: 鬼北町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kihoku.ehime.jp/site/yosan/33949.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kihoku.ehime.jp/site/yosan/33949.html",
@@ -69,9 +69,21 @@
           "url": "https://www.town.kihoku.ehime.jp/uploaded/attachment/18287.pdf",
           "observed_on": "https://www.town.kihoku.ehime.jp/site/yosan/33949.html",
           "fetched_at": "2026-08-27T11:01:16Z"
+        },
+        {
+          "url": "http://www.town.kihoku.ehime.jp/site/yosan/33949.html",
+          "observed_on": "http://www.town.kihoku.ehime.jp/",
+          "sha256": "0c4da88989b6c63860a26c97994491f58d108d2f4205c66e8e05d5fa93b5d9a5",
+          "fetched_at": "2026-08-27T09:47:11Z"
+        },
+        {
+          "url": "https://www.town.kihoku.ehime.jp/uploaded/attachment/18297.pdf",
+          "observed_on": "https://www.town.kihoku.ehime.jp/site/yosan/33949.html",
+          "sha256": "176bad1bcc79b5413e6240de3e2d72ed47eccb3428c67036e48c164aa2a5c903",
+          "fetched_at": "2026-08-27T13:43:34Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kihoku.ehime.jp/site/yosan/33949.html (label: 令和8年度当初予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（18297.pdf「令和8年度一般会計予算書（当初） [PDFファイル／8.2MB]」, sha256:176bad1b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

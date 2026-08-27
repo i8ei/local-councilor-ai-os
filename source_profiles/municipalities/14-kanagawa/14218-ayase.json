@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.ayase.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ayase.kanagawa.jp/gyoseijoho/shigikai/shigikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.ayase.kanagawa.jp/gyoseijoho/shigikai/shigikaidayori/index.html",
+          "observed_on": "https://www.city.ayase.kanagawa.jp/gyoseijoho/shigikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.ayase.kanagawa.jp/gyoseijoho/shigikai/shigikaidayori/index.html",
+          "observed_on": "https://www.city.ayase.kanagawa.jp/gyoseijoho/shigikai/shigikaidayori/index.html",
+          "sha256": "c71bddef12411a89e0b9965e230287d34c2c7c8c3a1c56fc1e6dc3229293bda0",
+          "fetched_at": "2026-08-27T13:43:54Z"
+        },
+        {
+          "url": "https://www.city.ayase.kanagawa.jp/soshiki/gikaijimukyoku/shigikaidayori/25/23820.html",
+          "observed_on": "https://www.city.ayase.kanagawa.jp/gyoseijoho/shigikai/shigikaidayori/index.html",
+          "sha256": "c32e8f13a1d80f6a403adcaf00961e54bdf4dbbb7e4bd782d0b84d3b71fd894c",
+          "fetched_at": "2026-08-27T13:43:55Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

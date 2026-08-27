@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.shintotsukawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.shintotsukawa.lg.jp/hotnews/detail/00005586.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.shintotsukawa.lg.jp/hotnews/detail/00005586.html",
+          "observed_on": "https://www.town.shintotsukawa.lg.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.shintotsukawa.lg.jp/hotnews/detail/00005586.html",
+          "observed_on": "https://www.town.shintotsukawa.lg.jp/hotnews/detail/00005586.html",
+          "sha256": "7c7134711ac7a4523cc448d2d25e9c8a9de8907ca04b7156b1aea893b301a7f0",
+          "fetched_at": "2026-08-27T13:24:10Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

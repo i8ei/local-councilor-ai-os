@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/nakai/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
           "sha256": "ff0a73a64898eb63accaf1691a9b31a4bb48d0f3abdad1f3c289380acddffbec",
           "fetched_at": "2026-08-27T10:28:21Z"
+        },
+        {
+          "url": "https://www.town.nakai.kanagawa.jp/material/files/group/4/kisyahappyou0708.pdf",
+          "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/985.html",
+          "sha256": "e42cf1001e02b055be5fad6126f4a00e53445a4ab0e42b8df6f73b6fedaa4d37",
+          "fetched_at": "2026-08-27T13:34:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（kisyahappyou0708.pdf「補正予算の概要（記者発表資料）令和3年7月8日（木曜日） (PDFファイル: 289.4KB)」, sha256:e42cf100）にて構造マーカー（当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html",
           "sha256": "ff0a73a64898eb63accaf1691a9b31a4bb48d0f3abdad1f3c289380acddffbec",
           "fetched_at": "2026-08-27T10:28:21Z"
+        },
+        {
+          "url": "https://www.town.nakai.kanagawa.jp/material/files/group/32/R6kessansho.pdf",
+          "observed_on": "https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/987.html",
+          "sha256": "036a307028a909ca5a55e9d2f56f6771febbd81254d7c6dcb0006041cb1c6c1f",
+          "fetched_at": "2026-08-27T13:34:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nakai.kanagawa.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansho.pdf「令和6年度一般会計特別会計企業会計歳入歳出決算書及び付属資料 (PDFファイル: 7.5MB)」, sha256:036a3070）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

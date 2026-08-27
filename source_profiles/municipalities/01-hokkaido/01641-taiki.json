@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.taiki.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.taiki.hokkaido.jp/choseijoho/taikichogikai/1698.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.taiki.hokkaido.jp/choseijoho/taikichogikai/1700.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.taiki.hokkaido.jp/choseijoho/taikichogikai/1698.html",
+          "url": "https://www.town.taiki.hokkaido.jp/choseijoho/taikichogikai/1700.html",
           "observed_on": "https://www.town.taiki.hokkaido.jp/choseijoho/taikichogikai/index.html",
-          "fetched_at": "2026-08-27T06:51:22Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.taiki.hokkaido.jp/choseijoho/taikichogikai/1700.html",
+          "observed_on": "https://www.town.taiki.hokkaido.jp/choseijoho/taikichogikai/1700.html",
+          "sha256": "e2deeea0cd47641a6c9d05e4196afd1867c67be2544f8334513321f804b43cc0",
+          "fetched_at": "2026-08-27T13:25:34Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.taiki.hokkaido.jp/choseijoho/taikichogikai/1698.html (label: 会議録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

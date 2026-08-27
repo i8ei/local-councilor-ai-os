@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.naie.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.naie.hokkaido.jp/gikai/g_kaigiroku/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.naie.hokkaido.jp/gikai/g_kaigiroku/",
+          "observed_on": "http://www.town.naie.hokkaido.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.naie.hokkaido.jp/gikai/g_kaigiroku/",
+          "observed_on": "http://www.town.naie.hokkaido.jp/gikai/g_kaigiroku/",
+          "sha256": "20438d879996a72c8ae922b1005a5d38df9ddae7df9b947bd6f3538e0b37b3e3",
+          "fetched_at": "2026-08-27T13:24:10Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

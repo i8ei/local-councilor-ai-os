@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.bungotakada.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
-      "verified_at": "2026-08-27T09:39:12Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.bungotakada.oita.jp/site/gikai-subsite/43084.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
+          "url": "https://www.city.bungotakada.oita.jp/site/gikai-subsite/43084.html",
           "observed_on": "http://www.city.bungotakada.oita.jp/site/gikai-subsite/",
-          "fetched_at": "2026-08-27T06:20:48Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
-          "sha256": "d2f65b1830dd37acad87b306b06a5fc6184a427514887c99b19204f1c323c3c3",
-          "fetched_at": "2026-08-27T09:39:12Z"
+          "url": "https://www.city.bungotakada.oita.jp/site/gikai-subsite/43084.html",
+          "observed_on": "https://www.city.bungotakada.oita.jp/site/gikai-subsite/43084.html",
+          "sha256": "5df7aee0feb188c544d08b79ad84c766bc6f37f96785ce4a7363375aa5b81b9a",
+          "fetched_at": "2026-08-27T14:10:49Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html (label: 会議録検索システム（外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",
@@ -56,11 +58,11 @@
       "notes": "Observed budget link at http://www.city.bungotakada.oita.jp/life/4/36/115/ (label: 予算) 入口 https://www.city.bungotakada.oita.jp/life/4/36/115/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.bungotakada.oita.jp/life/4/36/115/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.bungotakada.oita.jp/life/4/36/116/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.bungotakada.oita.jp/life/4/36/116/",
@@ -72,9 +74,21 @@
           "observed_on": "https://www.city.bungotakada.oita.jp/life/4/36/116/",
           "sha256": "473c98f5d7574f25649d2b77773e64ff98fb3cc49cf5e884e30284e8f9e62622",
           "fetched_at": "2026-08-27T09:39:22Z"
+        },
+        {
+          "url": "http://www.city.bungotakada.oita.jp/life/4/36/116/",
+          "observed_on": "http://www.city.bungotakada.oita.jp/",
+          "sha256": "473c98f5d7574f25649d2b77773e64ff98fb3cc49cf5e884e30284e8f9e62622",
+          "fetched_at": "2026-08-27T09:39:22Z"
+        },
+        {
+          "url": "https://www.city.bungotakada.oita.jp/uploaded/attachment/12110.pdf",
+          "observed_on": "https://www.city.bungotakada.oita.jp/soshiki/3/37711.html",
+          "sha256": "828dc6fd8de36fdae0cd6f87378c7398cbca5c05033d1454b15fb8c094f379aa",
+          "fetched_at": "2026-08-27T13:46:55Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.bungotakada.oita.jp/life/4/36/116/ (label: 決算) 入口 https://www.city.bungotakada.oita.jp/life/4/36/116/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.bungotakada.oita.jp/life/4/36/116/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（12110.pdf「令和6年度決算カード [PDFファイル／102KB]」, sha256:828dc6fd）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.maebashi.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "http://www.city.maebashi.gunma.dbsr.jp/index.php",
-      "verified_at": "2026-08-27T10:18:25Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.maebashi.gunma.jp/gikai/4/13369.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.maebashi.gunma.dbsr.jp/index.php",
-          "observed_on": "https://www.city.maebashi.gunma.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:31:13Z"
+          "url": "https://www.city.maebashi.gunma.jp/gikai/4/13369.html",
+          "observed_on": "https://www.city.maebashi.gunma.jp/gikai/4/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://www.city.maebashi.gunma.dbsr.jp/index.php",
-          "observed_on": "http://www.city.maebashi.gunma.dbsr.jp/index.php",
-          "sha256": "be62351ca9b2cdb950617dccd898e786b0a23e3af873bc3e30833eb3056b8d50",
-          "fetched_at": "2026-08-27T10:18:32Z"
+          "url": "https://www.city.maebashi.gunma.jp/gikai/4/13369.html",
+          "observed_on": "https://www.city.maebashi.gunma.jp/gikai/4/13369.html",
+          "sha256": "a0a82bf4372fe0da7406762f70ce63fcd481efb0ffd91c81c0d4b790d80f2af6",
+          "fetched_at": "2026-08-27T13:39:11Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.maebashi.gunma.dbsr.jp/index.php (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

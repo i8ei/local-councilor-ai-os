@@ -63,11 +63,11 @@
       "notes": "Observed finance section at http://www.city.shijonawate.lg.jp/life/8/47/ (label: 財政・会計) 入口 https://www.city.shijonawate.lg.jp/life/8/47/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shijonawate.lg.jp/life/8/47/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shijonawate.lg.jp/life/8/47/223/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shijonawate.lg.jp/life/8/47/223/",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.shijonawate.lg.jp/life/8/47/223/",
           "sha256": "61b4178744905febd6afd5bc1917b662508b95f352c20c316ea46143dfcad815",
           "fetched_at": "2026-08-27T09:51:16Z"
+        },
+        {
+          "url": "http://www.city.shijonawate.lg.jp/life/8/47/223/",
+          "observed_on": "http://www.city.shijonawate.lg.jp/",
+          "sha256": "61b4178744905febd6afd5bc1917b662508b95f352c20c316ea46143dfcad815",
+          "fetched_at": "2026-08-27T09:51:16Z"
+        },
+        {
+          "url": "https://www.city.shijonawate.lg.jp/uploaded/attachment/34119.pdf",
+          "observed_on": "https://www.city.shijonawate.lg.jp/page/111541.html",
+          "sha256": "5f2d8ce691d32407e2d89067e6f353df26c674df9938aaf64454e20fa6ca88cd",
+          "fetched_at": "2026-08-27T13:40:31Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.shijonawate.lg.jp/life/8/47/223/ (label: 決算) 入口 https://www.city.shijonawate.lg.jp/life/8/47/223/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shijonawate.lg.jp/life/8/47/223/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（34119.pdf「令和6年度 一般会計決算書 [PDFファイル／1.98MB]」, sha256:5f2d8ce6）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

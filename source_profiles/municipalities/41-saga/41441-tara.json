@@ -6,37 +6,27 @@
   "official_home_url": "http://www.town.tara.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.tara.lg.jp/chosei/_1010/_1414/_1454.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
-          "observed_on": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html"
+          "url": "https://www.town.tara.lg.jp/chosei/_1010/_1414/_1454.html",
+          "observed_on": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
-          "observed_on": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
-          "sha256": "0eeb0d47700f787dce76069eebac394632fb1117900242d1a679eda644ed02a1",
-          "fetched_at": "2026-08-20T13:52:49Z"
-        },
-        {
-          "url": "https://www.town.tara.lg.jp/chosei/_1010/_1414/_7097.html",
-          "observed_on": "https://www.town.tara.lg.jp/chosei/_1010/_1414.html",
-          "sha256": "7c268107d8513145c78df526610b63afc26b00449a42e7fb6ebeba138d50f8f9",
-          "fetched_at": "2026-08-20T13:52:51Z"
+          "url": "https://www.town.tara.lg.jp/chosei/_1010/_1414/_1454.html",
+          "observed_on": "https://www.town.tara.lg.jp/chosei/_1010/_1414/_1454.html",
+          "sha256": "28bae0ded954ea569e1df18b1cc721f9f1c73a5278825d70357a61532827ed0c",
+          "fetched_at": "2026-08-27T13:29:51Z"
         }
       ],
-      "notes": "索引 https://www.town.tara.lg.jp/chosei/_1010/_1414.html は年度別ページへの静的リンクを列挙（例: /chosei/_1010/_1414/_7097.html「令和7年」）し、各年度ページに12月/9月/6月/3月定例会の日別PDF（日程表/目次/1日目...）が静的に配置（build.pyの発見経路と同じ）。一覧直下に定例会PDFは無く、follow_link_regex '(令和|平成)(元|[0-9]+)年' で同一hostの年度HTMLのみを最大3件辿る（決算審査特別委員会は選択しない）。年度ページに会議録PDFがあれば ready。 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
-      "config": {
-        "council_name": "太良町議会",
-        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
-        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
-        "pdf": true,
-        "follow_link_regex": "(令和|平成)(元|[0-9]+)年"
-      }
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

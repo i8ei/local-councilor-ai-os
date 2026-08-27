@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.yonabaru.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.yonabaru.okinawa.jp/life/5/18/93/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.yonabaru.okinawa.jp/soshiki/18/50.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.yonabaru.okinawa.jp/life/5/18/93/",
+          "url": "https://www.town.yonabaru.okinawa.jp/soshiki/18/50.html",
           "observed_on": "http://www.town.yonabaru.okinawa.jp/life/5/",
-          "fetched_at": "2026-08-27T06:56:05Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.yonabaru.okinawa.jp/soshiki/18/50.html",
+          "observed_on": "https://www.town.yonabaru.okinawa.jp/soshiki/18/50.html",
+          "sha256": "79636b79b27b8da62fbc3a5a1ac15c0d73f7ce91cad176806579a7d81643a578",
+          "fetched_at": "2026-08-27T14:12:33Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.yonabaru.okinawa.jp/life/5/18/93/ (label: 会議録検索システム)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -62,11 +70,11 @@
       "notes": "Observed budget link at http://www.town.yonabaru.okinawa.jp/soshiki/3/9121.html (label: 令和8年度予算) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yonabaru.okinawa.jp/life/5/19/98/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yonabaru.okinawa.jp/life/5/19/98/",
@@ -78,9 +86,21 @@
           "observed_on": "https://www.town.yonabaru.okinawa.jp/life/5/19/98/",
           "sha256": "84758e6079079ab64b4cb29554fa5546ebcf9e06ec11ae305fc2f5873b70ca54",
           "fetched_at": "2026-08-27T09:41:29Z"
+        },
+        {
+          "url": "http://www.town.yonabaru.okinawa.jp/life/5/19/98/",
+          "observed_on": "http://www.town.yonabaru.okinawa.jp/",
+          "sha256": "84758e6079079ab64b4cb29554fa5546ebcf9e06ec11ae305fc2f5873b70ca54",
+          "fetched_at": "2026-08-27T09:41:29Z"
+        },
+        {
+          "url": "https://www.town.yonabaru.okinawa.jp/uploaded/attachment/6090.pdf",
+          "observed_on": "https://www.town.yonabaru.okinawa.jp/soshiki/3/1202.html",
+          "sha256": "9f9889a2a39617b9ee2eb30fa3a65bf88f0f4e75d78ac4ede0ae17fb8f872951",
+          "fetched_at": "2026-08-27T13:48:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yonabaru.okinawa.jp/life/5/19/98/ (label: 財政情報) 入口 https://www.town.yonabaru.okinawa.jp/life/5/19/98/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yonabaru.okinawa.jp/life/5/19/98/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6090.pdf「令和６年度 [PDFファイル／7.27MB]」, sha256:9f9889a2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

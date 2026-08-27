@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.ozora.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.ozora.hokkaido.jp/machinoshirase/chogikai/3/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.ozora.hokkaido.jp/machinoshirase/chogikai/3/index.html",
+          "observed_on": "http://www.town.ozora.hokkaido.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.ozora.hokkaido.jp/machinoshirase/chogikai/3/index.html",
+          "observed_on": "https://www.town.ozora.hokkaido.jp/machinoshirase/chogikai/3/index.html",
+          "sha256": "6dc2e1b179b5a98e1fb2d1e55639c95269acc101effdb087262be2bb935ffbe5",
+          "fetched_at": "2026-08-27T13:25:15Z"
+        },
+        {
+          "url": "https://www.town.ozora.hokkaido.jp/machinoshirase/chogikai/3/2233.html",
+          "observed_on": "https://www.town.ozora.hokkaido.jp/machinoshirase/chogikai/3/index.html",
+          "sha256": "c3cfbdd392edb8c7961a2a4da7922687156600270bc4f46c564fb7b5039380a1",
+          "fetched_at": "2026-08-27T13:25:17Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

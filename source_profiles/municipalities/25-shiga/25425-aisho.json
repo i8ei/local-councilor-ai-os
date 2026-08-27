@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.aisho.shiga.jp/section/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aisho.shiga.jp/chosei/111/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aisho.shiga.jp/chosei/111/yosan/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.aisho.shiga.jp/chosei/111/yosan/index.html",
           "sha256": "61d67b48e9c0d14efb0ea8c1f99389019c1546c2917a4afc743a68264242eaea",
           "fetched_at": "2026-08-27T09:49:52Z"
+        },
+        {
+          "url": "https://www.town.aisho.shiga.jp/material/files/group/6/r08_toushoyosangaiyo.pdf",
+          "observed_on": "https://www.town.aisho.shiga.jp/chosei/111/yosan/14957.html",
+          "sha256": "c428d230c13ee12d3cd88950d4f463b13c278689c6f4658a5d82013903ae2bde",
+          "fetched_at": "2026-08-27T13:39:29Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.aisho.shiga.jp/chosei/111/yosan/index.html (label: 予算) 入口 https://www.town.aisho.shiga.jp/chosei/111/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aisho.shiga.jp/chosei/111/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aisho.shiga.jp/chosei/111/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r08_toushoyosangaiyo.pdf「令和8年度当初予算概要 (PDFファイル: 4.3MB)」, sha256:c428d230）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

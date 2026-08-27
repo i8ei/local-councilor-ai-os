@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.oyabe.toyama.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.oyabe.toyama.jp/shigikai/1003372/1001607.html",
-      "verified_at": "2026-08-27T11:09:40Z",
-      "verified_by": "verify --live",
+      "index_url": "https://www.city.oyabe.toyama.jp/shigikai/1001605/1001633/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www.city.oyabe.toyama.jp/shigikai/1003372/1001607.html",
+          "url": "https://www.city.oyabe.toyama.jp/shigikai/1001605/1001633/index.html",
           "observed_on": "http://www.city.oyabe.toyama.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T06:10:32Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://www.city.oyabe.toyama.jp/shigikai/1003372/1001607.html",
-          "observed_on": "http://www.city.oyabe.toyama.jp/shigikai/1003372/1001607.html",
-          "sha256": "3a5d4f8895133d493203837c2c55db3f22cb00416db9bdf7247f8764616f8cbf",
-          "fetched_at": "2026-08-27T10:04:59Z"
+          "url": "https://www.city.oyabe.toyama.jp/shigikai/1001605/1001633/index.html",
+          "observed_on": "https://www.city.oyabe.toyama.jp/shigikai/1001605/1001633/index.html",
+          "sha256": "a2917a1c760688cb40e774832086f8e288ae4e2dd1b8309f4bf4d3e440192ba6",
+          "fetched_at": "2026-08-27T13:44:50Z"
+        },
+        {
+          "url": "https://www.city.oyabe.toyama.jp/shigikai/1001605/1001633/1007300.html",
+          "observed_on": "https://www.city.oyabe.toyama.jp/shigikai/1001605/1001633/index.html",
+          "sha256": "dfc77a651873f221cf5176701fa2bf56bea47cd7f54aef6e0bf81336f2891540",
+          "fetched_at": "2026-08-27T13:44:50Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.oyabe.toyama.jp/shigikai/1003372/1001607.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

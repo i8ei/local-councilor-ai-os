@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.awa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.awa.lg.jp/gikai/docs/2026052800021/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.awa.lg.jp/gikai/docs/2026052800021/",
+          "observed_on": "https://www.city.awa.lg.jp/gikai/category/bunya/kaigiroku/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.awa.lg.jp/gikai/docs/2026052800021/",
+          "observed_on": "https://www.city.awa.lg.jp/gikai/docs/2026052800021/",
+          "sha256": "2ecb2516bdd26d99af073221d7e73763968cd9489a6ddca49f49f98a97824495",
+          "fetched_at": "2026-08-27T14:06:50Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed finance section at http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ (label: 財政状況) 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
@@ -72,9 +87,21 @@
           "observed_on": "https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
           "sha256": "58830d22154836867509d54a8b8aadd57260fb911902badf047868cb047d562e",
           "fetched_at": "2026-08-27T09:46:02Z"
+        },
+        {
+          "url": "http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/",
+          "observed_on": "http://www.city.awa.lg.jp/",
+          "sha256": "58830d22154836867509d54a8b8aadd57260fb911902badf047868cb047d562e",
+          "fetched_at": "2026-08-27T09:46:02Z"
+        },
+        {
+          "url": "https://www.city.awa.lg.jp/docs/2011040600202/file_contents/file_20263275134156_1.pdf",
+          "observed_on": "https://www.city.awa.lg.jp/docs/2011040600202/",
+          "sha256": "367d698e138d59b2fa3a07fa765f37a47facec1d2acd7d141256b47cca166e49",
+          "fetched_at": "2026-08-27T13:43:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ (label: 財政状況) 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.awa.lg.jp/category/bunya/gyosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（file_20263275134156_1.pdf「令和6年度財政状況資料集[PDF：1.26MB]」, sha256:367d698e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

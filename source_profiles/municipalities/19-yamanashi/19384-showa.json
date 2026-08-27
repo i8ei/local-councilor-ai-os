@@ -6,25 +6,27 @@
   "official_home_url": "http://www.town.showa.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/showa/pg/index.html",
-      "verified_at": "2026-08-27T10:08:35Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.showa.yamanashi.jp/soshiki/22/14250.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/showa/pg/index.html",
-          "observed_on": "http://www.town.showa.yamanashi.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:50:09Z"
+          "url": "https://www.town.showa.yamanashi.jp/soshiki/22/14250.html",
+          "observed_on": "http://www.town.showa.yamanashi.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/showa/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/showa/pg/index.html",
-          "sha256": "a8805c656c662ac7efd2e619212add89f5c000073d348a745913ab113b5a6150",
-          "fetched_at": "2026-08-27T10:08:35Z"
+          "url": "https://www.town.showa.yamanashi.jp/soshiki/22/14250.html",
+          "observed_on": "https://www.town.showa.yamanashi.jp/soshiki/22/14250.html",
+          "sha256": "0426db5d6fe5ce3c19fa91ceb0a92a24bbfbdb57be4d884f19d4e0b0197f3592",
+          "fetched_at": "2026-08-27T13:46:11Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/showa/pg/index.html (label: 議事録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

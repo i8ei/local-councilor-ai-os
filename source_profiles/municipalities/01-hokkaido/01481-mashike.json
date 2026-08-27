@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.mashike.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.mashike.hokkaido.jp/division/gikai/1544764511.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.mashike.hokkaido.jp/division/gikai/1544764511.html",
+          "observed_on": "https://www.town.mashike.hokkaido.jp/division/gikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.mashike.hokkaido.jp/division/gikai/1544764511.html",
+          "observed_on": "https://www.town.mashike.hokkaido.jp/division/gikai/1544764511.html",
+          "sha256": "af43168d782300e7b858ecd93158a8b4f1fb3916b537ce73cff0c0bbded7de89",
+          "fetched_at": "2026-08-27T13:24:35Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

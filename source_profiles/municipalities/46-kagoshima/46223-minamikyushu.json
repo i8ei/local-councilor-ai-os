@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.minamikyushu/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "b98a274d404967f8e6f5f1639e37ac218316e26b8acc80850d2c251ae6cd80ae",
           "fetched_at": "2026-08-27T09:40:43Z"
+        },
+        {
+          "url": "https://www.city.minamikyushu.lg.jp/material/files/group/4/zaiseijijyou7shimoki20260501.pdf",
+          "observed_on": "https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/1/11247.html",
+          "sha256": "5548a84d6472f531f76dcff10e6d5d5d34b594b8940be8d60f481f878978bc19",
+          "fetched_at": "2026-08-27T13:47:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minamikyushu.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijijyou7shimoki20260501.pdf「令和7年度下半期（令和7年度下半期の財政状況・令和8年度当初予算の概要） (PDFファイル: 554.5KB)」, sha256:5548a84d）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

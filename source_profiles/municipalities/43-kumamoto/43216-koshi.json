@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.koshi.lg.jp/list00420.html (label: 予算) 入口 https://www.city.koshi.lg.jp/list00420.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.koshi.lg.jp/list00420.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.koshi.lg.jp/list00421.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.koshi.lg.jp/list00421.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.koshi.lg.jp/list00421.html",
           "sha256": "b61d9aa9c1d35889df68af92587d03892c1f348b981e48cf92fea89d0c170947",
           "fetched_at": "2026-08-27T09:38:16Z"
+        },
+        {
+          "url": "http://www.city.koshi.lg.jp/list00421.html",
+          "observed_on": "http://www.city.koshi.lg.jp/",
+          "sha256": "b61d9aa9c1d35889df68af92587d03892c1f348b981e48cf92fea89d0c170947",
+          "fetched_at": "2026-08-27T09:38:16Z"
+        },
+        {
+          "url": "https://www.city.koshi.lg.jp/kiji00324826/3_24826_39219_up_q6rdshnh.pdf",
+          "observed_on": "https://www.city.koshi.lg.jp/kiji00324826/index.html",
+          "sha256": "ae7c86b47eceee557f138f4e6c549967a8141241b11451ec2fe1f0a8d4f49d03",
+          "fetched_at": "2026-08-27T13:46:02Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.koshi.lg.jp/list00421.html (label: 決算) 入口 https://www.city.koshi.lg.jp/list00421.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.koshi.lg.jp/list00421.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_24826_39219_up_q6rdshnh.pdf「令和6年度決算概要説明資料（PDF：1.11メガバイト）」, sha256:ae7c86b4）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

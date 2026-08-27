@@ -6,25 +6,27 @@
   "official_home_url": "http://www.town.saitama-miyoshi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html",
-      "verified_at": "2026-08-27T10:21:51Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.saitama-miyoshi.lg.jp/gikai/gikaidayori/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html",
+          "url": "https://www.town.saitama-miyoshi.lg.jp/gikai/gikaidayori/index.html",
           "observed_on": "http://www.town.saitama-miyoshi.lg.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T07:03:04Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:21:52Z"
+          "url": "https://www.town.saitama-miyoshi.lg.jp/gikai/gikaidayori/index.html",
+          "observed_on": "https://www.town.saitama-miyoshi.lg.jp/gikai/gikaidayori/index.html",
+          "sha256": "49304a9c0d02adbd73d49de7053bc96f2632b11ca251ed40586fbf86210e5306",
+          "fetched_at": "2026-08-27T13:40:38Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/miyoshi/SpTop.html (label: 本会議 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed finance section at http://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html (label: 調査・統計・財政) 入口 https://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html",
@@ -85,9 +87,21 @@
           "observed_on": "https://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html",
           "sha256": "876a18b43011f7cadac422c427e1d0c35d8f86b5ec4a76013b49a7eee1d46980",
           "fetched_at": "2026-08-27T10:21:59Z"
+        },
+        {
+          "url": "http://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html",
+          "observed_on": "http://www.town.saitama-miyoshi.lg.jp/",
+          "sha256": "876a18b43011f7cadac422c427e1d0c35d8f86b5ec4a76013b49a7eee1d46980",
+          "fetched_at": "2026-08-27T10:21:59Z"
+        },
+        {
+          "url": "https://www.town.saitama-miyoshi.lg.jp/town/chosa/documents/R2zaiseijoukyou.xlsx",
+          "observed_on": "https://www.town.saitama-miyoshi.lg.jp/town/chosa/2007-0314-1349-9.html",
+          "sha256": "79d88f9c93b74e8ee556d28b82336c2260829e5a1160adfd7175143ebca44057",
+          "fetched_at": "2026-08-27T13:32:17Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html (label: 調査・統計・財政) 入口 https://www.town.saitama-miyoshi.lg.jp/town/chosa/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R2zaiseijoukyou.xlsx「令和2年度 （838KB）」, sha256:79d88f9c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

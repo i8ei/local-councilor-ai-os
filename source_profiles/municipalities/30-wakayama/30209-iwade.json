@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.iwade.lg.jp/adv/ba.php?id=14 (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.iwade.lg.jp/life/6/21/93/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iwade.lg.jp/life/6/21/93/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.iwade.lg.jp/life/6/21/93/",
           "sha256": "de09944df2382d2f30d4b088bb275c3b3bac1045c2af0277a3220949891ed92a",
           "fetched_at": "2026-08-27T09:53:31Z"
+        },
+        {
+          "url": "http://www.city.iwade.lg.jp/life/6/21/93/",
+          "observed_on": "http://www.city.iwade.lg.jp/",
+          "sha256": "de09944df2382d2f30d4b088bb275c3b3bac1045c2af0277a3220949891ed92a",
+          "fetched_at": "2026-08-27T09:53:31Z"
+        },
+        {
+          "url": "https://www.city.iwade.lg.jp/uploaded/attachment/8510.pdf",
+          "observed_on": "https://www.city.iwade.lg.jp/soshiki/4/8557.html",
+          "sha256": "9a1cd6e2cdc241c0092998333eedd95bede5de41b026a9195d3ed919dc14a45e",
+          "fetched_at": "2026-08-27T13:41:49Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.iwade.lg.jp/life/6/21/93/ (label: 予算) 入口 https://www.city.iwade.lg.jp/life/6/21/93/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iwade.lg.jp/life/6/21/93/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8510.pdf「当初予算の概要 （PDFファイル／1.04MB）」, sha256:9a1cd6e2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

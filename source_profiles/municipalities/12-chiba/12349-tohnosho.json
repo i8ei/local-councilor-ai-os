@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tohnosho/reiki_menu.html (label: 東庄町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html",
           "sha256": "357d4a17b3f0cd72252fd73ebe35127b71765b22788fda25ac2e26f90a0decac",
           "fetched_at": "2026-08-27T10:24:59Z"
+        },
+        {
+          "url": "https://www.town.tohnosho.chiba.jp/material/files/group/4/R8yosansho.pdf",
+          "observed_on": "https://www.town.tohnosho.chiba.jp/gyoseijoho/gyozaisei/2230.html",
+          "sha256": "0c521d40123fe307ca7841fc773caf03a4fba85ba5348aa29856465255b277c9",
+          "fetched_at": "2026-08-27T13:33:06Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html (label: 行財政) 入口 https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tohnosho.chiba.jp/gyoseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosansho.pdf「令和8年度 予算書 (PDFファイル: 5.7MB)」, sha256:0c521d40）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

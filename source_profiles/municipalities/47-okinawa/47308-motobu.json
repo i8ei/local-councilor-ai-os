@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.motobu.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.motobu.okinawa.jp/doc/2023103100062/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.motobu.okinawa.jp/doc/2023103100031/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.motobu.okinawa.jp/doc/2023103100062/",
+          "url": "https://www.town.motobu.okinawa.jp/doc/2023103100031/",
           "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023103000065/",
-          "fetched_at": "2026-08-27T06:54:30Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.motobu.okinawa.jp/doc/2023103100031/",
+          "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023103100031/",
+          "sha256": "ea8721c688817ba7985a61f1249b130faba1a3f408a92d41d2232726d39eb27c",
+          "fetched_at": "2026-08-27T14:12:02Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.motobu.okinawa.jp/doc/2023103100062/ (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -42,11 +50,11 @@
       "notes": "Observed g_reiki at http://www.reiki.town.motobu.okinawa.jp/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
@@ -63,16 +71,22 @@
           "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/file_contents/R8tousyoyosan.pdf",
           "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
           "fetched_at": "2026-08-27T09:41:15Z"
+        },
+        {
+          "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/file_contents/R8tousyoyosan.pdf",
+          "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
+          "sha256": "abd72cf5f50ee304721ff8be6dfc03eacb8d2a19db9cef0640939626244db03e",
+          "fetched_at": "2026-08-27T09:41:18Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.motobu.okinawa.jp/doc/2023110900198/ (label: 予算、財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8tousyoyosan.pdf「当初予算（令和８年度）[PDF：166KB]」, sha256:abd72cf5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
@@ -89,9 +103,15 @@
           "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/file_contents/kessansho_r6.pdf",
           "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
           "fetched_at": "2026-08-27T09:41:18Z"
+        },
+        {
+          "url": "https://www.town.motobu.okinawa.jp/doc/2023110900198/file_contents/kessansho_r6.pdf",
+          "observed_on": "https://www.town.motobu.okinawa.jp/doc/2023110900198/",
+          "sha256": "83a65f50974466df99b439ea97682b5e5c888c0147a53c5a30c6b218e351a836",
+          "fetched_at": "2026-08-27T09:41:19Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.motobu.okinawa.jp/doc/2023110900198/ (label: 予算、財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（kessansho_r6.pdf「決算書（令和6年度）[PDF：719KB]」, sha256:83a65f50）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

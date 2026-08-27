@@ -50,11 +50,11 @@
       "notes": "Observed finance section at https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html (label: 財政運営適正化計画（中長期財政計画）の公表) 入口 https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html",
           "sha256": "4cc1ae775dcd929cbf92607f73383cfe7f886564fcca9375360e68fa7e9b4a4a",
           "fetched_at": "2026-08-27T09:44:26Z"
+        },
+        {
+          "url": "https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/documents/r7_zaiseiuneitekiseikakeikaku.pdf",
+          "observed_on": "https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html",
+          "sha256": "d1ec3923b4d2711ae2e065a42ad5f82d8dc5221fc59fc02810cdb70589e1c77a",
+          "fetched_at": "2026-08-27T13:42:25Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html (label: 財政運営適正化計画（中長期財政計画）の公表) 入口 https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r7_zaiseiuneitekiseikakeikaku.pdf「久米南町財政運営適正化計画（令和7年度）（PDF：456KB）」, sha256:d1ec3923）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

@@ -6,24 +6,27 @@
   "official_home_url": "http://www.city.karatsu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/karatsu/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.karatsu.lg.jp/site/shigikai/46073.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/karatsu/SpTop.html",
-          "observed_on": "http://www.city.karatsu.lg.jp/"
+          "url": "https://www.city.karatsu.lg.jp/site/shigikai/46073.html",
+          "observed_on": "https://www.city.karatsu.lg.jp/site/shigikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/karatsu/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/karatsu/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-20T14:05:34Z"
+          "url": "https://www.city.karatsu.lg.jp/site/shigikai/46073.html",
+          "observed_on": "https://www.city.karatsu.lg.jp/site/shigikai/46073.html",
+          "sha256": "3eeed1185b6e6c6bd36f889bdaf7b264251f019e5af987e363b68a13ba389a70",
+          "fetched_at": "2026-08-27T14:09:14Z"
         }
       ],
-      "notes": "2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

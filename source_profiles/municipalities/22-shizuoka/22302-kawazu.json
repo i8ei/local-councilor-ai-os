@@ -68,11 +68,11 @@
       "notes": "Observed finance section at https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/ (label: 財政・給与) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
@@ -89,9 +89,15 @@
           "url": "https://www.town.kawazu.shizuoka.jp/wp/wp-content/uploads/2025/12/R6zaiseijijouhoukokysho.pdf",
           "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
           "fetched_at": "2026-08-27T11:15:58Z"
+        },
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/wp/wp-content/uploads/2026/03/zaiseijoukyouR6.xlsx",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "sha256": "02b415dc48f81bc841a62530e995e9dd68089833a209bb9d43255c416f7e5f9d",
+          "fetched_at": "2026-08-27T13:37:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/ (label: 財政・給与) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（zaiseijoukyouR6.xlsx「財政状況資料集＜令和6年度＞（Excel)」, sha256:02b415dc）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

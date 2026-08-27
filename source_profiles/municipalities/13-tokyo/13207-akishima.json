@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.akishima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.akishima.lg.jp/gikai/dayori/1011737/1011741.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.city.akishima.lg.jp/gikai/dayori/1011737/1011741.html",
+          "observed_on": "http://www.city.akishima.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.akishima.lg.jp/gikai/dayori/1011737/1011741.html",
+          "observed_on": "http://www.city.akishima.lg.jp/gikai/dayori/1011737/1011741.html",
+          "sha256": "958729ac0180a4e61e1aa84a17eef360ba9a9ce8f4126dbc28d6f72b13a784c1",
+          "fetched_at": "2026-08-27T13:42:36Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

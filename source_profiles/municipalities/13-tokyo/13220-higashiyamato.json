@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www.city.higashiyamato.lg.jp/reiki/reiki_menu.html (label: 例規集検索)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html",
           "sha256": "b6404d816a8e8870c5b2df6939870de98e9a13c599f929cf32c0cb9a3dd5626b",
           "fetched_at": "2026-08-27T10:26:10Z"
+        },
+        {
+          "url": "http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html",
+          "observed_on": "http://www.city.higashiyamato.lg.jp/",
+          "sha256": "b6404d816a8e8870c5b2df6939870de98e9a13c599f929cf32c0cb9a3dd5626b",
+          "fetched_at": "2026-08-27T10:26:10Z"
+        },
+        {
+          "url": "https://www.city.higashiyamato.lg.jp/_res/projects/default_project/_page_/001/011/885/20260212.pdf",
+          "observed_on": "https://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/1011420/1011885.html",
+          "sha256": "f3c1b905a0116b1168814871c4a5e644bfc52ad946c2204991cb063604d557b7",
+          "fetched_at": "2026-08-27T13:34:05Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html (label: 予算) 入口 https://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260212.pdf「令和8年度予算概要 （PDF 9.7 MB）」, sha256:f3c1b905）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

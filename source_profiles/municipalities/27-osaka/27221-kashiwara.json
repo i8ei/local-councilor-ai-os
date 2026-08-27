@@ -29,34 +29,58 @@
       "notes": "Observed g_reiki at http://www.city.kashiwara.osaka.jp/reiki/reiki_menu.html (label: 例規集閲覧・検索)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kashiwara.osaka.jp/category/bunya/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kashiwara.osaka.jp/category/bunya/shisei/zaisei/",
           "observed_on": "http://www.city.kashiwara.osaka.jp/",
           "fetched_at": "2026-08-27T06:32:35Z"
+        },
+        {
+          "url": "http://www.city.kashiwara.osaka.jp/category/bunya/shisei/zaisei/",
+          "observed_on": "http://www.city.kashiwara.osaka.jp/",
+          "sha256": "0c01a481906b2bd3a2bb55f89eb470672b6de60fbd037413f6d4e8736365d679",
+          "fetched_at": "2026-08-27T09:50:46Z"
+        },
+        {
+          "url": "https://www.city.kashiwara.lg.jp/_files/00532686/22kashiwara_2022_2.xlsx",
+          "observed_on": "https://www.city.kashiwara.lg.jp/category/bunya/shisei/zaisei/",
+          "sha256": "91c87cb55c52f89a072ea91afc3e2200582138ac84e3bb188e3d4c97bacb30b0",
+          "fetched_at": "2026-08-27T13:40:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kashiwara.osaka.jp/category/bunya/shisei/zaisei/ (label: 財政)"
+      "notes": "deepest_doc=P1。budget文書（22kashiwara_2022_2.xlsx「財政状況資料集(R4年度分)【Excel形式】」, sha256:91c87cb5）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kashiwara.osaka.jp/category/bunya/shisei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kashiwara.osaka.jp/category/bunya/shisei/zaisei/",
           "observed_on": "http://www.city.kashiwara.osaka.jp/",
           "fetched_at": "2026-08-27T06:32:35Z"
+        },
+        {
+          "url": "http://www.city.kashiwara.osaka.jp/category/bunya/shisei/zaisei/",
+          "observed_on": "http://www.city.kashiwara.osaka.jp/",
+          "sha256": "0c01a481906b2bd3a2bb55f89eb470672b6de60fbd037413f6d4e8736365d679",
+          "fetched_at": "2026-08-27T09:50:46Z"
+        },
+        {
+          "url": "https://www.city.kashiwara.lg.jp/_files/00532686/22kashiwara_2022_2.xlsx",
+          "observed_on": "https://www.city.kashiwara.lg.jp/category/bunya/shisei/zaisei/",
+          "sha256": "91c87cb55c52f89a072ea91afc3e2200582138ac84e3bb188e3d4c97bacb30b0",
+          "fetched_at": "2026-08-27T13:40:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kashiwara.osaka.jp/category/bunya/shisei/zaisei/ (label: 財政)"
+      "notes": "deepest_doc=P1。settlement文書（22kashiwara_2022_2.xlsx「財政状況資料集(R4年度分)【Excel形式】」, sha256:91c87cb5）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

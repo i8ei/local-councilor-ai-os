@@ -6,19 +6,37 @@
   "official_home_url": "http://www.town.shimane-misato.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://gov.town.shimane-misato.lg.jp/gikai/1910/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://gov.town.shimane-misato.lg.jp/gikai/1910/",
           "observed_on": "https://gov.town.shimane-misato.lg.jp/gikai/",
           "fetched_at": "2026-08-27T06:09:43Z"
+        },
+        {
+          "url": "https://gov.town.shimane-misato.lg.jp/gikai/1910/",
+          "observed_on": "https://gov.town.shimane-misato.lg.jp/gikai/1910/",
+          "sha256": "e7d25b7c5a6be71fe6c354e6a62fd9c5c3b45655bb96edb3fe0d7ecdf6725850",
+          "fetched_at": "2026-08-27T09:43:05Z"
+        },
+        {
+          "url": "https://gov.town.shimane-misato.lg.jp/gikai/1910/9135",
+          "observed_on": "https://gov.town.shimane-misato.lg.jp/gikai/1910/",
+          "sha256": "dd8abc3e6eb160997054a78b2f75fa637bb0a6b7631e0911474871f132dc66d7",
+          "fetched_at": "2026-08-27T14:05:19Z"
         }
       ],
-      "notes": "Observed council minutes index at https://gov.town.shimane-misato.lg.jp/gikai/1910/ (label: 会議録・中継動画)"
+      "notes": "Observed council minutes index at https://gov.town.shimane-misato.lg.jp/gikai/1910/ (label: 会議録・中継動画)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "ready",

@@ -63,11 +63,11 @@
       "notes": "Observed budget link at https://www.town.hasami.lg.jp/list00236.html (label: 予算・決算) 入口 https://www.town.hasami.lg.jp/list00236.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hasami.lg.jp/list00236.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hasami.lg.jp/list00236.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hasami.lg.jp/list00236.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.town.hasami.lg.jp/list00236.html",
           "sha256": "f8ab849e3fbec98eb3316d081067ad8e897a12b3889b5141e3d2415e5456c42b",
           "fetched_at": "2026-08-27T09:37:39Z"
+        },
+        {
+          "url": "https://www.town.hasami.lg.jp/kiji0031870/3_1870_2954_up_5qvb6rz2.xlsx",
+          "observed_on": "https://www.town.hasami.lg.jp/kiji0031870/index.html",
+          "sha256": "ff615a24ebd8b36130a6e9ca39c8d5dba5a4e4334624bf6a922f7603a49e91d2",
+          "fetched_at": "2026-08-27T13:45:48Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.hasami.lg.jp/list00236.html (label: 予算・決算) 入口 https://www.town.hasami.lg.jp/list00236.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hasami.lg.jp/list00236.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_1870_2954_up_5qvb6rz2.xlsx「令和6年度 財政状況資料集（エクセル：557.8キロバイト）」, sha256:ff615a24）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

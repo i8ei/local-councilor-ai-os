@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.maibara.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.maibara.lg.jp/soshiki/gikai/gikai/shigikai_dayori/r08/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.maibara.lg.jp/soshiki/gikai/gikai/shigikai_dayori/r08/index.html",
+          "observed_on": "https://www.city.maibara.lg.jp/soshiki/gikai/gikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.maibara.lg.jp/soshiki/gikai/gikai/shigikai_dayori/r08/index.html",
+          "observed_on": "https://www.city.maibara.lg.jp/soshiki/gikai/gikai/shigikai_dayori/r08/index.html",
+          "sha256": "f548c40661bd96e55cb8e96e93db105071dad0f976211088bdfbbcced8d2bd94",
+          "fetched_at": "2026-08-27T14:00:52Z"
+        },
+        {
+          "url": "https://www.city.maibara.lg.jp/soshiki/gikai/gikai/shigikai_dayori/r08/23862.html",
+          "observed_on": "https://www.city.maibara.lg.jp/soshiki/gikai/gikai/shigikai_dayori/r08/index.html",
+          "sha256": "544eee230bac8a9eee46d65bb343e853ad40cf0f187c5fd96dee29c4909be4fa",
+          "fetched_at": "2026-08-27T14:00:53Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +53,11 @@
       "notes": "Observed g_reiki at https://www.city.maibara.lg.jp/reiki/reiki_honbun/r108RG00001716.html (label: 米原市不当要求行為等対策条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.maibara.lg.jp/shisei/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.maibara.lg.jp/shisei/zaisei/yosan/index.html",
@@ -45,9 +69,15 @@
           "observed_on": "https://www.city.maibara.lg.jp/shisei/zaisei/yosan/index.html",
           "sha256": "828eccef9628362c34267936fdecd5b80fa1990ac9936988b8a0490c87217d54",
           "fetched_at": "2026-08-27T09:49:37Z"
+        },
+        {
+          "url": "https://www.city.maibara.lg.jp/material/files/group/8/R8ippannkaikei_01.pdf",
+          "observed_on": "https://www.city.maibara.lg.jp/shisei/zaisei/yosan/r8_2/23737.html",
+          "sha256": "c7c3c51880a58a33c1e9b4889a85798b80f0d647c21341ff0af39e594ed4d636",
+          "fetched_at": "2026-08-27T13:39:30Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.maibara.lg.jp/shisei/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.maibara.lg.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.maibara.lg.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8ippannkaikei_01.pdf「令和8年米原市一般会計補正予算（第1号）（最終日追加） (PDFファイル: 417.9KB)」, sha256:c7c3c518）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

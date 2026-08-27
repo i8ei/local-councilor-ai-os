@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/onojo/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=259",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=259",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.onojo.fukuoka.jp/list00259.html",
           "sha256": "7212dde29d7fac430a12e6e18f3d970f14a3fa2cd77a82d4f482a5f31e650401",
           "fetched_at": "2026-08-27T09:36:09Z"
+        },
+        {
+          "url": "http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=259",
+          "observed_on": "http://www.city.onojo.fukuoka.jp/",
+          "sha256": "7212dde29d7fac430a12e6e18f3d970f14a3fa2cd77a82d4f482a5f31e650401",
+          "fetched_at": "2026-08-27T09:36:09Z"
+        },
+        {
+          "url": "https://www.city.onojo.fukuoka.jp/kiji003427/3_427_2_01soukatu.pdf",
+          "observed_on": "https://www.city.onojo.fukuoka.jp/kiji003427/index.html",
+          "sha256": "7f4f0c3f1c1d60c3c2d78662a078385004d6a04012000051142a2ff882061f4e",
+          "fetched_at": "2026-08-27T13:44:56Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=259 (label: 予算) 入口 https://www.city.onojo.fukuoka.jp/list00259.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.onojo.fukuoka.jp/list00259.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_427_2_01soukatu.pdf「ページ1（PDF：560.5キロバイト）」, sha256:7f4f0c3f）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

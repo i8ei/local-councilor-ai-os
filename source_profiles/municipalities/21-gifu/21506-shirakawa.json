@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.town.shirakawa.lg.jp/chousei/1002167.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shirakawa.lg.jp/chousei/zaimu/1002876.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shirakawa.lg.jp/chousei/zaimu/1002876.html",
@@ -50,16 +50,28 @@
           "url": "https://www.town.shirakawa.lg.jp/_res/projects/default_project/_page_/001/002/876/r7_yosansho.pdf",
           "observed_on": "https://www.town.shirakawa.lg.jp/chousei/zaimu/1002876.html",
           "fetched_at": "2026-08-27T11:14:20Z"
+        },
+        {
+          "url": "http://www.town.shirakawa.lg.jp/chousei/zaimu/1002876.html",
+          "observed_on": "http://www.town.shirakawa.lg.jp/",
+          "sha256": "610b054eb02a6641458e938b8b9cdfdd7333e0dc0a9b958340f56e080d7abe7c",
+          "fetched_at": "2026-08-27T10:14:07Z"
+        },
+        {
+          "url": "https://www.town.shirakawa.lg.jp/_res/projects/default_project/_page_/001/002/876/r7_yosansho.pdf",
+          "observed_on": "https://www.town.shirakawa.lg.jp/chousei/zaimu/1002876.html",
+          "sha256": "241d6edfd34680baf2659817541dae0729c59bb66828b71adc8994eed6f27e61",
+          "fetched_at": "2026-08-27T11:14:22Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.shirakawa.lg.jp/chousei/zaimu/1002876.html (label: 予算について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r7_yosansho.pdf「令和7年度当初予算書 （PDF 5.4MB）」, sha256:241d6edf）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shirakawa.lg.jp/chousei/zaimu/1003423.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shirakawa.lg.jp/chousei/zaimu/1003423.html",
@@ -71,9 +83,21 @@
           "observed_on": "https://www.town.shirakawa.lg.jp/chousei/zaimu/1003423.html",
           "sha256": "43b22958bd7ff6024405caecc34c03b6dbcbe97440668ed1f3747e610fdb736e",
           "fetched_at": "2026-08-27T10:14:10Z"
+        },
+        {
+          "url": "http://www.town.shirakawa.lg.jp/chousei/zaimu/1003423.html",
+          "observed_on": "http://www.town.shirakawa.lg.jp/",
+          "sha256": "43b22958bd7ff6024405caecc34c03b6dbcbe97440668ed1f3747e610fdb736e",
+          "fetched_at": "2026-08-27T10:14:10Z"
+        },
+        {
+          "url": "https://www.town.shirakawa.lg.jp/_res/projects/default_project/_page_/001/003/423/r8.3.pdf",
+          "observed_on": "https://www.town.shirakawa.lg.jp/chousei/zaimu/1003423.html",
+          "sha256": "ed90bdf3d905f8157542e06dd3242dd3b230bd7a812bc44d5beae3f0aeec0c39",
+          "fetched_at": "2026-08-27T13:37:04Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shirakawa.lg.jp/chousei/zaimu/1003423.html (label: 財政状況を公表します) 入口 https://www.town.shirakawa.lg.jp/chousei/zaimu/1003423.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shirakawa.lg.jp/chousei/zaimu/1003423.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r8.3.pdf「令和7年度の財政状況（上半期を含む） （PDF 112.3KB）」, sha256:ed90bdf3）にて構造マーカー（歳入・歳出・款・収入済額等）を確認済み。"
     }
   }
 }

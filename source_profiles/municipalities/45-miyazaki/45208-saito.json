@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.saito.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.saito.lg.jp/shiseigyosei/shigikai/0503_1703310000000017.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.saito.lg.jp/shiseigyosei/shigikai/0503_1703310000000017.html",
+          "observed_on": "https://www.city.saito.lg.jp/shiseigyosei/shigikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.saito.lg.jp/shiseigyosei/shigikai/0503_1703310000000017.html",
+          "observed_on": "https://www.city.saito.lg.jp/shiseigyosei/shigikai/0503_1703310000000017.html",
+          "sha256": "0e886705c0579e354221bd57e23fb2ade94c857af61f72a1fc777232a8b7c606",
+          "fetched_at": "2026-08-27T14:11:26Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed budget link at https://www.city.saito.lg.jp/shiseigyosei/yosan/ (label: 予算) 入口 https://www.city.saito.lg.jp/shiseigyosei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.saito.lg.jp/shiseigyosei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.saito.lg.jp/shiseigyosei/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.saito.lg.jp/shiseigyosei/kaikaku_kokai/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.saito.lg.jp/shiseigyosei/kaikaku_kokai/",
@@ -72,9 +87,15 @@
           "observed_on": "https://www.city.saito.lg.jp/shiseigyosei/kaikaku_kokai/",
           "sha256": "abaebd601c42538e2fbfe6c135af671ab596785fe6032416487b7e21760275dc",
           "fetched_at": "2026-08-27T09:39:54Z"
+        },
+        {
+          "url": "https://www.city.saito.lg.jp/b64d9b0b0a28a434326d78017f6ffd07.xlsx",
+          "observed_on": "https://www.city.saito.lg.jp/shiseigyosei/kaikaku_kokai/post_1930.html",
+          "sha256": "e676c1d93e23a5443346e536a60565b657da21cd80962687b34e81ca27ac2ce0",
+          "fetched_at": "2026-08-27T13:47:16Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.saito.lg.jp/shiseigyosei/kaikaku_kokai/ (label: 行財政改革・情報公開) 入口 https://www.city.saito.lg.jp/shiseigyosei/kaikaku_kokai/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.saito.lg.jp/shiseigyosei/kaikaku_kokai/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.saito.lg.jp/shiseigyosei/kaikaku_kokai/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（b64d9b0b0a28a434326d78017f6ffd07.xlsx「令和６年度財政状況資料集.xlsx」, sha256:e676c1d9）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.kitahiroshima.lg.jp/rw-data/reiki_int/reiki_menu.html (label: 北広島町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kitahiroshima.lg.jp/life/4/18/62/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kitahiroshima.lg.jp/life/4/18/62/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.kitahiroshima.lg.jp/life/4/18/62/",
           "sha256": "fb03fd55a1254df4164caacdb982c71a9388c4689b37bbe6835e3b2726c79c5e",
           "fetched_at": "2026-08-27T09:45:12Z"
+        },
+        {
+          "url": "http://www.town.kitahiroshima.lg.jp/life/4/18/62/",
+          "observed_on": "http://www.town.kitahiroshima.lg.jp/",
+          "sha256": "fb03fd55a1254df4164caacdb982c71a9388c4689b37bbe6835e3b2726c79c5e",
+          "fetched_at": "2026-08-27T09:45:12Z"
+        },
+        {
+          "url": "https://www.town.kitahiroshima.lg.jp/uploaded/attachment/27513.pdf",
+          "observed_on": "https://www.town.kitahiroshima.lg.jp/soshiki/4/38895.html",
+          "sha256": "4859168ed16e0e8f1933108483b19884dae23de6f4e6de961dcb71918c611b6f",
+          "fetched_at": "2026-08-27T13:42:37Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kitahiroshima.lg.jp/life/4/18/62/ (label: 予算・決算) 入口 https://www.town.kitahiroshima.lg.jp/life/4/18/62/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kitahiroshima.lg.jp/life/4/18/62/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（27513.pdf「令和8年度・当初予算の概要 [PDFファイル／558KB]」, sha256:4859168e）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

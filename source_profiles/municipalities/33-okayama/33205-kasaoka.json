@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.kasaoka.okayama.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html",
-      "verified_at": "2026-08-27T09:43:45Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kasaoka.okayama.jp/site/gikai/3340.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html",
-          "observed_on": "http://www.city.kasaoka.okayama.jp/site/gikai/72905.html",
-          "fetched_at": "2026-08-27T06:16:14Z"
+          "url": "https://www.city.kasaoka.okayama.jp/site/gikai/3340.html",
+          "observed_on": "http://www.city.kasaoka.okayama.jp/site/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html",
-          "sha256": "755d87e3c87d93b683fe70c55753eb817836bf6badb74053646665ecec4041cf",
-          "fetched_at": "2026-08-27T09:43:47Z"
+          "url": "https://www.city.kasaoka.okayama.jp/site/gikai/3340.html",
+          "observed_on": "https://www.city.kasaoka.okayama.jp/site/gikai/3340.html",
+          "sha256": "2d3a3bd1ddec8d6bb00f551c2a4cba1c93492062646b2e4f3e3612afaf9b5187",
+          "fetched_at": "2026-08-27T14:05:46Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kasaoka/pg/index.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed finance section at http://www.city.kasaoka.okayama.jp/life/4/25/ (label: 市政運営・行政・財政) 入口 https://www.city.kasaoka.okayama.jp/life/4/25/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasaoka.okayama.jp/life/4/25/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kasaoka.okayama.jp/life/4/25/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kasaoka.okayama.jp/life/4/25/",
@@ -85,9 +87,21 @@
           "observed_on": "https://www.city.kasaoka.okayama.jp/life/4/25/",
           "sha256": "0ac626d6570edd9584b71e51de7a0e044c83d7826cc4d6990b93959fa4dac861",
           "fetched_at": "2026-08-27T09:43:49Z"
+        },
+        {
+          "url": "http://www.city.kasaoka.okayama.jp/life/4/25/",
+          "observed_on": "http://www.city.kasaoka.okayama.jp/",
+          "sha256": "0ac626d6570edd9584b71e51de7a0e044c83d7826cc4d6990b93959fa4dac861",
+          "fetched_at": "2026-08-27T09:43:49Z"
+        },
+        {
+          "url": "https://www.city.kasaoka.okayama.jp/uploaded/attachment/55098.pdf",
+          "observed_on": "https://www.city.kasaoka.okayama.jp/soshiki/13/1596.html",
+          "sha256": "2b860ad91ad3dcbac6970019f789edf902eb5aade9cb2bc6538bca9347e53f69",
+          "fetched_at": "2026-08-27T13:42:17Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kasaoka.okayama.jp/life/4/25/ (label: 市政運営・行政・財政) 入口 https://www.city.kasaoka.okayama.jp/life/4/25/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kasaoka.okayama.jp/life/4/25/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（55098.pdf「令和7年度 中期財政見通し及び財政健全化プランの進捗状況 [PDFファイル／1.03MB]」, sha256:2b860ad9）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

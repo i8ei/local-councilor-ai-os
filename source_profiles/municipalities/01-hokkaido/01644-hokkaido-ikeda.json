@@ -6,12 +6,36 @@
   "official_home_url": "https://www.town.hokkaido-ikeda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.hokkaido-ikeda.lg.jp/kikan/gikai/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.hokkaido-ikeda.lg.jp/kikan/gikai/",
+          "observed_on": "https://www.town.hokkaido-ikeda.lg.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.hokkaido-ikeda.lg.jp/kikan/gikai/",
+          "observed_on": "https://www.town.hokkaido-ikeda.lg.jp/kikan/gikai/",
+          "sha256": "e5d9e88277e48cc4476012299ab39d8a54b416f2617fbad5485b5e2dd7017963",
+          "fetched_at": "2026-08-27T13:25:27Z"
+        },
+        {
+          "url": "https://www.town.hokkaido-ikeda.lg.jp/kikan/gikai/chogikai/11787.html",
+          "observed_on": "https://www.town.hokkaido-ikeda.lg.jp/kikan/gikai/",
+          "sha256": "7fd1de4a4b0afc5c052a69864affa9e5dc9a34a28a78efed792adee507cdc47f",
+          "fetched_at": "2026-08-27T13:25:29Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

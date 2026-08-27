@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.ota.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.ota.tokyo.jp/gikai/kugikai_katsudou/honkaigirokusokuhouban.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.city.ota.tokyo.jp/gikai/kugikai_katsudou/honkaigirokusokuhouban.html",
+          "observed_on": "http://www.city.ota.tokyo.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.ota.tokyo.jp/gikai/kugikai_katsudou/honkaigirokusokuhouban.html",
+          "observed_on": "http://www.city.ota.tokyo.jp/gikai/kugikai_katsudou/honkaigirokusokuhouban.html",
+          "sha256": "68a8fd2191116dce7b6d8f29359a27970b0fb3e2f9fe0a6e5e7e58445a3fda75",
+          "fetched_at": "2026-08-27T13:42:28Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

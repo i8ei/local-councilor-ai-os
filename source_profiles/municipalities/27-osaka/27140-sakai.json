@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.sakai.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "http://www12.gijiroku.com/sakai/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.sakai.lg.jp/shigikai/kaigi/kojo/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www12.gijiroku.com/sakai/",
+          "url": "https://www.city.sakai.lg.jp/shigikai/kaigi/kojo/index.html",
           "observed_on": "http://www.city.sakai.lg.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T06:26:38Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.sakai.lg.jp/shigikai/kaigi/kojo/index.html",
+          "observed_on": "https://www.city.sakai.lg.jp/shigikai/kaigi/kojo/index.html",
+          "sha256": "f3dd5ee4984bd1488384341481873dac77496d5f1122e9835a606149c5c01c3b",
+          "fetched_at": "2026-08-27T14:01:34Z"
+        },
+        {
+          "url": "https://www.city.sakai.lg.jp/shigikai/kaigi/kojo/kojo83-.html",
+          "observed_on": "https://www.city.sakai.lg.jp/shigikai/kaigi/kojo/index.html",
+          "sha256": "e362c85a9d7898a42417be250b1bfcecefba4658c4ec4bcb7f4352b64ba3ca33",
+          "fetched_at": "2026-08-27T14:01:34Z"
         }
       ],
-      "notes": "Observed voices at http://www12.gijiroku.com/sakai/ (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +53,11 @@
       "notes": "Observed regulations index at http://www.city.sakai.lg.jp/shisei/sonota/jyorei/index.html (label: 条例・規則、公報など)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
@@ -52,9 +69,21 @@
           "observed_on": "https://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
           "sha256": "850a2c0c64408db355c2cb694af74019aca3c3f520796716edbe181ec906e739",
           "fetched_at": "2026-08-27T09:50:28Z"
+        },
+        {
+          "url": "http://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
+          "observed_on": "http://www.city.sakai.lg.jp/",
+          "sha256": "850a2c0c64408db355c2cb694af74019aca3c3f520796716edbe181ec906e739",
+          "fetched_at": "2026-08-27T09:50:28Z"
+        },
+        {
+          "url": "https://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.files/R06zaiseijoukyou.xlsx",
+          "observed_on": "https://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html",
+          "sha256": "06b0649b860bb106d351ef8a9c4ccf3e8ee7010fbb557f9939ae8ff61c7fd96e",
+          "fetched_at": "2026-08-27T13:39:53Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html (label: 予算・決算・財政収支) 入口 https://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sakai.lg.jp/shisei/zaisei/yosan_kessan_shushj/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R06zaiseijoukyou.xlsx「令和6年度財政状況資料集（エクセル：562KB）」, sha256:06b0649b）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

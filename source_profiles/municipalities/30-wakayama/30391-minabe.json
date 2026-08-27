@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.minabe.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.minabe.lg.jp/tyousei/15/02/2013091100243.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.minabe.lg.jp/tyousei/15/02/2013091100243.html",
+          "observed_on": "http://www.town.minabe.lg.jp/tyousei/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.minabe.lg.jp/tyousei/15/02/2013091100243.html",
+          "observed_on": "https://www.town.minabe.lg.jp/tyousei/15/02/2013091100243.html",
+          "sha256": "fb6eb0bae764899ffb3ff8ff835e0485572bf9499453aceecd18d2da2a45a41f",
+          "fetched_at": "2026-08-27T14:04:46Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +65,11 @@
       "notes": "Observed budget link at http://www.town.minabe.lg.jp/tyousei/06/01/2018101600034.html (label: 財政事情（予算執行・財産の状況等）) 入口 https://www.town.minabe.lg.jp/tyousei/06/01/2018101600034.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minabe.lg.jp/tyousei/06/01/2018101600034.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.minabe.lg.jp/tyousei/06",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.minabe.lg.jp/tyousei/06",
@@ -66,9 +81,21 @@
           "observed_on": "https://www.town.minabe.lg.jp/tyousei/06/",
           "sha256": "60ced07112034db96dfe214955e469a370c724f03e999b8ea9207c10f28b70c8",
           "fetched_at": "2026-08-27T10:04:15Z"
+        },
+        {
+          "url": "http://www.town.minabe.lg.jp/tyousei/06",
+          "observed_on": "http://www.town.minabe.lg.jp/",
+          "sha256": "60ced07112034db96dfe214955e469a370c724f03e999b8ea9207c10f28b70c8",
+          "fetched_at": "2026-08-27T10:04:15Z"
+        },
+        {
+          "url": "https://www.town.minabe.lg.jp/tyousei/06/02/files/R6_ippankessan.pdf",
+          "observed_on": "https://www.town.minabe.lg.jp/tyousei/06/02/2021092200022.html",
+          "sha256": "21fd3cffb02ae42cd61ad03a80f21cc7f0042bc7bd55c09af55a0f5c778424a5",
+          "fetched_at": "2026-08-27T13:41:55Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.minabe.lg.jp/tyousei/06 (label: 財政) 入口 https://www.town.minabe.lg.jp/tyousei/06/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minabe.lg.jp/tyousei/06/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_ippankessan.pdf「令和６年度一般会計決算書 (1023KB)」, sha256:21fd3cff）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.hashimoto.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.hashimoto.lg.jp/shigikai/kaigiannai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.hashimoto.lg.jp/shigikai/gikaikouhou/sigikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.hashimoto.lg.jp/shigikai/kaigiannai/kaigiroku/index.html",
+          "url": "https://www.city.hashimoto.lg.jp/shigikai/gikaikouhou/sigikaidayori/index.html",
           "observed_on": "https://www.city.hashimoto.lg.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T07:18:29Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.hashimoto.lg.jp/shigikai/gikaikouhou/sigikaidayori/index.html",
+          "observed_on": "https://www.city.hashimoto.lg.jp/shigikai/gikaikouhou/sigikaidayori/index.html",
+          "sha256": "26a8c994c032a5f9f4855f9460810db29fc900bd8058171503f9b98463b8483a",
+          "fetched_at": "2026-08-27T14:04:33Z"
+        },
+        {
+          "url": "https://www.city.hashimoto.lg.jp/shigikai/gikaikouhou/sigikaidayori/dayorikako/h28dayori.html",
+          "observed_on": "https://www.city.hashimoto.lg.jp/shigikai/gikaikouhou/sigikaidayori/index.html",
+          "sha256": "8a460d87df558c1485193e5759fe270f699990881322a823b3925bc99430c501",
+          "fetched_at": "2026-08-27T14:04:34Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.hashimoto.lg.jp/shigikai/kaigiannai/kaigiroku/index.html (label: 会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +80,11 @@
       "notes": "Observed finance section at https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html (label: 開庁時間を変更します) 入口 https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html",
@@ -79,9 +96,15 @@
           "observed_on": "https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html",
           "sha256": "4220cae212f00bdfb2ed3c4ae624f096513b58b85ef1277ac46d45d181e73540",
           "fetched_at": "2026-08-27T09:53:25Z"
+        },
+        {
+          "url": "https://www.city.hashimoto.lg.jp/material/files/group/34/3gyokaku.pdf",
+          "observed_on": "https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/16714.html",
+          "sha256": "a695d9df55c8d96f2dcccf0e69af14423ee7fbfffcc170b63873594e0efab380",
+          "fetched_at": "2026-08-27T13:41:56Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html (label: 開庁時間を変更します) 入口 https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hashimoto.lg.jp/guide/somubu/zaisei/gyouseikaikaku/22964.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3gyokaku.pdf「橋本市第３次行政改革推進計画 (PDFファイル: 679.0KB)」, sha256:a695d9df）にて構造マーカー（歳入・項・標準財政規模等）を確認済み。"
     }
   }
 }

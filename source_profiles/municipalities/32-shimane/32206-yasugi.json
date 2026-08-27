@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.yasugi.shimane.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
-      "verified_at": "2026-08-27T09:43:16Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.yasugi.shimane.jp/gikai/dayori/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
+          "url": "https://www.city.yasugi.shimane.jp/gikai/dayori/",
           "observed_on": "http://www.city.yasugi.shimane.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:05:54Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html",
-          "sha256": "c696dc56cd3b41ee9f1fc5859ef86fd9244f1fef1f3cc64a7e90b3e14e6a8cdf",
-          "fetched_at": "2026-08-27T09:43:17Z"
+          "url": "https://www.city.yasugi.shimane.jp/gikai/dayori/",
+          "observed_on": "https://www.city.yasugi.shimane.jp/gikai/dayori/",
+          "sha256": "592641a4d5314dea28d513d36fefc90ad3e4792ad56a02cf6e5dd3550922da52",
+          "fetched_at": "2026-08-27T14:05:25Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yasugi/pg/index.html (label: 会議録検索（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

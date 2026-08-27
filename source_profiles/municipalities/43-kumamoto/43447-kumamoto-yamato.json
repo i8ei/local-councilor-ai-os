@@ -72,11 +72,11 @@
       "notes": "Observed budget link at https://www.town.kumamoto-yamato.lg.jp/list00435.html (label: 予算) 入口 https://www.town.kumamoto-yamato.lg.jp/list00435.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumamoto-yamato.lg.jp/list00435.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumamoto-yamato.lg.jp/list00436.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumamoto-yamato.lg.jp/list00436.html",
@@ -88,9 +88,15 @@
           "observed_on": "https://www.town.kumamoto-yamato.lg.jp/list00436.html",
           "sha256": "be9042bbe1c0932e00ec39bc1981ccafb3873a5254375af505345ccaa9096147",
           "fetched_at": "2026-08-27T09:38:52Z"
+        },
+        {
+          "url": "https://www.town.kumamoto-yamato.lg.jp/kiji0034672/3_4672_28035_up_66krn4cy.xlsx",
+          "observed_on": "https://www.town.kumamoto-yamato.lg.jp/kiji0034672/index.html",
+          "sha256": "3fed47cd01b6ee1237114edab4903b81d31db2f157867020c32712a10cb3b846",
+          "fetched_at": "2026-08-27T13:46:23Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.kumamoto-yamato.lg.jp/list00436.html (label: 決算) 入口 https://www.town.kumamoto-yamato.lg.jp/list00436.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumamoto-yamato.lg.jp/list00436.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_4672_28035_up_66krn4cy.xlsx「令和06年度 財政状況資料集（エクセル：558.8キロバイト）」, sha256:3fed47cd）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

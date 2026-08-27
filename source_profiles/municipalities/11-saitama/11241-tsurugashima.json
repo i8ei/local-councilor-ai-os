@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.tsurugashima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html",
-      "verified_at": "2026-08-27T10:21:20Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.tsurugashima.lg.jp/gikai/news/page012424.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html",
-          "observed_on": "http://www.city.tsurugashima.lg.jp/gikai/",
-          "fetched_at": "2026-08-27T07:01:37Z"
+          "url": "https://www.city.tsurugashima.lg.jp/gikai/news/page012424.html",
+          "observed_on": "https://www.city.tsurugashima.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html",
-          "sha256": "c66faaee050330ad4feb3ba623f633cd3c8d7c428fa18c747e9ed038548d7980",
-          "fetched_at": "2026-08-27T10:21:21Z"
+          "url": "https://www.city.tsurugashima.lg.jp/gikai/news/page012424.html",
+          "observed_on": "https://www.city.tsurugashima.lg.jp/gikai/news/page012424.html",
+          "sha256": "4d94c63217dc74929831ca6fbdf8e2e6f2928cff7961de4b25d914342269878d",
+          "fetched_at": "2026-08-27T13:40:32Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tsurugashima/pg/index.html (label: 会議録閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

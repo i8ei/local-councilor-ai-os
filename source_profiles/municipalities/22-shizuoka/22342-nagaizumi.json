@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.nagaizumi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.nagaizumi.lg.jp/soshiki/gikai/235/gikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.nagaizumi.lg.jp/soshiki/gikai/235/gikaidayori/index.html",
+          "observed_on": "https://www.town.nagaizumi.lg.jp/soshiki/gikai/235/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.nagaizumi.lg.jp/soshiki/gikai/235/gikaidayori/index.html",
+          "observed_on": "https://www.town.nagaizumi.lg.jp/soshiki/gikai/235/gikaidayori/index.html",
+          "sha256": "b922434dc50455d58d72329b68c85820adc8a99671a2a1e7f51ffe0131dd3168",
+          "fetched_at": "2026-08-27T13:49:57Z"
+        },
+        {
+          "url": "https://www.town.nagaizumi.lg.jp/soshiki/gikai/235/gikaidayori/11984.html",
+          "observed_on": "https://www.town.nagaizumi.lg.jp/soshiki/gikai/235/gikaidayori/index.html",
+          "sha256": "8f49689b485ce2b3b7301633a39ade88176063585b8d8df9e106b9c57610ba67",
+          "fetched_at": "2026-08-27T13:49:57Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

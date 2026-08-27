@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.higashiagatsuma.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.higashiagatsuma.gunma.jp/www/gikai/contents/1269923047391/index.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.higashiagatsuma.gunma.jp/www/gikai/contents/1269923047391/index.html",
+          "observed_on": "https://www.town.higashiagatsuma.gunma.jp/www/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.higashiagatsuma.gunma.jp/www/gikai/contents/1269923047391/index.html",
+          "observed_on": "https://www.town.higashiagatsuma.gunma.jp/www/gikai/contents/1269923047391/index.html",
+          "sha256": "8a72ec74a16e70329b8257d2f18c106966fe9433e91dace6d5582000026ae4d8",
+          "fetched_at": "2026-08-27T13:39:19Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

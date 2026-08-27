@@ -69,11 +69,11 @@
       "notes": "Observed budget link at https://www.kumakogen.jp/soshiki/2/1278.html (label: 当初予算の概要) 入口 https://www.kumakogen.jp/soshiki/2/1278.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.kumakogen.jp/soshiki/2/1278.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.kumakogen.jp/life/4/4/44/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.kumakogen.jp/life/4/4/44/",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.kumakogen.jp/life/4/4/44/",
           "sha256": "2562ab2540f920c5ccf1ccc7db2a2d09b28bb0e4b52641b06fbf7218aa809294",
           "fetched_at": "2026-08-27T09:47:11Z"
+        },
+        {
+          "url": "https://www.kumakogen.jp/uploaded/attachment/14710.xlsx",
+          "observed_on": "https://www.kumakogen.jp/soshiki/2/1280.html",
+          "sha256": "d9119a4d0af007025a8647c30b53b9197a4dae7e56704ad6f4c935f69b082816",
+          "fetched_at": "2026-08-27T13:43:30Z"
         }
       ],
-      "notes": "Observed finance section at https://www.kumakogen.jp/life/4/4/44/ (label: 行財政) 入口 https://www.kumakogen.jp/life/4/4/44/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.kumakogen.jp/life/4/4/44/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（14710.xlsx「令和6年度 [Excelファイル／557KB]」, sha256:d9119a4d）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -63,11 +63,11 @@
       "notes": "Observed budget link at https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html (label: 予算・決算) 入口 https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html",
           "sha256": "06c302dcd9673923fd265655252589e8d28933f5c1f4b1b0f39130004f0eba09",
           "fetched_at": "2026-08-27T09:51:21Z"
+        },
+        {
+          "url": "https://www.town.kumatori.lg.jp/material/files/group/4/R2kessan_card.pdf",
+          "observed_on": "https://www.town.kumatori.lg.jp/soshiki/kikaku_keiei/zaisei/gyomu/gyozaisei/yosan_kessan/kessan/8221.html",
+          "sha256": "d5214bc9f5e9956f6f6c53d9f4144467a021f87759284a53cce79bf365080fa7",
+          "fetched_at": "2026-08-27T13:40:37Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html (label: 予算・決算) 入口 https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumatori.lg.jp/gyosei_joho/gyozaisei/yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R2kessan_card.pdf「令和2年度決算カード (PDFファイル: 101.4KB)」, sha256:d5214bc9）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

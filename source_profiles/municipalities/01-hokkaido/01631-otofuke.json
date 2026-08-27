@@ -6,25 +6,27 @@
   "official_home_url": "https://www.town.otofuke.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "http://www.town.otofuke.hokkaido.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T10:31:31Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.otofuke.hokkaido.jp/gikai/arikatatyousa.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.otofuke.hokkaido.dbsr.jp/index.php/",
+          "url": "https://www.town.otofuke.hokkaido.jp/gikai/arikatatyousa.html",
           "observed_on": "https://www.town.otofuke.hokkaido.jp/gikai/",
-          "fetched_at": "2026-08-27T06:47:24Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://www.town.otofuke.hokkaido.dbsr.jp/index.php/",
-          "observed_on": "http://www.town.otofuke.hokkaido.dbsr.jp/index.php/",
-          "sha256": "25c7013b9d77e00a083e04cbda9862974093acc67ee9c9759da36d90169da4d3",
-          "fetched_at": "2026-08-27T10:31:37Z"
+          "url": "https://www.town.otofuke.hokkaido.jp/gikai/arikatatyousa.html",
+          "observed_on": "https://www.town.otofuke.hokkaido.jp/gikai/arikatatyousa.html",
+          "sha256": "3e5ddc6fed1d98a1ea5675023ab5ff74a8fe292e42d0550e13c2576d5c9670ff",
+          "fetched_at": "2026-08-27T13:25:26Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.town.otofuke.hokkaido.dbsr.jp/index.php/ (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

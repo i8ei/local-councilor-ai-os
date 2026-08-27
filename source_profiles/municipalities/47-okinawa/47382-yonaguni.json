@@ -29,11 +29,11 @@
       "notes": "Observed g_reiki at https://www.town.yonaguni.okinawa.jp/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yonaguni.okinawa.jp/docs/2026042100032/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yonaguni.okinawa.jp/docs/2026042100032/",
@@ -45,9 +45,15 @@
           "observed_on": "https://www.town.yonaguni.okinawa.jp/docs/2026042100032/",
           "sha256": "874da091de04426b4c214396518a4bf2aac12487a0d259c6ea1641701cc258a1",
           "fetched_at": "2026-08-27T09:41:53Z"
+        },
+        {
+          "url": "https://www.town.yonaguni.okinawa.jp/docs/2021042800012/file_contents/file_2026585134526_1.pdf",
+          "observed_on": "https://www.town.yonaguni.okinawa.jp/docs/2021042800012/",
+          "sha256": "d649532124d7d4485210228348205410d3c390a8703058b25c603f633feb907c",
+          "fetched_at": "2026-08-27T13:48:39Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.yonaguni.okinawa.jp/docs/2026042100032/ (label: 令和７年度補正予算分重点支援地方交付金の活用状況について) 入口 https://www.town.yonaguni.okinawa.jp/docs/2026042100032/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yonaguni.okinawa.jp/docs/2026042100032/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yonaguni.okinawa.jp/docs/2026042100032/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（file_2026585134526_1.pdf「令和8年度一般会計補正予算書（第１号）[PDF：157KB]」, sha256:d6495321）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

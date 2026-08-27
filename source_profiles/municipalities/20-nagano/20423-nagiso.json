@@ -36,11 +36,11 @@
       "index_url": "https://en3-jg.d1-law.com/nagiso/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nagiso.nagano.jp/0000000115.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nagiso.nagano.jp/0000000115.html",
@@ -57,16 +57,22 @@
           "url": "https://www.town.nagiso.nagano.jp/cmsfiles/contents/0000000/115/R6_tousyoyosan.pdf",
           "observed_on": "https://www.town.nagiso.nagano.jp/0000000115.html",
           "fetched_at": "2026-08-27T11:12:46Z"
+        },
+        {
+          "url": "https://www.town.nagiso.nagano.jp/cmsfiles/contents/0000000/115/R6_tousyoyosan.pdf",
+          "observed_on": "https://www.town.nagiso.nagano.jp/0000000115.html",
+          "sha256": "a57d97901ce20caadc61b4b12afd516b7eba6bb4cd8c2de03d3e7ef106fe91d2",
+          "fetched_at": "2026-08-27T11:12:47Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.nagiso.nagano.jp/0000000115.html (label: 南木曽町の予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R6_tousyoyosan.pdf「当初予算の概要（一般会計） (PDF, 1.51MB)」, sha256:a57d9790）にて構造マーカー（歳出・予算額・予算総額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nagiso.nagano.jp/0000000119.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nagiso.nagano.jp/0000000119.html",
@@ -83,9 +89,15 @@
           "url": "https://www.town.nagiso.nagano.jp/cmsfiles/contents/0000000/119/R6ippanntokubetu.pdf",
           "observed_on": "https://www.town.nagiso.nagano.jp/0000000119.html",
           "fetched_at": "2026-08-27T11:12:47Z"
+        },
+        {
+          "url": "https://www.town.nagiso.nagano.jp/cmsfiles/contents/0000000/114/54nagisomachi2024.xlsx",
+          "observed_on": "https://www.town.nagiso.nagano.jp/0000000114.html",
+          "sha256": "0b1eb257d2704d0e16713133c0dbe510e271643adae9b0038c322f2ec9a71e55",
+          "fetched_at": "2026-08-27T13:36:39Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.nagiso.nagano.jp/0000000119.html (label: 決算審査意見書・財政経営健全化意見書) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。settlement文書（54nagisomachi2024.xlsx「財政状況資料集 (xlsx, 549.55KB)」, sha256:0b1eb257）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

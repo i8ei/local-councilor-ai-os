@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.amakusa.kumamoto.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html",
-      "verified_at": "2026-08-27T09:38:09Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.amakusa.kumamoto.jp/kiji00314486/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html",
-          "observed_on": "https://www.city.amakusa.kumamoto.jp/list00630.html",
-          "fetched_at": "2026-08-27T05:35:26Z"
+          "url": "https://www.city.amakusa.kumamoto.jp/kiji00314486/index.html",
+          "observed_on": "https://www.city.amakusa.kumamoto.jp/list01552.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T09:38:09Z"
+          "url": "https://www.city.amakusa.kumamoto.jp/kiji00314486/index.html",
+          "observed_on": "https://www.city.amakusa.kumamoto.jp/kiji00314486/index.html",
+          "sha256": "9f67f41eb6883561fc01187caf90de7abdcd6f8faa41e9e936e85c7f3e6c3989",
+          "fetched_at": "2026-08-27T14:10:13Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/amakusa/SpTop.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed budget link at https://www.city.amakusa.kumamoto.jp/list00748.html (label: 予算・決算) 入口 https://www.city.amakusa.kumamoto.jp/list00748.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.amakusa.kumamoto.jp/list00748.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.amakusa.kumamoto.jp/list00748.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.amakusa.kumamoto.jp/list00748.html",
@@ -85,9 +87,15 @@
           "observed_on": "https://www.city.amakusa.kumamoto.jp/list00748.html",
           "sha256": "ab133677a3d2e2883ffed6e1fd4f903ee56802a0de3287507d38e59af35e67c5",
           "fetched_at": "2026-08-27T09:38:11Z"
+        },
+        {
+          "url": "https://www.city.amakusa.kumamoto.jp/kiji00314013/3_14013_74639_up_zhaig8cd.pdf",
+          "observed_on": "https://www.city.amakusa.kumamoto.jp/kiji00314013/index.html",
+          "sha256": "184a7a6a463aa2f2e5cc6a58e263b03fcd906a8b9add94be46d16c44a2004c1d",
+          "fetched_at": "2026-08-27T13:46:03Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.amakusa.kumamoto.jp/list00748.html (label: 予算・決算) 入口 https://www.city.amakusa.kumamoto.jp/list00748.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.amakusa.kumamoto.jp/list00748.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_14013_74639_up_zhaig8cd.pdf「令和６年度 歳入歳出決算書（PDF：2.83メガバイト）」, sha256:184a7a6a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

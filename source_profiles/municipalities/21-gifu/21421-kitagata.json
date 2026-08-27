@@ -56,11 +56,11 @@
       "notes": "Observed finance section at https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "6250d60d6c078143dddc8dec328d81272aa71f9d273c3cb9870b206492d6b67b",
           "fetched_at": "2026-08-27T10:13:52Z"
+        },
+        {
+          "url": "https://www.town.kitagata.gifu.jp/material/files/group/3/R0612.pdf",
+          "observed_on": "https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/3/2296.html",
+          "sha256": "921dc1727b2a53c2b78896d882ac6003e55697bb398a93e40ad53cdb6b4c486f",
+          "fetched_at": "2026-08-27T13:37:05Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kitagata.gifu.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R0612.pdf「令和5年度決算状況（広報きたがた 令和6年12月号） (PDFファイル: 750.3KB)」, sha256:921dc172）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

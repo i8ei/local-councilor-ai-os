@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.sammu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.sammu.lg.jp/gikai/info/page008648.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.sammu.lg.jp/gikai/info/page008648.html",
+          "observed_on": "http://www.city.sammu.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.sammu.lg.jp/gikai/info/page008648.html",
+          "observed_on": "https://www.city.sammu.lg.jp/gikai/info/page008648.html",
+          "sha256": "47c01807aac23270304b3eb49772d8020f06dc6873444db30bace8b6c3b66907",
+          "fetched_at": "2026-08-27T13:42:11Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

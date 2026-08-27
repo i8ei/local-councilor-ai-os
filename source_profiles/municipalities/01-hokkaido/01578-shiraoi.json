@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.shiraoi.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.shiraoi.hokkaido.jp/docs/page2014063000011.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.shiraoi.hokkaido.jp/docs/6603.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.shiraoi.hokkaido.jp/docs/page2014063000011.html",
-          "observed_on": "http://www.town.shiraoi.hokkaido.jp/town/51",
-          "fetched_at": "2026-08-27T06:44:41Z"
+          "url": "https://www.town.shiraoi.hokkaido.jp/docs/6603.html",
+          "observed_on": "http://www.town.shiraoi.hokkaido.jp/soshiki/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.shiraoi.hokkaido.jp/docs/6603.html",
+          "observed_on": "https://www.town.shiraoi.hokkaido.jp/docs/6603.html",
+          "sha256": "48023151c1bc7485823078a9cde57db52d530f7845e8a98873d3926d486e3611",
+          "fetched_at": "2026-08-27T13:25:16Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.shiraoi.hokkaido.jp/docs/page2014063000011.html (label: 会議録 ( 2026年4月13日 更新))"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

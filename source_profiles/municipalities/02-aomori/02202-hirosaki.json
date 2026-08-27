@@ -6,19 +6,27 @@
   "official_home_url": "https://www.city.hirosaki.aomori.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.kensakusystem.jp/hirosaki/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.hirosaki.aomori.jp/gikai/iinkaikaigiroku.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.kensakusystem.jp/hirosaki/index.html",
+          "url": "https://www.city.hirosaki.aomori.jp/gikai/iinkaikaigiroku.html",
           "observed_on": "https://www.city.hirosaki.aomori.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:55:44Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.hirosaki.aomori.jp/gikai/iinkaikaigiroku.html",
+          "observed_on": "https://www.city.hirosaki.aomori.jp/gikai/iinkaikaigiroku.html",
+          "sha256": "77ecd26a0fea71f3c9320482967c4494c64b143852d006726d2e0ec29f86aa84",
+          "fetched_at": "2026-08-27T13:25:39Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.kensakusystem.jp/hirosaki/index.html (label: 会議録検索システム)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

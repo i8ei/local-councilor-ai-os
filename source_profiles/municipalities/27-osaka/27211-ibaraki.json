@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.ibaraki.osaka.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/shigikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/shigikaidayori/index.html",
+          "observed_on": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/shigikaidayori/index.html",
+          "observed_on": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/shigikaidayori/index.html",
+          "sha256": "529a98c27e9219b6641348f0f9149dd11f095bf2ecffe1e56c6b809ab489f8e7",
+          "fetched_at": "2026-08-27T14:01:55Z"
+        },
+        {
+          "url": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/shigikaidayori/pdf_gikaidayori/r8shigikaidayori/69635.html",
+          "observed_on": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/shigikaidayori/index.html",
+          "sha256": "202cc73094eda56cf877045b47aa43096c559d53bbdc30159eb8aa3dabf7de4e",
+          "fetched_at": "2026-08-27T14:01:56Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +53,11 @@
       "notes": "Observed regulations index at http://www.city.ibaraki.osaka.jp/shisei_info/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/56344.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/56344.html",
@@ -50,16 +74,22 @@
           "url": "https://www.city.ibaraki.osaka.jp/material/files/group/73/r8yosan.pdf",
           "observed_on": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/56344.html",
           "fetched_at": "2026-08-27T11:04:12Z"
+        },
+        {
+          "url": "https://www.city.ibaraki.osaka.jp/material/files/group/73/r8yosan.pdf",
+          "observed_on": "https://www.city.ibaraki.osaka.jp/shisei_info/gikai/56344.html",
+          "sha256": "dbf098550bb359f27ab8b27a35f0c786a77ebeedb94a373067a999299ffe736b",
+          "fetched_at": "2026-08-27T11:04:13Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.ibaraki.osaka.jp/shisei_info/gikai/56344.html (label: 議会費予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r8yosan.pdf「令和8年度議会費予算詳細 (PDFファイル: 117.1KB)」, sha256:dbf09855）にて構造マーカー（節・予算額・予算総額・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ibaraki.osaka.jp/shisei_info/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ibaraki.osaka.jp/shisei_info/gyozaisei/index.html",
@@ -71,9 +101,21 @@
           "observed_on": "https://www.city.ibaraki.osaka.jp/shisei_info/gyozaisei/index.html",
           "sha256": "1679f70ba2da69148f7f0493cae150b3f18ae998aebb57d6898d596c62aecfd4",
           "fetched_at": "2026-08-27T09:50:38Z"
+        },
+        {
+          "url": "http://www.city.ibaraki.osaka.jp/shisei_info/gyozaisei/index.html",
+          "observed_on": "http://www.city.ibaraki.osaka.jp/",
+          "sha256": "1679f70ba2da69148f7f0493cae150b3f18ae998aebb57d6898d596c62aecfd4",
+          "fetched_at": "2026-08-27T09:50:38Z"
+        },
+        {
+          "url": "https://www.city.ibaraki.osaka.jp/material/files/group/13/R6_torikumizisseki.pdf",
+          "observed_on": "https://www.city.ibaraki.osaka.jp/shisei_info/gyozaisei/gyozaiseikaikaku/54858.html",
+          "sha256": "03aa134af99a4f009a738c97c1a9ef531469f6277db1a5706c4a5af303285d38",
+          "fetched_at": "2026-08-27T13:40:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ibaraki.osaka.jp/shisei_info/gyozaisei/index.html (label: 行財政) 入口 https://www.city.ibaraki.osaka.jp/shisei_info/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ibaraki.osaka.jp/shisei_info/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ibaraki.osaka.jp/shisei_info/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_torikumizisseki.pdf「行財政改革取組実績報告書（令和6年度） (PDFファイル: 1.3MB)」, sha256:03aa134a）にて構造マーカー（歳入・項・節等）を確認済み。"
     }
   }
 }

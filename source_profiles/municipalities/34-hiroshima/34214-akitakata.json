@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/akitakata/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/",
           "sha256": "a2e164b93a72ebe025f7d18ffd6f812b931962787f4412e262f6d115bc05a3c6",
           "fetched_at": "2026-08-27T09:45:10Z"
+        },
+        {
+          "url": "http://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/",
+          "observed_on": "http://www.akitakata.jp/",
+          "sha256": "a2e164b93a72ebe025f7d18ffd6f812b931962787f4412e262f6d115bc05a3c6",
+          "fetched_at": "2026-08-27T09:45:10Z"
+        },
+        {
+          "url": "https://www.akitakata.jp/akitakata-media/filer_public/0b/30/0b30b7ef-1c31-46d9-9393-60fd02ff1452/2026nendo-yosan-hensei-houshin-nitsuite-kouhyou-you-251002.pdf",
+          "observed_on": "https://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/z144/z583/",
+          "sha256": "21f3faabe02caa4ac135e93c40d63143db432abc7bb96c12c1024d0e668d3915",
+          "fetched_at": "2026-08-27T13:42:55Z"
         }
       ],
-      "notes": "Observed budget link at http://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/ (label: 予算) 入口 https://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2026nendo-yosan-hensei-houshin-nitsuite-kouhyou-you-251002.pdf「令和8年度予算編成方針について (165.7 KB)」, sha256:21f3faab）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

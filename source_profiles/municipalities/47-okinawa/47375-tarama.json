@@ -6,12 +6,36 @@
   "official_home_url": "https://www.vill.tarama.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.tarama.okinawa.jp/gyousei/gikai/gikaidayori/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.tarama.okinawa.jp/gyousei/gikai/gikaidayori/",
+          "observed_on": "https://www.vill.tarama.okinawa.jp/gyousei/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.vill.tarama.okinawa.jp/gyousei/gikai/gikaidayori/",
+          "observed_on": "https://www.vill.tarama.okinawa.jp/gyousei/gikai/gikaidayori/",
+          "sha256": "dd5b4a17dfda838fba6f27e62a3fac5509a63a6648e8e36ada2ab687dd5d3e5a",
+          "fetched_at": "2026-08-27T14:12:56Z"
+        },
+        {
+          "url": "https://www.vill.tarama.okinawa.jp/gyousei/gikai/gikaidayori/2023%e5%b9%b4%e5%ba%a6/",
+          "observed_on": "https://www.vill.tarama.okinawa.jp/gyousei/gikai/gikaidayori/",
+          "sha256": "a8e7470ab10c72f247c29fa2206259a86c65f0c6d29391063777ae38ed038fa5",
+          "fetched_at": "2026-08-27T14:12:57Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +80,11 @@
       "notes": "Observed finance section at https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ (label: 財政 多良間村の行政財政計画、財政状況について。) 入口 https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
@@ -72,9 +96,15 @@
           "observed_on": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
           "sha256": "00e1938157625201650349ab3dec3b824c9297bfca7a79891c8f6337b845f315",
           "fetched_at": "2026-08-27T09:42:05Z"
+        },
+        {
+          "url": "https://www.vill.tarama.okinawa.jp/common/uploads/39_tarama.xlsx",
+          "observed_on": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/%e8%b2%a1%e6%94%bf%e7%8a%b6%e6%b3%81%e8%b3%87%e6%96%99%e9%9b%86%e3%81%ae%e5%85%ac%e8%a1%a8%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+          "sha256": "60ded41ba18a0293317aa3f2f94d08e19467bff8dbaeb5b828f9d460083c0723",
+          "fetched_at": "2026-08-27T13:48:32Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ (label: 財政 多良間村の行政財政計画、財政状況について。) 入口 https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（39_tarama.xlsx「平成30年度 財政状況資料集」, sha256:60ded41b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

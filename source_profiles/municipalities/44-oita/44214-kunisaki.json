@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www.city.kunisaki.oita.jp/soshiki/somu/reiki.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html",
@@ -63,16 +63,28 @@
           "url": "https://www.city.kunisaki.oita.jp/uploaded/attachment/31364.pdf",
           "observed_on": "https://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html",
           "fetched_at": "2026-08-27T10:57:32Z"
+        },
+        {
+          "url": "http://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html",
+          "observed_on": "http://www.city.kunisaki.oita.jp/",
+          "sha256": "2217de8566d81a1ccdeca9983e71bf1b294b6f388009a209063d7674702ed6ce",
+          "fetched_at": "2026-08-27T09:39:34Z"
+        },
+        {
+          "url": "https://www.city.kunisaki.oita.jp/uploaded/attachment/30967.pdf",
+          "observed_on": "https://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html",
+          "sha256": "723f294c0c9cd2ed80d8de51f2ffc56e381842df2c2b39f97ea3b58758df4a71",
+          "fetched_at": "2026-08-27T13:46:54Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html (label: 令和8年度予算について) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（30967.pdf「6月補正予算書（一般会計） [PDFファイル／85KB]」, sha256:723f294c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kunisaki.oita.jp/life/4/22/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kunisaki.oita.jp/life/4/22/",
@@ -84,9 +96,21 @@
           "observed_on": "https://www.city.kunisaki.oita.jp/life/4/22/",
           "sha256": "4f891f9e7e918a8a544fb7407b71d35fac30c4a82b94ee259cd6ddeba945fcf2",
           "fetched_at": "2026-08-27T09:39:37Z"
+        },
+        {
+          "url": "http://www.city.kunisaki.oita.jp/life/4/22/",
+          "observed_on": "http://www.city.kunisaki.oita.jp/",
+          "sha256": "4f891f9e7e918a8a544fb7407b71d35fac30c4a82b94ee259cd6ddeba945fcf2",
+          "fetched_at": "2026-08-27T09:39:37Z"
+        },
+        {
+          "url": "https://www.city.kunisaki.oita.jp/uploaded/attachment/28880.pdf",
+          "observed_on": "https://www.city.kunisaki.oita.jp/soshiki/zaisei/zaijokyo-top28.html",
+          "sha256": "d30c3bdc05f9d44f7c662b0067d342f8c27d8318930931d9ebff8f425b3e692f",
+          "fetched_at": "2026-08-27T13:46:56Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kunisaki.oita.jp/life/4/22/ (label: 行財政) 入口 https://www.city.kunisaki.oita.jp/life/4/22/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kunisaki.oita.jp/life/4/22/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（28880.pdf「令和6年度 歳入歳出決算の概要 [PDFファイル／107KB]」, sha256:d30c3bdc）にて構造マーカー（歳入・歳出・決算額等）を確認済み。"
     }
   }
 }

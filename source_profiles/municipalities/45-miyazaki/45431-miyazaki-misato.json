@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.miyazaki-misato.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.miyazaki-misato.lg.jp/gikai/kiji0031310/index.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.miyazaki-misato.lg.jp/gikai/kiji0031310/index.html",
+          "observed_on": "https://www.town.miyazaki-misato.lg.jp/gikai/list00411.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.miyazaki-misato.lg.jp/gikai/kiji0031310/index.html",
+          "observed_on": "https://www.town.miyazaki-misato.lg.jp/gikai/kiji0031310/index.html",
+          "sha256": "7d6b18e1d6fd69b013505deded79fb7fe86365a3ecf74fc2dfcf363d6f7f4cd9",
+          "fetched_at": "2026-08-27T14:11:33Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +44,11 @@
       "notes": "Observed regulations index at http://www.town.miyazaki-misato.lg.jp/list00213.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.miyazaki-misato.lg.jp/list00495.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miyazaki-misato.lg.jp/list00495.html",
@@ -45,9 +60,21 @@
           "observed_on": "https://www.town.miyazaki-misato.lg.jp/list00495.html",
           "sha256": "ecf6343a5619f4611295969d51bfd3345fa6690ad7bf6bd23eb9effb4cffa4cf",
           "fetched_at": "2026-08-27T09:40:11Z"
+        },
+        {
+          "url": "http://www.town.miyazaki-misato.lg.jp/list00495.html",
+          "observed_on": "http://www.town.miyazaki-misato.lg.jp/",
+          "sha256": "ecf6343a5619f4611295969d51bfd3345fa6690ad7bf6bd23eb9effb4cffa4cf",
+          "fetched_at": "2026-08-27T09:40:11Z"
+        },
+        {
+          "url": "https://www.town.miyazaki-misato.lg.jp/kiji0031142/3_1142_5185_up_0mjyi758.pdf",
+          "observed_on": "https://www.town.miyazaki-misato.lg.jp/kiji0031142/index.html",
+          "sha256": "4b490332fcbd6ff3fc4a29cf2140bcc96cc7103a14506fc6950dac89c676694a",
+          "fetched_at": "2026-08-27T13:47:19Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.miyazaki-misato.lg.jp/list00495.html (label: 予算) 入口 https://www.town.miyazaki-misato.lg.jp/list00495.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.miyazaki-misato.lg.jp/list00495.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_1142_5185_up_0mjyi758.pdf「令和7年度美郷町一般会計予算（PDF：1.91メガバイト）」, sha256:4b490332）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

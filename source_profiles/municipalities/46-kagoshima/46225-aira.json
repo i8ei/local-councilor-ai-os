@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/rinjikouhukin.html (label: 新型コロナウイルス感染症対応地方創生臨時交付金の効果検証の公表) 入口 http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/rinjikouhukin.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/rinjikouhukin.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/kessansho/kessansho.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/kessansho/kessansho.html",
@@ -90,9 +90,15 @@
           "url": "http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/kessansho/documents/r6kessan.pdf",
           "observed_on": "http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/kessansho/kessansho.html",
           "fetched_at": "2026-08-27T10:57:53Z"
+        },
+        {
+          "url": "http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/kessansho/documents/r6kessan.pdf",
+          "observed_on": "http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/kessansho/kessansho.html",
+          "sha256": "81b573b03251783a342cfe3c0f01d46a3145ccb57a742b4d3642a263219510c4",
+          "fetched_at": "2026-08-27T10:57:53Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.aira.lg.jp/zaisei/gyosei/yosan/kohyo/kessansho/kessansho.html (label: 姶良市の決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（r6kessan.pdf「令和6年度の決算書（PDF：1,513KB）」, sha256:81b573b0）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

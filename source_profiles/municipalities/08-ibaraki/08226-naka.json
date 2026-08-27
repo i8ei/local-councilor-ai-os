@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.naka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.naka.lg.jp/gikai/teireikai/page001775.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.naka.lg.jp/gikai/teireikai/page001775.html",
+          "observed_on": "http://www.city.naka.lg.jp/gikai/teireikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.naka.lg.jp/gikai/teireikai/page001775.html",
+          "observed_on": "https://www.city.naka.lg.jp/gikai/teireikai/page001775.html",
+          "sha256": "6b48c8f81edfd2b8c06db6134942c9c0d6bbe49bdcfd961f8e3b8fded1664d3a",
+          "fetched_at": "2026-08-27T13:30:21Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

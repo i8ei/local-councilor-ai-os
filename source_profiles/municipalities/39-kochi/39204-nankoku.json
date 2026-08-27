@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.nankoku.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.nankoku.lg.jp/gijiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.nankoku.lg.jp/gijiroku/giji_dtl.php?hdnKatugi=9000&hdnID=2041",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.nankoku.lg.jp/gijiroku/",
-          "observed_on": "https://www.city.nankoku.lg.jp/gikai/",
-          "fetched_at": "2026-08-27T07:07:42Z"
+          "url": "https://www.city.nankoku.lg.jp/gijiroku/giji_dtl.php?hdnKatugi=9000&hdnID=2041",
+          "observed_on": "https://www.city.nankoku.lg.jp/gijiroku/?hdnKatugi=9000",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.nankoku.lg.jp/gijiroku/giji_dtl.php?hdnKatugi=9000&hdnID=2041",
+          "observed_on": "https://www.city.nankoku.lg.jp/gijiroku/giji_dtl.php?hdnKatugi=9000&hdnID=2041",
+          "sha256": "f9d9e0cab6181b0a3745eeb9c9cb2c60805d9b2f531d95029afb0ae17ff4f869",
+          "fetched_at": "2026-08-27T14:07:47Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.nankoku.lg.jp/gijiroku/ (label: )"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

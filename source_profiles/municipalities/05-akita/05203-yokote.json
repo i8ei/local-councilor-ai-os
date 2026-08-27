@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.yokote.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.yokote.lg.jp/shigikai/1001553/1003538/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.yokote.lg.jp/shigikai/1001553/1003539/1013010.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.yokote.lg.jp/shigikai/1001553/1003538/index.html",
-          "observed_on": "http://www.city.yokote.lg.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T07:29:12Z"
+          "url": "https://www.city.yokote.lg.jp/shigikai/1001553/1003539/1013010.html",
+          "observed_on": "http://www.city.yokote.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.yokote.lg.jp/shigikai/1001553/1003539/1013010.html",
+          "observed_on": "https://www.city.yokote.lg.jp/shigikai/1001553/1003539/1013010.html",
+          "sha256": "79030f355218b2abd7df15e697529e1aad4b40728fd678088293f4fde2e762bd",
+          "fetched_at": "2026-08-27T13:26:54Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.yokote.lg.jp/shigikai/1001553/1003538/index.html (label: 会議録) extraction probe read one document at http://ssp.kaigiroku.net/tenant/yokote/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

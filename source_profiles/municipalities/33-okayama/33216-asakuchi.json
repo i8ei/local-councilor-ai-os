@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.asakuchi/reiki_menu.html (label: 浅口市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.asakuchi.lg.jp/life/4/22/94/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.asakuchi.lg.jp/life/4/22/94/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.asakuchi.lg.jp/life/4/22/94/",
           "sha256": "34c231203e489b8d3da9e7a40a63f253b6ce53871e1518f720c74d1133438373",
           "fetched_at": "2026-08-27T09:44:40Z"
+        },
+        {
+          "url": "http://www.city.asakuchi.lg.jp/life/4/22/94/",
+          "observed_on": "http://www.city.asakuchi.lg.jp/",
+          "sha256": "34c231203e489b8d3da9e7a40a63f253b6ce53871e1518f720c74d1133438373",
+          "fetched_at": "2026-08-27T09:44:40Z"
+        },
+        {
+          "url": "https://www.city.asakuchi.lg.jp/uploaded/attachment/12215.pdf",
+          "observed_on": "https://www.city.asakuchi.lg.jp/page/17223.html",
+          "sha256": "72f9d07b18316169d6f55dc572136872e69ecf2566b1a1a0b6dafdb73438c913",
+          "fetched_at": "2026-08-27T13:42:22Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.asakuchi.lg.jp/life/4/22/94/ (label: 財政) 入口 https://www.city.asakuchi.lg.jp/life/4/22/94/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.asakuchi.lg.jp/life/4/22/94/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（12215.pdf「予算書 [PDFファイル／6.86MB]」, sha256:72f9d07b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

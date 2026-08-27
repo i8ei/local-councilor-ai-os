@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.owase.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.owase.lg.jp/0000000792.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.owase.lg.jp/0000000792.html",
+          "observed_on": "https://www.city.owase.lg.jp/category/7-10-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.owase.lg.jp/0000000792.html",
+          "observed_on": "https://www.city.owase.lg.jp/0000000792.html",
+          "sha256": "88a229abc5d8a46a2e0e379fd898da69d054f1b900758c168cc76379a0af0997",
+          "fetched_at": "2026-08-27T13:59:48Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed budget link at http://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html (label: 予算・決算) 入口 https://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html",
@@ -72,9 +87,21 @@
           "observed_on": "https://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html",
           "sha256": "ef1113640c9e2832cae5d6b4f73a145e8e009a787448e79f6dfe247f12f535f8",
           "fetched_at": "2026-08-27T09:48:44Z"
+        },
+        {
+          "url": "http://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.owase.lg.jp/",
+          "sha256": "ef1113640c9e2832cae5d6b4f73a145e8e009a787448e79f6dfe247f12f535f8",
+          "fetched_at": "2026-08-27T09:48:44Z"
+        },
+        {
+          "url": "https://www.city.owase.lg.jp/cmsfiles/contents/0000023/23239/R6kessan.pdf",
+          "observed_on": "https://www.city.owase.lg.jp/0000023239.html",
+          "sha256": "d307285dfd7af3a0dbef43bb57db6b343597f97bde012cab4e3aaa70b1d05f2e",
+          "fetched_at": "2026-08-27T13:39:04Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html (label: 予算・決算) 入口 https://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.owase.lg.jp/category/7-7-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan.pdf「令和６年度一般会計・特別会計決算書 (PDF形式、1.77MB)」, sha256:d307285d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

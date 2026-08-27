@@ -63,11 +63,11 @@
       "notes": "Observed finance section at https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html",
           "sha256": "13aab43fe705e8910c8ee21530e5a787d51aafd6f1378dcdd86cb915081964df",
           "fetched_at": "2026-08-27T09:53:03Z"
+        },
+        {
+          "url": "https://www.town.kanmaki.nara.jp/material/files/group/3/zai05-25kanmaki.xlsx",
+          "observed_on": "https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/2354.html",
+          "sha256": "78231acc3e327f1124d65b762b1c479cd16223d1a38d4673262fea0cf8940f2c",
+          "fetched_at": "2026-08-27T13:41:34Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kanmaki.nara.jp/choseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zai05-25kanmaki.xlsx「令和5年度財政状況資料集 (Excelファイル: 841.5KB)」, sha256:78231acc）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

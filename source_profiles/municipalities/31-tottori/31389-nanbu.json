@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.nanbu.tottori.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.nanbu.tottori.jp/admin/gikai/kaigiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.nanbu.tottori.jp/admin/gikai/1/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.nanbu.tottori.jp/admin/gikai/kaigiroku/",
+          "url": "https://www.town.nanbu.tottori.jp/admin/gikai/1/",
           "observed_on": "http://www.town.nanbu.tottori.jp/admin/gikai/",
-          "fetched_at": "2026-08-27T06:00:58Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.nanbu.tottori.jp/admin/gikai/1/",
+          "observed_on": "https://www.town.nanbu.tottori.jp/admin/gikai/1/",
+          "sha256": "c9e5399be92eecee4ef153b89f086a6aa67675a5c345c130af362b883cd41181",
+          "fetched_at": "2026-08-27T14:05:16Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.nanbu.tottori.jp/admin/gikai/kaigiroku/ (label: 会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

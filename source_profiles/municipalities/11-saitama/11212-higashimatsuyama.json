@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.higashimatsuyama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/higashimatsuyama/pg/index.html",
-      "verified_at": "2026-08-27T10:20:56Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.higashimatsuyama.lg.jp/site/shigikai/55934.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/higashimatsuyama/pg/index.html",
-          "observed_on": "http://www.city.higashimatsuyama.lg.jp/site/shigikai/55934.html",
-          "fetched_at": "2026-08-27T06:51:34Z"
+          "url": "https://www.city.higashimatsuyama.lg.jp/site/shigikai/55934.html",
+          "observed_on": "https://www.city.higashimatsuyama.lg.jp/site/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/higashimatsuyama/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/higashimatsuyama/pg/index.html",
-          "sha256": "60074f74fdcb6c1b7e44d9400654e6e3e01779be040383bbda7ff54571b6a17f",
-          "fetched_at": "2026-08-27T10:20:57Z"
+          "url": "https://www.city.higashimatsuyama.lg.jp/site/shigikai/55934.html",
+          "observed_on": "https://www.city.higashimatsuyama.lg.jp/site/shigikai/55934.html",
+          "sha256": "bf910c66c8f6bde8cbf5f6040cee44f31483de3cf343c7913dd5e3828711db79",
+          "fetched_at": "2026-08-27T13:39:59Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/higashimatsuyama/pg/index.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -6,19 +6,37 @@
   "official_home_url": "http://www.town.misasa.tottori.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.misasa.tottori.jp/315/319/333/442/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.misasa.tottori.jp/315/319/333/442/",
           "observed_on": "http://www.town.misasa.tottori.jp/315/319/333/",
           "fetched_at": "2026-08-27T05:59:28Z"
+        },
+        {
+          "url": "https://www.town.misasa.tottori.jp/315/319/333/442/",
+          "observed_on": "https://www.town.misasa.tottori.jp/315/319/333/442/",
+          "sha256": "4e69cb119a8e3a10a50c1ddd3d7eaaee1065b63932dfd7f074df345360a6e77d",
+          "fetched_at": "2026-08-27T09:42:33Z"
+        },
+        {
+          "url": "https://www.town.misasa.tottori.jp/315/319/333/442/2047/",
+          "observed_on": "https://www.town.misasa.tottori.jp/315/319/333/442/",
+          "sha256": "79ad8cfa0af407c6365c8a50ddb6468ba600541b8035f38f8ab45cc40c2d8bbb",
+          "fetched_at": "2026-08-27T14:04:54Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.misasa.tottori.jp/315/319/333/442/ (label: 会議録 2022-02-22)"
+      "notes": "Observed council minutes index at https://www.town.misasa.tottori.jp/315/319/333/442/ (label: 会議録 2022-02-22)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +54,11 @@
       "notes": "Observed regulations index at https://www.town.misasa.tottori.jp/315/1492/ (label: 条例・規則等)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.misasa.tottori.jp/315/319/323/340/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.misasa.tottori.jp/315/319/323/340/",
@@ -52,9 +70,15 @@
           "observed_on": "http://www.town.misasa.tottori.jp/315/319/323/340/",
           "sha256": "a847c019b1629ff6231eb6ad1e78a721f1c781fb52cdc4d76a0282f926fa9978",
           "fetched_at": "2026-08-27T09:42:35Z"
+        },
+        {
+          "url": "https://www.town.misasa.tottori.jp/files/67118.pdf",
+          "observed_on": "https://www.town.misasa.tottori.jp/315/319/323/340/1986/",
+          "sha256": "e80b63867d97a70dc5d56d5f97949a6cf10442956e76222b1cd749367b6a9bcc",
+          "fetched_at": "2026-08-27T13:42:03Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.misasa.tottori.jp/315/319/323/340/ (label: 予算・決算) 入口 http://www.town.misasa.tottori.jp/315/319/323/340/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.misasa.tottori.jp/315/319/323/340/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（67118.pdf「令和７年度 １月補正予算（専決処分）の概要 2026-01-28」, sha256:e80b6386）にて構造マーカー（項・予算総額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

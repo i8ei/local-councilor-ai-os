@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.bunkyo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.bunkyo.lg.jp/kugikai/index.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.city.bunkyo.lg.jp/kugikai/index.html",
+          "observed_on": "http://www.city.bunkyo.lg.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.bunkyo.lg.jp/kugikai/index.html",
+          "observed_on": "http://www.city.bunkyo.lg.jp/kugikai/index.html",
+          "sha256": "94624c94ae0833272e85d3665e77865fb6804002e81ebbdaa60561f26d513160",
+          "fetched_at": "2026-08-27T13:42:24Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

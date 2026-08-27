@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.kuki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kuki.lg.jp/shigikai/gian_kekka/1012894/1013228/1013232.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.kuki.lg.jp/shigikai/gian_kekka/1012894/1013228/1013232.html",
+          "observed_on": "http://www.city.kuki.lg.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.kuki.lg.jp/shigikai/gian_kekka/1012894/1013228/1013232.html",
+          "observed_on": "https://www.city.kuki.lg.jp/shigikai/gian_kekka/1012894/1013228/1013232.html",
+          "sha256": "53f559c9ee9c517a0dec5d803dbbd4d4a8ad72eb4f4e179ec941723bb3e5b4a4",
+          "fetched_at": "2026-08-27T13:40:14Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

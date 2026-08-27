@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at https://www.city.shizuoka.lg.jp/p000214.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.shizuoka.lg.jp/p000291.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.shizuoka.lg.jp/p000291.html",
@@ -45,9 +45,15 @@
           "observed_on": "https://www.city.shizuoka.lg.jp/p000291.html",
           "sha256": "547b0e71e0b11385e094032dace5d49523a6e250a2e591e114c788f84a0ecc03",
           "fetched_at": "2026-08-27T10:14:12Z"
+        },
+        {
+          "url": "https://www.city.shizuoka.lg.jp/documents/56762/06_r8jikoubetumeisaisyo_ippankaikei.pdf",
+          "observed_on": "https://www.city.shizuoka.lg.jp/s3627/s012583.html",
+          "sha256": "f2e143e2c70939e2781439cc74d65919ba3d4d8e7a8d42da87397b8aa443e19d",
+          "fetched_at": "2026-08-27T13:37:15Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.shizuoka.lg.jp/p000291.html (label: 予算・決算・財政) 入口 https://www.city.shizuoka.lg.jp/p000291.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shizuoka.lg.jp/p000291.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（06_r8jikoubetumeisaisyo_ippankaikei.pdf「令和8年度一般会計当初予算説明書（PDF：4640KB）」, sha256:f2e143e2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

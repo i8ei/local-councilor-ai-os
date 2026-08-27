@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html",
           "sha256": "18ec7148025198ae27dd57d792da2602bb4b210dc635d7c745dbe34dbf2563f8",
           "fetched_at": "2026-08-27T10:14:27Z"
+        },
+        {
+          "url": "http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.fujinomiya.lg.jp/",
+          "sha256": "18ec7148025198ae27dd57d792da2602bb4b210dc635d7c745dbe34dbf2563f8",
+          "fetched_at": "2026-08-27T10:14:27Z"
+        },
+        {
+          "url": "https://www.city.fujinomiya.lg.jp/documents/7755/ippankaikei.pdf",
+          "observed_on": "https://www.city.fujinomiya.lg.jp/1020100000/p004124.html",
+          "sha256": "382a28bd4c92f0c2928e04a0dfddec095aa3e67623eb36aa3172e0a81899059b",
+          "fetched_at": "2026-08-27T13:37:17Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（ippankaikei.pdf「一般会計予算書（PDF：2,855KB）」, sha256:382a28bd）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

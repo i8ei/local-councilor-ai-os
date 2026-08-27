@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.ikeda.osaka.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ikeda.osaka.jp/shisei_info/gikai/gikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.ikeda.osaka.jp/shisei_info/gikai/gikaidayori/index.html",
+          "observed_on": "https://www.city.ikeda.osaka.jp/shisei_info/gikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.ikeda.osaka.jp/shisei_info/gikai/gikaidayori/index.html",
+          "observed_on": "https://www.city.ikeda.osaka.jp/shisei_info/gikai/gikaidayori/index.html",
+          "sha256": "bc769ac1d9e7aed36b6e32d07e31f61610fadec462f8c4cfab956e6e40825177",
+          "fetched_at": "2026-08-27T14:01:45Z"
+        },
+        {
+          "url": "https://www.city.ikeda.osaka.jp/shisei_info/gikai/gikaidayori/R8_tayori_1/21383.html",
+          "observed_on": "https://www.city.ikeda.osaka.jp/shisei_info/gikai/gikaidayori/index.html",
+          "sha256": "f885fb86ae668354048042eca4fa2f0bd7e4c9a545114154bf7818808c42d592",
+          "fetched_at": "2026-08-27T14:01:46Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +74,11 @@
       "notes": "Observed finance section at https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html (label: 行財政) 入口 https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html",
@@ -66,9 +90,15 @@
           "observed_on": "https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html",
           "sha256": "8d9ffc4094aa31dd8a0a6d271bbf2864012b3865c2ae751b26a77bf601715053",
           "fetched_at": "2026-08-27T09:50:41Z"
+        },
+        {
+          "url": "https://www.city.ikeda.osaka.jp/material/files/group/103/step_up_gaid.pdf",
+          "observed_on": "https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/gyozaisei/21160.html",
+          "sha256": "764c2bbd029f9dc20bd55cdd79dac356965b9209d90619816a41df2c5d9005f9",
+          "fetched_at": "2026-08-27T13:39:58Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html (label: 行財政) 入口 https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ikeda.osaka.jp/shisei_info/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（step_up_gaid.pdf「行財政ステップアップガイド (PDFファイル: 1017.0KB)」, sha256:764c2bbd）にて構造マーカー（歳入・項等）を確認済み。"
     }
   }
 }

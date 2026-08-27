@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.honbetsu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.honbetsu.hokkaido.jp/web/parliament/parliament04.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.honbetsu.hokkaido.jp/web/parliament/parliament04.html",
+          "observed_on": "http://www.town.honbetsu.hokkaido.jp/web/parliament/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.honbetsu.hokkaido.jp/web/parliament/parliament04.html",
+          "observed_on": "http://www.town.honbetsu.hokkaido.jp/web/parliament/parliament04.html",
+          "sha256": "c94e08d980c9f0ab1078995b20e239674070698e688fec436b02210ddacd7bee",
+          "fetched_at": "2026-08-27T13:25:40Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

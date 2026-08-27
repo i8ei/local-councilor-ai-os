@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.isesaki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.isesaki.lg.jp/gyoseijoho/shigikai/shigikaikohoshi/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "http://www.city.isesaki.lg.jp/gyoseijoho/shigikai/shigikaikohoshi/index.html",
+          "observed_on": "https://www.city.isesaki.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.isesaki.lg.jp/gyoseijoho/shigikai/shigikaikohoshi/index.html",
+          "observed_on": "http://www.city.isesaki.lg.jp/gyoseijoho/shigikai/shigikaikohoshi/index.html",
+          "sha256": "dbb6bb0a7bb3e2250436993865c93e8e771b533944ac09c1ffe3d9b5655386f1",
+          "fetched_at": "2026-08-27T13:32:05Z"
+        },
+        {
+          "url": "https://www.city.isesaki.lg.jp/gyoseijoho/shigikai/shigikaikohoshi/15070.html",
+          "observed_on": "http://www.city.isesaki.lg.jp/gyoseijoho/shigikai/shigikaikohoshi/index.html",
+          "sha256": "dc2378f81198c3fe57ad2599db9db5a6fb816bc98febe6eaff4878b1a6f0d807",
+          "fetched_at": "2026-08-27T13:39:07Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

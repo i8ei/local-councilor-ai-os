@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.usa.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.usa.oita.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T09:40:11Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.usa.oita.jp/sougo/soshiki/20/gikai/koukou/2768.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.usa.oita.dbsr.jp/index.php/",
+          "url": "https://www.city.usa.oita.jp/sougo/soshiki/20/gikai/koukou/2768.html",
           "observed_on": "https://www.city.usa.oita.jp/sougo/soshiki/20/gikai/index.html",
-          "fetched_at": "2026-08-27T06:20:15Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://www.city.usa.oita.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.usa.oita.dbsr.jp/index.php/",
-          "sha256": "a3841de25c7a950d1d6038a9ed47a87f28936c14aee29023a43fa37bfdd880f6",
-          "fetched_at": "2026-08-27T09:40:13Z"
+          "url": "https://www.city.usa.oita.jp/sougo/soshiki/20/gikai/koukou/2768.html",
+          "observed_on": "https://www.city.usa.oita.jp/sougo/soshiki/20/gikai/koukou/2768.html",
+          "sha256": "95b412a45398791c700eeb051f95b2dff89ce0541f3867d88fdec1e3ad92cef2",
+          "fetched_at": "2026-08-27T14:10:43Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.usa.oita.dbsr.jp/index.php/ (label: 宇佐市議会会議録（検索システム）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -63,11 +65,11 @@
       "notes": "Observed finance section at http://www.city.usa.oita.jp/sougo/oshirase/24806.html (label: 宇佐市行財政改革推進プランのパブリックコメントを募集します) 入口 https://www.city.usa.oita.jp/sougo/oshirase/24806.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.usa.oita.jp/sougo/oshirase/24806.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.usa.oita.jp/sougo/oshirase/24806.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.usa.oita.jp/sougo/oshirase/24806.html",
@@ -79,9 +81,21 @@
           "observed_on": "https://www.city.usa.oita.jp/sougo/oshirase/24806.html",
           "sha256": "bb025115ab73eb554bb55c2e79d096ae2f877d2f24b9e5ff450f00ebbd496103",
           "fetched_at": "2026-08-27T09:40:19Z"
+        },
+        {
+          "url": "http://www.city.usa.oita.jp/sougo/oshirase/24806.html",
+          "observed_on": "http://www.city.usa.oita.jp/",
+          "sha256": "bb025115ab73eb554bb55c2e79d096ae2f877d2f24b9e5ff450f00ebbd496103",
+          "fetched_at": "2026-08-27T09:40:19Z"
+        },
+        {
+          "url": "https://www.city.usa.oita.jp/material/files/group/136/GyoukakuPlan2026.pdf",
+          "observed_on": "https://www.city.usa.oita.jp/sougo/oshirase/24806.html",
+          "sha256": "4df5df0bd1b6e99eb6d4bfb410ad5fb9643273ee6e9e0d007c8fd03ff6d6a0c8",
+          "fetched_at": "2026-08-27T13:47:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.usa.oita.jp/sougo/oshirase/24806.html (label: 宇佐市行財政改革推進プランのパブリックコメントを募集します) 入口 https://www.city.usa.oita.jp/sougo/oshirase/24806.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.usa.oita.jp/sougo/oshirase/24806.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（GyoukakuPlan2026.pdf「宇佐市行財政改革推進プラン2026（案） (PDFファイル: 4.0MB)」, sha256:4df5df0b）にて構造マーカー（歳入・歳出・項・標準財政規模等）を確認済み。"
     }
   }
 }

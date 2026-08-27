@@ -6,19 +6,37 @@
   "official_home_url": "http://www.town.ami.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.ami.lg.jp/category/2-19-11-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ami.lg.jp/category/2-19-11-0-0-0-0-0-0-0.html",
           "observed_on": "http://www.town.ami.lg.jp/category/2-0-0-0-0-0-0-0-0-0.html",
           "fetched_at": "2026-08-27T06:14:31Z"
+        },
+        {
+          "url": "http://www.town.ami.lg.jp/category/2-19-11-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.ami.lg.jp/category/2-19-11-0-0-0-0-0-0-0.html",
+          "sha256": "3832126e2d2d2b8a51074c837e32d57db27b2fc8e7aa579a68f92c12dc54d8d4",
+          "fetched_at": "2026-08-27T10:17:52Z"
+        },
+        {
+          "url": "https://www.town.ami.lg.jp/0000000309.html",
+          "observed_on": "http://www.town.ami.lg.jp/category/2-19-11-0-0-0-0-0-0-0.html",
+          "sha256": "fa6275575bbeffb92629ee4ac8835f2e0f16015f0ed0d36a85d5eac267b9ad20",
+          "fetched_at": "2026-08-27T13:30:18Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.ami.lg.jp/category/2-19-11-0-0-0-0-0-0-0.html (label: 会議録)"
+      "notes": "Observed council minutes index at http://www.town.ami.lg.jp/category/2-19-11-0-0-0-0-0-0-0.html (label: 会議録)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "needs_review",

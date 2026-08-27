@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.bando.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.bando.lg.jp/page/page004968.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.bando.lg.jp/page/page004968.html",
+          "observed_on": "https://www.city.bando.lg.jp/page/page011265.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.bando.lg.jp/page/page004968.html",
+          "observed_on": "https://www.city.bando.lg.jp/page/page004968.html",
+          "sha256": "0bde094f74bc991fb9253f91ec3b325d13d4176c358e2433f1ac38814e45f53b",
+          "fetched_at": "2026-08-27T13:37:58Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

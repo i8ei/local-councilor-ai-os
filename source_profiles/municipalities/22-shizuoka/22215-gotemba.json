@@ -57,11 +57,11 @@
       "notes": "Observed budget link at https://www.city.gotemba.lg.jp/gyousei/category/g-8 (label: 予算・決算・財政) 入口 https://www.city.gotemba.lg.jp/gyousei/category/g-8 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.gotemba.lg.jp/gyousei/category/g-8 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.gotemba.lg.jp/gyousei/category/g-8 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.gotemba.lg.jp/gyousei/category/g-8",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.gotemba.lg.jp/gyousei/category/g-8",
@@ -73,9 +73,15 @@
           "observed_on": "https://www.city.gotemba.lg.jp/gyousei/category/g-8",
           "sha256": "248383b3645a0d1c2e6d5430391d955a305164517c5738040c3056123c12d14b",
           "fetched_at": "2026-08-27T10:14:34Z"
+        },
+        {
+          "url": "https://www.city.gotemba.lg.jp/gyousei/kanri/assets/uploads/2024/10/fdc12dbdbdfa05de851f12908d881afd.pdf",
+          "observed_on": "https://www.city.gotemba.lg.jp/gyousei/g-8/g-8-2/29411.html",
+          "sha256": "2eac46b4ba41eb35b95c5af4dbd2bebe81d9f95f6344e79e567dc3a2cfc14d44",
+          "fetched_at": "2026-08-27T13:37:58Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.gotemba.lg.jp/gyousei/category/g-8 (label: 予算・決算・財政) 入口 https://www.city.gotemba.lg.jp/gyousei/category/g-8 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.gotemba.lg.jp/gyousei/category/g-8 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.gotemba.lg.jp/gyousei/category/g-8 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（fdc12dbdbdfa05de851f12908d881afd.pdf「一般会計と特別会計の決算総額【PDF:60KB】」, sha256:2eac46b4）にて構造マーカー（歳入・歳出・決算額・決算総額等）を確認済み。"
     }
   }
 }

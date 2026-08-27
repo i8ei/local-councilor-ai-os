@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.nasukarasuyama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.nasukarasuyama.lg.jp/city-council/latest/page006755.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.nasukarasuyama.lg.jp/city-council/latest/page006755.html",
+          "observed_on": "https://www.city.nasukarasuyama.lg.jp/city-council/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.nasukarasuyama.lg.jp/city-council/latest/page006755.html",
+          "observed_on": "https://www.city.nasukarasuyama.lg.jp/city-council/latest/page006755.html",
+          "sha256": "8cc254977d47e48947825959a423014d36c8c5ccd065f436bf28bc5cc01b08f0",
+          "fetched_at": "2026-08-27T13:38:53Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

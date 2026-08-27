@@ -56,11 +56,11 @@
       "notes": "Observed budget link at http://www.city.nagareyama.chiba.jp/information/1008311/index.html (label: 予算・決算・監査) 入口 https://www.city.nagareyama.chiba.jp/information/1008311/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nagareyama.chiba.jp/information/1008311/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nagareyama.chiba.jp/information/1008311/index.html",
@@ -72,9 +72,21 @@
           "observed_on": "https://www.city.nagareyama.chiba.jp/information/1008311/index.html",
           "sha256": "d0e131e6b0a35cb4928bd6fe44116a631b9ed4c0dcfb7da1dffa1b00ef79ad69",
           "fetched_at": "2026-08-27T10:23:30Z"
+        },
+        {
+          "url": "http://www.city.nagareyama.chiba.jp/information/1008311/index.html",
+          "observed_on": "http://www.city.nagareyama.chiba.jp/",
+          "sha256": "d0e131e6b0a35cb4928bd6fe44116a631b9ed4c0dcfb7da1dffa1b00ef79ad69",
+          "fetched_at": "2026-08-27T10:23:30Z"
+        },
+        {
+          "url": "https://www.city.nagareyama.chiba.jp/_res/projects/default_project/_page_/001/055/486/r7_kessansho.pdf",
+          "observed_on": "https://www.city.nagareyama.chiba.jp/information/1008311/1008371/1055486.html",
+          "sha256": "9b9132824853440862d3c383c5f0c42d20b654f76ca395f306de04ee4791f19b",
+          "fetched_at": "2026-08-27T13:32:41Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.nagareyama.chiba.jp/information/1008311/index.html (label: 予算・決算・監査) 入口 https://www.city.nagareyama.chiba.jp/information/1008311/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r7_kessansho.pdf「歳入歳出決算書 （PDF 2.1 MB）」, sha256:9b913282）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

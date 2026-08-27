@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.town.kikuyo.lg.jp/list00242.html (label: 予算) 入口 https://www.town.kikuyo.lg.jp/list00242.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kikuyo.lg.jp/list00242.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kikuyo.lg.jp/list00243.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kikuyo.lg.jp/list00243.html",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.town.kikuyo.lg.jp/list00243.html",
           "sha256": "7490ee81a04da22b57f7e674a66c904c3b1732140605f757a0ca909c2ef745b3",
           "fetched_at": "2026-08-27T09:38:50Z"
+        },
+        {
+          "url": "http://www.town.kikuyo.lg.jp/list00243.html",
+          "observed_on": "http://www.town.kikuyo.lg.jp/",
+          "sha256": "7490ee81a04da22b57f7e674a66c904c3b1732140605f757a0ca909c2ef745b3",
+          "fetched_at": "2026-08-27T09:38:50Z"
+        },
+        {
+          "url": "https://www.town.kikuyo.lg.jp/kiji003984/3_984_20248_up_csxekzot.pdf",
+          "observed_on": "https://www.town.kikuyo.lg.jp/kiji003984/index.html",
+          "sha256": "7c8271481f6bd4396ef91615a68c98f890a5020fbd892826deed33c6445029a9",
+          "fetched_at": "2026-08-27T13:46:11Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kikuyo.lg.jp/list00243.html (label: 決算) 入口 https://www.town.kikuyo.lg.jp/list00243.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kikuyo.lg.jp/list00243.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_984_20248_up_csxekzot.pdf「令和6年度一般会計決算書（PDF：782.6キロバイト）」, sha256:7c827148）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

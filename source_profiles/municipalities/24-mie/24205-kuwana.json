@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.kuwana.lg.jp/shiseijouhou/index.html (label: 例規・条例)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kuwana.lg.jp/shiseijouhou/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kuwana.lg.jp/shiseijouhou/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.kuwana.lg.jp/shiseijouhou/index.html",
           "sha256": "4a642385fa4fd3dee3335547626c0b28eb3387e91563d5c227aaf07cb3230459",
           "fetched_at": "2026-08-27T09:48:37Z"
+        },
+        {
+          "url": "http://www.city.kuwana.lg.jp/shiseijouhou/index.html",
+          "observed_on": "http://www.city.kuwana.lg.jp/",
+          "sha256": "4a642385fa4fd3dee3335547626c0b28eb3387e91563d5c227aaf07cb3230459",
+          "fetched_at": "2026-08-27T09:48:37Z"
+        },
+        {
+          "url": "https://www.city.kuwana.lg.jp/documents/12594/reiwa8toushoyosan.pdf",
+          "observed_on": "https://www.city.kuwana.lg.jp/zaisei/r8tousyo.html",
+          "sha256": "9379aa8dba5f794d921802a196bf7317264c727d354c48bed623e0315e0e589f",
+          "fetched_at": "2026-08-27T13:39:00Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kuwana.lg.jp/shiseijouhou/index.html (label: 予算・財政・会計) 入口 https://www.city.kuwana.lg.jp/shiseijouhou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kuwana.lg.jp/shiseijouhou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（reiwa8toushoyosan.pdf「令和8年度予算書及び予算説明書(一般会計・特別会計）（PDF：880KB）」, sha256:9379aa8d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

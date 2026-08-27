@@ -35,11 +35,11 @@
       "notes": "Observed regulations index at https://www.city.yamatotakada.nara.jp/shisei/jorei_kisoku_yoko/3743.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yamatotakada.nara.jp/shisei/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yamatotakada.nara.jp/shisei/zaisei_yosan_kessan/index.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.city.yamatotakada.nara.jp/shisei/zaisei_yosan_kessan/index.html",
           "sha256": "a492013a00399aa84fd4be3d0f41226fc3d48f5b51b1a263a193533e8f7e61ec",
           "fetched_at": "2026-08-27T09:52:28Z"
+        },
+        {
+          "url": "https://www.city.yamatotakada.nara.jp/material/files/group/11/R7-yosansyo-yosannikansurusetumeisyo-ippan-6gatuhoseituikabun2.pdf",
+          "observed_on": "https://www.city.yamatotakada.nara.jp/shisei/zaisei_yosan_kessan/3298.html",
+          "sha256": "41b21a3d7f3fbf1cd02d21dc3337f466cf7f4286994e46670675f180dacac13a",
+          "fetched_at": "2026-08-27T13:41:17Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.yamatotakada.nara.jp/shisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.city.yamatotakada.nara.jp/shisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yamatotakada.nara.jp/shisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yamatotakada.nara.jp/shisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7-yosansyo-yosannikansurusetumeisyo-ippan-6gatuhoseituikabun2.pdf「令和7年度予算書および予算に関する説明書一般会計（令和7年6月補正追加分） (PDFファイル: 485.6KB)」, sha256:41b21a3d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

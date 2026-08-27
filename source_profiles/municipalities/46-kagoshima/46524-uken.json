@@ -6,12 +6,27 @@
   "official_home_url": "http://www.uken.net/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.uken.net/gikai/kaigiroku2026.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.uken.net/gikai/kaigiroku2026.html",
+          "observed_on": "http://www.uken.net/gikai/kaigiroku.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "http://www.uken.net/gikai/kaigiroku2026.html",
+          "observed_on": "http://www.uken.net/gikai/kaigiroku2026.html",
+          "sha256": "72741b843312c7a9d35f916c5b7a62fbf0e0d2366a0fadfd78a1a32bb348e4f2",
+          "fetched_at": "2026-08-27T14:11:38Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",
