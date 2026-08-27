@@ -174,12 +174,32 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(info["indicators_count"], 3)
 
     def test_find_candidate_databases(self) -> None:
+        # Create databases that should be ignored
+        trash_dir = self.work_dir / ".trash"
+        trash_dir.mkdir()
+        (trash_dir / "trashed.db").touch()
+
+        cache_dir = self.work_dir / "cache"
+        cache_dir.mkdir()
+        (cache_dir / "cached.db").touch()
+
+        (self.work_dir / "backup.bak.db").touch()
+        (self.work_dir / "temp.tmp").touch()
+
         found = find_candidate_databases([self.work_dir])
         found_names = {p.name for p in found}
         self.assertEqual(
             found_names,
             {"minutes.db", "regulations.db", "settlement.db", "benchmark.db"},
         )
+
+        # A search dir with 'tmp' in its own name must still discover DBs inside it
+        sub_tmp_dir = self.work_dir / "tmp_data"
+        sub_tmp_dir.mkdir()
+        valid_db = sub_tmp_dir / "valid.db"
+        valid_db.touch()
+        found_in_tmp = find_candidate_databases([sub_tmp_dir])
+        self.assertEqual({p.name for p in found_in_tmp}, {"valid.db"})
 
     def test_build_and_render_report(self) -> None:
         dbs = [self.minutes_db, self.reg_db, self.settlement_db, self.benchmark_db]

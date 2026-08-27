@@ -315,6 +315,17 @@ def find_candidate_databases(search_dirs: Sequence[Path]) -> list[Path]:
     """Discover SQLite databases in target directories."""
     candidates = []
     seen = set()
+    ignored_dir_names = {
+        ".git",
+        ".trash",
+        ".cache",
+        "cache",
+        "archive",
+        ".bak",
+        "backups",
+        "tmp",
+        ".tmp",
+    }
     for directory in search_dirs:
         if not directory.exists():
             continue
@@ -324,12 +335,31 @@ def find_candidate_databases(search_dirs: Sequence[Path]) -> list[Path]:
                 seen.add(resolved)
                 candidates.append(directory)
             continue
-        ignored_parts = {".bak", "cache", "archive", ".trash", "tmp"}
         for ext in ("*.db", "*.sqlite", "*.sqlite3"):
             for path in directory.rglob(ext):
-                # skip backups, archives, caches, and test files
-                if any(ig in path.name.lower() or ig in [p.lower() for p in path.parts] for ig in ignored_parts):
+                # Skip databases located inside ignored subdirectories
+                try:
+                    rel_parents = path.relative_to(directory).parent.parts
+                except ValueError:
+                    rel_parents = ()
+                if any(p.lower() in ignored_dir_names for p in rel_parents):
                     continue
+
+                # Skip hidden files, backups, temporary files
+                name_lower = path.name.lower()
+                if (
+                    name_lower.startswith(".")
+                    or any(
+                        name_lower.endswith(s)
+                        for s in (".bak", ".backup", ".tmp", ".swp", "~")
+                    )
+                    or any(
+                        m in name_lower
+                        for m in (".bak.", ".tmp.", "_backup.", ".backup.")
+                    )
+                ):
+                    continue
+
                 resolved = path.resolve()
                 if resolved not in seen:
                     seen.add(resolved)
