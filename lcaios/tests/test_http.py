@@ -674,6 +674,66 @@ class HttpClientTests(unittest.TestCase):
                 second._request_once("https://example.test/two")
         slept.assert_called_once_with(1.25)
 
+    def test_retry_on_429_with_retry_after_header(self) -> None:
+        rate_limited = _FakeResponse(
+            "https://example.test/rate-limited",
+            b"Too Many Requests",
+            status=429,
+        )
+        rate_limited.headers["Retry-After"] = "5"
+        success = _FakeResponse(
+            "https://example.test/rate-limited",
+            b"Success after retry",
+            status=200,
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            client = HttpClient(
+                temporary,
+                user_agent="retry-test",
+                min_interval_seconds=0,
+                max_retries=2,
+            )
+            with (
+                mock.patch.object(
+                    http._OPENER,
+                    "open",
+                    side_effect=[rate_limited, success],
+                ),
+                mock.patch.object(http.time, "sleep") as slept,
+            ):
+                raw = client._request_once("https://example.test/rate-limited")
+            self.assertEqual(200, raw.status)
+            self.assertEqual(b"Success after retry", raw.body)
+            self.assertEqual(1, client.retry_count)
+            slept.assert_called_once_with(5.0)
+
+    def test_retry_fails_when_exceeding_max_retries(self) -> None:
+        rate_limited = _FakeResponse(
+            "https://example.test/persistent-429",
+            b"Rate Limited",
+            status=429,
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            client = HttpClient(
+                temporary,
+                user_agent="retry-fail-test",
+                min_interval_seconds=0,
+                max_retries=2,
+                backoff_base_seconds=1.0,
+            )
+            with (
+                mock.patch.object(
+                    http._OPENER,
+                    "open",
+                    side_effect=[rate_limited, rate_limited, rate_limited],
+                ),
+                mock.patch.object(http.time, "sleep") as slept,
+            ):
+                raw = client._request_once("https://example.test/persistent-429")
+            self.assertEqual(429, raw.status)
+            self.assertEqual(2, client.retry_count)
+            self.assertEqual(2, slept.call_count)
+
 
 class FakeHttpClientTests(unittest.TestCase):
     def test_maps_responses_and_records_url_and_tier(self) -> None:

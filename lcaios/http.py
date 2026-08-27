@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import email.utils
 import enum
 import hashlib
 import json
@@ -232,6 +233,26 @@ def _parse_fetched_at(value: str) -> datetime | None:
     return parsed.astimezone(timezone.utc)
 
 
+def _parse_retry_after(headers: Mapping[str, str], default_delay: float, max_delay: float) -> float:
+    val = headers.get("Retry-After", headers.get("retry-after", "")).strip()
+    if not val:
+        return min(default_delay, max_delay)
+    try:
+        seconds = float(val)
+        return max(0.1, min(seconds, max_delay))
+    except ValueError:
+        pass
+    try:
+        target_dt = email.utils.parsedate_to_datetime(val)
+        if target_dt.tzinfo is None:
+            target_dt = target_dt.replace(tzinfo=timezone.utc)
+        now = datetime.now(timezone.utc)
+        diff = (target_dt - now).total_seconds()
+        return max(0.1, min(diff, max_delay))
+    except Exception:
+        return min(default_delay, max_delay)
+
+
 class HttpClient:
     """Sequential cached HTTP client used by bootstrap and modules."""
 
@@ -246,6 +267,9 @@ class HttpClient:
         min_interval_seconds: float = 1.5,
         index_ttl_seconds: float = 86_400.0,
         max_response_bytes: int = 64 * 1024 * 1024,
+        max_retries: int = 3,
+        backoff_base_seconds: float = 2.0,
+        max_retry_after_seconds: float = 60.0,
     ) -> None:
         if offline and refresh:
             raise ValueError("offlineとrefreshは同時に指定できません")
@@ -257,7 +281,11 @@ class HttpClient:
         self.min_interval_seconds = min_interval_seconds
         self.index_ttl_seconds = index_ttl_seconds
         self.max_response_bytes = max_response_bytes
+        self.max_retries = max_retries
+        self.backoff_base_seconds = backoff_base_seconds
+        self.max_retry_after_seconds = max_retry_after_seconds
         self.request_count = 0
+        self.retry_count = 0
         self.cache_hit_count = 0
         self.cache_miss_count = 0
         self.refresh_count = 0
@@ -475,39 +503,62 @@ class HttpClient:
 
     def _request_once(self, url: str) -> _RawResponse:
         with _REQUEST_LOCK:
-            self._throttle()
-            request = urllib.request.Request(
-                url,
-                headers={
-                    "User-Agent": self.user_agent,
-                    "Accept": "*/*",
-                    "Accept-Encoding": "identity",
-                    "Connection": "close",
-                },
-                method="GET",
-            )
-            self.request_count += 1
-            try:
+            for attempt in range(self.max_retries + 1):
+                self._throttle()
+                request = urllib.request.Request(
+                    url,
+                    headers={
+                        "User-Agent": self.user_agent,
+                        "Accept": "*/*",
+                        "Accept-Encoding": "identity",
+                        "Connection": "close",
+                    },
+                    method="GET",
+                )
+                self.request_count += 1
                 try:
-                    response = _OPENER.open(request, timeout=self.timeout)
-                except urllib.error.HTTPError as error:
-                    response = error
-                with response:
-                    response_url = canonical_url(response.geturl() or url)
-                    return _RawResponse(
-                        url=response_url,
-                        status=int(
+                    try:
+                        response = _OPENER.open(request, timeout=self.timeout)
+                    except urllib.error.HTTPError as error:
+                        response = error
+                    with response:
+                        response_url = canonical_url(response.geturl() or url)
+                        status = int(
                             getattr(response, "status", response.getcode())
-                        ),
-                        body=self._read_response_body(response, url),
-                        headers={
+                        )
+                        headers = {
                             str(key): str(value)
                             for key, value in response.headers.items()
-                        },
-                        fetched_at=utc_now(),
-                    )
-            except (urllib.error.URLError, TimeoutError, OSError) as error:
-                raise FetchError(f"取得に失敗しました: {url}: {error}") from error
+                        }
+                        body = self._read_response_body(response, url)
+
+                        # Retry on 429 (Too Many Requests) or 503 (Service Unavailable)
+                        if status in {429, 503} and attempt < self.max_retries:
+                            backoff = self.backoff_base_seconds * (2 ** attempt)
+                            delay = _parse_retry_after(
+                                headers,
+                                default_delay=backoff,
+                                max_delay=self.max_retry_after_seconds,
+                            )
+                            self.retry_count += 1
+                            time.sleep(delay)
+                            continue
+
+                        return _RawResponse(
+                            url=response_url,
+                            status=status,
+                            body=body,
+                            headers=headers,
+                            fetched_at=utc_now(),
+                        )
+                except (urllib.error.URLError, TimeoutError, OSError) as error:
+                    if attempt < self.max_retries:
+                        backoff = self.backoff_base_seconds * (2 ** attempt)
+                        self.retry_count += 1
+                        time.sleep(backoff)
+                        continue
+                    raise FetchError(f"取得に失敗しました: {url}: {error}") from error
+            raise FetchError(f"最大リトライ回数を超えました: {url}")
 
     @staticmethod
     def _redirect_target(response: _RawResponse) -> str | None:
