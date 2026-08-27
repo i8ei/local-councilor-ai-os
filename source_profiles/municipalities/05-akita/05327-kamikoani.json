@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T07:33:08Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.vill.kamikoani.akita.jp/info/663 (label: 会議録（令和６年～）)"
+      "notes": "Observed council minutes index at http://www.vill.kamikoani.akita.jp/info/663 (label: 会議録（令和６年～）) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "not_found",
@@ -39,9 +39,15 @@
           "url": "http://www.vill.kamikoani.akita.jp/menu/35",
           "observed_on": "http://www.vill.kamikoani.akita.jp/",
           "fetched_at": "2026-08-27T07:31:59Z"
+        },
+        {
+          "url": "https://www.vill.kamikoani.akita.jp:443/menu/35",
+          "observed_on": "https://www.vill.kamikoani.akita.jp:443/menu/35",
+          "sha256": "c0edf8373b39bc50618e61b7145b2f5617c63160c12964de0cbd33df342843eb",
+          "fetched_at": "2026-08-27T10:34:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.kamikoani.akita.jp/menu/35 (label: 財政情報)"
+      "notes": "Observed finance section at http://www.vill.kamikoani.akita.jp/menu/35 (label: 財政情報) 入口 https://www.vill.kamikoani.akita.jp:443/menu/35 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +60,15 @@
           "url": "http://www.vill.kamikoani.akita.jp/menu/35",
           "observed_on": "http://www.vill.kamikoani.akita.jp/",
           "fetched_at": "2026-08-27T07:31:59Z"
+        },
+        {
+          "url": "https://www.vill.kamikoani.akita.jp:443/menu/35",
+          "observed_on": "https://www.vill.kamikoani.akita.jp:443/menu/35",
+          "sha256": "c0edf8373b39bc50618e61b7145b2f5617c63160c12964de0cbd33df342843eb",
+          "fetched_at": "2026-08-27T10:34:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.kamikoani.akita.jp/menu/35 (label: 財政情報)"
+      "notes": "Observed finance section at http://www.vill.kamikoani.akita.jp/menu/35 (label: 財政情報) 入口 https://www.vill.kamikoani.akita.jp:443/menu/35 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

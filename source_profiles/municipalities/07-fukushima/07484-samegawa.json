@@ -6,16 +6,22 @@
   "official_home_url": "http://www.vill.samegawa.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.vill.samegawa.fukushima.jp/page/dir000624.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:26:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.samegawa.fukushima.jp/page/dir000624.html",
           "observed_on": "http://www.vill.samegawa.fukushima.jp/page/dir000062.html",
           "fetched_at": "2026-08-27T08:05:59Z"
+        },
+        {
+          "url": "http://www.vill.samegawa.fukushima.jp/page/dir000624.html",
+          "observed_on": "http://www.vill.samegawa.fukushima.jp/page/dir000624.html",
+          "sha256": "396e03c576fdbf8854b1646a0f3a341a143a0a5d8ba154bd225e4d295b454ae4",
+          "fetched_at": "2026-08-27T10:38:00Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.vill.samegawa.fukushima.jp/page/dir000624.html (label: 議会会議録)"
@@ -46,9 +52,20 @@
           "url": "http://www.vill.samegawa.fukushima.jp/page/page000572.html",
           "observed_on": "http://www.vill.samegawa.fukushima.jp/page/dir001910.html",
           "fetched_at": "2026-08-27T08:05:18Z"
+        },
+        {
+          "url": "https://www.vill.samegawa.fukushima.jp:443/page/page000572.html",
+          "observed_on": "https://www.vill.samegawa.fukushima.jp:443/page/page000572.html",
+          "sha256": "d3f294a4afe397bd1b0e72cdf1f80510b3f1ffb9ca91900740a8d328f8bc8bf8",
+          "fetched_at": "2026-08-27T10:38:01Z"
+        },
+        {
+          "url": "https://www.vill.samegawa.fukushima.jp/data/doc/1772695678_doc_44_0.pdf",
+          "observed_on": "https://www.vill.samegawa.fukushima.jp:443/page/page000572.html",
+          "fetched_at": "2026-08-27T11:26:47Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.samegawa.fukushima.jp/page/page000572.html (label: 予算・決算)"
+      "notes": "Observed budget link at http://www.vill.samegawa.fukushima.jp/page/page000572.html (label: 予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "http://www.vill.samegawa.fukushima.jp/page/page000572.html",
           "observed_on": "http://www.vill.samegawa.fukushima.jp/page/dir001910.html",
           "fetched_at": "2026-08-27T08:05:18Z"
+        },
+        {
+          "url": "https://www.vill.samegawa.fukushima.jp:443/page/page000572.html",
+          "observed_on": "https://www.vill.samegawa.fukushima.jp:443/page/page000572.html",
+          "sha256": "d3f294a4afe397bd1b0e72cdf1f80510b3f1ffb9ca91900740a8d328f8bc8bf8",
+          "fetched_at": "2026-08-27T10:38:01Z"
+        },
+        {
+          "url": "https://www.vill.samegawa.fukushima.jp/data/doc/1759127038_doc_44_0.pdf",
+          "observed_on": "https://www.vill.samegawa.fukushima.jp:443/page/page000572.html",
+          "fetched_at": "2026-08-27T11:26:49Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.samegawa.fukushima.jp/page/page000572.html (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.vill.samegawa.fukushima.jp/page/page000572.html (label: 予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

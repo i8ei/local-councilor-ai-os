@@ -409,14 +409,14 @@ def _content_subpage_links(html: str, page_url: str) -> list[dict[str, str]]:
         parser.feed(html)
     except Exception:
         pass
-    page_host = urlparse(page_url).netloc
+    page_host = (urlparse(page_url).hostname or "").lower()
     candidates: list[dict[str, str]] = []
     seen: set[str] = set()
     for href, raw_label in parser.links:
         label = raw_label[:120] or href[:120]
         absolute = urljoin(page_url, href)
         parsed = urlparse(absolute)
-        if parsed.scheme not in ("http", "https") or parsed.netloc != page_host:
+        if parsed.scheme not in ("http", "https") or (parsed.hostname or "").lower() != page_host:
             continue
         if absolute in seen:
             continue
@@ -453,7 +453,7 @@ def _extract_document_links(
         parser.feed(html)
     except Exception:
         pass  # malformed HTML: keep whatever links were collected
-    page_host = urlparse(page_url).netloc
+    page_host = (urlparse(page_url).hostname or "").lower()
     seen: set[str] = set()
     documents: list[dict[str, str]] = []
     year_pages: list[dict[str, str]] = []
@@ -463,7 +463,7 @@ def _extract_document_links(
         parsed = urlparse(absolute)
         if parsed.scheme not in ("http", "https"):
             continue
-        if parsed.netloc != page_host:
+        if (parsed.hostname or "").lower() != page_host:
             continue  # same-host policy: no cross-site document listing
         if absolute in seen:
             continue

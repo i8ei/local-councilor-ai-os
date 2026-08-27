@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import codecs
 import email.utils
 import enum
 import hashlib
@@ -165,8 +166,10 @@ def canonical_url(url: str, *, strict: bool = True) -> str | None:
         if strict:
             raise FetchError(f"HTTP(S) URL が必要です: {url}")
         return None
-    if strict and (parts.username or parts.password):
-        raise FetchError("認証情報を含む URL は取得できません")
+    if parts.username or parts.password:
+        if strict:
+            raise FetchError("認証情報を含む URL は取得できません")
+        return None
     return urllib.parse.urlunsplit(
         (parts.scheme.lower(), parts.netloc, parts.path or "/", parts.query, "")
     )
@@ -199,9 +202,25 @@ def _normalize_encoding(value: str | None) -> str | None:
     if not value:
         return None
     normalized = value.strip().strip("\"'").lower().replace("_", "-")
-    if normalized in {"shift-jis", "shiftjis", "sjis", "windows-31j", "ms932"}:
+    if normalized in {
+        "shift-jis",
+        "shiftjis",
+        "sjis",
+        "windows-31j",
+        "ms932",
+        "x-sjis",
+        "x-shift-jis",
+    }:
         return "cp932"
-    return normalized
+    if normalized in {"euc-jp", "eucjp", "x-euc-jp", "x-eucjp"}:
+        return "euc-jp"
+    if normalized in {"utf-8", "utf8", "utf-8-sig"}:
+        return "utf-8"
+    try:
+        codecs.lookup(normalized)
+        return normalized
+    except LookupError:
+        return "utf-8"
 
 
 def _detect_encoding(body: bytes, content_type_header: str) -> str:

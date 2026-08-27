@@ -6,16 +6,22 @@
   "official_home_url": "http://www.vill.tenei.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.vill.tenei.fukushima.jp/site/gikai/list19-54.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:43Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tenei.fukushima.jp/site/gikai/list19-54.html",
           "observed_on": "http://www.vill.tenei.fukushima.jp/site/gikai/",
           "fetched_at": "2026-08-27T07:57:05Z"
+        },
+        {
+          "url": "http://www.vill.tenei.fukushima.jp/site/gikai/list19-54.html",
+          "observed_on": "http://www.vill.tenei.fukushima.jp/site/gikai/list19-54.html",
+          "sha256": "2d73f5d2f8074f4aad0754d40125e185cfd4f7e70aa407291c52c1223d4c42fd",
+          "fetched_at": "2026-08-27T10:36:58Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.vill.tenei.fukushima.jp/site/gikai/list19-54.html (label: 会議録)"
@@ -46,9 +52,20 @@
           "url": "http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html",
           "observed_on": "http://www.vill.tenei.fukushima.jp/life/4/16/59/",
           "fetched_at": "2026-08-27T07:56:49Z"
+        },
+        {
+          "url": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
+          "observed_on": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
+          "sha256": "b13b57c13b7fcdb434b06b3a906478775c13dc4adbfdb974e9b05a4302bfb24f",
+          "fetched_at": "2026-08-27T10:37:01Z"
+        },
+        {
+          "url": "https://www.vill.tenei.fukushima.jp:443/uploaded/attachment/1189.pdf",
+          "observed_on": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
+          "fetched_at": "2026-08-27T11:25:44Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html (label: 財政情報)"
+      "notes": "Observed finance section at http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html",
           "observed_on": "http://www.vill.tenei.fukushima.jp/life/4/16/59/",
           "fetched_at": "2026-08-27T07:56:49Z"
+        },
+        {
+          "url": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
+          "observed_on": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
+          "sha256": "b13b57c13b7fcdb434b06b3a906478775c13dc4adbfdb974e9b05a4302bfb24f",
+          "fetched_at": "2026-08-27T10:37:01Z"
+        },
+        {
+          "url": "https://www.vill.tenei.fukushima.jp:443/uploaded/attachment/681.pdf",
+          "observed_on": "https://www.vill.tenei.fukushima.jp:443/soshiki/2/zaiseijouhou.html",
+          "fetched_at": "2026-08-27T11:25:44Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html (label: 財政情報)"
+      "notes": "Observed finance section at http://www.vill.tenei.fukushima.jp/soshiki/2/zaiseijouhou.html (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

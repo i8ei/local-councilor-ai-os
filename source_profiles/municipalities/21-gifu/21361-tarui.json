@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.tarui.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.tarui.lg.jp/site/gikai/list32.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:14:07Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tarui.lg.jp/site/gikai/list32.html",
           "observed_on": "http://www.town.tarui.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T07:34:11Z"
+        },
+        {
+          "url": "http://www.town.tarui.lg.jp/site/gikai/list32.html",
+          "observed_on": "http://www.town.tarui.lg.jp/site/gikai/list32.html",
+          "sha256": "3e1922071441d8de3e7d7b4185ac7cd851286c6d2a54d1386b63d7ce51cbe2b5",
+          "fetched_at": "2026-08-27T10:13:42Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.tarui.lg.jp/site/gikai/list32.html (label: 会議録の一覧)"
@@ -52,9 +58,15 @@
           "url": "http://www.town.tarui.lg.jp/life/6/25/106/",
           "observed_on": "http://www.town.tarui.lg.jp/",
           "fetched_at": "2026-08-27T07:33:00Z"
+        },
+        {
+          "url": "https://www.town.tarui.lg.jp/life/6/25/106/",
+          "observed_on": "https://www.town.tarui.lg.jp/life/6/25/106/",
+          "sha256": "d94dd4ff418dc39643b3bcb87350342d760c011e2198cc2efc6cec81b1243f70",
+          "fetched_at": "2026-08-27T10:13:44Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tarui.lg.jp/life/6/25/106/ (label: 予算・決算)"
+      "notes": "Observed budget link at http://www.town.tarui.lg.jp/life/6/25/106/ (label: 予算・決算) 入口 https://www.town.tarui.lg.jp/life/6/25/106/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.town.tarui.lg.jp/life/6/25/106/",
           "observed_on": "http://www.town.tarui.lg.jp/",
           "fetched_at": "2026-08-27T07:33:00Z"
+        },
+        {
+          "url": "https://www.town.tarui.lg.jp/life/6/25/106/",
+          "observed_on": "https://www.town.tarui.lg.jp/life/6/25/106/",
+          "sha256": "d94dd4ff418dc39643b3bcb87350342d760c011e2198cc2efc6cec81b1243f70",
+          "fetched_at": "2026-08-27T10:13:44Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tarui.lg.jp/life/6/25/106/ (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.town.tarui.lg.jp/life/6/25/106/ (label: 予算・決算) 入口 https://www.town.tarui.lg.jp/life/6/25/106/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

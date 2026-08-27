@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.nishikawa.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.nishikawa.yamagata.jp/site/gikai/list3-11.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:14Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nishikawa.yamagata.jp/site/gikai/list3-11.html",
           "observed_on": "http://www.town.nishikawa.yamagata.jp/site/gikai/",
           "fetched_at": "2026-08-27T07:43:12Z"
+        },
+        {
+          "url": "http://www.town.nishikawa.yamagata.jp/site/gikai/list3-11.html",
+          "observed_on": "http://www.town.nishikawa.yamagata.jp/site/gikai/list3-11.html",
+          "sha256": "55515ca3f3c0155f1c912031a07a69bfbe7965ff495635c8f987168006308319",
+          "fetched_at": "2026-08-27T10:37:02Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.nishikawa.yamagata.jp/site/gikai/list3-11.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/town.nishikawa.yamagata/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/town.nishikawa.yamagata/reiki_menu.html",
           "observed_on": "http://www.town.nishikawa.yamagata.jp/",
           "fetched_at": "2026-08-27T07:42:37Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/town.nishikawa.yamagata/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/town.nishikawa.yamagata/",
+          "sha256": "91648385412010cdbc9bd66b94805a683dd1e6836045bc332ecbe744c9c896d7",
+          "fetched_at": "2026-08-27T11:25:09Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.nishikawa.yamagata/reiki_menu.html (label: )"
@@ -46,9 +58,15 @@
           "url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
           "observed_on": "http://www.town.nishikawa.yamagata.jp/life/5/",
           "fetched_at": "2026-08-27T07:42:55Z"
+        },
+        {
+          "url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
+          "observed_on": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
+          "sha256": "7fa45ce50ace2e3d6047f4711641c985e9951710c685c94e66a560983640b8b3",
+          "fetched_at": "2026-08-27T10:37:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nishikawa.yamagata.jp/life/5/19/70/ (label: 財政)"
+      "notes": "Observed finance section at http://www.town.nishikawa.yamagata.jp/life/5/19/70/ (label: 財政) 入口 http://www.town.nishikawa.yamagata.jp/life/5/19/70/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
           "observed_on": "http://www.town.nishikawa.yamagata.jp/life/5/",
           "fetched_at": "2026-08-27T07:42:55Z"
+        },
+        {
+          "url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
+          "observed_on": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
+          "sha256": "7fa45ce50ace2e3d6047f4711641c985e9951710c685c94e66a560983640b8b3",
+          "fetched_at": "2026-08-27T10:37:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nishikawa.yamagata.jp/life/5/19/70/ (label: 財政)"
+      "notes": "Observed finance section at http://www.town.nishikawa.yamagata.jp/life/5/19/70/ (label: 財政) 入口 http://www.town.nishikawa.yamagata.jp/life/5/19/70/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

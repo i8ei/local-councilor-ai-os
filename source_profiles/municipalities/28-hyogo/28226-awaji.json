@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.awaji.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.awaji.lg.jp/site/gikai/list74-174.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:05:59Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.awaji.lg.jp/site/gikai/list74-174.html",
           "observed_on": "http://www.city.awaji.lg.jp/site/gikai/list74-173.html",
           "fetched_at": "2026-08-27T06:54:15Z"
+        },
+        {
+          "url": "http://www.city.awaji.lg.jp/site/gikai/list74-174.html",
+          "observed_on": "http://www.city.awaji.lg.jp/site/gikai/list74-174.html",
+          "sha256": "748fdf754026bb5f8d732d08a34d7c5e455afb1ed0e497f8c38482084276d33e",
+          "fetched_at": "2026-08-27T09:52:12Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.awaji.lg.jp/site/gikai/list74-174.html (label: 会議録について)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.awaji.lg.jp/site/gikai/list319-1015.html",
           "observed_on": "http://www.city.awaji.lg.jp/site/gikai/list74-173.html",
           "fetched_at": "2026-08-27T06:54:15Z"
+        },
+        {
+          "url": "https://www.city.awaji.lg.jp/site/gikai/list319-1015.html",
+          "observed_on": "https://www.city.awaji.lg.jp/site/gikai/list319-1015.html",
+          "sha256": "faa4d3108873671ccde9dd6658cb21d3d72e8b1e4486c2b04fd4769047d73fb2",
+          "fetched_at": "2026-08-27T09:52:15Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.awaji.lg.jp/site/gikai/list319-1015.html (label: 会派等予算要望)"
+      "notes": "Observed budget link at http://www.city.awaji.lg.jp/site/gikai/list319-1015.html (label: 会派等予算要望) 入口 https://www.city.awaji.lg.jp/site/gikai/list319-1015.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.awaji.lg.jp/life/4/48/65/",
           "observed_on": "http://www.city.awaji.lg.jp/",
           "fetched_at": "2026-08-27T06:53:51Z"
+        },
+        {
+          "url": "https://www.city.awaji.lg.jp/life/4/48/65/",
+          "observed_on": "https://www.city.awaji.lg.jp/life/4/48/65/",
+          "sha256": "66821796e69a3b5ac9673471c48dd66b98dd0d7ee7e3259d28c1dab4bc7b791c",
+          "fetched_at": "2026-08-27T09:52:18Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.awaji.lg.jp/life/4/48/65/ (label: 財政状況)"
+      "notes": "Observed finance section at http://www.city.awaji.lg.jp/life/4/48/65/ (label: 財政状況) 入口 https://www.city.awaji.lg.jp/life/4/48/65/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

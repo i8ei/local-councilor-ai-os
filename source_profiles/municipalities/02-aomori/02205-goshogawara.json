@@ -6,16 +6,22 @@
   "official_home_url": "https://www.city.goshogawara.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:23:32Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
           "observed_on": "https://www.city.goshogawara.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:57:20Z"
+        },
+        {
+          "url": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
+          "observed_on": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
+          "sha256": "594ece68ddf524f124f85473fe62d69910b4865aa26038041d23c58898b1e662",
+          "fetched_at": "2026-08-27T10:31:48Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html (label: 会議録閲覧)"
@@ -39,9 +45,20 @@
           "url": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
           "observed_on": "https://www.city.goshogawara.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:57:20Z"
+        },
+        {
+          "url": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
+          "observed_on": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
+          "sha256": "594ece68ddf524f124f85473fe62d69910b4865aa26038041d23c58898b1e662",
+          "fetched_at": "2026-08-27T10:31:48Z"
+        },
+        {
+          "url": "https://www.city.goshogawara.lg.jp/gikai/files/0802yosan.pdf",
+          "observed_on": "https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html",
+          "fetched_at": "2026-08-27T11:23:33Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html (label: 令和8年第2回定例会本会議会議録、予算特別委員会会議録)"
+      "notes": "Observed budget link at https://www.city.goshogawara.lg.jp/gikai/7-1kaigiroku.html (label: 令和8年第2回定例会本会議会議録、予算特別委員会会議録) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "not_found",

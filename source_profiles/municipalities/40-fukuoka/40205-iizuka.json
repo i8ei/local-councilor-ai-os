@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.iizuka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.iizuka.lg.jp/site/shigikai/list18.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:56:06Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iizuka.lg.jp/site/shigikai/list18.html",
           "observed_on": "http://www.city.iizuka.lg.jp/adv/ba.php?id=21",
           "fetched_at": "2026-08-27T04:09:22Z"
+        },
+        {
+          "url": "http://www.city.iizuka.lg.jp/site/shigikai/list18.html",
+          "observed_on": "http://www.city.iizuka.lg.jp/site/shigikai/list18.html",
+          "sha256": "f03788f65f97f2745e44aedd484bcc7c979c1a09b466b31cf87b93598799963e",
+          "fetched_at": "2026-08-27T09:35:30Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.iizuka.lg.jp/site/shigikai/list18.html (label: 会議録・録画中継の一覧)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.iizuka.lg.jp/life/6/30/",
           "observed_on": "http://www.city.iizuka.lg.jp/",
           "fetched_at": "2026-08-27T04:09:14Z"
+        },
+        {
+          "url": "https://www.city.iizuka.lg.jp/life/6/30/",
+          "observed_on": "https://www.city.iizuka.lg.jp/life/6/30/",
+          "sha256": "98a391030b3363302f65aa798d00c506d38a2de77a4eb84847ee54585c91e976",
+          "fetched_at": "2026-08-27T09:35:33Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.iizuka.lg.jp/life/6/30/ (label: 予算・財政)"
+      "notes": "Observed budget link at http://www.city.iizuka.lg.jp/life/6/30/ (label: 予算・財政) 入口 https://www.city.iizuka.lg.jp/life/6/30/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.iizuka.lg.jp/life/6/30/",
           "observed_on": "http://www.city.iizuka.lg.jp/",
           "fetched_at": "2026-08-27T04:09:14Z"
+        },
+        {
+          "url": "https://www.city.iizuka.lg.jp/life/6/30/",
+          "observed_on": "https://www.city.iizuka.lg.jp/life/6/30/",
+          "sha256": "98a391030b3363302f65aa798d00c506d38a2de77a4eb84847ee54585c91e976",
+          "fetched_at": "2026-08-27T09:35:33Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.iizuka.lg.jp/life/6/30/ (label: 予算・財政)"
+      "notes": "Observed finance section at http://www.city.iizuka.lg.jp/life/6/30/ (label: 予算・財政) 入口 https://www.city.iizuka.lg.jp/life/6/30/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

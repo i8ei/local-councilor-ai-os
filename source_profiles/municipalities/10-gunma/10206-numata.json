@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.numata.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.numata.gunma.jp/gikai/honkaigi/1004426.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:17:15Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.numata.gunma.jp/gikai/honkaigi/1004426.html",
           "observed_on": "http://www.city.numata.gunma.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:32:30Z"
+        },
+        {
+          "url": "http://www.city.numata.gunma.jp/gikai/honkaigi/1004426.html",
+          "observed_on": "http://www.city.numata.gunma.jp/gikai/honkaigi/1004426.html",
+          "sha256": "f5205704444bc8d04cb7718dc801544d052535afbec761ccd32ec4f1db14c801",
+          "fetched_at": "2026-08-27T10:19:02Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.numata.gunma.jp/gikai/honkaigi/1004426.html (label: 会議録)"
@@ -52,9 +58,15 @@
           "url": "http://www.city.numata.gunma.jp/event/zaisei/index.html",
           "observed_on": "http://www.city.numata.gunma.jp/sitemap.html",
           "fetched_at": "2026-08-27T06:32:09Z"
+        },
+        {
+          "url": "https://www.city.numata.gunma.jp/event/zaisei/index.html",
+          "observed_on": "https://www.city.numata.gunma.jp/event/zaisei/index.html",
+          "sha256": "cad69c9d350f513a1facc6bcdf63504490c1c9635285aaf2557ab2ec8e9903e7",
+          "fetched_at": "2026-08-27T10:19:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.numata.gunma.jp/event/zaisei/index.html (label: 資産活用課)"
+      "notes": "Observed finance section at http://www.city.numata.gunma.jp/event/zaisei/index.html (label: 資産活用課) 入口 https://www.city.numata.gunma.jp/event/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city.numata.gunma.jp/event/zaisei/index.html",
           "observed_on": "http://www.city.numata.gunma.jp/sitemap.html",
           "fetched_at": "2026-08-27T06:32:09Z"
+        },
+        {
+          "url": "https://www.city.numata.gunma.jp/event/zaisei/index.html",
+          "observed_on": "https://www.city.numata.gunma.jp/event/zaisei/index.html",
+          "sha256": "cad69c9d350f513a1facc6bcdf63504490c1c9635285aaf2557ab2ec8e9903e7",
+          "fetched_at": "2026-08-27T10:19:05Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.numata.gunma.jp/event/zaisei/index.html (label: 資産活用課)"
+      "notes": "Observed finance section at http://www.city.numata.gunma.jp/event/zaisei/index.html (label: 資産活用課) 入口 https://www.city.numata.gunma.jp/event/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

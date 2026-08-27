@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.shibushi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.shibushi.lg.jp/site/gikai/2312.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:57:51Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shibushi.lg.jp/site/gikai/2312.html",
           "observed_on": "http://www.city.shibushi.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:41:25Z"
+        },
+        {
+          "url": "http://www.city.shibushi.lg.jp/site/gikai/2312.html",
+          "observed_on": "http://www.city.shibushi.lg.jp/site/gikai/2312.html",
+          "sha256": "c7e5ac825b4fe75d7be2c8f364532c90e4f4bb2ea1c1e80df5eb72c4f70bafec",
+          "fetched_at": "2026-08-27T09:40:31Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.shibushi.lg.jp/site/gikai/2312.html (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.shibushi.lg.jp/life/5/28/",
           "observed_on": "http://www.city.shibushi.lg.jp/",
           "fetched_at": "2026-08-27T06:40:31Z"
+        },
+        {
+          "url": "https://www.city.shibushi.lg.jp/life/5/28/",
+          "observed_on": "https://www.city.shibushi.lg.jp/life/5/28/",
+          "sha256": "2805c20a06dc752c965ffbc4bc2c5a8b6dec82a123c748ad31cadfb1f15835d0",
+          "fetched_at": "2026-08-27T09:40:34Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shibushi.lg.jp/life/5/28/ (label: 行財政)"
+      "notes": "Observed finance section at http://www.city.shibushi.lg.jp/life/5/28/ (label: 行財政) 入口 https://www.city.shibushi.lg.jp/life/5/28/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.shibushi.lg.jp/life/5/28/",
           "observed_on": "http://www.city.shibushi.lg.jp/",
           "fetched_at": "2026-08-27T06:40:31Z"
+        },
+        {
+          "url": "https://www.city.shibushi.lg.jp/life/5/28/",
+          "observed_on": "https://www.city.shibushi.lg.jp/life/5/28/",
+          "sha256": "2805c20a06dc752c965ffbc4bc2c5a8b6dec82a123c748ad31cadfb1f15835d0",
+          "fetched_at": "2026-08-27T09:40:34Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.shibushi.lg.jp/life/5/28/ (label: 行財政)"
+      "notes": "Observed finance section at http://www.city.shibushi.lg.jp/life/5/28/ (label: 行財政) 入口 https://www.city.shibushi.lg.jp/life/5/28/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

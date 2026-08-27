@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.misato.miyagi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.misato.miyagi.jp/15tyogikai/154kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.misato.miyagi.jp/15tyogikai/154kaigiroku/index.html",
           "observed_on": "http://www.town.misato.miyagi.jp/",
           "fetched_at": "2026-08-27T07:27:02Z"
+        },
+        {
+          "url": "http://www.town.misato.miyagi.jp/15tyogikai/154kaigiroku/index.html",
+          "observed_on": "http://www.town.misato.miyagi.jp/15tyogikai/154kaigiroku/index.html",
+          "sha256": "63c0865748b21f78f9bb4d108445bfb8b14f858f9172bf87e93aec461415c6be",
+          "fetched_at": "2026-08-27T10:35:33Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.misato.miyagi.jp/15tyogikai/154kaigiroku/index.html (label: 会議録)"
@@ -52,9 +58,15 @@
           "url": "http://www.town.misato.miyagi.jp/13jyoho/zaisei.html",
           "observed_on": "http://www.town.misato.miyagi.jp/",
           "fetched_at": "2026-08-27T07:27:02Z"
+        },
+        {
+          "url": "https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html",
+          "observed_on": "https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html",
+          "sha256": "121043f3ccdf892ab2679bb47ade21790d56511bf8aa9f9f0683a97afabfd191",
+          "fetched_at": "2026-08-27T10:35:34Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.misato.miyagi.jp/13jyoho/zaisei.html (label: 財政)"
+      "notes": "Observed finance section at http://www.town.misato.miyagi.jp/13jyoho/zaisei.html (label: 財政) 入口 https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.town.misato.miyagi.jp/13jyoho/zaisei.html",
           "observed_on": "http://www.town.misato.miyagi.jp/",
           "fetched_at": "2026-08-27T07:27:02Z"
+        },
+        {
+          "url": "https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html",
+          "observed_on": "https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html",
+          "sha256": "121043f3ccdf892ab2679bb47ade21790d56511bf8aa9f9f0683a97afabfd191",
+          "fetched_at": "2026-08-27T10:35:34Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.misato.miyagi.jp/13jyoho/zaisei.html (label: 財政)"
+      "notes": "Observed finance section at http://www.town.misato.miyagi.jp/13jyoho/zaisei.html (label: 財政) 入口 https://www.town.misato.miyagi.jp:443/13jyoho/zaisei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

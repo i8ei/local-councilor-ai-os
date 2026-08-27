@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.hashima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.hashima.lg.jp/3526.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:13:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hashima.lg.jp/3526.html",
           "observed_on": "http://www.city.hashima.lg.jp/1004.html",
           "fetched_at": "2026-08-27T07:28:35Z"
+        },
+        {
+          "url": "http://www.city.hashima.lg.jp/3526.html",
+          "observed_on": "http://www.city.hashima.lg.jp/3526.html",
+          "sha256": "5bc0a2945ac32f7d4f35a0d45a396b681c04624aa8d426d3fe8261075d09edc9",
+          "fetched_at": "2026-08-27T10:12:42Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.hashima.lg.jp/3526.html (label: 会議録検索)"
@@ -52,9 +58,15 @@
           "url": "http://www.city.hashima.lg.jp/4548.html",
           "observed_on": "http://www.city.hashima.lg.jp/1004.html",
           "fetched_at": "2026-08-27T07:28:35Z"
+        },
+        {
+          "url": "https://www.city.hashima.lg.jp/4548.html",
+          "observed_on": "https://www.city.hashima.lg.jp/4548.html",
+          "sha256": "4af0d8cbb7f67756031811e4e5bbaa316ed46ff432d901a40eba243783d9ce02",
+          "fetched_at": "2026-08-27T10:12:45Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.hashima.lg.jp/4548.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.hashima.lg.jp/4548.html (label: 予算) 入口 https://www.city.hashima.lg.jp/4548.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city.hashima.lg.jp/4549.html",
           "observed_on": "http://www.city.hashima.lg.jp/1004.html",
           "fetched_at": "2026-08-27T07:28:35Z"
+        },
+        {
+          "url": "https://www.city.hashima.lg.jp/4549.html",
+          "observed_on": "https://www.city.hashima.lg.jp/4549.html",
+          "sha256": "c51ebdb4c9c905c4c55d1cb13ef4c31e415afa0f416775bde0a0025cef98bdfb",
+          "fetched_at": "2026-08-27T10:12:48Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.hashima.lg.jp/4549.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.hashima.lg.jp/4549.html (label: 決算) 入口 https://www.city.hashima.lg.jp/4549.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

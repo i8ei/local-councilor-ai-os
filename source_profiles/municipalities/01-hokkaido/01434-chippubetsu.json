@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.chippubetsu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.chippubetsu.hokkaido.jp/news/detail.html?news=299",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:22:42Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.chippubetsu.hokkaido.jp/news/detail.html?news=299",
           "observed_on": "https://www.town.chippubetsu.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:22:22Z"
+        },
+        {
+          "url": "https://www.town.chippubetsu.hokkaido.jp/news/detail.html?news=299",
+          "observed_on": "https://www.town.chippubetsu.hokkaido.jp/news/detail.html?news=299",
+          "sha256": "ddca99173c86fabfb02be753e20f8a9ffb74762821ce2bf19825d688c00d4871",
+          "fetched_at": "2026-08-27T10:30:20Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.chippubetsu.hokkaido.jp/news/detail.html?news=299 (label: 令和８年の定例会・臨時会等の議決結果・会議録)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
           "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/?category=town",
           "fetched_at": "2026-08-27T06:22:45Z"
+        },
+        {
+          "url": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
+          "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
+          "sha256": "14fc0079c4d6d1f9fe03c06482439b49788cf70ad9b49567e942fe538d82a039",
+          "fetched_at": "2026-08-27T10:30:23Z"
+        },
+        {
+          "url": "https://www.town.chippubetsu.hokkaido.jp/common/img/content/content_20260722_144640.pdf",
+          "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
+          "fetched_at": "2026-08-27T11:22:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87 (label: 財政情報)"
+      "notes": "Observed finance section at https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87 (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
           "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/?category=town",
           "fetched_at": "2026-08-27T06:22:45Z"
+        },
+        {
+          "url": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
+          "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
+          "sha256": "14fc0079c4d6d1f9fe03c06482439b49788cf70ad9b49567e942fe538d82a039",
+          "fetched_at": "2026-08-27T10:30:23Z"
+        },
+        {
+          "url": "https://www.town.chippubetsu.hokkaido.jp/common/img/content/content_20260722_144613.pdf",
+          "observed_on": "https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87",
+          "fetched_at": "2026-08-27T11:22:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87 (label: 財政情報)"
+      "notes": "Observed finance section at https://www.town.chippubetsu.hokkaido.jp/category/detail.html?category=town&content=87 (label: 財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

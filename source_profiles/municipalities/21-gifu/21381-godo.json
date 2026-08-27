@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T07:34:45Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.godo.gifu.jp/contents/gikai/gikai08.html (label: 会議録)"
+      "notes": "Observed council minutes index at http://www.town.godo.gifu.jp/contents/gikai/gikai08.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "ready",
@@ -52,9 +52,20 @@
           "url": "http://www.town.godo.gifu.jp/politics/politics09.html",
           "observed_on": "http://www.town.godo.gifu.jp/politics/",
           "fetched_at": "2026-08-27T07:33:39Z"
+        },
+        {
+          "url": "http://www.town.godo.gifu.jp/politics/politics09.html",
+          "observed_on": "http://www.town.godo.gifu.jp/politics/politics09.html",
+          "sha256": "5065769a049e1c1398f0a230a60f5d4bb4a5dced2a038ce66fc37f5433855d24",
+          "fetched_at": "2026-08-27T10:13:57Z"
+        },
+        {
+          "url": "http://www.town.godo.gifu.jp/politics/pdf/09_01-08.pdf",
+          "observed_on": "http://www.town.godo.gifu.jp/politics/politics09.html",
+          "fetched_at": "2026-08-27T11:14:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.godo.gifu.jp/politics/politics09.html (label: 財政状況)"
+      "notes": "Observed finance section at http://www.town.godo.gifu.jp/politics/politics09.html (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +78,20 @@
           "url": "http://www.town.godo.gifu.jp/politics/politics09.html",
           "observed_on": "http://www.town.godo.gifu.jp/politics/",
           "fetched_at": "2026-08-27T07:33:39Z"
+        },
+        {
+          "url": "http://www.town.godo.gifu.jp/politics/politics09.html",
+          "observed_on": "http://www.town.godo.gifu.jp/politics/politics09.html",
+          "sha256": "5065769a049e1c1398f0a230a60f5d4bb4a5dced2a038ce66fc37f5433855d24",
+          "fetched_at": "2026-08-27T10:13:57Z"
+        },
+        {
+          "url": "http://www.town.godo.gifu.jp/politics/pdf/09_18_06.pdf",
+          "observed_on": "http://www.town.godo.gifu.jp/politics/politics09.html",
+          "fetched_at": "2026-08-27T11:14:12Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.godo.gifu.jp/politics/politics09.html (label: 財政状況)"
+      "notes": "Observed finance section at http://www.town.godo.gifu.jp/politics/politics09.html (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

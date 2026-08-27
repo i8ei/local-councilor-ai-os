@@ -6,16 +6,22 @@
   "official_home_url": "https://town.biei.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://town.biei.hokkaido.jp/administration/parliament/proceedings/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:22:49Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://town.biei.hokkaido.jp/administration/parliament/proceedings/",
           "observed_on": "https://town.biei.hokkaido.jp/administration/parliament/",
           "fetched_at": "2026-08-27T06:26:06Z"
+        },
+        {
+          "url": "https://town.biei.hokkaido.jp/administration/parliament/proceedings/",
+          "observed_on": "https://town.biei.hokkaido.jp/administration/parliament/proceedings/",
+          "sha256": "ae7610bd11a75045fc6f0523fda39aaf0e0d3f73e67590d1fd22f66c4c718a1c",
+          "fetched_at": "2026-08-27T10:30:39Z"
         }
       ],
       "notes": "Observed council minutes index at https://town.biei.hokkaido.jp/administration/parliament/proceedings/ (label: 会議録)"
@@ -46,9 +52,20 @@
           "url": "https://town.biei.hokkaido.jp/administration/finance/",
           "observed_on": "https://town.biei.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:25:24Z"
+        },
+        {
+          "url": "https://town.biei.hokkaido.jp/administration/finance/",
+          "observed_on": "https://town.biei.hokkaido.jp/administration/finance/",
+          "sha256": "1f0398fd6e1729caa24938e856fa7e7c5cab7c03a6a7fa63bf98c3bee1c5dd68",
+          "fetched_at": "2026-08-27T10:30:41Z"
+        },
+        {
+          "url": "https://town.biei.hokkaido.jp/files/00000000/00000062/01_r8_ippan_yosansyo.pdf",
+          "observed_on": "https://town.biei.hokkaido.jp/administration/finance/",
+          "fetched_at": "2026-08-27T11:22:50Z"
         }
       ],
-      "notes": "Observed finance section at https://town.biei.hokkaido.jp/administration/finance/ (label: 財政)"
+      "notes": "Observed finance section at https://town.biei.hokkaido.jp/administration/finance/ (label: 財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://town.biei.hokkaido.jp/administration/finance/",
           "observed_on": "https://town.biei.hokkaido.jp/",
           "fetched_at": "2026-08-27T06:25:24Z"
+        },
+        {
+          "url": "https://town.biei.hokkaido.jp/administration/finance/",
+          "observed_on": "https://town.biei.hokkaido.jp/administration/finance/",
+          "sha256": "1f0398fd6e1729caa24938e856fa7e7c5cab7c03a6a7fa63bf98c3bee1c5dd68",
+          "fetched_at": "2026-08-27T10:30:41Z"
+        },
+        {
+          "url": "https://town.biei.hokkaido.jp/files/00000000/00000062/r6_kessan_ippan.pdf",
+          "observed_on": "https://town.biei.hokkaido.jp/administration/finance/",
+          "fetched_at": "2026-08-27T11:22:54Z"
         }
       ],
-      "notes": "Observed finance section at https://town.biei.hokkaido.jp/administration/finance/ (label: 財政)"
+      "notes": "Observed finance section at https://town.biei.hokkaido.jp/administration/finance/ (label: 財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.hirono.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.hirono.fukushima.jp/chousei/gikai/1005487/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:27:01Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hirono.fukushima.jp/chousei/gikai/1005487/index.html",
           "observed_on": "http://www.town.hirono.fukushima.jp/chousei/gikai/index.html",
           "fetched_at": "2026-08-27T08:08:07Z"
+        },
+        {
+          "url": "http://www.town.hirono.fukushima.jp/chousei/gikai/1005487/index.html",
+          "observed_on": "http://www.town.hirono.fukushima.jp/chousei/gikai/1005487/index.html",
+          "sha256": "01064bba48713f98ba4b8a29538e539f7c3cc3ab7fd04377338204d42aca9c04",
+          "fetched_at": "2026-08-27T10:38:10Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.hirono.fukushima.jp/chousei/gikai/1005487/index.html (label: 会議録)"
@@ -39,9 +45,15 @@
           "url": "http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html",
           "observed_on": "http://www.town.hirono.fukushima.jp/",
           "fetched_at": "2026-08-27T08:07:49Z"
+        },
+        {
+          "url": "https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html",
+          "observed_on": "https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html",
+          "sha256": "b4ecbfa9e6ad7348cc046e0a0b755a7f26b0ab59827f1b5bda77571d55badb6d",
+          "fetched_at": "2026-08-27T10:38:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html (label: 行政・財政)"
+      "notes": "Observed finance section at http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html (label: 行政・財政) 入口 https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html",
           "observed_on": "http://www.town.hirono.fukushima.jp/",
           "fetched_at": "2026-08-27T08:07:49Z"
+        },
+        {
+          "url": "https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html",
+          "observed_on": "https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html",
+          "sha256": "b4ecbfa9e6ad7348cc046e0a0b755a7f26b0ab59827f1b5bda77571d55badb6d",
+          "fetched_at": "2026-08-27T10:38:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html (label: 行政・財政)"
+      "notes": "Observed finance section at http://www.town.hirono.fukushima.jp/chousei/zaisei/index.html (label: 行政・財政) 入口 https://www.town.hirono.fukushima.jp:443/chousei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

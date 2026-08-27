@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T06:58:27Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.imabetsu.lg.jp/gyousei/gikai/2025-0317-1111-1.html (label: 町議会定例会会議録)"
+      "notes": "Observed council minutes index at https://www.town.imabetsu.lg.jp/gyousei/gikai/2025-0317-1111-1.html (label: 町議会定例会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +46,20 @@
           "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
           "observed_on": "https://www.town.imabetsu.lg.jp/",
           "fetched_at": "2026-08-27T06:58:12Z"
+        },
+        {
+          "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
+          "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
+          "sha256": "bfa0f3259dbc512d61dee36b50d1ac00337035ffc669d9449e130bd32eb23d51",
+          "fetched_at": "2026-08-27T10:32:08Z"
+        },
+        {
+          "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/files/R8tosyoyosansito.pdf",
+          "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
+          "fetched_at": "2026-08-27T11:23:37Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html (label: 今別町財政情報)"
+      "notes": "Observed finance section at https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html (label: 今別町財政情報) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +72,20 @@
           "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
           "observed_on": "https://www.town.imabetsu.lg.jp/",
           "fetched_at": "2026-08-27T06:58:12Z"
+        },
+        {
+          "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
+          "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
+          "sha256": "bfa0f3259dbc512d61dee36b50d1ac00337035ffc669d9449e130bd32eb23d51",
+          "fetched_at": "2026-08-27T10:32:08Z"
+        },
+        {
+          "url": "https://www.town.imabetsu.lg.jp/gyousei/koukai/files/R6kenzenka.pdf",
+          "observed_on": "https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html",
+          "fetched_at": "2026-08-27T11:23:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html (label: 今別町財政情報)"
+      "notes": "Observed finance section at https://www.town.imabetsu.lg.jp/gyousei/koukai/zaisei.html (label: 今別町財政情報) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     }
   }
 }

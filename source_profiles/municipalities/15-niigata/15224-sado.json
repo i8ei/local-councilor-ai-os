@@ -27,16 +27,22 @@
       "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/sado/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.sado.niigata.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:55:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sado.niigata.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.sado.niigata.jp/index2.html",
           "fetched_at": "2026-08-27T06:02:58Z"
+        },
+        {
+          "url": "http://www.city.sado.niigata.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.sado.niigata.jp/reiki_int/",
+          "sha256": "10404682b120b9fe82acd9d2b12672f3b7af85aa91448c3584392162daf43580",
+          "fetched_at": "2026-08-27T10:04:27Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.sado.niigata.jp/reiki_int/reiki_menu.html (label: 例規集)"
@@ -52,9 +58,15 @@
           "url": "http://www.city.sado.niigata.jp/life/4/34/161/",
           "observed_on": "http://www.city.sado.niigata.jp/life/4/",
           "fetched_at": "2026-08-27T06:03:31Z"
+        },
+        {
+          "url": "https://www.city.sado.niigata.jp:443/life/4/34/161/",
+          "observed_on": "https://www.city.sado.niigata.jp:443/life/4/34/161/",
+          "sha256": "da02fde18fbebb584153994ece20ba059283ce7595f30e86f95ce67489fc97ee",
+          "fetched_at": "2026-08-27T10:04:30Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.sado.niigata.jp/life/4/34/161/ (label: 予算・決算)"
+      "notes": "Observed budget link at http://www.city.sado.niigata.jp/life/4/34/161/ (label: 予算・決算) 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city.sado.niigata.jp/life/4/34/161/",
           "observed_on": "http://www.city.sado.niigata.jp/life/4/",
           "fetched_at": "2026-08-27T06:03:31Z"
+        },
+        {
+          "url": "https://www.city.sado.niigata.jp:443/life/4/34/161/",
+          "observed_on": "https://www.city.sado.niigata.jp:443/life/4/34/161/",
+          "sha256": "da02fde18fbebb584153994ece20ba059283ce7595f30e86f95ce67489fc97ee",
+          "fetched_at": "2026-08-27T10:04:30Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.sado.niigata.jp/life/4/34/161/ (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.city.sado.niigata.jp/life/4/34/161/ (label: 予算・決算) 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.toei.aichi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.toei.aichi.jp/1396.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:14:59Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.toei.aichi.jp/1396.htm",
           "observed_on": "http://www.town.toei.aichi.jp/1395.htm",
           "fetched_at": "2026-08-27T08:17:21Z"
+        },
+        {
+          "url": "http://www.town.toei.aichi.jp/1396.htm",
+          "observed_on": "http://www.town.toei.aichi.jp/1396.htm",
+          "sha256": "a553139994537f03c11116f87e514ef4beeae09c0bf8e428db705800762e8828",
+          "fetched_at": "2026-08-27T10:17:03Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.toei.aichi.jp/1396.htm (label: 定例会・臨時会会議録)"
@@ -67,9 +73,20 @@
           "url": "http://www.town.toei.aichi.jp/5463.htm",
           "observed_on": "http://www.town.toei.aichi.jp/kurashi/",
           "fetched_at": "2026-08-27T08:15:29Z"
+        },
+        {
+          "url": "https://www.town.toei.aichi.jp/5463.htm",
+          "observed_on": "https://www.town.toei.aichi.jp/5463.htm",
+          "sha256": "8693b144da379929e91f2047b351a09f34d1abd771bd543b064d8e52a761b299",
+          "fetched_at": "2026-08-27T10:17:09Z"
+        },
+        {
+          "url": "https://www.town.toei.aichi.jp/secure/7345/R5kansuikessan.pdf",
+          "observed_on": "https://www.town.toei.aichi.jp/5463.htm",
+          "fetched_at": "2026-08-27T11:15:01Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.toei.aichi.jp/5463.htm (label: 令和５年度公営企業会計の決算)"
+      "notes": "Observed settlement link at http://www.town.toei.aichi.jp/5463.htm (label: 令和５年度公営企業会計の決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

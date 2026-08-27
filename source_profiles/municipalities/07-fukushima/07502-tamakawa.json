@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.vill.tamakawa.fukushima.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:26:51Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.tamakawa.fukushima.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.vill.tamakawa.fukushima.jp/home.html",
           "fetched_at": "2026-08-27T08:05:32Z"
+        },
+        {
+          "url": "http://www.vill.tamakawa.fukushima.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.tamakawa.fukushima.jp/reiki_int/",
+          "sha256": "afa8f568b7ff4ce9e861ca3e2644337add882cc346efe50f135835085e92b3a9",
+          "fetched_at": "2026-08-27T10:38:05Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.vill.tamakawa.fukushima.jp/reiki_int/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "http://www.vill.tamakawa.fukushima.jp/outline/finance.html",
           "observed_on": "http://www.vill.tamakawa.fukushima.jp/home.html",
           "fetched_at": "2026-08-27T08:05:32Z"
+        },
+        {
+          "url": "https://www.vill.tamakawa.fukushima.jp:443/outline/finance.html",
+          "observed_on": "https://www.vill.tamakawa.fukushima.jp:443/outline/finance.html",
+          "sha256": "ca1eaadff28ec2c7c90ceca5faa993be346d7293a9f164600a261875702071ae",
+          "fetched_at": "2026-08-27T10:38:06Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.tamakawa.fukushima.jp/outline/finance.html (label: 財政状況)"
+      "notes": "Observed finance section at http://www.vill.tamakawa.fukushima.jp/outline/finance.html (label: 財政状況) 入口 https://www.vill.tamakawa.fukushima.jp:443/outline/finance.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",

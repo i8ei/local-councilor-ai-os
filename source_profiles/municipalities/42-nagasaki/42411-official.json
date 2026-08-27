@@ -6,16 +6,22 @@
   "official_home_url": "http://official.shinkamigoto.net/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00002x4",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:56:49Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00002x4",
           "observed_on": "http://official.shinkamigoto.net/goto_kurashi.php?wcid=i00001x1",
           "fetched_at": "2026-08-27T06:07:40Z"
+        },
+        {
+          "url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00002x4",
+          "observed_on": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00002x4",
+          "sha256": "7d6c5c26c6d4070ca37f969f0166efcc1e6c64714a59f3e982b2979f0a29a8d5",
+          "fetched_at": "2026-08-27T09:37:48Z"
         }
       ],
       "notes": "Observed council minutes index at http://official.shinkamigoto.net/goto_chosei.php?wcid=l00002x4 (label: ) 会議録)"
@@ -46,9 +52,15 @@
           "url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
           "observed_on": "http://official.shinkamigoto.net/",
           "fetched_at": "2026-08-27T05:29:03Z"
+        },
+        {
+          "url": "https://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
+          "observed_on": "https://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
+          "sha256": "98f5d0522588b727ca0528c52e0cd1912829076032195a94d58a4f282d4e7f45",
+          "fetched_at": "2026-08-27T09:37:51Z"
         }
       ],
-      "notes": "Observed finance section at http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004 (label: 町の計画・行財政)"
+      "notes": "Observed finance section at http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004 (label: 町の計画・行財政) 入口 https://official.shinkamigoto.net/goto_chosei.php?wcid=l00004 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
           "observed_on": "http://official.shinkamigoto.net/",
           "fetched_at": "2026-08-27T05:29:03Z"
+        },
+        {
+          "url": "https://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
+          "observed_on": "https://official.shinkamigoto.net/goto_chosei.php?wcid=l00004",
+          "sha256": "98f5d0522588b727ca0528c52e0cd1912829076032195a94d58a4f282d4e7f45",
+          "fetched_at": "2026-08-27T09:37:51Z"
         }
       ],
-      "notes": "Observed finance section at http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004 (label: 町の計画・行財政)"
+      "notes": "Observed finance section at http://official.shinkamigoto.net/goto_chosei.php?wcid=l00004 (label: 町の計画・行財政) 入口 https://official.shinkamigoto.net/goto_chosei.php?wcid=l00004 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

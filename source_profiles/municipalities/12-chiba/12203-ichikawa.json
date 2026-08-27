@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.ichikawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.ichikawa.lg.jp/site/gikai/5244.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:18:57Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ichikawa.lg.jp/site/gikai/5244.html",
           "observed_on": "http://www.city.ichikawa.lg.jp/adv/ba.php?id=10",
           "fetched_at": "2026-08-27T07:10:18Z"
+        },
+        {
+          "url": "http://www.city.ichikawa.lg.jp/site/gikai/5244.html",
+          "observed_on": "http://www.city.ichikawa.lg.jp/site/gikai/5244.html",
+          "sha256": "0d3d1aa7d18e1ba661ddf6d7125b5e34a44e8be6ec2dcdb7fd4340caf7804edd",
+          "fetched_at": "2026-08-27T10:22:41Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.ichikawa.lg.jp/site/gikai/5244.html (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.ichikawa.lg.jp/life/8/41/190/",
           "observed_on": "http://www.city.ichikawa.lg.jp/life/8/",
           "fetched_at": "2026-08-27T07:09:56Z"
+        },
+        {
+          "url": "https://www.city.ichikawa.lg.jp/life/8/41/190/",
+          "observed_on": "https://www.city.ichikawa.lg.jp/life/8/41/190/",
+          "sha256": "cb62e599ad4d585fe27dbc732ead1b1d6ab3202def6331403a56dce4f9f88579",
+          "fetched_at": "2026-08-27T10:22:44Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.ichikawa.lg.jp/life/8/41/190/ (label: 予算・決算)"
+      "notes": "Observed budget link at http://www.city.ichikawa.lg.jp/life/8/41/190/ (label: 予算・決算) 入口 https://www.city.ichikawa.lg.jp/life/8/41/190/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.ichikawa.lg.jp/life/8/41/190/",
           "observed_on": "http://www.city.ichikawa.lg.jp/life/8/",
           "fetched_at": "2026-08-27T07:09:56Z"
+        },
+        {
+          "url": "https://www.city.ichikawa.lg.jp/life/8/41/190/",
+          "observed_on": "https://www.city.ichikawa.lg.jp/life/8/41/190/",
+          "sha256": "cb62e599ad4d585fe27dbc732ead1b1d6ab3202def6331403a56dce4f9f88579",
+          "fetched_at": "2026-08-27T10:22:44Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ichikawa.lg.jp/life/8/41/190/ (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.city.ichikawa.lg.jp/life/8/41/190/ (label: 予算・決算) 入口 https://www.city.ichikawa.lg.jp/life/8/41/190/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

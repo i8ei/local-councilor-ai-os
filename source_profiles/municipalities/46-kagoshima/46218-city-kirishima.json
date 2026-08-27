@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city-kirishima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city-kirishima.jp/hisyokouhou/shise/shigikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:57:50Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city-kirishima.jp/hisyokouhou/shise/shigikai/kaigiroku/index.html",
           "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/index.html",
           "fetched_at": "2026-08-27T06:39:57Z"
+        },
+        {
+          "url": "http://www.city-kirishima.jp/hisyokouhou/shise/shigikai/kaigiroku/index.html",
+          "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/shigikai/kaigiroku/index.html",
+          "sha256": "c1d1a45bbb274956cc9dd4575e0b525e978c8038efd891db6871a324136b70e7",
+          "fetched_at": "2026-08-27T09:40:35Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city-kirishima.jp/hisyokouhou/shise/shigikai/kaigiroku/index.html (label: 会議録)"
@@ -52,9 +58,15 @@
           "url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html",
           "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/index.html",
           "fetched_at": "2026-08-27T06:39:57Z"
+        },
+        {
+          "url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html",
+          "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html",
+          "sha256": "7ae3888c89404776ce55962a3fbcba1e8c1d967cd1c4d8cb234c3c34da00ff01",
+          "fetched_at": "2026-08-27T09:40:37Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html (label: 予算・財政)"
+      "notes": "Observed budget link at http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html (label: 予算・財政) 入口 http://www.city-kirishima.jp/hisyokouhou/shise/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html",
           "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/index.html",
           "fetched_at": "2026-08-27T06:39:57Z"
+        },
+        {
+          "url": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html",
+          "observed_on": "http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html",
+          "sha256": "08fb797057274246e9f74d912cad84fb95550cfec2cf8f4731ed94a577a23d08",
+          "fetched_at": "2026-08-27T09:40:38Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html (label: 決算概要)"
+      "notes": "Observed settlement link at http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html (label: 決算概要) 入口 http://www.city-kirishima.jp/hisyokouhou/shise/yosan/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

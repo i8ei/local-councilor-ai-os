@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.shika.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.shika.lg.jp/site/gikai/list23-19.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:09:48Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shika.lg.jp/site/gikai/list23-19.html",
           "observed_on": "http://www.town.shika.lg.jp/adv/ba.php?id=11",
           "fetched_at": "2026-08-27T06:21:27Z"
+        },
+        {
+          "url": "http://www.town.shika.lg.jp/site/gikai/list23-19.html",
+          "observed_on": "http://www.town.shika.lg.jp/site/gikai/list23-19.html",
+          "sha256": "aa78bcb643b362fda49c8154674eec42d546a9734c35ce00ba88853fae2f8c19",
+          "fetched_at": "2026-08-27T10:06:25Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.shika.lg.jp/site/gikai/list23-19.html (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.town.shika.lg.jp/life/7/24/",
           "observed_on": "http://www.town.shika.lg.jp/life/7",
           "fetched_at": "2026-08-27T06:20:51Z"
+        },
+        {
+          "url": "https://www.town.shika.lg.jp/life/7/24/",
+          "observed_on": "https://www.town.shika.lg.jp/life/7/24/",
+          "sha256": "30503f2f6f54e09269790849f5a9853f1294137fbb7f380ac6fb5d19a86dae3a",
+          "fetched_at": "2026-08-27T10:06:28Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shika.lg.jp/life/7/24/ (label: 行財政)"
+      "notes": "Observed finance section at http://www.town.shika.lg.jp/life/7/24/ (label: 行財政) 入口 https://www.town.shika.lg.jp/life/7/24/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.shika.lg.jp/life/7/24/",
           "observed_on": "http://www.town.shika.lg.jp/life/7",
           "fetched_at": "2026-08-27T06:20:51Z"
+        },
+        {
+          "url": "https://www.town.shika.lg.jp/life/7/24/",
+          "observed_on": "https://www.town.shika.lg.jp/life/7/24/",
+          "sha256": "30503f2f6f54e09269790849f5a9853f1294137fbb7f380ac6fb5d19a86dae3a",
+          "fetched_at": "2026-08-27T10:06:28Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shika.lg.jp/life/7/24/ (label: 行財政)"
+      "notes": "Observed finance section at http://www.town.shika.lg.jp/life/7/24/ (label: 行財政) 入口 https://www.town.shika.lg.jp/life/7/24/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

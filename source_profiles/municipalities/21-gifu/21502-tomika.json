@@ -52,9 +52,20 @@
           "url": "http://www.town.tomika.gifu.jp/docs/170.html",
           "observed_on": "http://www.town.tomika.gifu.jp/oshirase/chosei/",
           "fetched_at": "2026-08-27T07:38:06Z"
+        },
+        {
+          "url": "https://www.town.tomika.gifu.jp/docs/170.html",
+          "observed_on": "https://www.town.tomika.gifu.jp/docs/170.html",
+          "sha256": "a25c8adc29124e89de43513df85155285e2dc72788d1537cbd155835b6205096",
+          "fetched_at": "2026-08-27T10:14:19Z"
+        },
+        {
+          "url": "https://www.town.tomika.gifu.jp/fs/3/2/1/0/6/9/_/__8________.pdf",
+          "observed_on": "https://www.town.tomika.gifu.jp/docs/170.html",
+          "fetched_at": "2026-08-27T11:14:17Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tomika.gifu.jp/docs/170.html (label: 【2025年11月13日】 当初予算の編成について)"
+      "notes": "Observed budget link at http://www.town.tomika.gifu.jp/docs/170.html (label: 【2025年11月13日】 当初予算の編成について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +78,15 @@
           "url": "http://www.town.tomika.gifu.jp/chosei/zaisei/",
           "observed_on": "http://www.town.tomika.gifu.jp/",
           "fetched_at": "2026-08-27T07:36:29Z"
+        },
+        {
+          "url": "https://www.town.tomika.gifu.jp/chosei/zaisei/",
+          "observed_on": "https://www.town.tomika.gifu.jp/chosei/zaisei/",
+          "sha256": "78ae74d0413c9995eb44b827b0fd98af8716e4ca51cef1406f2456864df67874",
+          "fetched_at": "2026-08-27T10:14:22Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tomika.gifu.jp/chosei/zaisei/ (label: 財政・行政改革)"
+      "notes": "Observed finance section at http://www.town.tomika.gifu.jp/chosei/zaisei/ (label: 財政・行政改革) 入口 https://www.town.tomika.gifu.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -52,9 +52,20 @@
           "url": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
           "observed_on": "http://www.city.saiki.oita.jp/",
           "fetched_at": "2026-08-27T06:17:13Z"
+        },
+        {
+          "url": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
+          "observed_on": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
+          "sha256": "db3d52531cb000e38897a51d358905dcac49b625309b77d6836bb2c6f7af2e36",
+          "fetched_at": "2026-08-27T09:39:19Z"
+        },
+        {
+          "url": "https://www.city.saiki.oita.jp/kiji0031997/3_1997_up_p0qhnxny.pdf",
+          "observed_on": "https://www.city.saiki.oita.jp/kiji0031997/index.html",
+          "fetched_at": "2026-08-27T10:57:16Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.saiki.oita.jp/kiji0031997/index.html (label: 予算)"
+      "notes": "Observed budget link at https://www.city.saiki.oita.jp/kiji0031997/index.html (label: 予算) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +78,20 @@
           "url": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
           "observed_on": "http://www.city.saiki.oita.jp/",
           "fetched_at": "2026-08-27T06:17:13Z"
+        },
+        {
+          "url": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
+          "observed_on": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
+          "sha256": "797104b67843d7c5f6f9aa902ad752ce94f529c91fa8fe957a7d6c2fe57cd2b2",
+          "fetched_at": "2026-08-27T09:39:21Z"
+        },
+        {
+          "url": "https://www.city.saiki.oita.jp/kiji0031990/3_1990_up_xmj2gr0x.pdf",
+          "observed_on": "https://www.city.saiki.oita.jp/kiji0031990/index.html",
+          "fetched_at": "2026-08-27T10:57:17Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.saiki.oita.jp/kiji0031990/index.html (label: 決算)"
+      "notes": "Observed settlement link at https://www.city.saiki.oita.jp/kiji0031990/index.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

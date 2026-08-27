@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.kunisaki.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.kunisaki.oita.jp/site/gikai/list57-109.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:57:30Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kunisaki.oita.jp/site/gikai/list57-109.html",
           "observed_on": "http://www.city.kunisaki.oita.jp/site/gikai/6.html",
           "fetched_at": "2026-08-27T06:22:26Z"
+        },
+        {
+          "url": "http://www.city.kunisaki.oita.jp/site/gikai/list57-109.html",
+          "observed_on": "http://www.city.kunisaki.oita.jp/site/gikai/list57-109.html",
+          "sha256": "8b6b9f2f04f29e886da8bad004398c0302d23d5b28c9a2347a3dc5ed75787fa7",
+          "fetched_at": "2026-08-27T09:39:31Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.kunisaki.oita.jp/site/gikai/list57-109.html (label: 会議録検索システム)"
@@ -46,9 +52,20 @@
           "url": "http://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html",
           "observed_on": "http://www.city.kunisaki.oita.jp/",
           "fetched_at": "2026-08-27T06:21:39Z"
+        },
+        {
+          "url": "https://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html",
+          "observed_on": "https://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html",
+          "sha256": "2217de8566d81a1ccdeca9983e71bf1b294b6f388009a209063d7674702ed6ce",
+          "fetched_at": "2026-08-27T09:39:34Z"
+        },
+        {
+          "url": "https://www.city.kunisaki.oita.jp/uploaded/attachment/31364.pdf",
+          "observed_on": "https://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html",
+          "fetched_at": "2026-08-27T10:57:32Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html (label: 令和8年度予算について)"
+      "notes": "Observed budget link at http://www.city.kunisaki.oita.jp/soshiki/zaisei/zaiseiyosan08.html (label: 令和8年度予算について) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,15 @@
           "url": "http://www.city.kunisaki.oita.jp/life/4/22/",
           "observed_on": "http://www.city.kunisaki.oita.jp/",
           "fetched_at": "2026-08-27T06:21:39Z"
+        },
+        {
+          "url": "https://www.city.kunisaki.oita.jp/life/4/22/",
+          "observed_on": "https://www.city.kunisaki.oita.jp/life/4/22/",
+          "sha256": "4f891f9e7e918a8a544fb7407b71d35fac30c4a82b94ee259cd6ddeba945fcf2",
+          "fetched_at": "2026-08-27T09:39:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kunisaki.oita.jp/life/4/22/ (label: 行財政)"
+      "notes": "Observed finance section at http://www.city.kunisaki.oita.jp/life/4/22/ (label: 行財政) 入口 https://www.city.kunisaki.oita.jp/life/4/22/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

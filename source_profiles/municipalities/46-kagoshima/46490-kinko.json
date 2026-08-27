@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.kinko.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.kinko.lg.jp/gikai-h/chose/gikai/kaigiroku/kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:57:57Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kinko.lg.jp/gikai-h/chose/gikai/kaigiroku/kaigiroku.html",
           "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/index.html",
           "fetched_at": "2026-08-27T06:44:04Z"
+        },
+        {
+          "url": "http://www.town.kinko.lg.jp/gikai-h/chose/gikai/kaigiroku/kaigiroku.html",
+          "observed_on": "http://www.town.kinko.lg.jp/gikai-h/chose/gikai/kaigiroku/kaigiroku.html",
+          "sha256": "ab0e95d281200da9169f602ba453b1de2fa1c5302a7c077b8026c7d31036fe33",
+          "fetched_at": "2026-08-27T09:40:41Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.kinko.lg.jp/gikai-h/chose/gikai/kaigiroku/kaigiroku.html (label: 議会会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
           "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/index.html",
           "fetched_at": "2026-08-27T06:44:04Z"
+        },
+        {
+          "url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
+          "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
+          "sha256": "8d38800e84702a2417135535b1a97951ada3d619a89bf539ef44e05e03714bea",
+          "fetched_at": "2026-08-27T09:40:42Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html (label: 予算・財政)"
+      "notes": "Observed budget link at http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html (label: 予算・財政) 入口 http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
           "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/index.html",
           "fetched_at": "2026-08-27T06:44:04Z"
+        },
+        {
+          "url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
+          "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
+          "sha256": "8d38800e84702a2417135535b1a97951ada3d619a89bf539ef44e05e03714bea",
+          "fetched_at": "2026-08-27T09:40:42Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html (label: 予算・財政)"
+      "notes": "Observed finance section at http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html (label: 予算・財政) 入口 http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

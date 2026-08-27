@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.fuefuki.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.fuefuki.yamanashi.jp/shisejoho/shigikai/gijiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:10:01Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fuefuki.yamanashi.jp/shisejoho/shigikai/gijiroku/index.html",
           "observed_on": "http://www.city.fuefuki.yamanashi.jp/shisejoho/index.html",
           "fetched_at": "2026-08-27T06:41:30Z"
+        },
+        {
+          "url": "http://www.city.fuefuki.yamanashi.jp/shisejoho/shigikai/gijiroku/index.html",
+          "observed_on": "http://www.city.fuefuki.yamanashi.jp/shisejoho/shigikai/gijiroku/index.html",
+          "sha256": "c6a4a881494f45f5ee3250177fe29832e050d88556a62c265f3b92bc83ad03f2",
+          "fetched_at": "2026-08-27T10:08:41Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.fuefuki.yamanashi.jp/shisejoho/shigikai/gijiroku/index.html (label: 議事録)"
@@ -52,9 +58,20 @@
           "url": "http://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/yosan.html",
           "observed_on": "http://www.city.fuefuki.yamanashi.jp/shisejoho/index.html",
           "fetched_at": "2026-08-27T06:41:30Z"
+        },
+        {
+          "url": "https://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/yosan.html",
+          "observed_on": "https://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/yosan.html",
+          "sha256": "b06b6770af178e44dc02cfac9145ab8a925e078a303f7fb964afa00e0b56ddc7",
+          "fetched_at": "2026-08-27T10:08:44Z"
+        },
+        {
+          "url": "https://www.city.fuefuki.yamanashi.jp/documents/1033/r8toushoyosangaiyou.pdf",
+          "observed_on": "https://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/yosan.html",
+          "fetched_at": "2026-08-27T11:10:03Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/yosan.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/yosan.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +84,20 @@
           "url": "http://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/kessan.html",
           "observed_on": "http://www.city.fuefuki.yamanashi.jp/shisejoho/index.html",
           "fetched_at": "2026-08-27T06:41:30Z"
+        },
+        {
+          "url": "https://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/kessan.html",
+          "observed_on": "https://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/kessan.html",
+          "sha256": "85ecf709734599fb93efd56fbad19f7a686e29d1c34ac12c3cc05b04b5ea1011",
+          "fetched_at": "2026-08-27T10:08:47Z"
+        },
+        {
+          "url": "https://www.city.fuefuki.yamanashi.jp/documents/1035/r6kessangaiyou.pdf",
+          "observed_on": "https://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/kessan.html",
+          "fetched_at": "2026-08-27T11:10:06Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/kessan.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.fuefuki.yamanashi.jp/zaise/shisejoho/zaise/kessan.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

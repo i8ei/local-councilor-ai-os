@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.otsuchi.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.otsuchi.iwate.jp/gyosei/gikai/kaigiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:23:55Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.otsuchi.iwate.jp/gyosei/gikai/kaigiroku/",
           "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/gikai/",
           "fetched_at": "2026-08-27T07:14:26Z"
+        },
+        {
+          "url": "https://www.town.otsuchi.iwate.jp/gyosei/gikai/kaigiroku/",
+          "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/gikai/kaigiroku/",
+          "sha256": "1766df3844ccac3f261ddb57f55e41ccd04734c2163b70ec867501795a509960",
+          "fetched_at": "2026-08-27T10:33:09Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.otsuchi.iwate.jp/gyosei/gikai/kaigiroku/ (label: 会議録)"
@@ -39,9 +45,15 @@
           "url": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
           "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/docs/462443.html",
           "fetched_at": "2026-08-27T07:13:27Z"
+        },
+        {
+          "url": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
+          "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
+          "sha256": "aca6a0dead9bcca4c11a4780c608f2b79b424d64fac7a551983c231f9322299f",
+          "fetched_at": "2026-08-27T10:33:11Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ (label: 財政情報)"
+      "notes": "Observed finance section at https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ (label: 財政情報) 入口 https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
           "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/docs/462443.html",
           "fetched_at": "2026-08-27T07:13:27Z"
+        },
+        {
+          "url": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
+          "observed_on": "https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/",
+          "sha256": "aca6a0dead9bcca4c11a4780c608f2b79b424d64fac7a551983c231f9322299f",
+          "fetched_at": "2026-08-27T10:33:11Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ (label: 財政情報)"
+      "notes": "Observed finance section at https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ (label: 財政情報) 入口 https://www.town.otsuchi.iwate.jp/gyosei/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

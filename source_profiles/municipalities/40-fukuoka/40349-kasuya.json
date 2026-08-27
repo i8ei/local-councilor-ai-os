@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.kasuya.fukuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.kasuya.fukuoka.jp/li/080/030/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:56:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kasuya.fukuoka.jp/li/080/030/index.html",
           "observed_on": "http://www.town.kasuya.fukuoka.jp/sitemap.html",
           "fetched_at": "2026-08-27T04:20:34Z"
+        },
+        {
+          "url": "http://www.town.kasuya.fukuoka.jp/li/080/030/index.html",
+          "observed_on": "http://www.town.kasuya.fukuoka.jp/li/080/030/index.html",
+          "sha256": "c1ae566f09c60f3e2e1ca4e8c860a98a51c70da535edea4f0c0a0c50375be7bf",
+          "fetched_at": "2026-08-27T09:36:23Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.kasuya.fukuoka.jp/li/080/030/index.html (label: 議会会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.town.kasuya.fukuoka.jp/li/070/060/010/010/index.html",
           "observed_on": "http://www.town.kasuya.fukuoka.jp/li/070/060/010/index.html",
           "fetched_at": "2026-08-27T04:41:39Z"
+        },
+        {
+          "url": "https://www.town.kasuya.fukuoka.jp/li/070/060/010/010/index.html",
+          "observed_on": "https://www.town.kasuya.fukuoka.jp/li/070/060/010/010/index.html",
+          "sha256": "f6ce7497eea2295eccdcaf40812b2bcbdd14ab4401d24872fbecf6ac38be2f7d",
+          "fetched_at": "2026-08-27T09:36:26Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kasuya.fukuoka.jp/li/070/060/010/010/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.town.kasuya.fukuoka.jp/li/070/060/010/010/index.html (label: 予算) 入口 https://www.town.kasuya.fukuoka.jp/li/070/060/010/010/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html",
           "observed_on": "http://www.town.kasuya.fukuoka.jp/li/070/060/010/index.html",
           "fetched_at": "2026-08-27T04:41:39Z"
+        },
+        {
+          "url": "https://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html",
+          "observed_on": "https://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html",
+          "sha256": "483a757ed9f5636c19aad473acfe2929069ed2de9cbb7d9c983cbf8765c0dc6d",
+          "fetched_at": "2026-08-27T09:36:29Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html (label: 決算) 入口 https://www.town.kasuya.fukuoka.jp/li/070/060/010/020/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.yonago.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.yonago.lg.jp/2924.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:00:09Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yonago.lg.jp/2924.htm",
           "observed_on": "http://www.city.yonago.lg.jp/gikai/",
           "fetched_at": "2026-08-27T05:57:45Z"
+        },
+        {
+          "url": "http://www.city.yonago.lg.jp/2924.htm",
+          "observed_on": "http://www.city.yonago.lg.jp/2924.htm",
+          "sha256": "5007e97bf45846dc68f72257fcb3ed3c5ba2cf5fe7f29db206894c26b1516d7d",
+          "fetched_at": "2026-08-27T09:42:36Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.yonago.lg.jp/2924.htm (label: 会議録検索)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.yonago.lg.jp/item/62475.htm",
           "observed_on": "http://www.city.yonago.lg.jp/",
           "fetched_at": "2026-08-27T05:56:37Z"
+        },
+        {
+          "url": "https://www.city.yonago.lg.jp/item/62475.htm",
+          "observed_on": "https://www.city.yonago.lg.jp/item/62475.htm",
+          "sha256": "fd672786708af0b4e1b228b013d2167dd0049c47d93d3131697c06437d6654c8",
+          "fetched_at": "2026-08-27T09:42:40Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.yonago.lg.jp/item/62475.htm (label: 令和8年度9月補正予算 市長査定状況)"
+      "notes": "Observed budget link at http://www.city.yonago.lg.jp/item/62475.htm (label: 令和8年度9月補正予算 市長査定状況) 入口 https://www.city.yonago.lg.jp/item/62475.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.yonago.lg.jp/1047.htm",
           "observed_on": "http://www.city.yonago.lg.jp/",
           "fetched_at": "2026-08-27T05:56:37Z"
+        },
+        {
+          "url": "https://www.city.yonago.lg.jp/1047.htm",
+          "observed_on": "https://www.city.yonago.lg.jp/1047.htm",
+          "sha256": "89bbf52b91872c14512a400eab90042bd69dd6a7f4c1a96310dc14d0f21ccaa2",
+          "fetched_at": "2026-08-27T09:42:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.yonago.lg.jp/1047.htm (label: 財政情報)"
+      "notes": "Observed finance section at http://www.city.yonago.lg.jp/1047.htm (label: 財政情報) 入口 https://www.city.yonago.lg.jp/1047.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

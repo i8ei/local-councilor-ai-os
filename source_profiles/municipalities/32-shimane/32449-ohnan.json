@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.ohnan.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.ohnan.lg.jp/site/gikai/list11-61.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:00:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ohnan.lg.jp/site/gikai/list11-61.html",
           "observed_on": "http://www.town.ohnan.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:10:42Z"
+        },
+        {
+          "url": "http://www.town.ohnan.lg.jp/site/gikai/list11-61.html",
+          "observed_on": "http://www.town.ohnan.lg.jp/site/gikai/list11-61.html",
+          "sha256": "f4ad381cb0a5a6f4de157db9344c939720cb150e98f4d972914b0a9285d1a39d",
+          "fetched_at": "2026-08-27T09:43:43Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.ohnan.lg.jp/site/gikai/list11-61.html (label: 会議録)"
@@ -52,9 +58,15 @@
           "url": "http://www.town.ohnan.lg.jp/life/7/22/",
           "observed_on": "http://www.town.ohnan.lg.jp/soshiki/7/9285.html",
           "fetched_at": "2026-08-27T06:10:16Z"
+        },
+        {
+          "url": "https://www.town.ohnan.lg.jp/life/7/22/",
+          "observed_on": "https://www.town.ohnan.lg.jp/life/7/22/",
+          "sha256": "6d8aad8bd5d28cf06cbd278b7a1b50ce4eed4c95fa64f0936f841ecf6a6d0418",
+          "fetched_at": "2026-08-27T09:43:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ohnan.lg.jp/life/7/22/ (label: 財政・計画・施策)"
+      "notes": "Observed finance section at http://www.town.ohnan.lg.jp/life/7/22/ (label: 財政・計画・施策) 入口 https://www.town.ohnan.lg.jp/life/7/22/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.town.ohnan.lg.jp/life/7/22/",
           "observed_on": "http://www.town.ohnan.lg.jp/soshiki/7/9285.html",
           "fetched_at": "2026-08-27T06:10:16Z"
+        },
+        {
+          "url": "https://www.town.ohnan.lg.jp/life/7/22/",
+          "observed_on": "https://www.town.ohnan.lg.jp/life/7/22/",
+          "sha256": "6d8aad8bd5d28cf06cbd278b7a1b50ce4eed4c95fa64f0936f841ecf6a6d0418",
+          "fetched_at": "2026-08-27T09:43:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ohnan.lg.jp/life/7/22/ (label: 財政・計画・施策)"
+      "notes": "Observed finance section at http://www.town.ohnan.lg.jp/life/7/22/ (label: 財政・計画・施策) 入口 https://www.town.ohnan.lg.jp/life/7/22/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

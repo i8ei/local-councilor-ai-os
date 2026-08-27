@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T06:13:20Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.hakusan.lg.jp/shigikai/index.html (label: 会議録検索や議会録画検索、議員の紹介など 市議会に関する情報はこちら)"
+      "notes": "Observed council minutes index at http://www.city.hakusan.lg.jp/shigikai/index.html (label: 会議録検索や議会録画検索、議員の紹介など 市議会に関する情報はこちら) extraction probe read one document at http://ssp.kaigiroku.net/tenant/hakusan/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +46,15 @@
           "url": "http://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
           "observed_on": "http://www.city.hakusan.lg.jp/",
           "fetched_at": "2026-08-27T06:13:20Z"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
+          "sha256": "8ccff645cae8bba619b5ab5d0e373463920f3ad3503d9524d3dac6ce5bca7bac",
+          "fetched_at": "2026-08-27T10:05:54Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hakusan.lg.jp/shisei/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.hakusan.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.hakusan.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +67,15 @@
           "url": "http://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
           "observed_on": "http://www.city.hakusan.lg.jp/",
           "fetched_at": "2026-08-27T06:13:20Z"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.hakusan.lg.jp/shisei/zaisei/index.html",
+          "sha256": "8ccff645cae8bba619b5ab5d0e373463920f3ad3503d9524d3dac6ce5bca7bac",
+          "fetched_at": "2026-08-27T10:05:54Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hakusan.lg.jp/shisei/zaisei/index.html (label: 財政)"
+      "notes": "Observed finance section at http://www.city.hakusan.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.hakusan.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

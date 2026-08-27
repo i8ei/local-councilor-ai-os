@@ -184,6 +184,22 @@ class VerifyTests(unittest.TestCase):
         self.assertIn("host drift", report["reason"])
         self.assertEqual("needs_review", updated["sources"]["regulations"]["status"])
 
+    def test_host_with_explicit_port_is_not_host_drift(self) -> None:
+        profile = _base_greiki_needs_review()
+        # Simulate final_url with explicit port 443 on the same host
+        port_entry = "https://www1.g-reiki.net:443/town.tara/reiki_menu.html"
+        port_kana = "https://www1.g-reiki.net:443/town.tara/reiki_kana/kana_default.html"
+        port_doc = "https://www1.g-reiki.net:443/town.tara/reiki_honbun/h001.html"
+        fetch_entry = replace(make_fetch_result(ENTRY_URL, GREIKI_HTML), final_url=port_entry)
+        client = FakeHttpClient({
+            ENTRY_URL: fetch_entry,
+            port_kana: make_fetch_result(port_kana, KANA_INDEX_HTML),
+            port_doc: make_fetch_result(port_doc, GREIKI_DOC_HTML),
+        })
+        updated, report = verify_profile(profile, client=client, now=NOW)
+        self.assertEqual("verified", report["result"])
+        self.assertEqual("ready", updated["sources"]["regulations"]["status"])
+
     def test_structure_mismatch_does_not_promote(self) -> None:
         profile = _base_greiki_needs_review()
         fetch = make_fetch_result(ENTRY_URL, NON_GREIKI_HTML)

@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.shikaoi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.shikaoi.lg.jp/gikai/gijiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:23:21Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.shikaoi.lg.jp/gikai/gijiroku/",
           "observed_on": "https://www.town.shikaoi.lg.jp/gikai/",
           "fetched_at": "2026-08-27T06:48:20Z"
+        },
+        {
+          "url": "https://www.town.shikaoi.lg.jp/gikai/gijiroku/",
+          "observed_on": "https://www.town.shikaoi.lg.jp/gikai/gijiroku/",
+          "sha256": "ec233c5fb32c257b3cdd2e77a6198f40945f7f3a5a59be92f08fbac5bf50672e",
+          "fetched_at": "2026-08-27T10:31:29Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.shikaoi.lg.jp/gikai/gijiroku/ (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
           "observed_on": "https://www.town.shikaoi.lg.jp/",
           "fetched_at": "2026-08-27T06:47:15Z"
+        },
+        {
+          "url": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
+          "observed_on": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
+          "sha256": "02a55de5c1554d8c97d7f2f96d4b26d7a13fbf010892dabe32ce676edd234696",
+          "fetched_at": "2026-08-27T10:31:31Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ (label: 財政状況) 入口 https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
           "observed_on": "https://www.town.shikaoi.lg.jp/",
           "fetched_at": "2026-08-27T06:47:15Z"
+        },
+        {
+          "url": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
+          "observed_on": "https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/",
+          "sha256": "02a55de5c1554d8c97d7f2f96d4b26d7a13fbf010892dabe32ce676edd234696",
+          "fetched_at": "2026-08-27T10:31:31Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ (label: 財政状況) 入口 https://www.town.shikaoi.lg.jp/gyosei/zaisei_jokyo/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

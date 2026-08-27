@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T06:22:06Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.yufu.oita.jp/city_council/shigikai/shigikai_cate5/gijirokukensaku (label: 令和８年第１回臨時会議事録を掲載しました)"
+      "notes": "Observed council minutes index at https://www.city.yufu.oita.jp/city_council/shigikai/shigikai_cate5/gijirokukensaku (label: 令和８年第１回臨時会議事録を掲載しました) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "ready",
@@ -52,9 +52,20 @@
           "url": "https://www.city.yufu.oita.jp/article_83351",
           "observed_on": "http://www.city.yufu.oita.jp/",
           "fetched_at": "2026-08-27T06:21:19Z"
+        },
+        {
+          "url": "https://www.city.yufu.oita.jp/article_83351",
+          "observed_on": "https://www.city.yufu.oita.jp/article_83351",
+          "sha256": "10f53b5ad410e54eed73d206095bc54ac7a90bec9b7de34ee87f8c4880f15592",
+          "fetched_at": "2026-08-27T09:39:34Z"
+        },
+        {
+          "url": "https://www.city.yufu.oita.jp/uploads/files/2026/02/ippannkaikei-yosannsyo.pdf",
+          "observed_on": "https://www.city.yufu.oita.jp/article_83351",
+          "fetched_at": "2026-08-27T10:57:28Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.yufu.oita.jp/article_83351 (label: 令和８年度予算について)"
+      "notes": "Observed budget link at https://www.city.yufu.oita.jp/article_83351 (label: 令和８年度予算について) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +78,15 @@
           "url": "https://www.city.yufu.oita.jp/siseijouhou/zaisei",
           "observed_on": "http://www.city.yufu.oita.jp/",
           "fetched_at": "2026-08-27T06:21:19Z"
+        },
+        {
+          "url": "https://www.city.yufu.oita.jp/siseijouhou/zaisei",
+          "observed_on": "https://www.city.yufu.oita.jp/siseijouhou/zaisei",
+          "sha256": "db1d0597379f4472dc477562db4e88166b1f16359597cd6561ce331a088e2baf",
+          "fetched_at": "2026-08-27T09:39:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.yufu.oita.jp/siseijouhou/zaisei (label: 財政)"
+      "notes": "Observed finance section at https://www.city.yufu.oita.jp/siseijouhou/zaisei (label: 財政) 入口 https://www.city.yufu.oita.jp/siseijouhou/zaisei に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

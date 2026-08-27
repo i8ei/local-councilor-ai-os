@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.tsuruoka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.tsuruoka.lg.jp/shisei/gikai/chukei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:55Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tsuruoka.lg.jp/shisei/gikai/chukei/index.html",
           "observed_on": "http://www.city.tsuruoka.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:38:23Z"
+        },
+        {
+          "url": "http://www.city.tsuruoka.lg.jp/shisei/gikai/chukei/index.html",
+          "observed_on": "http://www.city.tsuruoka.lg.jp/shisei/gikai/chukei/index.html",
+          "sha256": "f8c50721b9680149635e9a9001c33894cfffc59f552aee9078d5c0b2ca7c7b14",
+          "fetched_at": "2026-08-27T10:35:38Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.tsuruoka.lg.jp/shisei/gikai/chukei/index.html (label: 議会中継・会議録)"
@@ -46,9 +52,20 @@
           "url": "http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html",
           "observed_on": "http://www.city.tsuruoka.lg.jp/",
           "fetched_at": "2026-08-27T07:37:23Z"
+        },
+        {
+          "url": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
+          "observed_on": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
+          "sha256": "bb9dfa1e82095038435ae25cef2ca17f1bc9cd49b89374f2e95bc663fa876f9b",
+          "fetched_at": "2026-08-27T10:35:40Z"
+        },
+        {
+          "url": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.files/R8yosan.pdf",
+          "observed_on": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
+          "fetched_at": "2026-08-27T11:24:56Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html (label: 予算・決算資料について)"
+      "notes": "Observed budget link at http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html (label: 予算・決算資料について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html",
           "observed_on": "http://www.city.tsuruoka.lg.jp/",
           "fetched_at": "2026-08-27T07:37:23Z"
+        },
+        {
+          "url": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
+          "observed_on": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
+          "sha256": "bb9dfa1e82095038435ae25cef2ca17f1bc9cd49b89374f2e95bc663fa876f9b",
+          "fetched_at": "2026-08-27T10:35:40Z"
+        },
+        {
+          "url": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.files/R06_kessan.pdf",
+          "observed_on": "https://www.city.tsuruoka.lg.jp:443/shisei/shiyakusyo/zaisei/yosan.html",
+          "fetched_at": "2026-08-27T11:24:57Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html (label: 予算・決算資料について)"
+      "notes": "Observed settlement link at http://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/yosan.html (label: 予算・決算資料について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

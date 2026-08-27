@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.sango.nara.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.sango.nara.jp/site/kaigi-gijiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:06:33Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.sango.nara.jp/site/kaigi-gijiroku/",
           "observed_on": "http://www.town.sango.nara.jp/",
           "fetched_at": "2026-08-27T07:03:40Z"
+        },
+        {
+          "url": "http://www.town.sango.nara.jp/site/kaigi-gijiroku/",
+          "observed_on": "http://www.town.sango.nara.jp/site/kaigi-gijiroku/",
+          "sha256": "f4e35dde9d75e53ad7ed5cc2aeac96354fcc12bb2c48d927add090a69024b16b",
+          "fetched_at": "2026-08-27T09:53:01Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.sango.nara.jp/site/kaigi-gijiroku/ (label: 会議録・議事録)"
@@ -52,9 +58,15 @@
           "url": "http://www.town.sango.nara.jp/life/5/37/",
           "observed_on": "http://www.town.sango.nara.jp/",
           "fetched_at": "2026-08-27T07:03:40Z"
+        },
+        {
+          "url": "https://www.town.sango.nara.jp/life/5/37/",
+          "observed_on": "https://www.town.sango.nara.jp/life/5/37/",
+          "sha256": "6f6699e5879173da8d0f3394b5142df7310bdc1809de3ea54a07c4475c0ebb25",
+          "fetched_at": "2026-08-27T09:53:04Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.sango.nara.jp/life/5/37/ (label: 予算・決算・財政状況)"
+      "notes": "Observed budget link at http://www.town.sango.nara.jp/life/5/37/ (label: 予算・決算・財政状況) 入口 https://www.town.sango.nara.jp/life/5/37/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.town.sango.nara.jp/life/5/37/",
           "observed_on": "http://www.town.sango.nara.jp/",
           "fetched_at": "2026-08-27T07:03:40Z"
+        },
+        {
+          "url": "https://www.town.sango.nara.jp/life/5/37/",
+          "observed_on": "https://www.town.sango.nara.jp/life/5/37/",
+          "sha256": "6f6699e5879173da8d0f3394b5142df7310bdc1809de3ea54a07c4475c0ebb25",
+          "fetched_at": "2026-08-27T09:53:04Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.sango.nara.jp/life/5/37/ (label: 予算・決算・財政状況)"
+      "notes": "Observed settlement link at http://www.town.sango.nara.jp/life/5/37/ (label: 予算・決算・財政状況) 入口 https://www.town.sango.nara.jp/life/5/37/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

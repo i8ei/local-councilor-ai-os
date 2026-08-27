@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.fuji.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.fuji.shizuoka.jp/shiseijoho/shigikai/gikaichukei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:14:27Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fuji.shizuoka.jp/shiseijoho/shigikai/gikaichukei/index.html",
           "observed_on": "http://www.city.fuji.shizuoka.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T07:43:32Z"
+        },
+        {
+          "url": "http://www.city.fuji.shizuoka.jp/shiseijoho/shigikai/gikaichukei/index.html",
+          "observed_on": "http://www.city.fuji.shizuoka.jp/shiseijoho/shigikai/gikaichukei/index.html",
+          "sha256": "3e9bfcf81fdb109cc5ac4f5d229188cf2b017df1f8a5e2c03fd5ecfd873a568d",
+          "fetched_at": "2026-08-27T10:14:25Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.fuji.shizuoka.jp/shiseijoho/shigikai/gikaichukei/index.html (label: 議会中継・会議録を見る)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html",
           "observed_on": "http://www.city.fuji.shizuoka.jp/",
           "fetched_at": "2026-08-27T07:42:22Z"
+        },
+        {
+          "url": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html",
+          "observed_on": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html",
+          "sha256": "12d287a022a2f27bafea1460ea19c9ad76fa8c9535fb203cd385ace0731fdaf1",
+          "fetched_at": "2026-08-27T10:14:27Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html (label: ふるさと納税)"
+      "notes": "Observed budget link at http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html (label: ふるさと納税) 入口 http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/furusatonozei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html",
           "observed_on": "http://www.city.fuji.shizuoka.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T07:43:32Z"
+        },
+        {
+          "url": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html",
+          "observed_on": "http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html",
+          "sha256": "924373e80b4852c200c3bdf7fce4cba6d2ae354a7ee36680113bb9a7c4cd5ca4",
+          "fetched_at": "2026-08-27T10:14:28Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html (label: 決算) 入口 http://www.city.fuji.shizuoka.jp/shiseijoho/yosan/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

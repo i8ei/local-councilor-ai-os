@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.gifu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "static",
       "index_url": "http://www.city.gifu.lg.jp/info/shigikai/1009436/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:13:02Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.gifu.lg.jp/info/shigikai/1009436/index.html",
           "observed_on": "http://www.city.gifu.lg.jp/info/index.html",
           "fetched_at": "2026-08-27T07:25:18Z"
+        },
+        {
+          "url": "http://www.city.gifu.lg.jp/info/shigikai/1009436/index.html",
+          "observed_on": "http://www.city.gifu.lg.jp/info/shigikai/1009436/index.html",
+          "sha256": "ee355d10e82b0dd2632f284a98044549ce6724a3b2d6435f515fb542eeb4470b",
+          "fetched_at": "2026-08-27T10:12:26Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.gifu.lg.jp/info/shigikai/1009436/index.html (label: 中継・会議録検索)"
+      "notes": "Observed council minutes index at http://www.city.gifu.lg.jp/info/shigikai/1009436/index.html (label: 中継・会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "ready",
@@ -52,9 +58,15 @@
           "url": "http://www.city.gifu.lg.jp/info/zaisei/index.html",
           "observed_on": "http://www.city.gifu.lg.jp/",
           "fetched_at": "2026-08-27T07:24:58Z"
+        },
+        {
+          "url": "https://www.city.gifu.lg.jp/info/zaisei/index.html",
+          "observed_on": "https://www.city.gifu.lg.jp/info/zaisei/index.html",
+          "sha256": "193f06a95a95f7f2bb218efe5399c96063a0b723e63c679054c2addd4c3d489e",
+          "fetched_at": "2026-08-27T10:12:29Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.gifu.lg.jp/info/zaisei/index.html (label: 予算・財政)"
+      "notes": "Observed budget link at http://www.city.gifu.lg.jp/info/zaisei/index.html (label: 予算・財政) 入口 https://www.city.gifu.lg.jp/info/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city.gifu.lg.jp/info/zaisei/1007720/index.html",
           "observed_on": "http://www.city.gifu.lg.jp/info/index.html",
           "fetched_at": "2026-08-27T07:25:18Z"
+        },
+        {
+          "url": "https://www.city.gifu.lg.jp/info/zaisei/1007720/index.html",
+          "observed_on": "https://www.city.gifu.lg.jp/info/zaisei/1007720/index.html",
+          "sha256": "e0c08fdcedcac913102e2e784797d3d3f0c72de90813a37c54bc5b1d751431f2",
+          "fetched_at": "2026-08-27T10:12:32Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.gifu.lg.jp/info/zaisei/1007720/index.html (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.city.gifu.lg.jp/info/zaisei/1007720/index.html (label: 予算・決算) 入口 https://www.city.gifu.lg.jp/info/zaisei/1007720/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

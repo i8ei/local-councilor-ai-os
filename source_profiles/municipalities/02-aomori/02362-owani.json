@@ -45,9 +45,20 @@
           "url": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
           "observed_on": "http://www.town.owani.lg.jp/gyousei/index.html",
           "fetched_at": "2026-08-27T07:00:18Z"
+        },
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
+          "observed_on": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
+          "sha256": "1b00574d02914ec5924d2a3968a063df25d2272e13ec10d2c7bb96059e74695a",
+          "fetched_at": "2026-08-27T10:32:16Z"
+        },
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/zaisei/files/R8yosannsoiukatuhyou.pdf",
+          "observed_on": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
+          "fetched_at": "2026-08-27T11:23:39Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.owani.lg.jp/gyousei/zaisei/budget.html (label: 予算)"
+      "notes": "Observed budget link at http://www.town.owani.lg.jp/gyousei/zaisei/budget.html (label: 予算) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
@@ -60,9 +71,20 @@
           "url": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
           "observed_on": "http://www.town.owani.lg.jp/gyousei/index.html",
           "fetched_at": "2026-08-27T07:00:18Z"
+        },
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
+          "observed_on": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
+          "sha256": "4b5331d7b56a70b347b8fb2e5807175cc82c8c3c8377f61a8c8bf47f1d304d58",
+          "fetched_at": "2026-08-27T10:32:17Z"
+        },
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/zaisei/files/R6kessannjoukyou.pdf",
+          "observed_on": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
+          "fetched_at": "2026-08-27T11:23:41Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

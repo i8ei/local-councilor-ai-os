@@ -39,9 +39,20 @@
           "url": "http://www.town.katsuura.lg.jp/docs/2026032700037/",
           "observed_on": "http://www.town.katsuura.lg.jp/docs/2026063000021/",
           "fetched_at": "2026-08-27T06:42:02Z"
+        },
+        {
+          "url": "https://www.town.katsuura.lg.jp/docs/2026032700037/",
+          "observed_on": "https://www.town.katsuura.lg.jp/docs/2026032700037/",
+          "sha256": "89c1524421c6854b6e30aa792cee6750762ce0336148bfc91342a80e3a169461",
+          "fetched_at": "2026-08-27T09:46:13Z"
+        },
+        {
+          "url": "https://www.town.katsuura.lg.jp/docs/2026032700037/file_contents/yosansho.pdf",
+          "observed_on": "https://www.town.katsuura.lg.jp/docs/2026032700037/",
+          "fetched_at": "2026-08-27T11:02:01Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.katsuura.lg.jp/docs/2026032700037/ (label: 令和8年度当初予算について)"
+      "notes": "Observed budget link at http://www.town.katsuura.lg.jp/docs/2026032700037/ (label: 令和8年度当初予算について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "not_found",

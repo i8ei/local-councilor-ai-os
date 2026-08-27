@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.yoshida.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.yoshida.shizuoka.jp/1376.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:14:40Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoshida.shizuoka.jp/1376.htm",
           "observed_on": "http://www.town.yoshida.shizuoka.jp/info/",
           "fetched_at": "2026-08-27T07:52:39Z"
+        },
+        {
+          "url": "http://www.town.yoshida.shizuoka.jp/1376.htm",
+          "observed_on": "http://www.town.yoshida.shizuoka.jp/1376.htm",
+          "sha256": "a1b7015f39386e9926c255129e7e8bfe79e6aee4c72d6ba74d186720142f4d49",
+          "fetched_at": "2026-08-27T10:15:04Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.yoshida.shizuoka.jp/1376.htm (label: 議会会議録)"
@@ -52,9 +58,20 @@
           "url": "http://www.town.yoshida.shizuoka.jp/item/14045.htm",
           "observed_on": "http://www.town.yoshida.shizuoka.jp/info/",
           "fetched_at": "2026-08-27T07:52:39Z"
+        },
+        {
+          "url": "https://www.town.yoshida.shizuoka.jp/item/14045.htm",
+          "observed_on": "https://www.town.yoshida.shizuoka.jp/item/14045.htm",
+          "sha256": "999b87644da3706070f9ff1c15f3eee64dab64fa19459ab3cf1c412e50a0e7d4",
+          "fetched_at": "2026-08-27T10:15:06Z"
+        },
+        {
+          "url": "https://www.town.yoshida.shizuoka.jp/secure/14045/R8kaigo1gouyosan.pdf",
+          "observed_on": "https://www.town.yoshida.shizuoka.jp/item/14045.htm",
+          "fetched_at": "2026-08-27T11:14:40Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.yoshida.shizuoka.jp/item/14045.htm (label: 令和8年度吉田町介護事業特別会計補正予算（第1号）)"
+      "notes": "Observed budget link at http://www.town.yoshida.shizuoka.jp/item/14045.htm (label: 令和8年度吉田町介護事業特別会計補正予算（第1号）) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +84,15 @@
           "url": "http://www.town.yoshida.shizuoka.jp/1228.htm",
           "observed_on": "http://www.town.yoshida.shizuoka.jp/",
           "fetched_at": "2026-08-27T07:52:18Z"
+        },
+        {
+          "url": "https://www.town.yoshida.shizuoka.jp/1228.htm",
+          "observed_on": "https://www.town.yoshida.shizuoka.jp/1228.htm",
+          "sha256": "1dcceb338ae4d841f215395fad2f1dd2ff095c388bbd475eebe1cf83e5310e29",
+          "fetched_at": "2026-08-27T10:15:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yoshida.shizuoka.jp/1228.htm (label: 町の財政)"
+      "notes": "Observed finance section at http://www.town.yoshida.shizuoka.jp/1228.htm (label: 町の財政) 入口 https://www.town.yoshida.shizuoka.jp/1228.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

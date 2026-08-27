@@ -6,16 +6,22 @@
   "official_home_url": "http://www.akitakata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.akitakata.jp/ja/parliament/gikai201/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:00:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.akitakata.jp/ja/parliament/gikai201/",
           "observed_on": "http://www.akitakata.jp/ja/parliament/",
           "fetched_at": "2026-08-27T06:31:43Z"
+        },
+        {
+          "url": "http://www.akitakata.jp/ja/parliament/gikai201/",
+          "observed_on": "http://www.akitakata.jp/ja/parliament/gikai201/",
+          "sha256": "de3a5e24b4f92750f9fe98305ff14484563100a2cf0ad56bbec80d1ea725b941",
+          "fetched_at": "2026-08-27T09:45:06Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.akitakata.jp/ja/parliament/gikai201/ (label: 会議録)"
@@ -52,9 +58,15 @@
           "url": "http://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/",
           "observed_on": "http://www.akitakata.jp/ja/shisei/",
           "fetched_at": "2026-08-27T06:30:48Z"
+        },
+        {
+          "url": "https://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/",
+          "observed_on": "https://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/",
+          "sha256": "a2e164b93a72ebe025f7d18ffd6f812b931962787f4412e262f6d115bc05a3c6",
+          "fetched_at": "2026-08-27T09:45:10Z"
         }
       ],
-      "notes": "Observed budget link at http://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/ (label: 予算)"
+      "notes": "Observed budget link at http://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/ (label: 予算) 入口 https://www.akitakata.jp/ja/shisei/section/soumu_soumu/yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/",
           "observed_on": "http://www.akitakata.jp/ja/shisei/",
           "fetched_at": "2026-08-27T06:30:48Z"
+        },
+        {
+          "url": "https://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/",
+          "observed_on": "https://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/",
+          "sha256": "1366ae5fe0f9044177680d7a93c4ec926aeec7f665796a37c27bddcc9ca1a8b4",
+          "fetched_at": "2026-08-27T09:45:13Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/ (label: 決算)"
+      "notes": "Observed settlement link at http://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/ (label: 決算) 入口 https://www.akitakata.jp/ja/shisei/section/soumu_soumu/kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

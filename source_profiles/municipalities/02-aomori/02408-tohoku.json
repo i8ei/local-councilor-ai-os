@@ -21,16 +21,22 @@
       "notes": "Observed council minutes index at http://www.town.tohoku.lg.jp/chousei/info/info_yakuba_03-54.html (label: 企画課「東北町地域公共交通会議の会議録」を更新)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.tohoku.lg.jp/chousei/t_data/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:23:43Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tohoku.lg.jp/chousei/t_data/reiki/reiki_menu.html",
           "observed_on": "http://www.town.tohoku.lg.jp/top.html",
           "fetched_at": "2026-08-27T07:03:01Z"
+        },
+        {
+          "url": "http://www.town.tohoku.lg.jp/chousei/t_data/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.tohoku.lg.jp/chousei/t_data/reiki/",
+          "sha256": "3c72937260a17a25832ed3eb1108d4fc2b52bb05d65d11d46c2832612032a22e",
+          "fetched_at": "2026-08-27T10:32:26Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.tohoku.lg.jp/chousei/t_data/reiki/reiki_menu.html (label: )"
@@ -46,9 +52,15 @@
           "url": "http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html",
           "observed_on": "http://www.town.tohoku.lg.jp/",
           "fetched_at": "2026-08-27T07:02:43Z"
+        },
+        {
+          "url": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html",
+          "observed_on": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html",
+          "sha256": "1809db42607895bab989630e9983220eb367328963120c187c6c60eee9bfe863",
+          "fetched_at": "2026-08-27T10:32:29Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html (label: 町の財政 -予算・決算-)"
+      "notes": "Observed budget link at http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html (label: 町の財政 -予算・決算-) 入口 https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html",
           "observed_on": "http://www.town.tohoku.lg.jp/",
           "fetched_at": "2026-08-27T07:02:43Z"
+        },
+        {
+          "url": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html",
+          "observed_on": "https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html",
+          "sha256": "1809db42607895bab989630e9983220eb367328963120c187c6c60eee9bfe863",
+          "fetched_at": "2026-08-27T10:32:29Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html (label: 町の財政 -予算・決算-)"
+      "notes": "Observed settlement link at http://www.town.tohoku.lg.jp/chousei/zaisei/zaisei.html (label: 町の財政 -予算・決算-) 入口 https://www.town.tohoku.lg.jp:443/chousei/zaisei/zaisei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

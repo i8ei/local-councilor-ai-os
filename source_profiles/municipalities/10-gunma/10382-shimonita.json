@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.shimonita.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.shimonita.lg.jp/m08/m02/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:17:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shimonita.lg.jp/m08/m02/index.html",
           "observed_on": "http://www.town.shimonita.lg.jp/m08/index.html",
           "fetched_at": "2026-08-27T06:39:08Z"
+        },
+        {
+          "url": "http://www.town.shimonita.lg.jp/m08/m02/index.html",
+          "observed_on": "http://www.town.shimonita.lg.jp/m08/m02/index.html",
+          "sha256": "224fab8063666ce60e0a52ea6d4cfb2ccd5b4c0112f58c4e5e8ec2750b1550e9",
+          "fetched_at": "2026-08-27T10:19:12Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.shimonita.lg.jp/m08/m02/index.html (label: 議会会議録PDF版)"
@@ -46,9 +52,15 @@
           "url": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
           "observed_on": "http://www.town.shimonita.lg.jp/m06/index.html",
           "fetched_at": "2026-08-27T06:38:52Z"
+        },
+        {
+          "url": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
+          "observed_on": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
+          "sha256": "7e6c7c361c0a8751c010195fb95ea9de311f2591089257621f12a7f9f3e8818c",
+          "fetched_at": "2026-08-27T10:19:13Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.shimonita.lg.jp/m06/m04/index.html (label: 予算・決算・財政状況)"
+      "notes": "Observed budget link at http://www.town.shimonita.lg.jp/m06/m04/index.html (label: 予算・決算・財政状況) 入口 http://www.town.shimonita.lg.jp/m06/m04/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
           "observed_on": "http://www.town.shimonita.lg.jp/m06/index.html",
           "fetched_at": "2026-08-27T06:38:52Z"
+        },
+        {
+          "url": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
+          "observed_on": "http://www.town.shimonita.lg.jp/m06/m04/index.html",
+          "sha256": "7e6c7c361c0a8751c010195fb95ea9de311f2591089257621f12a7f9f3e8818c",
+          "fetched_at": "2026-08-27T10:19:13Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.shimonita.lg.jp/m06/m04/index.html (label: 予算・決算・財政状況)"
+      "notes": "Observed settlement link at http://www.town.shimonita.lg.jp/m06/m04/index.html (label: 予算・決算・財政状況) 入口 http://www.town.shimonita.lg.jp/m06/m04/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

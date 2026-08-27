@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.hirono.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.hirono.iwate.jp/doc/2026031300016/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:42Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hirono.iwate.jp/doc/2026031300016/",
           "observed_on": "https://www.town.hirono.iwate.jp/navi/shisei/",
           "fetched_at": "2026-08-27T07:15:07Z"
+        },
+        {
+          "url": "https://www.town.hirono.iwate.jp/doc/2026031300016/",
+          "observed_on": "https://www.town.hirono.iwate.jp/doc/2026031300016/",
+          "sha256": "2d88fabb7eefccd063246d0442f3c0f82b4d8b980e7d5df021de003f5a93d4c5",
+          "fetched_at": "2026-08-27T10:34:10Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.hirono.iwate.jp/doc/2026031300016/ (label: 令和８年洋野町議会会議録)"
@@ -36,34 +42,46 @@
       "notes": "Observed g_reiki at https://en3-jg.d1-law.com/hirono-iwate/d1w_reiki/reiki.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hirono.iwate.jp/doc/2026072300037/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:42Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hirono.iwate.jp/doc/2026072300037/",
           "observed_on": "https://www.town.hirono.iwate.jp/navi/shisei/",
           "fetched_at": "2026-08-27T07:15:07Z"
+        },
+        {
+          "url": "https://www.town.hirono.iwate.jp/doc/2026072300037/",
+          "observed_on": "https://www.town.hirono.iwate.jp/doc/2026072300037/",
+          "sha256": "9437538a545ea2beeba6d2454210c281ee2e0edcbdc211a7cb424bda79ecbb82",
+          "fetched_at": "2026-08-27T10:34:11Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.hirono.iwate.jp/doc/2026072300037/ (label: 引上げ分に係る地方消費税収の使途について（令和８年度当初予算）)"
+      "notes": "Observed budget link at https://www.town.hirono.iwate.jp/doc/2026072300037/ (label: 引上げ分に係る地方消費税収の使途について（令和８年度当初予算）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "official_document_index",
       "index_url": "https://www.town.hirono.iwate.jp/doc/2026072300044/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:42Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hirono.iwate.jp/doc/2026072300044/",
           "observed_on": "https://www.town.hirono.iwate.jp/navi/shisei/",
           "fetched_at": "2026-08-27T07:15:07Z"
+        },
+        {
+          "url": "https://www.town.hirono.iwate.jp/doc/2026072300044/",
+          "observed_on": "https://www.town.hirono.iwate.jp/doc/2026072300044/",
+          "sha256": "e5d98489016f8e06c7824e870d957e453d2d4c1a441fe9cd89443f810be2dd84",
+          "fetched_at": "2026-08-27T10:34:13Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.hirono.iwate.jp/doc/2026072300044/ (label: 引上げ分に係る地方消費税収の使途について（令和６年度決算）)"
+      "notes": "Observed settlement link at https://www.town.hirono.iwate.jp/doc/2026072300044/ (label: 引上げ分に係る地方消費税収の使途について（令和６年度決算）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     }
   }
 }

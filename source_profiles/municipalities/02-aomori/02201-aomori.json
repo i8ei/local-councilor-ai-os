@@ -46,9 +46,15 @@
           "url": "http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1006058/index.html",
           "observed_on": "http://www.city.aomori.aomori.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:54:42Z"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp:443/shisei/gyouzaiseiunei/1006058/index.html",
+          "observed_on": "https://www.city.aomori.aomori.jp:443/shisei/gyouzaiseiunei/1006058/index.html",
+          "sha256": "c54797559c57111869ae7d905aeeaf6cfbf745083506954a9c665d4c617d4c33",
+          "fetched_at": "2026-08-27T10:31:44Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1006058/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1006058/index.html (label: 予算) 入口 https://www.city.aomori.aomori.jp:443/shisei/gyouzaiseiunei/1006058/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +67,20 @@
           "url": "http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1007411/index.html",
           "observed_on": "http://www.city.aomori.aomori.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:54:42Z"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp:443/shisei/gyouzaiseiunei/1007411/index.html",
+          "observed_on": "https://www.city.aomori.aomori.jp:443/shisei/gyouzaiseiunei/1007411/index.html",
+          "sha256": "9c9f85ad7ccaf6699c3be210992db2e4f61e294a882b30d3e86e0dbfe4197ce3",
+          "fetched_at": "2026-08-27T10:31:46Z"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp:443/_res/projects/default_project/_page_/001/007/411/r6kessansyo.pdf",
+          "observed_on": "https://www.city.aomori.aomori.jp:443/shisei/gyouzaiseiunei/1007411/index.html",
+          "fetched_at": "2026-08-27T11:23:34Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1007411/index.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1007411/index.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

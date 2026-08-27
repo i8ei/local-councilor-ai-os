@@ -6,16 +6,22 @@
   "official_home_url": "https://www.city.towada.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.towada.lg.jp/shisei/gikai/kaigiroku-kensaku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:23:34Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.towada.lg.jp/shisei/gikai/kaigiroku-kensaku.html",
           "observed_on": "https://www.city.towada.lg.jp/shisei/gikai/",
           "fetched_at": "2026-08-27T06:57:48Z"
+        },
+        {
+          "url": "https://www.city.towada.lg.jp/shisei/gikai/kaigiroku-kensaku.html",
+          "observed_on": "https://www.city.towada.lg.jp/shisei/gikai/kaigiroku-kensaku.html",
+          "sha256": "eb2253ea25655d37db84569952ce7f68adab91ee9a427152f9cac8b63421dfaf",
+          "fetched_at": "2026-08-27T10:31:48Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.towada.lg.jp/shisei/gikai/kaigiroku-kensaku.html (label: 会議録検索システム)"
@@ -46,9 +52,15 @@
           "url": "https://www.city.towada.lg.jp/shisei/gyousei/",
           "observed_on": "https://www.city.towada.lg.jp/",
           "fetched_at": "2026-08-27T06:57:13Z"
+        },
+        {
+          "url": "https://www.city.towada.lg.jp/shisei/gyousei/",
+          "observed_on": "https://www.city.towada.lg.jp/shisei/gyousei/",
+          "sha256": "62b4ae6eef6146dbfcad690c4980ecf22001075b298d503828fe9f066fd9b82e",
+          "fetched_at": "2026-08-27T10:31:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.towada.lg.jp/shisei/gyousei/ (label: 行政・財政)"
+      "notes": "Observed finance section at https://www.city.towada.lg.jp/shisei/gyousei/ (label: 行政・財政) 入口 https://www.city.towada.lg.jp/shisei/gyousei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.city.towada.lg.jp/shisei/gyousei/",
           "observed_on": "https://www.city.towada.lg.jp/",
           "fetched_at": "2026-08-27T06:57:13Z"
+        },
+        {
+          "url": "https://www.city.towada.lg.jp/shisei/gyousei/",
+          "observed_on": "https://www.city.towada.lg.jp/shisei/gyousei/",
+          "sha256": "62b4ae6eef6146dbfcad690c4980ecf22001075b298d503828fe9f066fd9b82e",
+          "fetched_at": "2026-08-27T10:31:49Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.towada.lg.jp/shisei/gyousei/ (label: 行政・財政)"
+      "notes": "Observed finance section at https://www.city.towada.lg.jp/shisei/gyousei/ (label: 行政・財政) 入口 https://www.city.towada.lg.jp/shisei/gyousei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.dazaifu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.dazaifu.lg.jp/site/gikai/list99-11.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:56:14Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.dazaifu.lg.jp/site/gikai/list99-11.html",
           "observed_on": "http://www.city.dazaifu.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T04:14:20Z"
+        },
+        {
+          "url": "http://www.city.dazaifu.lg.jp/site/gikai/list99-11.html",
+          "observed_on": "http://www.city.dazaifu.lg.jp/site/gikai/list99-11.html",
+          "sha256": "25905691e3f2658fc82d39c6d20939efa291635b99a8ef6dfa83ae3f5f575adb",
+          "fetched_at": "2026-08-27T09:35:56Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.dazaifu.lg.jp/site/gikai/list99-11.html (label: 会議録)"
@@ -52,9 +58,15 @@
           "url": "http://www.city.dazaifu.lg.jp/life/5/32/",
           "observed_on": "http://www.city.dazaifu.lg.jp/life/5/",
           "fetched_at": "2026-08-27T05:57:33Z"
+        },
+        {
+          "url": "https://www.city.dazaifu.lg.jp/life/5/32/",
+          "observed_on": "https://www.city.dazaifu.lg.jp/life/5/32/",
+          "sha256": "a1ebc9fd7a9a9f146103f9cfba332503a3919ad23eb251c5b8a526637638b681",
+          "fetched_at": "2026-08-27T09:35:59Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.dazaifu.lg.jp/life/5/32/ (label: 予算・決算・行政評価)"
+      "notes": "Observed budget link at http://www.city.dazaifu.lg.jp/life/5/32/ (label: 予算・決算・行政評価) 入口 https://www.city.dazaifu.lg.jp/life/5/32/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city.dazaifu.lg.jp/life/5/32/",
           "observed_on": "http://www.city.dazaifu.lg.jp/life/5/",
           "fetched_at": "2026-08-27T05:57:33Z"
+        },
+        {
+          "url": "https://www.city.dazaifu.lg.jp/life/5/32/",
+          "observed_on": "https://www.city.dazaifu.lg.jp/life/5/32/",
+          "sha256": "a1ebc9fd7a9a9f146103f9cfba332503a3919ad23eb251c5b8a526637638b681",
+          "fetched_at": "2026-08-27T09:35:59Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.dazaifu.lg.jp/life/5/32/ (label: 予算・決算・行政評価)"
+      "notes": "Observed settlement link at http://www.city.dazaifu.lg.jp/life/5/32/ (label: 予算・決算・行政評価) 入口 https://www.city.dazaifu.lg.jp/life/5/32/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

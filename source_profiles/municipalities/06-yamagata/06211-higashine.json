@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.higashine.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.higashine.yamagata.jp/section_list/section018/354",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:04Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashine.yamagata.jp/section_list/section018/354",
           "observed_on": "http://www.city.higashine.yamagata.jp/section_list/section018/",
           "fetched_at": "2026-08-27T07:41:56Z"
+        },
+        {
+          "url": "http://www.city.higashine.yamagata.jp/section_list/section018/354",
+          "observed_on": "http://www.city.higashine.yamagata.jp/section_list/section018/354",
+          "sha256": "eeb7f002d8b10b42891ff999a7b201673784a1c1d59d18fedac906198e158cee",
+          "fetched_at": "2026-08-27T10:35:47Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.higashine.yamagata.jp/section_list/section018/354 (label: 会議録検索)"
@@ -46,9 +52,20 @@
           "url": "http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53",
           "observed_on": "http://www.city.higashine.yamagata.jp/administration/city/",
           "fetched_at": "2026-08-27T07:41:15Z"
+        },
+        {
+          "url": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
+          "observed_on": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
+          "sha256": "bd7867bf1f092494932ca8e47d97213e9792777ff5c4bfae130eafb4cd392688",
+          "fetched_at": "2026-08-27T10:35:49Z"
+        },
+        {
+          "url": "https://www.city.higashine.yamagata.jp:443/files/original/202604021346358048d820eaf.pdf",
+          "observed_on": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
+          "fetched_at": "2026-08-27T11:25:06Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53 (label: 予算及び決算の概要)"
+      "notes": "Observed budget link at http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53 (label: 予算及び決算の概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53",
           "observed_on": "http://www.city.higashine.yamagata.jp/administration/city/",
           "fetched_at": "2026-08-27T07:41:15Z"
+        },
+        {
+          "url": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
+          "observed_on": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
+          "sha256": "bd7867bf1f092494932ca8e47d97213e9792777ff5c4bfae130eafb4cd392688",
+          "fetched_at": "2026-08-27T10:35:49Z"
+        },
+        {
+          "url": "https://www.city.higashine.yamagata.jp:443/files/original/20260402134457961d740b2ea.pdf",
+          "observed_on": "https://www.city.higashine.yamagata.jp:443/section_list/section004/gyoseishiryo/53",
+          "fetched_at": "2026-08-27T11:25:08Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53 (label: 予算及び決算の概要)"
+      "notes": "Observed settlement link at http://www.city.higashine.yamagata.jp/section_list/section004/gyoseishiryo/53 (label: 予算及び決算の概要) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

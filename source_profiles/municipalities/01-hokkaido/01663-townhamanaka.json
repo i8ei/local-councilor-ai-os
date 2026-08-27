@@ -6,16 +6,22 @@
   "official_home_url": "http://www.townhamanaka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.townhamanaka.jp/gyousei/kaigi/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:23:27Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.townhamanaka.jp/gyousei/kaigi/index.html",
           "observed_on": "http://www.townhamanaka.jp/seikatu/gikaisenkyo.html",
           "fetched_at": "2026-08-27T06:53:27Z"
+        },
+        {
+          "url": "http://www.townhamanaka.jp/gyousei/kaigi/index.html",
+          "observed_on": "http://www.townhamanaka.jp/gyousei/kaigi/index.html",
+          "sha256": "c5aa75b33e0077105277cd03274b188eb7ade69cf400daf5220701bf91f01b3a",
+          "fetched_at": "2026-08-27T10:32:00Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.townhamanaka.jp/gyousei/kaigi/index.html (label: 会議録)"
@@ -52,9 +58,15 @@
           "url": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
           "observed_on": "http://www.townhamanaka.jp/",
           "fetched_at": "2026-08-27T06:52:34Z"
+        },
+        {
+          "url": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
+          "observed_on": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
+          "sha256": "28e95b5f1e6ecf05f33942165e933221fe86e8c7f8f3955d83ba9d92ba02c59d",
+          "fetched_at": "2026-08-27T10:32:01Z"
         }
       ],
-      "notes": "Observed finance section at http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html (label: 企画財政課)"
+      "notes": "Observed finance section at http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html (label: 企画財政課) 入口 http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
           "observed_on": "http://www.townhamanaka.jp/",
           "fetched_at": "2026-08-27T06:52:34Z"
+        },
+        {
+          "url": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
+          "observed_on": "http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html",
+          "sha256": "28e95b5f1e6ecf05f33942165e933221fe86e8c7f8f3955d83ba9d92ba02c59d",
+          "fetched_at": "2026-08-27T10:32:01Z"
         }
       ],
-      "notes": "Observed finance section at http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html (label: 企画財政課)"
+      "notes": "Observed finance section at http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html (label: 企画財政課) 入口 http://www.townhamanaka.jp/kakuka/kikakuzaiseika/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

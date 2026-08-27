@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.watari.miyagi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.watari.miyagi.jp/council/detail.php?content=1085",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:25Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.watari.miyagi.jp/council/detail.php?content=1085",
           "observed_on": "http://www.town.watari.miyagi.jp/council/",
           "fetched_at": "2026-08-27T07:26:23Z"
+        },
+        {
+          "url": "http://www.town.watari.miyagi.jp/council/detail.php?content=1085",
+          "observed_on": "http://www.town.watari.miyagi.jp/council/detail.php?content=1085",
+          "sha256": "a6412768ca740fb3efeb58889d46611c477778c096bc5d70455795cd9b5e50ab",
+          "fetched_at": "2026-08-27T10:34:09Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.watari.miyagi.jp/council/detail.php?content=1085 (label: 会議録検索システム（令和2年3月開催以降のものはこちらで公開しております）)"
@@ -42,34 +48,46 @@
       "notes": "Observed g_reiki at http://www.town.watari.miyagi.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "official_document_index",
       "index_url": "http://www.town.watari.miyagi.jp/detail.php?content=311",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:25Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.watari.miyagi.jp/detail.php?content=311",
           "observed_on": "http://www.town.watari.miyagi.jp/town",
           "fetched_at": "2026-08-27T07:23:19Z"
+        },
+        {
+          "url": "http://www.town.watari.miyagi.jp/detail.php?content=311",
+          "observed_on": "http://www.town.watari.miyagi.jp/detail.php?content=311",
+          "sha256": "602993c8ae51a770e39b2eec0d6b61fe2c97a07312eef19e96b033834ee1bb48",
+          "fetched_at": "2026-08-27T10:34:10Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.watari.miyagi.jp/detail.php?content=311 (label: 予算)"
+      "notes": "Observed budget link at http://www.town.watari.miyagi.jp/detail.php?content=311 (label: 予算) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "official_document_index",
       "index_url": "http://www.town.watari.miyagi.jp/detail.php?content=313",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:25Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.watari.miyagi.jp/detail.php?content=313",
           "observed_on": "http://www.town.watari.miyagi.jp/town",
           "fetched_at": "2026-08-27T07:23:19Z"
+        },
+        {
+          "url": "http://www.town.watari.miyagi.jp/detail.php?content=313",
+          "observed_on": "http://www.town.watari.miyagi.jp/detail.php?content=313",
+          "sha256": "e9799a2614bc3c5f4b78c81734baf12a2f91a2e1d923d7216214b8f905083950",
+          "fetched_at": "2026-08-27T10:34:12Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.watari.miyagi.jp/detail.php?content=313 (label: 決算)"
+      "notes": "Observed settlement link at http://www.town.watari.miyagi.jp/detail.php?content=313 (label: 決算) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     }
   }
 }

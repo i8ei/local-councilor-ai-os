@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.niseko.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.niseko.lg.jp/chosei/gikai/kaigi/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:22:30Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.niseko.lg.jp/chosei/gikai/kaigi/",
           "observed_on": "https://www.town.niseko.lg.jp/chosei/gikai/",
           "fetched_at": "2026-08-27T06:13:48Z"
+        },
+        {
+          "url": "https://www.town.niseko.lg.jp/chosei/gikai/kaigi/",
+          "observed_on": "https://www.town.niseko.lg.jp/chosei/gikai/kaigi/",
+          "sha256": "94ea2e8f5e0696d7cb596d4338dc3695a6edcebd74720f8b2604f61509cf8929",
+          "fetched_at": "2026-08-27T10:29:46Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.niseko.lg.jp/chosei/gikai/kaigi/ (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "https://www.town.niseko.lg.jp/chosei/zaisei/",
           "observed_on": "https://www.town.niseko.lg.jp/",
           "fetched_at": "2026-08-27T06:13:36Z"
+        },
+        {
+          "url": "https://www.town.niseko.lg.jp/chosei/zaisei/",
+          "observed_on": "https://www.town.niseko.lg.jp/chosei/zaisei/",
+          "sha256": "3c30b1f64e2eb8f6a62d9fb2726ec27a0b8f59f4d2519cc675baa87670a2dd33",
+          "fetched_at": "2026-08-27T10:29:47Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.niseko.lg.jp/chosei/zaisei/ (label: 財政・契約)"
+      "notes": "Observed finance section at https://www.town.niseko.lg.jp/chosei/zaisei/ (label: 財政・契約) 入口 https://www.town.niseko.lg.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.town.niseko.lg.jp/chosei/zaisei/",
           "observed_on": "https://www.town.niseko.lg.jp/",
           "fetched_at": "2026-08-27T06:13:36Z"
+        },
+        {
+          "url": "https://www.town.niseko.lg.jp/chosei/zaisei/",
+          "observed_on": "https://www.town.niseko.lg.jp/chosei/zaisei/",
+          "sha256": "3c30b1f64e2eb8f6a62d9fb2726ec27a0b8f59f4d2519cc675baa87670a2dd33",
+          "fetched_at": "2026-08-27T10:29:47Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.niseko.lg.jp/chosei/zaisei/ (label: 財政・契約)"
+      "notes": "Observed finance section at https://www.town.niseko.lg.jp/chosei/zaisei/ (label: 財政・契約) 入口 https://www.town.niseko.lg.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

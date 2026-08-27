@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.iyo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.iyo.lg.jp/gikai/shise/gikai/kaigiroku/jimukyoku/giketu.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:02:32Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iyo.lg.jp/gikai/shise/gikai/kaigiroku/jimukyoku/giketu.html",
           "observed_on": "http://www.city.iyo.lg.jp/gikai/shise/gikai/index.html",
           "fetched_at": "2026-08-27T07:04:12Z"
+        },
+        {
+          "url": "http://www.city.iyo.lg.jp/gikai/shise/gikai/kaigiroku/jimukyoku/giketu.html",
+          "observed_on": "http://www.city.iyo.lg.jp/gikai/shise/gikai/kaigiroku/jimukyoku/giketu.html",
+          "sha256": "adf72c461079e92440067d404b8c6e186e32ccbb48a316ee36035f110feee240",
+          "fetched_at": "2026-08-27T09:47:06Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.iyo.lg.jp/gikai/shise/gikai/kaigiroku/jimukyoku/giketu.html (label: 議会の議決結果)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
           "observed_on": "http://www.city.iyo.lg.jp/",
           "fetched_at": "2026-08-27T07:00:36Z"
+        },
+        {
+          "url": "https://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
+          "observed_on": "https://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
+          "sha256": "71973e2fa7594c2e8d06b9d8df6452c4664ab5ed1ff39e8ff5a8e3e215a437c9",
+          "fetched_at": "2026-08-27T09:47:09Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html (label: 伊予市の財政)"
+      "notes": "Observed budget link at http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html (label: 伊予市の財政) 入口 https://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
           "observed_on": "http://www.city.iyo.lg.jp/",
           "fetched_at": "2026-08-27T07:00:36Z"
+        },
+        {
+          "url": "https://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
+          "observed_on": "https://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
+          "sha256": "71973e2fa7594c2e8d06b9d8df6452c4664ab5ed1ff39e8ff5a8e3e215a437c9",
+          "fetched_at": "2026-08-27T09:47:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html (label: 伊予市の財政)"
+      "notes": "Observed finance section at http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html (label: 伊予市の財政) 入口 https://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }
