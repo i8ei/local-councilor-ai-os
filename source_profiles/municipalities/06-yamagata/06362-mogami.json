@@ -6,19 +6,27 @@
   "official_home_url": "https://town.mogami.lg.jp/top.php",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/mogami/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://town.mogami.lg.jp/info/05gikai/08gikai.php",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/mogami/WebView/rd/council.html",
+          "url": "https://town.mogami.lg.jp/info/05gikai/08gikai.php",
           "observed_on": "https://town.mogami.lg.jp/top.php",
-          "fetched_at": "2026-08-27T07:44:22Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://town.mogami.lg.jp/info/05gikai/08gikai.php",
+          "observed_on": "https://town.mogami.lg.jp/info/05gikai/08gikai.php",
+          "sha256": "3ecaf549432e34ced0dba561085b7e0452aaa6f92f0959af16b7ed75248b2ae1",
+          "fetched_at": "2026-08-27T13:27:29Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/mogami/WebView/rd/council.html (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

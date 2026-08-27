@@ -72,11 +72,11 @@
       "notes": "Observed finance section at http://www.town.hayakawa.yamanashi.jp/town/finance/index.html (label: 財政・人事) 入口 https://www.town.hayakawa.yamanashi.jp/town/finance/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hayakawa.yamanashi.jp/town/finance/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hayakawa.yamanashi.jp/town/finance/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hayakawa.yamanashi.jp/town/finance/index.html",
@@ -88,9 +88,21 @@
           "observed_on": "https://www.town.hayakawa.yamanashi.jp/town/finance/index.html",
           "sha256": "3d92adcd57a1a9ab95a4c333698c4c80402d9940065fe617ab7e27e0b405eeb8",
           "fetched_at": "2026-08-27T10:09:00Z"
+        },
+        {
+          "url": "http://www.town.hayakawa.yamanashi.jp/town/finance/index.html",
+          "observed_on": "http://www.town.hayakawa.yamanashi.jp/",
+          "sha256": "3d92adcd57a1a9ab95a4c333698c4c80402d9940065fe617ab7e27e0b405eeb8",
+          "fetched_at": "2026-08-27T10:09:00Z"
+        },
+        {
+          "url": "https://www.town.hayakawa.yamanashi.jp/town/finance/images/R6tihoushouhizei.pdf",
+          "observed_on": "https://www.town.hayakawa.yamanashi.jp/town/finance/finance.html",
+          "sha256": "4e0aadc8cea9e733500b91d9fa2e58145c0df74285cfef5f0f17da5d1a01663a",
+          "fetched_at": "2026-08-27T13:36:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hayakawa.yamanashi.jp/town/finance/index.html (label: 財政・人事) 入口 https://www.town.hayakawa.yamanashi.jp/town/finance/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hayakawa.yamanashi.jp/town/finance/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6tihoushouhizei.pdf「R6年度決算.pdf」, sha256:4e0aadc8）にて構造マーカー（歳入・歳出・地方債等）を確認済み。"
     }
   }
 }

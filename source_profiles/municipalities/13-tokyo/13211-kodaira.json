@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.kodaira.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://smart.discussvision.net/smart/tenant/kodaira/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.kodaira.tokyo.jp/gikai/129/129620.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://smart.discussvision.net/smart/tenant/kodaira/WebView/rd/council.html",
+          "url": "http://www.city.kodaira.tokyo.jp/gikai/129/129620.html",
           "observed_on": "http://www.city.kodaira.tokyo.jp/gikai/",
-          "fetched_at": "2026-08-27T07:44:55Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.kodaira.tokyo.jp/gikai/129/129620.html",
+          "observed_on": "http://www.city.kodaira.tokyo.jp/gikai/129/129620.html",
+          "sha256": "0f372b727c3a7b060878d19295401111d84074964b847d568b2cc0ff8bd6eb1f",
+          "fetched_at": "2026-08-27T13:42:48Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/kodaira/WebView/rd/council.html (label: 議会中継)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

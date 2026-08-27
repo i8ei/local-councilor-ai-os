@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.saijo.ehime.jp/life/4/32/143/ (label: 予算・決算) 入口 https://www.city.saijo.ehime.jp/life/4/32/143/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.saijo.ehime.jp/life/4/32/143/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.saijo.ehime.jp/life/4/32/143/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.saijo.ehime.jp/life/4/32/143/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.saijo.ehime.jp/life/4/32/143/",
           "sha256": "fa0c60519e44d0010b44155492e0d41a5adf8751b992f9a3fc01687976c25941",
           "fetched_at": "2026-08-27T09:46:56Z"
+        },
+        {
+          "url": "http://www.city.saijo.ehime.jp/life/4/32/143/",
+          "observed_on": "http://www.city.saijo.ehime.jp/",
+          "sha256": "fa0c60519e44d0010b44155492e0d41a5adf8751b992f9a3fc01687976c25941",
+          "fetched_at": "2026-08-27T09:46:56Z"
+        },
+        {
+          "url": "https://www.city.saijo.ehime.jp/uploaded/attachment/81522.pdf",
+          "observed_on": "https://www.city.saijo.ehime.jp/soshiki/zaisei/kessan-r6.html",
+          "sha256": "8c3461c67857764b9d06fd63b235e3672a2169597574e57a21d6468a48dfef6e",
+          "fetched_at": "2026-08-27T13:43:46Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.saijo.ehime.jp/life/4/32/143/ (label: 予算・決算) 入口 https://www.city.saijo.ehime.jp/life/4/32/143/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.saijo.ehime.jp/life/4/32/143/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（81522.pdf「令和6年度決算報告【「広報さいじょう」2025年9月号】 [PDFファイル／3.76MB]」, sha256:8c3461c6）にて構造マーカー（歳入・歳出・決算額等）を確認済み。"
     }
   }
 }

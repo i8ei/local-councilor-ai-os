@@ -6,19 +6,37 @@
   "official_home_url": "http://www.vill.kawakami.nagano.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.vill.kawakami.nagano.jp/www/genre/1745388292507/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.kawakami.nagano.jp/www/genre/1745388292507/index.html",
           "observed_on": "http://www.vill.kawakami.nagano.jp/www/genre/1000100000013/index.html",
           "fetched_at": "2026-08-27T07:02:31Z"
+        },
+        {
+          "url": "http://www.vill.kawakami.nagano.jp/www/genre/1745388292507/index.html",
+          "observed_on": "http://www.vill.kawakami.nagano.jp/www/genre/1745388292507/index.html",
+          "sha256": "2f1040f8d5684447eb4e221734c29e32037f36dd971692b975a10e52c76bec1e",
+          "fetched_at": "2026-08-27T10:10:09Z"
+        },
+        {
+          "url": "https://www.vill.kawakami.nagano.jp/www/contents/1748241653956/index.html",
+          "observed_on": "http://www.vill.kawakami.nagano.jp/www/genre/1745388292507/index.html",
+          "sha256": "fab914a89ffdc7914562fe48bdab554b5be9eebb0b94b20ee6edecb6a707507f",
+          "fetched_at": "2026-08-27T13:46:50Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.vill.kawakami.nagano.jp/www/genre/1745388292507/index.html (label: 会議録)"
+      "notes": "Observed council minutes index at http://www.vill.kawakami.nagano.jp/www/genre/1745388292507/index.html (label: 会議録)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "needs_review",

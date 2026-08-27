@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/himi/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
@@ -64,9 +64,15 @@
           "observed_on": "https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html",
           "sha256": "04fdb29cfe98b6c305baab9c305a40babac2e50f2d82d27ac3395ecebda16bd3",
           "fetched_at": "2026-08-27T10:05:24Z"
+        },
+        {
+          "url": "https://www.city.himi.toyama.jp/material/files/group/11/R5wakariyasuiyosannsyo.pdf",
+          "observed_on": "https://www.city.himi.toyama.jp/gyosei/soshiki/zaimuka/2_2/10/8850.html",
+          "sha256": "1a190a65bd43fc4a6e8071a6679ee92aa23b05c65073499a7c5d62f5689a0928",
+          "fetched_at": "2026-08-27T13:35:57Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.himi.toyama.jp/gyosei/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R5wakariyasuiyosannsyo.pdf「令和5年度わかりやすい予算書 (PDFファイル: 1.3MB)」, sha256:1a190a65）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

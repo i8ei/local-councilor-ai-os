@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.city.ibara.okayama.jp/life/6/24/ (label: 計画・施策・財政) 入口 http://www.city.ibara.okayama.jp/life/6/24/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.ibara.okayama.jp/life/6/24/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ibara.okayama.jp/life/6/24/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ibara.okayama.jp/life/6/24/",
@@ -85,9 +85,15 @@
           "observed_on": "http://www.city.ibara.okayama.jp/life/6/24/",
           "sha256": "8d111bb9ee3a14dfea87415641441e5819eb2799f022c5f92c06c445d74c55d8",
           "fetched_at": "2026-08-27T09:44:08Z"
+        },
+        {
+          "url": "http://www.city.ibara.okayama.jp/uploaded/attachment/9848.pdf",
+          "observed_on": "http://www.city.ibara.okayama.jp/soshiki/6/1759.html",
+          "sha256": "92ec2ab9cbe8dc345bb717574caac7402251358bc29af5b0a9bde3dd7212a42c",
+          "fetched_at": "2026-08-27T13:42:14Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.ibara.okayama.jp/life/6/24/ (label: 計画・施策・財政) 入口 http://www.city.ibara.okayama.jp/life/6/24/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.ibara.okayama.jp/life/6/24/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（9848.pdf「R06決算カード（普通会計） [PDFファイル／116KB]」, sha256:92ec2ab9）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

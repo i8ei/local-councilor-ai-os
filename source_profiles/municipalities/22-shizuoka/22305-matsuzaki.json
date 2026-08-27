@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.matsuzaki.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.matsuzaki.shizuoka.jp/docs/2016012700027/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.matsuzaki.shizuoka.jp/docs/2016012700027/",
+          "observed_on": "http://www.town.matsuzaki.shizuoka.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.matsuzaki.shizuoka.jp/docs/2016012700027/",
+          "observed_on": "https://www.town.matsuzaki.shizuoka.jp/docs/2016012700027/",
+          "sha256": "a8396ba3a21c7d384e64eb3032536b23a0b8481ef92eecc4a34e94510e8622d5",
+          "fetched_at": "2026-08-27T13:49:52Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

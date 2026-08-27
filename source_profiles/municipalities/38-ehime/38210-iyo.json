@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/iyo/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
           "sha256": "71973e2fa7594c2e8d06b9d8df6452c4664ab5ed1ff39e8ff5a8e3e215a437c9",
           "fetched_at": "2026-08-27T09:47:09Z"
+        },
+        {
+          "url": "http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
+          "observed_on": "http://www.city.iyo.lg.jp/",
+          "sha256": "71973e2fa7594c2e8d06b9d8df6452c4664ab5ed1ff39e8ff5a8e3e215a437c9",
+          "fetched_at": "2026-08-27T09:47:09Z"
+        },
+        {
+          "url": "https://www.city.iyo.lg.jp/zaimu/documents/8-6-ippan.pdf",
+          "observed_on": "https://www.city.iyo.lg.jp/zaimu/yosan_fromr7.html",
+          "sha256": "0dd2537827ba76d0c0d2df3ba005937dfc18372517836182150bdb8a2096e4ca",
+          "fetched_at": "2026-08-27T13:43:31Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html (label: 伊予市の財政) 入口 https://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8-6-ippan.pdf「補正予算書・予算説明書（PDF：5,189KB）」, sha256:0dd25378）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

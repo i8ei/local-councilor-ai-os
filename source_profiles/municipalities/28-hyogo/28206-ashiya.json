@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.ashiya.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://smart.discussvision.net/smart/tenant/ashiya/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ashiya.lg.jp/shigi/sigikaidayori.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://smart.discussvision.net/smart/tenant/ashiya/WebView/rd/council.html",
-          "observed_on": "http://www.city.ashiya.lg.jp/shigi/gikaityuukeitoha.html",
-          "fetched_at": "2026-08-27T06:46:40Z"
+          "url": "https://www.city.ashiya.lg.jp/shigi/sigikaidayori.html",
+          "observed_on": "http://www.city.ashiya.lg.jp/shisei/shigikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.ashiya.lg.jp/shigi/sigikaidayori.html",
+          "observed_on": "https://www.city.ashiya.lg.jp/shigi/sigikaidayori.html",
+          "sha256": "fd71f182b843a7edcf0aa0e989cae5b672ecb27c567cd9e88191eb65d4b11079",
+          "fetched_at": "2026-08-27T14:02:41Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/ashiya/WebView/rd/council.html (label: 本会議・委員会映像の中継（外部サイトへリンク）（別ウィンドウが開きます）)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

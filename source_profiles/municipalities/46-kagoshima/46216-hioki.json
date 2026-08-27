@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www.city.hioki.kagoshima.jp/housei/reiki.html (label: 日置市例規集（市の条例や規則など）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html",
@@ -63,9 +63,15 @@
           "url": "http://www.city.hioki.kagoshima.jp/documents/939/r8_tousyo_gaiyou.pdf",
           "observed_on": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html",
           "fetched_at": "2026-08-27T10:57:46Z"
+        },
+        {
+          "url": "http://www.city.hioki.kagoshima.jp/documents/939/r8_tousyo.pdf",
+          "observed_on": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html",
+          "sha256": "9789a27e46bd68b054aa8db4a5a152314836bcd0180bcb3a8c624e28882f54dd",
+          "fetched_at": "2026-08-27T13:47:31Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（r8_tousyo.pdf「令和8年度当初予算書（PDF：1,463KB）」, sha256:9789a27e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

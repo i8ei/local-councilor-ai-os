@@ -36,19 +36,31 @@
       "notes": "Observed regulations index at http://www.city.uda.nara.jp/life/5/37/157/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.uda.nara.jp/life/5/28/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.uda.nara.jp/life/5/28/",
           "observed_on": "http://www.city.uda.nara.jp/life/5/",
           "fetched_at": "2026-08-27T07:02:39Z"
+        },
+        {
+          "url": "http://www.city.uda.nara.jp/life/5/28/",
+          "observed_on": "http://www.city.uda.nara.jp/",
+          "sha256": "cbd0077f78a9bf3d727ed60875a9efa26fef0aae6f7b7de50d94a6b79eb007d1",
+          "fetched_at": "2026-08-27T09:52:43Z"
+        },
+        {
+          "url": "https://www.city.uda.lg.jp/uploaded/attachment/11406.pdf",
+          "observed_on": "https://www.city.uda.lg.jp/soshiki/8/20119.html",
+          "sha256": "a629c45afaf6c92a6104a557e45fac7b2bcb644c26de7ce4a751fda462e4abf8",
+          "fetched_at": "2026-08-27T13:41:26Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.uda.nara.jp/life/5/28/ (label: 財政・予算・決算)"
+      "notes": "deepest_doc=P1。budget文書（11406.pdf「令和8年度宇陀市一般会計補正予算書（第1号） （PDFファイル：103KB）」, sha256:a629c45a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

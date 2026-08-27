@@ -6,12 +6,27 @@
   "official_home_url": "https://www.vill.noda.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.noda.iwate.jp/soshiki/gikaijimukyoku/nodasongikai/302.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.noda.iwate.jp/soshiki/gikaijimukyoku/nodasongikai/302.html",
+          "observed_on": "https://www.vill.noda.iwate.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.noda.iwate.jp/soshiki/gikaijimukyoku/nodasongikai/302.html",
+          "observed_on": "https://www.vill.noda.iwate.jp/soshiki/gikaijimukyoku/nodasongikai/302.html",
+          "sha256": "69163a3905e6183bc5ca638b66ef529fe307114b310649dffe397c245e1b1f8e",
+          "fetched_at": "2026-08-27T13:26:20Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

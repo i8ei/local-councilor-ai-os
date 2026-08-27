@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.nakagawa.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.nakagawa.hokkaido.jp/section/gikaijimukyoku/b02d3l0000002cu1.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.nakagawa.hokkaido.jp/section/gikaijimukyoku/b02d3l0000002cu1.html",
+          "observed_on": "https://www.town.nakagawa.hokkaido.jp/section/gikaijimukyoku/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.nakagawa.hokkaido.jp/section/gikaijimukyoku/b02d3l0000002cu1.html",
+          "observed_on": "https://www.town.nakagawa.hokkaido.jp/section/gikaijimukyoku/b02d3l0000002cu1.html",
+          "sha256": "0dc4c7f2fc652f07dc052d5f81816e2eb69cc131eabe40c12472e1e05a49ab26",
+          "fetched_at": "2026-08-27T13:24:38Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

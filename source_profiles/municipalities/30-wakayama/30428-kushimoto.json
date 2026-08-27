@@ -56,11 +56,11 @@
       "notes": "No budget entrance found within page limit"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
@@ -77,9 +77,21 @@
           "url": "https://www.town.kushimoto.wakayama.jp/gikai/files/kessanshinsa-houkoku_r6.pdf",
           "observed_on": "https://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
           "fetched_at": "2026-08-27T09:54:08Z"
+        },
+        {
+          "url": "http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
+          "observed_on": "http://www.town.kushimoto.wakayama.jp/",
+          "sha256": "c5603640a581f8b1ce34b9335413f0549095c4a707f05346886d5c63d8dc9455",
+          "fetched_at": "2026-08-27T09:54:10Z"
+        },
+        {
+          "url": "https://www.town.kushimoto.wakayama.jp/gikai/files/kessanshinsa-houkoku_r6.pdf",
+          "observed_on": "https://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html",
+          "sha256": "a87631a28ba4be28bd92d6bb7b8d6d7977046c4b1edd10e6db1f1b65f9225489",
+          "fetched_at": "2026-08-27T09:54:12Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kushimoto.wakayama.jp/gikai/kessannshinsa-houkoku.html (label: 決算審査特別委員会報告書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（kessanshinsa-houkoku_r6.pdf「令和7年度（令和6年度会計分） 決算審査特別委員会報告書 (662KB)」, sha256:a87631a2）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

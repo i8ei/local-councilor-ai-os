@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.ashoro.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.ashoro.hokkaido.jp/gikai/kaigiroku/page_6.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.ashoro.hokkaido.jp/gikai/kaigiroku/page_6.html",
+          "observed_on": "https://www.town.ashoro.hokkaido.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.ashoro.hokkaido.jp/gikai/kaigiroku/page_6.html",
+          "observed_on": "https://www.town.ashoro.hokkaido.jp/gikai/kaigiroku/page_6.html",
+          "sha256": "174b840c164e873aa6930227d7ffba896eafc045952e87a31174c5117bb97614",
+          "fetched_at": "2026-08-27T13:25:32Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

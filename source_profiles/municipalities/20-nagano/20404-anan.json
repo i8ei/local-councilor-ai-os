@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.anan.nagano.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.anan.nagano.jp/category/living-adm/town-information/anan-gikai/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.anan.nagano.jp/category/living-adm/town-information/anan-gikai/",
+          "observed_on": "http://www.town.anan.nagano.jp/iju-top/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.anan.nagano.jp/category/living-adm/town-information/anan-gikai/",
+          "observed_on": "http://www.town.anan.nagano.jp/category/living-adm/town-information/anan-gikai/",
+          "sha256": "c2694af98fc733599cb1ae1942bff1995be2d2b4e3b790364858a63811f35e04",
+          "fetched_at": "2026-08-27T13:47:36Z"
+        },
+        {
+          "url": "http://www.town.anan.nagano.jp/anan_town/106-r80715/",
+          "observed_on": "http://www.town.anan.nagano.jp/category/living-adm/town-information/anan-gikai/",
+          "sha256": "776aa826d5d88d716fbb33715ee199ab8b8fa3452f7f1262141bec06a9fd212a",
+          "fetched_at": "2026-08-27T13:47:37Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

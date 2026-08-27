@@ -6,25 +6,27 @@
   "official_home_url": "http://www.town.yoro.gifu.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html",
-      "verified_at": "2026-08-27T10:13:24Z",
-      "verified_by": "verify --live",
+      "index_url": "https://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/1002294.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html",
-          "observed_on": "http://www.town.yoro.gifu.jp/government/assembly/index.html",
-          "fetched_at": "2026-08-27T07:32:48Z"
+          "url": "https://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/1002294.html",
+          "observed_on": "http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html",
-          "observed_on": "http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html",
-          "sha256": "39574d295d8490e00841d8e6f79f39588176ee055deb575cc79db66a3afe96d2",
-          "fetched_at": "2026-08-27T10:13:30Z"
+          "url": "https://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/1002294.html",
+          "observed_on": "https://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/1002294.html",
+          "sha256": "946e18d7e7b6452c5dee1e99910c0d64cb23870a7b199a4823928e6fc0b5aef4",
+          "fetched_at": "2026-08-27T13:49:09Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.yoro.gifu.jp/government/assembly/1002278/1002284/index.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

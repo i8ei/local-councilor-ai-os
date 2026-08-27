@@ -6,30 +6,36 @@
   "official_home_url": "http://www.town.kiyama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.kiyama.lg.jp/gikai/list01207.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.kiyama.lg.jp/gikai/list01249.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.town.kiyama.lg.jp/gikai/list01207.html",
-          "observed_on": "https://www.town.kiyama.lg.jp/gikai/list01207.html"
+          "url": "https://www.town.kiyama.lg.jp/gikai/list01249.html",
+          "observed_on": "https://www.town.kiyama.lg.jp/gikai/list01207.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://www.town.kiyama.lg.jp/gikai/list01207.html",
-          "observed_on": "https://www.town.kiyama.lg.jp/gikai/list01207.html",
-          "sha256": "ddb0893e82883bc207e66cda39359e3dc9483145bed3b4cdde0a4778a6fbe931",
-          "fetched_at": "2026-08-20T13:28:20Z"
+          "url": "https://www.town.kiyama.lg.jp/gikai/list01249.html",
+          "observed_on": "https://www.town.kiyama.lg.jp/gikai/list01249.html",
+          "sha256": "3621b4473bf82a4f14023fef2bd7e3571b113b8e4c15bd76c51e360f1af9ecfa",
+          "fetched_at": "2026-08-27T13:22:50Z"
+        },
+        {
+          "url": "https://www.town.kiyama.lg.jp/gikai/kiji0036473/index.html",
+          "observed_on": "https://www.town.kiyama.lg.jp/gikai/list01249.html",
+          "sha256": "5d81e218d22b382b1c4dfc69e91c22f7b22cd0915f965c3e23f02a550ea69dc1",
+          "fetched_at": "2026-08-27T14:09:26Z"
         }
       ],
-      "notes": "2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
-      "config": {
-        "council_name": "基山町議会",
-        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
-        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
-        "pdf": true
-      }
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

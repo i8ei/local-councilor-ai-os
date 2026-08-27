@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.inashiki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "http://inashiki.gijiroku.com/voices/g08v_search.asp",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.inashiki.lg.jp/page/page011416.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://inashiki.gijiroku.com/voices/g08v_search.asp",
-          "observed_on": "http://www.city.inashiki.lg.jp/page/dir000034.html",
-          "fetched_at": "2026-08-27T06:08:01Z"
+          "url": "https://www.city.inashiki.lg.jp/page/page011416.html",
+          "observed_on": "https://www.city.inashiki.lg.jp/page/dir000580.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.inashiki.lg.jp/page/page011416.html",
+          "observed_on": "https://www.city.inashiki.lg.jp/page/page011416.html",
+          "sha256": "bf2d60ccdf37d08a9eaa15e2451d9688fccf2971a9e0e0c622cb719ed3c29653",
+          "fetched_at": "2026-08-27T13:37:51Z"
         }
       ],
-      "notes": "Observed voices at http://inashiki.gijiroku.com/voices/g08v_search.asp (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

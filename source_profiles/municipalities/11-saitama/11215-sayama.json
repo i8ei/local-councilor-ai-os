@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.sayama.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.sayama.saitama.jp/gikai/teireikai/iincyouhoukoku/R8_6teireikaihoukoku.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.sayama.saitama.jp/gikai/teireikai/iincyouhoukoku/R8_6teireikaihoukoku.html",
+          "observed_on": "https://www.city.sayama.saitama.jp/gikai/teireikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.sayama.saitama.jp/gikai/teireikai/iincyouhoukoku/R8_6teireikaihoukoku.html",
+          "observed_on": "https://www.city.sayama.saitama.jp/gikai/teireikai/iincyouhoukoku/R8_6teireikaihoukoku.html",
+          "sha256": "267f4d7a3a8aace57d2f41d20b2d684f6b6f875d958d44dd3d6248fac4d15ab9",
+          "fetched_at": "2026-08-27T13:40:03Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

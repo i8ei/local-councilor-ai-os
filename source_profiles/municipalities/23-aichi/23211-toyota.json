@@ -43,11 +43,11 @@
       "notes": "Observed budget link at http://www.city.toyota.aichi.jp/shisei/yosan/index.html (label: 予算・財政) 入口 https://www.city.toyota.aichi.jp/shisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.toyota.aichi.jp/shisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.toyota.aichi.jp/shisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toyota.aichi.jp/shisei/yosan/index.html",
@@ -59,9 +59,21 @@
           "observed_on": "https://www.city.toyota.aichi.jp/shisei/yosan/index.html",
           "sha256": "f2bc7d6b588dc31a07dc24a67d45f69b0def3a4cc30615e85dc672edb6cf0b07",
           "fetched_at": "2026-08-27T10:15:16Z"
+        },
+        {
+          "url": "http://www.city.toyota.aichi.jp/shisei/yosan/index.html",
+          "observed_on": "http://www.city.toyota.aichi.jp/",
+          "sha256": "f2bc7d6b588dc31a07dc24a67d45f69b0def3a4cc30615e85dc672edb6cf0b07",
+          "fetched_at": "2026-08-27T10:15:16Z"
+        },
+        {
+          "url": "https://www.city.toyota.aichi.jp/_res/projects/default_project/_page_/001/004/779/r06/05.pdf",
+          "observed_on": "https://www.city.toyota.aichi.jp/shisei/yosan/1073321/1004779.html",
+          "sha256": "ad2857b12e394c77c71ab3c78d5e634a99068430007cc0238edd274cc613a6a3",
+          "fetched_at": "2026-08-27T13:38:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.toyota.aichi.jp/shisei/yosan/index.html (label: 予算・財政) 入口 https://www.city.toyota.aichi.jp/shisei/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.toyota.aichi.jp/shisei/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（05.pdf「5分で読める！令和6年度豊田市決算報告（全13スライド） （PDF 2.3 MB）」, sha256:ad2857b1）にて構造マーカー（項・決算額等）を確認済み。"
     }
   }
 }

@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.kitanakagusuku.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.kitanakagusuku.lg.jp/sonsei/gikai/618.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.kitanakagusuku.lg.jp/sonsei/gikai/618.html",
+          "observed_on": "https://www.vill.kitanakagusuku.lg.jp/sonsei/gikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.vill.kitanakagusuku.lg.jp/sonsei/gikai/618.html",
+          "observed_on": "https://www.vill.kitanakagusuku.lg.jp/sonsei/gikai/618.html",
+          "sha256": "30539cee467ec7f3eea590eabc390262a35e8b46f48c9c6a81e27daddc56df22",
+          "fetched_at": "2026-08-27T14:12:18Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

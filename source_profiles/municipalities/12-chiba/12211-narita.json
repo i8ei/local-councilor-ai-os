@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.narita.chiba.jp/shisei/index0072.html (label: 財政（予算・決算ほか）) 入口 https://www.city.narita.chiba.jp/shisei/index0072.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.narita.chiba.jp/shisei/index0072.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.narita.chiba.jp/shisei/index0072.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.narita.chiba.jp/shisei/index0072.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.narita.chiba.jp/shisei/index0072.html",
           "sha256": "d7e370ffc6b0f70c16dc894d2a9676a626e9e2fc3af6ec9cc645f0dac9f96e5a",
           "fetched_at": "2026-08-27T10:23:16Z"
+        },
+        {
+          "url": "http://www.city.narita.chiba.jp/shisei/index0072.html",
+          "observed_on": "http://www.city.narita.chiba.jp/",
+          "sha256": "d7e370ffc6b0f70c16dc894d2a9676a626e9e2fc3af6ec9cc645f0dac9f96e5a",
+          "fetched_at": "2026-08-27T10:23:16Z"
+        },
+        {
+          "url": "https://www.city.narita.chiba.jp/content/000220302.pdf",
+          "observed_on": "https://www.city.narita.chiba.jp/shisei/page085400.html",
+          "sha256": "1082004b0635f4083eb263d144e506b7facda369752417c589d67e3c15584c9e",
+          "fetched_at": "2026-08-27T13:32:39Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.narita.chiba.jp/shisei/index0072.html (label: 財政（予算・決算ほか）) 入口 https://www.city.narita.chiba.jp/shisei/index0072.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.narita.chiba.jp/shisei/index0072.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（000220302.pdf「令和6年度 決算の概要 （PDFファイル : 1.2MB）」, sha256:1082004b）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

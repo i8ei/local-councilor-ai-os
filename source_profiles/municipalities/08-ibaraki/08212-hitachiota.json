@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.hitachiota.ibaraki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.hitachiota.ibaraki.dbsr.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.hitachiota.ibaraki.jp/shigikai/gikai-to-minasan/report-meeting/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.hitachiota.ibaraki.dbsr.jp/",
+          "url": "https://www.city.hitachiota.ibaraki.jp/shigikai/gikai-to-minasan/report-meeting/index.html",
           "observed_on": "https://www.city.hitachiota.ibaraki.jp/shigikai/page007076.html",
-          "fetched_at": "2026-08-27T06:01:08Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.hitachiota.ibaraki.jp/shigikai/gikai-to-minasan/report-meeting/index.html",
+          "observed_on": "https://www.city.hitachiota.ibaraki.jp/shigikai/gikai-to-minasan/report-meeting/index.html",
+          "sha256": "aa8ebd216bddf51cd2c6328073c7ed900f117e85bd928daf72349648f0e79514",
+          "fetched_at": "2026-08-27T13:29:18Z"
+        },
+        {
+          "url": "https://www.city.hitachiota.ibaraki.jp/shigikai/gikai-to-minasan/report-meeting/page011247.html",
+          "observed_on": "https://www.city.hitachiota.ibaraki.jp/shigikai/gikai-to-minasan/report-meeting/index.html",
+          "sha256": "ab3ee4d1dc99a84bf1c4d1830f780a8d946d8a9b77b59f063fb746f11fb39f94",
+          "fetched_at": "2026-08-27T13:29:20Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.hitachiota.ibaraki.dbsr.jp/ (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

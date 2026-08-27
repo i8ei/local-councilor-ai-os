@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.shima.mie.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.shima.mie.jp/shimashigikai/gikaihoukokukai/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.shima.mie.jp/shimashigikai/gikaihoukokukai/index.html",
+          "observed_on": "https://www.city.shima.mie.jp/shimashigikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.shima.mie.jp/shimashigikai/gikaihoukokukai/index.html",
+          "observed_on": "https://www.city.shima.mie.jp/shimashigikai/gikaihoukokukai/index.html",
+          "sha256": "0621a6606c998390e25a374794d12f493b4a7e5fd7d265ede58608685dd785e2",
+          "fetched_at": "2026-08-27T13:59:56Z"
+        },
+        {
+          "url": "https://www.city.shima.mie.jp/shimashigikai/gikaihoukokukai/1567381632939.html",
+          "observed_on": "https://www.city.shima.mie.jp/shimashigikai/gikaihoukokukai/index.html",
+          "sha256": "2defa3ab8152d6d0e58ae0b5eb84ee65fbcd4e322a426b0b733c3e6980e55657",
+          "fetched_at": "2026-08-27T13:59:56Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

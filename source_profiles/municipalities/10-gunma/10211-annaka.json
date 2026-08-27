@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.annaka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/annaka/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.annaka.lg.jp/site/gikai",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/annaka/WebView/rd/council.html",
+          "url": "https://www.city.annaka.lg.jp/site/gikai",
           "observed_on": "http://www.city.annaka.lg.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:36:02Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.annaka.lg.jp/site/gikai",
+          "observed_on": "https://www.city.annaka.lg.jp/site/gikai",
+          "sha256": "57c7953f82ceab3f1080e27d987c69761411c37b4976a16764f5cd8110271196",
+          "fetched_at": "2026-08-27T13:39:07Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/annaka/WebView/rd/council.html (label: インターネット議会中継はこちら)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

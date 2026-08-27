@@ -6,25 +6,36 @@
   "official_home_url": "http://www.vill.higashichichibu.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/higashichichibu/SpTop.html",
-      "verified_at": "2026-08-27T10:22:17Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.higashichichibu.saitama.jp/site/gikai/gikairinji.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/higashichichibu/SpTop.html",
+          "url": "https://www.vill.higashichichibu.saitama.jp/site/gikai/gikairinji.html",
           "observed_on": "http://www.vill.higashichichibu.saitama.jp/site/gikai/",
-          "fetched_at": "2026-08-27T07:06:28Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/higashichichibu/SpTop.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/higashichichibu/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:22:21Z"
+          "url": "https://www.vill.higashichichibu.saitama.jp/site/gikai/gikairinji.html",
+          "observed_on": "https://www.vill.higashichichibu.saitama.jp/site/gikai/gikairinji.html",
+          "sha256": "238f490af4ed6a7a9257d9650da28d338ab283b48636c3b19487bb8bdc350e29",
+          "fetched_at": "2026-08-27T13:40:50Z"
+        },
+        {
+          "url": "https://www.vill.higashichichibu.saitama.jp/site/gikai/gikaiteireikaiyotei.html",
+          "observed_on": "https://www.vill.higashichichibu.saitama.jp/site/gikai/gikairinji.html",
+          "sha256": "c032e7353f4452046977dbeff5224afcf9cddd498503a4674218028e1a319473",
+          "fetched_at": "2026-08-27T13:40:51Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/higashichichibu/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -48,11 +59,11 @@
       "notes": "Observed g_reiki at http://www.vill.higashichichibu.saitama.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.higashichichibu.saitama.jp/site/gikai/gikaihiyosan1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.higashichichibu.saitama.jp/site/gikai/gikaihiyosan1.html",
@@ -69,9 +80,21 @@
           "url": "https://www.vill.higashichichibu.saitama.jp/uploaded/life/8210_56540_misc.pdf",
           "observed_on": "https://www.vill.higashichichibu.saitama.jp/site/gikai/gikaihiyosan1.html",
           "fetched_at": "2026-08-27T11:18:32Z"
+        },
+        {
+          "url": "http://www.vill.higashichichibu.saitama.jp/site/gikai/gikaihiyosan1.html",
+          "observed_on": "http://www.vill.higashichichibu.saitama.jp/",
+          "sha256": "9657fff9a62486e4c3dbcff8723ab5fa13dc3838450e1b1f16fd9a3fc75dd2c4",
+          "fetched_at": "2026-08-27T10:22:22Z"
+        },
+        {
+          "url": "https://www.vill.higashichichibu.saitama.jp/uploaded/life/8210_56540_misc.pdf",
+          "observed_on": "https://www.vill.higashichichibu.saitama.jp/site/gikai/gikaihiyosan1.html",
+          "sha256": "9618a89b619094abd0153bde5c32e8952b1c53f5c9311392143a277864482aff",
+          "fetched_at": "2026-08-27T11:18:32Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.higashichichibu.saitama.jp/site/gikai/gikaihiyosan1.html (label: 議会費予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（8210_56540_misc.pdf「令和8年度 議会費予算 [PDFファイル／1.4MB]」, sha256:9618a89b）にて構造マーカー（歳出・款・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "not_found",

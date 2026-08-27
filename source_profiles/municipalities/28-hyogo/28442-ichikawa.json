@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at https://www.town.ichikawa.lg.jp/menu/18 (label: 町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ichikawa.lg.jp/menu/19",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ichikawa.lg.jp/menu/19",
@@ -52,9 +52,15 @@
           "observed_on": "https://www.town.ichikawa.lg.jp/menu/19",
           "sha256": "26446f4ae7661eea203b49c799f31d12c31e47a9b45a45e3bafd36e67b9838e1",
           "fetched_at": "2026-08-27T09:52:22Z"
+        },
+        {
+          "url": "https://www.town.ichikawa.lg.jp/div/zaisei/pdf/R8yosan/03R8gaiyou.pdf",
+          "observed_on": "https://www.town.ichikawa.lg.jp/Info/2024",
+          "sha256": "94c0806a70a5decd145605d5169565c603183afdbd3c7f100744f974ce6592f6",
+          "fetched_at": "2026-08-27T13:41:18Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ichikawa.lg.jp/menu/19 (label: 町の財政) 入口 https://www.town.ichikawa.lg.jp/menu/19 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ichikawa.lg.jp/menu/19 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（03R8gaiyou.pdf「・ 予算概要説明書（ＰＤＦ形式）」, sha256:94c0806a）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

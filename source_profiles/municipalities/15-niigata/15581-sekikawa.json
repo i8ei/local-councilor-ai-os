@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.sekikawa.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.vill.sekikawa.niigata.jp/709/74/index.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.vill.sekikawa.niigata.jp/709/74/index.html",
+          "observed_on": "http://www.vill.sekikawa.niigata.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.vill.sekikawa.niigata.jp/709/74/index.html",
+          "observed_on": "http://www.vill.sekikawa.niigata.jp/709/74/index.html",
+          "sha256": "2e4f9a63d4f4cebd7e50e3fabb8613cbe8533b69f2168c6b15d0fa83dc78024f",
+          "fetched_at": "2026-08-27T13:44:30Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

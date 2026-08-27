@@ -36,11 +36,11 @@
       "index_url": "http://www.city.fukuoka.lg.jp/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.fukuoka.lg.jp/shisei/zaisei-kifu/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fukuoka.lg.jp/shisei/zaisei-kifu/index.html",
@@ -52,9 +52,15 @@
           "observed_on": "http://www.city.fukuoka.lg.jp/shisei/zaisei-kifu/index.html",
           "sha256": "28883dabb5c1880e807ea609fd2364a87c6fe865e3caf0350dff149a6deba668",
           "fetched_at": "2026-08-27T09:35:26Z"
+        },
+        {
+          "url": "http://www.city.fukuoka.lg.jp/zaisei/zaisei/shisei/documents/R8nendo9gatsuhosei.pdf",
+          "observed_on": "http://www.city.fukuoka.lg.jp/zaisei/zaisei/shisei/8nendor9gatsuhosei.html",
+          "sha256": "f712154efeca323adbb34d71d2c5ffda78ed3b1f6bfef87c779a43ddad916e58",
+          "fetched_at": "2026-08-27T13:44:29Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.fukuoka.lg.jp/shisei/zaisei-kifu/index.html (label: 予算・決算・市債・寄付等) 入口 http://www.city.fukuoka.lg.jp/shisei/zaisei-kifu/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.fukuoka.lg.jp/shisei/zaisei-kifu/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8nendo9gatsuhosei.pdf「令和８年度９月補正予算案（PDF：181KB）」, sha256:f712154e）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

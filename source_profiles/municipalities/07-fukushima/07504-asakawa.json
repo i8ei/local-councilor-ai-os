@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.asakawa.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.asakawa.fukushima.jp/gikai/news/002158.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.asakawa.fukushima.jp/gikai/news/002158.html",
+          "observed_on": "http://www.town.asakawa.fukushima.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.asakawa.fukushima.jp/gikai/news/002158.html",
+          "observed_on": "https://www.town.asakawa.fukushima.jp/gikai/news/002158.html",
+          "sha256": "429fca9f1ae887a8092eaab65583b22e871237728a5dbf041dff3fefb50afc41",
+          "fetched_at": "2026-08-27T13:28:39Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

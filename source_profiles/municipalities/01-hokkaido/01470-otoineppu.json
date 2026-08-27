@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.otoineppu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.otoineppu.hokkaido.jp/kakuka/gikaijimu/oshirase/2025-1203-0930-25.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.otoineppu.hokkaido.jp/kakuka/gikaijimu/oshirase/2025-1203-0930-25.html",
+          "observed_on": "https://www.vill.otoineppu.hokkaido.jp/kakuka/gikaijimu/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.otoineppu.hokkaido.jp/kakuka/gikaijimu/oshirase/2025-1203-0930-25.html",
+          "observed_on": "https://www.vill.otoineppu.hokkaido.jp/kakuka/gikaijimu/oshirase/2025-1203-0930-25.html",
+          "sha256": "d1c4e339f7ab7bd8e514be9c520887cf303b1770cf6a765d886d33ddd34fa3bf",
+          "fetched_at": "2026-08-27T13:25:06Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

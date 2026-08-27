@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.miyama.lg.jp/li/shisei/060/030/index.html (label: 予算) 入口 https://www.city.miyama.lg.jp/li/shisei/060/030/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyama.lg.jp/li/shisei/060/030/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.miyama.lg.jp/li/shisei/060/040/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyama.lg.jp/li/shisei/060/040/index.html",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.miyama.lg.jp/li/shisei/060/040/index.html",
           "sha256": "26379ab1cc4365709b641252f2216c0c9df91d52a1c9d064f9dc3413efd3dbbb",
           "fetched_at": "2026-08-27T09:36:15Z"
+        },
+        {
+          "url": "http://www.city.miyama.lg.jp/li/shisei/060/040/index.html",
+          "observed_on": "http://www.city.miyama.lg.jp/",
+          "sha256": "26379ab1cc4365709b641252f2216c0c9df91d52a1c9d064f9dc3413efd3dbbb",
+          "fetched_at": "2026-08-27T09:36:15Z"
+        },
+        {
+          "url": "https://www.city.miyama.lg.jp/s008/shisei/070/060/020/R6zaiseijoukyou.xlsx",
+          "observed_on": "https://www.city.miyama.lg.jp/s008/shisei/070/060/020/20200105124000.html",
+          "sha256": "a0f3bb780947eb52354c3c09ab49866682e36c0ca56c27ceb4e4d4cc512cfe83",
+          "fetched_at": "2026-08-27T13:44:59Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.miyama.lg.jp/li/shisei/060/040/index.html (label: 決算) 入口 https://www.city.miyama.lg.jp/li/shisei/060/040/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyama.lg.jp/li/shisei/060/040/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijoukyou.xlsx「令和6年度みやま市財政状況資料集（EXCEL：556KB）」, sha256:a0f3bb78）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

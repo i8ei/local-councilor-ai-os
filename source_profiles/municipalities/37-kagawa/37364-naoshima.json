@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.town.naoshima.lg.jp/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html",
@@ -45,9 +45,15 @@
           "observed_on": "http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html",
           "sha256": "39c5fba7337e7088a76d2171f6277b2fbdf4b679f6e62c8ce3bd7f5f05889347",
           "fetched_at": "2026-08-27T09:46:24Z"
+        },
+        {
+          "url": "http://www.town.naoshima.lg.jp/torikumi/torikumi/item/zaiseijyokyou27.xlsx",
+          "observed_on": "http://www.town.naoshima.lg.jp/torikumi/torikumi/zaiseijyokyou.html",
+          "sha256": "d73bd0dd963e25e20c998808b05149ec3f23d2fd45b90f7ee20816899686fe3a",
+          "fetched_at": "2026-08-27T13:43:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html (label: 財政) 入口 http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijyokyou27.xlsx「平成27年度 財政状況資料集」, sha256:d73bd0dd）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

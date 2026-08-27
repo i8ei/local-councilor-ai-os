@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.toshima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.kensakusystem.jp/toshima/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.toshima.lg.jp/368/kuse/gikai/tayori/2606081219.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.kensakusystem.jp/toshima/",
+          "url": "https://www.city.toshima.lg.jp/368/kuse/gikai/tayori/2606081219.html",
           "observed_on": "http://www.city.toshima.lg.jp/kuse/gikai/index.html",
-          "fetched_at": "2026-08-27T07:38:09Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.toshima.lg.jp/368/kuse/gikai/tayori/2606081219.html",
+          "observed_on": "https://www.city.toshima.lg.jp/368/kuse/gikai/tayori/2606081219.html",
+          "sha256": "d5d932da50242b0e3af5859a1aa185e669f6149fd326e38dfa668e0a3bc17397",
+          "fetched_at": "2026-08-27T13:42:43Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.kensakusystem.jp/toshima/ (label: 会議録検索システム)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

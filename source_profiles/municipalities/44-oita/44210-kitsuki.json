@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.kitsuki.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/kitsuki/pg/index.html",
-      "verified_at": "2026-08-27T09:39:55Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kitsuki.lg.jp/shiseimachidukuri/shigikai/11540.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kitsuki/pg/index.html",
+          "url": "https://www.city.kitsuki.lg.jp/shiseimachidukuri/shigikai/11540.html",
           "observed_on": "https://www.city.kitsuki.lg.jp/shiseimachidukuri/shigikai/index.html",
-          "fetched_at": "2026-08-27T06:20:21Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kitsuki/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/kitsuki/pg/index.html",
-          "sha256": "c6f25f842da8533ef55df9724514bef7ab8430ee587f4f42f50ead7bf5ce4946",
-          "fetched_at": "2026-08-27T09:39:57Z"
+          "url": "https://www.city.kitsuki.lg.jp/shiseimachidukuri/shigikai/11540.html",
+          "observed_on": "https://www.city.kitsuki.lg.jp/shiseimachidukuri/shigikai/11540.html",
+          "sha256": "afbfdacb8257eaec1b6b0c62f54075a460ef8c6b11068543dba44aca7e211201",
+          "fetched_at": "2026-08-27T14:11:04Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kitsuki/pg/index.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

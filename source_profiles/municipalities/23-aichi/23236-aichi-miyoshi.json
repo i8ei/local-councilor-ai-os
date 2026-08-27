@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.aichi-miyoshi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.kensakusystem.jp/miyoshi-c/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.aichi-miyoshi.lg.jp/soshiki/gikai/1/8/151.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.kensakusystem.jp/miyoshi-c/index.html",
+          "url": "https://www.city.aichi-miyoshi.lg.jp/soshiki/gikai/1/8/151.html",
           "observed_on": "https://www.city.aichi-miyoshi.lg.jp/soshiki/gikai/1/150.html",
-          "fetched_at": "2026-08-27T08:10:25Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.aichi-miyoshi.lg.jp/soshiki/gikai/1/8/151.html",
+          "observed_on": "https://www.city.aichi-miyoshi.lg.jp/soshiki/gikai/1/8/151.html",
+          "sha256": "e1bbd8f52f0d283eb1a3929b1c7d5cf2bfba9c75060a6dace49fd050b8662719",
+          "fetched_at": "2026-08-27T13:50:52Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.kensakusystem.jp/miyoshi-c/index.html (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

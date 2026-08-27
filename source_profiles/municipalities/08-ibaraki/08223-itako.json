@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.itako.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.itako.lg.jp/gikai/gikai-info/page008922.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.itako.lg.jp/gikai/gikai-info/page008922.html",
+          "observed_on": "http://www.city.itako.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.itako.lg.jp/gikai/gikai-info/page008922.html",
+          "observed_on": "https://www.city.itako.lg.jp/gikai/gikai-info/page008922.html",
+          "sha256": "9aef27dcfc3d914c0b877ab11b7661b568af319ab9b034a086528456a3a17609",
+          "fetched_at": "2026-08-27T13:29:48Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

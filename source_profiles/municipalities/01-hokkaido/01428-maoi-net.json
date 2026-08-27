@@ -6,12 +6,27 @@
   "official_home_url": "https://www.maoi-net.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.maoi-net.jp/gikai/gikaidemae.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.maoi-net.jp/gikai/gikaidemae.html",
+          "observed_on": "https://www.maoi-net.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.maoi-net.jp/gikai/gikaidemae.html",
+          "observed_on": "https://www.maoi-net.jp/gikai/gikaidemae.html",
+          "sha256": "a507d65a96a138902cb46a9e750ac89c876c76b748cad6001a3ca81b7f0ffdff",
+          "fetched_at": "2026-08-27T13:24:41Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

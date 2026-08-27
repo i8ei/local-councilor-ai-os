@@ -6,25 +6,27 @@
   "official_home_url": "http://www.vill.ginoza.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
-      "verified_at": "2026-08-27T09:41:15Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.ginoza.okinawa.jp/gikai/1396.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
+          "url": "https://www.vill.ginoza.okinawa.jp/gikai/1396.html",
           "observed_on": "https://www.vill.ginoza.okinawa.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:53:32Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html",
-          "sha256": "e9a232c5eab9c00014c8725d7f200e6cdb3542c14ae6741892fcb1052e541419",
-          "fetched_at": "2026-08-27T09:41:16Z"
+          "url": "https://www.vill.ginoza.okinawa.jp/gikai/1396.html",
+          "observed_on": "https://www.vill.ginoza.okinawa.jp/gikai/1396.html",
+          "sha256": "4edfee54a6d249cc184e1a6a239e76f73c872799527091f1850326805aabc858",
+          "fetched_at": "2026-08-27T14:12:29Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ginoza/pg/index.html (label: 村議会議事録システムはこちら) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.shiroi.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "http://www.city.shiroi.chiba.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T10:24:04Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.shiroi.chiba.jp/shisei/shigikai/iinkai/10955.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.shiroi.chiba.dbsr.jp/index.php/",
+          "url": "https://www.city.shiroi.chiba.jp/shisei/shigikai/iinkai/10955.html",
           "observed_on": "https://www.city.shiroi.chiba.jp/shisei/shigikai/index.html",
-          "fetched_at": "2026-08-27T07:21:58Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://www.city.shiroi.chiba.dbsr.jp/index.php/",
-          "observed_on": "http://www.city.shiroi.chiba.dbsr.jp/index.php/",
-          "sha256": "3968b58d6573158d9918eedeb293bc11837fd071f2eaac683be32800ae0fd626",
-          "fetched_at": "2026-08-27T10:24:10Z"
+          "url": "https://www.city.shiroi.chiba.jp/shisei/shigikai/iinkai/10955.html",
+          "observed_on": "https://www.city.shiroi.chiba.jp/shisei/shigikai/iinkai/10955.html",
+          "sha256": "5e25f18fb70da7d3f40cce6159052ccece44bfcf9ece8a35b40f598b80354c5c",
+          "fetched_at": "2026-08-27T13:42:04Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.shiroi.chiba.dbsr.jp/index.php/ (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

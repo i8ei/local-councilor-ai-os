@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.koshimizu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.koshimizu.hokkaido.jp/gikai/detail/00009799.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.koshimizu.hokkaido.jp/gikai/detail/00009799.html",
+          "observed_on": "https://www.town.koshimizu.hokkaido.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.koshimizu.hokkaido.jp/gikai/detail/00009799.html",
+          "observed_on": "https://www.town.koshimizu.hokkaido.jp/gikai/detail/00009799.html",
+          "sha256": "f5e8595f6d6f94812b2795e21bb6256f71bc3fc09eea514fc150b4aaccc77c02",
+          "fetched_at": "2026-08-27T13:24:57Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

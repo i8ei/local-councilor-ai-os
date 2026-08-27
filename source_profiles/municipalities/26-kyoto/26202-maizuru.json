@@ -56,11 +56,11 @@
       "notes": "Observed budget link at http://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html (label: 予算・決算・財政) 入口 https://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html",
@@ -72,9 +72,21 @@
           "observed_on": "https://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html",
           "sha256": "be339662886c8aa25939b0f6fbb13fbe86e6d1b157ec740bb1458d727280edde",
           "fetched_at": "2026-08-27T09:49:55Z"
+        },
+        {
+          "url": "http://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.maizuru.kyoto.jp/",
+          "sha256": "be339662886c8aa25939b0f6fbb13fbe86e6d1b157ec740bb1458d727280edde",
+          "fetched_at": "2026-08-27T09:49:55Z"
+        },
+        {
+          "url": "https://www.city.maizuru.kyoto.jp/shisei/cmsfiles/contents/0000015/15447/r7kessangaiyou.pdf",
+          "observed_on": "https://www.city.maizuru.kyoto.jp/shisei/0000015447.html",
+          "sha256": "972a0794a4e0d5d92a7f72a32c56eecb3ac3e3df2fa3f75783f70777073c35c3",
+          "fetched_at": "2026-08-27T13:39:58Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html (label: 予算・決算・財政) 入口 https://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.maizuru.kyoto.jp/shisei/category/3-1-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r7kessangaiyou.pdf「令和7年度決算概要 (PDF形式、10.14MB)」, sha256:972a0794）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

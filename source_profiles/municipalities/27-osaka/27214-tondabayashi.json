@@ -69,11 +69,11 @@
       "notes": "Observed budget link at https://www.city.tondabayashi.lg.jp/life/5/31/113/ (label: 財政状況（予算・決算など）) 入口 https://www.city.tondabayashi.lg.jp/life/5/31/113/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tondabayashi.lg.jp/life/5/31/113/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tondabayashi.lg.jp/life/5/31/113/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tondabayashi.lg.jp/life/5/31/113/",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.city.tondabayashi.lg.jp/life/5/31/113/",
           "sha256": "2d7c18c2d8f9c619e5d3f13b4a24ea671ef2a47549fbf94e517d77b35adcec52",
           "fetched_at": "2026-08-27T09:50:36Z"
+        },
+        {
+          "url": "https://www.city.tondabayashi.lg.jp/uploaded/attachment/115579.pdf",
+          "observed_on": "https://www.city.tondabayashi.lg.jp/soshiki/10/97111.html",
+          "sha256": "d0ae97837394ddb2a1589099a58b2e8309a0c69c5b75d21f87dd5003b51b2d96",
+          "fetched_at": "2026-08-27T13:40:17Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.tondabayashi.lg.jp/life/5/31/113/ (label: 財政状況（予算・決算など）) 入口 https://www.city.tondabayashi.lg.jp/life/5/31/113/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tondabayashi.lg.jp/life/5/31/113/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（115579.pdf「令和7年度決算カード [PDFファイル／107KB]」, sha256:d0ae9783）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

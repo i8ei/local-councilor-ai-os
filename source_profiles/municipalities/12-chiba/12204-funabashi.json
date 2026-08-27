@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.funabashi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "https://funabashi.gijiroku.com/voices/g08v_search.asp",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.funabashi.lg.jp/assembly/012/p022018.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://funabashi.gijiroku.com/voices/g08v_search.asp",
-          "observed_on": "http://www.city.funabashi.lg.jp/assembly/index.html",
-          "fetched_at": "2026-08-27T07:10:11Z"
+          "url": "https://www.city.funabashi.lg.jp/assembly/012/p022018.html",
+          "observed_on": "http://www.city.funabashi.lg.jp/assembly/information/p146596.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.funabashi.lg.jp/assembly/012/p022018.html",
+          "observed_on": "https://www.city.funabashi.lg.jp/assembly/012/p022018.html",
+          "sha256": "7f5a83aef83c91cd712af38695370e20deed9fac26b069be61171683ac1f7dc6",
+          "fetched_at": "2026-08-27T13:41:23Z"
         }
       ],
-      "notes": "Observed voices at https://funabashi.gijiroku.com/voices/g08v_search.asp (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

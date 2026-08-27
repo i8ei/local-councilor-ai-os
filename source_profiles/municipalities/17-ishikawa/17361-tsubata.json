@@ -66,11 +66,11 @@
       "notes": "Observed budget link at http://www.town.tsubata.lg.jp/life/6/22/124/ (label: 予算) 入口 https://www.town.tsubata.lg.jp/life/6/22/124/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tsubata.lg.jp/life/6/22/124/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tsubata.lg.jp/life/6/22/125/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tsubata.lg.jp/life/6/22/125/",
@@ -82,9 +82,21 @@
           "observed_on": "https://www.town.tsubata.lg.jp/life/6/22/125/",
           "sha256": "7c911bf80b5f05662297d65d6f313a68d409897c7513e99f587b4b62f07d8358",
           "fetched_at": "2026-08-27T10:06:19Z"
+        },
+        {
+          "url": "http://www.town.tsubata.lg.jp/life/6/22/125/",
+          "observed_on": "http://www.town.tsubata.lg.jp/",
+          "sha256": "7c911bf80b5f05662297d65d6f313a68d409897c7513e99f587b4b62f07d8358",
+          "fetched_at": "2026-08-27T10:06:19Z"
+        },
+        {
+          "url": "https://www.town.tsubata.lg.jp/uploaded/attachment/6177.pdf",
+          "observed_on": "https://www.town.tsubata.lg.jp/page/9738.html",
+          "sha256": "df0f8db8f36fff9effb3bc3a4c8817eb9814c1758d8230421de799d632ce0dde",
+          "fetched_at": "2026-08-27T13:35:44Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tsubata.lg.jp/life/6/22/125/ (label: 決算) 入口 https://www.town.tsubata.lg.jp/life/6/22/125/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tsubata.lg.jp/life/6/22/125/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6177.pdf「歳入・歳出(目的別)・町民1人あたりの費用(目的別) [PDFファイル／310KB]」, sha256:df0f8db8）にて構造マーカー（歳入・歳出・決算額等）を確認済み。"
     }
   }
 }

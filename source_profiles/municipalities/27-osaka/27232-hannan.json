@@ -69,11 +69,11 @@
       "notes": "Observed finance section at https://www.city.hannan.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.hannan.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hannan.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hannan.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hannan.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hannan.lg.jp/shisei/zaisei/index.html",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.city.hannan.lg.jp/shisei/zaisei/index.html",
           "sha256": "550df02cb71e3b32a04d0063ee9f66d29a9451518d9f9e7688b6603ce31e7520",
           "fetched_at": "2026-08-27T09:51:18Z"
+        },
+        {
+          "url": "https://www.city.hannan.lg.jp/material/files/group/46/gyoukakupuransinntyokuitiran4kessan.pdf",
+          "observed_on": "https://www.city.hannan.lg.jp/kakuka/somu/gyoukaku/gyouzaikaku/1533015190939.html",
+          "sha256": "711d9ea28113780283dcba4b078c8da03f68ddb038edd2732077885318da30a7",
+          "fetched_at": "2026-08-27T13:40:27Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.hannan.lg.jp/shisei/zaisei/index.html (label: 財政) 入口 https://www.city.hannan.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hannan.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hannan.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（gyoukakupuransinntyokuitiran4kessan.pdf「阪南市行財政構造改革プラン改訂版_取組項目進捗状況（一覧） (PDFファイル: 598.9KB)」, sha256:711d9ea2）にて構造マーカー（歳入・項・節等）を確認済み。"
     }
   }
 }

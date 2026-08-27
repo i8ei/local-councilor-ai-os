@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.hamada.shimane.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.hamada.shimane.jp/www/contents/1766105247091/index.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.hamada.shimane.jp/www/contents/1766105247091/index.html",
+          "observed_on": "http://www.city.hamada.shimane.jp/www/genre/1000170010334/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.hamada.shimane.jp/www/contents/1766105247091/index.html",
+          "observed_on": "https://www.city.hamada.shimane.jp/www/contents/1766105247091/index.html",
+          "sha256": "ec720072903e521a6107a63b7f0ccdf69e1633ff585cd8b2a3cd5d5a38a2e6ae",
+          "fetched_at": "2026-08-27T14:05:16Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A8B78EA9C (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hamada.shimane.jp/www/genre/1000170010364/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hamada.shimane.jp/www/genre/1000170010364/index.html",
@@ -51,9 +66,21 @@
           "observed_on": "https://www.city.hamada.shimane.jp/www/genre/1000170010364/index.html",
           "sha256": "dae27a2434061de81de506c3ee5157b11c8b9709b51a451b1f07b4163111c3e7",
           "fetched_at": "2026-08-27T09:42:55Z"
+        },
+        {
+          "url": "http://www.city.hamada.shimane.jp/www/genre/1000170010364/index.html",
+          "observed_on": "http://www.city.hamada.shimane.jp/",
+          "sha256": "dae27a2434061de81de506c3ee5157b11c8b9709b51a451b1f07b4163111c3e7",
+          "fetched_at": "2026-08-27T09:42:55Z"
+        },
+        {
+          "url": "https://www.city.hamada.shimane.jp/www/contents/1001000003319/simple/ippan_h25.pdf",
+          "observed_on": "https://www.city.hamada.shimane.jp/www/contents/1001000003319/index.html",
+          "sha256": "14d382239a7eee848b581ee4bba9f09f6e4cd12684e9291ef3296e7db379d7a6",
+          "fetched_at": "2026-08-27T13:42:14Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.hamada.shimane.jp/www/genre/1000170010364/index.html (label: 予算・決算・監査) 入口 https://www.city.hamada.shimane.jp/www/genre/1000170010364/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hamada.shimane.jp/www/genre/1000170010364/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（ippan_h25.pdf「当初予算概要（一般会計）.pdf」, sha256:14d38223）にて構造マーカー（項・節・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

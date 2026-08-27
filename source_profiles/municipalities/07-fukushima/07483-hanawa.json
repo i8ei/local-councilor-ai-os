@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.hanawa.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.hanawa.fukushima.jp/page/page002464.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.hanawa.fukushima.jp/page/page002464.html",
+          "observed_on": "https://www.town.hanawa.fukushima.jp/page/dir000309.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.hanawa.fukushima.jp/page/page002464.html",
+          "observed_on": "https://www.town.hanawa.fukushima.jp/page/page002464.html",
+          "sha256": "012c2914f3b351c2cd708e98ad014a3e4820b065f69c3b3505748f3171d214cf",
+          "fetched_at": "2026-08-27T13:29:14Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

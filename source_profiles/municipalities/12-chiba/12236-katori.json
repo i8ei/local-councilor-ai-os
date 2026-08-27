@@ -63,11 +63,11 @@
       "notes": "Observed finance section at http://www.city.katori.lg.jp/government/zaisei/index.html (label: 財政状況) 入口 https://www.city.katori.lg.jp/government/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.katori.lg.jp/government/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.katori.lg.jp/government/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.katori.lg.jp/government/zaisei/index.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.katori.lg.jp/government/zaisei/index.html",
           "sha256": "221cd6a06fd8a1997eb9e7ce64dbcee9585388bee9e69ef0c88cdb51583cb42a",
           "fetched_at": "2026-08-27T10:24:21Z"
+        },
+        {
+          "url": "http://www.city.katori.lg.jp/government/zaisei/index.html",
+          "observed_on": "http://www.city.katori.lg.jp/",
+          "sha256": "221cd6a06fd8a1997eb9e7ce64dbcee9585388bee9e69ef0c88cdb51583cb42a",
+          "fetched_at": "2026-08-27T10:24:21Z"
+        },
+        {
+          "url": "https://www.city.katori.lg.jp/government/zaisei/kessan-card.files/r6card.pdf",
+          "observed_on": "https://www.city.katori.lg.jp/government/zaisei/kessan-card.html",
+          "sha256": "87edac5bb0f92aef27376e8ef61fa0449ba9fddecf13f76813618917d05e14cd",
+          "fetched_at": "2026-08-27T13:33:18Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.katori.lg.jp/government/zaisei/index.html (label: 財政状況) 入口 https://www.city.katori.lg.jp/government/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.katori.lg.jp/government/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6card.pdf「令和6年度決算カード（PDF：429KB）」, sha256:87edac5b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

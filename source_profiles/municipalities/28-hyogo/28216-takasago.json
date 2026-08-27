@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.takasago.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.takasago.lg.jp/material/files/group/7/50802262.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.takasago.lg.jp/soshikikarasagasu/gikaijimukyoku/takasagoshigikai/10272.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.takasago.lg.jp/material/files/group/7/50802262.pdf",
-          "observed_on": "https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/shingikai_iinkai/12860.html",
-          "fetched_at": "2026-08-27T06:51:43Z"
+          "url": "https://www.city.takasago.lg.jp/soshikikarasagasu/gikaijimukyoku/takasagoshigikai/10272.html",
+          "observed_on": "https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/7383.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.takasago.lg.jp/soshikikarasagasu/gikaijimukyoku/takasagoshigikai/10272.html",
+          "observed_on": "https://www.city.takasago.lg.jp/soshikikarasagasu/gikaijimukyoku/takasagoshigikai/10272.html",
+          "sha256": "93b779c7c589e6a343c92d83baf9bad7e8445196971f59b2c4c7a2102b8e8526",
+          "fetched_at": "2026-08-27T14:03:16Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.takasago.lg.jp/material/files/group/7/50802262.pdf (label: 第1回会議録（令和7年10月31日） (PDFファイル: 376.9KB))"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +44,11 @@
       "notes": "Observed regulations index at https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/gyozaisei/4/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/gyozaisei/4/index.html",
@@ -52,9 +60,15 @@
           "observed_on": "https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/gyozaisei/4/index.html",
           "sha256": "137c601a86556ee80f5f4e3d418f3554d021a08e0811a1637739ec29c58a7458",
           "fetched_at": "2026-08-27T09:51:49Z"
+        },
+        {
+          "url": "https://www.city.takasago.lg.jp/material/files/group/12/20260213-2.pdf",
+          "observed_on": "https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/gyozaisei/4/6/12975.html",
+          "sha256": "1373c971219942647a4e608fe4df9d618f8e22c53bacab13e2c0c1db89a0321c",
+          "fetched_at": "2026-08-27T13:41:10Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/gyozaisei/4/index.html (label: 財政・予算・決算) 入口 https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/gyozaisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/gyozaisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.takasago.lg.jp/gyoseisite/shiseijoho/gyozaisei/4/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260213-2.pdf「令和8年度 予算の概要 (PDFファイル: 1.8MB)」, sha256:1373c971）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

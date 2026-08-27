@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.sunagawa.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.sunagawa.hokkaido.jp/shisei/shigikai/kaigiroku/2026/2026-0817-1028-138.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.city.sunagawa.hokkaido.jp/shisei/shigikai/kaigiroku/2026/2026-0817-1028-138.html",
+          "observed_on": "http://www.city.sunagawa.hokkaido.jp/shisei/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.sunagawa.hokkaido.jp/shisei/shigikai/kaigiroku/2026/2026-0817-1028-138.html",
+          "observed_on": "http://www.city.sunagawa.hokkaido.jp/shisei/shigikai/kaigiroku/2026/2026-0817-1028-138.html",
+          "sha256": "a718e2346a669a8d783bddcf1f4def8977b370f187144349e556a5d865d40ee2",
+          "fetched_at": "2026-08-27T13:23:19Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

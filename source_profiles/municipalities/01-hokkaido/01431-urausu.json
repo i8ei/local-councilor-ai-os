@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.urausu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.urausu.hokkaido.jp/kurashi/gyosei/urausutyo/kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.urausu.hokkaido.jp/kurashi/gyosei/urausutyo/gikaidayori.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.urausu.hokkaido.jp/kurashi/gyosei/urausutyo/kaigiroku.html",
+          "url": "https://www.town.urausu.hokkaido.jp/kurashi/gyosei/urausutyo/gikaidayori.html",
           "observed_on": "https://www.town.urausu.hokkaido.jp/kurashi/gyosei/urausutyo/index.html",
-          "fetched_at": "2026-08-27T06:21:36Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.urausu.hokkaido.jp/kurashi/gyosei/urausutyo/gikaidayori.html",
+          "observed_on": "https://www.town.urausu.hokkaido.jp/kurashi/gyosei/urausutyo/gikaidayori.html",
+          "sha256": "1cc91c8d1d0da375e1ae21df1969620b3ab102a92d1a1b3b52c741fc405cb182",
+          "fetched_at": "2026-08-27T13:24:17Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.urausu.hokkaido.jp/kurashi/gyosei/urausutyo/kaigiroku.html (label: 会議録・一般質問通告・議決結果) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

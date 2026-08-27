@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.city.machida.tokyo.jp/shisei/machida_reiki_youkou.html (label: 例規集・要綱集（条例、規則、要綱等）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.machida.tokyo.jp/shisei/gyouzaisei/siyosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.machida.tokyo.jp/shisei/gyouzaisei/siyosan/index.html",
@@ -45,9 +45,15 @@
           "observed_on": "http://www.city.machida.tokyo.jp/shisei/gyouzaisei/siyosan/index.html",
           "sha256": "160c9689948b7e44637a323ebd65d8a510e6098c15c80cc777d6df2e00362d43",
           "fetched_at": "2026-08-27T10:25:48Z"
+        },
+        {
+          "url": "http://www.city.machida.tokyo.jp/shisei/gyouzaisei/siyosan/tousyo_26/2026yosansyo.files/R8_yosansyo_2.pdf",
+          "observed_on": "http://www.city.machida.tokyo.jp/shisei/gyouzaisei/siyosan/tousyo_26/2026yosansyo.html",
+          "sha256": "f9e99acf44bde0c045f1d5a8ded72b318ee7a8461e01de0efaed231ee74e750e",
+          "fetched_at": "2026-08-27T13:33:48Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.machida.tokyo.jp/shisei/gyouzaisei/siyosan/index.html (label: 町田市の予算) 入口 http://www.city.machida.tokyo.jp/shisei/gyouzaisei/siyosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8_yosansyo_2.pdf「2026年度予算書（PDF・2,912KB）」, sha256:f9e99acf）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

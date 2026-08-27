@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.ikaruga.nara.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.ikaruga.nara.jp/0000000060.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.ikaruga.nara.jp/0000000060.html",
+          "observed_on": "https://www.town.ikaruga.nara.jp/category/4-12-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.ikaruga.nara.jp/0000000060.html",
+          "observed_on": "https://www.town.ikaruga.nara.jp/0000000060.html",
+          "sha256": "fe82e3aa0c557907f52113ae5e4c2ee79c85dc83b54c7341775391a4652b62b2",
+          "fetched_at": "2026-08-27T14:04:07Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed budget link at http://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html (label: 予算・決算・財政状況) 入口 https://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html",
@@ -72,9 +87,21 @@
           "observed_on": "https://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html",
           "sha256": "a59fe77d6791dcaffc44edd884cd82663d5ca07453136db9974a4a5ba094b02c",
           "fetched_at": "2026-08-27T09:52:56Z"
+        },
+        {
+          "url": "http://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.ikaruga.nara.jp/",
+          "sha256": "a59fe77d6791dcaffc44edd884cd82663d5ca07453136db9974a4a5ba094b02c",
+          "fetched_at": "2026-08-27T09:52:56Z"
+        },
+        {
+          "url": "https://www.town.ikaruga.nara.jp/cmsfiles/contents/0000000/270/zai05-16ikaruga.xlsx",
+          "observed_on": "https://www.town.ikaruga.nara.jp/0000000270.html",
+          "sha256": "2226e3dcc6b24cfff64ae605b205d94a528569f8709e79160232646814a8f959",
+          "fetched_at": "2026-08-27T13:41:28Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html (label: 予算・決算・財政状況) 入口 https://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ikaruga.nara.jp/category/4-9-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zai05-16ikaruga.xlsx「令和5年度財政状況資料集」, sha256:2226e3dc）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

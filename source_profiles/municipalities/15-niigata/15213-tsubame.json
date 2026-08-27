@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.tsubame.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/tsubame/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.tsubame.niigata.jp/keikaku/gikai/3/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/tsubame/WebView/rd/council_1.html",
+          "url": "https://www.city.tsubame.niigata.jp/keikaku/gikai/3/index.html",
           "observed_on": "https://www.city.tsubame.niigata.jp/keikaku/gikai/index.html",
-          "fetched_at": "2026-08-27T05:59:58Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.tsubame.niigata.jp/keikaku/gikai/3/index.html",
+          "observed_on": "https://www.city.tsubame.niigata.jp/keikaku/gikai/3/index.html",
+          "sha256": "8734895c4b3324097977b5e33c3e0661ecbbc53c0e626c6f264f7475df24597c",
+          "fetched_at": "2026-08-27T13:44:24Z"
+        },
+        {
+          "url": "https://www.city.tsubame.niigata.jp/keikaku/gikai/3/13862.html",
+          "observed_on": "https://www.city.tsubame.niigata.jp/keikaku/gikai/3/index.html",
+          "sha256": "2b48339286ce0fd5c237161fd3af603abe607d4c77ef5617615859009d4495ef",
+          "fetched_at": "2026-08-27T13:44:25Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/tsubame/WebView/rd/council_1.html (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

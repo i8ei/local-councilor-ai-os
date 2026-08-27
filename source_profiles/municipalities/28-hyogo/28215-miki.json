@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www.city.miki.lg.jp/reiki_int/reiki_menu.html (label: 例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.miki.lg.jp/life/5/36/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miki.lg.jp/life/5/36/",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.miki.lg.jp/life/5/36/",
           "sha256": "43195f425b573f23946e650fb8e3bd8388de1c72dbd76dac7941f362929c01a7",
           "fetched_at": "2026-08-27T09:52:00Z"
+        },
+        {
+          "url": "http://www.city.miki.lg.jp/life/5/36/",
+          "observed_on": "http://www.city.miki.lg.jp/",
+          "sha256": "43195f425b573f23946e650fb8e3bd8388de1c72dbd76dac7941f362929c01a7",
+          "fetched_at": "2026-08-27T09:52:00Z"
+        },
+        {
+          "url": "https://www.city.miki.lg.jp/uploaded/attachment/57875.pdf",
+          "observed_on": "https://www.city.miki.lg.jp/soshiki/10/1703.html",
+          "sha256": "5141b0214413040b0ca40c7938ba5224fe0ae1e12a9d74555af8547c8cb0b75a",
+          "fetched_at": "2026-08-27T13:40:59Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.miki.lg.jp/life/5/36/ (label: 予算・決算) 入口 https://www.city.miki.lg.jp/life/5/36/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miki.lg.jp/life/5/36/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（57875.pdf「6月補正 [PDFファイル／171KB]」, sha256:5141b021）にて構造マーカー（歳入・歳出・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

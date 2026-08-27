@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.katsuyama/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
           "sha256": "9da9ee7e314538b646b6da25494ed5cdd56eb921bce8ac660c3d3a1155e7c2d2",
           "fetched_at": "2026-08-27T10:07:14Z"
+        },
+        {
+          "url": "https://www.city.katsuyama.fukui.jp/uploaded/attachment/35857.pdf",
+          "observed_on": "https://www.city.katsuyama.fukui.jp/soshiki/3/16325.html",
+          "sha256": "e5475762b9b8f1dda239f1ddbb811ee8d0a18d9e8906a8a8a5a57d0f97f52580",
+          "fetched_at": "2026-08-27T13:36:08Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.katsuyama.fukui.jp/life/4/34/160/ (label: 予算・決算) 入口 https://www.city.katsuyama.fukui.jp/life/4/34/160/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.katsuyama.fukui.jp/life/4/34/160/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（35857.pdf「予算の概要」, sha256:e5475762）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

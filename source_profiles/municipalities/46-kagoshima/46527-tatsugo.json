@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
@@ -51,16 +51,22 @@
           "observed_on": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
           "sha256": "3438838fab7438c60b5d76a76fa7ca5d50b167c258631cae0333469ded65f1ca",
           "fetched_at": "2026-08-27T09:40:49Z"
+        },
+        {
+          "url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/documents/r8tousyo.pdf",
+          "observed_on": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/zaise.html",
+          "sha256": "f5c8625f9a48210303b653672c9e9c7346af131c33260dcdf1501d5e44aed976",
+          "fetched_at": "2026-08-27T13:47:47Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html (label: 予算・財政) 入口 http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8tousyo.pdf「令和8年度当初予算（PDF：154KB）」, sha256:f5c8625f）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
@@ -72,9 +78,15 @@
           "observed_on": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
           "sha256": "3438838fab7438c60b5d76a76fa7ca5d50b167c258631cae0333469ded65f1ca",
           "fetched_at": "2026-08-27T09:40:49Z"
+        },
+        {
+          "url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/documents/r6kessann_1.pdf",
+          "observed_on": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/zaise.html",
+          "sha256": "a85b83d9e21f050c279c99b57da875b99e80e193719ec710072c315a244f077b",
+          "fetched_at": "2026-08-27T13:47:47Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html (label: 予算・財政) 入口 http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessann_1.pdf「令和6年度決算（PDF：827KB）」, sha256:a85b83d9）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

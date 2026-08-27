@@ -51,11 +51,11 @@
       "notes": "Observed regulations index at http://www.tokunoshima-town.org/soumuka/chose/johokokai/reikisyu.html (label: 徳之島町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.tokunoshima-town.org/chose/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.tokunoshima-town.org/chose/yosan/index.html",
@@ -67,9 +67,15 @@
           "observed_on": "http://www.tokunoshima-town.org/chose/yosan/index.html",
           "sha256": "36a3b9db6ebb038191f398a5e2c6f433149e33f410270c03e49e6f2f0d2bd66c",
           "fetched_at": "2026-08-27T09:40:51Z"
+        },
+        {
+          "url": "http://www.tokunoshima-town.org/soumuka/zaisei/documents/r8wakariyasuiyosannsyo.pdf",
+          "observed_on": "http://www.tokunoshima-town.org/soumuka/zaisei/wakariyasuiyosan.html",
+          "sha256": "1e4816fc00619f536c8997f6c95c2144c22c2d1f5251d682886c234f845af184",
+          "fetched_at": "2026-08-27T13:47:58Z"
         }
       ],
-      "notes": "Observed budget link at http://www.tokunoshima-town.org/chose/yosan/index.html (label: 予算・財政) 入口 http://www.tokunoshima-town.org/chose/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.tokunoshima-town.org/chose/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8wakariyasuiyosannsyo.pdf「令和8年度わかりやすい予算書（PDF：5,931KB）」, sha256:1e4816fc）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

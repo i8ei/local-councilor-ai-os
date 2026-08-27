@@ -50,11 +50,11 @@
       "notes": "No budget entrance found within page limit"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.kijimadaira.lg.jp/categories/kubun/gyousei/kansa/iken/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.kijimadaira.lg.jp/categories/kubun/gyousei/kansa/iken/",
@@ -66,9 +66,15 @@
           "observed_on": "http://www.vill.kijimadaira.lg.jp/categories/kubun/gyousei/kansa/iken/",
           "sha256": "df3819d585463da659221000d42e52b58507fc1144552f908322e4589aa38560",
           "fetched_at": "2026-08-27T10:11:56Z"
+        },
+        {
+          "url": "http://www.vill.kijimadaira.lg.jp/articles/2025080400012/file_contents/R6kessaniken.pdf",
+          "observed_on": "http://www.vill.kijimadaira.lg.jp/articles/2025080400012/",
+          "sha256": "8303c74ae38fe19507012d7a1bd4c9f067ee66df45c09e3ae96f47eca2f76435",
+          "fetched_at": "2026-08-27T13:36:43Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.kijimadaira.lg.jp/categories/kubun/gyousei/kansa/iken/ (label: 決算審査意見) 入口 http://www.vill.kijimadaira.lg.jp/categories/kubun/gyousei/kansa/iken/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.kijimadaira.lg.jp/categories/kubun/gyousei/kansa/iken/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.kijimadaira.lg.jp/categories/kubun/gyousei/kansa/iken/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessaniken.pdf「令和6年度木島平村一般会計及び特別会計決算審査意見[PDF：341KB]」, sha256:8303c74a）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

@@ -48,19 +48,31 @@
       "notes": "Observed g_reiki at https://www.town.nagomi.lg.jp/nagomitown/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/17440791896922/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/17440791896922/",
           "observed_on": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/177389619720156",
           "fetched_at": "2026-08-27T05:38:47Z"
+        },
+        {
+          "url": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/17440791896922/",
+          "observed_on": "http://www.town.nagomi.lg.jp/",
+          "sha256": "11ac80c78bf21a2e57b2850125c15a20e30cd08d31f2d63bbb20f642bdfe88f3",
+          "fetched_at": "2026-08-27T09:38:38Z"
+        },
+        {
+          "url": "https://www.town.nagomi.lg.jp/nagomitown/switch/3_366_1126_up_QEYEP5UU.pdf",
+          "observed_on": "https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/3_366/",
+          "sha256": "de00d81860f0ec5629fa8fdca3efb608a54304e5208d8978386be4258a119e4d",
+          "fetched_at": "2026-08-27T13:46:10Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.nagomi.lg.jp/soshiki/soumu/chousei/17440791896922/ (label: 令和7年度予算の概要について)"
+      "notes": "deepest_doc=P1。budget文書（3_366_1126_up_QEYEP5UU.pdf「01_H25年度一般会計補正予算書（4月）」, sha256:de00d818）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

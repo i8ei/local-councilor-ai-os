@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.yugawara.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "dbsr",
-      "index_url": "https://www.town.yugawara.kanagawa.dbsr.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.yugawara.kanagawa.jp/site/yugawara-gikai/1333.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.yugawara.kanagawa.dbsr.jp/",
+          "url": "https://www.town.yugawara.kanagawa.jp/site/yugawara-gikai/1333.html",
           "observed_on": "http://www.town.yugawara.kanagawa.jp/site/yugawara-gikai/",
-          "fetched_at": "2026-08-27T08:11:15Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.yugawara.kanagawa.jp/site/yugawara-gikai/1333.html",
+          "observed_on": "https://www.town.yugawara.kanagawa.jp/site/yugawara-gikai/1333.html",
+          "sha256": "df81f3f74ce0c2f840a5240f1d56e35f02bf0ddd523b9a5d9423a1024004387e",
+          "fetched_at": "2026-08-27T13:44:08Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.town.yugawara.kanagawa.dbsr.jp/ (label: 会議録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

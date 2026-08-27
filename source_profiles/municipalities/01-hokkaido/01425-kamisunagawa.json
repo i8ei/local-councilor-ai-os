@@ -6,19 +6,27 @@
   "official_home_url": "http://town.kamisunagawa.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://town.kamisunagawa.hokkaido.jp/gikai_jimukyoku/kekka/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://town.kamisunagawa.hokkaido.jp/gikai_jimukyoku/kekka/teirei/r8/2491.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://town.kamisunagawa.hokkaido.jp/gikai_jimukyoku/kekka/index.html",
-          "observed_on": "https://town.kamisunagawa.hokkaido.jp/gikai_jimukyoku/index.html",
-          "fetched_at": "2026-08-27T06:19:40Z"
+          "url": "https://town.kamisunagawa.hokkaido.jp/gikai_jimukyoku/kekka/teirei/r8/2491.html",
+          "observed_on": "https://town.kamisunagawa.hokkaido.jp/gikai_jimukyoku/kekka/teirei/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://town.kamisunagawa.hokkaido.jp/gikai_jimukyoku/kekka/teirei/r8/2491.html",
+          "observed_on": "https://town.kamisunagawa.hokkaido.jp/gikai_jimukyoku/kekka/teirei/r8/2491.html",
+          "sha256": "60dae7f2645eb5c0b3a206d63714d1ceca8dd42b0fa7f8059591bcbfa887e9c9",
+          "fetched_at": "2026-08-27T13:24:19Z"
         }
       ],
-      "notes": "Observed council minutes index at https://town.kamisunagawa.hokkaido.jp/gikai_jimukyoku/kekka/index.html (label: 議会の結果・会議録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

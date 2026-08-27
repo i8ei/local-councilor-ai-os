@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.anan.tokushima.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.anan.tokushima.jp/gikai/docs/2026072200078/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.anan.tokushima.jp/gikai/docs/2026072200078/",
+          "observed_on": "http://www.city.anan.tokushima.jp/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.anan.tokushima.jp/gikai/docs/2026072200078/",
+          "observed_on": "https://www.city.anan.tokushima.jp/gikai/docs/2026072200078/",
+          "sha256": "7c8646332c3935973c0bcc375e7bac6fb779515d139a9859e2c2558769f4035f",
+          "fetched_at": "2026-08-27T14:06:46Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

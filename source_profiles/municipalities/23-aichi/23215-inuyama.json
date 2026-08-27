@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.inuyama.aichi.jp/shisei/1001281/1005027/index.html (label: 予算) 入口 https://www.city.inuyama.aichi.jp/shisei/1001281/1005027/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.inuyama.aichi.jp/shisei/1001281/1005028/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inuyama.aichi.jp/shisei/1001281/1005028/index.html",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.inuyama.aichi.jp/shisei/1001281/1005028/index.html",
           "sha256": "12168ff0a968680552ab6707676888c2f606017e49404aba62c1be5742630d8a",
           "fetched_at": "2026-08-27T10:15:24Z"
+        },
+        {
+          "url": "http://www.city.inuyama.aichi.jp/shisei/1001281/1005028/index.html",
+          "observed_on": "http://www.city.inuyama.aichi.jp/",
+          "sha256": "12168ff0a968680552ab6707676888c2f606017e49404aba62c1be5742630d8a",
+          "fetched_at": "2026-08-27T10:15:24Z"
+        },
+        {
+          "url": "https://www.city.inuyama.aichi.jp/_res/projects/default_project/_page_/001/008/085/r6_kessan_ippan.pdf",
+          "observed_on": "https://www.city.inuyama.aichi.jp/shisei/1001281/1005028/1008085/index.html",
+          "sha256": "5487d811ca3a7193eed97924930831a4ea699aa0acf9b7905c7fd9d28246a732",
+          "fetched_at": "2026-08-27T13:38:07Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.inuyama.aichi.jp/shisei/1001281/1005028/index.html (label: 決算) 入口 https://www.city.inuyama.aichi.jp/shisei/1001281/1005028/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6_kessan_ippan.pdf「令和6年度一般会計・特別会計歳入歳出決算書及び附属資料 （PDF 3.7MB）」, sha256:5487d811）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

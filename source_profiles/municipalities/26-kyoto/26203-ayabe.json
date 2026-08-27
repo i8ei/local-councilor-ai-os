@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.ayabe.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ayabe.lg.jp/category/7-23-5-0-0-0-0-0-0-0.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.ayabe.lg.jp/category/7-23-5-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.ayabe.lg.jp/category/7-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.ayabe.lg.jp/category/7-23-5-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.ayabe.lg.jp/category/7-23-5-0-0-0-0-0-0-0.html",
+          "sha256": "e893aa6a0a8770c982a27f668d2c15ba68e4cab493abdb77ae161c3ecf81bfd6",
+          "fetched_at": "2026-08-27T14:01:00Z"
+        },
+        {
+          "url": "https://www.city.ayabe.lg.jp/0000006361.html",
+          "observed_on": "https://www.city.ayabe.lg.jp/category/7-23-5-0-0-0-0-0-0-0.html",
+          "sha256": "683d3fe9974bd250f1f7278e6d79bd4eb5b8b75e8287826095071799cfd1d54d",
+          "fetched_at": "2026-08-27T14:01:00Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +53,11 @@
       "index_url": "https://en3-jg.d1-law.com/ayabe/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html",
@@ -45,9 +69,21 @@
           "observed_on": "https://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html",
           "sha256": "f227b8a028ca4f3ab988898f9e051eaea81d59fdd2a7ad67ff87ee5ead15a5e6",
           "fetched_at": "2026-08-27T09:50:26Z"
+        },
+        {
+          "url": "http://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.ayabe.lg.jp/",
+          "sha256": "f227b8a028ca4f3ab988898f9e051eaea81d59fdd2a7ad67ff87ee5ead15a5e6",
+          "fetched_at": "2026-08-27T09:50:26Z"
+        },
+        {
+          "url": "https://www.city.ayabe.lg.jp/cmsfiles/contents/0000006/6231/r8_ippankaikeiyosansho.pdf",
+          "observed_on": "https://www.city.ayabe.lg.jp/0000006231.html",
+          "sha256": "80768efa99048280b9b85382a2a2e1339a782ec45188ff1aafe7942f272dd651",
+          "fetched_at": "2026-08-27T13:39:35Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html (label: 予算・財政) 入口 https://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8_ippankaikeiyosansho.pdf「一般会計予算書 (PDF形式、874.35KB)」, sha256:80768efa）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

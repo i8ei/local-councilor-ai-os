@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.tokamachi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
-      "verified_at": "2026-08-27T10:04:23Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.tokamachi.lg.jp/shisei_machizukuri/tokamachishigikai/2655.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
+          "url": "https://www.city.tokamachi.lg.jp/shisei_machizukuri/tokamachishigikai/2655.html",
           "observed_on": "https://www.city.tokamachi.lg.jp/shisei_machizukuri/tokamachishigikai/index.html",
-          "fetched_at": "2026-08-27T05:57:58Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:04:24Z"
+          "url": "https://www.city.tokamachi.lg.jp/shisei_machizukuri/tokamachishigikai/2655.html",
+          "observed_on": "https://www.city.tokamachi.lg.jp/shisei_machizukuri/tokamachishigikai/2655.html",
+          "sha256": "5517d47cc99eeded86afe84a64e9f773f3fb53a492a1d9464c7d87261ed8434c",
+          "fetched_at": "2026-08-27T13:44:24Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tokamachi/SpTop.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

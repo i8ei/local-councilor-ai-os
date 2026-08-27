@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.kamisato.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/kamisato/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kamisato.saitama.jp/gikai/tayori/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/kamisato/WebView/rd/council_1.html",
+          "url": "https://www.town.kamisato.saitama.jp/gikai/tayori/",
           "observed_on": "http://www.town.kamisato.saitama.jp/1793.htm",
-          "fetched_at": "2026-08-27T07:07:27Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.kamisato.saitama.jp/gikai/tayori/",
+          "observed_on": "https://www.town.kamisato.saitama.jp/gikai/tayori/",
+          "sha256": "9d8f20f85ca4eb9d083c894df11c7b6581d84bf9be0b6d0787b534e30ba5bc56",
+          "fetched_at": "2026-08-27T13:40:56Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/kamisato/WebView/rd/council_1.html (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +44,11 @@
       "index_url": "http://www.town.kamisato.saitama.jp/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kamisato.saitama.jp/1789.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kamisato.saitama.jp/1789.htm",
@@ -52,9 +60,21 @@
           "observed_on": "https://www.town.kamisato.saitama.jp/1789.htm",
           "sha256": "2a3d28803a7079454f1e0a826e9fe6e319315f73abe85f451fed4cc6315986c8",
           "fetched_at": "2026-08-27T10:22:21Z"
+        },
+        {
+          "url": "http://www.town.kamisato.saitama.jp/1789.htm",
+          "observed_on": "http://www.town.kamisato.saitama.jp/",
+          "sha256": "2a3d28803a7079454f1e0a826e9fe6e319315f73abe85f451fed4cc6315986c8",
+          "fetched_at": "2026-08-27T10:22:21Z"
+        },
+        {
+          "url": "https://www.town.kamisato.saitama.jp/secure/15349/8gatsu_hosei_ippan.pdf",
+          "observed_on": "https://www.town.kamisato.saitama.jp/7708.htm",
+          "sha256": "6cf0b03035798b77e5ca68d16509a7b9056c637f3a569b81bac6249afb751809",
+          "fetched_at": "2026-08-27T13:32:22Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kamisato.saitama.jp/1789.htm (label: 予算の状況) 入口 https://www.town.kamisato.saitama.jp/1789.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8gatsu_hosei_ippan.pdf「令和8年度 一般会計8月補正予算書（第2号）(PDF：70KB)」, sha256:6cf0b030）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

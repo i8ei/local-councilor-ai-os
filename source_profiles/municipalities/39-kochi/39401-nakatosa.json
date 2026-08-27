@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.nakatosa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/nakatosa/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.nakatosa.lg.jp/gijiroku/giji_kaisai.php?hdnID=157",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/nakatosa/WebView/rd/council_1.html",
-          "observed_on": "http://www.town.nakatosa.lg.jp/gikai/",
-          "fetched_at": "2026-08-27T07:17:22Z"
+          "url": "https://www.town.nakatosa.lg.jp/gijiroku/giji_kaisai.php?hdnID=157",
+          "observed_on": "http://www.town.nakatosa.lg.jp/gijiroku/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.nakatosa.lg.jp/gijiroku/giji_kaisai.php?hdnID=157",
+          "observed_on": "https://www.town.nakatosa.lg.jp/gijiroku/giji_kaisai.php?hdnID=157",
+          "sha256": "396c49fb2463418e7017117d6c30d3968e8981a78a9e772fcbacc865108bbf5c",
+          "fetched_at": "2026-08-27T14:07:59Z"
+        },
+        {
+          "url": "https://www.town.nakatosa.lg.jp/gijiroku/giji_dtl.php?hdnFlg=9&hdnID=405",
+          "observed_on": "https://www.town.nakatosa.lg.jp/gijiroku/giji_kaisai.php?hdnID=157",
+          "sha256": "d1dd73b999363550d79a77eff96d184d67a77e0dba47aff52ed5704617236d12",
+          "fetched_at": "2026-08-27T14:08:01Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/nakatosa/WebView/rd/council_1.html (label: )"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

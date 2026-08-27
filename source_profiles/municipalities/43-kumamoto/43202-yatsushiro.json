@@ -29,11 +29,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yatsushiro.lg.jp/bousai/list02096.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yatsushiro.lg.jp/bousai/list02096.html",
@@ -45,9 +45,15 @@
           "observed_on": "https://www.city.yatsushiro.lg.jp/bousai/list02096.html",
           "sha256": "31267454cee17c675f1757f94ea179e05bb4f33b275b53b1a6c3cf4de3f78a33",
           "fetched_at": "2026-08-27T09:37:48Z"
+        },
+        {
+          "url": "https://www.city.yatsushiro.lg.jp/bousai/kiji00324867/3_24867_up_n1k78odv.pdf",
+          "observed_on": "https://www.city.yatsushiro.lg.jp/bousai/kiji00324867/index.html",
+          "sha256": "a82fb5201e919e837b168553478e43bb402b6a4cbcf4574a7e18c77ff7ddd9d9",
+          "fetched_at": "2026-08-27T13:45:49Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.yatsushiro.lg.jp/bousai/list02096.html (label: 予算関係) 入口 https://www.city.yatsushiro.lg.jp/bousai/list02096.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yatsushiro.lg.jp/bousai/list02096.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_24867_up_n1k78odv.pdf「令和7年度9月補正予算（9月10日専決分）の概要（PDF：584.6キロバイト）」, sha256:a82fb520）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "not_found",

@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.isahaya.nagasaki.jp/life/6/28/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.isahaya.nagasaki.jp/life/6/28/",
@@ -51,16 +51,28 @@
           "observed_on": "https://www.city.isahaya.nagasaki.jp/life/6/28/",
           "sha256": "2d9f346aae54168632021c782bcbc5d29bfbaf492b8476c2e5bc59bd211d1f9d",
           "fetched_at": "2026-08-27T09:37:23Z"
+        },
+        {
+          "url": "http://www.city.isahaya.nagasaki.jp/life/6/28/",
+          "observed_on": "http://www.city.isahaya.nagasaki.jp/",
+          "sha256": "2d9f346aae54168632021c782bcbc5d29bfbaf492b8476c2e5bc59bd211d1f9d",
+          "fetched_at": "2026-08-27T09:37:23Z"
+        },
+        {
+          "url": "https://www.city.isahaya.nagasaki.jp/uploaded/attachment/15686.pdf",
+          "observed_on": "https://www.city.isahaya.nagasaki.jp/soshiki/10/1935.html",
+          "sha256": "83ab25998f614f539bc14a6467e3602d329c1cfd4df58a3d4eed884106459f61",
+          "fetched_at": "2026-08-27T13:45:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.isahaya.nagasaki.jp/life/6/28/ (label: 市の財政) 入口 https://www.city.isahaya.nagasaki.jp/life/6/28/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.isahaya.nagasaki.jp/life/6/28/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（15686.pdf「当初予算の概要 （PDFファイル：132KB）」, sha256:83ab2599）にて構造マーカー（歳出・予算総額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.isahaya.nagasaki.jp/life/6/28/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.isahaya.nagasaki.jp/life/6/28/",
@@ -72,9 +84,21 @@
           "observed_on": "https://www.city.isahaya.nagasaki.jp/life/6/28/",
           "sha256": "2d9f346aae54168632021c782bcbc5d29bfbaf492b8476c2e5bc59bd211d1f9d",
           "fetched_at": "2026-08-27T09:37:23Z"
+        },
+        {
+          "url": "http://www.city.isahaya.nagasaki.jp/life/6/28/",
+          "observed_on": "http://www.city.isahaya.nagasaki.jp/",
+          "sha256": "2d9f346aae54168632021c782bcbc5d29bfbaf492b8476c2e5bc59bd211d1f9d",
+          "fetched_at": "2026-08-27T09:37:23Z"
+        },
+        {
+          "url": "https://www.city.isahaya.nagasaki.jp/uploaded/attachment/13647.pdf",
+          "observed_on": "https://www.city.isahaya.nagasaki.jp/soshiki/10/1935.html",
+          "sha256": "88de3f14070a3f7dea57a4ef100a0a470a11d7c5651b86bfe0d36a6d15d68e21",
+          "fetched_at": "2026-08-27T13:45:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.isahaya.nagasaki.jp/life/6/28/ (label: 市の財政) 入口 https://www.city.isahaya.nagasaki.jp/life/6/28/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.isahaya.nagasaki.jp/life/6/28/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（13647.pdf「各会計歳入歳出決算額総括表 （PDFファイル：51KB）」, sha256:88de3f14）にて構造マーカー（歳入・歳出・実質収支等）を確認済み。"
     }
   }
 }

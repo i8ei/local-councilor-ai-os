@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.kumiyama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.kumiyama.lg.jp/0000006602.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.kumiyama.lg.jp/0000006602.html",
+          "observed_on": "http://www.town.kumiyama.lg.jp/0000006508.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "http://www.town.kumiyama.lg.jp/0000006602.html",
+          "observed_on": "http://www.town.kumiyama.lg.jp/0000006602.html",
+          "sha256": "b1a168d0ed5e7100921de5d5ae4bf60759d89301d6892e68730c16865a1f9d1d",
+          "fetched_at": "2026-08-27T14:01:22Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.town.kumiyama.lg.jp/selfcontents/reiki_int/reiki_menu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
@@ -51,9 +66,15 @@
           "observed_on": "https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html",
           "sha256": "9dfdef514e161c5c3e027c738c0e7855923ea02ce55bc6eb9ff0bf7e330cf3a7",
           "fetched_at": "2026-08-27T09:50:16Z"
+        },
+        {
+          "url": "https://www.town.kumiyama.lg.jp/cmsfiles/contents/0000000/997/kumiyama-20242026032715443841.xlsx",
+          "observed_on": "https://www.town.kumiyama.lg.jp/0000000997.html",
+          "sha256": "a1b0e4ff3805e4c511ae2c940da626462fe212b4e209960d5fc1147165ad3440",
+          "fetched_at": "2026-08-27T13:39:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html (label: 財政状況) 入口 https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumiyama.lg.jp/category/4-1-4-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（kumiyama-20242026032715443841.xlsx「令和6年度決算 財政状況資料集 (サイズ：541.85KB)」, sha256:a1b0e4ff）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

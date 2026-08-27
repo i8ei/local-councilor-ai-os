@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.kamagaya.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/kamagaya/pg/index.html",
-      "verified_at": "2026-08-27T10:23:31Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kamagaya.chiba.jp/gikai/gikaidayori/gikaidayori2026.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kamagaya/pg/index.html",
-          "observed_on": "http://www.city.kamagaya.chiba.jp/gikai/kidspage/kidspagetop.html",
-          "fetched_at": "2026-08-27T07:17:25Z"
+          "url": "https://www.city.kamagaya.chiba.jp/gikai/gikaidayori/gikaidayori2026.html",
+          "observed_on": "http://www.city.kamagaya.chiba.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kamagaya/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/kamagaya/pg/index.html",
-          "sha256": "fc47f2d4d3c787209e159f8a47c65b991c499506b8cea99b3d075f2ca57290c5",
-          "fetched_at": "2026-08-27T10:23:33Z"
+          "url": "https://www.city.kamagaya.chiba.jp/gikai/gikaidayori/gikaidayori2026.html",
+          "observed_on": "https://www.city.kamagaya.chiba.jp/gikai/gikaidayori/gikaidayori2026.html",
+          "sha256": "13cc0cf7a4ea79f9ac80d7d88674b3bafebf9b3fdea0d85c2b8bcfd8381231b1",
+          "fetched_at": "2026-08-27T13:41:50Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kamagaya/pg/index.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

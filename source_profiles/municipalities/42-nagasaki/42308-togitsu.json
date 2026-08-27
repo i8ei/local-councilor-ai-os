@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.togitsu.nagasaki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.kensakusystem.jp/togitsu-s/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/chogikai/gikaidayoritsugibo/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www.kensakusystem.jp/togitsu-s/index.html",
+          "url": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/chogikai/gikaidayoritsugibo/index.html",
           "observed_on": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/chogikai/index.html",
-          "fetched_at": "2026-08-27T05:27:01Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/chogikai/gikaidayoritsugibo/index.html",
+          "observed_on": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/chogikai/gikaidayoritsugibo/index.html",
+          "sha256": "58e722ca660c77ce7c03793545c22d5a0eefc37ec4e836a12bc1900911443108",
+          "fetched_at": "2026-08-27T14:09:41Z"
+        },
+        {
+          "url": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/chogikai/gikaidayoritsugibo/R8_1/9726.html",
+          "observed_on": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/chogikai/gikaidayoritsugibo/index.html",
+          "sha256": "a87b5516b70ac2eb273d489e74fbecdbfe3b082ffe5c816963f2505275126bc6",
+          "fetched_at": "2026-08-27T14:09:43Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.kensakusystem.jp/togitsu-s/index.html (label: 会議録の検索と閲覧（外部リンク）)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -42,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.togitsu/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/zaiseijoho/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/zaiseijoho/index.html",
@@ -58,9 +75,15 @@
           "observed_on": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/zaiseijoho/index.html",
           "sha256": "a3baa6380b6eae02f3c24de7c2785f72ef09c68bfd9674253a9004766089ba73",
           "fetched_at": "2026-08-27T09:37:54Z"
+        },
+        {
+          "url": "https://www.town.togitsu.nagasaki.jp/material/files/group/3/houkoku0929.pdf",
+          "observed_on": "https://www.town.togitsu.nagasaki.jp/gyoseijoho/zaiseijoho/9393.html",
+          "sha256": "927da74540c04aad829fe31331cd9ccd58446925466a1dcfe99180f7904d8560",
+          "fetched_at": "2026-08-27T13:45:52Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.togitsu.nagasaki.jp/gyoseijoho/zaiseijoho/index.html (label: 財政情報) 入口 https://www.town.togitsu.nagasaki.jp/gyoseijoho/zaiseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.togitsu.nagasaki.jp/gyoseijoho/zaiseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.togitsu.nagasaki.jp/gyoseijoho/zaiseijoho/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（houkoku0929.pdf「西彼中央土地開発公社清算報告書（令和7年9月29日） (PDFファイル: 136.3KB)」, sha256:927da745）にて構造マーカー（款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.nichinan.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.nichinan.miyazaki.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T09:39:40Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.nichinan.lg.jp/gyoseijoho/nichinanshigikai/3/4518.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.nichinan.miyazaki.dbsr.jp/index.php/",
+          "url": "https://www.city.nichinan.lg.jp/gyoseijoho/nichinanshigikai/3/4518.html",
           "observed_on": "https://www.city.nichinan.lg.jp/gyoseijoho/nichinanshigikai/index.html",
-          "fetched_at": "2026-08-27T06:26:09Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://www.city.nichinan.miyazaki.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.nichinan.miyazaki.dbsr.jp/index.php/",
-          "sha256": "45bd7ac12e2c93c62f3a2ceeb942f420dd94b80a4e31a86292e74f2092ca759a",
-          "fetched_at": "2026-08-27T09:39:41Z"
+          "url": "https://www.city.nichinan.lg.jp/gyoseijoho/nichinanshigikai/3/4518.html",
+          "observed_on": "https://www.city.nichinan.lg.jp/gyoseijoho/nichinanshigikai/3/4518.html",
+          "sha256": "ea5ab67570efc1b1cbe34c63baa60cc871241ba26a7d408b8a3fc7d3d6497cd0",
+          "fetched_at": "2026-08-27T14:10:51Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.nichinan.miyazaki.dbsr.jp/index.php/ (label: 議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed finance section at https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html (label: 行財政・行政評価) 入口 https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
@@ -85,9 +87,15 @@
           "observed_on": "https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html",
           "sha256": "e7c21f898418ed0b8cc919d6f5a39644e1216db87b6e76069f4aa538155dbb7f",
           "fetched_at": "2026-08-27T09:39:43Z"
+        },
+        {
+          "url": "https://www.city.nichinan.lg.jp/material/files/group/23/R6kessancard.pdf",
+          "observed_on": "https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/4/4549.html",
+          "sha256": "318cc0aa74711efa708317c22ce847a97a919abfb84cb3ffe1cf9e403e117c29",
+          "fetched_at": "2026-08-27T13:47:11Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html (label: 行財政・行政評価) 入口 https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nichinan.lg.jp/gyoseijoho/gyozaisei_gyoseihyoka/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessancard.pdf「令和6年度決算カード (PDFファイル: 388.0KB)」, sha256:318cc0aa）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

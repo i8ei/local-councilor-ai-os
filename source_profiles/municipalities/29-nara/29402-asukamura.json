@@ -6,19 +6,27 @@
   "official_home_url": "https://asukamura.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://asukamura.jp/gyosei_gikai_honkaigi.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.asukamura.jp/gyosei_gikai_honkaigi.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://asukamura.jp/gyosei_gikai_honkaigi.html",
+          "url": "https://www.asukamura.jp/gyosei_gikai_honkaigi.html",
           "observed_on": "https://asukamura.jp/gyosei_gikai.html",
-          "fetched_at": "2026-08-27T07:06:47Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.asukamura.jp/gyosei_gikai_honkaigi.html",
+          "observed_on": "https://www.asukamura.jp/gyosei_gikai_honkaigi.html",
+          "sha256": "ee0254b71353e820bf7002eb1831caecc7cfda647cc678d72e6c8020b1f9db69",
+          "fetched_at": "2026-08-27T14:04:14Z"
         }
       ],
-      "notes": "Observed council minutes index at https://asukamura.jp/gyosei_gikai_honkaigi.html (label: 本会議（議会日程・議決結果・会議録・議会映像）)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

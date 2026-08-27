@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.owani.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.owani.lg.jp/gyousei/gikai/teireikairinjikai/R8teireikairinjikai.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/gikai/teireikairinjikai/R8teireikairinjikai.html",
+          "observed_on": "http://www.town.owani.lg.jp/home.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/gikai/teireikairinjikai/R8teireikairinjikai.html",
+          "observed_on": "http://www.town.owani.lg.jp/gyousei/gikai/teireikairinjikai/R8teireikairinjikai.html",
+          "sha256": "07ad186fc030319210c82f3625a62a72667117c54a316403d47fff3079111f3e",
+          "fetched_at": "2026-08-27T13:25:46Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

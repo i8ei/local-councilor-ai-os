@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.suzaka.nagano.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.suzaka.nagano.jp/shigikai/shokai/1233.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.suzaka.nagano.jp/shigikai/shokai/1233.html",
+          "observed_on": "http://www.city.suzaka.nagano.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.suzaka.nagano.jp/shigikai/shokai/1233.html",
+          "observed_on": "https://www.city.suzaka.nagano.jp/shigikai/shokai/1233.html",
+          "sha256": "5e3bf3a4a75fff7527a064059f9cfafcfd270100f8e9af407747cc8e65887984",
+          "fetched_at": "2026-08-27T13:46:44Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

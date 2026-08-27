@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.kinokawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.kensakusystem.jp/kinokawa/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.kinokawa.lg.jp/001/06/kaigirokuh-R01.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.kensakusystem.jp/kinokawa/index.html",
-          "observed_on": "http://www.city.kinokawa.lg.jp/001/index.html",
-          "fetched_at": "2026-08-27T07:21:26Z"
+          "url": "https://www.city.kinokawa.lg.jp/001/06/kaigirokuh-R01.html",
+          "observed_on": "http://www.city.kinokawa.lg.jp/gikai/kaigiroku/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.kinokawa.lg.jp/001/06/kaigirokuh-R01.html",
+          "observed_on": "https://www.city.kinokawa.lg.jp/001/06/kaigirokuh-R01.html",
+          "sha256": "f78e7024bd05c79fb89109a191b924753c54f2706eb16ab50933cd5bcab97880",
+          "fetched_at": "2026-08-27T14:04:36Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.kensakusystem.jp/kinokawa/index.html (label: 本会議会議録の検索と閲覧（令和2年1月以降）(外部リンク）)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +71,11 @@
       "notes": "Observed finance section at http://www.city.kinokawa.lg.jp/008/index.html (label: 財政) 入口 https://www.city.kinokawa.lg.jp/008/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kinokawa.lg.jp/008/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kinokawa.lg.jp/008/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kinokawa.lg.jp/008/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kinokawa.lg.jp/008/index.html",
@@ -79,9 +87,21 @@
           "observed_on": "https://www.city.kinokawa.lg.jp/008/index.html",
           "sha256": "a8c65ed618454dfca0019e8904eb4a6f6bb0572056d0ae45899e33e41df04c87",
           "fetched_at": "2026-08-27T09:53:33Z"
+        },
+        {
+          "url": "http://www.city.kinokawa.lg.jp/008/index.html",
+          "observed_on": "http://www.city.kinokawa.lg.jp/",
+          "sha256": "a8c65ed618454dfca0019e8904eb4a6f6bb0572056d0ae45899e33e41df04c87",
+          "fetched_at": "2026-08-27T09:53:33Z"
+        },
+        {
+          "url": "https://www.city.kinokawa.lg.jp/008/files/302082_kinokawa_2024.xlsx",
+          "observed_on": "https://www.city.kinokawa.lg.jp/008/2015-1207-1057-22.html",
+          "sha256": "c266539af1325d64569cc3d0ab0ef85e57a14ba77dcfa8cc0e8db7dca7e2ce93",
+          "fetched_at": "2026-08-27T13:41:44Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kinokawa.lg.jp/008/index.html (label: 財政) 入口 https://www.city.kinokawa.lg.jp/008/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kinokawa.lg.jp/008/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kinokawa.lg.jp/008/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（302082_kinokawa_2024.xlsx「令和6年度財政状況資料集 (553KB)」, sha256:c266539a）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

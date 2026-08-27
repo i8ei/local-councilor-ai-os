@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.ogasawara.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.ogasawara.tokyo.jp/gikai/gikai_kouhou.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.ogasawara.tokyo.jp/gikai/gikai_kouhou.html",
+          "observed_on": "http://www.vill.ogasawara.tokyo.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.ogasawara.tokyo.jp/gikai/gikai_kouhou.html",
+          "observed_on": "https://www.vill.ogasawara.tokyo.jp/gikai/gikai_kouhou.html",
+          "sha256": "a14d18176a548493e04d5160d495cfd040a01e8af33fe9fe0efa4d60c5646c80",
+          "fetched_at": "2026-08-27T13:43:51Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

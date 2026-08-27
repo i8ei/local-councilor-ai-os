@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.hakone.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://ami-search.amivoice.com/hakone/usr/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.hakone.kanagawa.jp/www/contents/1100000000350/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ami-search.amivoice.com/hakone/usr/",
-          "observed_on": "http://www.town.hakone.kanagawa.jp/www/genre/1000600000001/index.html",
-          "fetched_at": "2026-08-27T08:10:21Z"
+          "url": "https://www.town.hakone.kanagawa.jp/www/contents/1100000000350/index.html",
+          "observed_on": "https://www.town.hakone.kanagawa.jp/www/genre/1000600000024/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.hakone.kanagawa.jp/www/contents/1100000000350/index.html",
+          "observed_on": "https://www.town.hakone.kanagawa.jp/www/contents/1100000000350/index.html",
+          "sha256": "62d5819cdf203aeddcbd3d3eb33887d0aff495c734fab9f5c6d023c45c4d3015",
+          "fetched_at": "2026-08-27T13:44:13Z"
         }
       ],
-      "notes": "Observed council minutes index at http://ami-search.amivoice.com/hakone/usr/ (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.tomakomai.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.tomakomai.hokkaido.jp/gikai/katsudo/nenpou.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.tomakomai.hokkaido.jp/gikai/katsudo/nenpou.html",
+          "observed_on": "https://www.city.tomakomai.hokkaido.jp/gikai/katsudo/gikainittei.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.tomakomai.hokkaido.jp/gikai/katsudo/nenpou.html",
+          "observed_on": "https://www.city.tomakomai.hokkaido.jp/gikai/katsudo/nenpou.html",
+          "sha256": "ad063499bac61c0f84651df64e3039d82c41f9c4674636ce91680cf33eb8a655",
+          "fetched_at": "2026-08-27T13:23:21Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

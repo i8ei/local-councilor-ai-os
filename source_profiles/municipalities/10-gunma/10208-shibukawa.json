@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.shibukawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.shibukawa.lg.jp/gikai-site/gikai/000403/p002656.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.city.shibukawa.lg.jp/gikai-site/gikai/000403/p002656.html",
+          "observed_on": "http://www.city.shibukawa.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.shibukawa.lg.jp/gikai-site/gikai/000403/p002656.html",
+          "observed_on": "http://www.city.shibukawa.lg.jp/gikai-site/gikai/000403/p002656.html",
+          "sha256": "48470a2a7293018f810655c46e898561e67b83861ff0ea8e91437244042af17b",
+          "fetched_at": "2026-08-27T13:32:07Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

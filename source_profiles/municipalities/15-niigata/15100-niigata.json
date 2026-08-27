@@ -50,11 +50,11 @@
       "notes": "Observed finance section at http://www.city.niigata.lg.jp/shisei/zaimu/index.html (label: 財政・市債・IR) 入口 https://www.city.niigata.lg.jp:443/shisei/zaimu/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.niigata.lg.jp:443/shisei/zaimu/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.niigata.lg.jp:443/shisei/zaimu/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.niigata.lg.jp/shisei/zaimu/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.niigata.lg.jp/shisei/zaimu/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.niigata.lg.jp:443/shisei/zaimu/index.html",
           "sha256": "b948398dcf5ee057983b026b2229600466bed94234ae39468b4f429b24d3f589",
           "fetched_at": "2026-08-27T10:04:21Z"
+        },
+        {
+          "url": "http://www.city.niigata.lg.jp/shisei/zaimu/index.html",
+          "observed_on": "http://www.city.niigata.lg.jp/",
+          "sha256": "b948398dcf5ee057983b026b2229600466bed94234ae39468b4f429b24d3f589",
+          "fetched_at": "2026-08-27T10:04:21Z"
+        },
+        {
+          "url": "https://www.city.niigata.lg.jp:443/shisei/zaimu/zaisei/yosankessan/yosankessanjokyo.files/R6-gesuikessan.pdf",
+          "observed_on": "https://www.city.niigata.lg.jp:443/shisei/zaimu/zaisei/yosankessan/yosankessanjokyo.html",
+          "sha256": "3450735cc26541dda7ee8c91ded1f5cdef0fa1c1a08265966b9d8e5ccba8b977",
+          "fetched_at": "2026-08-27T13:35:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.niigata.lg.jp/shisei/zaimu/index.html (label: 財政・市債・IR) 入口 https://www.city.niigata.lg.jp:443/shisei/zaimu/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.niigata.lg.jp:443/shisei/zaimu/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.niigata.lg.jp:443/shisei/zaimu/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6-gesuikessan.pdf「令和6年度 新潟市下水道事業会計決算書（PDF：594KB）」, sha256:3450735c）にて構造マーカー（款・項・節・決算額等）を確認済み。"
     }
   }
 }

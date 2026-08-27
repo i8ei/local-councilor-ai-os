@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.hita.oita.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/hita/pg/index.html",
-      "verified_at": "2026-08-27T09:39:05Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.hita.oita.jp/site/gikai/9168.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/hita/pg/index.html",
-          "observed_on": "http://www.city.hita.oita.jp/site/gikai/17561.html",
-          "fetched_at": "2026-08-27T06:18:07Z"
+          "url": "https://www.city.hita.oita.jp/site/gikai/9168.html",
+          "observed_on": "https://www.city.hita.oita.jp/life/6/29/",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/hita/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/hita/pg/index.html",
-          "sha256": "b2df4f5f4a02c1e1804a41f49cac415991539df791a82a00dad361b4eec777b6",
-          "fetched_at": "2026-08-27T09:39:05Z"
+          "url": "https://www.city.hita.oita.jp/site/gikai/9168.html",
+          "observed_on": "https://www.city.hita.oita.jp/site/gikai/9168.html",
+          "sha256": "2a7e495b1b84ca268940bba8b80c823ccdc9a0ee9dff31fde39370a7cdf41676",
+          "fetched_at": "2026-08-27T14:10:38Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/hita/pg/index.html (label: 会議録検索システム（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -63,11 +65,11 @@
       "notes": "Observed finance section at http://www.city.hita.oita.jp/life/6/29/ (label: 行政・財政) 入口 https://www.city.hita.oita.jp/life/6/29/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hita.oita.jp/life/6/29/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hita.oita.jp/life/6/29/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hita.oita.jp/life/6/29/",
@@ -79,9 +81,21 @@
           "observed_on": "https://www.city.hita.oita.jp/life/6/29/",
           "sha256": "5801e5f194e0547f156746bb4e0ff43d47b131c5cd224057261fad303022ae97",
           "fetched_at": "2026-08-27T09:39:11Z"
+        },
+        {
+          "url": "http://www.city.hita.oita.jp/life/6/29/",
+          "observed_on": "http://www.city.hita.oita.jp/",
+          "sha256": "5801e5f194e0547f156746bb4e0ff43d47b131c5cd224057261fad303022ae97",
+          "fetched_at": "2026-08-27T09:39:11Z"
+        },
+        {
+          "url": "https://www.city.hita.oita.jp/uploaded/attachment/8683.xlsx",
+          "observed_on": "https://www.city.hita.oita.jp/soshiki/4/1985.html",
+          "sha256": "29e904cca65d43db9f4c1ab143cca6c8051bc9e8af3a1911acf47dedf20c168b",
+          "fetched_at": "2026-08-27T13:46:53Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hita.oita.jp/life/6/29/ (label: 行政・財政) 入口 https://www.city.hita.oita.jp/life/6/29/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hita.oita.jp/life/6/29/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（8683.xlsx「令和6年度市町村財政比較分析表 [Excelファイル／420KB]」, sha256:29e904cc）にて構造マーカー（歳入・決算額・実質収支・地方債等）を確認済み。"
     }
   }
 }

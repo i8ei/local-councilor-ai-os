@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.katsuura.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.katsuura.lg.jp/gikai/kaigiroku/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.katsuura.lg.jp/gikai/kaigiroku/",
+          "observed_on": "http://www.town.katsuura.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.katsuura.lg.jp/gikai/kaigiroku/",
+          "observed_on": "https://www.town.katsuura.lg.jp/gikai/kaigiroku/",
+          "sha256": "8654046961151ecb0ce6113ece7383b9e3aa174a32fa9f60f7c591a768d0d3af",
+          "fetched_at": "2026-08-27T14:06:50Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +44,11 @@
       "index_url": "https://en3-jg.d1-law.com/katsuura/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.katsuura.lg.jp/docs/2026032700037/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.katsuura.lg.jp/docs/2026032700037/",
@@ -50,9 +65,21 @@
           "url": "https://www.town.katsuura.lg.jp/docs/2026032700037/file_contents/yosansho.pdf",
           "observed_on": "https://www.town.katsuura.lg.jp/docs/2026032700037/",
           "fetched_at": "2026-08-27T11:02:01Z"
+        },
+        {
+          "url": "http://www.town.katsuura.lg.jp/docs/2026032700037/",
+          "observed_on": "http://www.town.katsuura.lg.jp/",
+          "sha256": "89c1524421c6854b6e30aa792cee6750762ce0336148bfc91342a80e3a169461",
+          "fetched_at": "2026-08-27T09:46:13Z"
+        },
+        {
+          "url": "https://www.town.katsuura.lg.jp/docs/2026032700037/file_contents/yosansho.pdf",
+          "observed_on": "https://www.town.katsuura.lg.jp/docs/2026032700037/",
+          "sha256": "cf69aaa573436fe588ec5bac5897d66785b79d9dacf51e37c80273f918ac142e",
+          "fetched_at": "2026-08-27T11:02:01Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.katsuura.lg.jp/docs/2026032700037/ (label: 令和8年度当初予算について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（yosansho.pdf「令和８年度勝浦町一般会計予算書[PDF：1.29MB]」, sha256:cf69aaa5）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "not_found",

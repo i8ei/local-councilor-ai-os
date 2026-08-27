@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.kunitomi.miyazaki.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.kunitomi.miyazaki.jp/main/administration/town_council/page001520.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.kunitomi.miyazaki.jp/main/administration/town_council/page001520.html",
+          "observed_on": "http://www.town.kunitomi.miyazaki.jp/main/administration/town_council/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "http://www.town.kunitomi.miyazaki.jp/main/administration/town_council/page001520.html",
+          "observed_on": "http://www.town.kunitomi.miyazaki.jp/main/administration/town_council/page001520.html",
+          "sha256": "f3b3b5128275afe82197f65684588c1e616a7a9091ca43c83ffbb6119575d0e4",
+          "fetched_at": "2026-08-27T14:11:00Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed budget link at http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html (label: 予算や決算で使用される用語の解説について) 入口 http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
@@ -72,9 +87,15 @@
           "observed_on": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html",
           "sha256": "d69b0293bef5d15fb3b927bd06a6a4b5e5eba2e4bc0bfda63055dfe89f461015",
           "fetched_at": "2026-08-27T09:39:59Z"
+        },
+        {
+          "url": "http://www.town.kunitomi.miyazaki.jp/main/administration/2f4bcce0c9b9aaf1fb8e05dc3c745da0.pdf",
+          "observed_on": "http://www.town.kunitomi.miyazaki.jp/main/administration/page001690.html",
+          "sha256": "5d3f9b7450fe431e67ca006c801e9f3ff5e213ed94bf7d9e43facf218467b813",
+          "fetched_at": "2026-08-27T13:47:12Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html (label: 予算や決算で使用される用語の解説について) 入口 http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kunitomi.miyazaki.jp/main/administration/page001905.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2f4bcce0c9b9aaf1fb8e05dc3c745da0.pdf「財政状況の公表（令和８年５月）.pdf」, sha256:5d3f9b74）にて構造マーカー（歳入・歳出・収入済額・支出済額等）を確認済み。"
     }
   }
 }

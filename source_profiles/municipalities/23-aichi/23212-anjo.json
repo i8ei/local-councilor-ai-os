@@ -36,11 +36,11 @@
       "notes": "Observed g_reiki at http://www.city.anjo.aichi.jp/shisei/reiki.html (label: 安城市例規集・電子掲示場)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.anjo.aichi.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.anjo.aichi.jp/shisei/zaisei/index.html",
@@ -52,9 +52,21 @@
           "observed_on": "https://www.city.anjo.aichi.jp/shisei/zaisei/index.html",
           "sha256": "031ba484aaef01c45d3e869401f3d888aef6fd7642445716d0869496413c6d7c",
           "fetched_at": "2026-08-27T10:15:19Z"
+        },
+        {
+          "url": "http://www.city.anjo.aichi.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.anjo.aichi.jp/",
+          "sha256": "031ba484aaef01c45d3e869401f3d888aef6fd7642445716d0869496413c6d7c",
+          "fetched_at": "2026-08-27T10:15:19Z"
+        },
+        {
+          "url": "https://www.city.anjo.aichi.jp/shisei/zaisei/yosan/documents/6gyouseihoukokusyo1.pdf",
+          "observed_on": "https://www.city.anjo.aichi.jp/shisei/zaisei/yosan/kessan.html",
+          "sha256": "56efeb7c5e736123f7b8871db60efdf90a7b5baeb4c37bbc3bfbe45b9812cb01",
+          "fetched_at": "2026-08-27T13:38:04Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.anjo.aichi.jp/shisei/zaisei/index.html (label: 財政（予算・決算）と主要事業) 入口 https://www.city.anjo.aichi.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（6gyouseihoukokusyo1.pdf「主要施策の行政報告書１／２（PDF：4,889KB）」, sha256:56efeb7c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

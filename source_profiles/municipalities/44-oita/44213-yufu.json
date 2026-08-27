@@ -51,11 +51,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/yufu/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yufu.oita.jp/article_83351",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yufu.oita.jp/article_83351",
@@ -72,9 +72,15 @@
           "url": "https://www.city.yufu.oita.jp/uploads/files/2026/02/ippannkaikei-yosannsyo.pdf",
           "observed_on": "https://www.city.yufu.oita.jp/article_83351",
           "fetched_at": "2026-08-27T10:57:28Z"
+        },
+        {
+          "url": "https://www.city.yufu.oita.jp/uploads/files/2026/02/kokuho.pdf",
+          "observed_on": "https://www.city.yufu.oita.jp/article_83351",
+          "sha256": "bb36b3392792b714062d26eae8f4767c2587e56e238b2e1c36a17e64b8cfe17f",
+          "fetched_at": "2026-08-27T13:46:58Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.yufu.oita.jp/article_83351 (label: 令和８年度予算について) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（kokuho.pdf「国民健康保険特別会計当初予算書」, sha256:bb36b339）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

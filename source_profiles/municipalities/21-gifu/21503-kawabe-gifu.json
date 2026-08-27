@@ -6,19 +6,27 @@
   "official_home_url": "http://www.kawabe-gifu.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.kawabe-gifu.jp/?page_id=48191",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.kawabe-gifu.jp/?page_id=26176",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.kawabe-gifu.jp/?page_id=48191",
+          "url": "https://www.kawabe-gifu.jp/?page_id=26176",
           "observed_on": "http://www.kawabe-gifu.jp/?page_id=827&sosiki=gikai",
-          "fetched_at": "2026-08-27T07:37:15Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.kawabe-gifu.jp/?page_id=26176",
+          "observed_on": "https://www.kawabe-gifu.jp/?page_id=26176",
+          "sha256": "5d89509fe795b86ceb785f178c782203089c83b5b12e0578996c7c4a29ee4ec1",
+          "fetched_at": "2026-08-27T13:49:21Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.kawabe-gifu.jp/?page_id=48191 (label: 議事録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

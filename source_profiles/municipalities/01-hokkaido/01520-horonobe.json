@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.horonobe.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.horonobe.lg.jp/www4/section/gikai/le009f000001iot8.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.horonobe.lg.jp/www4/section/gikai/le009f000001iot8.html",
+          "observed_on": "https://www.town.horonobe.lg.jp/www4/section/gikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.horonobe.lg.jp/www4/section/gikai/le009f000001iot8.html",
+          "observed_on": "https://www.town.horonobe.lg.jp/www4/section/gikai/le009f000001iot8.html",
+          "sha256": "01cecb7eb9d463151786d5b553cb3f3101f7a28ff6fac8148daa0f37ce32d285",
+          "fetched_at": "2026-08-27T13:24:59Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

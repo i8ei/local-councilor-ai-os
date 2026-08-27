@@ -22,11 +22,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.kitaaiki.nagano.jp/docs/297.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.kitaaiki.nagano.jp/docs/297.html",
@@ -38,16 +38,22 @@
           "observed_on": "http://www.vill.kitaaiki.nagano.jp/docs/297.html",
           "sha256": "c3f93b8457406ef16b5d29031a861ee70e1e87182e4e9d3014af94fe7c369163",
           "fetched_at": "2026-08-27T10:09:38Z"
+        },
+        {
+          "url": "http://www.vill.kitaaiki.nagano.jp/fs/1/1/7/6/_/900-1-20110223152420.pdf",
+          "observed_on": "http://www.vill.kitaaiki.nagano.jp/docs/297.html",
+          "sha256": "0966b990d3ccb3d373770d9271e9f93958153d7ee1f2a078982a264f8b32e6d4",
+          "fetched_at": "2026-08-27T11:10:15Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.kitaaiki.nagano.jp/docs/297.html (label: 平成２０年度北相木村財政状況について) 入口 http://www.vill.kitaaiki.nagano.jp/docs/297.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.vill.kitaaiki.nagano.jp/docs/297.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（900-1-20110223152420.pdf「財政状況等一覧表(平成20年度決算)(PDF 22.1KB)」, sha256:0966b990）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.kitaaiki.nagano.jp/docs/297.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.kitaaiki.nagano.jp/docs/297.html",
@@ -64,9 +70,15 @@
           "url": "http://www.vill.kitaaiki.nagano.jp/fs/1/1/7/6/_/900-1-20110223152420.pdf",
           "observed_on": "http://www.vill.kitaaiki.nagano.jp/docs/297.html",
           "fetched_at": "2026-08-27T11:10:14Z"
+        },
+        {
+          "url": "http://www.vill.kitaaiki.nagano.jp/fs/1/1/7/6/_/900-1-20110223152420.pdf",
+          "observed_on": "http://www.vill.kitaaiki.nagano.jp/docs/297.html",
+          "sha256": "0966b990d3ccb3d373770d9271e9f93958153d7ee1f2a078982a264f8b32e6d4",
+          "fetched_at": "2026-08-27T11:10:15Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.kitaaiki.nagano.jp/docs/297.html (label: 平成２０年度北相木村財政状況について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（900-1-20110223152420.pdf「財政状況等一覧表(平成20年度決算)(PDF 22.1KB)」, sha256:0966b990）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.otake.hiroshima.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.otake.hiroshima.jp/soshiki/shigikai/gikaijimu/1599117606350.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.otake.hiroshima.jp/soshiki/shigikai/gikaijimu/1599117606350.html",
+          "observed_on": "https://www.city.otake.hiroshima.jp/gikai/1471834517954.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.otake.hiroshima.jp/soshiki/shigikai/gikaijimu/1599117606350.html",
+          "observed_on": "https://www.city.otake.hiroshima.jp/soshiki/shigikai/gikaijimu/1599117606350.html",
+          "sha256": "3130c43f99fd9eaba9c5145f4d5c2c351ad688c606b25aeb476f3fd5429c116a",
+          "fetched_at": "2026-08-27T14:06:25Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

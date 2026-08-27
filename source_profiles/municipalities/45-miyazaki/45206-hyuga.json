@@ -51,19 +51,31 @@
       "notes": "Observed budget link at http://www.city.hyuga.miyazaki.jp/display.php?clist=0223 (label: 予算)"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hyuga.miyazaki.jp/display.php?clist=0224",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hyuga.miyazaki.jp/display.php?clist=0224",
           "observed_on": "http://www.city.hyuga.miyazaki.jp/display.php?list=011",
           "fetched_at": "2026-08-27T06:26:16Z"
+        },
+        {
+          "url": "http://www.city.hyuga.miyazaki.jp/display.php?clist=0224",
+          "observed_on": "http://www.city.hyuga.miyazaki.jp/",
+          "sha256": "5774128db2e4565b592f0279c775a7eba4796de79249153d64b694997017e01b",
+          "fetched_at": "2026-08-27T09:39:50Z"
+        },
+        {
+          "url": "https://www.hyugacity.jp/tempimg/20260330155738.xlsx",
+          "observed_on": "https://www.hyugacity.jp/display.php?cont=140314155656",
+          "sha256": "517ea02d1b5b94f06ceedcad0e891dd205aba8a99fec54a994846a603e662f68",
+          "fetched_at": "2026-08-27T13:47:12Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.hyuga.miyazaki.jp/display.php?clist=0224 (label: 決算・財政状況)"
+      "notes": "deepest_doc=P1。settlement文書（20260330155738.xlsx「令和6年度財政状況資料集 (Excel/522.9キロバイト)」, sha256:517ea02d）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

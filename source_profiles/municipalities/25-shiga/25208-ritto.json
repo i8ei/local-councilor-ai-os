@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.ritto.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ritto.lg.jp/shigikai/gikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.ritto.lg.jp/shigikai/gikaidayori/index.html",
+          "observed_on": "http://www.city.ritto.lg.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.ritto.lg.jp/shigikai/gikaidayori/index.html",
+          "observed_on": "https://www.city.ritto.lg.jp/shigikai/gikaidayori/index.html",
+          "sha256": "49adfa431b8a4a2994bd961757e7dccde31ae3f4351b3968e08d750411a7df05",
+          "fetched_at": "2026-08-27T14:00:32Z"
+        },
+        {
+          "url": "https://www.city.ritto.lg.jp/shigikai/gikaidayori/17968.html",
+          "observed_on": "https://www.city.ritto.lg.jp/shigikai/gikaidayori/index.html",
+          "sha256": "0d52d95404aba5371194510014246ea444d054c8e8311f58eb1d32d6ccd5f1bb",
+          "fetched_at": "2026-08-27T14:00:32Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +59,11 @@
       "notes": "Observed g_reiki at http://www.city.ritto.lg.jp/reiki/reiki_menu.html (label: 条例・規則（例規集）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
@@ -51,9 +75,15 @@
           "observed_on": "https://www.city.ritto.lg.jp/shisei/zaisei/index.html",
           "sha256": "ff6a805294b6ef44b96fb609d309de59389b8ddb2107ef910fe44c130f4be9fc",
           "fetched_at": "2026-08-27T09:49:33Z"
+        },
+        {
+          "url": "https://www.city.ritto.lg.jp/material/files/group/4/zaiseijoukyousiryousyuu2023_kousinban.xlsx",
+          "observed_on": "https://www.city.ritto.lg.jp/soshiki/somubu/zaisei/zaisei/joukyou/16304.html",
+          "sha256": "8b338c56cc1d749bac409943dc786368bcb79fd0b646c9d41d7a6752349b37a3",
+          "fetched_at": "2026-08-27T13:39:31Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.ritto.lg.jp/shisei/zaisei/index.html (label: ) 入口 https://www.city.ritto.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ritto.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijoukyousiryousyuu2023_kousinban.xlsx「令和5年度財政状況資料集 (Excelファイル: 843.2KB)」, sha256:8b338c56）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

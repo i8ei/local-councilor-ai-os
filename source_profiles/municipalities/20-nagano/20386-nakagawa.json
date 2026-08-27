@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.vill.nakagawa.nagano.jp/life/4/28/121/ (label: 予算・決算) 入口 https://www.vill.nakagawa.nagano.jp/life/4/28/121/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.nakagawa.nagano.jp/life/4/28/121/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.nakagawa.nagano.jp/life/4/28/121/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.nakagawa.nagano.jp/life/4/28/121/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.vill.nakagawa.nagano.jp/life/4/28/121/",
           "sha256": "7cc14e37c8556fbb3d44813051795909e6dde22e6b1d3423117bbb23ba463177",
           "fetched_at": "2026-08-27T10:10:30Z"
+        },
+        {
+          "url": "http://www.vill.nakagawa.nagano.jp/life/4/28/121/",
+          "observed_on": "http://www.vill.nakagawa.nagano.jp/",
+          "sha256": "7cc14e37c8556fbb3d44813051795909e6dde22e6b1d3423117bbb23ba463177",
+          "fetched_at": "2026-08-27T10:10:30Z"
+        },
+        {
+          "url": "https://www.vill.nakagawa.nagano.jp/uploaded/attachment/2725.pdf",
+          "observed_on": "https://www.vill.nakagawa.nagano.jp/soshiki/soumu/1315.html",
+          "sha256": "044ec222d4605f19fcbd39edb2df6de2933e38de7e5620edf426640e737eb81e",
+          "fetched_at": "2026-08-27T13:36:33Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.nakagawa.nagano.jp/life/4/28/121/ (label: 予算・決算) 入口 https://www.vill.nakagawa.nagano.jp/life/4/28/121/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.nakagawa.nagano.jp/life/4/28/121/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2725.pdf「決算カードについて」, sha256:044ec222）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

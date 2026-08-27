@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.hitachiomiya.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.hitachiomiya.lg.jp/gikai/page000398.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.hitachiomiya.lg.jp/gikai/r10/gikai_kouhou/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.hitachiomiya.lg.jp/gikai/page000398.html",
+          "url": "https://www.city.hitachiomiya.lg.jp/gikai/r10/gikai_kouhou/",
           "observed_on": "http://www.city.hitachiomiya.lg.jp/gikai/",
-          "fetched_at": "2026-08-27T06:06:17Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.hitachiomiya.lg.jp/gikai/r10/gikai_kouhou/",
+          "observed_on": "https://www.city.hitachiomiya.lg.jp/gikai/r10/gikai_kouhou/",
+          "sha256": "aa9c7df2a86907ec4a969833254cde87e2d710aaf7475bc4f210b3ea1a55716d",
+          "fetched_at": "2026-08-27T13:30:05Z"
+        },
+        {
+          "url": "https://www.city.hitachiomiya.lg.jp/gikai/r10/gikai_kouhou/page011612.html",
+          "observed_on": "https://www.city.hitachiomiya.lg.jp/gikai/r10/gikai_kouhou/",
+          "sha256": "cacadc349094905925c29076ddd77ff3ba54f75022b1e56517fbc745b50665ff",
+          "fetched_at": "2026-08-27T13:37:39Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.hitachiomiya.lg.jp/gikai/page000398.html (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

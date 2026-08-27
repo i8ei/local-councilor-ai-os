@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.kashiba.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html",
-      "verified_at": "2026-08-27T09:52:34Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kashiba.lg.jp/site/shigikai/13772.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html",
+          "url": "https://www.city.kashiba.lg.jp/site/shigikai/13772.html",
           "observed_on": "http://www.city.kashiba.lg.jp/site/shigikai/",
-          "fetched_at": "2026-08-27T07:02:32Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html",
-          "sha256": "181fe8caa1cc6cc59e6b51c96f81570015b4b560f766b688711942bef2cbd032",
-          "fetched_at": "2026-08-27T09:52:34Z"
+          "url": "https://www.city.kashiba.lg.jp/site/shigikai/13772.html",
+          "observed_on": "https://www.city.kashiba.lg.jp/site/shigikai/13772.html",
+          "sha256": "316c890dc34baac42bbe5eb532a6846117fe312c63972567b8737f68fc1fcaa3",
+          "fetched_at": "2026-08-27T14:03:49Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kashiba/pg/index.html (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -42,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.kashiba.lg.jp/life/4/46/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kashiba.lg.jp/life/4/29/129/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kashiba.lg.jp/life/4/29/129/",
@@ -58,9 +60,21 @@
           "observed_on": "https://www.city.kashiba.lg.jp/life/4/29/129/",
           "sha256": "f8043d628ef5b72317769b255ff94047a7acbeeee5a73fc2636fef92e8258fda",
           "fetched_at": "2026-08-27T09:52:40Z"
+        },
+        {
+          "url": "http://www.city.kashiba.lg.jp/life/4/29/129/",
+          "observed_on": "http://www.city.kashiba.lg.jp/",
+          "sha256": "f8043d628ef5b72317769b255ff94047a7acbeeee5a73fc2636fef92e8258fda",
+          "fetched_at": "2026-08-27T09:52:40Z"
+        },
+        {
+          "url": "https://www.city.kashiba.lg.jp/uploaded/attachment/31775.pdf",
+          "observed_on": "https://www.city.kashiba.lg.jp/soshiki/8/6310.html",
+          "sha256": "686a709dfd83fe1b21fc7fedba9b9b2f1a8dc0b141cd09f052c123a266947d1c",
+          "fetched_at": "2026-08-27T13:41:23Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kashiba.lg.jp/life/4/29/129/ (label: 予算) 入口 https://www.city.kashiba.lg.jp/life/4/29/129/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashiba.lg.jp/life/4/29/129/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（31775.pdf「令和8年度 予算書 [PDFファイル／1.56MB]」, sha256:686a709d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

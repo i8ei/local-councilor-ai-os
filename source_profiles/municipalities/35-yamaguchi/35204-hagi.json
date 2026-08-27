@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.city.hagi.lg.jp/reiki/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.hagi.lg.jp/soshiki/3/h24587.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hagi.lg.jp/soshiki/3/h24587.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.hagi.lg.jp/soshiki/3/h24587.html",
           "sha256": "726e3fafc696c5cd703a83a8f22ac122505f26276250ce8cc1193b4a8afaacd9",
           "fetched_at": "2026-08-27T09:45:24Z"
+        },
+        {
+          "url": "http://www.city.hagi.lg.jp/soshiki/3/h24587.html",
+          "observed_on": "http://www.city.hagi.lg.jp/",
+          "sha256": "726e3fafc696c5cd703a83a8f22ac122505f26276250ce8cc1193b4a8afaacd9",
+          "fetched_at": "2026-08-27T09:45:24Z"
+        },
+        {
+          "url": "https://www.city.hagi.lg.jp/uploaded/attachment/28557.pdf",
+          "observed_on": "https://www.city.hagi.lg.jp/soshiki/3/h24587.html",
+          "sha256": "f2af62018e3414dd6717864cc6caf2aaad422ac78d7a185e5e5d267f1ab8a24e",
+          "fetched_at": "2026-08-27T13:42:39Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.hagi.lg.jp/soshiki/3/h24587.html (label: 萩市財政の健全性に関する比率の公表) 入口 https://www.city.hagi.lg.jp/soshiki/3/h24587.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hagi.lg.jp/soshiki/3/h24587.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（28557.pdf「令和７年度 萩市財政の健全性に関する比率の公表 [PDFファイル／568KB]」, sha256:f2af6201）にて構造マーカー（歳入・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

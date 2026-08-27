@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.aya.miyazaki.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.aya.miyazaki.jp/soshiki/gikaizimukyoku/1107.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.aya.miyazaki.jp/soshiki/gikaizimukyoku/1107.html",
+          "observed_on": "https://www.town.aya.miyazaki.jp/life/4/4/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.aya.miyazaki.jp/soshiki/gikaizimukyoku/1107.html",
+          "observed_on": "https://www.town.aya.miyazaki.jp/soshiki/gikaizimukyoku/1107.html",
+          "sha256": "cdb3f8e42ca31104f5f4efeccdaa81d2ba5df18d67af07750e845e5a8d46e6e6",
+          "fetched_at": "2026-08-27T14:10:59Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",
@@ -43,11 +58,11 @@
       "notes": "Observed finance section at https://www.town.aya.miyazaki.jp/life/4/4/22/ (label: 町政運営・行政・財政) 入口 https://www.town.aya.miyazaki.jp/life/4/4/22/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aya.miyazaki.jp/life/4/4/22/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.aya.miyazaki.jp/life/4/4/22/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.aya.miyazaki.jp/life/4/4/22/",
@@ -59,9 +74,15 @@
           "observed_on": "https://www.town.aya.miyazaki.jp/life/4/4/22/",
           "sha256": "0c1fabed76b216448c9f2a1e41cd7ddd71ae55741d2745942ee4cb56c792e584",
           "fetched_at": "2026-08-27T09:39:52Z"
+        },
+        {
+          "url": "https://www.town.aya.miyazaki.jp/uploaded/attachment/4677.pdf",
+          "observed_on": "https://www.town.aya.miyazaki.jp/soshiki/zaiseika/4955.html",
+          "sha256": "ccd1b093a5eecdd754cc6326a1cfa05740b17ecc12f435ab05f33cecd972cc6e",
+          "fetched_at": "2026-08-27T13:47:13Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.aya.miyazaki.jp/life/4/4/22/ (label: 町政運営・行政・財政) 入口 https://www.town.aya.miyazaki.jp/life/4/4/22/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.aya.miyazaki.jp/life/4/4/22/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（4677.pdf「令和5年度 財務書類 [PDFファイル／354KB]」, sha256:ccd1b093）にて構造マーカー（歳入・歳出・項・地方債等）を確認済み。"
     }
   }
 }

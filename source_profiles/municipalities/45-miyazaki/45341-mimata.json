@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.mimata.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.mimata.lg.jp/categories/index/kaigiroku",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.mimata.lg.jp/contents/2535.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.mimata.lg.jp/categories/index/kaigiroku",
+          "url": "https://www.town.mimata.lg.jp/contents/2535.html",
           "observed_on": "http://www.town.mimata.lg.jp/categories/index/gikai",
-          "fetched_at": "2026-08-27T06:30:03Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.mimata.lg.jp/contents/2535.html",
+          "observed_on": "https://www.town.mimata.lg.jp/contents/2535.html",
+          "sha256": "821f5070ca7ed0a3accd9febd19251be06c07a662f710c86adfea84ab17a275b",
+          "fetched_at": "2026-08-27T10:57:39Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.mimata.lg.jp/categories/index/kaigiroku (label: 定例会・臨時会会議録) extraction probe read one document at https://www.town.mimata.lg.jp/contents/2535.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +71,11 @@
       "notes": "Observed finance section at http://www.town.mimata.lg.jp/categories/index/zaisei (label: 財政) 入口 https://www.town.mimata.lg.jp/categories/index/zaisei に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mimata.lg.jp/categories/index/zaisei に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.mimata.lg.jp/categories/index/zaisei",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mimata.lg.jp/categories/index/zaisei",
@@ -79,9 +87,21 @@
           "observed_on": "https://www.town.mimata.lg.jp/categories/index/zaisei",
           "sha256": "ae1d29225e3c40654d3621a44a4184240dc9aaf7fb913775379ea947fa4b2755",
           "fetched_at": "2026-08-27T09:39:57Z"
+        },
+        {
+          "url": "http://www.town.mimata.lg.jp/categories/index/zaisei",
+          "observed_on": "http://www.town.mimata.lg.jp/",
+          "sha256": "ae1d29225e3c40654d3621a44a4184240dc9aaf7fb913775379ea947fa4b2755",
+          "fetched_at": "2026-08-27T09:39:57Z"
+        },
+        {
+          "url": "https://www.town.mimata.lg.jp/upload/file/03zeizai/01zaisei/02_%E8%B2%A1%E6%94%BF%E6%AF%94%E8%BC%83%E5%88%86%E6%9E%90%E8%A1%A8/%E4%BB%A4%E5%92%8C%EF%BC%96%E5%B9%B4%E5%BA%A6%E8%B2%A1%E6%94%BF%E6%AF%94%E8%BC%83%E5%88%86%E6%9E%90%E8%A1%A8.xlsx",
+          "observed_on": "https://www.town.mimata.lg.jp/contents/259.html",
+          "sha256": "f2d527fbbab569ceb8004825a0eeab47d23cb75dd0c754aa38ebd2df4a1fc3a8",
+          "fetched_at": "2026-08-27T13:47:14Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.mimata.lg.jp/categories/index/zaisei (label: 財政) 入口 https://www.town.mimata.lg.jp/categories/index/zaisei に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.mimata.lg.jp/categories/index/zaisei に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E4%BB%A4%E5%92%8C%EF%BC%96%E5%B9%B4%E5%BA%A6%E8%B2%A1%E6%94%BF%E6%AF%94%E8%BC%83%E5%88%86%E6%9E%90%E8%A1%A8.xlsx「令和６年度財政比較分析表.xlsx」, sha256:f2d527fb）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

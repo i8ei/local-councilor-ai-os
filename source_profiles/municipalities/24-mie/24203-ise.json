@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.ise.mie.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ise.mie.jp/gikai/koho_kouchou/gikai_dayori/1020736.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.ise.mie.jp/gikai/koho_kouchou/gikai_dayori/1020736.html",
+          "observed_on": "http://www.city.ise.mie.jp/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.ise.mie.jp/gikai/koho_kouchou/gikai_dayori/1020736.html",
+          "observed_on": "https://www.city.ise.mie.jp/gikai/koho_kouchou/gikai_dayori/1020736.html",
+          "sha256": "a924e79d5e8cd67740c35faf629ac0c600a5dd81f8b5e6bd2f8b2a5c50d02da9",
+          "fetched_at": "2026-08-27T13:59:40Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed budget link at http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html (label: 財政（予算決算等）) 入口 https://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html",
@@ -72,9 +87,21 @@
           "observed_on": "https://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html",
           "sha256": "d9aaa0ff904cb4542347372efda94b235b6748648e8c330816c530116f00feed",
           "fetched_at": "2026-08-27T09:48:41Z"
+        },
+        {
+          "url": "http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html",
+          "observed_on": "http://www.city.ise.mie.jp/",
+          "sha256": "d9aaa0ff904cb4542347372efda94b235b6748648e8c330816c530116f00feed",
+          "fetched_at": "2026-08-27T09:48:41Z"
+        },
+        {
+          "url": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/020/149/001005014.xlsx",
+          "observed_on": "https://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/1016921/1020149.html",
+          "sha256": "cc726e73e518ccd578e3c5cab9b8ee6618da5bac4b6c65640043f5d6973d2915",
+          "fetched_at": "2026-08-27T13:38:48Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html (label: 財政（予算決算等）) 入口 https://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（001005014.xlsx「令和6年度財政状況資料集 (Excel)(527.4KB)」, sha256:cc726e73）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -72,11 +72,11 @@
       "notes": "Observed finance section at http://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html",
@@ -88,9 +88,21 @@
           "observed_on": "https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html",
           "sha256": "cc5374ce5ddb9adaf5903d78718a4086f091e450f3f0d1062cce5bdca5e0cec6",
           "fetched_at": "2026-08-27T09:37:28Z"
+        },
+        {
+          "url": "http://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html",
+          "observed_on": "http://www.town.fukuchi.lg.jp/",
+          "sha256": "cc5374ce5ddb9adaf5903d78718a4086f091e450f3f0d1062cce5bdca5e0cec6",
+          "fetched_at": "2026-08-27T09:37:28Z"
+        },
+        {
+          "url": "https://www.town.fukuchi.lg.jp/material/files/group/4/R6kessann.pdf",
+          "observed_on": "https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/zaisei/1546.html",
+          "sha256": "3cb141bff2def880569356b966e43955120261d6e449bb78033aa9cf8a24393a",
+          "fetched_at": "2026-08-27T13:45:35Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fukuchi.lg.jp/tyousei/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessann.pdf「令和6年度決算 (PDFファイル: 81.9KB)」, sha256:3cb141bf）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

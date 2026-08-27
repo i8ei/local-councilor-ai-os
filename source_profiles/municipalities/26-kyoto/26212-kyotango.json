@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.kyotango.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kyotango.lg.jp/shigikai/2632.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.kyotango.lg.jp/shigikai/2632.html",
+          "observed_on": "http://www.city.kyotango.lg.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.kyotango.lg.jp/shigikai/2632.html",
+          "observed_on": "https://www.city.kyotango.lg.jp/shigikai/2632.html",
+          "sha256": "7f588b4164a564550c763b3f8d56d9859b5aa55c8cedc1e4f2a43e6eff049851",
+          "fetched_at": "2026-08-27T14:01:15Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city.kyotango/reiki_menu.html (label: 京丹後市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
@@ -51,9 +66,15 @@
           "observed_on": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html",
           "sha256": "28b55ab9f75284ef49140bd115912f81e0ba161c8ae3ec8dc022b9e3d886afe5",
           "fetched_at": "2026-08-27T09:50:09Z"
+        },
+        {
+          "url": "https://www.city.kyotango.lg.jp/material/files/group/8/R8yosan_graph.pdf",
+          "observed_on": "https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/7/3839.html",
+          "sha256": "95097633a9c07a20f1836064404e4ba1d2afc0edd6fce98c63599d15b3bff333",
+          "fetched_at": "2026-08-27T13:39:44Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html (label: 財政課) 入口 https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kyotango.lg.jp/top/soshiki/somu/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosan_graph.pdf「令和8年度 (PDFファイル: 954.0KB)」, sha256:95097633）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

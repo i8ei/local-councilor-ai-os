@@ -50,11 +50,11 @@
       "notes": "Observed budget link at http://www.city.katsushika.lg.jp/information/1000085/index.html (label: 行財政・予算・決算) 入口 https://www.city.katsushika.lg.jp/information/1000085/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.katsushika.lg.jp/information/1000085/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.katsushika.lg.jp/information/1000085/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.katsushika.lg.jp/information/1000085/index.html",
           "sha256": "61544251c0a54e78cb6ce08356ae9f204d11e4d47600daf82f3d6caf3322e982",
           "fetched_at": "2026-08-27T10:25:43Z"
+        },
+        {
+          "url": "http://www.city.katsushika.lg.jp/information/1000085/index.html",
+          "observed_on": "http://www.city.katsushika.lg.jp/",
+          "sha256": "61544251c0a54e78cb6ce08356ae9f204d11e4d47600daf82f3d6caf3322e982",
+          "fetched_at": "2026-08-27T10:25:43Z"
+        },
+        {
+          "url": "https://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/040/046/kessansho6.pdf",
+          "observed_on": "https://www.city.katsushika.lg.jp/information/1000085/1013101/1040046.html",
+          "sha256": "d2b8b24884196ff8408d89dc84b77f8e1d682d8abdcc50af72499f5d25d8a45b",
+          "fetched_at": "2026-08-27T13:33:35Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.katsushika.lg.jp/information/1000085/index.html (label: 行財政・予算・決算) 入口 https://www.city.katsushika.lg.jp/information/1000085/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessansho6.pdf「令和6年度葛飾区各会計歳入歳出決算書 （PDF 1.5MB）」, sha256:d2b8b248）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

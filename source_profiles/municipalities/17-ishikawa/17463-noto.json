@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.noto.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.noto.lg.jp/chosei/5417.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.noto.lg.jp/chosei/gikai/4061.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.town.noto.lg.jp/chosei/5417.html",
-          "observed_on": "https://www.town.noto.lg.jp/chosei/index.html",
-          "fetched_at": "2026-08-27T06:22:00Z"
+          "url": "https://www.town.noto.lg.jp/chosei/gikai/4061.html",
+          "observed_on": "http://www.town.noto.lg.jp/chosei/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.noto.lg.jp/chosei/gikai/4061.html",
+          "observed_on": "https://www.town.noto.lg.jp/chosei/gikai/4061.html",
+          "sha256": "2e25eb230bc31620c27ead64368ea246071817203ce8b43b1110c65b00d8ccf8",
+          "fetched_at": "2026-08-27T13:45:34Z"
+        },
+        {
+          "url": "https://www.town.noto.lg.jp/kakuka/1013/gyomu/1/2/5259.html",
+          "observed_on": "https://www.town.noto.lg.jp/chosei/gikai/4061.html",
+          "sha256": "a288b6258c22e03f3e27c427285a713604a7a8db74b67bfc2a8ad973f23dbe02",
+          "fetched_at": "2026-08-27T13:45:34Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.noto.lg.jp/chosei/5417.html (label: 令和8年 能登町議会会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

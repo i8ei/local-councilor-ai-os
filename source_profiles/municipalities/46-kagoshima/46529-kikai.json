@@ -42,11 +42,11 @@
       "index_url": "https://en3-jg.d1-law.com/kikai/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kikai.lg.jp/densan/machi/yosan-zaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kikai.lg.jp/densan/machi/yosan-zaise/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "http://www.town.kikai.lg.jp/densan/machi/yosan-zaise/index.html",
           "sha256": "0dc32d7b2ac7e2b8328167da6e809a8462126ac57cdedb3ce5918ac17ad99672",
           "fetched_at": "2026-08-27T09:41:15Z"
+        },
+        {
+          "url": "http://www.town.kikai.lg.jp/zaisei/machi/yosan-zaise/documents/r8yosannsyo.pdf",
+          "observed_on": "http://www.town.kikai.lg.jp/zaisei/machi/yosan-zaise/toshoyosan.html",
+          "sha256": "db750268ccc4d982a266ffcd550aeb1edbc9b7ad9d20fe2d8dfc7362d93b712b",
+          "fetched_at": "2026-08-27T13:47:51Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kikai.lg.jp/densan/machi/yosan-zaise/index.html (label: 予算・財政) 入口 http://www.town.kikai.lg.jp/densan/machi/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kikai.lg.jp/densan/machi/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8yosannsyo.pdf「令和8年度一般会計当初予算書（PDF：1,139KB）」, sha256:db750268）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

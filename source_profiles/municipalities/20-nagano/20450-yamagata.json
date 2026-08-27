@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.vill.yamagata.nagano.jp/government/finance/ (label: 財政) 入口 https://www.vill.yamagata.nagano.jp/government/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.yamagata.nagano.jp/government/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.yamagata.nagano.jp/government/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.yamagata.nagano.jp/government/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.yamagata.nagano.jp/government/finance/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.vill.yamagata.nagano.jp/government/finance/",
           "sha256": "97a3c424839e458b7eb0f23687374449acce92a4204ed671c0b565499bd7938b",
           "fetched_at": "2026-08-27T10:11:29Z"
+        },
+        {
+          "url": "http://www.vill.yamagata.nagano.jp/government/finance/",
+          "observed_on": "http://www.vill.yamagata.nagano.jp/",
+          "sha256": "97a3c424839e458b7eb0f23687374449acce92a4204ed671c0b565499bd7938b",
+          "fetched_at": "2026-08-27T10:11:29Z"
+        },
+        {
+          "url": "https://www.vill.yamagata.nagano.jp/fs/1/8/9/5/3/8/_/%E4%BB%A4%E5%92%8C5%E5%B9%B4%E5%BA%A6%E5%B1%B1%E5%BD%A2%E6%9D%91%E4%B8%8B%E6%B0%B4%E9%81%93%E4%BA%8B%E6%A5%AD%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97.pdf",
+          "observed_on": "https://www.vill.yamagata.nagano.jp/docs/jousui.html",
+          "sha256": "4a524e80edeb614c20a849c68f91d113e8439c45177beb3bbf255008ce592b7e",
+          "fetched_at": "2026-08-27T13:36:36Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.yamagata.nagano.jp/government/finance/ (label: 財政) 入口 https://www.vill.yamagata.nagano.jp/government/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.yamagata.nagano.jp/government/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.yamagata.nagano.jp/government/finance/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（%E4%BB%A4%E5%92%8C5%E5%B9%B4%E5%BA%A6%E5%B1%B1%E5%BD%A2%E6%9D%91%E4%B8%8B%E6%B0%B4%E9%81%93%E4%BA%8B%E6%A5%AD%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97.pdf「令和5年度山形村下水道事業会計決算 (PDF 1.09MB)」, sha256:4a524e80）にて構造マーカー（款・項・節・決算額等）を確認済み。"
     }
   }
 }

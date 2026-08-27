@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.kiyokawa.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.kensakusystem.jp/kiyokawa/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.kiyokawa.kanagawa.jp/gikai/nittei/4142.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.kensakusystem.jp/kiyokawa/index.html",
+          "url": "https://www.town.kiyokawa.kanagawa.jp/gikai/nittei/4142.html",
           "observed_on": "https://www.town.kiyokawa.kanagawa.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T08:11:01Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.kiyokawa.kanagawa.jp/gikai/nittei/4142.html",
+          "observed_on": "https://www.town.kiyokawa.kanagawa.jp/gikai/nittei/4142.html",
+          "sha256": "f1f0580b944e346f2a10d87b23151caa5292d3f68ef139c124d160072599c782",
+          "fetched_at": "2026-08-27T13:44:05Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.kensakusystem.jp/kiyokawa/index.html (label: 会議録（本会議）)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

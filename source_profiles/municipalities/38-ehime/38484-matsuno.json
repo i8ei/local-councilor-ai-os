@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.matsuno.ehime/reiki_menu.html (label: 松野町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.matsuno.ehime.jp/site/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.matsuno.ehime.jp/site/zaisei/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.matsuno.ehime.jp/site/zaisei/",
           "sha256": "d27efdbc4577487f7097d421b266936981536ac4eee6b47e626ee3a77030082c",
           "fetched_at": "2026-08-27T09:47:17Z"
+        },
+        {
+          "url": "http://www.town.matsuno.ehime.jp/site/zaisei/",
+          "observed_on": "http://www.town.matsuno.ehime.jp/",
+          "sha256": "d27efdbc4577487f7097d421b266936981536ac4eee6b47e626ee3a77030082c",
+          "fetched_at": "2026-08-27T09:47:17Z"
+        },
+        {
+          "url": "https://www.town.matsuno.ehime.jp/uploaded/attachment/7015.pdf",
+          "observed_on": "https://www.town.matsuno.ehime.jp/site/zaisei/16872.html",
+          "sha256": "804f34fc842987246e118c8a0a299fa8fb7796d77ad25f9b8cf9f16d6a95d1f1",
+          "fetched_at": "2026-08-27T13:43:37Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.matsuno.ehime.jp/site/zaisei/ (label: 財政情報) 入口 https://www.town.matsuno.ehime.jp/site/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.matsuno.ehime.jp/site/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（7015.pdf「令和8年度一般会計予算書（当初） [PDFファイル／1.23MB]」, sha256:804f34fc）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

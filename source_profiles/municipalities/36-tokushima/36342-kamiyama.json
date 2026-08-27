@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.kamiyama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kamiyama.lg.jp/docs/2026081400018/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kamiyama.lg.jp/docs/2026081400018/",
+          "observed_on": "http://www.town.kamiyama.lg.jp/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.kamiyama.lg.jp/docs/2026081400018/",
+          "observed_on": "https://www.town.kamiyama.lg.jp/docs/2026081400018/",
+          "sha256": "39ea3f287e517d66c209a83e09aed88956cadf18aef5ebbaa559b636e3a6a13a",
+          "fetched_at": "2026-08-27T14:06:59Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

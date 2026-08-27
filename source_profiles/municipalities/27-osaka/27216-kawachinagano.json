@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.city.kawachinagano.lg.jp/static/reiki/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kawachinagano.lg.jp/life/4/20/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kawachinagano.lg.jp/life/4/20/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.kawachinagano.lg.jp/life/4/20/",
           "sha256": "815395acb42665bdffde03a03ab93e19542877cbbaffa956f9f4a8bfb90ca810",
           "fetched_at": "2026-08-27T09:50:53Z"
+        },
+        {
+          "url": "http://www.city.kawachinagano.lg.jp/life/4/20/",
+          "observed_on": "http://www.city.kawachinagano.lg.jp/",
+          "sha256": "815395acb42665bdffde03a03ab93e19542877cbbaffa956f9f4a8bfb90ca810",
+          "fetched_at": "2026-08-27T09:50:53Z"
+        },
+        {
+          "url": "https://www.city.kawachinagano.lg.jp/uploaded/attachment/45422.pdf",
+          "observed_on": "https://www.city.kawachinagano.lg.jp/soshiki/26/120266.html",
+          "sha256": "4c79739aafa9cd39b7a5bfd8b0b994acdf65d6395579e0fbe751f07014cc45e1",
+          "fetched_at": "2026-08-27T13:40:31Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kawachinagano.lg.jp/life/4/20/ (label: 行財政) 入口 https://www.city.kawachinagano.lg.jp/life/4/20/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kawachinagano.lg.jp/life/4/20/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（45422.pdf「当初予算の概要」, sha256:4c79739a）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

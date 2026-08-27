@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.kure.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/kure/pg/index.html",
-      "verified_at": "2026-08-27T09:44:40Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kure.lg.jp/site/gikai/list9-30.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kure/pg/index.html",
+          "url": "https://www.city.kure.lg.jp/site/gikai/list9-30.html",
           "observed_on": "http://www.city.kure.lg.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:26:19Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/kure/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/kure/pg/index.html",
-          "sha256": "8ff1dec86b5210299d5826d99b809f85943c3a29a1131b8d083855c649f2929b",
-          "fetched_at": "2026-08-27T09:44:45Z"
+          "url": "https://www.city.kure.lg.jp/site/gikai/list9-30.html",
+          "observed_on": "https://www.city.kure.lg.jp/site/gikai/list9-30.html",
+          "sha256": "37998f94d3919f9692a66b92f9c3c964f47e8a97a4aaf1a51a1e6c987ffd828b",
+          "fetched_at": "2026-08-27T14:06:11Z"
+        },
+        {
+          "url": "https://www.city.kure.lg.jp/site/gikai/gikaihoukokukai0804.html",
+          "observed_on": "https://www.city.kure.lg.jp/site/gikai/list9-30.html",
+          "sha256": "6539b2538e7a18ac9c32374b840b6c2eef1ab1a6dfa6f9645fbdf8007367fb40",
+          "fetched_at": "2026-08-27T14:06:11Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kure/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -63,11 +74,11 @@
       "notes": "Observed budget link at http://www.city.kure.lg.jp/life/4/35/137/ (label: 予算・決算) 入口 https://www.city.kure.lg.jp/life/4/35/137/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kure.lg.jp/life/4/35/137/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kure.lg.jp/life/4/35/137/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kure.lg.jp/life/4/35/137/",
@@ -79,9 +90,21 @@
           "observed_on": "https://www.city.kure.lg.jp/life/4/35/137/",
           "sha256": "5e2056479ba7fdcb64f2c780b1d47cc83db6b12ddd1cd639fe6bac9f55ce6224",
           "fetched_at": "2026-08-27T09:44:47Z"
+        },
+        {
+          "url": "http://www.city.kure.lg.jp/life/4/35/137/",
+          "observed_on": "http://www.city.kure.lg.jp/",
+          "sha256": "5e2056479ba7fdcb64f2c780b1d47cc83db6b12ddd1cd639fe6bac9f55ce6224",
+          "fetched_at": "2026-08-27T09:44:47Z"
+        },
+        {
+          "url": "https://www.city.kure.lg.jp/uploaded/attachment/109592.xlsx",
+          "observed_on": "https://www.city.kure.lg.jp/soshiki/89/zaisei-koukaikei06.html",
+          "sha256": "5caf2662046219e878e3b4ea5d2e8649175116e4493a8e427782956770cf0e6e",
+          "fetched_at": "2026-08-27T13:42:43Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kure.lg.jp/life/4/35/137/ (label: 予算・決算) 入口 https://www.city.kure.lg.jp/life/4/35/137/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kure.lg.jp/life/4/35/137/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（109592.xlsx「・財政状況資料集」, sha256:5caf2662）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

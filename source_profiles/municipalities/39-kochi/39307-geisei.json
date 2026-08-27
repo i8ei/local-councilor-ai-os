@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.geisei.kochi.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.geisei.kochi.jp/gikai/pages/page0054.php",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.geisei.kochi.jp/gikai/pages/page0054.php",
+          "observed_on": "http://www.vill.geisei.kochi.jp/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.vill.geisei.kochi.jp/gikai/pages/page0054.php",
+          "observed_on": "https://www.vill.geisei.kochi.jp/gikai/pages/page0054.php",
+          "sha256": "db789edc7ca64c3af71d9657c2a12c3103492325c92c815580a82ea5f3b41cb9",
+          "fetched_at": "2026-08-27T14:07:58Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

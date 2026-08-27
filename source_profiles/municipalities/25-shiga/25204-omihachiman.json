@@ -6,25 +6,27 @@
   "official_home_url": "https://www.city.omihachiman.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/omihachiman/pg/index.html",
-      "verified_at": "2026-08-27T09:49:12Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.omihachiman.lg.jp/gyosei/shigikai/2677.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/omihachiman/pg/index.html",
+          "url": "https://www.city.omihachiman.lg.jp/gyosei/shigikai/2677.html",
           "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/shigikai/index.html",
-          "fetched_at": "2026-08-27T06:08:39Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/omihachiman/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/omihachiman/pg/index.html",
-          "sha256": "9379abc5eba02847f8b767b09757da758081f0391ef68f48b078183487755363",
-          "fetched_at": "2026-08-27T09:49:12Z"
+          "url": "https://www.city.omihachiman.lg.jp/gyosei/shigikai/2677.html",
+          "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/shigikai/2677.html",
+          "sha256": "64c48bfa76890bf9da27e6a3452eba2de7467742f8589a7dd9ac6ac2b3c83597",
+          "fetched_at": "2026-08-27T14:00:35Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/omihachiman/pg/index.html (label: 12.会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed finance section at https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html (label: 行財政) 入口 https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
@@ -85,9 +87,15 @@
           "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html",
           "sha256": "c2083eba73c0047b6653908fe195261040a8fd2a981051d59ae646482846c627",
           "fetched_at": "2026-08-27T09:49:15Z"
+        },
+        {
+          "url": "https://www.city.omihachiman.lg.jp/material/files/group/134/H29kessansyo.pdf",
+          "observed_on": "https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/kessansyo/23438.html",
+          "sha256": "ae0d7a011192b642f91eab1c9d5f036a2d9ca87fbf0ade0502900992f156d744",
+          "fetched_at": "2026-08-27T13:39:29Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html (label: 行財政) 入口 https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.omihachiman.lg.jp/gyosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H29kessansyo.pdf「平成29年度近江八幡市歳入歳出決算書 (PDFファイル: 9.1MB)」, sha256:ae0d7a01）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

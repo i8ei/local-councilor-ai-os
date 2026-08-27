@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.ota.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ota.gunma.jp/site/shigikai/1062658.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.ota.gunma.jp/site/shigikai/1062658.html",
+          "observed_on": "https://www.city.ota.gunma.jp/site/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.ota.gunma.jp/site/shigikai/1062658.html",
+          "observed_on": "https://www.city.ota.gunma.jp/site/shigikai/1062658.html",
+          "sha256": "257c1c28d1a85c0417136a5bcb917737dc38e20184ead53b6fad4a17ee0a0707",
+          "fetched_at": "2026-08-27T13:39:08Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

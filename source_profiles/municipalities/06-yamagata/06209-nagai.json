@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.nagai.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.nagai.yamagata.jp/shigikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.nagai.yamagata.jp/shigikai/11525.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.nagai.yamagata.jp/shigikai/kaigiroku/index.html",
+          "url": "https://www.city.nagai.yamagata.jp/shigikai/11525.html",
           "observed_on": "https://www.city.nagai.yamagata.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T07:40:26Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.nagai.yamagata.jp/shigikai/11525.html",
+          "observed_on": "https://www.city.nagai.yamagata.jp/shigikai/11525.html",
+          "sha256": "54f859d6a116093d86279a0fb4b7e629ac57c20453ebc152965782094af72ac1",
+          "fetched_at": "2026-08-27T13:27:18Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.nagai.yamagata.jp/shigikai/kaigiroku/index.html (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

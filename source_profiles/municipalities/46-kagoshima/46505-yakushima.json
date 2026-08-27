@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.yakushima.kagoshima.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.yakushima.kagoshima.jp/soshiki/gikai/yakushimamachigikai/2/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.yakushima.kagoshima.jp/soshiki/gikai/yakushimamachigikai/2/index.html",
+          "observed_on": "https://www.town.yakushima.kagoshima.jp/soshiki/gikai/yakushimamachigikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.yakushima.kagoshima.jp/soshiki/gikai/yakushimamachigikai/2/index.html",
+          "observed_on": "https://www.town.yakushima.kagoshima.jp/soshiki/gikai/yakushimamachigikai/2/index.html",
+          "sha256": "1ccb84ca177df2c42fc31771b283ecb7d9adb4e77e78f125b5ce84cfc300eae7",
+          "fetched_at": "2026-08-27T14:11:50Z"
+        },
+        {
+          "url": "https://www.town.yakushima.kagoshima.jp/soshiki/gikai/yakushimamachigikai/2/217.html",
+          "observed_on": "https://www.town.yakushima.kagoshima.jp/soshiki/gikai/yakushimamachigikai/2/index.html",
+          "sha256": "ac1779606fa5875cd3ace73acc078169ddb7f9d6376c54ded92d562bb071f69c",
+          "fetched_at": "2026-08-27T14:11:50Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +59,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town.yakushima.kagoshima/reiki_menu.html (label: 屋久島町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.yakushima.kagoshima.jp/gyosei/zaiseijokyo/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yakushima.kagoshima.jp/gyosei/zaiseijokyo/index.html",
@@ -51,9 +75,15 @@
           "observed_on": "https://www.town.yakushima.kagoshima.jp/gyosei/zaiseijokyo/index.html",
           "sha256": "6a6e981ebb45af5cdfacf55e764d023647d6d626797bb984b340925dd3addcd9",
           "fetched_at": "2026-08-27T09:40:59Z"
+        },
+        {
+          "url": "https://www.town.yakushima.kagoshima.jp/material/files/group/6/2024_zaiseijyoukyousiryousyu.xlsx",
+          "observed_on": "https://www.town.yakushima.kagoshima.jp/gyosei/zaiseijokyo/1997.html",
+          "sha256": "8c1ebe3307075cf5b19d9012cd6df0cf6f798e6a683edf31151e476c1bfc547e",
+          "fetched_at": "2026-08-27T13:47:47Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.yakushima.kagoshima.jp/gyosei/zaiseijokyo/index.html (label: 財政状況) 入口 https://www.town.yakushima.kagoshima.jp/gyosei/zaiseijokyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yakushima.kagoshima.jp/gyosei/zaiseijokyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yakushima.kagoshima.jp/gyosei/zaiseijokyo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（2024_zaiseijyoukyousiryousyu.xlsx「令和6年度 財政状況資料集 (Excelファイル: 597.2KB)」, sha256:8c1ebe33）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

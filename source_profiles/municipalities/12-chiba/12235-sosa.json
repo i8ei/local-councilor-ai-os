@@ -56,11 +56,11 @@
       "notes": "Observed finance section at https://www.city.sosa.lg.jp/page/dir000091.html (label: 財政) 入口 https://www.city.sosa.lg.jp/page/dir000091.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sosa.lg.jp/page/dir000091.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sosa.lg.jp/page/dir000091.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sosa.lg.jp/page/dir000091.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.city.sosa.lg.jp/page/dir000091.html",
           "sha256": "6597b614e6f6f63988cca194afebca7911a30d560324e146188de32e5881137c",
           "fetched_at": "2026-08-27T10:24:15Z"
+        },
+        {
+          "url": "https://www.city.sosa.lg.jp/data/doc/1774513877_doc_123_0.pdf",
+          "observed_on": "https://www.city.sosa.lg.jp/page/page001568.html",
+          "sha256": "ea2ca29b322d5ebb43e39202ae7d24bc1db613830719c95c054ae19339876d71",
+          "fetched_at": "2026-08-27T13:32:58Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.sosa.lg.jp/page/dir000091.html (label: 財政) 入口 https://www.city.sosa.lg.jp/page/dir000091.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sosa.lg.jp/page/dir000091.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1774513877_doc_123_0.pdf「令和6年度財政状況資料集」, sha256:ea2ca29b）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

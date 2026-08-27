@@ -6,19 +6,36 @@
   "official_home_url": "http://www.joho.tagawa.fukuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.kensakusystem.jp/tagawa/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.joho.tagawa.fukuoka.jp/list00704.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www.kensakusystem.jp/tagawa/",
+          "url": "https://www.joho.tagawa.fukuoka.jp/list00704.html",
           "observed_on": "https://www.joho.tagawa.fukuoka.jp/default.html",
-          "fetched_at": "2026-08-27T04:33:35Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.joho.tagawa.fukuoka.jp/list00704.html",
+          "observed_on": "https://www.joho.tagawa.fukuoka.jp/list00704.html",
+          "sha256": "2ba32aabd6b04b3512a45f077fe7487089c1608fbed318bdf78305fabb4214d5",
+          "fetched_at": "2026-08-27T14:08:31Z"
+        },
+        {
+          "url": "https://www.joho.tagawa.fukuoka.jp/kiji00311432/index.html",
+          "observed_on": "https://www.joho.tagawa.fukuoka.jp/list00704.html",
+          "sha256": "7d5e080f6c901a0df432f3439feb5fe788370f022fcfe5dea9d9e28db0c5948a",
+          "fetched_at": "2026-08-27T14:08:32Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.kensakusystem.jp/tagawa/ (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -57,11 +74,11 @@
       "notes": "Observed budget link at https://www.joho.tagawa.fukuoka.jp/list00682.html (label: 予算) 入口 https://www.joho.tagawa.fukuoka.jp/list00682.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.joho.tagawa.fukuoka.jp/list00682.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.joho.tagawa.fukuoka.jp/list00683.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.joho.tagawa.fukuoka.jp/list00683.html",
@@ -73,9 +90,15 @@
           "observed_on": "https://www.joho.tagawa.fukuoka.jp/list00683.html",
           "sha256": "d7e4f25881dfec6f53e905c333fa539a08666bb33727f146745de4fd647e759c",
           "fetched_at": "2026-08-27T09:35:36Z"
+        },
+        {
+          "url": "https://www.joho.tagawa.fukuoka.jp/kiji00311310/3_11310_shiryou1_e35sl0vq.pdf",
+          "observed_on": "https://www.joho.tagawa.fukuoka.jp/list00732.html",
+          "sha256": "b9af83160a369dcb33f22f52065cb839d98da110fe32bb9be848ac3455f50c49",
+          "fetched_at": "2026-08-27T13:44:47Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.joho.tagawa.fukuoka.jp/list00683.html (label: 決算実績報告) 入口 https://www.joho.tagawa.fukuoka.jp/list00683.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.joho.tagawa.fukuoka.jp/list00683.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_11310_shiryou1_e35sl0vq.pdf「決算審査意見書（令和6年度） （PDF：1.79メガバイト）」, sha256:b9af8316）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

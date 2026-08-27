@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.otsuki.yamanashi.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html",
-      "verified_at": "2026-08-27T10:07:43Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.otsuki.yamanashi.jp/shigikai/index.html#shigikai_04",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html",
+          "url": "https://www.city.otsuki.yamanashi.jp/shigikai/index.html#shigikai_04",
           "observed_on": "http://www.city.otsuki.yamanashi.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T06:33:58Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html",
-          "sha256": "6938dded445ec6f450d5513ed19f67c3f605e8cda958ad28fcf726f02c2feca3",
-          "fetched_at": "2026-08-27T10:07:45Z"
+          "url": "https://www.city.otsuki.yamanashi.jp/shigikai/index.html#shigikai_04",
+          "observed_on": "https://www.city.otsuki.yamanashi.jp/shigikai/index.html#shigikai_04",
+          "sha256": "711d496524000f165c08fae6e23556882f02fff2021b1d073dc12b2ed8980311",
+          "fetched_at": "2026-08-27T13:45:52Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/otsuki/pg/index.html (label: 会議録の検索と閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

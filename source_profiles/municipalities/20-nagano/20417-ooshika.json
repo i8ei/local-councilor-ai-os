@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.ooshika.nagano.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.ooshika.nagano.jp/what-ooshikamura-gikai/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.ooshika.nagano.jp/what-ooshikamura-gikai/",
+          "observed_on": "https://www.vill.ooshika.nagano.jp/category/village_admin/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.ooshika.nagano.jp/what-ooshikamura-gikai/",
+          "observed_on": "https://www.vill.ooshika.nagano.jp/what-ooshikamura-gikai/",
+          "sha256": "0e54ac28c7a06dc9c8a5cda387f7b20d9c7a1797099e9fb0b274478252f14d30",
+          "fetched_at": "2026-08-27T13:47:52Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

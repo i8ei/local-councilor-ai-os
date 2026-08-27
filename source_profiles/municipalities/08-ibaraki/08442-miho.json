@@ -6,12 +6,27 @@
   "official_home_url": "http://www.vill.miho.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.miho.lg.jp/gyousei/mihomura-annai/gikai/gikaikaigiroku/page013511.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.miho.lg.jp/gyousei/mihomura-annai/gikai/gikaikaigiroku/page013511.html",
+          "observed_on": "https://www.vill.miho.lg.jp/gyousei/mihomura-annai/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.miho.lg.jp/gyousei/mihomura-annai/gikai/gikaikaigiroku/page013511.html",
+          "observed_on": "https://www.vill.miho.lg.jp/gyousei/mihomura-annai/gikai/gikaikaigiroku/page013511.html",
+          "sha256": "e400ae7bae531a4d97da4115c57c4e21513011f950f9ae16acb5f87bdb504432",
+          "fetched_at": "2026-08-27T13:31:12Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

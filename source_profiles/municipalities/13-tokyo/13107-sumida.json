@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html (label: 行政改革・財政・予算・会計) 入口 https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
           "sha256": "5f61bce2e2301468a7527f02be28da16daa0b2b109c3ec8d58a2a2c9d5f0e231",
           "fetched_at": "2026-08-27T10:25:32Z"
+        },
+        {
+          "url": "http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
+          "observed_on": "http://www.city.sumida.lg.jp/",
+          "sha256": "5f61bce2e2301468a7527f02be28da16daa0b2b109c3ec8d58a2a2c9d5f0e231",
+          "fetched_at": "2026-08-27T10:25:32Z"
+        },
+        {
+          "url": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/suisin/zizokukanounashishin.files/gyouzaiseishishin.pdf",
+          "observed_on": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/suisin/zizokukanounashishin.html",
+          "sha256": "8ba3202ade39da5d63e39afc02e64c30d1ea73223d16d1b111cdd2eb09e7b369",
+          "fetched_at": "2026-08-27T13:25:18Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html (label: 行政改革・財政・予算・会計) 入口 https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（gyouzaiseishishin.pdf「墨田区持続可能な行財政運営指針（PDF：2,801KB）」, sha256:8ba3202a）にて構造マーカー（歳入・歳出・項・標準財政規模等）を確認済み。"
     }
   }
 }

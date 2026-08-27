@@ -6,19 +6,37 @@
   "official_home_url": "http://www.town.tachiarai.fukuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.tachiarai.fukuoka.jp/list00612.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tachiarai.fukuoka.jp/list00612.html",
           "observed_on": "https://www.town.tachiarai.fukuoka.jp/list00817.html",
           "fetched_at": "2026-08-27T04:24:22Z"
+        },
+        {
+          "url": "https://www.town.tachiarai.fukuoka.jp/list00612.html",
+          "observed_on": "https://www.town.tachiarai.fukuoka.jp/list00612.html",
+          "sha256": "a55ba4fcc55a7b6dd1307a9f36b57c1c7bfd49be61a77c1962583f93a1a8fdc1",
+          "fetched_at": "2026-08-27T09:37:04Z"
+        },
+        {
+          "url": "https://www.town.tachiarai.fukuoka.jp/kiji0032196/index.html",
+          "observed_on": "https://www.town.tachiarai.fukuoka.jp/list00612.html",
+          "sha256": "2151e8e01ca929987ea79bb47dac1c2b04fef1f639fd7759a7295bd5ef6d54ef",
+          "fetched_at": "2026-08-27T14:08:39Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.tachiarai.fukuoka.jp/list00612.html (label: 会議録)"
+      "notes": "Observed council minutes index at https://www.town.tachiarai.fukuoka.jp/list00612.html (label: 会議録)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +81,11 @@
       "notes": "Observed budget link at http://www.town.tachiarai.fukuoka.jp/list00319.html (label: 予算) 入口 https://www.town.tachiarai.fukuoka.jp/list00319.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tachiarai.fukuoka.jp/list00319.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tachiarai.fukuoka.jp/list00320.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tachiarai.fukuoka.jp/list00320.html",
@@ -79,9 +97,21 @@
           "observed_on": "https://www.town.tachiarai.fukuoka.jp/list00320.html",
           "sha256": "96f8b22565a70e1593499ea0c993450197855ca82a8881fad5a650d263bb2d82",
           "fetched_at": "2026-08-27T09:37:13Z"
+        },
+        {
+          "url": "http://www.town.tachiarai.fukuoka.jp/list00320.html",
+          "observed_on": "http://www.town.tachiarai.fukuoka.jp/",
+          "sha256": "96f8b22565a70e1593499ea0c993450197855ca82a8881fad5a650d263bb2d82",
+          "fetched_at": "2026-08-27T09:37:13Z"
+        },
+        {
+          "url": "https://www.town.tachiarai.fukuoka.jp/kiji0031773/3_1773_2123_up_saoa63t7.pdf",
+          "observed_on": "https://www.town.tachiarai.fukuoka.jp/kiji0031773/index.html",
+          "sha256": "cef078e9225be328dfeac103baffb19603f2ed94bbc7104ef74967e59325515d",
+          "fetched_at": "2026-08-27T13:45:27Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.tachiarai.fukuoka.jp/list00320.html (label: 決算) 入口 https://www.town.tachiarai.fukuoka.jp/list00320.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tachiarai.fukuoka.jp/list00320.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_1773_2123_up_saoa63t7.pdf「令和6年度大刀洗町下水道事業会計決算書（PDF：1.41メガバイト）」, sha256:cef078e9）にて構造マーカー（款・項・節・決算額等）を確認済み。"
     }
   }
 }

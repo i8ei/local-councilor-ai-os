@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at http://www.city.inabe.mie.jp/shisei/reiki/index.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.inabe.mie.jp/gikai/1012517/1012521.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inabe.mie.jp/gikai/1012517/1012521.html",
@@ -57,9 +57,21 @@
           "url": "https://www.city.inabe.mie.jp/_res/projects/default_project/_page_/001/012/521/r7yosan-gikai1.pdf",
           "observed_on": "https://www.city.inabe.mie.jp/gikai/1012517/1012521.html",
           "fetched_at": "2026-08-27T11:03:44Z"
+        },
+        {
+          "url": "http://www.city.inabe.mie.jp/gikai/1012517/1012521.html",
+          "observed_on": "http://www.city.inabe.mie.jp/",
+          "sha256": "365878127177f26ca26ecf794a76943bb7a7de1f72c4201e7e01d467ab480666",
+          "fetched_at": "2026-08-27T09:48:46Z"
+        },
+        {
+          "url": "https://www.city.inabe.mie.jp/_res/projects/default_project/_page_/001/012/521/r4yosan-gikai.pdf",
+          "observed_on": "https://www.city.inabe.mie.jp/gikai/1012517/1012521.html",
+          "sha256": "a813d5801c138596176596a649ab373637785eed47dd25c5a3ab9c2357960168",
+          "fetched_at": "2026-08-27T13:39:03Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.inabe.mie.jp/gikai/1012517/1012521.html (label: 議会費の予算・決算) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（r4yosan-gikai.pdf「令和4年度 議会費 予算 （PDF 409.4KB）」, sha256:a813d580）にて構造マーカー（歳入・款・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

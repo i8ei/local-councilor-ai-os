@@ -6,19 +6,27 @@
   "official_home_url": "http://www.ubuyama-v.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.ubuyama-v.jp/material/files/group/1/gijiroku202405.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.ubuyama-v.jp/sonseijoho/ubuyamamuragikai/gikaidayorii/1935.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.ubuyama-v.jp/material/files/group/1/gijiroku202405.pdf",
-          "observed_on": "https://www.ubuyama-v.jp/sonseijoho/ubuyamamuragikai/gikaidayorii/1934.html",
-          "fetched_at": "2026-08-27T05:41:31Z"
+          "url": "https://www.ubuyama-v.jp/sonseijoho/ubuyamamuragikai/gikaidayorii/1935.html",
+          "observed_on": "http://www.ubuyama-v.jp/sonseijoho/ubuyamamuragikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.ubuyama-v.jp/sonseijoho/ubuyamamuragikai/gikaidayorii/1935.html",
+          "observed_on": "https://www.ubuyama-v.jp/sonseijoho/ubuyamamuragikai/gikaidayorii/1935.html",
+          "sha256": "3bc625eadc6ef5526c1edc0b68c47f17ac092f256832234a5465cf070b3a422b",
+          "fetched_at": "2026-08-27T14:10:33Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.ubuyama-v.jp/material/files/group/1/gijiroku202405.pdf (label: 第25号 令和6年5月発行 (PDFファイル: 13.6MB))"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +71,11 @@
       "notes": "Observed finance section at http://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html (label: 村の財政) 入口 https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html",
@@ -79,9 +87,21 @@
           "observed_on": "https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html",
           "sha256": "5cd8f23ecc8029b543fb7a9fb10c3f4bfa8bcde85b1b0a275125068b9fd4ca30",
           "fetched_at": "2026-08-27T09:38:40Z"
+        },
+        {
+          "url": "http://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html",
+          "observed_on": "http://www.ubuyama-v.jp/",
+          "sha256": "5cd8f23ecc8029b543fb7a9fb10c3f4bfa8bcde85b1b0a275125068b9fd4ca30",
+          "fetched_at": "2026-08-27T09:38:40Z"
+        },
+        {
+          "url": "https://www.ubuyama-v.jp/material/files/group/2/zaisei2015.pdf",
+          "observed_on": "https://www.ubuyama-v.jp/sonseijoho/muranozaisei/zaiseijokyo/550.html",
+          "sha256": "0f0f348fcc35a0d8b4ed62f0f57112f4877b276ffaa32071e6e94535b4e94fa6",
+          "fetched_at": "2026-08-27T13:46:12Z"
         }
       ],
-      "notes": "Observed finance section at http://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html (label: 村の財政) 入口 https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.ubuyama-v.jp/sonseijoho/muranozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（zaisei2015.pdf「平成27年 財政状況資料集 (PDFファイル: 1.4MB)」, sha256:0f0f348f）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

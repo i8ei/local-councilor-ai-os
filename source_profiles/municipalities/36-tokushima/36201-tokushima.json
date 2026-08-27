@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.tokushima.tokushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.tokushima.tokushima.jp/shigikai/kensaku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/kouho.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.tokushima.tokushima.jp/shigikai/kensaku.html",
+          "url": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/kouho.html",
           "observed_on": "http://www.city.tokushima.tokushima.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T06:37:57Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/kouho.html",
+          "observed_on": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/kouho.html",
+          "sha256": "8dda1a7d056395cd866c90632f778d13d2723b66d7148cf951b1f354f1e95d97",
+          "fetched_at": "2026-08-27T14:06:36Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.tokushima.tokushima.jp/shigikai/kensaku.html (label: 会議録の閲覧・検索) extraction probe read one document at http://voices.city.tokushima.tokushima.jp/ but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +44,11 @@
       "notes": "Observed regulations index at http://reiki.city.tokushima.tokushima.jp/ (label: 徳島市例規集（外部サイト）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html",
@@ -57,9 +65,15 @@
           "url": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.files/gov_r5.pdf",
           "observed_on": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html",
           "fetched_at": "2026-08-27T09:45:37Z"
+        },
+        {
+          "url": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/jjyuuyouyoubouR9.files/youboushoR8.pdf",
+          "observed_on": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/jjyuuyouyoubouR9.html",
+          "sha256": "c6307a83c0faf6d039a7c41cf23374ecb84f22b8446c7dea53898d6ba5bb6242",
+          "fetched_at": "2026-08-27T13:42:57Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html (label: 令和5年度に向けた国の予算及び施策に関する重要事項要望) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（youboushoR8.pdf「令和9年度に向けた国の予算及び施策に関する重要事項要望書（PDF形式：4,846KB）」, sha256:c6307a83）にて構造マーカー（項・節・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

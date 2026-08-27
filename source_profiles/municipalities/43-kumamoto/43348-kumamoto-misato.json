@@ -66,11 +66,11 @@
       "notes": "Observed finance section at https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html (label: 行財政) 入口 https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html",
@@ -82,9 +82,15 @@
           "observed_on": "https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html",
           "sha256": "d7e7c25720b2a6578e4581921673a7ab151fb0655bb61aa824d23c1971641ec6",
           "fetched_at": "2026-08-27T09:38:14Z"
+        },
+        {
+          "url": "https://www.town.kumamoto-misato.lg.jp/material/files/group/6/kannisuidou6.pdf",
+          "observed_on": "https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/3508.html",
+          "sha256": "7564fc9c1c60fc980909abd2341d4aff93e4064b03b750c72324e5c0820f9b78",
+          "fetched_at": "2026-08-27T13:46:02Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html (label: 行財政) 入口 https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumamoto-misato.lg.jp/gyosei/gyozaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kannisuidou6.pdf「令和6年度 美里町簡易水道事業会計決算書(PDFファイル:980.2KB)」, sha256:7564fc9c）にて構造マーカー（歳入・款・項・節等）を確認済み。"
     }
   }
 }

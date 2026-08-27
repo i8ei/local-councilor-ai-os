@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.town.nagara.chiba.jp/site/gikai/15135.html (label: 常任委員会の開催について（令和８年度予算審査）) 入口 http://www.town.nagara.chiba.jp/site/gikai/15135.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nagara.chiba.jp/life/4/21/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nagara.chiba.jp/life/4/21/",
@@ -85,9 +85,15 @@
           "observed_on": "http://www.town.nagara.chiba.jp/life/4/21/",
           "sha256": "f03b6a40a36b427c0dc8e581867cbf2ebbf095fdd9f35058dbda8d0ecd25a9e7",
           "fetched_at": "2026-08-27T10:25:31Z"
+        },
+        {
+          "url": "http://www.town.nagara.chiba.jp/uploaded/attachment/6740.xlsx",
+          "observed_on": "http://www.town.nagara.chiba.jp/soshiki/2/51.html",
+          "sha256": "1ce66e84395d154ce16badb56b6a5f7c965b12802488fa5395b19ffec3a19161",
+          "fetched_at": "2026-08-27T13:33:15Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.nagara.chiba.jp/life/4/21/ (label: 行財政) 入口 http://www.town.nagara.chiba.jp/life/4/21/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6740.xlsx「令和6年度 財政状況資料集 [Excelファイル／546KB]」, sha256:1ce66e84）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

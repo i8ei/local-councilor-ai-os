@@ -6,25 +6,27 @@
   "official_home_url": "https://www.city.tsuruga.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.tsuruga.fukui.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T10:06:24Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.tsuruga.lg.jp/site/gikai/3037.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.tsuruga.fukui.dbsr.jp/index.php/",
+          "url": "https://www.city.tsuruga.lg.jp/site/gikai/3037.html",
           "observed_on": "https://www.city.tsuruga.lg.jp/site/gikai",
-          "fetched_at": "2026-08-27T06:22:38Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://www.city.tsuruga.fukui.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.tsuruga.fukui.dbsr.jp/index.php/",
-          "sha256": "96e98e98658b51bf79ad19b42bd69fdc412e6a453b3809f292d8733fac0d3147",
-          "fetched_at": "2026-08-27T10:06:25Z"
+          "url": "https://www.city.tsuruga.lg.jp/site/gikai/3037.html",
+          "observed_on": "https://www.city.tsuruga.lg.jp/site/gikai/3037.html",
+          "sha256": "d1fdd0a228c4b69e29b04c290d904455c49c2874c672db04813de8b465e4227b",
+          "fetched_at": "2026-08-27T13:45:24Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.tsuruga.fukui.dbsr.jp/index.php/ (label: 会議録検索 ＜外部リンク＞) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

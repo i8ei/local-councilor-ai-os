@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.sendai.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.sendai.miyagi.dbsr.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.gikai.city.sendai.jp/schedule/meeting_agenda.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.sendai.miyagi.dbsr.jp/",
-          "observed_on": "https://www.gikai.city.sendai.jp/",
-          "fetched_at": "2026-08-27T07:16:42Z"
+          "url": "https://www.gikai.city.sendai.jp/schedule/meeting_agenda.html",
+          "observed_on": "https://www.gikai.city.sendai.jp/schedule/previous_meeting/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.gikai.city.sendai.jp/schedule/meeting_agenda.html",
+          "observed_on": "https://www.gikai.city.sendai.jp/schedule/meeting_agenda.html",
+          "sha256": "b8ac5f142cfa85d77a86887ab9594172ab55470016906627075630d408fce333",
+          "fetched_at": "2026-08-27T13:26:37Z"
+        },
+        {
+          "url": "https://www.gikai.city.sendai.jp/schedule/previous_committee/commit_2026/iinkai_r8_6.html",
+          "observed_on": "https://www.gikai.city.sendai.jp/schedule/meeting_agenda.html",
+          "sha256": "dab4eacaa8758c779ebb6697f06507b657b59924b2694969ef437193bb45f916",
+          "fetched_at": "2026-08-27T13:35:38Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.sendai.miyagi.dbsr.jp/ (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

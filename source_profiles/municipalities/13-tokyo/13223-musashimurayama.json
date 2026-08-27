@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.musashimurayama.lg.jp/shisei/1004404/index.html (label: オンラインサービス（例規・申請等）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.musashimurayama.lg.jp/shisei/zaisei/1022367/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.musashimurayama.lg.jp/shisei/zaisei/1022367/index.html",
@@ -58,9 +58,21 @@
           "observed_on": "https://www.city.musashimurayama.lg.jp/shisei/zaisei/1022367/index.html",
           "sha256": "fa18521a9a2ef01988202c66a449a73ec3fa5f2809e3303c1ecab94dec5a7348",
           "fetched_at": "2026-08-27T10:26:11Z"
+        },
+        {
+          "url": "http://www.city.musashimurayama.lg.jp/shisei/zaisei/1022367/index.html",
+          "observed_on": "http://www.city.musashimurayama.lg.jp/",
+          "sha256": "fa18521a9a2ef01988202c66a449a73ec3fa5f2809e3303c1ecab94dec5a7348",
+          "fetched_at": "2026-08-27T10:26:11Z"
+        },
+        {
+          "url": "https://www.city.musashimurayama.lg.jp/_res/projects/default_project/_page_/001/021/941/00_ikkatufile.pdf",
+          "observed_on": "https://www.city.musashimurayama.lg.jp/shisei/zaisei/1022367/1021676/1021941.html",
+          "sha256": "08861a8a8dfac662986a1163302802e56534b9a1ec9476e58e9d5f4450209c5a",
+          "fetched_at": "2026-08-27T13:34:07Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.musashimurayama.lg.jp/shisei/zaisei/1022367/index.html (label: 予算・決算) 入口 https://www.city.musashimurayama.lg.jp/shisei/zaisei/1022367/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（00_ikkatufile.pdf「令和8年度一般会計予算書（当初予算） （PDF 4.5MB）」, sha256:08861a8a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

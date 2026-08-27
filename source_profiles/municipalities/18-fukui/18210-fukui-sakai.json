@@ -50,11 +50,11 @@
       "notes": "Observed budget link at https://www.city.fukui-sakai.lg.jp/shisei/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.fukui-sakai.lg.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukui-sakai.lg.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukui-sakai.lg.jp/shisei/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukui-sakai.lg.jp/shisei/zaisei/kessan/index.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.fukui-sakai.lg.jp/shisei/zaisei/kessan/index.html",
           "sha256": "bc99a5ee86f7911a126be757c6eda29620d2ce82bf2ed99508d9cc6a1c687019",
           "fetched_at": "2026-08-27T10:06:45Z"
+        },
+        {
+          "url": "https://www.city.fukui-sakai.lg.jp/zaisei/shisei/zaisei/kessan/documents/kessankahdor6.pdf",
+          "observed_on": "https://www.city.fukui-sakai.lg.jp/zaisei/shisei/zaisei/kessan/card.html",
+          "sha256": "b795ebe376ad6a3786e613341e4c30bf1fae7361c4bc361c9c24a4e916508d28",
+          "fetched_at": "2026-08-27T13:36:09Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.fukui-sakai.lg.jp/shisei/zaisei/kessan/index.html (label: 決算・財務諸表) 入口 https://www.city.fukui-sakai.lg.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukui-sakai.lg.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessankahdor6.pdf「令和6年度決算カード（PDF：238KB）」, sha256:b795ebe3）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

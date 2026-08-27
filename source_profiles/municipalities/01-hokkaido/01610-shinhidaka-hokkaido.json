@@ -6,12 +6,27 @@
   "official_home_url": "https://www.shinhidaka-hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.shinhidaka-hokkaido.jp/gikai/detail/00000185.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.shinhidaka-hokkaido.jp/gikai/detail/00000185.html",
+          "observed_on": "https://www.shinhidaka-hokkaido.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.shinhidaka-hokkaido.jp/gikai/detail/00000185.html",
+          "observed_on": "https://www.shinhidaka-hokkaido.jp/gikai/detail/00000185.html",
+          "sha256": "151a5a72b24cd4adf3527c40076bcb2965a57dd2a59391c45a0c81f2e464b73b",
+          "fetched_at": "2026-08-27T13:25:21Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

@@ -55,11 +55,11 @@
       "notes": "Observed budget link at http://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html (label: 予算・決算・財政・市有財産) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
@@ -76,9 +76,21 @@
           "url": "https://www.city.kagoshima-izumi.lg.jp/files/SpcDocumentDetail/24/SpcDocumentDetail_24079_file.pdf",
           "observed_on": "https://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
           "fetched_at": "2026-08-27T10:57:49Z"
+        },
+        {
+          "url": "http://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
+          "observed_on": "http://www.city.kagoshima-izumi.lg.jp/",
+          "sha256": "b9fce276f563eaed7337c4d81cf38e829160be4c2f032d8de83e42d33f58b616",
+          "fetched_at": "2026-08-27T09:40:18Z"
+        },
+        {
+          "url": "https://www.city.kagoshima-izumi.lg.jp/files/SpcDocumentDetail/24/SpcDocumentDetail_24079_file.pdf",
+          "observed_on": "https://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html",
+          "sha256": "ef6db72244ba51065c8e1c4463a6e8a4de0fc8bed299f960c5f9565250ef4369",
+          "fetched_at": "2026-08-27T10:57:50Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kagoshima-izumi.lg.jp/shisei/yosan/index.html (label: 予算・決算・財政・市有財産) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（SpcDocumentDetail_24079_file.pdf「平成28年度決算報告」, sha256:ef6db722）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

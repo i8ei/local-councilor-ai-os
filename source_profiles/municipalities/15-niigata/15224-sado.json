@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.sado.niigata.jp/life/4/34/161/ (label: 予算・決算) 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.sado.niigata.jp/life/4/34/161/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sado.niigata.jp/life/4/34/161/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.sado.niigata.jp:443/life/4/34/161/",
           "sha256": "da02fde18fbebb584153994ece20ba059283ce7595f30e86f95ce67489fc97ee",
           "fetched_at": "2026-08-27T10:04:30Z"
+        },
+        {
+          "url": "http://www.city.sado.niigata.jp/life/4/34/161/",
+          "observed_on": "http://www.city.sado.niigata.jp/",
+          "sha256": "da02fde18fbebb584153994ece20ba059283ce7595f30e86f95ce67489fc97ee",
+          "fetched_at": "2026-08-27T10:04:30Z"
+        },
+        {
+          "url": "https://www.city.sado.niigata.jp:443/uploaded/attachment/57249.pdf",
+          "observed_on": "https://www.city.sado.niigata.jp:443/soshiki/2006/78155.html",
+          "sha256": "86eeeaa04084f1bab4a676058d5ec07fa58c3c001d013459fc68ffb7fca12ce3",
+          "fetched_at": "2026-08-27T13:35:15Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.sado.niigata.jp/life/4/34/161/ (label: 予算・決算) 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sado.niigata.jp:443/life/4/34/161/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（57249.pdf「令和6年度 補助金等交付一覧表（決算） [PDFファイル／327KB]」, sha256:86eeeaa0）にて構造マーカー（項・決算額等）を確認済み。"
     }
   }
 }

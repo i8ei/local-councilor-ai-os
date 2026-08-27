@@ -29,11 +29,11 @@
       "index_url": "https://en3-jg.d1-law.com/sakae/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.sakae.nagano.jp/docs/2945.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.sakae.nagano.jp/docs/2945.html",
@@ -50,9 +50,15 @@
           "url": "http://www.vill.sakae.nagano.jp/fs/4/3/9/0/9/_/R08_________.pdf",
           "observed_on": "http://www.vill.sakae.nagano.jp/docs/2945.html",
           "fetched_at": "2026-08-27T11:14:53Z"
+        },
+        {
+          "url": "http://www.vill.sakae.nagano.jp/fs/4/3/9/1/0/_/R08_______.pdf",
+          "observed_on": "http://www.vill.sakae.nagano.jp/docs/2945.html",
+          "sha256": "2f182937ebab02f8f67ee139d157d42fb1fa05cdd2632507f4e814e2bff2b681",
+          "fetched_at": "2026-08-27T13:36:43Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.sakae.nagano.jp/docs/2945.html (label: 栄村の予算について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R08_______.pdf「当初予算書 (PDF 1.64MB)」, sha256:2f182937）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

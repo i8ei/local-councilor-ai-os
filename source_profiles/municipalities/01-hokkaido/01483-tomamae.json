@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.tomamae.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.tomamae.lg.jp/section/kikakushinko/o9flkl0000000334.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.tomamae.lg.jp/section/kikakushinko/o9flkl0000000334.html",
+          "observed_on": "http://www.town.tomamae.lg.jp/section/kikakushinko/policy-budget-summary.html?cp=lg6iib0000000k3r&cs=cm04",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.tomamae.lg.jp/section/kikakushinko/o9flkl0000000334.html",
+          "observed_on": "http://www.town.tomamae.lg.jp/section/kikakushinko/o9flkl0000000334.html",
+          "sha256": "081034025004b0cd73b5aed2b59e6f39c9afb19499bb0d360a185d37d489c739",
+          "fetched_at": "2026-08-27T13:24:42Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

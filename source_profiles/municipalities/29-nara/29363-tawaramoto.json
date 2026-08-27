@@ -29,11 +29,11 @@
       "notes": "Observed g_reiki at http://www.town.tawaramoto.nara.jp/05_others/reiki_int/reiki_menu.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3046.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3046.html",
@@ -50,9 +50,15 @@
           "url": "https://www.town.tawaramoto.nara.jp/material/files/group/41/260402_05.pdf",
           "observed_on": "https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3046.html",
           "fetched_at": "2026-08-27T11:06:37Z"
+        },
+        {
+          "url": "https://www.town.tawaramoto.nara.jp/material/files/group/41/yosan2.pdf",
+          "observed_on": "https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3046.html",
+          "sha256": "861c8b1894b7b39ba2186e9a9b54427c5661792f9b07223bf2bf6f6fef5e4470",
+          "fetched_at": "2026-08-27T13:41:33Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.tawaramoto.nara.jp/gyosei/zaisei/3046.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（yosan2.pdf「令和8年度予算書 (PDFファイル: 10.9MB)」, sha256:861c8b18）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

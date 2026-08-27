@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.oyamazaki.kyoto.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.oyamazaki.kyoto.jp/annai/gikaijimukyoku/gikaikakari/gikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.oyamazaki.kyoto.jp/annai/gikaijimukyoku/gikaikakari/gikaidayori/index.html",
+          "observed_on": "http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/gikai/2343.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "http://www.town.oyamazaki.kyoto.jp/annai/gikaijimukyoku/gikaikakari/gikaidayori/index.html",
+          "observed_on": "http://www.town.oyamazaki.kyoto.jp/annai/gikaijimukyoku/gikaikakari/gikaidayori/index.html",
+          "sha256": "706348cc1db65b7bc4bd30e256495059779fede11cbd441eeb071cdad549ba53",
+          "fetched_at": "2026-08-27T14:01:59Z"
+        },
+        {
+          "url": "https://www.town.oyamazaki.kyoto.jp/annai/gikaijimukyoku/gikaikakari/gikaidayori/r8_1/11482.html",
+          "observed_on": "http://www.town.oyamazaki.kyoto.jp/annai/gikaijimukyoku/gikaikakari/gikaidayori/index.html",
+          "sha256": "2f1d45a7c427e654e03611f7910a3ec0509a8cc96eee040ea3fce1bbc93b2aea",
+          "fetched_at": "2026-08-27T14:02:03Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +53,11 @@
       "notes": "Observed regulations index at http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/2353.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html",
@@ -45,9 +69,21 @@
           "observed_on": "https://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html",
           "sha256": "65e0686bc6e81ceb1ea9ec931d73548f169dc71ca2b549f774610a62fd725876",
           "fetched_at": "2026-08-27T09:50:12Z"
+        },
+        {
+          "url": "http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html",
+          "observed_on": "http://www.town.oyamazaki.kyoto.jp/",
+          "sha256": "65e0686bc6e81ceb1ea9ec931d73548f169dc71ca2b549f774610a62fd725876",
+          "fetched_at": "2026-08-27T09:50:12Z"
+        },
+        {
+          "url": "https://www.town.oyamazaki.kyoto.jp/material/files/group/23/R8tousyo_gennann.pdf",
+          "observed_on": "https://www.town.oyamazaki.kyoto.jp/annai/kikakuzaisei/somuka_zaiseikakari/zaisei/yosan/11197.html",
+          "sha256": "e374d29401ecb84e00279be0fb4dcc9fd3546edd68ab19e643bdd60f98f9d5e8",
+          "fetched_at": "2026-08-27T13:39:58Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html (label: 財政) 入口 https://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.oyamazaki.kyoto.jp/cyoseijyohomachinosyokai/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyo_gennann.pdf「当初予算書 (PDFファイル: 416.6KB)」, sha256:e374d294）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

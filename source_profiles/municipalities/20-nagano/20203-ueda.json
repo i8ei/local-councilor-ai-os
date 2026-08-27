@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.ueda.nagano.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/ueda/SpTop.html",
-      "verified_at": "2026-08-27T10:09:01Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.ueda.nagano.jp/site/gikai/2300.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/ueda/SpTop.html",
+          "url": "https://www.city.ueda.nagano.jp/site/gikai/2300.html",
           "observed_on": "http://www.city.ueda.nagano.jp/adv/ba.php?id=290",
-          "fetched_at": "2026-08-27T06:55:04Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/ueda/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/ueda/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:09:02Z"
+          "url": "https://www.city.ueda.nagano.jp/site/gikai/2300.html",
+          "observed_on": "https://www.city.ueda.nagano.jp/site/gikai/2300.html",
+          "sha256": "cd0244b13313664a5a2d0e1da54f1f8c58d675a99f86db1a19bf6d723c51c778",
+          "fetched_at": "2026-08-27T13:46:25Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ueda/SpTop.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

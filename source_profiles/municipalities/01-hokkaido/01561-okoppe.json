@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.okoppe.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.okoppe.lg.jp/cms/section/gikai/nbm3tm0000000ndt.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.okoppe.lg.jp/cms/section/gikai/nbm3tm0000000ndt.html",
+          "observed_on": "https://www.town.okoppe.lg.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.okoppe.lg.jp/cms/section/gikai/nbm3tm0000000ndt.html",
+          "observed_on": "https://www.town.okoppe.lg.jp/cms/section/gikai/nbm3tm0000000ndt.html",
+          "sha256": "0d4c1d6c4a5a24f0854dfa7f2418e4933c2f92a94dcd68ce0b90f91d08240921",
+          "fetched_at": "2026-08-27T13:25:05Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

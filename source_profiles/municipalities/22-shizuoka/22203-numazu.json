@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.numazu.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.numazu.shizuoka.jp/shisei/g-shigiki/g-sigiki/index.htm",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.numazu.shizuoka.jp/shisei/g-shigiki/g-sigiki/index.htm",
+          "observed_on": "http://www.city.numazu.shizuoka.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.numazu.shizuoka.jp/shisei/g-shigiki/g-sigiki/index.htm",
+          "observed_on": "https://www.city.numazu.shizuoka.jp/shisei/g-shigiki/g-sigiki/index.htm",
+          "sha256": "5369c886601aefa4ca7950c8eaad726ede22b046ac3adba67d7b4c8ca9ad4a09",
+          "fetched_at": "2026-08-27T13:49:32Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

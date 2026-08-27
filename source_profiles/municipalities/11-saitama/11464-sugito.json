@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.town.sugito.lg.jp/life/5/19/95/ (label: 予算) 入口 https://www.town.sugito.lg.jp/life/5/19/95/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.sugito.lg.jp/life/5/19/96/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.sugito.lg.jp/life/5/19/96/",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.town.sugito.lg.jp/life/5/19/96/",
           "sha256": "6927f1336735b45e62a8738f6add964ff66c607552154f259603b3a26ed400b7",
           "fetched_at": "2026-08-27T10:22:35Z"
+        },
+        {
+          "url": "http://www.town.sugito.lg.jp/life/5/19/96/",
+          "observed_on": "http://www.town.sugito.lg.jp/",
+          "sha256": "6927f1336735b45e62a8738f6add964ff66c607552154f259603b3a26ed400b7",
+          "fetched_at": "2026-08-27T10:22:35Z"
+        },
+        {
+          "url": "https://www.town.sugito.lg.jp/uploaded/attachment/1417.pdf",
+          "observed_on": "https://www.town.sugito.lg.jp/page/1094.html",
+          "sha256": "5311cc6e9bc6eaee517eafbcdbb50b290a40d3a425b1bb5b1a68bc8f4022e8fa",
+          "fetched_at": "2026-08-27T13:32:29Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.sugito.lg.jp/life/5/19/96/ (label: 決算) 入口 https://www.town.sugito.lg.jp/life/5/19/96/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（1417.pdf「令和元年度決算書[PDFファイル／3.12MB]」, sha256:5311cc6e）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

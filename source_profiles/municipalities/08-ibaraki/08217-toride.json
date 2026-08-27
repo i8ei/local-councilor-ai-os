@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.toride.ibaraki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://ami-search.amivoice.com/toride/usr/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "http://www.city.toride.ibaraki.jp/gikai/shise/shicho/shigikai/kaisaijokyo/iinkai_haifusiryo.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ami-search.amivoice.com/toride/usr/",
+          "url": "http://www.city.toride.ibaraki.jp/gikai/shise/shicho/shigikai/kaisaijokyo/iinkai_haifusiryo.html",
           "observed_on": "http://www.city.toride.ibaraki.jp/shise/index.html",
-          "fetched_at": "2026-08-27T06:02:34Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.toride.ibaraki.jp/gikai/shise/shicho/shigikai/kaisaijokyo/iinkai_haifusiryo.html",
+          "observed_on": "http://www.city.toride.ibaraki.jp/gikai/shise/shicho/shigikai/kaisaijokyo/iinkai_haifusiryo.html",
+          "sha256": "f8f02be0b2074465b82a074554f0082fe4cd39ce55e85fa237a538ef93d28b0a",
+          "fetched_at": "2026-08-27T13:29:09Z"
         }
       ],
-      "notes": "Observed council minutes index at http://ami-search.amivoice.com/toride/usr/ (label: 取手市議会会議録検索・閲覧システム)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

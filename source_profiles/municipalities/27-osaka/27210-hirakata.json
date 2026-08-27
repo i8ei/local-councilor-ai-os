@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.hirakata.osaka.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.hirakata.osaka.jp/0000031683.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.hirakata.osaka.jp/0000031683.html",
+          "observed_on": "https://www.city.hirakata.osaka.jp/0000011280.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.hirakata.osaka.jp/0000031683.html",
+          "observed_on": "https://www.city.hirakata.osaka.jp/0000031683.html",
+          "sha256": "d79f728d2283ec8e066b17129bbeb54044e4f6e3d63754b3deaa116c0e6b8e8d",
+          "fetched_at": "2026-08-27T14:02:10Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +44,11 @@
       "notes": "Observed regulations index at https://www.city.hirakata.osaka.jp/0000000472.html (label: 枚⽅市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html",
@@ -45,9 +60,15 @@
           "observed_on": "https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html",
           "sha256": "472b254259c3b618dc8e81be491e6aac5fc22b983abab9387c8aedad32787445",
           "fetched_at": "2026-08-27T09:50:32Z"
+        },
+        {
+          "url": "https://www.city.hirakata.osaka.jp/cmsfiles/contents/0000051/51662/R7sainyuu.pdf",
+          "observed_on": "https://www.city.hirakata.osaka.jp/0000051662.html",
+          "sha256": "a5af08d1330be8d0d6ba704c2496c2df0136d127586d4af1cef8e9b7b9daf3e6",
+          "fetched_at": "2026-08-27T13:40:34Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html (label: 予算・決算) 入口 https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.hirakata.osaka.jp/category/6-2-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7sainyuu.pdf「一般会計歳入 (PDF形式、11.16MB)」, sha256:a5af08d1）にて構造マーカー（歳入・款・項・節等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

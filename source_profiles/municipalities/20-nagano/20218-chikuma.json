@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.chikuma.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/chikuma/SpTop.html",
-      "verified_at": "2026-08-27T10:09:42Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.chikuma.lg.jp/soshiki/gikai_jimukyoku/chikumashigikai/1956.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/chikuma/SpTop.html",
+          "url": "https://www.city.chikuma.lg.jp/soshiki/gikai_jimukyoku/chikumashigikai/1956.html",
           "observed_on": "http://www.city.chikuma.lg.jp/",
-          "fetched_at": "2026-08-27T07:00:11Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/chikuma/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/chikuma/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:09:42Z"
+          "url": "https://www.city.chikuma.lg.jp/soshiki/gikai_jimukyoku/chikumashigikai/1956.html",
+          "observed_on": "https://www.city.chikuma.lg.jp/soshiki/gikai_jimukyoku/chikumashigikai/1956.html",
+          "sha256": "5bbe35ca4f052e2bfd8808fe66de70861037c549629dd783e5d51aef3857e604",
+          "fetched_at": "2026-08-27T13:46:56Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/chikuma/SpTop.html (label: 議会会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

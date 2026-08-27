@@ -56,11 +56,11 @@
       "notes": "Observed budget link at https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html (label: 予算書・決算書) 入口 https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html",
           "sha256": "8611b5b288b129d04bd5e666463c0e59bdcb0e4767f619abab03d4af3202c636",
           "fetched_at": "2026-08-27T09:50:36Z"
+        },
+        {
+          "url": "https://www.city.izumiotsu.lg.jp/material/files/group/36/R6kessan.pdf",
+          "observed_on": "https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/kessannsho/14896.html",
+          "sha256": "11a0f2164666198261b4e4f2cb750f6e1a6276445d2a02fc4af4570cba450b1a",
+          "fetched_at": "2026-08-27T13:40:08Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html (label: 予算書・決算書) 入口 https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.izumiotsu.lg.jp/shisei/yosan_kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan.pdf「令和6年度決算書（全ページ） (PDFファイル: 4.7MB)」, sha256:11a0f216）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

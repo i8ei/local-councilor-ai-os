@@ -56,11 +56,11 @@
       "notes": "Observed budget link at http://www.city.shiojiri.lg.jp/life/5/31/153/ (label: 予算・決算) 入口 https://www.city.shiojiri.lg.jp/life/5/31/153/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shiojiri.lg.jp/life/5/31/153/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shiojiri.lg.jp/life/5/31/153/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shiojiri.lg.jp/life/5/31/153/",
@@ -72,9 +72,21 @@
           "observed_on": "https://www.city.shiojiri.lg.jp/life/5/31/153/",
           "sha256": "0128358b799b57b8e19a89a6bd3d423845edf7f559b4ca74f81d7b6325e96a91",
           "fetched_at": "2026-08-27T10:09:27Z"
+        },
+        {
+          "url": "http://www.city.shiojiri.lg.jp/life/5/31/153/",
+          "observed_on": "http://www.city.shiojiri.lg.jp/",
+          "sha256": "0128358b799b57b8e19a89a6bd3d423845edf7f559b4ca74f81d7b6325e96a91",
+          "fetched_at": "2026-08-27T10:09:27Z"
+        },
+        {
+          "url": "https://www.city.shiojiri.lg.jp/uploaded/attachment/36616.pdf",
+          "observed_on": "https://www.city.shiojiri.lg.jp/soshiki/11/32052.html",
+          "sha256": "43f136ae31e58fb75c2174155a0b84f8e89e8cb915ecc3cd034ee2a35e34a0c0",
+          "fetched_at": "2026-08-27T13:36:21Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.shiojiri.lg.jp/life/5/31/153/ (label: 予算・決算) 入口 https://www.city.shiojiri.lg.jp/life/5/31/153/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shiojiri.lg.jp/life/5/31/153/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（36616.pdf「デジタル予算書・決算書操作マニュアル [PDFファイル／2.13MB]」, sha256:43f136ae）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

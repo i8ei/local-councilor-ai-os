@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.nishio.aichi.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "http://www.city.nishio.aichi.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T10:15:11Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.nishio.aichi.jp/gikai/gaiyo/1004331.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.nishio.aichi.dbsr.jp/index.php/",
+          "url": "https://www.city.nishio.aichi.jp/gikai/gaiyo/1004331.html",
           "observed_on": "http://www.city.nishio.aichi.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T08:00:34Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://www.city.nishio.aichi.dbsr.jp/index.php/",
-          "observed_on": "http://www.city.nishio.aichi.dbsr.jp/index.php/",
-          "sha256": "a3ffe4bebe4a9bddd10b94c2415bb531f6135291566b0ec414069ebc4d2a0a38",
-          "fetched_at": "2026-08-27T10:15:17Z"
+          "url": "https://www.city.nishio.aichi.jp/gikai/gaiyo/1004331.html",
+          "observed_on": "https://www.city.nishio.aichi.jp/gikai/gaiyo/1004331.html",
+          "sha256": "fc628ebb12f1a14f22f6b68e290fd14885697f181db466dfa2c2fa66a516439c",
+          "fetched_at": "2026-08-27T13:50:17Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.nishio.aichi.dbsr.jp/index.php/ (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

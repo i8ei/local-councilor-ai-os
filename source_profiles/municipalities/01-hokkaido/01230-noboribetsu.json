@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.noboribetsu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.noboribetsu.lg.jp/docs/2025050900078/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.noboribetsu.lg.jp/docs/2025050900078/",
+          "observed_on": "https://www.city.noboribetsu.lg.jp/soshiki/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.noboribetsu.lg.jp/docs/2025050900078/",
+          "observed_on": "https://www.city.noboribetsu.lg.jp/docs/2025050900078/",
+          "sha256": "79eeb77438aea55c8b915c8fb48adb255086a6fe911e5b8ada686dc41253c1e1",
+          "fetched_at": "2026-08-27T13:23:27Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

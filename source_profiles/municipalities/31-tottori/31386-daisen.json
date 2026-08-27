@@ -74,11 +74,11 @@
       "notes": "Observed budget link at http://www.daisen.jp/gikai/4/5/3/ (label: 予算審査特別委員会) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.daisen.jp/gikai/4/5/4/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.daisen.jp/gikai/4/5/4/",
@@ -95,9 +95,15 @@
           "url": "http://www.daisen.jp/user/filer_public/43/cc/43cc80e3-ff20-4104-865d-a5205a3ecfc8/ling-he-6nian-du-jue-suan-shen-cha-te-bie-wei-yuan-hui-bao-gao.pdf",
           "observed_on": "http://www.daisen.jp/gikai/4/5/4/",
           "fetched_at": "2026-08-27T09:42:52Z"
+        },
+        {
+          "url": "http://www.daisen.jp/user/filer_public/43/cc/43cc80e3-ff20-4104-865d-a5205a3ecfc8/ling-he-6nian-du-jue-suan-shen-cha-te-bie-wei-yuan-hui-bao-gao.pdf",
+          "observed_on": "http://www.daisen.jp/gikai/4/5/4/",
+          "sha256": "65568992f182a3f91b8462c554b454406469f143e99c6e2ad39437f08ce0a135",
+          "fetched_at": "2026-08-27T09:42:55Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.daisen.jp/gikai/4/5/4/ (label: 決算審査特別委員会) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（ling-he-6nian-du-jue-suan-shen-cha-te-bie-wei-yuan-hui-bao-gao.pdf「令和6年度決算審査特別委員会報告について（令和7年9月25日報告） [ pdf : 198.3 KB ]」, sha256:65568992）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

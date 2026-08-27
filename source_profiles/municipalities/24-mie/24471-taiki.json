@@ -50,11 +50,11 @@
       "notes": "Observed finance section at https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html (label: 財政) 入口 https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "0a6d7dc27cde652b3bb30023954a1553a4f30e38b92e41403e9254aa46f041a1",
           "fetched_at": "2026-08-27T09:49:50Z"
+        },
+        {
+          "url": "https://www.town.taiki.mie.jp/material/files/group/4/R6zaiseijoukyou.pdf",
+          "observed_on": "https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/s_kessann/964.html",
+          "sha256": "2641712741f29e9440129c648690350abfbff8b65c6295ff0bfeaf31e38ddd6d",
+          "fetched_at": "2026-08-27T13:39:18Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html (label: 財政) 入口 https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taiki.mie.jp/gyoseijoho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaiseijoukyou.pdf「令和6年度大紀町財政状況資料集 (PDFファイル: 558.8KB)」, sha256:26417127）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

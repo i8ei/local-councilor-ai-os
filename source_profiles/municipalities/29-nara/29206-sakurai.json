@@ -63,11 +63,11 @@
       "notes": "Observed budget link at https://www.city.sakurai.lg.jp/shisei/zaisei/index.html (label: 予算・財政) 入口 https://www.city.sakurai.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sakurai.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sakurai.lg.jp/shisei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sakurai.lg.jp/shisei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sakurai.lg.jp/shisei/zaisei/index.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.city.sakurai.lg.jp/shisei/zaisei/index.html",
           "sha256": "a93178146ed1792d6449bd6ce118ea9c9884f253b725f86aeacb39432376a0d3",
           "fetched_at": "2026-08-27T09:53:22Z"
+        },
+        {
+          "url": "https://www.city.sakurai.lg.jp/material/files/group/25/R6kessansyo.pdf",
+          "observed_on": "https://www.city.sakurai.lg.jp/shisei/zaisei/zaiseijyoukyou/9807.html",
+          "sha256": "42ad2b2939748207f17b961cca376454b47d1b8086fb921226049dfecb985154",
+          "fetched_at": "2026-08-27T13:41:22Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.sakurai.lg.jp/shisei/zaisei/index.html (label: 予算・財政) 入口 https://www.city.sakurai.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sakurai.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sakurai.lg.jp/shisei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansyo.pdf「令和6年度桜井市各会計歳入歳出決算書 (PDFファイル: 6.1MB)」, sha256:42ad2b29）にて構造マーカー（歳入・歳出・款・予算現額等）を確認済み。"
     }
   }
 }

@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.taito.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "http://taito.gijiroku.com/voices/index.asp",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.taito.lg.jp/kugikai/kaigi/sokuhouban/sokuhouban.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://taito.gijiroku.com/voices/index.asp",
+          "url": "https://www.city.taito.lg.jp/kugikai/kaigi/sokuhouban/sokuhouban.html",
           "observed_on": "http://www.city.taito.lg.jp/kugikai/index.html",
-          "fetched_at": "2026-08-27T07:33:39Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.taito.lg.jp/kugikai/kaigi/sokuhouban/sokuhouban.html",
+          "observed_on": "https://www.city.taito.lg.jp/kugikai/kaigi/sokuhouban/sokuhouban.html",
+          "sha256": "d55ffde2fb4d30de4764cac4b956c6782e52bd73bb8407b091d917f152957768",
+          "fetched_at": "2026-08-27T13:42:30Z"
         }
       ],
-      "notes": "Observed voices at http://taito.gijiroku.com/voices/index.asp (label: 会議録検索システム)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

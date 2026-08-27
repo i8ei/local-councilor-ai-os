@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.marugame.lg.jp/life/6/28/140/ (label: 予算・財政) 入口 http://www.city.marugame.lg.jp/life/6/28/140/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.marugame.lg.jp/life/6/28/140/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.marugame.lg.jp/life/6/28/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.marugame.lg.jp/life/6/28/",
@@ -85,9 +85,15 @@
           "observed_on": "http://www.city.marugame.lg.jp/life/6/28/",
           "sha256": "a027e0deef8c319fef53f93d150ec1f03930fa1c5c7418bc71feb7f70ab1bf6a",
           "fetched_at": "2026-08-27T09:46:19Z"
+        },
+        {
+          "url": "http://www.city.marugame.lg.jp/uploaded/attachment/25370.pdf",
+          "observed_on": "http://www.city.marugame.lg.jp/page/12917.html",
+          "sha256": "506fa0416873aea16813685e3a03aaed1a96f419dd7e0dbb7c9c804adb4778f0",
+          "fetched_at": "2026-08-27T13:43:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.marugame.lg.jp/life/6/28/ (label: 市の財政) 入口 http://www.city.marugame.lg.jp/life/6/28/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.marugame.lg.jp/life/6/28/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（25370.pdf「令和6年度（令和7年11月号） [PDFファイル／349KB]」, sha256:506fa041）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

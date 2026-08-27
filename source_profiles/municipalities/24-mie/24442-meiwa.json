@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.meiwa.mie.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.meiwa.mie.jp/gyosei_joho/gikai/gikaidayori.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.meiwa.mie.jp/gyosei_joho/gikai/gikaidayori.html",
+          "observed_on": "https://www.town.meiwa.mie.jp/gyosei_joho/gikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.meiwa.mie.jp/gyosei_joho/gikai/gikaidayori.html",
+          "observed_on": "https://www.town.meiwa.mie.jp/gyosei_joho/gikai/gikaidayori.html",
+          "sha256": "253702317d22b52807cc3468d5d18279d7a41a4dd2450fb4296856f8c1ed4a6c",
+          "fetched_at": "2026-08-27T14:00:11Z"
+        },
+        {
+          "url": "https://www.town.meiwa.mie.jp/main/soshiki/gikai/shomuk/gikaidayori/2026/4511.html",
+          "observed_on": "https://www.town.meiwa.mie.jp/gyosei_joho/gikai/gikaidayori.html",
+          "sha256": "c076b5bd884f958bb637047e2119363f6d43688752d9c76502ccfb13b1da2197",
+          "fetched_at": "2026-08-27T14:00:12Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +53,11 @@
       "notes": "Observed regulations index at https://www.town.meiwa.mie.jp/gyosei_joho/2585.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html",
@@ -45,9 +69,15 @@
           "observed_on": "https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html",
           "sha256": "949e4b669205402c926dbc9b6742a68d0c243da9b90be7b3e7576553a0311ee4",
           "fetched_at": "2026-08-27T09:48:57Z"
+        },
+        {
+          "url": "https://www.town.meiwa.mie.jp/material/files/group/46/r6zaiseijoukyoushiryou.xlsx",
+          "observed_on": "https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/1958.html",
+          "sha256": "019718b6578696bd313414d622aa00ae3843ff438192377bf0fecb621aae174b",
+          "fetched_at": "2026-08-27T13:39:14Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.meiwa.mie.jp/gyosei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r6zaiseijoukyoushiryou.xlsx「令和6年度財政状況資料集 (Excelファイル: 575.4KB)」, sha256:019718b6）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

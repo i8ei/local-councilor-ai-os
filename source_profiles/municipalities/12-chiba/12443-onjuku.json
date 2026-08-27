@@ -69,11 +69,11 @@
       "notes": "Observed finance section at https://www.town.onjuku.chiba.jp/sub5/3/ (label: 財政・政策・計画) 入口 https://www.town.onjuku.chiba.jp/sub5/3/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.onjuku.chiba.jp/sub5/3/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.onjuku.chiba.jp/sub5/3/",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.town.onjuku.chiba.jp/sub5/3/",
           "sha256": "3923a14b696fe52717d0b4ed6b275a2f97d85ed5e98a749018ee4ce957e32f66",
           "fetched_at": "2026-08-27T10:25:19Z"
+        },
+        {
+          "url": "https://www.town.onjuku.chiba.jp/content/files/soumuka/bousai/R5tiikibousaikeikaku/saisyuu/bousaikekaku_R6.3.pdf",
+          "observed_on": "https://www.town.onjuku.chiba.jp/sub5/3/",
+          "sha256": "11776a6d850bf01f4ad97f6e614586bea3808a32febc17c76b99068824f9cfff",
+          "fetched_at": "2026-08-27T13:33:29Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.onjuku.chiba.jp/sub5/3/ (label: 財政・政策・計画) 入口 https://www.town.onjuku.chiba.jp/sub5/3/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（bousaikekaku_R6.3.pdf「地域防災計画（全文版）（PDF）4MB」, sha256:11776a6d）にて構造マーカー（項・節等）を確認済み。"
     }
   }
 }

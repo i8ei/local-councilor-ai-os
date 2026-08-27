@@ -6,24 +6,27 @@
   "official_home_url": "https://www.city.taku.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/taku/SpTop.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.taku.lg.jp/site/parliament/1498.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/taku/SpTop.html",
-          "observed_on": "https://www.city.taku.lg.jp/"
+          "url": "https://www.city.taku.lg.jp/site/parliament/1498.html",
+          "observed_on": "https://www.city.taku.lg.jp/site/parliament/",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/taku/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/taku/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-20T14:05:39Z"
+          "url": "https://www.city.taku.lg.jp/site/parliament/1498.html",
+          "observed_on": "https://www.city.taku.lg.jp/site/parliament/1498.html",
+          "sha256": "39104fbb33e481cebfde26fafd16b63174297c5fd48527354264db61c209d112",
+          "fetched_at": "2026-08-27T14:09:12Z"
         }
       ],
-      "notes": "2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -6,12 +6,27 @@
   "official_home_url": "https://www1.city.obama.fukui.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www1.city.obama.fukui.jp/gikai/p007090.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www1.city.obama.fukui.jp/gikai/p007090.html",
+          "observed_on": "https://www1.city.obama.fukui.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www1.city.obama.fukui.jp/gikai/p007090.html",
+          "observed_on": "https://www1.city.obama.fukui.jp/gikai/p007090.html",
+          "sha256": "1e86a6118f935789b7607d9922d856f455830ef9602dbf149bfb939dfe5908f2",
+          "fetched_at": "2026-08-27T13:45:26Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

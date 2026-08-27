@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/gamagori/reiki_menu.html (label: 蒲郡市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.gamagori.lg.jp/life/3/68/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.gamagori.lg.jp/life/3/68/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.gamagori.lg.jp/life/3/68/",
           "sha256": "bdbf5c655e136dab2a244868a8539760439842a733ce162411ad3555ec3b8c2d",
           "fetched_at": "2026-08-27T10:15:25Z"
+        },
+        {
+          "url": "http://www.city.gamagori.lg.jp/life/3/68/",
+          "observed_on": "http://www.city.gamagori.lg.jp/",
+          "sha256": "bdbf5c655e136dab2a244868a8539760439842a733ce162411ad3555ec3b8c2d",
+          "fetched_at": "2026-08-27T10:15:25Z"
+        },
+        {
+          "url": "https://www.city.gamagori.lg.jp/uploaded/attachment/114870.xlsx",
+          "observed_on": "https://www.city.gamagori.lg.jp/unit/zaimu/zaiseijyokyoshiryosyu.html",
+          "sha256": "e73f34759e37b3fd59aa69138716b15fdb058134129dbd585ec97a49d6164540",
+          "fetched_at": "2026-08-27T13:38:07Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.gamagori.lg.jp/life/3/68/ (label: 財政・財産) 入口 https://www.city.gamagori.lg.jp/life/3/68/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（114870.xlsx「令和６年度 [Excelファイル／557KB]」, sha256:e73f3475）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

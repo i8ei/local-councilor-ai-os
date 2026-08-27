@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.kaneyama.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kaneyama.yamagata.jp/kaneyamamachigikai/1325.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kaneyama.yamagata.jp/kaneyamamachigikai/1325.html",
+          "observed_on": "https://www.town.kaneyama.yamagata.jp/kaneyamamachigikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.kaneyama.yamagata.jp/kaneyamamachigikai/1325.html",
+          "observed_on": "https://www.town.kaneyama.yamagata.jp/kaneyamamachigikai/1325.html",
+          "sha256": "61267ab1388ed6074a594f011ce71a570ef1d32596911c2950cb9129a8e45f52",
+          "fetched_at": "2026-08-27T13:27:35Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

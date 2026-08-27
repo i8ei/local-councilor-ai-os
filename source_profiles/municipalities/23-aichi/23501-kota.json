@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.town.kota.lg.jp/life/4/30/159/ (label: 予算・決算) 入口 https://www.town.kota.lg.jp/life/4/30/159/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kota.lg.jp/life/4/30/159/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kota.lg.jp/life/4/30/159/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.town.kota.lg.jp/life/4/30/159/",
           "sha256": "799d65fe5be65a046f3298a2ef17b4d362edfe13a0b0d8ab98e85cf16d3410af",
           "fetched_at": "2026-08-27T10:17:05Z"
+        },
+        {
+          "url": "http://www.town.kota.lg.jp/life/4/30/159/",
+          "observed_on": "http://www.town.kota.lg.jp/",
+          "sha256": "799d65fe5be65a046f3298a2ef17b4d362edfe13a0b0d8ab98e85cf16d3410af",
+          "fetched_at": "2026-08-27T10:17:05Z"
+        },
+        {
+          "url": "https://www.town.kota.lg.jp/uploaded/attachment/17550.pdf",
+          "observed_on": "https://www.town.kota.lg.jp/soshiki/4/1160.html",
+          "sha256": "84b19e46c15fb72c0d0cc1672b103625eed5f4f4990beb3f15146e65980686a1",
+          "fetched_at": "2026-08-27T13:38:42Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kota.lg.jp/life/4/30/159/ (label: 予算・決算) 入口 https://www.town.kota.lg.jp/life/4/30/159/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（17550.pdf「令和6年度 [PDFファイル／786KB]」, sha256:84b19e46）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

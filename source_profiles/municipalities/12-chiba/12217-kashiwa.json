@@ -57,11 +57,11 @@
       "notes": "Observed budget link at http://www.city.kashiwa.lg.jp/policy_pr/budget/index.html (label: 予算) 入口 https://www.city.kashiwa.lg.jp/policy_pr/budget/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kashiwa.lg.jp/policy_pr/accounts/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kashiwa.lg.jp/policy_pr/accounts/index.html",
@@ -73,9 +73,21 @@
           "observed_on": "https://www.city.kashiwa.lg.jp/policy_pr/accounts/index.html",
           "sha256": "f88cd187180e20c18618fe5194a812f8953d9e710be4cffa6fb879fc4e545f67",
           "fetched_at": "2026-08-27T10:23:07Z"
+        },
+        {
+          "url": "http://www.city.kashiwa.lg.jp/policy_pr/accounts/index.html",
+          "observed_on": "http://www.city.kashiwa.lg.jp/",
+          "sha256": "f88cd187180e20c18618fe5194a812f8953d9e710be4cffa6fb879fc4e545f67",
+          "fetched_at": "2026-08-27T10:23:07Z"
+        },
+        {
+          "url": "https://www.city.kashiwa.lg.jp/documents/3532/r6kessanncard.pdf",
+          "observed_on": "https://www.city.kashiwa.lg.jp/zaisei/policy_pr/accounts/3532.html",
+          "sha256": "81afebb156a1d2d400dbf4aa8770bc738cc0ce4966625dceefabc4eb624ff146",
+          "fetched_at": "2026-08-27T13:32:51Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kashiwa.lg.jp/policy_pr/accounts/index.html (label: 決算) 入口 https://www.city.kashiwa.lg.jp/policy_pr/accounts/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessanncard.pdf「（PDF：235KB）」, sha256:81afebb1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

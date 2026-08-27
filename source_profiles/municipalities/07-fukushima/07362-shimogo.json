@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.shimogo.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.shimogo.fukushima.jp/shimogo/gikai/652.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.shimogo.fukushima.jp/shimogo/gikai/649.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.shimogo.fukushima.jp/shimogo/gikai/652.html",
+          "url": "https://www.town.shimogo.fukushima.jp/shimogo/gikai/649.html",
           "observed_on": "https://www.town.shimogo.fukushima.jp/shimogo/gikai/index.html",
-          "fetched_at": "2026-08-27T07:56:34Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.shimogo.fukushima.jp/shimogo/gikai/649.html",
+          "observed_on": "https://www.town.shimogo.fukushima.jp/shimogo/gikai/649.html",
+          "sha256": "ab790cff22f44404ba5d491eab4182acffb2a56a3b63afefc4a90708b161919a",
+          "fetched_at": "2026-08-27T13:28:05Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.shimogo.fukushima.jp/shimogo/gikai/652.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

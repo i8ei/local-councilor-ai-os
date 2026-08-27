@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/watarai/reiki_menu.html (label: )"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.watarai.lg.jp/category_list.php?frmCd=3-6-0-0-0",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.watarai.lg.jp/category_list.php?frmCd=3-6-0-0-0",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.watarai.lg.jp/category_list.php?frmCd=3-6-0-0-0",
           "sha256": "06d73cd2f655395b27169f87d2c280e5055cf2ad131073553c5cb7eb72a56912",
           "fetched_at": "2026-08-27T09:49:14Z"
+        },
+        {
+          "url": "http://www.town.watarai.lg.jp/category_list.php?frmCd=3-6-0-0-0",
+          "observed_on": "http://www.town.watarai.lg.jp/",
+          "sha256": "06d73cd2f655395b27169f87d2c280e5055cf2ad131073553c5cb7eb72a56912",
+          "fetched_at": "2026-08-27T09:49:14Z"
+        },
+        {
+          "url": "https://www.town.watarai.lg.jp/cmsfiles/contents/0000003/3672/R8tousyo.pdf",
+          "observed_on": "https://www.town.watarai.lg.jp/contents_detail.php?co=cat&frmId=3672&frmCd=3-6-0-0-0",
+          "sha256": "59aa2a200c672c4036d5cecb6a2940e6e04c02efa67cbc0baa809e7672f155a6",
+          "fetched_at": "2026-08-27T13:39:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.watarai.lg.jp/category_list.php?frmCd=3-6-0-0-0 (label: 財政・行政改革) 入口 https://www.town.watarai.lg.jp/category_list.php?frmCd=3-6-0-0-0 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.watarai.lg.jp/category_list.php?frmCd=3-6-0-0-0 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8tousyo.pdf「令和8年度 度会町一般会計予算」, sha256:59aa2a20）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

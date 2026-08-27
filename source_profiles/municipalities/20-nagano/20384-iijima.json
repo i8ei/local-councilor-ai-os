@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.iijima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.iijima.lg.jp/soshikiichiran/gikaijimukyoku/gikai/gikai_kuroku/91.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.iijima.lg.jp/soshikiichiran/gikaijimukyoku/gikai/gikai_kuroku/91.html",
+          "observed_on": "https://www.town.iijima.lg.jp/iijimamachigikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.iijima.lg.jp/soshikiichiran/gikaijimukyoku/gikai/gikai_kuroku/91.html",
+          "observed_on": "https://www.town.iijima.lg.jp/soshikiichiran/gikaijimukyoku/gikai/gikai_kuroku/91.html",
+          "sha256": "f13ec352f7dc3b82e2270b05cd9e1cdb7fb86ec50d080e66fb3686e9b90de27d",
+          "fetched_at": "2026-08-27T13:47:28Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

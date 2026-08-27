@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.zama.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.kensakusystem.jp/zama/sapphire.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.zama.kanagawa.jp/shigikai/dayori/1013120/1013898.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.kensakusystem.jp/zama/sapphire.html",
+          "url": "https://www.city.zama.kanagawa.jp/shigikai/dayori/1013120/1013898.html",
           "observed_on": "http://www.city.zama.kanagawa.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T08:04:37Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.zama.kanagawa.jp/shigikai/dayori/1013120/1013898.html",
+          "observed_on": "https://www.city.zama.kanagawa.jp/shigikai/dayori/1013120/1013898.html",
+          "sha256": "1d955e79ccf1b2e43ca5fb8e0df439cbb3b53cf9b60df83ea21287ac78aae37a",
+          "fetched_at": "2026-08-27T13:43:50Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.kensakusystem.jp/zama/sapphire.html (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

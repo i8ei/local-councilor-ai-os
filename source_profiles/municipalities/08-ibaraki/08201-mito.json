@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.mito.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/mito/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.mito.lg.jp/site/gikai/list11.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/mito/WebView/rd/council_1.html",
+          "url": "https://www.city.mito.lg.jp/site/gikai/list11.html",
           "observed_on": "http://www.city.mito.lg.jp/site/gikai/",
-          "fetched_at": "2026-08-27T05:58:26Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/site/gikai/list11.html",
+          "observed_on": "https://www.city.mito.lg.jp/site/gikai/list11.html",
+          "sha256": "d112cef17f550f8c2072b88fac09f4d547baed08caf63c0262d7a7dbcea31082",
+          "fetched_at": "2026-08-27T13:28:44Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/mito/WebView/rd/council_1.html (label: 議会中継・映像配信)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

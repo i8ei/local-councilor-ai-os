@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.kujukuri.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.kujukuri.chiba.jp/category/5-8-7-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.kujukuri.chiba.jp/0000008493.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.kujukuri.chiba.jp/category/5-8-7-0-0.html",
-          "observed_on": "https://www.town.kujukuri.chiba.jp/category/5-0-0-0-0.html",
-          "fetched_at": "2026-08-27T07:26:26Z"
+          "url": "https://www.town.kujukuri.chiba.jp/0000008493.html",
+          "observed_on": "http://www.town.kujukuri.chiba.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.kujukuri.chiba.jp/0000008493.html",
+          "observed_on": "https://www.town.kujukuri.chiba.jp/0000008493.html",
+          "sha256": "14499e1ccfd59cdc5d73ce78240210a2d6ab741bdd2148bd65d3731e0e924ef9",
+          "fetched_at": "2026-08-27T13:42:16Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.kujukuri.chiba.jp/category/5-8-7-0-0.html (label: 議会会議録検索システム) extraction probe read one document at http://ssp.kaigiroku.net/tenant/kujukuri/pg/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

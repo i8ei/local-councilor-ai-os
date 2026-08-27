@@ -37,19 +37,31 @@
       "notes": "Observed finance section at http://www.vill.higashiyoshino.nara.jp/life/%e8%a1%8c%e8%b2%a1%e6%94%bf%e6%94%b9%e9%9d%a9%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/ (label: 行財政改革について)"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.higashiyoshino.nara.jp/life/news/2017/p128/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.higashiyoshino.nara.jp/life/news/2017/p128/",
           "observed_on": "http://www.vill.higashiyoshino.nara.jp/sitemap/",
           "fetched_at": "2026-08-27T07:15:21Z"
+        },
+        {
+          "url": "http://www.vill.higashiyoshino.nara.jp/life/news/2017/p128/",
+          "observed_on": "http://www.vill.higashiyoshino.nara.jp/",
+          "sha256": "6385b1d7228803e232466a52c1e4cfaa5ff876e619ad21e1e1b517199bd87bce",
+          "fetched_at": "2026-08-27T09:53:22Z"
+        },
+        {
+          "url": "http://www.vill.higashiyoshino.nara.jp/life/wp-content/uploads/sites/2/2019/11/zai28-39higashiyoshino.xlsx",
+          "observed_on": "https://vill.higashiyoshino.nara.jp/life/news/2023/p128/",
+          "sha256": "b7856d38c98323c661d5b3f52bfbd4088bfdff73dcc91b43d7e2de4aaa57445e",
+          "fetched_at": "2026-08-27T13:41:39Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.vill.higashiyoshino.nara.jp/life/news/2017/p128/ (label: 普通会計決算に基づく財政状況の公表)"
+      "notes": "deepest_doc=P1。settlement文書（zai28-39higashiyoshino.xlsx「平成２８年度財政状況資料集（Excel:625KB）」, sha256:b7856d38）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

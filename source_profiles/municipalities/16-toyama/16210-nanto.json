@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.nanto.toyama.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/nanto/SpTop.html",
-      "verified_at": "2026-08-27T10:04:56Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.nanto.toyama.jp/gyoseijoho/nantoshigikai/4296.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/nanto/SpTop.html",
-          "observed_on": "https://www.nanto-shigikai.jp/",
-          "fetched_at": "2026-08-27T06:10:26Z"
+          "url": "https://www.city.nanto.toyama.jp/gyoseijoho/nantoshigikai/4296.html",
+          "observed_on": "https://www.city.nanto.toyama.jp/gyoseijoho/nantoshigikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/nanto/SpTop.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/nanto/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:04:57Z"
+          "url": "https://www.city.nanto.toyama.jp/gyoseijoho/nantoshigikai/4296.html",
+          "observed_on": "https://www.city.nanto.toyama.jp/gyoseijoho/nantoshigikai/4296.html",
+          "sha256": "44d40e723d82153eebf7219dd40d8a9341037a8666c8c79bf727333f91a69644",
+          "fetched_at": "2026-08-27T13:45:06Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/nanto/SpTop.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

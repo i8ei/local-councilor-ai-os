@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/minamidaito/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.minamidaito.okinawa.jp/life/5/21",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.minamidaito.okinawa.jp/life/5/21",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.vill.minamidaito.okinawa.jp/life/5/21/",
           "sha256": "cdf39970ced442ab1a0d226c12c2e4b63cfd1f182fec9c4f88af2845e417c68b",
           "fetched_at": "2026-08-27T09:42:07Z"
+        },
+        {
+          "url": "http://www.vill.minamidaito.okinawa.jp/life/5/21",
+          "observed_on": "http://www.vill.minamidaito.okinawa.jp/",
+          "sha256": "cdf39970ced442ab1a0d226c12c2e4b63cfd1f182fec9c4f88af2845e417c68b",
+          "fetched_at": "2026-08-27T09:42:07Z"
+        },
+        {
+          "url": "https://www.vill.minamidaito.okinawa.jp/uploaded/attachment/125.pdf",
+          "observed_on": "https://www.vill.minamidaito.okinawa.jp/page/352.html",
+          "sha256": "69319f11a93a3c4e26a0f43e03851e4f1f6b054ee3e6f67f2030de72f42aebb1",
+          "fetched_at": "2026-08-27T13:48:22Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.minamidaito.okinawa.jp/life/5/21 (label: 村の取り組み・財政) 入口 https://www.vill.minamidaito.okinawa.jp/life/5/21/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.minamidaito.okinawa.jp/life/5/21/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（125.pdf「令和4年度 市町村財政比較分析表 [PDFファイル／813KB]」, sha256:69319f11）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

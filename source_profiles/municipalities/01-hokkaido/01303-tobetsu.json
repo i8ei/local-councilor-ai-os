@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.tobetsu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.tobetsu.hokkaido.jp/site/gikai/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.tobetsu.hokkaido.jp/site/gikai/",
+          "observed_on": "http://www.town.tobetsu.hokkaido.jp/index2.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.tobetsu.hokkaido.jp/site/gikai/",
+          "observed_on": "https://www.town.tobetsu.hokkaido.jp/site/gikai/",
+          "sha256": "4dfe81887f38451248c8e1a188d06d5e2fb3ddc3130c84c8463a16f0159bc6d0",
+          "fetched_at": "2026-08-27T13:23:35Z"
+        },
+        {
+          "url": "https://www.town.tobetsu.hokkaido.jp/site/gikai/52529.html",
+          "observed_on": "https://www.town.tobetsu.hokkaido.jp/site/gikai/",
+          "sha256": "5896ebe17b9e996b9159a50a54bc745bdaaefe8f3c7da106ede7ef64e951cce7",
+          "fetched_at": "2026-08-27T13:23:41Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

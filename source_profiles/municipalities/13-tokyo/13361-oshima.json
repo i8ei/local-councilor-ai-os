@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.oshima.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.oshima.tokyo.jp/soshiki/gikaijim/gikai-kaisai-rinji.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.oshima.tokyo.jp/soshiki/gikaijim/gikai-kaisai-rinji.html",
+          "observed_on": "https://www.town.oshima.tokyo.jp/soshiki/gikaijim/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.oshima.tokyo.jp/soshiki/gikaijim/gikai-kaisai-rinji.html",
+          "observed_on": "https://www.town.oshima.tokyo.jp/soshiki/gikaijim/gikai-kaisai-rinji.html",
+          "sha256": "18738b2b80b3a3922e3e8e85c656053340bd631d74d5bc8d965a82cf9fc79519",
+          "fetched_at": "2026-08-27T13:43:26Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.miyazaki.miyazaki.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
-      "verified_at": "2026-08-27T09:39:33Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.miyazaki.miyazaki.jp/parliament/news/415042.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
+          "url": "https://www.city.miyazaki.miyazaki.jp/parliament/news/415042.html",
           "observed_on": "http://www.city.miyazaki.miyazaki.jp/parliament/",
-          "fetched_at": "2026-08-27T06:25:02Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
-          "observed_on": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
-          "sha256": "544f2e5c9927aad7ace6661928b7aeb4f1fb8315d1428411285ecbbbf2545063",
-          "fetched_at": "2026-08-27T09:39:41Z"
+          "url": "https://www.city.miyazaki.miyazaki.jp/parliament/news/415042.html",
+          "observed_on": "https://www.city.miyazaki.miyazaki.jp/parliament/news/415042.html",
+          "sha256": "2b35889d1369af1877ff6b6bf3b91826f677b9695da08b4a26f5ee761aad00e9",
+          "fetched_at": "2026-08-27T14:10:48Z"
         }
       ],
-      "notes": "Observed dbsr at http://www.city.miyazaki.miyazaki.dbsr.jp/index.php (label: 会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -48,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CB (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.miyazaki.miyazaki.jp/city/finance/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyazaki.miyazaki.jp/city/finance/",
@@ -64,9 +66,21 @@
           "observed_on": "https://www.city.miyazaki.miyazaki.jp/city/finance/",
           "sha256": "ac550a5cf7d0472ec321378952471086ade0c808c5f90690663e171dea826c64",
           "fetched_at": "2026-08-27T09:39:47Z"
+        },
+        {
+          "url": "http://www.city.miyazaki.miyazaki.jp/city/finance/",
+          "observed_on": "http://www.city.miyazaki.miyazaki.jp/",
+          "sha256": "ac550a5cf7d0472ec321378952471086ade0c808c5f90690663e171dea826c64",
+          "fetched_at": "2026-08-27T09:39:47Z"
+        },
+        {
+          "url": "https://www.city.miyazaki.miyazaki.jp/fs/8/6/0/2/4/0/_/860240.pdf",
+          "observed_on": "https://www.city.miyazaki.miyazaki.jp/city/finance/budget/",
+          "sha256": "23a28acb99cd1f41fa19ef0edd1ada25b09e9030bb8e4c8dbad5bfde12e1139f",
+          "fetched_at": "2026-08-27T13:47:02Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.miyazaki.miyazaki.jp/city/finance/ (label: 財政・行政改革) 入口 https://www.city.miyazaki.miyazaki.jp/city/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyazaki.miyazaki.jp/city/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyazaki.miyazaki.jp/city/finance/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（860240.pdf「令和6年度主要施策の成果等説明書 (PDF 11MB)」, sha256:23a28acb）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

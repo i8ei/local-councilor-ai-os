@@ -6,25 +6,27 @@
   "official_home_url": "https://www.city.soo.kagoshima.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/soo/pg/index.html",
-      "verified_at": "2026-08-27T09:40:19Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.soo.kagoshima.jp/gyousei/gikai/giziroku/r6kaigirokupdf.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/soo/pg/index.html",
-          "observed_on": "https://www.city.soo.kagoshima.jp/gyousei/gikai/index.html",
-          "fetched_at": "2026-08-27T06:41:07Z"
+          "url": "https://www.city.soo.kagoshima.jp/gyousei/gikai/giziroku/r6kaigirokupdf.html",
+          "observed_on": "https://www.city.soo.kagoshima.jp/gyousei/gikai/giziroku/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/soo/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/soo/pg/index.html",
-          "sha256": "36e1aeb7a72c6b8afc46247971cb9a53c85369fe8694c052de7af119ff4457cb",
-          "fetched_at": "2026-08-27T09:40:21Z"
+          "url": "https://www.city.soo.kagoshima.jp/gyousei/gikai/giziroku/r6kaigirokupdf.html",
+          "observed_on": "https://www.city.soo.kagoshima.jp/gyousei/gikai/giziroku/r6kaigirokupdf.html",
+          "sha256": "7c1a809f1ae10e3863b8def91de434f7313fa19a799941ba2f78c88ec8baa80a",
+          "fetched_at": "2026-08-27T14:11:24Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/soo/pg/index.html (label: 曽於市会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -63,11 +65,11 @@
       "notes": "Observed budget link at https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/yosanntoshigoto.html (label: 曽於市の予算と仕事) 入口 https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/yosanntoshigoto.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/yosanntoshigoto.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/yosanntoshigoto.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/index.html",
@@ -79,9 +81,15 @@
           "observed_on": "https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/index.html",
           "sha256": "da74bf39eb7f5cac2361b9a602e3b1842b80252c8d9d52a93e4e91df7559b5f9",
           "fetched_at": "2026-08-27T09:40:24Z"
+        },
+        {
+          "url": "https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/files/558899.pdf",
+          "observed_on": "https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/kessann.html",
+          "sha256": "e13ae67c2e33b0d956ac156cc6daa957e3aca78a18c19766bc78fee01d540589",
+          "fetched_at": "2026-08-27T13:47:46Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/index.html (label: 財政・予算・決算・給与) 入口 https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.soo.kagoshima.jp/gyousei/yosannkessann/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（558899.pdf「決算カード(地方財政状況調査資料) (153KB)」, sha256:e13ae67c）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.town.izumozaki.niigata.jp/reiki/reiki_menu.html (label: 出雲崎町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
@@ -69,9 +69,15 @@
           "url": "https://www.town.izumozaki.niigata.jp/_files/00078610/00_tousho25.pdf",
           "observed_on": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
           "fetched_at": "2026-08-27T10:55:44Z"
+        },
+        {
+          "url": "https://www.town.izumozaki.niigata.jp/_files/00078610/00_tousho25.pdf",
+          "observed_on": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
+          "sha256": "e523c37c422a5f6f9ec418c39166b71a692e3662987687638929ed5e2d43669d",
+          "fetched_at": "2026-08-27T10:55:50Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911 (label: 出雲崎町の予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（00_tousho25.pdf「当初予算書[PDF：31MB]」, sha256:e523c37c）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.kizugawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.kizugawa.kyoto.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T09:50:03Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kizugawa.lg.jp/0000001676.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.kizugawa.kyoto.dbsr.jp/index.php/",
+          "url": "https://www.city.kizugawa.lg.jp/0000001676.html",
           "observed_on": "http://www.city.kizugawa.lg.jp/category/6-0-0-0-0-0-0-0-0-0.html",
-          "fetched_at": "2026-08-27T06:20:06Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://www.city.kizugawa.kyoto.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.kizugawa.kyoto.dbsr.jp/index.php/",
-          "sha256": "581b2ba26a1eae23f27a6ab1eacae3bcb2b9ff97af896525d670593ae6aeb8bf",
-          "fetched_at": "2026-08-27T09:50:05Z"
+          "url": "https://www.city.kizugawa.lg.jp/0000001676.html",
+          "observed_on": "https://www.city.kizugawa.lg.jp/0000001676.html",
+          "sha256": "911f85c9f12f0041499cba7ef26ba145293defca80a8df07a5309c0da637eb8d",
+          "fetched_at": "2026-08-27T14:01:18Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.kizugawa.kyoto.dbsr.jp/index.php/ (label: 会議録検索 [2026年1月22日]) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -42,11 +44,11 @@
       "notes": "Observed regulations index at https://www.city.kizugawa.lg.jp/0000002093.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html",
@@ -58,9 +60,21 @@
           "observed_on": "https://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html",
           "sha256": "c255f0f6bb6c28de2076eebdecc5903bd9bb5576a81d1e33645728a592b17937",
           "fetched_at": "2026-08-27T09:50:11Z"
+        },
+        {
+          "url": "http://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.kizugawa.lg.jp/",
+          "sha256": "c255f0f6bb6c28de2076eebdecc5903bd9bb5576a81d1e33645728a592b17937",
+          "fetched_at": "2026-08-27T09:50:11Z"
+        },
+        {
+          "url": "https://www.city.kizugawa.lg.jp/cmsfiles/contents/0000002/2943/20260303.pdf",
+          "observed_on": "https://www.city.kizugawa.lg.jp/0000002943.html",
+          "sha256": "966a17c16ad002311cff14a8bdb93b2adbe09d80e6c46eb0c834cc7d7536233c",
+          "fetched_at": "2026-08-27T13:39:43Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（20260303.pdf「令和8年度当初予算案の概要 (PDF, 4.96MB)」, sha256:966a17c1）にて構造マーカー（予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

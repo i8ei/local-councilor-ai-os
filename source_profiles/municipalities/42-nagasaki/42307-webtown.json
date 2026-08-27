@@ -6,19 +6,27 @@
   "official_home_url": "http://webtown.nagayo.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://webtown.nagayo.jp/list01175.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://webtown.nagayo.jp/gikai/kiji0031007/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://webtown.nagayo.jp/list01175.html",
-          "observed_on": "http://webtown.nagayo.jp/",
-          "fetched_at": "2026-08-27T05:26:33Z"
+          "url": "https://webtown.nagayo.jp/gikai/kiji0031007/index.html",
+          "observed_on": "https://webtown.nagayo.jp/gikai/list00405.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://webtown.nagayo.jp/gikai/kiji0031007/index.html",
+          "observed_on": "https://webtown.nagayo.jp/gikai/kiji0031007/index.html",
+          "sha256": "ab9d2a930ddcca378a772ebbc6f60f8e175bfeb58c051d2fa1138aeeb02ac1d4",
+          "fetched_at": "2026-08-27T14:09:46Z"
         }
       ],
-      "notes": "Observed council minutes index at http://webtown.nagayo.jp/list01175.html (label: 附属機関・懇談会等の議事録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +44,11 @@
       "notes": "Observed regulations index at http://webtown.nagayo.jp/list00231.html (label: 入札・契約関連例規)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://webtown.nagayo.jp/list00276.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://webtown.nagayo.jp/list00276.html",
@@ -52,9 +60,21 @@
           "observed_on": "https://webtown.nagayo.jp/list00276.html",
           "sha256": "ce5ddd63fec800c9ef1cffe29fe2ac1bcc423d095ffc0bfbc1cadfb3c5d55ee6",
           "fetched_at": "2026-08-27T09:37:43Z"
+        },
+        {
+          "url": "http://webtown.nagayo.jp/list00276.html",
+          "observed_on": "http://webtown.nagayo.jp/",
+          "sha256": "ce5ddd63fec800c9ef1cffe29fe2ac1bcc423d095ffc0bfbc1cadfb3c5d55ee6",
+          "fetched_at": "2026-08-27T09:37:43Z"
+        },
+        {
+          "url": "https://webtown.nagayo.jp/kiji003208/3_208_26570_up_21ur33pq.pdf",
+          "observed_on": "https://webtown.nagayo.jp/kiji003208/index.html",
+          "sha256": "268e7d122b13b6b18947b56f93a5dac5f402ea482ceced18e1c00f59118ed7bd",
+          "fetched_at": "2026-08-27T13:45:46Z"
         }
       ],
-      "notes": "Observed budget link at http://webtown.nagayo.jp/list00276.html (label: 予算) 入口 https://webtown.nagayo.jp/list00276.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://webtown.nagayo.jp/list00276.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_208_26570_up_21ur33pq.pdf「令和7年度（PDF：1.2メガバイト）」, sha256:268e7d12）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

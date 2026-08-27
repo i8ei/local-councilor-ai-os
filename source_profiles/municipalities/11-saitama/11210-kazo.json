@@ -6,19 +6,36 @@
   "official_home_url": "http://www.city.kazo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/kazo/WebView/rd/council_1.html?referrer=http%3A%2F%2Flg-cms.smart-lgov.jp%2F",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.kazo.lg.jp/soshiki/gikai/dayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/kazo/WebView/rd/council_1.html?referrer=http%3A%2F%2Flg-cms.smart-lgov.jp%2F",
+          "url": "http://www.city.kazo.lg.jp/soshiki/gikai/dayori/index.html",
           "observed_on": "https://www.city.kazo.lg.jp/soshiki/gikai/index.html",
-          "fetched_at": "2026-08-27T06:48:37Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.kazo.lg.jp/soshiki/gikai/dayori/index.html",
+          "observed_on": "http://www.city.kazo.lg.jp/soshiki/gikai/dayori/index.html",
+          "sha256": "1202f1a51014d9222198eef6b1ed316bedc0dbfbac31a0191377b50bda7ebfd6",
+          "fetched_at": "2026-08-27T13:40:41Z"
+        },
+        {
+          "url": "https://www.city.kazo.lg.jp/soshiki/gikai/dayori/R8_1/44196.html",
+          "observed_on": "http://www.city.kazo.lg.jp/soshiki/gikai/dayori/index.html",
+          "sha256": "8ec82ec2021a1c063de1720ca44bea95e1eee5933f95351dd6d3cd5751ef6fec",
+          "fetched_at": "2026-08-27T13:40:44Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/kazo/WebView/rd/council_1.html?referrer=http%3A%2F%2Flg-cms.smart-lgov.jp%2F (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.fukaya.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.fukaya.saitama.jp/gikai/giin/iinkaimeibo.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.fukaya.saitama.jp/gikai/giin/iinkaimeibo.html",
+          "observed_on": "http://www.city.fukaya.saitama.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.fukaya.saitama.jp/gikai/giin/iinkaimeibo.html",
+          "observed_on": "https://www.city.fukaya.saitama.jp/gikai/giin/iinkaimeibo.html",
+          "sha256": "c568a9ddee46d76c7f4105db1de99f4fe0841ffdc4525a7d9d6971c9ee150e09",
+          "fetched_at": "2026-08-27T13:40:05Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

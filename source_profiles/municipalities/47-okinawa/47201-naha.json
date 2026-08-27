@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.naha.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.naha.okinawa.jp/sigikai/teireikai/1005329/1010904/1012589.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.naha.okinawa.jp/sigikai/teireikai/1005329/1010904/1012589.html",
+          "observed_on": "https://www.city.naha.okinawa.jp/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.naha.okinawa.jp/sigikai/teireikai/1005329/1010904/1012589.html",
+          "observed_on": "https://www.city.naha.okinawa.jp/sigikai/teireikai/1005329/1010904/1012589.html",
+          "sha256": "8d673be5957406ef1fbfa79550d72ae4f38b15fffc9ab50db634c1fe0cc3cc8f",
+          "fetched_at": "2026-08-27T14:11:43Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed budget link at https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html (label: 予算) 入口 https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html",
@@ -72,9 +87,15 @@
           "observed_on": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html",
           "sha256": "525d4cb8c6db8b176ac9f266062e0d0fe9c336debc9443cb6bc812192aa9248d",
           "fetched_at": "2026-08-27T09:41:08Z"
+        },
+        {
+          "url": "https://www.city.naha.okinawa.jp/_res/projects/default_project/_page_/001/004/425/kessan_h30kessancard.pdf",
+          "observed_on": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/1004417/1004425.html",
+          "sha256": "4b643cb9a6deb73aed4ee72cbc1b6ea279a6f41393709cb15e9975e1068cd822",
+          "fetched_at": "2026-08-27T13:48:00Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html (label: 決算) 入口 https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（kessan_h30kessancard.pdf「決算カード（平成30年度） （PDF 336.4 KB）」, sha256:4b643cb9）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

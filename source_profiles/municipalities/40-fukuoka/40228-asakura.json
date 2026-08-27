@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.asakura.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.asakura.lg.jp/site/gikai/list51-96.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.asakura.lg.jp/site/gikai/14106.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.asakura.lg.jp/site/gikai/list51-96.html",
+          "url": "https://www.city.asakura.lg.jp/site/gikai/14106.html",
           "observed_on": "http://www.city.asakura.lg.jp/adv/ba.php?id=3",
-          "fetched_at": "2026-08-27T04:17:02Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.asakura.lg.jp/site/gikai/14106.html",
+          "observed_on": "https://www.city.asakura.lg.jp/site/gikai/14106.html",
+          "sha256": "49be17546c205860b7fb9c9895b35b8f9775ae4114b303cca1012d31dc2f2273",
+          "fetched_at": "2026-08-27T14:08:37Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.asakura.lg.jp/site/gikai/list51-96.html (label: 会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -57,11 +65,11 @@
       "notes": "Observed budget link at http://www.city.asakura.lg.jp/life/4/29/136/ (label: 予算書) 入口 https://www.city.asakura.lg.jp/life/4/29/136/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.asakura.lg.jp/life/4/29/136/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.asakura.lg.jp/life/4/29/137/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.asakura.lg.jp/life/4/29/137/",
@@ -73,9 +81,21 @@
           "observed_on": "https://www.city.asakura.lg.jp/life/4/29/137/",
           "sha256": "8dcd2e6611e3d017f0f693ca64e37250cc642ca387bea6a641555f1ba2f21db5",
           "fetched_at": "2026-08-27T09:36:12Z"
+        },
+        {
+          "url": "http://www.city.asakura.lg.jp/life/4/29/137/",
+          "observed_on": "http://www.city.asakura.lg.jp/",
+          "sha256": "8dcd2e6611e3d017f0f693ca64e37250cc642ca387bea6a641555f1ba2f21db5",
+          "fetched_at": "2026-08-27T09:36:12Z"
+        },
+        {
+          "url": "https://www.city.asakura.lg.jp/uploaded/attachment/4587.pdf",
+          "observed_on": "https://www.city.asakura.lg.jp/soshiki/37/2200.html",
+          "sha256": "23079a5565c6b2ceff11306ef4d8133b4b16ffee092449430b6c9727a8c01c2f",
+          "fetched_at": "2026-08-27T13:45:20Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.asakura.lg.jp/life/4/29/137/ (label: 決算書) 入口 https://www.city.asakura.lg.jp/life/4/29/137/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.asakura.lg.jp/life/4/29/137/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（4587.pdf「平成28年度決算書 [PDFファイル／4.11MB]」, sha256:23079a55）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

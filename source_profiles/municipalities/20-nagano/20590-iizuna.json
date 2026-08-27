@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.town.iizuna.nagano.jp/chosei/zaisei/ (label: 財政・行政改革) 入口 https://www.town.iizuna.nagano.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.iizuna.nagano.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.iizuna.nagano.jp/chosei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.town.iizuna.nagano.jp/chosei/zaisei/",
           "sha256": "a52461008bd33a41ba58b59e828bd3d93b8e5a9128222998e978d434a2ffe752",
           "fetched_at": "2026-08-27T10:12:14Z"
+        },
+        {
+          "url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.iizuna.nagano.jp/",
+          "sha256": "a52461008bd33a41ba58b59e828bd3d93b8e5a9128222998e978d434a2ffe752",
+          "fetched_at": "2026-08-27T10:12:14Z"
+        },
+        {
+          "url": "https://www.town.iizuna.nagano.jp/fs/8/6/1/8/2/_/__6__________.xlsx",
+          "observed_on": "https://www.town.iizuna.nagano.jp/docs/658.html",
+          "sha256": "a24e25ef8d0708d69f3c24b91d72e64e8338e77492f50bff03288dc5ce4d7d65",
+          "fetched_at": "2026-08-27T13:36:44Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.iizuna.nagano.jp/chosei/zaisei/ (label: 財政・行政改革) 入口 https://www.town.iizuna.nagano.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.iizuna.nagano.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.iizuna.nagano.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（__6__________.xlsx「令和6年度 財政状況資料集 (XLSX 540KB)」, sha256:a24e25ef）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

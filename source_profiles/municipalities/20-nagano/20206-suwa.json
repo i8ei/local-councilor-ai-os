@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.suwa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "http://www08.gijiroku.com/voices/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.suwa.lg.jp/soshiki/2/79632.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www08.gijiroku.com/voices/",
-          "observed_on": "http://www.city.suwa.lg.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:56:39Z"
+          "url": "https://www.city.suwa.lg.jp/soshiki/2/79632.html",
+          "observed_on": "http://www.city.suwa.lg.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.suwa.lg.jp/soshiki/2/79632.html",
+          "observed_on": "https://www.city.suwa.lg.jp/soshiki/2/79632.html",
+          "sha256": "4cc5365d5be26a6defbdc20a55739faa2047231c10094333de46313ba92f0e44",
+          "fetched_at": "2026-08-27T13:46:49Z"
         }
       ],
-      "notes": "Observed voices at http://www08.gijiroku.com/voices/ (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

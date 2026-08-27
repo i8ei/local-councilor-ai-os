@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www.town.kinko.lg.jp/somu-h/chose/reki/reiki.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
@@ -58,9 +58,15 @@
           "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
           "sha256": "8d38800e84702a2417135535b1a97951ada3d619a89bf539ef44e05e03714bea",
           "fetched_at": "2026-08-27T09:40:42Z"
+        },
+        {
+          "url": "http://www.town.kinko.lg.jp/documents/645/zaiseir805.pdf",
+          "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/zaise/jijo.html",
+          "sha256": "a2ed14018e2ec780fb5068a2446038e4995123460d2ed092b286963434111b50",
+          "fetched_at": "2026-08-27T13:47:42Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html (label: 予算・財政) 入口 http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseir805.pdf「令和8年5月公表 財政事情（PDF：573KB）」, sha256:a2ed1401）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

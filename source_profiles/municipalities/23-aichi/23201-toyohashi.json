@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.toyohashi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/toyohashi/pg/index.html",
-      "verified_at": "2026-08-27T10:14:58Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.toyohashi.lg.jp/item/9869.htm#itemid9869",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/toyohashi/pg/index.html",
+          "url": "https://www.city.toyohashi.lg.jp/item/9869.htm#itemid9869",
           "observed_on": "http://www.city.toyohashi.lg.jp/gikai/",
-          "fetched_at": "2026-08-27T07:55:37Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/toyohashi/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/toyohashi/pg/index.html",
-          "sha256": "05788e3de8088a1268db21bac969a0a9168e3f2764c130cfda60c71e667e6ca6",
-          "fetched_at": "2026-08-27T10:15:00Z"
+          "url": "https://www.city.toyohashi.lg.jp/item/9869.htm#itemid9869",
+          "observed_on": "https://www.city.toyohashi.lg.jp/item/9869.htm#itemid9869",
+          "sha256": "88be739bcc714c95360cf4d0808fdd2cb9260bedd1cb554466d3332cf821e089",
+          "fetched_at": "2026-08-27T13:49:57Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/toyohashi/pg/index.html (label: 市議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

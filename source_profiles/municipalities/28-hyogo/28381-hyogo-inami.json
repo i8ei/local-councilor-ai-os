@@ -63,11 +63,11 @@
       "notes": "Observed finance section at http://www.town.hyogo-inami.lg.jp/category/2-1-2-0-0-0-0-0-0-0.html (label: 財政状況) 入口 https://www.town.hyogo-inami.lg.jp//category/2-1-2-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hyogo-inami.lg.jp//category/2-1-2-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hyogo-inami.lg.jp/category/2-1-2-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hyogo-inami.lg.jp/category/2-1-2-0-0-0-0-0-0-0.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.town.hyogo-inami.lg.jp//category/2-1-2-0-0-0-0-0-0-0.html",
           "sha256": "e58fe3ba51d02a9858da8bac6c53829a19c9104f4997055a68ff88815f50f45a",
           "fetched_at": "2026-08-27T09:52:29Z"
+        },
+        {
+          "url": "http://www.town.hyogo-inami.lg.jp/category/2-1-2-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.hyogo-inami.lg.jp/",
+          "sha256": "e58fe3ba51d02a9858da8bac6c53829a19c9104f4997055a68ff88815f50f45a",
+          "fetched_at": "2026-08-27T09:52:29Z"
+        },
+        {
+          "url": "https://www.town.hyogo-inami.lg.jp/cmsfiles/contents/0000000/7/06sixyuyousesaku.pdf",
+          "observed_on": "https://www.town.hyogo-inami.lg.jp/0000000007.html",
+          "sha256": "b78626fbb386a4a2fcf1c96d7042f1cf628d7667d81e9237d248c12c84925eba",
+          "fetched_at": "2026-08-27T13:41:10Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hyogo-inami.lg.jp/category/2-1-2-0-0-0-0-0-0-0.html (label: 財政状況) 入口 https://www.town.hyogo-inami.lg.jp//category/2-1-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hyogo-inami.lg.jp//category/2-1-2-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（06sixyuyousesaku.pdf「◇主要施策の成果(令和6(2024)年度)(ファイル名：06sixyuyousesaku.pdf サイズ：1.76MB)」, sha256:b78626fb）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

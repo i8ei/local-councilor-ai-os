@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.midori.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/midori/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.city.midori.gunma.jp%2F",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.midori.gunma.jp/shisei/1001670/1003211/1009583/1009936.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/midori/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.city.midori.gunma.jp%2F",
-          "observed_on": "http://www.city.midori.gunma.jp/shisei/1001670/1003209/1003266.html",
-          "fetched_at": "2026-08-27T06:39:00Z"
+          "url": "https://www.city.midori.gunma.jp/shisei/1001670/1003211/1009583/1009936.html",
+          "observed_on": "http://www.city.midori.gunma.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.midori.gunma.jp/shisei/1001670/1003211/1009583/1009936.html",
+          "observed_on": "https://www.city.midori.gunma.jp/shisei/1001670/1003211/1009583/1009936.html",
+          "sha256": "770f45d547f323a78eb33e7d2e62bfd39596ba4b11f827d9f11959bd9f093267",
+          "fetched_at": "2026-08-27T13:39:11Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/midori/WebView/rd/council_1.html?referrer=https%3A%2F%2Fwww.city.midori.gunma.jp%2F (label: みどり市議会インターネット中継を見る)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

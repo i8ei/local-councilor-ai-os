@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.tokorozawa.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.tokorozawa.saitama.jp/shiseijoho/shingikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.tokorozawa.saitama.jp/shigikai/gikaikaikaku/kaikakuhyoka/gikaihyoka.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.tokorozawa.saitama.jp/shiseijoho/shingikai/kaigiroku/index.html",
-          "observed_on": "http://www.city.tokorozawa.saitama.jp/shiseijoho/index.html",
-          "fetched_at": "2026-08-27T06:48:04Z"
+          "url": "https://www.city.tokorozawa.saitama.jp/shigikai/gikaikaikaku/kaikakuhyoka/gikaihyoka.html",
+          "observed_on": "http://www.city.tokorozawa.saitama.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.tokorozawa.saitama.jp/shigikai/gikaikaikaku/kaikakuhyoka/gikaihyoka.html",
+          "observed_on": "https://www.city.tokorozawa.saitama.jp/shigikai/gikaikaikaku/kaikakuhyoka/gikaihyoka.html",
+          "sha256": "d6a2582a2462adfbb8bd097c495aada3de8f40d28774ecba87eab77106dfe983",
+          "fetched_at": "2026-08-27T13:39:50Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.tokorozawa.saitama.jp/shiseijoho/shingikai/kaigiroku/index.html (label: 会議録等)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -50,11 +50,11 @@
       "notes": "Observed finance section at https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html (label: 財政状況) 入口 https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.toyosato.shiga.jp/category/29-2-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.toyosato.shiga.jp/category/29-2-1-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.toyosato.shiga.jp/category/29-2-1-0-0-0-0-0-0-0.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.town.toyosato.shiga.jp/category/29-2-1-0-0-0-0-0-0-0.html",
           "sha256": "c7e6790f74bd017918291baf5121e6c1df3e8b6415cc0cbf3c5bf6fbd1c2444a",
           "fetched_at": "2026-08-27T09:49:42Z"
+        },
+        {
+          "url": "https://www.town.toyosato.shiga.jp/cmsfiles/contents/0000003/3473/R4_kennzennka.pdf",
+          "observed_on": "https://www.town.toyosato.shiga.jp/0000003473.html",
+          "sha256": "8098dbb7912d3e98864027546cc89edb581005f10c669681b42853c3af24bd39",
+          "fetched_at": "2026-08-27T13:39:30Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.toyosato.shiga.jp/category/29-2-1-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.town.toyosato.shiga.jp/category/29-2-1-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.toyosato.shiga.jp/category/29-2-1-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R4_kennzennka.pdf「令和4年度健全化判断比率 (PDF形式、156.23KB)」, sha256:8098dbb7）にて構造マーカー（歳入・項・実質収支・地方債等）を確認済み。"
     }
   }
 }

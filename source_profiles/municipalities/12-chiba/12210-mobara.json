@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.mobara.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.mobara.chiba.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.mobara.chiba.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.mobara.chiba.jp/category/6-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.mobara.chiba.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.mobara.chiba.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+          "sha256": "fe50896adc86195483781a2984bebbbf2a2ba8d925c8746c39c6c49ba9d88a0d",
+          "fetched_at": "2026-08-27T13:41:23Z"
+        },
+        {
+          "url": "https://www.city.mobara.chiba.jp/0000009230.html",
+          "observed_on": "https://www.city.mobara.chiba.jp/category/6-2-2-0-0-0-0-0-0-0.html",
+          "sha256": "471cc3c75626ee1f6e70b95bb283d9dc2f99cdb5df961e4d93f75badaa27c49c",
+          "fetched_at": "2026-08-27T13:41:24Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

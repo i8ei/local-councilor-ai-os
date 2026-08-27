@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.minamifurano.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.minamifurano.hokkaido.jp/gikai/gikaidayori/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.minamifurano.hokkaido.jp/gikai/gikaidayori/",
+          "observed_on": "https://www.town.minamifurano.hokkaido.jp/gikai/%e6%84%8f%e8%a6%8b%e6%9b%b8/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.minamifurano.hokkaido.jp/gikai/gikaidayori/",
+          "observed_on": "https://www.town.minamifurano.hokkaido.jp/gikai/gikaidayori/",
+          "sha256": "071f97dc81f69d61b37f73bf59cb8fe80565e594f2714fa1bf0591eceadfe2b4",
+          "fetched_at": "2026-08-27T13:24:48Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.tottori.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T09:42:35Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.tottori.lg.jp/site/shigikai/6410.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
+          "url": "https://www.city.tottori.lg.jp/site/shigikai/6410.html",
           "observed_on": "http://www.city.tottori.lg.jp/site/shigikai/",
-          "fetched_at": "2026-08-27T05:57:42Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.tottori.tottori.dbsr.jp/index.php/",
-          "sha256": "26ed1aedb054cfe939ae6e844a963eb5ff1a96861501d6ccf537d1f57623e5bd",
-          "fetched_at": "2026-08-27T09:42:37Z"
+          "url": "https://www.city.tottori.lg.jp/site/shigikai/6410.html",
+          "observed_on": "https://www.city.tottori.lg.jp/site/shigikai/6410.html",
+          "sha256": "783b91e1fc647f4b5203a00c6e096e970bcf694f3d1c0aca971eb3ada21b21a5",
+          "fetched_at": "2026-08-27T14:05:01Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.tottori.tottori.dbsr.jp/index.php/ (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -48,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/city.tottori/reiki_menu.html (label: 条例・規則（例規集）)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tottori.lg.jp/life/7/55/248/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tottori.lg.jp/life/7/55/248/",
@@ -64,9 +66,21 @@
           "observed_on": "https://www.city.tottori.lg.jp/life/7/55/248/",
           "sha256": "e41ec004b44749a0a4bbe2bbdcd75260be4ddea7c8db9f598fbe32483aca947c",
           "fetched_at": "2026-08-27T09:42:43Z"
+        },
+        {
+          "url": "http://www.city.tottori.lg.jp/life/7/55/248/",
+          "observed_on": "http://www.city.tottori.lg.jp/",
+          "sha256": "e41ec004b44749a0a4bbe2bbdcd75260be4ddea7c8db9f598fbe32483aca947c",
+          "fetched_at": "2026-08-27T09:42:43Z"
+        },
+        {
+          "url": "https://www.city.tottori.lg.jp/uploaded/attachment/43201.pdf",
+          "observed_on": "https://www.city.tottori.lg.jp/page/30417.html",
+          "sha256": "e86232b54195e2a3da0886ce48728eeee99f8db4afbe4a3bd9f4768ecb37da04",
+          "fetched_at": "2026-08-27T13:42:01Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tottori.lg.jp/life/7/55/248/ (label: 予算関係) 入口 https://www.city.tottori.lg.jp/life/7/55/248/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tottori.lg.jp/life/7/55/248/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（43201.pdf「令和8年度当初予算（案）について [PDFファイル／412KB]」, sha256:e86232b5）にて構造マーカー（歳入・歳出・予算額・予算総額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

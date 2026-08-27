@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/ (label: 予算・決算・財政) 入口 https://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/",
           "sha256": "4e19f76cc85c5e1d7e9f9aae0f4e01197e64884adcf7e20fa7d6268e5d42be16",
           "fetched_at": "2026-08-27T09:35:43Z"
+        },
+        {
+          "url": "http://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/",
+          "observed_on": "http://www.city.kurume.fukuoka.jp/",
+          "sha256": "4e19f76cc85c5e1d7e9f9aae0f4e01197e64884adcf7e20fa7d6268e5d42be16",
+          "fetched_at": "2026-08-27T09:35:43Z"
+        },
+        {
+          "url": "https://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/3020kessan/files/R6kessanka-do.pdf",
+          "observed_on": "https://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/3020kessan/kessan.html",
+          "sha256": "3acd230172af011cac48469d8ee51597ceb97c9c1be5d4d9d94aa26670b0aa1a",
+          "fetched_at": "2026-08-27T13:44:34Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/ (label: 予算・決算・財政) 入口 https://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kurume.fukuoka.jp/1100keikaku/2070zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessanka-do.pdf「令和6年度決算カード (176キロバイト)」, sha256:3acd2301）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

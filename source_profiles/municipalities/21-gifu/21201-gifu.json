@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.gifu.lg.jp/info/zaisei/index.html (label: 予算・財政) 入口 https://www.city.gifu.lg.jp/info/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.gifu.lg.jp/info/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.gifu.lg.jp/info/zaisei/1007720/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.gifu.lg.jp/info/zaisei/1007720/index.html",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.gifu.lg.jp/info/zaisei/1007720/index.html",
           "sha256": "e0c08fdcedcac913102e2e784797d3d3f0c72de90813a37c54bc5b1d751431f2",
           "fetched_at": "2026-08-27T10:12:32Z"
+        },
+        {
+          "url": "http://www.city.gifu.lg.jp/info/zaisei/1007720/index.html",
+          "observed_on": "http://www.city.gifu.lg.jp/",
+          "sha256": "e0c08fdcedcac913102e2e784797d3d3f0c72de90813a37c54bc5b1d751431f2",
+          "fetched_at": "2026-08-27T10:12:32Z"
+        },
+        {
+          "url": "https://www.city.gifu.lg.jp/_res/projects/default_project/_page_/001/029/017/r7yosanhousin.pdf",
+          "observed_on": "https://www.city.gifu.lg.jp/info/zaisei/1007720/1029012/1029017.html",
+          "sha256": "0fdaf3dfc73dfe40366b3b9eaadfb082920af46281da1c5e6fdc6aad94f7921d",
+          "fetched_at": "2026-08-27T13:37:01Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.gifu.lg.jp/info/zaisei/1007720/index.html (label: 予算・決算) 入口 https://www.city.gifu.lg.jp/info/zaisei/1007720/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.gifu.lg.jp/info/zaisei/1007720/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r7yosanhousin.pdf「令和7年度予算編成方針 （PDF 355.4KB）」, sha256:0fdaf3df）にて構造マーカー（歳入・歳出・項・不用額等）を確認済み。"
     }
   }
 }

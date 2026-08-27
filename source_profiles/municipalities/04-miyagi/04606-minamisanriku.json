@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.minamisanriku.miyagi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/minamisanriku/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.minamisanriku.miyagi.jp/gikai/minutes/20260304kaigiroku12gatukaigi.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/minamisanriku/WebView/rd/council.html",
-          "observed_on": "https://www.town.minamisanriku.miyagi.jp/gikai/about/722.html",
-          "fetched_at": "2026-08-27T07:29:42Z"
+          "url": "https://www.town.minamisanriku.miyagi.jp/gikai/minutes/20260304kaigiroku12gatukaigi.html",
+          "observed_on": "https://www.town.minamisanriku.miyagi.jp/gikai/minutes/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.minamisanriku.miyagi.jp/gikai/minutes/20260304kaigiroku12gatukaigi.html",
+          "observed_on": "https://www.town.minamisanriku.miyagi.jp/gikai/minutes/20260304kaigiroku12gatukaigi.html",
+          "sha256": "1a382bcee5eb5302589aa66664f17cd9cd0967d5be53a6a42af864165f682ef8",
+          "fetched_at": "2026-08-27T13:26:46Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/minamisanriku/WebView/rd/council.html (label: 南三陸町議会 議会中継)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

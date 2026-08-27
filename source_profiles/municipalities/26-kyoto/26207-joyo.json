@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.joyo.kyoto.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.joyo.kyoto.jp/gikai/houkokukai/houkokukai.htm",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.joyo.kyoto.jp/gikai/houkokukai/houkokukai.htm",
+          "observed_on": "http://www.city.joyo.kyoto.jp/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.joyo.kyoto.jp/gikai/houkokukai/houkokukai.htm",
+          "observed_on": "https://www.city.joyo.kyoto.jp/gikai/houkokukai/houkokukai.htm",
+          "sha256": "eb0636a1e0de78340680cf5b5f7ed1428d1ffc126c257ab10ae9beb054cade02",
+          "fetched_at": "2026-08-27T14:01:07Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed budget link at https://www.city.joyo.kyoto.jp/category/4-28-12-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.joyo.kyoto.jp/category/4-28-12-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.joyo.kyoto.jp/category/4-28-12-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.joyo.kyoto.jp/category/4-28-13-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.joyo.kyoto.jp/category/4-28-13-0-0-0-0-0-0-0.html",
@@ -72,9 +87,15 @@
           "observed_on": "https://www.city.joyo.kyoto.jp/category/4-28-13-0-0-0-0-0-0-0.html",
           "sha256": "a1cdbb434cebe438ba53b51934460a3a4256f3dfd3e082ddff19b13fdf048ba2",
           "fetched_at": "2026-08-27T09:50:02Z"
+        },
+        {
+          "url": "https://www.city.joyo.kyoto.jp/cmsfiles/contents/0000011/11379/hyoushitou.pdf",
+          "observed_on": "https://www.city.joyo.kyoto.jp/0000011379.html",
+          "sha256": "20bc0eb5d7578b5462cdbb7fffe3c13201a5c9c6d523e600902120abc91b9845",
+          "fetched_at": "2026-08-27T13:39:40Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.joyo.kyoto.jp/category/4-28-13-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.city.joyo.kyoto.jp/category/4-28-13-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.joyo.kyoto.jp/category/4-28-13-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（hyoushitou.pdf「表紙、目次等 (PDF形式、146.73KB)」, sha256:20bc0eb5）にて構造マーカー（歳入・歳出・節・決算額等）を確認済み。"
     }
   }
 }

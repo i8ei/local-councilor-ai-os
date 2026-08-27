@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/tokai-city/reiki_menu.html (label: 東海市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tokai.aichi.jp/shisei/1003714/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tokai.aichi.jp/shisei/1003714/index.html",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.tokai.aichi.jp/shisei/1003714/index.html",
           "sha256": "ab6a209afe9be2df2d7f4dd200a0e70e7df8854a30de0a3ca6063ee711639b4b",
           "fetched_at": "2026-08-27T10:15:45Z"
+        },
+        {
+          "url": "http://www.city.tokai.aichi.jp/shisei/1003714/index.html",
+          "observed_on": "http://www.city.tokai.aichi.jp/",
+          "sha256": "ab6a209afe9be2df2d7f4dd200a0e70e7df8854a30de0a3ca6063ee711639b4b",
+          "fetched_at": "2026-08-27T10:15:45Z"
+        },
+        {
+          "url": "https://www.city.tokai.aichi.jp/_res/projects/default_project/_page_/001/003/737/zaiseihikaku26.pdf",
+          "observed_on": "https://www.city.tokai.aichi.jp/shisei/1003714/1003733/1003737.html",
+          "sha256": "98c6abbe08a37f3986a7fb1107604e3b269ecbbdbae7bfc3cde672087fcae6be",
+          "fetched_at": "2026-08-27T13:38:10Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tokai.aichi.jp/shisei/1003714/index.html (label: 予算・財政) 入口 https://www.city.tokai.aichi.jp/shisei/1003714/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseihikaku26.pdf「平成26年度(3) （PDF 275.0KB）」, sha256:98c6abbe）にて構造マーカー（歳入・歳出等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

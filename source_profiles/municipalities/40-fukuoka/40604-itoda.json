@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.itoda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.itoda.lg.jp/books/index/2",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.itoda.lg.jp/books/index/2",
+          "observed_on": "http://www.town.itoda.lg.jp/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.itoda.lg.jp/books/index/2",
+          "observed_on": "https://www.town.itoda.lg.jp/books/index/2",
+          "sha256": "355f5a117a5ef8e97b7419b2a577ffaaa02c5f3b19be4eb335e01f57e47f27aa",
+          "fetched_at": "2026-08-27T14:08:59Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +44,11 @@
       "index_url": "https://en3-jg.d1-law.com/itoda/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.itoda.lg.jp/administration/financial_affairs",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.itoda.lg.jp/administration/financial_affairs",
@@ -45,16 +60,22 @@
           "observed_on": "https://www.town.itoda.lg.jp/administration/financial_affairs",
           "sha256": "6ecdff78c952d78573a99b3c7cb1d599afd0ea7133ec7d44e9d25c7f3accb09f",
           "fetched_at": "2026-08-27T09:36:52Z"
+        },
+        {
+          "url": "https://www.town.itoda.lg.jp/files/SpcDocumentDetail_67eb9ffb-87b8-47fe-8753-4dee997ea3a5_file.xlsx",
+          "observed_on": "https://www.town.itoda.lg.jp/administration/financial_affairs/financial_affairs_records.html",
+          "sha256": "ea542ebf45a3709f4836d72d561c73a9625ffa1fbb514566dd04e16db34f2a38",
+          "fetched_at": "2026-08-27T13:45:29Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.itoda.lg.jp/administration/financial_affairs (label: 町の財政) 入口 https://www.town.itoda.lg.jp/administration/financial_affairs に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.itoda.lg.jp/administration/financial_affairs に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（SpcDocumentDetail_67eb9ffb-87b8-47fe-8753-4dee997ea3a5_file.xlsx「令和５年度(xlsx)」, sha256:ea542ebf）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.itoda.lg.jp/administration/financial_affairs",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.itoda.lg.jp/administration/financial_affairs",
@@ -66,9 +87,15 @@
           "observed_on": "https://www.town.itoda.lg.jp/administration/financial_affairs",
           "sha256": "6ecdff78c952d78573a99b3c7cb1d599afd0ea7133ec7d44e9d25c7f3accb09f",
           "fetched_at": "2026-08-27T09:36:52Z"
+        },
+        {
+          "url": "https://www.town.itoda.lg.jp/files/SpcDocumentDetail_67eb9ffb-87b8-47fe-8753-4dee997ea3a5_file.xlsx",
+          "observed_on": "https://www.town.itoda.lg.jp/administration/financial_affairs/financial_affairs_records.html",
+          "sha256": "ea542ebf45a3709f4836d72d561c73a9625ffa1fbb514566dd04e16db34f2a38",
+          "fetched_at": "2026-08-27T13:45:29Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.itoda.lg.jp/administration/financial_affairs (label: 町の財政) 入口 https://www.town.itoda.lg.jp/administration/financial_affairs に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.itoda.lg.jp/administration/financial_affairs に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（SpcDocumentDetail_67eb9ffb-87b8-47fe-8753-4dee997ea3a5_file.xlsx「令和５年度(xlsx)」, sha256:ea542ebf）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.yoshitomi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.yoshitomi.lg.jp/gyosei/19/1/",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.yoshitomi.lg.jp/gyosei/19/v361/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.yoshitomi.lg.jp/gyosei/19/1/",
+          "url": "https://www.town.yoshitomi.lg.jp/gyosei/19/v361/",
           "observed_on": "http://www.town.yoshitomi.lg.jp/gyosei/19/",
-          "fetched_at": "2026-08-27T04:59:50Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.yoshitomi.lg.jp/gyosei/19/v361/",
+          "observed_on": "https://www.town.yoshitomi.lg.jp/gyosei/19/v361/",
+          "sha256": "746759a51ea9711b98e7a78cb1090e162d16f3d49ad1a6e73fa3988353f9619c",
+          "fetched_at": "2026-08-27T14:09:15Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.yoshitomi.lg.jp/gyosei/19/1/ (label: 吉富町議会本会議会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",
@@ -50,11 +58,11 @@
       "notes": "Observed finance section at http://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/ (label: 行財政) 入口 https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/",
@@ -66,9 +74,21 @@
           "observed_on": "https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/",
           "sha256": "540c5ad02e9f0eef1f4dc7fc3c853db61e26cfbecfc4d82f28d24d677a85aa17",
           "fetched_at": "2026-08-27T09:37:13Z"
+        },
+        {
+          "url": "http://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/",
+          "observed_on": "http://www.town.yoshitomi.lg.jp/",
+          "sha256": "540c5ad02e9f0eef1f4dc7fc3c853db61e26cfbecfc4d82f28d24d677a85aa17",
+          "fetched_at": "2026-08-27T09:37:13Z"
+        },
+        {
+          "url": "https://www.town.yoshitomi.lg.jp/user/filer_public/90/f2/90f2e4b6-8d3b-43f5-95d4-57e746343ccf/r7nian-11yue-hao-hpjie-zai-wen-cai-zheng-shi-qing-nogong-biao.pdf",
+          "observed_on": "https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/p105/s627/",
+          "sha256": "1292c18e7f0dff7b9cd68643acde329c5116f39b9382ebe425b2f162bdee60cb",
+          "fetched_at": "2026-08-27T13:45:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/ (label: 行財政) 入口 https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.yoshitomi.lg.jp/gyosei/chosei/e111/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r7nian-11yue-hao-hpjie-zai-wen-cai-zheng-shi-qing-nogong-biao.pdf「令和６年度決算及び令和７年度上半期」, sha256:1292c18e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

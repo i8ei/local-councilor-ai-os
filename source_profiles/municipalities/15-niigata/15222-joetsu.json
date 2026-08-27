@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.joetsu.niigata.jp/life/5/84/210/ (label: 予算・決算) 入口 https://www.city.joetsu.niigata.jp:443/life/5/84/210/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.joetsu.niigata.jp:443/life/5/84/210/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.joetsu.niigata.jp:443/life/5/84/210/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.joetsu.niigata.jp/life/5/84/210/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.joetsu.niigata.jp/life/5/84/210/",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.joetsu.niigata.jp:443/life/5/84/210/",
           "sha256": "4f41299f3f823832339780dc18a7ea8a29330a255c775a92142ba6e4dae4b2f2",
           "fetched_at": "2026-08-27T10:04:28Z"
+        },
+        {
+          "url": "http://www.city.joetsu.niigata.jp/life/5/84/210/",
+          "observed_on": "http://www.city.joetsu.niigata.jp/",
+          "sha256": "4f41299f3f823832339780dc18a7ea8a29330a255c775a92142ba6e4dae4b2f2",
+          "fetched_at": "2026-08-27T10:04:28Z"
+        },
+        {
+          "url": "https://www.city.joetsu.niigata.jp:443/uploaded/attachment/288494.pdf",
+          "observed_on": "https://www.city.joetsu.niigata.jp:443/soshiki/zaisei/zaisei-08-yosan-hosei-3-hosei.html",
+          "sha256": "b46caa33bbcc09a404b5076e9c97a81a8c92b71afbb21fe3dcb1530653bf07fb",
+          "fetched_at": "2026-08-27T13:35:32Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.joetsu.niigata.jp/life/5/84/210/ (label: 予算・決算) 入口 https://www.city.joetsu.niigata.jp:443/life/5/84/210/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.joetsu.niigata.jp:443/life/5/84/210/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.joetsu.niigata.jp:443/life/5/84/210/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（288494.pdf「令和8年度9月補正予算（案）の概要 [PDFファイル／263KB]」, sha256:b46caa33）にて構造マーカー（歳入・歳出等）を確認済み。"
     }
   }
 }

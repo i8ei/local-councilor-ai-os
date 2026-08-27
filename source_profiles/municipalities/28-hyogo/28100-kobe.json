@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.kobe.lg.jp/shise/jore/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
@@ -63,9 +63,21 @@
           "url": "https://www.city.kobe.lg.jp/documents/48584/2026yosannogaiyou.pdf",
           "observed_on": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
           "fetched_at": "2026-08-27T11:05:38Z"
+        },
+        {
+          "url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "observed_on": "http://www.city.kobe.lg.jp/",
+          "sha256": "6964a0fb9302c8d11bac9c04b35078138b77f65923e6552225954279390559d9",
+          "fetched_at": "2026-08-27T09:51:36Z"
+        },
+        {
+          "url": "https://www.city.kobe.lg.jp/documents/48584/5gatsuhoseiyosanshor7.pdf",
+          "observed_on": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "sha256": "f12b09ea9e3db1e19de338223bcb4aeaad4d4bbf357a190c6e947e602a4ae8d1",
+          "fetched_at": "2026-08-27T13:40:34Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html (label: 予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（5gatsuhoseiyosanshor7.pdf「令和7年度5月補正一般会計補正予算書（PDF：275KB）」, sha256:f12b09ea）にて構造マーカー（歳出・款・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

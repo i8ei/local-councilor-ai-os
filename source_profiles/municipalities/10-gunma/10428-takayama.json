@@ -6,19 +6,27 @@
   "official_home_url": "http://vill.takayama.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://vill.takayama.gunma.jp/gikai/gijiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://vill.takayama.gunma.jp/gikai/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://vill.takayama.gunma.jp/gikai/gijiroku.html",
+          "url": "https://vill.takayama.gunma.jp/gikai/index.html",
           "observed_on": "http://vill.takayama.gunma.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:45:03Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://vill.takayama.gunma.jp/gikai/index.html",
+          "observed_on": "https://vill.takayama.gunma.jp/gikai/index.html",
+          "sha256": "0ac4b559e59748bfb80354c2366d0ce709ced11a5e418f9f1397ce0617a4bc72",
+          "fetched_at": "2026-08-27T13:39:36Z"
         }
       ],
-      "notes": "Observed council minutes index at http://vill.takayama.gunma.jp/gikai/gijiroku.html (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

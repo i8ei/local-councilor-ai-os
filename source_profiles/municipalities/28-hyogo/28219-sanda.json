@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.sanda.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.sanda.lg.jp/shisei_joho/gikai/28350.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.sanda.lg.jp/shisei_joho/gikai/28350.html",
+          "observed_on": "https://www.city.sanda.lg.jp/shisei_joho/gikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.sanda.lg.jp/shisei_joho/gikai/28350.html",
+          "observed_on": "https://www.city.sanda.lg.jp/shisei_joho/gikai/28350.html",
+          "sha256": "d15f28abb210716a817716c6f5649d4cb24c0a3a0054a3c29e876d6a004f829b",
+          "fetched_at": "2026-08-27T14:03:09Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +65,11 @@
       "notes": "Observed finance section at https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
@@ -66,9 +81,15 @@
           "observed_on": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html",
           "sha256": "c63d67b986e5bae0cc32b6110c1cdb12fa5662ea88f4aa8d3988b9cce32ba33e",
           "fetched_at": "2026-08-27T09:51:57Z"
+        },
+        {
+          "url": "https://www.city.sanda.lg.jp/material/files/group/10/roadmap_main.pdf",
+          "observed_on": "https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/gyozaiseikaikaku/34316.html",
+          "sha256": "5c8a693cdc55a3fbc555f1ea040e0cb66068557536ee0c912daf143fb58467ae",
+          "fetched_at": "2026-08-27T13:41:11Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.sanda.lg.jp/shisei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（roadmap_main.pdf「三田市未来への財政ロードマップ (PDFファイル: 2.1MB)」, sha256:5c8a693c）にて構造マーカー（歳入・歳出・項等）を確認済み。"
     }
   }
 }

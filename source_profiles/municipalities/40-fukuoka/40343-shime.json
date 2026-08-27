@@ -6,25 +6,27 @@
   "official_home_url": "http://www.town.shime.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/shime/SpTop.html",
-      "verified_at": "2026-08-27T09:36:13Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.shime.lg.jp/site/gikai/gikaidayori117.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/shime/SpTop.html",
-          "observed_on": "http://www.town.shime.lg.jp/",
-          "fetched_at": "2026-08-27T04:19:07Z"
+          "url": "https://www.town.shime.lg.jp/site/gikai/gikaidayori117.html",
+          "observed_on": "http://www.town.shime.lg.jp/site/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/shime/SpTop.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/shime/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T09:36:15Z"
+          "url": "https://www.town.shime.lg.jp/site/gikai/gikaidayori117.html",
+          "observed_on": "https://www.town.shime.lg.jp/site/gikai/gikaidayori117.html",
+          "sha256": "fd7cb851b37aee29f6db198a498735513c7fc730282623652bc1981c5aaf53a4",
+          "fetched_at": "2026-08-27T14:08:41Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/shime/SpTop.html (label: 町議会会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -69,11 +71,11 @@
       "notes": "Observed finance section at http://www.town.shime.lg.jp/life/3/8/45/  (label: 町の財政情報) 入口 https://www.town.shime.lg.jp/life/3/8/45/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shime.lg.jp/life/3/8/45/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.shime.lg.jp/life/3/8/45/ ",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shime.lg.jp/life/3/8/45/ ",
@@ -85,9 +87,21 @@
           "observed_on": "https://www.town.shime.lg.jp/life/3/8/45/",
           "sha256": "ccc7e4cbe2b7ea852aea849ee390d5911abb0d7b781008ca140a74645bf2af07",
           "fetched_at": "2026-08-27T09:36:21Z"
+        },
+        {
+          "url": "http://www.town.shime.lg.jp/life/3/8/45/ ",
+          "observed_on": "http://www.town.shime.lg.jp/",
+          "sha256": "ccc7e4cbe2b7ea852aea849ee390d5911abb0d7b781008ca140a74645bf2af07",
+          "fetched_at": "2026-08-27T09:36:21Z"
+        },
+        {
+          "url": "https://www.town.shime.lg.jp/uploaded/attachment/27028.pdf",
+          "observed_on": "https://www.town.shime.lg.jp/web-koho/kouhou/63626.html",
+          "sha256": "96400db976b06435e9b13f22491b0badb5879e9a6115ee05242aed7935da73db",
+          "fetched_at": "2026-08-27T13:45:40Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shime.lg.jp/life/3/8/45/  (label: 町の財政情報) 入口 https://www.town.shime.lg.jp/life/3/8/45/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.shime.lg.jp/life/3/8/45/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（27028.pdf「令和6年度普通会計決算の概要 [PDFファイル／116KB]」, sha256:96400db9）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

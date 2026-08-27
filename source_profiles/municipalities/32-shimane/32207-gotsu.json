@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.gotsu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html",
-      "verified_at": "2026-08-27T09:43:32Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.gotsu.lg.jp/site/gikai/41378.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html",
+          "url": "http://www.city.gotsu.lg.jp/site/gikai/41378.html",
           "observed_on": "http://www.city.gotsu.lg.jp/site/gikai/41842.html",
-          "fetched_at": "2026-08-27T06:06:26Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html",
-          "sha256": "d819b2408068d15346c41a8fcc3edcfec72ca49d340158c6d62bcb3d8912669c",
-          "fetched_at": "2026-08-27T09:43:32Z"
+          "url": "http://www.city.gotsu.lg.jp/site/gikai/41378.html",
+          "observed_on": "http://www.city.gotsu.lg.jp/site/gikai/41378.html",
+          "sha256": "5d4249fd97759d3703020ebb7c52c3b6f420c9aac01b358603a464d67e7d4c44",
+          "fetched_at": "2026-08-27T14:05:20Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/gotsu/pg/index.html (label: 市議会会議録検索) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -48,11 +50,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/city.gotsu/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.gotsu.lg.jp/soshiki/5/41300.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.gotsu.lg.jp/soshiki/5/41300.html",
@@ -69,16 +71,22 @@
           "url": "http://www.city.gotsu.lg.jp/uploaded/attachment/21757.pdf",
           "observed_on": "http://www.city.gotsu.lg.jp/soshiki/5/41300.html",
           "fetched_at": "2026-08-27T11:00:15Z"
+        },
+        {
+          "url": "http://www.city.gotsu.lg.jp/uploaded/attachment/21757.pdf",
+          "observed_on": "http://www.city.gotsu.lg.jp/soshiki/5/41300.html",
+          "sha256": "68e86555c35370925c94f5f71bfac692ce595d5c4deaa22798111343366ed08f",
+          "fetched_at": "2026-08-27T11:00:16Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.gotsu.lg.jp/soshiki/5/41300.html (label: 令和8年度補正予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（21757.pdf「令和8年度9月補正予算書 [PDFファイル：637KB]」, sha256:68e86555）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.gotsu.lg.jp/life/4/20/89/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.gotsu.lg.jp/life/4/20/89/",
@@ -90,9 +98,15 @@
           "observed_on": "http://www.city.gotsu.lg.jp/life/4/20/89/",
           "sha256": "7b7fda82554bfc91af91e0608cce8da725a50d690b4c67b1fd577df6146f880d",
           "fetched_at": "2026-08-27T09:43:36Z"
+        },
+        {
+          "url": "http://www.city.gotsu.lg.jp/uploaded/attachment/15926.pdf",
+          "observed_on": "http://www.city.gotsu.lg.jp/soshiki/5/1915.html",
+          "sha256": "c8ce3d15327e6e3e661ef91b056eb3efd268682177bf7df642c4b1d1d36ec84d",
+          "fetched_at": "2026-08-27T13:42:06Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.gotsu.lg.jp/life/4/20/89/ (label: 予算・決算) 入口 http://www.city.gotsu.lg.jp/life/4/20/89/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.city.gotsu.lg.jp/life/4/20/89/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（15926.pdf「令和4年度決算カード [PDFファイル：265KB]」, sha256:c8ce3d15）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

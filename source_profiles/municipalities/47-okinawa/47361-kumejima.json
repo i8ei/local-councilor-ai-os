@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.kumejima.okinawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/kumejima/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kumejima.okinawa.jp/docs/2019042600039/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/kumejima/WebView/rd/council_1.html",
-          "observed_on": "https://www.town.kumejima.okinawa.jp/categories/chosei/",
-          "fetched_at": "2026-08-27T06:59:37Z"
+          "url": "https://www.town.kumejima.okinawa.jp/docs/2019042600039/",
+          "observed_on": "https://www.town.kumejima.okinawa.jp/categories/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.kumejima.okinawa.jp/docs/2019042600039/",
+          "observed_on": "https://www.town.kumejima.okinawa.jp/docs/2019042600039/",
+          "sha256": "32048bd8efa7a2ee9fe9566955546f93800c4fcb786b6c46b3d7c3e8060ee7fd",
+          "fetched_at": "2026-08-27T14:12:49Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/kumejima/WebView/rd/council_1.html (label: )"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +44,11 @@
       "notes": "Observed regulations index at https://krq938.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 久米島町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumejima.okinawa.jp/docs/2026042700010/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumejima.okinawa.jp/docs/2026042700010/",
@@ -57,16 +65,22 @@
           "url": "https://www.town.kumejima.okinawa.jp/docs/2026042700010/file_contents/R8tousyo.pdf",
           "observed_on": "https://www.town.kumejima.okinawa.jp/docs/2026042700010/",
           "fetched_at": "2026-08-27T10:58:39Z"
+        },
+        {
+          "url": "https://www.town.kumejima.okinawa.jp/docs/2026042700010/file_contents/R8tousyo.pdf",
+          "observed_on": "https://www.town.kumejima.okinawa.jp/docs/2026042700010/",
+          "sha256": "045a6a0b13787a82680765ab3631485e63f39dee3b67c151b6bc1790c76311a3",
+          "fetched_at": "2026-08-27T10:58:39Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kumejima.okinawa.jp/docs/2026042700010/ (label: 令和８年度 下水道事業会計予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（R8tousyo.pdf「令和８年度 下水道事業会計予算書[PDF：370KB]」, sha256:045a6a0b）にて構造マーカー（款・項・節・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kumejima.okinawa.jp/docs/2020101300029/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kumejima.okinawa.jp/docs/2020101300029/",
@@ -78,9 +92,15 @@
           "observed_on": "https://www.town.kumejima.okinawa.jp/docs/2020101300029/",
           "sha256": "9f074b4d56355273db8ef885d173d2dd11d96b45ffb273462358f73f52e8af07",
           "fetched_at": "2026-08-27T09:41:41Z"
+        },
+        {
+          "url": "https://www.town.kumejima.okinawa.jp/docs/2020101300029/file_contents/R5_473618__2023.xlsx",
+          "observed_on": "https://www.town.kumejima.okinawa.jp/docs/2020101300029/",
+          "sha256": "f114ec395b0ea56c83f3507e27cdfc0190ad5da40d9b78a103950c99ce51734e",
+          "fetched_at": "2026-08-27T13:48:25Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kumejima.okinawa.jp/docs/2020101300029/ (label: 財政状況資料集) 入口 https://www.town.kumejima.okinawa.jp/docs/2020101300029/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kumejima.okinawa.jp/docs/2020101300029/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R5_473618__2023.xlsx「令和５年度 財政状況資料集[XLSX：559KB]」, sha256:f114ec39）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

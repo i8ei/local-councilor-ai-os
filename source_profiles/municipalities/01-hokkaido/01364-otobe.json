@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.otobe.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.otobe.lg.jp/section/gikai/e0taal0000000v31.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.otobe.lg.jp/section/gikai/e0taal0000000v31.html",
+          "observed_on": "http://www.town.otobe.lg.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.otobe.lg.jp/section/gikai/e0taal0000000v31.html",
+          "observed_on": "https://www.town.otobe.lg.jp/section/gikai/e0taal0000000v31.html",
+          "sha256": "290b35208e62cf58bb113196539dd41e12a9bd2b2a3f389db400024b6f8182b3",
+          "fetched_at": "2026-08-27T13:23:43Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

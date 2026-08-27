@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.seiro.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.seiro.niigata.jp/7/11/2877.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.seiro.niigata.jp/7/11/968.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.seiro.niigata.jp/7/11/2877.html",
+          "url": "https://www.town.seiro.niigata.jp/7/11/968.html",
           "observed_on": "https://www.town.seiro.niigata.jp/7/11/index.html",
-          "fetched_at": "2026-08-27T06:04:45Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.seiro.niigata.jp/7/11/968.html",
+          "observed_on": "https://www.town.seiro.niigata.jp/7/11/968.html",
+          "sha256": "9fb9bcd524abd6183760115fe0eb7f5c0b5a3edb2af426a9f8b18938ffea9ed6",
+          "fetched_at": "2026-08-27T13:44:28Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.seiro.niigata.jp/7/11/2877.html (label: 会議録) extraction probe read one document at https://www.town.seiro.niigata.jp/section/gikai/kaigiroku.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

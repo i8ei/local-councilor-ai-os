@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.fujimi.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/fujimi/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.fujimi.saitama.jp/shigikai/shoukai/gikai-aramashi.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/fujimi/WebView/rd/council.html",
+          "url": "https://www.city.fujimi.saitama.jp/shigikai/shoukai/gikai-aramashi.html",
           "observed_on": "http://www.city.fujimi.saitama.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T06:58:24Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.fujimi.saitama.jp/shigikai/shoukai/gikai-aramashi.html",
+          "observed_on": "https://www.city.fujimi.saitama.jp/shigikai/shoukai/gikai-aramashi.html",
+          "sha256": "738a27a155e9c77b0e17a252cec2b001de743ac120e8eee2161663a68d380661",
+          "fetched_at": "2026-08-27T13:40:24Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/fujimi/WebView/rd/council.html (label: 議会中継)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

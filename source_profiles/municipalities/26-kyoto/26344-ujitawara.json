@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.ujitawara.kyoto.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/ujitawarachogikai/gikainokatsudo/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/ujitawarachogikai/gikainokatsudo/index.html",
+          "observed_on": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/ujitawarachogikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/ujitawarachogikai/gikainokatsudo/index.html",
+          "observed_on": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/ujitawarachogikai/gikainokatsudo/index.html",
+          "sha256": "c2921081470ebf17bf14763befb9f88f9f947253592b3b555715662f36092077",
+          "fetched_at": "2026-08-27T14:01:27Z"
+        },
+        {
+          "url": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/ujitawarachogikai/gikainokatsudo/1856.html",
+          "observed_on": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/ujitawarachogikai/gikainokatsudo/index.html",
+          "sha256": "7217bc6a9a8047632a95039fdcde44694b16171e776a2c2d97306a7509826abe",
+          "fetched_at": "2026-08-27T14:01:27Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -29,11 +53,11 @@
       "notes": "Observed g_reiki at https://www.town.ujitawara.kyoto.jp/section/reiki_int/reiki_menu.html (label: 町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/zaisei/index.html",
@@ -45,9 +69,15 @@
           "observed_on": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/zaisei/index.html",
           "sha256": "206b782f8d3d7030ba2ebdb81c2ebaee48cc0efe6eab427d3c512ee437e09bac",
           "fetched_at": "2026-08-27T09:50:14Z"
+        },
+        {
+          "url": "https://www.town.ujitawara.kyoto.jp/material/files/group/3/h30_zaiseikenzenka_2019091713132058.pdf",
+          "observed_on": "https://www.town.ujitawara.kyoto.jp/gyoseijoho/zaisei/1193.html",
+          "sha256": "0dc9c028fa3b74741d54af7c52d797fa9c2df017d996fbccb4fcf25391fa2a42",
+          "fetched_at": "2026-08-27T13:39:46Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.ujitawara.kyoto.jp/gyoseijoho/zaisei/index.html (label: 財政) 入口 https://www.town.ujitawara.kyoto.jp/gyoseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ujitawara.kyoto.jp/gyoseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.ujitawara.kyoto.jp/gyoseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（h30_zaiseikenzenka_2019091713132058.pdf「平成30年度宇治田原町の健全化判断比率及び公営企業資金不足比率について (PDFファイル: 68.6KB)」, sha256:0dc9c028）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

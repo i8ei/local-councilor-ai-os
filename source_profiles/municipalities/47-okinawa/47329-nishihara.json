@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/nishihara/reiki_menu.html (label: 西原町例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.nishihara.okinawa.jp/life/5/22/123/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nishihara.okinawa.jp/life/5/22/123/",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.nishihara.okinawa.jp/life/5/22/123/",
           "sha256": "aa5e9aded02f61840b3fc1f5badcd775ef0438528d2f3ac65d0be95cab80673b",
           "fetched_at": "2026-08-27T09:41:58Z"
+        },
+        {
+          "url": "http://www.town.nishihara.okinawa.jp/life/5/22/123/",
+          "observed_on": "http://www.town.nishihara.okinawa.jp/",
+          "sha256": "aa5e9aded02f61840b3fc1f5badcd775ef0438528d2f3ac65d0be95cab80673b",
+          "fetched_at": "2026-08-27T09:41:58Z"
+        },
+        {
+          "url": "https://www.town.nishihara.okinawa.jp/uploaded/attachment/8248.pdf",
+          "observed_on": "https://www.town.nishihara.okinawa.jp/soshiki/3/4701.html",
+          "sha256": "820d8d4ad2c7ea30d3df9fc4557624e56692d86a11745e8104757bb8a7e2a1ed",
+          "fetched_at": "2026-08-27T13:48:18Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.nishihara.okinawa.jp/life/5/22/123/ (label: 予算) 入口 https://www.town.nishihara.okinawa.jp/life/5/22/123/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.nishihara.okinawa.jp/life/5/22/123/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（8248.pdf「予算編成緊急アクションプラン（第二次）（令和3年度まで） [PDFファイル／154KB]」, sha256:820d8d4a）にて構造マーカー（歳入・歳出・節・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

@@ -22,34 +22,58 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kozagawa.wakayama.jp/homepage/sub006.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kozagawa.wakayama.jp/homepage/sub006.html",
           "observed_on": "http://www.town.kozagawa.wakayama.jp/",
           "fetched_at": "2026-08-27T07:27:34Z"
+        },
+        {
+          "url": "http://www.town.kozagawa.wakayama.jp/homepage/sub006.html",
+          "observed_on": "http://www.town.kozagawa.wakayama.jp/",
+          "sha256": "c3aa219a27d124e3e8e899d347e05c6a9a62b09f2b9a36bad9a5572216b2cbf9",
+          "fetched_at": "2026-08-27T09:53:54Z"
+        },
+        {
+          "url": "https://www.town.kozagawa.lg.jp/pdf/zaisei/tousyoyosanjyoukyou.pdf",
+          "observed_on": "https://www.town.kozagawa.lg.jp/homepage/sub006.html",
+          "sha256": "a66c328070a34db1728789cb0232cff1346925f531185cfd5a7e6bf5388ad901",
+          "fetched_at": "2026-08-27T13:41:53Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.kozagawa.wakayama.jp/homepage/sub006.html (label: ◆財政・予算)"
+      "notes": "deepest_doc=P1。budget文書（tousyoyosanjyoukyou.pdf「」, sha256:a66c3280）にて構造マーカー（予算額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kozagawa.wakayama.jp/homepage/sub006.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kozagawa.wakayama.jp/homepage/sub006.html",
           "observed_on": "http://www.town.kozagawa.wakayama.jp/",
           "fetched_at": "2026-08-27T07:27:34Z"
+        },
+        {
+          "url": "http://www.town.kozagawa.wakayama.jp/homepage/sub006.html",
+          "observed_on": "http://www.town.kozagawa.wakayama.jp/",
+          "sha256": "c3aa219a27d124e3e8e899d347e05c6a9a62b09f2b9a36bad9a5572216b2cbf9",
+          "fetched_at": "2026-08-27T09:53:54Z"
+        },
+        {
+          "url": "https://www.town.kozagawa.lg.jp/pdf/zaisei/h23zaiseiyougo.pdf",
+          "observed_on": "https://www.town.kozagawa.lg.jp/homepage/sub006.html",
+          "sha256": "a8d7048129b0e8339dc9ca77360aac45cf497de11f5578f5d3590c7981edb7f7",
+          "fetched_at": "2026-08-27T13:41:55Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kozagawa.wakayama.jp/homepage/sub006.html (label: ◆財政・予算)"
+      "notes": "deepest_doc=P1。settlement文書（h23zaiseiyougo.pdf「」, sha256:a8d70481）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

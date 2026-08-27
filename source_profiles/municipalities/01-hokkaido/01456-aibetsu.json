@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.aibetsu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.aibetsu.hokkaido.jp/05/01/1329",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.aibetsu.hokkaido.jp/05/01/1329",
+          "observed_on": "https://www.town.aibetsu.hokkaido.jp/05/01",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.aibetsu.hokkaido.jp/05/01/1329",
+          "observed_on": "https://www.town.aibetsu.hokkaido.jp/05/01/1329",
+          "sha256": "0a45cb139b0a10ac0ef49222a34924f8f26249a4d2886941c11aa0a2a4096fa3",
+          "fetched_at": "2026-08-27T13:24:47Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

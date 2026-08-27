@@ -50,11 +50,11 @@
       "notes": "Observed finance section at http://www.city.kanonji.kagawa.jp/life/14/93/ (label: 行財政) 入口 https://www.city.kanonji.kagawa.jp/life/14/93/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kanonji.kagawa.jp/life/14/93/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kanonji.kagawa.jp/life/14/93/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kanonji.kagawa.jp/life/14/93/",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.city.kanonji.kagawa.jp/life/14/93/",
           "sha256": "54eaf8be4db7458d708011eff26761f79f53b1ff4bfa0eceae4d490d151ada2c",
           "fetched_at": "2026-08-27T09:46:28Z"
+        },
+        {
+          "url": "http://www.city.kanonji.kagawa.jp/life/14/93/",
+          "observed_on": "http://www.city.kanonji.kagawa.jp/",
+          "sha256": "54eaf8be4db7458d708011eff26761f79f53b1ff4bfa0eceae4d490d151ada2c",
+          "fetched_at": "2026-08-27T09:46:28Z"
+        },
+        {
+          "url": "https://www.city.kanonji.kagawa.jp/uploaded/attachment/42126.xlsx",
+          "observed_on": "https://www.city.kanonji.kagawa.jp/soshiki/5/1243.html",
+          "sha256": "f6f494d8333b3744af9d54f2a157df7030d83e68141dc4dad048d946cb10f036",
+          "fetched_at": "2026-08-27T13:43:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kanonji.kagawa.jp/life/14/93/ (label: 行財政) 入口 https://www.city.kanonji.kagawa.jp/life/14/93/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kanonji.kagawa.jp/life/14/93/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（42126.xlsx「令和６年度財政状況資料集 [Excelファイル／563KB]」, sha256:f6f494d8）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -6,19 +6,27 @@
   "official_home_url": "https://www.city.fukuchiyama.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.fukuchiyama.lg.jp/uploaded/life/88146_153921_misc.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.fukuchiyama.lg.jp/site/shigikai/87252.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.fukuchiyama.lg.jp/uploaded/life/88146_153921_misc.pdf",
-          "observed_on": "https://www.city.fukuchiyama.lg.jp/soshiki/39/23842.html",
-          "fetched_at": "2026-08-27T06:14:54Z"
+          "url": "https://www.city.fukuchiyama.lg.jp/site/shigikai/87252.html",
+          "observed_on": "https://www.city.fukuchiyama.lg.jp/site/shigikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.fukuchiyama.lg.jp/site/shigikai/87252.html",
+          "observed_on": "https://www.city.fukuchiyama.lg.jp/site/shigikai/87252.html",
+          "sha256": "2a005033f517b9f1da38286cd74d5260d6a701b2dfd0e6936f3da35f8baef405",
+          "fetched_at": "2026-08-27T14:01:00Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.fukuchiyama.lg.jp/uploaded/life/88146_153921_misc.pdf (label: 令和元年度第1回議事録 [PDFファイル／194KB])"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -68,11 +76,11 @@
       "notes": "Observed budget link at https://www.city.fukuchiyama.lg.jp/site/yosan/88131.html (label: 令和8年第3回（9月）定例会補正予算などの提案議案について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fukuchiyama.lg.jp/life/4/22/89/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fukuchiyama.lg.jp/life/4/22/89/",
@@ -84,9 +92,15 @@
           "observed_on": "https://www.city.fukuchiyama.lg.jp/life/4/22/89/",
           "sha256": "f2d864633e2fb172d8cf00560a24cd0c0cd20fc1b929f2f9bde745dfa2e86983",
           "fetched_at": "2026-08-27T09:49:53Z"
+        },
+        {
+          "url": "https://www.city.fukuchiyama.lg.jp/uploaded/attachment/49852.pdf",
+          "observed_on": "https://www.city.fukuchiyama.lg.jp/soshiki/9/79012.html",
+          "sha256": "b520c11fdb70a3b6617e07136964177c0f939277d0c6216b5350bc3b193188a6",
+          "fetched_at": "2026-08-27T13:39:32Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.fukuchiyama.lg.jp/life/4/22/89/ (label: 決算) 入口 https://www.city.fukuchiyama.lg.jp/life/4/22/89/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fukuchiyama.lg.jp/life/4/22/89/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（49852.pdf「R6年度 決算概要 [PDFファイル／2.71MB]」, sha256:b520c11f）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

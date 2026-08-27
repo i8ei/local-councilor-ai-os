@@ -6,12 +6,27 @@
   "official_home_url": "https://town.iwate.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://town.iwate.iwate.jp/gikai/kasseikatyousatokui/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://town.iwate.iwate.jp/gikai/kasseikatyousatokui/",
+          "observed_on": "https://town.iwate.iwate.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://town.iwate.iwate.jp/gikai/kasseikatyousatokui/",
+          "observed_on": "https://town.iwate.iwate.jp/gikai/kasseikatyousatokui/",
+          "sha256": "fc3322325aaac39fc910caf1553dbed71ea4a0af6b43b20393a33ece1c1b43fb",
+          "fetched_at": "2026-08-27T13:26:33Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

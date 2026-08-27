@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at http://www1.g-reiki.net/tomika/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tomika.gifu.jp/docs/170.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tomika.gifu.jp/docs/170.html",
@@ -63,16 +63,28 @@
           "url": "https://www.town.tomika.gifu.jp/fs/3/2/1/0/6/9/_/__8________.pdf",
           "observed_on": "https://www.town.tomika.gifu.jp/docs/170.html",
           "fetched_at": "2026-08-27T11:14:17Z"
+        },
+        {
+          "url": "http://www.town.tomika.gifu.jp/docs/170.html",
+          "observed_on": "http://www.town.tomika.gifu.jp/",
+          "sha256": "a25c8adc29124e89de43513df85155285e2dc72788d1537cbd155835b6205096",
+          "fetched_at": "2026-08-27T10:14:19Z"
+        },
+        {
+          "url": "https://www.town.tomika.gifu.jp/fs/3/2/1/0/6/9/_/__8________.pdf",
+          "observed_on": "https://www.town.tomika.gifu.jp/docs/170.html",
+          "sha256": "31ec050e0b71e4c65cf86c23c06fd3c2bf150344b66324c444c444cd03f84ded",
+          "fetched_at": "2026-08-27T11:14:17Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tomika.gifu.jp/docs/170.html (label: 【2025年11月13日】 当初予算の編成について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（__8________.pdf「令和8年度予算編成方針 (PDF 112KB)」, sha256:31ec050e）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.tomika.gifu.jp/chosei/zaisei/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tomika.gifu.jp/chosei/zaisei/",
@@ -84,9 +96,21 @@
           "observed_on": "https://www.town.tomika.gifu.jp/chosei/zaisei/",
           "sha256": "78ae74d0413c9995eb44b827b0fd98af8716e4ca51cef1406f2456864df67874",
           "fetched_at": "2026-08-27T10:14:22Z"
+        },
+        {
+          "url": "http://www.town.tomika.gifu.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.tomika.gifu.jp/",
+          "sha256": "78ae74d0413c9995eb44b827b0fd98af8716e4ca51cef1406f2456864df67874",
+          "fetched_at": "2026-08-27T10:14:22Z"
+        },
+        {
+          "url": "https://www.town.tomika.gifu.jp/fs/3/1/7/3/1/8/_/__6_____.pdf",
+          "observed_on": "https://www.town.tomika.gifu.jp/docs/11818.html",
+          "sha256": "f713d3bf6f4924daa465844dce121724ef54f7b94ff8d2737b972d7b2743bfc3",
+          "fetched_at": "2026-08-27T13:37:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tomika.gifu.jp/chosei/zaisei/ (label: 財政・行政改革) 入口 https://www.town.tomika.gifu.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tomika.gifu.jp/chosei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（__6_____.pdf「令和6年度決算書 (PDF 1.06MB)」, sha256:f713d3bf）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.miyawaka.lg.jp/list00321.html (label: 予算・決算) 入口 https://www.city.miyawaka.lg.jp/list00321.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyawaka.lg.jp/list00321.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.miyawaka.lg.jp/list00321.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyawaka.lg.jp/list00321.html",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.miyawaka.lg.jp/list00321.html",
           "sha256": "5007d53ac02512429ba976fb7845f9156547c5a42c4ae26e1ae43f33237fa38f",
           "fetched_at": "2026-08-27T09:36:07Z"
+        },
+        {
+          "url": "http://www.city.miyawaka.lg.jp/list00321.html",
+          "observed_on": "http://www.city.miyawaka.lg.jp/",
+          "sha256": "5007d53ac02512429ba976fb7845f9156547c5a42c4ae26e1ae43f33237fa38f",
+          "fetched_at": "2026-08-27T09:36:07Z"
+        },
+        {
+          "url": "https://www.city.miyawaka.lg.jp/kiji003448542/3_448542_19710_up_bzrplz0t.pdf",
+          "observed_on": "https://www.city.miyawaka.lg.jp/kiji003448542/index.html",
+          "sha256": "42d0b14174beb15e1f09c5b2ab7984c56c32a0ddb50657fd1f2b21a2ee214396",
+          "fetched_at": "2026-08-27T13:45:03Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.miyawaka.lg.jp/list00321.html (label: 予算・決算) 入口 https://www.city.miyawaka.lg.jp/list00321.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyawaka.lg.jp/list00321.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3_448542_19710_up_bzrplz0t.pdf「令和6年度宮若市歳入歳出決算書」, sha256:42d0b141）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

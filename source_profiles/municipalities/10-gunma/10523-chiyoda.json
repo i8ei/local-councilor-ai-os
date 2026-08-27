@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.chiyoda.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.chiyoda.gunma.jp/gikai/gikai15.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.chiyoda.gunma.jp/gikai/gikai10.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.chiyoda.gunma.jp/gikai/gikai15.html",
+          "url": "https://www.town.chiyoda.gunma.jp/gikai/gikai10.html",
           "observed_on": "http://www.town.chiyoda.gunma.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T06:44:53Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.chiyoda.gunma.jp/gikai/gikai10.html",
+          "observed_on": "https://www.town.chiyoda.gunma.jp/gikai/gikai10.html",
+          "sha256": "109a9811d22e8cefc922527b001c1e4da4445b0bfeaa4af17cf25111895c10af",
+          "fetched_at": "2026-08-27T13:39:34Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.chiyoda.gunma.jp/gikai/gikai15.html (label: 本会議会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

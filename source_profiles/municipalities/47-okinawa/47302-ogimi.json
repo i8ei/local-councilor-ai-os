@@ -61,11 +61,11 @@
       "notes": "Observed budget link at https://www.vill.ogimi.okinawa.jp/soshiki/kaikei/gyomu/gyozaisei/1475.html (label: 当初予算の公表について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html",
@@ -77,9 +77,15 @@
           "observed_on": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html",
           "sha256": "43ba3e6de2c7c1024c91e1c318e5b93aef0d1859ae066c682c9e11281e95e112",
           "fetched_at": "2026-08-27T09:41:16Z"
+        },
+        {
+          "url": "https://www.vill.ogimi.okinawa.jp/material/files/group/8/ogimisonzaiseizyoukyousiryousyuu_H25.xlsx",
+          "observed_on": "https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/1480.html",
+          "sha256": "790d6506d9a8c1c68e0f6f740c805ffc728cb6536bffa3cf0175938a1e0956be",
+          "fetched_at": "2026-08-27T13:48:11Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.ogimi.okinawa.jp/gyosei_joho/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（ogimisonzaiseizyoukyousiryousyuu_H25.xlsx「平成25年度 (Excelファイル: 357.3KB)」, sha256:790d6506）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

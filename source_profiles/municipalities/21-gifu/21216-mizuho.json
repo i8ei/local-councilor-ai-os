@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.city.mizuho.lg.jp/reiki_int/reiki_menu.html (label: 瑞穂市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.mizuho.lg.jp/2488.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.mizuho.lg.jp/2488.htm",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.mizuho.lg.jp/2488.htm",
           "sha256": "d8b0d2443d86ed14f64ad30051b09c29c187b46568bbfc8a6f2d333f9b5d4594",
           "fetched_at": "2026-08-27T10:13:20Z"
+        },
+        {
+          "url": "http://www.city.mizuho.lg.jp/2488.htm",
+          "observed_on": "http://www.city.mizuho.lg.jp/",
+          "sha256": "d8b0d2443d86ed14f64ad30051b09c29c187b46568bbfc8a6f2d333f9b5d4594",
+          "fetched_at": "2026-08-27T10:13:20Z"
+        },
+        {
+          "url": "https://www.city.mizuho.lg.jp/secure/15394/R8yosangaiyou.pdf",
+          "observed_on": "https://www.city.mizuho.lg.jp/13743.htm",
+          "sha256": "49dcb4c45b2350a0573481a0da9e2f2b30b42444a1de60ee6f796bd375fe5f11",
+          "fetched_at": "2026-08-27T13:36:56Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.mizuho.lg.jp/2488.htm (label: 予算) 入口 https://www.city.mizuho.lg.jp/2488.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.mizuho.lg.jp/2488.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R8yosangaiyou.pdf「予算概要(pdf 696KB)」, sha256:49dcb4c4）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

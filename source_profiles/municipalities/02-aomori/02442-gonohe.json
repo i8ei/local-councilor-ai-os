@@ -6,19 +6,37 @@
   "official_home_url": "https://www.town.gonohe.aomori.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.gonohe.aomori.jp/chosei/gikai/gikai_kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.gonohe.aomori.jp/chosei/gikai/gikai_kaigiroku.html",
           "observed_on": "https://www.town.gonohe.aomori.jp/chosei/gikai/",
           "fetched_at": "2026-08-27T07:06:07Z"
+        },
+        {
+          "url": "https://www.town.gonohe.aomori.jp/chosei/gikai/gikai_kaigiroku.html",
+          "observed_on": "https://www.town.gonohe.aomori.jp/chosei/gikai/gikai_kaigiroku.html",
+          "sha256": "d06358d3f70f069778077fa91e7ad65a844b8b25e7df359bced986f16d9e9b57",
+          "fetched_at": "2026-08-27T10:33:06Z"
+        },
+        {
+          "url": "https://www.town.gonohe.aomori.jp/chosei/gikai/2026-0421-0953-70.html",
+          "observed_on": "https://www.town.gonohe.aomori.jp/chosei/gikai/gikai_kaigiroku.html",
+          "sha256": "0960d227666132665518225d42fa5fe84148e2e2d51c0661dbf373cb8a537987",
+          "fetched_at": "2026-08-27T13:34:42Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.gonohe.aomori.jp/chosei/gikai/gikai_kaigiroku.html (label: 議会会議録)"
+      "notes": "Observed council minutes index at https://www.town.gonohe.aomori.jp/chosei/gikai/gikai_kaigiroku.html (label: 議会会議録)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "needs_review",

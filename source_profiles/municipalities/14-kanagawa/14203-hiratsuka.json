@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.hiratsuka.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.hiratsuka.kanagawa.jp/gikai/page-c_02386.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.hiratsuka.kanagawa.jp/gikai/page-c_02386.html",
+          "observed_on": "https://www.city.hiratsuka.kanagawa.jp/gikai/page-c_02220.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.hiratsuka.kanagawa.jp/gikai/page-c_02386.html",
+          "observed_on": "https://www.city.hiratsuka.kanagawa.jp/gikai/page-c_02386.html",
+          "sha256": "74e6a9efc100f2bbad728dfc4d9d74a78f11f1eecd19d70cf085a29dcba97eb1",
+          "fetched_at": "2026-08-27T13:43:35Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

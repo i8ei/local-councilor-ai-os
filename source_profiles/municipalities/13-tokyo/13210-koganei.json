@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.koganei.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.koganei.lg.jp/shisei/gikaijimukyoku/koutyou_koho/sigikaidayoripdf/r8/20260819.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.koganei.lg.jp/shisei/gikaijimukyoku/koutyou_koho/sigikaidayoripdf/r8/20260819.html",
+          "observed_on": "https://www.city.koganei.lg.jp/shisei/gikaijimukyoku/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.koganei.lg.jp/shisei/gikaijimukyoku/koutyou_koho/sigikaidayoripdf/r8/20260819.html",
+          "observed_on": "https://www.city.koganei.lg.jp/shisei/gikaijimukyoku/koutyou_koho/sigikaidayoripdf/r8/20260819.html",
+          "sha256": "35d536bcc9ea04ef4e66a2cdeb1b223a4e668a2255258a2af00529cde1005946",
+          "fetched_at": "2026-08-27T13:42:56Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

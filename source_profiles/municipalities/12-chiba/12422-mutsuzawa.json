@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.mutsuzawa.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.mutsuzawa.chiba.jp/./kurashi/gikai/cat84",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.mutsuzawa.chiba.jp/kurashi/gikai/giinmeibo.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.mutsuzawa.chiba.jp/./kurashi/gikai/cat84",
+          "url": "https://www.town.mutsuzawa.chiba.jp/kurashi/gikai/giinmeibo.html",
           "observed_on": "https://www.town.mutsuzawa.chiba.jp/kurashi/gikai",
-          "fetched_at": "2026-08-27T07:29:24Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.mutsuzawa.chiba.jp/kurashi/gikai/giinmeibo.html",
+          "observed_on": "https://www.town.mutsuzawa.chiba.jp/kurashi/gikai/giinmeibo.html",
+          "sha256": "c8cfac3f46b0707c42023452981ccd3750febdb0789bb1f00fa324bf70213adc",
+          "fetched_at": "2026-08-27T13:42:53Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.mutsuzawa.chiba.jp/./kurashi/gikai/cat84 (label: 議会会議録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.zushi.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/zushi/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.zushi.kanagawa.jp/shisei/gikai/1005523.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/zushi/WebView/rd/council_1.html",
+          "url": "https://www.city.zushi.kanagawa.jp/shisei/gikai/1005523.html",
           "observed_on": "http://www.city.zushi.kanagawa.jp/shisei/gikai/index.html",
-          "fetched_at": "2026-08-27T08:01:51Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.zushi.kanagawa.jp/shisei/gikai/1005523.html",
+          "observed_on": "https://www.city.zushi.kanagawa.jp/shisei/gikai/1005523.html",
+          "sha256": "f6f5a1d6b568f0cf910dda042b300c1e8b4ace237741a4e4a20365264e88d1fb",
+          "fetched_at": "2026-08-27T13:43:46Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/zushi/WebView/rd/council_1.html (label: 本会議インターネット中継)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

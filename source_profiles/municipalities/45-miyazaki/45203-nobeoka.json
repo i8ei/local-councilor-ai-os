@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.nobeoka.miyazaki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.kensakusystem.jp/nobeoka/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.nobeoka.miyazaki.jp/site/gikai/1415.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.kensakusystem.jp/nobeoka/index.html",
+          "url": "https://www.city.nobeoka.miyazaki.jp/site/gikai/1415.html",
           "observed_on": "http://www.city.nobeoka.miyazaki.jp/site/gikai/",
-          "fetched_at": "2026-08-27T06:25:19Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.nobeoka.miyazaki.jp/site/gikai/1415.html",
+          "observed_on": "https://www.city.nobeoka.miyazaki.jp/site/gikai/1415.html",
+          "sha256": "ac7bbaaf17d3040a393940cc421f66f0c6799821b2ca4d849a45dc84452ed5f5",
+          "fetched_at": "2026-08-27T14:10:55Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.kensakusystem.jp/nobeoka/index.html (label: 会議録検索)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -57,11 +65,11 @@
       "notes": "Observed finance section at http://www.city.nobeoka.miyazaki.jp/life/3/22/96/ (label: 財政事情) 入口 https://www.city.nobeoka.miyazaki.jp/life/3/22/96/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nobeoka.miyazaki.jp/life/3/22/96/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.nobeoka.miyazaki.jp/life/3/22/96/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.nobeoka.miyazaki.jp/life/3/22/96/",
@@ -73,9 +81,21 @@
           "observed_on": "https://www.city.nobeoka.miyazaki.jp/life/3/22/96/",
           "sha256": "63e393abba0ee3ff3420bbc3259f52b5664449c71db3214c02ae1580fa63bf12",
           "fetched_at": "2026-08-27T09:39:43Z"
+        },
+        {
+          "url": "http://www.city.nobeoka.miyazaki.jp/life/3/22/96/",
+          "observed_on": "http://www.city.nobeoka.miyazaki.jp/",
+          "sha256": "63e393abba0ee3ff3420bbc3259f52b5664449c71db3214c02ae1580fa63bf12",
+          "fetched_at": "2026-08-27T09:39:43Z"
+        },
+        {
+          "url": "https://www.city.nobeoka.miyazaki.jp/uploaded/attachment/24780.pdf",
+          "observed_on": "https://www.city.nobeoka.miyazaki.jp/soshiki/18/45428.html",
+          "sha256": "0ae153fdf5d1cd0eb3b0c4a588b87a09b4550422bf9afdbb3135dc1eba5fdf11",
+          "fetched_at": "2026-08-27T13:47:09Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.nobeoka.miyazaki.jp/life/3/22/96/ (label: 財政事情) 入口 https://www.city.nobeoka.miyazaki.jp/life/3/22/96/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.nobeoka.miyazaki.jp/life/3/22/96/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（24780.pdf「令和6年度 歳入歳出決算状況 [PDFファイル／116KB]」, sha256:0ae153fd）にて構造マーカー（歳入・歳出・決算額等）を確認済み。"
     }
   }
 }

@@ -6,19 +6,27 @@
   "official_home_url": "https://www.city.wakkanai.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.wakkanai.hokkaido.jp/banner_click.php?url=http%3A%2F%2Fssp.kaigiroku.net%2Ftenant%2Fwakkanai%2Fpg%2Findex.html%26id%3D29",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.wakkanai.hokkaido.jp/gikai/gikaijoho/gikaidayori/",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.wakkanai.hokkaido.jp/banner_click.php?url=http%3A%2F%2Fssp.kaigiroku.net%2Ftenant%2Fwakkanai%2Fpg%2Findex.html%26id%3D29",
+          "url": "https://www.city.wakkanai.hokkaido.jp/gikai/gikaijoho/gikaidayori/",
           "observed_on": "https://www.city.wakkanai.hokkaido.jp/gikai/",
-          "fetched_at": "2026-08-27T05:59:31Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.wakkanai.hokkaido.jp/gikai/gikaijoho/gikaidayori/",
+          "observed_on": "https://www.city.wakkanai.hokkaido.jp/gikai/gikaijoho/gikaidayori/",
+          "sha256": "f41b827602c12e3fdf208878bad083ac4b4b522320b50fec256767f1e6c1c99a",
+          "fetched_at": "2026-08-27T13:23:21Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.wakkanai.hokkaido.jp/banner_click.php?url=http%3A%2F%2Fssp.kaigiroku.net%2Ftenant%2Fwakkanai%2Fpg%2Findex.html%26id%3D29 (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

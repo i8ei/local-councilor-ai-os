@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.oizumi.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/oizumi/WebView/rd/council_1.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.oizumi.gunma.jp/g001/20260806134818.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/oizumi/WebView/rd/council_1.html",
+          "url": "https://www.town.oizumi.gunma.jp/g001/20260806134818.html",
           "observed_on": "http://www.town.oizumi.gunma.jp/g001/index.html",
-          "fetched_at": "2026-08-27T06:46:32Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.oizumi.gunma.jp/g001/20260806134818.html",
+          "observed_on": "https://www.town.oizumi.gunma.jp/g001/20260806134818.html",
+          "sha256": "1b019ee5144d9cce82079d9e706b3a2e5e9a37d9a8605d3af34bade70b7a1fbf",
+          "fetched_at": "2026-08-27T13:39:38Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/oizumi/WebView/rd/council_1.html (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

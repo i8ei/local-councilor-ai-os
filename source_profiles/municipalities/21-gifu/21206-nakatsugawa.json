@@ -29,11 +29,11 @@
       "index_url": "https://en3-jg.d1-law.com/nakatsugawa/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.nakatsugawa.lg.jp/shisei/finance/3/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.nakatsugawa.lg.jp/shisei/finance/3/index.html",
@@ -45,9 +45,15 @@
           "observed_on": "https://www.city.nakatsugawa.lg.jp/shisei/finance/3/index.html",
           "sha256": "81832e53b177afbeff08847cc515abbdbb1315c007ff0c58cacacda7e326f519",
           "fetched_at": "2026-08-27T10:14:18Z"
+        },
+        {
+          "url": "https://www.city.nakatsugawa.lg.jp/material/files/group/11/reiwa8nendo_tousyoyosansy_ippan_tokubetu.pdf",
+          "observed_on": "https://www.city.nakatsugawa.lg.jp/shisei/finance/3/38193.html",
+          "sha256": "5e153d8d4cd9371bdbf05302e61535cda53cde17a427e70eec6b29fa269b35cc",
+          "fetched_at": "2026-08-27T13:36:50Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.nakatsugawa.lg.jp/shisei/finance/3/index.html (label: 予算) 入口 https://www.city.nakatsugawa.lg.jp/shisei/finance/3/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（reiwa8nendo_tousyoyosansy_ippan_tokubetu.pdf「一般会計・特別会計予算書【附・予算説明書】(PDFファイル:6.1MB)」, sha256:5e153d8d）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

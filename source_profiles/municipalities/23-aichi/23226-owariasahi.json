@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.owariasahi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/owariasahi/WebView/rd/council_1.html?referrer=https%3A%2F%2Fsmart.discussvision.net%2Fsmart%2Ftenant%2Fowariasahi%2FWebView%2F",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.owariasahi.lg.jp/site/gikai/3458.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/owariasahi/WebView/rd/council_1.html?referrer=https%3A%2F%2Fsmart.discussvision.net%2Fsmart%2Ftenant%2Fowariasahi%2FWebView%2F",
+          "url": "https://www.city.owariasahi.lg.jp/site/gikai/3458.html",
           "observed_on": "http://www.city.owariasahi.lg.jp/site/gikai/",
-          "fetched_at": "2026-08-27T08:05:31Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.owariasahi.lg.jp/site/gikai/3458.html",
+          "observed_on": "https://www.city.owariasahi.lg.jp/site/gikai/3458.html",
+          "sha256": "7452b9abf9e7b3d645565799bf885bc3bcf3c309f50fa1f36bf2d8eff76e4ed6",
+          "fetched_at": "2026-08-27T13:50:37Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/owariasahi/WebView/rd/council_1.html?referrer=https%3A%2F%2Fsmart.discussvision.net%2Fsmart%2Ftenant%2Fowariasahi%2FWebView%2F (label: 本会議中継・録画（開催日から概ね2日後に配信）)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.kamigori.hyogo.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gikai/2883.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gikai/2883.html",
+          "observed_on": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gikai/2883.html",
+          "observed_on": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gikai/2883.html",
+          "sha256": "961355973582468b031a851a8427a3080c83229392065cdb2d9a7e1595c9cfd6",
+          "fetched_at": "2026-08-27T14:03:26Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -35,11 +50,11 @@
       "notes": "Observed g_reiki at https://www.town.kamigori.hyogo.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html",
@@ -51,9 +66,15 @@
           "observed_on": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html",
           "sha256": "e8462cb01c5dda30d211d2bfd4332d890378fb0b8de4efded4f05f95904d702f",
           "fetched_at": "2026-08-27T09:52:30Z"
+        },
+        {
+          "url": "https://www.town.kamigori.hyogo.jp/material/files/group/63/zaiseijokyosiryosyu_2024.xlsx",
+          "observed_on": "https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/3423.html",
+          "sha256": "c278b9010f77c234bd06184797ac7e07bfe6c08d29443ae8c199aeeefe4079a3",
+          "fetched_at": "2026-08-27T13:41:14Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kamigori.hyogo.jp/tyoseizyoho/gyozaisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（zaiseijokyosiryosyu_2024.xlsx「令和6年度(Excelファイル:556.5KB)」, sha256:c278b901）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

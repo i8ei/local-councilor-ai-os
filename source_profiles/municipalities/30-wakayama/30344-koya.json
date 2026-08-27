@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.koya.wakayama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.koya.wakayama.jp/town/gikai/501.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "http://www.town.koya.wakayama.jp/gikai_dayori",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www.town.koya.wakayama.jp/town/gikai/501.html",
+          "url": "http://www.town.koya.wakayama.jp/gikai_dayori",
           "observed_on": "http://www.town.koya.wakayama.jp/town/gikai",
-          "fetched_at": "2026-08-27T07:24:18Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "http://www.town.koya.wakayama.jp/gikai_dayori",
+          "observed_on": "http://www.town.koya.wakayama.jp/gikai_dayori",
+          "sha256": "c510e551b77f7cdaa0814abb2a5fc5c3f1308741e39c40e4bde2795bb71a6f2a",
+          "fetched_at": "2026-08-27T14:04:36Z"
+        },
+        {
+          "url": "http://www.town.koya.wakayama.jp/gikai_dayori/%e4%bb%a4%e5%92%8c8%e5%b9%b4%ef%bc%882026%e5%b9%b4%ef%bc%89",
+          "observed_on": "http://www.town.koya.wakayama.jp/gikai_dayori",
+          "sha256": "8cd3d0774cad0ebb6f56897dc5999b87ebd3a4cd8fec5052f50c499a9a71ae94",
+          "fetched_at": "2026-08-27T14:04:36Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.koya.wakayama.jp/town/gikai/501.html (label: 会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

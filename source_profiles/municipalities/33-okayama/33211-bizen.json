@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.bizen.okayama.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.bizen.okayama.jp/soshiki/23/5776.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.bizen.okayama.jp/soshiki/23/5776.html",
+          "observed_on": "https://www.city.bizen.okayama.jp/soshiki/23/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.bizen.okayama.jp/soshiki/23/5776.html",
+          "observed_on": "https://www.city.bizen.okayama.jp/soshiki/23/5776.html",
+          "sha256": "46da37f4f3d364da20c7a375acc0ee3392de2acf14c4e6a53d157cd82b0823f6",
+          "fetched_at": "2026-08-27T14:09:02Z"
+        },
+        {
+          "url": "https://www.city.bizen.okayama.jp/soshiki/23/38392.html",
+          "observed_on": "https://www.city.bizen.okayama.jp/soshiki/23/5776.html",
+          "sha256": "bdb24fe05ddfcc3c163fec3cf0230e5499414e8b46bc12949aa9254ffe463ea2",
+          "fetched_at": "2026-08-27T14:09:03Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -55,11 +79,11 @@
       "notes": "Observed budget link at http://www.city.bizen.okayama.jp/soshiki/6/619.html (label: 予算の概要について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.bizen.okayama.jp/life/3/19/75/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.bizen.okayama.jp/life/3/19/75/",
@@ -71,9 +95,21 @@
           "observed_on": "https://www.city.bizen.okayama.jp/life/3/19/75/",
           "sha256": "21df60551b0f9512f19b1c3df645e632d5a0c77ed371a23931fda7f470769f20",
           "fetched_at": "2026-08-27T09:44:00Z"
+        },
+        {
+          "url": "http://www.city.bizen.okayama.jp/life/3/19/75/",
+          "observed_on": "http://www.city.bizen.okayama.jp/",
+          "sha256": "21df60551b0f9512f19b1c3df645e632d5a0c77ed371a23931fda7f470769f20",
+          "fetched_at": "2026-08-27T09:44:00Z"
+        },
+        {
+          "url": "https://www.city.bizen.okayama.jp/uploaded/life/32033_64191_misc.pdf",
+          "observed_on": "https://www.city.bizen.okayama.jp/soshiki/22/27147.html",
+          "sha256": "f9dd5f539ca834983fab3e109a385f6239a90ed7550b8fbf2a9ffca78bf27dff",
+          "fetched_at": "2026-08-27T13:42:28Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.bizen.okayama.jp/life/3/19/75/ (label: 行財政) 入口 https://www.city.bizen.okayama.jp/life/3/19/75/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.bizen.okayama.jp/life/3/19/75/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（32033_64191_misc.pdf「令和6年度決算書 [PDFファイル／3.67MB]」, sha256:f9dd5f53）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

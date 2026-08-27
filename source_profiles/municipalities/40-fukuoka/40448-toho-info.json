@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://vill.toho-info.com/40000/40800/index.html (label: 財政情報) 入口 https://vill.toho-info.com/40000/40800/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://vill.toho-info.com/40000/40800/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://vill.toho-info.com/40000/40800/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://vill.toho-info.com/40000/40800/index.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://vill.toho-info.com/40000/40800/index.html",
           "sha256": "ef2417450feb193892bc8202196aa350446db72f97c602e2a16c7dbb8a454e45",
           "fetched_at": "2026-08-27T09:37:03Z"
+        },
+        {
+          "url": "http://vill.toho-info.com/40000/40800/index.html",
+          "observed_on": "http://vill.toho-info.com/",
+          "sha256": "ef2417450feb193892bc8202196aa350446db72f97c602e2a16c7dbb8a454e45",
+          "fetched_at": "2026-08-27T09:37:03Z"
+        },
+        {
+          "url": "https://vill.toho-info.com/2023/01/17/9227a4d0f977cee81d6b65bba98e3f4f.pdf",
+          "observed_on": "https://vill.toho-info.com/40000/40800/cat1/post-307.html",
+          "sha256": "3a42634a632823ec097d4199de84531ab19fc9d26d2d4b3e84a75456bdfd60d8",
+          "fetched_at": "2026-08-27T13:46:22Z"
         }
       ],
-      "notes": "Observed settlement link at http://vill.toho-info.com/40000/40800/index.html (label: 財政情報) 入口 https://vill.toho-info.com/40000/40800/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://vill.toho-info.com/40000/40800/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（9227a4d0f977cee81d6b65bba98e3f4f.pdf「【東峰村】R1財政状況資料集.pdf」, sha256:3a42634a）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

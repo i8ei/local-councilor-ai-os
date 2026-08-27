@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/minokamo/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.minokamo.lg.jp/life/5/23/147/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.minokamo.lg.jp/life/5/23/147/",
@@ -58,9 +58,15 @@
           "observed_on": "https://www.city.minokamo.lg.jp/life/5/23/147/",
           "sha256": "aa53b28a1afda3104d6d36ff807ee6972d3c6abe9360b38b12ace0e02bc8b445",
           "fetched_at": "2026-08-27T10:12:54Z"
+        },
+        {
+          "url": "https://www.city.minokamo.lg.jp/uploaded/attachment/16397.pdf",
+          "observed_on": "https://www.city.minokamo.lg.jp/soshiki/28/2568.html",
+          "sha256": "51acefb50184e6f71a37446b2f40f4baa82c7b44e9547ebe5665526475075302",
+          "fetched_at": "2026-08-27T13:42:29Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.minokamo.lg.jp/life/5/23/147/ (label: 予算・決算) 入口 https://www.city.minokamo.lg.jp/life/5/23/147/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minokamo.lg.jp/life/5/23/147/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（16397.pdf「「見たい知りたい今年の予算」（令和7年度当初予算の概要） [PDFファイル／2.73MB]」, sha256:51acefb5）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

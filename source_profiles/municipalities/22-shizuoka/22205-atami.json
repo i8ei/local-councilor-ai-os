@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.atami.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/atami/pg/index.html",
-      "verified_at": "2026-08-27T10:14:13Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.atami.lg.jp/shigikai/teireikai/1012888.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/atami/pg/index.html",
+          "url": "https://www.city.atami.lg.jp/shigikai/teireikai/1012888.html",
           "observed_on": "http://www.city.atami.lg.jp/shigikai/index.html",
-          "fetched_at": "2026-08-27T07:42:02Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/atami/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/atami/pg/index.html",
-          "sha256": "25e37f44b6d55f01110e9b5be10008dc401ef29ec9261cfa2825204e319e2427",
-          "fetched_at": "2026-08-27T10:14:15Z"
+          "url": "https://www.city.atami.lg.jp/shigikai/teireikai/1012888.html",
+          "observed_on": "https://www.city.atami.lg.jp/shigikai/teireikai/1012888.html",
+          "sha256": "fcbfd398efe88e129b1ff832153ef25744066f3ce07746d8947d0ed5b249ba77",
+          "fetched_at": "2026-08-27T13:49:35Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/atami/pg/index.html (label: ) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

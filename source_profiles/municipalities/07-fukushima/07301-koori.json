@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.koori.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "dbsr",
-      "index_url": "https://www.town.koori.fukushima.dbsr.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.koori.fukushima.jp/site/gikai/7377.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.koori.fukushima.dbsr.jp/",
+          "url": "http://www.town.koori.fukushima.jp/site/gikai/7377.html",
           "observed_on": "http://www.town.koori.fukushima.jp/site/gikai/",
-          "fetched_at": "2026-08-27T07:56:07Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.koori.fukushima.jp/site/gikai/7377.html",
+          "observed_on": "http://www.town.koori.fukushima.jp/site/gikai/7377.html",
+          "sha256": "b4b5d60216f9094d4e66757bed09d2b744f476c03ea528f19e244a0b74ae41fe",
+          "fetched_at": "2026-08-27T13:27:56Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.town.koori.fukushima.dbsr.jp/ (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.itoshima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.itoshima.lg.jp/s032/020/030/dai1kaikaigiroku.pdf",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.itoshima.lg.jp/s034/020/030/020/020/tyousya-gikai-kouenn.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.itoshima.lg.jp/s032/020/030/dai1kaikaigiroku.pdf",
-          "observed_on": "https://www.city.itoshima.lg.jp/s032/020/030/20260614143714.html",
-          "fetched_at": "2026-08-27T04:18:12Z"
+          "url": "https://www.city.itoshima.lg.jp/s034/020/030/020/020/tyousya-gikai-kouenn.html",
+          "observed_on": "https://www.city.itoshima.lg.jp/li/gikai/030/020/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.itoshima.lg.jp/s034/020/030/020/020/tyousya-gikai-kouenn.html",
+          "observed_on": "https://www.city.itoshima.lg.jp/s034/020/030/020/020/tyousya-gikai-kouenn.html",
+          "sha256": "f3a3121d7672f684d0cdbc97326972f252c4028b16172264a2746e17ac175a25",
+          "fetched_at": "2026-08-27T14:08:54Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.city.itoshima.lg.jp/s032/020/030/dai1kaikaigiroku.pdf (label: 令和8年度第1回協議会会議録)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.itoshima.lg.jp/s001/010/060/reikisyu.html (label: 糸島市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.itoshima.lg.jp/li/shisei/050/070/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.itoshima.lg.jp/li/shisei/050/070/index.html",
@@ -52,9 +60,21 @@
           "observed_on": "https://www.city.itoshima.lg.jp/li/shisei/050/070/",
           "sha256": "51ab2440e61e6ad6efdd3673cb600fbc990ff8a93fe8f21fb3c6ec2e4b64649d",
           "fetched_at": "2026-08-27T09:36:12Z"
+        },
+        {
+          "url": "http://www.city.itoshima.lg.jp/li/shisei/050/070/index.html",
+          "observed_on": "http://www.city.itoshima.lg.jp/",
+          "sha256": "51ab2440e61e6ad6efdd3673cb600fbc990ff8a93fe8f21fb3c6ec2e4b64649d",
+          "fetched_at": "2026-08-27T09:36:12Z"
+        },
+        {
+          "url": "https://www.city.itoshima.lg.jp/s002/010/010/010/010/140/r8nenndotousyoyosannnogaiyou.pdf",
+          "observed_on": "https://www.city.itoshima.lg.jp/s002/010/010/010/010/140/20260218162736.html",
+          "sha256": "02a0c5ec9c3b06241dc738cea13741c8aaf53f984542b1bcc111a5ded2e1b196",
+          "fetched_at": "2026-08-27T13:45:08Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.itoshima.lg.jp/li/shisei/050/070/index.html (label: 予算) 入口 https://www.city.itoshima.lg.jp/li/shisei/050/070/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.itoshima.lg.jp/li/shisei/050/070/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（r8nenndotousyoyosannnogaiyou.pdf「令和８年度糸島市当初予算の概要（PDF：460KB）」, sha256:02a0c5ec）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

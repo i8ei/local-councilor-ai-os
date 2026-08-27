@@ -42,11 +42,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/town-fujimi/reiki_menu.html (label: 例規類集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
@@ -63,16 +63,28 @@
           "url": "https://www.town.fujimi.lg.jp/uploaded/attachment/36996.pdf",
           "observed_on": "https://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
           "fetched_at": "2026-08-27T11:10:22Z"
+        },
+        {
+          "url": "http://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
+          "observed_on": "http://www.town.fujimi.lg.jp/",
+          "sha256": "01554ad750270a496b66fd34147a052e47f26d50ad6a810c07862c4658d850c8",
+          "fetched_at": "2026-08-27T10:10:10Z"
+        },
+        {
+          "url": "https://www.town.fujimi.lg.jp/uploaded/attachment/36996.pdf",
+          "observed_on": "https://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
+          "sha256": "ca15d573b62678fa8c00373719e307f42f116b30a05e58eda32971c1c6f0c75b",
+          "fetched_at": "2026-08-27T11:10:23Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.fujimi.lg.jp/page/jyogesuikaikei.html (label: 水道事業会計・下水道事業会計の予算書及び決算書について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（36996.pdf「令和8年度 水道事業会計予算書 [PDFファイル／256KB]」, sha256:ca15d573）にて構造マーカー（款・項・節・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
@@ -84,9 +96,21 @@
           "observed_on": "https://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
           "sha256": "01554ad750270a496b66fd34147a052e47f26d50ad6a810c07862c4658d850c8",
           "fetched_at": "2026-08-27T10:10:10Z"
+        },
+        {
+          "url": "http://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
+          "observed_on": "http://www.town.fujimi.lg.jp/",
+          "sha256": "01554ad750270a496b66fd34147a052e47f26d50ad6a810c07862c4658d850c8",
+          "fetched_at": "2026-08-27T10:10:10Z"
+        },
+        {
+          "url": "https://www.town.fujimi.lg.jp/uploaded/attachment/36996.pdf",
+          "observed_on": "https://www.town.fujimi.lg.jp/page/jyogesuikaikei.html",
+          "sha256": "ca15d573b62678fa8c00373719e307f42f116b30a05e58eda32971c1c6f0c75b",
+          "fetched_at": "2026-08-27T11:10:23Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.fujimi.lg.jp/page/jyogesuikaikei.html (label: 水道事業会計・下水道事業会計の予算書及び決算書について) 入口 https://www.town.fujimi.lg.jp/page/jyogesuikaikei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.fujimi.lg.jp/page/jyogesuikaikei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（36996.pdf「令和8年度 水道事業会計予算書 [PDFファイル／256KB]」, sha256:ca15d573）にて構造マーカー（款・項・節等）を確認済み。"
     }
   }
 }

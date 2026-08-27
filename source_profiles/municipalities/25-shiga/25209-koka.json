@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.koka.lg.jp/5547.htm (label: 財政・予算) 入口 https://www.city.koka.lg.jp/5547.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.koka.lg.jp/5547.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.koka.lg.jp/21032.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.koka.lg.jp/21032.htm",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.koka.lg.jp/21032.htm",
           "sha256": "d5eb14f1838f36c4dc7e98ced88e350f3ef291bbd37355bb7e8196b1245a5e46",
           "fetched_at": "2026-08-27T09:49:37Z"
+        },
+        {
+          "url": "http://www.city.koka.lg.jp/21032.htm",
+          "observed_on": "http://www.city.koka.lg.jp/",
+          "sha256": "d5eb14f1838f36c4dc7e98ced88e350f3ef291bbd37355bb7e8196b1245a5e46",
+          "fetched_at": "2026-08-27T09:49:37Z"
+        },
+        {
+          "url": "https://www.city.koka.lg.jp/secure/40178/R7kessan.pdf",
+          "observed_on": "https://www.city.koka.lg.jp/5979.htm",
+          "sha256": "c20d34a4003be9246ba49a2451e3ef6082d4daa93dab22a3ef661e47614c674c",
+          "fetched_at": "2026-08-27T13:39:37Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.koka.lg.jp/21032.htm (label: 予算・決算) 入口 https://www.city.koka.lg.jp/21032.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.koka.lg.jp/21032.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R7kessan.pdf「令和７年度 甲賀市決算概要（一般会計）」, sha256:c20d34a4）にて構造マーカー（歳入・歳出・決算額・予算現額等）を確認済み。"
     }
   }
 }

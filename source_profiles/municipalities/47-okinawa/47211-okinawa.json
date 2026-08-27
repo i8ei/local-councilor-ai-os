@@ -50,11 +50,11 @@
       "notes": "Observed budget link at https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html (label: 予算・財政) 入口 https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okinawa.okinawa.jp/shiseijouhou/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.okinawa.okinawa.jp/shiseijouhou/yosanzaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.okinawa.okinawa.jp/shiseijouhou/yosanzaisei/kessan/index.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.okinawa.okinawa.jp/shiseijouhou/yosanzaisei/kessan/index.html",
           "sha256": "02bc34fc8e886cf1b4c8eff6d92f7bc50f818b3ef9f97eb8a581a1a7e41bd41b",
           "fetched_at": "2026-08-27T09:40:59Z"
+        },
+        {
+          "url": "https://www.city.okinawa.okinawa.jp/documents/1918/r6zaiseijyoukyousiryousyuu.xlsx",
+          "observed_on": "https://www.city.okinawa.okinawa.jp/k011/shiseijouhou/yosanzaisei/zaiseijoukyou/2151.html",
+          "sha256": "cfd51e0cc9e9c539dd4e08c2f6932942890a86b1bd60e899386ad4b43289d4fc",
+          "fetched_at": "2026-08-27T13:48:08Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.okinawa.okinawa.jp/shiseijouhou/yosanzaisei/kessan/index.html (label: 決算) 入口 https://www.city.okinawa.okinawa.jp/shiseijouhou/yosanzaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okinawa.okinawa.jp/shiseijouhou/yosanzaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6zaiseijyoukyousiryousyuu.xlsx「令和6年度沖縄市財政状況資料集（エクセル：556KB）」, sha256:cfd51e0c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

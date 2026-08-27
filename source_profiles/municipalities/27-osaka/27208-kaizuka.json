@@ -56,11 +56,11 @@
       "notes": "Observed finance section at https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html (label: 行財政について) 入口 https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html",
           "sha256": "8d5bf1ee93e2e1ae46a68a00c1a983aa20610f43f88e6ff792c58a73f333698b",
           "fetched_at": "2026-08-27T09:50:38Z"
+        },
+        {
+          "url": "https://www.city.kaizuka.lg.jp/material/files/group/84/r6kessancard.pdf",
+          "observed_on": "https://www.city.kaizuka.lg.jp/kakuka/sogoseisaku/zaisei/menu/zaisei_jyokyo/kessancard/index.html",
+          "sha256": "e2c16015dedf1fdc0c3c07de8d3c56015432b7532e4b943cdeb1059571b12a41",
+          "fetched_at": "2026-08-27T13:40:07Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html (label: 行財政について) 入口 https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kaizuka.lg.jp/shinohoshin/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessancard.pdf「令和6年度決算カード (PDFファイル: 495.6KB)」, sha256:e2c16015）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

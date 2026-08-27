@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.meiwa.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.meiwa.gunma.jp/life/soshiki/gikai/meiwamachigikai/index.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.meiwa.gunma.jp/life/soshiki/gikai/meiwamachigikai/index.html",
+          "observed_on": "http://www.town.meiwa.gunma.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.meiwa.gunma.jp/life/soshiki/gikai/meiwamachigikai/index.html",
+          "observed_on": "https://www.town.meiwa.gunma.jp/life/soshiki/gikai/meiwamachigikai/index.html",
+          "sha256": "ffe181d4c83f995943f9e9dd2ac19967f7a918cba562b133fbe59d6db1baad81",
+          "fetched_at": "2026-08-27T13:39:35Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

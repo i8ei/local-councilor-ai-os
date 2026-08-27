@@ -6,12 +6,36 @@
   "official_home_url": "https://www.town.nishiwaga.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.nishiwaga.lg.jp/chogikai/3/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.nishiwaga.lg.jp/chogikai/3/index.html",
+          "observed_on": "https://www.town.nishiwaga.lg.jp/chogikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.nishiwaga.lg.jp/chogikai/3/index.html",
+          "observed_on": "https://www.town.nishiwaga.lg.jp/chogikai/3/index.html",
+          "sha256": "135d1c739d31e2eb45e8eb64d79980a28cfa30e201174a7ae94dcb0411b41311",
+          "fetched_at": "2026-08-27T13:26:07Z"
+        },
+        {
+          "url": "https://www.town.nishiwaga.lg.jp/chogikai/3/4091.html",
+          "observed_on": "https://www.town.nishiwaga.lg.jp/chogikai/3/index.html",
+          "sha256": "e5aee9edcd5fc271f2c1698240f81e0a97d554d4e40e3b128ce5eb77ea1f8da6",
+          "fetched_at": "2026-08-27T13:26:14Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

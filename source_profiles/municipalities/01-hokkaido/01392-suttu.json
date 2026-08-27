@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.suttu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.suttu.lg.jp/town/detail.php?id=63",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.suttu.lg.jp/town/detail.php?id=63",
+          "observed_on": "http://www.town.suttu.lg.jp/town/detail.php?id=150",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.suttu.lg.jp/town/detail.php?id=63",
+          "observed_on": "http://www.town.suttu.lg.jp/town/detail.php?id=63",
+          "sha256": "c1ca48c803ea8e53503b6c5383cb9eb7efbf69a9e1edcdb46d4f2a5664ff698e",
+          "fetched_at": "2026-08-27T13:23:44Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

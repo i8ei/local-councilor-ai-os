@@ -6,12 +6,27 @@
   "official_home_url": "http://www.koumi-town.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.koumi-town.jp/office2/archives/gikai/post-167.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.koumi-town.jp/office2/archives/gikai/post-167.html",
+          "observed_on": "https://www.koumi-town.jp/office2/archives/gikai",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.koumi-town.jp/office2/archives/gikai/post-167.html",
+          "observed_on": "https://www.koumi-town.jp/office2/archives/gikai/post-167.html",
+          "sha256": "a5352f3d6670462ce4b9d78f792c9f1ada3252503a859d20dd5fe9a6c1df74ba",
+          "fetched_at": "2026-08-27T13:47:21Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

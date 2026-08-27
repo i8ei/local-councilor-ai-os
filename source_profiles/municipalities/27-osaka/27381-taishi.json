@@ -6,19 +6,37 @@
   "official_home_url": "http://www.town.taishi.osaka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.taishi.osaka.jp/busyo/gikai_jimu/taishichougikai/kaigirokunoetsuran/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.taishi.osaka.jp/busyo/gikai_jimu/taishichougikai/kaigirokunoetsuran/index.html",
           "observed_on": "http://www.town.taishi.osaka.jp/taishi_info/index.html",
           "fetched_at": "2026-08-27T06:40:41Z"
+        },
+        {
+          "url": "http://www.town.taishi.osaka.jp/busyo/gikai_jimu/taishichougikai/kaigirokunoetsuran/index.html",
+          "observed_on": "http://www.town.taishi.osaka.jp/busyo/gikai_jimu/taishichougikai/kaigirokunoetsuran/index.html",
+          "sha256": "db547f62a3ffdd37260d389590098749972a984b81c7a9605debab4d71c46434",
+          "fetched_at": "2026-08-27T09:51:27Z"
+        },
+        {
+          "url": "https://www.town.taishi.osaka.jp/busyo/gikai_jimu/taishichougikai/kaigirokunoetsuran/6960.html",
+          "observed_on": "http://www.town.taishi.osaka.jp/busyo/gikai_jimu/taishichougikai/kaigirokunoetsuran/index.html",
+          "sha256": "c12ae02008a2af72fa344e8f0792f17809d40919d365898e2de4e659bc406d11",
+          "fetched_at": "2026-08-27T14:02:25Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.taishi.osaka.jp/busyo/gikai_jimu/taishichougikai/kaigirokunoetsuran/index.html (label: 会議録の閲覧)"
+      "notes": "Observed council minutes index at http://www.town.taishi.osaka.jp/busyo/gikai_jimu/taishichougikai/kaigirokunoetsuran/index.html (label: 会議録の閲覧)",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      }
     },
     "regulations": {
       "status": "needs_review",

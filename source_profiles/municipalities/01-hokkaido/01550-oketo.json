@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.oketo.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.oketo.hokkaido.jp/gikai/kaigiroku/R8_kaigi/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.oketo.hokkaido.jp/gikai/kaigiroku/R8_kaigi/",
+          "observed_on": "http://www.town.oketo.hokkaido.jp/gikai/kaigiroku/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.oketo.hokkaido.jp/gikai/kaigiroku/R8_kaigi/",
+          "observed_on": "https://www.town.oketo.hokkaido.jp/gikai/kaigiroku/R8_kaigi/",
+          "sha256": "83354ffa79160856d714907d92e1cb1f3baee34d4018b365fc6ff4bf14f21c68",
+          "fetched_at": "2026-08-27T13:25:26Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

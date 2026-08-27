@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.misaki.osaka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/gijiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/gijiroku/438.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/gijiroku/index.html",
-          "observed_on": "http://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/index.html",
-          "fetched_at": "2026-08-27T06:43:24Z"
+          "url": "https://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/gijiroku/438.html",
+          "observed_on": "https://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/gijiroku/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/gijiroku/438.html",
+          "observed_on": "https://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/gijiroku/438.html",
+          "sha256": "c93fb0b79294a40060b3c498546382cedf66c8f62c0ce48ca86b43f5548f7b6d",
+          "fetched_at": "2026-08-27T14:02:35Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/gijiroku/index.html (label: 会議録) extraction probe read one document at https://www.town.misaki.osaka.jp/soshiki/gikai/chogikai/gijiroku/5942.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

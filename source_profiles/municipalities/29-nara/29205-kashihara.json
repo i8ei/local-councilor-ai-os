@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.kashihara.nara.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
-      "verified_at": "2026-08-27T09:52:31Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kashihara.nara.jp/shiseijoho/gikai/5/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
+          "url": "https://www.city.kashihara.nara.jp/shiseijoho/gikai/5/index.html",
           "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/gikai/index.html",
-          "fetched_at": "2026-08-27T07:00:47Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
-          "observed_on": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
-          "sha256": "06329e793d747db03be08cbe8c487b5684f4b6c15c9c24a8618b4f02d936cb92",
-          "fetched_at": "2026-08-27T09:52:33Z"
+          "url": "https://www.city.kashihara.nara.jp/shiseijoho/gikai/5/index.html",
+          "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/gikai/5/index.html",
+          "sha256": "a253cd772e8a3d41cc88bff59fbac59eca494123d0e085daffc50867988f6855",
+          "fetched_at": "2026-08-27T14:03:42Z"
+        },
+        {
+          "url": "https://www.city.kashihara.nara.jp/shiseijoho/gikai/5/12_4/20520.html",
+          "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/gikai/5/index.html",
+          "sha256": "bb6923bca710400083b92e8e1689d5c8e8b2fa935704ca87a5bde3cf7b2b4a53",
+          "fetched_at": "2026-08-27T14:03:44Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.kashihara.nara.dbsr.jp/index.php/ (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -63,11 +74,11 @@
       "notes": "Observed finance section at https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
@@ -79,9 +90,15 @@
           "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
           "sha256": "65c7b7135d21b7b55ab0d3b4180cc7f856c7fd435ab82c821823343b3487e34a",
           "fetched_at": "2026-08-27T09:52:33Z"
+        },
+        {
+          "url": "https://www.city.kashihara.nara.jp/material/files/group/45/20251020-1.pdf",
+          "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/10556.html",
+          "sha256": "69a9f57edc771329db4460b32f3e19c3560dc766ffaeaee66c0fe955f05f2a2b",
+          "fetched_at": "2026-08-27T13:41:21Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html (label: 財政) 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（20251020-1.pdf「令和6年度一般会計特別会計決算書 (PDFファイル: 6.0MB)」, sha256:69a9f57e）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -6,25 +6,36 @@
   "official_home_url": "http://www.town.aga.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
-      "verified_at": "2026-08-27T10:04:36Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.aga.niigata.jp/agachogikai/gikaidayori/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
-          "observed_on": "https://www.town.aga.niigata.jp/agachogikai/1188.html",
-          "fetched_at": "2026-08-27T06:07:45Z"
+          "url": "https://www.town.aga.niigata.jp/agachogikai/gikaidayori/index.html",
+          "observed_on": "https://www.town.aga.niigata.jp/agachogikai/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/aga/pg/index.html",
-          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
-          "fetched_at": "2026-08-27T10:04:38Z"
+          "url": "https://www.town.aga.niigata.jp/agachogikai/gikaidayori/index.html",
+          "observed_on": "https://www.town.aga.niigata.jp/agachogikai/gikaidayori/index.html",
+          "sha256": "ec5c2f52e8fe75ff477a2f561526ad0e6a06a5376e2681ac8e787b379473413e",
+          "fetched_at": "2026-08-27T13:44:35Z"
+        },
+        {
+          "url": "https://www.town.aga.niigata.jp/agachogikai/gikaidayori/3126.html",
+          "observed_on": "https://www.town.aga.niigata.jp/agachogikai/gikaidayori/index.html",
+          "sha256": "8f1458c23fbb6b87b0a4ef1e6f2fc93210d607acba6d0c897ceb4924ae78ddf3",
+          "fetched_at": "2026-08-27T13:44:35Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/aga/pg/index.html (label: 会議録検索はこちらから（外部サイト）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

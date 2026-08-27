@@ -6,25 +6,27 @@
   "official_home_url": "http://www.vill.tobishima.aichi.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/tobishima2/SpTop.html",
-      "verified_at": "2026-08-27T10:16:47Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.tobishima.aichi.jp/sonsei/gikai/1002195/1002196/1003031.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tobishima2/SpTop.html",
-          "observed_on": "http://www.vill.tobishima.aichi.jp/sonsei/index.html",
-          "fetched_at": "2026-08-27T08:12:34Z"
+          "url": "https://www.vill.tobishima.aichi.jp/sonsei/gikai/1002195/1002196/1003031.html",
+          "observed_on": "https://www.vill.tobishima.aichi.jp/sonsei/gikai/1002195/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/tobishima2/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/tobishima2/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:16:48Z"
+          "url": "https://www.vill.tobishima.aichi.jp/sonsei/gikai/1002195/1002196/1003031.html",
+          "observed_on": "https://www.vill.tobishima.aichi.jp/sonsei/gikai/1002195/1002196/1003031.html",
+          "sha256": "be3d5279aaf4f81264a40d1b2ad5f8ac487b3bf4ac8e2683fefb76a446ddd80e",
+          "fetched_at": "2026-08-27T13:50:59Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/tobishima2/SpTop.html (label: 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

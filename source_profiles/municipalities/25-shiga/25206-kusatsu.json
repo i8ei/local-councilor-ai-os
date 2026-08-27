@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.kusatsu.shiga.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.kusatsu.shiga.jp/shigikai/houkoku/gikai12024091.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "http://www.city.kusatsu.shiga.jp/shigikai/houkoku/gikai12024091.html",
+          "observed_on": "http://www.city.kusatsu.shiga.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "http://www.city.kusatsu.shiga.jp/shigikai/houkoku/gikai12024091.html",
+          "observed_on": "http://www.city.kusatsu.shiga.jp/shigikai/houkoku/gikai12024091.html",
+          "sha256": "7e54cbc3a867db8103e5c030f97a0e5c4adaae20af871f3bc1f7519d07467bc1",
+          "fetched_at": "2026-08-27T14:00:30Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

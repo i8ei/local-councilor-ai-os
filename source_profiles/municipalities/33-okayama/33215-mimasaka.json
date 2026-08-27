@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.mimasaka.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.mimasaka.lg.jp/shisei/shigikai/1667352611388.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.mimasaka.lg.jp/shisei/shigikai/1667352611388.html",
+          "observed_on": "http://www.city.mimasaka.lg.jp/shisei/shigikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.mimasaka.lg.jp/shisei/shigikai/1667352611388.html",
+          "observed_on": "https://www.city.mimasaka.lg.jp/shisei/shigikai/1667352611388.html",
+          "sha256": "07af2cc272c3ec53fe5d6e52f6fcfd63ead2ba1eafa35fc563703e3f21459d06",
+          "fetched_at": "2026-08-27T14:06:08Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

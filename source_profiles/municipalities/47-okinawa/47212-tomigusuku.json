@@ -35,11 +35,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91CB1CD1 (label: 豊見城市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tomigusuku.lg.jp/gyoseijoho/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tomigusuku.lg.jp/gyoseijoho/gyozaisei/index.html",
@@ -51,9 +51,15 @@
           "observed_on": "https://www.city.tomigusuku.lg.jp/gyoseijoho/gyozaisei/index.html",
           "sha256": "0f9e59b760514ac64758791d6e9fb70078f1a2882a79ed8dd791a54e1aa29612",
           "fetched_at": "2026-08-27T09:41:00Z"
+        },
+        {
+          "url": "https://www.city.tomigusuku.lg.jp/material/files/group/5/000000H25kakukaikei.pdf",
+          "observed_on": "https://www.city.tomigusuku.lg.jp/gyoseijoho/gyozaisei/2/3689.html",
+          "sha256": "05846db74dbb20043ddafacb2f27c867400b985127bc9c4ef9ef8743b88fb4fd",
+          "fetched_at": "2026-08-27T13:48:12Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.tomigusuku.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政) 入口 https://www.city.tomigusuku.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.tomigusuku.lg.jp/gyoseijoho/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（000000H25kakukaikei.pdf「1.平成25年度全会計当初予算総括表 (PDFファイル: 55.7KB)」, sha256:05846db7）にて構造マーカー（予算額・当初予算・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

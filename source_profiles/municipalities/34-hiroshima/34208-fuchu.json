@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.fuchu.hiroshima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.kensakusystem.jp/fuchu-c/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.fuchu.hiroshima.jp/shisei/shigikai/3386.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.kensakusystem.jp/fuchu-c/index.html",
+          "url": "https://www.city.fuchu.hiroshima.jp/shisei/shigikai/3386.html",
           "observed_on": "https://www.city.fuchu.hiroshima.jp/shisei/index.html",
-          "fetched_at": "2026-08-27T06:27:09Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.fuchu.hiroshima.jp/shisei/shigikai/3386.html",
+          "observed_on": "https://www.city.fuchu.hiroshima.jp/shisei/shigikai/3386.html",
+          "sha256": "fa6a8d99f6fc7f8d78e22cc691777df05b0a64130c03eb7bfe0b1ceab679f0dc",
+          "fetched_at": "2026-08-27T14:06:20Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.kensakusystem.jp/fuchu-c/index.html (label: 会議録検索システム)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +44,11 @@
       "index_url": "https://en3-jg.d1-law.com/fuchu-shi/d1w_reiki/"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.fuchu.hiroshima.jp/shisei/gyousei_zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.fuchu.hiroshima.jp/shisei/gyousei_zaisei/index.html",
@@ -52,9 +60,15 @@
           "observed_on": "https://www.city.fuchu.hiroshima.jp/shisei/gyousei_zaisei/index.html",
           "sha256": "5adee1e2f3381676e1fe19409dc8c71639653d8995f347cee0c3e37cc16ea4de",
           "fetched_at": "2026-08-27T09:44:59Z"
+        },
+        {
+          "url": "https://www.city.fuchu.hiroshima.jp/material/files/group/3/jyuminsetumeishiryouR7.pdf",
+          "observed_on": "https://www.city.fuchu.hiroshima.jp/shisei/gyousei_zaisei/9504.html",
+          "sha256": "ea9d8728eb3386010ad84b7e8ddbb7d9953fb741d19e6b23fdc169f49986fd24",
+          "fetched_at": "2026-08-27T13:42:30Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.fuchu.hiroshima.jp/shisei/gyousei_zaisei/index.html (label: 行政・財政施策) 入口 https://www.city.fuchu.hiroshima.jp/shisei/gyousei_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fuchu.hiroshima.jp/shisei/gyousei_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.fuchu.hiroshima.jp/shisei/gyousei_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（jyuminsetumeishiryouR7.pdf「住民説明会資料 (PDFファイル: 938.0KB)」, sha256:ea9d8728）にて構造マーカー（歳入・歳出・項・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

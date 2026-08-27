@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.imizu.toyama.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=070103",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=070103",
+          "observed_on": "https://www.city.imizu.toyama.jp/topCity.aspx",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=070103",
+          "observed_on": "https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=070103",
+          "sha256": "b2a44489f3df20a869f6802abc2a97186b3fe5175f25f2389ab99ae5d413c6a4",
+          "fetched_at": "2026-08-27T13:44:41Z"
+        },
+        {
+          "url": "https://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=56582",
+          "observed_on": "https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=070103",
+          "sha256": "395d689d4405abc84ff87ebcc61b42c8c7352e74e59ab33b929ac4daaed9446c",
+          "fetched_at": "2026-08-27T13:44:42Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

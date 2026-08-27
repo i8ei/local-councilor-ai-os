@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.kembuchi.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kembuchi.hokkaido.jp/gikai/%e8%ad%b0%e4%bc%9a%e3%81%a0%e3%82%88%e3%82%8a/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kembuchi.hokkaido.jp/gikai/%e8%ad%b0%e4%bc%9a%e3%81%a0%e3%82%88%e3%82%8a/",
+          "observed_on": "https://www.town.kembuchi.hokkaido.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.kembuchi.hokkaido.jp/gikai/%e8%ad%b0%e4%bc%9a%e3%81%a0%e3%82%88%e3%82%8a/",
+          "observed_on": "https://www.town.kembuchi.hokkaido.jp/gikai/%e8%ad%b0%e4%bc%9a%e3%81%a0%e3%82%88%e3%82%8a/",
+          "sha256": "73693326ed781634b93820c016fa5f52985c8e02b90c1b7dcef9ab902fef431d",
+          "fetched_at": "2026-08-27T13:24:48Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

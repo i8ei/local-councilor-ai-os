@@ -6,18 +6,36 @@
   "official_home_url": "https://www.city.saga.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "voices",
-      "index_url": "https://sagashi-gikai.gijiroku.com/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.saga.lg.jp/shisei/shigikai/1/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://sagashi-gikai.gijiroku.com/",
-          "observed_on": "https://www.city.saga.lg.jp/shisei/shigikai/index.html"
+          "url": "https://www.city.saga.lg.jp/shisei/shigikai/1/index.html",
+          "observed_on": "https://www.city.saga.lg.jp/shisei/shigikai/index.html",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.saga.lg.jp/shisei/shigikai/1/index.html",
+          "observed_on": "https://www.city.saga.lg.jp/shisei/shigikai/1/index.html",
+          "sha256": "8715771fddc1d30217ef9ad6080356f504a30105e9505c8cf29f1912459f01e1",
+          "fetched_at": "2026-08-27T13:22:36Z"
+        },
+        {
+          "url": "https://www.city.saga.lg.jp/shisei/shigikai/1/1/4601.html",
+          "observed_on": "https://www.city.saga.lg.jp/shisei/shigikai/1/index.html",
+          "sha256": "8f11cdc550061cd83fc3c3cd87dc20d7f84454be2e70f5139664904f842c27f3",
+          "fetched_at": "2026-08-27T14:09:09Z"
         }
       ],
-      "notes": "voices(gijiroku.com)。会議一覧本体は voices/cgi/voiweb.exe 配下で、robots.txt (User-agent: *) が Disallow: /voices/cgi/（2026-08-21実確認）。礼節あるクロールでは自動取込不可。本文リンクはjavascript:winopen()依存・Shift_JISのため、許可を得た利用者が各自取得する前提（dbsr・江北例規と同じ線引）。"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

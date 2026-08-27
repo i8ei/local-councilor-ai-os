@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://reiki.town.hidakagawa.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html",
           "sha256": "b9d6ed9b2f69fa1d9a8bb977e5c46a5e63bd5b6f0424d1371f28114de7b913d1",
           "fetched_at": "2026-08-27T09:53:57Z"
+        },
+        {
+          "url": "http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html",
+          "observed_on": "http://www.town.hidakagawa.lg.jp/",
+          "sha256": "b9d6ed9b2f69fa1d9a8bb977e5c46a5e63bd5b6f0424d1371f28114de7b913d1",
+          "fetched_at": "2026-08-27T09:53:57Z"
+        },
+        {
+          "url": "https://www.town.hidakagawa.lg.jp/tyousei/zaisei/files/R6zaiseisiryou2024.xlsx",
+          "observed_on": "https://www.town.hidakagawa.lg.jp/tyousei/zaisei/zaiseijoukyou.html",
+          "sha256": "be8628f12528f15a24d7258d44a95507661135052a5c758783fd661422cb8162",
+          "fetched_at": "2026-08-27T13:41:53Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html (label: 財政) 入口 https://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.hidakagawa.lg.jp/tyousei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R6zaiseisiryou2024.xlsx「令和 7年度（R 6決算） (545KB)」, sha256:be8628f1）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.azumino.nagano.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://smart.discussvision.net/smart/tenant/azumino/WebView/rd/council.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.azumino.nagano.jp/site/gikai/140275.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://smart.discussvision.net/smart/tenant/azumino/WebView/rd/council.html",
+          "url": "https://www.city.azumino.nagano.jp/site/gikai/140275.html",
           "observed_on": "http://www.city.azumino.nagano.jp/adv/ba.php?id=182",
-          "fetched_at": "2026-08-27T07:03:46Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.azumino.nagano.jp/site/gikai/140275.html",
+          "observed_on": "https://www.city.azumino.nagano.jp/site/gikai/140275.html",
+          "sha256": "818d62e648eb986650075052c8f0a7b3dffeb9267564564732aee92c7558d0ea",
+          "fetched_at": "2026-08-27T13:47:05Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/azumino/WebView/rd/council.html (label: )"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

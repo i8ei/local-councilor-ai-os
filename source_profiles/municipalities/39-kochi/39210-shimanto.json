@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at http://www1.city.shimanto.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.shimanto.lg.jp/life/5/30/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.shimanto.lg.jp/life/5/30/",
@@ -51,9 +51,21 @@
           "observed_on": "https://www.city.shimanto.lg.jp/life/5/30/",
           "sha256": "92fa81bffce89954f9c60d481912fece1454b9fb069f202f478f681369fcd515",
           "fetched_at": "2026-08-27T09:47:23Z"
+        },
+        {
+          "url": "http://www.city.shimanto.lg.jp/life/5/30/",
+          "observed_on": "http://www.city.shimanto.lg.jp/",
+          "sha256": "92fa81bffce89954f9c60d481912fece1454b9fb069f202f478f681369fcd515",
+          "fetched_at": "2026-08-27T09:47:23Z"
+        },
+        {
+          "url": "https://www.city.shimanto.lg.jp/uploaded/attachment/13927.pdf",
+          "observed_on": "https://www.city.shimanto.lg.jp/soshiki/3/14871.html",
+          "sha256": "638ab2ca6d4e601f3044807024efb743e8f525a6c50387ba2f85080d4b30550b",
+          "fetched_at": "2026-08-27T13:43:51Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.shimanto.lg.jp/life/5/30/ (label: 予算・財政) 入口 https://www.city.shimanto.lg.jp/life/5/30/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.shimanto.lg.jp/life/5/30/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（13927.pdf「令和8年度 四万十市一般会計予算書 [PDFファイル／2.36MB]」, sha256:638ab2ca）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

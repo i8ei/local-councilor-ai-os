@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.chichibu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html",
-      "verified_at": "2026-08-27T10:20:53Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.chichibu.lg.jp/9270.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html",
-          "observed_on": "http://www.city.chichibu.lg.jp/1894.html",
-          "fetched_at": "2026-08-27T06:47:54Z"
+          "url": "https://www.city.chichibu.lg.jp/9270.html",
+          "observed_on": "https://www.city.chichibu.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html",
-          "sha256": "a736b74f03129a0fea8afd0e2e2748f110eced1bb7f1beb4e42e9f14e32481ea",
-          "fetched_at": "2026-08-27T10:20:55Z"
+          "url": "https://www.city.chichibu.lg.jp/9270.html",
+          "observed_on": "https://www.city.chichibu.lg.jp/9270.html",
+          "sha256": "8f6cb45f35891363039f3c33141a21a758b96854046e7e824288b6bea2d36b81",
+          "fetched_at": "2026-08-27T13:39:48Z"
+        },
+        {
+          "url": "https://www.city.chichibu.lg.jp/10412.html",
+          "observed_on": "https://www.city.chichibu.lg.jp/9270.html",
+          "sha256": "80e8134cc3cdd942daa056617c6a681787c57df463d46d645e2f85e1dd823fdc",
+          "fetched_at": "2026-08-27T13:39:48Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/chichibu/pg/index.html (label: 会議録（会議録検索システム）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

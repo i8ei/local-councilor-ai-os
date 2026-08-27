@@ -6,19 +6,27 @@
   "official_home_url": "https://www.town.tatsuno.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.tatsuno.lg.jp/gyosei/soshiki/gikaijimukyoku/choseijoho/1/gikaigijiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.tatsuno.lg.jp/gyosei/soshiki/gikaijimukyoku/choseijoho/1/gikaikousei.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.tatsuno.lg.jp/gyosei/soshiki/gikaijimukyoku/choseijoho/1/gikaigijiroku/index.html",
+          "url": "https://www.town.tatsuno.lg.jp/gyosei/soshiki/gikaijimukyoku/choseijoho/1/gikaikousei.html",
           "observed_on": "https://www.town.tatsuno.lg.jp/gyosei/soshiki/gikaijimukyoku/choseijoho/1/index.html",
-          "fetched_at": "2026-08-27T07:07:30Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.tatsuno.lg.jp/gyosei/soshiki/gikaijimukyoku/choseijoho/1/gikaikousei.html",
+          "observed_on": "https://www.town.tatsuno.lg.jp/gyosei/soshiki/gikaijimukyoku/choseijoho/1/gikaikousei.html",
+          "sha256": "886a9819fffe6a3c470fe91c7e6f694a7e68e408959415843340e04392241dd9",
+          "fetched_at": "2026-08-27T13:47:22Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.tatsuno.lg.jp/gyosei/soshiki/gikaijimukyoku/choseijoho/1/gikaigijiroku/index.html (label: 議会議事録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

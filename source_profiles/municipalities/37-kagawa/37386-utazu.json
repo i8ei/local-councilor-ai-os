@@ -6,12 +6,36 @@
   "official_home_url": "https://www.town.utazu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.utazu.lg.jp/site/gikai",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.utazu.lg.jp/site/gikai",
+          "observed_on": "https://www.town.utazu.lg.jp/site/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.utazu.lg.jp/site/gikai",
+          "observed_on": "https://www.town.utazu.lg.jp/site/gikai",
+          "sha256": "adda982259b7b54c7ec63610a94030c2dd0505dbbfa2c342b04b5d83704797c7",
+          "fetched_at": "2026-08-27T14:07:16Z"
+        },
+        {
+          "url": "https://www.town.utazu.lg.jp/site/gikai/1510.html",
+          "observed_on": "https://www.town.utazu.lg.jp/site/gikai",
+          "sha256": "ab56c74cb4672dfdc9275a0cbce07d418ca58434f8ee5b2b1032b48f0cbae5bf",
+          "fetched_at": "2026-08-27T14:07:16Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -50,11 +74,11 @@
       "notes": "Observed budget link at https://www.town.utazu.lg.jp/life/4/12/54/ (label: 予算・財政) 入口 https://www.town.utazu.lg.jp/life/4/12/54/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.utazu.lg.jp/life/4/12/54/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.utazu.lg.jp/life/4/12/54/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.utazu.lg.jp/life/4/12/54/",
@@ -66,9 +90,15 @@
           "observed_on": "https://www.town.utazu.lg.jp/life/4/12/54/",
           "sha256": "e0c6c39f6c203b1516dd70d0dc96c33ac619e2e3f30e9d298c256334dc942517",
           "fetched_at": "2026-08-27T09:46:26Z"
+        },
+        {
+          "url": "https://www.town.utazu.lg.jp/uploaded/attachment/3771.xlsx",
+          "observed_on": "https://www.town.utazu.lg.jp/page/1233.html",
+          "sha256": "bc76a7a136586dc1fd6755927516aca5e5a76342e69fcf82f14fdf7c3947cb5e",
+          "fetched_at": "2026-08-27T13:43:15Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.utazu.lg.jp/life/4/12/54/ (label: 予算・財政) 入口 https://www.town.utazu.lg.jp/life/4/12/54/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.utazu.lg.jp/life/4/12/54/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（3771.xlsx「財政状況資料集（令和6年度） [Excelファイル／562KB]」, sha256:bc76a7a1）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

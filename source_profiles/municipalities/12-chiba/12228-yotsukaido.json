@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.yotsukaido.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.city.yotsukaido.chiba.jp/shisei/nougyou/kiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.yotsukaido.chiba.jp/shigikai/katsudou/223.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.city.yotsukaido.chiba.jp/shisei/nougyou/kiroku/index.html",
-          "observed_on": "http://www.city.yotsukaido.chiba.jp/shisei/index.html",
-          "fetched_at": "2026-08-27T07:18:21Z"
+          "url": "https://www.city.yotsukaido.chiba.jp/shigikai/katsudou/223.html",
+          "observed_on": "http://www.city.yotsukaido.chiba.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.yotsukaido.chiba.jp/shigikai/katsudou/223.html",
+          "observed_on": "https://www.city.yotsukaido.chiba.jp/shigikai/katsudou/223.html",
+          "sha256": "cf08010e0b590d35cd9f0bad222dc16b243d95ad2fb2fb44d0d248590e88d78c",
+          "fetched_at": "2026-08-27T13:41:52Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.yotsukaido.chiba.jp/shisei/nougyou/kiroku/index.html (label: 議事録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

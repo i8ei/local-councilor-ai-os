@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.minakami.gunma.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/2026-0403-0951-66.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/index.html",
-          "observed_on": "http://www.town.minakami.gunma.jp/politics/08gikai/index.html",
-          "fetched_at": "2026-08-27T06:43:39Z"
+          "url": "https://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/2026-0403-0951-66.html",
+          "observed_on": "https://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/2026-0403-0951-66.html",
+          "observed_on": "https://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/2026-0403-0951-66.html",
+          "sha256": "b89dba1695324b304a11855e9fffa2268330c0b8c70e4728110950138e6840b1",
+          "fetched_at": "2026-08-27T13:39:36Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/index.html (label: 議事録) extraction probe read one document at https://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/ but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

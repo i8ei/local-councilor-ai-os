@@ -6,12 +6,36 @@
   "official_home_url": "http://www.city.nakano.nagano.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.city.nakano.nagano.jp/shigikai/2026031700045/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "http://www.city.nakano.nagano.jp/shigikai/2026031700045/",
+          "observed_on": "http://www.city.nakano.nagano.jp/shigikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.city.nakano.nagano.jp/shigikai/2026031700045/",
+          "observed_on": "http://www.city.nakano.nagano.jp/shigikai/2026031700045/",
+          "sha256": "0a12aa0fb4a072ed6e3266c2df0aa6592f0f3f287e874e42b9c5e19b80c03ad6",
+          "fetched_at": "2026-08-27T13:46:40Z"
+        },
+        {
+          "url": "https://www.city.nakano.nagano.jp/shigikai/2026060500067/",
+          "observed_on": "http://www.city.nakano.nagano.jp/shigikai/2026031700045/",
+          "sha256": "3d2a58dc17b5600a7e66dedf11e801aa7f90087bce1c1ccde0d1cda99f3ccaea",
+          "fetched_at": "2026-08-27T13:46:41Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

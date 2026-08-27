@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.town.susami.lg.jp/tyousei/12/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.susami.lg.jp/tyousei/08/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.susami.lg.jp/tyousei/08/index.html",
@@ -45,24 +45,48 @@
           "observed_on": "https://www.town.susami.lg.jp/tyousei/08/index.html",
           "sha256": "4b2d0ad47135e5e6514dfddc53a9d7a2122bb32946c06f0975a5aa7ef9777388",
           "fetched_at": "2026-08-27T09:53:52Z"
+        },
+        {
+          "url": "http://www.town.susami.lg.jp/tyousei/08/index.html",
+          "observed_on": "http://www.town.susami.lg.jp/",
+          "sha256": "4b2d0ad47135e5e6514dfddc53a9d7a2122bb32946c06f0975a5aa7ef9777388",
+          "fetched_at": "2026-08-27T09:53:52Z"
+        },
+        {
+          "url": "https://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx",
+          "observed_on": "https://www.town.susami.lg.jp/tyousei/08/2017032900022.html",
+          "sha256": "6c7c86eb90237d403ed84eadd1c4b0cccd17549684a25412e3c5842e37f172de",
+          "fetched_at": "2026-08-27T13:41:51Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.susami.lg.jp/tyousei/08/index.html (label: 行財政) 入口 https://www.town.susami.lg.jp/tyousei/08/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.susami.lg.jp/tyousei/08/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.susami.lg.jp/tyousei/08/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（304069_2023.xlsx「財政状況資料集（令和5年度決算） (831KB)」, sha256:6c7c86eb）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx",
           "observed_on": "http://www.town.susami.lg.jp/tyousei/08/2017032900022.html",
           "fetched_at": "2026-08-27T07:29:43Z"
+        },
+        {
+          "url": "http://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx",
+          "observed_on": "http://www.town.susami.lg.jp/",
+          "sha256": "6c7c86eb90237d403ed84eadd1c4b0cccd17549684a25412e3c5842e37f172de",
+          "fetched_at": "2026-08-27T09:53:55Z"
+        },
+        {
+          "url": "https://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx",
+          "observed_on": "https://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx",
+          "sha256": "6c7c86eb90237d403ed84eadd1c4b0cccd17549684a25412e3c5842e37f172de",
+          "fetched_at": "2026-08-27T13:41:51Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx (label: 財政状況資料集（令和5年度決算） (831KB))"
+      "notes": "deepest_doc=P1。settlement文書（304069_2023.xlsx「Direct Document」, sha256:6c7c86eb）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

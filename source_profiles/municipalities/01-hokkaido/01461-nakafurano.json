@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.nakafurano.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.nakafurano.lg.jp/hotnews/detail/00000136.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.nakafurano.lg.jp/hotnews/detail/00000136.html",
+          "observed_on": "https://www.town.nakafurano.lg.jp/hotnews/category/6.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.nakafurano.lg.jp/hotnews/detail/00000136.html",
+          "observed_on": "https://www.town.nakafurano.lg.jp/hotnews/detail/00000136.html",
+          "sha256": "495f7db972839f9c037c527ef000ad974af7eceaca3b013e38edfc92457ac1a3",
+          "fetched_at": "2026-08-27T13:24:25Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

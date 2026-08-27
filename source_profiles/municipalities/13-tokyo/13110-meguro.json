@@ -57,19 +57,31 @@
       "notes": "Observed budget link at http://www.city.meguro.tokyo.jp/hisho/kusei/yosan/furusatonozei.html (label: 目黒区のふるさと納税)"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.meguro.tokyo.jp/kusei/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.meguro.tokyo.jp/kusei/yosan/index.html",
           "observed_on": "http://www.city.meguro.tokyo.jp/kusei/kugikai/index.html",
           "fetched_at": "2026-08-27T07:34:19Z"
+        },
+        {
+          "url": "http://www.city.meguro.tokyo.jp/kusei/yosan/index.html",
+          "observed_on": "http://www.city.meguro.tokyo.jp/",
+          "sha256": "5e324b1d4abbe08d1a7dcca2b9857a6ca08d65cb6b5cdd7b1a2cd9f329b569df",
+          "fetched_at": "2026-08-27T10:25:53Z"
+        },
+        {
+          "url": "https://d345i7cbfi6qy8.cloudfront.net/documents/2240/06zaiseijokyo.xlsx",
+          "observed_on": "https://d345i7cbfi6qy8.cloudfront.net/zaisei/kusei/yosan/zaiseishiryo.html",
+          "sha256": "da9c1c5528dd5bdb14f3797f791ae418d0436258ab7fb6a70ae4712f3018ed55",
+          "fetched_at": "2026-08-27T13:33:30Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.meguro.tokyo.jp/kusei/yosan/index.html (label: 予算・財政)"
+      "notes": "deepest_doc=P1。settlement文書（06zaiseijokyo.xlsx「令和6年度財政状況資料集（エクセル：555KB）」, sha256:da9c1c55）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

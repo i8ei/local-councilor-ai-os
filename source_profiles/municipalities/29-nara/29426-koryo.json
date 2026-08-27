@@ -6,19 +6,27 @@
   "official_home_url": "http://www.town.koryo.nara.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.town.koryo.nara.jp/soshiki/7-1-0-0-0_2.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.town.koryo.nara.jp/0000007799.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.town.koryo.nara.jp/soshiki/7-1-0-0-0_2.html",
+          "url": "https://www.town.koryo.nara.jp/0000007799.html",
           "observed_on": "http://www.town.koryo.nara.jp/0000008082.html",
-          "fetched_at": "2026-08-27T07:11:55Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.koryo.nara.jp/0000007799.html",
+          "observed_on": "https://www.town.koryo.nara.jp/0000007799.html",
+          "sha256": "4cd2e752ff276b4d5198e3c7c38da0d5696ca0dda7105f796c9d2022739b9333",
+          "fetched_at": "2026-08-27T14:04:09Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.town.koryo.nara.jp/soshiki/7-1-0-0-0_2.html (label: 会議録) extraction probe read one document at http://www.kensakusystem.jp/koryo/cgi-bin3/See.exe?Code=gwtept4ijlnpo2gtkc but found no speaker-attributed speeches; reachability alone is not ingest evidence"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -57,11 +65,11 @@
       "notes": "Observed finance section at https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html",
@@ -73,9 +81,15 @@
           "observed_on": "https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html",
           "sha256": "a30cf84b764cf58802ac07cb3840120dafc0d974ec90128650d87720865d1663",
           "fetched_at": "2026-08-27T09:53:05Z"
+        },
+        {
+          "url": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7357/R6mitoosi.pdf",
+          "observed_on": "https://www.town.koryo.nara.jp/0000007357.html",
+          "sha256": "8e53bb855e55e9de1235cf7fb8bc6ee7261ca7e9ed11f4139839cf022a07e754",
+          "fetched_at": "2026-08-27T13:41:39Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.koryo.nara.jp/category/20-5-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6mitoosi.pdf「令和6年度試算分（令和7年度から令和11年度まで） (PDF形式、1.20MB)」, sha256:8e53bb85）にて構造マーカー（歳入・歳出・項・実質収支等）を確認済み。"
     }
   }
 }

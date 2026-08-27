@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.chikushino.fukuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "dbsr",
-      "index_url": "https://www.city.chikushino.fukuoka.dbsr.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.chikushino.fukuoka.jp/soshiki/1/3775.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.chikushino.fukuoka.dbsr.jp/",
+          "url": "https://www.city.chikushino.fukuoka.jp/soshiki/1/3775.html",
           "observed_on": "http://www.city.chikushino.fukuoka.jp/site/gikai-2/",
-          "fetched_at": "2026-08-27T04:12:50Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.city.chikushino.fukuoka.jp/soshiki/1/3775.html",
+          "observed_on": "https://www.city.chikushino.fukuoka.jp/soshiki/1/3775.html",
+          "sha256": "c75d695324e47f8d4c6b6e9ffa383486b204e7e1b4f0b99525d182f3647fd585",
+          "fetched_at": "2026-08-27T14:08:25Z"
         }
       ],
-      "notes": "Observed dbsr at https://www.city.chikushino.fukuoka.dbsr.jp/ (label: )"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -68,11 +76,11 @@
       "notes": "Observed budget link at http://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html (label: 予算書・決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
@@ -89,9 +97,21 @@
           "url": "https://www.city.chikushino.fukuoka.jp/uploaded/attachment/29955.pdf",
           "observed_on": "https://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
           "fetched_at": "2026-08-27T10:56:13Z"
+        },
+        {
+          "url": "http://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
+          "observed_on": "http://www.city.chikushino.fukuoka.jp/",
+          "sha256": "bd7c32236b2e126f41db73516a31e248606ed7bf1ae439c365a2c90dca477c22",
+          "fetched_at": "2026-08-27T09:35:42Z"
+        },
+        {
+          "url": "https://www.city.chikushino.fukuoka.jp/uploaded/attachment/29955.pdf",
+          "observed_on": "https://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html",
+          "sha256": "a97eff48f721cb48acdcd6e2d2078a07ec063b9b9f2a5484f2ae9dc8134ab3a8",
+          "fetched_at": "2026-08-27T10:56:14Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.chikushino.fukuoka.jp/soshiki/5/44313.html (label: 予算書・決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（29955.pdf「歳入歳出決算書 [PDFファイル／3.23MB]」, sha256:a97eff48）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

@@ -57,11 +57,11 @@
       "notes": "Observed budget link at http://www.city.chino.lg.jp/life/5/29/168/ (label: 予算・決算) 入口 https://www.city.chino.lg.jp/life/5/29/168/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.chino.lg.jp/life/5/29/168/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.chino.lg.jp/life/5/29/168/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chino.lg.jp/life/5/29/168/",
@@ -73,9 +73,21 @@
           "observed_on": "https://www.city.chino.lg.jp/life/5/29/168/",
           "sha256": "4489eb5a24be077ae44a8e71857d9e2bb8d438f212f102c597eede3988f147a1",
           "fetched_at": "2026-08-27T10:09:26Z"
+        },
+        {
+          "url": "http://www.city.chino.lg.jp/life/5/29/168/",
+          "observed_on": "http://www.city.chino.lg.jp/",
+          "sha256": "4489eb5a24be077ae44a8e71857d9e2bb8d438f212f102c597eede3988f147a1",
+          "fetched_at": "2026-08-27T10:09:26Z"
+        },
+        {
+          "url": "https://www.city.chino.lg.jp/uploaded/life/73312_130989_misc.pdf",
+          "observed_on": "https://www.city.chino.lg.jp/soshiki/kanri/kessan.html",
+          "sha256": "7339da199f460adbaaba61c759f20b6c078aab68079ee2dbe92a87e1dc0cc404",
+          "fetched_at": "2026-08-27T13:36:21Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.chino.lg.jp/life/5/29/168/ (label: 予算・決算) 入口 https://www.city.chino.lg.jp/life/5/29/168/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.chino.lg.jp/life/5/29/168/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（73312_130989_misc.pdf「令和6年度決算カード [PDFファイル／284KB]」, sha256:7339da19）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

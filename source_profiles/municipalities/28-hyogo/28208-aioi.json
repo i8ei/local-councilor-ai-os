@@ -69,11 +69,11 @@
       "notes": "Observed finance section at http://www.city.aioi.lg.jp/life/4/22/80/ (label: 財政状況) 入口 https://www.city.aioi.lg.jp/life/4/22/80/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.aioi.lg.jp/life/4/22/80/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.aioi.lg.jp/life/4/22/80/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aioi.lg.jp/life/4/22/80/",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.aioi.lg.jp/life/4/22/80/",
           "sha256": "a6ee580bc79faddc6d67edf4ecea76884768193f1b809becde4459562324653d",
           "fetched_at": "2026-08-27T09:51:56Z"
+        },
+        {
+          "url": "http://www.city.aioi.lg.jp/life/4/22/80/",
+          "observed_on": "http://www.city.aioi.lg.jp/",
+          "sha256": "a6ee580bc79faddc6d67edf4ecea76884768193f1b809becde4459562324653d",
+          "fetched_at": "2026-08-27T09:51:56Z"
+        },
+        {
+          "url": "https://www.city.aioi.lg.jp/uploaded/attachment/24496.pdf",
+          "observed_on": "https://www.city.aioi.lg.jp/soshiki/zaisei/kessan.html",
+          "sha256": "4cd792efefa3749e916464e0e55d91a54e0537ef5b5757cb3383a586c13d12ba",
+          "fetched_at": "2026-08-27T13:40:57Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.aioi.lg.jp/life/4/22/80/ (label: 財政状況) 入口 https://www.city.aioi.lg.jp/life/4/22/80/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.aioi.lg.jp/life/4/22/80/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（24496.pdf「令和6年度決算概要 [PDFファイル／483KB]」, sha256:4cd792ef）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

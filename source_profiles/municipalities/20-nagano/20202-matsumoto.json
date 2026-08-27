@@ -6,25 +6,27 @@
   "official_home_url": "http://www.city.matsumoto.nagano.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/matsumoto/SpTop.html",
-      "verified_at": "2026-08-27T10:09:00Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.matsumoto.nagano.jp/site/gikai/6326.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/matsumoto/SpTop.html",
+          "url": "https://www.city.matsumoto.nagano.jp/site/gikai/6326.html",
           "observed_on": "http://www.city.matsumoto.nagano.jp/site/gikai/6158.html",
-          "fetched_at": "2026-08-27T06:57:51Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/matsumoto/SpTop.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/matsumoto/SpTop.html",
-          "sha256": "ba485274e6ac3eb77ee9db9ced49dd445c687a57140ee63df0ad33cc3db93482",
-          "fetched_at": "2026-08-27T10:09:01Z"
+          "url": "https://www.city.matsumoto.nagano.jp/site/gikai/6326.html",
+          "observed_on": "https://www.city.matsumoto.nagano.jp/site/gikai/6326.html",
+          "sha256": "21b9221f38720f7a9558e31607f3b3c2bcb1f9f401f5be4b8cacf985f0d760ca",
+          "fetched_at": "2026-08-27T13:46:23Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/matsumoto/SpTop.html (label: 松本市議会 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "not_found",

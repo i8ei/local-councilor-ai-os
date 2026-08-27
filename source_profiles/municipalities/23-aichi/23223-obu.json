@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.obu.aichi.jp/shisei/zaisei/yosan/index.html (label: 大府市の予算) 入口 https://www.city.obu.aichi.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.obu.aichi.jp/shisei/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.obu.aichi.jp/shisei/zaisei/kessan/index.html",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.obu.aichi.jp/shisei/zaisei/kessan/index.html",
           "sha256": "f8c0d4ec427b37ea1d6a88645b42202975c6b4383e20bb5d35d87ad5065dfcd0",
           "fetched_at": "2026-08-27T10:15:32Z"
+        },
+        {
+          "url": "http://www.city.obu.aichi.jp/shisei/zaisei/kessan/index.html",
+          "observed_on": "http://www.city.obu.aichi.jp/",
+          "sha256": "f8c0d4ec427b37ea1d6a88645b42202975c6b4383e20bb5d35d87ad5065dfcd0",
+          "fetched_at": "2026-08-27T10:15:32Z"
+        },
+        {
+          "url": "https://www.city.obu.aichi.jp/_res/projects/default_project/_page_/001/037/208/r6kessancard.pdf",
+          "observed_on": "https://www.city.obu.aichi.jp/shisei/zaisei/kessan/1037202/1037208.html",
+          "sha256": "a1ed8c162366e9d0336de44fcb52ce219891521712d55ba410e0c89f9256b4ce",
+          "fetched_at": "2026-08-27T13:38:23Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.obu.aichi.jp/shisei/zaisei/kessan/index.html (label: 大府市の決算) 入口 https://www.city.obu.aichi.jp/shisei/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r6kessancard.pdf「2024年度決算カード （PDF 145.0KB）」, sha256:a1ed8c16）にて構造マーカー（歳入・歳出・決算額・収入済額等）を確認済み。"
     }
   }
 }

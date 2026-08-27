@@ -69,11 +69,11 @@
       "notes": "Observed budget link at http://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.tomisato.lg.jp/category/2-6-5-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tomisato.lg.jp/category/2-6-5-0-0-0-0-0-0-0.html",
@@ -85,9 +85,21 @@
           "observed_on": "https://www.city.tomisato.lg.jp/category/2-6-5-0-0-0-0-0-0-0.html",
           "sha256": "beacbae5491dcb0e66e0dd796bd3511db2a8a2d773ecb3893fb5ad3680c45ba5",
           "fetched_at": "2026-08-27T10:24:20Z"
+        },
+        {
+          "url": "http://www.city.tomisato.lg.jp/category/2-6-5-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.tomisato.lg.jp/",
+          "sha256": "beacbae5491dcb0e66e0dd796bd3511db2a8a2d773ecb3893fb5ad3680c45ba5",
+          "fetched_at": "2026-08-27T10:24:20Z"
+        },
+        {
+          "url": "https://www.city.tomisato.lg.jp/cmsfiles/contents/0000016/16705/R6kessansyo.pdf",
+          "observed_on": "https://www.city.tomisato.lg.jp/0000016705.html",
+          "sha256": "9a2abc0acff681605549f68558c29ac98767a93dd70a9086690e6885be0b0838",
+          "fetched_at": "2026-08-27T13:33:05Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tomisato.lg.jp/category/2-6-5-0-0-0-0-0-0-0.html (label: 決算) 入口 https://www.city.tomisato.lg.jp/category/2-6-5-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessansyo.pdf「令和6年度歳入歳出決算書並びに決算関係調書(PDF形式、3.17MB)」, sha256:9a2abc0a）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

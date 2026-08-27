@@ -50,11 +50,11 @@
       "notes": "Observed budget link at https://www.city.yamato.lg.jp/gyosei/shiseijoho/seisaku_keikaku/kuni_kennoshisaku_seido_yosannikansuruyobo/index.html (label: 国・県の施策・制度・予算に関する要望) 入口 https://www.city.yamato.lg.jp/gyosei/shiseijoho/seisaku_keikaku/kuni_kennoshisaku_seido_yosannikansuruyobo/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/shinoshokai/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/shinoshokai/zaisei/index.html",
@@ -66,9 +66,15 @@
           "observed_on": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/shinoshokai/zaisei/index.html",
           "sha256": "e97ee45af780c50adb031d50a75a5f26dc6aab2e77c5e62e7da8af02065d0551",
           "fetched_at": "2026-08-27T10:26:56Z"
+        },
+        {
+          "url": "https://www.city.yamato.lg.jp/material/files/group/8/R7_kessansyo.pdf",
+          "observed_on": "https://www.city.yamato.lg.jp/gyosei/shiseijoho/shinoshokai/zaisei/8547.html",
+          "sha256": "c1140638f6c998a7bf0466fdf998bb17f69adb2854b066700ef569621de19516",
+          "fetched_at": "2026-08-27T13:34:28Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.yamato.lg.jp/gyosei/shiseijoho/shinoshokai/zaisei/index.html (label: 財政) 入口 https://www.city.yamato.lg.jp/gyosei/shiseijoho/shinoshokai/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R7_kessansyo.pdf「令和7年度 決算書及び附属書類 (PDFファイル: 2.7MB)」, sha256:c1140638）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

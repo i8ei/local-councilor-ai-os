@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.fujieda.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.fujieda.shizuoka.jp/shigikai/index.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.fujieda.shizuoka.jp/shigikai/index.html",
+          "observed_on": "https://www.city.fujieda.shizuoka.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.fujieda.shizuoka.jp/shigikai/index.html",
+          "observed_on": "https://www.city.fujieda.shizuoka.jp/shigikai/index.html",
+          "sha256": "de781d18d77d694b3b4efd9d32d4a44981d02460b81e1cefff014c246215c655",
+          "fetched_at": "2026-08-27T13:49:42Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

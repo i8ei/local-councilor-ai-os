@@ -35,11 +35,11 @@
       "notes": "Observed g_reiki at https://www.city.settsu.osaka.jp/section/reiki/reiki_menu.html (label: 市例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.settsu.osaka.jp/soshiki/shichoukoushitsu/seisakusuishinka/jigyou/29541.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.settsu.osaka.jp/soshiki/shichoukoushitsu/seisakusuishinka/jigyou/29541.html",
@@ -56,16 +56,22 @@
           "url": "https://www.city.settsu.osaka.jp/material/files/group/31/R8syuyouzigyou.pdf",
           "observed_on": "https://www.city.settsu.osaka.jp/soshiki/shichoukoushitsu/seisakusuishinka/jigyou/29541.html",
           "fetched_at": "2026-08-27T11:04:25Z"
+        },
+        {
+          "url": "https://www.city.settsu.osaka.jp/material/files/group/31/R8syuyouzigyou.pdf",
+          "observed_on": "https://www.city.settsu.osaka.jp/soshiki/shichoukoushitsu/seisakusuishinka/jigyou/29541.html",
+          "sha256": "8e30173ba4d7ca30362f8107ae27bbadc8cab060b0b56f10ebb719e0c86b275b",
+          "fetched_at": "2026-08-27T11:04:27Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.settsu.osaka.jp/soshiki/shichoukoushitsu/seisakusuishinka/jigyou/29541.html (label: 令和8年度当初予算主要事業一覧) budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった budget document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
+      "notes": "deepest_doc=P1。budget文書（R8syuyouzigyou.pdf「令和8年度当初予算主要事業 (PDFファイル: 2.7MB)」, sha256:8e30173b）にて構造マーカー（節・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html",
@@ -77,9 +83,15 @@
           "observed_on": "https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html",
           "sha256": "e6958caf2b5ca8bbc01adf94ed76ed759aaf099bf4be027998776e839255d2ba",
           "fetched_at": "2026-08-27T09:50:57Z"
+        },
+        {
+          "url": "https://www.city.settsu.osaka.jp/material/files/group/57/settsucitychuukizaiseikeikaku.pdf",
+          "observed_on": "https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html",
+          "sha256": "5449be91f2f44007a1e029f168343d1579ced96de4f59f3de00e587ba58511d6",
+          "fetched_at": "2026-08-27T13:40:23Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html (label: 摂津市中期財政計画) 入口 https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（settsucitychuukizaiseikeikaku.pdf「摂津市中期財政計画 (PDFファイル: 1.8MB)」, sha256:5449be91）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.vill.yamanakako.lg.jp/menu/40 (label: 山中湖村例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.yamanakako.lg.jp/menu/27",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.yamanakako.lg.jp/menu/27",
@@ -45,9 +45,21 @@
           "observed_on": "https://www.vill.yamanakako.lg.jp/menu/27",
           "sha256": "b45dbd46381016581de4e61e7eefb95a6a8bdffdaeec64f6f309330589b94be3",
           "fetched_at": "2026-08-27T10:08:46Z"
+        },
+        {
+          "url": "http://www.vill.yamanakako.lg.jp/menu/27",
+          "observed_on": "http://www.vill.yamanakako.lg.jp/",
+          "sha256": "b45dbd46381016581de4e61e7eefb95a6a8bdffdaeec64f6f309330589b94be3",
+          "fetched_at": "2026-08-27T10:08:46Z"
+        },
+        {
+          "url": "https://www.vill.yamanakako.lg.jp/div/zaisei/pdf/R7yosan_tousyo.pdf",
+          "observed_on": "https://www.vill.yamanakako.lg.jp/info/1525",
+          "sha256": "376b27cd9bf9bcb5e4bc3054153b4cc71f35bf6261c059fbc528de88dce54628",
+          "fetched_at": "2026-08-27T13:36:16Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.yamanakako.lg.jp/menu/27 (label: 財政) 入口 https://www.vill.yamanakako.lg.jp/menu/27 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.yamanakako.lg.jp/menu/27 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（R7yosan_tousyo.pdf「・令和７年度当初予算」, sha256:376b27cd）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

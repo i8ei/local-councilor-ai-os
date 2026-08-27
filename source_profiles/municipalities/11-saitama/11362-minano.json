@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.minano.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.minano.saitama.jp/section/gikai/815/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.minano.saitama.jp/section/gikai/815/",
+          "observed_on": "https://www.town.minano.saitama.jp/section/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.minano.saitama.jp/section/gikai/815/",
+          "observed_on": "https://www.town.minano.saitama.jp/section/gikai/815/",
+          "sha256": "6eeb777d881d91c7baee745a263f31f1e956b7bb5bae8a8f4c4c623f4885b811",
+          "fetched_at": "2026-08-27T13:41:16Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed finance section at https://www.town.minano.saitama.jp/section/mirai/ (label: 企画財政課) 入口 https://www.town.minano.saitama.jp/section/mirai/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minano.saitama.jp/section/mirai/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.minano.saitama.jp/section/mirai/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.minano.saitama.jp/section/mirai/",
@@ -72,9 +87,15 @@
           "observed_on": "https://www.town.minano.saitama.jp/section/mirai/",
           "sha256": "eb486089278c5e6e6ad465e7070bf5eace457b705200538c5f6920f649c61650",
           "fetched_at": "2026-08-27T10:22:07Z"
+        },
+        {
+          "url": "https://www.town.minano.saitama.jp/wp-content/uploads/2014/12/e7f54671c75f52a8b4d31e8b2bd7fd56.xlsx",
+          "observed_on": "https://www.town.minano.saitama.jp/section/mirai/18247/",
+          "sha256": "fcc3d48c54b6c52e4fea6b8b735d4e1574af9494d1fda4056d971f8644b639d5",
+          "fetched_at": "2026-08-27T13:32:19Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.minano.saitama.jp/section/mirai/ (label: 企画財政課) 入口 https://www.town.minano.saitama.jp/section/mirai/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.minano.saitama.jp/section/mirai/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（e7f54671c75f52a8b4d31e8b2bd7fd56.xlsx「令和６年度皆野町財政状況資料集」, sha256:fcc3d48c）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

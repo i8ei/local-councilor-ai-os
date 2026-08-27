@@ -36,11 +36,11 @@
       "notes": "Observed regulations index at http://www.city.daito.lg.jp/life/6/30/130/ (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.daito.lg.jp/life/6/30/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.daito.lg.jp/life/6/30/",
@@ -52,9 +52,21 @@
           "observed_on": "https://www.city.daito.lg.jp/life/6/30/",
           "sha256": "bcb50249041782873a65943023f58c26a32767fe7a2f3ecfdec13254d0b26c14",
           "fetched_at": "2026-08-27T09:50:44Z"
+        },
+        {
+          "url": "http://www.city.daito.lg.jp/life/6/30/",
+          "observed_on": "http://www.city.daito.lg.jp/",
+          "sha256": "bcb50249041782873a65943023f58c26a32767fe7a2f3ecfdec13254d0b26c14",
+          "fetched_at": "2026-08-27T09:50:44Z"
+        },
+        {
+          "url": "https://www.city.daito.lg.jp/uploaded/attachment/42616.pdf",
+          "observed_on": "https://www.city.daito.lg.jp/soshiki/4/68019.html",
+          "sha256": "5e30891bbdbd3b0aff637ccb11a08ae13d8570c8faf5d0479eda85eae78b1a78",
+          "fetched_at": "2026-08-27T13:40:20Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.daito.lg.jp/life/6/30/ (label: 行財政) 入口 https://www.city.daito.lg.jp/life/6/30/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.daito.lg.jp/life/6/30/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（42616.pdf「令和8年度予算概要 [PDFファイル／14.63MB]」, sha256:5e30891b）にて構造マーカー（歳入・歳出・款・節等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

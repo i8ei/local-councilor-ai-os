@@ -6,12 +6,27 @@
   "official_home_url": "https://www.town.yubetsu.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.yubetsu.lg.jp/administration/town/detail.html?content=280",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.yubetsu.lg.jp/administration/town/detail.html?content=280",
+          "observed_on": "https://www.town.yubetsu.lg.jp/administration/town/category/?category=12",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.yubetsu.lg.jp/administration/town/detail.html?content=280",
+          "observed_on": "https://www.town.yubetsu.lg.jp/administration/town/detail.html?content=280",
+          "sha256": "5abb622fedce39b7c919dd3ed5a1f82746dd593b6e5dec17f52ed9e2ace2cff7",
+          "fetched_at": "2026-08-27T13:25:11Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

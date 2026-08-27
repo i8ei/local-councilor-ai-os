@@ -6,12 +6,27 @@
   "official_home_url": "https://www.city.hirakawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.hirakawa.lg.jp/jouhou/gikai/nittei/jikaiyotei.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.hirakawa.lg.jp/jouhou/gikai/nittei/jikaiyotei.html",
+          "observed_on": "https://www.city.hirakawa.lg.jp/jouhou/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.hirakawa.lg.jp/jouhou/gikai/nittei/jikaiyotei.html",
+          "observed_on": "https://www.city.hirakawa.lg.jp/jouhou/gikai/nittei/jikaiyotei.html",
+          "sha256": "caffd357c314166ee9aceeb41daa28de1f1a2891b1f9d32c339b138409c056b4",
+          "fetched_at": "2026-08-27T13:25:43Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

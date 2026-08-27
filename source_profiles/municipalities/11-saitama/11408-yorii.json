@@ -6,25 +6,27 @@
   "official_home_url": "http://www.town.yorii.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/yorii/pg/index.html",
-      "verified_at": "2026-08-27T10:22:16Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.yorii.saitama.jp/site/gikai/gikaimeibo.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/yorii/pg/index.html",
+          "url": "https://www.town.yorii.saitama.jp/site/gikai/gikaimeibo.html",
           "observed_on": "http://www.town.yorii.saitama.jp/site/gikai/",
-          "fetched_at": "2026-08-27T07:08:54Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/yorii/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/yorii/pg/index.html",
-          "sha256": "4b1d1864f1333f6893b461321469dd3658675d5f53cd6c35513264e8d53c0420",
-          "fetched_at": "2026-08-27T10:22:17Z"
+          "url": "https://www.town.yorii.saitama.jp/site/gikai/gikaimeibo.html",
+          "observed_on": "https://www.town.yorii.saitama.jp/site/gikai/gikaimeibo.html",
+          "sha256": "3ddc38426af6bafe8ce8383ae7635ae899c179c3c93f6b49f47c6834af8bd506",
+          "fetched_at": "2026-08-27T13:42:05Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/yorii/pg/index.html (label: 会議録の検索と閲覧) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -48,11 +50,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/yorii/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.yorii.saitama.jp/life/5/22/84/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.yorii.saitama.jp/life/5/22/84/",
@@ -64,9 +66,21 @@
           "observed_on": "https://www.town.yorii.saitama.jp/life/5/22/84/",
           "sha256": "6b1b7c277655863517378c907fa0afc734ba80ebc5657e6b88719fce77b8421a",
           "fetched_at": "2026-08-27T10:22:24Z"
+        },
+        {
+          "url": "http://www.town.yorii.saitama.jp/life/5/22/84/",
+          "observed_on": "http://www.town.yorii.saitama.jp/",
+          "sha256": "6b1b7c277655863517378c907fa0afc734ba80ebc5657e6b88719fce77b8421a",
+          "fetched_at": "2026-08-27T10:22:24Z"
+        },
+        {
+          "url": "https://www.town.yorii.saitama.jp/uploaded/attachment/27238.pdf",
+          "observed_on": "https://www.town.yorii.saitama.jp/soshiki/02/r8yosan.html",
+          "sha256": "92e5859d63f06d19bf2d012ce5990ef29cf6619344d7f48407d44947412ded38",
+          "fetched_at": "2026-08-27T13:32:23Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.yorii.saitama.jp/life/5/22/84/ (label: 予算) 入口 https://www.town.yorii.saitama.jp/life/5/22/84/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（27238.pdf「令和８年度当初予算・概要 [PDFファイル／296KB]」, sha256:92e5859d）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

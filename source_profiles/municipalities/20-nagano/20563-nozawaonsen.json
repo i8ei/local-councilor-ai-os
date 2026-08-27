@@ -50,11 +50,11 @@
       "notes": "Observed finance section at http://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html (label: 財政・財務) 入口 https://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html",
@@ -66,9 +66,21 @@
           "observed_on": "https://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html",
           "sha256": "662422540b4ff21d3d5db0257a3bc6b6c02a84e5ad0a7a1874043887f7621f20",
           "fetched_at": "2026-08-27T10:12:03Z"
+        },
+        {
+          "url": "http://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html",
+          "observed_on": "http://www.vill.nozawaonsen.nagano.jp/",
+          "sha256": "662422540b4ff21d3d5db0257a3bc6b6c02a84e5ad0a7a1874043887f7621f20",
+          "fetched_at": "2026-08-27T10:12:03Z"
+        },
+        {
+          "url": "https://www.vill.nozawaonsen.nagano.jp/www/contents/1050000000316/files/H22_kessaizaimu_ichiran.pdf",
+          "observed_on": "https://www.vill.nozawaonsen.nagano.jp/www/contents/1050000000316/index.html",
+          "sha256": "55051cb9ad36c87c0413aa92047f30c0f9db406db307af8450d01c63fbaefb85",
+          "fetched_at": "2026-08-27T13:36:43Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html (label: 財政・財務) 入口 https://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.nozawaonsen.nagano.jp/www/genre/1000000000014/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（H22_kessaizaimu_ichiran.pdf「平成22年度決算財政状況一覧（PDF:101KB）」, sha256:55051cb9）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

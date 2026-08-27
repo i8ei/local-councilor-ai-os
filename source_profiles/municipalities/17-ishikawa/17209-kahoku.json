@@ -6,12 +6,36 @@
   "official_home_url": "https://www.city.kahoku.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kahoku.lg.jp/006/635/645/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.kahoku.lg.jp/006/635/645/index.html",
+          "observed_on": "https://www.city.kahoku.lg.jp/006/635/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.kahoku.lg.jp/006/635/645/index.html",
+          "observed_on": "https://www.city.kahoku.lg.jp/006/635/645/index.html",
+          "sha256": "29649ca34f522d86eae5c8e9f384c9c06ba20b896ef91b8c8cef2e67d93bca09",
+          "fetched_at": "2026-08-27T13:46:26Z"
+        },
+        {
+          "url": "https://www.city.kahoku.lg.jp/006/635/645/d011804.html",
+          "observed_on": "https://www.city.kahoku.lg.jp/006/635/645/index.html",
+          "sha256": "cb00d1a8a54a201732ee0e64a1d1ed2876b1db891c4227162a6e344db02cce8e",
+          "fetched_at": "2026-08-27T13:46:27Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

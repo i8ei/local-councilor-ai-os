@@ -6,12 +6,36 @@
   "official_home_url": "https://www.vill.takagi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.vill.takagi.lg.jp/soshiki/ou_GikaiJimuKyoku/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.vill.takagi.lg.jp/soshiki/ou_GikaiJimuKyoku/",
+          "observed_on": "https://www.vill.takagi.lg.jp/soshiki/ou_KikakuZaiseiKa/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.vill.takagi.lg.jp/soshiki/ou_GikaiJimuKyoku/",
+          "observed_on": "https://www.vill.takagi.lg.jp/soshiki/ou_GikaiJimuKyoku/",
+          "sha256": "44b7d4c3b76616a61eb3cb698a3fce6444f70979fbdfc664817e55dfad039276",
+          "fetched_at": "2026-08-27T13:47:39Z"
+        },
+        {
+          "url": "https://www.vill.takagi.lg.jp/docGikai/2026062300023/",
+          "observed_on": "https://www.vill.takagi.lg.jp/soshiki/ou_GikaiJimuKyoku/",
+          "sha256": "12b0a7d354006f9933fe5e5a547ed5d887b2f20b1e48b227e46385abc1ecb442",
+          "fetched_at": "2026-08-27T13:47:40Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

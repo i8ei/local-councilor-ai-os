@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
-      "adapter": "voices",
-      "index_url": "https://chiba-city.gijiroku.com/index.asp",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.chiba.jp/shigikai/kaigirokukensaku-eturan.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://chiba-city.gijiroku.com/index.asp",
+          "url": "https://www.city.chiba.jp/shigikai/kaigirokukensaku-eturan.html",
           "observed_on": "http://www.city.chiba.jp/shigikai/top.html",
-          "fetched_at": "2026-08-27T07:12:49Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.chiba.jp/shigikai/kaigirokukensaku-eturan.html",
+          "observed_on": "https://www.city.chiba.jp/shigikai/kaigirokukensaku-eturan.html",
+          "sha256": "ac501d86eba5bb42c0b557f5f9241c058f427fb989545cdeb896c2874441c009",
+          "fetched_at": "2026-08-27T13:41:06Z"
         }
       ],
-      "notes": "Observed voices at https://chiba-city.gijiroku.com/index.asp (label: 議会中継)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -63,11 +71,11 @@
       "notes": "Observed budget link at http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo (label: 市の予算・決算) 入口 https://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo= に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo",
@@ -79,9 +87,21 @@
           "observed_on": "https://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo=",
           "sha256": "d314bc03a952cabca2bcb84191857b2d7c42131c5a6bed31e36dfab6f4f1a3ca",
           "fetched_at": "2026-08-27T10:22:46Z"
+        },
+        {
+          "url": "http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo",
+          "observed_on": "http://www.city.chiba.jp/",
+          "sha256": "d314bc03a952cabca2bcb84191857b2d7c42131c5a6bed31e36dfab6f4f1a3ca",
+          "fetched_at": "2026-08-27T10:22:46Z"
+        },
+        {
+          "url": "https://www.city.chiba.jp/zaiseikyoku/zaisei/zaisei/documents/r7kessancard.pdf",
+          "observed_on": "https://www.city.chiba.jp/zaiseikyoku/zaisei/zaisei/r7kessan.html",
+          "sha256": "2c50331f899038372ad4c0665bfd56c95bde07635447e64b0effb8c66084222f",
+          "fetched_at": "2026-08-27T13:32:33Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo (label: 市の予算・決算) 入口 https://www.city.chiba.jp/shisei/gyokaku/zaise/yosan/index.html?jigyo= に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（r7kessancard.pdf「令和7年度決算カード（速報値）（PDF：614KB）」, sha256:2c50331f）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

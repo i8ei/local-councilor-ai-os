@@ -6,25 +6,27 @@
   "official_home_url": "https://www.city.miyakojima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "http://ssp.kaigiroku.net/tenant/miyakojima/pg/index.html",
-      "verified_at": "2026-08-27T09:41:00Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.miyakojima.lg.jp/gyosei/gikai/gijiroku.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "http://ssp.kaigiroku.net/tenant/miyakojima/pg/index.html",
+          "url": "https://www.city.miyakojima.lg.jp/gyosei/gikai/gijiroku.html",
           "observed_on": "https://www.city.miyakojima.lg.jp/gyosei/gikai/miyakojimashigikai_gijiroku.html",
-          "fetched_at": "2026-08-27T06:53:47Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
         },
         {
-          "url": "http://ssp.kaigiroku.net/tenant/miyakojima/pg/index.html",
-          "observed_on": "http://ssp.kaigiroku.net/tenant/miyakojima/pg/index.html",
-          "sha256": "e9a232c5eab9c00014c8725d7f200e6cdb3542c14ae6741892fcb1052e541419",
-          "fetched_at": "2026-08-27T09:41:02Z"
+          "url": "https://www.city.miyakojima.lg.jp/gyosei/gikai/gijiroku.html",
+          "observed_on": "https://www.city.miyakojima.lg.jp/gyosei/gikai/gijiroku.html",
+          "sha256": "8642e1f8ebcd2cf8f5d4a3e33ed45c7d9c597d4df2f518831c92a0546d8c28a5",
+          "fetched_at": "2026-08-27T14:12:06Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/miyakojima/pg/index.html (label: 宮古島市議会議事録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

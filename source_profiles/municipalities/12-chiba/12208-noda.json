@@ -6,25 +6,36 @@
   "official_home_url": "http://www.city.noda.chiba.jp/",
   "sources": {
     "minutes": {
-      "status": "blocked",
-      "adapter": "kaigiroku_net",
-      "tenant_url": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
-      "verified_at": "2026-08-27T10:22:46Z",
-      "verified_by": "verify --live",
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.noda.chiba.jp/gikai/1028432/1028546/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
+          "url": "https://www.city.noda.chiba.jp/gikai/1028432/1028546/index.html",
           "observed_on": "http://www.city.noda.chiba.jp/gikai/index.html",
-          "fetched_at": "2026-08-27T07:12:34Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
         },
         {
-          "url": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
-          "observed_on": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
-          "sha256": "23c00312f362ec9c56f02ad5b0d4fcb7b38d12abbedeb10cb4489730f34669af",
-          "fetched_at": "2026-08-27T10:22:46Z"
+          "url": "https://www.city.noda.chiba.jp/gikai/1028432/1028546/index.html",
+          "observed_on": "https://www.city.noda.chiba.jp/gikai/1028432/1028546/index.html",
+          "sha256": "872af35eb0aa2ae53678a9d77a1b78356a6c50c04b38295eeb575833062afc33",
+          "fetched_at": "2026-08-27T13:41:17Z"
+        },
+        {
+          "url": "https://www.city.noda.chiba.jp/gikai/1028432/1028546/1051941.html",
+          "observed_on": "https://www.city.noda.chiba.jp/gikai/1028432/1028546/index.html",
+          "sha256": "5ed0c5281b795ba07bbce2665e76f4c833b3cea302441830e257eb8cd0d8b3b5",
+          "fetched_at": "2026-08-27T13:41:17Z"
         }
       ],
-      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/noda/pg/index.html (label: 会議録検索（外部リンク）) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

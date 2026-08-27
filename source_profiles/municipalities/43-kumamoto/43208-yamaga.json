@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/yamaga/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.yamaga.kumamoto.jp/list00136.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yamaga.kumamoto.jp/list00136.html",
@@ -64,9 +64,21 @@
           "observed_on": "https://www.city.yamaga.kumamoto.jp/list00136.html",
           "sha256": "161a9556e5b3ab944bb4e79a26c10094d29aeed3b2d3ba810faed288637a5b60",
           "fetched_at": "2026-08-27T09:38:29Z"
+        },
+        {
+          "url": "http://www.city.yamaga.kumamoto.jp/list00136.html",
+          "observed_on": "http://www.city.yamaga.kumamoto.jp/",
+          "sha256": "161a9556e5b3ab944bb4e79a26c10094d29aeed3b2d3ba810faed288637a5b60",
+          "fetched_at": "2026-08-27T09:38:29Z"
+        },
+        {
+          "url": "https://www.city.yamaga.kumamoto.jp/kiji003641/3_641_12665_up_rvkrnqp7.pdf",
+          "observed_on": "https://www.city.yamaga.kumamoto.jp/kiji003641/index.html",
+          "sha256": "3da19971805063fff4c3899ff2edd20ec182ddc1f231707289c5599d55e8d1e2",
+          "fetched_at": "2026-08-27T13:45:55Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.yamaga.kumamoto.jp/list00136.html (label: 行政・財政) 入口 https://www.city.yamaga.kumamoto.jp/list00136.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.yamaga.kumamoto.jp/list00136.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（3_641_12665_up_rvkrnqp7.pdf「公表（PDF：94.3キロバイト）」, sha256:3da19971）にて構造マーカー（歳入・歳出・予算額・一般会計等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

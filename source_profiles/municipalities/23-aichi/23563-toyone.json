@@ -56,11 +56,11 @@
       "notes": "Observed finance section at https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/index.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/index.html",
           "sha256": "bccca12a794248d475e1a838c81bd8774f5d5ff417137a33ac64f94229561a48",
           "fetched_at": "2026-08-27T10:17:00Z"
+        },
+        {
+          "url": "https://www.vill.toyone.aichi.jp/material/files/group/2/R6_zaiseijyoukyou.xlsx",
+          "observed_on": "https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/345.html",
+          "sha256": "2368600363386338a4bf49a0534ae73476990eaa3e760b3fc8d5ed4879107c61",
+          "fetched_at": "2026-08-27T13:38:43Z"
         }
       ],
-      "notes": "Observed finance section at https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/index.html (label: 行財政) 入口 https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.vill.toyone.aichi.jp/gyosei/gyozaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6_zaiseijyoukyou.xlsx「令和6年度財政状況資料集 (Excelファイル: 550.1KB)」, sha256:23686003）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

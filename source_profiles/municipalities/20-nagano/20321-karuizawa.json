@@ -57,11 +57,11 @@
       "notes": "Observed budget link at http://www.town.karuizawa.lg.jp/life/6/24/118/ (label: 予算) 入口 https://www.town.karuizawa.lg.jp/life/6/24/118/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.karuizawa.lg.jp/life/6/24/118/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.karuizawa.lg.jp/life/6/24/119/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.karuizawa.lg.jp/life/6/24/119/",
@@ -73,9 +73,21 @@
           "observed_on": "https://www.town.karuizawa.lg.jp/life/6/24/119/",
           "sha256": "09a999b14432d7126ac2692672b557704ac6795d083c901d91e9670881b1c666",
           "fetched_at": "2026-08-27T10:10:43Z"
+        },
+        {
+          "url": "http://www.town.karuizawa.lg.jp/life/6/24/119/",
+          "observed_on": "http://www.town.karuizawa.lg.jp/",
+          "sha256": "09a999b14432d7126ac2692672b557704ac6795d083c901d91e9670881b1c666",
+          "fetched_at": "2026-08-27T10:10:43Z"
+        },
+        {
+          "url": "https://www.town.karuizawa.lg.jp/uploaded/attachment/6875.pdf",
+          "observed_on": "https://www.town.karuizawa.lg.jp/page/16539.html",
+          "sha256": "841bb0912553d1c55b4f56e490b18cd484d9a4ecbc37f4a8a6be95f530989c7e",
+          "fetched_at": "2026-08-27T13:36:32Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.karuizawa.lg.jp/life/6/24/119/ (label: 決算) 入口 https://www.town.karuizawa.lg.jp/life/6/24/119/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.karuizawa.lg.jp/life/6/24/119/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（6875.pdf「令和6年度一般会計・特別会計決算書 [PDFファイル／5.08MB]」, sha256:841bb091）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

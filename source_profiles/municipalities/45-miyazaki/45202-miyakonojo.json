@@ -43,11 +43,11 @@
       "notes": "Observed budget link at http://www.city.miyakonojo.miyazaki.jp/life/5/57/312/ (label: 当初予算) 入口 https://www.city.miyakonojo.miyazaki.jp/life/5/57/312/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyakonojo.miyazaki.jp/life/5/57/312/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.miyakonojo.miyazaki.jp/life/5/57/311/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyakonojo.miyazaki.jp/life/5/57/311/",
@@ -59,9 +59,21 @@
           "observed_on": "https://www.city.miyakonojo.miyazaki.jp/life/5/57/311/",
           "sha256": "3bbf36f29c54fd7ec93fef27400e002c18aefebecf2240cf36dfa5cdbedef3d0",
           "fetched_at": "2026-08-27T09:39:42Z"
+        },
+        {
+          "url": "http://www.city.miyakonojo.miyazaki.jp/life/5/57/311/",
+          "observed_on": "http://www.city.miyakonojo.miyazaki.jp/",
+          "sha256": "3bbf36f29c54fd7ec93fef27400e002c18aefebecf2240cf36dfa5cdbedef3d0",
+          "fetched_at": "2026-08-27T09:39:42Z"
+        },
+        {
+          "url": "https://www.city.miyakonojo.miyazaki.jp/uploaded/attachment/46488.pdf",
+          "observed_on": "https://www.city.miyakonojo.miyazaki.jp/soshiki/19/2253.html",
+          "sha256": "0fde5d4413ce159917f5ab84b70554c6b2f9c3e421c9bf705e0de04f281deee3",
+          "fetched_at": "2026-08-27T13:47:05Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.miyakonojo.miyazaki.jp/life/5/57/311/ (label: 決算) 入口 https://www.city.miyakonojo.miyazaki.jp/life/5/57/311/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyakonojo.miyazaki.jp/life/5/57/311/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（46488.pdf「令和6年度決算カード [PDFファイル／298KB]」, sha256:0fde5d44）にて構造マーカー（歳入・歳出・決算額・実質収支等）を確認済み。"
     }
   }
 }

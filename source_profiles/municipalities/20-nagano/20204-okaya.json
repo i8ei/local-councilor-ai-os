@@ -69,11 +69,11 @@
       "notes": "Observed budget link at https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html",
@@ -85,9 +85,15 @@
           "observed_on": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html",
           "sha256": "3d20a4637efe66615748f7e91da77657394d451ad5f93cd3233d628df3c0b1fa",
           "fetched_at": "2026-08-27T10:09:31Z"
+        },
+        {
+          "url": "https://www.city.okaya.lg.jp/material/files/group/7/R6zaijou.pdf",
+          "observed_on": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/8919.html",
+          "sha256": "4cfdfa55e0add3e6464d916e99e0e73e6fea70ed354f0a6112ce2e11bca83cda",
+          "fetched_at": "2026-08-27T13:36:18Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6zaijou.pdf「令和6年度財政状況等一覧表(PDFファイル:1.3MB)」, sha256:4cfdfa55）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

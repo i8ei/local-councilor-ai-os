@@ -56,11 +56,11 @@
       "notes": "Observed finance section at http://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html (label: 財政) 入口 https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html",
@@ -72,9 +72,21 @@
           "observed_on": "https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html",
           "sha256": "404ccf2b43fec29f7c3c9b5cf0e61f0c05d397f6c2f903ca69426b7533616068",
           "fetched_at": "2026-08-27T09:38:55Z"
+        },
+        {
+          "url": "http://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html",
+          "observed_on": "http://www.town.taragi.lg.jp/",
+          "sha256": "404ccf2b43fec29f7c3c9b5cf0e61f0c05d397f6c2f903ca69426b7533616068",
+          "fetched_at": "2026-08-27T09:38:55Z"
+        },
+        {
+          "url": "https://www.town.taragi.lg.jp/material/files/group/2/0_R2zaimushohyounogaiyou.pdf",
+          "observed_on": "https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/oshirase/2950.html",
+          "sha256": "35b30ef4085241446d180b64322390b459fdf8018a3ee7c5944cdd38675b9519",
+          "fetched_at": "2026-08-27T13:46:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html (label: 財政) 入口 https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.taragi.lg.jp/gyousei/chosei_gikai/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（0_R2zaimushohyounogaiyou.pdf「0_R2財務諸表の概要 (PDFファイル: 1.6MB)」, sha256:35b30ef4）にて構造マーカー（項・地方債等）を確認済み。"
     }
   }
 }

@@ -6,12 +6,36 @@
   "official_home_url": "http://www.ikedamachi.net/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.ikedamachi.net/category/7-10-0-0-0-0-0-0-0-0.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "https://www.ikedamachi.net/category/7-10-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.ikedamachi.net/category/7-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.ikedamachi.net/category/7-10-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.ikedamachi.net/category/7-10-0-0-0-0-0-0-0-0.html",
+          "sha256": "2735fa268b4dcd0814f5859e30cd81b67580b9c427909a9447e58d377cf42df6",
+          "fetched_at": "2026-08-27T13:48:02Z"
+        },
+        {
+          "url": "https://www.ikedamachi.net/0000000115.html",
+          "observed_on": "https://www.ikedamachi.net/category/7-10-0-0-0-0-0-0-0-0.html",
+          "sha256": "bd6a9522150656769b714c0ccad184c71f927d2618b63f347ccae88e084cf189",
+          "fetched_at": "2026-08-27T13:48:02Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

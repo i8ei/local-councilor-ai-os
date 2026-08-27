@@ -6,19 +6,27 @@
   "official_home_url": "http://www.city.miura.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.kensakusystem.jp/miura/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://www.city.miura.kanagawa.jp/soshiki/gikaijimukyoku/643/index.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.kensakusystem.jp/miura/index.html",
+          "url": "https://www.city.miura.kanagawa.jp/soshiki/gikaijimukyoku/643/index.html",
           "observed_on": "https://www.city.miura.kanagawa.jp/shiseijoho/miura_shigikai/index.html",
-          "fetched_at": "2026-08-27T08:03:41Z"
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.miura.kanagawa.jp/soshiki/gikaijimukyoku/643/index.html",
+          "observed_on": "https://www.city.miura.kanagawa.jp/soshiki/gikaijimukyoku/643/index.html",
+          "sha256": "59e8a06c698529a5a8209376f4e4e65f4a268451e01299fa84e99896d0595811",
+          "fetched_at": "2026-08-27T13:43:42Z"
         }
       ],
-      "notes": "Observed council minutes index at https://www.kensakusystem.jp/miura/index.html (label: 会議録の閲覧と検索)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

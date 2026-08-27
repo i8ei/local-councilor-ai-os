@@ -63,11 +63,11 @@
       "notes": "Observed finance section at http://www.city.miyoshi.hiroshima.jp/life/6/48/ (label: 市の財政) 入口 https://www.city.miyoshi.hiroshima.jp/life/6/48/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyoshi.hiroshima.jp/life/6/48/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.miyoshi.hiroshima.jp/life/6/48/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyoshi.hiroshima.jp/life/6/48/",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.miyoshi.hiroshima.jp/life/6/48/",
           "sha256": "1f284978abdec58670ab8b75f3ad09f0eda562928cfb684bf1aa21f23f84738a",
           "fetched_at": "2026-08-27T09:45:22Z"
+        },
+        {
+          "url": "http://www.city.miyoshi.hiroshima.jp/life/6/48/",
+          "observed_on": "http://www.city.miyoshi.hiroshima.jp/",
+          "sha256": "1f284978abdec58670ab8b75f3ad09f0eda562928cfb684bf1aa21f23f84738a",
+          "fetched_at": "2026-08-27T09:45:22Z"
+        },
+        {
+          "url": "https://www.city.miyoshi.hiroshima.jp/uploaded/attachment/31988.pdf",
+          "observed_on": "https://www.city.miyoshi.hiroshima.jp/soshiki/3/37900.html",
+          "sha256": "622a436cc3b0fd05fc7a7d04cff03482e61bf2489e5172a470f3bf60c01e7c22",
+          "fetched_at": "2026-08-27T13:42:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.miyoshi.hiroshima.jp/life/6/48/ (label: 市の財政) 入口 https://www.city.miyoshi.hiroshima.jp/life/6/48/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.miyoshi.hiroshima.jp/life/6/48/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（31988.pdf「本編 [PDFファイル／3.04MB]」, sha256:622a436c）にて構造マーカー（歳入・歳出・項・地方債等）を確認済み。"
     }
   }
 }

@@ -63,11 +63,11 @@
       "notes": "Observed budget link at http://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-yosan/ (label: 予算) 入口 https://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-yosan/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-kessan/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-kessan/",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-kessan/",
           "sha256": "b1d28bb7617741eb6f4ecb551cb1e721a14353275e7e86b184b687b2bb52ea6a",
           "fetched_at": "2026-08-27T10:08:33Z"
+        },
+        {
+          "url": "http://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-kessan/",
+          "observed_on": "http://www.city.minami-alps.yamanashi.jp/",
+          "sha256": "b1d28bb7617741eb6f4ecb551cb1e721a14353275e7e86b184b687b2bb52ea6a",
+          "fetched_at": "2026-08-27T10:08:33Z"
+        },
+        {
+          "url": "https://www.city.minami-alps.yamanashi.jp/fs/1/3/8/5/2/2/_/R06_________________1030.pdf",
+          "observed_on": "https://www.city.minami-alps.yamanashi.jp/docs/20107.html",
+          "sha256": "e73f9b74f0df87f619f47dada5316d765459a87d86acf173c5eaffb50bc5a2da",
+          "fetched_at": "2026-08-27T13:36:10Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-kessan/ (label: 決算) 入口 https://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.minami-alps.yamanashi.jp/gyousei/zaisei/zaisei-kessan/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R06_________________1030.pdf「令和6年度南アルプス市のお金(財政)の話 (PDF 938KB)」, sha256:e73f9b74）にて構造マーカー（歳入・歳出・決算額・地方債等）を確認済み。"
     }
   }
 }

@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.kotoura.tottori.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.kotoura.tottori.jp/docs/2026072800063/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.kotoura.tottori.jp/docs/2026072800063/",
+          "observed_on": "http://www.town.kotoura.tottori.jp/soshiki/gikai/",
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "https://www.town.kotoura.tottori.jp/docs/2026072800063/",
+          "observed_on": "https://www.town.kotoura.tottori.jp/docs/2026072800063/",
+          "sha256": "0a8ebed954a2df7c74564e7a6d60399de4d5a85042dc1a625ed3dc450df7e480",
+          "fetched_at": "2026-08-27T14:05:12Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",
@@ -56,11 +71,11 @@
       "notes": "Observed budget link at http://www.town.kotoura.tottori.jp/docs/2016030500012/ (label: 琴浦町の予算) 入口 https://www.town.kotoura.tottori.jp/docs/2016030500012/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kotoura.tottori.jp/docs/2016030500012/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.kotoura.tottori.jp/docs/2014071700118/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kotoura.tottori.jp/docs/2014071700118/",
@@ -72,9 +87,21 @@
           "observed_on": "https://www.town.kotoura.tottori.jp/docs/2014071700118/",
           "sha256": "272dab268543180395eb17b82614de53ae30e7fff125f0f26f191d9e94ff5431",
           "fetched_at": "2026-08-27T09:42:50Z"
+        },
+        {
+          "url": "http://www.town.kotoura.tottori.jp/docs/2014071700118/",
+          "observed_on": "http://www.town.kotoura.tottori.jp/",
+          "sha256": "272dab268543180395eb17b82614de53ae30e7fff125f0f26f191d9e94ff5431",
+          "fetched_at": "2026-08-27T09:42:50Z"
+        },
+        {
+          "url": "https://www.town.kotoura.tottori.jp/docs/2023111600042/files/R6kessan.pdf",
+          "observed_on": "https://www.town.kotoura.tottori.jp/docs/2023111600042/",
+          "sha256": "8565f16d0164ba16a74cd0bb3521ad38846b0d7070067c828e1a92d63a36a74e",
+          "fetched_at": "2026-08-27T13:42:11Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.kotoura.tottori.jp/docs/2014071700118/ (label: 琴浦町決算の状況) 入口 https://www.town.kotoura.tottori.jp/docs/2014071700118/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kotoura.tottori.jp/docs/2014071700118/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（R6kessan.pdf「令和6年度琴浦町下水道事業決算書.pdf(2MB)」, sha256:8565f16d）にて構造マーカー（款・項・節・決算額等）を確認済み。"
     }
   }
 }

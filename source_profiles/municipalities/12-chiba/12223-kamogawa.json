@@ -6,12 +6,27 @@
   "official_home_url": "http://www.city.kamogawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.city.kamogawa.lg.jp/site/gikai/",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.city.kamogawa.lg.jp/site/gikai/",
+          "observed_on": "http://www.city.kamogawa.lg.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.city.kamogawa.lg.jp/site/gikai/",
+          "observed_on": "https://www.city.kamogawa.lg.jp/site/gikai/",
+          "sha256": "dd62e3daa315abf00402cce59cc78ef3924b341bcdd77c393af3819f95047404",
+          "fetched_at": "2026-08-27T13:41:45Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

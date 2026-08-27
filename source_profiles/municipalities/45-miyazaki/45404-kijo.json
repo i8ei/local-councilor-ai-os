@@ -56,11 +56,11 @@
       "notes": "Observed finance section at https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html",
@@ -72,9 +72,15 @@
           "observed_on": "https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html",
           "sha256": "f5684909bec15f9c72167dd4feff79267f16cc614b0f8c7031fc173d4fa28b29",
           "fetched_at": "2026-08-27T09:40:01Z"
+        },
+        {
+          "url": "https://www.town.kijo.lg.jp/material/files/group/2/2014.xlsx",
+          "observed_on": "https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/901.html",
+          "sha256": "cb00c251a09297a99c9551cd41f82e69e1d299e6c2615cb8dbeed2d247ab463a",
+          "fetched_at": "2026-08-27T13:47:16Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html (label: 行財政) 入口 https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.kijo.lg.jp/gyouseizyouhou/gyouzaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（2014.xlsx「財政状況資料集（平成26年度決算） (Excelファイル: 251.2KB)」, sha256:cb00c251）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

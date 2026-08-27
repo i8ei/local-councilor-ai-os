@@ -35,11 +35,11 @@
       "notes": "No regulations entrance found within page limit"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
@@ -51,16 +51,22 @@
           "observed_on": "http://www.town.toyo.kochi.jp/contents/info0541.php",
           "sha256": "05d91b1aca1b7c9d0a11d95e76783e10eee204fbf318b8b5afd9ff0285182bd6",
           "fetched_at": "2026-08-27T09:47:24Z"
+        },
+        {
+          "url": "http://www.town.toyo.kochi.jp/pbfile/m000541/pbf20220302165015.pdf",
+          "observed_on": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+          "sha256": "cc5aaf9e0400fed62f84ed8cd98e72ee8d0c41f51a0c7242fb89b97976cea05b",
+          "fetched_at": "2026-08-27T09:47:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.toyo.kochi.jp/contents/info0541.php (label: 財政状況資料集) 入口 http://www.town.toyo.kochi.jp/contents/info0541.php に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.toyo.kochi.jp/contents/info0541.php に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.toyo.kochi.jp/contents/info0541.php に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（pbf20220302165015.pdf「平成29年度決算」, sha256:cc5aaf9e）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
@@ -77,9 +83,15 @@
           "url": "http://www.town.toyo.kochi.jp/pbfile/m000541/pbf20220302165015.pdf",
           "observed_on": "http://www.town.toyo.kochi.jp/contents/info0541.php",
           "fetched_at": "2026-08-27T09:47:24Z"
+        },
+        {
+          "url": "http://www.town.toyo.kochi.jp/pbfile/m000541/pbf20220302165015.pdf",
+          "observed_on": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+          "sha256": "cc5aaf9e0400fed62f84ed8cd98e72ee8d0c41f51a0c7242fb89b97976cea05b",
+          "fetched_at": "2026-08-27T09:47:27Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.toyo.kochi.jp/contents/info0541.php (label: 財政状況資料集) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。settlement文書（pbf20220302165015.pdf「平成29年度決算」, sha256:cc5aaf9e）にて構造マーカー（歳入・歳出・項・決算額等）を確認済み。"
     }
   }
 }

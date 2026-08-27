@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.hokkaido-kamikawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.hokkaido-kamikawa.lg.jp/section/gikai/chs8120000000z5g.html?cp=h8nafq0000000ago&cs=c06_06s0",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/gikai/chs8120000000z5g.html?cp=h8nafq0000000ago&cs=c06_06s0",
+          "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/category/gyosei/index.html",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/gikai/chs8120000000z5g.html?cp=h8nafq0000000ago&cs=c06_06s0",
+          "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/section/gikai/chs8120000000z5g.html?cp=h8nafq0000000ago&cs=c06_06s0",
+          "sha256": "3d234e802f59a2846d48023824938ad3e07c758fe56bd5b5bf52255892507960",
+          "fetched_at": "2026-08-27T13:24:21Z"
+        },
+        {
+          "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/gikai/njguvh0000001994.html",
+          "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/section/gikai/chs8120000000z5g.html?cp=h8nafq0000000ago&cs=c06_06s0",
+          "sha256": "220f6d31fe528b74a2d8963e21840fd1a9970b1dbd6f5409d3de874a00afb72e",
+          "fetched_at": "2026-08-27T13:33:32Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",

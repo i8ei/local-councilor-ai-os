@@ -6,19 +6,27 @@
   "official_home_url": "https://town.shichikashuku.miyagi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "https://town.shichikashuku.miyagi.jp/town/gikai/gijiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "https://town.shichikashuku.miyagi.jp/gikai/kaigiroku/life/move.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://town.shichikashuku.miyagi.jp/town/gikai/gijiroku.html",
-          "observed_on": "https://town.shichikashuku.miyagi.jp/town/gikai/",
-          "fetched_at": "2026-08-27T07:22:51Z"
+          "url": "https://town.shichikashuku.miyagi.jp/gikai/kaigiroku/life/move.html",
+          "observed_on": "https://town.shichikashuku.miyagi.jp/gikai/kaigiroku/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://town.shichikashuku.miyagi.jp/gikai/kaigiroku/life/move.html",
+          "observed_on": "https://town.shichikashuku.miyagi.jp/gikai/kaigiroku/life/move.html",
+          "sha256": "f5ff90787a8d08d82b08f6ab6f2f0b9dc55b0a3f68deaeff7c368cdc23057b00",
+          "fetched_at": "2026-08-27T13:26:37Z"
         }
       ],
-      "notes": "Observed council minutes index at https://town.shichikashuku.miyagi.jp/town/gikai/gijiroku.html (label: 会議録)"
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

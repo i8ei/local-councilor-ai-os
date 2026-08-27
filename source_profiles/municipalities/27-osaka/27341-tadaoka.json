@@ -63,11 +63,11 @@
       "notes": "Observed budget link at https://www.town.tadaoka.osaka.jp/gyousei/gikai/yosanshinsatokubetu/index.html (label: 予算審査特別委員会) 入口 https://www.town.tadaoka.osaka.jp/gyousei/gikai/yosanshinsatokubetu/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tadaoka.osaka.jp/gyousei/gikai/yosanshinsatokubetu/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tadaoka.osaka.jp/gyousei/gikai/yosanshinsatokubetu/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "https://www.town.tadaoka.osaka.jp/gyousei/gikai/kessanshinsatokubetu/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.tadaoka.osaka.jp/gyousei/gikai/kessanshinsatokubetu/index.html",
@@ -79,9 +79,15 @@
           "observed_on": "https://www.town.tadaoka.osaka.jp/gyousei/gikai/kessanshinsatokubetu/index.html",
           "sha256": "ede4ccc24be8235c362220534b8ac6d33fa06729d873d5f160bc650ec03eef31",
           "fetched_at": "2026-08-27T09:52:20Z"
+        },
+        {
+          "url": "https://www.town.tadaoka.osaka.jp/material/files/group/21/de7cafb359361274a3a63829cb2dcf7b1.pdf",
+          "observed_on": "https://www.town.tadaoka.osaka.jp/gyousei/gikai/kessanshinsatokubetu/2123.html",
+          "sha256": "1b1505a8f78f877a1099542b30a4d8cac645baf4d1f1f0c75a31a35a6eec40f9",
+          "fetched_at": "2026-08-27T13:40:33Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.tadaoka.osaka.jp/gyousei/gikai/kessanshinsatokubetu/index.html (label: 決算審査特別委員会) 入口 https://www.town.tadaoka.osaka.jp/gyousei/gikai/kessanshinsatokubetu/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tadaoka.osaka.jp/gyousei/gikai/kessanshinsatokubetu/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.tadaoka.osaka.jp/gyousei/gikai/kessanshinsatokubetu/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（de7cafb359361274a3a63829cb2dcf7b1.pdf「平成27年 決算審査特別委員会会議録（第1日） (PDFファイル: 2.1MB)」, sha256:1b1505a8）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

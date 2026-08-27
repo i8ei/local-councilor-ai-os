@@ -6,12 +6,36 @@
   "official_home_url": "http://www.town.saroma.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "http://www.town.saroma.hokkaido.jp/gikai/gikaidayori/",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
+      "evidence": [
+        {
+          "url": "http://www.town.saroma.hokkaido.jp/gikai/gikaidayori/",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "http://www.town.saroma.hokkaido.jp/gikai/gikaidayori/",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/gikai/gikaidayori/",
+          "sha256": "36e819b24eade524be6d577584b7734a514f7fc93ba68dd6d2c6d6c810f301ed",
+          "fetched_at": "2026-08-27T13:25:00Z"
+        },
+        {
+          "url": "http://www.town.saroma.hokkaido.jp/gikai/gikaidayori/gikaidayori2026/2026-0527-1530-18.html",
+          "observed_on": "http://www.town.saroma.hokkaido.jp/gikai/gikaidayori/",
+          "sha256": "327946362fbf9ceda64d9779c400bbf11d2538b09a35fcd5653db4d51d8e50ba",
+          "fetched_at": "2026-08-27T13:25:01Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "ready",

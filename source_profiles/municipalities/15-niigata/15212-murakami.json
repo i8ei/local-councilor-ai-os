@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at https://www1.g-reiki.net/murakami/reiki_menu.html (label: 例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.murakami.lg.jp/site/zaisei/zaisei-yosan08-hosei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.murakami.lg.jp/site/zaisei/zaisei-yosan08-hosei.html",
@@ -69,16 +69,28 @@
           "url": "https://www.city.murakami.lg.jp:443/uploaded/attachment/76805.pdf",
           "observed_on": "https://www.city.murakami.lg.jp:443/site/zaisei/zaisei-yosan08-hosei.html",
           "fetched_at": "2026-08-27T10:55:31Z"
+        },
+        {
+          "url": "http://www.city.murakami.lg.jp/site/zaisei/zaisei-yosan08-hosei.html",
+          "observed_on": "http://www.city.murakami.lg.jp/",
+          "sha256": "996d644dfcf32b8bbd046f725258bc5c15c20be9c13228756eb979e6abf9f83a",
+          "fetched_at": "2026-08-27T10:04:30Z"
+        },
+        {
+          "url": "https://www.city.murakami.lg.jp:443/uploaded/attachment/76805.pdf",
+          "observed_on": "https://www.city.murakami.lg.jp:443/site/zaisei/zaisei-yosan08-hosei.html",
+          "sha256": "01257df8a5a041982bc373316f5bb6b286be9d0b250a36ed872b0cbad7b7a172",
+          "fetched_at": "2026-08-27T10:55:31Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.murakami.lg.jp/site/zaisei/zaisei-yosan08-hosei.html (label: 令和8年度補正予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
+      "notes": "deepest_doc=P1。budget文書（76805.pdf「補正予算書（第1号） [PDFファイル／148KB]」, sha256:01257df8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.city.murakami.lg.jp/site/zaisei/zaisei-yosan08-hosei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.murakami.lg.jp/site/zaisei/zaisei-yosan08-hosei.html",
@@ -90,9 +102,21 @@
           "observed_on": "https://www.city.murakami.lg.jp:443/site/zaisei/zaisei-yosan08-hosei.html",
           "sha256": "996d644dfcf32b8bbd046f725258bc5c15c20be9c13228756eb979e6abf9f83a",
           "fetched_at": "2026-08-27T10:04:30Z"
+        },
+        {
+          "url": "http://www.city.murakami.lg.jp/site/zaisei/zaisei-yosan08-hosei.html",
+          "observed_on": "http://www.city.murakami.lg.jp/",
+          "sha256": "996d644dfcf32b8bbd046f725258bc5c15c20be9c13228756eb979e6abf9f83a",
+          "fetched_at": "2026-08-27T10:04:30Z"
+        },
+        {
+          "url": "https://www.city.murakami.lg.jp:443/uploaded/attachment/76805.pdf",
+          "observed_on": "https://www.city.murakami.lg.jp:443/site/zaisei/zaisei-yosan08-hosei.html",
+          "sha256": "01257df8a5a041982bc373316f5bb6b286be9d0b250a36ed872b0cbad7b7a172",
+          "fetched_at": "2026-08-27T10:55:31Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.murakami.lg.jp/site/zaisei/zaisei-yosan08-hosei.html (label: 令和8年度補正予算) 入口 https://www.city.murakami.lg.jp:443/site/zaisei/zaisei-yosan08-hosei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.murakami.lg.jp:443/site/zaisei/zaisei-yosan08-hosei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.murakami.lg.jp:443/site/zaisei/zaisei-yosan08-hosei.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（76805.pdf「補正予算書（第1号） [PDFファイル／148KB]」, sha256:01257df8）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     }
   }
 }

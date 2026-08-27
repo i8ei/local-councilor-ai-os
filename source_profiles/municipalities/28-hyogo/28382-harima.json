@@ -6,19 +6,36 @@
   "official_home_url": "http://www.town.harima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
-      "index_url": "http://www.kensakusystem.jp/harima/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "index_url": "http://www.town.harima.lg.jp/gikaijimukyoku/chosejoho/gikai/koho/chogikaidayori/back/index.html",
+      "config": {
+        "pdf": true,
+        "follow_link_regex": "(?:令和|平成|\\d+年|定例会|臨時会|本会議|会議録|議事録|第\\d+回|kaigiroku|gijiroku)",
+        "follow_max_depth": 2,
+        "follow_max_pages": 5
+      },
       "evidence": [
         {
-          "url": "http://www.kensakusystem.jp/harima/index.html",
+          "url": "http://www.town.harima.lg.jp/gikaijimukyoku/chosejoho/gikai/koho/chogikaidayori/back/index.html",
           "observed_on": "http://www.town.harima.lg.jp/gikaijimukyoku/chosejoho/gikai/gikai.html",
-          "fetched_at": "2026-08-27T06:56:34Z"
+          "fetched_at": "2026-08-27T13:51:05Z"
+        },
+        {
+          "url": "http://www.town.harima.lg.jp/gikaijimukyoku/chosejoho/gikai/koho/chogikaidayori/back/index.html",
+          "observed_on": "http://www.town.harima.lg.jp/gikaijimukyoku/chosejoho/gikai/koho/chogikaidayori/back/index.html",
+          "sha256": "47a99aa84c1718a83eb90867fa7005be1d239f3104eee08d9f4f31e93f4f6836",
+          "fetched_at": "2026-08-27T14:03:16Z"
+        },
+        {
+          "url": "http://www.town.harima.lg.jp/gikaijimukyoku/chosejoho/gikai/koho/chogikaidayori/back/273.html",
+          "observed_on": "http://www.town.harima.lg.jp/gikaijimukyoku/chosejoho/gikai/koho/chogikaidayori/back/index.html",
+          "sha256": "611871d3fce9e4d3249ba386b1c0bdf1f46f231fa6747a7dbff4005b11910fc3",
+          "fetched_at": "2026-08-27T14:03:16Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.kensakusystem.jp/harima/index.html (label: 播磨町議会会議録検索システム（外部サイトへリンク）)"
+      "verified_at": "2026-08-27T13:51:05Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
@@ -36,11 +53,11 @@
       "notes": "Observed regulations index at http://www.town.harima.lg.jp/chosejoho/johokokai/index.html (label: 情報公開・個人情報保護・行政不服審査・例規集)"
     },
     "budget": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.town.harima.lg.jp/chosejoho/yosan/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.harima.lg.jp/chosejoho/yosan/index.html",
@@ -52,9 +69,15 @@
           "observed_on": "http://www.town.harima.lg.jp/chosejoho/yosan/index.html",
           "sha256": "f16f6c8b02dce5cba8c178ad4921368cabf14edb8af25e9611d6fdeb757b453b",
           "fetched_at": "2026-08-27T09:52:20Z"
+        },
+        {
+          "url": "http://www.town.harima.lg.jp/somu/documents/yosangaiyo2026.pdf",
+          "observed_on": "http://www.town.harima.lg.jp/somu/tosyoyosan2026.html",
+          "sha256": "28b0ae2b40f2dea21a48f132b9c6a4f0cc1a6da73ac0e5ec65f108906621b2c4",
+          "fetched_at": "2026-08-27T13:41:44Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.harima.lg.jp/chosejoho/yosan/index.html (label: 予算・財政) 入口 http://www.town.harima.lg.jp/chosejoho/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 http://www.town.harima.lg.jp/chosejoho/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。budget文書（yosangaiyo2026.pdf「予算概要（PDF：13,717KB）」, sha256:28b0ae2b）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
       "status": "needs_review",

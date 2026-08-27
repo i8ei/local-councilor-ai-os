@@ -63,11 +63,11 @@
       "notes": "Observed finance section at http://www.akiota.jp/life/4/25/78/ (label: 財政情報) 入口 https://www.akiota.jp/life/4/25/78/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.akiota.jp/life/4/25/78/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "official_document_index",
       "index_url": "http://www.akiota.jp/life/4/25/78/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T13:25:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.akiota.jp/life/4/25/78/",
@@ -79,9 +79,21 @@
           "observed_on": "https://www.akiota.jp/life/4/25/78/",
           "sha256": "acd69700a4f62c694a33da30858498e545604c93985ed01c16a063695b9acb97",
           "fetched_at": "2026-08-27T09:45:07Z"
+        },
+        {
+          "url": "http://www.akiota.jp/life/4/25/78/",
+          "observed_on": "http://www.akiota.jp/",
+          "sha256": "acd69700a4f62c694a33da30858498e545604c93985ed01c16a063695b9acb97",
+          "fetched_at": "2026-08-27T09:45:07Z"
+        },
+        {
+          "url": "https://www.akiota.jp/uploaded/attachment/9822.pdf",
+          "observed_on": "https://www.akiota.jp/soshiki/3/1494.html",
+          "sha256": "7b0a52f5649f88476503f4ccc011082154fbefeb2f1abda798e36995bf9cf693",
+          "fetched_at": "2026-08-27T13:42:34Z"
         }
       ],
-      "notes": "Observed finance section at http://www.akiota.jp/life/4/25/78/ (label: 財政情報) 入口 https://www.akiota.jp/life/4/25/78/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.akiota.jp/life/4/25/78/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
+      "notes": "deepest_doc=P1。settlement文書（9822.pdf「中期財政運営方針（令和8年度～令和12年度） [PDF／517KB]」, sha256:7b0a52f5）にて構造マーカー（歳入・歳出・項・節等）を確認済み。"
     }
   }
 }

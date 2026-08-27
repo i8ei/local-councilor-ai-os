@@ -6,12 +6,27 @@
   "official_home_url": "http://www.town.oiso.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "not_found",
-      "adapter": null,
-      "verified_at": null,
-      "verified_by": null,
-      "evidence": [],
-      "notes": "No council minutes entrance found within page limit"
+      "status": "ready",
+      "adapter": "static",
+      "index_url": "https://www.town.oiso.kanagawa.jp/gikai/koho_kocho/gikaidayori/gikai_dayori.html",
+      "config": {
+        "pdf": true
+      },
+      "evidence": [
+        {
+          "url": "https://www.town.oiso.kanagawa.jp/gikai/koho_kocho/gikaidayori/gikai_dayori.html",
+          "observed_on": "http://www.town.oiso.kanagawa.jp/gikai/",
+          "fetched_at": "2026-08-27T13:32:35Z"
+        },
+        {
+          "url": "https://www.town.oiso.kanagawa.jp/gikai/koho_kocho/gikaidayori/gikai_dayori.html",
+          "observed_on": "https://www.town.oiso.kanagawa.jp/gikai/koho_kocho/gikaidayori/gikai_dayori.html",
+          "sha256": "4a2b3052799d7d7f1dcc5eb425cb4520bc2949cb3d178d430d5f26354ae7c094",
+          "fetched_at": "2026-08-27T13:43:59Z"
+        }
+      ],
+      "verified_at": "2026-08-27T13:32:35Z",
+      "verified_by": "verify --live"
     },
     "regulations": {
       "status": "needs_review",
