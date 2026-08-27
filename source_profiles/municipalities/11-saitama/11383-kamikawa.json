@@ -27,19 +27,25 @@
       "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kamikawa/pg/index.html (label: 会議録検索システム) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T15:51:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://en3-jg.d1-law.com/kamikawa/d1w_reiki/reiki.html",
           "observed_on": "http://www.town.kamikawa.saitama.jp/",
           "fetched_at": "2026-08-27T07:05:43Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/kamikawa/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/kamikawa/d1w_reiki/reiki.html",
+          "sha256": "e12ef60878ceb79610ef75bad3ba4835138e039a56f5321178df697301799b63",
+          "fetched_at": "2026-08-27T15:57:56Z"
         }
       ],
       "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kamikawa/d1w_reiki/reiki.html (label: 例規集)",
-      "index_url": "https://en3-jg.d1-law.com/kamikawa/d1w_reiki/"
+      "index_url": "https://en3-jg.d1-law.com/kamikawa/d1w_reiki/reiki.html"
     },
     "budget": {
       "status": "ready",

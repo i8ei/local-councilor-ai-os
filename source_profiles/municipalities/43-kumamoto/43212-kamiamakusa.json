@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at https://www.city.kamiamakusa.kumamoto.jp/q/list/388.html (label: 会議・議事録・市議会) extraction probe read one document at https://www.city.kamiamakusa.kumamoto.jp/q/list/388.html but found no speaker-attributed speeches; reachability alone is not ingest evidence [再挑戦対象: 実PDFへfollowして再検証]"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "d1_law",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T16:08:21Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://en3-jg.d1-law.com/kamiamakusa/d1w_reiki/reiki.html",
           "observed_on": "http://www.city.kamiamakusa.kumamoto.jp/",
           "fetched_at": "2026-08-27T05:34:30Z"
+        },
+        {
+          "url": "https://en3-jg.d1-law.com/kamiamakusa/d1w_reiki/reiki.html",
+          "observed_on": "https://en3-jg.d1-law.com/kamiamakusa/d1w_reiki/reiki.html",
+          "sha256": "471ca169f68160c6caa2b9bad45c8ccbe8a1a0bcb8b93966e89164bc1247c7b5",
+          "fetched_at": "2026-08-27T16:08:22Z"
         }
       ],
       "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kamiamakusa/d1w_reiki/reiki.html (label: )",
-      "index_url": "https://en3-jg.d1-law.com/kamiamakusa/d1w_reiki/"
+      "index_url": "https://en3-jg.d1-law.com/kamiamakusa/d1w_reiki/reiki.html"
     },
     "budget": {
       "status": "needs_review",

@@ -537,6 +537,18 @@ class HttpClientTests(unittest.TestCase):
             ):
                 client._assert_robots_allowed("https://example.test/data")
 
+    def test_robots_unreachable_is_treated_as_absent(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            client = HttpClient(temporary, user_agent="test")
+            with mock.patch.object(
+                client,
+                "_request_once",
+                side_effect=FetchError("connection closed"),
+            ):
+                # A robots.txt that cannot be fetched (connection close /
+                # timeout) is treated as absent, so fetching is allowed.
+                client._assert_robots_allowed("https://example.test/data")
+
     def test_robots_http_403_denies_fetching(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             client = HttpClient(temporary, user_agent="test")
