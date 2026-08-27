@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.aioi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.aioi.lg.jp/site/gikai/page-kaigirokueturan.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:05:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aioi.lg.jp/site/gikai/page-kaigirokueturan.html",
           "observed_on": "http://www.city.aioi.lg.jp/life/4/22/82/",
           "fetched_at": "2026-08-27T06:46:22Z"
+        },
+        {
+          "url": "http://www.city.aioi.lg.jp/site/gikai/page-kaigirokueturan.html",
+          "observed_on": "http://www.city.aioi.lg.jp/site/gikai/page-kaigirokueturan.html",
+          "sha256": "1df0fc85c0cc048e9beee77dc8e17dbde20319dbde2669bc617f3e90fdb88801",
+          "fetched_at": "2026-08-27T09:51:53Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.aioi.lg.jp/site/gikai/page-kaigirokueturan.html (label: 会議録の閲覧・検索)"
@@ -52,9 +58,15 @@
           "url": "http://www.city.aioi.lg.jp/life/4/22/80/",
           "observed_on": "http://www.city.aioi.lg.jp/",
           "fetched_at": "2026-08-27T06:45:08Z"
+        },
+        {
+          "url": "https://www.city.aioi.lg.jp/life/4/22/80/",
+          "observed_on": "https://www.city.aioi.lg.jp/life/4/22/80/",
+          "sha256": "a6ee580bc79faddc6d67edf4ecea76884768193f1b809becde4459562324653d",
+          "fetched_at": "2026-08-27T09:51:56Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.aioi.lg.jp/life/4/22/80/ (label: 財政状況)"
+      "notes": "Observed finance section at http://www.city.aioi.lg.jp/life/4/22/80/ (label: 財政状況) 入口 https://www.city.aioi.lg.jp/life/4/22/80/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city.aioi.lg.jp/life/4/22/80/",
           "observed_on": "http://www.city.aioi.lg.jp/",
           "fetched_at": "2026-08-27T06:45:08Z"
+        },
+        {
+          "url": "https://www.city.aioi.lg.jp/life/4/22/80/",
+          "observed_on": "https://www.city.aioi.lg.jp/life/4/22/80/",
+          "sha256": "a6ee580bc79faddc6d67edf4ecea76884768193f1b809becde4459562324653d",
+          "fetched_at": "2026-08-27T09:51:56Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.aioi.lg.jp/life/4/22/80/ (label: 財政状況)"
+      "notes": "Observed finance section at http://www.city.aioi.lg.jp/life/4/22/80/ (label: 財政状況) 入口 https://www.city.aioi.lg.jp/life/4/22/80/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

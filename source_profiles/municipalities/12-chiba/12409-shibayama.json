@@ -58,9 +58,20 @@
           "url": "http://www.town.shibayama.lg.jp/0000006420.html",
           "observed_on": "http://www.town.shibayama.lg.jp/",
           "fetched_at": "2026-08-27T07:26:49Z"
+        },
+        {
+          "url": "https://www.town.shibayama.lg.jp/0000006420.html",
+          "observed_on": "https://www.town.shibayama.lg.jp/0000006420.html",
+          "sha256": "2737d99c35906ffa0f4d4e426982dd4f212e1f3209ea4ce96aa325704ee0f8c3",
+          "fetched_at": "2026-08-27T10:25:08Z"
+        },
+        {
+          "url": "https://www.town.shibayama.lg.jp/cmsfiles/contents/0000006/6420/R89gatsu0819.pdf",
+          "observed_on": "https://www.town.shibayama.lg.jp/0000006420.html",
+          "fetched_at": "2026-08-27T11:19:31Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.shibayama.lg.jp/0000006420.html (label: 令和8年度補正予算書について)"
+      "notes": "Observed budget link at http://www.town.shibayama.lg.jp/0000006420.html (label: 令和8年度補正予算書について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -73,9 +84,15 @@
           "url": "http://www.town.shibayama.lg.jp/category/23-6-0-0-0-0-0-0-0-0.html",
           "observed_on": "http://www.town.shibayama.lg.jp/",
           "fetched_at": "2026-08-27T07:26:49Z"
+        },
+        {
+          "url": "https://www.town.shibayama.lg.jp/category/23-6-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.shibayama.lg.jp/category/23-6-0-0-0-0-0-0-0-0.html",
+          "sha256": "0b63b9f2cac01ec97056b89c394359c0042529523a79603feefe968bb9a0dbc8",
+          "fetched_at": "2026-08-27T10:25:11Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shibayama.lg.jp/category/23-6-0-0-0-0-0-0-0-0.html (label: 財政)"
+      "notes": "Observed finance section at http://www.town.shibayama.lg.jp/category/23-6-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.town.shibayama.lg.jp/category/23-6-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

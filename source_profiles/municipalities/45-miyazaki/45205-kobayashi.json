@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.kobayashi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.kobayashi.lg.jp/gyoseijoho/gikai/gikaichukei_kaigirokukensaku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:57:35Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kobayashi.lg.jp/gyoseijoho/gikai/gikaichukei_kaigirokukensaku/index.html",
           "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:26:24Z"
+        },
+        {
+          "url": "https://www.city.kobayashi.lg.jp/gyoseijoho/gikai/gikaichukei_kaigirokukensaku/index.html",
+          "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/gikai/gikaichukei_kaigirokukensaku/index.html",
+          "sha256": "aba7dd0b272fadcd661608f0070e3b14dd3c4db9a2e670d1160d582a86883630",
+          "fetched_at": "2026-08-27T09:39:44Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.kobayashi.lg.jp/gyoseijoho/gikai/gikaichukei_kaigirokukensaku/index.html (label: 議会中継・会議録検索)"
@@ -46,9 +52,15 @@
           "url": "https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
           "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:26:24Z"
+        },
+        {
+          "url": "https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+          "sha256": "a8e9eb70053efb85be99c8aff80f34e2eaf1e4ee7331d56e94dbf25c5962039f",
+          "fetched_at": "2026-08-27T09:39:46Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+      "notes": "Observed budget link at https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算) 入口 https://www.city.kobayashi.lg.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,20 @@
           "url": "https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html",
           "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T06:26:24Z"
+        },
+        {
+          "url": "https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html",
+          "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html",
+          "sha256": "94447fb92d05a6936898981fe09272f5c368d31da8c4effcafe5950470d6748f",
+          "fetched_at": "2026-08-27T09:39:47Z"
+        },
+        {
+          "url": "https://www.city.kobayashi.lg.jp/material/files/group/32/06-sainyuusaishutuikennsho-kikinnunnyoujoukyouikennsho.pdf",
+          "observed_on": "https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html",
+          "fetched_at": "2026-08-27T10:57:36Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html (label: 決算審査意見書及び基金運用状況審査意見書)"
+      "notes": "Observed settlement link at https://www.city.kobayashi.lg.jp/gyoseijoho/kansa_compliance/2850.html (label: 決算審査意見書及び基金運用状況審査意見書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

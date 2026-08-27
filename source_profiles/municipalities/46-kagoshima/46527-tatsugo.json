@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.tatsugo.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.tatsugo.lg.jp/gikai/r402teirei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:58:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.tatsugo.lg.jp/gikai/r402teirei.html",
           "observed_on": "http://www.town.tatsugo.lg.jp/kikakukanko/topics.html",
           "fetched_at": "2026-08-27T06:46:46Z"
+        },
+        {
+          "url": "http://www.town.tatsugo.lg.jp/gikai/r402teirei.html",
+          "observed_on": "http://www.town.tatsugo.lg.jp/gikai/r402teirei.html",
+          "sha256": "8970b7c5a5e96e9602a95dadf12f8261c4480aba0a62f5a1cc61cae23df88417",
+          "fetched_at": "2026-08-27T09:40:48Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.tatsugo.lg.jp/gikai/r402teirei.html (label: 議会会議録閲覧ページを更新しました)"
@@ -39,9 +45,15 @@
           "url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
           "observed_on": "http://www.town.tatsugo.lg.jp/",
           "fetched_at": "2026-08-27T06:46:18Z"
+        },
+        {
+          "url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
+          "observed_on": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
+          "sha256": "3438838fab7438c60b5d76a76fa7ca5d50b167c258631cae0333469ded65f1ca",
+          "fetched_at": "2026-08-27T09:40:49Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html (label: 予算・財政)"
+      "notes": "Observed budget link at http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html (label: 予算・財政) 入口 http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
           "observed_on": "http://www.town.tatsugo.lg.jp/",
           "fetched_at": "2026-08-27T06:46:18Z"
+        },
+        {
+          "url": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
+          "observed_on": "http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html",
+          "sha256": "3438838fab7438c60b5d76a76fa7ca5d50b167c258631cae0333469ded65f1ca",
+          "fetched_at": "2026-08-27T09:40:49Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html (label: 予算・財政)"
+      "notes": "Observed finance section at http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html (label: 予算・財政) 入口 http://www.town.tatsugo.lg.jp/somu/chose/yosan-zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

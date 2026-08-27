@@ -6,16 +6,22 @@
   "official_home_url": "https://www.city.kurobe.toyama.jp",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.kurobe.toyama.jp/category/page.aspx?servno=8214",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:09:38Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kurobe.toyama.jp/category/page.aspx?servno=8214",
           "observed_on": "https://www.city.kurobe.toyama.jp/topCouncil.aspx",
           "fetched_at": "2026-08-27T06:12:06Z"
+        },
+        {
+          "url": "https://www.city.kurobe.toyama.jp/category/page.aspx?servno=8214",
+          "observed_on": "https://www.city.kurobe.toyama.jp/category/page.aspx?servno=8214",
+          "sha256": "b67c4c92d55be258289528837c32790489b2d3fb4e52e9aa179c7fcaf233a31d",
+          "fetched_at": "2026-08-27T10:05:38Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.kurobe.toyama.jp/category/page.aspx?servno=8214 (label: 本会議録画映像の配信)"
@@ -52,9 +58,20 @@
           "url": "https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521",
           "observed_on": "https://www.city.kurobe.toyama.jp/top.aspx",
           "fetched_at": "2026-08-27T06:09:06Z"
+        },
+        {
+          "url": "https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521",
+          "observed_on": "https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521",
+          "sha256": "7f4804044932c3ff88bb1760614bf7f3a0757fd32df810322bc7aaa12423693c",
+          "fetched_at": "2026-08-27T10:05:40Z"
+        },
+        {
+          "url": "https://www.city.kurobe.toyama.jp/attach/EDIT/049/049894.pdf",
+          "observed_on": "https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521",
+          "fetched_at": "2026-08-27T11:09:39Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521 (label: 令和８年度 当初予算について 2026年3月25日)"
+      "notes": "Observed budget link at https://www.city.kurobe.toyama.jp/news/detail.aspx?servno=45521 (label: 令和８年度 当初予算について 2026年3月25日) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +84,15 @@
           "url": "https://www.city.kurobe.toyama.jp/category/menu.aspx?ctgcd=144",
           "observed_on": "https://www.city.kurobe.toyama.jp/top.aspx",
           "fetched_at": "2026-08-27T06:09:06Z"
+        },
+        {
+          "url": "https://www.city.kurobe.toyama.jp/category/menu.aspx?ctgcd=144",
+          "observed_on": "https://www.city.kurobe.toyama.jp/category/menu.aspx?ctgcd=144",
+          "sha256": "cf73846deb7d8730e9d3173d5513a4d8f5349e241e5b42388aed4b8126a68596",
+          "fetched_at": "2026-08-27T10:05:41Z"
         }
       ],
-      "notes": "Observed finance section at https://www.city.kurobe.toyama.jp/category/menu.aspx?ctgcd=144 (label: 市の財政)"
+      "notes": "Observed finance section at https://www.city.kurobe.toyama.jp/category/menu.aspx?ctgcd=144 (label: 市の財政) 入口 https://www.city.kurobe.toyama.jp/category/menu.aspx?ctgcd=144 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

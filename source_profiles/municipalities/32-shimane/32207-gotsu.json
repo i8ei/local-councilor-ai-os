@@ -58,9 +58,20 @@
           "url": "http://www.city.gotsu.lg.jp/soshiki/5/41300.html",
           "observed_on": "http://www.city.gotsu.lg.jp/life/4/",
           "fetched_at": "2026-08-27T06:06:08Z"
+        },
+        {
+          "url": "http://www.city.gotsu.lg.jp/soshiki/5/41300.html",
+          "observed_on": "http://www.city.gotsu.lg.jp/soshiki/5/41300.html",
+          "sha256": "5bc45f721bac9326a843d1cf50da76858e45cd2727d3778fa28fdf62eb5741b9",
+          "fetched_at": "2026-08-27T09:43:34Z"
+        },
+        {
+          "url": "http://www.city.gotsu.lg.jp/uploaded/attachment/21757.pdf",
+          "observed_on": "http://www.city.gotsu.lg.jp/soshiki/5/41300.html",
+          "fetched_at": "2026-08-27T11:00:15Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.gotsu.lg.jp/soshiki/5/41300.html (label: 令和8年度補正予算)"
+      "notes": "Observed budget link at http://www.city.gotsu.lg.jp/soshiki/5/41300.html (label: 令和8年度補正予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -73,9 +84,15 @@
           "url": "http://www.city.gotsu.lg.jp/life/4/20/89/",
           "observed_on": "http://www.city.gotsu.lg.jp/life/4/",
           "fetched_at": "2026-08-27T06:06:08Z"
+        },
+        {
+          "url": "http://www.city.gotsu.lg.jp/life/4/20/89/",
+          "observed_on": "http://www.city.gotsu.lg.jp/life/4/20/89/",
+          "sha256": "7b7fda82554bfc91af91e0608cce8da725a50d690b4c67b1fd577df6146f880d",
+          "fetched_at": "2026-08-27T09:43:36Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.gotsu.lg.jp/life/4/20/89/ (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.city.gotsu.lg.jp/life/4/20/89/ (label: 予算・決算) 入口 http://www.city.gotsu.lg.jp/life/4/20/89/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

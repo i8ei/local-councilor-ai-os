@@ -6,16 +6,22 @@
   "official_home_url": "http://www.vill.iitate.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.vill.iitate.fukushima.jp/site/gikai/list24.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:27:03Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.iitate.fukushima.jp/site/gikai/list24.html",
           "observed_on": "http://www.vill.iitate.fukushima.jp/site/gikai/15010.html",
           "fetched_at": "2026-08-27T08:12:25Z"
+        },
+        {
+          "url": "http://www.vill.iitate.fukushima.jp/site/gikai/list24.html",
+          "observed_on": "http://www.vill.iitate.fukushima.jp/site/gikai/list24.html",
+          "sha256": "faa52bb3858e266536ac568d9fa8f2927c926890d547658455993d3bea4d389c",
+          "fetched_at": "2026-08-27T10:38:32Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.vill.iitate.fukushima.jp/site/gikai/list24.html (label: 会議録検索の一覧)"
@@ -52,9 +58,20 @@
           "url": "http://www.vill.iitate.fukushima.jp/site/gikai/14739.html",
           "observed_on": "http://www.vill.iitate.fukushima.jp/site/gikai/",
           "fetched_at": "2026-08-27T08:12:53Z"
+        },
+        {
+          "url": "https://www.vill.iitate.fukushima.jp:443/site/gikai/14739.html",
+          "observed_on": "https://www.vill.iitate.fukushima.jp:443/site/gikai/14739.html",
+          "sha256": "f4d99987048b28278519996ba27563cf66e9c404176998c0364111a38fbc12f0",
+          "fetched_at": "2026-08-27T10:38:34Z"
+        },
+        {
+          "url": "https://www.vill.iitate.fukushima.jp:443/uploaded/attachment/17825.pdf",
+          "observed_on": "https://www.vill.iitate.fukushima.jp:443/site/gikai/14739.html",
+          "fetched_at": "2026-08-27T11:27:04Z"
         }
       ],
-      "notes": "Observed budget link at http://www.vill.iitate.fukushima.jp/site/gikai/14739.html (label: 令和8年度 飯舘村議会予算審査特別委員会記録（令和8年3月6日～3月10日）)"
+      "notes": "Observed budget link at http://www.vill.iitate.fukushima.jp/site/gikai/14739.html (label: 令和8年度 飯舘村議会予算審査特別委員会記録（令和8年3月6日～3月10日）) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "not_found",

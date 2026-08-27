@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.katsuura.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.katsuura.lg.jp/site/gikai/list27-103.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:19:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.katsuura.lg.jp/site/gikai/list27-103.html",
           "observed_on": "http://www.city.katsuura.lg.jp/site/gikai/",
           "fetched_at": "2026-08-27T07:15:52Z"
+        },
+        {
+          "url": "http://www.city.katsuura.lg.jp/site/gikai/list27-103.html",
+          "observed_on": "http://www.city.katsuura.lg.jp/site/gikai/list27-103.html",
+          "sha256": "3ce1650864edde1b5abf6f28cf813fdac9070cb0ee9a8cb154e8a3a4d0154baf",
+          "fetched_at": "2026-08-27T10:23:03Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.katsuura.lg.jp/site/gikai/list27-103.html (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.katsuura.lg.jp/life/6/25/100/",
           "observed_on": "http://www.city.katsuura.lg.jp/sitemap.html",
           "fetched_at": "2026-08-27T07:14:36Z"
+        },
+        {
+          "url": "https://www.city.katsuura.lg.jp/life/6/25/100/",
+          "observed_on": "https://www.city.katsuura.lg.jp/life/6/25/100/",
+          "sha256": "643ffb4d2e169c501b0f1c68644c508c130125e6c809065b97db41f857aebbdb",
+          "fetched_at": "2026-08-27T10:23:06Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.katsuura.lg.jp/life/6/25/100/ (label: 予算)"
+      "notes": "Observed budget link at http://www.city.katsuura.lg.jp/life/6/25/100/ (label: 予算) 入口 https://www.city.katsuura.lg.jp/life/6/25/100/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.katsuura.lg.jp/life/6/25/101/",
           "observed_on": "http://www.city.katsuura.lg.jp/sitemap.html",
           "fetched_at": "2026-08-27T07:14:36Z"
+        },
+        {
+          "url": "https://www.city.katsuura.lg.jp/life/6/25/101/",
+          "observed_on": "https://www.city.katsuura.lg.jp/life/6/25/101/",
+          "sha256": "06a9ac100bf73c7aa6bdb08ef8dcd42ac3f55cf7d9f2606604b42cc34e6d0100",
+          "fetched_at": "2026-08-27T10:23:09Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.katsuura.lg.jp/life/6/25/101/ (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.katsuura.lg.jp/life/6/25/101/ (label: 決算) 入口 https://www.city.katsuura.lg.jp/life/6/25/101/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.kamo.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.kamo.niigata.jp/docs/327883.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:55:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kamo.niigata.jp/docs/327883.html",
           "observed_on": "http://www.city.kamo.niigata.jp/",
           "fetched_at": "2026-08-27T05:57:05Z"
+        },
+        {
+          "url": "http://www.city.kamo.niigata.jp/docs/327883.html",
+          "observed_on": "http://www.city.kamo.niigata.jp/docs/327883.html",
+          "sha256": "8823c3748ef7f7071900469d544d34815d023ae6f10cfa60c9878d0c7cd6a799",
+          "fetched_at": "2026-08-27T10:04:21Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.kamo.niigata.jp/docs/327883.html (label: 令和8年加茂市議会6月定例会の会議録を掲載しました)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.kamo.niigata.jp/shisei/zaisei/",
           "observed_on": "http://www.city.kamo.niigata.jp/shisei/",
           "fetched_at": "2026-08-27T05:57:43Z"
+        },
+        {
+          "url": "https://www.city.kamo.niigata.jp:443/shisei/zaisei/",
+          "observed_on": "https://www.city.kamo.niigata.jp:443/shisei/zaisei/",
+          "sha256": "0f73777b02afbf223c5bfc92fb7e1baa50dd462fc76986562bb552c5d4e89491",
+          "fetched_at": "2026-08-27T10:04:23Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kamo.niigata.jp/shisei/zaisei/ (label: 財政)"
+      "notes": "Observed finance section at http://www.city.kamo.niigata.jp/shisei/zaisei/ (label: 財政) 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.kamo.niigata.jp/shisei/zaisei/",
           "observed_on": "http://www.city.kamo.niigata.jp/shisei/",
           "fetched_at": "2026-08-27T05:57:43Z"
+        },
+        {
+          "url": "https://www.city.kamo.niigata.jp:443/shisei/zaisei/",
+          "observed_on": "https://www.city.kamo.niigata.jp:443/shisei/zaisei/",
+          "sha256": "0f73777b02afbf223c5bfc92fb7e1baa50dd462fc76986562bb552c5d4e89491",
+          "fetched_at": "2026-08-27T10:04:23Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kamo.niigata.jp/shisei/zaisei/ (label: 財政)"
+      "notes": "Observed finance section at http://www.city.kamo.niigata.jp/shisei/zaisei/ (label: 財政) 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.city.kamo.niigata.jp:443/shisei/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

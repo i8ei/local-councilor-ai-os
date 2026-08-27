@@ -6,31 +6,43 @@
   "official_home_url": "http://www.shichigahama.com/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.shichigahama.com/benricho/joho/gikai4-010-10126.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:32Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.shichigahama.com/benricho/joho/gikai4-010-10126.html",
           "observed_on": "http://www.shichigahama.com/benricho/keyword/sanka_key05.html",
           "fetched_at": "2026-08-27T07:24:49Z"
+        },
+        {
+          "url": "http://www.shichigahama.com/benricho/joho/gikai4-010-10126.html",
+          "observed_on": "http://www.shichigahama.com/benricho/joho/gikai4-010-10126.html",
+          "sha256": "14712676a6bdf343ea821e10248f4e1979a927a82b3e4ffa9446e4b0619a803f",
+          "fetched_at": "2026-08-27T10:34:11Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.shichigahama.com/benricho/joho/gikai4-010-10126.html (label: 定例会等会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.shichigahama.com/benricho/joho/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:28Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.shichigahama.com/benricho/joho/reiki/reiki_menu.html",
           "observed_on": "http://www.shichigahama.com/town2/admin01.html",
           "fetched_at": "2026-08-27T07:24:32Z"
+        },
+        {
+          "url": "http://www.shichigahama.com/benricho/joho/reiki/reiki_menu.html",
+          "observed_on": "http://www.shichigahama.com/benricho/joho/reiki/",
+          "sha256": "01791faf1522aa00116c2f193d96907569ba9d1d28ffca8b8d854db691fa6f3d",
+          "fetched_at": "2026-08-27T10:34:10Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.shichigahama.com/benricho/joho/reiki/reiki_menu.html (label: 七ヶ浜町例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.shichigahama.com/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
           "observed_on": "http://www.shichigahama.com/benricho/joho/gikai4-010-10126.html",
           "fetched_at": "2026-08-27T07:27:16Z"
+        },
+        {
+          "url": "https://www.shichigahama.com:443/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
+          "observed_on": "https://www.shichigahama.com:443/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
+          "sha256": "f2e7bfa19538ee54de436d6f39e429922acbaa7829752ce48e33fd76379d3e41",
+          "fetched_at": "2026-08-27T10:34:13Z"
         }
       ],
-      "notes": "Observed budget link at http://www.shichigahama.com/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf (label: 令和7年予算審査特別委員会.pdf)"
+      "notes": "Observed budget link at http://www.shichigahama.com/benricho/joho/assets/%E4%BA%88%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf (label: 令和7年予算審査特別委員会.pdf) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.shichigahama.com/benricho/joho/assets/%E4%BB%A4%E5%92%8C7%E5%B9%B4%E6%B1%BA%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
           "observed_on": "http://www.shichigahama.com/benricho/joho/gikai4-010-10126.html",
           "fetched_at": "2026-08-27T07:27:16Z"
+        },
+        {
+          "url": "https://www.shichigahama.com:443/benricho/joho/assets/%E4%BB%A4%E5%92%8C7%E5%B9%B4%E6%B1%BA%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
+          "observed_on": "https://www.shichigahama.com:443/benricho/joho/assets/%E4%BB%A4%E5%92%8C7%E5%B9%B4%E6%B1%BA%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf",
+          "sha256": "648f6c1e5017f77d5886ab914ff844ed2015de298df9893247469ca842022129",
+          "fetched_at": "2026-08-27T10:34:15Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.shichigahama.com/benricho/joho/assets/%E4%BB%A4%E5%92%8C7%E5%B9%B4%E6%B1%BA%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf (label: 令和7年決算審査特別委員会.pdf)"
+      "notes": "Observed settlement link at http://www.shichigahama.com/benricho/joho/assets/%E4%BB%A4%E5%92%8C7%E5%B9%B4%E6%B1%BA%E7%AE%97%E5%AF%A9%E6%9F%BB%E7%89%B9%E5%88%A5%E5%A7%94%E5%93%A1%E4%BC%9A.pdf (label: 令和7年決算審査特別委員会.pdf) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     }
   }
 }

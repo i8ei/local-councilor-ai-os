@@ -69,7 +69,9 @@ def _host(url: str) -> str | None:
         p = urllib.parse.urlsplit(url)
         if not p.scheme or not p.netloc:
             return None
-        return p.netloc.lower()
+        if p.hostname:
+            return p.hostname.lower()
+        return p.netloc.lower().split(":")[0]
     except Exception:
         return None
 
@@ -208,7 +210,8 @@ def _budget_settlement_doc_urls(
     out: list[str] = []
     for href, label in links:
         resolved = canonical_url(
-            urllib.parse.urljoin(str(observed_url), href)
+            urllib.parse.urljoin(str(observed_url), href),
+            strict=False,
         )
         if resolved is None:
             continue
@@ -1032,7 +1035,10 @@ def _verify_minutes_static(
     ) -> list[str]:
         urls: list[str] = []
         for href, label in links:
-            resolved = canonical_url(urllib.parse.urljoin(str(observed_url), href))
+            resolved = canonical_url(
+                urllib.parse.urljoin(str(observed_url), href),
+                strict=False,
+            )
             if resolved is None:
                 continue
             if not _is_minutes_document_link(label=label, url=resolved):
@@ -1259,7 +1265,10 @@ def _verify_minutes_static(
         for href, label in links:
             if len(out) >= limit:
                 break
-            resolved = canonical_url(urllib.parse.urljoin(str(base_url), href))
+            resolved = canonical_url(
+                urllib.parse.urljoin(str(base_url), href),
+                strict=False,
+            )
             if resolved is None:
                 continue
             cand_host = _host(resolved)
@@ -1531,7 +1540,10 @@ def _first_dbsr_meeting_link(
         return None
     observed_host = _host(observed_url)
     for href, label in links:
-        resolved = canonical_url(urllib.parse.urljoin(str(observed_url), href))
+        resolved = canonical_url(
+            urllib.parse.urljoin(str(observed_url), href),
+            strict=False,
+        )
         if resolved is None:
             continue
         if _host(resolved) != observed_host:

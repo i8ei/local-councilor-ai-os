@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.hioki.kagoshima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.hioki.kagoshima.jp/gikai/shisejoho/shigikai/kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:57:46Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hioki.kagoshima.jp/gikai/shisejoho/shigikai/kaigiroku.html",
           "observed_on": "http://www.city.hioki.kagoshima.jp/kouho/shisejoho/index.html",
           "fetched_at": "2026-08-27T06:40:02Z"
+        },
+        {
+          "url": "http://www.city.hioki.kagoshima.jp/gikai/shisejoho/shigikai/kaigiroku.html",
+          "observed_on": "http://www.city.hioki.kagoshima.jp/gikai/shisejoho/shigikai/kaigiroku.html",
+          "sha256": "4582c11a0cf91ec476423c5a95fd883a84e1ac2717bf9d0332385e845c55d7bf",
+          "fetched_at": "2026-08-27T09:40:22Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.hioki.kagoshima.jp/gikai/shisejoho/shigikai/kaigiroku.html (label: 会議録の閲覧)"
@@ -46,9 +52,20 @@
           "url": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html",
           "observed_on": "http://www.city.hioki.kagoshima.jp/kouho/shisejoho/index.html",
           "fetched_at": "2026-08-27T06:40:02Z"
+        },
+        {
+          "url": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html",
+          "observed_on": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html",
+          "sha256": "04474baf958d1296a8600c8ba472d180b7e5d09def334d65523648280692d896",
+          "fetched_at": "2026-08-27T09:40:23Z"
+        },
+        {
+          "url": "http://www.city.hioki.kagoshima.jp/documents/939/r8_tousyo_gaiyou.pdf",
+          "observed_on": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html",
+          "fetched_at": "2026-08-27T10:57:46Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/yosan.html (label: 予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html",
           "observed_on": "http://www.city.hioki.kagoshima.jp/kouho/shisejoho/index.html",
           "fetched_at": "2026-08-27T06:40:02Z"
+        },
+        {
+          "url": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html",
+          "observed_on": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html",
+          "sha256": "8c231b8364c7b3cda297e33c752566f2536d8c7446a7915fe68c202d71a65586",
+          "fetched_at": "2026-08-27T09:40:25Z"
+        },
+        {
+          "url": "http://www.city.hioki.kagoshima.jp/documents/937/r6syouhizei.pdf",
+          "observed_on": "http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html",
+          "fetched_at": "2026-08-27T10:57:48Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.hioki.kagoshima.jp/zaisei/shisejoho/zaise/kessan.html (label: 決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

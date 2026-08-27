@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T04:23:25Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.keisen.fukuoka.jp/gikai/kaigiroku.php (label: 会議録)"
+      "notes": "Observed council minutes index at http://www.town.keisen.fukuoka.jp/gikai/kaigiroku.php (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "ready",
@@ -52,9 +52,20 @@
           "url": "http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
           "observed_on": "http://www.town.keisen.fukuoka.jp/",
           "fetched_at": "2026-08-27T04:23:19Z"
+        },
+        {
+          "url": "https://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
+          "observed_on": "https://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
+          "sha256": "1f31a860ce65502e627104cd5778d46d9ed547a442ab74c5115b3a6d10805493",
+          "fetched_at": "2026-08-27T09:37:09Z"
+        },
+        {
+          "url": "https://www.town.keisen.fukuoka.jp/pdf/zaisei/tousyoR08.pdf",
+          "observed_on": "https://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
+          "fetched_at": "2026-08-27T10:56:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php (label: 桂川町の財政)"
+      "notes": "Observed finance section at http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php (label: 桂川町の財政) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +78,20 @@
           "url": "http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
           "observed_on": "http://www.town.keisen.fukuoka.jp/",
           "fetched_at": "2026-08-27T04:23:19Z"
+        },
+        {
+          "url": "https://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
+          "observed_on": "https://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
+          "sha256": "1f31a860ce65502e627104cd5778d46d9ed547a442ab74c5115b3a6d10805493",
+          "fetched_at": "2026-08-27T09:37:09Z"
+        },
+        {
+          "url": "https://www.town.keisen.fukuoka.jp/pdf/zaisei/kessanR06.pdf",
+          "observed_on": "https://www.town.keisen.fukuoka.jp/tyousei/zaisei.php",
+          "fetched_at": "2026-08-27T10:56:31Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php (label: 桂川町の財政)"
+      "notes": "Observed finance section at http://www.town.keisen.fukuoka.jp/tyousei/zaisei.php (label: 桂川町の財政) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     }
   }
 }

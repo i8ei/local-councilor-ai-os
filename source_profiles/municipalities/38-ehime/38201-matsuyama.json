@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T06:58:39Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.matsuyama.ehime.jp/shisei/opendata/metadata/town-kaigiroku-sedai.html (label: 【世代別・職業別】会議禄)"
+      "notes": "Observed council minutes index at http://www.city.matsuyama.ehime.jp/shisei/opendata/metadata/town-kaigiroku-sedai.html (label: 【世代別・職業別】会議禄) extraction probe read one document at https://www.city.matsuyama.ehime.jp/shisei/opendata/metadata/town-kaigiroku-sedai.files/79H270218.docx but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +46,15 @@
           "url": "http://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/index.html",
           "observed_on": "http://www.city.matsuyama.ehime.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:58:04Z"
+        },
+        {
+          "url": "https://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/index.html",
+          "sha256": "8278f620a9f348a1ae6ac33d38be78d9691efa428e44dcd53455309093a5920d",
+          "fetched_at": "2026-08-27T09:46:40Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +67,20 @@
           "url": "http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
           "observed_on": "http://www.city.matsuyama.ehime.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:58:04Z"
+        },
+        {
+          "url": "https://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
+          "observed_on": "https://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
+          "sha256": "addda287173502c22b9f19a195abb43d15743281d20b921621072fa1e4e58884",
+          "fetched_at": "2026-08-27T09:46:43Z"
+        },
+        {
+          "url": "https://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.files/R6_ikensyo_kigyou.pdf",
+          "observed_on": "https://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html",
+          "fetched_at": "2026-08-27T11:01:08Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html (label: 各会計決算審査意見)"
+      "notes": "Observed settlement link at http://www.city.matsuyama.ehime.jp/shisei/kansa/kakukaikeikessan.html (label: 各会計決算審査意見) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

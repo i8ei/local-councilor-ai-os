@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.ogawara.miyagi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.ogawara.miyagi.jp/2765.htm",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:26Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ogawara.miyagi.jp/2765.htm",
           "observed_on": "http://www.town.ogawara.miyagi.jp/1004.htm",
           "fetched_at": "2026-08-27T07:21:54Z"
+        },
+        {
+          "url": "http://www.town.ogawara.miyagi.jp/2765.htm",
+          "observed_on": "http://www.town.ogawara.miyagi.jp/2765.htm",
+          "sha256": "6291479f6b5cc13ebb79986b04d812e5f7fdc437c52448f339374b3a61a742d3",
+          "fetched_at": "2026-08-27T10:34:00Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.ogawara.miyagi.jp/2765.htm (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.ogawara.miyagi.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:23Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ogawara.miyagi.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.ogawara.miyagi.jp/",
           "fetched_at": "2026-08-27T07:21:06Z"
+        },
+        {
+          "url": "http://www.town.ogawara.miyagi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.ogawara.miyagi.jp/reiki_int/",
+          "sha256": "a7f43f35f9d7134f594166496cdd5c4ea3da93d60daaf4c75db2c6175a8faa2d",
+          "fetched_at": "2026-08-27T10:33:59Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.ogawara.miyagi.jp/reiki_int/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.town.ogawara.miyagi.jp/8087.htm",
           "observed_on": "http://www.town.ogawara.miyagi.jp/1004.htm",
           "fetched_at": "2026-08-27T07:21:54Z"
+        },
+        {
+          "url": "https://www.town.ogawara.miyagi.jp:443/8087.htm",
+          "observed_on": "https://www.town.ogawara.miyagi.jp:443/8087.htm",
+          "sha256": "07a67bafe284861a846c18e0603a7ce9432c583dc62a37a74b4e954f9cf63a8a",
+          "fetched_at": "2026-08-27T10:34:02Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.ogawara.miyagi.jp/8087.htm (label: 令和8年度大河原町予算書)"
+      "notes": "Observed budget link at http://www.town.ogawara.miyagi.jp/8087.htm (label: 令和8年度大河原町予算書) 入口 https://www.town.ogawara.miyagi.jp:443/8087.htm に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.town.ogawara.miyagi.jp/2518.htm",
           "observed_on": "http://www.town.ogawara.miyagi.jp/",
           "fetched_at": "2026-08-27T07:21:06Z"
+        },
+        {
+          "url": "https://www.town.ogawara.miyagi.jp:443/2518.htm",
+          "observed_on": "https://www.town.ogawara.miyagi.jp:443/2518.htm",
+          "sha256": "13f04af500d0b12defce78fd162a8633804e503f953ab115cbc44fee53ef863c",
+          "fetched_at": "2026-08-27T10:34:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.ogawara.miyagi.jp/2518.htm (label: 町の財政)"
+      "notes": "Observed finance section at http://www.town.ogawara.miyagi.jp/2518.htm (label: 町の財政) 入口 https://www.town.ogawara.miyagi.jp:443/2518.htm に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

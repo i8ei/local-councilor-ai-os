@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.zao.miyagi.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/gijiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:20Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/gijiroku/index.html",
           "observed_on": "http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/index.html",
           "fetched_at": "2026-08-27T07:22:02Z"
+        },
+        {
+          "url": "http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/gijiroku/index.html",
+          "observed_on": "http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/gijiroku/index.html",
+          "sha256": "abb30fe25f03fe05b9004288e9f8ac709de16b20d160193f2d57393f3929b019",
+          "fetched_at": "2026-08-27T10:33:56Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.zao.miyagi.jp/kurashi_guide/gikai_senkyo/gikai/gijiroku/index.html (label: 議会会議録の公開)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.zao.miyagi.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.zao.miyagi.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.zao.miyagi.jp/",
           "fetched_at": "2026-08-27T07:20:25Z"
+        },
+        {
+          "url": "http://www.town.zao.miyagi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.zao.miyagi.jp/reiki_int/",
+          "sha256": "bcec37aec290867fbbe3f825214bc40eefcb56931d9d19f6f7bfad95ee3e80fd",
+          "fetched_at": "2026-08-27T10:33:54Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.zao.miyagi.jp/reiki_int/reiki_menu.html (label: 例規集)"

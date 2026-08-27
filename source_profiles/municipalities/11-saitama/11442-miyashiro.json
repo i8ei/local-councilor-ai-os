@@ -52,9 +52,15 @@
           "url": "http://www.town.miyashiro.lg.jp/category/2-6-1-0-0-0-0-0-0-0.html",
           "observed_on": "http://www.town.miyashiro.lg.jp/category/2-0-0-0-0-0-0-0-0-0.html",
           "fetched_at": "2026-08-27T07:07:54Z"
+        },
+        {
+          "url": "https://www.town.miyashiro.lg.jp/category/2-6-1-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.miyashiro.lg.jp/category/2-6-1-0-0-0-0-0-0-0.html",
+          "sha256": "25109e742c4d052459a2f2ed0c5d7b577e6bbc0250327acf76c18c7a1d392d5e",
+          "fetched_at": "2026-08-27T10:22:39Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.miyashiro.lg.jp/category/2-6-1-0-0-0-0-0-0-0.html (label: 予算)"
+      "notes": "Observed budget link at http://www.town.miyashiro.lg.jp/category/2-6-1-0-0-0-0-0-0-0.html (label: 予算) 入口 https://www.town.miyashiro.lg.jp/category/2-6-1-0-0-0-0-0-0-0.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +73,20 @@
           "url": "http://www.town.miyashiro.lg.jp/0000026751.html",
           "observed_on": "http://www.town.miyashiro.lg.jp/category/2-0-0-0-0-0-0-0-0-0.html",
           "fetched_at": "2026-08-27T07:07:54Z"
+        },
+        {
+          "url": "https://www.town.miyashiro.lg.jp/0000026751.html",
+          "observed_on": "https://www.town.miyashiro.lg.jp/0000026751.html",
+          "sha256": "e0790178710a09e5f7b26801b290fe625d8b3932f95bee84cfbe79194fd5039c",
+          "fetched_at": "2026-08-27T10:22:42Z"
+        },
+        {
+          "url": "https://www.town.miyashiro.lg.jp/cmsfiles/contents/0000026/26751/01_R7ippanntokkai.pdf",
+          "observed_on": "https://www.town.miyashiro.lg.jp/0000026751.html",
+          "fetched_at": "2026-08-27T11:18:54Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.miyashiro.lg.jp/0000026751.html (label: 令和7年度決算審査の結果報告)"
+      "notes": "Observed settlement link at http://www.town.miyashiro.lg.jp/0000026751.html (label: 令和7年度決算審査の結果報告) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

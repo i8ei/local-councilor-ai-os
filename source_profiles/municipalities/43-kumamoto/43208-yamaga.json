@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.yamaga.kumamoto.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.yamaga.kumamoto.jp/gikai/list00405.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:56:53Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.yamaga.kumamoto.jp/gikai/list00405.html",
           "observed_on": "https://www.city.yamaga.kumamoto.jp/gikai/default.html",
           "fetched_at": "2026-08-27T05:33:21Z"
+        },
+        {
+          "url": "https://www.city.yamaga.kumamoto.jp/gikai/list00405.html",
+          "observed_on": "https://www.city.yamaga.kumamoto.jp/gikai/list00405.html",
+          "sha256": "959fabccf8aabf12fa1c680e436a4f5ef9678bbe0c34f0b4586a80e8b96cba54",
+          "fetched_at": "2026-08-27T09:38:21Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.yamaga.kumamoto.jp/gikai/list00405.html (label: 会議録・議会だより)"
@@ -52,9 +58,15 @@
           "url": "http://www.city.yamaga.kumamoto.jp/list00136.html",
           "observed_on": "http://www.city.yamaga.kumamoto.jp/",
           "fetched_at": "2026-08-27T05:33:19Z"
+        },
+        {
+          "url": "https://www.city.yamaga.kumamoto.jp/list00136.html",
+          "observed_on": "https://www.city.yamaga.kumamoto.jp/list00136.html",
+          "sha256": "161a9556e5b3ab944bb4e79a26c10094d29aeed3b2d3ba810faed288637a5b60",
+          "fetched_at": "2026-08-27T09:38:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.yamaga.kumamoto.jp/list00136.html (label: 行政・財政)"
+      "notes": "Observed finance section at http://www.city.yamaga.kumamoto.jp/list00136.html (label: 行政・財政) 入口 https://www.city.yamaga.kumamoto.jp/list00136.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city.yamaga.kumamoto.jp/list00136.html",
           "observed_on": "http://www.city.yamaga.kumamoto.jp/",
           "fetched_at": "2026-08-27T05:33:19Z"
+        },
+        {
+          "url": "https://www.city.yamaga.kumamoto.jp/list00136.html",
+          "observed_on": "https://www.city.yamaga.kumamoto.jp/list00136.html",
+          "sha256": "161a9556e5b3ab944bb4e79a26c10094d29aeed3b2d3ba810faed288637a5b60",
+          "fetched_at": "2026-08-27T09:38:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.yamaga.kumamoto.jp/list00136.html (label: 行政・財政)"
+      "notes": "Observed finance section at http://www.city.yamaga.kumamoto.jp/list00136.html (label: 行政・財政) 入口 https://www.city.yamaga.kumamoto.jp/list00136.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

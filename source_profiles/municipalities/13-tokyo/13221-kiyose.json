@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.kiyose.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.kiyose.lg.jp/sigikai/1002348.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:21:31Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kiyose.lg.jp/sigikai/1002348.html",
           "observed_on": "http://www.city.kiyose.lg.jp/sigikai/index.html",
           "fetched_at": "2026-08-27T07:48:19Z"
+        },
+        {
+          "url": "http://www.city.kiyose.lg.jp/sigikai/1002348.html",
+          "observed_on": "http://www.city.kiyose.lg.jp/sigikai/1002348.html",
+          "sha256": "52d91f89828e0c99cffa01abc1b43f2003c4120d096f439f7dc9774acb618538",
+          "fetched_at": "2026-08-27T10:26:17Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.kiyose.lg.jp/sigikai/1002348.html (label: 会議録検索システム)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html",
           "observed_on": "http://www.city.kiyose.lg.jp/siseijouhou/index.html",
           "fetched_at": "2026-08-27T07:47:09Z"
+        },
+        {
+          "url": "https://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html",
+          "sha256": "b5256b9a068da2d6284fe31417cd2e864be977509c55d77c9a9e038598f65228",
+          "fetched_at": "2026-08-27T10:26:20Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.kiyose.lg.jp/siseijouhou/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html",
           "observed_on": "http://www.city.kiyose.lg.jp/siseijouhou/index.html",
           "fetched_at": "2026-08-27T07:47:09Z"
+        },
+        {
+          "url": "https://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html",
+          "observed_on": "https://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html",
+          "sha256": "0c6cfc4b384e2f8d236669f6a54d46c951d0ff985ea42a1d1fb16b69f146bcd0",
+          "fetched_at": "2026-08-27T10:26:23Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html (label: 決算) 入口 https://www.city.kiyose.lg.jp/siseijouhou/zaisei/kessan/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

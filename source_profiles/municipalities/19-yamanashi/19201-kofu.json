@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T06:27:29Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.kofu.yamanashi.jp/shise/gikai/kaigiroku/index.html (label: 会議録の検索と閲覧)"
+      "notes": "Observed council minutes index at http://www.city.kofu.yamanashi.jp/shise/gikai/kaigiroku/index.html (label: 会議録の検索と閲覧) extraction probe read one document at https://www.city.kofu.yamanashi.jp/shise/gikai/kaigiroku/index.html but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "ready",
@@ -52,9 +52,15 @@
           "url": "http://www.city.kofu.yamanashi.jp/shise/yosan/index.html",
           "observed_on": "http://www.city.kofu.yamanashi.jp/shise/index.html",
           "fetched_at": "2026-08-27T06:27:29Z"
+        },
+        {
+          "url": "https://www.city.kofu.yamanashi.jp/shise/yosan/index.html",
+          "observed_on": "https://www.city.kofu.yamanashi.jp/shise/yosan/index.html",
+          "sha256": "7f56c2523c3f669a3304a5a2b7f149bbed742217b57d57316e17b8e52ec4a031",
+          "fetched_at": "2026-08-27T10:08:15Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kofu.yamanashi.jp/shise/yosan/index.html (label: 予算・財政)"
+      "notes": "Observed budget link at http://www.city.kofu.yamanashi.jp/shise/yosan/index.html (label: 予算・財政) 入口 https://www.city.kofu.yamanashi.jp/shise/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +73,15 @@
           "url": "http://www.city.kofu.yamanashi.jp/shise/yosan/yosan/kessanidx.html",
           "observed_on": "http://www.city.kofu.yamanashi.jp/shise/index.html",
           "fetched_at": "2026-08-27T06:27:29Z"
+        },
+        {
+          "url": "https://www.city.kofu.yamanashi.jp/shise/yosan/yosan/kessanidx.html",
+          "observed_on": "https://www.city.kofu.yamanashi.jp/shise/yosan/yosan/kessanidx.html",
+          "sha256": "5795835b7b3ab5014f63b7cdea7e8806af34bf089cb89647ec2e8f51da1296bb",
+          "fetched_at": "2026-08-27T10:08:18Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kofu.yamanashi.jp/shise/yosan/yosan/kessanidx.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.kofu.yamanashi.jp/shise/yosan/yosan/kessanidx.html (label: 決算) 入口 https://www.city.kofu.yamanashi.jp/shise/yosan/yosan/kessanidx.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

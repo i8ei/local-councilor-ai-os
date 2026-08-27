@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.wassamu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.wassamu.hokkaido.jp/congress-secretariat/hearing-browse/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:22:52Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.wassamu.hokkaido.jp/congress-secretariat/hearing-browse/",
           "observed_on": "https://www.town.wassamu.hokkaido.jp/congress-secretariat/2026/08/05/gikaidayori122-2-2/",
           "fetched_at": "2026-08-27T06:28:03Z"
+        },
+        {
+          "url": "https://www.town.wassamu.hokkaido.jp/congress-secretariat/hearing-browse/",
+          "observed_on": "https://www.town.wassamu.hokkaido.jp/congress-secretariat/hearing-browse/",
+          "sha256": "4bbfcc9ecd856f99cb54ca7344d9751cc6f6763a1b3c08a05585d3faa56f6dde",
+          "fetched_at": "2026-08-27T10:30:49Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.wassamu.hokkaido.jp/congress-secretariat/hearing-browse/ (label: 議会の傍聴・会議録の閲覧)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/",
           "observed_on": "https://www.town.wassamu.hokkaido.jp/administration-development/",
           "fetched_at": "2026-08-27T06:27:38Z"
+        },
+        {
+          "url": "https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/",
+          "observed_on": "https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/",
+          "sha256": "6850f0e3d2fa256407a3516b412fa871312b5b834baeecd9950782706c39fb52",
+          "fetched_at": "2026-08-27T10:30:51Z"
+        },
+        {
+          "url": "https://www.town.wassamu.hokkaido.jp/affairs/files/2026/07/160af0b7db522d407c57ca38812eb13c.pdf",
+          "observed_on": "https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/",
+          "fetched_at": "2026-08-27T11:22:54Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/ (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/ (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/",
           "observed_on": "https://www.town.wassamu.hokkaido.jp/administration-development/",
           "fetched_at": "2026-08-27T06:27:38Z"
+        },
+        {
+          "url": "https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/",
+          "observed_on": "https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/",
+          "sha256": "6850f0e3d2fa256407a3516b412fa871312b5b834baeecd9950782706c39fb52",
+          "fetched_at": "2026-08-27T10:30:51Z"
+        },
+        {
+          "url": "https://www.town.wassamu.hokkaido.jp/affairs/files/2025/04/04b2d368cf87d66939122779152e35fd.pdf",
+          "observed_on": "https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/",
+          "fetched_at": "2026-08-27T11:22:56Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/ (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.wassamu.hokkaido.jp/affairs/finance/published-financial/ (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

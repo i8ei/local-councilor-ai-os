@@ -243,12 +243,16 @@ class HttpClientTests(unittest.TestCase):
         )
         # Declared charset still wins over the fallback.
         self.assertEqual(
-            http._detect_encoding(eucjp_body, "text/html; charset=EUC-JP"),
+            http._detect_encoding(sjis_body, "text/html; charset=x-sjis"),
+            "cp932",
+        )
+        self.assertEqual(
+            http._detect_encoding(eucjp_body, "text/html; charset=x-euc-jp"),
             "euc-jp",
         )
         self.assertEqual(
-            http._detect_encoding(eucjp_body, "text/html; charset=cp932"),
-            "cp932",
+            http._detect_encoding(sjis_body, "text/html; charset=unknown-xyz"),
+            "utf-8",
         )
 
     def test_denied_path_is_not_fetched(self) -> None:

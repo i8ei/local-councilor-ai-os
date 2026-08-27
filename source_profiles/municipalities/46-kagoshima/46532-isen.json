@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.isen.kagoshima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.isen.kagoshima.jp/gikai/chosejoho/gikai/kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:58:01Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.isen.kagoshima.jp/gikai/chosejoho/gikai/kaigiroku.html",
           "observed_on": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/index.html",
           "fetched_at": "2026-08-27T06:47:23Z"
+        },
+        {
+          "url": "http://www.town.isen.kagoshima.jp/gikai/chosejoho/gikai/kaigiroku.html",
+          "observed_on": "http://www.town.isen.kagoshima.jp/gikai/chosejoho/gikai/kaigiroku.html",
+          "sha256": "1ee8e4ab9585e8f812e1fdbb8ad85327e7e4830a15055e77220cb1ff7a4608a3",
+          "fetched_at": "2026-08-27T09:40:51Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.isen.kagoshima.jp/gikai/chosejoho/gikai/kaigiroku.html (label: 会議録(平成21年～令和2年))"
@@ -46,9 +52,15 @@
           "url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
           "observed_on": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/index.html",
           "fetched_at": "2026-08-27T06:47:23Z"
+        },
+        {
+          "url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
+          "observed_on": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
+          "sha256": "27fb2650dddb063e8361325c7b052e98f513a549aec8c5659773c3d9fdc96b68",
+          "fetched_at": "2026-08-27T09:40:52Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html (label: 予算・財政)"
+      "notes": "Observed budget link at http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html (label: 予算・財政) 入口 http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
           "observed_on": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/index.html",
           "fetched_at": "2026-08-27T06:47:23Z"
+        },
+        {
+          "url": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
+          "observed_on": "http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html",
+          "sha256": "27fb2650dddb063e8361325c7b052e98f513a549aec8c5659773c3d9fdc96b68",
+          "fetched_at": "2026-08-27T09:40:52Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html (label: 予算・財政)"
+      "notes": "Observed finance section at http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html (label: 予算・財政) 入口 http://www.town.isen.kagoshima.jp/mirai/chosejoho/yosan-zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

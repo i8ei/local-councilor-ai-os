@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.hokuryu.hokkaido.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.hokuryu.hokkaido.jp/chosei/6551/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:22:44Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.hokuryu.hokkaido.jp/chosei/6551/",
           "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/",
           "fetched_at": "2026-08-27T06:22:55Z"
+        },
+        {
+          "url": "https://www.town.hokuryu.hokkaido.jp/chosei/6551/",
+          "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/6551/",
+          "sha256": "6a7127907fec322321443d7494bde8004a23bad6d10f19751af4082b21410e1a",
+          "fetched_at": "2026-08-27T10:30:25Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.hokuryu.hokkaido.jp/chosei/6551/ (label: 議会会議録)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
           "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/",
           "fetched_at": "2026-08-27T06:22:55Z"
+        },
+        {
+          "url": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
+          "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
+          "sha256": "866096c41e75ae054a38a4a9c218fb913a25eddee8dd13040881d2e1d9216f7e",
+          "fetched_at": "2026-08-27T10:30:27Z"
+        },
+        {
+          "url": "https://www.town.hokuryu.hokkaido.jp/wp-content/uploads/2026/06/r7-chihoshohizeikofukin-yosan.pdf",
+          "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
+          "fetched_at": "2026-08-27T11:22:45Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/ (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/ (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
           "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/",
           "fetched_at": "2026-08-27T06:22:55Z"
+        },
+        {
+          "url": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
+          "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
+          "sha256": "866096c41e75ae054a38a4a9c218fb913a25eddee8dd13040881d2e1d9216f7e",
+          "fetched_at": "2026-08-27T10:30:27Z"
+        },
+        {
+          "url": "https://www.town.hokuryu.hokkaido.jp/wp-content/uploads/2026/06/r6-chihoshohizeikofukin-kessan.pdf",
+          "observed_on": "https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/",
+          "fetched_at": "2026-08-27T11:22:47Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/ (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.hokuryu.hokkaido.jp/chosei/zaisei/ (label: 財政状況) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

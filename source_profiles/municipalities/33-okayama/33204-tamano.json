@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.tamano.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.tamano.lg.jp/site/gikai/1808.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:00:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tamano.lg.jp/site/gikai/1808.html",
           "observed_on": "http://www.city.tamano.lg.jp/site/gikai/44766.html",
           "fetched_at": "2026-08-27T06:15:13Z"
+        },
+        {
+          "url": "http://www.city.tamano.lg.jp/site/gikai/1808.html",
+          "observed_on": "http://www.city.tamano.lg.jp/site/gikai/1808.html",
+          "sha256": "1eca95ece81821d3f5a62a5a95bb4a3cdae079d9f655d27bd1f37fb6de5f1e0b",
+          "fetched_at": "2026-08-27T09:43:35Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.tamano.lg.jp/site/gikai/1808.html (label: 本会議 会議録検索)"
@@ -46,9 +52,20 @@
           "url": "http://www.city.tamano.lg.jp/site/zaisei/58118.html",
           "observed_on": "http://www.city.tamano.lg.jp/",
           "fetched_at": "2026-08-27T06:14:28Z"
+        },
+        {
+          "url": "https://www.city.tamano.lg.jp/site/zaisei/58118.html",
+          "observed_on": "https://www.city.tamano.lg.jp/site/zaisei/58118.html",
+          "sha256": "6260d635cfbc9cbfd33604713b389cbf67912f9033dec0bdf5f5df8453c48d3a",
+          "fetched_at": "2026-08-27T09:43:38Z"
+        },
+        {
+          "url": "https://www.city.tamano.lg.jp/uploaded/attachment/36269.pdf",
+          "observed_on": "https://www.city.tamano.lg.jp/site/zaisei/58118.html",
+          "fetched_at": "2026-08-27T11:00:25Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tamano.lg.jp/site/zaisei/58118.html (label: 令和8年度9月補正予算等のお知らせ)"
+      "notes": "Observed budget link at http://www.city.tamano.lg.jp/site/zaisei/58118.html (label: 令和8年度9月補正予算等のお知らせ) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,15 @@
           "url": "http://www.city.tamano.lg.jp/site/zaisei/58118.html",
           "observed_on": "http://www.city.tamano.lg.jp/",
           "fetched_at": "2026-08-27T06:14:28Z"
+        },
+        {
+          "url": "https://www.city.tamano.lg.jp/site/zaisei/58118.html",
+          "observed_on": "https://www.city.tamano.lg.jp/site/zaisei/58118.html",
+          "sha256": "6260d635cfbc9cbfd33604713b389cbf67912f9033dec0bdf5f5df8453c48d3a",
+          "fetched_at": "2026-08-27T09:43:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.tamano.lg.jp/site/zaisei/58118.html (label: 令和8年度9月補正予算等のお知らせ)"
+      "notes": "Observed finance section at http://www.city.tamano.lg.jp/site/zaisei/58118.html (label: 令和8年度9月補正予算等のお知らせ) 入口 https://www.city.tamano.lg.jp/site/zaisei/58118.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

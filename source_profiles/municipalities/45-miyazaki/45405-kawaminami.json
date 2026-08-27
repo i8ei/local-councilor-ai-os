@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.kawaminami.miyazaki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.kawaminami.miyazaki.jp/site/gikai/1028.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:59:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kawaminami.miyazaki.jp/site/gikai/1028.html",
           "observed_on": "http://www.town.kawaminami.miyazaki.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:31:21Z"
+        },
+        {
+          "url": "http://www.town.kawaminami.miyazaki.jp/site/gikai/1028.html",
+          "observed_on": "http://www.town.kawaminami.miyazaki.jp/site/gikai/1028.html",
+          "sha256": "d86ec343c8d14a1b060a76bc6c0ae9edd564681329443d2d89e076ef060b6feb",
+          "fetched_at": "2026-08-27T09:40:35Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.kawaminami.miyazaki.jp/site/gikai/1028.html (label: 川南町議会会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.town.kawaminami.miyazaki.jp/soshiki/14/",
           "observed_on": "http://www.town.kawaminami.miyazaki.jp/",
           "fetched_at": "2026-08-27T06:31:00Z"
+        },
+        {
+          "url": "https://www.town.kawaminami.miyazaki.jp/soshiki/14/",
+          "observed_on": "https://www.town.kawaminami.miyazaki.jp/soshiki/14/",
+          "sha256": "0ec04ad4e607478398b80b24f842eee19b823996323cda6e078e332303e3132e",
+          "fetched_at": "2026-08-27T09:40:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kawaminami.miyazaki.jp/soshiki/14/ (label: 財政情報)"
+      "notes": "Observed finance section at http://www.town.kawaminami.miyazaki.jp/soshiki/14/ (label: 財政情報) 入口 https://www.town.kawaminami.miyazaki.jp/soshiki/14/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.kawaminami.miyazaki.jp/soshiki/14/",
           "observed_on": "http://www.town.kawaminami.miyazaki.jp/",
           "fetched_at": "2026-08-27T06:31:00Z"
+        },
+        {
+          "url": "https://www.town.kawaminami.miyazaki.jp/soshiki/14/",
+          "observed_on": "https://www.town.kawaminami.miyazaki.jp/soshiki/14/",
+          "sha256": "0ec04ad4e607478398b80b24f842eee19b823996323cda6e078e332303e3132e",
+          "fetched_at": "2026-08-27T09:40:38Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kawaminami.miyazaki.jp/soshiki/14/ (label: 財政情報)"
+      "notes": "Observed finance section at http://www.town.kawaminami.miyazaki.jp/soshiki/14/ (label: 財政情報) 入口 https://www.town.kawaminami.miyazaki.jp/soshiki/14/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

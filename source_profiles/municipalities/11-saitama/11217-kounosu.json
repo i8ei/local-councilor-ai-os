@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.kounosu.saitama.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.kounosu.saitama.jp/site/gikai/2499.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:17:32Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kounosu.saitama.jp/site/gikai/2499.html",
           "observed_on": "http://www.city.kounosu.saitama.jp/site/gikai/",
           "fetched_at": "2026-08-27T06:50:57Z"
+        },
+        {
+          "url": "http://www.city.kounosu.saitama.jp/site/gikai/2499.html",
+          "observed_on": "http://www.city.kounosu.saitama.jp/site/gikai/2499.html",
+          "sha256": "59c92cd6f1286513118eb09e594d90893b7b2d51efbba130285c4f17cb408c6c",
+          "fetched_at": "2026-08-27T10:20:43Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.kounosu.saitama.jp/site/gikai/2499.html (label: 会議録検索)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.kounosu.saitama.jp/site/mayor/list9.html",
           "observed_on": "http://www.city.kounosu.saitama.jp/life/6/",
           "fetched_at": "2026-08-27T06:50:38Z"
+        },
+        {
+          "url": "http://www.city.kounosu.saitama.jp/site/mayor/list9.html",
+          "observed_on": "http://www.city.kounosu.saitama.jp/site/mayor/list9.html",
+          "sha256": "83afb4cf71bebb17c66156d6736cbdda651a4bd14817be5a3a7318f542955ba0",
+          "fetched_at": "2026-08-27T10:20:44Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kounosu.saitama.jp/site/mayor/list9.html (label: 施政方針及び予算の大綱)"
+      "notes": "Observed budget link at http://www.city.kounosu.saitama.jp/site/mayor/list9.html (label: 施政方針及び予算の大綱) 入口 http://www.city.kounosu.saitama.jp/site/mayor/list9.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.kounosu.saitama.jp/life/6/29/133/",
           "observed_on": "http://www.city.kounosu.saitama.jp/life/6/",
           "fetched_at": "2026-08-27T06:50:38Z"
+        },
+        {
+          "url": "http://www.city.kounosu.saitama.jp/life/6/29/133/",
+          "observed_on": "http://www.city.kounosu.saitama.jp/life/6/29/133/",
+          "sha256": "bad481ee6c3c2f22cf729e1dcb4338d7aca2117768f0d63ba88e0d0f2f7fd6ab",
+          "fetched_at": "2026-08-27T10:20:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.kounosu.saitama.jp/life/6/29/133/ (label: 財政)"
+      "notes": "Observed finance section at http://www.city.kounosu.saitama.jp/life/6/29/133/ (label: 財政) 入口 http://www.city.kounosu.saitama.jp/life/6/29/133/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

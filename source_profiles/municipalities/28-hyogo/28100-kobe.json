@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.kobe.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.kobe.lg.jp/a71064/shise/municipal/boutyou_eturann/boutyou.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:05:30Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kobe.lg.jp/a71064/shise/municipal/boutyou_eturann/boutyou.html",
           "observed_on": "http://www.city.kobe.lg.jp/shise/index.html",
           "fetched_at": "2026-08-27T06:41:54Z"
+        },
+        {
+          "url": "http://www.city.kobe.lg.jp/a71064/shise/municipal/boutyou_eturann/boutyou.html",
+          "observed_on": "http://www.city.kobe.lg.jp/a71064/shise/municipal/boutyou_eturann/boutyou.html",
+          "sha256": "d92730975e1e4bb0c64d7068d695b83f9bb5380f57836e47254cb2742155be0e",
+          "fetched_at": "2026-08-27T09:51:33Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.kobe.lg.jp/a71064/shise/municipal/boutyou_eturann/boutyou.html (label: 神戸市会 傍聴・会議録の閲覧)"
@@ -46,9 +52,20 @@
           "url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
           "observed_on": "http://www.city.kobe.lg.jp/shise/index.html",
           "fetched_at": "2026-08-27T06:41:54Z"
+        },
+        {
+          "url": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "observed_on": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "sha256": "6964a0fb9302c8d11bac9c04b35078138b77f65923e6552225954279390559d9",
+          "fetched_at": "2026-08-27T09:51:36Z"
+        },
+        {
+          "url": "https://www.city.kobe.lg.jp/documents/48584/2026yosannogaiyou.pdf",
+          "observed_on": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "fetched_at": "2026-08-27T11:05:38Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html (label: 予算・決算)"
+      "notes": "Observed budget link at http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html (label: 予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
           "observed_on": "http://www.city.kobe.lg.jp/shise/index.html",
           "fetched_at": "2026-08-27T06:41:54Z"
+        },
+        {
+          "url": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "observed_on": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "sha256": "6964a0fb9302c8d11bac9c04b35078138b77f65923e6552225954279390559d9",
+          "fetched_at": "2026-08-27T09:51:36Z"
+        },
+        {
+          "url": "https://www.city.kobe.lg.jp/documents/48584/r7kessan.pdf",
+          "observed_on": "https://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
+          "fetched_at": "2026-08-27T11:05:42Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html (label: 予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

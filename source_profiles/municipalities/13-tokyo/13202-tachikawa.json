@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T07:41:45Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.tachikawa.lg.jp/shisei/sanka/1006064/1006089/1006261/1006274/1027940.html (label: 令和8年度第1回立川市医療的ケア児支援関係者会議議事録)"
+      "notes": "Observed council minutes index at http://www.city.tachikawa.lg.jp/shisei/sanka/1006064/1006089/1006261/1006274/1027940.html (label: 令和8年度第1回立川市医療的ケア児支援関係者会議議事録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +46,15 @@
           "url": "http://www.city.tachikawa.lg.jp/shisei/yosan/index.html",
           "observed_on": "http://www.city.tachikawa.lg.jp/",
           "fetched_at": "2026-08-27T07:40:56Z"
+        },
+        {
+          "url": "https://www.city.tachikawa.lg.jp/shisei/yosan/index.html",
+          "observed_on": "https://www.city.tachikawa.lg.jp/shisei/yosan/index.html",
+          "sha256": "24bf22fabb17b1d83418f3d6a88b82de9acc6c277b682c45ef1a3de2778a597e",
+          "fetched_at": "2026-08-27T10:25:49Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.tachikawa.lg.jp/shisei/yosan/index.html (label: 予算・行財政)"
+      "notes": "Observed budget link at http://www.city.tachikawa.lg.jp/shisei/yosan/index.html (label: 予算・行財政) 入口 https://www.city.tachikawa.lg.jp/shisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +67,15 @@
           "url": "http://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html",
           "observed_on": "http://www.city.tachikawa.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:41:24Z"
+        },
+        {
+          "url": "https://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html",
+          "observed_on": "https://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html",
+          "sha256": "3007b910fd8f90b941d4075fb07862ffd2fc4fccd2d4bb7b3fa25ad3abc599bb",
+          "fetched_at": "2026-08-27T10:25:52Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html (label: 予算・決算) 入口 https://www.city.tachikawa.lg.jp/shisei/yosan/1007100/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

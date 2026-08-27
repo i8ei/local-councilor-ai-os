@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.niyodogawa.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.niyodogawa.lg.jp/gikai/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:01:32Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.niyodogawa.lg.jp/gikai/",
           "observed_on": "http://www.town.niyodogawa.lg.jp/gikai/",
           "fetched_at": "2026-08-27T07:17:33Z"
+        },
+        {
+          "url": "http://www.town.niyodogawa.lg.jp/gikai/",
+          "observed_on": "http://www.town.niyodogawa.lg.jp/gikai/",
+          "sha256": "1cfdd64883a694e845a2f090af2dc404d403727e1b46a5aec273f9dcabd59484",
+          "fetched_at": "2026-08-27T09:47:46Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.niyodogawa.lg.jp/gikai/ (label: 会議録)"
@@ -52,9 +58,15 @@
           "url": "http://www.town.niyodogawa.lg.jp/life/list.php?hdnSKBN=B&hdnKeyword=%E8%B2%A1%E6%94%BF&hdnJPN=%C6%FC%CB%DC%B8%EC",
           "observed_on": "http://www.town.niyodogawa.lg.jp/",
           "fetched_at": "2026-08-27T07:15:42Z"
+        },
+        {
+          "url": "https://www.town.niyodogawa.lg.jp/life/list.php?hdnSKBN=B&hdnKeyword=%E8%B2%A1%E6%94%BF&hdnJPN=%EF%BF%BD%EF%BF%BD%EF%BF%BD%DC%B8%EF%BF%BD",
+          "observed_on": "https://www.town.niyodogawa.lg.jp/life/list.php?hdnSKBN=B&hdnKeyword=%E8%B2%A1%E6%94%BF&hdnJPN=%EF%BF%BD%EF%BF%BD%EF%BF%BD%DC%B8%EF%BF%BD",
+          "sha256": "92d6b79f578f0e59b9ffe95b0f8c16b3be3fdb164ae10722161046dc957e253f",
+          "fetched_at": "2026-08-27T09:47:49Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.niyodogawa.lg.jp/life/list.php?hdnSKBN=B&hdnKeyword=%E8%B2%A1%E6%94%BF&hdnJPN=%C6%FC%CB%DC%B8%EC (label: 財政)"
+      "notes": "Observed finance section at http://www.town.niyodogawa.lg.jp/life/list.php?hdnSKBN=B&hdnKeyword=%E8%B2%A1%E6%94%BF&hdnJPN=%C6%FC%CB%DC%B8%EC (label: 財政) 入口 https://www.town.niyodogawa.lg.jp/life/list.php?hdnSKBN=B&hdnKeyword=%E8%B2%A1%E6%94%BF&hdnJPN=%EF%BF%BD%EF%BF%BD%EF%BF%BD%DC%B8%EF%BF%BD に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.town.niyodogawa.lg.jp/life/life_dtl.php?hdnKey=2035",
           "observed_on": "http://www.town.niyodogawa.lg.jp/info/",
           "fetched_at": "2026-08-27T07:16:13Z"
+        },
+        {
+          "url": "https://www.town.niyodogawa.lg.jp/life/life_dtl.php?hdnKey=2035",
+          "observed_on": "https://www.town.niyodogawa.lg.jp/life/life_dtl.php?hdnKey=2035",
+          "sha256": "86b18a5c7fd7d2693cbc762eb9c4b80c10f50572840c067c1f4d334ada35adbc",
+          "fetched_at": "2026-08-27T09:47:52Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.niyodogawa.lg.jp/life/life_dtl.php?hdnKey=2035 (label: 歳入歳出決算書及び関係書類の公表)"
+      "notes": "Observed settlement link at http://www.town.niyodogawa.lg.jp/life/life_dtl.php?hdnKey=2035 (label: 歳入歳出決算書及び関係書類の公表) 入口 https://www.town.niyodogawa.lg.jp/life/life_dtl.php?hdnKey=2035 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.miharu.fukushima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.miharu.fukushima.jp/site/gikai/kaigiroku08.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:27:00Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.miharu.fukushima.jp/site/gikai/kaigiroku08.html",
           "observed_on": "http://www.town.miharu.fukushima.jp/site/gikai/",
           "fetched_at": "2026-08-27T08:08:41Z"
+        },
+        {
+          "url": "http://www.town.miharu.fukushima.jp/site/gikai/kaigiroku08.html",
+          "observed_on": "http://www.town.miharu.fukushima.jp/site/gikai/kaigiroku08.html",
+          "sha256": "7d4598bada488865ed0c37259941bc1fc2e1d459b8f70f393e4f22195d0ef901",
+          "fetched_at": "2026-08-27T10:38:14Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.miharu.fukushima.jp/site/gikai/kaigiroku08.html (label: 令和8年会議録)"
@@ -52,9 +58,15 @@
           "url": "http://www.town.miharu.fukushima.jp/life/4/22/88/",
           "observed_on": "http://www.town.miharu.fukushima.jp/life/4/",
           "fetched_at": "2026-08-27T08:07:32Z"
+        },
+        {
+          "url": "https://www.town.miharu.fukushima.jp:443/life/4/22/88/",
+          "observed_on": "https://www.town.miharu.fukushima.jp:443/life/4/22/88/",
+          "sha256": "d0253fd52a5b50a1c3ba70e88e9a73786f6fc20c8ec79139746d4145aa695db6",
+          "fetched_at": "2026-08-27T10:38:15Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.miharu.fukushima.jp/life/4/22/88/ (label: 財政資料)"
+      "notes": "Observed finance section at http://www.town.miharu.fukushima.jp/life/4/22/88/ (label: 財政資料) 入口 https://www.town.miharu.fukushima.jp:443/life/4/22/88/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.town.miharu.fukushima.jp/life/4/22/88/",
           "observed_on": "http://www.town.miharu.fukushima.jp/life/4/",
           "fetched_at": "2026-08-27T08:07:32Z"
+        },
+        {
+          "url": "https://www.town.miharu.fukushima.jp:443/life/4/22/88/",
+          "observed_on": "https://www.town.miharu.fukushima.jp:443/life/4/22/88/",
+          "sha256": "d0253fd52a5b50a1c3ba70e88e9a73786f6fc20c8ec79139746d4145aa695db6",
+          "fetched_at": "2026-08-27T10:38:15Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.miharu.fukushima.jp/life/4/22/88/ (label: 財政資料)"
+      "notes": "Observed finance section at http://www.town.miharu.fukushima.jp/life/4/22/88/ (label: 財政資料) 入口 https://www.town.miharu.fukushima.jp:443/life/4/22/88/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

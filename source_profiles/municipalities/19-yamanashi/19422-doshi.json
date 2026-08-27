@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T06:49:29Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7 (label: 会議録)"
+      "notes": "Observed council minutes index at http://www.vill.doshi.lg.jp/ka/info.php?if_id=719&ka_id=7 (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "ready",
@@ -52,9 +52,15 @@
           "url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
           "observed_on": "http://www.vill.doshi.lg.jp/",
           "fetched_at": "2026-08-27T06:48:40Z"
+        },
+        {
+          "url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
+          "observed_on": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
+          "sha256": "5c0f063e1009d9f44ab1424aa2d0a46af55a2a255953653d554d94038174309c",
+          "fetched_at": "2026-08-27T10:09:06Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 (label: 給与・財政・行革)"
+      "notes": "Observed finance section at http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 (label: 給与・財政・行革) 入口 http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +73,15 @@
           "url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
           "observed_on": "http://www.vill.doshi.lg.jp/",
           "fetched_at": "2026-08-27T06:48:40Z"
+        },
+        {
+          "url": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
+          "observed_on": "http://www.vill.doshi.lg.jp/info/list.php?ca_id=23",
+          "sha256": "5c0f063e1009d9f44ab1424aa2d0a46af55a2a255953653d554d94038174309c",
+          "fetched_at": "2026-08-27T10:09:06Z"
         }
       ],
-      "notes": "Observed finance section at http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 (label: 給与・財政・行革)"
+      "notes": "Observed finance section at http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 (label: 給与・財政・行革) 入口 http://www.vill.doshi.lg.jp/info/list.php?ca_id=23 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

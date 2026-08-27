@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T04:10:55Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.okawa.lg.jp/s078/010/080/20150902133811.html (label: 会議録)"
+      "notes": "Observed council minutes index at http://www.city.okawa.lg.jp/s078/010/080/20150902133811.html (label: 会議録) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +46,15 @@
           "url": "http://www.city.okawa.lg.jp/100/060/010/20230220151538.html",
           "observed_on": "http://www.city.okawa.lg.jp/100/060/index.html",
           "fetched_at": "2026-08-27T04:51:27Z"
+        },
+        {
+          "url": "http://www.city.okawa.lg.jp/100/060/010/20230220151538.html",
+          "observed_on": "http://www.city.okawa.lg.jp/100/060/010/20230220151538.html",
+          "sha256": "149ba1e2cbbbf45173262c2ba996aa896ca99e61f6a1448be6b9b1c07ba1d767",
+          "fetched_at": "2026-08-27T09:35:45Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.okawa.lg.jp/100/060/010/20230220151538.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.okawa.lg.jp/100/060/010/20230220151538.html (label: 予算) 入口 http://www.city.okawa.lg.jp/100/060/010/20230220151538.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +67,15 @@
           "url": "http://www.city.okawa.lg.jp/100/060/020/20230302100751.html",
           "observed_on": "http://www.city.okawa.lg.jp/100/060/index.html",
           "fetched_at": "2026-08-27T04:51:27Z"
+        },
+        {
+          "url": "http://www.city.okawa.lg.jp/100/060/020/20230302100751.html",
+          "observed_on": "http://www.city.okawa.lg.jp/100/060/020/20230302100751.html",
+          "sha256": "95b6798635a7cb4807ccd75607a684bc6163378e521bb9f9adf9015883c2fd1b",
+          "fetched_at": "2026-08-27T09:35:47Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.okawa.lg.jp/100/060/020/20230302100751.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.okawa.lg.jp/100/060/020/20230302100751.html (label: 決算) 入口 http://www.city.okawa.lg.jp/100/060/020/20230302100751.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

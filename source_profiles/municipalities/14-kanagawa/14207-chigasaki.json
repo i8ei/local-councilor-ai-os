@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.chigasaki.kanagawa.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.chigasaki.kanagawa.jp/shingikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:20:21Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.chigasaki.kanagawa.jp/shingikai/kaigiroku/index.html",
           "observed_on": "http://www.city.chigasaki.kanagawa.jp/shisei.html",
           "fetched_at": "2026-08-27T08:01:12Z"
+        },
+        {
+          "url": "http://www.city.chigasaki.kanagawa.jp/shingikai/kaigiroku/index.html",
+          "observed_on": "http://www.city.chigasaki.kanagawa.jp/shingikai/kaigiroku/index.html",
+          "sha256": "f4ff15135a5ab819c04800e322bdbc788d3aaed14e3e0d773bfd7f4d9d9fbdc5",
+          "fetched_at": "2026-08-27T10:26:54Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.chigasaki.kanagawa.jp/shingikai/kaigiroku/index.html (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
           "observed_on": "http://www.city.chigasaki.kanagawa.jp/shisei.html",
           "fetched_at": "2026-08-27T08:01:12Z"
+        },
+        {
+          "url": "https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
+          "observed_on": "https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
+          "sha256": "9dd8feb48d7678fc0c09a6ca5f2f5e77aefaced1633b2b8eeb6e7b166175b557",
+          "fetched_at": "2026-08-27T10:26:57Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html (label: 予算・決算)"
+      "notes": "Observed budget link at http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html (label: 予算・決算) 入口 https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
           "observed_on": "http://www.city.chigasaki.kanagawa.jp/shisei.html",
           "fetched_at": "2026-08-27T08:01:12Z"
+        },
+        {
+          "url": "https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
+          "observed_on": "https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html",
+          "sha256": "9dd8feb48d7678fc0c09a6ca5f2f5e77aefaced1633b2b8eeb6e7b166175b557",
+          "fetched_at": "2026-08-27T10:26:57Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html (label: 予算・決算) 入口 https://www.city.chigasaki.kanagawa.jp/zaisei/1008506/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

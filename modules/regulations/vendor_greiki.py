@@ -214,10 +214,12 @@ class _DocumentParser(HTMLParser):
 def _same_tenant(url: str, base_url: str) -> bool:
     parsed = urllib.parse.urlsplit(url)
     base = urllib.parse.urlsplit(base_url)
+    parsed_host = (parsed.hostname or "").lower()
+    base_host = (base.hostname or "").lower()
     return (
         parsed.scheme.lower() in {"http", "https"}
         and base.scheme.lower() in {"http", "https"}
-        and parsed.netloc.lower() == base.netloc.lower()
+        and parsed_host == base_host
         and parsed.path.startswith(base.path)
     )
 

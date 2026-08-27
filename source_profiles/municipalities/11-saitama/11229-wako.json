@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.wako.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.wako.lg.jp/shisei/1006222/1006526/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:17:36Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.wako.lg.jp/shisei/1006222/1006526/index.html",
           "observed_on": "http://www.city.wako.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:57:05Z"
+        },
+        {
+          "url": "http://www.city.wako.lg.jp/shisei/1006222/1006526/index.html",
+          "observed_on": "http://www.city.wako.lg.jp/shisei/1006222/1006526/index.html",
+          "sha256": "f7e4c26302c3b5dd1267871507f9dc649906e2f8e3321958ab710bf746378f10",
+          "fetched_at": "2026-08-27T10:21:25Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.wako.lg.jp/shisei/1006222/1006526/index.html (label: 会議録等)"
@@ -52,9 +58,15 @@
           "url": "http://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html",
           "observed_on": "http://www.city.wako.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:57:05Z"
+        },
+        {
+          "url": "https://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html",
+          "observed_on": "https://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html",
+          "sha256": "edf9315a4efc4821b31506a4c60973d68aadffd009ca209fc8b8ac5ceaa8112b",
+          "fetched_at": "2026-08-27T10:21:28Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html (label: 予算) 入口 https://www.city.wako.lg.jp/shisei/zaisei/1006866/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html",
           "observed_on": "http://www.city.wako.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:57:05Z"
+        },
+        {
+          "url": "https://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html",
+          "observed_on": "https://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html",
+          "sha256": "4b7f3d27c93db6708e5b5b76d1a1372293adbd7db58a7c7572b67c9df605179d",
+          "fetched_at": "2026-08-27T10:21:31Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html (label: 決算) 入口 https://www.city.wako.lg.jp/shisei/zaisei/1006910/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

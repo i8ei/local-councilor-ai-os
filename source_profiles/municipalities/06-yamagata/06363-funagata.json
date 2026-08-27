@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.funagata.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.funagata.yamagata.jp/s027/gikai/010/160/20250328112359.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:22Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.funagata.yamagata.jp/s027/gikai/010/160/20250328112359.html",
           "observed_on": "http://www.town.funagata.yamagata.jp/li/gikai/index.html",
           "fetched_at": "2026-08-27T07:47:06Z"
+        },
+        {
+          "url": "http://www.town.funagata.yamagata.jp/s027/gikai/010/160/20250328112359.html",
+          "observed_on": "http://www.town.funagata.yamagata.jp/s027/gikai/010/160/20250328112359.html",
+          "sha256": "e99dc87acb1b22c8554713cb97889a6fc61c02da753e93d7bd599f81cbb134e8",
+          "fetched_at": "2026-08-27T10:37:20Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.funagata.yamagata.jp/s027/gikai/010/160/20250328112359.html (label: 令和8年 議事録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/funagata/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:17Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/funagata/reiki_menu.html",
           "observed_on": "https://www1.g-reiki.net/funagata/reiki_menu.html",
           "fetched_at": "2026-08-27T07:49:20Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/funagata/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/funagata/",
+          "sha256": "7f6342ae3a820d89ce5692b63f7d5970dd35a6c286a66a4f39165fec12e341f9",
+          "fetched_at": "2026-08-27T11:25:17Z"
         }
       ],
       "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/funagata/reiki_menu.html for 舟形町"
@@ -46,9 +58,15 @@
           "url": "http://www.town.funagata.yamagata.jp/li/sugata/100/index.html",
           "observed_on": "http://www.town.funagata.yamagata.jp/s006/sugata/010/050/202608010000.html",
           "fetched_at": "2026-08-27T07:45:56Z"
+        },
+        {
+          "url": "https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html",
+          "observed_on": "https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html",
+          "sha256": "49531277f1f48ac7ee197ea68e42c48863446101956fb4a938fb681c1265bf37",
+          "fetched_at": "2026-08-27T10:37:21Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.funagata.yamagata.jp/li/sugata/100/index.html (label: 財政)"
+      "notes": "Observed finance section at http://www.town.funagata.yamagata.jp/li/sugata/100/index.html (label: 財政) 入口 https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.town.funagata.yamagata.jp/li/sugata/100/index.html",
           "observed_on": "http://www.town.funagata.yamagata.jp/s006/sugata/010/050/202608010000.html",
           "fetched_at": "2026-08-27T07:45:56Z"
+        },
+        {
+          "url": "https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html",
+          "observed_on": "https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html",
+          "sha256": "49531277f1f48ac7ee197ea68e42c48863446101956fb4a938fb681c1265bf37",
+          "fetched_at": "2026-08-27T10:37:21Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.funagata.yamagata.jp/li/sugata/100/index.html (label: 財政)"
+      "notes": "Observed finance section at http://www.town.funagata.yamagata.jp/li/sugata/100/index.html (label: 財政) 入口 https://www.town.funagata.yamagata.jp:443/li/sugata/100/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

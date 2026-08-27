@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.kanra.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.kanra.lg.jp/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:17:19Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kanra.lg.jp/gikai/kaigiroku/index.html",
           "observed_on": "https://www.town.kanra.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T06:40:28Z"
+        },
+        {
+          "url": "https://www.town.kanra.lg.jp/gikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.kanra.lg.jp/gikai/kaigiroku/index.html",
+          "sha256": "f979732247befa6533d2af5d917ce8a9456380f58a249356aefcce773891fd1c",
+          "fetched_at": "2026-08-27T10:20:02Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.kanra.lg.jp/gikai/kaigiroku/index.html (label: 会議録)"
@@ -52,9 +58,15 @@
           "url": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
           "observed_on": "https://www.town.kanra.lg.jp/",
           "fetched_at": "2026-08-27T06:39:27Z"
+        },
+        {
+          "url": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
+          "observed_on": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
+          "sha256": "1687c13a020450d74146253eda758cb023f48bbbc9f5b67c87642b2a8c703182",
+          "fetched_at": "2026-08-27T10:20:04Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kanra.lg.jp/gyosei/zaisei/index.html (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.kanra.lg.jp/gyosei/zaisei/index.html (label: 財政状況) 入口 https://www.town.kanra.lg.jp/gyosei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
           "observed_on": "https://www.town.kanra.lg.jp/",
           "fetched_at": "2026-08-27T06:39:27Z"
+        },
+        {
+          "url": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
+          "observed_on": "https://www.town.kanra.lg.jp/gyosei/zaisei/index.html",
+          "sha256": "1687c13a020450d74146253eda758cb023f48bbbc9f5b67c87642b2a8c703182",
+          "fetched_at": "2026-08-27T10:20:04Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kanra.lg.jp/gyosei/zaisei/index.html (label: 財政状況)"
+      "notes": "Observed finance section at https://www.town.kanra.lg.jp/gyosei/zaisei/index.html (label: 財政状況) 入口 https://www.town.kanra.lg.jp/gyosei/zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

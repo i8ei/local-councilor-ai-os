@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.koshi.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.koshi.lg.jp/list00429.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:56:57Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.koshi.lg.jp/list00429.html",
           "observed_on": "http://www.city.koshi.lg.jp/list00205.html",
           "fetched_at": "2026-08-27T06:09:57Z"
+        },
+        {
+          "url": "http://www.city.koshi.lg.jp/list00429.html",
+          "observed_on": "http://www.city.koshi.lg.jp/list00429.html",
+          "sha256": "e50f03a02071b9ce4ecc552c38cb6732420d4d28d4b2280afe4be4bb9a60e466",
+          "fetched_at": "2026-08-27T09:38:10Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.koshi.lg.jp/list00429.html (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.koshi.lg.jp/list00420.html",
           "observed_on": "http://www.city.koshi.lg.jp/list00205.html",
           "fetched_at": "2026-08-27T06:09:57Z"
+        },
+        {
+          "url": "https://www.city.koshi.lg.jp/list00420.html",
+          "observed_on": "https://www.city.koshi.lg.jp/list00420.html",
+          "sha256": "fabe2514b4884d365e4f07ea71b1823041001a5839c15bc5006f6bbcdcce2b42",
+          "fetched_at": "2026-08-27T09:38:13Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.koshi.lg.jp/list00420.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.koshi.lg.jp/list00420.html (label: 予算) 入口 https://www.city.koshi.lg.jp/list00420.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.koshi.lg.jp/list00421.html",
           "observed_on": "http://www.city.koshi.lg.jp/list00205.html",
           "fetched_at": "2026-08-27T06:09:57Z"
+        },
+        {
+          "url": "https://www.city.koshi.lg.jp/list00421.html",
+          "observed_on": "https://www.city.koshi.lg.jp/list00421.html",
+          "sha256": "b61d9aa9c1d35889df68af92587d03892c1f348b981e48cf92fea89d0c170947",
+          "fetched_at": "2026-08-27T09:38:16Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.koshi.lg.jp/list00421.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.koshi.lg.jp/list00421.html (label: 決算) 入口 https://www.city.koshi.lg.jp/list00421.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

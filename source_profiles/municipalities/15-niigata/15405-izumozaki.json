@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.izumozaki.niigata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.izumozaki.niigata.jp/chosei/nogyo/gijiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:55:43Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.izumozaki.niigata.jp/chosei/nogyo/gijiroku.html",
           "observed_on": "http://www.town.izumozaki.niigata.jp/chosei/",
           "fetched_at": "2026-08-27T06:05:26Z"
+        },
+        {
+          "url": "http://www.town.izumozaki.niigata.jp/chosei/nogyo/gijiroku.html",
+          "observed_on": "http://www.town.izumozaki.niigata.jp/chosei/nogyo/gijiroku.html",
+          "sha256": "c6fc1b7d73e097d398381f789220b9f07f38c8b1bcffb09ca3aa2710dde69f07",
+          "fetched_at": "2026-08-27T10:04:35Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.izumozaki.niigata.jp/chosei/nogyo/gijiroku.html (label: 総会議事録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.izumozaki.niigata.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:55:40Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.izumozaki.niigata.jp/reiki/reiki_menu.html",
           "observed_on": "http://www.town.izumozaki.niigata.jp/",
           "fetched_at": "2026-08-27T06:05:00Z"
+        },
+        {
+          "url": "http://www.town.izumozaki.niigata.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.izumozaki.niigata.jp/reiki/",
+          "sha256": "e0e4ac60a72a5d2d5538d1510c707a3a6e2b38fc94d29245e1bcb9ad158e5633",
+          "fetched_at": "2026-08-27T10:04:34Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.izumozaki.niigata.jp/reiki/reiki_menu.html (label: 出雲崎町例規集)"
@@ -46,9 +58,20 @@
           "url": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
           "observed_on": "http://www.town.izumozaki.niigata.jp/chosei/",
           "fetched_at": "2026-08-27T06:05:26Z"
+        },
+        {
+          "url": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
+          "observed_on": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
+          "sha256": "d76b8f2bc05ed58fc9ced79e2fdcdad855ebca72f45dbd49a1dff882322f1c0c",
+          "fetched_at": "2026-08-27T10:04:37Z"
+        },
+        {
+          "url": "https://www.town.izumozaki.niigata.jp/_files/00078610/00_tousho25.pdf",
+          "observed_on": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
+          "fetched_at": "2026-08-27T10:55:44Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911 (label: 出雲崎町の予算)"
+      "notes": "Observed budget link at https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911 (label: 出雲崎町の予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +84,15 @@
           "url": "http://www.town.izumozaki.niigata.jp/chosei/suji/kaikei-kessan.html",
           "observed_on": "http://www.town.izumozaki.niigata.jp/chosei/",
           "fetched_at": "2026-08-27T06:05:26Z"
+        },
+        {
+          "url": "https://www.town.izumozaki.niigata.jp:443/chosei/suji/kaikei-kessan.html",
+          "observed_on": "https://www.town.izumozaki.niigata.jp:443/chosei/suji/kaikei-kessan.html",
+          "sha256": "e534b9b50fb2a8ad46456d1cab569bf503aa38e8ce8d1d7c6f2e7b8ffbed2e66",
+          "fetched_at": "2026-08-27T10:04:38Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.izumozaki.niigata.jp/chosei/suji/kaikei-kessan.html (label: 一般会計歳入歳出決算額)"
+      "notes": "Observed settlement link at http://www.town.izumozaki.niigata.jp/chosei/suji/kaikei-kessan.html (label: 一般会計歳入歳出決算額) 入口 https://www.town.izumozaki.niigata.jp:443/chosei/suji/kaikei-kessan.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない 入口 https://www.town.izumozaki.niigata.jp:443/chosei/suji/kaikei-kessan.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

@@ -6,16 +6,22 @@
   "official_home_url": "http://town.nakatane.kagoshima.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://town.nakatane.kagoshima.jp/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:57:58Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://town.nakatane.kagoshima.jp/gikai/kaigiroku/index.html",
           "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/gikai/index.html",
           "fetched_at": "2026-08-27T06:45:55Z"
+        },
+        {
+          "url": "http://town.nakatane.kagoshima.jp/gikai/kaigiroku/index.html",
+          "observed_on": "http://town.nakatane.kagoshima.jp/gikai/kaigiroku/index.html",
+          "sha256": "b3fd3013643b38a9d8e42f3ddc55656ca041a2b7dda2c1f783f4d3a92b3eaf24",
+          "fetched_at": "2026-08-27T09:40:40Z"
         }
       ],
       "notes": "Observed council minutes index at http://town.nakatane.kagoshima.jp/gikai/kaigiroku/index.html (label: 会議録)"
@@ -46,9 +52,15 @@
           "url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
           "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/gikai/index.html",
           "fetched_at": "2026-08-27T06:45:55Z"
+        },
+        {
+          "url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
+          "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
+          "sha256": "f3c0da810e3b2ed483797567ac68f103d8cdbf7308ac1e8c783f457752310a56",
+          "fetched_at": "2026-08-27T09:40:41Z"
         }
       ],
-      "notes": "Observed budget link at http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html (label: 予算・財政)"
+      "notes": "Observed budget link at http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html (label: 予算・財政) 入口 http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
           "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/gikai/index.html",
           "fetched_at": "2026-08-27T06:45:55Z"
+        },
+        {
+          "url": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
+          "observed_on": "http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html",
+          "sha256": "f3c0da810e3b2ed483797567ac68f103d8cdbf7308ac1e8c783f457752310a56",
+          "fetched_at": "2026-08-27T09:40:41Z"
         }
       ],
-      "notes": "Observed finance section at http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html (label: 予算・財政)"
+      "notes": "Observed finance section at http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html (label: 予算・財政) 入口 http://town.nakatane.kagoshima.jp/koho/machinojoho/yosan-zaise/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

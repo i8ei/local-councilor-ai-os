@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.fuso.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.fuso.lg.jp/gikai/1002218.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:16:29Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.fuso.lg.jp/gikai/1002218.html",
           "observed_on": "http://www.town.fuso.lg.jp/gikai/index.html",
           "fetched_at": "2026-08-27T08:12:27Z"
+        },
+        {
+          "url": "http://www.town.fuso.lg.jp/gikai/1002218.html",
+          "observed_on": "http://www.town.fuso.lg.jp/gikai/1002218.html",
+          "sha256": "a0d6836a77ce6ef2b857c4b627992fcc58cbc11f526993aa29314eb64dfc229d",
+          "fetched_at": "2026-08-27T10:16:36Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.fuso.lg.jp/gikai/1002218.html (label: 扶桑町議会 会議録検索システム)"
@@ -46,9 +52,15 @@
           "url": "http://www.town.fuso.lg.jp/chousei/1002205/index.html",
           "observed_on": "http://www.town.fuso.lg.jp/chousei/index.html",
           "fetched_at": "2026-08-27T08:12:03Z"
+        },
+        {
+          "url": "https://www.town.fuso.lg.jp/chousei/1002205/index.html",
+          "observed_on": "https://www.town.fuso.lg.jp/chousei/1002205/index.html",
+          "sha256": "65e2e66da4117506f7f59abc823f804b4cf9cc21ad2f1dffb2b3e2c7d57b4aa4",
+          "fetched_at": "2026-08-27T10:16:39Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.fuso.lg.jp/chousei/1002205/index.html (label: 予算・財政)"
+      "notes": "Observed budget link at http://www.town.fuso.lg.jp/chousei/1002205/index.html (label: 予算・財政) 入口 https://www.town.fuso.lg.jp/chousei/1002205/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.town.fuso.lg.jp/chousei/1002205/index.html",
           "observed_on": "http://www.town.fuso.lg.jp/chousei/index.html",
           "fetched_at": "2026-08-27T08:12:03Z"
+        },
+        {
+          "url": "https://www.town.fuso.lg.jp/chousei/1002205/index.html",
+          "observed_on": "https://www.town.fuso.lg.jp/chousei/1002205/index.html",
+          "sha256": "65e2e66da4117506f7f59abc823f804b4cf9cc21ad2f1dffb2b3e2c7d57b4aa4",
+          "fetched_at": "2026-08-27T10:16:39Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.fuso.lg.jp/chousei/1002205/index.html (label: 予算・財政)"
+      "notes": "Observed finance section at http://www.town.fuso.lg.jp/chousei/1002205/index.html (label: 予算・財政) 入口 https://www.town.fuso.lg.jp/chousei/1002205/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

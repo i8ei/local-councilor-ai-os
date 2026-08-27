@@ -6,31 +6,43 @@
   "official_home_url": "http://www.city.muroran.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.muroran.lg.jp/administration/?content=4794",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:22:10Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.muroran.lg.jp/administration/?content=4794",
           "observed_on": "http://www.city.muroran.lg.jp/administration/?category=82",
           "fetched_at": "2026-08-27T05:57:47Z"
+        },
+        {
+          "url": "http://www.city.muroran.lg.jp/administration/?content=4794",
+          "observed_on": "http://www.city.muroran.lg.jp/administration/?content=4794",
+          "sha256": "b189e717f2a64fa6750ac56307344354ee2053ea57f3891ef42053d7eb8fd177",
+          "fetched_at": "2026-08-27T10:29:03Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.muroran.lg.jp/administration/?content=4794 (label: 室蘭市議会会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "https://www1.g-reiki.net/muroran/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:22:04Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www1.g-reiki.net/muroran/reiki_menu.html",
           "observed_on": "http://www.city.muroran.lg.jp/",
           "fetched_at": "2026-08-27T05:57:11Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/muroran/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/muroran/",
+          "sha256": "3dae437b23bb2a610927292f23d96dda4cfa32f2531695a9ccbf59e2d8f2f773",
+          "fetched_at": "2026-08-27T11:22:04Z"
         }
       ],
       "notes": "Observed g_reiki at https://www1.g-reiki.net/muroran/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.city.muroran.lg.jp/administration/?category=67",
           "observed_on": "http://www.city.muroran.lg.jp/",
           "fetched_at": "2026-08-27T05:57:11Z"
+        },
+        {
+          "url": "https://www.city.muroran.lg.jp/administration/?category=67",
+          "observed_on": "https://www.city.muroran.lg.jp/administration/?category=67",
+          "sha256": "7ff21be71c0916eeb31d47df28c29e6e38b8be4d8c5d5365c4d3280aa537f78f",
+          "fetched_at": "2026-08-27T10:29:06Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.muroran.lg.jp/administration/?category=67 (label: 財政)"
+      "notes": "Observed finance section at http://www.city.muroran.lg.jp/administration/?category=67 (label: 財政) 入口 https://www.city.muroran.lg.jp/administration/?category=67 に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.city.muroran.lg.jp/administration/?category=67",
           "observed_on": "http://www.city.muroran.lg.jp/",
           "fetched_at": "2026-08-27T05:57:11Z"
+        },
+        {
+          "url": "https://www.city.muroran.lg.jp/administration/?category=67",
+          "observed_on": "https://www.city.muroran.lg.jp/administration/?category=67",
+          "sha256": "7ff21be71c0916eeb31d47df28c29e6e38b8be4d8c5d5365c4d3280aa537f78f",
+          "fetched_at": "2026-08-27T10:29:06Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.muroran.lg.jp/administration/?category=67 (label: 財政)"
+      "notes": "Observed finance section at http://www.city.muroran.lg.jp/administration/?category=67 (label: 財政) 入口 https://www.city.muroran.lg.jp/administration/?category=67 に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

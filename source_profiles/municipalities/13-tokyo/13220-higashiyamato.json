@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.higashiyamato.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "static",
       "index_url": "http://www.city.higashiyamato.lg.jp/shisei/gikai/1005809/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:19:53Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.higashiyamato.lg.jp/shisei/gikai/1005809/index.html",
           "observed_on": "http://www.city.higashiyamato.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:46:57Z"
+        },
+        {
+          "url": "http://www.city.higashiyamato.lg.jp/shisei/gikai/1005809/index.html",
+          "observed_on": "http://www.city.higashiyamato.lg.jp/shisei/gikai/1005809/index.html",
+          "sha256": "bc524a91d6b90980e729e1f18afa94ad7e8782ee35293cabf55a764afef331b6",
+          "fetched_at": "2026-08-27T10:26:07Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.higashiyamato.lg.jp/shisei/gikai/1005809/index.html (label: 議事録検索・映像配信)"
+      "notes": "Observed council minutes index at http://www.city.higashiyamato.lg.jp/shisei/gikai/1005809/index.html (label: 議事録検索・映像配信) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "ready",
@@ -52,9 +58,15 @@
           "url": "http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html",
           "observed_on": "http://www.city.higashiyamato.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:46:57Z"
+        },
+        {
+          "url": "https://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html",
+          "observed_on": "https://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html",
+          "sha256": "b6404d816a8e8870c5b2df6939870de98e9a13c599f929cf32c0cb9a3dd5626b",
+          "fetched_at": "2026-08-27T10:26:10Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html (label: 予算) 入口 https://www.city.higashiyamato.lg.jp/shisei/zaisei/1004304/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004338/index.html",
           "observed_on": "http://www.city.higashiyamato.lg.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:46:57Z"
+        },
+        {
+          "url": "https://www.city.higashiyamato.lg.jp/shisei/zaisei/1004338/index.html",
+          "observed_on": "https://www.city.higashiyamato.lg.jp/shisei/zaisei/1004338/index.html",
+          "sha256": "2ceff6c0d3db1fcc42bd28622a3ddb21fe252389c55ff7f0a03015a68da9cee2",
+          "fetched_at": "2026-08-27T10:26:13Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004338/index.html (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.higashiyamato.lg.jp/shisei/zaisei/1004338/index.html (label: 決算) 入口 https://www.city.higashiyamato.lg.jp/shisei/zaisei/1004338/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

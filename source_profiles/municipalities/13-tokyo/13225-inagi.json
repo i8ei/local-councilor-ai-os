@@ -6,19 +6,25 @@
   "official_home_url": "http://www.city.inagi.tokyo.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "blocked",
       "adapter": "static",
       "index_url": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:19:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
           "observed_on": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/index.html",
           "fetched_at": "2026-08-27T07:49:15Z"
+        },
+        {
+          "url": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
+          "observed_on": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
+          "sha256": "4beb9678e4d354a8909f84e84c9582ae9efb508e2ecd96011aa413ef410c98b3",
+          "fetched_at": "2026-08-27T10:26:23Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html (label: 多摩地域福祉有償運送運営協議会 会議録)"
+      "notes": "Observed council minutes index at http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html (label: 多摩地域福祉有償運送運営協議会 会議録) document bodies reached through this entry are robots-restricted (robots.txt disallows document paths); ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion)"
     },
     "regulations": {
       "status": "ready",
@@ -52,9 +58,20 @@
           "url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
           "observed_on": "http://www.city.inagi.tokyo.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:48:54Z"
+        },
+        {
+          "url": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
+          "observed_on": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
+          "sha256": "5c641007963f99cd002116c1bfc9345cb37b0d459e97b71ae367c21d1f765f9b",
+          "fetched_at": "2026-08-27T10:26:26Z"
+        },
+        {
+          "url": "https://www.city.inagi.tokyo.jp/_res/projects/default_project/_page_/001/009/113/r8ipannkaikei.pdf",
+          "observed_on": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
+          "fetched_at": "2026-08-27T11:19:57Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html (label: 予算書)"
+      "notes": "Observed budget link at http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html (label: 予算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +84,20 @@
           "url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
           "observed_on": "http://www.city.inagi.tokyo.jp/shisei/index.html",
           "fetched_at": "2026-08-27T07:48:54Z"
+        },
+        {
+          "url": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
+          "observed_on": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
+          "sha256": "35e9a4c14466ee32225d236fb26ff2dfd15188b4f64b7071961248c3957d8f9f",
+          "fetched_at": "2026-08-27T10:26:29Z"
+        },
+        {
+          "url": "https://www.city.inagi.tokyo.jp/_res/projects/default_project/_page_/001/009/154/r6_kessan_ippannkaikei.pdf",
+          "observed_on": "https://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
+          "fetched_at": "2026-08-27T11:19:59Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html (label: 決算書)"
+      "notes": "Observed settlement link at http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html (label: 決算書) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

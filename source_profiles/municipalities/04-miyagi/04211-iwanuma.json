@@ -21,16 +21,22 @@
       "notes": "Observed dbsr at https://www.city.iwanuma.miyagi.dbsr.jp/ (label: 会議録検索)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.city.iwanuma.miyagi.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:24:08Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iwanuma.miyagi.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.city.iwanuma.miyagi.jp/home.html",
           "fetched_at": "2026-08-27T07:18:08Z"
+        },
+        {
+          "url": "http://www.city.iwanuma.miyagi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.iwanuma.miyagi.jp/reiki_int/",
+          "sha256": "dfb9ed7f126cec1ed70bfa56dfafe8776ab63c4fb0b0bf4a6c46a8b474e453a4",
+          "fetched_at": "2026-08-27T10:33:48Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.city.iwanuma.miyagi.jp/reiki_int/reiki_menu.html (label: 条例・規則（例規集）)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.iwanuma.miyagi.jp/shisei/chosha-zaisan/aidenwa.html",
           "observed_on": "http://www.city.iwanuma.miyagi.jp/home.html",
           "fetched_at": "2026-08-27T07:18:08Z"
+        },
+        {
+          "url": "https://www.city.iwanuma.miyagi.jp:443/shisei/chosha-zaisan/aidenwa.html",
+          "observed_on": "https://www.city.iwanuma.miyagi.jp:443/shisei/chosha-zaisan/aidenwa.html",
+          "sha256": "729c2aff994b3b50885c664390050f7b73769f0ed9bb7bedb0cd904c3d7ed10b",
+          "fetched_at": "2026-08-27T10:33:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.iwanuma.miyagi.jp/shisei/chosha-zaisan/aidenwa.html (label: 市役所代表番号の再開とAI電話対応サービス開始のお知らせ（財政課）)"
+      "notes": "Observed finance section at http://www.city.iwanuma.miyagi.jp/shisei/chosha-zaisan/aidenwa.html (label: 市役所代表番号の再開とAI電話対応サービス開始のお知らせ（財政課）) 入口 https://www.city.iwanuma.miyagi.jp:443/shisei/chosha-zaisan/aidenwa.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.iwanuma.miyagi.jp/shisei/chosha-zaisan/aidenwa.html",
           "observed_on": "http://www.city.iwanuma.miyagi.jp/home.html",
           "fetched_at": "2026-08-27T07:18:08Z"
+        },
+        {
+          "url": "https://www.city.iwanuma.miyagi.jp:443/shisei/chosha-zaisan/aidenwa.html",
+          "observed_on": "https://www.city.iwanuma.miyagi.jp:443/shisei/chosha-zaisan/aidenwa.html",
+          "sha256": "729c2aff994b3b50885c664390050f7b73769f0ed9bb7bedb0cd904c3d7ed10b",
+          "fetched_at": "2026-08-27T10:33:50Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.iwanuma.miyagi.jp/shisei/chosha-zaisan/aidenwa.html (label: 市役所代表番号の再開とAI電話対応サービス開始のお知らせ（財政課）)"
+      "notes": "Observed finance section at http://www.city.iwanuma.miyagi.jp/shisei/chosha-zaisan/aidenwa.html (label: 市役所代表番号の再開とAI電話対応サービス開始のお知らせ（財政課）) 入口 https://www.city.iwanuma.miyagi.jp:443/shisei/chosha-zaisan/aidenwa.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

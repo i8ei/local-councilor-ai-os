@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.fujinomiya.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.fujinomiya.lg.jp/4010100000/p003486.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:14:25Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.fujinomiya.lg.jp/4010100000/p003486.html",
           "observed_on": "http://www.city.fujinomiya.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T07:41:59Z"
+        },
+        {
+          "url": "http://www.city.fujinomiya.lg.jp/4010100000/p003486.html",
+          "observed_on": "http://www.city.fujinomiya.lg.jp/4010100000/p003486.html",
+          "sha256": "c3649c9c76f2693b533b691f8c9ce1d4bf3142ffe7cffcb4c47f12cdaf0effc1",
+          "fetched_at": "2026-08-27T10:14:24Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.fujinomiya.lg.jp/4010100000/p003486.html (label: 会議録検索システム)"
@@ -39,9 +45,15 @@
           "url": "http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html",
           "observed_on": "http://www.city.fujinomiya.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T07:41:59Z"
+        },
+        {
+          "url": "https://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html",
+          "sha256": "18ec7148025198ae27dd57d792da2602bb4b210dc635d7c745dbe34dbf2563f8",
+          "fetched_at": "2026-08-27T10:14:27Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html (label: 予算)"
+      "notes": "Observed budget link at http://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html (label: 予算) 入口 https://www.city.fujinomiya.lg.jp/shiseijoho/zaisei/yosan/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,20 @@
           "url": "http://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
           "observed_on": "http://www.city.fujinomiya.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T07:41:59Z"
+        },
+        {
+          "url": "https://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
+          "observed_on": "https://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
+          "sha256": "ca192a57c6dc2fd3085265f756130960a1a8e94c4332ec278f7ef9a5627c3f9b",
+          "fetched_at": "2026-08-27T10:14:31Z"
+        },
+        {
+          "url": "https://www.city.fujinomiya.lg.jp/documents/2786/r7kaikei.pdf",
+          "observed_on": "https://www.city.fujinomiya.lg.jp/6010000000/p003006.html",
+          "fetched_at": "2026-08-27T11:14:26Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.fujinomiya.lg.jp/6010000000/p003006.html (label: 決算審査、健全化判断比率等審査)"
+      "notes": "Observed settlement link at http://www.city.fujinomiya.lg.jp/6010000000/p003006.html (label: 決算審査、健全化判断比率等審査) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

@@ -6,16 +6,22 @@
   "official_home_url": "http://www.sazacho-nagasaki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.sazacho-nagasaki.jp/gikai/list00807.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:56:49Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.sazacho-nagasaki.jp/gikai/list00807.html",
           "observed_on": "http://www.sazacho-nagasaki.jp/gikai/default.html",
           "fetched_at": "2026-08-27T05:28:38Z"
+        },
+        {
+          "url": "http://www.sazacho-nagasaki.jp/gikai/list00807.html",
+          "observed_on": "http://www.sazacho-nagasaki.jp/gikai/list00807.html",
+          "sha256": "36503913b5829d2a69fd9f58b7385c1794ed95697891ad3d096a0036253f492e",
+          "fetched_at": "2026-08-27T09:37:49Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.sazacho-nagasaki.jp/gikai/list00807.html (label: 会議録等)"
@@ -46,9 +52,15 @@
           "url": "https://www.sazacho-nagasaki.jp/list00134.html",
           "observed_on": "http://www.sazacho-nagasaki.jp/",
           "fetched_at": "2026-08-27T05:28:33Z"
+        },
+        {
+          "url": "https://www.sazacho-nagasaki.jp/list00134.html",
+          "observed_on": "https://www.sazacho-nagasaki.jp/list00134.html",
+          "sha256": "ab889d903a8f7bb8bad8680436c4923e6a214d16f53aa858216da103c68d57f2",
+          "fetched_at": "2026-08-27T09:37:51Z"
         }
       ],
-      "notes": "Observed budget link at https://www.sazacho-nagasaki.jp/list00134.html (label: 予算)"
+      "notes": "Observed budget link at https://www.sazacho-nagasaki.jp/list00134.html (label: 予算) 入口 https://www.sazacho-nagasaki.jp/list00134.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "https://www.sazacho-nagasaki.jp/list00135.html",
           "observed_on": "http://www.sazacho-nagasaki.jp/",
           "fetched_at": "2026-08-27T05:28:33Z"
+        },
+        {
+          "url": "https://www.sazacho-nagasaki.jp/list00135.html",
+          "observed_on": "https://www.sazacho-nagasaki.jp/list00135.html",
+          "sha256": "957cf36ffcebe533f65a023cb4d79afad59ab26933c4d6d292f6169c66e35166",
+          "fetched_at": "2026-08-27T09:37:52Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.sazacho-nagasaki.jp/list00135.html (label: 決算)"
+      "notes": "Observed settlement link at https://www.sazacho-nagasaki.jp/list00135.html (label: 決算) 入口 https://www.sazacho-nagasaki.jp/list00135.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

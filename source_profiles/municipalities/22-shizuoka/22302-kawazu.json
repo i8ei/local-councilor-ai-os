@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.kawazu.shizuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.kawazu.shizuoka.jp/16069/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:15:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.kawazu.shizuoka.jp/16069/",
           "observed_on": "https://www.town.kawazu.shizuoka.jp/category/topics/page/2/",
           "fetched_at": "2026-08-27T07:51:44Z"
+        },
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/16069/",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/16069/",
+          "sha256": "af0f5eb26b103c6db9391bd1ee4975d1b8b69777fb744b50e1c3c9083ec012e9",
+          "fetched_at": "2026-08-27T10:14:58Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.kawazu.shizuoka.jp/16069/ (label: 町議会からのお知らせ（令和７年第４回定例会、令和８年第１回臨時会 会議録の掲載）)"
@@ -46,9 +52,20 @@
           "url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
           "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/",
           "fetched_at": "2026-08-27T07:50:45Z"
+        },
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "sha256": "e571bc0a0968adc53d4d66b2fca9ac8653885d6e6c59e52bc1d03aff330198a6",
+          "fetched_at": "2026-08-27T10:14:59Z"
+        },
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/wp/wp-content/uploads/2026/02/R8toushoyosanhensei.pdf",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "fetched_at": "2026-08-27T11:15:58Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/ (label: 財政・給与)"
+      "notes": "Observed finance section at https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/ (label: 財政・給与) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
           "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/",
           "fetched_at": "2026-08-27T07:50:45Z"
+        },
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "sha256": "e571bc0a0968adc53d4d66b2fca9ac8653885d6e6c59e52bc1d03aff330198a6",
+          "fetched_at": "2026-08-27T10:14:59Z"
+        },
+        {
+          "url": "https://www.town.kawazu.shizuoka.jp/wp/wp-content/uploads/2025/12/R6zaiseijijouhoukokysho.pdf",
+          "observed_on": "https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/",
+          "fetched_at": "2026-08-27T11:15:58Z"
         }
       ],
-      "notes": "Observed finance section at https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/ (label: 財政・給与)"
+      "notes": "Observed finance section at https://www.town.kawazu.shizuoka.jp/gyousei/zaisei-kyuyo/ (label: 財政・給与) settlement document に到達したが構造マーカー（歳入・歳出・款 等）を確認できなかった"
     }
   }
 }

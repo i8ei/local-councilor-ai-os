@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.isahaya.nagasaki.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.isahaya.nagasaki.jp/site/gikai/2351.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:56:39Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.isahaya.nagasaki.jp/site/gikai/2351.html",
           "observed_on": "http://www.city.isahaya.nagasaki.jp/site/gikai/",
           "fetched_at": "2026-08-27T05:51:45Z"
+        },
+        {
+          "url": "http://www.city.isahaya.nagasaki.jp/site/gikai/2351.html",
+          "observed_on": "http://www.city.isahaya.nagasaki.jp/site/gikai/2351.html",
+          "sha256": "ee079183f9e1c975c855b99d80d1fa374e3ec6b60c3361f351875d0df20d71d7",
+          "fetched_at": "2026-08-27T09:37:20Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.isahaya.nagasaki.jp/site/gikai/2351.html (label: 会議録の検索と閲覧)"
@@ -39,9 +45,15 @@
           "url": "http://www.city.isahaya.nagasaki.jp/life/6/28/",
           "observed_on": "http://www.city.isahaya.nagasaki.jp/index2.html",
           "fetched_at": "2026-08-27T05:51:18Z"
+        },
+        {
+          "url": "https://www.city.isahaya.nagasaki.jp/life/6/28/",
+          "observed_on": "https://www.city.isahaya.nagasaki.jp/life/6/28/",
+          "sha256": "2d9f346aae54168632021c782bcbc5d29bfbaf492b8476c2e5bc59bd211d1f9d",
+          "fetched_at": "2026-08-27T09:37:23Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.isahaya.nagasaki.jp/life/6/28/ (label: 市の財政)"
+      "notes": "Observed finance section at http://www.city.isahaya.nagasaki.jp/life/6/28/ (label: 市の財政) 入口 https://www.city.isahaya.nagasaki.jp/life/6/28/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "http://www.city.isahaya.nagasaki.jp/life/6/28/",
           "observed_on": "http://www.city.isahaya.nagasaki.jp/index2.html",
           "fetched_at": "2026-08-27T05:51:18Z"
+        },
+        {
+          "url": "https://www.city.isahaya.nagasaki.jp/life/6/28/",
+          "observed_on": "https://www.city.isahaya.nagasaki.jp/life/6/28/",
+          "sha256": "2d9f346aae54168632021c782bcbc5d29bfbaf492b8476c2e5bc59bd211d1f9d",
+          "fetched_at": "2026-08-27T09:37:23Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.isahaya.nagasaki.jp/life/6/28/ (label: 市の財政)"
+      "notes": "Observed finance section at http://www.city.isahaya.nagasaki.jp/life/6/28/ (label: 市の財政) 入口 https://www.city.isahaya.nagasaki.jp/life/6/28/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

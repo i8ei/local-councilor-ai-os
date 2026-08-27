@@ -45,9 +45,20 @@
           "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
           "observed_on": "http://www.town.sotogahama.lg.jp/gyosei/",
           "fetched_at": "2026-08-27T06:59:13Z"
+        },
+        {
+          "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
+          "observed_on": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
+          "sha256": "a594f810b9a844155c1fbf3cd7a7e76476379fecbc8f26ca0f791d73d54112d9",
+          "fetched_at": "2026-08-27T10:32:07Z"
+        },
+        {
+          "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/files/R07_tousyo.pdf",
+          "observed_on": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
+          "fetched_at": "2026-08-27T11:23:36Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html (label: 予算・決算)"
+      "notes": "Observed budget link at http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html (label: 予算・決算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -60,9 +71,15 @@
           "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
           "observed_on": "http://www.town.sotogahama.lg.jp/gyosei/",
           "fetched_at": "2026-08-27T06:59:13Z"
+        },
+        {
+          "url": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
+          "observed_on": "http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html",
+          "sha256": "a594f810b9a844155c1fbf3cd7a7e76476379fecbc8f26ca0f791d73d54112d9",
+          "fetched_at": "2026-08-27T10:32:07Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html (label: 予算・決算)"
+      "notes": "Observed settlement link at http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html (label: 予算・決算) 入口 http://www.town.sotogahama.lg.jp/gyosei/gyouzaisei/yosan_kessan.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

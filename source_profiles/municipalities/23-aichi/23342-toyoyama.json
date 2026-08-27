@@ -18,7 +18,7 @@
           "fetched_at": "2026-08-27T08:11:03Z"
         }
       ],
-      "notes": "Observed council minutes index at http://www.town.toyoyama.lg.jp/chosei/singikai/1007232/1001270.html (label: 令和8年度豊山町安全なまちづくり協議会議事録を掲載しました)"
+      "notes": "Observed council minutes index at http://www.town.toyoyama.lg.jp/chosei/singikai/1007232/1001270.html (label: 令和8年度豊山町安全なまちづくり協議会議事録を掲載しました) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence"
     },
     "regulations": {
       "status": "needs_review",
@@ -46,9 +46,15 @@
           "url": "http://www.town.toyoyama.lg.jp/chosei/zaisei/index.html",
           "observed_on": "http://www.town.toyoyama.lg.jp/chosei/index.html",
           "fetched_at": "2026-08-27T08:11:43Z"
+        },
+        {
+          "url": "https://www.town.toyoyama.lg.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.toyoyama.lg.jp/chosei/zaisei/index.html",
+          "sha256": "da0a1c44523ec6e2ac7575ff0703fb5b0b7ab0d2acc2bd92c0448fc9821be4fe",
+          "fetched_at": "2026-08-27T10:16:46Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.toyoyama.lg.jp/chosei/zaisei/index.html (label: 行財政の状況)"
+      "notes": "Observed finance section at http://www.town.toyoyama.lg.jp/chosei/zaisei/index.html (label: 行財政の状況) 入口 https://www.town.toyoyama.lg.jp/chosei/zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +67,20 @@
           "url": "http://www.town.toyoyama.lg.jp/chosei/1002693/1002710.html",
           "observed_on": "http://www.town.toyoyama.lg.jp/chosei/index.html",
           "fetched_at": "2026-08-27T08:11:43Z"
+        },
+        {
+          "url": "https://www.town.toyoyama.lg.jp/chosei/1002693/1002710.html",
+          "observed_on": "https://www.town.toyoyama.lg.jp/chosei/1002693/1002710.html",
+          "sha256": "abf1383c050bbbcdf3af48735df41f9c1bb78e4d252276fe7c8b77e0df61740c",
+          "fetched_at": "2026-08-27T10:16:49Z"
+        },
+        {
+          "url": "https://www.town.toyoyama.lg.jp/_res/projects/default_project/_page_/001/002/710/7.kessansashikae.pdf",
+          "observed_on": "https://www.town.toyoyama.lg.jp/chosei/1002693/1002710.html",
+          "fetched_at": "2026-08-27T11:14:55Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.town.toyoyama.lg.jp/chosei/1002693/1002710.html (label: 決算審査)"
+      "notes": "Observed settlement link at http://www.town.toyoyama.lg.jp/chosei/1002693/1002710.html (label: 決算審査) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

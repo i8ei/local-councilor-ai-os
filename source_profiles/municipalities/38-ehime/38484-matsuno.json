@@ -6,16 +6,22 @@
   "official_home_url": "http://www.town.matsuno.ehime.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.matsuno.ehime.jp/site/gikai/list156.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:01:14Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.matsuno.ehime.jp/site/gikai/list156.html",
           "observed_on": "http://www.town.matsuno.ehime.jp/site/gikai/",
           "fetched_at": "2026-08-27T07:06:13Z"
+        },
+        {
+          "url": "http://www.town.matsuno.ehime.jp/site/gikai/list156.html",
+          "observed_on": "http://www.town.matsuno.ehime.jp/site/gikai/list156.html",
+          "sha256": "2cf382b055c21e7cd9d773aba221706eaefb70734ed87930c47e7a4344d11739",
+          "fetched_at": "2026-08-27T09:47:14Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.matsuno.ehime.jp/site/gikai/list156.html (label: 会議録の一覧を見る)"
@@ -52,9 +58,15 @@
           "url": "http://www.town.matsuno.ehime.jp/site/zaisei/",
           "observed_on": "http://www.town.matsuno.ehime.jp/index2.html",
           "fetched_at": "2026-08-27T07:05:24Z"
+        },
+        {
+          "url": "https://www.town.matsuno.ehime.jp/site/zaisei/",
+          "observed_on": "https://www.town.matsuno.ehime.jp/site/zaisei/",
+          "sha256": "d27efdbc4577487f7097d421b266936981536ac4eee6b47e626ee3a77030082c",
+          "fetched_at": "2026-08-27T09:47:17Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.matsuno.ehime.jp/site/zaisei/ (label: 財政情報)"
+      "notes": "Observed finance section at http://www.town.matsuno.ehime.jp/site/zaisei/ (label: 財政情報) 入口 https://www.town.matsuno.ehime.jp/site/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +79,15 @@
           "url": "http://www.town.matsuno.ehime.jp/site/zaisei/",
           "observed_on": "http://www.town.matsuno.ehime.jp/index2.html",
           "fetched_at": "2026-08-27T07:05:24Z"
+        },
+        {
+          "url": "https://www.town.matsuno.ehime.jp/site/zaisei/",
+          "observed_on": "https://www.town.matsuno.ehime.jp/site/zaisei/",
+          "sha256": "d27efdbc4577487f7097d421b266936981536ac4eee6b47e626ee3a77030082c",
+          "fetched_at": "2026-08-27T09:47:17Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.matsuno.ehime.jp/site/zaisei/ (label: 財政情報)"
+      "notes": "Observed finance section at http://www.town.matsuno.ehime.jp/site/zaisei/ (label: 財政情報) 入口 https://www.town.matsuno.ehime.jp/site/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

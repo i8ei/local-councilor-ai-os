@@ -6,16 +6,22 @@
   "official_home_url": "https://www.city.komatsushima.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.komatsushima.lg.jp/gikai/kaigiroku/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:00:50Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.komatsushima.lg.jp/gikai/kaigiroku/",
           "observed_on": "https://www.city.komatsushima.lg.jp/gikai/",
           "fetched_at": "2026-08-27T06:39:50Z"
+        },
+        {
+          "url": "https://www.city.komatsushima.lg.jp/gikai/kaigiroku/",
+          "observed_on": "https://www.city.komatsushima.lg.jp/gikai/kaigiroku/",
+          "sha256": "8e3e2dc4e38f7aaf0e4f3125c1c498b8a30f1e8815ae9579b94dadea173b941e",
+          "fetched_at": "2026-08-27T09:45:46Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.komatsushima.lg.jp/gikai/kaigiroku/ (label: 会議録の閲覧・検索)"
@@ -46,9 +52,20 @@
           "url": "https://www.city.komatsushima.lg.jp/docs/5632553.html",
           "observed_on": "https://www.city.komatsushima.lg.jp/oshirase/shisei/",
           "fetched_at": "2026-08-27T06:39:32Z"
+        },
+        {
+          "url": "https://www.city.komatsushima.lg.jp/docs/5632553.html",
+          "observed_on": "https://www.city.komatsushima.lg.jp/docs/5632553.html",
+          "sha256": "006732b6276d91644de5ab0c17a2987fe87b0642ac05b2fe046f5ff23a78d43c",
+          "fetched_at": "2026-08-27T09:45:47Z"
+        },
+        {
+          "url": "https://www.city.komatsushima.lg.jp/fs/6/1/9/9/8/6/_/%E4%BB%A4%E5%92%8C8%E5%B9%B4%E5%BA%A6%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E8%AA%AC%E6%98%8E%E6%9B%B8%E3%80%90%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E5%8F%8A%E3%81%B3%E7%89%B9%E5%88%A5%E4%BC%9A%E8%A8%88%E3%80%91.pdf",
+          "observed_on": "https://www.city.komatsushima.lg.jp/docs/5632553.html",
+          "fetched_at": "2026-08-27T11:00:52Z"
         }
       ],
-      "notes": "Observed budget link at https://www.city.komatsushima.lg.jp/docs/5632553.html (label: 令和８年度小松島市当初予算（一般会計及び特別会計）について)"
+      "notes": "Observed budget link at https://www.city.komatsushima.lg.jp/docs/5632553.html (label: 令和８年度小松島市当初予算（一般会計及び特別会計）について) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +78,20 @@
           "url": "https://www.city.komatsushima.lg.jp/docs/2244.html",
           "observed_on": "https://www.city.komatsushima.lg.jp/oshirase/shisei/",
           "fetched_at": "2026-08-27T06:39:32Z"
+        },
+        {
+          "url": "https://www.city.komatsushima.lg.jp/docs/2244.html",
+          "observed_on": "https://www.city.komatsushima.lg.jp/docs/2244.html",
+          "sha256": "498a8613d65ad2d8ec976e772f687bc58589e64ed1c8fc7adf96c0ee5630f3cc",
+          "fetched_at": "2026-08-27T09:45:49Z"
+        },
+        {
+          "url": "https://www.city.komatsushima.lg.jp/fs/5/7/8/7/1/3/_/%E2%97%8BR5%E6%B1%BA%E7%AE%97CARD.pdf",
+          "observed_on": "https://www.city.komatsushima.lg.jp/docs/2244.html",
+          "fetched_at": "2026-08-27T11:00:54Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.city.komatsushima.lg.jp/docs/2244.html (label: 決算カード（普通会計）)"
+      "notes": "Observed settlement link at https://www.city.komatsushima.lg.jp/docs/2244.html (label: 決算カード（普通会計）) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     }
   }
 }

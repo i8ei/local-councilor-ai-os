@@ -6,31 +6,43 @@
   "official_home_url": "http://www.town.kawanishi.yamagata.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.town.kawanishi.yamagata.jp/gikai/kaigiroku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:27Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kawanishi.yamagata.jp/gikai/kaigiroku/index.html",
           "observed_on": "http://www.town.kawanishi.yamagata.jp/gikai/teireikai/index.html",
           "fetched_at": "2026-08-27T07:49:05Z"
+        },
+        {
+          "url": "http://www.town.kawanishi.yamagata.jp/gikai/kaigiroku/index.html",
+          "observed_on": "http://www.town.kawanishi.yamagata.jp/gikai/kaigiroku/index.html",
+          "sha256": "d23135d5b4da42dad8ad64cdc5cd115f9e78e9cb00737dffef444d54666e3434",
+          "fetched_at": "2026-08-27T10:36:26Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.town.kawanishi.yamagata.jp/gikai/kaigiroku/index.html (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.kawanishi.yamagata.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:25:24Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.kawanishi.yamagata.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.kawanishi.yamagata.jp/kurashi-top.html",
           "fetched_at": "2026-08-27T07:48:13Z"
+        },
+        {
+          "url": "http://www.town.kawanishi.yamagata.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.kawanishi.yamagata.jp/reiki_int/",
+          "sha256": "31bb3feaccedf9a79344cc2da97f88f7ba491795e8a29b359260b96a9d0fafc8",
+          "fetched_at": "2026-08-27T10:36:22Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.kawanishi.yamagata.jp/reiki_int/reiki_menu.html (label: 例規集)"
@@ -46,9 +58,15 @@
           "url": "http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei",
           "observed_on": "http://www.town.kawanishi.yamagata.jp/kurashi-top.html",
           "fetched_at": "2026-08-27T07:48:13Z"
+        },
+        {
+          "url": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/",
+          "observed_on": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/",
+          "sha256": "34306594be85bbdd39014fd05327306972769a74610683bdb034b447a3b72e38",
+          "fetched_at": "2026-08-27T10:36:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei (label: 財政情報)"
+      "notes": "Observed finance section at http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei (label: 財政情報) 入口 https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/ に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +79,15 @@
           "url": "http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei",
           "observed_on": "http://www.town.kawanishi.yamagata.jp/kurashi-top.html",
           "fetched_at": "2026-08-27T07:48:13Z"
+        },
+        {
+          "url": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/",
+          "observed_on": "https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/",
+          "sha256": "34306594be85bbdd39014fd05327306972769a74610683bdb034b447a3b72e38",
+          "fetched_at": "2026-08-27T10:36:29Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei (label: 財政情報)"
+      "notes": "Observed finance section at http://www.town.kawanishi.yamagata.jp/machinojoho/zaisei (label: 財政情報) 入口 https://www.town.kawanishi.yamagata.jp:443/machinojoho/zaisei/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

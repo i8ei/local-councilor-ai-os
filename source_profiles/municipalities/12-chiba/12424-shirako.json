@@ -39,9 +39,20 @@
           "url": "http://www.town.shirako.lg.jp/0000000788.html",
           "observed_on": "http://www.town.shirako.lg.jp/",
           "fetched_at": "2026-08-27T07:27:29Z"
+        },
+        {
+          "url": "https://www.town.shirako.lg.jp/0000000788.html",
+          "observed_on": "https://www.town.shirako.lg.jp/0000000788.html",
+          "sha256": "c5c1c5f9c79f49d74372713af18a14895b1dfd208e1def48a97969e61ca44946",
+          "fetched_at": "2026-08-27T10:25:00Z"
+        },
+        {
+          "url": "https://www.town.shirako.lg.jp/cmsfiles/contents/0000000/788/r8gaiyou.pdf",
+          "observed_on": "https://www.town.shirako.lg.jp/0000000788.html",
+          "fetched_at": "2026-08-27T11:19:34Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.shirako.lg.jp/0000000788.html (label: 当初予算)"
+      "notes": "Observed budget link at http://www.town.shirako.lg.jp/0000000788.html (label: 当初予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +65,15 @@
           "url": "http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html",
           "observed_on": "http://www.town.shirako.lg.jp/",
           "fetched_at": "2026-08-27T07:27:29Z"
+        },
+        {
+          "url": "https://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html",
+          "sha256": "4ac73f8e4ce13f4d598d0c2fec3cfc5f055b9f2ee5eb9cf26d326b08241512d1",
+          "fetched_at": "2026-08-27T10:25:03Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html (label: 財政)"
+      "notes": "Observed finance section at http://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html (label: 財政) 入口 https://www.town.shirako.lg.jp/category/4-8-0-0-0-0-0-0-0-0.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

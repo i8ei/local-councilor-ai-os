@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.sumida.lg.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "http://www.city.sumida.lg.jp/kugikai/R7_top_kaigiroku.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:19:39Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sumida.lg.jp/kugikai/R7_top_kaigiroku.html",
           "observed_on": "http://www.city.sumida.lg.jp/kugikai/index.html",
           "fetched_at": "2026-08-27T07:32:47Z"
+        },
+        {
+          "url": "http://www.city.sumida.lg.jp/kugikai/R7_top_kaigiroku.html",
+          "observed_on": "http://www.city.sumida.lg.jp/kugikai/R7_top_kaigiroku.html",
+          "sha256": "b3489e71973b655a15c73b749c9074f3a5544026af1e08e7b0f93ce67c94e3c3",
+          "fetched_at": "2026-08-27T10:25:29Z"
         }
       ],
       "notes": "Observed council minutes index at http://www.city.sumida.lg.jp/kugikai/R7_top_kaigiroku.html (label: )"
@@ -46,9 +52,15 @@
           "url": "http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
           "observed_on": "http://www.city.sumida.lg.jp/",
           "fetched_at": "2026-08-27T07:32:11Z"
+        },
+        {
+          "url": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
+          "observed_on": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
+          "sha256": "5f61bce2e2301468a7527f02be28da16daa0b2b109c3ec8d58a2a2c9d5f0e231",
+          "fetched_at": "2026-08-27T10:25:32Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html (label: 行政改革・財政・予算・会計)"
+      "notes": "Observed budget link at http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html (label: 行政改革・財政・予算・会計) 入口 https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
           "observed_on": "http://www.city.sumida.lg.jp/",
           "fetched_at": "2026-08-27T07:32:11Z"
+        },
+        {
+          "url": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
+          "observed_on": "https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html",
+          "sha256": "5f61bce2e2301468a7527f02be28da16daa0b2b109c3ec8d58a2a2c9d5f0e231",
+          "fetched_at": "2026-08-27T10:25:32Z"
         }
       ],
-      "notes": "Observed finance section at http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html (label: 行政改革・財政・予算・会計)"
+      "notes": "Observed finance section at http://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html (label: 行政改革・財政・予算・会計) 入口 https://www.city.sumida.lg.jp/kuseijoho/gyoseikaikaku_zaisei/index.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

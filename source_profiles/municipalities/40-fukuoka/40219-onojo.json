@@ -6,16 +6,22 @@
   "official_home_url": "http://www.city.onojo.fukuoka.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.city.onojo.fukuoka.jp/gikai/list00804.html",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T10:56:41Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.onojo.fukuoka.jp/gikai/list00804.html",
           "observed_on": "https://www.city.onojo.fukuoka.jp/gikai/default.html",
           "fetched_at": "2026-08-27T04:13:32Z"
+        },
+        {
+          "url": "https://www.city.onojo.fukuoka.jp/gikai/list00804.html",
+          "observed_on": "https://www.city.onojo.fukuoka.jp/gikai/list00804.html",
+          "sha256": "e637e054cefdab5c2305a816de9cb625a4bc37596382bcc2cb5a2c01a91ee0b2",
+          "fetched_at": "2026-08-27T09:36:02Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.city.onojo.fukuoka.jp/gikai/list00804.html (label: 中継・録画、会議録)"
@@ -46,9 +52,15 @@
           "url": "http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=259",
           "observed_on": "http://www.city.onojo.fukuoka.jp/dynamic/personalize/pub/default.aspx?c_id=49",
           "fetched_at": "2026-08-27T05:56:59Z"
+        },
+        {
+          "url": "https://www.city.onojo.fukuoka.jp/list00259.html",
+          "observed_on": "https://www.city.onojo.fukuoka.jp/list00259.html",
+          "sha256": "7212dde29d7fac430a12e6e18f3d970f14a3fa2cd77a82d4f482a5f31e650401",
+          "fetched_at": "2026-08-27T09:36:09Z"
         }
       ],
-      "notes": "Observed budget link at http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=259 (label: 予算)"
+      "notes": "Observed budget link at http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=259 (label: 予算) 入口 https://www.city.onojo.fukuoka.jp/list00259.html に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -61,9 +73,15 @@
           "url": "http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=260",
           "observed_on": "http://www.city.onojo.fukuoka.jp/dynamic/personalize/pub/default.aspx?c_id=49",
           "fetched_at": "2026-08-27T05:56:59Z"
+        },
+        {
+          "url": "https://www.city.onojo.fukuoka.jp/list00260.html",
+          "observed_on": "https://www.city.onojo.fukuoka.jp/list00260.html",
+          "sha256": "5875b01ca13b330df2f25541a060aff134a873e41240332d2e96f597ea9e5dc0",
+          "fetched_at": "2026-08-27T09:36:13Z"
         }
       ],
-      "notes": "Observed settlement link at http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=260 (label: 決算)"
+      "notes": "Observed settlement link at http://www.city.onojo.fukuoka.jp/dynamic/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=260 (label: 決算) 入口 https://www.city.onojo.fukuoka.jp/list00260.html に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

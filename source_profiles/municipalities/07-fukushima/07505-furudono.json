@@ -14,16 +14,22 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "g_reiki",
       "base_url": "http://www.town.furudono.fukushima.jp/reiki_int/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:26:56Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.furudono.fukushima.jp/reiki_int/reiki_menu.html",
           "observed_on": "http://www.town.furudono.fukushima.jp/",
           "fetched_at": "2026-08-27T08:06:47Z"
+        },
+        {
+          "url": "http://www.town.furudono.fukushima.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.furudono.fukushima.jp/reiki_int/",
+          "sha256": "44d16676bba2713dde9f896c90dd89a29287f5481e7d65c68f99f0dc270dfcb0",
+          "fetched_at": "2026-08-27T10:38:05Z"
         }
       ],
       "notes": "Observed g_reiki at http://www.town.furudono.fukushima.jp/reiki_int/reiki_menu.html (label: 例規集)"
@@ -39,9 +45,15 @@
           "url": "http://www.town.furudono.fukushima.jp/chouseijyouhou/yosanjyoukyou",
           "observed_on": "http://www.town.furudono.fukushima.jp/",
           "fetched_at": "2026-08-27T08:06:47Z"
+        },
+        {
+          "url": "https://www.town.furudono.fukushima.jp:443/chouseijyouhou/yosanjyoukyou",
+          "observed_on": "https://www.town.furudono.fukushima.jp:443/chouseijyouhou/yosanjyoukyou",
+          "sha256": "a3832d4b4597460daa7c47b14f7c2fec5fc08b050e3c277c20de3697b37b7fa0",
+          "fetched_at": "2026-08-27T10:38:07Z"
         }
       ],
-      "notes": "Observed budget link at http://www.town.furudono.fukushima.jp/chouseijyouhou/yosanjyoukyou (label: 予算編成状況について)"
+      "notes": "Observed budget link at http://www.town.furudono.fukushima.jp/chouseijyouhou/yosanjyoukyou (label: 予算編成状況について) 入口 https://www.town.furudono.fukushima.jp:443/chouseijyouhou/yosanjyoukyou に budget の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     },
     "settlement": {
       "status": "needs_review",
@@ -54,9 +66,15 @@
           "url": "http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki",
           "observed_on": "http://www.town.furudono.fukushima.jp/",
           "fetched_at": "2026-08-27T08:06:47Z"
+        },
+        {
+          "url": "https://www.town.furudono.fukushima.jp:443/chouseijyouhou/zaiseihikakubunseki",
+          "observed_on": "https://www.town.furudono.fukushima.jp:443/chouseijyouhou/zaiseihikakubunseki",
+          "sha256": "26bc7ecf6aa3a4503533c9352e35089b8d1d6d17ea3d65f695a84650299b237b",
+          "fetched_at": "2026-08-27T10:38:08Z"
         }
       ],
-      "notes": "Observed finance section at http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki (label: 財政比較分析表について)"
+      "notes": "Observed finance section at http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki (label: 財政比較分析表について) 入口 https://www.town.furudono.fukushima.jp:443/chouseijyouhou/zaiseihikakubunseki に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }

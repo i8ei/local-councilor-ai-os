@@ -6,16 +6,22 @@
   "official_home_url": "https://www.town.sumita.iwate.jp/",
   "sources": {
     "minutes": {
-      "status": "needs_review",
+      "status": "ready",
       "adapter": "static",
       "index_url": "https://www.town.sumita.iwate.jp/docs/2023021500012/",
-      "verified_at": null,
-      "verified_by": null,
+      "verified_at": "2026-08-27T11:23:55Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.sumita.iwate.jp/docs/2023021500012/",
           "observed_on": "https://www.town.sumita.iwate.jp/bunya/chousei/",
           "fetched_at": "2026-08-27T07:13:15Z"
+        },
+        {
+          "url": "https://www.town.sumita.iwate.jp/docs/2023021500012/",
+          "observed_on": "https://www.town.sumita.iwate.jp/docs/2023021500012/",
+          "sha256": "29569d9d03ea676a771afafe3a0f781389cd34d00d83045c6ab9c9e1b1632b70",
+          "fetched_at": "2026-08-27T10:33:38Z"
         }
       ],
       "notes": "Observed council minutes index at https://www.town.sumita.iwate.jp/docs/2023021500012/ (label: 会議録)"
@@ -52,9 +58,20 @@
           "url": "https://www.town.sumita.iwate.jp/docs/2026022500012/",
           "observed_on": "https://www.town.sumita.iwate.jp/bunya/chousei/",
           "fetched_at": "2026-08-27T07:13:15Z"
+        },
+        {
+          "url": "https://www.town.sumita.iwate.jp/docs/2026022500012/",
+          "observed_on": "https://www.town.sumita.iwate.jp/docs/2026022500012/",
+          "sha256": "804a7c6ddb69bdad1ea10733e21953f2b2e5674b24507ddc5720c59687c4c6f0",
+          "fetched_at": "2026-08-27T10:33:39Z"
+        },
+        {
+          "url": "https://www.town.sumita.iwate.jp/docs/2026022500012/files/R08yosan.pdf",
+          "observed_on": "https://www.town.sumita.iwate.jp/docs/2026022500012/",
+          "fetched_at": "2026-08-27T11:23:58Z"
         }
       ],
-      "notes": "Observed budget link at https://www.town.sumita.iwate.jp/docs/2026022500012/ (label: 令和８年度当初予算)"
+      "notes": "Observed budget link at https://www.town.sumita.iwate.jp/docs/2026022500012/ (label: 令和８年度当初予算) 検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。取込後に human が ready を付与する。"
     },
     "settlement": {
       "status": "needs_review",
@@ -67,9 +84,15 @@
           "url": "https://www.town.sumita.iwate.jp/docs/2025100200035/",
           "observed_on": "https://www.town.sumita.iwate.jp/bunya/chousei/",
           "fetched_at": "2026-08-27T07:13:15Z"
+        },
+        {
+          "url": "https://www.town.sumita.iwate.jp/docs/2025100200035/",
+          "observed_on": "https://www.town.sumita.iwate.jp/docs/2025100200035/",
+          "sha256": "fa55048bc9c2011fac0d816ac175285ce0cfaa2fbfefac2f40f66a8e9ab011e3",
+          "fetched_at": "2026-08-27T10:33:41Z"
         }
       ],
-      "notes": "Observed settlement link at https://www.town.sumita.iwate.jp/docs/2025100200035/ (label: 令和２年度決算)"
+      "notes": "Observed settlement link at https://www.town.sumita.iwate.jp/docs/2025100200035/ (label: 令和２年度決算) 入口 https://www.town.sumita.iwate.jp/docs/2025100200035/ に settlement の文書リンク（PDF/XLSX・予算/決算ラベル）が見つからない; 本文に到達できたとは言えない"
     }
   }
 }
