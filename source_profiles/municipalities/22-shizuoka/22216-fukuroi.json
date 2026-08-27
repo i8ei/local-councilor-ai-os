@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22216",
+  "prefecture": "静岡県",
+  "municipality": "袋井市",
+  "official_home_url": "http://www.city.fukuroi.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.fukuroi.shizuoka.jp/section/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fukuroi.shizuoka.jp/section/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.fukuroi.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:45:10Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.fukuroi.shizuoka.jp/section/d1w_reiki/reiki.html (label: 袋井市森町広域行政組合例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:45:25Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.fukuroi.shizuoka.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:45:25Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.fukuroi.shizuoka.jp/shiseijoho/zaisei/index.html (label: 財政)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01233",
+  "prefecture": "北海道",
+  "municipality": "伊達市",
+  "official_home_url": "https://www.city.date.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.date.hokkaido.jp/hotnews/category/128.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.date.hokkaido.jp/hotnews/category/128.html",
+          "observed_on": "https://www.city.date.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:03:38Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.date.hokkaido.jp/hotnews/category/128.html (label: 条例・規則・要綱)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.date.hokkaido.jp/hotnews/category/126.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.date.hokkaido.jp/hotnews/category/126.html",
+          "observed_on": "https://www.city.date.hokkaido.jp/hotnews/category/5.html",
+          "fetched_at": "2026-08-27T06:04:07Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.date.hokkaido.jp/hotnews/category/126.html (label: 財政 伊達市の予算・決算、財政状況に関する情報をご案内しています)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.date.hokkaido.jp/hotnews/category/126.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.date.hokkaido.jp/hotnews/category/126.html",
+          "observed_on": "https://www.city.date.hokkaido.jp/hotnews/category/5.html",
+          "fetched_at": "2026-08-27T06:04:07Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.date.hokkaido.jp/hotnews/category/126.html (label: 財政 伊達市の予算・決算、財政状況に関する情報をご案内しています)"
+    }
+  }
+}

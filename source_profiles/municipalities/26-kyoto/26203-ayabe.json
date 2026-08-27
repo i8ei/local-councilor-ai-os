@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26203",
+  "prefecture": "京都府",
+  "municipality": "綾部市",
+  "official_home_url": "http://www.city.ayabe.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/ayabe/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/ayabe/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.ayabe.lg.jp/",
+          "fetched_at": "2026-08-27T06:14:48Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/ayabe/d1w_reiki/reiki.html (label: 条例・規則の検索)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.ayabe.lg.jp/",
+          "fetched_at": "2026-08-27T06:14:48Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.ayabe.lg.jp/category/7-8-0-0-0-0-0-0-0-0.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.ayabe.lg.jp/category/7-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:15:31Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.ayabe.lg.jp/category/7-8-3-0-0-0-0-0-0-0.html (label: 決算)"
+    }
+  }
+}

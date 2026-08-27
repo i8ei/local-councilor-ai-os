@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26213",
+  "prefecture": "京都府",
+  "municipality": "南丹市",
+  "official_home_url": "http://www.city.nantan.kyoto.jp/www/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://smart.discussvision.net/smart/tenant/nantan/WebView/rd/council.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://smart.discussvision.net/smart/tenant/nantan/WebView/rd/council.html",
+          "observed_on": "http://www.city.nantan.kyoto.jp/www/gove/144/001/000/index_9392.html",
+          "fetched_at": "2026-08-27T06:20:47Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/nantan/WebView/rd/council.html (label: 映像配信)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
+          "observed_on": "http://www.city.nantan.kyoto.jp/www/gove/144/index.html",
+          "fetched_at": "2026-08-27T06:19:48Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.nantan.kyoto.jp/www/gove/138/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.nantan.kyoto.jp/www/gove/138/index.html",
+          "observed_on": "http://www.city.nantan.kyoto.jp/www/gove/144/index.html",
+          "fetched_at": "2026-08-27T06:19:48Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.nantan.kyoto.jp/www/gove/138/index.html (label: 財政)"
+    }
+  }
+}

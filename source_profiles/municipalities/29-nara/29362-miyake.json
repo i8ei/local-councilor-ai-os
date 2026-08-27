@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "29362",
+  "prefecture": "奈良県",
+  "municipality": "三宅町",
+  "official_home_url": "https://www.town.miyake.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.miyake.lg.jp/site/gikai/8736.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.miyake.lg.jp/site/gikai/8736.html",
+          "observed_on": "https://www.town.miyake.lg.jp/site/gikai/",
+          "fetched_at": "2026-08-27T07:05:24Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.miyake.lg.jp/site/gikai/8736.html (label: 会議録（平成31年以降）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.miyake/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.miyake/reiki_menu.html",
+          "observed_on": "https://www.town.miyake.lg.jp/",
+          "fetched_at": "2026-08-27T07:04:48Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.miyake/reiki_menu.html (label: 三宅町例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

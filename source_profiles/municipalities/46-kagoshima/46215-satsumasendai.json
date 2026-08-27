@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "46215",
+  "prefecture": "鹿児島県",
+  "municipality": "薩摩川内市",
+  "official_home_url": "http://www.city.satsumasendai.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.satsumasendai.lg.jp/shigikai/2/9238.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.satsumasendai.lg.jp/shigikai/2/9238.html",
+          "observed_on": "https://www.city.satsumasendai.lg.jp/shigikai/2/index.html",
+          "fetched_at": "2026-08-27T06:39:33Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.satsumasendai.lg.jp/shigikai/2/9238.html (label: 本会議の会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.satsumasendai/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.satsumasendai/reiki_menu.html",
+          "observed_on": "http://www.city.satsumasendai.lg.jp/",
+          "fetched_at": "2026-08-27T06:38:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.satsumasendai/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.satsumasendai.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:38:20Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.satsumasendai.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T06:38:20Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.satsumasendai.lg.jp/gyoseijoho/gyozaisei/index.html (label: 財政)"
+    }
+  }
+}

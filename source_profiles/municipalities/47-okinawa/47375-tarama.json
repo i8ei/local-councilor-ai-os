@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47375",
+  "prefecture": "沖縄県",
+  "municipality": "多良間村",
+  "official_home_url": "https://www.vill.tarama.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/tarama/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/tarama/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/tarama/reiki_menu.html",
+          "fetched_at": "2026-08-27T07:02:14Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/tarama/reiki_menu.html for 多良間村"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
+          "observed_on": "https://www.vill.tarama.okinawa.jp/gyousei/",
+          "fetched_at": "2026-08-27T07:00:07Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ (label: 財政 多良間村の行政財政計画、財政状況について。)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.tarama.okinawa.jp/gyousei/zaisei/",
+          "observed_on": "https://www.vill.tarama.okinawa.jp/gyousei/",
+          "fetched_at": "2026-08-27T07:00:07Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.tarama.okinawa.jp/gyousei/zaisei/ (label: 財政 多良間村の行政財政計画、財政状況について。)"
+    }
+  }
+}

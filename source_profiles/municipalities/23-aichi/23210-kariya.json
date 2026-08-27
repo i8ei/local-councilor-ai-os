@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "23210",
+  "prefecture": "愛知県",
+  "municipality": "刈谷市",
+  "official_home_url": "http://www.city.kariya.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.kariya.lg.jp/shisei/1004769.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kariya.lg.jp/shisei/1004769.html",
+          "observed_on": "http://www.city.kariya.lg.jp/",
+          "fetched_at": "2026-08-27T07:58:56Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.kariya.lg.jp/shisei/1004769.html (label: 刈谷市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kariya.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kariya.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.kariya.lg.jp/",
+          "fetched_at": "2026-08-27T07:58:56Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kariya.lg.jp/shisei/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kariya.lg.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kariya.lg.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.kariya.lg.jp/",
+          "fetched_at": "2026-08-27T07:58:56Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kariya.lg.jp/shisei/zaisei/index.html (label: 財政)"
+    }
+  }
+}

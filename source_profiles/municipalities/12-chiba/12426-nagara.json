@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12426",
+  "prefecture": "千葉県",
+  "municipality": "長柄町",
+  "official_home_url": "http://www.town.nagara.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.nagara.chiba.jp/site/gikai/9653.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nagara.chiba.jp/site/gikai/9653.html",
+          "observed_on": "http://www.town.nagara.chiba.jp/site/gikai/",
+          "fetched_at": "2026-08-27T07:29:16Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.nagara.chiba.jp/site/gikai/9653.html (label: 議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/nagara/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/nagara/reiki_menu.html",
+          "observed_on": "http://www.town.nagara.chiba.jp/",
+          "fetched_at": "2026-08-27T07:27:36Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/nagara/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.nagara.chiba.jp/site/gikai/15135.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nagara.chiba.jp/site/gikai/15135.html",
+          "observed_on": "http://www.town.nagara.chiba.jp/site/gikai/",
+          "fetched_at": "2026-08-27T07:29:16Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.nagara.chiba.jp/site/gikai/15135.html (label: 常任委員会の開催について（令和８年度予算審査）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.nagara.chiba.jp/life/4/21/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nagara.chiba.jp/life/4/21/",
+          "observed_on": "http://www.town.nagara.chiba.jp/life/4/",
+          "fetched_at": "2026-08-27T07:28:15Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.nagara.chiba.jp/life/4/21/ (label: 行財政)"
+    }
+  }
+}

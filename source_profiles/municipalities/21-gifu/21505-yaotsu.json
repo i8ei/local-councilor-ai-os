@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "21505",
+  "prefecture": "岐阜県",
+  "municipality": "八百津町",
+  "official_home_url": "http://www.town.yaotsu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.yaotsu.lg.jp/6699.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yaotsu.lg.jp/6699.htm",
+          "observed_on": "http://www.town.yaotsu.lg.jp/1004.htm",
+          "fetched_at": "2026-08-27T07:37:59Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.yaotsu.lg.jp/6699.htm (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.yaotsu.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yaotsu.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.yaotsu.lg.jp/",
+          "fetched_at": "2026-08-27T07:37:21Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.yaotsu.lg.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.yaotsu.lg.jp/6436.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yaotsu.lg.jp/6436.htm",
+          "observed_on": "http://www.town.yaotsu.lg.jp/1004.htm",
+          "fetched_at": "2026-08-27T07:37:59Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.yaotsu.lg.jp/6436.htm (label: 当初予算・補正予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.yaotsu.lg.jp/4062.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yaotsu.lg.jp/4062.htm",
+          "observed_on": "http://www.town.yaotsu.lg.jp/",
+          "fetched_at": "2026-08-27T07:37:21Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.yaotsu.lg.jp/4062.htm (label: 財政情報)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20561",
+  "prefecture": "長野県",
+  "municipality": "山ノ内町",
+  "official_home_url": "http://www.town.yamanouchi.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.yamanouchi.nagano/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.yamanouchi.nagano/reiki_menu.html",
+          "observed_on": "http://www.town.yamanouchi.nagano.jp/",
+          "fetched_at": "2026-08-27T07:21:39Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.yamanouchi.nagano/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T07:21:57Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.town.yamanouchi.nagano.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T07:21:57Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.yamanouchi.nagano.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

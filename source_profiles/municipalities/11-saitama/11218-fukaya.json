@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11218",
+  "prefecture": "埼玉県",
+  "municipality": "深谷市",
+  "official_home_url": "http://www.city.fukaya.saitama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/fukaya/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/fukaya/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.fukaya.saitama.jp/",
+          "fetched_at": "2026-08-27T06:51:20Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/fukaya/d1w_reiki/reiki.html (label: 例規集を調べる)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

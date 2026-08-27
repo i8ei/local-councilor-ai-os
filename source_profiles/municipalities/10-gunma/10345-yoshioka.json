@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10345",
+  "prefecture": "群馬県",
+  "municipality": "吉岡町",
+  "official_home_url": "http://www.town.yoshioka.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/yoshioka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/yoshioka/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/yoshioka/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:37:16Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/yoshioka/reiki_menu.html for 吉岡町"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "29450",
+  "prefecture": "奈良県",
+  "municipality": "下北山村",
+  "official_home_url": "http://www.vill.shimokitayama.nara.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.shimokitayama.nara.jp/yakuba/post_22.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.shimokitayama.nara.jp/yakuba/post_22.html",
+          "observed_on": "https://www.vill.shimokitayama.nara.jp/yakuba/yakuba4.html",
+          "fetched_at": "2026-08-27T07:14:44Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.vill.shimokitayama.nara.jp/yakuba/post_22.html (label: 令和６年度予算書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.shimokitayama.nara.jp/yakuba/file/ad8fd3a43baae5db1fa2989efc7c1291a06eca5d.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.shimokitayama.nara.jp/yakuba/file/ad8fd3a43baae5db1fa2989efc7c1291a06eca5d.pdf",
+          "observed_on": "https://www.vill.shimokitayama.nara.jp/yakuba/yakuba4.html",
+          "fetched_at": "2026-08-27T07:14:44Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.vill.shimokitayama.nara.jp/yakuba/file/ad8fd3a43baae5db1fa2989efc7c1291a06eca5d.pdf (label: 令和２年度決算・引き上げ分に係る地方消費税交付金使用用途明示資料)"
+    }
+  }
+}

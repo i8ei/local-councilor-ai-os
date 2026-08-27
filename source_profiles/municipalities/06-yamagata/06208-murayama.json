@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06208",
+  "prefecture": "山形県",
+  "municipality": "村山市",
+  "official_home_url": "http://www.city.murayama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://smart.discussvision.net/smart/tenant/murayama/WebView/rd/council.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://smart.discussvision.net/smart/tenant/murayama/WebView/rd/council.html",
+          "observed_on": "http://www.city.murayama.lg.jp/shisei/gikai/index.html",
+          "fetched_at": "2026-08-27T07:42:13Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/murayama/WebView/rd/council.html (label: 議会中継（ライブ中継・録画中継、外部リンク）（外部サイト）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.murayama.lg.jp/shisei/gaiyo/reikishuu.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.murayama.lg.jp/shisei/gaiyo/reikishuu.html",
+          "observed_on": "http://www.city.murayama.lg.jp/",
+          "fetched_at": "2026-08-27T07:39:08Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.murayama.lg.jp/shisei/gaiyo/reikishuu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
+          "observed_on": "http://www.city.murayama.lg.jp/shisei/gikai/index.html",
+          "fetched_at": "2026-08-27T07:42:13Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html (label: 予算・決算質疑通告)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html",
+          "observed_on": "http://www.city.murayama.lg.jp/shisei/gikai/index.html",
+          "fetched_at": "2026-08-27T07:42:13Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.murayama.lg.jp/shisei/gikai/gikaijimu0120190906.html (label: 予算・決算質疑通告)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "45201",
+  "prefecture": "宮崎県",
+  "municipality": "宮崎市",
+  "official_home_url": "http://www.city.miyazaki.miyazaki.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.miyazaki.miyazaki.dbsr.jp/index.php",
+          "observed_on": "http://www.city.miyazaki.miyazaki.jp/parliament/",
+          "fetched_at": "2026-08-27T06:25:02Z"
+        }
+      ],
+      "notes": "Observed dbsr at http://www.city.miyazaki.miyazaki.dbsr.jp/index.php (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CB",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CB",
+          "observed_on": "http://www.city.miyazaki.miyazaki.jp/",
+          "fetched_at": "2026-08-27T06:23:53Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A91AC49CB (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.miyazaki.miyazaki.jp/city/finance/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.miyazaki.miyazaki.jp/city/finance/",
+          "observed_on": "http://www.city.miyazaki.miyazaki.jp/city/",
+          "fetched_at": "2026-08-27T06:24:16Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.miyazaki.miyazaki.jp/city/finance/ (label: 財政・行政改革)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.miyazaki.miyazaki.jp/parliament/commission/special-committee/138105.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.miyazaki.miyazaki.jp/parliament/commission/special-committee/138105.html",
+          "observed_on": "http://www.city.miyazaki.miyazaki.jp/parliament/",
+          "fetched_at": "2026-08-27T06:25:02Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.miyazaki.miyazaki.jp/parliament/commission/special-committee/138105.html (label: 決算審査特別委員会)"
+    }
+  }
+}

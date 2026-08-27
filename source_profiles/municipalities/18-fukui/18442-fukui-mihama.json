@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "18442",
+  "prefecture": "福井県",
+  "municipality": "美浜町",
+  "official_home_url": "https://www.town.fukui-mihama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.fukui-mihama.lg.jp/site/town-council/14259.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.fukui-mihama.lg.jp/site/town-council/14259.html",
+          "observed_on": "https://www.town.fukui-mihama.lg.jp/life/6/36/154/",
+          "fetched_at": "2026-08-27T06:26:55Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.fukui-mihama.lg.jp/site/town-council/14259.html (label: 令和6年第2回美浜町議会定例会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/mihama/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/mihama/reiki_menu.html",
+          "observed_on": "https://www.town.fukui-mihama.lg.jp/",
+          "fetched_at": "2026-08-27T06:25:53Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/mihama/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
+          "observed_on": "https://www.town.fukui-mihama.lg.jp/life/6/",
+          "fetched_at": "2026-08-27T06:26:05Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.fukui-mihama.lg.jp/life/6/36/158/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.fukui-mihama.lg.jp/life/6/36/158/",
+          "observed_on": "https://www.town.fukui-mihama.lg.jp/life/6/",
+          "fetched_at": "2026-08-27T06:26:05Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.fukui-mihama.lg.jp/life/6/36/158/ (label: 予算・決算)"
+    }
+  }
+}

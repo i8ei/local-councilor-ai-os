@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "04202",
+  "prefecture": "宮城県",
+  "municipality": "石巻市",
+  "official_home_url": "http://www.city.ishinomaki.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.ishinomaki.lg.jp/d0030/d0200/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ishinomaki.lg.jp/d0030/d0200/index.html",
+          "observed_on": "http://www.city.ishinomaki.lg.jp/d0030/index.html",
+          "fetched_at": "2026-08-27T07:17:07Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.ishinomaki.lg.jp/d0030/d0200/index.html (label: 条例・規則・訓令・告示)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ishinomaki.lg.jp/d0030/d0020/d0170/d0010/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ishinomaki.lg.jp/d0030/d0020/d0170/d0010/index.html",
+          "observed_on": "http://www.city.ishinomaki.lg.jp/d0030/index.html",
+          "fetched_at": "2026-08-27T07:17:07Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.ishinomaki.lg.jp/d0030/d0020/d0170/d0010/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ishinomaki.lg.jp/d0030/d0020/d0170/d0020/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ishinomaki.lg.jp/d0030/d0020/d0170/d0020/index.html",
+          "observed_on": "http://www.city.ishinomaki.lg.jp/d0030/index.html",
+          "fetched_at": "2026-08-27T07:17:07Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.ishinomaki.lg.jp/d0030/d0020/d0170/d0020/index.html (label: 決算)"
+    }
+  }
+}

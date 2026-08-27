@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15227",
+  "prefecture": "新潟県",
+  "municipality": "胎内市",
+  "official_home_url": "http://www.city.tainai.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.tainai.niigata.jp/gyose/gikai/kaigiroku2.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tainai.niigata.jp/gyose/gikai/kaigiroku2.html",
+          "observed_on": "http://www.city.tainai.niigata.jp/gyose/gikai/index.html",
+          "fetched_at": "2026-08-27T06:05:50Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.tainai.niigata.jp/gyose/gikai/kaigiroku2.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/tainai/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/tainai/reiki_menu.html",
+          "observed_on": "http://www.city.tainai.niigata.jp/",
+          "fetched_at": "2026-08-27T06:02:55Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/tainai/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tainai.niigata.jp/gyose/zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tainai.niigata.jp/gyose/zaise/index.html",
+          "observed_on": "http://www.city.tainai.niigata.jp/gyose/kakuka/index2.html",
+          "fetched_at": "2026-08-27T06:03:12Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.tainai.niigata.jp/gyose/zaise/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tainai.niigata.jp/gyose/zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tainai.niigata.jp/gyose/zaise/index.html",
+          "observed_on": "http://www.city.tainai.niigata.jp/gyose/kakuka/index2.html",
+          "fetched_at": "2026-08-27T06:03:12Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.tainai.niigata.jp/gyose/zaise/index.html (label: 財政)"
+    }
+  }
+}

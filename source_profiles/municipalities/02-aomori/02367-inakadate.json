@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02367",
+  "prefecture": "青森県",
+  "municipality": "田舎館村",
+  "official_home_url": "http://www.vill.inakadate.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.vill.inakadate.lg.jp/_common/themes/inakadate/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.inakadate.lg.jp/_common/themes/inakadate/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.inakadate.lg.jp/",
+          "fetched_at": "2026-08-27T07:00:03Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.vill.inakadate.lg.jp/_common/themes/inakadate/reiki_int/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
+          "observed_on": "http://www.vill.inakadate.lg.jp/",
+          "fetched_at": "2026-08-27T07:00:03Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.inakadate.lg.jp/bunya/zaisei/ (label: 財政・組織)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.inakadate.lg.jp/bunya/zaisei/",
+          "observed_on": "http://www.vill.inakadate.lg.jp/",
+          "fetched_at": "2026-08-27T07:00:03Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.inakadate.lg.jp/bunya/zaisei/ (label: 財政・組織)"
+    }
+  }
+}

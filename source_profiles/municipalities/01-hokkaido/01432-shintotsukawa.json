@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01432",
+  "prefecture": "北海道",
+  "municipality": "新十津川町",
+  "official_home_url": "https://www.town.shintotsukawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.shintotsukawa.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shintotsukawa.lg.jp/reiki/reiki.html",
+          "observed_on": "https://www.town.shintotsukawa.lg.jp/home.html",
+          "fetched_at": "2026-08-27T06:21:45Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.shintotsukawa.lg.jp/reiki/reiki.html (label: 町の例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
+          "observed_on": "https://www.town.shintotsukawa.lg.jp/home.html",
+          "fetched_at": "2026-08-27T06:21:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html",
+          "observed_on": "https://www.town.shintotsukawa.lg.jp/home.html",
+          "fetched_at": "2026-08-27T06:21:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.shintotsukawa.lg.jp/hotnews/category/210.html (label: 財政)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "04212",
+  "prefecture": "宮城県",
+  "municipality": "登米市",
+  "official_home_url": "http://www.city.tome.miyagi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.tome.miyagi.jp/shisejoho/gyose/reiki/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tome.miyagi.jp/shisejoho/gyose/reiki/index.html",
+          "observed_on": "http://www.city.tome.miyagi.jp/shisejoho/index.html",
+          "fetched_at": "2026-08-27T07:19:44Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.tome.miyagi.jp/shisejoho/gyose/reiki/index.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
+          "observed_on": "http://www.city.tome.miyagi.jp/kurashi/index.html",
+          "fetched_at": "2026-08-27T07:19:20Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html (label: 補助金等情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html",
+          "observed_on": "http://www.city.tome.miyagi.jp/kurashi/index.html",
+          "fetched_at": "2026-08-27T07:19:20Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.tome.miyagi.jp/zaisei/shisejoho/machizukuri/sinotorikumi-top/hojokinjoho.html (label: 補助金等情報)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "23209",
+  "prefecture": "愛知県",
+  "municipality": "碧南市",
+  "official_home_url": "http://www.city.hekinan.aichi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A858330B3",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A858330B3",
+          "observed_on": "http://www.city.hekinan.aichi.jp/",
+          "fetched_at": "2026-08-27T07:58:41Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A858330B3 (label: 碧南市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hekinan.lg.jp/attention/24279.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hekinan.lg.jp/attention/24279.html",
+          "observed_on": "http://www.city.hekinan.aichi.jp/",
+          "fetched_at": "2026-08-27T07:58:41Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.hekinan.lg.jp/attention/24279.html (label: 緊急行財政対策について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hekinan.lg.jp/attention/24279.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hekinan.lg.jp/attention/24279.html",
+          "observed_on": "http://www.city.hekinan.aichi.jp/",
+          "fetched_at": "2026-08-27T07:58:41Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.hekinan.lg.jp/attention/24279.html (label: 緊急行財政対策について)"
+    }
+  }
+}

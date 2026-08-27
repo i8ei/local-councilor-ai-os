@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01211",
+  "prefecture": "北海道",
+  "municipality": "網走市",
+  "official_home_url": "https://www.city.abashiri.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.abashiri.hokkaido.jp/site/gikai/1581.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.abashiri.hokkaido.jp/site/gikai/1581.html",
+          "observed_on": "https://www.city.abashiri.hokkaido.jp/adv/ba.php?id=12",
+          "fetched_at": "2026-08-27T05:58:30Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.abashiri.hokkaido.jp/site/gikai/1581.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.abashiri/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.abashiri/reiki_menu.html",
+          "observed_on": "https://www.city.abashiri.hokkaido.jp/",
+          "fetched_at": "2026-08-27T05:58:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.abashiri/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf",
+          "observed_on": "https://www.city.abashiri.hokkaido.jp/site/gikai/1567.html",
+          "fetched_at": "2026-08-27T06:00:14Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.abashiri.hokkaido.jp/uploaded/attachment/15066.pdf (label: 令和8年度網走市一般会計補正予算事項別明細書 [PDFファイル／95KB])"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.abashiri.hokkaido.jp/soshiki/32/1583.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.abashiri.hokkaido.jp/soshiki/32/1583.html",
+          "observed_on": "https://www.city.abashiri.hokkaido.jp/life/5/27/",
+          "fetched_at": "2026-08-27T05:58:12Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.abashiri.hokkaido.jp/soshiki/32/1583.html (label: 各会計決算審査特別委員会 会議録)"
+    }
+  }
+}

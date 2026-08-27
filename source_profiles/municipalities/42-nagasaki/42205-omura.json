@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "42205",
+  "prefecture": "長崎県",
+  "municipality": "大村市",
+  "official_home_url": "http://www.city.omura.nagasaki.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.omura.nagasaki.jp/shise/shigikai/shingikekka/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.omura.nagasaki.jp/shise/shigikai/shingikekka/kaigiroku/index.html",
+          "observed_on": "http://www.city.omura.nagasaki.jp/gikaichousa/shise/shigikai/index.html",
+          "fetched_at": "2026-08-27T05:22:13Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.omura.nagasaki.jp/shise/shigikai/shingikekka/kaigiroku/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/omura/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/omura/reiki_menu.html",
+          "observed_on": "http://www.city.omura.nagasaki.jp/",
+          "fetched_at": "2026-08-27T05:22:12Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/omura/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.omura.nagasaki.jp/gikaichousa/shise/shigikai/shingikekka/ketsugi-iken/ketsugi/r06-09-hosei.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.omura.nagasaki.jp/gikaichousa/shise/shigikai/shingikekka/ketsugi-iken/ketsugi/r06-09-hosei.html",
+          "observed_on": "http://www.city.omura.nagasaki.jp/gikaichousa/shise/shigikai/shingikekka/ketsugi-iken/ketsugi/r08-06-zieikan.html",
+          "fetched_at": "2026-08-27T05:22:21Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.omura.nagasaki.jp/gikaichousa/shise/shigikai/shingikekka/ketsugi-iken/ketsugi/r06-09-hosei.html (label: 第70号議案令和6年度大村市一般会計補正予算（第2号）に対する附帯決議（令和6年9月）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.omura.nagasaki.jp/gikaichousa/shise/shigikai/shingikekka/ketsugi-iken/ketsugi/h20-06-02.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.omura.nagasaki.jp/gikaichousa/shise/shigikai/shingikekka/ketsugi-iken/ketsugi/h20-06-02.html",
+          "observed_on": "http://www.city.omura.nagasaki.jp/gikaichousa/shise/shigikai/shingikekka/ketsugi-iken/ketsugi/r08-06-zieikan.html",
+          "fetched_at": "2026-08-27T05:22:21Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.omura.nagasaki.jp/gikaichousa/shise/shigikai/shingikekka/ketsugi-iken/ketsugi/h20-06-02.html (label: 市民協働による財政健全化への取り組みを求める決議（平成20年6月）)"
+    }
+  }
+}

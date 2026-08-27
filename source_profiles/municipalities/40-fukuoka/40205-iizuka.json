@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40205",
+  "prefecture": "福岡県",
+  "municipality": "飯塚市",
+  "official_home_url": "http://www.city.iizuka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.iizuka.lg.jp/site/shigikai/list18.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.iizuka.lg.jp/site/shigikai/list18.html",
+          "observed_on": "http://www.city.iizuka.lg.jp/adv/ba.php?id=21",
+          "fetched_at": "2026-08-27T04:09:22Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.iizuka.lg.jp/site/shigikai/list18.html (label: 会議録・録画中継の一覧)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.iizuka.lg.jp/adv/ba.php?id=27",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.iizuka.lg.jp/adv/ba.php?id=27",
+          "observed_on": "http://www.city.iizuka.lg.jp/",
+          "fetched_at": "2026-08-27T04:09:14Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.iizuka.lg.jp/adv/ba.php?id=27 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.iizuka.lg.jp/life/6/30/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.iizuka.lg.jp/life/6/30/",
+          "observed_on": "http://www.city.iizuka.lg.jp/",
+          "fetched_at": "2026-08-27T04:09:14Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.iizuka.lg.jp/life/6/30/ (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.iizuka.lg.jp/life/6/30/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.iizuka.lg.jp/life/6/30/",
+          "observed_on": "http://www.city.iizuka.lg.jp/",
+          "fetched_at": "2026-08-27T04:09:14Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.iizuka.lg.jp/life/6/30/ (label: 予算・財政)"
+    }
+  }
+}

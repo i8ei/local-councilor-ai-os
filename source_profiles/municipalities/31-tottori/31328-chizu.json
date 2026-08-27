@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "31328",
+  "prefecture": "鳥取県",
+  "municipality": "智頭町",
+  "official_home_url": "http://www1.town.chizu.tottori.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.chizutown.jp/contents/reiki_202603/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.chizutown.jp/contents/reiki_202603/reiki_menu.html",
+          "observed_on": "https://www1.town.chizu.tottori.jp/1/",
+          "fetched_at": "2026-08-27T05:57:35Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.chizutown.jp/contents/reiki_202603/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

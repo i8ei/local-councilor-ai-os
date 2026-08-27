@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02426",
+  "prefecture": "青森県",
+  "municipality": "佐井村",
+  "official_home_url": "http://www.vill.sai.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.vill.sai.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.sai.lg.jp/reiki_int/",
+          "observed_on": "http://www.vill.sai.lg.jp/",
+          "fetched_at": "2026-08-27T07:03:50Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.vill.sai.lg.jp/reiki_int/ (label: 佐井村例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

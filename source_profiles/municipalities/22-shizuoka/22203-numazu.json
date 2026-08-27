@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22203",
+  "prefecture": "静岡県",
+  "municipality": "沼津市",
+  "official_home_url": "http://www.city.numazu.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "http://www.city.numazu.shizuoka.jp/d1w_reiki/index.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.numazu.shizuoka.jp/d1w_reiki/index.htm",
+          "observed_on": "http://www.city.numazu.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:40:14Z"
+        }
+      ],
+      "notes": "Observed d1_law at http://www.city.numazu.shizuoka.jp/d1w_reiki/index.htm (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.numazu.shizuoka.jp/shisei/pr/interview/index.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.numazu.shizuoka.jp/shisei/pr/interview/index.htm",
+          "observed_on": "http://www.city.numazu.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:40:14Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.numazu.shizuoka.jp/shisei/pr/interview/index.htm (label: 令和8年度当初予算(案)等に関する市長定例記者会見)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.numazu.shizuoka.jp/shisei/gyozaisei.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.numazu.shizuoka.jp/shisei/gyozaisei.htm",
+          "observed_on": "http://www.city.numazu.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:40:14Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.numazu.shizuoka.jp/shisei/gyozaisei.htm (label: 行財政)"
+    }
+  }
+}

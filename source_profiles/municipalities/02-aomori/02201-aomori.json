@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02201",
+  "prefecture": "青森県",
+  "municipality": "青森市",
+  "official_home_url": "http://www.city.aomori.aomori.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "http://www.city.aomori.aomori.dbsr.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.aomori.aomori.dbsr.jp/",
+          "observed_on": "http://www.city.aomori.aomori.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:56:36Z"
+        }
+      ],
+      "notes": "Observed dbsr at http://www.city.aomori.aomori.dbsr.jp/ (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.aomori.aomori.jp/shisei/machizukuri/1005733.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.aomori.aomori.jp/shisei/machizukuri/1005733.html",
+          "observed_on": "http://www.city.aomori.aomori.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:54:42Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.aomori.aomori.jp/shisei/machizukuri/1005733.html (label: 条例規則など)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1006058/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1006058/index.html",
+          "observed_on": "http://www.city.aomori.aomori.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:54:42Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1006058/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1007411/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1007411/index.html",
+          "observed_on": "http://www.city.aomori.aomori.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:54:42Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.aomori.aomori.jp/shisei/gyouzaiseiunei/1007411/index.html (label: 決算)"
+    }
+  }
+}

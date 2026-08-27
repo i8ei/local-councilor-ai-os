@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20215",
+  "prefecture": "長野県",
+  "municipality": "塩尻市",
+  "official_home_url": "http://www.city.shiojiri.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85567BC4",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85567BC4",
+          "observed_on": "http://www.city.shiojiri.lg.jp/",
+          "fetched_at": "2026-08-27T06:59:35Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85567BC4 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.shiojiri.lg.jp/life/5/31/153/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shiojiri.lg.jp/life/5/31/153/",
+          "observed_on": "http://www.city.shiojiri.lg.jp/",
+          "fetched_at": "2026-08-27T06:59:35Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.shiojiri.lg.jp/life/5/31/153/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.shiojiri.lg.jp/life/5/31/153/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shiojiri.lg.jp/life/5/31/153/",
+          "observed_on": "http://www.city.shiojiri.lg.jp/",
+          "fetched_at": "2026-08-27T06:59:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.shiojiri.lg.jp/life/5/31/153/ (label: 予算・決算)"
+    }
+  }
+}

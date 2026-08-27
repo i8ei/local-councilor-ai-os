@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11233",
+  "prefecture": "埼玉県",
+  "municipality": "北本市",
+  "official_home_url": "https://www.city.kitamoto.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kitamoto/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kitamoto/d1w_reiki/reiki.html",
+          "observed_on": "https://www.city.kitamoto.lg.jp/",
+          "fetched_at": "2026-08-27T06:57:12Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kitamoto/d1w_reiki/reiki.html (label: 北本市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kitamoto.lg.jp/shisei/unei/2/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kitamoto.lg.jp/shisei/unei/2/index.html",
+          "observed_on": "https://www.city.kitamoto.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:57:51Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kitamoto.lg.jp/shisei/unei/2/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kitamoto.lg.jp/shisei/unei/2/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kitamoto.lg.jp/shisei/unei/2/index.html",
+          "observed_on": "https://www.city.kitamoto.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:57:51Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kitamoto.lg.jp/shisei/unei/2/index.html (label: 財政)"
+    }
+  }
+}

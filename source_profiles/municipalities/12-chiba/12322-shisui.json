@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12322",
+  "prefecture": "千葉県",
+  "municipality": "酒々井町",
+  "official_home_url": "http://www.town.shisui.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/shisui/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/shisui/reiki_menu.html",
+          "observed_on": "http://www.town.shisui.chiba.jp/",
+          "fetched_at": "2026-08-27T07:22:55Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/shisui/reiki_menu.html (label: 町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
+          "observed_on": "http://www.town.shisui.chiba.jp/docs/2026031000022/",
+          "fetched_at": "2026-08-27T07:23:24Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/ (label: 企画財政課)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/",
+          "observed_on": "http://www.town.shisui.chiba.jp/docs/2026031000022/",
+          "fetched_at": "2026-08-27T07:23:24Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.shisui.chiba.jp/soshiki/chocho/kikakuzaisei/ (label: 企画財政課)"
+    }
+  }
+}

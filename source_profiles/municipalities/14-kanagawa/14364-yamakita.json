@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14364",
+  "prefecture": "神奈川県",
+  "municipality": "山北町",
+  "official_home_url": "http://www.town.yamakita.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.yamakita.kanagawa.jp/machidukuri/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yamakita.kanagawa.jp/machidukuri/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.yamakita.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:07:53Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.yamakita.kanagawa.jp/machidukuri/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

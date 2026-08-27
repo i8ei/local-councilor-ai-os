@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12463",
+  "prefecture": "千葉県",
+  "municipality": "鋸南町",
+  "official_home_url": "http://www.town.kyonan.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.kyonan.chiba.jp/site/machigikai/list23.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kyonan.chiba.jp/site/machigikai/list23.html",
+          "observed_on": "http://www.town.kyonan.chiba.jp/site/machigikai/",
+          "fetched_at": "2026-08-27T07:29:22Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.kyonan.chiba.jp/site/machigikai/list23.html (label: 議会会議録の一覧)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kyonan/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kyonan/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.kyonan.chiba.jp/",
+          "fetched_at": "2026-08-27T07:29:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kyonan/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

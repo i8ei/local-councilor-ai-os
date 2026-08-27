@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07364",
+  "prefecture": "福島県",
+  "municipality": "檜枝岐村",
+  "official_home_url": "https://www.vill.hinoemata.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.hinoemata.lg.jp/File/2020/07/13/42eefb28038e57a877a4b5737188d935.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.hinoemata.lg.jp/File/2020/07/13/42eefb28038e57a877a4b5737188d935.pdf",
+          "observed_on": "https://www.vill.hinoemata.lg.jp//soumu/gaiyo/000016.html",
+          "fetched_at": "2026-08-27T07:58:37Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.vill.hinoemata.lg.jp/File/2020/07/13/42eefb28038e57a877a4b5737188d935.pdf (label: 平成30年度予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.hinoemata.lg.jp/File/2019/03/22/55337882df8456e25adf91ed0d0a2960.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.hinoemata.lg.jp/File/2019/03/22/55337882df8456e25adf91ed0d0a2960.pdf",
+          "observed_on": "https://www.vill.hinoemata.lg.jp//soumu/gaiyo/000016.html",
+          "fetched_at": "2026-08-27T07:58:37Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.vill.hinoemata.lg.jp/File/2019/03/22/55337882df8456e25adf91ed0d0a2960.pdf (label: 平成29年度決算)"
+    }
+  }
+}

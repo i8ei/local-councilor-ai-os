@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "30344",
+  "prefecture": "和歌山県",
+  "municipality": "高野町",
+  "official_home_url": "http://www.town.koya.wakayama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.koya.wakayama.jp/town/gikai/501.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.koya.wakayama.jp/town/gikai/501.html",
+          "observed_on": "http://www.town.koya.wakayama.jp/town/gikai",
+          "fetched_at": "2026-08-27T07:24:18Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.koya.wakayama.jp/town/gikai/501.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/koya/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/koya/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.koya.wakayama.jp/",
+          "fetched_at": "2026-08-27T07:21:22Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/koya/d1w_reiki/reiki.html (label: )"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

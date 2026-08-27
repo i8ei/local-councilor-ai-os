@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10207",
+  "prefecture": "群馬県",
+  "municipality": "館林市",
+  "official_home_url": "http://www.city.tatebayashi.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.tatebayashi.gunma.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tatebayashi.gunma.jp/reiki/reiki.html",
+          "observed_on": "http://www.city.tatebayashi.gunma.jp/",
+          "fetched_at": "2026-08-27T06:33:21Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.tatebayashi.gunma.jp/reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
+          "observed_on": "http://www.city.tatebayashi.gunma.jp/li/shisei/index.html",
+          "fetched_at": "2026-08-27T06:34:01Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html",
+          "observed_on": "http://www.city.tatebayashi.gunma.jp/li/shisei/index.html",
+          "fetched_at": "2026-08-27T06:34:01Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.tatebayashi.gunma.jp/li/shisei/070/index.html (label: 財政)"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "34207",
+  "prefecture": "広島県",
+  "municipality": "福山市",
+  "official_home_url": "http://www.city.fukuyama.hiroshima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.fukuyama.hiroshima.jp/uploaded/attachment/303457.xlsx",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.fukuyama.hiroshima.jp/uploaded/attachment/303457.xlsx",
+          "observed_on": "http://www.city.fukuyama.hiroshima.jp/soshiki/machidukuri-suisin/395611.html",
+          "fetched_at": "2026-08-27T06:27:29Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.fukuyama.hiroshima.jp/uploaded/attachment/303457.xlsx (label: 収支予算書 [Excelファイル／15KB])"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.fukuyama.hiroshima.jp/uploaded/attachment/303466.xlsx",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.fukuyama.hiroshima.jp/uploaded/attachment/303466.xlsx",
+          "observed_on": "http://www.city.fukuyama.hiroshima.jp/soshiki/machidukuri-suisin/395611.html",
+          "fetched_at": "2026-08-27T06:27:29Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.fukuyama.hiroshima.jp/uploaded/attachment/303466.xlsx (label: 収支決算書 [Excelファイル／15KB])"
+    }
+  }
+}

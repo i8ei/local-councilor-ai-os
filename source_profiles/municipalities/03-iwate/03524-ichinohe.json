@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03524",
+  "prefecture": "岩手県",
+  "municipality": "一戸町",
+  "official_home_url": "https://www.town.ichinohe.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/ichinohe/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/ichinohe/SpTop.html",
+          "observed_on": "https://www.town.ichinohe.iwate.jp/gyoseijoho/2/index.html",
+          "fetched_at": "2026-08-27T07:17:13Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/ichinohe/SpTop.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A11F7CA",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A11F7CA",
+          "observed_on": "https://www.town.ichinohe.iwate.jp/",
+          "fetched_at": "2026-08-27T07:14:59Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7A11F7CA (label: 例規集 Regular regulations)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5871.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5871.html",
+          "observed_on": "https://www.town.ichinohe.iwate.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:15:11Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5871.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html",
+          "observed_on": "https://www.town.ichinohe.iwate.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:15:11Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.ichinohe.iwate.jp/gyoseijoho/gyozaisei/5874.html (label: 決算)"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10205",
+  "prefecture": "群馬県",
+  "municipality": "太田市",
+  "official_home_url": "http://www.city.ota.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krr125.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krr125.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.ota.gunma.jp/",
+          "fetched_at": "2026-08-27T06:31:42Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krr125.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 太田市例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

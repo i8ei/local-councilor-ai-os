@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12208",
+  "prefecture": "千葉県",
+  "municipality": "野田市",
+  "official_home_url": "http://www.city.noda.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/noda/pg/index.html",
+          "observed_on": "http://www.city.noda.chiba.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T07:12:34Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/noda/pg/index.html (label: 会議録検索（外部リンク）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.noda.chiba.jp/jigyousha/shoureikin/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.noda.chiba.jp/jigyousha/shoureikin/index.html",
+          "observed_on": "http://www.city.noda.chiba.jp/",
+          "fetched_at": "2026-08-27T07:11:09Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.noda.chiba.jp/jigyousha/shoureikin/index.html (label: 雇用に関する奨励金等)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

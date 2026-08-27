@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03441",
+  "prefecture": "岩手県",
+  "municipality": "住田町",
+  "official_home_url": "https://www.town.sumita.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.sumita.iwate.jp/docs/2023021500012/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.sumita.iwate.jp/docs/2023021500012/",
+          "observed_on": "https://www.town.sumita.iwate.jp/bunya/chousei/",
+          "fetched_at": "2026-08-27T07:13:15Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.sumita.iwate.jp/docs/2023021500012/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.sumita.iwate/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.sumita.iwate/reiki_menu.html",
+          "observed_on": "https://www.town.sumita.iwate.jp/",
+          "fetched_at": "2026-08-27T07:13:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.sumita.iwate/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.sumita.iwate.jp/docs/2026022500012/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.sumita.iwate.jp/docs/2026022500012/",
+          "observed_on": "https://www.town.sumita.iwate.jp/bunya/chousei/",
+          "fetched_at": "2026-08-27T07:13:15Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.sumita.iwate.jp/docs/2026022500012/ (label: 令和８年度当初予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.sumita.iwate.jp/docs/2025100200035/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.sumita.iwate.jp/docs/2025100200035/",
+          "observed_on": "https://www.town.sumita.iwate.jp/bunya/chousei/",
+          "fetched_at": "2026-08-27T07:13:15Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.sumita.iwate.jp/docs/2025100200035/ (label: 令和２年度決算)"
+    }
+  }
+}

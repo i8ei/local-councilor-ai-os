@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01427",
+  "prefecture": "北海道",
+  "municipality": "由仁町",
+  "official_home_url": "https://www.town.yuni.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.yuni/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.yuni/reiki_menu.html",
+          "observed_on": "https://www.town.yuni.lg.jp/",
+          "fetched_at": "2026-08-27T06:19:49Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.yuni/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yuni.lg.jp/newstopics/6021",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yuni.lg.jp/newstopics/6021",
+          "observed_on": "https://www.town.yuni.lg.jp/",
+          "fetched_at": "2026-08-27T06:19:49Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.yuni.lg.jp/newstopics/6021 (label: 財政状況資料集の公表について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yuni.lg.jp/newstopics/6243",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yuni.lg.jp/newstopics/6243",
+          "observed_on": "https://www.town.yuni.lg.jp/",
+          "fetched_at": "2026-08-27T06:19:49Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.yuni.lg.jp/newstopics/6243 (label: 令和６年度決算に基づく由仁町の健全化判断比率・資金不足比率)"
+    }
+  }
+}

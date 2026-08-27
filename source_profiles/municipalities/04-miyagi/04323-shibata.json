@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "04323",
+  "prefecture": "宮城県",
+  "municipality": "柴田町",
+  "official_home_url": "http://www.town.shibata.miyagi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,169,297,html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,169,297,html",
+          "observed_on": "http://www.town.shibata.miyagi.jp/index.cfm/82,html",
+          "fetched_at": "2026-08-27T07:21:51Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.shibata.miyagi.jp/index.cfm/82,0,169,297,html (label: 議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.shibata.miyagi.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shibata.miyagi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.shibata.miyagi.jp/",
+          "fetched_at": "2026-08-27T07:21:30Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.shibata.miyagi.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
+          "observed_on": "http://www.town.shibata.miyagi.jp/index.cfm/82,html",
+          "fetched_at": "2026-08-27T07:21:51Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html",
+          "observed_on": "http://www.town.shibata.miyagi.jp/index.cfm/82,html",
+          "fetched_at": "2026-08-27T07:21:51Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.shibata.miyagi.jp/index.cfm/82,0,221,html (label: 財政)"
+    }
+  }
+}

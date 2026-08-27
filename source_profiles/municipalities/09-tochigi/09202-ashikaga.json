@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "09202",
+  "prefecture": "栃木県",
+  "municipality": "足利市",
+  "official_home_url": "http://www.city.ashikaga.tochigi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/ashikaga/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/ashikaga/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.ashikaga.tochigi.jp/",
+          "fetched_at": "2026-08-27T06:16:23Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/ashikaga/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ashikaga.tochigi.jp/goverment/000084/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ashikaga.tochigi.jp/goverment/000084/index.html",
+          "observed_on": "http://www.city.ashikaga.tochigi.jp/",
+          "fetched_at": "2026-08-27T06:16:23Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.ashikaga.tochigi.jp/goverment/000084/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ashikaga.tochigi.jp/goverment/000084/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ashikaga.tochigi.jp/goverment/000084/index.html",
+          "observed_on": "http://www.city.ashikaga.tochigi.jp/",
+          "fetched_at": "2026-08-27T06:16:23Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.ashikaga.tochigi.jp/goverment/000084/index.html (label: 財政)"
+    }
+  }
+}

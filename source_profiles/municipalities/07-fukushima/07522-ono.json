@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07522",
+  "prefecture": "福島県",
+  "municipality": "小野町",
+  "official_home_url": "http://www.town.ono.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html",
+          "observed_on": "http://www.town.ono.fukushima.jp/life/4/19/",
+          "fetched_at": "2026-08-27T08:08:20Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.ono.fukushima.jp/soshiki/10/kaigiroku08.html (label: 令和8年会議録（議会事務局）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://public1.legalcrud.com/ono_town/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://public1.legalcrud.com/ono_town/reiki/",
+          "observed_on": "http://www.town.ono.fukushima.jp/home.html",
+          "fetched_at": "2026-08-27T08:08:02Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://public1.legalcrud.com/ono_town/reiki/ (label: )"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

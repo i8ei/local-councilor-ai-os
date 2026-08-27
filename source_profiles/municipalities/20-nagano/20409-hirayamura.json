@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20409",
+  "prefecture": "長野県",
+  "municipality": "平谷村",
+  "official_home_url": "http://hirayamura.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/hirayamura/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/hirayamura/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/hirayamura/reiki_menu.html",
+          "fetched_at": "2026-08-27T07:12:38Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/hirayamura/reiki_menu.html for 平谷村"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.hirayamura.jp/relays/download/17/1452/621//?file=/files/libs/4344/202607010840518838.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.hirayamura.jp/relays/download/17/1452/621//?file=/files/libs/4344/202607010840518838.pdf",
+          "observed_on": "http://hirayamura.jp/pages/17/",
+          "fetched_at": "2026-08-27T07:09:33Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.hirayamura.jp/relays/download/17/1452/621//?file=/files/libs/4344/202607010840518838.pdf (label: 令和７年度補正予算 重点支援地方交付金の活用状況について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.hirayamura.jp/relays/download/50/1453/622//?file=/files/libs/4307/20260212155836422.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.hirayamura.jp/relays/download/50/1453/622//?file=/files/libs/4307/20260212155836422.pdf",
+          "observed_on": "http://hirayamura.jp/pages/50/",
+          "fetched_at": "2026-08-27T07:10:03Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.hirayamura.jp/relays/download/50/1453/622//?file=/files/libs/4307/20260212155836422.pdf (label: 令和５年度決算 消費税引き上げ分の地方消費税交付金（社会保障財源化分）の使途について)"
+    }
+  }
+}

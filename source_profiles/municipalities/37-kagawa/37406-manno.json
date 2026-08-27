@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "37406",
+  "prefecture": "香川県",
+  "municipality": "まんのう町",
+  "official_home_url": "http://www.town.manno.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.manno.lg.jp/life/4/25/88/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.manno.lg.jp/life/4/25/88/",
+          "observed_on": "http://www.town.manno.lg.jp/life/4/25/",
+          "fetched_at": "2026-08-27T06:57:33Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.manno.lg.jp/life/4/25/88/ (label: 定例会・臨時会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.manno/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.manno/reiki_menu.html",
+          "observed_on": "http://www.town.manno.lg.jp/",
+          "fetched_at": "2026-08-27T06:57:10Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.manno/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

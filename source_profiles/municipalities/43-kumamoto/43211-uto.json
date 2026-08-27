@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43211",
+  "prefecture": "熊本県",
+  "municipality": "宇土市",
+  "official_home_url": "https://www.city.uto.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/uto/MinuteSearch.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/uto/MinuteSearch.html",
+          "observed_on": "https://www.city.uto.lg.jp/article/view/1255/730.html",
+          "fetched_at": "2026-08-27T05:34:09Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/uto/MinuteSearch.html (label: 宇土市議会会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/uto-city/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/uto-city/reiki_menu.html",
+          "observed_on": "https://www.city.uto.lg.jp/",
+          "fetched_at": "2026-08-27T05:34:04Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/uto-city/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

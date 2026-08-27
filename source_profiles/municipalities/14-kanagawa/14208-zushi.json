@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14208",
+  "prefecture": "神奈川県",
+  "municipality": "逗子市",
+  "official_home_url": "http://www.city.zushi.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/zushi/WebView/rd/council_1.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/zushi/WebView/rd/council_1.html",
+          "observed_on": "http://www.city.zushi.kanagawa.jp/shisei/gikai/index.html",
+          "fetched_at": "2026-08-27T08:01:51Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/zushi/WebView/rd/council_1.html (label: 本会議インターネット中継)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/zushi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/zushi/reiki_menu.html",
+          "observed_on": "http://www.city.zushi.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:00:56Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/zushi/reiki_menu.html (label: 逗子市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/index.html",
+          "observed_on": "http://www.city.zushi.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:00:56Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.zushi.kanagawa.jp/shisei/1009210/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/index.html",
+          "observed_on": "http://www.city.zushi.kanagawa.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T08:01:17Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.zushi.kanagawa.jp/shisei/1009210/1006718/index.html (label: 決算)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20206",
+  "prefecture": "長野県",
+  "municipality": "諏訪市",
+  "official_home_url": "http://www.city.suwa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "http://www08.gijiroku.com/voices/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www08.gijiroku.com/voices/",
+          "observed_on": "http://www.city.suwa.lg.jp/site/gikai/",
+          "fetched_at": "2026-08-27T06:56:39Z"
+        }
+      ],
+      "notes": "Observed voices at http://www08.gijiroku.com/voices/ (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.suwa.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.suwa.lg.jp/reiki/",
+          "observed_on": "http://www.city.suwa.lg.jp/",
+          "fetched_at": "2026-08-27T06:55:39Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.suwa.lg.jp/reiki/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.suwa.lg.jp/uploaded/attachment/52256.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.suwa.lg.jp/uploaded/attachment/52256.pdf",
+          "observed_on": "http://www.city.suwa.lg.jp/site/gikai/84848.html",
+          "fetched_at": "2026-08-27T06:57:42Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.suwa.lg.jp/uploaded/attachment/52256.pdf (label: 令和8年第4回（9月）定例会補正予算審査特別委員会審査日程 [PDFファイル／224KB])"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.suwa.lg.jp/uploaded/attachment/52255.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.suwa.lg.jp/uploaded/attachment/52255.pdf",
+          "observed_on": "http://www.city.suwa.lg.jp/site/gikai/84848.html",
+          "fetched_at": "2026-08-27T06:57:42Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.suwa.lg.jp/uploaded/attachment/52255.pdf (label: 令和8年第4回（9月）定例会決算審査特別委員会審査日程 [PDFファイル／480KB])"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14205",
+  "prefecture": "神奈川県",
+  "municipality": "藤沢市",
+  "official_home_url": "http://www.city.fujisawa.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.fujisawa.kanagawa.jp/shise/reki/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.fujisawa.kanagawa.jp/shise/reki/index.html",
+          "observed_on": "http://www.city.fujisawa.kanagawa.jp/",
+          "fetched_at": "2026-08-27T07:59:33Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.fujisawa.kanagawa.jp/shise/reki/index.html (label: 条例・規則・告示・公告)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.fujisawa.kanagawa.jp/shise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.fujisawa.kanagawa.jp/shise/index.html",
+          "observed_on": "http://www.city.fujisawa.kanagawa.jp/shise/index.html",
+          "fetched_at": "2026-08-27T07:59:55Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.fujisawa.kanagawa.jp/shise/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.fujisawa.kanagawa.jp/shise/yosan/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.fujisawa.kanagawa.jp/shise/yosan/yosan/index.html",
+          "observed_on": "http://www.city.fujisawa.kanagawa.jp/shise/index.html",
+          "fetched_at": "2026-08-27T07:59:55Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.fujisawa.kanagawa.jp/shise/yosan/yosan/index.html (label: 予算・決算)"
+    }
+  }
+}

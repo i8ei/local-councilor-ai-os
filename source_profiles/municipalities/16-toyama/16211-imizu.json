@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "16211",
+  "prefecture": "富山県",
+  "municipality": "射水市",
+  "official_home_url": "http://www.city.imizu.toyama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=34959",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=34959",
+          "observed_on": "http://www.city.imizu.toyama.jp/",
+          "fetched_at": "2026-08-27T06:09:40Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=34959 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=070314",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=070314",
+          "observed_on": "https://www.city.imizu.toyama.jp/topCity.aspx",
+          "fetched_at": "2026-08-27T06:12:24Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cdkb=ctg&cd=070314 (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cd=0707",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cd=0707",
+          "observed_on": "http://www.city.imizu.toyama.jp/",
+          "fetched_at": "2026-08-27T06:09:40Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.imizu.toyama.jp/guide/svGuideList.aspx?cd=0707 (label: 行財政改革)"
+    }
+  }
+}

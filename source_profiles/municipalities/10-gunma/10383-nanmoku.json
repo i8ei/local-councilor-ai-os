@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10383",
+  "prefecture": "群馬県",
+  "municipality": "南牧村",
+  "official_home_url": "http://www.nanmoku.ne.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/nanmoku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/nanmoku/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/nanmoku/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:42:31Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/nanmoku/reiki_menu.html for 南牧村"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://nanmoku.ne.jp/sonsei/gaiyou/budget_final_account/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://nanmoku.ne.jp/sonsei/gaiyou/budget_final_account/",
+          "observed_on": "https://nanmoku.ne.jp/sitemap",
+          "fetched_at": "2026-08-27T06:39:30Z"
+        }
+      ],
+      "notes": "Observed budget link at https://nanmoku.ne.jp/sonsei/gaiyou/budget_final_account/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://nanmoku.ne.jp/sonsei/gaiyou/budget_final_account/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://nanmoku.ne.jp/sonsei/gaiyou/budget_final_account/",
+          "observed_on": "https://nanmoku.ne.jp/sitemap",
+          "fetched_at": "2026-08-27T06:39:30Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://nanmoku.ne.jp/sonsei/gaiyou/budget_final_account/ (label: 予算・決算)"
+    }
+  }
+}

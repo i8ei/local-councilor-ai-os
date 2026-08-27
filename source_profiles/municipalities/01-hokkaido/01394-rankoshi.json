@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01394",
+  "prefecture": "北海道",
+  "municipality": "蘭越町",
+  "official_home_url": "http://www.town.rankoshi.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.rankoshi.hokkaido.jp/administration/town/detail.html?content=301",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.rankoshi.hokkaido.jp/administration/town/detail.html?content=301",
+          "observed_on": "http://www.town.rankoshi.hokkaido.jp/administration/town/category/?category=48",
+          "fetched_at": "2026-08-27T06:13:58Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.rankoshi.hokkaido.jp/administration/town/detail.html?content=301 (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/rankoshi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/rankoshi/reiki_menu.html",
+          "observed_on": "http://www.town.rankoshi.hokkaido.jp/administration/",
+          "fetched_at": "2026-08-27T06:13:39Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/rankoshi/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

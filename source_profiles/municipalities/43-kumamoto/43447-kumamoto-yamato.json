@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43447",
+  "prefecture": "熊本県",
+  "municipality": "山都町",
+  "official_home_url": "http://www.town.kumamoto-yamato.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.kumamoto-yamato.lg.jp/gikai/kiji0036495/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kumamoto-yamato.lg.jp/gikai/kiji0036495/index.html",
+          "observed_on": "https://www.town.kumamoto-yamato.lg.jp/sitemap.html",
+          "fetched_at": "2026-08-27T05:44:34Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.kumamoto-yamato.lg.jp/gikai/kiji0036495/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.kumamoto-yamato.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kumamoto-yamato.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.kumamoto-yamato.lg.jp/default.html",
+          "fetched_at": "2026-08-27T06:13:17Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.kumamoto-yamato.lg.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kumamoto-yamato.lg.jp/list00435.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kumamoto-yamato.lg.jp/list00435.html",
+          "observed_on": "https://www.town.kumamoto-yamato.lg.jp/default.html",
+          "fetched_at": "2026-08-27T06:13:17Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.kumamoto-yamato.lg.jp/list00435.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kumamoto-yamato.lg.jp/list00436.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kumamoto-yamato.lg.jp/list00436.html",
+          "observed_on": "https://www.town.kumamoto-yamato.lg.jp/default.html",
+          "fetched_at": "2026-08-27T06:13:17Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.kumamoto-yamato.lg.jp/list00436.html (label: 決算)"
+    }
+  }
+}

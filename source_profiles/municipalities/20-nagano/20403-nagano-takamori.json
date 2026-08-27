@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20403",
+  "prefecture": "長野県",
+  "municipality": "高森町",
+  "official_home_url": "http://www.town.nagano-takamori.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/takamori/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/takamori/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.nagano-takamori.lg.jp/",
+          "fetched_at": "2026-08-27T07:08:25Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/takamori/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.nagano-takamori.lg.jp/docs/13302.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nagano-takamori.lg.jp/docs/13302.html",
+          "observed_on": "http://www.town.nagano-takamori.lg.jp/chosei/gikai/houkoku/",
+          "fetched_at": "2026-08-27T07:11:39Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.nagano-takamori.lg.jp/docs/13302.html (label: 令和8年度予算編成に向けて提言を行いました)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.nagano-takamori.lg.jp/chosei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nagano-takamori.lg.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.nagano-takamori.lg.jp/chosei/",
+          "fetched_at": "2026-08-27T07:08:41Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.nagano-takamori.lg.jp/chosei/zaisei/ (label: 行財政)"
+    }
+  }
+}

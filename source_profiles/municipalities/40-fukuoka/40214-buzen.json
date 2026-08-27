@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40214",
+  "prefecture": "福岡県",
+  "municipality": "豊前市",
+  "official_home_url": "http://www.city.buzen.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.buzen.lg.jp/saihen/documents/giji_zen11.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.buzen.lg.jp/saihen/documents/giji_zen11.pdf",
+          "observed_on": "http://www.city.buzen.lg.jp/saihen/junbi_kyougikai.html",
+          "fetched_at": "2026-08-27T04:11:38Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.buzen.lg.jp/saihen/documents/giji_zen11.pdf (label: 第11回会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://en3-jg.d1-law.com/buzen/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://en3-jg.d1-law.com/buzen/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.buzen.lg.jp/",
+          "fetched_at": "2026-08-27T04:11:26Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://en3-jg.d1-law.com/buzen/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.buzen.lg.jp/sisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.buzen.lg.jp/sisei/zaisei/index.html",
+          "observed_on": "http://www.city.buzen.lg.jp/sisei/index.html",
+          "fetched_at": "2026-08-27T04:51:50Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.buzen.lg.jp/sisei/zaisei/index.html (label: 市の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.buzen.lg.jp/sisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.buzen.lg.jp/sisei/zaisei/index.html",
+          "observed_on": "http://www.city.buzen.lg.jp/sisei/index.html",
+          "fetched_at": "2026-08-27T04:51:50Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.buzen.lg.jp/sisei/zaisei/index.html (label: 市の財政)"
+    }
+  }
+}

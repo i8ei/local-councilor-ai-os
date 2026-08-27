@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01424",
+  "prefecture": "北海道",
+  "municipality": "奈井江町",
+  "official_home_url": "http://www.town.naie.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.naie.hokkaido.jp/town/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.naie.hokkaido.jp/town/reiki/",
+          "observed_on": "http://www.town.naie.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:18:53Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.naie.hokkaido.jp/town/reiki/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.naie.hokkaido.jp/town/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.naie.hokkaido.jp/town/zaisei/",
+          "observed_on": "http://www.town.naie.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:18:53Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.naie.hokkaido.jp/town/zaisei/ (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.naie.hokkaido.jp/town/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.naie.hokkaido.jp/town/zaisei/",
+          "observed_on": "http://www.town.naie.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:18:53Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.naie.hokkaido.jp/town/zaisei/ (label: 財政状況)"
+    }
+  }
+}

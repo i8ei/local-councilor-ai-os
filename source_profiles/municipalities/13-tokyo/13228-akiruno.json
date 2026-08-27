@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13228",
+  "prefecture": "東京都",
+  "municipality": "あきる野市",
+  "official_home_url": "http://www.city.akiruno.tokyo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.akiruno.tokyo.jp/reiki/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akiruno.tokyo.jp/reiki/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.akiruno.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:49:03Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.akiruno.tokyo.jp/reiki/reiki_int/reiki_menu.html (label: 別ウィンドウで開く)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.akiruno.tokyo.jp/category/2-7-2-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akiruno.tokyo.jp/category/2-7-2-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.akiruno.tokyo.jp/category/2-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:49:48Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.akiruno.tokyo.jp/category/2-7-2-0-0-0-0-0-0-0.html (label: 予算の概要)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.akiruno.tokyo.jp/category/2-7-3-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akiruno.tokyo.jp/category/2-7-3-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.akiruno.tokyo.jp/category/2-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:49:48Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.akiruno.tokyo.jp/category/2-7-3-0-0-0-0-0-0-0.html (label: 決算の概要)"
+    }
+  }
+}

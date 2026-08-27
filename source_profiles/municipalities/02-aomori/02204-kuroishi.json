@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02204",
+  "prefecture": "青森県",
+  "municipality": "黒石市",
+  "official_home_url": "http://www.city.kuroishi.aomori.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.kuroishi.aomori.jp/shisei/gikai/gikai_kaigiroku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kuroishi.aomori.jp/shisei/gikai/gikai_kaigiroku.html",
+          "observed_on": "http://www.city.kuroishi.aomori.jp/shisei/gikai/index.html",
+          "fetched_at": "2026-08-27T06:57:38Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.kuroishi.aomori.jp/shisei/gikai/gikai_kaigiroku.html (label: 過去の会議録についてはこちら をクリックしてください)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.kuroishi/reiki_honbun/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.kuroishi/reiki_honbun/c005RG00000058.html",
+          "observed_on": "http://www.city.kuroishi.aomori.jp/shisei/gikai/index.html",
+          "fetched_at": "2026-08-27T06:57:38Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kuroishi/reiki_honbun/c005RG00000058.html (label: 黒石市議会基本条例)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
+          "observed_on": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/index.html",
+          "fetched_at": "2026-08-27T06:56:55Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html (label: 行財政改革)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html",
+          "observed_on": "http://www.city.kuroishi.aomori.jp/shisei/keikaku/index.html",
+          "fetched_at": "2026-08-27T06:56:55Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kuroishi.aomori.jp/shisei/keikaku/gyouzaisei-kaikaku.html (label: 行財政改革)"
+    }
+  }
+}

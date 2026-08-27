@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06461",
+  "prefecture": "山形県",
+  "municipality": "遊佐町",
+  "official_home_url": "http://www.town.yuza.yamagata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.yuza.yamagata.jp/reiki",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yuza.yamagata.jp/reiki",
+          "observed_on": "http://www.town.yuza.yamagata.jp/",
+          "fetched_at": "2026-08-27T07:49:39Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.town.yuza.yamagata.jp/reiki (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yuza.yamagata.jp/archive/contents-1154",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yuza.yamagata.jp/archive/contents-1154",
+          "observed_on": "https://www.town.yuza.yamagata.jp/genre/service",
+          "fetched_at": "2026-08-27T07:50:11Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.yuza.yamagata.jp/archive/contents-1154 (label: 一般会計当初予算の概要について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.yuza.yamagata.jp/archive/p20250501105129",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.yuza.yamagata.jp/archive/p20250501105129",
+          "observed_on": "https://www.town.yuza.yamagata.jp/genre/service",
+          "fetched_at": "2026-08-27T07:50:11Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.yuza.yamagata.jp/archive/p20250501105129 (label: 令和7年度(2025)遊佐町の主要施策)"
+    }
+  }
+}

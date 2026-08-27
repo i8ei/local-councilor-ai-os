@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11203",
+  "prefecture": "埼玉県",
+  "municipality": "川口市",
+  "official_home_url": "http://www.city.kawaguchi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7FF957ED",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7FF957ED",
+          "observed_on": "http://www.city.kawaguchi.lg.jp/",
+          "fetched_at": "2026-08-27T06:46:56Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A7FF957ED (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20900.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20900.html",
+          "observed_on": "https://www.city.kawaguchi.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:47:48Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20900.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20898.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20898.html",
+          "observed_on": "https://www.city.kawaguchi.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:47:48Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.kawaguchi.lg.jp/shiseijoho/shinozaisei/20898.html (label: 決算)"
+    }
+  }
+}

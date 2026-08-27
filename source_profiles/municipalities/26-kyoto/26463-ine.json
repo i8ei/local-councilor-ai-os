@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26463",
+  "prefecture": "京都府",
+  "municipality": "伊根町",
+  "official_home_url": "http://www.town.ine.kyoto.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.ine.kyoto.jp/chosei/gikai/4/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ine.kyoto.jp/chosei/gikai/4/index.html",
+          "observed_on": "https://www.town.ine.kyoto.jp/chosei/gikai/index.html",
+          "fetched_at": "2026-08-27T06:27:15Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.ine.kyoto.jp/chosei/gikai/4/index.html (label: 議事録及び議会日程)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.ine.kyoto.jp/section/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ine.kyoto.jp/section/reiki/reiki.html",
+          "observed_on": "http://www.town.ine.kyoto.jp/",
+          "fetched_at": "2026-08-27T06:23:57Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.ine.kyoto.jp/section/reiki/reiki.html (label: 伊根町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html",
+          "observed_on": "https://www.town.ine.kyoto.jp/chosei/index.html",
+          "fetched_at": "2026-08-27T06:24:11Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html",
+          "observed_on": "https://www.town.ine.kyoto.jp/chosei/index.html",
+          "fetched_at": "2026-08-27T06:24:11Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ine.kyoto.jp/chosei/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39303",
+  "prefecture": "高知県",
+  "municipality": "田野町",
+  "official_home_url": "https://tanocho.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/tano-town/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/tano-town/d1w_reiki/reiki.html",
+          "observed_on": "https://tanocho.jp/",
+          "fetched_at": "2026-08-27T07:11:01Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/tano-town/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://tanocho.jp/life/detail.php?hdnKey=251",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://tanocho.jp/life/detail.php?hdnKey=251",
+          "observed_on": "https://tanocho.jp/life/list.php?hdnCat=400",
+          "fetched_at": "2026-08-27T07:11:31Z"
+        }
+      ],
+      "notes": "Observed finance section at https://tanocho.jp/life/detail.php?hdnKey=251 (label: 財務状況・財政健全化判断比率及び資金不足比率)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://tanocho.jp/life/detail.php?hdnKey=251",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://tanocho.jp/life/detail.php?hdnKey=251",
+          "observed_on": "https://tanocho.jp/life/list.php?hdnCat=400",
+          "fetched_at": "2026-08-27T07:11:31Z"
+        }
+      ],
+      "notes": "Observed finance section at https://tanocho.jp/life/detail.php?hdnKey=251 (label: 財務状況・財政健全化判断比率及び資金不足比率)"
+    }
+  }
+}

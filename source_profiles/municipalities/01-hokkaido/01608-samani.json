@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01608",
+  "prefecture": "北海道",
+  "municipality": "様似町",
+  "official_home_url": "http://www.samani.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://houmu.h-chosonkai.gr.jp/~reikidb/?shoson_no=78",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://houmu.h-chosonkai.gr.jp/~reikidb/?shoson_no=78",
+          "observed_on": "http://www.samani.jp/",
+          "fetched_at": "2026-08-27T06:45:00Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/?shoson_no=78 (label: 様似町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.samani.jp/keijijo/main/chouchou/choukokuzidai52gou.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.samani.jp/keijijo/main/chouchou/choukokuzidai52gou.pdf",
+          "observed_on": "http://www.samani.jp/keijijo/main/chouchou/",
+          "fetched_at": "2026-08-27T06:46:31Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.samani.jp/keijijo/main/chouchou/choukokuzidai52gou.pdf (label: 令和8年度様似町介護保険特別会計補正予算（第1号） (pdf:314.8 KB))"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07545",
+  "prefecture": "福島県",
+  "municipality": "大熊町",
+  "official_home_url": "http://www.town.okuma.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.okuma.fukushima.jp/reikishu/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.okuma.fukushima.jp/reikishu/",
+          "observed_on": "http://www.town.okuma.fukushima.jp/",
+          "fetched_at": "2026-08-27T08:09:57Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.okuma.fukushima.jp/reikishu/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

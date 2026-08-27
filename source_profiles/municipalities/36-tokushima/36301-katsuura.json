@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36301",
+  "prefecture": "徳島県",
+  "municipality": "勝浦町",
+  "official_home_url": "http://www.town.katsuura.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/katsuura/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/katsuura/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.katsuura.lg.jp/top.html",
+          "fetched_at": "2026-08-27T06:41:16Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/katsuura/d1w_reiki/reiki.html (label: 町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.katsuura.lg.jp/docs/2026032700037/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.katsuura.lg.jp/docs/2026032700037/",
+          "observed_on": "http://www.town.katsuura.lg.jp/docs/2026063000021/",
+          "fetched_at": "2026-08-27T06:42:02Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.katsuura.lg.jp/docs/2026032700037/ (label: 令和8年度当初予算について)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

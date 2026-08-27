@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27224",
+  "prefecture": "大阪府",
+  "municipality": "摂津市",
+  "official_home_url": "http://www.city.settsu.osaka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.settsu.osaka.jp/section/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.settsu.osaka.jp/section/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.settsu.osaka.jp/",
+          "fetched_at": "2026-08-27T06:32:58Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.settsu.osaka.jp/section/reiki/reiki_menu.html (label: 市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.settsu.osaka.jp/soshiki/shichoukoushitsu/seisakusuishinka/jigyou/29541.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.settsu.osaka.jp/soshiki/shichoukoushitsu/seisakusuishinka/jigyou/29541.html",
+          "observed_on": "http://www.city.settsu.osaka.jp/",
+          "fetched_at": "2026-08-27T06:32:58Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.settsu.osaka.jp/soshiki/shichoukoushitsu/seisakusuishinka/jigyou/29541.html (label: 令和8年度当初予算主要事業一覧)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html",
+          "observed_on": "http://www.city.settsu.osaka.jp/",
+          "fetched_at": "2026-08-27T06:32:58Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.settsu.osaka.jp/soshiki/soumubu/zaiseika/zaisei/29617.html (label: 摂津市中期財政計画)"
+    }
+  }
+}

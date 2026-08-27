@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "46490",
+  "prefecture": "鹿児島県",
+  "municipality": "錦江町",
+  "official_home_url": "http://www.town.kinko.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.kinko.lg.jp/gikai-h/chose/gikai/kaigiroku/kaigiroku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kinko.lg.jp/gikai-h/chose/gikai/kaigiroku/kaigiroku.html",
+          "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/index.html",
+          "fetched_at": "2026-08-27T06:44:04Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.kinko.lg.jp/gikai-h/chose/gikai/kaigiroku/kaigiroku.html (label: 議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.kinko.lg.jp/somu-h/chose/reki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kinko.lg.jp/somu-h/chose/reki/reiki.html",
+          "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/index.html",
+          "fetched_at": "2026-08-27T06:44:04Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.kinko.lg.jp/somu-h/chose/reki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
+          "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/index.html",
+          "fetched_at": "2026-08-27T06:44:04Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html",
+          "observed_on": "http://www.town.kinko.lg.jp/somu-h/chose/index.html",
+          "fetched_at": "2026-08-27T06:44:04Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.kinko.lg.jp/somu-h/chose/yosan/index.html (label: 予算・財政)"
+    }
+  }
+}

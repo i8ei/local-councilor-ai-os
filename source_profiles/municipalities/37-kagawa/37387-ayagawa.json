@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "37387",
+  "prefecture": "香川県",
+  "municipality": "綾川町",
+  "official_home_url": "https://www.town.ayagawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.ayakawa/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.ayakawa/reiki_menu.html",
+          "observed_on": "https://www.town.ayagawa.lg.jp/top.html",
+          "fetched_at": "2026-08-27T06:56:16Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.ayakawa/reiki_menu.html (label: 綾川町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
+          "observed_on": "https://www.town.ayagawa.lg.jp/top.html",
+          "fetched_at": "2026-08-27T06:56:16Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ayagawa.lg.jp/docs/2011070500015/ (label: 綾川町の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ayagawa.lg.jp/docs/2011070500015/",
+          "observed_on": "https://www.town.ayagawa.lg.jp/top.html",
+          "fetched_at": "2026-08-27T06:56:16Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ayagawa.lg.jp/docs/2011070500015/ (label: 綾川町の財政)"
+    }
+  }
+}

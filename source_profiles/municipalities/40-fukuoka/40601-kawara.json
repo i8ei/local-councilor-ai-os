@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40601",
+  "prefecture": "福岡県",
+  "municipality": "香春町",
+  "official_home_url": "http://www.town.kawara.fukuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/kawara/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/kawara/reiki_menu.html",
+          "observed_on": "http://www.town.kawara.fukuoka.jp/default.html",
+          "fetched_at": "2026-08-27T04:49:48Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/kawara/reiki_menu.html (label: 香春町 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kawara.fukuoka.jp/050/040/010/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kawara.fukuoka.jp/050/040/010/index.html",
+          "observed_on": "http://www.town.kawara.fukuoka.jp/050/index.html",
+          "fetched_at": "2026-08-27T04:44:59Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.kawara.fukuoka.jp/050/040/010/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kawara.fukuoka.jp/050/040/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kawara.fukuoka.jp/050/040/index.html",
+          "observed_on": "http://www.town.kawara.fukuoka.jp/default.html",
+          "fetched_at": "2026-08-27T04:49:48Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.kawara.fukuoka.jp/050/040/index.html (label: 町の財政)"
+    }
+  }
+}

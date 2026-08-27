@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01487",
+  "prefecture": "北海道",
+  "municipality": "天塩町",
+  "official_home_url": "http://www.teshiotown.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.teshiotown.hokkaido.jp/?page_id=325",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.teshiotown.hokkaido.jp/?page_id=325",
+          "observed_on": "http://www.teshiotown.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:33:08Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.teshiotown.hokkaido.jp/?page_id=325 (label: 天塩町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.teshiotown.hokkaido.jp/?page_id=317",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.teshiotown.hokkaido.jp/?page_id=317",
+          "observed_on": "http://www.teshiotown.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:33:08Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.teshiotown.hokkaido.jp/?page_id=317 (label: 財政状況について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.teshiotown.hokkaido.jp/?page_id=317",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.teshiotown.hokkaido.jp/?page_id=317",
+          "observed_on": "http://www.teshiotown.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:33:08Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.teshiotown.hokkaido.jp/?page_id=317 (label: 財政状況について)"
+    }
+  }
+}

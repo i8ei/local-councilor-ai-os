@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44209",
+  "prefecture": "大分県",
+  "municipality": "豊後高田市",
+  "official_home_url": "http://www.city.bungotakada.oita.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html",
+          "observed_on": "http://www.city.bungotakada.oita.jp/site/gikai-subsite/",
+          "fetched_at": "2026-08-27T06:20:48Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/bungotakada/pg/index.html (label: 会議録検索システム（外部リンク）)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.bungotakada.oita.jp/life/4/36/115/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.bungotakada.oita.jp/life/4/36/115/",
+          "observed_on": "http://www.city.bungotakada.oita.jp/sitemap.html",
+          "fetched_at": "2026-08-27T06:19:48Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.bungotakada.oita.jp/life/4/36/115/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.bungotakada.oita.jp/life/4/36/116/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.bungotakada.oita.jp/life/4/36/116/",
+          "observed_on": "http://www.city.bungotakada.oita.jp/sitemap.html",
+          "fetched_at": "2026-08-27T06:19:48Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.bungotakada.oita.jp/life/4/36/116/ (label: 決算)"
+    }
+  }
+}

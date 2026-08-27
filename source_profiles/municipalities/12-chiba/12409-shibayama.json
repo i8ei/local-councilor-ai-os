@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12409",
+  "prefecture": "千葉県",
+  "municipality": "芝山町",
+  "official_home_url": "http://www.town.shibayama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/shibayama/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/shibayama/SpTop.html",
+          "observed_on": "http://www.town.shibayama.lg.jp/",
+          "fetched_at": "2026-08-27T07:26:49Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/shibayama/SpTop.html (label: 議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.shibayama/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.shibayama/reiki_menu.html",
+          "observed_on": "http://www.town.shibayama.lg.jp/",
+          "fetched_at": "2026-08-27T07:26:49Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.shibayama/reiki_menu.html (label: 例規集(条例・規則))"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shibayama.lg.jp/0000006420.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shibayama.lg.jp/0000006420.html",
+          "observed_on": "http://www.town.shibayama.lg.jp/",
+          "fetched_at": "2026-08-27T07:26:49Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.shibayama.lg.jp/0000006420.html (label: 令和8年度補正予算書について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shibayama.lg.jp/category/23-6-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shibayama.lg.jp/category/23-6-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.shibayama.lg.jp/",
+          "fetched_at": "2026-08-27T07:26:49Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.shibayama.lg.jp/category/23-6-0-0-0-0-0-0-0-0.html (label: 財政)"
+    }
+  }
+}

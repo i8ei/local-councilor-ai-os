@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28229",
+  "prefecture": "兵庫県",
+  "municipality": "たつの市",
+  "official_home_url": "http://www.city.tatsuno.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.tatsuno.lg.jp/soshiki/1042/gyomu/1/5/4/1755.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tatsuno.lg.jp/soshiki/1042/gyomu/1/5/4/1755.html",
+          "observed_on": "https://www.city.tatsuno.lg.jp/soshiki/1042/gyomu/1/4/1763.html",
+          "fetched_at": "2026-08-27T06:55:32Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.tatsuno.lg.jp/soshiki/1042/gyomu/1/5/4/1755.html (label: 本会議録画映像)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.tatsuno/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.tatsuno/reiki_menu.html",
+          "observed_on": "http://www.city.tatsuno.lg.jp/",
+          "fetched_at": "2026-08-27T06:54:40Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.tatsuno/reiki_menu.html (label: たつの市例規類集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tatsuno.lg.jp/gyosei/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tatsuno.lg.jp/gyosei/gyozaisei/index.html",
+          "observed_on": "https://www.city.tatsuno.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:55:16Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.tatsuno.lg.jp/gyosei/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tatsuno.lg.jp/gyosei/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tatsuno.lg.jp/gyosei/gyozaisei/index.html",
+          "observed_on": "https://www.city.tatsuno.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:55:16Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.tatsuno.lg.jp/gyosei/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

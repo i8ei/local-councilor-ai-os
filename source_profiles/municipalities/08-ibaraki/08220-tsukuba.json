@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08220",
+  "prefecture": "茨城県",
+  "municipality": "つくば市",
+  "official_home_url": "http://www.city.tsukuba.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/tsukuba/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/tsukuba/reiki_menu.html",
+          "observed_on": "http://www.city.tsukuba.lg.jp/",
+          "fetched_at": "2026-08-27T06:02:19Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/tsukuba/reiki_menu.html (label: つくば市の 条例・規則)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tsukuba.lg.jp/mayor/1004263.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tsukuba.lg.jp/mayor/1004263.html",
+          "observed_on": "http://www.city.tsukuba.lg.jp/",
+          "fetched_at": "2026-08-27T06:02:19Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.tsukuba.lg.jp/mayor/1004263.html (label: 市政運営の所信と主要施策の概要)"
+    }
+  }
+}

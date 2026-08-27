@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "24215",
+  "prefecture": "三重県",
+  "municipality": "志摩市",
+  "official_home_url": "http://www.city.shima.mie.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.shima.mie/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.shima.mie/reiki_menu.html",
+          "observed_on": "http://www.city.shima.mie.jp/",
+          "fetched_at": "2026-08-27T05:58:57Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.shima.mie/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shima.mie.jp/material/files/group/3/shushiyosansyo.doc",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shima.mie.jp/material/files/group/3/shushiyosansyo.doc",
+          "observed_on": "https://www.city.shima.mie.jp/kurashi_tetsuzuki/todokedetetsuzukishomei/1454320049522.html",
+          "fetched_at": "2026-08-27T06:02:18Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.shima.mie.jp/material/files/group/3/shushiyosansyo.doc (label: 収支予算書 (Wordファイル: 28.5KB))"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shima.mie.jp/material/files/group/19/koen-kessansyo.doc",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shima.mie.jp/material/files/group/19/koen-kessansyo.doc",
+          "observed_on": "https://www.city.shima.mie.jp/kurashi_tetsuzuki/todokedetetsuzukishomei/1454320049522.html",
+          "fetched_at": "2026-08-27T06:02:18Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.shima.mie.jp/material/files/group/19/koen-kessansyo.doc (label: 収支決算書 (Wordファイル: 28.0KB))"
+    }
+  }
+}

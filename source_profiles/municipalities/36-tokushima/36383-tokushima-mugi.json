@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36383",
+  "prefecture": "徳島県",
+  "municipality": "牟岐町",
+  "official_home_url": "http://www.town.tokushima-mugi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.tokushima-mugi.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tokushima-mugi.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.tokushima-mugi.lg.jp/top.html",
+          "fetched_at": "2026-08-27T06:44:15Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.tokushima-mugi.lg.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

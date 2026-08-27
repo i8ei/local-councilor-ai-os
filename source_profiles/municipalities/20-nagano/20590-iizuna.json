@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20590",
+  "prefecture": "長野県",
+  "municipality": "飯綱町",
+  "official_home_url": "http://www.town.iizuna.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.iizuna.nagano.jp/gikai/kaigiroku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.iizuna.nagano.jp/gikai/kaigiroku/",
+          "observed_on": "http://www.town.iizuna.nagano.jp/gikai/",
+          "fetched_at": "2026-08-27T07:25:54Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.iizuna.nagano.jp/gikai/kaigiroku/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8556F539",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A8556F539",
+          "observed_on": "http://www.town.iizuna.nagano.jp/",
+          "fetched_at": "2026-08-27T07:24:01Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A8556F539 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.iizuna.nagano.jp/chosei/",
+          "fetched_at": "2026-08-27T07:24:19Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.iizuna.nagano.jp/chosei/zaisei/ (label: 財政・行政改革)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.iizuna.nagano.jp/chosei/zaisei/",
+          "observed_on": "http://www.town.iizuna.nagano.jp/chosei/",
+          "fetched_at": "2026-08-27T07:24:19Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.iizuna.nagano.jp/chosei/zaisei/ (label: 財政・行政改革)"
+    }
+  }
+}

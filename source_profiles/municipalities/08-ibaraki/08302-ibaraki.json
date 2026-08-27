@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08302",
+  "prefecture": "茨城県",
+  "municipality": "茨城町",
+  "official_home_url": "http://www.town.ibaraki.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/gikai/000586.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/gikai/000586.html",
+          "observed_on": "http://www.town.ibaraki.lg.jp/gyousei/office/000009/000901/index.html",
+          "fetched_at": "2026-08-27T06:13:46Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.ibaraki.lg.jp/gyousei/gyousei/gikai/000586.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.ibaraki.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ibaraki.lg.jp/reiki_int/?idSubTop=1",
+          "observed_on": "http://www.town.ibaraki.lg.jp/",
+          "fetched_at": "2026-08-27T06:10:44Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.ibaraki.lg.jp/reiki_int/?idSubTop=1 (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html",
+          "observed_on": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/index.html",
+          "fetched_at": "2026-08-27T06:11:26Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/yosansyo/index.html (label: 予算書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html",
+          "observed_on": "http://www.town.ibaraki.lg.jp/gyousei/gyousei/index.html",
+          "fetched_at": "2026-08-27T06:11:26Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.ibaraki.lg.jp/gyousei/gyousei/seisakuzaisei/financial/index.html (label: 決算・財政状況)"
+    }
+  }
+}

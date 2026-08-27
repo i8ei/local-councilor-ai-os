@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "17204",
+  "prefecture": "石川県",
+  "municipality": "輪島市",
+  "official_home_url": "http://www.city.wajima.ishikawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8054492E",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8054492E",
+          "observed_on": "http://www.city.wajima.ishikawa.jp/",
+          "fetched_at": "2026-08-27T06:12:22Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8054492E (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
+          "observed_on": "http://www.city.wajima.ishikawa.jp/navi/shisei/",
+          "fetched_at": "2026-08-27T06:12:51Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/",
+          "observed_on": "http://www.city.wajima.ishikawa.jp/navi/shisei/",
+          "fetched_at": "2026-08-27T06:12:51Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.wajima.ishikawa.jp/categories/bunya/gyosei/zaisei/ (label: 財政状況)"
+    }
+  }
+}

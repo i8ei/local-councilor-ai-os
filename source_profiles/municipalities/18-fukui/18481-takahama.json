@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "18481",
+  "prefecture": "福井県",
+  "municipality": "高浜町",
+  "official_home_url": "https://www.town.takahama.fukui.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.takahama.fukui.jp/gikai/gijiroku-search/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.takahama.fukui.jp/gikai/gijiroku-search/index.html",
+          "observed_on": "https://www.town.takahama.fukui.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:26:37Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.takahama.fukui.jp/gikai/gijiroku-search/index.html (label: 議事録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.takahama.fukui.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.takahama.fukui.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.takahama.fukui.jp/",
+          "fetched_at": "2026-08-27T06:26:24Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.takahama.fukui.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

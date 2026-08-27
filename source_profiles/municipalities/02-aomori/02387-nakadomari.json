@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02387",
+  "prefecture": "青森県",
+  "municipality": "中泊町",
+  "official_home_url": "https://www.town.nakadomari.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:02:29Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.nakadomari.lg.jp/gyoseijoho/gikai/kaigiroku/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.nakadomari.lg.jp/soshikikarasagasu/somuka/gyomuannai/5/826.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nakadomari.lg.jp/soshikikarasagasu/somuka/gyomuannai/5/826.html",
+          "observed_on": "https://www.town.nakadomari.lg.jp/",
+          "fetched_at": "2026-08-27T07:01:47Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.town.nakadomari.lg.jp/soshikikarasagasu/somuka/gyomuannai/5/826.html (label: 中泊町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html",
+          "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:02:29Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/5443.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.nakadomari.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:02:29Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.nakadomari.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

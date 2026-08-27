@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26343",
+  "prefecture": "京都府",
+  "municipality": "井手町",
+  "official_home_url": "http://www.town.ide.kyoto.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.ide.kyoto.jp/chougikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ide.kyoto.jp/chougikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.ide.kyoto.jp/chougikai/index.html",
+          "fetched_at": "2026-08-27T06:22:15Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.ide.kyoto.jp/chougikai/kaigiroku/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.ide.kyoto.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ide.kyoto.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.ide.kyoto.jp/index2.html",
+          "fetched_at": "2026-08-27T06:22:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.ide.kyoto.jp/section/reiki_int/reiki_menu.html (label: 井手町例規集（令和8年6月17日現在）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ide.kyoto.jp/choseijoho/zaisei_kouhyou/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ide.kyoto.jp/choseijoho/zaisei_kouhyou/index.html",
+          "observed_on": "https://www.town.ide.kyoto.jp/choseijoho/index.html",
+          "fetched_at": "2026-08-27T06:21:40Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ide.kyoto.jp/choseijoho/zaisei_kouhyou/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ide.kyoto.jp/choseijoho/zaisei_kouhyou/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ide.kyoto.jp/choseijoho/zaisei_kouhyou/index.html",
+          "observed_on": "https://www.town.ide.kyoto.jp/choseijoho/index.html",
+          "fetched_at": "2026-08-27T06:21:40Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ide.kyoto.jp/choseijoho/zaisei_kouhyou/index.html (label: 財政)"
+    }
+  }
+}

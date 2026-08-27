@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01511",
+  "prefecture": "北海道",
+  "municipality": "猿払村",
+  "official_home_url": "https://www.vill.sarufutsu.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.vill.sarufutsu.hokkaido.jp/contents/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.sarufutsu.hokkaido.jp/contents/reiki/reiki.html",
+          "observed_on": "https://www.vill.sarufutsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:33:33Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.vill.sarufutsu.hokkaido.jp/contents/reiki/reiki.html (label: 猿払村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
+          "observed_on": "https://www.vill.sarufutsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:33:33Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html (label: 令和８年度財政事情説明書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html",
+          "observed_on": "https://www.vill.sarufutsu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:33:33Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.sarufutsu.hokkaido.jp/hotnews/detail/00005009.html (label: 令和８年度財政事情説明書)"
+    }
+  }
+}

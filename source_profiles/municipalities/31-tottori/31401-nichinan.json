@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "31401",
+  "prefecture": "鳥取県",
+  "municipality": "日南町",
+  "official_home_url": "http://www.town.nichinan.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "joureikun",
+      "index_url": "https://lg.joureikun.jp/nichinan_town/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://lg.joureikun.jp/nichinan_town/",
+          "observed_on": "http://www.town.nichinan.lg.jp/",
+          "fetched_at": "2026-08-27T06:02:57Z"
+        }
+      ],
+      "notes": "Observed joureikun at https://lg.joureikun.jp/nichinan_town/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nichinan.lg.jp/soshikikarasagasu/somuka/zaisei/1/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nichinan.lg.jp/soshikikarasagasu/somuka/zaisei/1/index.html",
+          "observed_on": "http://www.town.nichinan.lg.jp/",
+          "fetched_at": "2026-08-27T06:02:57Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.nichinan.lg.jp/soshikikarasagasu/somuka/zaisei/1/index.html (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nichinan.lg.jp/soshikikarasagasu/somuka/zaisei/1/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nichinan.lg.jp/soshikikarasagasu/somuka/zaisei/1/index.html",
+          "observed_on": "http://www.town.nichinan.lg.jp/",
+          "fetched_at": "2026-08-27T06:02:57Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.nichinan.lg.jp/soshikikarasagasu/somuka/zaisei/1/index.html (label: 財政情報)"
+    }
+  }
+}

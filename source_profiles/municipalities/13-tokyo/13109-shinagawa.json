@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13109",
+  "prefecture": "東京都",
+  "municipality": "品川区",
+  "official_home_url": "http://www.city.shinagawa.tokyo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html",
+          "observed_on": "http://www.city.shinagawa.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:33:05Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/index.html",
+          "observed_on": "http://www.city.shinagawa.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:33:05Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/index.html (label: 決算)"
+    }
+  }
+}

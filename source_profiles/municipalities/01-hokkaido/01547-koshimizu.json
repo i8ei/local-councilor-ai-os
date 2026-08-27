@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01547",
+  "prefecture": "北海道",
+  "municipality": "小清水町",
+  "official_home_url": "https://www.town.koshimizu.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.koshimizu.hokkaido.jp/hotnews/category/122.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.koshimizu.hokkaido.jp/hotnews/category/122.html",
+          "observed_on": "https://www.town.koshimizu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:37:40Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.town.koshimizu.hokkaido.jp/hotnews/category/122.html (label: 条例・規則・告示)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.koshimizu.hokkaido.jp/hotnews/category/125.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.koshimizu.hokkaido.jp/hotnews/category/125.html",
+          "observed_on": "https://www.town.koshimizu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:37:40Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.koshimizu.hokkaido.jp/hotnews/category/125.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.koshimizu.hokkaido.jp/hotnews/category/125.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.koshimizu.hokkaido.jp/hotnews/category/125.html",
+          "observed_on": "https://www.town.koshimizu.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:37:40Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.koshimizu.hokkaido.jp/hotnews/category/125.html (label: 財政)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06364",
+  "prefecture": "山形県",
+  "municipality": "真室川町",
+  "official_home_url": "https://www.town.mamurogawa.yamagata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.mamurogawa.yamagata.jp/chosei/gikai/2/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.mamurogawa.yamagata.jp/chosei/gikai/2/index.html",
+          "observed_on": "https://www.town.mamurogawa.yamagata.jp/chosei/gikai/index.html",
+          "fetched_at": "2026-08-27T07:46:26Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.mamurogawa.yamagata.jp/chosei/gikai/2/index.html (label: 議会会議録・会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/mamurogawa/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/mamurogawa/reiki_menu.html",
+          "observed_on": "https://www.town.mamurogawa.yamagata.jp/",
+          "fetched_at": "2026-08-27T07:45:47Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/mamurogawa/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.mamurogawa.yamagata.jp/chosei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.mamurogawa.yamagata.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.mamurogawa.yamagata.jp/chosei/index.html",
+          "fetched_at": "2026-08-27T07:46:05Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.mamurogawa.yamagata.jp/chosei/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.mamurogawa.yamagata.jp/chosei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.mamurogawa.yamagata.jp/chosei/zaisei/index.html",
+          "observed_on": "https://www.town.mamurogawa.yamagata.jp/chosei/index.html",
+          "fetched_at": "2026-08-27T07:46:05Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.mamurogawa.yamagata.jp/chosei/zaisei/index.html (label: 財政)"
+    }
+  }
+}

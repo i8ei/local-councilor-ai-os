@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08223",
+  "prefecture": "茨城県",
+  "municipality": "潮来市",
+  "official_home_url": "http://www.city.itako.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.itako.lg.jp/shisei/page003664.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.itako.lg.jp/shisei/page003664.html",
+          "observed_on": "http://www.city.itako.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T06:04:29Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.itako.lg.jp/shisei/page003664.html (label: 潮来市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/",
+          "observed_on": "http://www.city.itako.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T06:04:29Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.itako.lg.jp/shisei/gyousei-zaisei/yosan/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/",
+          "observed_on": "http://www.city.itako.lg.jp/shisei/",
+          "fetched_at": "2026-08-27T06:04:29Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.itako.lg.jp/shisei/gyousei-zaisei/kessan/ (label: 決算)"
+    }
+  }
+}

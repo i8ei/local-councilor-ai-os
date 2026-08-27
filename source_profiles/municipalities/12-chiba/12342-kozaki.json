@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12342",
+  "prefecture": "千葉県",
+  "municipality": "神崎町",
+  "official_home_url": "http://www.town.kozaki.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.kozaki.chiba.jp/profile/gikai/2026-0303-1701-31.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kozaki.chiba.jp/profile/gikai/2026-0303-1701-31.html",
+          "observed_on": "http://www.town.kozaki.chiba.jp/profile/gikai/index.html",
+          "fetched_at": "2026-08-27T07:24:11Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.kozaki.chiba.jp/profile/gikai/2026-0303-1701-31.html (label: 神崎町議会本会議録画配信 (001))"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/kozaki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/kozaki/reiki_menu.html",
+          "observed_on": "http://www.town.kozaki.chiba.jp/",
+          "fetched_at": "2026-08-27T07:23:10Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/kozaki/reiki_menu.html (label: 神崎町例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

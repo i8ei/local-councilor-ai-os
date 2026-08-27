@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27217",
+  "prefecture": "大阪府",
+  "municipality": "松原市",
+  "official_home_url": "https://www.city.matsubara.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.matsubara.lg.jp/docs/page8606.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.matsubara.lg.jp/docs/page8606.html",
+          "observed_on": "https://www.city.matsubara.lg.jp/shisei/shisei/gikai/",
+          "fetched_at": "2026-08-27T06:32:14Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.matsubara.lg.jp/docs/page8606.html (label: 議会議事録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/matsubara/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/matsubara/d1w_reiki/reiki.html",
+          "observed_on": "https://www.city.matsubara.lg.jp/",
+          "fetched_at": "2026-08-27T06:31:44Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/matsubara/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/",
+          "observed_on": "https://www.city.matsubara.lg.jp/shisei/shisei/gikai/",
+          "fetched_at": "2026-08-27T06:32:14Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/ (label: 市の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/",
+          "observed_on": "https://www.city.matsubara.lg.jp/shisei/shisei/gikai/",
+          "fetched_at": "2026-08-27T06:32:14Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.matsubara.lg.jp/shisei/shisei/zaisei/ (label: 市の財政)"
+    }
+  }
+}

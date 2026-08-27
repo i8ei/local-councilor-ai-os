@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "45443",
+  "prefecture": "宮崎県",
+  "municipality": "五ヶ瀬町",
+  "official_home_url": "http://www.town.gokase.miyazaki.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.gokase.miyazaki.jp/kakuka/gikai/honkaigi/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.gokase.miyazaki.jp/kakuka/gikai/honkaigi/kaigiroku/index.html",
+          "observed_on": "https://www.town.gokase.miyazaki.jp/kakuka/gikai/honkaigi/index.html",
+          "fetched_at": "2026-08-27T06:36:55Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.gokase.miyazaki.jp/kakuka/gikai/honkaigi/kaigiroku/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC9A3F",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC9A3F",
+          "observed_on": "https://www.town.gokase.miyazaki.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:34:05Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A91AC9A3F (label: )"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

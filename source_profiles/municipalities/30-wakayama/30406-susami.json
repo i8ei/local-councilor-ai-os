@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "30406",
+  "prefecture": "和歌山県",
+  "municipality": "すさみ町",
+  "official_home_url": "http://www.town.susami.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.susami.lg.jp/tyousei/12/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.susami.lg.jp/tyousei/12/index.html",
+          "observed_on": "http://www.town.susami.lg.jp/tyousei/07/index.html",
+          "fetched_at": "2026-08-27T07:27:10Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.susami.lg.jp/tyousei/12/index.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.susami.lg.jp/tyousei/08/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.susami.lg.jp/tyousei/08/index.html",
+          "observed_on": "http://www.town.susami.lg.jp/tyousei/07/index.html",
+          "fetched_at": "2026-08-27T07:27:10Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.susami.lg.jp/tyousei/08/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx",
+          "observed_on": "http://www.town.susami.lg.jp/tyousei/08/2017032900022.html",
+          "fetched_at": "2026-08-27T07:29:43Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.susami.lg.jp/tyousei/08/files/304069_2023.xlsx (label: 財政状況資料集（令和5年度決算） (831KB))"
+    }
+  }
+}

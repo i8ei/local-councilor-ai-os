@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "37207",
+  "prefecture": "香川県",
+  "municipality": "東かがわ市",
+  "official_home_url": "http://www.higashikagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.higashikagawa.jp/shiseijoho/gikai/3603.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.higashikagawa.jp/shiseijoho/gikai/3603.html",
+          "observed_on": "https://www.higashikagawa.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:53:35Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.higashikagawa.jp/shiseijoho/gikai/3603.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/higashikagawa/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/higashikagawa/d1w_reiki/reiki.html",
+          "observed_on": "http://www.higashikagawa.jp/",
+          "fetched_at": "2026-08-27T06:52:46Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/higashikagawa/d1w_reiki/reiki.html (label: 市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.higashikagawa.jp/shiseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.higashikagawa.jp/shiseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.higashikagawa.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:53:35Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.higashikagawa.jp/shiseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.higashikagawa.jp/shiseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.higashikagawa.jp/shiseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.higashikagawa.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:53:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.higashikagawa.jp/shiseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    }
+  }
+}

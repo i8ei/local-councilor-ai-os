@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22213",
+  "prefecture": "静岡県",
+  "municipality": "掛川市",
+  "official_home_url": "http://www.city.kakegawa.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.kakegawa.shizuoka.jp/gyosei/docs/7576.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kakegawa.shizuoka.jp/gyosei/docs/7576.html",
+          "observed_on": "http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/shigikai/",
+          "fetched_at": "2026-08-27T07:45:38Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.kakegawa.shizuoka.jp/gyosei/docs/7576.html (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/jorei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/jorei/",
+          "observed_on": "http://www.city.kakegawa.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:43:58Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/jorei/ (label: 条例・規則等)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/",
+          "observed_on": "http://www.city.kakegawa.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:43:58Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kakegawa.shizuoka.jp/gyosei/shisei/zaisei/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html",
+          "observed_on": "http://www.city.kakegawa.shizuoka.jp/opendata/dataset/bunya/shisei",
+          "fetched_at": "2026-08-27T07:45:00Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.kakegawa.shizuoka.jp/opendata/dataset/188003.html (label: 令和２年度決算書)"
+    }
+  }
+}

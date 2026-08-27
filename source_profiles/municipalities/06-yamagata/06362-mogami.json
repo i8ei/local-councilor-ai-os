@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06362",
+  "prefecture": "山形県",
+  "municipality": "最上町",
+  "official_home_url": "https://town.mogami.lg.jp/top.php",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/mogami/WebView/rd/council.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/mogami/WebView/rd/council.html",
+          "observed_on": "https://town.mogami.lg.jp/top.php",
+          "fetched_at": "2026-08-27T07:44:22Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/mogami/WebView/rd/council.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://town.mogami.lg.jp/admin/09reiki/index.php",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://town.mogami.lg.jp/admin/09reiki/index.php",
+          "observed_on": "https://town.mogami.lg.jp/top.php",
+          "fetched_at": "2026-08-27T07:44:22Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://town.mogami.lg.jp/admin/09reiki/index.php (label: 最上町例規集(目次ページ))"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://town.mogami.lg.jp/info/11zaisei/01yosan.php",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://town.mogami.lg.jp/info/11zaisei/01yosan.php",
+          "observed_on": "https://town.mogami.lg.jp/top.php",
+          "fetched_at": "2026-08-27T07:44:22Z"
+        }
+      ],
+      "notes": "Observed budget link at https://town.mogami.lg.jp/info/11zaisei/01yosan.php (label: 予算の概要)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://town.mogami.lg.jp/info/11zaisei/02kessan.php",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://town.mogami.lg.jp/info/11zaisei/02kessan.php",
+          "observed_on": "https://town.mogami.lg.jp/top.php",
+          "fetched_at": "2026-08-27T07:44:22Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://town.mogami.lg.jp/info/11zaisei/02kessan.php (label: 決算の概要)"
+    }
+  }
+}

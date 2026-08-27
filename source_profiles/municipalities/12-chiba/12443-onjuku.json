@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12443",
+  "prefecture": "千葉県",
+  "municipality": "御宿町",
+  "official_home_url": "http://www.town.onjuku.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.onjuku.chiba.jp/sub5/4/gikai/gijiroku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.onjuku.chiba.jp/sub5/4/gikai/gijiroku/",
+          "observed_on": "http://www.town.onjuku.chiba.jp/top.html",
+          "fetched_at": "2026-08-27T07:29:20Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.onjuku.chiba.jp/sub5/4/gikai/gijiroku/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A80078B0F",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A80078B0F",
+          "observed_on": "http://www.town.onjuku.chiba.jp/",
+          "fetched_at": "2026-08-27T07:28:52Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A80078B0F (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.onjuku.chiba.jp/sub5/3/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.onjuku.chiba.jp/sub5/3/",
+          "observed_on": "http://www.town.onjuku.chiba.jp/",
+          "fetched_at": "2026-08-27T07:28:52Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.onjuku.chiba.jp/sub5/3/ (label: 財政・政策・計画)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.onjuku.chiba.jp/sub5/3/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.onjuku.chiba.jp/sub5/3/",
+          "observed_on": "http://www.town.onjuku.chiba.jp/",
+          "fetched_at": "2026-08-27T07:28:52Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.onjuku.chiba.jp/sub5/3/ (label: 財政・政策・計画)"
+    }
+  }
+}

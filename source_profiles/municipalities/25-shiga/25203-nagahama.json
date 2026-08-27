@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "25203",
+  "prefecture": "滋賀県",
+  "municipality": "長浜市",
+  "official_home_url": "http://www.city.nagahama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.nagahama/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.nagahama/reiki_menu.html",
+          "observed_on": "http://www.city.nagahama.lg.jp/",
+          "fetched_at": "2026-08-27T06:07:05Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.nagahama/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.nagahama.lg.jp/category/5-10-1-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.nagahama.lg.jp/category/5-10-1-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.nagahama.lg.jp/category/5-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:07:34Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.nagahama.lg.jp/category/5-10-1-0-0-0-0-0-0-0.html (label: 予算・決算等)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.nagahama.lg.jp/",
+          "fetched_at": "2026-08-27T06:07:05Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.nagahama.lg.jp/category/5-11-0-0-0-0-0-0-0-0.html (label: 主要な施策・プロジェクト)"
+    }
+  }
+}

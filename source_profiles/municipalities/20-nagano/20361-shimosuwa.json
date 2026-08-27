@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20361",
+  "prefecture": "長野県",
+  "municipality": "下諏訪町",
+  "official_home_url": "http://www.town.shimosuwa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.shimosuwa.lg.jp/www/contents/1001000001264/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shimosuwa.lg.jp/www/contents/1001000001264/index.html",
+          "observed_on": "http://www.town.shimosuwa.lg.jp/www/genre/1000100000128/index.html",
+          "fetched_at": "2026-08-27T07:05:59Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.shimosuwa.lg.jp/www/contents/1001000001264/index.html (label: 本会議の会議録はどこで閲覧できますか。)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/shimosuwa/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/shimosuwa/reiki_menu.html",
+          "observed_on": "http://www.town.shimosuwa.lg.jp/",
+          "fetched_at": "2026-08-27T07:05:45Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/shimosuwa/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html",
+          "observed_on": "http://www.town.shimosuwa.lg.jp/",
+          "fetched_at": "2026-08-27T07:05:45Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html (label: 行財政計画)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html",
+          "observed_on": "http://www.town.shimosuwa.lg.jp/",
+          "fetched_at": "2026-08-27T07:05:45Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.shimosuwa.lg.jp/www/genre/1000100000075/index.html (label: 行財政計画)"
+    }
+  }
+}

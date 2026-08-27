@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02424",
+  "prefecture": "青森県",
+  "municipality": "東通村",
+  "official_home_url": "http://www.vill.higashidoori.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.vill.higashidoori.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.higashidoori.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.higashidoori.lg.jp/",
+          "fetched_at": "2026-08-27T07:03:17Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.vill.higashidoori.lg.jp/reiki_int/reiki_menu.html (label: 東通村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.higashidoori.lg.jp/sub05/cat500005.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.higashidoori.lg.jp/sub05/cat500005.html",
+          "observed_on": "http://www.vill.higashidoori.lg.jp/",
+          "fetched_at": "2026-08-27T07:03:17Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.higashidoori.lg.jp/sub05/cat500005.html (label: 計画・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.higashidoori.lg.jp/sub05/cat500005.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.higashidoori.lg.jp/sub05/cat500005.html",
+          "observed_on": "http://www.vill.higashidoori.lg.jp/",
+          "fetched_at": "2026-08-27T07:03:17Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.higashidoori.lg.jp/sub05/cat500005.html (label: 計画・財政)"
+    }
+  }
+}

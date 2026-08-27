@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47201",
+  "prefecture": "沖縄県",
+  "municipality": "那覇市",
+  "official_home_url": "https://www.city.naha.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/naha/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/naha/reiki_menu.html",
+          "observed_on": "https://www.city.naha.okinawa.jp/",
+          "fetched_at": "2026-08-27T06:47:58Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/naha/reiki_menu.html (label: 那覇市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html",
+          "observed_on": "https://www.city.naha.okinawa.jp/admin/index.html",
+          "fetched_at": "2026-08-27T06:48:25Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004386/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html",
+          "observed_on": "https://www.city.naha.okinawa.jp/admin/index.html",
+          "fetched_at": "2026-08-27T06:48:25Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.naha.okinawa.jp/admin/nahashizaisei/1004409/index.html (label: 決算)"
+    }
+  }
+}

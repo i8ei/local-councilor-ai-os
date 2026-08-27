@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40621",
+  "prefecture": "福岡県",
+  "municipality": "苅田町",
+  "official_home_url": "http://www.town.kanda.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/kanda/pg/index.html",
+          "observed_on": "http://www.town.kanda.lg.jp/site/gikai/",
+          "fetched_at": "2026-08-27T04:27:38Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/kanda/pg/index.html (label: 議会録検索＜外部リンク＞)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.kanda.lg.jp/life/6/30/109/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kanda.lg.jp/life/6/30/109/",
+          "observed_on": "http://www.town.kanda.lg.jp/life/6/",
+          "fetched_at": "2026-08-27T06:04:18Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.kanda.lg.jp/life/6/30/109/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kanda.lg.jp/life/6/27/97/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kanda.lg.jp/life/6/27/97/",
+          "observed_on": "http://www.town.kanda.lg.jp/life/6/",
+          "fetched_at": "2026-08-27T06:04:18Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.kanda.lg.jp/life/6/27/97/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.kanda.lg.jp/life/6/27/98/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.kanda.lg.jp/life/6/27/98/",
+          "observed_on": "http://www.town.kanda.lg.jp/life/6/",
+          "fetched_at": "2026-08-27T06:04:18Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.kanda.lg.jp/life/6/27/98/ (label: 決算)"
+    }
+  }
+}

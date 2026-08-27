@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39301",
+  "prefecture": "高知県",
+  "municipality": "東洋町",
+  "official_home_url": "http://www.town.toyo.kochi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.toyo.kochi.jp/gikai-toyo/kaigiroku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.toyo.kochi.jp/gikai-toyo/kaigiroku.html",
+          "observed_on": "http://www.town.toyo.kochi.jp/gikai-toyo/",
+          "fetched_at": "2026-08-27T07:11:08Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.toyo.kochi.jp/gikai-toyo/kaigiroku.html (label: 会議録の閲覧)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+          "observed_on": "http://www.town.toyo.kochi.jp/contents/a02b07.php",
+          "fetched_at": "2026-08-27T07:10:43Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.toyo.kochi.jp/contents/info0541.php (label: 財政状況資料集)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.toyo.kochi.jp/contents/info0541.php",
+          "observed_on": "http://www.town.toyo.kochi.jp/contents/a02b07.php",
+          "fetched_at": "2026-08-27T07:10:43Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.toyo.kochi.jp/contents/info0541.php (label: 財政状況資料集)"
+    }
+  }
+}

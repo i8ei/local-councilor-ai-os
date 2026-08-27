@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39341",
+  "prefecture": "高知県",
+  "municipality": "本山町",
+  "official_home_url": "http://www.town.motoyama.kochi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.motoyama.kochi.jp/soshikikarasagasu/gikaijimukyoku/teireirinnji/teireikairinzikaikaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.motoyama.kochi.jp/soshikikarasagasu/gikaijimukyoku/teireirinnji/teireikairinzikaikaigiroku/index.html",
+          "observed_on": "https://www.town.motoyama.kochi.jp/soshikikarasagasu/gikaijimukyoku/teireirinnji/index.html",
+          "fetched_at": "2026-08-27T07:14:08Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.motoyama.kochi.jp/soshikikarasagasu/gikaijimukyoku/teireirinnji/teireikairinzikaikaigiroku/index.html (label: 定例会・臨時会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/motoyama/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/motoyama/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.motoyama.kochi.jp/",
+          "fetched_at": "2026-08-27T07:12:09Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/motoyama/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.motoyama.kochi.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.motoyama.kochi.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.town.motoyama.kochi.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:12:24Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.motoyama.kochi.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.motoyama.kochi.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.motoyama.kochi.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html",
+          "observed_on": "https://www.town.motoyama.kochi.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:12:24Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.motoyama.kochi.jp/gyoseijoho/gyozaisei/zaisei_yosan_kessan/index.html (label: 財政・予算・決算)"
+    }
+  }
+}

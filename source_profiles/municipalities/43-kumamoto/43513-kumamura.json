@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43513",
+  "prefecture": "熊本県",
+  "municipality": "球磨村",
+  "official_home_url": "http://www.kumamura.com/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kumamura.com/list00249.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kumamura.com/list00249.html",
+          "observed_on": "https://www.kumamura.com/list00133.html",
+          "fetched_at": "2026-08-27T05:49:41Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kumamura.com/list00249.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kuma/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kuma/d1w_reiki/reiki.html",
+          "observed_on": "https://www.kumamura.com/default.html",
+          "fetched_at": "2026-08-27T05:49:40Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kuma/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.kumamura.com/list00235.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kumamura.com/list00235.html",
+          "observed_on": "https://www.kumamura.com/default.html",
+          "fetched_at": "2026-08-27T05:49:40Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.kumamura.com/list00235.html (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.kumamura.com/list00235.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kumamura.com/list00235.html",
+          "observed_on": "https://www.kumamura.com/default.html",
+          "fetched_at": "2026-08-27T05:49:40Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.kumamura.com/list00235.html (label: 予算・決算)"
+    }
+  }
+}

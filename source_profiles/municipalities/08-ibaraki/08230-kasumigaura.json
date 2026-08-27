@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08230",
+  "prefecture": "茨城県",
+  "municipality": "かすみがうら市",
+  "official_home_url": "http://www.city.kasumigaura.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.kasumigaura.lg.jp/search.php?keyword=%E4%BE%8B%E8%A6%8F%E9%9B%86",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kasumigaura.lg.jp/search.php?keyword=%E4%BE%8B%E8%A6%8F%E9%9B%86",
+          "observed_on": "http://www.city.kasumigaura.lg.jp/",
+          "fetched_at": "2026-08-27T06:06:31Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.kasumigaura.lg.jp/search.php?keyword=%E4%BE%8B%E8%A6%8F%E9%9B%86 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
+          "observed_on": "http://www.city.kasumigaura.lg.jp/page/dir000006.html",
+          "fetched_at": "2026-08-27T06:07:55Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kasumigaura.lg.jp/page/dir000472.html (label: 行革・財政・統計・人事等)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kasumigaura.lg.jp/page/dir000472.html",
+          "observed_on": "http://www.city.kasumigaura.lg.jp/page/dir000006.html",
+          "fetched_at": "2026-08-27T06:07:55Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kasumigaura.lg.jp/page/dir000472.html (label: 行革・財政・統計・人事等)"
+    }
+  }
+}

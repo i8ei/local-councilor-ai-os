@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "29205",
+  "prefecture": "奈良県",
+  "municipality": "橿原市",
+  "official_home_url": "http://www.city.kashihara.nara.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kashihara.nara.dbsr.jp/index.php/",
+          "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/gikai/index.html",
+          "fetched_at": "2026-08-27T07:00:47Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.city.kashihara.nara.dbsr.jp/index.php/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.kashihara.nara.jp/section/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kashihara.nara.jp/section/reiki/reiki.html",
+          "observed_on": "http://www.city.kashihara.nara.jp/",
+          "fetched_at": "2026-08-27T07:00:17Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.kashihara.nara.jp/section/reiki/reiki.html (label: 例規集検索)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:00:35Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.kashihara.nara.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:00:35Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kashihara.nara.jp/shiseijoho/zaisei/index.html (label: 財政)"
+    }
+  }
+}

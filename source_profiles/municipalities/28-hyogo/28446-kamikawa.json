@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28446",
+  "prefecture": "兵庫県",
+  "municipality": "神河町",
+  "official_home_url": "http://www.town.kamikawa.hyogo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.kamikawa.hyogo.jp/html/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kamikawa.hyogo.jp/html/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.kamikawa.hyogo.jp/",
+          "fetched_at": "2026-08-27T06:56:49Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.kamikawa.hyogo.jp/html/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kamikawa.hyogo.jp/0000000162.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kamikawa.hyogo.jp/0000000162.html",
+          "observed_on": "https://www.town.kamikawa.hyogo.jp/category/5-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:57:37Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.kamikawa.hyogo.jp/0000000162.html (label: 神河町の予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kamikawa.hyogo.jp/0000000176.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kamikawa.hyogo.jp/0000000176.html",
+          "observed_on": "https://www.town.kamikawa.hyogo.jp/category/5-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:57:37Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.kamikawa.hyogo.jp/0000000176.html (label: 神河町の決算・財政状況)"
+    }
+  }
+}

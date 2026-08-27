@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28207",
+  "prefecture": "兵庫県",
+  "municipality": "伊丹市",
+  "official_home_url": "http://www.city.itami.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kensakusystem.jp/itami/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kensakusystem.jp/itami/index.html",
+          "observed_on": "https://www.city.itami.lg.jp/SOSIKI/SHIGIKAI/index.html",
+          "fetched_at": "2026-08-27T06:45:34Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kensakusystem.jp/itami/index.html (label: 伊丹市議会 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.itami.lg.jp/SOSIKI/SOGOSEISAKU/KOHO/teireikisyakaiken/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.itami.lg.jp/SOSIKI/SOGOSEISAKU/KOHO/teireikisyakaiken/index.html",
+          "observed_on": "http://www.city.itami.lg.jp/",
+          "fetched_at": "2026-08-27T06:44:47Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.itami.lg.jp/SOSIKI/SOGOSEISAKU/KOHO/teireikisyakaiken/index.html (label: 記者会見)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.itami.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:45:13Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html (label: 財政・経営)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.itami.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:45:13Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.itami.lg.jp/shiseijoho/zaisei/index.html (label: 財政・経営)"
+    }
+  }
+}

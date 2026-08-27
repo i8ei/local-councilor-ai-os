@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "39306",
+  "prefecture": "高知県",
+  "municipality": "馬路村",
+  "official_home_url": "https://vill.umaji.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://vill.umaji.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://vill.umaji.lg.jp/reiki/",
+          "observed_on": "https://vill.umaji.lg.jp/",
+          "fetched_at": "2026-08-27T07:11:36Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://vill.umaji.lg.jp/reiki/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://vill.umaji.lg.jp/about/administrative/1786/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://vill.umaji.lg.jp/about/administrative/1786/",
+          "observed_on": "https://vill.umaji.lg.jp/about/category/administrative/",
+          "fetched_at": "2026-08-27T07:12:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://vill.umaji.lg.jp/about/administrative/1786/ (label: 馬路村財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://vill.umaji.lg.jp/about/administrative/1786/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://vill.umaji.lg.jp/about/administrative/1786/",
+          "observed_on": "https://vill.umaji.lg.jp/about/category/administrative/",
+          "fetched_at": "2026-08-27T07:12:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://vill.umaji.lg.jp/about/administrative/1786/ (label: 馬路村財政状況)"
+    }
+  }
+}

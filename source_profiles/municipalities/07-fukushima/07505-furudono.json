@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07505",
+  "prefecture": "福島県",
+  "municipality": "古殿町",
+  "official_home_url": "http://www.town.furudono.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.furudono.fukushima.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.furudono.fukushima.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.furudono.fukushima.jp/",
+          "fetched_at": "2026-08-27T08:06:47Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.furudono.fukushima.jp/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.furudono.fukushima.jp/chouseijyouhou/yosanjyoukyou",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.furudono.fukushima.jp/chouseijyouhou/yosanjyoukyou",
+          "observed_on": "http://www.town.furudono.fukushima.jp/",
+          "fetched_at": "2026-08-27T08:06:47Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.furudono.fukushima.jp/chouseijyouhou/yosanjyoukyou (label: 予算編成状況について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki",
+          "observed_on": "http://www.town.furudono.fukushima.jp/",
+          "fetched_at": "2026-08-27T08:06:47Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.furudono.fukushima.jp/chouseijyouhou/zaiseihikakubunseki (label: 財政比較分析表について)"
+    }
+  }
+}

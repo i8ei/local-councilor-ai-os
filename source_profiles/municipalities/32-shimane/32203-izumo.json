@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "32203",
+  "prefecture": "島根県",
+  "municipality": "出雲市",
+  "official_home_url": "http://www.city.izumo.shimane.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.izumo.shimane.jp/www/genre/1000000010239/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.izumo.shimane.jp/www/genre/1000000010239/index.html",
+          "observed_on": "http://www.city.izumo.shimane.jp/www/genre/1000000000070/index.html",
+          "fetched_at": "2026-08-27T06:07:30Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.izumo.shimane.jp/www/genre/1000000010239/index.html (label: 財政部)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.izumo.shimane.jp/www/genre/1000000010239/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.izumo.shimane.jp/www/genre/1000000010239/index.html",
+          "observed_on": "http://www.city.izumo.shimane.jp/www/genre/1000000000070/index.html",
+          "fetched_at": "2026-08-27T06:07:30Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.izumo.shimane.jp/www/genre/1000000010239/index.html (label: 財政部)"
+    }
+  }
+}

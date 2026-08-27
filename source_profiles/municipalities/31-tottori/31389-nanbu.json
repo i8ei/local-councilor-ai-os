@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "31389",
+  "prefecture": "鳥取県",
+  "municipality": "南部町",
+  "official_home_url": "http://www.town.nanbu.tottori.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.nanbu.tottori.jp/admin/gikai/kaigiroku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nanbu.tottori.jp/admin/gikai/kaigiroku/",
+          "observed_on": "http://www.town.nanbu.tottori.jp/admin/gikai/",
+          "fetched_at": "2026-08-27T06:00:58Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.nanbu.tottori.jp/admin/gikai/kaigiroku/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.nanbu.tottori.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nanbu.tottori.jp/reiki/",
+          "observed_on": "http://www.town.nanbu.tottori.jp/",
+          "fetched_at": "2026-08-27T06:00:10Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.nanbu.tottori.jp/reiki/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

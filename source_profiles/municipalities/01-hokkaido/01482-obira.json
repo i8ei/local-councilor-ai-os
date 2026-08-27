@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01482",
+  "prefecture": "北海道",
+  "municipality": "小平町",
+  "official_home_url": "https://www.town.obira.hokkaido.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=48",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=48",
+          "observed_on": "https://www.town.obira.hokkaido.jp/",
+          "fetched_at": "2026-08-27T06:30:41Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=48 (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.obira.hokkaido.jp/hotnews/category/232.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.obira.hokkaido.jp/hotnews/category/232.html",
+          "observed_on": "https://www.town.obira.hokkaido.jp/top.html",
+          "fetched_at": "2026-08-27T06:31:00Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.obira.hokkaido.jp/hotnews/category/232.html (label: 小平町の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.obira.hokkaido.jp/hotnews/category/232.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.obira.hokkaido.jp/hotnews/category/232.html",
+          "observed_on": "https://www.town.obira.hokkaido.jp/top.html",
+          "fetched_at": "2026-08-27T06:31:00Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.obira.hokkaido.jp/hotnews/category/232.html (label: 小平町の財政)"
+    }
+  }
+}

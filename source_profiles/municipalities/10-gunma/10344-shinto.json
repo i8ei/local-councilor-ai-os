@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10344",
+  "prefecture": "群馬県",
+  "municipality": "榛東村",
+  "official_home_url": "http://www.vill.shinto.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/shinto/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/shinto/reiki_menu.html",
+          "observed_on": "http://www.vill.shinto.gunma.jp/",
+          "fetched_at": "2026-08-27T06:36:35Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/shinto/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.shinto.gunma.jp/administration/000350/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.shinto.gunma.jp/administration/000350/index.html",
+          "observed_on": "http://www.vill.shinto.gunma.jp/",
+          "fetched_at": "2026-08-27T06:36:35Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.shinto.gunma.jp/administration/000350/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.shinto.gunma.jp/administration/000350/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.shinto.gunma.jp/administration/000350/index.html",
+          "observed_on": "http://www.vill.shinto.gunma.jp/",
+          "fetched_at": "2026-08-27T06:36:35Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.shinto.gunma.jp/administration/000350/index.html (label: 行財政)"
+    }
+  }
+}

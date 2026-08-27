@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01581",
+  "prefecture": "北海道",
+  "municipality": "厚真町",
+  "official_home_url": "https://www.town.atsuma.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/atsuma/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/atsuma/SpTop.html",
+          "observed_on": "https://www.town.atsuma.lg.jp/adv/ba.php?id=10",
+          "fetched_at": "2026-08-27T06:44:00Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/atsuma/SpTop.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.atsuma.lg.jp/adv/ba.php?id=14",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.atsuma.lg.jp/adv/ba.php?id=14",
+          "observed_on": "https://www.town.atsuma.lg.jp/",
+          "fetched_at": "2026-08-27T06:43:19Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.town.atsuma.lg.jp/adv/ba.php?id=14 (label: 厚真町例規類集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.atsuma.lg.jp/life/5/32/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.atsuma.lg.jp/life/5/32/",
+          "observed_on": "https://www.town.atsuma.lg.jp/",
+          "fetched_at": "2026-08-27T06:43:19Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.atsuma.lg.jp/life/5/32/ (label: 財政・計画・統計)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.atsuma.lg.jp/life/5/32/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.atsuma.lg.jp/life/5/32/",
+          "observed_on": "https://www.town.atsuma.lg.jp/",
+          "fetched_at": "2026-08-27T06:43:19Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.atsuma.lg.jp/life/5/32/ (label: 財政・計画・統計)"
+    }
+  }
+}

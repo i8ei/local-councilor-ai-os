@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "21504",
+  "prefecture": "岐阜県",
+  "municipality": "七宗町",
+  "official_home_url": "http://www.hichiso.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.hichiso.jp/top/gyosei/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.hichiso.jp/top/gyosei/reiki/",
+          "observed_on": "http://www.hichiso.jp/",
+          "fetched_at": "2026-08-27T07:37:13Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.hichiso.jp/top/gyosei/reiki/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.hichiso.jp/top/gyosei/financial/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.hichiso.jp/top/gyosei/financial/",
+          "observed_on": "http://www.hichiso.jp/",
+          "fetched_at": "2026-08-27T07:37:13Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.hichiso.jp/top/gyosei/financial/ (label: 町の財政事情)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.hichiso.jp/top/gyosei/financial/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.hichiso.jp/top/gyosei/financial/",
+          "observed_on": "http://www.hichiso.jp/",
+          "fetched_at": "2026-08-27T07:37:13Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.hichiso.jp/top/gyosei/financial/ (label: 町の財政事情)"
+    }
+  }
+}

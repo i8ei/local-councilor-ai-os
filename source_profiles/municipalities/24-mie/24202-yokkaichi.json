@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "24202",
+  "prefecture": "三重県",
+  "municipality": "四日市市",
+  "official_home_url": "https://www.city.yokkaichi.lg.jp/www/index.html",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/yokkaichi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/yokkaichi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/yokkaichi/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:01:20Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/yokkaichi/reiki_menu.html for 四日市市"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.yokkaichi.lg.jp/www/contents/1778205323445/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.yokkaichi.lg.jp/www/contents/1778205323445/index.html",
+          "observed_on": "https://www.city.yokkaichi.lg.jp/www/index.html",
+          "fetched_at": "2026-08-27T05:56:40Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.yokkaichi.lg.jp/www/contents/1778205323445/index.html (label: （予算上限に達したため、受付を停止します。）四日市市太陽光発電設備等設置費補助金の募集について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.yokkaichi.lg.jp/www/genre/1490610299694/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.yokkaichi.lg.jp/www/genre/1490610299694/index.html",
+          "observed_on": "https://www.city.yokkaichi.lg.jp/www/genre/1000100000051/index.html",
+          "fetched_at": "2026-08-27T05:58:46Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.yokkaichi.lg.jp/www/genre/1490610299694/index.html (label: 人事・財政)"
+    }
+  }
+}

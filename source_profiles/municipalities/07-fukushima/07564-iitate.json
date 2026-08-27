@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07564",
+  "prefecture": "福島県",
+  "municipality": "飯舘村",
+  "official_home_url": "http://www.vill.iitate.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.vill.iitate.fukushima.jp/site/gikai/list24.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.iitate.fukushima.jp/site/gikai/list24.html",
+          "observed_on": "http://www.vill.iitate.fukushima.jp/site/gikai/15010.html",
+          "fetched_at": "2026-08-27T08:12:25Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.vill.iitate.fukushima.jp/site/gikai/list24.html (label: 会議録検索の一覧)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.iitate/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.iitate/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/vill.iitate/reiki_menu.html",
+          "fetched_at": "2026-08-27T08:14:26Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/vill.iitate/reiki_menu.html for 飯舘村"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.iitate.fukushima.jp/site/gikai/14739.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.iitate.fukushima.jp/site/gikai/14739.html",
+          "observed_on": "http://www.vill.iitate.fukushima.jp/site/gikai/",
+          "fetched_at": "2026-08-27T08:12:53Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.vill.iitate.fukushima.jp/site/gikai/14739.html (label: 令和8年度 飯舘村議会予算審査特別委員会記録（令和8年3月6日～3月10日）)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28206",
+  "prefecture": "兵庫県",
+  "municipality": "芦屋市",
+  "official_home_url": "http://www.city.ashiya.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://smart.discussvision.net/smart/tenant/ashiya/WebView/rd/council.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://smart.discussvision.net/smart/tenant/ashiya/WebView/rd/council.html",
+          "observed_on": "http://www.city.ashiya.lg.jp/shigi/gikaityuukeitoha.html",
+          "fetched_at": "2026-08-27T06:46:40Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/ashiya/WebView/rd/council.html (label: 本会議・委員会映像の中継（外部サイトへリンク）（別ウィンドウが開きます）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/ashiya/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/ashiya/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/ashiya/reiki_menu.html",
+          "fetched_at": "2026-08-27T06:50:32Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/ashiya/reiki_menu.html for 芦屋市"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

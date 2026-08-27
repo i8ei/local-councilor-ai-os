@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "24472",
+  "prefecture": "三重県",
+  "municipality": "南伊勢町",
+  "official_home_url": "https://www.town.minamiise.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.minamiise.lg.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.minamiise.lg.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.minamiise.lg.jp/",
+          "fetched_at": "2026-08-27T06:04:19Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.minamiise.lg.jp/section/reiki_int/reiki_menu.html (label: 南伊勢町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.minamiise.lg.jp/admin/gyousei/unei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.minamiise.lg.jp/admin/gyousei/unei/index.html",
+          "observed_on": "https://www.town.minamiise.lg.jp/admin/gyousei/index.html",
+          "fetched_at": "2026-08-27T06:04:32Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.minamiise.lg.jp/admin/gyousei/unei/index.html (label: 行政運営・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.minamiise.lg.jp/admin/gyousei/unei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.minamiise.lg.jp/admin/gyousei/unei/index.html",
+          "observed_on": "https://www.town.minamiise.lg.jp/admin/gyousei/index.html",
+          "fetched_at": "2026-08-27T06:04:32Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.minamiise.lg.jp/admin/gyousei/unei/index.html (label: 行政運営・財政)"
+    }
+  }
+}

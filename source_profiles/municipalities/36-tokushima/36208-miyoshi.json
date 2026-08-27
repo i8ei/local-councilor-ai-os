@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36208",
+  "prefecture": "徳島県",
+  "municipality": "三好市",
+  "official_home_url": "https://www.miyoshi.i-tokushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/tmiyoshi/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/tmiyoshi/pg/index.html",
+          "observed_on": "https://www.miyoshi.i-tokushima.jp/gikai/",
+          "fetched_at": "2026-08-27T06:41:17Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/tmiyoshi/pg/index.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.miyoshi.i-tokushima.jp/reiki/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.miyoshi.i-tokushima.jp/reiki/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.miyoshi.i-tokushima.jp/index2.html",
+          "fetched_at": "2026-08-27T06:40:27Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.miyoshi.i-tokushima.jp/reiki/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.miyoshi.i-tokushima.jp/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.miyoshi.i-tokushima.jp/shisei/zaisei/",
+          "observed_on": "https://www.miyoshi.i-tokushima.jp/index2.html",
+          "fetched_at": "2026-08-27T06:40:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.miyoshi.i-tokushima.jp/shisei/zaisei/ (label: 財政・行政改革)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.miyoshi.i-tokushima.jp/shisei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.miyoshi.i-tokushima.jp/shisei/zaisei/",
+          "observed_on": "https://www.miyoshi.i-tokushima.jp/index2.html",
+          "fetched_at": "2026-08-27T06:40:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.miyoshi.i-tokushima.jp/shisei/zaisei/ (label: 財政・行政改革)"
+    }
+  }
+}

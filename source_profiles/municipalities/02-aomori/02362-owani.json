@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02362",
+  "prefecture": "青森県",
+  "municipality": "大鰐町",
+  "official_home_url": "http://www.town.owani.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.owani.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.owani.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.owani.lg.jp/home.html",
+          "fetched_at": "2026-08-27T06:59:53Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.owani.lg.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/zaisei/budget.html",
+          "observed_on": "http://www.town.owani.lg.jp/gyousei/index.html",
+          "fetched_at": "2026-08-27T07:00:18Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.owani.lg.jp/gyousei/zaisei/budget.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html",
+          "observed_on": "http://www.town.owani.lg.jp/gyousei/index.html",
+          "fetched_at": "2026-08-27T07:00:18Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.owani.lg.jp/gyousei/zaisei/settlement.html (label: 決算)"
+    }
+  }
+}

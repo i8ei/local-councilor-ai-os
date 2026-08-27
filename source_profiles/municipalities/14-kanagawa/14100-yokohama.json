@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14100",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "official_home_url": "http://www.city.yokohama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.yokohama.lg.jp/city-info/gyosei-kansa/jorei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.yokohama.lg.jp/city-info/gyosei-kansa/jorei/index.html",
+          "observed_on": "http://www.city.yokohama.lg.jp/city-info/index.html",
+          "fetched_at": "2026-08-27T07:56:55Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.yokohama.lg.jp/city-info/gyosei-kansa/jorei/index.html (label: 条例・規則・市報)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.yokohama.lg.jp/city-info/zaisei/jokyo/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.yokohama.lg.jp/city-info/zaisei/jokyo/index.html",
+          "observed_on": "http://www.city.yokohama.lg.jp/city-info/index.html",
+          "fetched_at": "2026-08-27T07:56:55Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.yokohama.lg.jp/city-info/zaisei/jokyo/index.html (label: 財政状況（予算・決算）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.yokohama.lg.jp/city-info/zaisei/jokyo/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.yokohama.lg.jp/city-info/zaisei/jokyo/index.html",
+          "observed_on": "http://www.city.yokohama.lg.jp/city-info/index.html",
+          "fetched_at": "2026-08-27T07:56:55Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.yokohama.lg.jp/city-info/zaisei/jokyo/index.html (label: 財政状況（予算・決算）)"
+    }
+  }
+}

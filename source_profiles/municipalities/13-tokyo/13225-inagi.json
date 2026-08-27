@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13225",
+  "prefecture": "東京都",
+  "municipality": "稲城市",
+  "official_home_url": "http://www.city.inagi.tokyo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html",
+          "observed_on": "http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/index.html",
+          "fetched_at": "2026-08-27T07:49:15Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.inagi.tokyo.jp/kenko/hukushiyuusouunsou/1003619.html (label: 多摩地域福祉有償運送運営協議会 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/inagi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/inagi/reiki_menu.html",
+          "observed_on": "http://www.city.inagi.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:48:30Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/inagi/reiki_menu.html (label: 条例・規則等)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html",
+          "observed_on": "http://www.city.inagi.tokyo.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:48:54Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.inagi.tokyo.jp/shisei/zaisei/1009113.html (label: 予算書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html",
+          "observed_on": "http://www.city.inagi.tokyo.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:48:54Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.inagi.tokyo.jp/shisei/zaisei/1009154.html (label: 決算書)"
+    }
+  }
+}

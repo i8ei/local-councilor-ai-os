@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47214",
+  "prefecture": "沖縄県",
+  "municipality": "宮古島市",
+  "official_home_url": "https://www.city.miyakojima.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/miyakojima/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/miyakojima/pg/index.html",
+          "observed_on": "https://www.city.miyakojima.lg.jp/gyosei/gikai/miyakojimashigikai_gijiroku.html",
+          "fetched_at": "2026-08-27T06:53:47Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/miyakojima/pg/index.html (label: 宮古島市議会議事録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krr230.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krr230.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "https://www.city.miyakojima.lg.jp/",
+          "fetched_at": "2026-08-27T06:51:06Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krr230.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

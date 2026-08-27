@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "33663",
+  "prefecture": "岡山県",
+  "municipality": "久米南町",
+  "official_home_url": "https://www.town.kumenan.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://reiki.town.kumenan.okayama.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://reiki.town.kumenan.okayama.jp/reiki_menu.html",
+          "observed_on": "https://www.town.kumenan.lg.jp/",
+          "fetched_at": "2026-08-27T06:21:36Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://reiki.town.kumenan.okayama.jp/reiki_menu.html (label: 町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html",
+          "observed_on": "https://www.town.kumenan.lg.jp/",
+          "fetched_at": "2026-08-27T06:21:36Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html (label: 財政運営適正化計画（中長期財政計画）の公表)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html",
+          "observed_on": "https://www.town.kumenan.lg.jp/",
+          "fetched_at": "2026-08-27T06:21:36Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.kumenan.lg.jp/administration/gyouzaisei/gyouzaisei/zaisei_unei_keikaku.html (label: 財政運営適正化計画（中長期財政計画）の公表)"
+    }
+  }
+}

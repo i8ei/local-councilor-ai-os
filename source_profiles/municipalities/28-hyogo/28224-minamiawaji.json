@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28224",
+  "prefecture": "兵庫県",
+  "municipality": "南あわじ市",
+  "official_home_url": "http://www.city.minamiawaji.hyogo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.minamiawaji.hyogo.jp/site/gikai/list269-474.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.minamiawaji.hyogo.jp/site/gikai/list269-474.html",
+          "observed_on": "http://www.city.minamiawaji.hyogo.jp/site/gikai/gianichiran.html",
+          "fetched_at": "2026-08-27T06:52:22Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.minamiawaji.hyogo.jp/site/gikai/list269-474.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/city.minamiawaji/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/city.minamiawaji/reiki_menu.html",
+          "observed_on": "http://www.city.minamiawaji.hyogo.jp/",
+          "fetched_at": "2026-08-27T06:52:04Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/city.minamiawaji/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.minamiawaji.hyogo.jp/uploaded/attachment/324730.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.minamiawaji.hyogo.jp/uploaded/attachment/324730.pdf",
+          "observed_on": "http://www.city.minamiawaji.hyogo.jp/site/gikai/gianichiran.html",
+          "fetched_at": "2026-08-27T06:52:22Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.minamiawaji.hyogo.jp/uploaded/attachment/324730.pdf (label: 議案第9号 ※令和8年度当初予算（一般会計） [PDFファイル／3.01MB])"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01457",
+  "prefecture": "北海道",
+  "municipality": "上川町",
+  "official_home_url": "http://www.town.hokkaido-kamikawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.hokkaido-kamikawa.lg.jp/reiki/reiki_taikei/taikei_default.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.hokkaido-kamikawa.lg.jp/reiki/reiki_taikei/taikei_default.html",
+          "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:24:44Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.hokkaido-kamikawa.lg.jp/reiki/reiki_taikei/taikei_default.html (label: 例規集 （新規ウィンドウで開きます）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx.html?cp=h8nafq0000000ago&cs=c06_05s3",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx.html?cp=h8nafq0000000ago&cs=c06_05s3",
+          "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/category/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:24:57Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006jx.html?cp=h8nafq0000000ago&cs=c06_05s3 (label: 予算説明書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl.html?cp=h8nafq0000000ago&cs=c06_05s3",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl.html?cp=h8nafq0000000ago&cs=c06_05s3",
+          "observed_on": "http://www.town.hokkaido-kamikawa.lg.jp/category/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:24:57Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.hokkaido-kamikawa.lg.jp/section/kikakusoumu/chs81200000006rl.html?cp=h8nafq0000000ago&cs=c06_05s3 (label: 決算状況)"
+    }
+  }
+}

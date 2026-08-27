@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12223",
+  "prefecture": "千葉県",
+  "municipality": "鴨川市",
+  "official_home_url": "http://www.city.kamogawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.kamogawa.lg.jp/soshiki/6/1157.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kamogawa.lg.jp/soshiki/6/1157.html",
+          "observed_on": "http://www.city.kamogawa.lg.jp/",
+          "fetched_at": "2026-08-27T07:16:15Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.kamogawa.lg.jp/soshiki/6/1157.html (label: 電子掲示場 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

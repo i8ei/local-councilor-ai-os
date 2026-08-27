@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10464",
+  "prefecture": "群馬県",
+  "municipality": "玉村町",
+  "official_home_url": "http://www.town.tamamura.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.tamamura.lg.jp/docs/2026052200043/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tamamura.lg.jp/docs/2026052200043/",
+          "observed_on": "http://www.town.tamamura.lg.jp/category/bunya/chosei/",
+          "fetched_at": "2026-08-27T06:46:14Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.tamamura.lg.jp/docs/2026052200043/ (label: 令和8年玉村町議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/tamamura/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/tamamura/reiki_menu.html",
+          "observed_on": "http://www.town.tamamura.lg.jp/top.html",
+          "fetched_at": "2026-08-27T06:43:27Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/tamamura/reiki_menu.html (label: 玉村町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/",
+          "observed_on": "http://www.town.tamamura.lg.jp/navi/chosei/",
+          "fetched_at": "2026-08-27T06:43:52Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.tamamura.lg.jp/category/bunya/chosei/zaisei/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.tamamura.lg.jp/docs/2026032700013/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.tamamura.lg.jp/docs/2026032700013/",
+          "observed_on": "http://www.town.tamamura.lg.jp/category/bunya/chosei/",
+          "fetched_at": "2026-08-27T06:46:14Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.tamamura.lg.jp/docs/2026032700013/ (label: 令和6年度決算 新地方公会計制度による財務書類・固定資産台帳)"
+    }
+  }
+}

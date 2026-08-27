@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47355",
+  "prefecture": "沖縄県",
+  "municipality": "粟国村",
+  "official_home_url": "https://www.vill.aguni.okinawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.vill.aguni.okinawa.jp/sonsei/754.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.aguni.okinawa.jp/sonsei/754.html",
+          "observed_on": "https://www.vill.aguni.okinawa.jp/sonsei/index.html",
+          "fetched_at": "2026-08-27T06:56:56Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.vill.aguni.okinawa.jp/sonsei/754.html (label: 粟国村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.aguni.okinawa.jp/sonsei/214.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.aguni.okinawa.jp/sonsei/214.html",
+          "observed_on": "https://www.vill.aguni.okinawa.jp/sonsei/index.html",
+          "fetched_at": "2026-08-27T06:56:56Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.aguni.okinawa.jp/sonsei/214.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.aguni.okinawa.jp/sonsei/214.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.aguni.okinawa.jp/sonsei/214.html",
+          "observed_on": "https://www.vill.aguni.okinawa.jp/sonsei/index.html",
+          "fetched_at": "2026-08-27T06:56:56Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.aguni.okinawa.jp/sonsei/214.html (label: 財政)"
+    }
+  }
+}

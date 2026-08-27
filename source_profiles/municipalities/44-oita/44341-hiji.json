@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44341",
+  "prefecture": "大分県",
+  "municipality": "日出町",
+  "official_home_url": "http://www.town.hiji.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.hiji.lg.jp/section/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hiji.lg.jp/section/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.hiji.lg.jp/",
+          "fetched_at": "2026-08-27T06:22:33Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.hiji.lg.jp/section/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.hiji.lg.jp/gyoseijoho/gyozaiseikaikaku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hiji.lg.jp/gyoseijoho/gyozaiseikaikaku/index.html",
+          "observed_on": "http://www.town.hiji.lg.jp/",
+          "fetched_at": "2026-08-27T06:22:33Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.hiji.lg.jp/gyoseijoho/gyozaiseikaikaku/index.html (label: 行財政改革)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.hiji.lg.jp/gyoseijoho/gyozaiseikaikaku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hiji.lg.jp/gyoseijoho/gyozaiseikaikaku/index.html",
+          "observed_on": "http://www.town.hiji.lg.jp/",
+          "fetched_at": "2026-08-27T06:22:33Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.hiji.lg.jp/gyoseijoho/gyozaiseikaikaku/index.html (label: 行財政改革)"
+    }
+  }
+}

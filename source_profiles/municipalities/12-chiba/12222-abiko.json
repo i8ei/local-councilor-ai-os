@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12222",
+  "prefecture": "千葉県",
+  "municipality": "我孫子市",
+  "official_home_url": "http://www.city.abiko.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.abiko.chiba/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.abiko.chiba/reiki_menu.html",
+          "observed_on": "http://www.city.abiko.chiba.jp/",
+          "fetched_at": "2026-08-27T07:15:58Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.abiko.chiba/reiki_menu.html (label: 条例・例規)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.abiko.chiba.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:16:19Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.abiko.chiba.jp/shisei/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.abiko.chiba.jp/shisei/zaisei/index.html",
+          "observed_on": "http://www.city.abiko.chiba.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:16:19Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.abiko.chiba.jp/shisei/zaisei/index.html (label: 財政)"
+    }
+  }
+}

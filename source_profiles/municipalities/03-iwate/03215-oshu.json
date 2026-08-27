@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "03215",
+  "prefecture": "岩手県",
+  "municipality": "奥州市",
+  "official_home_url": "https://www.city.oshu.iwate.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.oshu.iwate.jp/gikai/3586.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.oshu.iwate.jp/gikai/3586.html",
+          "observed_on": "https://www.city.oshu.iwate.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T07:10:39Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.oshu.iwate.jp/gikai/3586.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.oshu.iwate.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.oshu.iwate.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.oshu.iwate.jp/",
+          "fetched_at": "2026-08-27T07:10:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.oshu.iwate.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/1/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/1/index.html",
+          "observed_on": "https://www.city.oshu.iwate.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T07:10:14Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.oshu.iwate.jp/gyosei/gyozaisei/1/index.html (label: 各年度当初予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/2/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.oshu.iwate.jp/gyosei/gyozaisei/2/index.html",
+          "observed_on": "https://www.city.oshu.iwate.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T07:10:14Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.oshu.iwate.jp/gyosei/gyozaisei/2/index.html (label: 各年度決算)"
+    }
+  }
+}

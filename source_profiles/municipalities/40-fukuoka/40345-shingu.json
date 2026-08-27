@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "40345",
+  "prefecture": "福岡県",
+  "municipality": "新宮町",
+  "official_home_url": "http://www.town.shingu.fukuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.shingu.fukuoka.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shingu.fukuoka.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.shingu.fukuoka.jp/",
+          "fetched_at": "2026-08-27T04:19:55Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.shingu.fukuoka.jp/section/reiki_int/reiki_menu.html (label: 新宮町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.shingu.fukuoka.jp/gyosei/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shingu.fukuoka.jp/gyosei/gyozaisei/index.html",
+          "observed_on": "https://www.town.shingu.fukuoka.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:00:43Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.shingu.fukuoka.jp/gyosei/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.shingu.fukuoka.jp/gyosei/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shingu.fukuoka.jp/gyosei/gyozaisei/index.html",
+          "observed_on": "https://www.town.shingu.fukuoka.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:00:43Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.shingu.fukuoka.jp/gyosei/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

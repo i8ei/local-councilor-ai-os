@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20219",
+  "prefecture": "長野県",
+  "municipality": "東御市",
+  "official_home_url": "http://www.city.tomi.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.tomi.nagano.jp/file/185785.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tomi.nagano.jp/file/185785.pdf",
+          "observed_on": "http://www.city.tomi.nagano.jp/category/kosodate/154536.html",
+          "fetched_at": "2026-08-27T07:00:50Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.tomi.nagano.jp/file/185785.pdf (label: 議事録(pdf 167 kb))"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/tomi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/tomi/reiki_menu.html",
+          "observed_on": "http://www.city.tomi.nagano.jp/",
+          "fetched_at": "2026-08-27T07:00:32Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/tomi/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tomi.nagano.jp/category/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tomi.nagano.jp/category/zaisei/index.html",
+          "observed_on": "http://www.city.tomi.nagano.jp/",
+          "fetched_at": "2026-08-27T07:00:32Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.tomi.nagano.jp/category/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tomi.nagano.jp/category/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tomi.nagano.jp/category/zaisei/index.html",
+          "observed_on": "http://www.city.tomi.nagano.jp/",
+          "fetched_at": "2026-08-27T07:00:32Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.tomi.nagano.jp/category/zaisei/index.html (label: 財政)"
+    }
+  }
+}

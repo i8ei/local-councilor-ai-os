@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "17206",
+  "prefecture": "石川県",
+  "municipality": "加賀市",
+  "official_home_url": "http://www.city.kaga.ishikawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/kaga/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/kaga/reiki_menu.html",
+          "observed_on": "http://www.city.kaga.ishikawa.jp/",
+          "fetched_at": "2026-08-27T06:12:36Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/kaga/reiki_menu.html (label: 加賀市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/index.html",
+          "fetched_at": "2026-08-27T06:19:22Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html",
+          "observed_on": "https://www.city.kaga.ishikawa.jp/shisei_gikai/index.html",
+          "fetched_at": "2026-08-27T06:19:22Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.kaga.ishikawa.jp/shisei_gikai/zaisei/kessan/index.html (label: 決算)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "08228",
+  "prefecture": "茨城県",
+  "municipality": "坂東市",
+  "official_home_url": "http://www.city.bando.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.bando.lg.jp/page/dir000006.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.bando.lg.jp/page/dir000006.html",
+          "observed_on": "http://www.city.bando.lg.jp/page/dir000006.html",
+          "fetched_at": "2026-08-27T06:06:56Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.bando.lg.jp/page/dir000006.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.bando.lg.jp/page/page011042.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.bando.lg.jp/page/page011042.html",
+          "observed_on": "http://www.city.bando.lg.jp/page/dir000006.html",
+          "fetched_at": "2026-08-27T06:06:56Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.bando.lg.jp/page/page011042.html (label: 令和８年度特別会計予算書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.bando.lg.jp/page/page000549.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.bando.lg.jp/page/page000549.html",
+          "observed_on": "http://www.city.bando.lg.jp/page/dir000006.html",
+          "fetched_at": "2026-08-27T06:06:56Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.bando.lg.jp/page/page000549.html (label: 坂東市の予算決算)"
+    }
+  }
+}

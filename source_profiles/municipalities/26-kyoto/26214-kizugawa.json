@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26214",
+  "prefecture": "京都府",
+  "municipality": "木津川市",
+  "official_home_url": "http://www.city.kizugawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.city.kizugawa.kyoto.dbsr.jp/index.php/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kizugawa.kyoto.dbsr.jp/index.php/",
+          "observed_on": "http://www.city.kizugawa.lg.jp/category/6-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:20:06Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.city.kizugawa.kyoto.dbsr.jp/index.php/ (label: 会議録検索 [2026年1月22日])"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.kizugawa.lg.jp/0000002093.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kizugawa.lg.jp/0000002093.html",
+          "observed_on": "http://www.city.kizugawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:19:27Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.kizugawa.lg.jp/0000002093.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.kizugawa.lg.jp/category/6-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:20:06Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.kizugawa.lg.jp/category/6-5-1-0-0-0-0-0-0-0.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.kizugawa.lg.jp/category/6-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:20:06Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.kizugawa.lg.jp/category/6-5-2-0-0-0-0-0-0-0.html (label: 決算)"
+    }
+  }
+}

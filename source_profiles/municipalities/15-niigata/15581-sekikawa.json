@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15581",
+  "prefecture": "新潟県",
+  "municipality": "関川村",
+  "official_home_url": "http://www.vill.sekikawa.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.vill.sekikawa.niigata.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.sekikawa.niigata.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.vill.sekikawa.niigata.jp/",
+          "fetched_at": "2026-08-27T06:06:07Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.vill.sekikawa.niigata.jp/reiki_int/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.sekikawa.niigata.jp/politics/272/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.sekikawa.niigata.jp/politics/272/index.html",
+          "observed_on": "http://www.vill.sekikawa.niigata.jp/politics/index.html",
+          "fetched_at": "2026-08-27T06:06:56Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.vill.sekikawa.niigata.jp/politics/272/index.html (label: 関川村の財政 予算・決算、財務諸表など財政データを掲載しています。)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.sekikawa.niigata.jp/politics/272/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.sekikawa.niigata.jp/politics/272/index.html",
+          "observed_on": "http://www.vill.sekikawa.niigata.jp/politics/index.html",
+          "fetched_at": "2026-08-27T06:06:56Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.vill.sekikawa.niigata.jp/politics/272/index.html (label: 関川村の財政 予算・決算、財務諸表など財政データを掲載しています。)"
+    }
+  }
+}

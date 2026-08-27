@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11327",
+  "prefecture": "埼玉県",
+  "municipality": "越生町",
+  "official_home_url": "http://www.town.ogose.saitama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.ogose.saitama.jp/chousei/gikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ogose.saitama.jp/chousei/gikai/kaigiroku/index.html",
+          "observed_on": "https://www.town.ogose.saitama.jp/chousei/index.html",
+          "fetched_at": "2026-08-27T07:03:00Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.ogose.saitama.jp/chousei/gikai/kaigiroku/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/ogose/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/ogose/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.ogose.saitama.jp/",
+          "fetched_at": "2026-08-27T07:02:23Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/ogose/d1w_reiki/reiki.html (label: 条例・例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
+          "observed_on": "https://www.town.ogose.saitama.jp/chousei/index.html",
+          "fetched_at": "2026-08-27T07:03:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ogose.saitama.jp/chousei/unei/index.html (label: 町政運営・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ogose.saitama.jp/chousei/unei/index.html",
+          "observed_on": "https://www.town.ogose.saitama.jp/chousei/index.html",
+          "fetched_at": "2026-08-27T07:03:00Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.ogose.saitama.jp/chousei/unei/index.html (label: 町政運営・財政)"
+    }
+  }
+}

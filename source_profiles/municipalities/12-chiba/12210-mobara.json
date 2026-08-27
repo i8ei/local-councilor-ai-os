@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12210",
+  "prefecture": "千葉県",
+  "municipality": "茂原市",
+  "official_home_url": "http://www.city.mobara.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.mobara.chiba/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.mobara.chiba/reiki_menu.html",
+          "observed_on": "http://www.city.mobara.chiba.jp/",
+          "fetched_at": "2026-08-27T07:11:21Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.mobara.chiba/reiki_menu.html (label: 例規集 別ウィンドウで開く)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.mobara.chiba.jp/promotion/0000001304.html",
+          "fetched_at": "2026-08-27T07:15:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.mobara.chiba.jp/promotion/0000001304.html",
+          "fetched_at": "2026-08-27T07:15:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.mobara.chiba.jp/category/2-6-0-0-0-0-0-0-0-0.html (label: 財政)"
+    }
+  }
+}

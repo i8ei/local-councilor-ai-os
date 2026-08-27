@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "21218",
+  "prefecture": "岐阜県",
+  "municipality": "本巣市",
+  "official_home_url": "http://www.city.motosu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.motosu/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.motosu/reiki_menu.html",
+          "observed_on": "http://www.city.motosu.lg.jp/",
+          "fetched_at": "2026-08-27T07:30:53Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.motosu/reiki_menu.html (label: 本巣市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.motosu.lg.jp/category/5-15-5-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.motosu.lg.jp/category/5-15-5-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.motosu.lg.jp/category/5-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:32:44Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.motosu.lg.jp/category/5-15-5-0-0-0-0-0-0-0.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.motosu.lg.jp/category/5-15-2-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.motosu.lg.jp/category/5-15-2-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.motosu.lg.jp/category/5-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:32:44Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.motosu.lg.jp/category/5-15-2-0-0-0-0-0-0-0.html (label: 決算)"
+    }
+  }
+}

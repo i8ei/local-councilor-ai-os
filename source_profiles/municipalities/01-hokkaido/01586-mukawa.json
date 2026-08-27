@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01586",
+  "prefecture": "北海道",
+  "municipality": "むかわ町",
+  "official_home_url": "http://www.town.mukawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.mukawa.lg.jp/2872.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.mukawa.lg.jp/2872.htm",
+          "observed_on": "http://www.town.mukawa.lg.jp/1045.htm",
+          "fetched_at": "2026-08-27T06:44:19Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.mukawa.lg.jp/2872.htm (label: 議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=189&cd_type=0",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=189&cd_type=0",
+          "observed_on": "http://www.town.mukawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:43:55Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://houmu.h-chosonkai.gr.jp/~reikidb/index.php?choson_no=189&cd_type=0 (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

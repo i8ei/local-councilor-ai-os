@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "18202",
+  "prefecture": "福井県",
+  "municipality": "敦賀市",
+  "official_home_url": "https://www.city.tsuruga.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "https://www.city.tsuruga.fukui.dbsr.jp/index.php/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tsuruga.fukui.dbsr.jp/index.php/",
+          "observed_on": "https://www.city.tsuruga.lg.jp/site/gikai",
+          "fetched_at": "2026-08-27T06:22:38Z"
+        }
+      ],
+      "notes": "Observed dbsr at https://www.city.tsuruga.fukui.dbsr.jp/index.php/ (label: 会議録検索 ＜外部リンク＞)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.tsuruga.lg.jp/life/7/29/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tsuruga.lg.jp/life/7/29/",
+          "observed_on": "https://www.city.tsuruga.lg.jp/life/7/",
+          "fetched_at": "2026-08-27T06:22:24Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.tsuruga.lg.jp/life/7/29/ (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tsuruga.lg.jp/life/7/33/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tsuruga.lg.jp/life/7/33/",
+          "observed_on": "https://www.city.tsuruga.lg.jp/life/7/",
+          "fetched_at": "2026-08-27T06:22:24Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.tsuruga.lg.jp/life/7/33/ (label: 予算・監査)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tsuruga.lg.jp/life/7/33/150/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tsuruga.lg.jp/life/7/33/150/",
+          "observed_on": "https://www.city.tsuruga.lg.jp/life/7/",
+          "fetched_at": "2026-08-27T06:22:24Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.tsuruga.lg.jp/life/7/33/150/ (label: 決算)"
+    }
+  }
+}

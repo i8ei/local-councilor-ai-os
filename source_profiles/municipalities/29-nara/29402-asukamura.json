@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "29402",
+  "prefecture": "奈良県",
+  "municipality": "明日香村",
+  "official_home_url": "https://asukamura.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://asukamura.jp/gyosei_gikai_honkaigi.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://asukamura.jp/gyosei_gikai_honkaigi.html",
+          "observed_on": "https://asukamura.jp/gyosei_gikai.html",
+          "fetched_at": "2026-08-27T07:06:47Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://asukamura.jp/gyosei_gikai_honkaigi.html (label: 本会議（議会日程・議決結果・会議録・議会映像）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://asukamura.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://asukamura.jp/reiki/reiki_menu.html",
+          "observed_on": "https://asukamura.jp/",
+          "fetched_at": "2026-08-27T07:06:27Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://asukamura.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

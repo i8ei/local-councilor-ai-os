@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28443",
+  "prefecture": "兵庫県",
+  "municipality": "福崎町",
+  "official_home_url": "http://www.town.fukusaki.hyogo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/fukusaki/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/fukusaki/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.fukusaki.hyogo.jp/",
+          "fetched_at": "2026-08-27T06:56:29Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/fukusaki/d1w_reiki/reiki.html (label: 福崎町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.fukusaki.hyogo.jp/category/2-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:56:46Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html (label: 財政情報)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.fukusaki.hyogo.jp/category/2-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T06:56:46Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.fukusaki.hyogo.jp/category/2-13-5-0-0-0-0-0-0-0.html (label: 財政情報)"
+    }
+  }
+}

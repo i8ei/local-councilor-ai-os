@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20204",
+  "prefecture": "長野県",
+  "municipality": "岡谷市",
+  "official_home_url": "http://www.city.okaya.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/okaya/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/okaya/SpTop.html",
+          "observed_on": "https://www.city.okaya.lg.jp/okayashigikai/index.html",
+          "fetched_at": "2026-08-27T06:55:06Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/okaya/SpTop.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/okaya/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/okaya/reiki_menu.html",
+          "observed_on": "http://www.city.okaya.lg.jp/",
+          "fetched_at": "2026-08-27T06:54:31Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/okaya/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.okaya.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:54:49Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.okaya.lg.jp/shiseijoho/zaisei/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html",
+          "observed_on": "https://www.city.okaya.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:54:49Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.okaya.lg.jp/shiseijoho/zaisei/kessan/index.html (label: 決算)"
+    }
+  }
+}

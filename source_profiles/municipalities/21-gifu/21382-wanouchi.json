@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "21382",
+  "prefecture": "岐阜県",
+  "municipality": "輪之内町",
+  "official_home_url": "http://town.wanouchi.gifu.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://town.wanouchi.gifu.jp/portal/town/parliament/kaigiroku-parliament/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://town.wanouchi.gifu.jp/portal/town/parliament/kaigiroku-parliament/",
+          "observed_on": "https://town.wanouchi.gifu.jp/portal/town/parliament/",
+          "fetched_at": "2026-08-27T07:36:11Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://town.wanouchi.gifu.jp/portal/town/parliament/kaigiroku-parliament/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/wanouchi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/wanouchi/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/wanouchi/reiki_menu.html",
+          "fetched_at": "2026-08-27T07:37:30Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/wanouchi/reiki_menu.html for 輪之内町"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://town.wanouchi.gifu.jp/portal/town/finance/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://town.wanouchi.gifu.jp/portal/town/finance/",
+          "observed_on": "http://town.wanouchi.gifu.jp/",
+          "fetched_at": "2026-08-27T07:33:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://town.wanouchi.gifu.jp/portal/town/finance/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://town.wanouchi.gifu.jp/portal/town/finance/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://town.wanouchi.gifu.jp/portal/town/finance/",
+          "observed_on": "http://town.wanouchi.gifu.jp/",
+          "fetched_at": "2026-08-27T07:33:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://town.wanouchi.gifu.jp/portal/town/finance/ (label: 財政)"
+    }
+  }
+}

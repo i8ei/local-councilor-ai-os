@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07422",
+  "prefecture": "福島県",
+  "municipality": "湯川村",
+  "official_home_url": "http://www.vill.yugawa.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/yugawa/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/yugawa/d1w_reiki/reiki.html",
+          "observed_on": "http://www.vill.yugawa.fukushima.jp/",
+          "fetched_at": "2026-08-27T07:59:35Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/yugawa/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.yugawa.fukushima.jp/site/gyousei-top/6-3.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.yugawa.fukushima.jp/site/gyousei-top/6-3.html",
+          "observed_on": "http://www.vill.yugawa.fukushima.jp/",
+          "fetched_at": "2026-08-27T07:59:35Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.yugawa.fukushima.jp/site/gyousei-top/6-3.html (label: 財政・例規)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.yugawa.fukushima.jp/site/gyousei-top/6-3.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.yugawa.fukushima.jp/site/gyousei-top/6-3.html",
+          "observed_on": "http://www.vill.yugawa.fukushima.jp/",
+          "fetched_at": "2026-08-27T07:59:35Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.vill.yugawa.fukushima.jp/site/gyousei-top/6-3.html (label: 財政・例規)"
+    }
+  }
+}

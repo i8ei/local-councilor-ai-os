@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "18206",
+  "prefecture": "福井県",
+  "municipality": "勝山市",
+  "official_home_url": "https://www.city.katsuyama.fukui.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.katsuyama.fukui.jp/uploaded/attachment/21062.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.katsuyama.fukui.jp/uploaded/attachment/21062.pdf",
+          "observed_on": "https://www.city.katsuyama.fukui.jp/soshiki/17/17946.html",
+          "fetched_at": "2026-08-27T06:24:59Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.katsuyama.fukui.jp/uploaded/attachment/21062.pdf (label: 第1回会議録 [PDFファイル／130KB])"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.katsuyama/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.katsuyama/reiki_menu.html",
+          "observed_on": "https://www.city.katsuyama.fukui.jp/",
+          "fetched_at": "2026-08-27T06:22:23Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.katsuyama/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
+          "observed_on": "https://www.city.katsuyama.fukui.jp/life/4/",
+          "fetched_at": "2026-08-27T06:22:50Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.katsuyama.fukui.jp/life/4/34/160/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.katsuyama.fukui.jp/life/4/34/160/",
+          "observed_on": "https://www.city.katsuyama.fukui.jp/life/4/",
+          "fetched_at": "2026-08-27T06:22:50Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.katsuyama.fukui.jp/life/4/34/160/ (label: 予算・決算)"
+    }
+  }
+}

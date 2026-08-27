@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "29446",
+  "prefecture": "奈良県",
+  "municipality": "天川村",
+  "official_home_url": "http://www.vill.tenkawa.nara.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.tenkawa.nara.jp/office/administration/finance/report",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.tenkawa.nara.jp/office/administration/finance/report",
+          "observed_on": "https://www.vill.tenkawa.nara.jp/office/",
+          "fetched_at": "2026-08-27T07:11:09Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.tenkawa.nara.jp/office/administration/finance/report (label: 天川村の財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.tenkawa.nara.jp/office/administration/finance/report",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.tenkawa.nara.jp/office/administration/finance/report",
+          "observed_on": "https://www.vill.tenkawa.nara.jp/office/",
+          "fetched_at": "2026-08-27T07:11:09Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.tenkawa.nara.jp/office/administration/finance/report (label: 天川村の財政状況)"
+    }
+  }
+}

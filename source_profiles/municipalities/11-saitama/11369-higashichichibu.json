@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11369",
+  "prefecture": "埼玉県",
+  "municipality": "東秩父村",
+  "official_home_url": "http://www.vill.higashichichibu.saitama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/higashichichibu/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/higashichichibu/SpTop.html",
+          "observed_on": "http://www.vill.higashichichibu.saitama.jp/site/gikai/",
+          "fetched_at": "2026-08-27T07:06:28Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/higashichichibu/SpTop.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.vill.higashichichibu.saitama.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.higashichichibu.saitama.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.vill.higashichichibu.saitama.jp/",
+          "fetched_at": "2026-08-27T07:05:28Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.vill.higashichichibu.saitama.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.vill.higashichichibu.saitama.jp/site/gikai/gikaihiyosan1.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.higashichichibu.saitama.jp/site/gikai/gikaihiyosan1.html",
+          "observed_on": "http://www.vill.higashichichibu.saitama.jp/site/gikai/",
+          "fetched_at": "2026-08-27T07:06:28Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.vill.higashichichibu.saitama.jp/site/gikai/gikaihiyosan1.html (label: 議会費予算)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

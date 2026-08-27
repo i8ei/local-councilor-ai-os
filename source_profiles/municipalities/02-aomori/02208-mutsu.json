@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02208",
+  "prefecture": "青森県",
+  "municipality": "むつ市",
+  "official_home_url": "http://www.city.mutsu.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.mutsu.lg.jp/work/sangyou/nougyouiinkai/gijiroku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mutsu.lg.jp/work/sangyou/nougyouiinkai/gijiroku.html",
+          "observed_on": "http://www.city.mutsu.lg.jp/",
+          "fetched_at": "2026-08-27T06:57:46Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.mutsu.lg.jp/work/sangyou/nougyouiinkai/gijiroku.html (label: 総会議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.mutsu.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mutsu.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.mutsu.lg.jp/",
+          "fetched_at": "2026-08-27T06:57:46Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.mutsu.lg.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2026-0331-1009-29.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2026-0331-1009-29.html",
+          "observed_on": "http://www.city.mutsu.lg.jp/government/",
+          "fetched_at": "2026-08-27T06:58:09Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2026-0331-1009-29.html (label: 令和８年度予算が成立しました)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html",
+          "observed_on": "http://www.city.mutsu.lg.jp/government/",
+          "fetched_at": "2026-08-27T06:58:09Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.mutsu.lg.jp/government/gyosei/zaisei/2025-1030-1531-29.html (label: 令和6年度主要施策の実績報告書)"
+    }
+  }
+}

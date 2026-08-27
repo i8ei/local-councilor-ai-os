@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15225",
+  "prefecture": "新潟県",
+  "municipality": "魚沼市",
+  "official_home_url": "https://www.city.uonuma.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/uonuma/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/uonuma/SpTop.html",
+          "observed_on": "https://www.city.uonuma.lg.jp/site/gikai/",
+          "fetched_at": "2026-08-27T06:03:49Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/uonuma/SpTop.html (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.uonuma.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.uonuma.lg.jp/reiki/",
+          "observed_on": "https://www.city.uonuma.lg.jp/index2.html",
+          "fetched_at": "2026-08-27T06:03:00Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.uonuma.lg.jp/reiki/ (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.uonuma.lg.jp/life/6/27/129/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.uonuma.lg.jp/life/6/27/129/",
+          "observed_on": "https://www.city.uonuma.lg.jp/index2.html",
+          "fetched_at": "2026-08-27T06:03:00Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.uonuma.lg.jp/life/6/27/129/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.uonuma.lg.jp/life/6/27/129/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.uonuma.lg.jp/life/6/27/129/",
+          "observed_on": "https://www.city.uonuma.lg.jp/index2.html",
+          "fetched_at": "2026-08-27T06:03:00Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.uonuma.lg.jp/life/6/27/129/ (label: 予算・決算)"
+    }
+  }
+}

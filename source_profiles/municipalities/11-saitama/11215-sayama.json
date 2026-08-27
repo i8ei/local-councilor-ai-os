@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11215",
+  "prefecture": "埼玉県",
+  "municipality": "狭山市",
+  "official_home_url": "http://www.city.sayama.saitama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://kre316.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://kre316.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.sayama.saitama.jp/",
+          "fetched_at": "2026-08-27T06:49:44Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://kre316.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 例規検索)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.sayama.saitama.jp/shisei/zaisei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.sayama.saitama.jp/shisei/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.sayama.saitama.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:50:02Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.sayama.saitama.jp/shisei/zaisei/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/index.html",
+          "observed_on": "http://www.city.sayama.saitama.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T06:50:02Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.sayama.saitama.jp/shisei/zaisei/ketusan1/index.html (label: 決算)"
+    }
+  }
+}

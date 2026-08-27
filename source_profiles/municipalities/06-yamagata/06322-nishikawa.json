@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06322",
+  "prefecture": "山形県",
+  "municipality": "西川町",
+  "official_home_url": "http://www.town.nishikawa.yamagata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.nishikawa.yamagata.jp/site/gikai/list3-11.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nishikawa.yamagata.jp/site/gikai/list3-11.html",
+          "observed_on": "http://www.town.nishikawa.yamagata.jp/site/gikai/",
+          "fetched_at": "2026-08-27T07:43:12Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.nishikawa.yamagata.jp/site/gikai/list3-11.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.nishikawa.yamagata/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.nishikawa.yamagata/reiki_menu.html",
+          "observed_on": "http://www.town.nishikawa.yamagata.jp/",
+          "fetched_at": "2026-08-27T07:42:37Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.nishikawa.yamagata/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
+          "observed_on": "http://www.town.nishikawa.yamagata.jp/life/5/",
+          "fetched_at": "2026-08-27T07:42:55Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.nishikawa.yamagata.jp/life/5/19/70/ (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.nishikawa.yamagata.jp/life/5/19/70/",
+          "observed_on": "http://www.town.nishikawa.yamagata.jp/life/5/",
+          "fetched_at": "2026-08-27T07:42:55Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.nishikawa.yamagata.jp/life/5/19/70/ (label: 財政)"
+    }
+  }
+}

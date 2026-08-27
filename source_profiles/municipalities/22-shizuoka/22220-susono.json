@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22220",
+  "prefecture": "静岡県",
+  "municipality": "裾野市",
+  "official_home_url": "http://www.city.susono.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.susono.shizuoka.jp/website/6257.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.susono.shizuoka.jp/website/6257.html",
+          "observed_on": "http://www.city.susono.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:46:04Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.susono.shizuoka.jp/website/6257.html (label: 裾野市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.susono.shizuoka.jp/shisei/4/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.susono.shizuoka.jp/shisei/4/index.html",
+          "observed_on": "http://www.city.susono.shizuoka.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:46:32Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.susono.shizuoka.jp/shisei/4/index.html (label: 財政(予算・決算))"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.susono.shizuoka.jp/shisei/4/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.susono.shizuoka.jp/shisei/4/index.html",
+          "observed_on": "http://www.city.susono.shizuoka.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:46:32Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.susono.shizuoka.jp/shisei/4/index.html (label: 財政(予算・決算))"
+    }
+  }
+}

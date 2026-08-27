@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11465",
+  "prefecture": "埼玉県",
+  "municipality": "松伏町",
+  "official_home_url": "http://www.town.matsubushi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/matsubushi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/matsubushi/reiki_menu.html",
+          "observed_on": "http://www.town.matsubushi.lg.jp/",
+          "fetched_at": "2026-08-27T07:08:01Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/matsubushi/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.matsubushi.lg.jp/",
+          "fetched_at": "2026-08-27T07:08:01Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html (label: 町の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.town.matsubushi.lg.jp/",
+          "fetched_at": "2026-08-27T07:08:01Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.matsubushi.lg.jp/category/6-4-0-0-0-0-0-0-0-0.html (label: 町の財政)"
+    }
+  }
+}

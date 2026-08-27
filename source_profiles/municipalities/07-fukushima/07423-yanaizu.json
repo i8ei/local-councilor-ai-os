@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07423",
+  "prefecture": "福島県",
+  "municipality": "柳津町",
+  "official_home_url": "http://www.town.yanaizu.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/yanaizu/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/yanaizu/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.yanaizu.fukushima.jp/",
+          "fetched_at": "2026-08-27T07:59:47Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/yanaizu/d1w_reiki/reiki.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
+          "observed_on": "http://www.town.yanaizu.fukushima.jp/",
+          "fetched_at": "2026-08-27T07:59:47Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/ (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/",
+          "observed_on": "http://www.town.yanaizu.fukushima.jp/",
+          "fetched_at": "2026-08-27T07:59:47Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.yanaizu.fukushima.jp/categories/bunya/gyosei-machizukuri/zaiseijyoukyou/ (label: 財政状況)"
+    }
+  }
+}

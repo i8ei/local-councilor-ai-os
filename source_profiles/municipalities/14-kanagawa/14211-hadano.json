@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14211",
+  "prefecture": "神奈川県",
+  "municipality": "秦野市",
+  "official_home_url": "http://www.city.hadano.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.hadano/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.hadano/reiki_menu.html",
+          "observed_on": "http://www.city.hadano.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:01:48Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.hadano/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html",
+          "observed_on": "https://www.city.hadano.kanagawa.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T08:02:07Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html",
+          "observed_on": "https://www.city.hadano.kanagawa.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T08:02:07Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.hadano.kanagawa.jp/shisei/gyoseiunei/3/index.html (label: 行財政)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12233",
+  "prefecture": "千葉県",
+  "municipality": "富里市",
+  "official_home_url": "http://www.city.tomisato.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.tomisato.lg.jp/category/2-3-8-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tomisato.lg.jp/category/2-3-8-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.tomisato.lg.jp/category/2-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:22:26Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.tomisato.lg.jp/category/2-3-8-0-0-0-0-0-0-0.html (label: 市議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.tomisato/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.tomisato/reiki_menu.html",
+          "observed_on": "http://www.city.tomisato.lg.jp/",
+          "fetched_at": "2026-08-27T07:21:16Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.tomisato/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.tomisato.lg.jp/category/2-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:22:26Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.tomisato.lg.jp/category/2-6-4-0-0-0-0-0-0-0.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tomisato.lg.jp/category/2-6-5-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tomisato.lg.jp/category/2-6-5-0-0-0-0-0-0-0.html",
+          "observed_on": "http://www.city.tomisato.lg.jp/category/2-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:22:26Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.tomisato.lg.jp/category/2-6-5-0-0-0-0-0-0-0.html (label: 決算)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "05211",
+  "prefecture": "秋田県",
+  "municipality": "潟上市",
+  "official_home_url": "http://www.city.katagami.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/kaigiroku/index.html",
+          "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/index.html",
+          "fetched_at": "2026-08-27T07:30:58Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.katagami.lg.jp/gyosei/gyoseijoho/shigikai/kaigiroku/index.html (label: 市議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.katagami.lg.jp/section/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.katagami.lg.jp/section/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.katagami.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T07:30:46Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.katagami.lg.jp/section/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html",
+          "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:31:25Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2940.html (label: 予算概要)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2712.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2712.html",
+          "observed_on": "https://www.city.katagami.lg.jp/gyosei/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:31:25Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.katagami.lg.jp/gyosei/gyoseijoho/zaiseijokyo/2712.html (label: 決算状況)"
+    }
+  }
+}

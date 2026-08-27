@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12427",
+  "prefecture": "千葉県",
+  "municipality": "長南町",
+  "official_home_url": "http://www.town.chonan.chiba.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.chonan.chiba.jp/chousei/gikai/%e4%bc%9a%e8%ad%b0%e9%8c%b2/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.chonan.chiba.jp/chousei/gikai/%e4%bc%9a%e8%ad%b0%e9%8c%b2/",
+          "observed_on": "https://www.town.chonan.chiba.jp/chousei/",
+          "fetched_at": "2026-08-27T07:28:35Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.chonan.chiba.jp/chousei/gikai/%e4%bc%9a%e8%ad%b0%e9%8c%b2/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.chonan.chiba/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.chonan.chiba/reiki_menu.html",
+          "observed_on": "http://www.town.chonan.chiba.jp/",
+          "fetched_at": "2026-08-27T07:27:57Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.chonan.chiba/reiki_menu.html (label: 長南町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.chonan.chiba.jp/chousei/zaisei/yosansyo/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.chonan.chiba.jp/chousei/zaisei/yosansyo/",
+          "observed_on": "https://www.town.chonan.chiba.jp/chousei/",
+          "fetched_at": "2026-08-27T07:28:35Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.chonan.chiba.jp/chousei/zaisei/yosansyo/ (label: 予算書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.chonan.chiba.jp/chousei/zaisei/kessansyo/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.chonan.chiba.jp/chousei/zaisei/kessansyo/",
+          "observed_on": "https://www.town.chonan.chiba.jp/chousei/",
+          "fetched_at": "2026-08-27T07:28:35Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.chonan.chiba.jp/chousei/zaisei/kessansyo/ (label: 決算書)"
+    }
+  }
+}

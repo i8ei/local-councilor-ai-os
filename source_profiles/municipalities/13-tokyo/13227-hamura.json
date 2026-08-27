@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13227",
+  "prefecture": "東京都",
+  "municipality": "羽村市",
+  "official_home_url": "http://www.city.hamura.tokyo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.hamura.tokyo.jp/0000002437.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.hamura.tokyo.jp/0000002437.html",
+          "observed_on": "http://www.city.hamura.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:48:48Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.hamura.tokyo.jp/0000002437.html (label: 例規集のページをみる)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hamura.tokyo.jp/category/3-18-5-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hamura.tokyo.jp/category/3-18-5-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.hamura.tokyo.jp/category/3-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:49:31Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.hamura.tokyo.jp/category/3-18-5-0-0-0-0-0-0-0.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.hamura.tokyo.jp/category/3-18-7-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.hamura.tokyo.jp/category/3-18-7-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.hamura.tokyo.jp/category/3-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:49:31Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.hamura.tokyo.jp/category/3-18-7-0-0-0-0-0-0-0.html (label: 決算)"
+    }
+  }
+}

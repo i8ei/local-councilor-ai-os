@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13108",
+  "prefecture": "東京都",
+  "municipality": "江東区",
+  "official_home_url": "http://www.city.koto.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "https://koto-city.gijiroku.com/index.asp",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://koto-city.gijiroku.com/index.asp",
+          "observed_on": "http://www.city.koto.lg.jp/650102/kuse/kugikai/koshin/080708kousinhonkaigi.html",
+          "fetched_at": "2026-08-27T07:36:17Z"
+        }
+      ],
+      "notes": "Observed voices at https://koto-city.gijiroku.com/index.asp (label: 江東区議会インターネット中継（外部サイトへリンク）（別ウィンドウで開きます）)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.koto.lg.jp/650102/kuse/kugikai/koshin/0802rokugakoukai.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.koto.lg.jp/650102/kuse/kugikai/koshin/0802rokugakoukai.html",
+          "observed_on": "http://www.city.koto.lg.jp/650102/kuse/kugikai/koshin/080708kousinhonkaigi.html",
+          "fetched_at": "2026-08-27T07:36:17Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.koto.lg.jp/650102/kuse/kugikai/koshin/0802rokugakoukai.html (label: 予算審査特別委員会の録画映像を公開しました)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

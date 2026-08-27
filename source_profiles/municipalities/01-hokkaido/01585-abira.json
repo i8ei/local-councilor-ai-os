@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01585",
+  "prefecture": "北海道",
+  "municipality": "安平町",
+  "official_home_url": "https://www.town.abira.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.abira.lg.jp/gyosei/kaigiroku",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.abira.lg.jp/gyosei/kaigiroku",
+          "observed_on": "https://www.town.abira.lg.jp/",
+          "fetched_at": "2026-08-27T06:43:48Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.abira.lg.jp/gyosei/kaigiroku (label: 会議録の公表)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.abira.lg.jp/gyosei/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.abira.lg.jp/gyosei/reiki/reiki.html",
+          "observed_on": "https://www.town.abira.lg.jp/",
+          "fetched_at": "2026-08-27T06:43:48Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.abira.lg.jp/gyosei/reiki/reiki.html (label: 安平町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.abira.lg.jp/oshirase/8/20293",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.abira.lg.jp/oshirase/8/20293",
+          "observed_on": "https://www.town.abira.lg.jp/oshirase/gyosei",
+          "fetched_at": "2026-08-27T06:45:23Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.abira.lg.jp/oshirase/8/20293 (label: 令和７年度補正予算分の重点支援地方交付金を活用した事業について)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06206",
+  "prefecture": "山形県",
+  "municipality": "寒河江市",
+  "official_home_url": "http://www.city.sagae.yamagata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/sagae/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/sagae/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.sagae.yamagata.jp/",
+          "fetched_at": "2026-08-27T07:38:15Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/sagae/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.sagae.yamagata.jp/shisei/zaisei/R8yosanangaiyou.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.sagae.yamagata.jp/shisei/zaisei/R8yosanangaiyou.html",
+          "observed_on": "http://www.city.sagae.yamagata.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:38:56Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.sagae.yamagata.jp/shisei/zaisei/R8yosanangaiyou.html (label: 令和8年度寒河江市一般会計当初予算の概要)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.sagae.yamagata.jp/shisei/zaisei/kessan.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.sagae.yamagata.jp/shisei/zaisei/kessan.html",
+          "observed_on": "http://www.city.sagae.yamagata.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:38:56Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.sagae.yamagata.jp/shisei/zaisei/kessan.html (label: 決算状況)"
+    }
+  }
+}

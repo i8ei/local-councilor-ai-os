@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11383",
+  "prefecture": "埼玉県",
+  "municipality": "神川町",
+  "official_home_url": "http://www.town.kamikawa.saitama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/kamikawa/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/kamikawa/pg/index.html",
+          "observed_on": "http://www.town.kamikawa.saitama.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T07:06:17Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kamikawa/pg/index.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kamikawa/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kamikawa/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.kamikawa.saitama.jp/",
+          "fetched_at": "2026-08-27T07:05:43Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kamikawa/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kamikawa.saitama.jp/gyouseijouho/zaisei/2498.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kamikawa.saitama.jp/gyouseijouho/zaisei/2498.html",
+          "observed_on": "http://www.town.kamikawa.saitama.jp/gyouseijouho/index.html",
+          "fetched_at": "2026-08-27T07:06:01Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.kamikawa.saitama.jp/gyouseijouho/zaisei/2498.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kamikawa.saitama.jp/gyouseijouho/zaisei/1658.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kamikawa.saitama.jp/gyouseijouho/zaisei/1658.html",
+          "observed_on": "http://www.town.kamikawa.saitama.jp/gyouseijouho/index.html",
+          "fetched_at": "2026-08-27T07:06:01Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.kamikawa.saitama.jp/gyouseijouho/zaisei/1658.html (label: 決算に係る健全化判断比率)"
+    }
+  }
+}

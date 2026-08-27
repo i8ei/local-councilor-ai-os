@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "42207",
+  "prefecture": "長崎県",
+  "municipality": "平戸市",
+  "official_home_url": "http://www.city.hirado.nagasaki.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krq308.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krq308.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.hirado.nagasaki.jp/kurashi/life/sumai/ijuteiju/index.html",
+          "fetched_at": "2026-08-27T05:22:33Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krq308.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 平戸市例規類集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html",
+          "observed_on": "http://www.city.hirado.nagasaki.jp/kurashi/life/sumai/ijuteiju/index.html",
+          "fetched_at": "2026-08-27T05:22:33Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/yosan/index.html (label: 予算について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/kessan/index.html",
+          "observed_on": "http://www.city.hirado.nagasaki.jp/kurashi/life/sumai/ijuteiju/index.html",
+          "fetched_at": "2026-08-27T05:22:33Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.hirado.nagasaki.jp/kurashi/gyosei/zaisei/kessan/index.html (label: 決算について)"
+    }
+  }
+}

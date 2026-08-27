@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20207",
+  "prefecture": "長野県",
+  "municipality": "須坂市",
+  "official_home_url": "http://www.city.suzaka.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85567B61",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85567B61",
+          "observed_on": "http://www.city.suzaka.nagano.jp/",
+          "fetched_at": "2026-08-27T06:55:46Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85567B61 (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
+          "observed_on": "https://www.city.suzaka.nagano.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:56:15Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html (label: 財政・行政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html",
+          "observed_on": "https://www.city.suzaka.nagano.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:56:15Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.suzaka.nagano.jp/gyosei/zaisei_gyosei/index.html (label: 財政・行政)"
+    }
+  }
+}

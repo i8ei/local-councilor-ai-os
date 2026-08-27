@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47324",
+  "prefecture": "沖縄県",
+  "municipality": "読谷村",
+  "official_home_url": "https://www.vill.yomitan.okinawa.jp/index.html",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.vill.yomitan.okinawa.jp/gyosei_joho/gikai/kaigioku_gikai/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.yomitan.okinawa.jp/gyosei_joho/gikai/kaigioku_gikai/index.html",
+          "observed_on": "https://www.vill.yomitan.okinawa.jp/gyosei_joho/gikai/index.html",
+          "fetched_at": "2026-08-27T06:55:12Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.vill.yomitan.okinawa.jp/gyosei_joho/gikai/kaigioku_gikai/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/yomitan/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/yomitan/d1w_reiki/reiki.html",
+          "observed_on": "https://www.vill.yomitan.okinawa.jp/index.html",
+          "fetched_at": "2026-08-27T06:54:10Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/yomitan/d1w_reiki/reiki.html (label: 読谷村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.yomitan.okinawa.jp/gyosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.yomitan.okinawa.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.yomitan.okinawa.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:54:23Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.yomitan.okinawa.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.yomitan.okinawa.jp/gyosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.yomitan.okinawa.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.vill.yomitan.okinawa.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:54:23Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.yomitan.okinawa.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

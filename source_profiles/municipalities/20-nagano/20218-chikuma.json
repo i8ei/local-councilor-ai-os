@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20218",
+  "prefecture": "長野県",
+  "municipality": "千曲市",
+  "official_home_url": "http://www.city.chikuma.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/chikuma/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/chikuma/SpTop.html",
+          "observed_on": "http://www.city.chikuma.lg.jp/",
+          "fetched_at": "2026-08-27T07:00:11Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/chikuma/SpTop.html (label: 議会会議録検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/chikuma/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/chikuma/reiki_menu.html",
+          "observed_on": "http://www.city.chikuma.lg.jp/",
+          "fetched_at": "2026-08-27T07:00:11Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/chikuma/reiki_menu.html (label: 例規集(外部サイト))"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.chikuma.lg.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.chikuma.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.chikuma.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:00:34Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.chikuma.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.chikuma.lg.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.chikuma.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.city.chikuma.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:00:34Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.chikuma.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "02323",
+  "prefecture": "青森県",
+  "municipality": "深浦町",
+  "official_home_url": "https://www.town.fukaura.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.fukaura/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.fukaura/reiki_menu.html",
+          "observed_on": "https://www.town.fukaura.lg.jp/",
+          "fetched_at": "2026-08-27T06:58:45Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.fukaura/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.fukaura.lg.jp/category/bunya/jouhoukoukai/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.fukaura.lg.jp/category/bunya/jouhoukoukai/zaisei/",
+          "observed_on": "https://www.town.fukaura.lg.jp/navi/chosei/",
+          "fetched_at": "2026-08-27T06:59:04Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.fukaura.lg.jp/category/bunya/jouhoukoukai/zaisei/ (label: 財政状況)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.fukaura.lg.jp/category/bunya/jouhoukoukai/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.fukaura.lg.jp/category/bunya/jouhoukoukai/zaisei/",
+          "observed_on": "https://www.town.fukaura.lg.jp/navi/chosei/",
+          "fetched_at": "2026-08-27T06:59:04Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.fukaura.lg.jp/category/bunya/jouhoukoukai/zaisei/ (label: 財政状況)"
+    }
+  }
+}

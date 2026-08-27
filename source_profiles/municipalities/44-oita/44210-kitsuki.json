@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44210",
+  "prefecture": "大分県",
+  "municipality": "杵築市",
+  "official_home_url": "http://www.city.kitsuki.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/kitsuki/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/kitsuki/pg/index.html",
+          "observed_on": "https://www.city.kitsuki.lg.jp/shiseimachidukuri/shigikai/index.html",
+          "fetched_at": "2026-08-27T06:20:21Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/kitsuki/pg/index.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/kitsuki/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/kitsuki/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.kitsuki.lg.jp/",
+          "fetched_at": "2026-08-27T06:19:21Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/kitsuki/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

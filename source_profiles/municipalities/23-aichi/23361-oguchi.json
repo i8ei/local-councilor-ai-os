@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "23361",
+  "prefecture": "愛知県",
+  "municipality": "大口町",
+  "official_home_url": "https://www.town.oguchi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html",
+          "observed_on": "https://www.town.oguchi.lg.jp/2675.htm",
+          "fetched_at": "2026-08-27T08:11:27Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/oguchi/SpTop.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.oguchi.lg.jp/FTPdirect/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.oguchi.lg.jp/FTPdirect/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.oguchi.lg.jp/",
+          "fetched_at": "2026-08-27T08:11:10Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.oguchi.lg.jp/FTPdirect/reiki_int/reiki_menu.html (label: 例規集検索システム)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.oguchi.lg.jp/1050.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.oguchi.lg.jp/1050.htm",
+          "observed_on": "https://www.town.oguchi.lg.jp/2675.htm",
+          "fetched_at": "2026-08-27T08:11:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.oguchi.lg.jp/1050.htm (label: 財政・告示・公表資料)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.oguchi.lg.jp/1050.htm",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.oguchi.lg.jp/1050.htm",
+          "observed_on": "https://www.town.oguchi.lg.jp/2675.htm",
+          "fetched_at": "2026-08-27T08:11:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.oguchi.lg.jp/1050.htm (label: 財政・告示・公表資料)"
+    }
+  }
+}

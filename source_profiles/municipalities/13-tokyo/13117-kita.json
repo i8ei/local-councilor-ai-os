@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13117",
+  "prefecture": "東京都",
+  "municipality": "北区",
+  "official_home_url": "http://www.city.kita.tokyo.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kita.tokyo.jp/city-information/pr/1011994/1026439/1026575.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kita.tokyo.jp/city-information/pr/1011994/1026439/1026575.html",
+          "observed_on": "http://www.city.kita.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:36:00Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.kita.tokyo.jp/city-information/pr/1011994/1026439/1026575.html (label: 【2026年8月26日】令和8年度一般会計補正予算（第4号）案を編成)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.kita.tokyo.jp/city-information/finance/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.kita.tokyo.jp/city-information/finance/index.html",
+          "observed_on": "http://www.city.kita.tokyo.jp/",
+          "fetched_at": "2026-08-27T07:36:00Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.kita.tokyo.jp/city-information/finance/index.html (label: 財政・会計)"
+    }
+  }
+}

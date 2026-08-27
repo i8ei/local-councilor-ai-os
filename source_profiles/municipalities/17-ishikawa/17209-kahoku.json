@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "17209",
+  "prefecture": "石川県",
+  "municipality": "かほく市",
+  "official_home_url": "https://www.city.kahoku.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/kahoku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/kahoku/reiki_menu.html",
+          "observed_on": "https://www.city.kahoku.lg.jp/",
+          "fetched_at": "2026-08-27T06:12:48Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/kahoku/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kahoku.lg.jp/006/614/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kahoku.lg.jp/006/614/index.html",
+          "observed_on": "https://www.city.kahoku.lg.jp/",
+          "fetched_at": "2026-08-27T06:12:48Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.kahoku.lg.jp/006/614/index.html (label: 財政（予算・決算）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kahoku.lg.jp/006/614/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kahoku.lg.jp/006/614/index.html",
+          "observed_on": "https://www.city.kahoku.lg.jp/",
+          "fetched_at": "2026-08-27T06:12:48Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.kahoku.lg.jp/006/614/index.html (label: 財政（予算・決算）)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14362",
+  "prefecture": "神奈川県",
+  "municipality": "大井町",
+  "official_home_url": "http://www.town.oi.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.oi.kanagawa.jp/site/gikai/list81-243.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.oi.kanagawa.jp/site/gikai/list81-243.html",
+          "observed_on": "http://www.town.oi.kanagawa.jp/site/gikai/",
+          "fetched_at": "2026-08-27T08:07:32Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.oi.kanagawa.jp/site/gikai/list81-243.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.oi.kanagawa.jp/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.oi.kanagawa.jp/d1w_reiki/reiki.html",
+          "observed_on": "http://www.town.oi.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:06:51Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.oi.kanagawa.jp/d1w_reiki/reiki.html (label: 大井町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.oi.kanagawa.jp/life/3/27/139/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.oi.kanagawa.jp/life/3/27/139/",
+          "observed_on": "http://www.town.oi.kanagawa.jp/life/3/",
+          "fetched_at": "2026-08-27T08:07:15Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.oi.kanagawa.jp/life/3/27/139/ (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.oi.kanagawa.jp/life/3/27/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.oi.kanagawa.jp/life/3/27/",
+          "observed_on": "http://www.town.oi.kanagawa.jp/life/3/",
+          "fetched_at": "2026-08-27T08:07:15Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.oi.kanagawa.jp/life/3/27/ (label: 行政・財政)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "28223",
+  "prefecture": "兵庫県",
+  "municipality": "丹波市",
+  "official_home_url": "https://www.city.tamba.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kensakusystem.jp/tamba/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kensakusystem.jp/tamba/index.html",
+          "observed_on": "https://www.city.tamba.lg.jp/soshiki/gijisomuka/gyomuannai/2/index.html",
+          "fetched_at": "2026-08-27T06:52:14Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kensakusystem.jp/tamba/index.html (label: 丹波市議会 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/taikei_default.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/taikei_default.html",
+          "observed_on": "https://www.city.tamba.lg.jp/",
+          "fetched_at": "2026-08-27T06:51:06Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/taikei_default.html (label: 例規集検索)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/r_taikei_06_01.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/r_taikei_06_01.html",
+          "observed_on": "https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/taikei_default.html",
+          "fetched_at": "2026-08-27T06:51:37Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/r_taikei_06_01.html (label: 第1章 予算・会計)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tamba.lg.jp/gyosei/gyozaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tamba.lg.jp/gyosei/gyozaise/index.html",
+          "observed_on": "https://www.city.tamba.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:51:22Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.tamba.lg.jp/gyosei/gyozaise/index.html (label: 行財政)"
+    }
+  }
+}

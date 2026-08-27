@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11227",
+  "prefecture": "埼玉県",
+  "municipality": "朝霞市",
+  "official_home_url": "http://www.city.asaka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.asaka.lg.jp/site/shigikai/honkaigikaigirokukeisai20260821.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.asaka.lg.jp/site/shigikai/honkaigikaigirokukeisai20260821.html",
+          "observed_on": "http://www.city.asaka.lg.jp/life/4/27/",
+          "fetched_at": "2026-08-27T06:57:08Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.asaka.lg.jp/site/shigikai/honkaigikaigirokukeisai20260821.html (label: 令和8年第2回定例会本会議の会議録が掲載されました)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/asaka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/asaka/reiki_menu.html",
+          "observed_on": "http://www.city.asaka.lg.jp/",
+          "fetched_at": "2026-08-27T06:54:46Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/asaka/reiki_menu.html (label: 例規集(条例・規則等))"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.asaka.lg.jp/life/4/33/163/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.asaka.lg.jp/life/4/33/163/",
+          "observed_on": "http://www.city.asaka.lg.jp/life/4/",
+          "fetched_at": "2026-08-27T06:55:05Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.asaka.lg.jp/life/4/33/163/ (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.asaka.lg.jp/life/4/33/164/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.asaka.lg.jp/life/4/33/164/",
+          "observed_on": "http://www.city.asaka.lg.jp/life/4/",
+          "fetched_at": "2026-08-27T06:55:05Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.asaka.lg.jp/life/4/33/164/ (label: 決算)"
+    }
+  }
+}

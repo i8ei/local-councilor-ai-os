@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "04606",
+  "prefecture": "宮城県",
+  "municipality": "南三陸町",
+  "official_home_url": "http://www.town.minamisanriku.miyagi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/minamisanriku/WebView/rd/council.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/minamisanriku/WebView/rd/council.html",
+          "observed_on": "https://www.town.minamisanriku.miyagi.jp/gikai/about/722.html",
+          "fetched_at": "2026-08-27T07:29:42Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/minamisanriku/WebView/rd/council.html (label: 南三陸町議会 議会中継)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/minamisanriku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/minamisanriku/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/minamisanriku/reiki_menu.html",
+          "fetched_at": "2026-08-27T07:30:55Z"
+        }
+      ],
+      "notes": "Verified vendor regulations probe at https://www1.g-reiki.net/minamisanriku/reiki_menu.html for 南三陸町"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

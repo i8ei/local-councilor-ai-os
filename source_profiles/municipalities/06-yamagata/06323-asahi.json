@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06323",
+  "prefecture": "山形県",
+  "municipality": "朝日町",
+  "official_home_url": "http://www.town.asahi.yamagata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.asahi.yamagata.jp/section/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.asahi.yamagata.jp/section/d1w_reiki/reiki.html",
+          "observed_on": "https://www.town.asahi.yamagata.jp/portal/index.html",
+          "fetched_at": "2026-08-27T07:43:40Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.asahi.yamagata.jp/section/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.asahi.yamagata.jp/portal/administration/gyoseijoho/kansa/9823.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.asahi.yamagata.jp/portal/administration/gyoseijoho/kansa/9823.html",
+          "observed_on": "https://www.town.asahi.yamagata.jp/portal/administration/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:44:24Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.asahi.yamagata.jp/portal/administration/gyoseijoho/kansa/9823.html (label: 令和5年度決算審査意見書)"
+    }
+  }
+}

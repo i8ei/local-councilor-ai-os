@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22223",
+  "prefecture": "静岡県",
+  "municipality": "御前崎市",
+  "official_home_url": "http://www.city.omaezaki.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://krr029.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://krr029.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.omaezaki.shizuoka.jp/kurashi/",
+          "fetched_at": "2026-08-27T07:47:20Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://krr029.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.omaezaki.shizuoka.jp/kurashi/shisei/yosan_zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.omaezaki.shizuoka.jp/kurashi/shisei/yosan_zaisei/index.html",
+          "observed_on": "http://www.city.omaezaki.shizuoka.jp/kurashi/shisei/",
+          "fetched_at": "2026-08-27T07:48:56Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.omaezaki.shizuoka.jp/kurashi/shisei/yosan_zaisei/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.omaezaki.shizuoka.jp/kurashi/shisei/yosan_zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.omaezaki.shizuoka.jp/kurashi/shisei/yosan_zaisei/index.html",
+          "observed_on": "http://www.city.omaezaki.shizuoka.jp/kurashi/shisei/",
+          "fetched_at": "2026-08-27T07:48:56Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.omaezaki.shizuoka.jp/kurashi/shisei/yosan_zaisei/index.html (label: 予算・財政)"
+    }
+  }
+}

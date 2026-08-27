@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12239",
+  "prefecture": "千葉県",
+  "municipality": "大網白里市",
+  "official_home_url": "http://www.city.oamishirasato.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.oamishirasato.lg.jp/category/68-4-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.oamishirasato.lg.jp/category/68-4-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.oamishirasato.lg.jp/category/63-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:23:42Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.oamishirasato.lg.jp/category/68-4-0-0-0-0-0-0-0-0.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078984",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078984",
+          "observed_on": "https://www.city.oamishirasato.lg.jp/category/63-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:23:42Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80078984 (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.oamishirasato.lg.jp/category/63-7-1-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.oamishirasato.lg.jp/category/63-7-1-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.oamishirasato.lg.jp/category/63-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:23:42Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.oamishirasato.lg.jp/category/63-7-1-0-0-0-0-0-0-0.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.oamishirasato.lg.jp/category/63-7-2-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.oamishirasato.lg.jp/category/63-7-2-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.oamishirasato.lg.jp/category/63-0-0-0-0-0-0-0-0-0.html",
+          "fetched_at": "2026-08-27T07:23:42Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.oamishirasato.lg.jp/category/63-7-2-0-0-0-0-0-0-0.html (label: 決算)"
+    }
+  }
+}

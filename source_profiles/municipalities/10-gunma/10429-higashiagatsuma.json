@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10429",
+  "prefecture": "群馬県",
+  "municipality": "東吾妻町",
+  "official_home_url": "https://www.town.higashiagatsuma.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.higashiagatsuma.gunma.jp/www/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.higashiagatsuma.gunma.jp/www/reiki/reiki.html",
+          "observed_on": "https://www.town.higashiagatsuma.gunma.jp/",
+          "fetched_at": "2026-08-27T06:42:03Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.higashiagatsuma.gunma.jp/www/reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

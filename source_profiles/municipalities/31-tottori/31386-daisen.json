@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "31386",
+  "prefecture": "鳥取県",
+  "municipality": "大山町",
+  "official_home_url": "http://www.daisen.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.daisen.jp/gikai/9/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.daisen.jp/gikai/9/",
+          "observed_on": "http://www.daisen.jp/gikai/",
+          "fetched_at": "2026-08-27T06:00:21Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.daisen.jp/gikai/9/ (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.daisen.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.daisen.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.daisen.jp/",
+          "fetched_at": "2026-08-27T05:59:48Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.daisen.jp/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.daisen.jp/gikai/4/5/3/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.daisen.jp/gikai/4/5/3/",
+          "observed_on": "http://www.daisen.jp/gikai/4/5/",
+          "fetched_at": "2026-08-27T06:03:30Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.daisen.jp/gikai/4/5/3/ (label: 予算審査特別委員会)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.daisen.jp/gikai/4/5/4/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.daisen.jp/gikai/4/5/4/",
+          "observed_on": "http://www.daisen.jp/gikai/4/5/",
+          "fetched_at": "2026-08-27T06:03:30Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.daisen.jp/gikai/4/5/4/ (label: 決算審査特別委員会)"
+    }
+  }
+}

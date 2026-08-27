@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "23215",
+  "prefecture": "愛知県",
+  "municipality": "犬山市",
+  "official_home_url": "http://www.city.inuyama.aichi.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.inuyama.aichi.jp/shisei/gikai/1000467/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.inuyama.aichi.jp/shisei/gikai/1000467/index.html",
+          "observed_on": "http://www.city.inuyama.aichi.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T08:01:19Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.inuyama.aichi.jp/shisei/gikai/1000467/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85833114",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85833114",
+          "observed_on": "http://www.city.inuyama.aichi.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T08:01:19Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrFeF01/init?jctcd=8A85833114 (label: 例規集・要綱集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.inuyama.aichi.jp/shisei/1001281/1005027/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.inuyama.aichi.jp/shisei/1001281/1005027/index.html",
+          "observed_on": "http://www.city.inuyama.aichi.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T08:01:19Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.inuyama.aichi.jp/shisei/1001281/1005027/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.inuyama.aichi.jp/shisei/1001281/1005028/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.inuyama.aichi.jp/shisei/1001281/1005028/index.html",
+          "observed_on": "http://www.city.inuyama.aichi.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T08:01:19Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.inuyama.aichi.jp/shisei/1001281/1005028/index.html (label: 決算)"
+    }
+  }
+}

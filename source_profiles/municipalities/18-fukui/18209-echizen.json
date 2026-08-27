@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "18209",
+  "prefecture": "福井県",
+  "municipality": "越前市",
+  "official_home_url": "https://www.city.echizen.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.echizen.lg.jp/other/shigikai/kaigiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.echizen.lg.jp/other/shigikai/kaigiroku/index.html",
+          "observed_on": "https://www.city.echizen.lg.jp/office/110/010/gikaikathseika/gikai-topix2.html",
+          "fetched_at": "2026-08-27T06:24:47Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.echizen.lg.jp/other/shigikai/kaigiroku/index.html (label: 会議録検索システム)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.echizen.lg.jp/hometown/shisei/index.html",
+          "fetched_at": "2026-08-27T06:23:22Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html",
+          "observed_on": "https://www.city.echizen.lg.jp/hometown/shisei/index.html",
+          "fetched_at": "2026-08-27T06:23:22Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.echizen.lg.jp/hometown/shisei/zaisei/index.html (label: 財政)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "24203",
+  "prefecture": "三重県",
+  "municipality": "伊勢市",
+  "official_home_url": "http://www.city.ise.mie.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://reikisyu.city.ise.mie.jp/ise/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://reikisyu.city.ise.mie.jp/ise/reiki_menu.html",
+          "observed_on": "http://www.city.ise.mie.jp/",
+          "fetched_at": "2026-08-27T05:56:48Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://reikisyu.city.ise.mie.jp/ise/reiki_menu.html (label: 市の条例・規則〔伊勢市例規集〕)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html",
+          "observed_on": "http://www.city.ise.mie.jp/",
+          "fetched_at": "2026-08-27T05:56:48Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html (label: 財政（予算決算等）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html",
+          "observed_on": "http://www.city.ise.mie.jp/",
+          "fetched_at": "2026-08-27T05:56:48Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.ise.mie.jp/shisei/zaisei_kaikaku/yosan/index.html (label: 財政（予算決算等）)"
+    }
+  }
+}

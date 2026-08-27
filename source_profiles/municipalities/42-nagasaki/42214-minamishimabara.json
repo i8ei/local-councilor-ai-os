@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "42214",
+  "prefecture": "長崎県",
+  "municipality": "南島原市",
+  "official_home_url": "http://www.city.minamishimabara.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/minamishimabara/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/minamishimabara/SpTop.html",
+          "observed_on": "https://www.city.minamishimabara.lg.jp/gikai/default.html",
+          "fetched_at": "2026-08-27T05:26:22Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/minamishimabara/SpTop.html (label: 会議録の検索と閲覧)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.minamishimabara/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.minamishimabara/reiki_menu.html",
+          "observed_on": "https://www.city.minamishimabara.lg.jp/default.html",
+          "fetched_at": "2026-08-27T05:26:10Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.minamishimabara/reiki_menu.html (label: 条例・規則（例規集）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.minamishimabara.lg.jp/list00140.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minamishimabara.lg.jp/list00140.html",
+          "observed_on": "https://www.city.minamishimabara.lg.jp/default.html",
+          "fetched_at": "2026-08-27T05:26:10Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.minamishimabara.lg.jp/list00140.html (label: 市の財政・行政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.minamishimabara.lg.jp/list00140.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.minamishimabara.lg.jp/list00140.html",
+          "observed_on": "https://www.city.minamishimabara.lg.jp/default.html",
+          "fetched_at": "2026-08-27T05:26:10Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.minamishimabara.lg.jp/list00140.html (label: 市の財政・行政)"
+    }
+  }
+}

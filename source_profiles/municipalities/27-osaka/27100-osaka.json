@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "27100",
+  "prefecture": "大阪府",
+  "municipality": "大阪市",
+  "official_home_url": "http://www.city.osaka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.osaka.lg.jp/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.osaka.lg.jp/zaisei/index.html",
+          "observed_on": "http://www.city.osaka.lg.jp/main/soshiki_list.html",
+          "fetched_at": "2026-08-27T06:25:05Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.osaka.lg.jp/zaisei/index.html (label: 財政局)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.osaka.lg.jp/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.osaka.lg.jp/zaisei/index.html",
+          "observed_on": "http://www.city.osaka.lg.jp/main/soshiki_list.html",
+          "fetched_at": "2026-08-27T06:25:05Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.osaka.lg.jp/zaisei/index.html (label: 財政局)"
+    }
+  }
+}

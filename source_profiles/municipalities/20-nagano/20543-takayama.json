@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20543",
+  "prefecture": "長野県",
+  "municipality": "高山村",
+  "official_home_url": "http://www.vill.takayama.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.vill.takayama.nagano.jp/docs/538546.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.vill.takayama.nagano.jp/docs/538546.html",
+          "observed_on": "http://www.vill.takayama.nagano.jp/gikai/",
+          "fetched_at": "2026-08-27T07:22:14Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.vill.takayama.nagano.jp/docs/538546.html (label: 高山村議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/takayama/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/takayama/d1w_reiki/reiki.html",
+          "observed_on": "http://www.vill.takayama.nagano.jp/",
+          "fetched_at": "2026-08-27T07:21:32Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/takayama/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07501",
+  "prefecture": "福島県",
+  "municipality": "石川町",
+  "official_home_url": "http://www.town.ishikawa.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.ishikawa.fukushima.jp//reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ishikawa.fukushima.jp//reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.ishikawa.fukushima.jp/",
+          "fetched_at": "2026-08-27T08:04:57Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.ishikawa.fukushima.jp//reiki_int/reiki_menu.html (label: 石川町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ishikawa.fukushima.jp/admin/parliament/yosan.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ishikawa.fukushima.jp/admin/parliament/yosan.html",
+          "observed_on": "https://www.town.ishikawa.fukushima.jp/admin/list.html",
+          "fetched_at": "2026-08-27T08:05:42Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.ishikawa.fukushima.jp/admin/parliament/yosan.html (label: 2025.12.10 予算審査特別委員会（令和7年第8回（12月）石川町議会定例会）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.ishikawa.fukushima.jp/admin/audit/r810-2.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.ishikawa.fukushima.jp/admin/audit/r810-2.html",
+          "observed_on": "https://www.town.ishikawa.fukushima.jp/admin/list.html",
+          "fetched_at": "2026-08-27T08:05:42Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.ishikawa.fukushima.jp/admin/audit/r810-2.html (label: 2026.7.23 一般会計等の決算審査を実施しました（7月23日～31日）)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "06324",
+  "prefecture": "山形県",
+  "municipality": "大江町",
+  "official_home_url": "http://www.town.oe.yamagata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.oe.yamagata.jp/government/rekisyu/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.oe.yamagata.jp/government/rekisyu/",
+          "observed_on": "http://www.town.oe.yamagata.jp/",
+          "fetched_at": "2026-08-27T07:43:29Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.oe.yamagata.jp/government/rekisyu/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.oe.yamagata.jp/government/mainpolicy/machi-dukuri/264",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.oe.yamagata.jp/government/mainpolicy/machi-dukuri/264",
+          "observed_on": "http://www.town.oe.yamagata.jp/government/mainpolicy/machi-dukuri/",
+          "fetched_at": "2026-08-27T07:44:36Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.oe.yamagata.jp/government/mainpolicy/machi-dukuri/264 (label: 大江町行財政改革大綱)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.oe.yamagata.jp/government/mainpolicy/machi-dukuri/264",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.oe.yamagata.jp/government/mainpolicy/machi-dukuri/264",
+          "observed_on": "http://www.town.oe.yamagata.jp/government/mainpolicy/machi-dukuri/",
+          "fetched_at": "2026-08-27T07:44:36Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.oe.yamagata.jp/government/mainpolicy/machi-dukuri/264 (label: 大江町行財政改革大綱)"
+    }
+  }
+}

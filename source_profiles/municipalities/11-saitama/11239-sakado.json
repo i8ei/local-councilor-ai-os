@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11239",
+  "prefecture": "埼玉県",
+  "municipality": "坂戸市",
+  "official_home_url": "http://www.city.sakado.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.sakado.lg.jp/site/sakadogikai/106.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.sakado.lg.jp/site/sakadogikai/106.html",
+          "observed_on": "http://www.city.sakado.lg.jp/site/sakadogikai/",
+          "fetched_at": "2026-08-27T07:00:05Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.sakado.lg.jp/site/sakadogikai/106.html (label: 会議録の検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/sakado/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/sakado/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.sakado.lg.jp/",
+          "fetched_at": "2026-08-27T06:58:18Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/sakado/d1w_reiki/reiki.html (label: 例規集検索)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.sakado.lg.jp/life/3/33/157/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.sakado.lg.jp/life/3/33/157/",
+          "observed_on": "http://www.city.sakado.lg.jp/life/3/",
+          "fetched_at": "2026-08-27T06:59:09Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.sakado.lg.jp/life/3/33/157/ (label: 予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.sakado.lg.jp/life/3/33/157/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.sakado.lg.jp/life/3/33/157/",
+          "observed_on": "http://www.city.sakado.lg.jp/life/3/",
+          "fetched_at": "2026-08-27T06:59:09Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.sakado.lg.jp/life/3/33/157/ (label: 予算・決算)"
+    }
+  }
+}

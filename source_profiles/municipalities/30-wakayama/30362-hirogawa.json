@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "30362",
+  "prefecture": "和歌山県",
+  "municipality": "広川町",
+  "official_home_url": "http://www.town.hirogawa.wakayama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.hirogawa.wakayama.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.hirogawa.wakayama.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.hirogawa.wakayama.jp/",
+          "fetched_at": "2026-08-27T07:21:57Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.hirogawa.wakayama.jp/reiki/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.hirogawa.wakayama.jp/gikai/pdf/R3.9.koronaikennsyo.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.hirogawa.wakayama.jp/gikai/pdf/R3.9.koronaikennsyo.pdf",
+          "observed_on": "http://www.town.hirogawa.wakayama.jp/gikai/kekka.html",
+          "fetched_at": "2026-08-27T07:23:51Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.hirogawa.wakayama.jp/gikai/pdf/R3.9.koronaikennsyo.pdf (label: コロナ禍による厳しい財政状況に対処し地方税財源の充実を求める意見書 (137KB))"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.hirogawa.wakayama.jp/sangyou/sk-joyozei.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.hirogawa.wakayama.jp/sangyou/sk-joyozei.html",
+          "observed_on": "http://www.town.hirogawa.wakayama.jp/sangyou/seiken.html",
+          "fetched_at": "2026-08-27T07:25:03Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.hirogawa.wakayama.jp/sangyou/sk-joyozei.html (label: 森林環境譲与税使途状況（決算）)"
+    }
+  }
+}

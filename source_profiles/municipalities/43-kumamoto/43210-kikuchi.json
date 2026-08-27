@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43210",
+  "prefecture": "熊本県",
+  "municipality": "菊池市",
+  "official_home_url": "http://www.city.kikuchi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.kikuchi.lg.jp/article/view/1420/18148.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kikuchi.lg.jp/article/view/1420/18148.html",
+          "observed_on": "https://www.city.kikuchi.lg.jp/article/division_list/184.html",
+          "fetched_at": "2026-08-27T05:33:47Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.kikuchi.lg.jp/article/view/1420/18148.html (label: 2026年08月14日 15時00分 令和８年市議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/city.kikuchi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/city.kikuchi/reiki_menu.html",
+          "observed_on": "http://www.city.kikuchi.lg.jp/",
+          "fetched_at": "2026-08-27T05:33:45Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/city.kikuchi/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kikuchi.lg.jp/article/division_list/110.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kikuchi.lg.jp/article/division_list/110.html",
+          "observed_on": "http://www.city.kikuchi.lg.jp/",
+          "fetched_at": "2026-08-27T05:33:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kikuchi.lg.jp/article/division_list/110.html (label: 財政課 検査係)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kikuchi.lg.jp/article/division_list/110.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kikuchi.lg.jp/article/division_list/110.html",
+          "observed_on": "http://www.city.kikuchi.lg.jp/",
+          "fetched_at": "2026-08-27T05:33:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kikuchi.lg.jp/article/division_list/110.html (label: 財政課 検査係)"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "12212",
+  "prefecture": "千葉県",
+  "municipality": "佐倉市",
+  "official_home_url": "http://www.city.sakura.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "http://sakurashigikai.gijiroku.com/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://sakurashigikai.gijiroku.com/",
+          "observed_on": "https://www.city.sakura.lg.jp/global/shiseijouhou/index.html",
+          "fetched_at": "2026-08-27T07:13:22Z"
+        }
+      ],
+      "notes": "Observed voices at http://sakurashigikai.gijiroku.com/ (label: 議会)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80073B01",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80073B01",
+          "observed_on": "https://www.city.sakura.lg.jp/global/shiseijouhou/index.html",
+          "fetched_at": "2026-08-27T07:13:22Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A80073B01 (label: 佐倉市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sakura.lg.jp/global/shiseijouhou/15169.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sakura.lg.jp/global/shiseijouhou/15169.html",
+          "observed_on": "https://www.city.sakura.lg.jp/global/shiseijouhou/index.html",
+          "fetched_at": "2026-08-27T07:13:22Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.sakura.lg.jp/global/shiseijouhou/15169.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sakura.lg.jp/global/shiseijouhou/15169.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sakura.lg.jp/global/shiseijouhou/15169.html",
+          "observed_on": "https://www.city.sakura.lg.jp/global/shiseijouhou/index.html",
+          "fetched_at": "2026-08-27T07:13:22Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.sakura.lg.jp/global/shiseijouhou/15169.html (label: 財政)"
+    }
+  }
+}

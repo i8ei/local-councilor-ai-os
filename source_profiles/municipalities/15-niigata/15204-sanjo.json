@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15204",
+  "prefecture": "新潟県",
+  "municipality": "三条市",
+  "official_home_url": "http://www.city.sanjo.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/9384.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/9384.html",
+          "observed_on": "https://www.city.sanjo.niigata.jp/shisei/shigikai/index.html",
+          "fetched_at": "2026-08-27T05:57:37Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.sanjo.niigata.jp/shisei/shigikai/9384.html (label: 会議録検索)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/9388.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.sanjo.niigata.jp/shisei/shigikai/9388.html",
+          "observed_on": "https://www.city.sanjo.niigata.jp/shisei/shigikai/index.html",
+          "fetched_at": "2026-08-27T05:57:37Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.sanjo.niigata.jp/shisei/shigikai/9388.html (label: 市議会の予算)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

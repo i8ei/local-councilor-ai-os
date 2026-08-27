@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36204",
+  "prefecture": "徳島県",
+  "municipality": "阿南市",
+  "official_home_url": "http://www.city.anan.tokushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/anan/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/anan/reiki_menu.html",
+          "observed_on": "http://www.city.anan.tokushima.jp/top.html",
+          "fetched_at": "2026-08-27T06:38:37Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/anan/reiki_menu.html (label: 市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.anan.tokushima.jp/docs/2026080300029/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.anan.tokushima.jp/docs/2026080300029/",
+          "observed_on": "http://www.city.anan.tokushima.jp/top.html",
+          "fetched_at": "2026-08-27T06:38:37Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.anan.tokushima.jp/docs/2026080300029/ (label: 行財政改革懇話会「公募委員」を募集します)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.anan.tokushima.jp/docs/2026080300029/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.anan.tokushima.jp/docs/2026080300029/",
+          "observed_on": "http://www.city.anan.tokushima.jp/top.html",
+          "fetched_at": "2026-08-27T06:38:37Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.anan.tokushima.jp/docs/2026080300029/ (label: 行財政改革懇話会「公募委員」を募集します)"
+    }
+  }
+}

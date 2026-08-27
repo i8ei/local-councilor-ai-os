@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "05201",
+  "prefecture": "秋田県",
+  "municipality": "秋田市",
+  "official_home_url": "https://www.city.akita.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.akita.akita.jp/city/gn/dc/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.akita.akita.jp/city/gn/dc/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.akita.lg.jp/",
+          "fetched_at": "2026-08-27T07:27:37Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.akita.akita.jp/city/gn/dc/reiki/reiki_menu.html (label: 秋田市 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.akita.lg.jp/shisei/yosan-zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akita.lg.jp/shisei/yosan-zaisei/index.html",
+          "observed_on": "https://www.city.akita.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:28:11Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.akita.lg.jp/shisei/yosan-zaisei/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.akita.lg.jp/shisei/yosan-zaisei/1016251/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akita.lg.jp/shisei/yosan-zaisei/1016251/index.html",
+          "observed_on": "https://www.city.akita.lg.jp/shisei/index.html",
+          "fetched_at": "2026-08-27T07:28:11Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.akita.lg.jp/shisei/yosan-zaisei/1016251/index.html (label: 決算)"
+    }
+  }
+}

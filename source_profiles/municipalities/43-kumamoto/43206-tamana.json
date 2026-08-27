@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43206",
+  "prefecture": "熊本県",
+  "municipality": "玉名市",
+  "official_home_url": "http://www.city.tamana.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.tamana.lg.jp/q/list/448.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tamana.lg.jp/q/list/448.html",
+          "observed_on": "https://www.city.tamana.lg.jp/q/aview/438/21963.html",
+          "fetched_at": "2026-08-27T05:32:54Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.tamana.lg.jp/q/list/448.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www1.g-reiki.net/tamana/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www1.g-reiki.net/tamana/reiki_menu.html",
+          "observed_on": "http://www.city.tamana.lg.jp/",
+          "fetched_at": "2026-08-27T05:32:53Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www1.g-reiki.net/tamana/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tamana.lg.jp/q/aview/448/26148.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tamana.lg.jp/q/aview/448/26148.html",
+          "observed_on": "https://www.city.tamana.lg.jp/q/list/437.html",
+          "fetched_at": "2026-08-27T05:33:05Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.tamana.lg.jp/q/aview/448/26148.html (label: 予算決算委員会記録)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.tamana.lg.jp/q/aview/448/26148.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.tamana.lg.jp/q/aview/448/26148.html",
+          "observed_on": "https://www.city.tamana.lg.jp/q/list/437.html",
+          "fetched_at": "2026-08-27T05:33:05Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.tamana.lg.jp/q/aview/448/26148.html (label: 予算決算委員会記録)"
+    }
+  }
+}

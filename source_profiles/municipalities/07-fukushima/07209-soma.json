@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "07209",
+  "prefecture": "福島県",
+  "municipality": "相馬市",
+  "official_home_url": "http://www.city.soma.fukushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.soma.fukushima.jp/shiseijoho/kokai/4200.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.soma.fukushima.jp/shiseijoho/kokai/4200.html",
+          "observed_on": "https://www.city.soma.fukushima.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:53:44Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.soma.fukushima.jp/shiseijoho/kokai/4200.html (label: 公開用例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/yosan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/yosan/index.html",
+          "observed_on": "https://www.city.soma.fukushima.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:53:44Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.soma.fukushima.jp/shiseijoho/zaisei/yosan/index.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/kessan/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.soma.fukushima.jp/shiseijoho/zaisei/kessan/index.html",
+          "observed_on": "https://www.city.soma.fukushima.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T07:53:44Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.soma.fukushima.jp/shiseijoho/zaisei/kessan/index.html (label: 決算)"
+    }
+  }
+}

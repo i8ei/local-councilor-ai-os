@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "45207",
+  "prefecture": "宮崎県",
+  "municipality": "串間市",
+  "official_home_url": "http://www.city.kushima.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91AC49D1",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91AC49D1",
+          "observed_on": "https://www.city.kushima.lg.jp/main/",
+          "fetched_at": "2026-08-27T06:28:20Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A91AC49D1 (label: 串間市例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html",
+          "observed_on": "https://www.city.kushima.lg.jp/main/",
+          "fetched_at": "2026-08-27T06:28:20Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html (label: 令和８年度予算 事項別明細書)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html",
+          "observed_on": "https://www.city.kushima.lg.jp/main/",
+          "fetched_at": "2026-08-27T06:28:20Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kushima.lg.jp/main/info/zaisei/budget/sup/post-780.html (label: 令和８年度予算 事項別明細書)"
+    }
+  }
+}

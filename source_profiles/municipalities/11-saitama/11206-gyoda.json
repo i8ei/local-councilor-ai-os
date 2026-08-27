@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11206",
+  "prefecture": "埼玉県",
+  "municipality": "行田市",
+  "official_home_url": "http://www.city.gyoda.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://smart.discussvision.net/smart/tenant/gyoda/WebView/rd/council_1.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://smart.discussvision.net/smart/tenant/gyoda/WebView/rd/council_1.html",
+          "observed_on": "https://www.city.gyoda.lg.jp/soshiki/gikai_jimukyoku/gikai/7380.html",
+          "fetched_at": "2026-08-27T06:49:04Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/gyoda/WebView/rd/council_1.html (label: 令和8年6月定例会の録画映像を公開しています。（外部サイトへリンク）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.gyoda.lg.jp/gyosei_joho/jorei_kisoku_yoko/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.gyoda.lg.jp/gyosei_joho/jorei_kisoku_yoko/index.html",
+          "observed_on": "https://www.city.gyoda.lg.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:47:25Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.gyoda.lg.jp/gyosei_joho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.gyoda.lg.jp/gyosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.gyoda.lg.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.city.gyoda.lg.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:47:25Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.gyoda.lg.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.gyoda.lg.jp/gyosei_joho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.gyoda.lg.jp/gyosei_joho/gyozaisei/index.html",
+          "observed_on": "https://www.city.gyoda.lg.jp/gyosei_joho/index.html",
+          "fetched_at": "2026-08-27T06:47:25Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.gyoda.lg.jp/gyosei_joho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

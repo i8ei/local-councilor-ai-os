@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "44462",
+  "prefecture": "大分県",
+  "municipality": "玖珠町",
+  "official_home_url": "http://www.town.kusu.oita.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.kusu.oita.jp/choseijoho/kusuchogikai/1/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kusu.oita.jp/choseijoho/kusuchogikai/1/index.html",
+          "observed_on": "https://www.town.kusu.oita.jp/choseijoho/kusuchogikai/index.html",
+          "fetched_at": "2026-08-27T06:27:57Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.kusu.oita.jp/choseijoho/kusuchogikai/1/index.html (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A919D31B8",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A919D31B8",
+          "observed_on": "http://www.town.kusu.oita.jp/",
+          "fetched_at": "2026-08-27T06:23:44Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A919D31B8 (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01453",
+  "prefecture": "北海道",
+  "municipality": "東神楽町",
+  "official_home_url": "https://www.town.higashikagura.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.higashikagura.lg.jp/docs/677.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.higashikagura.lg.jp/docs/677.html",
+          "observed_on": "https://www.town.higashikagura.lg.jp/c1_town/",
+          "fetched_at": "2026-08-27T06:23:46Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.town.higashikagura.lg.jp/docs/677.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.higashikagura.lg.jp/docs/15207.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.higashikagura.lg.jp/docs/15207.html",
+          "observed_on": "https://www.town.higashikagura.lg.jp/topics/",
+          "fetched_at": "2026-08-27T06:24:16Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.higashikagura.lg.jp/docs/15207.html (label: 2026年1月22日 令和７年度補正予算「畑地化促進事業」の要望調査について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.higashikagura.lg.jp/docs/655.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.higashikagura.lg.jp/docs/655.html",
+          "observed_on": "https://www.town.higashikagura.lg.jp/c1_town/",
+          "fetched_at": "2026-08-27T06:23:46Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.higashikagura.lg.jp/docs/655.html (label: 「町の財政」一覧)"
+    }
+  }
+}

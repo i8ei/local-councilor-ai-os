@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "42203",
+  "prefecture": "長崎県",
+  "municipality": "島原市",
+  "official_home_url": "http://www.city.shimabara.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "dbsr",
+      "index_url": "http://www.city.shimabara.nagasaki.dbsr.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shimabara.nagasaki.dbsr.jp/",
+          "observed_on": "http://www.city.shimabara.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T05:21:28Z"
+        }
+      ],
+      "notes": "Observed dbsr at http://www.city.shimabara.nagasaki.dbsr.jp/ (label: 会議録の閲覧と検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.city.shimabara.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shimabara.lg.jp/reiki/reiki.html",
+          "observed_on": "http://www.city.shimabara.lg.jp/",
+          "fetched_at": "2026-08-27T05:21:23Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.city.shimabara.lg.jp/reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.shimabara.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=163",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shimabara.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=163",
+          "observed_on": "http://www.city.shimabara.lg.jp/",
+          "fetched_at": "2026-08-27T05:21:23Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.shimabara.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=163 (label: 市の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.shimabara.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=163",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shimabara.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=163",
+          "observed_on": "http://www.city.shimabara.lg.jp/",
+          "fetched_at": "2026-08-27T05:21:23Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.shimabara.lg.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=163 (label: 市の財政)"
+    }
+  }
+}

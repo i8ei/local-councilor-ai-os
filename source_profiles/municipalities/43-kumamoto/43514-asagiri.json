@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43514",
+  "prefecture": "熊本県",
+  "municipality": "あさぎり町",
+  "official_home_url": "http://www.town.asagiri.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/asagiri/WebView/rd/council.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/asagiri/WebView/rd/council.html",
+          "observed_on": "http://www.town.asagiri.lg.jp/list00212.html",
+          "fetched_at": "2026-08-27T05:50:08Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/asagiri/WebView/rd/council.html (label: 議会中継)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.asagiri.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.asagiri.lg.jp/reiki/",
+          "observed_on": "http://www.town.asagiri.lg.jp/",
+          "fetched_at": "2026-08-27T05:50:02Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.town.asagiri.lg.jp/reiki/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.asagiri.lg.jp/list00253.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.asagiri.lg.jp/list00253.html",
+          "observed_on": "http://www.town.asagiri.lg.jp/",
+          "fetched_at": "2026-08-27T05:50:02Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.asagiri.lg.jp/list00253.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.asagiri.lg.jp/list00254.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.asagiri.lg.jp/list00254.html",
+          "observed_on": "http://www.town.asagiri.lg.jp/",
+          "fetched_at": "2026-08-27T05:50:02Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.asagiri.lg.jp/list00254.html (label: 決算)"
+    }
+  }
+}

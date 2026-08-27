@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "46206",
+  "prefecture": "鹿児島県",
+  "municipality": "阿久根市",
+  "official_home_url": "https://www.city.akune.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.akune.lg.jp/shiseijoho/gikai/1385.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akune.lg.jp/shiseijoho/gikai/1385.html",
+          "observed_on": "https://www.city.akune.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:37:27Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.akune.lg.jp/shiseijoho/gikai/1385.html (label: 市議会会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.city.akune.lg.jp/section/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akune.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.akune.lg.jp/",
+          "fetched_at": "2026-08-27T06:37:06Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.city.akune.lg.jp/section/reiki/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html",
+          "observed_on": "https://www.city.akune.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:37:27Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.akune.lg.jp/shiseijoho/zaisei/1517.html (label: 予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.akune.lg.jp/shiseijoho/zaisei/index.html",
+          "observed_on": "https://www.city.akune.lg.jp/shiseijoho/index.html",
+          "fetched_at": "2026-08-27T06:37:27Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.akune.lg.jp/shiseijoho/zaisei/index.html (label: 財政)"
+    }
+  }
+}

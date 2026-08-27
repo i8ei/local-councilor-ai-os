@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "15405",
+  "prefecture": "新潟県",
+  "municipality": "出雲崎町",
+  "official_home_url": "http://www.town.izumozaki.niigata.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.izumozaki.niigata.jp/chosei/nogyo/gijiroku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.izumozaki.niigata.jp/chosei/nogyo/gijiroku.html",
+          "observed_on": "http://www.town.izumozaki.niigata.jp/chosei/",
+          "fetched_at": "2026-08-27T06:05:26Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.izumozaki.niigata.jp/chosei/nogyo/gijiroku.html (label: 総会議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.izumozaki.niigata.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.izumozaki.niigata.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.izumozaki.niigata.jp/",
+          "fetched_at": "2026-08-27T06:05:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.izumozaki.niigata.jp/reiki/reiki_menu.html (label: 出雲崎町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911",
+          "observed_on": "http://www.town.izumozaki.niigata.jp/chosei/",
+          "fetched_at": "2026-08-27T06:05:26Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.izumozaki.niigata.jp/chosei/gyosei/izumozaki-yosann.html?node_id=4911 (label: 出雲崎町の予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.izumozaki.niigata.jp/chosei/suji/kaikei-kessan.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.izumozaki.niigata.jp/chosei/suji/kaikei-kessan.html",
+          "observed_on": "http://www.town.izumozaki.niigata.jp/chosei/",
+          "fetched_at": "2026-08-27T06:05:26Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.izumozaki.niigata.jp/chosei/suji/kaikei-kessan.html (label: 一般会計歳入歳出決算額)"
+    }
+  }
+}

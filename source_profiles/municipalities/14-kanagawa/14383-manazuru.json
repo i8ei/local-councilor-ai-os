@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "14383",
+  "prefecture": "神奈川県",
+  "municipality": "真鶴町",
+  "official_home_url": "http://www.town.manazuru.kanagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.kensakusystem.jp/manazuru/sapphire.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.kensakusystem.jp/manazuru/sapphire.html",
+          "observed_on": "http://www.town.manazuru.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:09:12Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.kensakusystem.jp/manazuru/sapphire.html (label: 真鶴町議会議事録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.manazuru.kanagawa/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.manazuru.kanagawa/reiki_menu.html",
+          "observed_on": "http://www.town.manazuru.kanagawa.jp/",
+          "fetched_at": "2026-08-27T08:09:12Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.manazuru.kanagawa/reiki_menu.html (label: 真鶴町例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

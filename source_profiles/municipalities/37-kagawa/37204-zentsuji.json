@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "37204",
+  "prefecture": "香川県",
+  "municipality": "善通寺市",
+  "official_home_url": "http://www.city.zentsuji.kagawa.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://ssp.kaigiroku.net/tenant/zentsuji/pg/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ssp.kaigiroku.net/tenant/zentsuji/pg/index.html",
+          "observed_on": "http://www.city.zentsuji.kagawa.jp/adv/ba.php?id=24",
+          "fetched_at": "2026-08-27T06:52:54Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://ssp.kaigiroku.net/tenant/zentsuji/pg/index.html (label: 会議録の閲覧・検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC5F92E",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC5F92E",
+          "observed_on": "http://www.city.zentsuji.kagawa.jp/",
+          "fetched_at": "2026-08-27T06:51:58Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC5F92E (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

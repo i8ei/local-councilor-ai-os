@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43444",
+  "prefecture": "熊本県",
+  "municipality": "甲佐町",
+  "official_home_url": "https://www.town.kosa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.kosa.lg.jp/reiki_int/reiki_honbun/q457RG00000026.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kosa.lg.jp/reiki_int/reiki_honbun/q457RG00000026.html",
+          "observed_on": "https://www.town.kosa.lg.jp/reiki_int/reiki_honbun/q457RG00000026.html",
+          "fetched_at": "2026-08-27T06:14:06Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.kosa.lg.jp/reiki_int/reiki_honbun/q457RG00000026.html (label: 第14章 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www.town.kosa.lg.jp/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kosa.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.kosa.lg.jp/q/toppage.html",
+          "fetched_at": "2026-08-27T05:44:04Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www.town.kosa.lg.jp/reiki_int/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kosa.lg.jp/reiki_int/reiki_taikei/r_taikei_07_01.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kosa.lg.jp/reiki_int/reiki_taikei/r_taikei_07_01.html",
+          "observed_on": "https://www.town.kosa.lg.jp/reiki_int/reiki_taikei/taikei_default.html",
+          "fetched_at": "2026-08-27T05:44:16Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.town.kosa.lg.jp/reiki_int/reiki_taikei/r_taikei_07_01.html (label: 第1節 予算及び会計)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.kosa.lg.jp/q/list/220.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.kosa.lg.jp/q/list/220.html",
+          "observed_on": "https://www.town.kosa.lg.jp/q/aview/136/233.html",
+          "fetched_at": "2026-08-27T05:44:10Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.town.kosa.lg.jp/q/list/220.html (label: まちづくりプラン（決算版）)"
+    }
+  }
+}

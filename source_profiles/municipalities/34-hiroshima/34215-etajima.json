@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "34215",
+  "prefecture": "広島県",
+  "municipality": "江田島市",
+  "official_home_url": "http://www.city.etajima.hiroshima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.etajima.hiroshima.jp/cms/categories/show/473",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.etajima.hiroshima.jp/cms/categories/show/473",
+          "observed_on": "https://www.city.etajima.hiroshima.jp/cms/categories/show/474",
+          "fetched_at": "2026-08-27T06:30:54Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.etajima.hiroshima.jp/cms/categories/show/473 (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://krr068.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://krr068.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf",
+          "observed_on": "http://www.city.etajima.hiroshima.jp/",
+          "fetched_at": "2026-08-27T06:27:55Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://krr068.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf (label: 市の条例・規則)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

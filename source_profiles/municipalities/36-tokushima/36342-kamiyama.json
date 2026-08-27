@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36342",
+  "prefecture": "徳島県",
+  "municipality": "神山町",
+  "official_home_url": "http://www.town.kamiyama.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www3.town.kamiyama.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www3.town.kamiyama.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.kamiyama.lg.jp/",
+          "fetched_at": "2026-08-27T06:43:29Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www3.town.kamiyama.lg.jp/reiki/reiki_menu.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

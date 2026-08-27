@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "26100",
+  "prefecture": "京都府",
+  "municipality": "京都市",
+  "official_home_url": "http://www.city.kyoto.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.kyoto.lg.jp/menu5/category/75-2-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kyoto.lg.jp/menu5/category/75-2-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.kyoto.lg.jp/menu5/index.html",
+          "fetched_at": "2026-08-27T06:14:40Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.city.kyoto.lg.jp/menu5/category/75-2-0-0-0-0-0-0-0-0.html (label: 条例・規則)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kyoto.lg.jp/menu5/category/69-2-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kyoto.lg.jp/menu5/category/69-2-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.kyoto.lg.jp/menu5/index.html",
+          "fetched_at": "2026-08-27T06:14:40Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.kyoto.lg.jp/menu5/category/69-2-0-0-0-0-0-0-0-0.html (label: 財政（財政状況・予算・決算・IR等）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kyoto.lg.jp/menu5/category/69-2-0-0-0-0-0-0-0-0.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kyoto.lg.jp/menu5/category/69-2-0-0-0-0-0-0-0-0.html",
+          "observed_on": "https://www.city.kyoto.lg.jp/menu5/index.html",
+          "fetched_at": "2026-08-27T06:14:40Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.kyoto.lg.jp/menu5/category/69-2-0-0-0-0-0-0-0-0.html (label: 財政（財政状況・予算・決算・IR等）)"
+    }
+  }
+}

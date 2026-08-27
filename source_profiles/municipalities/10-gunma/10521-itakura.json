@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10521",
+  "prefecture": "群馬県",
+  "municipality": "板倉町",
+  "official_home_url": "http://www.town.itakura.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.itakura.gunma/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.itakura.gunma/reiki_menu.html",
+          "observed_on": "http://www.town.itakura.gunma.jp/",
+          "fetched_at": "2026-08-27T06:43:34Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.itakura.gunma/reiki_menu.html (label: 板倉町例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.itakura.gunma.jp/d000050/d000170/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.itakura.gunma.jp/d000050/d000170/index.html",
+          "observed_on": "http://www.town.itakura.gunma.jp/d000050/index.html",
+          "fetched_at": "2026-08-27T06:46:43Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.itakura.gunma.jp/d000050/d000170/index.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.itakura.gunma.jp/cont/s001000/d001010/d000030/d000030/20260826160353.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.itakura.gunma.jp/cont/s001000/d001010/d000030/d000030/20260826160353.html",
+          "observed_on": "http://www.town.itakura.gunma.jp/",
+          "fetched_at": "2026-08-27T06:43:34Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.itakura.gunma.jp/cont/s001000/d001010/d000030/d000030/20260826160353.html (label: 町長フォトニュース（令和7年度決算審査意見書提出） 08月27日 8月26日(水曜日)、監査委員から令和7年度決算審査意見書が提出されました。)"
+    }
+  }
+}

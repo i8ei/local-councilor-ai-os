@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36368",
+  "prefecture": "徳島県",
+  "municipality": "那賀町",
+  "official_home_url": "http://www.town.tokushima-naka.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://ssp.kaigiroku.net/tenant/naka/SpTop.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ssp.kaigiroku.net/tenant/naka/SpTop.html",
+          "observed_on": "https://www.town.tokushima-naka.lg.jp/gikai/index.html",
+          "fetched_at": "2026-08-27T06:46:31Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://ssp.kaigiroku.net/tenant/naka/SpTop.html (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/town.tokushima-naka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/town.tokushima-naka/reiki_menu.html",
+          "observed_on": "https://www.town.tokushima-naka.lg.jp/gyosei/index.html",
+          "fetched_at": "2026-08-27T06:44:02Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/town.tokushima-naka/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01555",
+  "prefecture": "北海道",
+  "municipality": "遠軽町",
+  "official_home_url": "https://engaru.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://engaru.jp/information/page.php?id=398",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://engaru.jp/information/page.php?id=398",
+          "observed_on": "https://engaru.jp/information/",
+          "fetched_at": "2026-08-27T06:39:31Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://engaru.jp/information/page.php?id=398 (label: 会議録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://engaru.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://engaru.jp/reiki/reiki_menu.html",
+          "observed_on": "https://engaru.jp/",
+          "fetched_at": "2026-08-27T06:39:15Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://engaru.jp/reiki/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://engaru.jp/information/page.php?id=914",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://engaru.jp/information/page.php?id=914",
+          "observed_on": "https://engaru.jp/information/",
+          "fetched_at": "2026-08-27T06:39:31Z"
+        }
+      ],
+      "notes": "Observed budget link at https://engaru.jp/information/page.php?id=914 (label: 令和３年度予算（当初予算）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://engaru.jp/information/page.php?id=1366",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://engaru.jp/information/page.php?id=1366",
+          "observed_on": "https://engaru.jp/information/",
+          "fetched_at": "2026-08-27T06:39:31Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://engaru.jp/information/page.php?id=1366 (label: 歳入歳出決算に係る主要な施策の成果説明書)"
+    }
+  }
+}

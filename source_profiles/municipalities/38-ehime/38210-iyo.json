@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "38210",
+  "prefecture": "愛媛県",
+  "municipality": "伊予市",
+  "official_home_url": "http://www.city.iyo.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.iyo.lg.jp/gikai/shise/gikai/kaigiroku/jimukyoku/giketu.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.iyo.lg.jp/gikai/shise/gikai/kaigiroku/jimukyoku/giketu.html",
+          "observed_on": "http://www.city.iyo.lg.jp/gikai/shise/gikai/index.html",
+          "fetched_at": "2026-08-27T07:04:12Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.iyo.lg.jp/gikai/shise/gikai/kaigiroku/jimukyoku/giketu.html (label: 議会の議決結果)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/iyo/d1w_reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/iyo/d1w_reiki/reiki.html",
+          "observed_on": "http://www.city.iyo.lg.jp/",
+          "fetched_at": "2026-08-27T07:00:36Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/iyo/d1w_reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
+          "observed_on": "http://www.city.iyo.lg.jp/",
+          "fetched_at": "2026-08-27T07:00:36Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html (label: 伊予市の財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html",
+          "observed_on": "http://www.city.iyo.lg.jp/",
+          "fetched_at": "2026-08-27T07:00:36Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.iyo.lg.jp/zaimu/shise/yosan/zaise/index.html (label: 伊予市の財政)"
+    }
+  }
+}

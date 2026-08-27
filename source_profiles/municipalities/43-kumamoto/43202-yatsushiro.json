@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "43202",
+  "prefecture": "熊本県",
+  "municipality": "八代市",
+  "official_home_url": "http://www.city.yatsushiro.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "voices",
+      "index_url": "https://yatsushiro.gijiroku.com/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://yatsushiro.gijiroku.com/",
+          "observed_on": "https://www.city.yatsushiro.lg.jp/gikai/default.html",
+          "fetched_at": "2026-08-27T05:30:23Z"
+        }
+      ],
+      "notes": "Observed voices at https://yatsushiro.gijiroku.com/ (label: 定例会・臨時会)"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.yatsushiro.lg.jp/bousai/list02096.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.yatsushiro.lg.jp/bousai/list02096.html",
+          "observed_on": "https://www.city.yatsushiro.lg.jp/bousai/default.html",
+          "fetched_at": "2026-08-27T06:08:22Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.yatsushiro.lg.jp/bousai/list02096.html (label: 予算関係)"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

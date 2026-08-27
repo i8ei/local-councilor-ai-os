@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13382",
+  "prefecture": "東京都",
+  "municipality": "御蔵島村",
+  "official_home_url": "http://www.mikurasima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.mikurasima.jp/data/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.mikurasima.jp/data/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.mikurasima.jp/",
+          "fetched_at": "2026-08-27T07:55:22Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.mikurasima.jp/data/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.mikurasima.jp/section/gyosei/zaisei.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.mikurasima.jp/section/gyosei/zaisei.html",
+          "observed_on": "http://www.mikurasima.jp/",
+          "fetched_at": "2026-08-27T07:55:22Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.mikurasima.jp/section/gyosei/zaisei.html (label: 行財政データ)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.mikurasima.jp/section/gyosei/zaisei.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.mikurasima.jp/section/gyosei/zaisei.html",
+          "observed_on": "http://www.mikurasima.jp/",
+          "fetched_at": "2026-08-27T07:55:22Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.mikurasima.jp/section/gyosei/zaisei.html (label: 行財政データ)"
+    }
+  }
+}

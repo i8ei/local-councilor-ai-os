@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10449",
+  "prefecture": "群馬県",
+  "municipality": "みなかみ町",
+  "official_home_url": "http://www.town.minakami.gunma.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/index.html",
+          "observed_on": "http://www.town.minakami.gunma.jp/politics/08gikai/index.html",
+          "fetched_at": "2026-08-27T06:43:39Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.minakami.gunma.jp/politics/08gikai/gijiroku/index.html (label: 議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/minakami/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/minakami/reiki_menu.html",
+          "observed_on": "http://www.town.minakami.gunma.jp/",
+          "fetched_at": "2026-08-27T06:42:55Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/minakami/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.minakami.gunma.jp/politics/07zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.minakami.gunma.jp/politics/07zaisei/index.html",
+          "observed_on": "http://www.town.minakami.gunma.jp/",
+          "fetched_at": "2026-08-27T06:42:55Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.minakami.gunma.jp/politics/07zaisei/index.html (label: 予算・財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.minakami.gunma.jp/politics/07zaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.minakami.gunma.jp/politics/07zaisei/index.html",
+          "observed_on": "http://www.town.minakami.gunma.jp/",
+          "fetched_at": "2026-08-27T06:42:55Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.minakami.gunma.jp/politics/07zaisei/index.html (label: 予算・財政)"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "11210",
+  "prefecture": "埼玉県",
+  "municipality": "加須市",
+  "official_home_url": "http://www.city.kazo.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "https://smart.discussvision.net/smart/tenant/kazo/WebView/rd/council_1.html?referrer=http%3A%2F%2Flg-cms.smart-lgov.jp%2F",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://smart.discussvision.net/smart/tenant/kazo/WebView/rd/council_1.html?referrer=http%3A%2F%2Flg-cms.smart-lgov.jp%2F",
+          "observed_on": "https://www.city.kazo.lg.jp/soshiki/gikai/index.html",
+          "fetched_at": "2026-08-27T06:48:37Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at https://smart.discussvision.net/smart/tenant/kazo/WebView/rd/council_1.html?referrer=http%3A%2F%2Flg-cms.smart-lgov.jp%2F (label: )"
+    },
+    "regulations": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No regulations entrance found within page limit"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kazo.lg.jp/soshiki/zaisei/yosan/43249.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kazo.lg.jp/soshiki/zaisei/yosan/43249.html",
+          "observed_on": "https://www.city.kazo.lg.jp/soshiki/gikai/teirei/reiwa8nennteireikai_1/43734.html",
+          "fetched_at": "2026-08-27T06:48:53Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.kazo.lg.jp/soshiki/zaisei/yosan/43249.html (label: 令和8年度予算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.kazo.lg.jp/soshiki/zaisei/yosan/43249.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.kazo.lg.jp/soshiki/zaisei/yosan/43249.html",
+          "observed_on": "https://www.city.kazo.lg.jp/soshiki/gikai/teirei/reiwa8nennteireikai_1/43734.html",
+          "fetched_at": "2026-08-27T06:48:53Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.city.kazo.lg.jp/soshiki/zaisei/yosan/43249.html (label: 令和8年度予算)"
+    }
+  }
+}

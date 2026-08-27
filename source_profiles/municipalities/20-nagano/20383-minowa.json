@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20383",
+  "prefecture": "長野県",
+  "municipality": "箕輪町",
+  "official_home_url": "https://www.town.minowa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.minowa.lg.jp/gyoseijoho/gikai/gijiroku/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.minowa.lg.jp/gyoseijoho/gikai/gijiroku/index.html",
+          "observed_on": "https://www.town.minowa.lg.jp/gyoseijoho/gikai/index.html",
+          "fetched_at": "2026-08-27T07:07:18Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.minowa.lg.jp/gyoseijoho/gikai/gijiroku/index.html (label: 議事録)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8556A5EF",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8556A5EF",
+          "observed_on": "https://www.town.minowa.lg.jp/",
+          "fetched_at": "2026-08-27T07:06:32Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8556A5EF (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.minowa.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:06:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html",
+          "observed_on": "https://www.town.minowa.lg.jp/gyoseijoho/index.html",
+          "fetched_at": "2026-08-27T07:06:45Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.minowa.lg.jp/gyoseijoho/gyozaisei/index.html (label: 行財政)"
+    }
+  }
+}

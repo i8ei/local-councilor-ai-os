@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "01396",
+  "prefecture": "北海道",
+  "municipality": "真狩村",
+  "official_home_url": "https://www.vill.makkari.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill.makkari/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill.makkari/reiki_menu.html",
+          "observed_on": "https://www.vill.makkari.lg.jp/gyosei/",
+          "fetched_at": "2026-08-27T06:14:08Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/vill.makkari/reiki_menu.html (label: 真狩村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
+          "observed_on": "https://www.vill.makkari.lg.jp/",
+          "fetched_at": "2026-08-27T06:13:50Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.makkari.lg.jp/gyosei/zaisei/ (label: 財政状況の公表)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.vill.makkari.lg.jp/gyosei/zaisei/",
+          "observed_on": "https://www.vill.makkari.lg.jp/",
+          "fetched_at": "2026-08-27T06:13:50Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.vill.makkari.lg.jp/gyosei/zaisei/ (label: 財政状況の公表)"
+    }
+  }
+}

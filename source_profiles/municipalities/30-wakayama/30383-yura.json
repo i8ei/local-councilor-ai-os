@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "30383",
+  "prefecture": "和歌山県",
+  "municipality": "由良町",
+  "official_home_url": "http://www.town.yura.wakayama.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://www.town.yura.wakayama.jp/other-contents/reiki_int/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yura.wakayama.jp/other-contents/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.yura.wakayama.jp/",
+          "fetched_at": "2026-08-27T07:23:36Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://www.town.yura.wakayama.jp/other-contents/reiki_int/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
+          "observed_on": "http://www.town.yura.wakayama.jp/",
+          "fetched_at": "2026-08-27T07:23:36Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.yura.wakayama.jp/bunya/zaisei/ (label: 行財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yura.wakayama.jp/bunya/zaisei/",
+          "observed_on": "http://www.town.yura.wakayama.jp/",
+          "fetched_at": "2026-08-27T07:23:36Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.yura.wakayama.jp/bunya/zaisei/ (label: 行財政)"
+    }
+  }
+}

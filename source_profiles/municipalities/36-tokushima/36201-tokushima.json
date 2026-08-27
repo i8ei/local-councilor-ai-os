@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36201",
+  "prefecture": "徳島県",
+  "municipality": "徳島市",
+  "official_home_url": "http://www.city.tokushima.tokushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.tokushima.tokushima.jp/shigikai/kensaku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tokushima.tokushima.jp/shigikai/kensaku.html",
+          "observed_on": "http://www.city.tokushima.tokushima.jp/shigikai/index.html",
+          "fetched_at": "2026-08-27T06:37:57Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.city.tokushima.tokushima.jp/shigikai/kensaku.html (label: 会議録の閲覧・検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://reiki.city.tokushima.tokushima.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://reiki.city.tokushima.tokushima.jp/",
+          "observed_on": "http://www.city.tokushima.tokushima.jp/",
+          "fetched_at": "2026-08-27T06:37:28Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://reiki.city.tokushima.tokushima.jp/ (label: 徳島市例規集（外部サイト）)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html",
+          "observed_on": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/20160727.html",
+          "fetched_at": "2026-08-27T06:40:42Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/townplanning/budgeting_request/country/020100a2022.html (label: 令和5年度に向けた国の予算及び施策に関する重要事項要望)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/kigyoukaikei.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/kigyoukaikei.html",
+          "observed_on": "http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/20160727.html",
+          "fetched_at": "2026-08-27T06:40:42Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.tokushima.tokushima.jp/shigikai/gikai_koho/sigikaidayori/sigikaidayorihtml/kigyoukaikei.html (label: 令和6年度各企業会計決算)"
+    }
+  }
+}

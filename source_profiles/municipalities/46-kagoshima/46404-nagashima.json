@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "46404",
+  "prefecture": "鹿児島県",
+  "municipality": "長島町",
+  "official_home_url": "https://www.town.nagashima.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "kaigiroku_net",
+      "tenant_url": "http://smart.discussvision.net/smart/tenant/nagashima/WebView/rd/council_1.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://smart.discussvision.net/smart/tenant/nagashima/WebView/rd/council_1.html",
+          "observed_on": "https://www.town.nagashima.lg.jp/",
+          "fetched_at": "2026-08-27T06:42:35Z"
+        }
+      ],
+      "notes": "Observed kaigiroku_net at http://smart.discussvision.net/smart/tenant/nagashima/WebView/rd/council_1.html (label: 町議会中継)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC0206",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC0206",
+          "observed_on": "https://www.town.nagashima.lg.jp/",
+          "fetched_at": "2026-08-27T06:42:35Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A91BC0206 (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nagashima.lg.jp/administration/ad0007/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nagashima.lg.jp/administration/ad0007/",
+          "observed_on": "https://www.town.nagashima.lg.jp/administration",
+          "fetched_at": "2026-08-27T06:43:17Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.nagashima.lg.jp/administration/ad0007/ (label: 財政情報一覧)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.town.nagashima.lg.jp/administration/ad0007/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.nagashima.lg.jp/administration/ad0007/",
+          "observed_on": "https://www.town.nagashima.lg.jp/administration",
+          "fetched_at": "2026-08-27T06:43:17Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.town.nagashima.lg.jp/administration/ad0007/ (label: 財政情報一覧)"
+    }
+  }
+}

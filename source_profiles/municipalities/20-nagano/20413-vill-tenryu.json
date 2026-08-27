@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20413",
+  "prefecture": "長野県",
+  "municipality": "天龍村",
+  "official_home_url": "http://www.vill-tenryu.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/vill-tenryu/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/vill-tenryu/reiki_menu.html",
+          "observed_on": "http://www.vill-tenryu.jp/",
+          "fetched_at": "2026-08-27T07:12:00Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/vill-tenryu/reiki_menu.html (label: 天龍村例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

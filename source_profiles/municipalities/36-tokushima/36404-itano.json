@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36404",
+  "prefecture": "徳島県",
+  "municipality": "板野町",
+  "official_home_url": "http://www.town.itano.tokushima.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.itano.tokushima.jp/docs/2026052000025/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.itano.tokushima.jp/docs/2026052000025/",
+          "observed_on": "http://www.town.itano.tokushima.jp/soshiki/gikai/",
+          "fetched_at": "2026-08-27T06:48:23Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.itano.tokushima.jp/docs/2026052000025/ (label: 令和８年第１回板野町議会定例会 会議録・一般質問者一覧)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "http://ns.town.itano.tokushima.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://ns.town.itano.tokushima.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.itano.tokushima.jp/",
+          "fetched_at": "2026-08-27T06:46:56Z"
+        }
+      ],
+      "notes": "Observed g_reiki at http://ns.town.itano.tokushima.jp/reiki/reiki_menu.html (label: )"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

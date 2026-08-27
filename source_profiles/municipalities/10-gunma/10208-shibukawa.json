@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "10208",
+  "prefecture": "群馬県",
+  "municipality": "渋川市",
+  "official_home_url": "http://www.city.shibukawa.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/shibukawa/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/shibukawa/reiki_menu.html",
+          "observed_on": "http://www.city.shibukawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:33:25Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/shibukawa/reiki_menu.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
+          "observed_on": "http://www.city.shibukawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:33:25Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.shibukawa.lg.jp/shisei/000276/index.html (label: 財政・会計)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.shibukawa.lg.jp/shisei/000276/index.html",
+          "observed_on": "http://www.city.shibukawa.lg.jp/",
+          "fetched_at": "2026-08-27T06:33:25Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.city.shibukawa.lg.jp/shisei/000276/index.html (label: 財政・会計)"
+    }
+  }
+}

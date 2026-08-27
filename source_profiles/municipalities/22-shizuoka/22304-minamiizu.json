@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "22304",
+  "prefecture": "静岡県",
+  "municipality": "南伊豆町",
+  "official_home_url": "http://www.town.minamiizu.shizuoka.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/",
+          "observed_on": "http://www.town.minamiizu.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:50:30Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/ (label: 会議録（令和元年～）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8573EED2",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8573EED2",
+          "observed_on": "http://www.town.minamiizu.shizuoka.jp/",
+          "fetched_at": "2026-08-27T07:50:30Z"
+        }
+      ],
+      "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8573EED2 (label: )"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf",
+          "observed_on": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/",
+          "fetched_at": "2026-08-27T07:51:05Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf (label: 令和８年３月南伊豆町議会予算決算常任委員会.pdf[PDF：938KB])"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf",
+          "observed_on": "http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/",
+          "fetched_at": "2026-08-27T07:51:05Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.minamiizu.shizuoka.jp/docs/2022012000012/file_contents/R8-YK03.pdf (label: 令和８年３月南伊豆町議会予算決算常任委員会.pdf[PDF：938KB])"
+    }
+  }
+}

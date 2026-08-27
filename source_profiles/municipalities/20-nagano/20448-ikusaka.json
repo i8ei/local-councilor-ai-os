@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "20448",
+  "prefecture": "長野県",
+  "municipality": "生坂村",
+  "official_home_url": "http://www.village.ikusaka.nagano.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.village.ikusaka.nagano.jp/gikai/gijiroku/teireikai08.06.pdf",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.village.ikusaka.nagano.jp/gikai/gijiroku/teireikai08.06.pdf",
+          "observed_on": "http://www.village.ikusaka.nagano.jp/gikai/teireikai.html",
+          "fetched_at": "2026-08-27T07:20:48Z"
+        }
+      ],
+      "notes": "Observed council minutes index at http://www.village.ikusaka.nagano.jp/gikai/gijiroku/teireikai08.06.pdf (label: )"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://en3-jg.d1-law.com/ikusaka/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://en3-jg.d1-law.com/ikusaka/reiki.html",
+          "observed_on": "http://www.village.ikusaka.nagano.jp/",
+          "fetched_at": "2026-08-27T07:17:13Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://en3-jg.d1-law.com/ikusaka/reiki.html (label: )"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

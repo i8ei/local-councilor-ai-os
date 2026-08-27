@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "13122",
+  "prefecture": "東京都",
+  "municipality": "葛飾区",
+  "official_home_url": "http://www.city.katsushika.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.city.katsushika.lg.jp/information/1000078/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.katsushika.lg.jp/information/1000078/index.html",
+          "observed_on": "http://www.city.katsushika.lg.jp/",
+          "fetched_at": "2026-08-27T07:38:39Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.city.katsushika.lg.jp/information/1000078/index.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.katsushika.lg.jp/information/1000085/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.katsushika.lg.jp/information/1000085/index.html",
+          "observed_on": "http://www.city.katsushika.lg.jp/",
+          "fetched_at": "2026-08-27T07:38:39Z"
+        }
+      ],
+      "notes": "Observed budget link at http://www.city.katsushika.lg.jp/information/1000085/index.html (label: 行財政・予算・決算)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.city.katsushika.lg.jp/information/1000085/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.city.katsushika.lg.jp/information/1000085/index.html",
+          "observed_on": "http://www.city.katsushika.lg.jp/",
+          "fetched_at": "2026-08-27T07:38:39Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.city.katsushika.lg.jp/information/1000085/index.html (label: 行財政・予算・決算)"
+    }
+  }
+}

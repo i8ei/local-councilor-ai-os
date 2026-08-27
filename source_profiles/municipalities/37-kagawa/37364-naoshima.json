@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "37364",
+  "prefecture": "香川県",
+  "municipality": "直島町",
+  "official_home_url": "http://www.town.naoshima.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.naoshima.lg.jp/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.naoshima.lg.jp/",
+          "observed_on": "http://www.town.naoshima.lg.jp/",
+          "fetched_at": "2026-08-27T06:54:54Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.naoshima.lg.jp/ (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html",
+          "observed_on": "http://www.town.naoshima.lg.jp/",
+          "fetched_at": "2026-08-27T06:54:54Z"
+        }
+      ],
+      "notes": "Observed finance section at http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html (label: 財政)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html",
+          "observed_on": "http://www.town.naoshima.lg.jp/",
+          "fetched_at": "2026-08-27T06:54:54Z"
+        }
+      ],
+      "notes": "Observed settlement link at http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html (label: 社会福祉協議会の定款・事業報告・決算報告等について)"
+    }
+  }
+}

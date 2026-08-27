@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "area_code_5": "47306",
+  "prefecture": "沖縄県",
+  "municipality": "今帰仁村",
+  "official_home_url": "https://www.nakijin.jp/",
+  "sources": {
+    "minutes": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No council minutes entrance found within page limit"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.nakijin.jp/pagtop/kakuka/somuka/3/1348.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.nakijin.jp/pagtop/kakuka/somuka/3/1348.html",
+          "observed_on": "https://www.nakijin.jp/pagtop/index.html",
+          "fetched_at": "2026-08-27T06:52:27Z"
+        }
+      ],
+      "notes": "Observed regulations index at https://www.nakijin.jp/pagtop/kakuka/somuka/3/1348.html (label: 今帰仁村例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.nakijin.jp/pagtop/topics/5395.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.nakijin.jp/pagtop/topics/5395.html",
+          "observed_on": "https://www.nakijin.jp/pagtop/index.html",
+          "fetched_at": "2026-08-27T06:52:27Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.nakijin.jp/pagtop/topics/5395.html (label: 令和7年度補正予算 重点支援地方交付金の活用状況について(沖縄県今帰仁村）)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.nakijin.jp/pagtop/kakuka/kikakuzaisei/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.nakijin.jp/pagtop/kakuka/kikakuzaisei/index.html",
+          "observed_on": "https://www.nakijin.jp/pagtop/kakuka/kikakuzaisei/2/4834.html",
+          "fetched_at": "2026-08-27T06:52:41Z"
+        }
+      ],
+      "notes": "Observed finance section at https://www.nakijin.jp/pagtop/kakuka/kikakuzaisei/index.html (label: 企画財政課)"
+    }
+  }
+}

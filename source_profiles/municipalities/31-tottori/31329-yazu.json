@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "31329",
+  "prefecture": "鳥取県",
+  "municipality": "八頭町",
+  "official_home_url": "http://www.town.yazu.tottori.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.kensakusystem.jp/yazu-s/index.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.kensakusystem.jp/yazu-s/index.html",
+          "observed_on": "http://www.town.yazu.tottori.jp/adv/ba.php?id=9",
+          "fetched_at": "2026-08-27T05:57:39Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.kensakusystem.jp/yazu-s/index.html (label: 会議録検索システム（外部リンク）)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "http://www.town.yazu.tottori.jp/adv/ba.php?id=26",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "http://www.town.yazu.tottori.jp/adv/ba.php?id=26",
+          "observed_on": "http://www.town.yazu.tottori.jp/",
+          "fetched_at": "2026-08-27T05:57:15Z"
+        }
+      ],
+      "notes": "Observed regulations index at http://www.town.yazu.tottori.jp/adv/ba.php?id=26 (label: 例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}

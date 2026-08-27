@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "area_code_5": "36203",
+  "prefecture": "徳島県",
+  "municipality": "小松島市",
+  "official_home_url": "https://www.city.komatsushima.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.city.komatsushima.lg.jp/gikai/kaigiroku/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.komatsushima.lg.jp/gikai/kaigiroku/",
+          "observed_on": "https://www.city.komatsushima.lg.jp/gikai/",
+          "fetched_at": "2026-08-27T06:39:50Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.city.komatsushima.lg.jp/gikai/kaigiroku/ (label: 会議録の閲覧・検索)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www2.city.komatsushima.lg.jp/reiki/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www2.city.komatsushima.lg.jp/reiki/reiki.html",
+          "observed_on": "https://www.city.komatsushima.lg.jp/index2.html",
+          "fetched_at": "2026-08-27T06:38:49Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www2.city.komatsushima.lg.jp/reiki/reiki.html (label: 例規集)"
+    },
+    "budget": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.komatsushima.lg.jp/docs/5632553.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.komatsushima.lg.jp/docs/5632553.html",
+          "observed_on": "https://www.city.komatsushima.lg.jp/oshirase/shisei/",
+          "fetched_at": "2026-08-27T06:39:32Z"
+        }
+      ],
+      "notes": "Observed budget link at https://www.city.komatsushima.lg.jp/docs/5632553.html (label: 令和８年度小松島市当初予算（一般会計及び特別会計）について)"
+    },
+    "settlement": {
+      "status": "needs_review",
+      "adapter": "official_document_index",
+      "index_url": "https://www.city.komatsushima.lg.jp/docs/2244.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.city.komatsushima.lg.jp/docs/2244.html",
+          "observed_on": "https://www.city.komatsushima.lg.jp/oshirase/shisei/",
+          "fetched_at": "2026-08-27T06:39:32Z"
+        }
+      ],
+      "notes": "Observed settlement link at https://www.city.komatsushima.lg.jp/docs/2244.html (label: 決算カード（普通会計）)"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "area_code_5": "45402",
+  "prefecture": "宮崎県",
+  "municipality": "新富町",
+  "official_home_url": "http://www.town.shintomi.lg.jp/",
+  "sources": {
+    "minutes": {
+      "status": "needs_review",
+      "adapter": "static",
+      "index_url": "https://www.town.shintomi.lg.jp/chosei/gikai/3049.html",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www.town.shintomi.lg.jp/chosei/gikai/3049.html",
+          "observed_on": "https://www.town.shintomi.lg.jp/chosei/gikai/index.html",
+          "fetched_at": "2026-08-27T06:30:07Z"
+        }
+      ],
+      "notes": "Observed council minutes index at https://www.town.shintomi.lg.jp/chosei/gikai/3049.html (label: 新富町会議録検索システム)"
+    },
+    "regulations": {
+      "status": "needs_review",
+      "adapter": "g_reiki",
+      "base_url": "https://www1.g-reiki.net/shintomi/",
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [
+        {
+          "url": "https://www1.g-reiki.net/shintomi/reiki_menu.html",
+          "observed_on": "http://www.town.shintomi.lg.jp/",
+          "fetched_at": "2026-08-27T06:29:53Z"
+        }
+      ],
+      "notes": "Observed g_reiki at https://www1.g-reiki.net/shintomi/reiki_menu.html (label: 町例規集)"
+    },
+    "budget": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No budget entrance found within page limit"
+    },
+    "settlement": {
+      "status": "not_found",
+      "adapter": null,
+      "verified_at": null,
+      "verified_by": null,
+      "evidence": [],
+      "notes": "No settlement entrance found within page limit"
+    }
+  }
+}
