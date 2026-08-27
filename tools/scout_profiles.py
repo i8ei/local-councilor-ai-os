@@ -17,6 +17,73 @@ from lcaios.html import LinkParser
 from lcaios.http import BOOTSTRAP_USER_AGENT, CacheTier, HttpClient, RobotsDeniedError
 from source_profiles.schema import validate_profile
 
+KINDS = ("minutes", "regulations", "budget", "settlement")
+
+# A fresh crawl cannot reproduce these, so the scout never writes over them:
+# `ready` and `unsupported` are verification outcomes, and a verified_at /
+# verified_by stamp means a person or `verify` already looked at the entry.
+PROTECTED_STATUSES = frozenset({"ready", "unsupported"})
+
+# Every note this module writes starts with one of these. A note that does not
+# came from somewhere else - usually a person recording what they established -
+# so an entry carrying one is protected. Unknown provenance means hands off.
+_SCOUT_NOTE_PREFIXES = (
+    "Observed ",
+    "Verified vendor ",
+    "No ",
+    "official_home robots.txt denied",
+)
+
+
+def _is_scout_authored(entry: dict[str, Any]) -> bool:
+    notes = entry.get("notes") or ""
+    if not notes:
+        return True
+    return notes.startswith(_SCOUT_NOTE_PREFIXES)
+
+
+def _is_protected(entry: dict[str, Any] | None) -> bool:
+    entry = entry or {}
+    if entry.get("status") in PROTECTED_STATUSES:
+        return True
+    if entry.get("verified_at") or entry.get("verified_by"):
+        return True
+    return not _is_scout_authored(entry)
+
+
+def _may_write(entry: dict[str, Any] | None, overwrite: bool) -> bool:
+    """Whether the scout may replace ``entry``.
+
+    Entries never looked at (`not_evaluated`) are always fair game. Anything
+    else already carries a finding — often a hand-written note recording what
+    a person established — so replacing it takes an explicit --overwrite.
+    """
+
+    entry = entry or {}
+    if _is_protected(entry):
+        return False
+    if entry.get("status") in (None, "not_evaluated"):
+        return True
+    return overwrite
+
+
+def _apply_candidate(
+    sources: dict[str, Any],
+    kind: str,
+    candidate: dict[str, Any] | None,
+    label: str,
+    overwrite: bool,
+) -> None:
+    """Record ``candidate`` for ``kind``, leaving protected entries alone."""
+
+    if not _may_write(sources.get(kind), overwrite):
+        return
+    if candidate:
+        sources[kind] = candidate
+    elif sources.get(kind, {}).get("status") == "not_evaluated":
+        sources[kind]["status"] = "not_found"
+        sources[kind]["notes"] = f"No {label} entrance found within page limit"
+
 
 def _clean_url(url: str, base: str) -> str | None:
     try:
@@ -297,9 +364,15 @@ def scout_municipality(
     profile_path: Path,
     client: HttpClient,
     max_pages: int = 12,
+    overwrite: bool = False,
 ) -> dict[str, Any]:
     with profile_path.open("r", encoding="utf-8") as f:
         profile = json.load(f)
+
+    if not any(
+        _may_write(profile.get("sources", {}).get(k), overwrite) for k in KINDS
+    ):
+        return profile
 
     home_url = profile["official_home_url"]
     home_parts = urllib.parse.urlsplit(home_url)
@@ -329,7 +402,9 @@ def scout_municipality(
             }
         except RobotsDeniedError:
             if current_url == home_url:
-                for k in ("minutes", "regulations", "budget", "settlement"):
+                for k in KINDS:
+                    if not _may_write(profile["sources"].get(k), overwrite):
+                        continue
                     profile["sources"][k] = {
                         "status": "blocked",
                         "adapter": None,
@@ -395,29 +470,13 @@ def scout_municipality(
 
     sources = profile.setdefault("sources", {})
 
-    if reg_cand:
-        sources["regulations"] = reg_cand
-    elif sources.get("regulations", {}).get("status") == "not_evaluated":
-        sources["regulations"]["status"] = "not_found"
-        sources["regulations"]["notes"] = "No regulations entrance found within page limit"
+    _apply_candidate(sources, "regulations", reg_cand, "regulations", overwrite)
 
-    if min_cand:
-        sources["minutes"] = min_cand
-    elif sources.get("minutes", {}).get("status") == "not_evaluated":
-        sources["minutes"]["status"] = "not_found"
-        sources["minutes"]["notes"] = "No council minutes entrance found within page limit"
+    _apply_candidate(sources, "minutes", min_cand, "council minutes", overwrite)
 
-    if bud_cand:
-        sources["budget"] = bud_cand
-    elif sources.get("budget", {}).get("status") == "not_evaluated":
-        sources["budget"]["status"] = "not_found"
-        sources["budget"]["notes"] = "No budget entrance found within page limit"
+    _apply_candidate(sources, "budget", bud_cand, "budget", overwrite)
 
-    if set_cand:
-        sources["settlement"] = set_cand
-    elif sources.get("settlement", {}).get("status") == "not_evaluated":
-        sources["settlement"]["status"] = "not_found"
-        sources["settlement"]["notes"] = "No settlement entrance found within page limit"
+    _apply_candidate(sources, "settlement", set_cand, "settlement", overwrite)
 
     errors = validate_profile(profile)
     if errors:
@@ -436,6 +495,11 @@ def main() -> int:
     parser.add_argument("--prefecture-code", help="2-digit prefecture code, e.g. 40")
     parser.add_argument("--limit", type=int, help="Limit number of municipalities to scout")
     parser.add_argument("--cache-dir", default=".tasks/cache/scout", help="Cache directory")
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Redo this scout's own findings (entries written elsewhere stay protected)",
+    )
     args = parser.parse_args()
 
     cache_path = Path(args.cache_dir)
@@ -446,8 +510,6 @@ def main() -> int:
     profile_paths: list[Path] = []
 
     for path in sorted(profiles_root.rglob("*.json")):
-        if "41-saga" in str(path):
-            continue
         if args.prefecture_code:
             if not path.parent.name.startswith(f"{args.prefecture_code}-"):
                 continue
@@ -469,7 +531,7 @@ def main() -> int:
 
     for i, path in enumerate(profile_paths, 1):
         try:
-            data = scout_municipality(path, client)
+            data = scout_municipality(path, client, overwrite=args.overwrite)
             m_name = data.get("municipality")
             s = data.get("sources", {})
             min_st = s.get("minutes", {}).get("status")

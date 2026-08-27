@@ -26,10 +26,10 @@ from tools.scout_profiles import scout_municipality
 print_lock = threading.Lock()
 
 
-def scout_worker(path: Path, cache_dir: str) -> tuple[bool, str, dict]:
+def scout_worker(path: Path, cache_dir: str, overwrite: bool) -> tuple[bool, str, dict]:
     client = HttpClient(Path(cache_dir), user_agent=BOOTSTRAP_USER_AGENT)
     try:
-        data = scout_municipality(path, client)
+        data = scout_municipality(path, client, overwrite=overwrite)
         return True, path.stem, data
     except Exception as exc:
         return False, path.stem, {"error": str(exc)}
@@ -40,6 +40,11 @@ def main() -> int:
     parser.add_argument("--block", required=True, choices=list(BLOCKS.keys()), help="Regional block name")
     parser.add_argument("--concurrency", type=int, default=8, help="Number of concurrent workers (default: 8)")
     parser.add_argument("--cache-dir", default=".tasks/cache/scout", help="Cache directory")
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Redo this scout's own findings (entries written elsewhere stay protected)",
+    )
     args = parser.parse_args()
 
     pref_codes = BLOCKS[args.block]
@@ -50,10 +55,7 @@ def main() -> int:
     profile_paths: list[Path] = []
 
     for pref_code in pref_codes:
-        for p in sorted(profiles_root.glob(f"{pref_code}-*/*.json")):
-            if "41-saga" in str(p):
-                continue
-            profile_paths.append(p)
+        profile_paths.extend(sorted(profiles_root.glob(f"{pref_code}-*/*.json")))
 
     print(f"=== Block: {args.block} (Prefectures: {','.join(pref_codes)}) ===", flush=True)
     print(f"Total municipalities to scout: {len(profile_paths)} (Concurrency: {args.concurrency})", flush=True)
@@ -64,7 +66,7 @@ def main() -> int:
     total = len(profile_paths)
 
     with ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-        futures = {executor.submit(scout_worker, path, args.cache_dir): path for path in profile_paths}
+        futures = {executor.submit(scout_worker, path, args.cache_dir, args.overwrite): path for path in profile_paths}
         for future in as_completed(futures):
             ok, name, data = future.result()
             with print_lock:
