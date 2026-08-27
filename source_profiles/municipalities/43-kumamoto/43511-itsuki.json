@@ -38,19 +38,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.vill.itsuki.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.vill.itsuki.lg.jp/reiki/",
           "observed_on": "https://www.vill.itsuki.lg.jp/default.html",
           "fetched_at": "2026-08-27T05:48:56Z"
+        },
+        {
+          "url": "https://www.vill.itsuki.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.vill.itsuki.lg.jp/reiki/",
+          "sha256": "086fdeb4eaf842d05a63e682eaaebe746041e60e2d2df9bb5738bb9001a2fba7",
+          "fetched_at": "2026-08-27T22:41:58Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.vill.itsuki.lg.jp/reiki/ (label: 例規集)"
+      "notes": "Observed regulations index at https://www.vill.itsuki.lg.jp/reiki/ (label: 例規集)",
+      "base_url": "https://www.vill.itsuki.lg.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at http://www.town.gyokuto.kumamoto.jp/list00381.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.gyokuto.kumamoto.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.gyokuto.kumamoto.jp/reiki/",
           "observed_on": "http://www.town.gyokuto.kumamoto.jp/",
           "fetched_at": "2026-08-27T05:36:57Z"
+        },
+        {
+          "url": "https://www.town.gyokuto.kumamoto.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.gyokuto.kumamoto.jp/reiki/",
+          "sha256": "0001cd66aa229486dd6d766c3dc45fa3d973e061ec2f849ef2a02161b87d0d31",
+          "fetched_at": "2026-08-27T22:41:57Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.gyokuto.kumamoto.jp/reiki/ (label: 例規集)"
+      "notes": "Observed regulations index at https://www.town.gyokuto.kumamoto.jp/reiki/ (label: 例規集)",
+      "base_url": "https://www.town.gyokuto.kumamoto.jp/reiki/"
     },
     "budget": {
       "status": "ready",

@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.sukumo.kochi.jp/01/04/02/02/ (label: 宿毛市議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.sukumo.kochi.jp/06/13/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sukumo.kochi.jp/06/13/",
           "observed_on": "http://www.city.sukumo.kochi.jp/06/",
           "fetched_at": "2026-08-27T07:10:07Z"
+        },
+        {
+          "url": "https://www.city.sukumo.kochi.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.sukumo.kochi.jp/reiki_int/",
+          "sha256": "351d2e7aee0ce007f1c167f9d70e24360c3ccdc54983a8c6bc62d96ef8276b92",
+          "fetched_at": "2026-08-27T22:41:56Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.sukumo.kochi.jp/06/13/ (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.sukumo.kochi.jp/06/13/ (label: 例規集)",
+      "base_url": "https://www.city.sukumo.kochi.jp/reiki_int/"
     },
     "budget": {
       "status": "needs_review",

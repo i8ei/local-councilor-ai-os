@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www4.city.kanazawa.lg.jp/shiseijoho/jorei_kisoku_yoko/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www4.city.kanazawa.lg.jp/shiseijoho/jorei_kisoku_yoko/index.html",
           "observed_on": "https://www4.city.kanazawa.lg.jp/shiseijoho/index.html",
           "fetched_at": "2026-08-27T06:12:00Z"
+        },
+        {
+          "url": "https://www.city.kanazawa.ishikawa.jp/reiki/",
+          "observed_on": "https://www.city.kanazawa.ishikawa.jp/reiki/",
+          "sha256": "dcbf5470c6d4c0b12dd7ef725d49e6a0bf1be68c6860bdc95788e9e02d6e1315",
+          "fetched_at": "2026-08-27T22:41:51Z"
         }
       ],
-      "notes": "Observed regulations index at https://www4.city.kanazawa.lg.jp/shiseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)"
+      "notes": "Observed regulations index at https://www4.city.kanazawa.lg.jp/shiseijoho/jorei_kisoku_yoko/index.html (label: 条例・規則・要綱)",
+      "base_url": "https://www.city.kanazawa.ishikawa.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

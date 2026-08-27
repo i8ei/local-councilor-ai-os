@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://reiki.city.tokushima.tokushima.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://reiki.city.tokushima.tokushima.jp/",
           "observed_on": "http://www.city.tokushima.tokushima.jp/",
           "fetched_at": "2026-08-27T06:37:28Z"
+        },
+        {
+          "url": "http://reiki.city.tokushima.tokushima.jp/reiki_menu.html",
+          "observed_on": "http://reiki.city.tokushima.tokushima.jp/",
+          "sha256": "e9106c0a4c2422c71bd4441690635d0a80a1467eb5286bd70f91b45676870823",
+          "fetched_at": "2026-08-27T22:41:55Z"
         }
       ],
-      "notes": "Observed regulations index at http://reiki.city.tokushima.tokushima.jp/ (label: 徳島市例規集（外部サイト）)"
+      "notes": "Observed regulations index at http://reiki.city.tokushima.tokushima.jp/ (label: 徳島市例規集（外部サイト）)",
+      "base_url": "http://reiki.city.tokushima.tokushima.jp/"
     },
     "budget": {
       "status": "ready",

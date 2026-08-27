@@ -38,16 +38,22 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.utazu.lg.jp/adv/ba.php?id=10&ef1=5",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC623C2",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.utazu.lg.jp/adv/ba.php?id=10&ef1=5",
           "observed_on": "https://www.town.utazu.lg.jp/",
           "fetched_at": "2026-08-27T06:55:34Z"
+        },
+        {
+          "url": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC623C2",
+          "observed_on": "https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A8BC623C2#",
+          "sha256": "7decf7b4c4c737f64fa9c27f87e1dc46e3cb3f1532a27aab47509a2caf3c6764",
+          "fetched_at": "2026-08-27T22:41:56Z"
         }
       ],
       "notes": "Observed regulations index at https://www.town.utazu.lg.jp/adv/ba.php?id=10&ef1=5 (label: 例規集)"

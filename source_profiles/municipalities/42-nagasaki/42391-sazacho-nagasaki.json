@@ -27,16 +27,22 @@
       "notes": "Observed council minutes index at http://www.sazacho-nagasaki.jp/gikai/list00807.html (label: 会議録等)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.sazacho-nagasaki.jp/reikisyu/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "d1_law",
+      "index_url": "https://www.sazacho-nagasaki.jp/reikisyu/mokuji_bunya.html",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.sazacho-nagasaki.jp/reikisyu/",
           "observed_on": "http://www.sazacho-nagasaki.jp/",
           "fetched_at": "2026-08-27T05:28:33Z"
+        },
+        {
+          "url": "https://www.sazacho-nagasaki.jp/reikisyu/mokuji_bunya.html",
+          "observed_on": "https://www.sazacho-nagasaki.jp/reikisyu/mokuji_bunya.html",
+          "sha256": "67cba06e45ff55120efed5ba4ac8c8fa24af387587f3b776e467c2a52e935b88",
+          "fetched_at": "2026-08-27T22:41:57Z"
         }
       ],
       "notes": "Observed regulations index at https://www.sazacho-nagasaki.jp/reikisyu/ (label: 条例・規則（例規集）)"

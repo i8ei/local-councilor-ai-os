@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.yamagata.gifu.jp/site/gikai/list59.html (label: 会議録の一覧)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.yamagata.gifu.jp/soshiki/somu/8489.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yamagata.gifu.jp/soshiki/somu/8489.html",
           "observed_on": "http://www.city.yamagata.gifu.jp/index2.html",
           "fetched_at": "2026-08-27T07:30:12Z"
+        },
+        {
+          "url": "https://www.city.yamagata.gifu.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.yamagata.gifu.jp/reiki/",
+          "sha256": "884c76e2ad523daadd4bbe1bce4184c2b5be1682824e2fe2c0d92df7a8ad81ea",
+          "fetched_at": "2026-08-27T22:41:51Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.yamagata.gifu.jp/soshiki/somu/8489.html (label: 山県市例規集)"
+      "notes": "Observed regulations index at http://www.city.yamagata.gifu.jp/soshiki/somu/8489.html (label: 山県市例規集)",
+      "base_url": "https://www.city.yamagata.gifu.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

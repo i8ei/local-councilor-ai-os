@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.higashikagura.lg.jp/docs/677.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.higashikagura.lg.jp/docs/677.html",
           "observed_on": "https://www.town.higashikagura.lg.jp/c1_town/",
           "fetched_at": "2026-08-27T06:23:46Z"
+        },
+        {
+          "url": "https://www.town.higashikagura.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.town.higashikagura.lg.jp/reiki_int/",
+          "sha256": "0b0ebdca88f293d17782e1c6ee7fe4ccb20f328ba98b3a60ba1b39530c663a63",
+          "fetched_at": "2026-08-27T22:41:48Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.higashikagura.lg.jp/docs/677.html (label: 例規集)"
+      "notes": "Observed regulations index at https://www.town.higashikagura.lg.jp/docs/677.html (label: 例規集)",
+      "base_url": "https://www.town.higashikagura.lg.jp/reiki_int/"
     },
     "budget": {
       "status": "needs_review",

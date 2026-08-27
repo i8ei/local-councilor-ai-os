@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at http://www.fuji-oyama.jp/page/1082.html (label: 会議録・議決結果) extraction probe read one document at the first council-scoped document link but found no speaker-attributed speeches; reachability alone is not ingest evidence [再挑戦対象: 実PDFへfollowして再検証]"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.fuji-oyama.jp/adv/ba.php?id=22",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.fuji-oyama.jp/adv/ba.php?id=22",
           "observed_on": "http://www.fuji-oyama.jp/",
           "fetched_at": "2026-08-27T07:52:11Z"
+        },
+        {
+          "url": "https://www.fuji-oyama.jp/oyama/reiki/reiki_menu.html",
+          "observed_on": "https://www.fuji-oyama.jp/oyama/reiki/",
+          "sha256": "1512bdf7bdb9b29e8d09cb21d82f48c37c5fb4eb4d72287ab9613721e635025b",
+          "fetched_at": "2026-08-27T22:41:52Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.fuji-oyama.jp/adv/ba.php?id=22 (label: 例規集)"
+      "notes": "Observed regulations index at http://www.fuji-oyama.jp/adv/ba.php?id=22 (label: 例規集)",
+      "base_url": "https://www.fuji-oyama.jp/oyama/reiki/"
     },
     "budget": {
       "status": "needs_review",

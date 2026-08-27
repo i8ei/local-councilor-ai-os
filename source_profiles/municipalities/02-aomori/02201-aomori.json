@@ -21,19 +21,25 @@
       "notes": "dbsr.jp は robots.txt によりアクセス拒否 (fail-closed)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.aomori.aomori.jp/shisei/machizukuri/1005733.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.aomori.aomori.jp/shisei/machizukuri/1005733.html",
           "observed_on": "http://www.city.aomori.aomori.jp/shisei/index.html",
           "fetched_at": "2026-08-27T06:54:42Z"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/area/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.aomori.aomori.jp/area/reiki/",
+          "sha256": "d35b5f362b6f157031d9d50eb4a388ed5dcf8d53df8283504c94fbe7884ee987",
+          "fetched_at": "2026-08-27T22:41:48Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.aomori.aomori.jp/shisei/machizukuri/1005733.html (label: 条例規則など)"
+      "notes": "Observed regulations index at http://www.city.aomori.aomori.jp/shisei/machizukuri/1005733.html (label: 条例規則など)",
+      "base_url": "https://www.city.aomori.aomori.jp/area/reiki/"
     },
     "budget": {
       "status": "needs_review",

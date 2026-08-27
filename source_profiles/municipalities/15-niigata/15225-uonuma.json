@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.uonuma.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.uonuma.lg.jp/reiki/",
           "observed_on": "https://www.city.uonuma.lg.jp/index2.html",
           "fetched_at": "2026-08-27T06:03:00Z"
+        },
+        {
+          "url": "https://www.city.uonuma.lg.jp/reiki/",
+          "observed_on": "https://www.city.uonuma.lg.jp/reiki/",
+          "sha256": "942548f6fc3adcab26537666ee1b52839c196c416e3cd3b0b3981e9d68731545",
+          "fetched_at": "2026-08-27T12:51:07Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.uonuma.lg.jp/reiki/ (label: 条例・規則)"
+      "notes": "Observed regulations index at https://www.city.uonuma.lg.jp/reiki/ (label: 条例・規則)",
+      "base_url": "https://www.city.uonuma.lg.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

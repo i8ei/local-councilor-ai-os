@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.kyotanabe.lg.jp/category/2-11-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.kyotanabe.lg.jp/category/2-11-0-0-0-0-0-0-0-0.html",
           "observed_on": "https://www.city.kyotanabe.lg.jp/",
           "fetched_at": "2026-08-27T06:18:34Z"
+        },
+        {
+          "url": "https://www.city.kyotanabe.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.kyotanabe.lg.jp/reiki/",
+          "sha256": "f327541225331da45441bbd4c9f26decbee9231cc53b068ce56955d762013c38",
+          "fetched_at": "2026-08-27T22:41:54Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.kyotanabe.lg.jp/category/2-11-0-0-0-0-0-0-0-0.html (label: 例規集)"
+      "notes": "Observed regulations index at https://www.city.kyotanabe.lg.jp/category/2-11-0-0-0-0-0-0-0-0.html (label: 例規集)",
+      "base_url": "https://www.city.kyotanabe.lg.jp/reiki/"
     },
     "budget": {
       "status": "not_found",

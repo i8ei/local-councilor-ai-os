@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.iizuka.lg.jp/site/shigikai/list18.html (label: 会議録・録画中継の一覧)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.iizuka.lg.jp/adv/ba.php?id=27",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.iizuka.lg.jp/adv/ba.php?id=27",
           "observed_on": "http://www.city.iizuka.lg.jp/",
           "fetched_at": "2026-08-27T04:09:14Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.iizuka/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.iizuka/",
+          "sha256": "01637497378c83d0112f582aa28bcfe4a7381596443d69f56449525149cde7b9",
+          "fetched_at": "2026-08-27T22:42:22Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.iizuka.lg.jp/adv/ba.php?id=27 (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.iizuka.lg.jp/adv/ba.php?id=27 (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/city.iizuka/"
     },
     "budget": {
       "status": "ready",

@@ -39,19 +39,25 @@
       }
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.misasa.tottori.jp/315/1492/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.misasa.tottori.jp/315/1492/",
           "observed_on": "http://www.town.misasa.tottori.jp/",
           "fetched_at": "2026-08-27T05:57:31Z"
+        },
+        {
+          "url": "http://www.town.misasa.tottori.jp/~misasa01/NewReiki/reiki_menu.html",
+          "observed_on": "http://www.town.misasa.tottori.jp/~misasa01/NewReiki/",
+          "sha256": "46a9dfb455139c9dd7aeca6766de7f1968826cdbac7680e394c66ec949357240",
+          "fetched_at": "2026-08-27T22:41:54Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.misasa.tottori.jp/315/1492/ (label: 条例・規則等)"
+      "notes": "Observed regulations index at https://www.town.misasa.tottori.jp/315/1492/ (label: 条例・規則等)",
+      "base_url": "http://www.town.misasa.tottori.jp/~misasa01/NewReiki/"
     },
     "budget": {
       "status": "ready",

@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.soeda.fukuoka.jp/adv/ba.php?id=26",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.soeda.fukuoka.jp/adv/ba.php?id=26",
           "observed_on": "https://www.town.soeda.fukuoka.jp/",
           "fetched_at": "2026-08-27T04:25:23Z"
+        },
+        {
+          "url": "https://www.town.soeda.fukuoka.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.soeda.fukuoka.jp/reiki/",
+          "sha256": "aeb43d30b2f347a4161896966cd4a769c68a6a602cbf7523e77ed54998278ea6",
+          "fetched_at": "2026-08-27T22:41:57Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.soeda.fukuoka.jp/adv/ba.php?id=26 (label: 例規集)"
+      "notes": "Observed regulations index at https://www.town.soeda.fukuoka.jp/adv/ba.php?id=26 (label: 例規集)",
+      "base_url": "https://www.town.soeda.fukuoka.jp/reiki/"
     },
     "budget": {
       "status": "ready",

@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.hita.oita.jp/adv/ba.php?id=20&ef1=7",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hita.oita.jp/adv/ba.php?id=20&ef1=7",
           "observed_on": "http://www.city.hita.oita.jp/index2.html",
           "fetched_at": "2026-08-27T06:17:21Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/hita/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/hita/",
+          "sha256": "56da7d7a772c9ec5fdf008ed57866b2c017d69841908ebf31edbf184762026d7",
+          "fetched_at": "2026-08-27T22:42:23Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.hita.oita.jp/adv/ba.php?id=20&ef1=7 (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.hita.oita.jp/adv/ba.php?id=20&ef1=7 (label: 例規集)",
+      "base_url": "https://www1.g-reiki.net/hita/"
     },
     "budget": {
       "status": "needs_review",

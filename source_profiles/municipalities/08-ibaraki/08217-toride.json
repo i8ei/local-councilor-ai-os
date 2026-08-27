@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.toride.ibaraki.jp/soumu/shise/machizukuri/rekishu.html?ref=top",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.toride.ibaraki.jp/soumu/shise/machizukuri/rekishu.html?ref=top",
           "observed_on": "http://www.city.toride.ibaraki.jp/",
           "fetched_at": "2026-08-27T06:01:50Z"
+        },
+        {
+          "url": "http://reiki.city.toride.ibaraki.jp/reiki_menu.html",
+          "observed_on": "http://reiki.city.toride.ibaraki.jp/",
+          "sha256": "d46283a9972b035a95cff6e42dc8f5b82ff94e228fadc2a98bd9faca74a38146",
+          "fetched_at": "2026-08-27T22:41:49Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.toride.ibaraki.jp/soumu/shise/machizukuri/rekishu.html?ref=top (label: 取手市例規集)"
+      "notes": "Observed regulations index at http://www.city.toride.ibaraki.jp/soumu/shise/machizukuri/rekishu.html?ref=top (label: 取手市例規集)",
+      "base_url": "http://reiki.city.toride.ibaraki.jp/"
     },
     "budget": {
       "status": "needs_review",

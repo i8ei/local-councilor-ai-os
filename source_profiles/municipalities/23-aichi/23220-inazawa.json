@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.inazawa.aichi.jp/category/7-27-0-0-0-0-0-0-0-0.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inazawa.aichi.jp/category/7-27-0-0-0-0-0-0-0-0.html",
           "observed_on": "http://www.city.inazawa.aichi.jp/",
           "fetched_at": "2026-08-27T08:02:00Z"
+        },
+        {
+          "url": "http://www3.city.inazawa.aichi.jp/city.inazawa.aichi/reiki_menu.html",
+          "observed_on": "http://www3.city.inazawa.aichi.jp/city.inazawa.aichi/",
+          "sha256": "c91196607d6031897813c50f08b53df009a2c59e422bdaa7320dc7fc7a9f77ae",
+          "fetched_at": "2026-08-27T22:41:52Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.inazawa.aichi.jp/category/7-27-0-0-0-0-0-0-0-0.html (label: 稲沢市例規集)"
+      "notes": "Observed regulations index at http://www.city.inazawa.aichi.jp/category/7-27-0-0-0-0-0-0-0-0.html (label: 稲沢市例規集)",
+      "base_url": "http://www3.city.inazawa.aichi.jp/city.inazawa.aichi/"
     },
     "budget": {
       "status": "needs_review",

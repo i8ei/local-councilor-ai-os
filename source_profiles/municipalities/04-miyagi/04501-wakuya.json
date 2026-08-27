@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.wakuya.miyagi.jp/gyose/jore/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.wakuya.miyagi.jp/gyose/jore/index.html",
           "observed_on": "http://www.town.wakuya.miyagi.jp/",
           "fetched_at": "2026-08-27T07:26:55Z"
+        },
+        {
+          "url": "https://www.town.wakuya.miyagi.jp:443/reiki/reiki_menu.html",
+          "observed_on": "http://www.town.wakuya.miyagi.jp/reiki/",
+          "sha256": "98f250c8dbba9dd408cd818581eb921764b24265348c2983c73d2d9a1bd69031",
+          "fetched_at": "2026-08-27T22:41:48Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.wakuya.miyagi.jp/gyose/jore/index.html (label: 条例・例規集)"
+      "notes": "Observed regulations index at http://www.town.wakuya.miyagi.jp/gyose/jore/index.html (label: 条例・例規集)",
+      "base_url": "http://www.town.wakuya.miyagi.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

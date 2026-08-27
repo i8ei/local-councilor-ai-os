@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.oyodo.lg.jp/0000000002.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.oyodo.lg.jp/0000000002.html",
           "observed_on": "http://www.town.oyodo.lg.jp/",
           "fetched_at": "2026-08-27T07:10:05Z"
+        },
+        {
+          "url": "https://www.town.oyodo.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.oyodo.lg.jp/reiki/",
+          "sha256": "c613867258a4ae00cf0d8d64b9c84aac3ff1dd230d4df3a605aed6c50b988db0",
+          "fetched_at": "2026-08-27T22:41:55Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.oyodo.lg.jp/0000000002.html (label: 大淀町例規集)"
+      "notes": "Observed regulations index at http://www.town.oyodo.lg.jp/0000000002.html (label: 大淀町例規集)",
+      "base_url": "https://www.town.oyodo.lg.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

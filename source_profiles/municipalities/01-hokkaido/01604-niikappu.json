@@ -30,19 +30,25 @@
       }
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.niikappu.jp/reiki/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.niikappu.jp/reiki/index.html",
           "observed_on": "https://www.niikappu.jp/",
           "fetched_at": "2026-08-27T06:44:23Z"
+        },
+        {
+          "url": "https://www.niikappu.jp/reiki/",
+          "observed_on": "https://www.niikappu.jp/reiki/",
+          "sha256": "079cbf3795c108682e46b6e2c8608900c4345913bab42ffa6e90a2a47c86fa2f",
+          "fetched_at": "2026-08-27T22:41:48Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.niikappu.jp/reiki/index.html (label: 条例・例規集)"
+      "notes": "Observed regulations index at https://www.niikappu.jp/reiki/index.html (label: 条例・例規集)",
+      "base_url": "https://www.niikappu.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

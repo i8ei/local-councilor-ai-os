@@ -21,19 +21,25 @@
       "notes": "Observed council minutes index at https://www.kensakusystem.jp/tamba/index.html (label: 丹波市議会 会議録検索システム)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/taikei_default.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/taikei_default.html",
           "observed_on": "https://www.city.tamba.lg.jp/",
           "fetched_at": "2026-08-27T06:51:06Z"
+        },
+        {
+          "url": "https://www.city.tamba.lg.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.tamba.lg.jp/section/reiki/",
+          "sha256": "d4546cd9310ca546937f352a4deda4b2ed57158560c7d4757e1f45349c4fdd22",
+          "fetched_at": "2026-08-27T22:41:54Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/taikei_default.html (label: 例規集検索)"
+      "notes": "Observed regulations index at https://www.city.tamba.lg.jp/section/reiki/reiki_taikei/taikei_default.html (label: 例規集検索)",
+      "base_url": "https://www.city.tamba.lg.jp/section/reiki/"
     },
     "budget": {
       "status": "needs_review",

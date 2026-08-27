@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.hokota.lg.jp/page/page000060.html (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.hokota.lg.jp/page/page000748.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.hokota.lg.jp/page/page000748.html",
           "observed_on": "http://www.city.hokota.lg.jp/page/dir000007.html",
           "fetched_at": "2026-08-27T06:12:38Z"
+        },
+        {
+          "url": "https://www.city.hokota.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.hokota.lg.jp/reiki_int/",
+          "sha256": "71d0cc8cc17fbffdca8af01a8e241bea4082e1e06084aaef9e31a87c35fb062b",
+          "fetched_at": "2026-08-27T22:41:50Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.hokota.lg.jp/page/page000748.html (label: 鉾田市例規集)"
+      "notes": "Observed regulations index at http://www.city.hokota.lg.jp/page/page000748.html (label: 鉾田市例規集)",
+      "base_url": "https://www.city.hokota.lg.jp/reiki_int/"
     },
     "budget": {
       "status": "needs_review",

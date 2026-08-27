@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.okuma.fukushima.jp/reikishu/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.okuma.fukushima.jp/reikishu/",
           "observed_on": "http://www.town.okuma.fukushima.jp/",
           "fetched_at": "2026-08-27T08:09:57Z"
+        },
+        {
+          "url": "https://www.town.okuma.fukushima.jp:443/reikishu/",
+          "observed_on": "https://www.town.okuma.fukushima.jp:443/reikishu/",
+          "sha256": "f79ad7a3774d942b250e0ab597c8febc3d1de5804caaa155bc4fde22699be412",
+          "fetched_at": "2026-08-27T22:41:49Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.okuma.fukushima.jp/reikishu/ (label: 例規集)"
+      "notes": "Observed regulations index at http://www.town.okuma.fukushima.jp/reikishu/ (label: 例規集)",
+      "base_url": "https://www.town.okuma.fukushima.jp:443/reikishu/"
     },
     "budget": {
       "status": "not_found",

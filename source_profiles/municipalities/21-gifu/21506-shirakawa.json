@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.shirakawa.lg.jp/chousei/1002167.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shirakawa.lg.jp/chousei/1002167.html",
           "observed_on": "http://www.town.shirakawa.lg.jp/",
           "fetched_at": "2026-08-27T07:37:53Z"
+        },
+        {
+          "url": "https://www2.town.shirakawa.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "https://www2.town.shirakawa.lg.jp/reiki_int/",
+          "sha256": "9971a65df41b12ae126d42d2b41e485027d06661d12eb8615557297f3b5c75b2",
+          "fetched_at": "2026-08-27T22:41:52Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.shirakawa.lg.jp/chousei/1002167.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.town.shirakawa.lg.jp/chousei/1002167.html (label: 例規集)",
+      "base_url": "https://www2.town.shirakawa.lg.jp/reiki_int/"
     },
     "budget": {
       "status": "ready",

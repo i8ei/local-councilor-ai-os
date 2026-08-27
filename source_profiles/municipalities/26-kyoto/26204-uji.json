@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://reiki-web.city.uji.kyoto.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://reiki-web.city.uji.kyoto.jp/reiki/",
           "observed_on": "http://www.city.uji.kyoto.jp/",
           "fetched_at": "2026-08-27T06:15:02Z"
+        },
+        {
+          "url": "http://reiki-web.city.uji.kyoto.jp/reiki/reiki_menu.html",
+          "observed_on": "http://reiki-web.city.uji.kyoto.jp/reiki/",
+          "sha256": "eaa666b9b8b76deb047c3f71f5b4a49b53e3165adc3f6bceac645a5acba88386",
+          "fetched_at": "2026-08-27T22:41:53Z"
         }
       ],
-      "notes": "Observed regulations index at http://reiki-web.city.uji.kyoto.jp/reiki/ (label: 例規集)"
+      "notes": "Observed regulations index at http://reiki-web.city.uji.kyoto.jp/reiki/ (label: 例規集)",
+      "base_url": "http://reiki-web.city.uji.kyoto.jp/reiki/"
     },
     "budget": {
       "status": "not_found",

@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.city.miyazu.kyoto.jp/site/gikai/ (label: 宮津市議会 市議会のしくみや日程、議決の結果、会議録など)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.miyazu.kyoto.jp/soshiki/1/2599.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.miyazu.kyoto.jp/soshiki/1/2599.html",
           "observed_on": "http://www.city.miyazu.kyoto.jp/",
           "fetched_at": "2026-08-27T06:15:21Z"
+        },
+        {
+          "url": "https://www.city.miyazu.kyoto.jp/reiki/reiki_int/reiki_menu.html",
+          "observed_on": "https://www.city.miyazu.kyoto.jp/reiki/reiki_int/",
+          "sha256": "c153f27615042794db5c5686253d91adf644cebddad93f4fd5bc4fb590c75f33",
+          "fetched_at": "2026-08-27T22:41:53Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.miyazu.kyoto.jp/soshiki/1/2599.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.miyazu.kyoto.jp/soshiki/1/2599.html (label: 例規集)",
+      "base_url": "https://www.city.miyazu.kyoto.jp/reiki/reiki_int/"
     },
     "budget": {
       "status": "needs_review",

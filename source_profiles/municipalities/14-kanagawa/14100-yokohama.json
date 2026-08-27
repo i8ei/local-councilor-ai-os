@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.yokohama.lg.jp/city-info/gyosei-kansa/jorei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.yokohama.lg.jp/city-info/gyosei-kansa/jorei/index.html",
           "observed_on": "http://www.city.yokohama.lg.jp/city-info/index.html",
           "fetched_at": "2026-08-27T07:56:55Z"
+        },
+        {
+          "url": "https://cgi.city.yokohama.lg.jp/somu/reiki/reiki_menu.html",
+          "observed_on": "https://cgi.city.yokohama.lg.jp/somu/reiki/",
+          "sha256": "3b30915ed3faeb403a41f3bf0c43ce6ffbda0d706d349314aa3c6fc416441b15",
+          "fetched_at": "2026-08-27T22:41:50Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.yokohama.lg.jp/city-info/gyosei-kansa/jorei/index.html (label: 条例・規則・市報)"
+      "notes": "Observed regulations index at http://www.city.yokohama.lg.jp/city-info/gyosei-kansa/jorei/index.html (label: 条例・規則・市報)",
+      "base_url": "https://cgi.city.yokohama.lg.jp/somu/reiki/"
     },
     "budget": {
       "status": "ready",

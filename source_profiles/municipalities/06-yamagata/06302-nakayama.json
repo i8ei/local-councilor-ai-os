@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.nakayama.yamagata.jp/gyoseijoho/jorei_kisoku/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.nakayama.yamagata.jp/gyoseijoho/jorei_kisoku/index.html",
           "observed_on": "https://www.town.nakayama.yamagata.jp/gyoseijoho/index.html",
           "fetched_at": "2026-08-27T07:42:42Z"
+        },
+        {
+          "url": "https://www.town.nakayama.yamagata.jp/section/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.nakayama.yamagata.jp/section/reiki/",
+          "sha256": "6d1bb4d88e80acfb13c01d0c5ade779d61513a0b6452509933d53eaa9531c2c2",
+          "fetched_at": "2026-08-27T22:41:48Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.nakayama.yamagata.jp/gyoseijoho/jorei_kisoku/index.html (label: 条例・規則・要綱)"
+      "notes": "Observed regulations index at https://www.town.nakayama.yamagata.jp/gyoseijoho/jorei_kisoku/index.html (label: 条例・規則・要綱)",
+      "base_url": "https://www.town.nakayama.yamagata.jp/section/reiki/"
     },
     "budget": {
       "status": "needs_review",

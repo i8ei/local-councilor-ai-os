@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.town.shirataka.lg.jp/1138.htm (label: 議会会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.shirataka.lg.jp/sreiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.shirataka.lg.jp/sreiki/",
           "observed_on": "http://www.town.shirataka.lg.jp/",
           "fetched_at": "2026-08-27T07:47:49Z"
+        },
+        {
+          "url": "https://www.town.shirataka.lg.jp:443/sreiki/reiki_menu.html",
+          "observed_on": "https://www.town.shirataka.lg.jp:443/sreiki/",
+          "sha256": "2af1659c87cc00a4c56a07a997cb4009b2d2f3d882494b4c40e303f4a79a5241",
+          "fetched_at": "2026-08-27T22:41:48Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.shirataka.lg.jp/sreiki/ (label: 例規集検索)"
+      "notes": "Observed regulations index at http://www.town.shirataka.lg.jp/sreiki/ (label: 例規集検索)",
+      "base_url": "https://www.town.shirataka.lg.jp:443/sreiki/"
     },
     "budget": {
       "status": "needs_review",

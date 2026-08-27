@@ -21,19 +21,25 @@
       "notes": "Observed voices at http://inabe.gijiroku.com/g07_broadcasting.asp (label: )"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.inabe.mie.jp/shisei/reiki/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.inabe.mie.jp/shisei/reiki/index.html",
           "observed_on": "http://www.city.inabe.mie.jp/",
           "fetched_at": "2026-08-27T05:58:41Z"
+        },
+        {
+          "url": "https://www2.city.inabe.mie.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www2.city.inabe.mie.jp/reiki/",
+          "sha256": "55157c5573cb5ade3acf317a0b73fff632f1bbca28937af5c65bbb3df3e8c741",
+          "fetched_at": "2026-08-27T22:41:53Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.inabe.mie.jp/shisei/reiki/index.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.inabe.mie.jp/shisei/reiki/index.html (label: 例規集)",
+      "base_url": "https://www2.city.inabe.mie.jp/reiki/"
     },
     "budget": {
       "status": "ready",

@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www2.city.yoshinogawa.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www2.city.yoshinogawa.lg.jp/reiki/",
           "observed_on": "http://www.city.yoshinogawa.lg.jp/top.html",
           "fetched_at": "2026-08-27T06:38:40Z"
+        },
+        {
+          "url": "http://www2.city.yoshinogawa.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www2.city.yoshinogawa.lg.jp/reiki/",
+          "sha256": "b0799e1a7ae0fd5804691736f35ded99752cae84ce6a4585b89d5ae42a2c2970",
+          "fetched_at": "2026-08-27T22:41:55Z"
         }
       ],
-      "notes": "Observed regulations index at http://www2.city.yoshinogawa.lg.jp/reiki/ (label: 吉野川市例規集)"
+      "notes": "Observed regulations index at http://www2.city.yoshinogawa.lg.jp/reiki/ (label: 吉野川市例規集)",
+      "base_url": "http://www2.city.yoshinogawa.lg.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

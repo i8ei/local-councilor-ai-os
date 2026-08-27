@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.vill.sanagochi.lg.jp/reiki/reiki_taikei/taikei_default.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.vill.sanagochi.lg.jp/reiki/reiki_taikei/taikei_default.html",
           "observed_on": "http://www.vill.sanagochi.lg.jp/",
           "fetched_at": "2026-08-27T06:41:44Z"
+        },
+        {
+          "url": "https://www.vill.sanagochi.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.vill.sanagochi.lg.jp/reiki/",
+          "sha256": "2cdfd79b40b07ccf8c4310ba49c12ca09f0a6fc3f9a303e04e76f051d993b978",
+          "fetched_at": "2026-08-27T22:41:55Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.vill.sanagochi.lg.jp/reiki/reiki_taikei/taikei_default.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.vill.sanagochi.lg.jp/reiki/reiki_taikei/taikei_default.html (label: 例規集)",
+      "base_url": "https://www.vill.sanagochi.lg.jp/reiki/"
     },
     "budget": {
       "status": "ready",

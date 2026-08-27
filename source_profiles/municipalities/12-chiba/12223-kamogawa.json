@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.kamogawa.lg.jp/soshiki/6/1157.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.kamogawa.lg.jp/soshiki/6/1157.html",
           "observed_on": "http://www.city.kamogawa.lg.jp/",
           "fetched_at": "2026-08-27T07:16:15Z"
+        },
+        {
+          "url": "https://www.city.kamogawa.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.kamogawa.lg.jp/reiki/",
+          "sha256": "1d133a428ef54fd2b9f1e5a7c03c7dd25740ff7bee691cf90acd6f6eb939b445",
+          "fetched_at": "2026-08-27T22:41:50Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.kamogawa.lg.jp/soshiki/6/1157.html (label: 電子掲示場 例規集)"
+      "notes": "Observed regulations index at http://www.city.kamogawa.lg.jp/soshiki/6/1157.html (label: 電子掲示場 例規集)",
+      "base_url": "https://www.city.kamogawa.lg.jp/reiki/"
     },
     "budget": {
       "status": "not_found",

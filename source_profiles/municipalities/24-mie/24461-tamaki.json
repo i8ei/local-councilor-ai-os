@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at https://kizuna.town.tamaki.mie.jp/chosei/senkyogikai/gikai/shingi/gijiroku.html (label: 議会議事録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://kizuna.town.tamaki.mie.jp/reiki/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://kizuna.town.tamaki.mie.jp/reiki/index.html",
           "observed_on": "https://kizuna.town.tamaki.mie.jp/",
           "fetched_at": "2026-08-27T06:03:26Z"
+        },
+        {
+          "url": "https://kizuna.town.tamaki.mie.jp/reiki/",
+          "observed_on": "https://kizuna.town.tamaki.mie.jp/reiki/",
+          "sha256": "2d6a6afc23168b53203317e4ef770ab0c2be3c504c73f1fac7bddd8618ce7c8b",
+          "fetched_at": "2026-08-27T22:41:53Z"
         }
       ],
-      "notes": "Observed regulations index at https://kizuna.town.tamaki.mie.jp/reiki/index.html (label: 玉城町例規集)"
+      "notes": "Observed regulations index at https://kizuna.town.tamaki.mie.jp/reiki/index.html (label: 玉城町例規集)",
+      "base_url": "https://kizuna.town.tamaki.mie.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

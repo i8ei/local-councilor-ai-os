@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.mikawa.yamagata.jp/mikawa/jyourei.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.mikawa.yamagata.jp/mikawa/jyourei.html",
           "observed_on": "http://www.town.mikawa.yamagata.jp/",
           "fetched_at": "2026-08-27T07:48:49Z"
+        },
+        {
+          "url": "https://www.town.mikawa.yamagata.jp:443/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.mikawa.yamagata.jp/reiki_int/",
+          "sha256": "e762186d7d9a561d1a9abd7aaa6fb196a154a1e78c0809e65bd47b332d7f60fe",
+          "fetched_at": "2026-08-27T22:41:49Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.mikawa.yamagata.jp/mikawa/jyourei.html (label: 条例・規則)"
+      "notes": "Observed regulations index at http://www.town.mikawa.yamagata.jp/mikawa/jyourei.html (label: 条例・規則)",
+      "base_url": "http://www.town.mikawa.yamagata.jp/reiki_int/"
     },
     "budget": {
       "status": "needs_review",

@@ -21,19 +21,25 @@
       "notes": "dbsr.jp は robots.txt によりアクセス拒否 (fail-closed)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.koga.fukuoka.jp/cityhall/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.koga.fukuoka.jp/cityhall/reiki/",
           "observed_on": "http://www.city.koga.fukuoka.jp/",
           "fetched_at": "2026-08-27T04:14:43Z"
+        },
+        {
+          "url": "https://www.city.koga.fukuoka.jp/cityhall/reiki/reiki_menu.html",
+          "observed_on": "https://www.city.koga.fukuoka.jp/cityhall/reiki/",
+          "sha256": "2d43aa0a1a1f890fc1863a00e6c707728609f695dfb74d96d2881f63d5910d96",
+          "fetched_at": "2026-08-27T22:41:56Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.koga.fukuoka.jp/cityhall/reiki/ (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.koga.fukuoka.jp/cityhall/reiki/ (label: 例規集)",
+      "base_url": "https://www.city.koga.fukuoka.jp/cityhall/reiki/"
     },
     "budget": {
       "status": "needs_review",

@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.nanbu.tottori.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.nanbu.tottori.jp/reiki/",
           "observed_on": "http://www.town.nanbu.tottori.jp/",
           "fetched_at": "2026-08-27T06:00:10Z"
+        },
+        {
+          "url": "https://www.town.nanbu.tottori.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.nanbu.tottori.jp/reiki/",
+          "sha256": "a1bdc2ab8ebae522829a95e6828eac04f73f0d86fd3d1e3e5252004d3b46cbda",
+          "fetched_at": "2026-08-27T22:41:55Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.nanbu.tottori.jp/reiki/ (label: 例規集)"
+      "notes": "Observed regulations index at http://www.town.nanbu.tottori.jp/reiki/ (label: 例規集)",
+      "base_url": "https://www.town.nanbu.tottori.jp/reiki/"
     },
     "budget": {
       "status": "not_found",

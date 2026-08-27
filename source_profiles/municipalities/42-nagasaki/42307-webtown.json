@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://webtown.nagayo.jp/list00231.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://webtown.nagayo.jp/list00231.html",
           "observed_on": "http://webtown.nagayo.jp/",
           "fetched_at": "2026-08-27T05:26:33Z"
+        },
+        {
+          "url": "https://webtown.nagayo.jp/reiki/reiki_menu.html",
+          "observed_on": "https://webtown.nagayo.jp/reiki/",
+          "sha256": "db5acef60684284365bd293fb50889f1b27dc5c56c2cc28b43cd5e9b8f4bb07b",
+          "fetched_at": "2026-08-27T22:41:57Z"
         }
       ],
-      "notes": "Observed regulations index at http://webtown.nagayo.jp/list00231.html (label: 入札・契約関連例規)"
+      "notes": "Observed regulations index at http://webtown.nagayo.jp/list00231.html (label: 入札・契約関連例規)",
+      "base_url": "https://webtown.nagayo.jp/reiki/"
     },
     "budget": {
       "status": "ready",

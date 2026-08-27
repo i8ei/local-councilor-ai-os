@@ -38,19 +38,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.ooki.lg.jp/soshiki/somu/jinji/osirase/1422015157232.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ooki.lg.jp/soshiki/somu/jinji/osirase/1422015157232.html",
           "observed_on": "http://www.town.ooki.lg.jp/",
           "fetched_at": "2026-08-27T04:24:42Z"
+        },
+        {
+          "url": "https://www.town.ooki.lg.jp/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.town.ooki.lg.jp/reiki_int/",
+          "sha256": "efa9717d9f9ab4a2049c2a8be5d4fcb7e1a0fffaf6daf91a714c8d4c6c57e3e3",
+          "fetched_at": "2026-08-27T22:41:57Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.ooki.lg.jp/soshiki/somu/jinji/osirase/1422015157232.html (label: まちの例規集)"
+      "notes": "Observed regulations index at http://www.town.ooki.lg.jp/soshiki/somu/jinji/osirase/1422015157232.html (label: まちの例規集)",
+      "base_url": "http://www.town.ooki.lg.jp/reiki_int/"
     },
     "budget": {
       "status": "needs_review",

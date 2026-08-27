@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.tome.miyagi.jp/shisejoho/gyose/reiki/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.tome.miyagi.jp/shisejoho/gyose/reiki/index.html",
           "observed_on": "http://www.city.tome.miyagi.jp/shisejoho/index.html",
           "fetched_at": "2026-08-27T07:19:44Z"
+        },
+        {
+          "url": "https://www.city.tome.miyagi.jp:443/reiki_int/reiki_menu.html",
+          "observed_on": "http://www.city.tome.miyagi.jp/reiki_int/",
+          "sha256": "3ea75bb434631b71cd137c06f8005f998435a6f8c1265cf6e8b387638203dfc6",
+          "fetched_at": "2026-08-27T22:41:48Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.tome.miyagi.jp/shisejoho/gyose/reiki/index.html (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.tome.miyagi.jp/shisejoho/gyose/reiki/index.html (label: 例規集)",
+      "base_url": "http://www.city.tome.miyagi.jp/reiki_int/"
     },
     "budget": {
       "status": "needs_review",

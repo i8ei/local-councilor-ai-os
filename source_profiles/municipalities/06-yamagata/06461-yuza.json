@@ -14,19 +14,25 @@
       "notes": "No council minutes entrance found within page limit"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.yuza.yamagata.jp/reiki",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.yuza.yamagata.jp/reiki",
           "observed_on": "http://www.town.yuza.yamagata.jp/",
           "fetched_at": "2026-08-27T07:49:39Z"
+        },
+        {
+          "url": "https://www.town.yuza.yamagata.jp/reiki/",
+          "observed_on": "https://www.town.yuza.yamagata.jp/reiki/",
+          "sha256": "b68c78ebde7c91632c7f6e53a22ca4e100a0fab13f0b33a007a9934f6514c93d",
+          "fetched_at": "2026-08-27T22:41:49Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.yuza.yamagata.jp/reiki (label: 例規集)"
+      "notes": "Observed regulations index at https://www.town.yuza.yamagata.jp/reiki (label: 例規集)",
+      "base_url": "https://www.town.yuza.yamagata.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

@@ -38,19 +38,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.sakai.lg.jp/shisei/sonota/jyorei/index.html",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.sakai.lg.jp/shisei/sonota/jyorei/index.html",
           "observed_on": "http://www.city.sakai.lg.jp/",
           "fetched_at": "2026-08-27T06:25:31Z"
+        },
+        {
+          "url": "https://www.city.sakai.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "http://www.city.sakai.lg.jp/reiki/",
+          "sha256": "6b3b058358cd5554e06ddb8043738fe933c7ed539051d39bd4d95e75cf735f58",
+          "fetched_at": "2026-08-27T22:41:54Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.sakai.lg.jp/shisei/sonota/jyorei/index.html (label: 条例・規則、公報など)"
+      "notes": "Observed regulations index at http://www.city.sakai.lg.jp/shisei/sonota/jyorei/index.html (label: 条例・規則、公報など)",
+      "base_url": "http://www.city.sakai.lg.jp/reiki/"
     },
     "budget": {
       "status": "ready",

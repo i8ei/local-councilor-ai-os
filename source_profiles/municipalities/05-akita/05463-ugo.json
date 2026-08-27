@@ -27,19 +27,25 @@
       "notes": "Observed council minutes index at http://www.town.ugo.lg.jp/administration/detail.html?id=1247&category_id=51 (label: 会議録)"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.town.ugo.lg.jp/administration/detail.html?id=466&category_id=53",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.town.ugo.lg.jp/administration/detail.html?id=466&category_id=53",
           "observed_on": "http://www.town.ugo.lg.jp/",
           "fetched_at": "2026-08-27T07:35:21Z"
+        },
+        {
+          "url": "https://www.town.ugo.lg.jp:443/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.ugo.lg.jp:443/reiki/",
+          "sha256": "ddf8ed5028296091be27f308c36462e8d11e99944ba733a99084ad7cef1e6d50",
+          "fetched_at": "2026-08-27T22:41:48Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.town.ugo.lg.jp/administration/detail.html?id=466&category_id=53 (label: 例規集)"
+      "notes": "Observed regulations index at http://www.town.ugo.lg.jp/administration/detail.html?id=466&category_id=53 (label: 例規集)",
+      "base_url": "https://www.town.ugo.lg.jp:443/reiki/"
     },
     "budget": {
       "status": "needs_review",

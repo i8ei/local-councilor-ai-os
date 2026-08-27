@@ -21,19 +21,25 @@
       "notes": "DiscussVision（動画配信システム・会議録テキストなし）"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "https://www.town.asagiri.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "https://www.town.asagiri.lg.jp/reiki/",
           "observed_on": "http://www.town.asagiri.lg.jp/",
           "fetched_at": "2026-08-27T05:50:02Z"
+        },
+        {
+          "url": "https://www.town.asagiri.lg.jp/reiki/reiki_menu.html",
+          "observed_on": "https://www.town.asagiri.lg.jp/reiki/",
+          "sha256": "bfdd4292a3349d1372f92a2f868979db241ea3df0d6d9d6cad9233a7f99bb4ad",
+          "fetched_at": "2026-08-27T22:41:58Z"
         }
       ],
-      "notes": "Observed regulations index at https://www.town.asagiri.lg.jp/reiki/ (label: 例規集)"
+      "notes": "Observed regulations index at https://www.town.asagiri.lg.jp/reiki/ (label: 例規集)",
+      "base_url": "https://www.town.asagiri.lg.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.suwa.lg.jp/reiki/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.suwa.lg.jp/reiki/",
           "observed_on": "http://www.city.suwa.lg.jp/",
           "fetched_at": "2026-08-27T06:55:39Z"
+        },
+        {
+          "url": "https://www.city.suwa.lg.jp/reiki/",
+          "observed_on": "https://www.city.suwa.lg.jp/reiki/",
+          "sha256": "5df9ba7f614f4737c10144e875277c4754c93ed19b36ed66fed6072a0fd95078",
+          "fetched_at": "2026-08-27T22:41:51Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.suwa.lg.jp/reiki/ (label: 例規集)"
+      "notes": "Observed regulations index at http://www.city.suwa.lg.jp/reiki/ (label: 例規集)",
+      "base_url": "https://www.city.suwa.lg.jp/reiki/"
     },
     "budget": {
       "status": "needs_review",

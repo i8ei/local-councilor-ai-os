@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://www.city.asakura.lg.jp/adv/ba.php?id=7",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://www.city.asakura.lg.jp/adv/ba.php?id=7",
           "observed_on": "http://www.city.asakura.lg.jp/",
           "fetched_at": "2026-08-27T04:16:52Z"
+        },
+        {
+          "url": "https://www1.g-reiki.net/city.asakura/reiki_menu.html",
+          "observed_on": "https://www1.g-reiki.net/city.asakura/",
+          "sha256": "0ce4648119c6b06d8014634e1456ab62dd610b0ad7eb80c9e95cdd9d154afc39",
+          "fetched_at": "2026-08-27T22:42:22Z"
         }
       ],
-      "notes": "Observed regulations index at http://www.city.asakura.lg.jp/adv/ba.php?id=7 (label: 朝倉市例規集)"
+      "notes": "Observed regulations index at http://www.city.asakura.lg.jp/adv/ba.php?id=7 (label: 朝倉市例規集)",
+      "base_url": "https://www1.g-reiki.net/city.asakura/"
     },
     "budget": {
       "status": "needs_review",

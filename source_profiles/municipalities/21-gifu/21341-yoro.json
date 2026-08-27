@@ -29,19 +29,25 @@
       "verified_by": "verify --live"
     },
     "regulations": {
-      "status": "needs_review",
-      "adapter": "static",
-      "index_url": "http://reiki.town.yoro.gifu.jp/",
-      "verified_at": null,
-      "verified_by": null,
+      "status": "ready",
+      "adapter": "g_reiki",
+      "verified_at": "2026-08-27T22:41:47Z",
+      "verified_by": "verify --live",
       "evidence": [
         {
           "url": "http://reiki.town.yoro.gifu.jp/",
           "observed_on": "http://www.town.yoro.gifu.jp/",
           "fetched_at": "2026-08-27T07:32:21Z"
+        },
+        {
+          "url": "http://reiki.town.yoro.gifu.jp/",
+          "observed_on": "http://reiki.town.yoro.gifu.jp/",
+          "sha256": "9a08141b244dcb74f68516b8765716314e3ff53137df0c7d9b23ad5702848ebd",
+          "fetched_at": "2026-08-27T12:52:38Z"
         }
       ],
-      "notes": "Observed regulations index at http://reiki.town.yoro.gifu.jp/ (label: 養老町 例規集)"
+      "notes": "Observed regulations index at http://reiki.town.yoro.gifu.jp/ (label: 養老町 例規集)",
+      "base_url": "http://reiki.town.yoro.gifu.jp/"
     },
     "budget": {
       "status": "needs_review",
