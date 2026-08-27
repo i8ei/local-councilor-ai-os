@@ -32,8 +32,40 @@ REGULATIONS_USER_AGENT = (
 )
 
 _MAX_REDIRECTS = 5
-_REQUEST_LOCK = threading.RLock()
-_LAST_REQUEST_AT: float | None = None
+
+# Politeness state is keyed by host: requests to one host are serialised and
+# spaced by ``min_interval_seconds``, while requests to different hosts may run
+# concurrently. ``_HOST_STATE_LOCK`` guards the two dictionaries below; it is
+# only ever acquired while already holding a host gate, never the other way
+# round, so the two cannot deadlock.
+_HOST_STATE_LOCK = threading.Lock()
+_HOST_LOCKS: dict[str, threading.RLock] = {}
+_LAST_REQUEST_AT: dict[str, float] = {}
+
+
+def _throttle_host(url: str) -> str:
+    """Return the politeness key for ``url`` (host, with a leading www. dropped)."""
+
+    host = (urllib.parse.urlsplit(url).netloc or "").lower()
+    return host.removeprefix("www.")
+
+
+def _host_gate(host: str) -> threading.RLock:
+    """Return the lock that serialises requests to ``host``."""
+
+    with _HOST_STATE_LOCK:
+        gate = _HOST_LOCKS.get(host)
+        if gate is None:
+            gate = threading.RLock()
+            _HOST_LOCKS[host] = gate
+        return gate
+
+
+def reset_throttle_state() -> None:
+    """Forget every host's last-request time. For tests only."""
+
+    with _HOST_STATE_LOCK:
+        _LAST_REQUEST_AT.clear()
 
 
 class CacheTier(enum.Enum):
@@ -254,7 +286,11 @@ def _parse_retry_after(headers: Mapping[str, str], default_delay: float, max_del
 
 
 class HttpClient:
-    """Sequential cached HTTP client used by bootstrap and modules."""
+    """Cached HTTP client used by bootstrap and modules.
+
+    Safe to share across threads: requests to one host are serialised and
+    spaced by ``min_interval_seconds``, requests to different hosts are not.
+    """
 
     def __init__(
         self,
@@ -467,14 +503,21 @@ class HttpClient:
             from_cache=False,
         )
 
-    def _throttle(self) -> None:
-        global _LAST_REQUEST_AT
-        now = time.monotonic()
-        if _LAST_REQUEST_AT is not None:
-            remaining = self.min_interval_seconds - (now - _LAST_REQUEST_AT)
+    def _throttle(self, host: str) -> None:
+        """Wait until ``host`` may be contacted again, then claim its slot.
+
+        Only the caller's own host is considered, so unrelated hosts never wait
+        on each other. The caller must already hold that host's gate.
+        """
+
+        with _HOST_STATE_LOCK:
+            last = _LAST_REQUEST_AT.get(host)
+        if last is not None:
+            remaining = self.min_interval_seconds - (time.monotonic() - last)
             if remaining > 0:
                 time.sleep(remaining)
-        _LAST_REQUEST_AT = time.monotonic()
+        with _HOST_STATE_LOCK:
+            _LAST_REQUEST_AT[host] = time.monotonic()
 
     def _read_response_body(self, response: Any, url: str) -> bytes:
         raw_length = response.headers.get(
@@ -502,9 +545,12 @@ class HttpClient:
         return body
 
     def _request_once(self, url: str) -> _RawResponse:
-        with _REQUEST_LOCK:
+        host = _throttle_host(url)
+        # Held across every retry so a struggling host is not hammered from
+        # other threads while this one backs off.
+        with _host_gate(host):
             for attempt in range(self.max_retries + 1):
-                self._throttle()
+                self._throttle(host)
                 request = urllib.request.Request(
                     url,
                     headers={
@@ -683,55 +729,44 @@ class HttpClient:
             )
             raise OfflineCacheMiss(f"キャッシュがありません: {safe_url}")
 
-        with _REQUEST_LOCK:
-            cached = None if self.refresh else self._read_usable_cached(key, tier)
-            if cached:
-                self.cache_hit_count += 1
-                self._record_fetch(
-                    cache_key=key,
-                    url=safe_url,
-                    status="cache_hit",
-                    result=cached[0],
+        current_url = requested_url
+        request_log: list[dict[str, Any]] = []
+        for _ in range(_MAX_REDIRECTS + 1):
+            self._assert_robots_allowed(current_url)
+            response = self._request_once(current_url)
+            request_log.append(
+                {
+                    "url": _redact_url(current_url, secret_keys),
+                    "resolved_url": _redact_url(response.url, secret_keys),
+                    "status": response.status,
+                    "fetched_at": response.fetched_at,
+                }
+            )
+            target = self._redirect_target(response)
+            if target:
+                current_url = target
+                continue
+            if response.status < 200 or response.status >= 300:
+                raise FetchError(
+                    f"取得に失敗しました: HTTP {response.status}: {safe_url}"
                 )
-                return cached[0]
-            current_url = requested_url
-            request_log: list[dict[str, Any]] = []
-            for _ in range(_MAX_REDIRECTS + 1):
-                self._assert_robots_allowed(current_url)
-                response = self._request_once(current_url)
-                request_log.append(
-                    {
-                        "url": _redact_url(current_url, secret_keys),
-                        "resolved_url": _redact_url(response.url, secret_keys),
-                        "status": response.status,
-                        "fetched_at": response.fetched_at,
-                    }
-                )
-                target = self._redirect_target(response)
-                if target:
-                    current_url = target
-                    continue
-                if response.status < 200 or response.status >= 300:
-                    raise FetchError(
-                        f"取得に失敗しました: HTTP {response.status}: {safe_url}"
-                    )
-                result = self._write_cache(
-                    key,
-                    requested_url,
-                    response,
-                    request_log,
-                    sensitive_query_keys=secret_keys,
-                )
-                status = "refreshed" if self.refresh and cache_available else "fetched"
-                if status == "refreshed":
-                    self.refresh_count += 1
-                elif not cache_available:
-                    self.cache_miss_count += 1
-                self._record_fetch(
-                    cache_key=key,
-                    url=safe_url,
-                    status=status,
-                    result=result,
-                )
-                return result
-            raise FetchError("リダイレクト回数が上限を超えました")
+            result = self._write_cache(
+                key,
+                requested_url,
+                response,
+                request_log,
+                sensitive_query_keys=secret_keys,
+            )
+            status = "refreshed" if self.refresh and cache_available else "fetched"
+            if status == "refreshed":
+                self.refresh_count += 1
+            elif not cache_available:
+                self.cache_miss_count += 1
+            self._record_fetch(
+                cache_key=key,
+                url=safe_url,
+                status=status,
+                result=result,
+            )
+            return result
+        raise FetchError("リダイレクト回数が上限を超えました")
