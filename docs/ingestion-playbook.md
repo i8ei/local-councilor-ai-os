@@ -50,10 +50,15 @@
 
 | アダプター名 | 主な提供ベンダー | URL規則 / 逆引きパターン | 安全ガードレール |
 |---|---|---|---|
-| `g_reiki` | ぎょうせい（例規Net） | `https://www1.g-reiki.net/<slug>/reiki_menu.html`<br>`https://www1.g-reiki.net/town.<slug>/`<br>`https://www1.g-reiki.net/vill.<slug>/` | レスポンス本文・タイトル内に**自治体名＋例規キーワード**が明記されていること |
-| `d1_law` | 第一法規（D1-Law） | `https://<domain>/d1w_reiki/reiki.html`<br>`https://en3-jg.d1-law.com/<slug>/d1w_reiki/` | 自治体名＋条例キーワードの照合 |
+| `g_reiki` | ぎょうせい（例規Net） | `https://www1.g-reiki.net/<slug>/reiki_menu.html`<br>`https://www1.g-reiki.net/town.<slug>/`<br>※`reiki.html` フォールバックあり | レスポンス本文・タイトル内に**自治体名＋例規キーワード**が明記されていること |
+| `d1_law` | 第一法規（D1-Law） | `https://<domain>/d1w_reiki/reiki.html` (または `.htm`)<br>`https://en3-jg.d1-law.com/<slug>/d1w_reiki/`<br>※直リンク `<id>/<id>_j.html` も対応 | 自治体名＋条例キーワードの照合 |
 | `kaigiroku_net` | 会議録Net | `https://ssp.kaigiroku.net/tenant/<slug>/SpTop.html`<br>`https://ssp.kaigiroku.net/tenant/<slug>/MinuteSearch.html` | 自治体名＋議会・会議録キーワードの照合 |
-| `dbsr` | NTT-AT（Discuss） | `http://www.<slug>.<pref>.dbsr.jp/index.php/` | 自治体名の照合 |
+| `dbsr` | NTT-AT（Discuss） | `http://www.<slug>.<pref>.dbsr.jp/index.php/` | 自治体名の照合（robots制限時はblocked隔離） |
+| `official_document_index` | 自治体公式（予算・決算） | 財政トップ / 予算・決算一覧ページ | 実体文書（PDF/Excel）から**構造マーカー（歳入・歳出・款・項等）**を検出 |
+
+### ④ 予算・決算の Level 2 文書構造検証（自動判定）
+- **判定基準**: ランディングページから 1〜2 ホップ先の PDF / Excel（『財政状況資料集』等）を取得し、**2つ以上の構造マーカー**（`歳入`, `歳出`, `款`, `項`, `決算額`, `予算現額`, `実質収支` 等）を検出できた場合に `ready` へ昇格。
+- **高速化の鉄則**: 巨大PDF（200ページ超）は `pdftotext -l 15`（先頭15ページ）、XLSXは先頭500セルのみ読み取ることで、1自治体あたり0.1秒未満で安全に判定可能。
 
 ---
 

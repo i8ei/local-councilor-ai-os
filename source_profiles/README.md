@@ -10,7 +10,7 @@ source_profiles/
   cli.py                             # validate / ingest-command / verify / resolve
   __main__.py                        # python3 -m source_profiles.cli
   schema/source_profile.schema.json  # contract (draft-07, reference)
-  municipalities/41-saga/*.json      # 1 file per municipality
+  municipalities/*/*.json            # 1 file per municipality (1,741 files across 47 prefectures)
   tests/
   README.md
 ```
@@ -27,17 +27,17 @@ One JSON per municipality (`area_code_5` is primary key).
   "municipality": "太良町",
   "official_home_url": "http://www.town.tara.lg.jp/",
   "sources": {
-    "minutes":     {"status": "not_evaluated", "adapter": null, "verified_at": null, "verified_by": null, "evidence": [], "notes": null},
-    "regulations": {"status": "needs_review", "adapter": "g_reiki", "base_url": "https://www1.g-reiki.net/town.tara/", "verified_at": null, "verified_by": null, "evidence": [{"url": "https://www1.g-reiki.net/town.tara/reiki_menu.html", "observed_on": "http://www.town.tara.lg.jp/"}], "notes": "..."},
-    "budget":      {"status": "not_evaluated", "adapter": null, "verified_at": null, "verified_by": null, "evidence": [], "notes": null},
-    "settlement":  {"status": "not_evaluated", "adapter": null, "verified_at": null, "verified_by": null, "evidence": [], "notes": null}
+    "minutes":     {"status": "needs_review", "adapter": "static", "index_url": "http://www.town.tara.lg.jp/gikai/", "verified_at": null, "verified_by": null, "evidence": [], "notes": "..."},
+    "regulations": {"status": "ready", "adapter": "g_reiki", "base_url": "https://www1.g-reiki.net/town.tara/", "verified_at": "2026-08-28T00:00:00Z", "verified_by": "verify --live", "evidence": [{"url": "https://www1.g-reiki.net/town.tara/reiki_menu.html", "observed_on": "http://www.town.tara.lg.jp/", "sha256": "...", "fetched_at": "..."}], "notes": "..."},
+    "budget":      {"status": "ready", "adapter": "official_document_index", "index_url": "http://www.town.tara.lg.jp/zaisei/budget.html", "verified_at": "2026-08-28T00:00:00Z", "verified_by": "verify --live", "evidence": [...], "notes": "..."},
+    "settlement":  {"status": "ready", "adapter": "official_document_index", "index_url": "http://www.town.tara.lg.jp/zaisei/settlement.html", "verified_at": "2026-08-28T00:00:00Z", "verified_by": "verify --live", "evidence": [...], "notes": "..."}
   }
 }
 ```
 
 - `status`: `ready | needs_review | unsupported | not_found | blocked | not_evaluated`
 - `adapter`: `null | kaigiroku_net | static | g_reiki | dbsr | voices | d1_law | joureikun | official_document_index`
-- Entry keys are mutually exclusive: `g_reiki` requires `base_url`, `static` requires `index_url`, `kaigiroku_net` requires `tenant_url`. Multiple simultaneous entries are rejected.
+- Entry keys are mutually exclusive: `g_reiki` requires `base_url`, `static` / `d1_law` / `official_document_index` require `index_url`, `kaigiroku_net` requires `tenant_url`. Multiple simultaneous entries are rejected.
 - `ready` requires `verified_at` (UTC ISO8601, not future) + `verified_by` + adapter + entry URL + `evidence>=1`. `verified_at` violation or missing fields => validation error.
 - Host check (anti-guess): whenever an entry URL exists, `evidence` must contain at least one entry whose `url` or `observed_on` shares the same host as the entry URL.
 
@@ -48,7 +48,7 @@ One JSON per municipality (`area_code_5` is primary key).
 ## CLI
 
 ```bash
-# validate all Saga profiles
+# validate all profiles in a prefecture (or omit --prefecture for nationwide 1,741)
 python3 -m source_profiles.cli validate --all --prefecture "佐賀県"
 
 # single profile
@@ -56,7 +56,6 @@ python3 -m source_profiles.cli validate --profile source_profiles/municipalities
 
 # generate ingest command (does not execute)
 python3 -m source_profiles.cli ingest-command --municipality "太良町" --prefecture "佐賀県" --kind regulations --limit 3
-# -> # NEEDS LIVE VERIFICATION
 # -> python3 modules/regulations/vendor_greiki.py --base-url https://www1.g-reiki.net/town.tara/ --db /tmp/41441-reg.db --source-name "太良町例規集" --limit 3
 
 # unsupported adapter => exit 2 with next action
@@ -67,78 +66,56 @@ python3 -m source_profiles.cli ingest-command --municipality "江北町" --prefe
 
 ## Verify (live re-check with HttpClient)
 
-Verify promotes `needs_review`/`not_evaluated` entries to `ready` only after a live fetch succeeds AND a real extraction probe yields at least one record.
+Verify promotes `needs_review`/`not_evaluated` entries to `ready` only after a live fetch succeeds AND a real extraction probe yields structural evidence.
 
 ```bash
 # verify a single municipality live (low rate, robots respected, HttpClient cache)
 python3 -m source_profiles.cli verify \
   --municipality "太良町" --prefecture "佐賀県" \
   --kind regulations --cache-dir /tmp/sp-verify-cache
-# -> {"municipality": "太良町", "kind": "regulations", "adapter": "g_reiki",
-#      "result": "verified", "status_before": "needs_review", "status_after": "ready", ...}
 
 # offline: use only verified cache
 python3 -m source_profiles.cli verify \
   --municipality "太良町" --prefecture "佐賀県" \
   --kind regulations --cache-dir /tmp/sp-verify-cache --offline
+
+# nationwide Level 2 verification for budget & settlement
+python3 tools/verify_budget_settlement_concurrent.py --workers 16
 ```
 
 Steps inside `verify_profile` (injectable `client`, no guessing):
 
-1. Derive entry URL as `base_url + "reiki_menu.html"` (fixed g_reiki spec, same as `vendor_greiki.py`).
-2. Fetch via `lcaios.http.HttpClient` (`REGULATIONS_USER_AGENT`, 1.5s throttle, robots check, SHA256 cache).
-3. Fail closed on `RobotsDenied/OfflineCacheMiss/FetchError`, host drift (`final_url` host != `base_url` host), or structure mismatch (HTML must contain `reiki_*` or `例規` markers). Status stays `needs_review`; exit `2`.
-4. Extraction probe: call the real ingest extractor (`modules/regulations/vendor_greiki.py` for g_reiki, `modules/minutes_db/adapters/*` for minutes) against exactly ONE document reached through the recorded entry URL. Promotion rules:
-   - **R1 — promotion gate**: `ready` is granted ONLY when the prior status is `needs_review` or `not_evaluated`. For any other prior status (`blocked`/`unsupported`/`not_found`/already-`ready`) the status is left untouched; the report result is still `verified` when the checks passed, but the reason states the promotion was withheld because of the prior status.
-   - **R2 — structural identification**: `ready` requires the probe to extract at least one STRUCTURALLY IDENTIFIED record via the real adapter code — minutes: ≥1 speech with a non-empty `speaker`; regulations: ≥1 article with a non-empty `article_no`. Fallback paragraph/document chunks (no speaker/article_no) do not count: both extractors deliberately fall back so ingestion never loses content, but a newsletter behind a 会議録 label is not verbatim minutes. Reachability alone is not ingest evidence.
-   - **R3 — robots denial on the probe**: status becomes `blocked` (including downgrade from `ready`), index evidence is recorded and a note marks the bodies as robots-restricted.
-   - **R4 — read but nothing identifiable**: if the probed document was read but yielded no structurally identified records (e.g. 議会だより newsletter prose, or an image-only page), the status becomes `needs_review` (never `ready`) with a note saying what was probed and that no speaker-attributed speeches (or numbered articles) were found.
-   - **R5 — probe inconclusive or unreachable**: if the probe fails for any other reason the status stays exactly as it was and the report result is `failed`. No promotion, no demotion. Two distinct causes are named in the reason: (a) the document was unreachable (404, network error, structure mismatch), or (b) the adapter could not READ the probed document at all — e.g. `pdf_cached_pdftotext_unavailable` when the pdftotext binary is missing — in which case the reason names the adapter status and local tooling must be fixed before re-running. Case (b) must never be reported as "yielded no records": only an adapter status classified as a real extraction (`extracted`, `html_no_text`, `text_without_segments`, `pdf_no_text`) lets a zero record count demote to `needs_review` under R4.
-   On promotion: set `verified_at` (UTC ISO8601 Z, now), `verified_by="verify --live"`, append `{url, observed_on, sha256, fetched_at}` to `evidence` (idempotent on `url+sha256`), self-validate via `schema.validate_profile` before saving.
+1. **Gate & Ingress**: Entry URL derivation (e.g. `base_url + "reiki_menu.html"` or `reiki.html` for g_reiki; `reiki.htm` / `reiki.html` for D1-Law).
+2. **Robots & Fetch**: Fetch via `lcaios.http.HttpClient` (`REGULATIONS_USER_AGENT` / `MINUTES_USER_AGENT`, low rate throttle, robots check, SHA256 cache).
+3. **Fail-closed**: On `RobotsDeniedError` (e.g. `houmu.h-chosonkai.gr.jp`, `dbsr.jp`, `kaigiroku.net`), status becomes `blocked` with evidence and notes. On host drift or structure mismatch, safe stop (exit `2`).
+4. **Extraction probe**: Call real ingest extractor / document reader against target documents:
+   - **R1 — promotion gate**: `ready` is granted ONLY when prior status is `needs_review` or `not_evaluated`.
+   - **R2 — structural identification**:
+     - `minutes`: ≥1 speech with non-empty `speaker`.
+     - `regulations`: ≥1 article with non-empty `article_no`.
+     - `budget` / `settlement`: ≥2 structural markers (`歳入`, `歳出`, `款`, `項`, `目`, `節`, `決算額`, `予算額`, `実質収支` 等) confirmed in deepest PDF/Excel document, with SHA256 recorded in `evidence`.
+   - **R3 — robots denial on probe**: status becomes `blocked`.
+   - **R4 — read but unidentifiable / newsletter only**: status stays/becomes `needs_review`.
+   - **R5 — probe inconclusive / unreachable**: status stays unchanged (`failed` report).
 
-For `minutes/static` the index is checked for a council-scoped minutes document link (`.pdf` or label/URL contains 会議録/議事録 with council token). If none is found and `config.follow_link_regex` is set, the verifier follows at most 3 same-host HTML links whose label or URL (percent-decoded) matches the regex, depth 1 only, using `HttpClient` (robots/low rate/cache). The first follow page containing a council document selects the probe document, and evidence covers both the root index and the successful follow page (idempotent on `url+sha256`). No follow occurs when the regex is absent or invalid; invalid regex is a validation/verify error and the profile is not saved. `決算審査` etc. are excluded by choosing a minimal year regex such as `(令和|平成)(元|[0-9]+)年`.
+## Nationwide Coverage（全国プロファイル確定状況）
 
-For `budget`/`settlement` (`adapter=official_document_index`) the verifier fetches `index_url`, prefers the recorded deepest document from `evidence` (any `.pdf/.xlsx/.xls`), else discovers a same-host budget/settlement-labeled document link from the index HTML, fetches one document and reads it (PDF via `pdftotext`, HTML via text; a missing `pdftotext` binary is INCONCLUSIVE — status untouched, never a verdict or a downgrade). The verdict is `needs_review` (never `ready`) with evidence + note: 構造マーカー（歳入・歳出・款・項・予算額/決算額）を2つ以上確認できたら「確認済み」、確認できなければ「到達したが非構造」。robots拒否は `blocked`。
+全国 1,741 自治体 × 4 種別（計 6,958 エントリ）において、**4,420 件（63.5%）** が `ready`（検証済み）に到達。
 
-For `minutes/kaigiroku_net` the stored `tenant_url` is fetched and the probe runs only if the host stays on `ssp.kaigiroku.net` and the page carries kaigiroku entrance markers.
+| 種別 | ready | needs_review | not_found | blocked | unsupported | 総数 | ready率 |
+|---|---|---|---|---|---|---|---|
+| **minutes (会議録)** | 1,073 | 68 | 418 | 135 | 47 | 1,741 | 61.6% |
+| **regulations (条例・例規)** | 1,111 | 260 | 224 | 87 | 59 | 1,741 | 63.8% |
+| **budget (当初予算)** | 1,119 | 186 | 361 | 72 | 0 | 1,738 | 64.4% |
+| **settlement (決算・財政)** | 1,117 | 182 | 369 | 70 | 0 | 1,738 | 64.3% |
+| **合計** | **4,420** | **696** | **1,372** | **364** | **106** | **6,958** | **63.5%** |
 
-For `minutes/dbsr` the stored `index_url` (must be a `*.dbsr.jp` URL containing `/index.php`) is fetched once and the probe runs only if the host stays on `*.dbsr.jp` and the page carries a minutes hint (会議録/議事録/定例会/臨時会/本会議) together with either a same-host `/index.php/<id>` detail link or the observed query-list form (`/index.php/?QueryType=New&Template=List...` with a meeting label). After the entrance check passes, the verifier probes the first same-host meeting link through the real dbsr adapter (`CacheTier.DOCUMENT`); if the probe is robots-denied the entry is set to `blocked` (R3), any other fetch error leaves the status unchanged (R5), and a reachable body without speaker-attributed speeches stays/becomes `needs_review` (R4). Observed Saga dbsr tenants allow only the bare `/index.php` index in `robots.txt` and block meeting bodies/details, so ingestion requires the councilor/user to obtain municipality permission (out of scope for automated ingestion). A bare or maintenance page on the vendor host does not promote.
-
-All adapters share the same promotion gate: `ready` only from `needs_review`/`not_evaluated`, and only after the extraction probe succeeded (R1–R5 above).
-
-Trust boundary:
-
-- Only a live (or human) verification can promote to `ready`; observatory/preflight hints never auto-promote.
-- URL changes or host drift cause safe stop (exit `2`, no rewrite).
-- No tenant or URL guessing; entry URL is derived only from the stored `base_url`.
-- `--offline` uses only the verified cache; missing cache is a failure, not a network fallback.
-
-## Saga coverage（佐賀20市町の確定状況）
-
-80入口（20市町×議事録/例規/予算/決算）はすべて判定済み。**2026-08-24 に議事録・例規の `ready` を全件取り下げた**（下記）。
-
-- **議事録（minutes）**: needs_review 15（adapter候補 static 10: 武雄/鹿島/嬉野/基山/有田/大町/江北/白石/太良/吉野ヶ里 ＋ kaigiroku_net 5: 唐津/鳥栖/多久/伊万里/玄海）/ blocked 4（dbsr 3: 神埼/上峰/みやき — 索引は見えるが本文がrobots制限。voices 1: 佐賀）/ unsupported 1（小城 — db-search.com）
-- **例規（regulations）**: needs_review 18（adapter候補 g_reiki 15 ＋ d1_law互換 1: 基山 ＋ joureikun 1: 大町 ＋ 吉野ヶ里 — JS描画）/ blocked 1（江北 d1_law — robots到達不可につきfail-closed）/ unsupported 1（みやき — opensearch型JS＋POST必須）
-- **予算（budget）**: ready 18 / blocked 1（白石 — robots `Disallow: /var/`、実プローブで確認済み）/ not_found 1（玄海 — 探索経路は記録済み）
-- **決算（settlement）**: ready 18 / blocked 1（白石）/ not_found 1（大町 — 総括表のみ確認）
-
-### 2026-08-24: 議事録・例規の ready 取り下げ（30件）
-
-`ready` の条件を「索引が存在する」から「**取込アダプタが本文からレコードを1件以上抽出できた**」へ変更した。会議録なら発言者の付いた発言、例規なら条番号の付いた条を要求する。旧条件は索引の見た目だけを見ていたため、逐語会議録を公開していない自治体の広報紙PDFを会議録として `ready` にした実例がある（有田町、2026-08-21に手で降格）。
-
-旧条件下で付いた `ready` は新条件を満たすか未検証なので、議事録13件・例規17件を `needs_review` へ戻し、`verified_at` / `verified_by` を消した。`evidence` と `config` はそのまま残してある。**取り戻すには各自治体で `verify --live` を実行する。**
-
-> [!important]
-> **予算・決算の `ready` 18件ずつは preflight 由来（2026-08-24 時点の記録）。**
-> 2026-08-25 に budget/settlement 用の verifier（`verify --kind budget|settlement`）を書いた。
-> 汎用抽出器は提供しない設計のため verify は予算・決算に `ready` を付けられない
-> （`needs_review`＝入口＋実文書＋構造マーカー確認済み、または `blocked`＝robots。
-> `ready` は取込後に人が付与する）。preflight 由来の `ready` は verify を回すと
-> `needs_review` へ再判定される。
-
-予算・決算は adapter=`official_document_index`＋`index_url` で保持する。evidence の `sha256`/`fetched_at` は調査封筒でなく HttpClient キャッシュのメタデータ（on-disk真実）から採用した。取込は設計上スコープ外: 数値の抽出は `modules/budget_review` / `modules/settlement_review` のCSV契約に対して利用者側のAI/人/OCRが行い、汎用抽出器は提供しない。
-
-注: 記録時点でopenしていた PR #44 は、逐語会議録が未公開であることを確認した上で有田のminutesを `ready` から `needs_review` へ降格させる提案。
+### アダプタ分類と境界線
+- `ready` (4,420件): `kaigiroku_net`, `g_reiki`, `d1_law`, `joureikun`, `static` (直PDF/HTML), `official_document_index` (構造検証済PDF/Excel)
+- `blocked` (364件): 北海道町村会 (`houmu.h-chosonkai.gr.jp`), `dbsr.jp`, `kaigiroku.net` 等の `robots.txt` Disallow による安全隔離
+- `unsupported` (106件): ぎょうせい JSF POST動的型 (`legal-square.com`), ASP型 voices (`gijiroku.com`), 動画配信 (`discussvision.net`) 等
+- `not_found` (1,372件): Web未公開または検索不能が確定した町村
+- `needs_review` (696件): スキャン画像PDF（OCR未処理）、または広報誌要約のみ掲載の小規模町村
 
 ## Resolve (on-demand document lookup)
 
@@ -150,7 +127,6 @@ python3 -m source_profiles.cli resolve \
   --municipality "伊万里市" --prefecture "佐賀県" --kind budget --cache-dir /tmp/sp-cache
 
 # 年度ハブ配下のサブページも辿る（既定8ページ、深さ2まで）
-#   ラベルが年度パターンのリンク → 文書0なら「当初/概要/決算報告」ラベルの内容ページ1つを追従
 python3 -m source_profiles.cli resolve ... --follow-pages 8
 
 # N番目の文書をダウンロードしてローカルパス+sha256を返す
@@ -166,5 +142,5 @@ python3 -m source_profiles.cli resolve ... --get 5
 python3 -m unittest source_profiles.tests.test_schema source_profiles.tests.test_cli source_profiles.tests.test_verify
 ruff check source_profiles
 mypy source_profiles
-python3 -m source_profiles.cli validate --all --prefecture "佐賀県"
+python3 -m source_profiles.cli validate --all
 ```

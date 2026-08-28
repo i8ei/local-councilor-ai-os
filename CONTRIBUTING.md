@@ -71,10 +71,18 @@ python3 -m modules.settlement_review.verify_totals --help
 自治体固有の修正が他地域でも再利用できそうな場合は、設定例、fixture、最小テストを
 添えてください。実データそのものではなく、再現に必要な最小構造を共有します。
 
-## 全国観測snapshotを更新するとき
+## 自治体プロファイルを更新するとき
 
-`bootstrap/observatory/municipalities.jsonl`を手編集しないでください。候補が古い場合は、
-自治体テストIssueへ現在の公式入口とpreflightの`status`、`reason`を報告してください。
-snapshot更新はmaintainerが全1,741自治体を同じ契約で再生成して行います。
+`source_profiles/municipalities/<pref>/<code-muni>.json` を更新した場合は、必ずバリデーションを実行してください。
 
-日付別snapshot、raw HTML、PDF、文書本文、作業DBは追加しません。
+```bash
+# 単一プロファイルの検証
+python3 -m source_profiles.cli validate --profile source_profiles/municipalities/41-saga/41441-tara.json
+
+# 全プロファイルの整合性チェック
+python3 -m source_profiles.cli validate --all
+```
+
+- 公式サイトで確認できる公開情報だけを根拠にする（推測URLは禁止）
+- robots.txt や取得条件に反する経路を迂回しない（拒否時は `blocked` に設定）
+- raw HTML、PDF、文書原本、作業DBは git に追加しない
