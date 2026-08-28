@@ -910,6 +910,41 @@ class StaticHtmlDivSpeakerTest(unittest.TestCase):
         self.assertEqual("2026-03-05", meeting["date"])
         self.assertFalse(meeting["date_inferred"])
 
+    def test_heading_context_attached_to_subday_links(self) -> None:
+        """Short anchor labels inherit preceding section/heading context."""
+        html = (
+            "<html><body>"
+            "<h2>令和6年決算審査特別委員会</h2>"
+            '<a href="/files/day1.pdf">1日目</a>'
+            '<a href="/files/day2.pdf">2日目</a>'
+            "<h2>令和5年決算審査特別委員会</h2>"
+            '<a href="/files/r5_day1.pdf">1日目</a>'
+            "</body></html>"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            responses = {
+                INDEX_URL: make_result(
+                    INDEX_URL,
+                    html.encode("utf-8"),
+                    content_type="text/html",
+                    cache_path=root / "index.cache",
+                ),
+            }
+            adapter = StaticHtmlAdapter(
+                {
+                    "index_url": [INDEX_URL],
+                    "council_name": "テスト町議会",
+                    "pdf": True,
+                },
+                client=FakeHttpClient(responses),
+            )
+            meetings = adapter.list_meetings()
+        self.assertEqual(len(meetings), 3)
+        self.assertEqual(meetings[0]["meeting_name"], "令和6年決算審査特別委員会 1日目")
+        self.assertEqual(meetings[1]["meeting_name"], "令和6年決算審査特別委員会 2日目")
+        self.assertEqual(meetings[2]["meeting_name"], "令和5年決算審査特別委員会 1日目")
+
 
 if __name__ == "__main__":
     unittest.main()

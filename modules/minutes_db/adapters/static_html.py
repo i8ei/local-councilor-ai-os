@@ -242,6 +242,9 @@ class _DocumentParser(HTMLParser):
         self._b_depth = 0
         self._b_has_anchor = False
         self._b_buffer: list[str] = []
+        self._heading_depth = 0
+        self._heading_buffer: list[str] = []
+        self._current_heading = ""
 
     def handle_starttag(
         self, tag: str, attrs: list[tuple[str, str | None]]
@@ -252,6 +255,9 @@ class _DocumentParser(HTMLParser):
             return
         if self._ignored_depth:
             return
+        if tag in ("h1", "h2", "h3", "h4", "h5", "h6", "caption", "th", "summary"):
+            self._heading_depth += 1
+            self._heading_buffer = []
         if tag in ("b", "strong"):
             if self._b_depth == 0:
                 self._b_buffer = []
@@ -282,6 +288,12 @@ class _DocumentParser(HTMLParser):
             return
         if self._ignored_depth:
             return
+        if tag in ("h1", "h2", "h3", "h4", "h5", "h6", "caption", "th", "summary") and self._heading_depth > 0:
+            self._heading_depth -= 1
+            heading_txt = _collapse_inline("".join(self._heading_buffer))
+            if heading_txt and any(k in heading_txt for k in ("年", "会", "委", "議", "月", "度")):
+                self._current_heading = heading_txt
+            self._heading_buffer = []
         if tag in ("b", "strong") and self._b_depth > 0:
             self._b_depth -= 1
             if self._b_depth == 0:
@@ -298,6 +310,10 @@ class _DocumentParser(HTMLParser):
             self._title_depth -= 1
         if tag == "a" and self._current_href is not None:
             label = _collapse_inline("".join(self._current_link_text))
+            # Attach parent heading if label is a short sub-day/number label (e.g. "1日目", "第1号")
+            if label and self._current_heading and not re.search(r"(令和|平成|昭和|\d{4}年)", label):
+                if re.fullmatch(r"\s*(第?\d+日(目)?|第?\d+号|[前後]半|全(体|ページ)|[0-9０-９]+)\s*", label) or len(label) <= 6:
+                    label = f"{self._current_heading} {label}".strip()
             self.links.append((self._current_href, label))
             self._current_href = None
             self._current_link_text = []
@@ -307,6 +323,8 @@ class _DocumentParser(HTMLParser):
     def handle_data(self, data: str) -> None:
         if self._ignored_depth:
             return
+        if self._heading_depth > 0:
+            self._heading_buffer.append(data)
         if self._b_depth > 0:
             self._b_buffer.append(data)
             if self._current_href is not None:
@@ -949,6 +967,12 @@ class StaticHtmlAdapter(Adapter):
         if is_pdf:
             text, status, issues = self._extract_pdf(fetched)
             title = ref["meeting_name"]
+            if (re.fullmatch(r"\s*(第?\d+日(目)?|第?\d+号|[a-zA-Z0-9_.-]+\.pdf)\s*", title) or len(title) <= 6) and text:
+                for line in text.splitlines()[:15]:
+                    clean_line = _collapse_inline(line)
+                    if re.search(r"(令和|平成|昭和|\d{4}年).*?(委員会|定例会|臨時会|本会議|総会)", clean_line):
+                        title = f"{clean_line} {title}" if title not in clean_line else clean_line
+                        break
             media_type = fetched.content_type or "application/pdf"
             transform = {
                 "extractor": "pdftotext" if text else None,
