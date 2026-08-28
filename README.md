@@ -1,12 +1,12 @@
 # local-councilor-ai-os
 
 <p align="center">
-  <img src="docs/assets/local-councilor-ai-os-og-1200x630.png" alt="地方議員AI運用OS — 議会議事録や条例、予算・決算、公開データを見立て・ツボ・手当てにつなぐ" width="900">
+  <img src="docs/assets/local-councilor-ai-os-og-1200x630.png" alt="地方議員AI運用OS" width="900">
 </p>
 
 <p align="center">
   <strong>議員の時間を、住民さんのために。</strong><br>
-  自治体の議事録・例規・予算データを手元に集約し、AIとObsidianで「1秒で過去答弁を探し、根拠ある質問を作る」ための仕事場キット。
+  自治体の議事録・例規・予算決算データを手元に集約し、AIとObsidianで「データに基づく政策提言（EBPM）」を組み立てる仕事場キット。
 </p>
 
 <p align="center">
@@ -19,54 +19,43 @@
 
 ---
 
-## これは何？
+## 概要
 
-地方議員の実務で最も時間を奪われる**「資料探し」「過去答弁の確認」「数字の検算」「出典の照合」を手元のPCとAIに肩代わりさせる**オープンソース（OSS）です。
+自治体の公式ウェブサイトから議事録・条例・予算・決算データを手元の SQLite データベースに取り込み、Markdown エディタ（Obsidian 等）や AI（Claude Code / Codex / Antigravity 等）と連携して、**事実と数字に基づいた建設的な政策提言（EBPM）を素早く組み立てる**ためのオープンソース基盤です。
 
-自治体の公式ウェブサイトから議事録・条例・予算決算データを手元（SQLiteデータベース）に取り込み、Markdownエディタ（[Obsidian](https://obsidian.md/) / VS Code / Cursor 等）や AIコーディングエージェント（Claude Code / Codex / Antigravity 等）と連携して、**事実に基づいた強い質問や政策提案を素早く組み立てる**ことができます。
-
-外部ライブラリへの依存はゼロ（Python 3.11+ 標準ライブラリのみ）。あなたのPC内だけで安全・軽快に完結します。
+外部ライブラリへの依存はゼロ（Python 3.11+ 標準ライブラリのみ）。PC内だけで安全・軽快に完結します。
 
 ---
 
-## こんな実務の悩みを解決します
+## 解決する実務課題
 
 | 従来の悩み (Before) | このOSを使うと (After) |
 |---|---|
-| 自治体の議事録検索システムが使いづらく、過去の町長・課長答弁を探すのに半日かかる | 手元のSQLite/FTS5から**1秒で全文検索**。該当発言と文脈を瞬時にリスト化 |
-| 関連する条例や規則の条文を探し、最新の改正状況を追うのが大変 | 自治体の全例規を手元にインデックス化。**条番号やキーワードで即座に参照** |
-| 予算書・決算書の数字が多く、手計算や電卓での検算や前年比較に追われる | **コマンド1発で検算**。歳入歳出の一致、款項目の突合差額ゼロを機械的に検証 |
-| 決算書を見ても「不用額が多すぎる事業」や「毎年繰り返される繰越」を見つけるのが大変 | **0.1秒で多年度を横断分析**。不用額常態化（過大見積もり）や連続繰越を自動抽出 |
-| 一般質問の原稿作りで、根拠の裏取りや出典リンクの整理に追われる | **出典URL・根拠データ・反対論・副作用**が最初から揃った質問ノートを自動生成 |
+| 自治体の検索システムが使いづらく、過去答弁の確認に時間がかかる | 手元の SQLite/FTS5 から**1秒で全文検索**。該当発言と文脈を瞬時にリスト化 |
+| 関連条例の最新条文や改正経緯を追うのが大変 | 自治体の全例規をインデックス化。**条番号やキーワードで即座に参照** |
+| 予算書・決算書の数字確認や前年比較に追われる | **コマンド1発で検算**。歳入歳出一致・款項目突合の差額ゼロを機械検証 |
+| 決算書から不用額常態化や連続繰越を見つけるのが大変 | **0.1秒で多年度を横断分析**。不用額・未収金・連続繰越を自動抽出 |
+| 議会質問が感情論や単なる要望になり「検討します」と流される | **決算推移・過去答弁・改善策・次回検証KPI**が揃ったEBPM質問カードを作成 |
 
 ---
 
 ## 4つのコア機能
 
-### 1. 全国1,741自治体の公式データカタログ（63.5% ready到達）
-全国の議事録・例規集・当初予算・決算の公式入口を構造化したプロファイル（`source_profiles/`）を標準内蔵。**4,420件の入口が実エビデンス付きで検証済み**です。
+### 1. 全国 1,741 自治体の公式データカタログ
+全国の議事録・例規集・当初予算・決算の公式入口を構造化したプロファイル（`source_profiles/`）を内蔵。**4,426 件（63.6%）の入口が実文書検証済み（ready）** です。
 
 ### 2. 議事録・例規の爆速ローカル検索
-過去数年〜十数年分の議事録（数万〜数十万件の発言）や例規集を手元のローカルDBに取り込みます。
-Webサイトの重い検索画面を開くことなく、日本語のあいまい検索や部分一致（Trigram FTS5）で一瞬で過去答弁を引き出せます。
+数万〜数十万件の発言記録や例規集を SQLite/FTS5（Trigram）でインデックス化。0.1秒で過去答弁や現行条文を引き出せます。
 
 ### 3. 予算・決算の自動検算と多年度ブリッジ分析
-予算書・決算書のデータを構造化し、計算ミスや不整合（歳入歳出一致・款項目突合）を機械的にチェック。
-複数年度の決算データを横断し、**「不用額の常態化（前年踏襲・見積もり過大）」「連続繰越（事業停滞）」** を0トークン・一瞬で抽出します。
+決算データを横断し、**「不用額の常態化（前年踏襲）」「連続繰越」「歳入の未収金・不納欠損」** を一瞬で抽出。9月決算審査の指摘を翌年度予算の適正化へと直結させます。
 
-### 4. EBPM（証拠に基づく政策立案）による質問・提案設計
-住民相談や現場の課題を、単なる感情論や要望で終わらせず、決算データ・議事録・類似団体比較のエビデンスとロジックモデルに基づいて、行政が動かせる具体的な政策提言と質問原稿を組み立てる実務ワークフロー（[EBPM質問設計](workflows/ebpm-policy-design.md)、[決算多年度審査](workflows/08-settlement-budget-review.md)等）を標準装備しています。
-
-```text
-1. エビデンス: 4カ年決算推移、不用額・未済額、類似団体比較、過去答弁
-2. ロジック:   インプット（予算）とアウトプット（実績）の乖離、ボトルネック特定
-3. 政策提言:   翌年度予算の減額・適正化、町独自施策へのシフト、要綱改正
-4. 検証KPI:    次回決算審査で検証すべき定量的目標（不用率低減、未収金削減等）
-```
+### 4. 実践 EBPM（証拠に基づく政策立案）質問設計
+感情論や思いつきではなく、**エビデンス（事実） → ロジックモデル（要因分析） → 政策提言（アクション） → アウトカム指標（検証KPI）** の4段階で行政と建設的に対話できる質問カードを設計します（[ワークフロー](workflows/ebpm-policy-design.md) / [テンプレート](templates/ebpm-question-card.md) / [実例](templates/examples/)）。
 
 ---
 
-## クイックスタート（3ステップで試す）
+## クイックスタート
 
 必要なものは **Python 3.11以上** と **Git** のみです。
 
@@ -75,19 +64,13 @@ git clone https://github.com/i8ei/local-councilor-ai-os.git
 cd local-councilor-ai-os
 ```
 
-### Step 1. 自分の自治体の公開状況をチェックする（Preflight）
-まずは自治体の公式ホームページから、議事録・例規・予算・決算の入口がどこにあるかを自動診断します（※この時点ではPDFや文書本文はダウンロードしません）。
-
+### Step 1. 自治体の公式データ入口を確認する（Preflight / Profile）
 ```bash
-python3 -m bootstrap.cli.preflight \
-  --prefecture '佐賀県' \
-  --municipality '太良町' \
-  --output /tmp/preflight.json
+# 自治体プロファイルの検証
+python3 -m source_profiles.cli validate --profile source_profiles/municipalities/41-saga/41441-tara.json
 ```
 
-### Step 2. 議事録や例規を取り込む（Ingest）
-診断結果に基づいて、手元のSQLiteデータベースへデータを取り込みます。
-
+### Step 2. 例規や議事録を取り込む（Ingest）
 ```bash
 # 例：例規集を取り込む
 python3 modules/regulations/vendor_greiki.py \
@@ -96,57 +79,32 @@ python3 modules/regulations/vendor_greiki.py \
   --source-name '太良町例規集'
 ```
 
-### Step 3. 検索してAIやObsidianで活用する
-取り込んだデータはコマンドラインから即座に検索でき、AIエージェントに小さなコンテキストとして渡すことができます。
-
+### Step 3. 手元のデータベースを検索する（Search）
 ```bash
-# 「空き家」に関する条文を検索
-python3 -m modules.regulations.search \
-  --db /tmp/tara-regulations.db \
-  --query '空き家'
+# 条文検索
+python3 -m modules.regulations.search --db /tmp/tara-regulations.db --query '空き家'
 ```
 
-### Step 4. 多年度の予算決算分析を実行する（Bridge）
-複数年度の決算データから、不用額常態化（見積もり過大）や連続繰越を0トークン・一瞬で抽出します。
-
+### Step 4. 多年度決算の課題を抽出する（Bridge）
 ```bash
-# Markdown形式で分析レポートを表示
-python3 -m modules.settlement_review.bridge \
-  --db /path/to/settlement_multi.db \
-  --min-years 2 \
-  --min-unused-amount 1000000 \
-  --min-unused-rate 0.15
+# 不用額常態化・連続繰越・未収金を自動分析
+python3 -m modules.settlement_review.bridge --db /path/to/settlement_multi.db --min-years 2
 ```
 
-### Step 5. 自治体データ見取り図（MOC）を生成する
-手元に取り込んだ議事録・例規・決算・比較指標データベースを走査し、収録期間や発言数、決算総括表をまとめた「見取り図（MOC）」ノートを1発で生成・更新できます。
-
+### Step 5. 見取り図ノート（MOC）を生成する
 ```bash
-# ワークスペース内に 00_自治体データ見取り図.md を自動生成・更新
-python3 -m lcaios dashboard \
-  --vault '/path/to/your/markdown-workspace' \
-  --write-vault
+# ワークスペース内に自治体データ見取り図ノートを自動生成
+python3 -m lcaios dashboard --vault '/path/to/your/markdown-workspace' --write-vault
 ```
-
-さらに本格的に運用する場合は、環境診断コマンドで状態をチェックします。
-
-```bash
-# 環境とワークスペースの準備状況を診断
-python3 -m lcaios doctor --vault '/path/to/your/markdown-workspace'
-```
-
-詳しい導入ステップは [`setup.md`](setup.md) をご覧ください。
 
 ---
 
-## 大切にしている設計原則（AIに任せないこと）
-
-このOSは、AIに何でも丸投げするためのものではありません。
+## 設計原則
 
 - **政策の判断は人間（議員）が行う**: AIは調査・構造化・検算の補助者です。
-- **推測でデータを埋めない（Fail-closed）**: 見つからないURLや数字をAIがもっともらしく捏造しないよう、厳格な検証ゲートを設けています。
-- **個人情報や秘密情報を守る**: 住民の個人情報や内部資料が公開用データに混入しないよう、機械的な安全スキャン機能を内蔵しています。
-- **ゼロ外部依存**: `pip install` による環境汚染やバージョン破壊を避けるため、標準ライブラリのみで動作します。
+- **推測でデータを埋めない（Fail-closed）**: 見つからないURLや数字をAIが捏造しないよう、厳格な検証ゲートを設けています。
+- **個人情報や秘密情報を守る**: 住民の個人情報や内部資料が公開用データに混入しないよう配慮します。
+- **ゼロ外部依存**: `pip install` による環境破壊を避けるため、標準ライブラリのみで動作します。
 
 ---
 
@@ -154,30 +112,26 @@ python3 -m lcaios doctor --vault '/path/to/your/markdown-workspace'
 
 ```text
 local-councilor-ai-os/
-├── bootstrap/       # 自治体の基礎データ探索・入口診断 (preflight)
-├── lcaios/          # OS制御層 (doctor / status / dashboard / backup)
-├── modules/         # 各種データ処理モジュール
-│   ├── minutes_db/        # 議事録の取込・FTS5全文検索
-│   ├── regulations/       # 例規集の取込・条文検索
-│   ├── budget_review/     # 予算書の構造化・自動検算
-│   └── settlement_review/ # 決算書の突合・多年度ブリッジ分析
-├── templates/       # 質問設計・政策提案テンプレート
-├── workflows/       # 実務ワークフロー (ツボ探し・決算審査等)
+├── source_profiles/ # 全国の自治体公式データプロファイル（1,741自治体）
+├── modules/         # 各種データ処理モジュール（議事録・例規・予算・決算）
+├── workflows/       # 実務ワークフロー（EBPM質問設計・決算審査等）
+├── templates/       # 質問設計カード・政策提案テンプレート
 ├── data-contracts/  # 各種データのスキーマ定義
-└── source_profiles/ # 全国の自治体ソース確定プロファイル
+└── lcaios/          # OS制御層（doctor / status / dashboard）
 ```
 
 ---
 
 ## ドキュメント一覧
 
-- [導入ガイド (`setup.md`)](setup.md)
+- [EBPM質問・政策設計ワークフロー (`workflows/ebpm-policy-design.md`)](workflows/ebpm-policy-design.md)
+- [EBPM質問カードテンプレート (`templates/ebpm-question-card.md`)](templates/ebpm-question-card.md)
+- [EBPM質問カード公式実例集 (`templates/examples/`)](templates/examples/)
+- [決算審査モジュール仕様 (`modules/settlement_review/README.md`)](modules/settlement_review/README.md)
 - [議事録モジュール仕様 (`modules/minutes_db/README.md`)](modules/minutes_db/README.md)
 - [例規モジュール仕様 (`modules/regulations/README.md`)](modules/regulations/README.md)
-- [予算審査モジュール仕様 (`modules/budget_review/README.md`)](modules/budget_review/README.md)
-- [決算審査モジュール仕様 (`modules/settlement_review/README.md`)](modules/settlement_review/README.md)
-- [自治体プロファイル (`source_profiles/README.md`)](source_profiles/README.md)
-- [実務ワークフロー (`way-of-working/README.md`)](way-of-working/README.md)
+- [自治体プロファイル基盤 (`source_profiles/README.md`)](source_profiles/README.md)
+- [導入ガイド (`setup.md`)](setup.md)
 - [コントリビューションガイド (`CONTRIBUTING.md`)](CONTRIBUTING.md)
 
 ---
