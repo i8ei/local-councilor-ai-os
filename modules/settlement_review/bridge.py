@@ -549,7 +549,10 @@ def find_speeches_for_topic(
                     sql += " WHERE s.text LIKE ? "
 
                 sql += " AND (s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%' OR s.speaker LIKE '%市長%' OR s.speaker LIKE '%部長%') "
-                sql += " ORDER BY s.seg_id DESC LIMIT ? "
+                if has_manifest:
+                    sql += " ORDER BY m.meeting_date DESC, s.seg_id DESC LIMIT ? "
+                else:
+                    sql += " ORDER BY s.seg_id DESC LIMIT ? "
 
                 param = term if has_fts else f"%{term}%"
                 rows = conn.execute(sql, (1 if has_manifest else 0, 1 if has_manifest else 0, param, limit - len(results))).fetchall()
@@ -613,10 +616,9 @@ def render_ebpm_cards(
     """Render structured EBPM question cards for top persistent unused and uncollected items."""
     cards: list[dict[str, str]] = []
 
-    # Process persistent unused items
+    # 1. Process persistent unused expenditure items
     for item in report.get("persistent_unused", []):
         moku_name = item.get("moku_name", "科目")
-        # Extract keyword (e.g. 障害福祉費 -> 障害福祉)
         keyword = moku_name.split(">")[-1].strip().split(".")[-1].strip().replace("費", "")
         query_terms = [keyword, moku_name.split(">")[-1].strip().split(".")[-1].strip()]
 
@@ -714,6 +716,106 @@ def render_ebpm_cards(
         cards.append({
             "filename": filename,
             "title": f"{moku_name} EBPM質問カード",
+            "content": "\n".join(lines).strip() + "\n",
+        })
+
+    # 2. Process uncollected revenue items
+    seen_rev_names: set[str] = set()
+    for item in report.get("revenue_uncollected", []):
+        rev_name = item.get("revenue_name", "歳入科目")
+        if rev_name in seen_rev_names:
+            continue
+        seen_rev_names.add(rev_name)
+
+        keyword = rev_name.split(">")[-1].strip().split(".")[-1].strip()
+        query_terms = [keyword, rev_name]
+
+        speeches = []
+        if minutes_db and minutes_db.is_file():
+            speeches = find_speeches_for_topic(minutes_db, query_terms, limit=2)
+
+        lines = [
+            "---",
+            f"description: {rev_name}の未収金縮減および不納欠損防止に対するEBPM質問・政策設計カード",
+            "tags:",
+            "  - EBPM",
+            "  - 決算審査",
+            "  - 歳入徴収",
+            "  - 一般質問",
+            "---",
+            "",
+            f"# 【EBPM質問・政策設計カード】{rev_name}の未収金縮減と不納欠損防止策",
+            "",
+            f"- **対象自治体**: {municipality or '対象自治体'}",
+            f"- **会計・科目**: {rev_name}",
+            "- **分析時点**: 直近決算データ",
+            "",
+            "---",
+            "",
+            "## 1. エビデンス（事実・データ・過去答弁）[Evidence]",
+            "",
+            "### ① 決算徴収実績",
+            f"- **調定額**: {item.get('amount_settled', 0):,} 円",
+            f"- **収入済額**: {item.get('amount_collected', 0):,} 円 (徴収率 `{item.get('collection_rate', 0)}%`)",
+            f"- **収入未済額**: **{item.get('amount_outstanding', 0):,} 円**",
+            f"- **不納欠損額**: **{item.get('amount_uncollectible', 0):,} 円**",
+            "",
+            "### ② 過去の議会答弁（議事録照合）",
+        ]
+
+        if speeches:
+            for sp in speeches:
+                prefix = f"- **{sp['date']} {sp['meeting']}** [{sp['speaker']}]:" if sp['date'] or sp['meeting'] else f"- [{sp['speaker']}]:"
+                lines.append(f"{prefix}\n  > 「{sp['snippet']}…」")
+        else:
+            lines.append("- （関連する過去答弁は議事録検索で確認してください）")
+        lines.append("")
+
+        lines.extend([
+            "---",
+            "",
+            "## 2. ロジックモデル分析（要因整理）[Logic Model]",
+            "",
+            "```text",
+            "【インプット（投入）】",
+            "  ・徴収体制、督促状・催告書の送付、滞納整理機構等への負担金",
+            "      │",
+            "      ▼",
+            "【アウトプット（直接実績）】",
+            f"  ・未済額 {item.get('amount_outstanding', 0):,} 円 が滞納繰越、時効到来による不納欠損が発生",
+            "      │",
+            "      ▼",
+            "【要因・課題の整理】",
+            "  1. 【初期催告の重要性】滞納初期段階での接触・納付相談体制の強化",
+            "  2. 【関係部署連携】空き家・相続登記・生活困窮支援窓口との庁内情報連携",
+            "```",
+            "",
+            "---",
+            "",
+            "## 3. 政策提言・質問項目（アクション）[Policy Action]",
+            "",
+            "### 質問 1（現状確認・未収要因）",
+            f"> 「{rev_name}における収入未済額および不納欠損の現状と、滞納長期化の主な要因をどう分析しているか？」",
+            "",
+            "### 質問 2（早期催告と機構移管基準）",
+            "> 「滞納の固定化を防ぐため、初期催告の強化や滞納整理機構への早期移管ルールの明確化を進める考えはないか？」",
+            "",
+            "### 質問 3（庁内連携による早期把握）",
+            "> 「相続登記や空き家対策等、関係部署との情報連携を深めて所有者特定と適正徴収につなげる体制をどう構築するか？」",
+            "",
+            "---",
+            "",
+            "## 4. アウトカム指標（検証KPI）[Outcome KPI]",
+            "",
+            "- **次回決算審査での検証目標**:",
+            f"  - **KPI 1（徴収率向上）**: {rev_name}の徴収率を前年比向上・未済額の圧縮",
+            "  - **KPI 2（不納欠損の抑制）**: 時効消滅による不納欠損額の抑制",
+        ])
+
+        filename = f"ebpm-card-rev-{keyword}.md"
+        cards.append({
+            "filename": filename,
+            "title": f"{rev_name} EBPM質問カード",
             "content": "\n".join(lines).strip() + "\n",
         })
 
