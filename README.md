@@ -39,56 +39,85 @@
 
 ---
 
+## データ構造: 2つの階層
+
+```text
+🏛【第1層: マクロの土台（全自動・手作業ゼロ）】
+  ・国勢調査（e-Stat API）＋ 総務省決算データ（全国XLSX）
+  ・コマンド一発（`python3 -m bootstrap.cli <自治体名>`）で、全国1,741自治体の
+    「人口構造（年少・生産年齢・高齢化率）・財政力指数・決算収支」の確実な基礎データを構築。
+
+🔍【第2層: ミクロの個別深掘り（自治体固有・議員の関心ごと）】
+  ・自治体の「議事録PDF（過去答弁）」「例規集（条例）」「個別事業の決算内訳」
+  ・各議員が関心のある科目（道路維持、子育て支援、特定補助金など）を取り込み、
+    過去答弁と照合した「EBPM質問・政策設計カード」を作成。
+```
+
+---
+
 ## 4つのコア機能
 
-### 1. 全国 1,741 自治体の公式データカタログ
-全国の議事録・例規集・当初予算・決算の公式入口を構造化したプロファイル（`source_profiles/`）を内蔵。**議事録・例規は 2,184 件が取込アダプタで実レコードを抽出済み（`ready`）**、**予算・決算は 2,206 件が実文書到達・構造マーカー確認済み（`document_confirmed`）** です（合計 4,390 件 / 63.0%）。予算・決算に汎用抽出器は提供しないため、これらの `ready` は実際に取り込んだ人が付与します。
+### 1. 全国 1,741 自治体の公式データカタログ & ブートストラップ
+全国の議事録・例規集・当初予算・決算の公式入口を構造化したプロファイル（`source_profiles/`）を内蔵。`python3 -m bootstrap.cli <自治体名>` を叩くだけで、国勢調査・総務省の公式指標と各自治体の取込コマンドを即座に提示します。
 
 ### 2. 議事録・例規の爆速ローカル検索
 数万〜数十万件の発言記録や例規集を SQLite/FTS5（Trigram）でインデックス化。0.1秒で過去答弁や現行条文を引き出せます。
 
 ### 3. 予算・決算の自動検算と多年度ブリッジ分析
-決算データを横断し、**「不用額の常態化（前年踏襲）」「連続繰越」「歳入の未収金・不納欠損」** を一瞬で抽出。9月決算審査の指摘を翌年度予算の適正化へと直結させます。
+総務省ポータルや決算カード（Excel）から決算データを自動抽出し、**「不用額の常態化（前年踏襲）」「連続繰越」「歳入の未収金・不納欠損」** を一瞬で抽出。差額ゼロの機械検証をパスした確実なデータを提供します。
 
 ### 4. 実践 EBPM（証拠に基づく政策立案）質問設計
-感情論や思いつきではなく、**エビデンス（事実） → ロジックモデル（要因分析） → 政策提言（アクション） → アウトカム指標（検証KPI）** の4段階で行政と建設的に対話できる質問カードを設計します（[ワークフロー](workflows/ebpm-policy-design.md) / [テンプレート](templates/ebpm-question-card.md) / [実例](templates/examples/)）。
+感情論や思いつきではなく、**エビデンス（事実・過去答弁） → ロジックモデル（要因分析） → 政策提言（アクション） → アウトカム指標（検証KPI）** の4段階で行政と建設的に対話できる質問カードを設計します（[ワークフロー](workflows/ebpm-policy-design.md) / [テンプレート](templates/ebpm-question-card.md) / [実例](templates/examples/)）。
 
 ---
 
 ## クイックスタート
 
-必要なものは **Python 3.11以上** と **Git** のみです。
+必要なものは **Python 3.11以上** と **Git** のみです（外部ライブラリのインストール不要）。
 
 ```bash
 git clone https://github.com/i8ei/local-councilor-ai-os.git
 cd local-councilor-ai-os
 ```
 
-### Step 1. 自治体の公式データ入口を確認する（Preflight / Profile）
+### Step 1. 自治体の基礎データを取り込む（Bootstrap）
 ```bash
-# 自治体プロファイルの検証
-python3 -m source_profiles.cli validate --profile source_profiles/municipalities/41-saga/41441-tara.json
+# 例：太良町の基礎データ（人口ピラミッド・財政指標・決算収支）を一括取得
+python3 -m bootstrap.cli 太良町
 ```
 
 ### Step 2. 例規や議事録を取り込む（Ingest）
 ```bash
-# 例：例規集を取り込む
-python3 modules/regulations/vendor_greiki.py \
-  --base-url 'https://www1.g-reiki.net/town.tara/' \
-  --db /tmp/tara-regulations.db \
-  --source-name '太良町例規集'
+# 例：太良町例規集を取り込む
+python3 -m modules.regulations.vendor_greiki \
+  --base-url "https://www1.g-reiki.net/town.tara/" \
+  --db /tmp/tara-regulations.db
+
+# 例：太良町議会の議事録PDFを取り込む（親見出し・会議名を自動結合）
+python3 -m modules.minutes_db.ingest \
+  --adapter static \
+  --config /path/to/minutes_config.json \
+  --db /tmp/tara-minutes.db
 ```
 
-### Step 3. 手元のデータベースを検索する（Search）
+### Step 3. 複数年度の決算データを自動取得・検算する（Settlement）
 ```bash
-# 条文検索
-python3 -m modules.regulations.search --db /tmp/tara-regulations.db --query '空き家'
+# 総務省ポータルから過去3年度分の決算データを自動取得・CSV変換・検算
+python3 -m modules.settlement_review.vendor_soumu \
+  --municipality "太良町" \
+  --years 2022 2023 2024 \
+  --db /tmp/tara-settlement.db
 ```
 
-### Step 4. 多年度決算の課題を抽出する（Bridge）
+### Step 4. EBPM質問・政策設計カードを自動生成する（Bridge）
 ```bash
-# 不用額常態化・連続繰越・未収金を自動分析
-python3 -m modules.settlement_review.bridge --db /path/to/settlement_multi.db --min-years 2
+# 決算の課題（不用額・未収金）と議事録の過去答弁を照合した質問カードを出力
+python3 -m modules.settlement_review.bridge \
+  --db /tmp/tara-settlement.db \
+  --minutes-db /tmp/tara-minutes.db \
+  --municipality "太良町" \
+  --format ebpm-card \
+  --ebpm-out-dir ~/my-vault/EBPM_Cards
 ```
 
 ### Step 5. 見取り図ノート（MOC）を生成する
