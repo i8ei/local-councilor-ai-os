@@ -22,15 +22,16 @@ def format_indicator_value(indicator: str, val: Any, unit: str) -> str:
     """Format numerical values nicely with appropriate units and rounding."""
     if val is None:
         return "-"
-    if isinstance(val, float):
-        if "ratio" in indicator or "hiritsu" in indicator or unit in {"％", "%"}:
-            return f"{val:.1f} %"
-        if unit == "index":
-            return f"{val:.2f}"
-        return f"{val:.2f} {unit}".strip()
-    if isinstance(val, int):
-        return f"{val:,} {unit}".strip()
-    return f"{val} {unit}".strip()
+    clean_unit = "%" if unit in {"％", "%"} else unit
+    if isinstance(val, (int, float)):
+        if "ratio" in indicator or "hiritsu" in indicator or clean_unit == "%":
+            return f"{float(val):.1f} %"
+        if clean_unit == "index":
+            return f"{float(val):.2f}"
+        if isinstance(val, int):
+            return f"{val:,} {clean_unit}".strip()
+        return f"{val:.2f} {clean_unit}".strip()
+    return f"{val} {clean_unit}".strip()
 
 
 class BootstrapConsole:
