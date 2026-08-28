@@ -8,14 +8,17 @@
     "minutes": {
       "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.saga-kashima.lg.jp/main/309.html",
+      "index_url": "https://www.city.saga-kashima.lg.jp/main/35934.html",
       "config": {
+        "council_name": "鹿島市議会",
+        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|一般質問|議案審議|開会|閉会)",
+        "link_exclude_regex": "(?i)(結果書|議決|目次|審議会|懇話会|審査会)",
         "pdf": true
       },
       "evidence": [
         {
-          "url": "https://www.city.saga-kashima.lg.jp/main/309.html",
-          "observed_on": "http://www.city.saga-kashima.lg.jp/",
+          "url": "https://www.city.saga-kashima.lg.jp/main/35934.html",
+          "observed_on": "https://www.city.saga-kashima.lg.jp/main/107.html",
           "fetched_at": "2026-08-28T22:30:00Z"
         }
       ],
@@ -25,10 +28,10 @@
     "regulations": {
       "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "https://www.g-reiki.net/kashima/",
+      "base_url": "https://www1.g-reiki.net/kashima/",
       "evidence": [
         {
-          "url": "https://www.g-reiki.net/kashima/",
+          "url": "https://www1.g-reiki.net/kashima/reiki_menu.html",
           "observed_on": "http://www.city.saga-kashima.lg.jp/",
           "fetched_at": "2026-08-28T22:30:00Z"
         }

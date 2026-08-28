@@ -56,10 +56,13 @@ def fetch_and_ingest_multi_year(
     db_path: Path,
     out_dir: Path,
     cache_dir: Path = Path("bootstrap/.cache"),
-    region_level: str = "12",  # Default town/village level
+    region_level: str = "auto",
     account_name: str = "一般会計",
 ) -> dict[str, Any]:
     """Fetch multi-year XLSX from Soumu, extract CSVs, ingest into settlement.db, and verify."""
+    if region_level == "auto":
+        region_level = "9" if (municipality_name.endswith("市") or municipality_name.endswith("区")) else "12"
+
     client = HttpClient(cache_dir=cache_dir, user_agent=BOOTSTRAP_USER_AGENT)
     available_pages = discover_fiscal_years(client, max_years=10)
 
