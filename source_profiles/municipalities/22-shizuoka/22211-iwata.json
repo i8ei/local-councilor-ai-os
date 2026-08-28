@@ -50,11 +50,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/?jctcd=8A8573C7C0 (label: 例規集)"
     },
     "budget": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/yosan/index.html",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/yosan/index.html",
@@ -83,11 +83,11 @@
       "notes": "deepest_doc=P1。budget文書（R8yosansyo.pdf「令和8年度 一般会計・特別会計予算書（附 予算に関する説明書） （PDF 36.9MB）」, sha256:d28fe7c4）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/kessan/index.html",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.city.iwata.shizuoka.jp/shiseijouhou/gyouzaisei/kessan/index.html",

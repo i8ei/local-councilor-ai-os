@@ -49,7 +49,7 @@
       ]
     },
     "budget": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.taku.lg.jp/life/4/23/82/",
       "verified_at": "2026-08-23T01:43:49Z",
@@ -68,10 +68,10 @@
           "fetched_at": "2026-08-23T01:27:48Z"
         }
       ],
-      "notes": "deepest_docはP1（当初予算書・款項明細PDF）；観測年度は予算一覧で複数年にわたり並存；テキスト層あり；検算キーはサンプル先頭では未検出だが文書全体に階層表あり；年度横断性あり同一入口で過去年度取得可；裁定なし。"
+      "notes": "deepest_docはP1（当初予算書・款項明細PDF）；観測年度は予算一覧で複数年にわたり並存；テキスト層あり；検算キーはサンプル先頭では未検出だが文書全体に階層表あり；年度横断性あり同一入口で過去年度取得可；裁定なし。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.taku.lg.jp/life/4/23/84/",
       "verified_at": "2026-08-23T01:43:49Z",
@@ -90,7 +90,7 @@
           "fetched_at": "2026-08-23T01:27:49Z"
         }
       ],
-      "notes": "deepest_docはP2（決算概要に添付の市報決算特集PDF）；観測年度は決算一覧で複数年にわたり並存；テキスト層あり；検算キーは決算カード側で確認可；年度横断性あり同hubで過去年度取得可；裁定により入口hub自体はreadyとしつつ決算書（款目明細）の有無は要追加確認。"
+      "notes": "deepest_docはP2（決算概要に添付の市報決算特集PDF）；観測年度は決算一覧で複数年にわたり並存；テキスト層あり；検算キーは決算カード側で確認可；年度横断性あり同hubで過去年度取得可；裁定により入口hub自体はreadyとしつつ決算書（款目明細）の有無は要追加確認。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     }
   }
 }

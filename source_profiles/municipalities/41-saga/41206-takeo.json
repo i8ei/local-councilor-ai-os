@@ -61,7 +61,7 @@
       ]
     },
     "budget": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.takeo.lg.jp/shisei/yosan/index.html",
       "verified_at": "2026-08-23T02:27:43Z",
@@ -78,10 +78,10 @@
           "fetched_at": "2026-08-23T02:08:09Z"
         }
       ],
-      "notes": "deepest_doc=P1。予算・決算共通hub shisei/yosan/index.htmlの#06予算セクションがR8-R1/H30-H27の年度別索引。各年度の当初予算サブページ（例: R8 r08yosan01_202604tousyo/index.html）に一般会計予算書P1（r0804_01tousyo.pdf, 3.2MB, 款〜目明細の第1表/第2表あり, テキスト層あり, 空白正規化後はspaced表記のため厳密歳入総額はfalseだが総括表で特定可, ファイル名つきでP1主張）と説明書・補正予算も併置。年度横断良好で複数年比較可。robots許可で取得成功。"
+      "notes": "deepest_doc=P1。予算・決算共通hub shisei/yosan/index.htmlの#06予算セクションがR8-R1/H30-H27の年度別索引。各年度の当初予算サブページ（例: R8 r08yosan01_202604tousyo/index.html）に一般会計予算書P1（r0804_01tousyo.pdf, 3.2MB, 款〜目明細の第1表/第2表あり, テキスト層あり, 空白正規化後はspaced表記のため厳密歳入総額はfalseだが総括表で特定可, ファイル名つきでP1主張）と説明書・補正予算も併置。年度横断良好で複数年比較可。robots許可で取得成功。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.takeo.lg.jp/shisei/yosan/index.html",
       "verified_at": "2026-08-23T02:27:43Z",
@@ -98,7 +98,7 @@
           "fetched_at": "2026-08-23T02:08:11Z"
         }
       ],
-      "notes": "deepest_doc=P1。同一hub内の決算セクション#01がR6-H17の決算一覧。最深は令和6年度普通会計決算カードP1（2024kessancard.pdf, 391KB, テキスト層あり, 空白正規化後に歳入総額行あり, 款別記載, v0.2でP1, 目明細なし要フラグ）と決算概要P2（2024kessangai.pdf, 866KB, 款別概要で歳入総額あり）併置。財政状況資料集（2024zaiseishiryo.pdf, 1.1MB, 総括表で歳入総額あり, Excel由来）も併存でDB化補助。robots許可。"
+      "notes": "deepest_doc=P1。同一hub内の決算セクション#01がR6-H17の決算一覧。最深は令和6年度普通会計決算カードP1（2024kessancard.pdf, 391KB, テキスト層あり, 空白正規化後に歳入総額行あり, 款別記載, v0.2でP1, 目明細なし要フラグ）と決算概要P2（2024kessangai.pdf, 866KB, 款別概要で歳入総額あり）併置。財政状況資料集（2024zaiseishiryo.pdf, 1.1MB, 総括表で歳入総額あり, Excel由来）も併存でDB化補助。robots許可。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     }
   }
 }

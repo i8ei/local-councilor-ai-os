@@ -50,11 +50,11 @@
       "notes": "Observed regulations index at https://www.city.sapporo.jp/shisei/jorei/index.html (label: 条例・規則・告示・統計)"
     },
     "budget": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
       "verified_at": "2026-08-27T22:59:15Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（r7_yosan_gaiyou.pdf「令和7年度予算の概要（PDF：6,669KB）」, sha256:3f2b1163）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",
       "verified_at": "2026-08-27T22:59:15Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/index.html",

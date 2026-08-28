@@ -29,14 +29,27 @@ source_profiles/
   "sources": {
     "minutes":     {"status": "ready", "adapter": "static", "index_url": "http://www.town.tara.lg.jp/gikai/", "verified_at": "2026-08-28T00:00:00Z", "verified_by": "verify --live", "evidence": [...]},
     "regulations": {"status": "ready", "adapter": "g_reiki", "base_url": "https://www1.g-reiki.net/town.tara/", "verified_at": "2026-08-28T00:00:00Z", "verified_by": "verify --live", "evidence": [...]},
-    "budget":      {"status": "ready", "adapter": "official_document_index", "index_url": "http://www.town.tara.lg.jp/zaisei/budget.html", "verified_at": "2026-08-28T00:00:00Z", "verified_by": "verify --live", "evidence": [...]},
-    "settlement":  {"status": "ready", "adapter": "official_document_index", "index_url": "http://www.town.tara.lg.jp/zaisei/settlement.html", "verified_at": "2026-08-28T00:00:00Z", "verified_by": "verify --live", "evidence": [...]}
+    "budget":      {"status": "document_confirmed", "adapter": "official_document_index", "index_url": "http://www.town.tara.lg.jp/zaisei/budget.html", "verified_at": "2026-08-28T00:00:00Z", "verified_by": "verify --doc-structure", "evidence": [...]},
+    "settlement":  {"status": "document_confirmed", "adapter": "official_document_index", "index_url": "http://www.town.tara.lg.jp/zaisei/settlement.html", "verified_at": "2026-08-28T00:00:00Z", "verified_by": "verify --doc-structure", "evidence": [...]}
   }
 }
 ```
 
 ### ステータス (`status`)
-- `ready`: 実エビデンス（実体文書・条文・発言等）の存在と構造が検証済みの状態
+
+`ready` の意味は種別ごとに違います。**この2つを合算した数字は「検証済み」を過大に見せる**ので、集計は分けて出してください。
+
+| 種別 | `ready` の条件 | 付与する主体 |
+|---|---|---|
+| 会議録 (`minutes`) | 取込アダプタが**発言者付きの発言を1件以上抽出**できた | `verify --live`（機械） |
+| 条例・例規 (`regulations`) | 取込アダプタが**条番号付きの条を1件以上抽出**できた | `verify --live`（機械） |
+| 当初予算 (`budget`) | **実際に取り込んで**予算レコードを得た | 人（取込後に手動付与） |
+| 決算・財政 (`settlement`) | **実際に取り込んで**決算レコードを得た | 人（取込後に手動付与） |
+
+予算・決算に汎用抽出器は提供しません（`extraction_guidance` のとおり、レコード抽出は利用者のAI/人に委ねる境界）。したがって機械検証が到達できる上限は `document_confirmed` であり、`verify` および `tools/verify_budget_settlement_concurrent.py` は予算・決算に `ready` を付けません。
+
+- `ready`: 取込アダプタが実レコードを抽出できた状態（上表参照）
+- `document_confirmed`（予算・決算のみ）: 実文書に到達し構造マーカー（`歳入`・`歳出`・`款`・`項` 等を2つ以上）を確認した状態。**文書の存在は検証済みだが、レコード抽出は未実施**
 - `needs_review`: 公式ページ上に入口は検知されたが、詳細精査が未完了の状態
 - `not_found`: 標準探索の範囲内では入口が未検出（またはWeb非公開）の状態
 - `blocked`: `robots.txt` によりクローラーのアクセスが拒否されている状態（安全隔離）
@@ -80,7 +93,7 @@ python3 -m source_profiles.cli ingest-command \
 ```
 
 ### 3. 実データ検証と昇格 (`verify`)
-実際に自治体サーバーまたはベンダーにアクセスし、文書構造（条番号・発言者・予算決算マーカー）を確認して `ready` へ昇格させます（※推測URLは禁止、robots.txt 厳守）。
+実際に自治体サーバーまたはベンダーにアクセスして昇格させます（※推測URLは禁止、robots.txt 厳守）。会議録・例規は取込アダプタで実レコード（発言・条）を抽出できた場合に `ready` へ、予算・決算は実文書に到達し構造マーカーを確認できた場合に `document_confirmed` へ昇格します（予算・決算に `ready` は付きません）。
 
 ```bash
 # 単一自治体の例規をライブ検証
@@ -109,15 +122,19 @@ python3 -m source_profiles.cli resolve \
 
 ## 全国プロファイル確定状況 (Nationwide Coverage)
 
-全国 1,741 自治体 × 4 種別（計 6,958 エントリ）において、**4,420 件（63.5%）** が `ready`（検証済み）に到達しています。
+全国 1,741 自治体 × 4 種別（計 6,964 エントリ）の内訳です。**`ready` と `document_confirmed` は保証の強さが違うので合算しないでください。**
 
-| 種別 | ready | needs_review | not_found | blocked | unsupported | 総数 | ready率 |
+| 種別 | ready | document_confirmed | needs_review | not_found | blocked | unsupported | 総数 |
 |---|---|---|---|---|---|---|---|
-| **会議録 (`minutes`)** | 1,073 | 68 | 418 | 135 | 47 | 1,741 | 61.6% |
-| **条例・例規 (`regulations`)** | 1,111 | 260 | 224 | 87 | 59 | 1,741 | 63.8% |
-| **当初予算 (`budget`)** | 1,119 | 186 | 361 | 72 | 0 | 1,738 | 64.4% |
-| **決算・財政 (`settlement`)** | 1,117 | 182 | 369 | 70 | 0 | 1,738 | 64.3% |
-| **合計** | **4,420** | **696** | **1,372** | **364** | **106** | **6,958** | **63.5%** |
+| **会議録 (`minutes`)** | 1,073 | — | 68 | 418 | 135 | 47 | 1,741 |
+| **条例・例規 (`regulations`)** | 1,111 | — | 260 | 224 | 87 | 59 | 1,741 |
+| **当初予算 (`budget`)** | 0 | 1,104 | 204 | 361 | 72 | 0 | 1,741 |
+| **決算・財政 (`settlement`)** | 0 | 1,102 | 200 | 369 | 70 | 0 | 1,741 |
+| **合計** | **2,184** | **2,206** | **732** | **1,372** | **364** | **106** | **6,964** |
+
+- **取込アダプタで実レコードを抽出済み（`ready`）**: 2,184 件（31.4%）— 会議録・例規
+- **実文書に到達し構造を確認済み（`document_confirmed`）**: 2,206 件（31.7%）— 予算・決算。取込は利用者の工程
+- 予算・決算の `ready` は現在 0 件です。実際に取り込んだ人が付与するため、機械走査では増えません
 
 ---
 

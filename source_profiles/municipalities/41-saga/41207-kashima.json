@@ -52,7 +52,7 @@
       ]
     },
     "budget": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.saga-kashima.lg.jp/main/411.html",
       "verified_at": "2026-08-23T02:27:43Z",
@@ -69,10 +69,10 @@
           "fetched_at": "2026-08-23T02:08:13Z"
         }
       ],
-      "notes": "deepest_doc=P2。予算hub 411がH23-R8の16年分を年度横断で静的列挙。最深は令和8年度予算説明資料P2（01_yosannsetumeishiryou.pdf, 3.1MB, 議案第2号参考資料, 款別集計/性質別/節別比較表と主要事業, テキスト層あり, 款項ありだが当初予算書P1（議案乙号第1表の条例本文）は本入口では未確認, ファイル名つきだがv0.2規律で予算書でなければP2）。年度横断良好。robots許可。"
+      "notes": "deepest_doc=P2。予算hub 411がH23-R8の16年分を年度横断で静的列挙。最深は令和8年度予算説明資料P2（01_yosannsetumeishiryou.pdf, 3.1MB, 議案第2号参考資料, 款別集計/性質別/節別比較表と主要事業, テキスト層あり, 款項ありだが当初予算書P1（議案乙号第1表の条例本文）は本入口では未確認, ファイル名つきだがv0.2規律で予算書でなければP2）。年度横断良好。robots許可。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.saga-kashima.lg.jp/main/419.html",
       "verified_at": "2026-08-23T02:27:43Z",
@@ -89,7 +89,7 @@
           "fetched_at": "2026-08-23T02:08:14Z"
         }
       ],
-      "notes": "deepest_doc=P1。決算カードhub 419がH元-R6の30年分を年度横断で静的列挙。最深は令和6年度決算カードP1（kessanR06ver01.pdf, 308KB, テキスト層あり, 空白正規化後に歳入総額行あり, 款別記載, v0.2でP1, 目明細なし要フラグ）。別系統412の決算（健全化比率・財政状況資料集Excel/PDF R2xlsx等）も併存でDB化補助。robots許可で取得成功。"
+      "notes": "deepest_doc=P1。決算カードhub 419がH元-R6の30年分を年度横断で静的列挙。最深は令和6年度決算カードP1（kessanR06ver01.pdf, 308KB, テキスト層あり, 空白正規化後に歳入総額行あり, 款別記載, v0.2でP1, 目明細なし要フラグ）。別系統412の決算（健全化比率・財政状況資料集Excel/PDF R2xlsx等）も併存でDB化補助。robots許可で取得成功。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     }
   }
 }

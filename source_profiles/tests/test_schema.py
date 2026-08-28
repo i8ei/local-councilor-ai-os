@@ -67,6 +67,62 @@ def _base_valid() -> dict:
     }
 
 
+def _document_confirmed_entry() -> dict:
+    """A budget entry in the document_confirmed state (evidence-backed)."""
+    return {
+        "status": "document_confirmed",
+        "adapter": "official_document_index",
+        "index_url": "https://www.town.tara.lg.jp/zaisei/budget.html",
+        "verified_at": "2026-08-28T00:00:00Z",
+        "verified_by": "verify --doc-structure",
+        "evidence": [
+            {
+                "url": "https://www.town.tara.lg.jp/zaisei/r8-budget.pdf",
+                "observed_on": "https://www.town.tara.lg.jp/zaisei/budget.html",
+            }
+        ],
+        "notes": "synthetic",
+    }
+
+
+class DocumentConfirmedStatusTests(unittest.TestCase):
+    """`document_confirmed` = a real document was reached and carries
+    structural markers, but no record was extracted. Only budget/settlement
+    can hold it; minutes/regulations have ingest adapters and must reach
+    `ready` through extraction."""
+
+    def test_document_confirmed_is_valid_for_budget_and_settlement(self) -> None:
+        for kind in ("budget", "settlement"):
+            with self.subTest(kind=kind):
+                data = _base_valid()
+                data["sources"][kind] = _document_confirmed_entry()
+                self.assertEqual([], validate_profile(data))
+
+    def test_document_confirmed_rejected_for_minutes_and_regulations(self) -> None:
+        for kind in ("minutes", "regulations"):
+            with self.subTest(kind=kind):
+                data = _base_valid()
+                data["sources"][kind] = _document_confirmed_entry()
+                errs = validate_profile(data)
+                self.assertTrue(
+                    any("document_confirmed is only valid for" in e for e in errs),
+                    errs,
+                )
+
+    def test_document_confirmed_requires_the_same_provenance_as_ready(self) -> None:
+        for dropped in ("verified_at", "verified_by", "evidence"):
+            with self.subTest(dropped=dropped):
+                data = _base_valid()
+                entry = _document_confirmed_entry()
+                entry[dropped] = None if dropped != "evidence" else []
+                data["sources"]["budget"] = entry
+                errs = validate_profile(data)
+                self.assertTrue(
+                    any(f"document_confirmed requires {dropped}" in e for e in errs),
+                    errs,
+                )
+
+
 class SchemaTests(unittest.TestCase):
     def test_valid_profile_passes(self) -> None:
         errs = validate_profile(_base_valid())

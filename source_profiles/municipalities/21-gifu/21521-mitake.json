@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at https://www.town.mitake.lg.jp/portal/town/laws/ (label: 条例・規則検索)"
     },
     "budget": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mitake.lg.jp/news/news0090984/",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "https://www.town.mitake.lg.jp/news/news0090984/",
@@ -71,11 +71,11 @@
       "notes": "deepest_doc=P1。budget文書（toshoR8.pdf「令和8年度 御嵩町当初予算書（PDF/13MB）」, sha256:c7a8a146）にて構造マーカー（歳入・歳出・款・項等）を確認済み。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "https://www.town.mitake.lg.jp/portal/town/finance/",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "https://www.town.mitake.lg.jp/portal/town/finance/",

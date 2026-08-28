@@ -58,7 +58,7 @@
       ]
     },
     "budget": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.saga.lg.jp/shisei/gyoseiunei/5/1/index.html",
       "verified_at": "2026-08-23T02:27:43Z",
@@ -75,10 +75,10 @@
           "fetched_at": "2026-08-23T02:08:40Z"
         }
       ],
-      "notes": "deepest_doc=P2。予算hubは5/1/index.htmlがR8/R7/R6の年度索引。最深は令和8年度当初予算の概要ページ6810.html内の当初予算の概要P2（p1jkmhfbjheuu1oh6o91jd0s304.pdf, 721KB, テキスト層あり, 空白正規化後に歳入総額相当の総括行あり, 款項明細なし）と主要事業概要P2（p1jhnnccku9eeecd1nr8i0eirn4.pdf, 5.7MB, 款項ありだが事業別説明）。款〜目明細の予算書P1（議案乙号の第1表）は本入口では未確認、議会ページ議案PDFが正本の可能性は残るが上限内でP1未検出。v0.2規律により市報編集物のみならP2、入口としてはready。Excel財政状況資料集は別系統5/2に併存。"
+      "notes": "deepest_doc=P2。予算hubは5/1/index.htmlがR8/R7/R6の年度索引。最深は令和8年度当初予算の概要ページ6810.html内の当初予算の概要P2（p1jkmhfbjheuu1oh6o91jd0s304.pdf, 721KB, テキスト層あり, 空白正規化後に歳入総額相当の総括行あり, 款項明細なし）と主要事業概要P2（p1jhnnccku9eeecd1nr8i0eirn4.pdf, 5.7MB, 款項ありだが事業別説明）。款〜目明細の予算書P1（議案乙号の第1表）は本入口では未確認、議会ページ議案PDFが正本の可能性は残るが上限内でP1未検出。v0.2規律により市報編集物のみならP2、入口としてはready。Excel財政状況資料集は別系統5/2に併存。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.saga.lg.jp/shisei/gyoseiunei/5/2/index.html",
       "verified_at": "2026-08-23T02:27:43Z",
@@ -95,7 +95,7 @@
           "fetched_at": "2026-08-23T02:08:43Z"
         }
       ],
-      "notes": "deepest_doc=P1。決算hubは5/2/index.htmlがR5決算明細1484.html等への索引。最深は令和5年度決算カードP1（p1in5ta9pgcib10ib1l8k1sin1umt4.pdf, 229KB, テキスト層あり, 空白正規化後に歳入総額行を特定, 款別記載, v0.2でP1扱い, 目明細なし要フラグ）と財政状況資料集P1相当（p1j69v5lm8563bp21jvr1u3u1sp84.pdf, 897KB, 総括表で歳入総額・歳出総額あり）。年度横断は複数年（資料集でR5以前）連続。robots許可でサンプル2本取得成功。"
+      "notes": "deepest_doc=P1。決算hubは5/2/index.htmlがR5決算明細1484.html等への索引。最深は令和5年度決算カードP1（p1in5ta9pgcib10ib1l8k1sin1umt4.pdf, 229KB, テキスト層あり, 空白正規化後に歳入総額行を特定, 款別記載, v0.2でP1扱い, 目明細なし要フラグ）と財政状況資料集P1相当（p1j69v5lm8563bp21jvr1u3u1sp84.pdf, 897KB, 総括表で歳入総額・歳出総額あり）。年度横断は複数年（資料集でR5以前）連続。robots許可でサンプル2本取得成功。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     }
   }
 }

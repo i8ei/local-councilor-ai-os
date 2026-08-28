@@ -241,11 +241,13 @@ def _is_council_scope(
 # Boundary: the repo provides NO generic budget/settlement web extractor
 # (extraction_guidance delegates record extraction to the user's AI, and
 # ingest_csv consumes human/AI-made CSVs). So verify can never reach `ready`
-# for these kinds under the ready definition (adapter-extracted records): the
-# reachable honest states are `needs_review` (entry + real document +
-# structural markers confirmed) and `blocked` (robots). A human grants
-# `ready` after ingestion. Preflight-derived `ready` entries are re-verified
-# here and land on needs_review with fresh evidence.
+# for these kinds under the ready definition (adapter-extracted records).
+# The reachable honest states are `document_confirmed` (entry + real document
+# + structural markers confirmed -- a verified fact, but weaker than ready),
+# `needs_review` (document reached without markers) and `blocked` (robots).
+# A human grants `ready` after an actual ingestion. Preflight-derived `ready`
+# entries are re-verified here and land on document_confirmed/needs_review
+# with fresh evidence.
 # ---------------------------------------------------------------------------
 
 _BUDGET_MARKERS = ("歳入", "歳出", "款", "項", "予算額", "予算総額")
@@ -342,6 +344,7 @@ def _probe_budget_settlement_doc(
 _BUDGET_SETTLEMENT_NOTE_READ = (
     "検証で実文書（予算書/決算書）に到達し、構造マーカー（歳入・歳出・款・項 等）の存在を確認した。"
     "レコード抽出は利用者（既存 CSV 契約）に委ねるため verify は ready を付けられない。"
+    "この状態は document_confirmed（文書到達済み・未取込）であり、"
     "取込後に human が ready を付与する。"
 )
 
@@ -360,9 +363,10 @@ def _verify_budget_settlement(
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     """Verify a budget/settlement entry: entry alive -> real document -> markers.
 
-    Markers confirmed => needs_review + evidence (never ready, see boundary
-    note above). robots denial => blocked. Unreadable doc / unprobeable
-    format => failed, status untouched.
+    Markers confirmed => document_confirmed + evidence (never ready, see
+    boundary note above). Document reached without markers => needs_review.
+    robots denial => blocked. Unreadable doc / unprobeable format => failed,
+    status untouched.
     """
     index_url = entry.get("index_url")
     if not isinstance(index_url, str) or not index_url.strip():
@@ -547,8 +551,8 @@ def _verify_budget_settlement(
             }
         ],
     )
-    entry["status"] = "needs_review"
     if confirmed:
+        entry["status"] = "document_confirmed"
         _append_note(entry, _BUDGET_SETTLEMENT_NOTE_READ, marker="structure markers")
         reason = (
             f"document_structure_confirmed: {kind} document at {document_url} "
@@ -556,6 +560,7 @@ def _verify_budget_settlement(
             "user's step (no generic extractor), ready stays human-granted"
         )
     else:
+        entry["status"] = "needs_review"
         _append_note(
             entry,
             f"{kind} document に到達したが構造マーカー（{'・'.join(markers[:3])} 等）"
@@ -575,11 +580,12 @@ def _verify_budget_settlement(
             "status_after": status_before,
         }
         return copy.deepcopy(profile), report
+    status_after = "document_confirmed" if confirmed else "needs_review"
     report = {
         **report_base,
-        "result": "needs_review",
+        "result": status_after,
         "reason": reason,
-        "status_after": "needs_review",
+        "status_after": status_after,
     }
     return updated, report
 

@@ -367,7 +367,12 @@ def _cmd_verify(args: argparse.Namespace) -> int:
     # identifiable records" or a budget/settlement structure verdict must
     # replace a stale preflight-derived status instead of silently leaving it
     # in place (有田 lesson). "failed" carries no new status and is not saved.
-    if v_report.get("result") in ("verified", "blocked", "needs_review"):
+    if v_report.get("result") in (
+        "verified",
+        "blocked",
+        "needs_review",
+        "document_confirmed",
+    ):
         try:
             # Write atomically via temp file
             tmp_path = path.with_suffix(".tmp")
@@ -576,7 +581,13 @@ def _cmd_resolve(
             )
         )
         return 2
-    if status != "ready":
+    if status == "document_confirmed":
+        warnings.append(
+            "profile status is 'document_confirmed': a real document was reached "
+            "and carries structural markers, but no records have been extracted; "
+            "extraction is the user's step (no generic extractor)"
+        )
+    elif status != "ready":
         warnings.append(
             f"profile status is {status!r} (not ready); result may be stale or restricted"
         )

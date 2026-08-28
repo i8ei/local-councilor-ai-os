@@ -48,11 +48,11 @@
       "notes": "Observed g_reiki at http://www.city.kawachinagano.lg.jp/static/reiki/reiki_menu.html (label: 例規集) extraction probe read one document at the first regulation document discovered from reiki_menu.html but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kawachinagano.lg.jp/life/4/20/",
       "verified_at": "2026-08-27T13:25:31Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.city.kawachinagano.lg.jp/life/4/20/",
@@ -81,11 +81,11 @@
       "notes": "deepest_doc=P1。budget文書（45422.pdf「当初予算の概要」, sha256:4c79739a）にて構造マーカー（歳入・歳出・予算額・当初予算等）を確認済み。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kawachinagano.lg.jp/life/4/20/",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.city.kawachinagano.lg.jp/life/4/20/",

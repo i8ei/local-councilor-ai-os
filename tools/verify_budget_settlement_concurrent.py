@@ -3,7 +3,8 @@
 
 Level 2 expansion: probes finance landing pages, discovers and probes actual general
 account budget/settlement books (PDF/Excel), verifies structural financial markers,
-and promotes validated profiles to `ready` with SHA256 evidence.
+and promotes validated profiles to `document_confirmed` with SHA256 evidence.
+(Never `ready`: no generic extractor exists for these kinds.)
 """
 
 from __future__ import annotations
@@ -364,8 +365,12 @@ def verify_municipality_kind(
     muni_name = str(profile.get("municipality") or "unknown")
     src = profile.setdefault("sources", {}).setdefault(kind, {})
 
-    if src.get("status") == "ready":
-        return f"{muni_name} {kind} -> SKIP (already ready)", False, None
+    if src.get("status") in ("ready", "document_confirmed"):
+        return (
+            f"{muni_name} {kind} -> SKIP (already {src.get('status')})",
+            False,
+            None,
+        )
 
     index_url = src.get("index_url") or src.get("base_url") or ""
     if not index_url:
@@ -376,7 +381,7 @@ def verify_municipality_kind(
     except RobotsDeniedError as exc:
         src["status"] = "blocked"
         src["verified_at"] = now
-        src["verified_by"] = "verify --live"
+        src["verified_by"] = "verify --doc-structure"
         notes = src.get("notes") or ""
         if "robots" not in notes.lower():
             src["notes"] = (
@@ -397,17 +402,20 @@ def verify_municipality_kind(
     if not ver_res:
         return f"{muni_name} {kind} -> unverified (no structural doc found)", False, None
 
-    # Promote to ready
+    # Promote to document_confirmed -- NOT ready. This tool proves a real
+    # budget/settlement document exists and carries structural markers; it
+    # does not extract records, and the repo ships no generic extractor for
+    # these kinds. `ready` stays human-granted after an actual ingestion.
     doc_url = ver_res["doc_url"]
     doc_label = ver_res["doc_label"]
     obs_on = ver_res["observed_on"]
     markers = ver_res["markers"]
 
-    src["status"] = "ready"
+    src["status"] = "document_confirmed"
     src["adapter"] = "official_document_index"
     src["index_url"] = index_url
     src["verified_at"] = now
-    src["verified_by"] = "verify --live"
+    src["verified_by"] = "verify --doc-structure"
 
     # Clean legacy keys
     src.pop("base_url", None)

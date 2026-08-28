@@ -11,12 +11,26 @@ from bootstrap.municipalities.registry import load_registry
 
 ALLOWED_STATUSES = {
     "ready",
+    "document_confirmed",
     "needs_review",
     "unsupported",
     "not_found",
     "blocked",
     "not_evaluated",
 }
+# `ready` means an ingest adapter extracted at least one real record
+# (a speech for minutes, an article for regulations). Budget/settlement have
+# no generic extractor by design (extraction_guidance delegates record
+# extraction to the user's AI), so verification can only prove that a real
+# budget/settlement document was reached and carries structural markers.
+# That weaker-but-real state is `document_confirmed`; it is not `ready` and
+# must not be counted as such. `ready` for these kinds stays human-granted
+# after an actual ingestion.
+DOCUMENT_CONFIRMED_KINDS = {"budget", "settlement"}
+# Statuses that assert verified evidence and therefore carry the same
+# provenance requirements (verified_at / verified_by / adapter / entry URL /
+# evidence).
+EVIDENCE_BACKED_STATUSES = {"ready", "document_confirmed"}
 ALLOWED_ADAPTERS = {
     None,
     "kaigiroku_net",
@@ -168,6 +182,15 @@ def validate_profile(data: dict[str, Any]) -> list[str]:
                     errors.append(
                         f"sources.{kind}.status must be one of {sorted(ALLOWED_STATUSES)}"
                     )
+                elif (
+                    status == "document_confirmed"
+                    and kind not in DOCUMENT_CONFIRMED_KINDS
+                ):
+                    errors.append(
+                        f"sources.{kind}.status document_confirmed is only valid for "
+                        f"{sorted(DOCUMENT_CONFIRMED_KINDS)} (other kinds have an "
+                        "ingest adapter and must reach ready via extraction)"
+                    )
                 # adapter
                 adapter = entry.get("adapter")
                 # JSON null -> None, string values must be in allowed (excluding None set)
@@ -214,14 +237,14 @@ def validate_profile(data: dict[str, Any]) -> list[str]:
                 # For other adapters like dbsr etc., if present_entries ==0 while adapter not None, may be okay for some statuses?
                 # But we already handled required for known adapters; for unknown adapter absence is already reported.
 
-                # ready conditions
-                if status == "ready":
+                # evidence-backed conditions (ready / document_confirmed)
+                if status in EVIDENCE_BACKED_STATUSES:
                     ver_at = entry.get("verified_at")
                     ver_by = entry.get("verified_by")
                     evidence = entry.get("evidence")
                     # verified_at must be non-null ISO8601 not future
                     if ver_at is None:
-                        errors.append(f"sources.{kind}: ready requires verified_at")
+                        errors.append(f"sources.{kind}: {status} requires verified_at")
                     elif not isinstance(ver_at, str):
                         errors.append(
                             f"sources.{kind}: verified_at must be ISO8601 string"
@@ -239,16 +262,16 @@ def validate_profile(data: dict[str, Any]) -> list[str]:
                                     f"sources.{kind}: verified_at must not be in the future"
                                 )
                     if not isinstance(ver_by, str) or not ver_by.strip():
-                        errors.append(f"sources.{kind}: ready requires verified_by")
+                        errors.append(f"sources.{kind}: {status} requires verified_by")
                     if adapter is None:
-                        errors.append(f"sources.{kind}: ready requires adapter")
+                        errors.append(f"sources.{kind}: {status} requires adapter")
                     if not present_entries:
                         errors.append(
-                            f"sources.{kind}: ready requires an entry URL (base_url/index_url/tenant_url)"
+                            f"sources.{kind}: {status} requires an entry URL (base_url/index_url/tenant_url)"
                         )
                     if not isinstance(evidence, list) or len(evidence) == 0:
                         errors.append(
-                            f"sources.{kind}: ready requires evidence with at least 1 entry"
+                            f"sources.{kind}: {status} requires evidence with at least 1 entry"
                         )
                     else:
                         errors.extend(
@@ -258,7 +281,7 @@ def validate_profile(data: dict[str, Any]) -> list[str]:
                         )
 
                 else:
-                    # For non-ready, if evidence present, validate its shape
+                    # For non-evidence-backed statuses, validate evidence shape only
                     evidence = entry.get("evidence")
                     if evidence is not None:
                         if not isinstance(evidence, list):

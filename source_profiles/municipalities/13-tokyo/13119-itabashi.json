@@ -44,11 +44,11 @@
       "notes": "Observed regulations index at http://www.city.itabashi.tokyo.jp/kusei/jorei/index.html (label: 条例・規則)"
     },
     "budget": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
@@ -77,11 +77,11 @@
       "notes": "deepest_doc=P1。budget文書（r5_gaiyou2.pdf「令和5年度 予算の概要 （PDF 6.5MB）」, sha256:5bb90cfd）にて構造マーカー（歳入・歳出・項・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.city.itabashi.tokyo.jp/kusei/zaisei/index.html",

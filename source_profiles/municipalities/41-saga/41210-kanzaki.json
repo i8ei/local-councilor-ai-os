@@ -49,7 +49,7 @@
       ]
     },
     "budget": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kanzaki.saga.jp/main/19988.html",
       "verified_at": "2026-08-23T01:43:49Z",
@@ -68,10 +68,10 @@
           "fetched_at": "2026-08-23T01:29:03Z"
         }
       ],
-      "notes": "deepest_docはP1（一般会計当初予算書の款項区分PDF）；観測年度は予算の状況入口で当年度を中心に並存；テキスト層あり；検算キーは予算書第1表で確認可；年度横断性は当年度中心で過年度は要追加探索；裁定なし。"
+      "notes": "deepest_docはP1（一般会計当初予算書の款項区分PDF）；観測年度は予算の状況入口で当年度を中心に並存；テキスト層あり；検算キーは予算書第1表で確認可；年度横断性は当年度中心で過年度は要追加探索；裁定なし。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kanzaki.saga.jp/main/199.html",
       "verified_at": "2026-08-23T01:43:49Z",
@@ -90,7 +90,7 @@
           "fetched_at": "2026-08-23T01:28:32Z"
         }
       ],
-      "notes": "deepest_docはP1（決算カード・テキスト層あり）；観測年度は決算カード一覧で長期にわたり並存；テキスト層あり；検算キーは決算カードで確認可；年度横断性あり同入口で多数年取得可；裁定なし。"
+      "notes": "deepest_docはP1（決算カード・テキスト層あり）；観測年度は決算カード一覧で長期にわたり並存；テキスト層あり；検算キーは決算カードで確認可；年度横断性あり同入口で多数年取得可；裁定なし。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     }
   }
 }

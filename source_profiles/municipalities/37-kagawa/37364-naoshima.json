@@ -29,11 +29,11 @@
       "notes": "Observed regulations index at http://www.town.naoshima.lg.jp/ (label: 例規集)"
     },
     "budget": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html",
       "verified_at": "2026-08-27T13:25:31Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.town.naoshima.lg.jp/torikumi/toukei/zaisei.html",
@@ -56,11 +56,11 @@
       "notes": "deepest_doc=P1。budget文書（zaiseijyokyou27.xlsx「平成27年度 財政状況資料集」, sha256:d73bd0dd）にて構造マーカー（歳入・歳出・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.town.naoshima.lg.jp/torikumi/care/kyougikaihoukoku.html",

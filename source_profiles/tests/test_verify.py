@@ -2516,7 +2516,8 @@ class BudgetSettlementVerifyTests(unittest.TestCase):
     """budget/settlement: document presence + structural markers.
 
     Boundary: no generic extractor exists, so verify NEVER grants ready here;
-    the reachable outcomes are needs_review (evidence recorded) and blocked.
+    the reachable outcomes are document_confirmed (markers found),
+    needs_review (document reached without markers) and blocked.
     """
 
     def _patch_pdftotext(self, text: str) -> tuple[mock._patch, ...]:  # type: ignore[name-defined]
@@ -2540,9 +2541,10 @@ class BudgetSettlementVerifyTests(unittest.TestCase):
             }
         )
 
-    def test_budget_structure_confirmed_is_needs_review_not_ready(self) -> None:
-        # preflight-derived ready must be re-verified down to needs_review with
-        # structural evidence; verify cannot re-grant ready (no extractor).
+    def test_budget_structure_confirmed_is_document_confirmed_not_ready(self) -> None:
+        # preflight-derived ready must be re-verified down to
+        # document_confirmed with structural evidence; verify cannot re-grant
+        # ready (no extractor).
         profile = _base_budget_ready("budget")
         which_patch, run_patch = self._patch_pdftotext(
             "歳入歳出の款項明細。予算総額 12億円。"
@@ -2551,17 +2553,17 @@ class BudgetSettlementVerifyTests(unittest.TestCase):
             updated, report = verify_profile(
                 profile, client=self._budget_client(), now=NOW, kind="budget"
             )
-        self.assertEqual("needs_review", report["result"])
+        self.assertEqual("document_confirmed", report["result"])
         self.assertEqual("ready", report["status_before"])
-        self.assertEqual("needs_review", report["status_after"])
+        self.assertEqual("document_confirmed", report["status_after"])
         self.assertIn("document_structure_confirmed", report["reason"])
         entry = updated["sources"]["budget"]
-        self.assertEqual("needs_review", entry["status"])
+        self.assertEqual("document_confirmed", entry["status"])
         notes = entry.get("notes") or ""
         self.assertIn("構造マーカー", notes)
         self.assertEqual([], validate_profile(updated))
 
-    def test_settlement_structure_confirmed_is_needs_review(self) -> None:
+    def test_settlement_structure_confirmed_is_document_confirmed(self) -> None:
         profile = _base_budget_ready("settlement")
         which_patch, run_patch = self._patch_pdftotext(
             "歳入歳出の決算額。決算総額 10億円。款項明細。"
@@ -2571,11 +2573,34 @@ class BudgetSettlementVerifyTests(unittest.TestCase):
             updated, report = verify_profile(
                 profile, client=client, now=NOW, kind="settlement"
             )
-        self.assertEqual("needs_review", report["result"])
-        self.assertEqual("needs_review", report["status_after"])
+        self.assertEqual("document_confirmed", report["result"])
+        self.assertEqual("document_confirmed", report["status_after"])
         self.assertIn("document_structure_confirmed", report["reason"])
         notes = updated["sources"]["settlement"].get("notes") or ""
         self.assertIn("構造マーカー", notes)
+        self.assertEqual([], validate_profile(updated))
+
+    def test_verify_never_grants_ready_for_budget_settlement(self) -> None:
+        # R1 guard: the only machine path to a budget/settlement verdict is
+        # document_confirmed. A regression that re-grants ready here is the
+        # exact drift that made 2,206 entries indistinguishable from
+        # adapter-extracted ready.
+        for kind, text, doc in (
+            ("budget", "歳入歳出の款項明細。予算総額 12億円。", BUDGET_DOC_URL),
+            ("settlement", "歳入歳出の決算額。決算総額 10億円。款項。", SETTLEMENT_DOC_URL),
+        ):
+            with self.subTest(kind=kind):
+                profile = _base_budget_ready(kind)
+                which_patch, run_patch = self._patch_pdftotext(text)
+                with which_patch, run_patch:
+                    updated, report = verify_profile(
+                        profile,
+                        client=self._budget_client(doc_url=doc),
+                        now=NOW,
+                        kind=kind,
+                    )
+                self.assertNotEqual("ready", report["status_after"])
+                self.assertNotEqual("ready", updated["sources"][kind]["status"])
 
     def test_budget_document_without_markers_stays_needs_review(self) -> None:
         # Document reached but no 歳入/歳出/款/項 markers: not structure-confirmed.

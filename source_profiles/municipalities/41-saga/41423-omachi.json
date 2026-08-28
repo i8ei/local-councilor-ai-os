@@ -56,7 +56,7 @@
       ]
     },
     "budget": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.town.omachi.lg.jp/list00749.html",
       "verified_at": "2026-08-23T02:27:51Z",
@@ -75,7 +75,7 @@
           "fetched_at": "2026-08-23T01:57:59Z"
         }
       ],
-      "notes": "deepest_docはP2（令和8年度一般会計予算概要資料3_1542_shiryou1_w1sr3ai7.pdf 8頁・Excel→PDF・テキスト層あり・款別概要で予算総額はあるが当初予算書P1の款項目明細は本入口では未確認・検算キーは歳入総額ではなく予算総額表記・v0.2規律によりP2止まりでも入口としてready）。観測年度は予算hubでR4-R8の5年分のみ並ぶ、補正は含まず、財政状況資料集list00296(R6-R2 Excel由来PDFで歳入総額あり)は別系統で併存。"
+      "notes": "deepest_docはP2（令和8年度一般会計予算概要資料3_1542_shiryou1_w1sr3ai7.pdf 8頁・Excel→PDF・テキスト層あり・款別概要で予算総額はあるが当初予算書P1の款項目明細は本入口では未確認・検算キーは歳入総額ではなく予算総額表記・v0.2規律によりP2止まりでも入口としてready）。観測年度は予算hubでR4-R8の5年分のみ並ぶ、補正は含まず、財政状況資料集list00296(R6-R2 Excel由来PDFで歳入総額あり)は別系統で併存。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     },
     "settlement": {
       "status": "not_found",

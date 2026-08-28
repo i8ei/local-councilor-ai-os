@@ -46,7 +46,7 @@
       ]
     },
     "budget": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.imari.lg.jp/6203.htm",
       "verified_at": "2026-08-23T02:27:43Z",
@@ -63,10 +63,10 @@
           "fetched_at": "2026-08-23T02:07:58Z"
         }
       ],
-      "notes": "deepest_doc=P1。予算・決算hub 6203がH22-R8の年度索引（R8は25890経由25892）。最深は令和8年度一般会計予算書P1（01_R8ippan_0yosan.pdf, 291KB, 議案乙第3号, 款〜目明細の第1表/歳入歳出予算あり, テキスト層あり, 空白正規化後も歳入総額は予算条文のため厳密一致falseだが款別明細で特定可, ファイル名つきでP1主張）と概要P2（R8gaiyou.pdf, 5.5MB）併置。補正予算も25893に併置（P3）。年度横断良好で多年度比較可。"
+      "notes": "deepest_doc=P1。予算・決算hub 6203がH22-R8の年度索引（R8は25890経由25892）。最深は令和8年度一般会計予算書P1（01_R8ippan_0yosan.pdf, 291KB, 議案乙第3号, 款〜目明細の第1表/歳入歳出予算あり, テキスト層あり, 空白正規化後も歳入総額は予算条文のため厳密一致falseだが款別明細で特定可, ファイル名つきでP1主張）と概要P2（R8gaiyou.pdf, 5.5MB）併置。補正予算も25893に併置（P3）。年度横断良好で多年度比較可。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.imari.lg.jp/22853.htm",
       "verified_at": "2026-08-23T02:27:43Z",
@@ -83,7 +83,7 @@
           "fetched_at": "2026-08-23T02:08:02Z"
         }
       ],
-      "notes": "deepest_doc=P1。R6年度財政ページ22853経由の決算概要22859が最深。最深は令和5年度決算カードP1（R5kessancard_ippan.pdf, 108KB, テキスト層あり, 空白正規化後に歳入総額行あり, 款別記載, v0.2でP1, 目明細なし）。別系統12713の財政状況資料集はR6-H25のExcel/PDF（R6はxlsx）でDB化最容易だがsettlement最深はカードP1で入口としてready。"
+      "notes": "deepest_doc=P1。R6年度財政ページ22853経由の決算概要22859が最深。最深は令和5年度決算カードP1（R5kessancard_ippan.pdf, 108KB, テキスト層あり, 空白正規化後に歳入総額行あり, 款別記載, v0.2でP1, 目明細なし）。別系統12713の財政状況資料集はR6-H25のExcel/PDF（R6はxlsx）でDB化最容易だがsettlement最深はカードP1で入口としてready。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     }
   }
 }

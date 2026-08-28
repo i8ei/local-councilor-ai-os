@@ -42,11 +42,11 @@
       "notes": "Observed regulations index at http://www.city.kobe.lg.jp/shise/jore/index.html (label: 条例・規則・要綱)"
     },
     "budget": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
       "verified_at": "2026-08-27T13:25:31Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
@@ -80,11 +80,11 @@
       "notes": "deepest_doc=P1。budget文書（5gatsuhoseiyosanshor7.pdf「令和7年度5月補正一般会計補正予算書（PDF：275KB）」, sha256:f12b09ea）にて構造マーカー（歳出・款・項・一般会計等）を確認済み。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "http://www.city.kobe.lg.jp/a61436/shise/financial/yosankessan.html",

@@ -38,6 +38,40 @@ class InventoryQualityTests(unittest.TestCase):
                 errors.append(f"{path.relative_to(MUNI_DIR)}: {err}")
         self.assertEqual(errors, [], "schema errors in real dataset:\n" + "\n".join(errors[:20]))
 
+    def test_budget_settlement_ready_is_never_machine_granted(self) -> None:
+        """`ready` for budget/settlement means records were actually ingested,
+        which only a human can attest: the repo ships no generic extractor for
+        these kinds. A verifier stamping `ready` here is the drift that made
+        2,206 doc-structure verdicts indistinguishable from adapter-extracted
+        ready (2026-08-28)."""
+        offenders: list[str] = []
+        for path, data in _profiles():
+            for kind in ("budget", "settlement"):
+                entry = data.get("sources", {}).get(kind) or {}
+                if entry.get("status") != "ready":
+                    continue
+                verified_by = str(entry.get("verified_by") or "")
+                if verified_by.startswith("verify") or verified_by.endswith("scout"):
+                    offenders.append(f"{path.name} {kind}: verified_by={verified_by!r}")
+        self.assertEqual(
+            [],
+            offenders,
+            "budget/settlement ready must follow a human-attested ingestion; "
+            "machine verification tops out at document_confirmed:\n"
+            + "\n".join(offenders[:10]),
+        )
+
+    def test_document_confirmed_only_on_budget_settlement(self) -> None:
+        offenders: list[str] = []
+        for path, data in _profiles():
+            for kind, entry in data.get("sources", {}).items():
+                if entry.get("status") == "document_confirmed" and kind not in (
+                    "budget",
+                    "settlement",
+                ):
+                    offenders.append(f"{path.name} {kind}")
+        self.assertEqual([], offenders, "\n".join(offenders[:10]))
+
     def test_observed_but_blocked_does_not_grow(self) -> None:
         observed: list[str] = []
         for path, data in _profiles():

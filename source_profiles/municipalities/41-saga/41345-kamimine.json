@@ -55,7 +55,7 @@
       ]
     },
     "budget": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kamimine.lg.jp/kiji00362/index.html",
       "verified_at": "2026-08-23T02:27:55Z",
@@ -72,10 +72,10 @@
           "fetched_at": "2026-08-23T01:56:20Z"
         }
       ],
-      "notes": "町の財政list00129→財政状況list00208→財政事情の公表kiji00362の3段で確定（§3順序）。kiji00362がR8予算P1（5749.pdf、財政事情広報だが款別表あり、ファイル名つき、テキスト層）、R7/R6予算・予算執行状況PDFも併置。同一ページに決算報告・財政状況資料集PDF/Excel・健全化比率も年度並び、予算/決算入口共用。Excel(xlsx/xls)も財政状況資料集・下水道事業で併存（Excel必須記録）。補正は予算執行状況PDFに含まれる。"
+      "notes": "町の財政list00129→財政状況list00208→財政事情の公表kiji00362の3段で確定（§3順序）。kiji00362がR8予算P1（5749.pdf、財政事情広報だが款別表あり、ファイル名つき、テキスト層）、R7/R6予算・予算執行状況PDFも併置。同一ページに決算報告・財政状況資料集PDF/Excel・健全化比率も年度並び、予算/決算入口共用。Excel(xlsx/xls)も財政状況資料集・下水道事業で併存（Excel必須記録）。補正は予算執行状況PDFに含まれる。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.town.kamimine.lg.jp/kiji00362/index.html",
       "verified_at": "2026-08-23T02:27:55Z",
@@ -92,7 +92,7 @@
           "fetched_at": "2026-08-23T01:56:22Z"
         }
       ],
-      "notes": "同一入口kiji00362に令和6年度決算報告P1（5393.pdf、決算状況の款別表、ファイル名つき、テキスト層、目明細は附属の財政状況資料集PDFで補完）、令和6年度決算財政状況資料集P2、H26-H23の下水道Excel(xls/xlsx)も併存。目明細フラグ: 決算報告=款別中心/資料集=明細補完。年度横断H23-R6で14年度連続、複数年比較可。"
+      "notes": "同一入口kiji00362に令和6年度決算報告P1（5393.pdf、決算状況の款別表、ファイル名つき、テキスト層、目明細は附属の財政状況資料集PDFで補完）、令和6年度決算財政状況資料集P2、H26-H23の下水道Excel(xls/xlsx)も併存。目明細フラグ: 決算報告=款別中心/資料集=明細補完。年度横断H23-R6で14年度連続、複数年比較可。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     }
   }
 }

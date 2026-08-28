@@ -48,11 +48,11 @@
       "notes": "Observed d1_law at https://ops-jg.d1-law.com/opensearch/SrMjF01/init?jctcd=8A7FF95853 (label: 例規集) extraction probe read one document at the first regulation document discovered from D1-Law index but found no numbered articles; reachability alone is not ingest evidence"
     },
     "budget": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",
@@ -75,11 +75,11 @@
       "notes": "deepest_doc=P1。budget文書（R8toushoyosannnogaiyou0226.pdf「令和8年度当初予算の概要 (PDFファイル: 12.2MB)」, sha256:1240370b）にて構造マーカー（歳入・歳出・款・予算額等）を確認済み。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "document_confirmed",
       "adapter": "official_document_index",
       "index_url": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",
       "verified_at": "2026-08-27T22:59:19Z",
-      "verified_by": "verify --live",
+      "verified_by": "verify --doc-structure",
       "evidence": [
         {
           "url": "https://www.city.kasukabe.lg.jp/shiseijoho/yosan_kessan_zaiseijokyo/index.html",

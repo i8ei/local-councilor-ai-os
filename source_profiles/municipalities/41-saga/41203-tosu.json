@@ -46,7 +46,7 @@
       ]
     },
     "budget": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tosu.lg.jp/soshiki/3/16904.html",
       "verified_at": "2026-08-23T01:43:49Z",
@@ -65,10 +65,10 @@
           "fetched_at": "2026-08-23T01:28:59Z"
         }
       ],
-      "notes": "deepest_docはP1（当初予算の款別明細PDF群）；観測年度は財政状況hubで複数年にわたり並存；テキスト層あり；検算キーは明細PDFで確認可；年度横断性あり同hubで複数年取得可；裁定なし。"
+      "notes": "deepest_docはP1（当初予算の款別明細PDF群）；観測年度は財政状況hubで複数年にわたり並存；テキスト層あり；検算キーは明細PDFで確認可；年度横断性あり同hubで複数年取得可；裁定なし。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     },
     "settlement": {
-      "status": "ready",
+      "status": "needs_review",
       "adapter": "official_document_index",
       "index_url": "https://www.city.tosu.lg.jp/soshiki/3/2041.html",
       "verified_at": "2026-08-23T01:43:49Z",
@@ -87,7 +87,7 @@
           "fetched_at": "2026-08-23T01:29:58Z"
         }
       ],
-      "notes": "deepest_docはP1（決算カード・款別まで記載の統一様式）；観測年度は財政状況hubで複数年にわたり並存；テキスト層あり；検算キーは決算カードで確認可；年度横断性あり同hubで複数年取得可；裁定により目レベル明細なし・主要施策成果説明書と分散する旨を記録。"
+      "notes": "deepest_docはP1（決算カード・款別まで記載の統一様式）；観測年度は財政状況hubで複数年にわたり並存；テキスト層あり；検算キーは決算カードで確認可；年度横断性あり同hubで複数年取得可；裁定により目レベル明細なし・主要施策成果説明書と分散する旨を記録。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
     }
   }
 }
