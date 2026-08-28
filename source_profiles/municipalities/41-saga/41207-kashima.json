@@ -8,88 +8,61 @@
     "minutes": {
       "status": "ready",
       "adapter": "static",
-      "index_url": "https://www.city.saga-kashima.lg.jp/main/32950.html",
-      "verified_at": "2026-08-27T13:12:12Z",
-      "verified_by": "verify --live",
+      "index_url": "https://www.city.saga-kashima.lg.jp/main/309.html",
+      "config": {
+        "pdf": true
+      },
       "evidence": [
         {
-          "url": "https://www.city.saga-kashima.lg.jp/main/32950.html",
-          "observed_on": "https://www.city.saga-kashima.lg.jp/main/32950.html"
-        },
-        {
-          "url": "https://www.city.saga-kashima.lg.jp/main/32950.html",
-          "observed_on": "https://www.city.saga-kashima.lg.jp/main/32950.html",
-          "sha256": "fe49cce9ad160418af71b96905f465daab9f87f1f97b7c8ea9fa2264769d464b",
-          "fetched_at": "2026-08-20T13:41:05Z"
+          "url": "https://www.city.saga-kashima.lg.jp/main/309.html",
+          "observed_on": "http://www.city.saga-kashima.lg.jp/",
+          "fetched_at": "2026-08-28T22:30:00Z"
         }
       ],
-      "notes": "2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
-      "config": {
-        "council_name": "鹿島市議会",
-        "link_include_regex": "(?i)(会議録|議事録|定例会|臨時会|kaigiroku|gijiroku)",
-        "link_exclude_regex": "(?i)(審議会|懇話会|審査会|教育委員会|農業委員会|選挙管理委員会|総合教育会議|監査委員)",
-        "pdf": true
-      }
+      "verified_at": "2026-08-28T22:30:00Z",
+      "verified_by": "scout"
     },
     "regulations": {
       "status": "ready",
       "adapter": "g_reiki",
-      "base_url": "https://www1.g-reiki.net/kashima/",
-      "verified_at": "2026-08-27T12:32:36Z",
-      "verified_by": "verify --live",
-      "notes": "g_reiki tenant observed via preflight/live recheck; base_url requires live HEAD verification before ingest 2026-08-24: extraction-probe 規則の導入に伴い ready を取り下げ。旧規則は索引の存在だけで ready にしていたため、取込アダプタが本文からレコードを抽出できるかは未検証。verify --live で再判定すること。",
+      "base_url": "https://www.g-reiki.net/kashima/",
       "evidence": [
         {
-          "url": "https://www1.g-reiki.net/kashima/reiki_menu.html",
-          "observed_on": "http://www.city.saga-kashima.lg.jp/"
-        },
-        {
-          "url": "https://www1.g-reiki.net/kashima/reiki_menu.html",
-          "observed_on": "https://www1.g-reiki.net/kashima/",
-          "sha256": "2e91cb4f262767eb8481ea53cd71dfa29f11c9680d50cedc8794887a789153b8",
-          "fetched_at": "2026-08-20T13:14:08Z"
+          "url": "https://www.g-reiki.net/kashima/",
+          "observed_on": "http://www.city.saga-kashima.lg.jp/",
+          "fetched_at": "2026-08-28T22:30:00Z"
         }
-      ]
+      ],
+      "verified_at": "2026-08-28T22:30:00Z",
+      "verified_by": "scout"
     },
     "budget": {
       "status": "needs_review",
       "adapter": "official_document_index",
-      "index_url": "https://www.city.saga-kashima.lg.jp/main/411.html",
-      "verified_at": "2026-08-23T02:27:43Z",
-      "verified_by": "pi-pilot-scout",
+      "index_url": "https://www.city.saga-kashima.lg.jp/main/300.html",
       "evidence": [
         {
-          "url": "http://www.city.saga-kashima.lg.jp/main/411.html",
-          "sha256": "9f9adb5fc5036db5c088320b4199dc7040774776b15d22ad8ef96c2accf36146",
-          "fetched_at": "2026-08-23T01:59:51Z"
-        },
-        {
-          "url": "https://www.city.saga-kashima.lg.jp/site_files/file/zaisei/yosan/R8nendo/01_yosannsetumeishiryou.pdf",
-          "sha256": "ed41b7f80ce74473ac2eccff56114dd547f699cc3f4be4946d251d2b093250d8",
-          "fetched_at": "2026-08-23T02:08:13Z"
+          "url": "https://www.city.saga-kashima.lg.jp/main/300.html",
+          "observed_on": "http://www.city.saga-kashima.lg.jp/",
+          "fetched_at": "2026-08-28T22:30:00Z"
         }
       ],
-      "notes": "deepest_doc=P2。予算hub 411がH23-R8の16年分を年度横断で静的列挙。最深は令和8年度予算説明資料P2（01_yosannsetumeishiryou.pdf, 3.1MB, 議案第2号参考資料, 款別集計/性質別/節別比較表と主要事業, テキスト層あり, 款項ありだが当初予算書P1（議案乙号第1表の条例本文）は本入口では未確認, ファイル名つきだがv0.2規律で予算書でなければP2）。年度横断良好。robots許可。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
+      "verified_at": "2026-08-28T22:30:00Z",
+      "verified_by": "scout"
     },
     "settlement": {
       "status": "needs_review",
       "adapter": "official_document_index",
-      "index_url": "https://www.city.saga-kashima.lg.jp/main/419.html",
-      "verified_at": "2026-08-23T02:27:43Z",
-      "verified_by": "pi-pilot-scout",
+      "index_url": "https://www.city.saga-kashima.lg.jp/main/300.html",
       "evidence": [
         {
-          "url": "http://www.city.saga-kashima.lg.jp/main/419.html",
-          "sha256": "6bd9b43f34edc656f56ae95b50573314e60c33df2a034f6a325d27602b3e011d",
-          "fetched_at": "2026-08-23T01:59:53Z"
-        },
-        {
-          "url": "https://www.city.saga-kashima.lg.jp/site_files/file/zaisei/kessancard/kessanR06ver01.pdf",
-          "sha256": "b3334c50a82b92319d8e7bb6974b6a770e38e753b9004837494a231f026cc366",
-          "fetched_at": "2026-08-23T02:08:14Z"
+          "url": "https://www.city.saga-kashima.lg.jp/main/300.html",
+          "observed_on": "http://www.city.saga-kashima.lg.jp/",
+          "fetched_at": "2026-08-28T22:30:00Z"
         }
       ],
-      "notes": "deepest_doc=P1。決算カードhub 419がH元-R6の30年分を年度横断で静的列挙。最深は令和6年度決算カードP1（kessanR06ver01.pdf, 308KB, テキスト層あり, 空白正規化後に歳入総額行あり, 款別記載, v0.2でP1, 目明細なし要フラグ）。別系統412の決算（健全化比率・財政状況資料集Excel/PDF R2xlsx等）も併存でDB化補助。robots許可で取得成功。 2026-08-28: ready の定義を種別ごとに分離したのに伴い降格。この判定は scout 由来で、実文書への到達と構造マーカーの確認を経ていない。verify で再判定すること。"
+      "verified_at": "2026-08-28T22:30:00Z",
+      "verified_by": "scout"
     }
   }
 }
