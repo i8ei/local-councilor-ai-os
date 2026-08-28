@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import sys
+from pathlib import Path
 from typing import Any
 
 LABEL_MAP: dict[str, str] = {
@@ -129,12 +130,20 @@ class BootstrapConsole:
         sys.stderr.write(f"  🗄️  データベース : {self.cyan(str(db_path))}\n")
         sys.stderr.write(f"  📋 根拠裁定表   : {self.cyan(str(auth_path))}\n\n")
         sys.stderr.write(f"💡 {self.bold('次の一手（コマンドをコピーして実行）')}:\n")
-        sys.stderr.write("  1. 議事録・例規・決算の公式入口を事前診断:\n")
-        cmd_str = (
-            f"python3 -m bootstrap.cli.preflight "
-            f"--prefecture '{muni.get('prefecture', '')}' --municipality '{muni.get('name', '')}'"
-        )
-        sys.stderr.write(f"     {self.yellow(cmd_str)}\n")
+        profiles_dir = Path("source_profiles/municipalities")
+        profile_path = next(profiles_dir.glob(f"**/{code}*.json"), None) if code and profiles_dir.is_dir() else None
+
+        if profile_path:
+            sys.stderr.write("  1. 登録済みプロファイルから公式データ（議事録・例規）を一括取得:\n")
+            sys.stderr.write(f"     {self.yellow(f'python3 -m source_profiles.cli ingest-command --profile {profile_path}')}\n")
+        else:
+            sys.stderr.write("  1. 議事録・例規・決算の公式入口を事前診断:\n")
+            cmd_str = (
+                f"python3 -m bootstrap.cli.preflight "
+                f"--prefecture '{muni.get('prefecture', '')}' --municipality '{muni.get('name', '')}'"
+            )
+            sys.stderr.write(f"     {self.yellow(cmd_str)}\n")
+
         sys.stderr.write("  2. 見取り図ノート（MOC）をObsidian Vaultに生成:\n")
         sys.stderr.write(
             f"     {self.yellow('python3 -m lcaios dashboard --vault /path/to/your/vault --write-vault')}\n"
