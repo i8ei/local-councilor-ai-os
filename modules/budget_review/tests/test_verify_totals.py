@@ -5,7 +5,8 @@ from __future__ import annotations
 import io
 import sqlite3
 import unittest
-from contextlib import redirect_stdout
+from collections.abc import Iterator
+from contextlib import contextmanager, redirect_stdout
 
 from modules.budget_review import verify_totals
 
@@ -30,11 +31,15 @@ COMMON = {
 }
 
 
-def make_connection() -> sqlite3.Connection:
+@contextmanager
+def make_connection() -> Iterator[sqlite3.Connection]:
     connection = sqlite3.connect(":memory:")
     connection.row_factory = sqlite3.Row
     connection.executescript(SCHEMA)
-    return connection
+    try:
+        yield connection
+    finally:
+        connection.close()
 
 
 def insert(connection: sqlite3.Connection, **overrides: object) -> None:
