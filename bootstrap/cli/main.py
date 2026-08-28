@@ -128,9 +128,10 @@ def run(
 
     # Step 3: 国勢調査
     con.step(3, 5, "📊", "国勢調査データ取得 (e-Stat 政府統計API)")
+    con.item("e-Stat API 接続中: 人口・世帯・高齢化率の最新統計表を探索...", status="⏳")
     census = fetch_census(municipality, client)
     c_records = census.get("records", [])
-    con.item(f"国勢調査指標を取得 ({len(c_records)} 件 / {census['selection'].get('reason', '最新統計表')})")
+    con.item(f"国勢調査指標を確定 ({len(c_records)} 件 / {census['selection'].get('reason', '最新統計表')})", status="✔")
     for idx, rec in enumerate(c_records):
         key = rec.get("indicator", "")
         label = LABEL_MAP.get(key, key)
@@ -143,10 +144,11 @@ def run(
 
     # Step 4: 財政データ
     con.step(4, 5, "💰", "財政データ探索・取得 (総務省 地方財政決算)")
+    con.item("総務省 決算状況調査を探索・全国データ(XLSX)から抽出中...", status="⏳")
     fiscal = fetch_fiscal(municipality, client, cross_check=cross_check)
     f_records = fiscal.get("records", [])
     fiscal_year = fiscal.get("fiscal_year", "")
-    con.item(f"総務省 決算状況調査より指標を抽出 ({len(f_records)} 件 / 令和{fiscal_year}年度)")
+    con.item(f"総務省 決算状況調査より指標を確定 ({len(f_records)} 件 / 令和{fiscal_year}年度)", status="✔")
     for idx, rec in enumerate(f_records):
         key = rec.get("indicator", "")
         label = LABEL_MAP.get(key, key)

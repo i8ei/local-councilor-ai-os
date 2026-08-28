@@ -82,7 +82,14 @@ class BootstrapConsole:
     def item(self, text: str, status: str = "✔") -> None:
         if self.quiet:
             return
-        symbol = self.green(status) if status == "✔" else self.yellow(status)
+        if status == "✔":
+            symbol = self.green(status)
+        elif status in {"⏳", "..."}:
+            symbol = self.cyan(status)
+        elif status == "·":
+            symbol = self._c(status, "90")
+        else:
+            symbol = self.yellow(status)
         sys.stderr.write(f"  {symbol} {text}\n")
         sys.stderr.flush()
 
