@@ -194,16 +194,16 @@ def process_municipality(task: tuple[int, int, Path, dict, str]) -> tuple[str, b
 
     # 1. Direct verification of existing URL (if not discussvision and not non-council)
     if current_url and not is_discuss and not _is_non_council("", current_url):
-        res = _try_save_verified(profile, client, now, path, muni_name, "direct existing")
-        if res and res[1]:
-            return f"[{idx:3d}/{total:3d}] {res[0]}", True
+        res_v = _try_save_verified(profile, client, now, path, muni_name, "direct existing")
+        if res_v and res_v[1]:
+            return f"[{idx:3d}/{total:3d}] {res_v[0]}", True
 
         if min_src.get("adapter") == "static":
             cand = json.loads(json.dumps(profile))
             cand["sources"]["minutes"].setdefault("config", {})["pdf"] = True
-            res = _try_save_verified(cand, client, now, path, muni_name, "direct static pdf")
-            if res and res[1]:
-                return f"[{idx:3d}/{total:3d}] {res[0]}", True
+            res_v = _try_save_verified(cand, client, now, path, muni_name, "direct static pdf")
+            if res_v and res_v[1]:
+                return f"[{idx:3d}/{total:3d}] {res_v[0]}", True
 
             cand["sources"]["minutes"]["config"] = {
                 "pdf": True,
@@ -211,9 +211,9 @@ def process_municipality(task: tuple[int, int, Path, dict, str]) -> tuple[str, b
                 "follow_max_depth": 2,
                 "follow_max_pages": 5,
             }
-            res = _try_save_verified(cand, client, now, path, muni_name, "direct static follow")
-            if res and res[1]:
-                return f"[{idx:3d}/{total:3d}] {res[0]}", True
+            res_v = _try_save_verified(cand, client, now, path, muni_name, "direct static follow")
+            if res_v and res_v[1]:
+                return f"[{idx:3d}/{total:3d}] {res_v[0]}", True
 
     # 2. Collect Seed URLs
     home_url = profile.get("official_home_url") or ""

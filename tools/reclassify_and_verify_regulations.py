@@ -12,7 +12,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
-from lcaios.http import REGULATIONS_USER_AGENT, HttpClient
+from lcaios.http import REGULATIONS_USER_AGENT, CacheTier, HttpClient
 from source_profiles.schema import validate_profile
 from source_profiles.verify import verify_profile
 
@@ -49,7 +49,7 @@ def reclassify_profiles() -> list[tuple[str, Path, dict]]:
             for tu in test_urls:
                 try:
                     c = HttpClient(CACHE_DIR, user_agent=REGULATIONS_USER_AGENT, timeout=5)
-                    res = c.fetch(tu)
+                    res = c.fetch(tu, tier=CacheTier.INDEX)
                     txt = res.text()
                     if "mokuji_bunya" in txt or "OpenResDataWin" in txt or "D1W" in txt or "bunya_" in txt:
                         new_ad = "d1_law"

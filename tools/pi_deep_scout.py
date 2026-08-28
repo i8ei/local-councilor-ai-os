@@ -138,8 +138,8 @@ def main() -> int:
         out.write_text(json.dumps(residual, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"residual not_found: {len(residual)} -> {out}", flush=True)
         print("Tier 2: pi が web_search/fetch で手動深掘りしてください。例:", flush=True)
-        for r in residual[:5]:
-            print(f"  web_search: \"{r['name']} 議事録\" / \"{r['name']} 例規集\" -> fetch検証 -> profile更新", flush=True)
+        for res_item in residual[:5]:
+            print(f"  web_search: \"{res_item['name']} 議事録\" / \"{res_item['name']} 例規集\" -> fetch検証 -> profile更新", flush=True)
         print("  参考: docs/ingestion-playbook.md レシピ1", flush=True)
     else:
         print("all hard cases resolved (no residual)", flush=True)
