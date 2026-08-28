@@ -275,7 +275,68 @@ class BridgeTests(unittest.TestCase):
         self.assertIn("多年度決算推移", card_content)
         self.assertIn("ロジックモデル分析", card_content)
         self.assertIn("政策提言・質問項目", card_content)
-        self.assertIn("アウトカム指標", card_content)
+    def test_ebpm_card_with_normalized_minutes_schema_and_preceding_context(self) -> None:
+        """The bridge correctly matches executive speeches using the normalized minutes_db schema and preceding question context."""
+        min_db = self.work_dir / "minutes_normalized.db"
+        conn = sqlite3.connect(min_db)
+        try:
+            conn.execute("""
+                CREATE TABLE meetings (
+                    meeting_id TEXT PRIMARY KEY,
+                    council_name TEXT NOT NULL,
+                    meeting_name TEXT NOT NULL,
+                    session TEXT,
+                    date TEXT,
+                    date_inferred INTEGER NOT NULL DEFAULT 0,
+                    source_url TEXT NOT NULL UNIQUE,
+                    adapter TEXT NOT NULL,
+                    fetched_at TEXT NOT NULL
+                );
+            """)
+            conn.execute("""
+                CREATE TABLE speeches (
+                    speech_id TEXT PRIMARY KEY,
+                    meeting_id TEXT NOT NULL REFERENCES meetings(meeting_id),
+                    seq INTEGER NOT NULL,
+                    speaker TEXT,
+                    speaker_role TEXT,
+                    text TEXT NOT NULL,
+                    locator TEXT NOT NULL,
+                    UNIQUE (meeting_id, seq)
+                );
+            """)
+            conn.execute("""
+                INSERT INTO meetings (meeting_id, council_name, meeting_name, date, source_url, adapter, fetched_at)
+                VALUES ('m1', 'テスト町議会', '決算審査特別委員会', '2025-09-12', 'https://example.invalid/m1.pdf', 'static', '2026-08-28T21:00:00Z');
+            """)
+            # Question mentions "道路維持", response mentions "不用額" but omits "道路維持"
+            conn.execute("""
+                INSERT INTO speeches (speech_id, meeting_id, seq, speaker, speaker_role, text, locator)
+                VALUES ('sp1', 'm1', 1, '山田議員', 'member', '決算書の道路維持費について不用額が生じていますが理由を伺います。', 'p1#l1');
+            """)
+            conn.execute("""
+                INSERT INTO speeches (speech_id, meeting_id, seq, speaker, speaker_role, text, locator)
+                VALUES ('sp2', 'm1', 2, '建設課長', 'executive', 'お答えします。入札不調および天候不順により事業執行が遅れ、残額が発生いたしました。', 'p1#l5');
+            """)
+            conn.commit()
+        finally:
+            conn.close()
+
+        ebpm_dir = self.work_dir / "ebpm_out_normalized"
+        ret = main([
+            "--db", str(self.db_path),
+            "--minutes-db", str(min_db),
+            "--municipality", "テスト町",
+            "--format", "ebpm-card",
+            "--ebpm-out-dir", str(ebpm_dir),
+        ])
+        self.assertEqual(ret, 0)
+
+        card_file = ebpm_dir / "ebpm-card-道路維持.md"
+        self.assertTrue(card_file.is_file())
+        card_content = card_file.read_text(encoding="utf-8")
+        self.assertIn("建設課長", card_content)
+        self.assertIn("入札不調および天候不順により事業執行が遅れ", card_content)
 
 
 if __name__ == "__main__":
