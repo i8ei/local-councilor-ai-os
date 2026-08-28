@@ -338,6 +338,14 @@ class BridgeTests(unittest.TestCase):
         self.assertIn("建設課長", card_content)
         self.assertIn("入札不調および天候不順により事業執行が遅れ", card_content)
 
+    def test_clean_speaker_and_meta_formatting(self) -> None:
+        """The bridge cleans up unclosed speaker parentheses and trims metadata prefixes cleanly."""
+        from modules.settlement_review.bridge import _clean_speaker
+        self.assertEqual(_clean_speaker("税務課長（江口"), "税務課長（江口）")
+        self.assertEqual(_clean_speaker("建設課長(山田"), "建設課長(山田)")
+        self.assertEqual(_clean_speaker("町長"), "町長")
+        self.assertEqual(_clean_speaker("総務課長（山田君）"), "総務課長（山田君）")
+
 
 if __name__ == "__main__":
     unittest.main()

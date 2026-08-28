@@ -527,6 +527,16 @@ EXP_CONTEXT = ["不用", "残額", "見込み", "過大", "執行", "決算", "�
 REV_CONTEXT = ["未収", "未済", "滞納", "不納欠損", "徴収", "調定", "催告", "差押", "機構"]
 
 
+def _clean_speaker(s: str) -> str:
+    """Clean up speaker names and fix unclosed parentheses."""
+    s = s.strip()
+    if "（" in s and "）" not in s:
+        s += "）"
+    elif "(" in s and ")" not in s:
+        s += ")"
+    return s
+
+
 def _extract_topic_terms(name: str) -> list[str]:
     """Extract clean search terms from accounting names by stripping common suffixes."""
     clean = name.split(">")[-1].strip().split(".")[-1].strip()
@@ -792,7 +802,9 @@ def render_ebpm_cards(
         lines.append("### ② 過去の議会答弁（議事録照合）")
         if speeches:
             for sp in speeches:
-                prefix = f"- **{sp['date']} {sp['meeting']}** [{sp['speaker']}]:" if sp['date'] or sp['meeting'] else f"- [{sp['speaker']}]:"
+                meta = " ".join(part for part in [sp.get("date", "").strip(), sp.get("meeting", "").strip()] if part)
+                speaker = _clean_speaker(sp.get("speaker", ""))
+                prefix = f"- **{meta}** [{speaker}]:" if meta else f"- [{speaker}]:"
                 lines.append(f"{prefix}\n  > 「{sp['snippet']}…」")
         else:
             lines.append("- （関連する過去答弁は議事録検索で確認してください）")
@@ -892,7 +904,9 @@ def render_ebpm_cards(
 
         if speeches:
             for sp in speeches:
-                prefix = f"- **{sp['date']} {sp['meeting']}** [{sp['speaker']}]:" if sp['date'] or sp['meeting'] else f"- [{sp['speaker']}]:"
+                meta = " ".join(part for part in [sp.get("date", "").strip(), sp.get("meeting", "").strip()] if part)
+                speaker = _clean_speaker(sp.get("speaker", ""))
+                prefix = f"- **{meta}** [{speaker}]:" if meta else f"- [{speaker}]:"
                 lines.append(f"{prefix}\n  > 「{sp['snippet']}…」")
         else:
             lines.append("- （関連する過去答弁は議事録検索で確認してください）")
