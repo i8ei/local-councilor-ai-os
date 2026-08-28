@@ -59,20 +59,18 @@ class CensusTests(unittest.TestCase):
             FakeEStatClient(),
         )
         self.assertFalse(result["selection"]["used_fallback"])
-        self.assertEqual(3, len(result["records"]))
+        self.assertEqual(6, len(result["records"]))
         self.assertEqual(
             {"2020-10-01"},
             {record["as_of"] for record in result["records"]},
         )
         serialized = repr(result)
         self.assertNotIn("test-secret", serialized)
-        ratio = next(
-            record
-            for record in result["records"]
-            if record["indicator"] == "population_65_plus_ratio"
-        )
-        self.assertEqual("％", ratio["unit"])
-        self.assertEqual(31.2, ratio["value"])
+        indicators = {r["indicator"]: r["value"] for r in result["records"]}
+        self.assertEqual(12.5, indicators["population_under_15_ratio"])
+        self.assertEqual(56.3, indicators["population_15_to_64_ratio"])
+        self.assertEqual(31.2, indicators["population_65_plus_ratio"])
+        self.assertEqual(17.4, indicators["population_75_plus_ratio"])
 
     @patch.dict(os.environ, {"ESTAT_APPID": "test-secret"}, clear=False)
     def test_discovery_failure_records_latestness_warning(self) -> None:

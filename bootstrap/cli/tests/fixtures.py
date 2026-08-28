@@ -100,26 +100,38 @@ TABLES = {
         "id": "1001",
         "title": "男女別人口－全国、都道府県、市区町村",
         "labels": [("cat01", "1", "人口"), ("cat02", "0", "総数")],
-        "raw": "12345",
+        "rows": [
+            ({"cat01": "1", "cat02": "0"}, "12345"),
+        ],
         "unit": "人",
     },
     "households_total": {
         "id": "1002",
         "title": "世帯の種類別世帯数及び世帯人員－全国、都道府県、市区町村",
         "labels": [("cat01", "1", "世帯数"), ("cat02", "0", "総数")],
-        "raw": "4567",
+        "rows": [
+            ({"cat01": "1", "cat02": "0"}, "4567"),
+        ],
         "unit": "世帯",
     },
-    "population_65_plus_ratio": {
+    "population_age_ratios": {
         "id": "1003",
         "title": "年齢（3区分）人口構成比［年齢別］－全国、市区町村",
         "labels": [
             ("cat01", "1", "人口構成比［年齢別］"),
             ("cat02", "0", "国籍総数"),
             ("cat03", "0", "総数"),
+            ("cat04", "1", "15歳未満"),
+            ("cat04", "2", "15～64歳"),
             ("cat04", "3", "65歳以上"),
+            ("cat04", "R2", "（再掲）75歳以上"),
         ],
-        "raw": "31.2",
+        "rows": [
+            ({"cat01": "1", "cat02": "0", "cat03": "0", "cat04": "1"}, "12.5"),
+            ({"cat01": "1", "cat02": "0", "cat03": "0", "cat04": "2"}, "56.3"),
+            ({"cat01": "1", "cat02": "0", "cat03": "0", "cat04": "3"}, "31.2"),
+            ({"cat01": "1", "cat02": "0", "cat03": "0", "cat04": "R2"}, "17.4"),
+        ],
         "unit": "％",
     },
 }
@@ -140,7 +152,7 @@ class FakeEStatClient:
             if "世帯の種類別" in search:
                 key = "households_total"
             elif "年齢（3区分）" in search:
-                key = "population_65_plus_ratio"
+                key = "population_age_ratios"
             else:
                 key = "population_total"
             table = TABLES[key]
@@ -161,13 +173,16 @@ class FakeEStatClient:
             table_id = query["statsDataId"][0]
             table = next(item for item in TABLES.values() if item["id"] == table_id)
             if endpoint == "getMetaInfo":
+                dim_classes: dict[str, list[dict[str, str]]] = {}
+                for dimension, code, label in table["labels"]:
+                    dim_classes.setdefault(dimension, []).append({"@code": code, "@name": label})
                 classes = [
                     {
                         "@id": dimension,
                         "@name": dimension,
-                        "CLASS": {"@code": code, "@name": label},
+                        "CLASS": items if len(items) > 1 else items[0],
                     }
-                    for dimension, code, label in table["labels"]
+                    for dimension, items in dim_classes.items()
                 ]
                 classes.append(
                     {
@@ -185,20 +200,23 @@ class FakeEStatClient:
                     }
                 }
             else:
-                value = {
-                    "@area": query["cdArea"][0],
-                    "@time": "2020000000",
-                    "@unit": "u",
-                    "$": table["raw"],
-                }
-                for dimension, code, _ in table["labels"]:
-                    value[f"@{dimension}"] = code
+                values = []
+                for dims, raw_val in table["rows"]:
+                    val_obj = {
+                        "@area": query["cdArea"][0],
+                        "@time": "2020000000",
+                        "@unit": "u",
+                        "$": raw_val,
+                    }
+                    for k, v in dims.items():
+                        val_obj[f"@{k}"] = v
+                    values.append(val_obj)
                 payload = {
                     "GET_STATS_DATA": {
                         "RESULT": {"STATUS": 0},
                         "STATISTICAL_DATA": {
                             "TABLE_INF": {"SURVEY_DATE": "202010"},
-                            "DATA_INF": {"VALUE": value},
+                            "DATA_INF": {"VALUE": values if len(values) > 1 else values[0]},
                         },
                     }
                 }

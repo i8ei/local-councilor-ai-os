@@ -9,7 +9,10 @@ from typing import Any
 LABEL_MAP: dict[str, str] = {
     "population_total": "総人口",
     "households_total": "世帯数",
+    "population_under_15_ratio": "年少人口比率 (15歳未満)",
+    "population_15_to_64_ratio": "生産年齢人口比率 (15〜64歳)",
     "population_65_plus_ratio": "高齢化率 (65歳以上)",
+    "population_75_plus_ratio": "後期高齢化率 (75歳以上)",
     "zaiseiryoku_shisuu": "財政力指数",
     "keijou_shuushi_hiritsu": "経常収支比率",
     "jisshitsu_kousaihi_hiritsu": "実質公債費比率",

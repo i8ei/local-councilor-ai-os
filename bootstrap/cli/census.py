@@ -19,7 +19,18 @@ STATS_CODE = "00200521"
 FALLBACK_TABLES = {
     "population_total": ("0003445078", "202010"),
     "households_total": ("0003445098", "202010"),
-    "population_65_plus_ratio": ("0003445163", "202010"),
+    "population_age_ratios": ("0003445163", "202010"),
+}
+
+TABLE_INDICATORS = {
+    "population_total": ["population_total"],
+    "households_total": ["households_total"],
+    "population_age_ratios": [
+        "population_under_15_ratio",
+        "population_15_to_64_ratio",
+        "population_65_plus_ratio",
+        "population_75_plus_ratio",
+    ],
 }
 
 SEARCHES = {
@@ -27,7 +38,7 @@ SEARCHES = {
     "households_total": (
         "世帯の種類別世帯数 AND 世帯人員 AND 全国 AND 都道府県 AND 市区町村"
     ),
-    "population_65_plus_ratio": (
+    "population_age_ratios": (
         "男女 AND 年齢（3区分） AND 国籍総数か日本人別人口構成比 AND 市区町村"
     ),
 }
@@ -35,26 +46,53 @@ SEARCHES = {
 TITLE_MATCHERS = {
     "population_total": ("男女別人口－全国",),
     "households_total": ("世帯の種類別世帯数及び世帯人員－全国",),
-    "population_65_plus_ratio": ("年齢（3区分）", "人口構成比［年齢別］－全国"),
+    "population_age_ratios": ("年齢（3区分）", "人口構成比［年齢別］－全国"),
 }
 
 LABEL_REQUIREMENTS = {
     "population_total": ("人口", "総数"),
     "households_total": ("世帯数", "総数"),
+    "population_under_15_ratio": (
+        "人口構成比［年齢別］",
+        "国籍総数",
+        "総数",
+        "15歳未満",
+    ),
+    "population_15_to_64_ratio": (
+        "人口構成比［年齢別］",
+        "国籍総数",
+        "総数",
+        "15～64歳",
+    ),
     "population_65_plus_ratio": (
         "人口構成比［年齢別］",
         "国籍総数",
         "総数",
         "65歳以上",
     ),
+    "population_75_plus_ratio": (
+        "人口構成比［年齢別］",
+        "国籍総数",
+        "総数",
+        "（再掲）75歳以上",
+    ),
 }
 
 DEFINITIONS = {
     "population_total": "国勢調査の調査時点に当該区域に常住する総人口。",
     "households_total": "国勢調査における世帯の種類「総数」の世帯数。",
+    "population_under_15_ratio": (
+        "国勢調査の国籍総数・男女総数における15歳未満（年少）人口の公式公表構成比。"
+    ),
+    "population_15_to_64_ratio": (
+        "国勢調査の国籍総数・男女総数における15〜64歳（生産年齢）人口の公式公表構成比。"
+    ),
     "population_65_plus_ratio": (
         "国勢調査の国籍総数・男女総数における65歳以上人口の公式公表構成比。"
         "年齢不詳の分母上の扱いは原表定義の確認が必要であり、自前計算しない。"
+    ),
+    "population_75_plus_ratio": (
+        "国勢調査の国籍総数・男女総数における75歳以上（後期高齢者）人口の公式公表構成比。"
     ),
 }
 
@@ -350,13 +388,17 @@ def _fetch_selected(
 ) -> list[dict[str, Any]]:
     dates = {survey_date for _, survey_date in selection.tables.values()}
     if len(dates) != 1:
-        raise CensusError(f"3指標のSURVEY_DATEが一致しません: {selection.tables}")
-    return [
-        _fetch_indicator(
-            client, indicator, table_id, survey_date, area_code
-        )
-        for indicator, (table_id, survey_date) in selection.tables.items()
-    ]
+        raise CensusError(f"統計表のSURVEY_DATEが一致しません: {selection.tables}")
+    records: list[dict[str, Any]] = []
+    for table_group, (table_id, survey_date) in selection.tables.items():
+        indicators = TABLE_INDICATORS.get(table_group, [table_group])
+        for indicator in indicators:
+            records.append(
+                _fetch_indicator(
+                    client, indicator, table_id, survey_date, area_code
+                )
+            )
+    return records
 
 
 def fetch_census(
