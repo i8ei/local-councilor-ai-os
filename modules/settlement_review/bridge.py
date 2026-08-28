@@ -511,6 +511,215 @@ def render_bridge_markdown(report: dict[str, Any]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def find_speeches_for_topic(
+    minutes_db: Path,
+    query_terms: list[str],
+    limit: int = 2,
+) -> list[dict[str, str]]:
+    """Search a minutes database for relevant executive speeches."""
+    if not minutes_db.is_file():
+        return []
+
+    results: list[dict[str, str]] = []
+    try:
+        uri = sqlite_read_only_uri(minutes_db.resolve())
+        conn = sqlite3.connect(uri, uri=True)
+        tables = _get_tables(conn)
+
+        # 1. Try segments table (taracho-archive / preset schema)
+        if "segments" in tables:
+            has_fts = "segments_fts" in tables
+            has_manifest = "manifest" in tables
+
+            for term in query_terms:
+                if len(results) >= limit:
+                    break
+                sql = """
+                    SELECT s.text, s.speaker,
+                           CASE WHEN ? THEN m.meeting_date ELSE '' END as meeting_date,
+                           CASE WHEN ? THEN m.title ELSE '' END as title
+                    FROM segments s
+                """
+                if has_manifest:
+                    sql += " LEFT JOIN manifest m ON s.doc_id = m.doc_id "
+
+                if has_fts:
+                    sql += " WHERE s.seg_id IN (SELECT rowid FROM segments_fts WHERE segments_fts MATCH ?) "
+                else:
+                    sql += " WHERE s.text LIKE ? "
+
+                sql += " AND (s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%' OR s.speaker LIKE '%市長%' OR s.speaker LIKE '%部長%') "
+                sql += " ORDER BY s.seg_id DESC LIMIT ? "
+
+                param = term if has_fts else f"%{term}%"
+                rows = conn.execute(sql, (1 if has_manifest else 0, 1 if has_manifest else 0, param, limit - len(results))).fetchall()
+                for r in rows:
+                    txt = (r[0] or "").replace("\n", " ")[:140]
+                    spk = r[1] or ""
+                    dt = r[2] or ""
+                    mtg = r[3] or ""
+                    results.append({
+                        "date": dt,
+                        "meeting": mtg,
+                        "speaker": spk,
+                        "snippet": txt,
+                    })
+
+        # 2. Try speeches table (modules/minutes_db standard schema)
+        elif "speeches" in tables:
+            has_fts = "speeches_fts" in tables
+            for term in query_terms:
+                if len(results) >= limit:
+                    break
+                if has_fts:
+                    sql = """
+                        SELECT s.text, s.speaker, s.date, s.meeting_name
+                        FROM speeches s
+                        JOIN speeches_fts f ON s.speech_id = f.rowid
+                        WHERE f MATCH ?
+                        AND (s.speaker_role IN ('mayor', 'executive') OR s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%')
+                        ORDER BY s.date DESC LIMIT ?
+                    """
+                    rows = conn.execute(sql, (term, limit - len(results))).fetchall()
+                else:
+                    sql = """
+                        SELECT s.text, s.speaker, s.date, s.meeting_name
+                        FROM speeches s
+                        WHERE s.text LIKE ?
+                        AND (s.speaker_role IN ('mayor', 'executive') OR s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%')
+                        ORDER BY s.date DESC LIMIT ?
+                    """
+                    rows = conn.execute(sql, (f"%{term}%", limit - len(results))).fetchall()
+
+                for r in rows:
+                    txt = (r[0] or "").replace("\n", " ")[:140]
+                    results.append({
+                        "date": r[2] or "",
+                        "meeting": r[3] or "",
+                        "speaker": r[1] or "",
+                        "snippet": txt,
+                    })
+        conn.close()
+    except Exception:
+        pass
+    return results[:limit]
+
+
+def render_ebpm_cards(
+    report: dict[str, Any],
+    minutes_db: Path | None = None,
+    municipality: str = "",
+) -> list[dict[str, str]]:
+    """Render structured EBPM question cards for top persistent unused and uncollected items."""
+    cards: list[dict[str, str]] = []
+
+    # Process persistent unused items
+    for item in report.get("persistent_unused", []):
+        moku_name = item.get("moku_name", "科目")
+        # Extract keyword (e.g. 障害福祉費 -> 障害福祉)
+        keyword = moku_name.split(">")[-1].strip().split(".")[-1].strip().replace("費", "")
+        query_terms = [keyword, moku_name.split(">")[-1].strip().split(".")[-1].strip()]
+
+        speeches = []
+        if minutes_db and minutes_db.is_file():
+            speeches = find_speeches_for_topic(minutes_db, query_terms, limit=2)
+
+        total_unused = sum(y.get("unused", 0) for y in item.get("yearly_breakdown", []))
+        total_years = len(item.get("yearly_breakdown", []))
+        avg_unused = item.get("avg_unused_amount", 0)
+
+        lines = [
+            "---",
+            f"description: {moku_name}の不用額常態化に対するEBPM質問・政策設計カード",
+            "tags:",
+            "  - EBPM",
+            "  - 決算審査",
+            "  - 一般質問",
+            "---",
+            "",
+            f"# 【EBPM質問・政策設計カード】{moku_name}の不用額分析と政策改善",
+            "",
+            f"- **対象自治体**: {municipality or '対象自治体'}",
+            f"- **会計・科目**: {moku_name}",
+            "- **分析時点**: 複数年度決算データ",
+            "",
+            "---",
+            "",
+            "## 1. エビデンス（事実・データ・過去答弁）[Evidence]",
+            "",
+            "### ① 多年度決算推移",
+        ]
+
+        for y in item.get("yearly_breakdown", []):
+            lines.append(
+                f"- **令和{y['fiscal_year']}年度**: 予算現額 {y['budget']:,} 円 / "
+                f"支出済額 {y['spent']:,} 円 / 不用額 **{y['unused']:,} 円** (不用率 `{y['unused_rate']}%`)"
+            )
+
+        lines.append("")
+        lines.append(f"> **{total_years}年間累計不用額**: **{total_unused:,} 円** / 年平均不用額 **{avg_unused:,} 円**")
+        lines.append("")
+
+        lines.append("### ② 過去の議会答弁（議事録照合）")
+        if speeches:
+            for sp in speeches:
+                prefix = f"- **{sp['date']} {sp['meeting']}** [{sp['speaker']}]:" if sp['date'] or sp['meeting'] else f"- [{sp['speaker']}]:"
+                lines.append(f"{prefix}\n  > 「{sp['snippet']}…」")
+        else:
+            lines.append("- （関連する過去答弁は議事録検索で確認してください）")
+        lines.append("")
+
+        lines.extend([
+            "---",
+            "",
+            "## 2. ロジックモデル分析（要因整理）[Logic Model]",
+            "",
+            "```text",
+            "【インプット（投入）】",
+            f"  ・毎年度当初予算に平均約 {sum(y.get('budget', 0) for y in item.get('yearly_breakdown', [])) // max(1, total_years):,} 円 を計上",
+            "      │",
+            "      ▼",
+            "【アウトプット（直接実績）】",
+            f"  ・実執行額は平均約 {sum(y.get('spent', 0) for y in item.get('yearly_breakdown', [])) // max(1, total_years):,} 円にとどまり、毎年約 {avg_unused:,} 円が不用",
+            "      │",
+            "      ▼",
+            "【要因・課題の整理】",
+            "  1. 【実績との乖離】受給・利用実績に対して当初見積もりが過大となっている可能性",
+            "  2. 【制度運用の改善余地】周知方法や助成枠の再設計により、本来届くべき住民への支援拡充の検討",
+            "```",
+            "",
+            "---",
+            "",
+            "## 3. 政策提言・質問項目（アクション）[Policy Action]",
+            "",
+            "### 質問 1（現状確認・要因の共有）",
+            f"> 「{moku_name}において複数年度にわたり不用額（年平均約 {avg_unused:,} 円）が生じている主な要因と、執行実績の傾向をどう総括しているか？」",
+            "",
+            "### 質問 2（予算編成と運用改善）",
+            "> 「直近の実績傾向を踏まえた精緻な当初予算計上を行い、必要に応じた補正対応や運用の見直しを図る考えはないか？」",
+            "",
+            "### 質問 3（政策提言・独自施策への再配分）",
+            "> 「余力となっている一般財源を活用し、町民ニーズの高い関連独自支援やサービス向上へシフトできないか？」",
+            "",
+            "---",
+            "",
+            "## 4. アウトカム指標（検証KPI）[Outcome KPI]",
+            "",
+            "- **次回決算審査での検証目標**:",
+            f"  - **KPI 1（不用額適正化）**: {moku_name}の不用率を前年比で適正水準へ圧縮",
+            "  - **KPI 2（住民サービス向上）**: 関連支援制度の利用件数・満足度の向上",
+        ])
+
+        filename = f"ebpm-card-{keyword}.md"
+        cards.append({
+            "filename": filename,
+            "title": f"{moku_name} EBPM質問カード",
+            "content": "\n".join(lines).strip() + "\n",
+        })
+
+    return cards
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="多年度の決算データから不用額常態化・繰越・未収金を高速分析する計算機"
@@ -546,16 +755,34 @@ def build_parser() -> argparse.ArgumentParser:
         help="歳入で未収金を抽出する最小金額（デフォルト: 100万円）",
     )
     parser.add_argument(
+        "--minutes-db",
+        type=Path,
+        default=None,
+        help="過去答弁を自動照合する議事録SQLiteデータベースパス",
+    )
+    parser.add_argument(
+        "--municipality",
+        type=str,
+        default="",
+        help="自治体名（EBPMカードの対象自治体名として表示）",
+    )
+    parser.add_argument(
         "--format",
-        choices=["markdown", "json"],
+        choices=["markdown", "json", "ebpm-card"],
         default="markdown",
-        help="出力形式（markdown または json）",
+        help="出力形式（markdown, json, ebpm-card）",
     )
     parser.add_argument(
         "--out",
         type=Path,
         default=None,
         help="結果を出力するファイルパス（省略時は標準出力）",
+    )
+    parser.add_argument(
+        "--ebpm-out-dir",
+        type=Path,
+        default=None,
+        help="EBPMカードを個別ファイルとして保存するディレクトリパス",
     )
     return parser
 
@@ -575,13 +802,22 @@ def main(argv: Sequence[str] | None = None) -> int:
 
         if args.format == "json":
             output_content = json.dumps(report, ensure_ascii=False, indent=2)
+        elif args.format == "ebpm-card":
+            cards = render_ebpm_cards(report, minutes_db=args.minutes_db, municipality=args.municipality)
+            if args.ebpm_out_dir:
+                args.ebpm_out_dir.mkdir(parents=True, exist_ok=True)
+                for card in cards:
+                    card_path = args.ebpm_out_dir / card["filename"]
+                    card_path.write_text(card["content"], encoding="utf-8")
+                    print(f"EBPMカードを出力しました: {card_path}")
+            output_content = "\n\n---\n\n".join(c["content"] for c in cards) if cards else "基準を満たすEBPMカード対象事業はありません。"
         else:
             output_content = render_bridge_markdown(report)
 
         if args.out:
             args.out.write_text(output_content, encoding="utf-8")
             print(f"分析レポートを出力しました: {args.out}")
-        else:
+        elif not args.ebpm_out_dir or args.format != "ebpm-card":
             print(output_content)
         return 0
     except (BridgeError, sqlite3.Error) as error:
@@ -592,3 +828,4 @@ def main(argv: Sequence[str] | None = None) -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+

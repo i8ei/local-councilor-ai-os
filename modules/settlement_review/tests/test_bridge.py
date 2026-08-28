@@ -226,6 +226,58 @@ class BridgeTests(unittest.TestCase):
         ret = main(["--db", str(broken)])
         self.assertEqual(ret, 2)
 
+    def test_ebpm_card_generation_and_minutes_matching(self) -> None:
+        """The bridge can render structured EBPM cards and auto-match speeches from a minutes DB."""
+        # 1. Create a dummy minutes DB with speeches
+        min_db = self.work_dir / "minutes.db"
+        conn = sqlite3.connect(min_db)
+        try:
+            conn.execute("""
+                CREATE TABLE speeches (
+                    speech_id TEXT PRIMARY KEY,
+                    speaker TEXT,
+                    speaker_role TEXT,
+                    date TEXT,
+                    meeting_name TEXT,
+                    council_name TEXT,
+                    text TEXT,
+                    source_url TEXT,
+                    locator TEXT,
+                    fetched_at TEXT
+                );
+            """)
+            conn.execute("""
+                INSERT INTO speeches (speech_id, speaker, speaker_role, date, meeting_name, council_name, text, source_url, locator, fetched_at)
+                VALUES ('s1', '総務課長', 'executive', '2025-09-10', '9月定例会', 'テスト町議会', '一般管理費の予算執行について、当初の見積もりが過大となっておりました。', '', '', '');
+            """)
+            conn.commit()
+        finally:
+            conn.close()
+
+        # 2. Run CLI with --format ebpm-card and --minutes-db
+        ebpm_dir = self.work_dir / "ebpm_out"
+        ret = main([
+            "--db", str(self.db_path),
+            "--minutes-db", str(min_db),
+            "--municipality", "テスト町",
+            "--format", "ebpm-card",
+            "--ebpm-out-dir", str(ebpm_dir),
+        ])
+        self.assertEqual(ret, 0)
+
+        # Check generated card
+        card_file = ebpm_dir / "ebpm-card-一般管理.md"
+        self.assertTrue(card_file.is_file())
+        card_content = card_file.read_text(encoding="utf-8")
+        self.assertIn("EBPM質問・政策設計カード", card_content)
+        self.assertIn("テスト町", card_content)
+        self.assertIn("総務課長", card_content)
+        self.assertIn("多年度決算推移", card_content)
+        self.assertIn("ロジックモデル分析", card_content)
+        self.assertIn("政策提言・質問項目", card_content)
+        self.assertIn("アウトカム指標", card_content)
+
 
 if __name__ == "__main__":
     unittest.main()
+
