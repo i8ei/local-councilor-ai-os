@@ -511,16 +511,39 @@ def render_bridge_markdown(report: dict[str, Any]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+NEGATIVE_PHRASES = [
+    "提案理由を説明",
+    "おはようございます",
+    "議案第",
+    "報告第",
+    "専決処分",
+    "開会に当たり",
+    "招集いたしましたところ",
+    "よろしくお願い",
+    "改めまして",
+]
+
+EXP_CONTEXT = ["不用", "残額", "見込み", "過大", "執行", "決算", "予算", "精算", "増額", "減額"]
+REV_CONTEXT = ["未収", "未済", "滞納", "不納欠損", "徴収", "調定", "催告", "差押", "機構"]
+
+
 def find_speeches_for_topic(
     minutes_db: Path,
     query_terms: list[str],
+    kind: str = "expenditure",
     limit: int = 2,
 ) -> list[dict[str, str]]:
-    """Search a minutes database for relevant executive speeches."""
+    """Search a minutes database for relevant executive speeches with context awareness."""
     if not minutes_db.is_file():
         return []
 
+    clean_terms = [t.strip() for t in query_terms if t and len(t.strip()) >= 2]
+    if not clean_terms:
+        return []
+
+    ctx_terms = EXP_CONTEXT if kind == "expenditure" else REV_CONTEXT
     results: list[dict[str, str]] = []
+
     try:
         uri = sqlite_read_only_uri(minutes_db.resolve())
         conn = sqlite3.connect(uri, uri=True)
@@ -528,80 +551,113 @@ def find_speeches_for_topic(
 
         # 1. Try segments table (taracho-archive / preset schema)
         if "segments" in tables:
-            has_fts = "segments_fts" in tables
             has_manifest = "manifest" in tables
 
-            for term in query_terms:
-                if len(results) >= limit:
-                    break
-                sql = """
+            main_likes = " OR ".join(["s.text LIKE ?" for _ in clean_terms])
+            ctx_likes = " OR ".join(["s.text LIKE ?" for _ in ctx_terms])
+            neg_likes = " AND ".join(["s.text NOT LIKE ?" for _ in NEGATIVE_PHRASES])
+
+            sql = f"""
+                SELECT s.text, s.speaker,
+                       {'m.meeting_date' if has_manifest else "''"} as meeting_date,
+                       {'m.title' if has_manifest else "''"} as title
+                FROM segments s
+                {'LEFT JOIN manifest m ON s.doc_id = m.doc_id' if has_manifest else ''}
+                WHERE ({main_likes})
+                  AND ({ctx_likes})
+                  AND ({neg_likes})
+                  AND (s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%' OR s.speaker LIKE '%市長%' OR s.speaker LIKE '%部長%')
+                ORDER BY
+                  {'''CASE
+                        WHEN m.title LIKE '%決算%' THEN 1
+                        WHEN m.title LIKE '%予算%' THEN 2
+                        WHEN m.title LIKE '%質問%' THEN 3
+                        WHEN m.title LIKE '%委員会%' THEN 4
+                        ELSE 5
+                      END,''' if has_manifest else ''}
+                  {'m.meeting_date DESC,' if has_manifest else ''}
+                  s.seg_id DESC
+                LIMIT ?
+            """
+
+            params = [f"%{t}%" for t in clean_terms] + [f"%{c}%" for c in ctx_terms] + [f"%{n}%" for n in NEGATIVE_PHRASES] + [limit]
+            rows = conn.execute(sql, params).fetchall()
+
+            if not rows:
+                fallback_sql = f"""
                     SELECT s.text, s.speaker,
-                           CASE WHEN ? THEN m.meeting_date ELSE '' END as meeting_date,
-                           CASE WHEN ? THEN m.title ELSE '' END as title
+                           {'m.meeting_date' if has_manifest else "''"} as meeting_date,
+                           {'m.title' if has_manifest else "''"} as title
                     FROM segments s
+                    {'LEFT JOIN manifest m ON s.doc_id = m.doc_id' if has_manifest else ''}
+                    WHERE ({main_likes})
+                      AND ({neg_likes})
+                      AND (s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%' OR s.speaker LIKE '%市長%' OR s.speaker LIKE '%部長%')
+                    ORDER BY
+                      {'m.meeting_date DESC,' if has_manifest else ''}
+                      s.seg_id DESC
+                    LIMIT ?
                 """
-                if has_manifest:
-                    sql += " LEFT JOIN manifest m ON s.doc_id = m.doc_id "
+                fallback_params = [f"%{t}%" for t in clean_terms] + [f"%{n}%" for n in NEGATIVE_PHRASES] + [limit]
+                rows = conn.execute(fallback_sql, fallback_params).fetchall()
 
-                if has_fts:
-                    sql += " WHERE s.seg_id IN (SELECT rowid FROM segments_fts WHERE segments_fts MATCH ?) "
-                else:
-                    sql += " WHERE s.text LIKE ? "
-
-                sql += " AND (s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%' OR s.speaker LIKE '%市長%' OR s.speaker LIKE '%部長%') "
-                if has_manifest:
-                    sql += " ORDER BY m.meeting_date DESC, s.seg_id DESC LIMIT ? "
-                else:
-                    sql += " ORDER BY s.seg_id DESC LIMIT ? "
-
-                param = term if has_fts else f"%{term}%"
-                rows = conn.execute(sql, (1 if has_manifest else 0, 1 if has_manifest else 0, param, limit - len(results))).fetchall()
-                for r in rows:
-                    txt = (r[0] or "").replace("\n", " ")[:140]
-                    spk = r[1] or ""
-                    dt = r[2] or ""
-                    mtg = r[3] or ""
-                    results.append({
-                        "date": dt,
-                        "meeting": mtg,
-                        "speaker": spk,
-                        "snippet": txt,
-                    })
+            for r in rows:
+                txt = (r[0] or "").replace("\n", " ").strip()[:140]
+                results.append({
+                    "date": r[2] or "",
+                    "meeting": r[3] or "",
+                    "speaker": r[1] or "",
+                    "snippet": txt,
+                })
 
         # 2. Try speeches table (modules/minutes_db standard schema)
         elif "speeches" in tables:
-            has_fts = "speeches_fts" in tables
-            for term in query_terms:
-                if len(results) >= limit:
-                    break
-                if has_fts:
-                    sql = """
-                        SELECT s.text, s.speaker, s.date, s.meeting_name
-                        FROM speeches s
-                        JOIN speeches_fts f ON s.speech_id = f.rowid
-                        WHERE f MATCH ?
-                        AND (s.speaker_role IN ('mayor', 'executive') OR s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%')
-                        ORDER BY s.date DESC LIMIT ?
-                    """
-                    rows = conn.execute(sql, (term, limit - len(results))).fetchall()
-                else:
-                    sql = """
-                        SELECT s.text, s.speaker, s.date, s.meeting_name
-                        FROM speeches s
-                        WHERE s.text LIKE ?
-                        AND (s.speaker_role IN ('mayor', 'executive') OR s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%')
-                        ORDER BY s.date DESC LIMIT ?
-                    """
-                    rows = conn.execute(sql, (f"%{term}%", limit - len(results))).fetchall()
+            main_likes = " OR ".join(["s.text LIKE ?" for _ in clean_terms])
+            ctx_likes = " OR ".join(["s.text LIKE ?" for _ in ctx_terms])
+            neg_likes = " AND ".join(["s.text NOT LIKE ?" for _ in NEGATIVE_PHRASES])
 
-                for r in rows:
-                    txt = (r[0] or "").replace("\n", " ")[:140]
-                    results.append({
-                        "date": r[2] or "",
-                        "meeting": r[3] or "",
-                        "speaker": r[1] or "",
-                        "snippet": txt,
-                    })
+            sql = f"""
+                SELECT s.text, s.speaker, s.date, s.meeting_name
+                FROM speeches s
+                WHERE ({main_likes})
+                  AND ({ctx_likes})
+                  AND ({neg_likes})
+                  AND (s.speaker_role IN ('mayor', 'executive') OR s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%')
+                ORDER BY
+                  CASE
+                    WHEN s.meeting_name LIKE '%決算%' THEN 1
+                    WHEN s.meeting_name LIKE '%予算%' THEN 2
+                    WHEN s.meeting_name LIKE '%質問%' THEN 3
+                    WHEN s.meeting_name LIKE '%委員会%' THEN 4
+                    ELSE 5
+                  END,
+                  s.date DESC
+                LIMIT ?
+            """
+            params = [f"%{t}%" for t in clean_terms] + [f"%{c}%" for c in ctx_terms] + [f"%{n}%" for n in NEGATIVE_PHRASES] + [limit]
+            rows = conn.execute(sql, params).fetchall()
+
+            if not rows:
+                fallback_sql = f"""
+                    SELECT s.text, s.speaker, s.date, s.meeting_name
+                    FROM speeches s
+                    WHERE ({main_likes})
+                      AND ({neg_likes})
+                      AND (s.speaker_role IN ('mayor', 'executive') OR s.speaker LIKE '%課長%' OR s.speaker LIKE '%町長%')
+                    ORDER BY s.date DESC
+                    LIMIT ?
+                """
+                fallback_params = [f"%{t}%" for t in clean_terms] + [f"%{n}%" for n in NEGATIVE_PHRASES] + [limit]
+                rows = conn.execute(fallback_sql, fallback_params).fetchall()
+
+            for r in rows:
+                txt = (r[0] or "").replace("\n", " ").strip()[:140]
+                results.append({
+                    "date": r[2] or "",
+                    "meeting": r[3] or "",
+                    "speaker": r[1] or "",
+                    "snippet": txt,
+                })
         conn.close()
     except Exception:
         pass
@@ -619,12 +675,13 @@ def render_ebpm_cards(
     # 1. Process persistent unused expenditure items
     for item in report.get("persistent_unused", []):
         moku_name = item.get("moku_name", "科目")
-        keyword = moku_name.split(">")[-1].strip().split(".")[-1].strip().replace("費", "")
-        query_terms = [keyword, moku_name.split(">")[-1].strip().split(".")[-1].strip()]
+        last_moku = moku_name.split(">")[-1].strip().split(".")[-1].strip()
+        keyword = last_moku.replace("費", "")
+        query_terms = [last_moku, keyword] if keyword != last_moku else [keyword]
 
         speeches = []
         if minutes_db and minutes_db.is_file():
-            speeches = find_speeches_for_topic(minutes_db, query_terms, limit=2)
+            speeches = find_speeches_for_topic(minutes_db, query_terms, kind="expenditure", limit=2)
 
         total_unused = sum(y.get("unused", 0) for y in item.get("yearly_breakdown", []))
         total_years = len(item.get("yearly_breakdown", []))
@@ -732,7 +789,7 @@ def render_ebpm_cards(
 
         speeches = []
         if minutes_db and minutes_db.is_file():
-            speeches = find_speeches_for_topic(minutes_db, query_terms, limit=2)
+            speeches = find_speeches_for_topic(minutes_db, query_terms, kind="revenue", limit=2)
 
         lines = [
             "---",
