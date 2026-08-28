@@ -23,6 +23,11 @@ if __package__ in {None, ""}:
 
 from bootstrap.cli.authority_map import generate_authority_map
 from bootstrap.cli.census import CensusError, fetch_census
+from bootstrap.cli.console import (
+    LABEL_MAP,
+    BootstrapConsole,
+    format_indicator_value,
+)
 from bootstrap.cli.db import DatabaseError, build_database
 from bootstrap.cli.fiscal import FiscalError, fetch_fiscal
 from bootstrap.cli.http import BOOTSTRAP_USER_AGENT, FetchError, HttpClient
@@ -60,8 +65,12 @@ def run(
     offline: bool,
     refresh: bool,
     cross_check: bool,
+    console: BootstrapConsole | None = None,
 ) -> dict[str, Any]:
     """Run the complete bootstrap and return a secret-free report."""
+
+    con = console or BootstrapConsole(quiet=True)
+    con.header(name)
 
     output_dir = (
         out_dir
@@ -74,7 +83,20 @@ def run(
         offline=offline,
         refresh=refresh,
     )
+
+    # Step 1: 自治体特定
+    con.step(1, 5, "🔍", "自治体コード解決")
     municipality = resolve_municipality(name, prefecture, client)
+    muni_label = f"{municipality['prefecture']}{municipality['name']}"
+    con.item(
+        f"「{municipality['name']}」を特定: {muni_label} "
+        f"(標準コード: {municipality['area_code_5']} / 団体コード: {municipality['local_government_code_6']})"
+    )
+    if municipality.get("official_home_url"):
+        con.item(f"公式サイト: {municipality['official_home_url']}")
+
+    # Step 2: 観測スナップショット
+    con.step(2, 5, "🔭", "公式データ入口探索 (Snapshot & Catalog)")
     observatory_hint: dict[str, Any] | None = None
     observatory_warning: str | None = None
     try:
@@ -83,10 +105,60 @@ def run(
             municipality["area_code_5"],
             catalog=observatory_catalog,
         )
+        if observatory_hint:
+            source_urls = observatory_hint.get("source_urls", {})
+            vendor_signals = observatory_hint.get("vendor_signals", [])
+            for kind, label in [
+                ("minutes", "議事録"),
+                ("regulations", "例規集"),
+                ("budget", "当初予算"),
+                ("settlement", "決算"),
+            ]:
+                urls = source_urls.get(kind, [])
+                if urls:
+                    v_note = f" [{', '.join(vendor_signals)}]" if (kind == "regulations" and vendor_signals) else ""
+                    con.item(f"{label}: {urls[0]}{v_note}")
+                else:
+                    con.item(f"{label}: 未観測 (preflightで自動探索可能)", status="·")
+        else:
+            con.item("既知入口カタログを照合 (preflightで詳細診断可能)")
     except ObservatoryError as error:
         observatory_warning = f"observatory hint unavailable: {error}"
+        con.item(f"スナップショット照合スキップ ({error})", status="!")
+
+    # Step 3: 国勢調査
+    con.step(3, 5, "📊", "国勢調査データ取得 (e-Stat 政府統計API)")
     census = fetch_census(municipality, client)
+    c_records = census.get("records", [])
+    con.item(f"国勢調査指標を取得 ({len(c_records)} 件 / {census['selection'].get('reason', '最新統計表')})")
+    for idx, rec in enumerate(c_records):
+        key = rec.get("indicator", "")
+        label = LABEL_MAP.get(key, key)
+        val = rec.get("value")
+        unit = rec.get("unit", "")
+        as_of = rec.get("as_of", "")
+        formatted = format_indicator_value(key, val, unit)
+        is_last = idx == len(c_records) - 1
+        con.data_row(label, formatted, note=as_of, is_last=is_last)
+
+    # Step 4: 財政データ
+    con.step(4, 5, "💰", "財政データ探索・取得 (総務省 地方財政決算)")
     fiscal = fetch_fiscal(municipality, client, cross_check=cross_check)
+    f_records = fiscal.get("records", [])
+    fiscal_year = fiscal.get("fiscal_year", "")
+    con.item(f"総務省 決算状況調査より指標を抽出 ({len(f_records)} 件 / 令和{fiscal_year}年度)")
+    for idx, rec in enumerate(f_records):
+        key = rec.get("indicator", "")
+        label = LABEL_MAP.get(key, key)
+        val = rec.get("value")
+        unit = rec.get("unit", "")
+        as_of = rec.get("as_of", "")
+        formatted = format_indicator_value(key, val, unit)
+        is_last = idx == len(f_records) - 1
+        con.data_row(label, formatted, note=as_of, is_last=is_last)
+
+    # Step 5: データベース & 裁定表構築
+    con.step(5, 5, "🗄️", "ローカル政策基盤の構築")
     records = list(census["records"]) + list(fiscal["records"])
     database_path = output_dir / "municipality.db"
     authority_path = output_dir / "authority_map.yaml"
@@ -99,6 +171,8 @@ def run(
     database = build_database(
         municipality, records, metadata, database_path
     )
+    con.item(f"SQLite データベース構築: {database_path.name} (指標: {database.get('indicator_rows', 0)} 行)")
+
     authority = generate_authority_map(
         municipality,
         records,
@@ -106,6 +180,8 @@ def run(
         database_name=database_path.name,
         census_warning=census["selection"].get("warning"),
     )
+    con.item("根拠裁定表 (authority_map.yaml) 生成: 原典・基準日・定義を固定")
+
     warnings = [
         item
         for item in [
@@ -116,7 +192,8 @@ def run(
         if item
     ]
     retrieval = client.retrieval_report()
-    return {
+
+    report = {
         "status": "ok",
         "mode": "offline" if offline else "online",
         "municipality": {
@@ -168,6 +245,9 @@ def run(
         "warnings": warnings,
     }
 
+    con.summary(report)
+    return report
+
 
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
@@ -210,6 +290,17 @@ def _parser() -> argparse.ArgumentParser:
         type=Path,
         help="共通run manifestの保存先。指定しなければmanifestは作らない",
     )
+    parser.add_argument(
+        "--quiet",
+        "-q",
+        action="store_true",
+        help="進捗・サマリ表示を抑制し、JSONのみを出力する",
+    )
+    parser.add_argument(
+        "--no-color",
+        action="store_true",
+        help="カラー表示を無効化する",
+    )
     return parser
 
 
@@ -250,6 +341,10 @@ def main(argv: Sequence[str] | None = None) -> int:
                 )
             )
             return 1
+    console = BootstrapConsole(
+        quiet=args.quiet,
+        color=False if args.no_color else None,
+    )
     try:
         report = run(
             args.municipality_name,
@@ -259,6 +354,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             offline=args.offline,
             refresh=args.refresh,
             cross_check=args.cross_check,
+            console=console,
         )
     except AmbiguousMunicipality as error:
         result = {
