@@ -2,22 +2,22 @@
 
 ## 目的
 
-この契約は、[見立て](policy-issue.schema.md)で特定したツボへ、効果と副作用を含む変更案を作るための最小仕様である。法的・政治的・実務的な責任の検証が必要な場合は、事実と根拠に基づいて別に行う。手当てでは、その評価と制度設計を混ぜず、町・県・国の制度のつながりをたどり、地域の課題を動かせる場所へ、実施可能な最小差分を示す。
+この契約は、[見立て](policy-issue.schema.md)で特定した課題に対し、効果と副作用を含む変更案を作るための最小仕様である。法的・政治的・実務的な責任の検証が必要な場合は、事実と根拠に基づいて別に行う。政策提案では、その評価と制度設計を混ぜず、町・県・国の制度のつながりをたどり、地域の課題を動かせる場所へ、実施可能な最小差分を示す。
 
 ## 1レコードの責務
 
-1レコードは、一つの見立てに対する一つの手当てを表す。国・県・町へ複数の働きかけが必要でも、第一のツボを一つ明記し、残りは並行対応として区別する。
+1レコードは、一つの見立てに対する一つの政策提案を表す。国・県・町へ複数の働きかけが必要でも、第一の働きかけ先を一つ明記し、残りは並行対応として区別する。
 
-要求だけを書かず、期待する効果、想定される副作用・反対論、対策、手当て後の観測方法を必ず一組で持つ。
+要求だけを書かず、期待する効果、想定される副作用・反対論、対策、提案後の観測方法を必ず一組で持つ。
 
 ## 必須フィールド
 
 | フィールド | 型 | 説明 |
 |---|---|---|
-| `title` | string | 手当ての名称 |
+| `title` | string | 提案の名称 |
 | `issue_ref` | string | 元になる見立てへの安定した参照 |
-| `primary_lever_level` | enum | 第一のツボ（`national` / `prefecture` / `municipality`） |
-| `lever_reason` | string | その層をツボと判断した理由 |
+| `primary_lever_level` | enum | 第一の働きかけ先（`national` / `prefecture` / `municipality`） |
+| `lever_reason` | string | その層を働きかけ先と判断した理由 |
 | `current_system` | list | 国・県・町の現行制度と地域で生じる差 |
 | `observed_problem` | list | 公開根拠で確認できる現象 |
 | `proposed_changes` | list | 実施主体と最小差分を含む変更案 |
@@ -92,7 +92,7 @@ mitigations:
 title: "<手当ての名称>"
 issue_ref: "<見立てへの参照>"
 primary_lever_level: "<national | prefecture | municipality>"
-lever_reason: "<その層をツボと判断した理由>"
+lever_reason: "<その層を働きかけ先と判断した理由>"
 # current_system / observed_problem / proposed_changes / expected_effects /
 # side_effects_and_objections / mitigations は各節の注釈付きYAMLどおり。
 outreach_options:

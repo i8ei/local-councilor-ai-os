@@ -22,7 +22,7 @@ title: "{{何が、どこで詰まっているか}}"
 municipality: "{{市町村名}}"
 policy_area: "{{政策分野}}"
 problem_type: "{{対象外 / 未整備 / 運用 / 撤退 / 財政 / 不作為・未活用}}"
-primary_lever_level: "{{national / prefecture / municipality}}"   # 一番効くツボの層
+primary_lever_level: "{{national / prefecture / municipality}}"   # 一番効く働きかけ先の層
 affected_people:
   - "{{影響を受ける人のカテゴリ}}"
 current_problem: >
@@ -42,4 +42,4 @@ status: "{{investigating / framed / archived}}"
 
 - [ ] {{現象を裏づける公開原典があるか}}
 - [ ] {{数値に値・時点・定義・出典があるか}}
-- [ ] {{一番効くツボ（働きかける先）は町・県・国のどこかを、配線をたどって特定したか}}
+- [ ] {{一番効く働きかけ先（宛先）は町・県・国のどこかを、制度をたどって特定したか}}
