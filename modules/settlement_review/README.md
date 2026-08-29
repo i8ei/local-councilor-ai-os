@@ -17,6 +17,8 @@
 | `insights.py` | 検算を通ったDBから、人が確認する分析候補をJSONで出す |
 | `bridge.py` | 多年度DBから不用額常態化・連続繰越・未収金を0トークンで高速分析する |
 | `insight_spec.md` | 分析候補と証拠台帳への受け渡しを定義する |
+| `vendor_card.py` | 決算カード（XLSX）から取込用3表CSV（summary/revenue/expenditure）を自動抽出する |
+| `vendor_soumu.py` | 総務省ポータルから複数年度の決算XLSXを自動探索・取得しDB化・自動検算する |
 | `csv_templates.py` | SQLiteへ投入する取込用CSVのヘッダー雛形を出力する |
 | `extraction_guidance.md` | PDF抽出を個別AIや人に任せる際の依頼方針 |
 | `failure_patterns.md` | 単位、ページ、欠測、重複加算などの典型的な失敗 |
