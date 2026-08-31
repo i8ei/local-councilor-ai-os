@@ -19,7 +19,7 @@ from lcaios.smoke_test import (
 )
 
 
-def _database(path: Path, value: str = "10") -> None:
+def _database(path: Path, value: str = "10", fetched_at: str = "2026-01-01T00:00:00Z") -> None:
     with closing(sqlite3.connect(path)) as connection, connection:
         connection.execute(
             """
@@ -27,13 +27,14 @@ def _database(path: Path, value: str = "10") -> None:
                 id INTEGER PRIMARY KEY,
                 municipality_code TEXT,
                 indicator_key TEXT,
-                value TEXT
+                value TEXT,
+                fetched_at TEXT
             )
             """
         )
         connection.execute(
-            "INSERT INTO indicator VALUES (1, '41205', 'fixture', ?)",
-            (value,),
+            "INSERT INTO indicator VALUES (1, '41205', 'fixture', ?, ?)",
+            (value, fetched_at),
         )
 
 
@@ -45,13 +46,13 @@ class SmokeTestTests(unittest.TestCase):
             with self.assertRaisesRegex(SmokeTestError, "空"):
                 run_bootstrap_smoke_test("伊万里市", work_dir=root)
 
-    def test_semantic_comparison_ignores_ids_and_generated_at(self) -> None:
+    def test_semantic_comparison_ignores_ids_fetched_at_and_generated_at(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             left = root / "left.db"
             right = root / "right.db"
             _database(left)
-            _database(right)
+            _database(right, fetched_at="2026-01-02T00:00:00Z")
             left_map = root / "left.yaml"
             right_map = root / "right.yaml"
             left_map.write_text(

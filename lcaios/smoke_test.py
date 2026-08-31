@@ -56,7 +56,7 @@ def _indicator_rows(path: Path) -> tuple[tuple[Any, ...], ...]:
         columns = [
             str(row[1])
             for row in connection.execute("PRAGMA table_info(indicator)")
-            if str(row[1]) != "id"
+            if str(row[1]) not in ("id", "fetched_at")
         ]
         if not columns:
             raise SmokeTestError(f"indicator tableを確認できません: {path}")
